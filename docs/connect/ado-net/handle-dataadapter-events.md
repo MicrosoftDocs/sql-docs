@@ -19,7 +19,7 @@ ms.reviewer: v-chmalh
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-The Microsoft SqlClient data provider for SQL Server <xref:Microsoft.Data.SqlDataAdapter> exposes three events that you can use to respond to changes made to data at the data source. The following table shows the `DataAdapter` events.
+The Microsoft SqlClient data provider for SQL Server <xref:Microsoft.Data.SqlClient.SqlDataAdapter> exposes three events that you can use to respond to changes made to data at the data source. The following table shows the `DataAdapter` events.
 
 |Event|Description|  
 |-----------|-----------------|  
@@ -31,7 +31,7 @@ The Microsoft SqlClient data provider for SQL Server <xref:Microsoft.Data.SqlDat
 
 `RowUpdating` is raised before any update to a row from the <xref:System.Data.DataSet> has been processed at the data source. `RowUpdated` is raised after any update to a row from the `DataSet` has been processed at the data source. As a result, you can use `RowUpdating` to modify update behavior before it happens, to provide additional handling when an update will occur, to retain a reference to an updated row, to cancel the current update and schedule it for a batch process to be processed later, and so on. `RowUpdated` is useful for responding to errors and exceptions that occur during the update. You can add **error information** to the `DataSet`, as well as **retry logic**, and so on.
 
-The <xref:Microsoft.Data.SqlClient.RowUpdatingEventArgs> and <xref:Microsoft.Data.SqlClient.RowUpdatedEventArgs> arguments passed to the `RowUpdating` and `RowUpdated` events include the following: a `Command` property that references the `Command` object being used to perform the update; a `Row` property that references the `DataRow` object containing the updated information; a `StatementType` property for what type of update is being performed; the `TableMapping`, if applicable; and the `Status` of the operation.
+The <xref:System.Data.Common.RowUpdatingEventArgs> and <xref:System.Data.Common.RowUpdatedEventArgs> arguments passed to the `RowUpdating` and `RowUpdated` events include the following: a `Command` property that references the `Command` object being used to perform the update; a `Row` property that references the `DataRow` object containing the updated information; a `StatementType` property for what type of update is being performed; the `TableMapping`, if applicable; and the `Status` of the operation.
 
 You can use the `Status` property to determine if an error has occurred during the operation and, if desired, to control the actions against the current and resulting rows. When the event occurs, the `Status` property equals either `Continue` or `ErrorsOccurred`. The following table shows the values to which you can set the `Status` property in order to control later actions during the update.
 

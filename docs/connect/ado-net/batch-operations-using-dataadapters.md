@@ -46,9 +46,9 @@ When batch processing is enabled, multiple rows are updated in a single database
 
 ### Accessing updated rows
 
-When batch processing is disabled, the row being updated can be accessed using the <xref:Microsoft.Data.SqlClient.RowUpdatedEventArgs.Row%2A> property of the <xref:Microsoft.Data.SqlClient.RowUpdatedEventArgs> class.
+When batch processing is disabled, the row being updated can be accessed using the <xref:System.Data.Common.RowUpdatedEventArgs.Row%2A> property of the <xref:System.Data.Common.RowUpdatedEventArgs> class.
 
-When batch processing is enabled, a single `RowUpdated` event is generated for multiple rows. Therefore, the value of the `Row` property for each row is null. `RowUpdating` events are still generated for each row. The <xref:Microsoft.Data.SqlClient.RowUpdatedEventArgs.CopyToRows%2A> method of the <xref:Microsoft.Data.SqlClient.RowUpdatedEventArgs> class allows you to access the processed rows by copying references to the rows into an array. If no rows are being processed, `CopyToRows` throws an <xref:System.ArgumentNullException>. Use the <xref:Microsoft.Data.SqlClient.RowUpdatedEventArgs.RowCount%2A> property to return the number of rows processed before calling the <xref:Microsoft.Data.SqlClient.RowUpdatedEventArgs.CopyToRows%2A> method.
+When batch processing is enabled, a single `RowUpdated` event is generated for multiple rows. Therefore, the value of the `Row` property for each row is null. `RowUpdating` events are still generated for each row. The <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> method of the <xref:System.Data.Common.RowUpdatedEventArgs> class allows you to access the processed rows by copying references to the rows into an array. If no rows are being processed, `CopyToRows` throws an <xref:System.ArgumentNullException>. Use the <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> property to return the number of rows processed before calling the <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> method.
 
 ### Handling data errors
 

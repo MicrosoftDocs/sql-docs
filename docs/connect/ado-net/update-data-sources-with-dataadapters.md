@@ -55,12 +55,10 @@ The `Fill` method determines whether a new row will be added or an existing row 
 > [!NOTE]
 > If the `SelectCommand` returns the results of an **OUTER JOIN**, the `DataAdapter` will not set a `PrimaryKey` value for the resulting `DataTable`. You must define the `PrimaryKey` yourself to ensure that duplicate rows are resolved correctly.
 
-To handle exceptions that may occur when calling the `Update` method, you can use the <xref:Microsoft.Data.SqlClient.SqlDataAdapter.RowUpdated%2A> event to respond to row update errors as they occur (see [Handling DataAdapter events](handle-dataadapter-events.md)), or you can set <xref:System.Data.Common.DbDataAdapter.ContinueUpdateOnError%2A> to `true` before calling `Update`, and respond to the error information stored in the `RowError` property of a particular row when the update is complete.
+To handle exceptions that may occur when calling the `Update` method, you can use the `RowUpdated` event to respond to row update errors as they occur (see [Handling DataAdapter events](handle-dataadapter-events.md)), or you can set <xref:System.Data.Common.DataAdapter.ContinueUpdateOnError%2A> to `true` before calling `Update`, and respond to the error information stored in the `RowError` property of a particular row when the update is complete.
 
 > [!NOTE]
 > Calling `AcceptChanges` on the `DataSet`, `DataTable`, or `DataRow` will cause all `Original` values for a `DataRow` to be overwritten with the `Current` values for the `DataRow`. If the field values that identify the row as unique have been modified, after calling `AcceptChanges` the `Original` values will no longer match the values in the data source. `AcceptChanges` is called automatically for each row during a call to the `Update` method of a `DataAdapter`. You can preserve the original values during a call to the Update method by first setting the `AcceptChangesDuringUpdate` property of the `DataAdapter` to false, or by creating an event handler for the `RowUpdated` event and setting the <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> to <xref:System.Data.UpdateStatus.SkipCurrentRow>. For more information, see [Handling DataAdapter Events](handle-dataadapter-events.md).
-
-## Example
 
 The following examples demonstrate how to perform updates to modified rows by explicitly setting the `UpdateCommand` of a `DataAdapter` and calling its `Update` method.
 

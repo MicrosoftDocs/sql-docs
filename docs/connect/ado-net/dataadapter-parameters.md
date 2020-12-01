@@ -36,7 +36,7 @@ UPDATE Customers SET CompanyName = @CompanyName
 
 In this example, the `CompanyName` field is updated with the value of the `@CompanyName` parameter for the row where `CustomerID` equals the value of the `@CustomerID` parameter. The parameters retrieve information from the modified row using the <xref:Microsoft.Data.SqlClient.SqlParameter.SourceColumn%2A> property of the <xref:Microsoft.Data.SqlClient.SqlParameter> object. The following are the parameters for the previous sample UPDATE statement. The code assumes that the variable `adapter` represents a valid <xref:Microsoft.Data.SqlClient.SqlDataAdapter> object.
 
-[!code-csharp[Classic WebData SqlDataAdapter.SqlDataAdapter#2](~/../sqlclient/doc/samples/SqlDataAdapter.SqlDataAdapter.cs#2)]
+[!code-csharp[Classic WebData SqlDataAdapter.SqlDataAdapter#2](~/../sqlclient/doc/samples/SqlDataAdapter_SqlDataAdapter.cs#2)]
 
 The `Add` method of the `Parameters` collection takes the name of the parameter, the data type, the size (if applicable to the type), and the name of the <xref:System.Data.Common.DbParameter.SourceColumn%2A> from the `DataTable`. Notice that the <xref:System.Data.Common.DbParameter.SourceVersion%2A> of the `@CustomerID` parameter is set to `Original`. This guarantees that the existing row in the data source is updated if the value of the identifying column or columns has been changed in the modified <xref:System.Data.DataRow>. In that case, the `Original` row value would match the current value at the data source, and the `Current` row value would contain the updated value. The `SourceVersion` for the `@CompanyName` parameter is not set and uses the default, `Current` row value.
 
@@ -62,7 +62,7 @@ The `SqlClient` code example in the next section defines a parameter for an <xre
 
 The following example demonstrates how to create a <xref:Microsoft.Data.SqlClient.SqlDataAdapter> and set the <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> to <xref:System.Data.MissingSchemaAction.AddWithKey> in order to retrieve additional schema information from the database. The <xref:Microsoft.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, <xref:Microsoft.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, <xref:Microsoft.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, and <xref:Microsoft.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> properties set and their corresponding <xref:Microsoft.Data.SqlClient.SqlParameter> objects added to the <xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> collection. The method returns a `SqlDataAdapter` object.
 
-[!code-csharp[Classic WebData SqlDataAdapter.SqlDataAdapter#1](~/../sqlclient/doc/samples/SqlDataAdapter.SqlDataAdapter.cs#1)]
+[!code-csharp[Classic WebData SqlDataAdapter.SqlDataAdapter#1](~/../sqlclient/doc/samples/SqlDataAdapter_SqlDataAdapter.cs#1)]
 
 ## See also
 

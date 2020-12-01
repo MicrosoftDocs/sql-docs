@@ -19,7 +19,7 @@ ms.reviewer: v-chmalh
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-A <xref:Microsoft.Data.SqlClient.SqlDataAdapter> contains a collection of zero or more <xref:System.Data.Common.DataTableMapping> objects in its <xref:Microsoft.Data.SqlClient.SqlDataAdapter.TableMappings%2A> property. A **DataTableMapping** provides a main mapping between the data returned from a query against a data source, and a <xref:System.Data.DataTable>. The **DataTableMapping** name can be passed in place of the **DataTable** name to the <xref:System.Data.Common.DbDataAdapter.Fill%2A> method of the **DataAdapter**. The following example creates a **DataTableMapping** named **AuthorsMapping** for the **Authors** table.
+A <xref:Microsoft.Data.SqlClient.SqlDataAdapter> contains a collection of zero or more <xref:System.Data.Common.DataTableMapping> objects in its <xref:System.Data.Common.DataAdapter.TableMappings%2A> property. A **DataTableMapping** provides a main mapping between the data returned from a query against a data source, and a <xref:System.Data.DataTable>. The **DataTableMapping** name can be passed in place of the **DataTable** name to the <xref:System.Data.Common.DbDataAdapter.Fill%2A> method of the **DataAdapter**. The following example creates a **DataTableMapping** named **AuthorsMapping** for the **Authors** table.
 
 ```csharp
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors");

@@ -67,4 +67,4 @@ This example demonstrates retrieving a partial connection string from a configur
   
 ## See also
 
-- [Connection Strings](connection-strings.md)
+- [Connection strings](connection-strings.md)

@@ -60,6 +60,10 @@ The instance collation for LocalDB is set to `SQL_Latin1_General_CP1_CI_AS` and 
 
 ### Restrictions
 
+- LocalDB cannot be patched beyond Service Packs. CUs and Security Updates cannot be applied manually and will not be applied via Windows Update, Windows Update for Business, or other methods.
+
+- LocalDB cannot be managed remotely via SQL Management Studio.
+
 - LocalDB cannot be a merge replication subscriber.
 
 - LocalDB does not support FILESTREAM.

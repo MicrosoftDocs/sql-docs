@@ -29,7 +29,7 @@ See [Get started with PolyBase](./polybase-guide.md) and [PolyBase Guide](../../
   
 ## Head node  
 
-The head node contains the SQL Server instance to which PolyBase queries are submitted. Each PolyBase group can have only one head node. A head node is a logical group of SQL Database Engine, PolyBase Engine and PolyBase Data Movement Service on the SQL Server instance. In SQL Server 2019 the PolyBase head node can be either an Enterprise or Standard edition.
+The head node contains the SQL Server instance to which PolyBase queries are submitted. Each PolyBase group can have only one head node. A head node is a logical group of SQL Server Database Engine, PolyBase Engine, and PolyBase Data Movement Service on the SQL Server instance. With SQL Server 2017 and prior  the head node must be an Enterprise Edition. Beginning with SQL Server 2019 the PolyBase head node can be either an Enterprise or Standard edition.
   
 ## Compute node  
 

@@ -48,7 +48,7 @@ ms.author: "sstein"
 >  If you move a system database and later rebuild the master database, you must move the system database again because the rebuild operation installs all system databases to their default location.  
 
 > [!IMPORTANT]  
->  After moving files, the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] service account must have permission to access the files in new file folder location.
+>  After moving files, the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] service account must have permission to access the files in the new file folder location. For more information, see [Configure File System Permissions for Database Engine Access](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md).
     
   
 ##  <a name="Planned"></a> Planned Relocation and Scheduled Disk Maintenance Procedure  

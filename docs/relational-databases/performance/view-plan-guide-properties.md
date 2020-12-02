@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "plan guides [SQL Server], view plan guide properties"
   - "viewing plan guide properties"
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # View Plan Guide Properties
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -137,7 +137,13 @@
       - name: Prerequisites
         href: big-data-cluster/active-directory-prerequisites.md
       - name: Deploy
-        href: big-data-cluster/active-directory-deploy.md
+        items:
+          - name: Simple AD deployment
+            href: big-data-cluster/active-directory-deploy.md
+          - name: Plan AD on AKS
+            href: big-data-cluster/active-directory-deployment-aks.md
+          - name: Tutorial - AD on AKS
+            href: big-data-cluster/active-directory-deployment-aks-tutorial.md
       - name: Connect
         href: big-data-cluster/active-directory-connect.md
       - name: Multiple BDCs in the same AD domain
@@ -1734,7 +1740,7 @@
         href: relational-databases/indexes/columnstore-indexes-query-performance.md
       - name: Real-time operational analytics
         href: relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md
-      - name: Data Warehouse
+      - name: Azure Synapse Analytics
         href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
       - name: Defragment
         href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
@@ -1870,15 +1876,6 @@
         href: relational-databases/tables/use-table-valued-parameters-database-engine.md
     - name: Edge constraints
       href: relational-databases/tables/graph-edge-constraints.md
-      items:
-      - name: Create
-        href: relational-databases/tables/create-edge-constraints.md
-      - name: Delete
-        href: relational-databases/tables/delete-edge-constraint.md
-      - name: Modify
-        href: relational-databases/tables/modify-edge-constraint.md
-      - name: View
-        href: relational-databases/tables/view-edge-constraint-properties.md
     - name: Primary keys
       href: relational-databases/tables/primary-and-foreign-key-constraints.md
       items:
@@ -2735,10 +2732,10 @@
       items:
       - name: What is Language Extensions?
         href: language-extensions/language-extensions-overview.md
+      - name: What is Java Language Extension?
+        href: language-extensions/java-overview.md
       - name: What's new?
         href: language-extensions/language-extensions-whats-new.md
-      - name: Java Language Extension Overview
-        href: language-extensions/java-overview.md
     - name: Install
       items:
       - name: Install Language Extensions on Windows
@@ -7082,7 +7079,7 @@
       items:
       - name: Query scenarios
         href: relational-databases/polybase/polybase-queries.md
-      - name: Push-down computation
+      - name: Pushdown computation
         href: relational-databases/polybase/polybase-pushdown-computation.md
       - name: Scale-out groups
         href: relational-databases/polybase/polybase-scale-out-groups.md
@@ -9742,6 +9739,8 @@
       href: tools/release-notes-sqlpackage.md
     - name: sqlpackage ref
       href: tools/sqlpackage.md
+    - name: SqlPackage in development pipelines
+      href: tools/sqlpackage-pipelines.md
   - name: SQL Server Profiler
     href: tools/sql-server-profiler/sql-server-profiler.md
     items:
@@ -9994,11 +9993,11 @@
         href: linux/sql-server-linux-setup-full-text-search.md
       - name: Install SQL Server Integration Services
         href: linux/sql-server-linux-setup-ssis.md
-      - name: Install SQL Server Machine Learning Services
+      - name: Install SQL Server Machine Learning Services (Python and R)
         href: linux/sql-server-linux-setup-machine-learning.md
-      - name: Install SQL Server Machine Learning Services on Docker
+      - name: Install SQL Server Machine Learning Services (Python and R) on Docker
         href: linux/sql-server-linux-setup-machine-learning-docker.md
-      - name: Install SQL Server Language Extensions
+      - name: Install SQL Server Java Language Extension
         href: linux/sql-server-linux-setup-language-extensions-java.md
       - name: Configure repositories
         href: linux/sql-server-linux-change-repo.md
@@ -10270,7 +10269,7 @@
           href: samples/wide-world-importers-oltp-install-configure.md
         - name: SQL Server features
           href: samples/wide-world-importers-oltp-use-of-sql-server-features.md
-      - name: Data Warehouse
+      - name: Azure Synapse Analytics
         items:
         - name: Database catalog
           href: samples/wide-world-importers-dw-database-catalog.md
@@ -13599,10 +13598,14 @@
         href: relational-databases/system-stored-procedures/sp-oastop-transact-sql.md
     - name: PolyBase
       items:
-      - name: polybase_join_group
+      - name: sp_polybase_join_group
         href: relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md
       - name: sp_polybase_leave_group
         href: relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md
+      - name: sp_data_source_table_columns
+        href: relational-databases/system-stored-procedures/sp-data-source-table-columns.md
+      - name: sp_data_source_objects
+        href: relational-databases/system-stored-procedures/sp-data-source-objects.md
     - name: Policy-Based Management
       href: relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md
       items:
@@ -16415,138 +16418,205 @@
       - name: ALTER
         items:
         - name: APPLICATION ROLE
+          displayName: ALTER APPLICATION ROLE
           href: t-sql/statements/alter-application-role-transact-sql.md
         - name: ASSEMBLY
+          displayName: ALTER ASSEMBLY
           href: t-sql/statements/alter-assembly-transact-sql.md
         - name: ASYMMETRIC KEY
+          displayName: ALTER ASYMMETRIC KEY
           href: t-sql/statements/alter-asymmetric-key-transact-sql.md
         - name: AUTHORIZATION
+          displayName: ALTER AUTHORIZATION
           href: t-sql/statements/alter-authorization-transact-sql.md
         - name: AVAILABILITY GROUP
+          displayName: ALTER AVAILABILITY GROUP
           href: t-sql/statements/alter-availability-group-transact-sql.md
         - name: BROKER PRIORITY
+          displayName: ALTER BROKER PRIORITY
           href: t-sql/statements/alter-broker-priority-transact-sql.md
         - name: CERTIFICATE
+          displayName: ALTER CERTIFICATE
           href: t-sql/statements/alter-certificate-transact-sql.md
         - name: COLUMN ENCRYPTION KEY
+          displayName: ALTER COLUMN ENCRYPTION KEY
           href: t-sql/statements/alter-column-encryption-key-transact-sql.md
         - name: CREDENTIAL
+          displayName: ALTER CREDENTIAL
           href: t-sql/statements/alter-credential-transact-sql.md
         - name: CRYPTOGRAPHIC PROVIDER
+          displayName: ALTER CRYPTOGRAPHIC PROVIDER
           href: t-sql/statements/alter-cryptographic-provider-transact-sql.md
         - name: DATABASE
+          displayName: ALTER DATABASE
           href: t-sql/statements/alter-database-transact-sql.md
         - name: DATABASE AUDIT SPECIFICATION
+          displayName: ALTER DATABASE AUDIT SPECIFICATION
           href: t-sql/statements/alter-database-audit-specification-transact-sql.md
         - name: DATABASE compatibility level
+          displayName: ALTER DATABASE compatibility level
           href: t-sql/statements/alter-database-transact-sql-compatibility-level.md
         - name: DATABASE database mirroring
+          displayName: ALTER DATABASE mirroring
           href: t-sql/statements/alter-database-transact-sql-database-mirroring.md
         - name: DATABASE ENCRYPTION KEY
+          displayName: ALTER DATABASE ENCRYPTION KEY
           href: t-sql/statements/alter-database-encryption-key-transact-sql.md
         - name: DATABASE file & filegroup options
+          displayName: ALTER DATABASE file & filegroup options
           href: t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md
         - name: DATABASE HADR
+          displayName: ALTER DATABASE HADR
           href: t-sql/statements/alter-database-transact-sql-set-hadr.md
         - name: DATABASE SCOPED CREDENTIAL
+          displayName: ALTER DATABASE SCOPED CREDENTIAL
           href: t-sql/statements/alter-database-scoped-credential-transact-sql.md
         - name: DATABASE SCOPED CONFIGURATION
+          displayName: ALTER DATABASE SCOPED CONFIGURATION
           href: t-sql/statements/alter-database-scoped-configuration-transact-sql.md
         - name: DATABASE SET Options
+          displayName: ALTER DATABASE SET Options
           href: t-sql/statements/alter-database-transact-sql-set-options.md
         - name: ENDPOINT
+          displayName: ALTER ENDPOINT
           href: t-sql/statements/alter-endpoint-transact-sql.md
         - name: EVENT SESSION
+          displayName: ALTER EVENT SESSION
           href: t-sql/statements/alter-event-session-transact-sql.md
         - name: EXTERNAL DATA SOURCE
+          displayName: ALTER EXTERNAL DATA SOURCE
           href: t-sql/statements/alter-external-data-source-transact-sql.md
         - name: EXTERNAL LANGUAGE
+          displayName: ALTER EXTERNAL LANGUAGE
           href: t-sql/statements/alter-external-language-transact-sql.md
         - name: EXTERNAL LIBRARY
+          displayName: ALTER EXTERNAL LIBRARY
           href: t-sql/statements/alter-external-library-transact-sql.md
         - name: EXTERNAL RESOURCE POOL
+          displayName: ALTER EXTERNAL RESOURCE POOL
           href: t-sql/statements/alter-external-resource-pool-transact-sql.md
         - name: FULLTEXT CATALOG
+          displayName: ALTER FULLTEXT CATALOG
           href: t-sql/statements/alter-fulltext-catalog-transact-sql.md
         - name: FULLTEXT INDEX
+          displayName: ALTER FULLTEXT INDEX
           href: t-sql/statements/alter-fulltext-index-transact-sql.md
         - name: FULLTEXT STOPLIST
+          displayName: ALTER FULLTEXT STOPLIST
           href: t-sql/statements/alter-fulltext-stoplist-transact-sql.md
         - name: FUNCTION
+          displayName: ALTER FUNCTION
           href: t-sql/statements/alter-function-transact-sql.md
         - name: INDEX
+          displayName: ALTER INDEX
           href: t-sql/statements/alter-index-transact-sql.md
         - name: INDEX (Selective XML Indexes)
+          displayName: ALTER INDEX (Selective XML Indexes)
           href: t-sql/statements/alter-index-selective-xml-indexes.md
         - name: LOGIN
+          displayName: ALTER LOGIN
           href: t-sql/statements/alter-login-transact-sql.md
         - name: MASTER KEY
+          displayName: ALTER MASTER KEY
           href: t-sql/statements/alter-master-key-transact-sql.md
         - name: MATERIALIZED VIEW
+          displayName: ALTER MATERIALIZED VIEW
           href: t-sql/statements/alter-materialized-view-transact-sql.md
         - name: MESSAGE TYPE
+          displayName: ALTER MESSAGE TYPE
           href: t-sql/statements/alter-message-type-transact-sql.md
         - name: PARTITION FUNCTION
+          displayName: ALTER PARTITION FUNCTION
           href: t-sql/statements/alter-partition-function-transact-sql.md
         - name: PARTITION SCHEME
+          displayName: ALTER PARTITION SCHEME
           href: t-sql/statements/alter-partition-scheme-transact-sql.md
         - name: PROCEDURE
+          displayName: ALTER PROCEDURE
           href: t-sql/statements/alter-procedure-transact-sql.md
         - name: QUEUE
+          displayName: ALTER QUEUE
           href: t-sql/statements/alter-queue-transact-sql.md
         - name: REMOTE SERVICE BINDING
+          displayName: ALTER REMOTE SERVICE BINDING
           href: t-sql/statements/alter-remote-service-binding-transact-sql.md
         - name: RESOURCE GOVERNOR
+          displayName: ALTER RESOURCE GOVERNOR
           href: t-sql/statements/alter-resource-governor-transact-sql.md
         - name: RESOURCE POOL
+          displayName: ALTER RESOURCE POOL
           href: t-sql/statements/alter-resource-pool-transact-sql.md
         - name: ROLE
+          displayName: ALTER ROLE
           href: t-sql/statements/alter-role-transact-sql.md
         - name: ROUTE
+          displayName: ALTER ROUTE
           href: t-sql/statements/alter-route-transact-sql.md
         - name: SCHEMA
+          displayName: ALTER SCHEMA
           href: t-sql/statements/alter-schema-transact-sql.md
         - name: SEARCH PROPERTY LIST
+          displayName: ALTER SEARCH PROPERTY LIST
           href: t-sql/statements/alter-search-property-list-transact-sql.md
         - name: SECURITY POLICY
+          displayName: ALTER SECURITY POLICY
           href: t-sql/statements/alter-security-policy-transact-sql.md
         - name: SEQUENCE
+          displayName: ALTER SEQUENCE
           href: t-sql/statements/alter-sequence-transact-sql.md
         - name: SERVER AUDIT
+          displayName: ALTER SERVER AUDIT
           href: t-sql/statements/alter-server-audit-transact-sql.md
         - name: SERVER AUDIT SPECIFICATION
+          displayName: ALTER SERVER AUDIT SPECIFICATION
           href: t-sql/statements/alter-server-audit-specification-transact-sql.md
         - name: SERVER CONFIGURATION
+          displayName: ALTER SERVER CONFIGURATION
           href: t-sql/statements/alter-server-configuration-transact-sql.md
         - name: SERVER ROLE
+          displayName: ALTER SERVER ROLE
           href: t-sql/statements/alter-server-role-transact-sql.md
         - name: SERVICE
+          displayName: ALTER SERVICE
           href: t-sql/statements/alter-service-transact-sql.md
         - name: SERVICE MASTER KEY
+          displayName: ALTER SERVICE MASTER KEY
           href: t-sql/statements/alter-service-master-key-transact-sql.md
         - name: SYMMETRIC KEY
+          displayName: ALTER SYMMETRIC KEY
           href: t-sql/statements/alter-symmetric-key-transact-sql.md
         - name: TABLE
+          displayName: ALTER TABLE
           href: t-sql/statements/alter-table-transact-sql.md
         - name: TABLE column_constraint
+          displayName: ALTER TABLE column_constraint
           href: t-sql/statements/alter-table-column-constraint-transact-sql.md
         - name: TABLE column_definition
+          displayName: ALTER TABLE column_definition
           href: t-sql/statements/alter-table-column-definition-transact-sql.md
         - name: TABLE computed_column_definition
+          displayName: ALTER TABLE computed_column_definition
           href: t-sql/statements/alter-table-computed-column-definition-transact-sql.md
         - name: TABLE index_option
+          displayName: ALTER TABLE index_option
           href: t-sql/statements/alter-table-index-option-transact-sql.md
         - name: TABLE table_constraint
+          displayName: ALTER TABLE table_constraint
           href: t-sql/statements/alter-table-table-constraint-transact-sql.md
         - name: TRIGGER
+          displayName: ALTER TRIGGER
           href: t-sql/statements/alter-trigger-transact-sql.md
         - name: USER
+          displayName: ALTER USER
           href: t-sql/statements/alter-user-transact-sql.md
         - name: VIEW
+          displayName: ALTER VIEW
           href: t-sql/statements/alter-view-transact-sql.md
         - name: WORKLOAD GROUP
+          displayName: ALTER WORKLOAD GROUP
           href: t-sql/statements/alter-workload-group-transact-sql.md
         - name: XML SCHEMA COLLECTION
+          displayName: ALTER XML SCHEMA COLLECTION
           href: t-sql/statements/alter-xml-schema-collection-transact-sql.md
       - name: Backup & restore
         items:

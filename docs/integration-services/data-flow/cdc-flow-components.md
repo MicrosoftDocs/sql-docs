@@ -38,7 +38,7 @@ ms.author: chugu
 ## Installation  
  This section describes the installation procedures for the CDC Components for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
- The CDC Components for SSIS are packaged with the MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ®. This download is part of the SQL Server Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ The CDC Components for SSIS are packaged with the MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ®. This download is part of the SQL Server Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](https://www.microsoft.com/download/details.aspx?id=56833).  
   
 ### Version Support
 

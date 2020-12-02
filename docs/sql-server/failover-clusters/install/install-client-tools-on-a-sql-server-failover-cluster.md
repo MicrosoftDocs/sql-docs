@@ -8,8 +8,8 @@ ms.prod: sql
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Install Client Tools on a SQL Server Failover Cluster
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

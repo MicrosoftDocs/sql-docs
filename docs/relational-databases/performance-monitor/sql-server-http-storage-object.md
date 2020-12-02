@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, HTTP Storage
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

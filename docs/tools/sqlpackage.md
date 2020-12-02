@@ -6,16 +6,18 @@ ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
-author: "pensivebrian"
-ms.author: "broneill"
-ms.reviewer: "drswkier; sstein"
-ms.date: 09/29/2020
+author: "dzsquared"
+ms.author: "drskwier"
+ms.reviewer: "maghan; sstein"
+ms.date: 11/4/2020
 ---
 
 # SqlPackage.exe
 
 **SqlPackage.exe** is a command-line utility that automates the following database development tasks:  
   
+- [Version](#version): Returns the build number of the SqlPackage application.  Added in version 18.6.
+
 - [Extract](#extract-parameters-and-properties): Creates a database snapshot (.dacpac) file from a live SQL Server or Azure SQL Database.  
   
 - [Publish](#publish-parameters-properties-and-sqlcmd-variables): Incrementally updates a database schema to match the schema of a source .dacpac file. If the database does not exist on the server, the publish operation creates it. Otherwise, an existing database is updated.  
@@ -64,7 +66,10 @@ Create a SQL script that generates the differences of two .dacpac files:
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
  ```
 
-Displays the sqlpackage version:
+
+## Version
+
+Displays the sqlpackage version as a build number.  Can be used in interactive prompts as well as in [automated pipelines](sqlpackage-pipelines.md).
 
 ```
 sqlpackage.exe /Version
@@ -235,7 +240,7 @@ A SqlPackage.exe publish operation incrementally updates the schema of a target 
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Specifies whether differences in the amount of time that SQL Server retains the route in the routing table should be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Specifies whether differences in the semi-colons between T-SQL statements will be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Specifies whether differences in the table options will be ignored or updated when you publish to a database.|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Specifies whether differences in the table partition options will be ignored or updated when you publish to a database.  This option applies only to Azure Synapse Analytics SQL pool (data warehouse) databases.|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Specifies whether differences in the table partition options will be ignored or updated when you publish to a database.  This option applies only to Azure Synapse Analytics dedicated SQL pool databases.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Specifies whether differences in the user settings objects will be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Specifies whether differences in white space will be ignored or updated when you publish to a database.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Specifies whether differences in the value of the WITH NOCHECK clause for check constraints will be ignored or updated when you publish.|

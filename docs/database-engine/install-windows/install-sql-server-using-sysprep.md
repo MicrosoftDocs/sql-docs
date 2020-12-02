@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install SQL Server with SysPrep

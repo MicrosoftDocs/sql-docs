@@ -1,5 +1,5 @@
 ---
-title: COPY INTO (Transact-SQL) (preview) 
+title: COPY INTO (Transact-SQL)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Use the COPY statement in Azure Synapse Analytics for loading from external storage accounts.
 ms.date: 09/25/2020
@@ -39,7 +39,7 @@ Visit the following documentation for comprehensive examples and quickstarts usi
 
 - [Quickstart: Bulk load data using the COPY statement](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
 - [Quickstart: Examples using the COPY statement and its supported authentication methods](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [Quickstart: Creating the COPY statement using the rich Synapse Studio UI (Workspace preview)](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [Quickstart: Creating the COPY statement using the rich Synapse Studio UI](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## Syntax  
 
@@ -256,7 +256,7 @@ DATEFORMAT only applies to CSV and specifies the date format of the date mapping
 *ENCODING* only applies to CSV. Default is UTF8. Specifies the data encoding standard for the files loaded by the COPY command. 
 
 *IDENTITY_INSERT = ‘ON’ | ‘OFF’*</br>
-IDENTITY_INSERT specifies whether the identity value or values in the imported data file are to be used for the identity column. If IDENTITY_INSERT is OFF (default), the identity values for this column are verified, but not imported. SQL DW will automatically assign unique values based on the seed and increment values specified during table creation. Note the following behavior with the COPY command:
+IDENTITY_INSERT specifies whether the identity value or values in the imported data file are to be used for the identity column. If IDENTITY_INSERT is OFF (default), the identity values for this column are verified, but not imported. Azure Synapse Analytics will automatically assign unique values based on the seed and increment values specified during table creation. Note the following behavior with the COPY command:
 
 - If IDENTITY_INSERT is OFF, and table has an identity column
   - A column list must be specified which does not map an input field to the identity column.
@@ -427,7 +427,7 @@ There is no need to split Parquet and ORC files because the COPY command will au
 ### Are there any limitations on the number or size of files?
 There are no limitations on the number or size of files; however, for best performance, we recommend files that are at least 4MB.
 
-### Are there any limitations with COPY using Synapse workspaces (preview)?
+### Are there any limitations with COPY using Synapse workspaces?
 
 Authenticating using Managed Identity (MSI) is not supported with the COPY statement or PolyBase (including when used in pipelines). You may run into a similiar error message:
 
@@ -435,7 +435,7 @@ Authenticating using Managed Identity (MSI) is not supported with the COPY state
 
 MSI authentication is required when the storage account is associated with a VNet. You must use BCP/Bulk insert to load data instead of COPY or PolyBase if your storage account is attached to a VNet.
 
-This limitation is only applicable to SQL pools belonging to a Synapse workspace (preview). We will enable MSI support in Synapse workspaces in an upcoming release. 
+This limitation is only applicable to SQL pools belonging to a Synapse workspace. We will enable MSI support in Synapse workspaces in an upcoming release. 
 
 Please send any feedback or issues to the following distribution list: sqldwcopypreview@service.microsoft.com
 

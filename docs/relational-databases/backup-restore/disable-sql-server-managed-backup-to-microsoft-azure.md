@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Disable SQL Server Managed Backup to Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

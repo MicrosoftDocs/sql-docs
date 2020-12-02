@@ -22,7 +22,7 @@ The custom Python runtime allows you to use your own version of the Python runti
 > [!NOTE]
 > This article describes how to install a custom runtime for Python on Windows. To install on Linux, see [Install a Python custom runtime for SQL Server on Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
 
-## Pre-install checklist
+## Pre-install checklist for Windows
 
 Before installing a custom Python runtime, install the following:
 
@@ -135,7 +135,7 @@ Alternatively, right-click the SQL Server Launchpad service in the **Services** 
 
 Download the [zip file containing the Python language extension for Windows](https://github.com/microsoft/sql-server-language-extensions/releases). Recommended to use the release version in production. Use the debug version in development or test since it provides verbose logging information to investigate any errors.
 
-## Register external language
+## Register external language on Windows
 
 Register this Python language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) for each database you want to use it in. Use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) to connect to SQL Server and run the following T-SQL command. Modify the path in this statement to reflect the location of the downloaded language extension zip file (python-lang-extension.zip).
 
@@ -157,7 +157,7 @@ You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterp
 > [!NOTE]
 > This article describes how to install a custom runtime for Python on Linux. To install on Windows, see the [Install a Python custom runtime for SQL Server on Windows](custom-runtime-python.md?view=sql-server-ver15&preserve-view=true)
 
-## Pre-install checklist
+## Pre-install checklist on Linux
 
 Before installing a Python custom runtime, install the following:
 
@@ -281,7 +281,7 @@ sudo systemctl restart mssql-launchpadd
 
 Download the [zip file containing the Python language extension for Linux](https://github.com/microsoft/sql-server-language-extensions/releases). Recommended to use the release version in production. Use the debug version in development or test since it provides verbose logging information to investigate any errors.
 
-## Register external language
+## Register external language on Linux
 
 Register this Python language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) for each database you want to use it in. Use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) to connect to SQL Server and run the following T-SQL command. 
 Modify the path in this statement to reflect the location of the downloaded language extension zip file (python-lang-extension.zip).

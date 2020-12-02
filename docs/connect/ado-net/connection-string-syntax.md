@@ -63,7 +63,7 @@ Windows Authentication is preferred for connecting to SQL Server. However, if SQ
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
 
-When you connect to Azure SQL Database or to Azure SQL Data Warehouse and provide a login in the format `user@servername`, make sure that the `servername` value in the login matches the value provided for `Server=`.
+When you connect to Azure SQL Database or to Azure Synapse Analytics and provide a login in the format `user@servername`, make sure that the `servername` value in the login matches the value provided for `Server=`.
 
 > [!NOTE]
 > Windows authentication takes precedence over SQL Server logins. If you specify both Integrated Security=true as well as a user name and password, the user name and password will be ignored and Windows authentication will be used.

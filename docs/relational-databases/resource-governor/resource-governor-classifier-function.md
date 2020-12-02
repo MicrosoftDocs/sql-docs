@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "classifier function [SQL Server]"
   - "classifier function [SQL Server], overview"
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Resource Governor Classifier Function
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQLServer:Buffer Node"
   - "Buffer Node object"
 ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server:Buffer Node
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

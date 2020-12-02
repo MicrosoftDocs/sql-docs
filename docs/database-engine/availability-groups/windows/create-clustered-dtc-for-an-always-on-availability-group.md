@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Create Clustered DTC resource for an Always On availability group

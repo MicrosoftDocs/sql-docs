@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "renaming statistics"
   - "statistics [SQL Server], renaming"
 ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename Statistics

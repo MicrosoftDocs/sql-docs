@@ -29,13 +29,13 @@ ms.author: wiassaf
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodically to confirm that memory usage is within typical ranges. 
 
-## Configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Max Memory
+## Configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] max memory
 
 A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance may over time consume all the Windows operating system memory allowed by [the **max server memory** option](../../database-engine/configure-windows/server-memory-server-configuration-options.md). 
 
 In SQL Server on Linux, [set the memory limit](../../linux/sql-server-linux-performance-best-practices.md#advanced-configuration) with the mssql-conf tool and the [memory.memorylimitmb setting](../../linux/sql-server-linux-configure-mssql-conf.md#memorylimit).  
 
-## Monitor Operating System Memory   
+## Monitor operating system memory   
  To monitor for a low-memory condition, use the following Windows server counters. Many operating system memory counters can be queried via the dynamic management views [sys.dm_os_process_memory](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md) and [sys.dm_os_sys_memory](../system-dynamic-management-views/sys-dm-os-sys-memory-transact-sql.md).
 
 -   **Memory: Available Bytes**  
@@ -52,7 +52,7 @@ This counter indicates the rate of Page Faults for a given user process. Monitor
   
  For more information about resolving excessive paging, see the operating system documentation.  
   
-## Isolating Memory Used by SQL Server  
+## Isolating memory used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 
  To monitor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory usage, use the following [SQL Server object counters](use-sql-server-objects.md). Many SQL Server object counters can be queried via the dynamic management views [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) or [sys.dm_os_process_memory](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md).
 
@@ -79,10 +79,17 @@ This counter indicates the number of pages in the buffer pool with database cont
  This counter measures amount of time in seconds that pages stay in cache, on average across the buffer pool. Each NUMA node has its own buffer pool. A higher, growing value is best. A sudden dip indicates a significant churn of data in and out of the buffer pool, indicating the workload could not fully benefit from data already in memory. On servers with more than one NUMA node, view each buffer pool node's page life expectancy using **SQL Server: Buffer Node: Page life expectancy**. Query this counter using the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view.
 
   
-## Determining Current Memory Allocation  
- The following query returns information about currently allocated memory.  
+## Examples 
+
+### Determining current memory allocation  
+ The following queries return information about currently allocated memory.  
   
 ```  
+SELECT
+(total_physical_memory_kb/1024) AS Total_OS_Memory_MB,
+(available_physical_memory_kb/1024)  AS Available_OS_Memory_MB
+FROM sys.dm_os_sys_memory;
+
 SELECT  
 (physical_memory_in_use_kb/1024) AS Memory_used_by_Sqlserver_MB,  
 (locked_page_allocations_kb/1024) AS Locked_pages_used_by_Sqlserver_MB,  
@@ -92,19 +99,18 @@ process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
 
-## Determining Current SQL Server Memory Utilization   
-
+### Determining Current SQL Server Memory Utilization   
+ The following query returns information about current SQL Server memory utilization.  
 ```  
 SELECT
 sqlserver_start_time,
-(physical_memory_kb/1024) AS OS_Physical_Mem_MB,
 (committed_kb/1024) AS Total_Server_Memory_MB,
 (committed_target_kb/1024)  AS Target_Server_Memory_MB
 FROM sys.dm_os_sys_info;
 ```   
 
-## Determining the Page Life Expectancy using sys.dm_os_performance_counters    
-
+### Determining Page Life Expectancy
+ The following query uses **sys.dm_os_performance_counters** to observe the SQL Server instance's current **page life expectancy** value.
 ```
 SELECT
 case when object_name = 'SQLServer:Buffer Manager' and counter_name = 'Page life expectancy' then cntr_value end AS PLE_s
@@ -115,6 +121,7 @@ WHERE case when object_name = 'SQLServer:Buffer Manager' and counter_name = 'Pag
 ## See Also
 - [sys.dm_os_sys_memory (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-sys-memory-transact-sql.md)
 - [sys.dm_os_process_memory (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md)
+- [sys.dm_os_sys_info (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
 - [sys.dm_os_performance_counters (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)
 - [SQL Server, Memory Manager Object](sql-server-memory-manager-object.md)
 - [SQL Server, Buffer Manager Object](sql-server-buffer-manager-object.md)   

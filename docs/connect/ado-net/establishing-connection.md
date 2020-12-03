@@ -23,12 +23,12 @@ To connect to Microsoft SQL Server, use the <xref:Microsoft.Data.SqlClient.SqlCo
 
 ## Closing Connections
 
-We recommend that you always close the connection when you are finished using it, so that the connection can be returned to the pool. The `Using` block in Visual Basic or C# automatically disposes of the connection when the code exits the block, even in the case of an unhandled exception. See [using Statement](/dotnet/docs/csharp/language-reference/keywords/using-statement.md) and [Using Statement](/dotnet/docs/visual-basic/language-reference/statements/using-statement.md) for more information.
+We recommend that you always close the connection when you are finished using it, so that the connection can be returned to the pool. The `Using` block in Visual Basic or C# automatically disposes of the connection when the code exits the block, even in the case of an unhandled exception. See [using Statement](/dotnet/csharp/language-reference/keywords/using-statement) and [Using Statement](/dotnet/visual-basic/language-reference/statements/using-statement) for more information.
 
 You can also use the `Close` or `Dispose` methods of the connection object. Connections that are not explicitly closed might not be added or returned to the pool. For example, a connection that has gone out of scope but that has not been explicitly closed will only be returned to the connection pool if the maximum pool size has been reached and the connection is still valid.
 
 > [!NOTE]
-> Do not call `Close` or `Dispose` on a **Connection**, a **DataReader**, or any other managed object in the `Finalize` method of your class. In a finalizer, only release unmanaged resources that your class owns directly. If your class does not own any unmanaged resources, do not include a `Finalize` method in your class definition. For more information, see [Garbage Collection](/dotnet/docs/standard/garbage-collection/index.md).
+> Do not call `Close` or `Dispose` on a **Connection**, a **DataReader**, or any other managed object in the `Finalize` method of your class. In a finalizer, only release unmanaged resources that your class owns directly. If your class does not own any unmanaged resources, do not include a `Finalize` method in your class definition. For more information, see [Garbage Collection](/dotnet/standard/garbage-collection/index).
 
 > [!NOTE]
 > Login and logout events will not be raised on the server when a connection is fetched from or returned to the connection pool, because the connection is not actually closed when it is returned to the connection pool. For more information, see [SQL Server Connection Pooling (ADO.NET)](sql-server-connection-pooling.md).

@@ -29,6 +29,8 @@ Possible values are:
         * Supported since driver version **v6.0**, `authentication=ActiveDirectoryIntegrated` can be used to connect to an Azure SQL Database/Data Warehouse using integrated authentication. To use this authentication mode, you need to federate the on-premise Active Directory Federation Services (ADFS) with Azure Active Directory in the cloud. Once it is set up, you can connect by either adding the native library 'mssql-jdbc_auth-\<version>-\<arch>.dll' to the application class path on Windows OS, or setting up a Kerberos ticket for cross-platform authentication support. You will be able to access Azure SQL Database/Azure Synapse Analytics without being prompted for credentials when you're logged in to a domain joined machine.
     * **ActiveDirectoryPassword**
         * Supported since driver version **v6.0**, `authentication=ActiveDirectoryPassword` can be used to connect to an Azure SQL Database/Data Warehouse using an Azure AD user name and password.
+    * **ActiveDirectoryInteractive**
+        * Supported starting driver version **v9.1**, `authentication=ActiveDirectoryInteractive` can be used to connect to an Azure SQL Database/Data Warehouse using an interactive mode that supports Multi-Factor Authentication.
     * **SqlPassword**
         * Use `authentication=SqlPassword` to connect to a SQL Server using userName/user and password properties.
     * **NotSpecified**
@@ -255,6 +257,75 @@ public class AADUserPassword {
 }
 ```
 If connection is established, you should see the following message as output:
+```
+You have successfully logged on as: <your user name>
+```
+
+> [!NOTE]  
+> A contained user database must exist and a contained database user representing the specified Azure AD user or one of the groups, the specified Azure AD user belongs to, must exist in the database, and must have the CONNECT permission (except for Azure Active Directory server admin or group)
+
+## Connecting using ActiveDirectoryInteractive authentication mode 
+The following example shows how to use `authentication=ActiveDirectoryInteractive` mode.
+
+Before building and running the example:
+1.	On the client machine (on which, you want to run the example), download the [azure-activedirectory-library-for-java library](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies, and include them in the Java build path
+2.	Locate the following lines of code and replace the server/database name with your server/database name.
+	```java
+	ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
+	ds.setDatabaseName("demo"); // replace with your database name
+	```
+3.	Locate the following lines of code and replace user name, with the name of the Azure AD user you want to connect as.
+	```java
+	ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
+	```
+
+The example to use ActiveDirectoryInteractive authentication mode:
+```java
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class AADUserPassword {
+    
+    public static void main(String[] args) throws Exception{
+        
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setDatabaseName("demo"); // Replace with your database
+        ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
+        ds.setAuthentication("ActiveDirectoryInteractive");
+        
+        try (Connection connection = ds.getConnection(); 
+                Statement stmt = connection.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
+}
+```
+The user who runs the program sees the following dialog boxes:
+
+A dialog box that displays an Azure AD user name and asks for the user's password.
+
+- If the user's domain is federated with Azure AD, this dialog box doesn't appear, because no password is needed.
+
+- If the Azure AD policy imposes Multi-Factor Authentication on the user, the next two dialog boxes are displayed.
+
+- The first time a user goes through Multi-Factor Authentication, the system displays a dialog box that asks for a mobile phone number to send text messages to. Each message provides the verification code that the user must enter in the next dialog box.
+
+- A dialog box that asks for a Multi-Factor Authentication verification code, which the system has sent to a mobile phone.
+
+For information about how to configure Azure AD to require Multi-Factor Authentication, see [Getting started with Azure AD Multi-Factor Authentication in the cloud](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-getstarted).
+
+If authentication is completed successfully, you should see the following message in the browser:
+```
+Authentication complete. You can close the browser and return to the application.
+```
+Note this only indicates user authentication was successful but not necessary successful connection to the server. Upon returning to the applicatoin, if connection is established, you should see the following message as output:
 ```
 You have successfully logged on as: <your user name>
 ```

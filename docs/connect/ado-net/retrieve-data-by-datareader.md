@@ -1,5 +1,5 @@
 ---
-title: "Retrieving data by a DataReader"
+title: "Retrieve data by a DataReader"
 description: Learn how to retrieve data using a DataReader in ADO.NET with this sample code. DataReader provides an unbuffered stream of data.
 ms.date: "11/30/2020"
 dev_langs: 
@@ -13,7 +13,7 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
 ---
-# Retrieving data by a DataReader
+# Retrieve data by a DataReader
 
 [!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -49,13 +49,13 @@ Always call the **Close** method when you have finished using the **DataReader**
 > [!NOTE]
 > Do not call **Close** or **Dispose** on a **Connection**, a **DataReader**, or any other managed object in the **Finalize** method of your class. In a finalizer, only release unmanaged resources that your class owns directly. If your class does not own any unmanaged resources, do not include a **Finalize** method in your class definition. For more information, see [Garbage Collection](/dotnet/standard/garbage-collection/index.md).
  
-## Retrieving multiple result-sets using NextResult
+## Retrieve multiple result-sets using NextResult
 
 If the **DataReader** returns multiple result sets, call the **NextResult** method to iterate through the result sets sequentially. The following example shows the <xref:Microsoft.Data.SqlClient.SqlDataReader> processing the results of two SELECT statements using the <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteReader%2A> method.  
 
 [!code-csharp[DataWorks SqlClient.NextResult#1](~/../sqlclient/doc/samples/SqlDataReader_NextResult.cs#1)]
 
-## Getting schema information from the DataReader  
+## Get schema information from the DataReader  
 
 While a **DataReader** is open, you can retrieve schema information about the current result set using the **GetSchemaTable** method. **GetSchemaTable** returns a <xref:System.Data.DataTable> object populated with rows and columns that contain the schema information for the current result set. The **DataTable** contains one row for each column of the result set. Each column of the schema table maps to a property of the columns returned in the rows of the result set, where the **ColumnName** is the name of the property and the value of the column is the value of the property. The following example writes out the schema information for **DataReader**.  
 
@@ -65,3 +65,4 @@ While a **DataReader** is open, you can retrieve schema information about the cu
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Commands and parameters](commands-parameters.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

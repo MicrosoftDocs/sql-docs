@@ -25,34 +25,35 @@ A <xref:System.Data.Common.DataAdapter> is used to retrieve data from a data sou
 
 ## In this section
 
-[Retrieving data by a DataReader](retrieve-data-by-datareader.md)
+[Retrieve data by a DataReader](retrieve-data-by-datareader.md)  
 Describes the ADO.NET **DataReader** object and how to use it to return a stream of results from a data source.
 
-[Populating a DataSet from a DataAdapter](populate-dataset-from-dataadapter.md)
+[Populate a DataSet from a DataAdapter](populate-dataset-from-dataadapter.md)  
 Describes how to fill a `DataSet` with tables, columns, and rows by using a `DataAdapter`.
 
-[DataAdapter parameters](dataadapter-parameters.md)
+[DataAdapter parameters](dataadapter-parameters.md)  
 Describes how to use parameters with the command properties of a `DataAdapter` including how to map the contents of a column in a `DataSet` to a command parameter.
 
-[Adding existing constraints to a DataSet](add-existing-constraints-to-dataset.md)
+[Add existing constraints to a DataSet](add-existing-constraints-to-dataset.md)  
 Describes how to add existing constraints to a `DataSet`.
 
-[DataAdapter DataTable and DataColumn mappings](dataadapter-datatable-datacolumn-mappings.md)
+[DataAdapter, DataTable, and DataColumn mappings](dataadapter-datatable-datacolumn-mappings.md)  
 Describes how to set up `DataTableMappings` and `ColumnMappings` for a `DataAdapter`.
 
-[Paging through a query result](paging-through-query-result.md)
+[Paging through a query result](paging-through-query-result.md)  
 Provides an example of viewing the results of a query as pages of data.
 
-[Updating data sources with DataAdapters](update-data-sources-with-dataadapters.md)
+[Update data sources with DataAdapters](update-data-sources-with-dataadapters.md)  
 Describes how to use a `DataAdapter` to resolve changes in a `DataSet` back to the database.
 
-[Handling DataAdapter events](handle-dataadapter-events.md)
+[Handle DataAdapter events](handle-dataadapter-events.md)  
 Describes `DataAdapter` events and how to use them.
 
-[Batch operations using DataAdapters](batch-operations-using-dataadapters.md)
+[Batch operations using DataAdapters](batch-operations-using-dataadapters.md)  
 Describes enhancing application performance by reducing the number of round trips to SQL Server when applying updates from the `DataSet`.
 
 ## See also
 
 - [Connecting to a data source](connecting-to-data-source.md)
 - [Commands and parameters](commands-parameters.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

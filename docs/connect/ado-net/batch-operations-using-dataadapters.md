@@ -28,7 +28,7 @@ At the Microsoft SqlClient Data Provider for SQL Server, the <xref:Microsoft.Dat
 > [!NOTE]
 > Executing an extremely large batch could decrease performance. Therefore, you should test for the optimum batch size setting before implementing your application.
 
-## Using the UpdateBatchSize property
+## Use the UpdateBatchSize property
 
 When batch updates are enabled, the <xref:System.Data.IDbCommand.UpdatedRowSource%2A> property value of the DataAdapter's `UpdateCommand`, `InsertCommand`, and `DeleteCommand` should be set to <xref:System.Data.UpdateRowSource.None> or <xref:System.Data.UpdateRowSource.OutputParameters>. When performing a batch update, the command's <xref:System.Data.IDbCommand.UpdatedRowSource%2A> property value of <xref:System.Data.UpdateRowSource.FirstReturnedRecord> or <xref:System.Data.UpdateRowSource.Both> is invalid.
   
@@ -36,29 +36,30 @@ The following procedure demonstrates the use of the `UpdateBatchSize` property. 
 
 [!code-csharp[SqlDataAdapter_Batch#1](~/../sqlclient/doc/samples/SqlDataAdapter_Batch.cs#1)]
 
-## Handling batch update-related events and errors
+## Handle batch update-related events and errors
 
-The **DataAdapter** has two update-related events: **RowUpdating** and **RowUpdated**. For more information see, [Handling DataAdapter events](handle-dataadapter-events.md).
+The **DataAdapter** has two update-related events: **RowUpdating** and **RowUpdated**. For more information, see [Handle DataAdapter events](handle-dataadapter-events.md).
 
 ### Event behavior changes with batch updates
 
 When batch processing is enabled, multiple rows are updated in a single database operation. Therefore, only one `RowUpdated` event occurs for each batch, whereas the `RowUpdating` event occurs for each row processed. When batch processing is disabled, the two events are fired with one-to-one interleaving, where one `RowUpdating` event and one `RowUpdated` event fire for a row, and then one `RowUpdating` and one `RowUpdated` event fire for the next row, until all of the rows are processed.
 
-### Accessing updated rows
+### Access updated rows
 
 When batch processing is disabled, the row being updated can be accessed using the <xref:System.Data.Common.RowUpdatedEventArgs.Row%2A> property of the <xref:System.Data.Common.RowUpdatedEventArgs> class.
 
 When batch processing is enabled, a single `RowUpdated` event is generated for multiple rows. Therefore, the value of the `Row` property for each row is null. `RowUpdating` events are still generated for each row. The <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> method of the <xref:System.Data.Common.RowUpdatedEventArgs> class allows you to access the processed rows by copying references to the rows into an array. If no rows are being processed, `CopyToRows` throws an <xref:System.ArgumentNullException>. Use the <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> property to return the number of rows processed before calling the <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> method.
 
-### Handling data errors
+### Handle data errors
 
 Batch execution has the same effect as the execution of each individual statement. Statements are executed in the order that the statements were added to the batch. Errors are handled the same way in batch mode as they are when batch mode is disabled. Each row is processed separately. Only rows that have been successfully processed in the database will be updated in the corresponding <xref:System.Data.DataRow> within the <xref:System.Data.DataTable>.
 
-[!NOTE]
+> [!NOTE]
 > The Microsoft SqlClient Data Provider SQL Server and the back-end database server determine which SQL constructs are supported for batch execution. An exception may be thrown if a non-supported statement is submitted for execution.
 
 ## See also
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
-- [Updating data sources with DataAdapters](update-data-sources-with-dataadapters.md)
-- [Handling DataAdapter events](handle-dataadapter-events.md)
+- [Update data sources with DataAdapters](update-data-sources-with-dataadapters.md)
+- [Handle DataAdapter events](handle-dataadapter-events.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

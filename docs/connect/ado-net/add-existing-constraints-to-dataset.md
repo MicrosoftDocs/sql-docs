@@ -1,5 +1,5 @@
 ---
-title: "Adding existing constraints to a Dataset"
+title: "Add existing constraints to a DataSet"
 description: Describes how to add existing constraints to a DataSet.
 ms.date: "11/30/2020"
 dev_langs: 
@@ -13,7 +13,7 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
 ---
-# Adding existing constraints to a Dataset
+# Add existing constraints to a DataSet
 
 [!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -50,3 +50,4 @@ If the **DataAdapter** meets multiple result sets returned from the <xref:Micros
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

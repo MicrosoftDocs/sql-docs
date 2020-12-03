@@ -1,5 +1,5 @@
 ---
-title: "DataAdapter DataTable and DataColumn mappings"
+title: "DataAdapter, DataTable, and DataColumn mappings"
 description: Describes how to set up DataTableMappings and ColumnMappings for a DataAdapter.
 ms.date: "11/30/2020"
 dev_langs: 
@@ -13,7 +13,7 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
 ---
-# DataAdapter DataTable and DataColumn mappings
+# DataAdapter, DataTable, and DataColumn mappings
 
 [!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -51,7 +51,7 @@ The following examples create a **DataTableMapping** with a name of **Customers*
 > [!NOTE]
 > We recommend that you avoid the naming convention of **SourceColumn** *N* for a column mapping, or **SourceTable** *N* for a table mapping, because the name you supply may conflict with an existing default column mapping name in the **ColumnMappingCollection** or table mapping name in the **DataTableMappingCollection**. If the supplied name already exists, an exception will be thrown.
 
-## Handling multiple result sets
+## Handle multiple result sets
 
 If your **SelectCommand** returns multiple tables, **Fill** automatically generates table names with incremental values for the tables in the **DataSet**, starting with the specified table name and continuing on in the form **TableName** *N*, starting with **TableName1**. You can use table mappings to map the automatically generated table name to a name you want specified for the table in the **DataSet**. For example, for a **SelectCommand** that returns two tables, **Customers** and **Orders**, issue the following call to **Fill**.
 
@@ -67,3 +67,4 @@ Two tables are created in the **DataSet**: **Customers** and **Customers1**. You
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

@@ -1,5 +1,5 @@
 ---
-title: "Handling DataAdapter events"
+title: "Handle DataAdapter events"
 description: Describes DataAdapter events and how to use them.
 ms.date: "11/30/2020"
 dev_langs: 
@@ -13,7 +13,7 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
 ---
-# Handling DataAdapter events
+# Handle DataAdapter events
 
 [!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -73,3 +73,4 @@ The following code example adds an event handler for the `FillError` event of th
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Events](/dotnet/standard/events/index.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

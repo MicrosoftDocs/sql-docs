@@ -34,7 +34,7 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 The following table details all intelligent query processing features, along with any requirement they have for database compatibility level.
 
-| **IQP Feature** | **Supported in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] ** | **Supported in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** |**Description** |
+| **IQP Feature** | **Supported in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]** | **Supported in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** |**Description** |
 | ---------------- | ------- | ------- | ---------------- |
 | [Adaptive Joins (Batch Mode)](#batch-mode-adaptive-joins) | Yes, under compatibility level 140| Yes, starting in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] under compatibility level 140|Adaptive joins dynamically select a join type during runtime based on actual input rows.|
 | [Approximate Count Distinct](#approximate-query-processing) | Yes| Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|Provide approximate COUNT DISTINCT for big data scenarios with the benefit of high performance and a low memory footprint. |

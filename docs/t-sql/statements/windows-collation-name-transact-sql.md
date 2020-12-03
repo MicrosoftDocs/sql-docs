@@ -32,10 +32,10 @@ Specifies the Windows collation name in the COLLATE clause in [!INCLUDE[ssNoVers
 
 ```syntaxsql
 <Windows_collation_name> :: =
-CollationDesignator_<ComparisonStyle>
+<CollationDesignator>_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ] 
+{ <CaseSensitivity>_<AccentSensitivity> [ _<KanatypeSensitive> ] [ _<WidthSensitive> ] [ _<VariationSelectorSensitive> ] 
 }
 | { _UTF8 }
 | { _BIN | _BIN2 }

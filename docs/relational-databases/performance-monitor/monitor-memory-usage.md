@@ -33,7 +33,7 @@ ms.author: wiassaf
 
 A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance may over time consume all the Windows operating system memory allowed by [the **max server memory** option](../../database-engine/configure-windows/server-memory-server-configuration-options.md). 
 
-In SQL Server on Linux, [set the memory limit](../../linux/sql-server-linux-performance-best-practices#advanced-configuration.md) with the mssql-conf tool and the [memory.memorylimitmb setting](../../linux/sql-server-linux-configure-mssql-conf#memorylimit.md).  
+In SQL Server on Linux, [set the memory limit](../../linux/sql-server-linux-performance-best-practices.md#advanced-configuration) with the mssql-conf tool and the [memory.memorylimitmb setting](../../linux/sql-server-linux-configure-mssql-conf.md#memorylimit).  
 
 ## Monitor Operating System Memory   
  To monitor for a low-memory condition, use the following Windows server counters. Many operating system memory counters can be queried via the dynamic management views [sys.dm_os_process_memory](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md) and [sys.dm_os_sys_memory](../system-dynamic-management-views/sys-dm-os-sys-memory-transact-sql.md).

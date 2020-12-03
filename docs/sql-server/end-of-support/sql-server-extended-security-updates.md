@@ -2,12 +2,12 @@
 title: "What are Extended Security Updates?"
 description: Learn how to use the SQL Server registry to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, and SQL Server 2008 R2. 
 ms.custom: ""
-ms.date: "12/09/2019"
+ms.date: "11/24/2020"
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
@@ -79,12 +79,12 @@ To create the SQL Server registry, follow these steps:
 1. Type `SQL Server registry` in the search box.  
 1. Choose the **SQL Server registry** option published by [!INCLUDE[msCoName](../../includes/msconame-md.md)], and then select **Create**. 
 
-   ![Choose the SQL Server registry service](media/sql-server-extended-security-updates/sql-server-registry-service.png)
+   ![Screenshot of the Auzre portal that shows how to create a SQL Server registry.](media/sql-server-extended-security-updates/sql-server-registry-service.png)
 
 1. Under **Project Details**, choose your subscription from the drop-down. Then either choose an existing **Resource group** or select **Create new** to create a new resource group for your new SQL Server registry service. 
 1. Under **Service Details**, provide a name and region for your new **SQL Server registry** resource: 
 
-   ![Choose the SQL Server registry service](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
+   ![Screenshot of the SQL Server registry showing the Basics tab.](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
 
 1. Select **Review + create** to review the details for your **SQL Server registry**. Select **Create** once validation has passed. 
 
@@ -202,6 +202,39 @@ To download ESUs, follow these steps:
 
 1. Download security updates from here, if and when they are made available. 
 
+## Supported regions and data residency
+
+The **SQL Server registry** service (Preview) is available in a subset of the Azure regions. The following table shows the supported regions and the data residency type in each.
+
+| **Region** | **Data residency** |
+|:--|:--|
+|Australia East|Geo|
+|Australia Southeast|Geo|
+|Canada Central|Geo|
+|France Central|Geo|
+|Japan East|Geo|
+|Japan West|Geo|
+|Korea Central|Geo|
+|Korea South|Geo|
+|North Central US|Geo|
+|North Europe|Geo|
+|South Central US|Geo|
+|Southeast Asia|Single region|
+|South India|Geo|
+|South Africa North|Geo|
+|UK South|Geo|
+|UK West|Geo|
+|West US|Geo|
+|East US|Geo|
+|Central US|Geo|
+|East Asia|Geo|
+|West Europe|Geo|
+|West Central US|Geo|
+|West US 2|Geo|
+|East US 2|Geo|
+
+In the regions with geopgraphic residency, the SQL registry service maintains data backups in a geo-redundant storage account (GRS).  In the regions with the single region residency, the SQL registry service maintains data backups in a zone-redundant storage account (ZRS). For more information, see the [Trust Center](https://azuredatacentermap.azurewebsites.net/).
+
 ## Configure regional redundancy 
 
 Customers that require regional redundancy for their **SQL Server registry** can create registration data in two distinct regions. Customers can then download security updates from either region based on **SQL Server registry** service availability. 
@@ -318,7 +351,7 @@ For advice on how to optimize performance for [!INCLUDE[ssNoVersion](../../inclu
 - [SQL Server 2008 / 2008 R2 end of support page](https://aka.ms/sqleos)
 - [Extended Security Updates frequently asked questions (FAQ)](https://aka.ms/sqleosfaq)
 - [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
-- [Manage Windows updates by using Azure Automation](/azure/automation/automation-tutorial-update-management)
+- [Manage Windows updates by using Azure Automation](/azure/automation/update-management/overview)
 - [SQL Server VM automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
 - [Microsoft Data Migration Guide](https://datamigration.microsoft.com/)
 - [Azure migrate: lift-and-shift options to move your current SQL Server 2008 / 2008 R2 into an Azure VM](https://azure.microsoft.com/services/azure-migrate/)

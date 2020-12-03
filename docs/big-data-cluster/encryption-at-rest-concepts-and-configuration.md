@@ -129,7 +129,7 @@ Requirements:
 
 - [Active Directory](active-directory-prerequisites.md) integrated cluster.
 
-- Azure Data CLI (`azdata`) configured and logged into the cluster in AD mode.
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] configured and logged into the cluster in AD mode.
 
 Follow the following procedure to reconfigure the cluster with encryption zones support.
 

@@ -30,7 +30,7 @@ When configuring the folder(s) to be shared on the NFS server, make sure they fo
 
 Ensure that your security standards are enforced for accessing. When configuring the folder, make sure that only the servers participating in the FCI should see the NFS folder. An example of a modified /etc/exports on a Linux-based NFS solution is shown below where the folder is restricted to FCIN1 and FCIN2.
 
-![05-nfsacl][1]
+![Screenshot of an example of a modified /etc/exports on a Linux-based NFS solution is shown below where the folder is restricted to FCIN1 and FCIN2.][1]
 
 ## Instructions
 
@@ -126,7 +126,7 @@ Ensure that your security standards are enforced for accessing. When configuring
     mount
     ```
 
-    ![10-mountnoswitches][2]
+    ![Screenshot of the mount command and the response to the command showing no switches.][2]
 
    * Switch to the mssql user. You will not receive any acknowledgement if successful.
 
@@ -222,7 +222,7 @@ Ensure that your security standards are enforced for accessing. When configuring
 
    * To test, create a database in that folder. The following example uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
 
-    ![15-createtestdatabase][4]
+    ![Screenshot of the sqlcmd command and the response to the command.][4]
  
    * Unmount the share 
 

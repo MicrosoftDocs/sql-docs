@@ -41,7 +41,7 @@ For more information on iSCSI initiator for the supported distributions, consult
     ```bash
     sudo iscsiadm -m iface -I iSCSINIC -o new
     ```
-    ![7-setiscsinetwork][6]
+    ![Screenshot of the iface command and the response to the command.][6]
  
 2.	Edit `/var/lib/iscsi/ifaces/iSCSIIfaceName`. Make sure it has the following values completely filled out:
 
@@ -52,7 +52,7 @@ For more information on iSCSI initiator for the supported distributions, consult
 
     See the following example:
 
-    ![iSCSITargetSettings][2]
+    ![Screenshot of the file with the files completely filled out.][2]
 
 3.	Find the iSCSI target.
 
@@ -62,7 +62,7 @@ For more information on iSCSI initiator for the supported distributions, consult
 
      \<iSCSINetName> is the unique/friendly name for the network, \<TargetIPAddress> is the IP address of the iSCSI target, and \<TargetPort> is the port of the iSCSI target. 
 
-    ![iSCSITargetResults][3]
+    ![Screenshot of the discovery command and the response to the command.][3]
 
  
 4.	Log into the target
@@ -89,7 +89,7 @@ For more information on iSCSI initiator for the supported distributions, consult
     ```bash
     sudo grep "Attached SCSI" /var/log/messages
     ```
-    ![30-iSCSIattachedDisks][7]
+    ![Screenshot of the grep command and the response to the command showing the attached SCSI disks.][7]
 
 7.	Create a physical volume on the iSCSI disk.
 
@@ -191,7 +191,7 @@ For more information on iSCSI initiator for the supported distributions, consult
         ls /var/opt/mssql/data
         ```
     
-        ![45-CopyMove][8]
+        ![Screenshot of the ls command and the response to the command.][8]
 
    * Type `exit` to switch back to the root user.
 
@@ -315,7 +315,7 @@ For more information on iSCSI initiator for the supported distributions, consult
 
    *	To test, create a database in that folder. The example shown below uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
   
-        ![50-ExampleCreateSSMS][9]
+        ![Screenshot of the sqlcmd command and the response to the command.][9]
 
    *	Unmount the share 
 
@@ -349,7 +349,7 @@ For more information on iSCSI initiator for the supported distributions, consult
 
     \<ListOfVGsNotUsedByPacemaker> is the list of volume groups from the output of Step 20 that will not be used by the FCI. Put each one in quotes and separate by a comma. An example is shown below.
 
-    ![55-ListOfVGs][11]
+    ![Screenshot showing an example of a volume_list value.][11]
 
 17.	When Linux starts, it will mount the file system. To ensure that only Pacemaker can mount the iSCSI disk, rebuild the root filesystem image. 
 

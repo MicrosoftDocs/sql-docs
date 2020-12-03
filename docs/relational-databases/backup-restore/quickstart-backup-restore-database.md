@@ -2,8 +2,8 @@
 title: "Quickstart: Back up & restore database"
 titleSuffix: SQL Server
 description: In this article, learn how to create a new database, take a backup of the database, and restore the backup in SQL Server.
-author: MashaMSFT 
-ms.author: mathoma 
+author: cawrites 
+ms.author: chadam 
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.topic: conceptual

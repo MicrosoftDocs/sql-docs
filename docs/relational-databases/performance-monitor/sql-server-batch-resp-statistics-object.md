@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Batch Resp Statistics"
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Batch Resp Statistics Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +45,9 @@ Each counter in the object contains the following instances:
   
 |Item|Description|  
 |----------|-----------------|  
-|**CPU Time:Requests**|The time the CPU spent on the request.|  
+|**CPU Time:Requests**|The number of requests based on CPU time.|  
 |**CPU Time:Total(ms)**|The total time the CPU spent on the batch.|  
-|**Elapsed Time:Requests**|The elapsed time of the request.|  
+|**Elapsed Time:Requests**|The number of requests based on elapsed time.|  
 |**Elapsed Time:Total(ms)**|The elapsed time of the batch.|  
 
 ## See Also

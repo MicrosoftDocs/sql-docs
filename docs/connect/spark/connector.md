@@ -39,7 +39,7 @@ You can import the connector into your project through the Maven coordinates: `c
 | Azure SQL Databases                  | Supported                       |
 
 > [!NOTE]
-> Azure Synapse Analytics (Azure SQL DW) use is not tested with this connector. While it may work, there may be unintended consequences.
+> Azure Synapse Analytics use is not tested with this connector. While it may work, there may be unintended consequences.
 
 ### Supported Options
 The Apache Spark Connector for SQL Server and Azure SQL supports the options defined here: [SQL DataSource JDBC](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)

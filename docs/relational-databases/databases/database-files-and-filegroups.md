@@ -206,6 +206,7 @@ Recommendations when working with files and filegroups:
 - Put different tables used in the same join queries in different filegroups. This step will improve performance, because of parallel disk I/O searching for joined data.
 - Put heavily accessed tables and the nonclustered indexes that belong to those tables on different filegroups. Using different filegroups will improve performance, because of parallel I/O if the files are located on different physical disks.
 - Don't put the transaction log file(s) on the same physical disk that has the other files and filegroups.
+- If you need to extend a volume or partition on which database files reside using tools like [Diskpart](/windows-server/administration/windows-commands/diskpart), you should back up all system and user databases and stop [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services first. Also, once disk volumes are extended successfully, you should consider running [`DBCC CHECKDB`](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) command to ensure the physical integrity of all databases residing on the volume.
 
 For more information on transaction log file management recommendations, see [Manage the size of the transaction log file](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
 

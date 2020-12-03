@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Quickstart: SQL backup and restore to Azure Blob storage service
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ GO
 USE [SQLTestDB]
 GO
 CREATE TABLE SQLTest (
-	ID INT NOT NULL PRIMARY KEY,
-	c1 VARCHAR(100) NOT NULL,
-	dt1 DATETIME NOT NULL DEFAULT getdate()
+    ID INT NOT NULL PRIMARY KEY,
+    c1 VARCHAR(100) NOT NULL,
+    dt1 DATETIME NOT NULL DEFAULT getdate()
 )
 GO
 
@@ -100,7 +100,7 @@ Use the GUI in SQL Server Management Studio to create the credential by followin
 
 1. Select **New container** on the **Select Backup Destination** dialog box to launch the **Connect to a Microsoft Subscription** window. 
 
-   ![Backup destination](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
+   ![Screenshot of the Select Backup Destination dialog window with the New container option called out.](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
 
 1. Sign in to the Azure portal by selecting **Sign In...** and then proceed through the sign-in process. 
 1. Select your **subscription** from the drop-drown. 
@@ -201,7 +201,7 @@ In this step, restore the database using either the GUI in SQL Server Management
 
 1. Select the container from the drop-down and then paste in the Shared Access Signature (SAS) you saved when creating the credential. 
 
-   ![Backup destination](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
+   ![Screenshot of the Select a Backup File Location dialog box with the Shared Access Signature field populated.](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
 
 1. Select **OK** to select the backup file location. 
 1. Expand **Containers** and select the container where your backup file exists. 

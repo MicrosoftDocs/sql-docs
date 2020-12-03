@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "log backups [SQL Server]"
   - "transaction log backups [SQL Server], sequencing"
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Transaction Log Backups (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

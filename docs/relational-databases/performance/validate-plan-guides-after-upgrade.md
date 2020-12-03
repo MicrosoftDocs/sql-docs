@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "plan guides [SQL Server], validating after upgrade"
 ms.assetid: a55ebd88-6f58-454d-b1c4-991b88add522
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Validate Plan Guides After Upgrade
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

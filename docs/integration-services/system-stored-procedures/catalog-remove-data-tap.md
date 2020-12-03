@@ -32,7 +32,10 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  The unique identifier for the data tap that is created by using the catalog.add_data_tap stored procedure. The *data_tap_id* is **bigint**.  
   
 ## Remarks  
- When a package contains more than one data flow tasks that have the same name, the data tap is added to the first data flow task with the given name.  
+
+- When a package contains more than one data flow tasks that have the same name, the data tap is added to the first data flow task with the given name.  
+  
+- To remove data taps, the instance of the execution must be in the created state (a value of 1 in the **status** column of the [catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)view) .  
   
 ## Return Codes  
  0 (success)  
@@ -41,9 +44,6 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
   
 ## Result Set  
  None  
-  
-## Remarks  
- To remove data taps, the instance of the execution must be in the created state (a value of 1 in the **status** column of the [catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)view) .  
   
 ## Permissions  
  This stored procedure requires one of the following permissions:  

@@ -21,12 +21,12 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 
   This diagram shows the SMO object hierarchy and the relationships between the object types. The <xref:Microsoft.SqlServer.Management.Smo.Server> object is the top level object.  
   
- ![Diagram that shows the hierarchical relationships](../../relational-databases/server-management-objects-smo/media/object-diagram.gif "Diagram that shows the hierarchical relationships")  
+ ![Diagram showing the first page of the hierarchical Object relationships.](../../relational-databases/server-management-objects-smo/media/object-diagram.gif "Diagram that shows the hierarchical relationships")  
   
- ![Object model, tree view showing the hierarchy](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "Object model, tree view showing the hierarchy")  
+ ![Diagram showing the second page of the hierarchical Object relationships.](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "Object model, tree view showing the hierarchy")  
   
- ![Object model, tree view showing the hierarchy](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "Object model, tree view showing the hierarchy")  
+ ![Diagram showing the third page of the hierarchical Object relationships.](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "Object model, tree view showing the hierarchy")  
   
- ![Object model, tree view showing the hierarchy](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "Object model, tree view showing the hierarchy")  
+ ![Diagram showing the fourth page of the hierarchical Object relationships.](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "Object model, tree view showing the hierarchy")  
   
   

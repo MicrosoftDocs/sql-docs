@@ -39,7 +39,7 @@ First, configure SQL Server PolyBase to use Azure blob storage.
    GO
    ```  
 
-2. You must restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
+2. Restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
 
    - SQL Server PolyBase Data Movement Service  
    - SQL Server PolyBase Engine  
@@ -50,7 +50,7 @@ First, configure SQL Server PolyBase to use Azure blob storage.
 
 To query the data in your Hadoop data source, you must define an external table to use in Transact-SQL queries. The following steps describe how to configure the external table.
 
-1. Create a master key on the database. This is required to encrypt the credential secret.
+1. Create a master key on the database. The master key is required to encrypt the credential secret.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -114,15 +114,15 @@ To query the data in your Hadoop data source, you must define an external table 
 
 There are three functions that PolyBase is suited for:  
   
-- Ad-hoc queries against external tables.  
+- Ad hoc queries against external tables.  
 - Importing data.  
 - Exporting data.  
 
 The following queries provide example with fictional car sensor data.
 
-### Ad-hoc queries  
+### Ad hoc queries  
 
-The following ad-hoc query joins relational with Hadoop data. It selects customers who drive faster than 35 mph,joining structured customer data stored in SQL Server with car sensor data stored in Hadoop.  
+The following ad hoc query joins relational with Hadoop data. It selects customers who drive faster than 35 mph, and joins to structured customer data stored in SQL Server with car sensor data stored in Hadoop.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -153,7 +153,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 ### Exporting data  
 
-The following query exports data from SQL Server to Azure Blob Storage. To do this, you first have to enable PolyBase export. The create an external table for the destination before exporting data to it.
+The following query exports data from SQL Server to Azure Blob Storage. First enable PolyBase export. Then, create an external table for the destination before exporting data to it.
 
 ```sql
 -- Enable INSERT into external table  

@@ -50,7 +50,7 @@ The following table highlights the PolyBase features available in [!INCLUDE[sssq
 
 |Feature |Big Data Cluster|Stand alone instance|
 |--------------------------|--------------------------|---------|   
-|Create external data source for SQL Server, Oracle, Teradata, and Mongo DB |X|X (Windows only) |
+|Create external data source for SQL Server, Oracle, Teradata, and Mongo DB |X|X|
 |Create external data source using a compatible third-party ODBC Driver | | X|
 |Create external data source for HADOOP data source | X| X|
 |Create external data source for Azure Blob Storage | X| X|

@@ -2,7 +2,7 @@
 title: "Monitor Memory Usage | Microsoft Docs"
 description: "Monitor a SQL Server instance to confirm that memory usage is within typical ranges. Use the Memory: Available Bytes and Memory: Pages/sec counters."
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "12/03/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -76,7 +76,7 @@ This counter indicates the number of pages in the buffer pool with database cont
  This counter is specific to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A ratio of 90 or higher is desirable. A value greater than 90 indicates that more than 90 percent of all requests for data were satisfied from the data cache in memory without having to read from disk. Find more information on the SQL Server Buffer Manager, see the [SQL Server Buffer Manager Object](sql-server-buffer-manager-object.md). Query this counter using the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view.  
  
 -   **SQL Server: Buffer Manager: Page life expectancy**  
- This counter measures amount of time in seconds that pages stay in cache, on average across the buffer pool. Each NUMA node has its own buffer pool. A higher, growing value is best. A sudden dip indicates a significant churn of data in and out of the buffer pool, indicating the workload could not fully benefit from data already in memory. Query this counter using the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view.
+ This counter measures amount of time in seconds that pages stay in cache, on average across the buffer pool. Each NUMA node has its own buffer pool. A higher, growing value is best. A sudden dip indicates a significant churn of data in and out of the buffer pool, indicating the workload could not fully benefit from data already in memory. On servers with more than one NUMA node, view each buffer pool node's page life expectancy using **SQL Server: Buffer Node: Page life expectancy**. Query this counter using the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view.
 
   
 ## Determining Current Memory Allocation  
@@ -86,12 +86,31 @@ This counter indicates the number of pages in the buffer pool with database cont
 SELECT  
 (physical_memory_in_use_kb/1024) AS Memory_used_by_Sqlserver_MB,  
 (locked_page_allocations_kb/1024) AS Locked_pages_used_by_Sqlserver_MB,  
-(total_virtual_address_space_kb/1024) AS Total_VAS_in_MB,  
+(total_virtual_address_space_kb/1024) AS Total_VAS_in_MB,
 process_physical_memory_low,  
 process_virtual_memory_low  
 FROM sys.dm_os_process_memory;  
 ```  
 
+## Determining Current SQL Server Memory Utilization   
+
+```  
+SELECT
+sqlserver_start_time,
+(physical_memory_kb/1024) AS OS_Physical_Mem_MB,
+(committed_kb/1024) AS Total_Server_Memory_MB,
+(committed_target_kb/1024)  AS Target_Server_Memory_MB
+FROM sys.dm_os_sys_info;
+```   
+
+## Determining the Page Life Expectancy using sys.dm_os_performance_counters    
+
+```
+SELECT
+case when object_name = 'SQLServer:Buffer Manager' and counter_name = 'Page life expectancy' then cntr_value end AS PLE_s
+FROM sys.dm_os_performance_counters    
+WHERE case when object_name = 'SQLServer:Buffer Manager' and counter_name = 'Page life expectancy' then cntr_value end is not null;
+```
 
 ## See Also
 - [sys.dm_os_sys_memory (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-sys-memory-transact-sql.md)

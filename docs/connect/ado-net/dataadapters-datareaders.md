@@ -21,7 +21,7 @@ You can use the Microsoft SqlClient Data Provider for SQL Server **DataReader** 
 
 A <xref:System.Data.Common.DataAdapter> is used to retrieve data from a data source and populate tables within a <xref:System.Data.DataSet>. The `DataAdapter` also resolves changes made to the `DataSet` back to the data source. The `DataAdapter` uses the `Connection` object of the Microsoft SqlClient Data Provider for SQL Server to connect to a data source, and it uses `Command` objects to retrieve data from and resolve changes to the data source.
 
-The .NET Framework has a <xref:System.Data.Common.DbDataReader> and a <xref:System.Data.Common.DbDataAdapter> object: the Microsoft SqlClient Data Provider for SQL Server includes a <xref:Microsoft.Data.SqlClient.SqlDataReader> and a <xref:Microsoft.Data.SqlClient.SqlDataAdapter> object.
+.NET has a <xref:System.Data.Common.DbDataReader> and a <xref:System.Data.Common.DbDataAdapter> object: the Microsoft SqlClient Data Provider for SQL Server includes a <xref:Microsoft.Data.SqlClient.SqlDataReader> and a <xref:Microsoft.Data.SqlClient.SqlDataAdapter> object.
 
 ## In this section
 

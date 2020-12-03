@@ -60,7 +60,7 @@ If the `DataAdapter` encounters multiple result sets, it creates multiple tables
 
 By default, the `DataSet` stores data by using .NET data types. For most applications, these provide a convenient representation of data source information. However, this representation may cause a problem when the data type in the data source is a SQL Server decimal or numeric data type. The .NET `decimal` data type allows a maximum of 28 significant digits, whereas the SQL Server `decimal` data type allows 38 significant digits. If the `SqlDataAdapter` determines during a `Fill` operation that the precision of a SQL Server `decimal` field is larger than 28 characters, the current row is not added to the `DataTable`. Instead the `FillError` event occurs, which enables you to determine whether a loss of precision will occur, and respond appropriately. For more information about the `FillError` event, see [Handling DataAdapter Events](handle-dataadapter-events.md). To get the SQL Server `decimal` value, you can also use a <xref:Microsoft.Data.SqlClient.SqlDataReader> object and call the <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> method.
 
-ADO.NET 2.0 introduced enhanced support for <xref:System.Data.SqlTypes> in the `DataSet`. For more information, see [SqlTypes and the DataSet](./sql/sqltypes-dataset.md).
+ADO.NET also includes enhanced support for <xref:System.Data.SqlTypes> in the `DataSet`. For more information, see [SqlTypes and the DataSet](./sql/sqltypes-dataset.md).
 
 ## See also
 

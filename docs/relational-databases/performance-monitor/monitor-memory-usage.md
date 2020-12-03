@@ -27,10 +27,16 @@ ms.author: wiassaf
 ---
 # Monitor Memory Usage
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodically to confirm that memory usage is within typical ranges. Be aware that a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance may over time consume all the operating system memory allowed by [the **max server memory** option](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
+  Monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodically to confirm that memory usage is within typical ranges. 
+
+## Configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Max Memory
+
+A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance may over time consume all the Windows operating system memory allowed by [the **max server memory** option](../../database-engine/configure-windows/server-memory-server-configuration-options.md). 
+
+In SQL Server on Linux, [set the memory limit](../../linux/sql-server-linux-performance-best-practices#advanced-configuration) with the mssql-conf tool and the [memory.memorylimitmb setting](../../linux/sql-server-linux-configure-mssql-conf#memorylimit).  
 
 ## Monitor Operating System Memory   
- To monitor for a low-memory condition, use the following Windows server counters. Many operating system memory counters can be queried via the dynamic management view [sys.dm_os_process_memory](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md) and [sys.dm_os_sys_memory](../system-dynamic-management-views/sys-dm-os-sys-memory-transact-sql.md).
+ To monitor for a low-memory condition, use the following Windows server counters. Many operating system memory counters can be queried via the dynamic management views [sys.dm_os_process_memory](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md) and [sys.dm_os_sys_memory](../system-dynamic-management-views/sys-dm-os-sys-memory-transact-sql.md).
 
 -   **Memory: Available Bytes**  
 The **Available Bytes** counter indicates how many bytes of memory are currently available for use by processes. Low values for the **Available Bytes** counter can indicate that there is an overall shortage of operating system memory. This value can be queried via T-SQL using [sys.dm_os_sys_memory](../system-dynamic-management-views/sys-dm-os-sys-memory-transact-sql.md).available_physical_memory_kb.
@@ -58,7 +64,7 @@ This indicates the rate of Page Faults for a given user process. Monitor the **P
 This is amount of the operating system's memory the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory manager has committed to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If the **TotalServerMemory (KB)** counter is consistently high compared to the amount of physical memory in the computer, it may indicate that more memory is required. This number is expected to grow as required by actual activity, and will grow following SQL Server startup. A high **Total Server Memory** is not necessarily indicative of any memory pressure or memory constraint, only indicative of actual activity. It is normal for the **Total Server Memory** to be near the [**Max Server Memory**](../../database-engine/configure-windows/server-memory-server-configuration-options.md) configuration option after a period of typical activity. 
 
 -   **Process: Working Set**  
-This is the amount of memory that is used by a process currently, according to the operating system. Query this counter using [sys.dm_os_process_memory](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md).physical_memory_in_use_kb.
+This is the amount of memory that is used by a process currently, according to the operating system. Query this counter using the [sys.dm_os_process_memory](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md) dynamic management view, observing the **physical_memory_in_use_kb** column.
 
 -   **SQL Server: Buffer Manager: Database Pages**  
 This is the number of pages in the buffer pool with database content. Does not include other nonbuffer pool memory within the SQL Server process. Query this counter using the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view.

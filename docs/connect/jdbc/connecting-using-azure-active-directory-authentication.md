@@ -2,7 +2,7 @@
 title: "Connecting using Azure Active Directory authentication"
 description: "Learn how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "09/23/2020"
+ms.date: "12/3/2020"
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
@@ -54,6 +54,7 @@ For other authentication modes, the below components must be installed on the cl
 * If you're using the access token-based authentication mode, you need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies to run the examples from this article. For more information, see the **Connecting using Access Token** section.
 * If you're using the **ActiveDirectoryPassword** authentication mode, you need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies. For more information, see the **Connecting using ActiveDirectoryPassword authentication mode** section.
 * If you're using the **ActiveDirectoryIntegrated** mode, you need azure-activedirectory-library-for-java and its dependencies. For more information, see the **Connecting using ActiveDirectoryIntegrated Authentication Mode** section.
+* If you're using the **ActiveDirectoryInteractive** mode, you need azure-activedirectory-library-for-java and its dependencies. For more information, see the **Connecting using ActiveDirectoryInteractive Authentication Mode** section.
 
 ## Connecting using ActiveDirectoryMSI authentication mode
 The following example shows how to use `authentication=ActiveDirectoryMSI` mode. Run this example from inside an Azure Resource, e,g an Azure Virtual Machine, App Service, or a Function App that is federated with Azure Active Directory.
@@ -287,15 +288,16 @@ import java.sql.Statement;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
-public class AADUserPassword {
-    
+public class AADInteractive {
     public static void main(String[] args) throws Exception{
         
         SQLServerDataSource ds = new SQLServerDataSource();
         ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
         ds.setDatabaseName("demo"); // Replace with your database
+	ds.setAuthentication("ActiveDirectoryInteractive");
+	  
+	// Optional
         ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
-        ds.setAuthentication("ActiveDirectoryInteractive");
         
         try (Connection connection = ds.getConnection(); 
                 Statement stmt = connection.createStatement();
@@ -309,11 +311,7 @@ public class AADUserPassword {
 ```
 The user who runs the program sees the following dialog boxes:
 
-A dialog box that displays an Azure AD user name and asks for the user's password.
-
-- If the user's domain is federated with Azure AD, this dialog box doesn't appear, because no password is needed.
-
-- If the Azure AD policy imposes Multi-Factor Authentication on the user, the next two dialog boxes are displayed.
+- A dialog box that displays an Azure AD user name and asks for the user's password.<br><br>If the user's domain is federated with Azure AD, this dialog box doesn't appear, because no password is needed.<br><br>If the Azure AD policy imposes Multi-Factor Authentication on the user, the next two dialog boxes are displayed.
 
 - The first time a user goes through Multi-Factor Authentication, the system displays a dialog box that asks for a mobile phone number to send text messages to. Each message provides the verification code that the user must enter in the next dialog box.
 
@@ -321,11 +319,13 @@ A dialog box that displays an Azure AD user name and asks for the user's passwor
 
 For information about how to configure Azure AD to require Multi-Factor Authentication, see [Getting started with Azure AD Multi-Factor Authentication in the cloud](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-getstarted).
 
-If authentication is completed successfully, you should see the following message in the browser:
+For screenshots of these dialog boxes, see [Configure multi-factor authentication for SQL Server Management Studio and Azure AD](https://docs.microsoft.com/en-us/azure/azure-sql/database/authentication-mfa-ssms-configure).
+
+If user authentication is completed successfully, you should see the following message in the browser:
 ```
 Authentication complete. You can close the browser and return to the application.
 ```
-Note this only indicates user authentication was successful but not necessary successful connection to the server. Upon returning to the applicatoin, if connection is established, you should see the following message as output:
+Note this only indicates user authentication was successful but not necessarily a successful connection to the server. Upon returning to the application, if connection is established to the server, you should see the following message as output:
 ```
 You have successfully logged on as: <your user name>
 ```

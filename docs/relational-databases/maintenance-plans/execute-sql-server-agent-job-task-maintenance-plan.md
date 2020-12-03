@@ -1,4 +1,5 @@
 ---
+description: "Execute SQL Server Agent Job Task (Maintenance Plan)"
 title: "Execute SQL Server Agent Job Task (Maintenance Plan) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Execute SQL Server Agent Job Task (Maintenance Plan)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the **Execute SQL Server Agent Job Task** dialog to execute Microsoft SQL Server Agent jobs within a maintenance plan. This option will not be available if you have no SQL Server Agent jobs on the selected connection.  
   
  This task uses the **.sp_start_job** statement.  
   
-## UIElement List  
+## UI element list  
  **Connection**  
  Select the server connection to use when performing this task.  
   

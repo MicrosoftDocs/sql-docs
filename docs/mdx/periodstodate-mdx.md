@@ -1,4 +1,5 @@
 ---
+description: "PeriodsToDate (MDX)"
 title: "PeriodsToDate (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

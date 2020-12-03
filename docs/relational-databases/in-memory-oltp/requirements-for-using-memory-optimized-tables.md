@@ -1,5 +1,6 @@
 ---
 title: "Requirements for Using Memory-Optimized Tables | Microsoft Docs"
+description: Learn about the requirements for using In-Memory OLTP, including SQL Database version, memory & storage considerations, and installation.
 ms.custom: ""
 ms.date: "11/24/2017"
 ms.prod: sql
@@ -8,13 +9,13 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Requirements for Using Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  For using In-Memory OLTP in Azure DB see [Get started with In-Memory in SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
+  For using In-Memory OLTP in Azure DB see [Get started with In-Memory in SQL Database](/azure/azure-sql/in-memory-oltp-overview).  
   
  In addition to the [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), the following are requirements to use In-Memory OLTP:  
   
@@ -52,4 +53,3 @@ ms.author: "carlrab"
  [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
  [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md)  
  [Memory Architecture guide](../../relational-databases/memory-management-architecture-guide.md)
-  

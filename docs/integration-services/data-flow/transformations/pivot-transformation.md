@@ -1,4 +1,5 @@
 ---
+description: "Pivot Transformation"
 title: "Pivot Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -21,7 +22,7 @@ ms.author: chugu
 ---
 # Pivot Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Pivot transformation makes a normalized data set into a less normalized but more compact version by pivoting the input data on a column value. For example, a normalized **Orders** data set that lists customer name, product, and quantity purchased typically has multiple rows for any customer who purchased multiple products, with each row for that customer showing order details for a different product. By pivoting the data set on the product column, the Pivot transformation can output a data set with a single row per customer. That single row lists all the purchases by the customer, with the product names shown as column names, and the quantity shown as a value in the product column. Because not every customer purchases every product, many columns may contain null values.  
@@ -100,7 +101,7 @@ ms.author: chugu
   
  The following table shows a data set after the data has been pivoted on the **Year** column.  
   
-||2002|2003|2004|  
+|Product Name|2002|2003|2004|  
 |-|----------|----------|----------|  
 |HL Mountain Tire|141164.10|446297.775|1504884.15|  
 |Road Tire Tube|3592.05|35920.50|89801.25|  
@@ -124,7 +125,7 @@ ms.author: chugu
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -135,5 +136,4 @@ ms.author: chugu
  [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

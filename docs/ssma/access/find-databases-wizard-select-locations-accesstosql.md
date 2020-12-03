@@ -1,4 +1,5 @@
 ---
+description: "Find Databases Wizard (Select Locations) (AccessToSQL)"
 title: "Find Databases Wizard (Select Locations) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -9,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Find Databases Wizard"
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Find Databases Wizard (Select Locations) (AccessToSQL)
 On the Select Locations page of the Find Databases Wizard, you enter the search parameters for finding Access databases.  
@@ -53,5 +54,4 @@ Enter the full Windows user name of the owner. This might be formatted as *domai
   
 ## See Also  
 [Adding and Removing Access Database Files](adding-and-removing-access-database-files-accesstosql.md)  
-[User Interface Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[User Interface Reference(Access)](./user-interface-reference-accesstosql.md)  

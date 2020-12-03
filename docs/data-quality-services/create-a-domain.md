@@ -1,4 +1,5 @@
 ---
+description: "Create a Domain"
 title: "Create a Domain"
 ms.date: "11/08/2011"
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.author: sawinark
 ---
 # Create a Domain
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to create a domain in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). The values in the domain are a semantic representation of the data in a field. For more information on domains, see [Managing a Domain](../data-quality-services/managing-a-domain.md).  
   
@@ -83,9 +84,8 @@ ms.author: sawinark
   
 9. Click **OK**.  
   
-10. Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+10. Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="FollowUp"></a> Follow Up: After Creating a Domain  
  After you create a domain, you can perform other domain management tasks on the domain, you can perform knowledge discovery to add knowledge to the domain, or you can add a matching policy to the domain. For more information, see [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md), [Managing a Domain](../data-quality-services/managing-a-domain.md), or [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
-  
   

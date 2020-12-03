@@ -1,4 +1,5 @@
 ---
+description: "supportsGroupByUnrelated Method (SQLServerDatabaseMetaData)"
 title: "supportsGroupByUnrelated Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 455fe02e-3877-409b-8281-8e0491acd3e8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # supportsGroupByUnrelated Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

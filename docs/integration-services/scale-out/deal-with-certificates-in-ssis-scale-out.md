@@ -1,6 +1,6 @@
 ---
 title: "Manage certificates for Sql Server Integration Services Scale Out | Microsoft Docs"
-ms.description: "This article describes how to manage certificates to secure communications between SSIS Scale Out Master and Scale Out Workers."
+description: "This article describes how to manage certificates to secure communications between SSIS Scale Out Master and Scale Out Workers."
 ms.date: "12/19/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
@@ -13,7 +13,7 @@ ms.author: "haoqian"
 ---
 # Manage certificates for SQL Server Integration Services Scale Out
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -23,20 +23,20 @@ To secure the communication between Scale Out Master and Scale Out Workers, SSIS
 
 In most cases, the Scale Out Master certificate is configured during the installation of Scale Out Master.
 
-In the **Integration Services Scale Out Configuration - Master Node** page of the SQL Server Installation wizard, you can choose to create a new self-signed SSL certificate or use an existing SSL certificate.
+In the **Integration Services Scale Out Configuration - Master Node** page of the SQL Server Installation wizard, you can choose to create a new self-signed TLS/SSL certificate or use an existing TLS/SSL certificate.
 
 ![Master Config](media/master-config.PNG)
 
-**New certificate**. If you don't have special requirements for certificates, you can choose to create a new self-signed SSL certificate. You can further specify the CNs in the certificate. Make sure the host name of the master endpoint to be used later by Scale Out Workers is included in the CNs. By default, the computer name and IP address of the master node are included. 
+**New certificate**. If you don't have special requirements for certificates, you can choose to create a new self-signed TLS/SSL certificate. You can further specify the CNs in the certificate. Make sure the host name of the master endpoint to be used later by Scale Out Workers is included in the CNs. By default, the computer name and IP address of the master node are included. 
 
-**Existing certificate**. If you choose to use an existing certificate, click **Browse** to select an SSL certificate from the **Root** certificate store of the local computer.
+**Existing certificate**. If you choose to use an existing certificate, click **Browse** to select a TLS/SSL certificate from the **Root** certificate store of the local computer.
 
 ### Change the Scale Out Master certificate
 
 You may want to change your Scale Out Master certificate due to certificate expiration or for other reasons. To change the Scale Out Master certificate, do the following things:
 
-#### 1. Create an SSL certificate.
-Create and install a new SSL certificate on the Master node with the following command:
+#### 1. Create a TLS/SSL certificate.
+Create and install a new TLS/SSL certificate on the Master node with the following command:
 
 ```dos
 MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
@@ -64,7 +64,7 @@ Delete the original binding and set up the new binding with the following comman
 
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:{Master port}
-netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={SSL Certificate Thumbprint} certstorename=Root appid={original appid}
+netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={TLS/SSL Certificate Thumbprint} certstorename=Root appid={original appid}
 ```
 
 For example:
@@ -75,18 +75,18 @@ netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe
 ```
 
 #### 3. Update the Scale Out Master service configuration file
-Update the Scale Out Master service configuration file, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`, on the Master node. Update **SSLCertThumbprint** to the thumbprint of the new SSL certificate.
+Update the Scale Out Master service configuration file, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`, on the Master node. Update **SSLCertThumbprint** to the thumbprint of the new TLS/SSL certificate.
 
 #### 4. Restart the Scale Out Master service
 
 #### 5. Reconnect Scale Out Workers to Scale Out Master
 For each Scale Out Worker, either delete the Worker and then add it back with [Scale Out Manager](integration-services-ssis-scale-out-manager.md), or do the following things:
 
-a.  Install the client SSL certificate to the Root store of the local computer on the Worker node.
+a.  Install the client TLS/SSL certificate to the Root store of the local computer on the Worker node.
 
 b.  Update the Scale Out Worker service configuration file.
 
-Update the Scale Out Worker service configuration file, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, on the Worker node. Update **MasterHttpsCertThumbprint** to the thumbprint of the new SSL certificate.
+Update the Scale Out Worker service configuration file, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, on the Worker node. Update **MasterHttpsCertThumbprint** to the thumbprint of the new TLS/SSL certificate.
 
 c.  Restart the Scale Out Worker service.
 

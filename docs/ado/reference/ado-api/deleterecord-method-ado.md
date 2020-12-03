@@ -1,8 +1,9 @@
 ---
+description: "DeleteRecord Method (ADO)"
 title: "DeleteRecord Method (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -14,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "DeleteRecord method [ADO]"
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DeleteRecord Method (ADO)
 Deletes an entity represented by a [Record](../../../ado/reference/ado-api/record-object-ado.md).  

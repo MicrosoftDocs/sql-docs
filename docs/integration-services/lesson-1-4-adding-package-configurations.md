@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-4 - Adding Package Configurations"
 title: "Step 4: Adding Package Configurations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 1-4 - Adding Package Configurations
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 In this task, you will add a configuration to each package. Configurations update the values of package properties and package objects at run time.  
@@ -132,6 +133,6 @@ Check the project's current Deployment Model, and set it to **Package Deployment
 [Step 5: Testing the Updated Packages](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## See Also  
-[Package Configurations](../integration-services/packages/package-configurations.md)  
-[Create Package Configurations](../integration-services/packages/create-package-configurations.md)  
-[Access to Files Used by Packages](../integration-services/security/security-overview-integration-services.md#files)  
+[Package Configurations](./packages/legacy-package-deployment-ssis.md)  
+[Create Package Configurations](./packages/legacy-package-deployment-ssis.md)  
+[Access to Files Used by Packages](../integration-services/security/security-overview-integration-services.md#files)

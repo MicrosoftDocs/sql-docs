@@ -1,4 +1,5 @@
 ---
+description: "catalog.add_data_tap"
 title: "catalog.add_data_tap | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,10 +14,10 @@ ms.author: chugu
 ---
 # catalog.add_data_tap 
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a data tap on the output of a component in a package data flow, for an instance of the execution.  
   

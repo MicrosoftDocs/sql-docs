@@ -1,4 +1,5 @@
 ---
+description: "Oracle Supplemental Logging Script"
 title: "Oracle Supplemental Logging Script | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Oracle Supplemental Logging Script
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This dialog box shows the script the Oracle supplemental logging script.  

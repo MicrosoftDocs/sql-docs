@@ -1,5 +1,7 @@
 ---
 title: "Save a Report to a SharePoint Library (Report Builder) | Microsoft Docs"
+description: This article describes the requirements and process necessary to save reports to a report server configured for SharePoint integration.
+
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

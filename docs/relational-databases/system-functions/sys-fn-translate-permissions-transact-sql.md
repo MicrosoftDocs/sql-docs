@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_translate_permissions (Transact-SQL)"
 title: "sys.fn_translate_permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -23,7 +24,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # sys.fn_translate_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Translates the permissions bitmask returned by SQL Trace into a table of permissions names.  
   

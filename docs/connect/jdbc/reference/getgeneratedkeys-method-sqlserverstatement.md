@@ -1,4 +1,5 @@
 ---
+description: "getGeneratedKeys Method (SQLServerStatement)"
 title: "getGeneratedKeys Method (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: a3325950-0e81-4ae8-aa0c-e1f6d371adcd
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getGeneratedKeys Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

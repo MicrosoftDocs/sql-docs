@@ -1,5 +1,6 @@
 ---
 title: "max Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery max() function that returns the one item in a sequence whose value is greater than that of all the others.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Aggregate Functions - max
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns from a sequence of atomic values, *$arg*, the one item whose value is greater than that of all the others.  
   

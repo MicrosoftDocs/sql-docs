@@ -1,4 +1,5 @@
 ---
+description: "RESTORE Statements - FILELISTONLY (Transact-SQL)"
 title: "RESTORE FILELISTONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
@@ -36,8 +37,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 RESTORE FILELISTONLY   
 FROM <backup_device>   
 [ WITH   
@@ -68,7 +68,6 @@ FROM <backup_device>
    | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
        @physical_backup_device_name_var }   
 }  
-  
 ```  
 
 > [!NOTE] 
@@ -117,7 +116,7 @@ FROM <backup_device>
 ## Examples  
  The following example returns the information from a backup device named `AdventureWorksBackups`. The example uses the `FILE` option to specify the second backup set on the device.  
   
-```  
+```sql  
 RESTORE FILELISTONLY FROM AdventureWorksBackups   
    WITH FILE=2;  
 GO  

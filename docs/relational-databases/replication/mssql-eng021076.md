@@ -1,4 +1,5 @@
 ---
+description: "MSSQL_ENG021076"
 title: "MSSQL_ENG021076 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 612e5c59-ba3e-49c3-a3df-56bac3d850a2
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # MSSQL_ENG021076
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## Message Details  
   
-|||  
+|Attribute|Value|  
 |-|-|  
 |Product Name|SQL Server|  
 |Event ID|21076|  

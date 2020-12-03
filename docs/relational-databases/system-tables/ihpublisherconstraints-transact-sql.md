@@ -1,4 +1,5 @@
 ---
+description: "IHpublisherconstraints (Transact-SQL)"
 title: "IHpublisherconstraints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "IHpublisherconstraints system table"
 ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # IHpublisherconstraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHpublisherconstraints** system table contains one row for each constraint replicated from non-SQL Server Publishers using the current Distributor. This table is stored in the distribution database.  
   

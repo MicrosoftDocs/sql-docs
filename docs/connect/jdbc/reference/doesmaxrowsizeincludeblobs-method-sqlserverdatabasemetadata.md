@@ -1,4 +1,5 @@
 ---
+description: "doesMaxRowSizeIncludeBlobs Method (SQLServerDatabaseMetaData)"
 title: "doesMaxRowSizeIncludeBlobs Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 0c90a7a7-5a59-4858-bb26-3e725d8611d7
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # doesMaxRowSizeIncludeBlobs Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Manage Objects by Using Object Explorer"
 title: "Manage Objects by Using Object Explorer"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -18,7 +19,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Manage Objects by Using Object Explorer
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can use Object Explorer to manage objects such as databases, tables and stored procedures.  
   
 ## Viewing Objects in Object Explorer  
@@ -46,7 +47,7 @@ You perform actions on objects by right clicking the Object Explorer node repres
 When Object Explorer is connected to a server, you can open a new Code Editor window using the connection settings of Object Explorer. To open a new Code Editor window, right-click the server name in Object Explorer, and then click **New Query**. To open a Code Editor window using a particular database, right-click the database name, and then click **New Query**. When opening a new query for an Analysis Services server, you can select DMX, MDX, or XMLA queries.  
   
 ### Start PowerShell  
-You can start a PowerShell session by right-clicking most folders and objects in the Object Explorer tree and selecting **Start PowerShell**. This starts a PowerShell session that has the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell support enabled, and the path set to the object you right-clicked in Object Explorer. You can then enter PowerShell commands in an interactive PowerShell environment. For more information, see [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
+You can start a PowerShell session by right-clicking most folders and objects in the Object Explorer tree and selecting **Start PowerShell**. This starts a PowerShell session that has the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell support enabled, and the path set to the object you right-clicked in Object Explorer. You can then enter PowerShell commands in an interactive PowerShell environment. For more information, see [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
 ## See Also  
 [Object Explorer](../../ssms/object/object-explorer.md)  
@@ -54,4 +55,3 @@ You can start a PowerShell session by right-clicking most folders and objects in
 [Connect to an Instance From Object Explorer](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [Object Explorer Details Pane](../../ssms/object/object-explorer-details-pane.md)  
 [Custom Reports in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
-  

@@ -1,4 +1,5 @@
 ---
+description: "Direct the CDC Stream According to the Type of Change"
 title: "Direct the CDC Stream According to the Type of Change | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,12 +14,12 @@ ms.author: chugu
 ---
 # Direct the CDC Stream According to the Type of Change
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To add and configure a CDC splitter Transformation, the package must contain at least one Data Flow task and a CDC source.  
   
- The CDC source added to the package must have a NetCDC processing mode selected. For more information on selecting processing modes, see [CDC Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md).  
+ The CDC source added to the package must have a NetCDC processing mode selected. For more information on selecting processing modes, see [CDC Source Editor &#40;Connection Manager Page&#41;](./cdc-source.md).  
   
 ### To direct the CDC stream according to the type of change  
   
@@ -52,5 +53,4 @@ ms.author: chugu
   
 ## See Also  
  [CDC Splitter](../../integration-services/data-flow/cdc-splitter.md)  
-  
   

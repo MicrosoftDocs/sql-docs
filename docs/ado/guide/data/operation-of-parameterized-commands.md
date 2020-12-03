@@ -1,8 +1,9 @@
 ---
+description: "Operation of Parameterized Commands"
 title: "Operation of Parameterized Commands | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "data shaping [ADO], parameterized commands"
   - "parameterized commands [ADO]"
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Operation of Parameterized Commands
 If you are working with a large child **Recordset**, especially compared to the size of the parent **Recordset**, but need to access only a few child chapters, you might find it more efficient to use a parameterized command.  
@@ -32,7 +33,7 @@ SHAPE {SELECT * FROM customer}
  The parent and child tables have a column name in common, *cust_id*. The *child-command* has a "?" placeholder, to which the RELATE clause refers (that is, "...PARAMETER 0").  
   
 > [!NOTE]
->  The PARAMETER clause pertains solely to the shape command syntax. It is not associated with either the ADO [Parameter](../../../ado/reference/ado-api/parameter-object.md) object or the [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection.  
+>  The PARAMETER clause pertains solely to the shape command syntax. It is not associated with either the ADO [Parameter](../../reference/ado-api/parameter-object.md) object or the [Parameters](../../reference/ado-api/parameters-collection-ado.md) collection.  
   
  When the parameterized shape command is executed, the following occurs:  
   
@@ -42,7 +43,7 @@ SHAPE {SELECT * FROM customer}
   
 3.  When the chapter column of a parent row is accessed, the *child-command* is executed using the value of the customer.cust_id as the value of the parameter.  
   
-4.  All rows in the data provider rowset created in step 3 are used to populate the child **Recordset**. In this example, that is all the rows in the Orders table in which the cust_id equals the value of customer.cust_id. By default, the child **Recordset**s will be cached on the client until all references to the parent **Recordset** are released. To change this behavior, set the **Recordset** [dynamic property](../../../ado/reference/ado-api/ado-dynamic-property-index.md) **Cache Child Rows** to **False**.  
+4.  All rows in the data provider rowset created in step 3 are used to populate the child **Recordset**. In this example, that is all the rows in the Orders table in which the cust_id equals the value of customer.cust_id. By default, the child **Recordset**s will be cached on the client until all references to the parent **Recordset** are released. To change this behavior, set the **Recordset** [dynamic property](../../reference/ado-api/ado-dynamic-property-index.md) **Cache Child Rows** to **False**.  
   
 5.  A reference to the retrieved child rows (that is, the chapter of the child **Recordset**) is placed in the chapter column of the current row of the parent **Recordset**.  
   
@@ -83,6 +84,6 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 >  When using WHERE clauses, parameters can not use the SQL data types for text, ntext and image or an error will result that contains the following description: `Invalid operator for data type`.  
   
 ## See Also  
- [Data Shaping Example](../../../ado/guide/data/data-shaping-example.md)   
- [Formal Shape Grammar](../../../ado/guide/data/formal-shape-grammar.md)   
- [Shape Commands in General](../../../ado/guide/data/shape-commands-in-general.md)
+ [Data Shaping Example](./data-shaping-example.md)   
+ [Formal Shape Grammar](./formal-shape-grammar.md)   
+ [Shape Commands in General](./shape-commands-in-general.md)

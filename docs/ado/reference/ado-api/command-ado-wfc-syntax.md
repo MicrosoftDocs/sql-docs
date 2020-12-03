@@ -1,8 +1,9 @@
 ---
+description: "Command (ADO - WFC Syntax)"
 title: "Command (ADO - WFC Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -11,8 +12,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "Command collection [ADO], ADO/WFC syntax"
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Command (ADO - WFC Syntax)
 ## package com.ms.wfc.data  
@@ -64,4 +65,4 @@ public AdoProperties getProperties()
 ```  
   
 ## See Also  
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [Command Object (ADO)](./command-object-ado.md)

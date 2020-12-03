@@ -1,4 +1,5 @@
 ---
+description: "sys.service_message_types (Transact-SQL)"
 title: "sys.service_message_types (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.service_message_types catalog view"
 ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sys.service_message_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This catalog view contains a row per message type registered in the service broker.
   

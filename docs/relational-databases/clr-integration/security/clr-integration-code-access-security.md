@@ -1,5 +1,6 @@
 ---
 title: "CLR Integration Code Access Security | Microsoft Docs"
+description: For SQL Server CLR integration, CLR supports code access security for managed code, where permissions are granted to assemblies based on code identity.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # CLR Integration Code Access Security
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The common language runtime (CLR) supports a security model called code access security for managed code. In this model, permissions are granted to assemblies based on the identity of the code. For more information, see the "Code Access Security" section in the .NET Framework software development kit.  
   
  The security policy that determines the permissions granted to assemblies is defined in three different places:  
@@ -97,14 +98,13 @@ ms.author: "jroth"
 ## Permission Set Summary  
  The following chart summarizes the restrictions and permissions granted to the **SAFE**, **EXTERNAL_ACCESS**, and **UNSAFE** permission sets.  
   
-|||||  
+|Functionality|**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|   
 |-|-|-|-|  
-||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
-|**Code Access Security Permissions**|Execute only|Execute + access to external resources|Unrestricted (including P/Invoke)|  
-|**Programming model restrictions**|Yes|Yes|No restrictions|  
-|**Verifiability requirement**|Yes|Yes|No|  
-|**Local data access**|Yes|Yes|Yes|  
-|**Ability to call native code**|No|No|Yes|  
+|Code Access Security Permissions|Execute only|Execute + access to external resources|Unrestricted (including P/Invoke)|  
+|Programming model restrictions|Yes|Yes|No restrictions|  
+|Verifiability requirement|Yes|Yes|No|  
+|Local data access|Yes|Yes|Yes|  
+|Ability to call native code|No|No|Yes|  
   
 ## See Also  
  [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

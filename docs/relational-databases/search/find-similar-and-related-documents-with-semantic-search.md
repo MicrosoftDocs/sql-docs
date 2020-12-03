@@ -1,4 +1,5 @@
 ---
+description: "Find Similar and Related Documents with Semantic Search"
 title: "Find similar & related documents with Semantic Search"
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.reviewer: mikeray
 ms.custom: "seo-lt-2019"
 ---
 # Find Similar and Related Documents with Semantic Search
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes how to find similar or related documents or text values, and information about how they are similar or related, in columns that are configured for statistical semantic indexing.  
    
 ##  <a name="HowToQuerySimilar"></a> Find similar or related documents with SEMANTICSIMILARITYTABLE  

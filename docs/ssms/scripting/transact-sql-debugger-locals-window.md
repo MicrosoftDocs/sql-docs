@@ -1,8 +1,9 @@
 ---
 title: Locals Window
+description: Learn how to use the Locals window of the Transact-SQL debugger to display and modify expressions from the current call stack frame.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Locals Window [Transact-SQL]"
@@ -17,7 +18,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Transact-SQL Debugger - Locals Window
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The **Locals** window displays information about the local expressions in the current scope of the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger. The scope is set to the current call stack frame that is selected in the **Call Stack** window. You must be in debug mode to display the local expressions.  
 
@@ -48,9 +49,9 @@ The **Locals** window displays information about the local expressions in the cu
  Displays the data type of the expression.  
   
 ## See Also  
- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [Watch Window](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [Call Stack Window](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [QuickWatch Dialog Box](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Transact-SQL Debugger](./transact-sql-debugger.md)   
+ [Transact-SQL Debugger Information](./transact-sql-debugger-information.md)   
+ [Watch Window](./transact-sql-debugger-watch-window.md)   
+ [Call Stack Window](./transact-sql-debugger-call-stack-window.md)   
+ [QuickWatch Dialog Box](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)

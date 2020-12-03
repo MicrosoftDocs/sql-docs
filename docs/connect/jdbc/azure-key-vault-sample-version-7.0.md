@@ -1,4 +1,5 @@
 ---
+description: "Azure Key Vault sample"
 title: "Azure Key Vault sample | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"
@@ -7,8 +8,8 @@ ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Azure Key Vault sample
 

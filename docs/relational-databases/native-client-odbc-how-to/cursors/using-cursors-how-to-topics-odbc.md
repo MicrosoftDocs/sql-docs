@@ -1,4 +1,5 @@
 ---
+description: "Using Cursors How-to Topics (ODBC)"
 title: "Using Cursors How-to Topics (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -10,12 +11,12 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "cursors [ODBC], how to topics"
 ms.assetid: 4e07d2a6-f389-4685-841c-71e34f948816
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Cursors How-to Topics (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   To use cursors, you must first set connection and statement attributes that control ODBC cursor behavior. Cursors allow an application to retrieve multiple rows on each fetch and execute UPDATE, INSERT, or DELETE statements at the current location of the cursor.  
   

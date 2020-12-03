@@ -1,5 +1,6 @@
 ---
 title: "Handling Large Object (LOB) Parameters in the CLR | Microsoft Docs"
+description: This article describes how to handle large object (LOB) values for parameters in SQL Server CLR integration. Use SqlBytes and SqlChars for LOB types.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Handling Large Object (LOB) Parameters in the CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use **SqlBytes** and **SqlChars** to pass large object (LOB) binary type (**varbinary(max)**) and LOB character type (**nvarchar(max)**) parameters, respectively. These types allow streaming the LOB values from the database to the common language runtime (CLR) routine, instead of copying the entire value into managed space. **SqlBinary** and **SqlString** should be used only for small binary and character string values.  
   
 ## See Also  

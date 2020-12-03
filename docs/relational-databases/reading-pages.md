@@ -1,4 +1,5 @@
 ---
+description: "Reading Pages"
 title: "Reading Pages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -14,7 +15,7 @@ author: "pmasl"
 ms.author: "pelopes"
 ---
 # Reading Pages
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 The I/O from an instance of the SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] includes logical and physical reads. A logical read occurs every time the [!INCLUDE[ssDE](../includes/ssde-md.md)] requests a page from the [buffer cache](../relational-databases/memory-management-architecture-guide.md). If the page is not currently in the buffer cache, a physical read first copies the page from disk into the cache.
 

@@ -1,5 +1,6 @@
 ---
 title: "Converting Oracle Schemas (OracleToSQL) | Microsoft Docs"
+description: Learn how to convert Oracle database objects to SQL Server database objects with SSMA for Oracle, after you set options and connect to Oracle and SQL Server.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -9,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Conversion Results"
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Converting Oracle Schemas (OracleToSQL)
 After you have connected to Oracle, connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and set project and data mapping options, you can convert Oracle database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects.  
@@ -27,9 +28,8 @@ Before converting objects, review the project conversion options in the **Projec
 ## Conversion Results  
 The following table shows which Oracle objects are converted, and the resulting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects:  
   
-|||  
-|-|-|  
 |Oracle Objects|Resulting SQL Server Objects|  
+|-|-|  
 |Functions|If the function can be directly converted to [!INCLUDE[tsql](../../includes/tsql-md.md)], SSMA creates a function.<br /><br />In some cases, the function must be converted to a stored procedure. In this case, SSMA creates a stored procedure and a function that calls the stored procedure.|  
 |Procedures|If the procedure can be directly converted to [!INCLUDE[tsql](../../includes/tsql-md.md)], SSMA creates a stored procedure.<br /><br />In some cases a stored procedure must be called in an autonomous transaction. In this case, SSMA creates two stored procedures: one that implements the procedure, and another that is used for calling the implementing stored procedure.|  
 |Packages|SSMA creates a set of stored procedures and functions that are unified by similar object names.|  

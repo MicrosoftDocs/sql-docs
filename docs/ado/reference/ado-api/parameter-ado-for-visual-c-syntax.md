@@ -1,8 +1,9 @@
 ---
+description: "Parameter (ADO for Visual C++ Syntax)"
 title: "Parameter (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Parameter collection [ADO], ADO for Visual C++ syntax"
 ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Parameter (ADO for Visual C++ Syntax)
 ## Methods  
@@ -45,4 +46,4 @@ put_Value(VARIANT val)
 ```  
   
 ## See Also  
- [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter Object](./parameter-object.md)

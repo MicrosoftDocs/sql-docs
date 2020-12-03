@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_12302"
 title: "MSSQLSERVER_12302 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -13,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_12302
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|12302|  
 |Event Source|MSSQLSERVER|  

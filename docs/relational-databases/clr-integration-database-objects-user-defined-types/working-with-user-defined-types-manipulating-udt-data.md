@@ -1,5 +1,6 @@
 ---
 title: "Manipulating UDT Data | Microsoft Docs"
+description: This article describes how to insert, select, and update data in UDT columns of a SQL Server database.
 ms.custom: ""
 ms.date: "12/05/2019"
 ms.prod: sql
@@ -30,7 +31,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Working with User-Defined Types - Manipulating UDT Data
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] provides no specialized syntax for INSERT, UPDATE, or DELETE statements when modifying data in user-defined type (UDT) columns. The [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST or CONVERT functions are used to cast native data types to the UDT type.  
   
 ## Inserting Data in a UDT Column  

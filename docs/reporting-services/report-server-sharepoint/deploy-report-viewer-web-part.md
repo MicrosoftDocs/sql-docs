@@ -1,5 +1,6 @@
 ---
 title: "Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site | Microsoft Docs"
+description: For SQL Server Reporting Services, you can manually add the Report Viewer custom web part to a SharePoint product.
 ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -13,7 +14,7 @@ ms.author: maggies
 
 # Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]  [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 The Report Viewer web part is a custom web part that can be used to view SQL Server Reporting Services (native mode) reports within your SharePoint site. You can use the web part to view, navigate, print, and export reports on a report server. The Report Viewer web part is associated with report definition (.rdl) files that are processed by a SQL Server Reporting Services report server or a Power BI Report Server. This Report Viewer web part cannot be used with Power BI reports hosted in Power BI Report Server.
 
@@ -49,7 +50,7 @@ This section shows you how to deploy the solution package to your SharePoint far
 
 1. On a SharePoint server, open a SharePoint Management Shell using the **Run as Administrator** option.
 
-2. Run [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx) to add the farm solution.
+2. Run [Add-SPSolution](/powershell/module/sharepoint-server/Add-SPSolution) to add the farm solution.
 
     ```
     Add-SPSolution -LiteralPath "{path to file}\ReportViewerWebPart.wsp"
@@ -57,7 +58,7 @@ This section shows you how to deploy the solution package to your SharePoint far
 
     The cmdlet returns the name of the solution, its solution ID, and Deployed=False. In the next step, you will deploy the solution.
 
-3. Run the [Install-SPSolution](https://technet.microsoft.com/library/ff607534(v=office.16).aspx) cmdlet to deploy the farm solution.
+3. Run the [Install-SPSolution](/powershell/module/sharepoint-server/Install-SPSolution) cmdlet to deploy the farm solution.
 
     **SharePoint 2013**
 
@@ -89,7 +90,7 @@ This section shows you how to deploy the solution package to your SharePoint far
 
 6. Repeat for additional site collections by opening each site and clicking Site Actions.
 
-Optionally, you can also use PowerShell to enable this feature on all sites using the [Enable-SPFeature](https://technet.microsoft.com/library/ff607803.aspx) cmdlet.
+Optionally, you can also use PowerShell to enable this feature on all sites using the [Enable-SPFeature](/powershell/module/sharepoint-server/Enable-SPFeature) cmdlet.
 
 ```
 Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL | 
@@ -167,6 +168,6 @@ The following languages are supported with the web part:
 
 ## Next steps
 
-After the Report Viewer web part has been deployed and activiated, you can add the web part to a SharePoint page. For more information, see [Add Report Viewer web part to a SharePoint page](add-report-viewer-web-part-to-page.md).
+After the Report Viewer web part has been deployed and activated, you can add the web part to a SharePoint page. For more information, see [Add Report Viewer web part to a SharePoint page](add-report-viewer-web-part-to-page.md).
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

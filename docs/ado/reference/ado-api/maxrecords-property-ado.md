@@ -1,8 +1,9 @@
 ---
+description: "MaxRecords Property (ADO)"
 title: "MaxRecords Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "MaxRecords property [ADO]"
 ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # MaxRecords Property (ADO)
-Indicates the maximum number of records to return to a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) from a query.  
+Indicates the maximum number of records to return to a [Recordset](./recordset-object-ado.md) from a query.  
   
 ## Settings and Return Values  
  Sets or returns a **Long** value that indicates the maximum number of records to return. Default is zero (**0**), which means no limit.  
@@ -28,8 +29,8 @@ Indicates the maximum number of records to return to a [Recordset](../../../ado/
  The **MaxRecords** property is read/write when the **Recordset** is closed and read-only when it is open.  
   
 ## Applies To  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset Object (ADO)](./recordset-object-ado.md)  
   
 ## See Also  
- [MaxRecords Property Example (VB)](../../../ado/reference/ado-api/maxrecords-property-example-vb.md)   
- [MaxRecords Property Example (VC++)](../../../ado/reference/ado-api/maxrecords-property-example-vc.md)   
+ [MaxRecords Property Example (VB)](./maxrecords-property-example-vb.md)   
+ [MaxRecords Property Example (VC++)](./maxrecords-property-example-vc.md)

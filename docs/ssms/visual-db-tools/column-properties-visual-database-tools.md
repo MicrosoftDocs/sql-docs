@@ -1,4 +1,5 @@
 ---
+description: "Column Properties (Visual Database Tools)"
 title: Column Properties
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,11 @@ f1_keywords:
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
 # Column Properties (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 There are two sets of properties for columns: a full set that you can see in the **Column Properties** tab within Table Designer (available only for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases) and a subset you can see in the Properties window using Server Explorer.  
   
 > [!NOTE]  
@@ -48,7 +48,7 @@ Shows the name of the data source for the selected column. (Applies only to OLE 
 Expands to show the remaining properties.  
   
 **Data Type**  
-Shows the data type of the selected column. For more information, see [Data Types (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Shows the data type of the selected column. For more information, see [Data Types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
 **Identity Increment**  
 Shows the increment that will be added to the **Identity Seed** for each subsequent row of the identity column. (Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
@@ -90,7 +90,7 @@ Displays the name of the column. To edit the name, type in the text box.
 Shows whether or not the column's data type allows null values.  
   
 **Data Type**  
-Shows the data type for the selected column. To edit this property, click its value, expand the drop-down list, and choose another value. For more information, see [Data Types (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Shows the data type for the selected column. To edit this property, click its value, expand the drop-down list, and choose another value. For more information, see [Data Types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
 **Default Value or Binding**  
 Shows the default for this column when no value is specified for this column. The drop-down list contains all global defaults defined in the data source. To bind the column to a global default, select from the drop-down list. Alternatively, to create a default constraint for the column, type the default value directly as text.  
@@ -138,7 +138,7 @@ Shows which column is used to define the document type of a column of type image
 Indicates the language used to index the column.  
   
 **Statistical Semantics**  
-Select whether to enable statistical semantic indexing for the selected column. For more information, see [Semantic Search placeholder](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
+Select whether to enable statistical semantic indexing for the selected column. For more information, see [Semantic Search placeholder](../../relational-databases/search/semantic-search-sql-server.md).  
   
 If you select a **Language** prior to selecting **Statistical Semantics**, and the selected language does not have an associated Semantic Language Model, then the **Statistical Semantics** option is set to **No** and cannot be modified. If you select **Yes** for the **Statistical Semantics** option prior to selecting a **Language**, then the languages available in the **Language** column will be restricted to those for which there is Semantic Language Model support.  
   
@@ -183,4 +183,3 @@ Shows the size in bytes allowed by column's data type. For example, a **nchar** 
   
 > [!NOTE]  
 > The length of a **varchar(max)** data type varies for each row. sp_help returns (-1) as the length of **varchar(max)** column. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] displays -1 as the column size.  
-  

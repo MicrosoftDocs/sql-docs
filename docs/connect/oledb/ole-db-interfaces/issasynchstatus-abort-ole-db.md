@@ -1,6 +1,6 @@
 ---
-title: "ISSAsynchStatus::Abort (OLE DB) | Microsoft Docs"
-description: "ISSAsynchStatus::Abort (OLE DB)"
+title: "ISSAsynchStatus::Abort (OLE DB driver) | Microsoft Docs"
+description: Learn how the ISSAsynchStatus::Abort method cancels an asynchronously executing operation in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -13,11 +13,11 @@ apiname:
 apitype: "COM"
 helpviewer_keywords: 
   - "Abort method"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # ISSAsynchStatus::Abort (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -43,7 +43,7 @@ HRESULT Abort(
   
 ## Return Code Values  
  S_OK  
- The request to cancel the asynchronous operation was processed. It does not guarantee that the operation itself was canceled. To determine whether the operation was canceled, the consumer should call [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) and check for DB_E_CANCELED; however, it might not be returned in the very next call.  
+ The request to cancel the asynchronous operation was processed. It does not guarantee that the operation itself was canceled. To determine whether the operation was canceled, the consumer should call [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) and check for DB_E_CANCELED; however, it might not be returned in the next call.  
   
  DB_E_CANTCANCEL  
  The asynchronous operation cannot be canceled.  
@@ -58,18 +58,18 @@ HRESULT Abort(
  The *hChapter* parameter isn't DB_NULL_HCHAPTER or *eOperation* isn't DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
- **ISSAsynchStatus::Abort** was called on a data source object on which **IDBInitialize::Initialize** hasn't been called, or hasn't completed.  
+ `ISSAsynchStatus::Abort` was called on a data source object on which `IDBInitialize::Initialize` hasn't been called, or hasn't completed.  
   
- **ISSAsynchStatus::Abort** was called on a data source object on which **IDBInitialize::Initialize** was called but subsequently canceled before initialization, or has timed out. The data source object is still uninitialized.  
+ `ISSAsynchStatus::Abort` was called on a data source object on which `IDBInitialize::Initialize` was called but then canceled before initialization, or has timed out. The data source object is still uninitialized.  
   
- **ISSAsynchStatus::Abort** was called on a rowset on which **ITransaction::Commit** or **ITransaction::Abort** was previously called, and the rowset didn't survive the commit or abort and is in a zombie state.  
+ `ISSAsynchStatus::Abort` was called on a rowset on which `ITransaction::Commit` or `ITransaction::Abort` was previously called, and the rowset didn't survive the commit or abort and is in a zombie state.  
   
- **ISSAsynchStatus::Abort** was called on a rowset that was asynchronously canceled in its initialization phase. The rowset is in a zombie state.  
+ `ISSAsynchStatus::Abort` was called on a rowset that was asynchronously canceled in its initialization phase. The rowset is in a zombie state.  
   
 ## Remarks  
- Aborting the initialization of a rowset or data source object might leave the rowset or data source object in a zombie state, such that all methods other than **IUnknown** methods return E_UNEXPECTED. When this happens, the only possible action for the consumer is to release the rowset or data source object.  
+ Aborting the initialization of a rowset or data source object might leave the rowset or data source object in a zombie state, such that all methods other than `IUnknown` methods return E_UNEXPECTED. When this happens, the only possible action for the consumer is to release the rowset or data source object.  
   
- Calling **ISSAsynchStatus::Abort** and passing a value for *eOperation* other than DBASYNCHOP_OPEN returns S_OK. This doesn't imply that the operation completed or was canceled.  
+ Calling `ISSAsynchStatus::Abort` and passing a value for *eOperation* other than DBASYNCHOP_OPEN returns S_OK. This value doesn't imply that the operation completed or was canceled.  
   
 ## See Also  
  [Performing Asynchronous Operations](../../oledb/features/performing-asynchronous-operations.md)  

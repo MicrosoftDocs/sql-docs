@@ -1,4 +1,5 @@
 ---
+description: "STStartPoint (geometry Data Type)"
 title: "STStartPoint (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -19,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STStartPoint (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns the start point of a **geometry** instance.
   
@@ -30,7 +31,9 @@ Returns the start point of a **geometry** instance.
 .STStartPoint ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geometry**  
   
  CLR return type: **SqlGeometry**  
@@ -45,7 +48,7 @@ Returns the start point of a **geometry** instance.
   
 ```  
 DECLARE @g geometry;  
-SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0;  
+SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);  
 SELECT @g.STStartPoint().ToString();  
 ```  
   

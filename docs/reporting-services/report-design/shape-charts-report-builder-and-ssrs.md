@@ -1,5 +1,6 @@
 ---
-title: "Shape Charts (Report Builder and SSRS) | Microsoft Docs"
+title: "Shape Charts (Report Builder) | Microsoft Docs"
+description: See how shape charts display value data as percentages of their whole in Report Builder. Shape charts are often used to show proportional comparisons between values in a set. 
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

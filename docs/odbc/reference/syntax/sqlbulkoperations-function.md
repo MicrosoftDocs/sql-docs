@@ -1,4 +1,5 @@
 ---
+description: "SQLBulkOperations Function"
 title: "SQLBulkOperations Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"
@@ -18,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLBulkOperations function [ODBC]"
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLBulkOperations Function
 **Conformance**  

@@ -1,4 +1,5 @@
 ---
+description: "Conversion Settings (MySQLToSQL)"
 title: "Conversion Settings (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Conversion Settings (MySQLToSQL)
 The **'Settings'** tab allows the user to set node level settings. The tab will be available at the following Metabase nodes:  
@@ -69,5 +70,4 @@ These settings will be available based on the type of Metabase node. For example
     3.  The settings made by the user are saved in cascaded preferences file on clicking **Apply** button.  
   
 ## See Also  
-[Project Settings (Conversion) (MySQL to SQL)](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
-  
+[Project Settings (Conversion) (MySQL to SQL)](./project-settings-conversion-mysqltosql.md)  

@@ -1,4 +1,5 @@
 ---
+description: "Advanced Merge Replication Conflict - COM-Based Resolvers"
 title: "Microsoft COM-Based Resolvers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Advanced Merge Replication Conflict - COM-Based Resolvers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   All of the COM-based resolvers supplied with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] handle update conflicts, and where indicated, they also handle insert and delete conflicts. They all handle column tracking; most also handle row tracking. These and all other COM-based resolvers declare the types of conflict they can handle, and the Merge Agent uses the default resolver for all other conflict types.  
   
  The resolvers are installed during the installation process for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Execute the **sp_enumcustomresolvers** stored procedure to view all the conflict resolvers registered on a computer. Executing the procedure displays the description and globally unique identifier (GUID) for each resolver in a separate result set.  

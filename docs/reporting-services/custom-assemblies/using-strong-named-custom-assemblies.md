@@ -1,5 +1,6 @@
 ---
 title: "Using Strong-Named Custom Assemblies | Microsoft Docs"
+description: Learn to use a strong-named custom assembly to uniquely identify an assembly to the common language runtime (CLR) and ensure binary integrity.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

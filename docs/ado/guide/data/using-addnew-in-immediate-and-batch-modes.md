@@ -1,8 +1,9 @@
 ---
 title: "Using AddNew in Immediate and Batch Modes | Microsoft Docs"
+description: Explains how to use AddNew in Immediate and Batch Modes.
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "ADO, adding data"
   - "editing data [ADO], AddNew method"
 ms.assetid: ed314bb9-e188-4658-a68c-a2abc49610be
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Using AddNew in Immediate and Batch Modes
 The behavior of the **AddNew** method depends on the updating mode of the **Recordset** object and whether you pass the *FieldList* and *Values* arguments.  

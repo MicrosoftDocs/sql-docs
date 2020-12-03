@@ -1,4 +1,5 @@
 ---
+description: "Updating Data with SQLBulkOperations"
 title: "Updating Data with SQLBulkOperations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "data updates [ODBC], SQLBulkOperations"
   - "updating data [ODBC], SQLBulkOperations"
 ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Updating Data with SQLBulkOperations
 Applications can perform bulk update, delete, fetch, or insertion operations on the underlying table at the data source with a call to **SQLBulkOperations**. Calling **SQLBulkOperations** is a convenient alternative to constructing and executing an SQL statement. It lets an ODBC driver support positioned updates even when the data source does not support positioned SQL statements. It is part of the paradigm of achieving complete database access by means of function calls.  

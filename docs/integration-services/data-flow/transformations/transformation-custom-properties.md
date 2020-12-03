@@ -1,4 +1,5 @@
 ---
+description: "Transformation Custom Properties"
 title: "Transformation Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -44,29 +45,52 @@ ms.author: chugu
 ---
 # Transformation Custom Properties
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In addition to the properties that are common to most data flow objects in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] object model, many data flow objects have custom properties that are specific to the object. These custom properties are available only at run time, and are not documented in the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed Programming Reference Documentation.  
   
- This topic lists and describes the custom properties of the various data flow transformations. For information about the properties common to most data flow objects, see [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ This topic lists and describes the custom properties of the various data flow transformations. For information about the properties common to most data flow objects, see [Common Properties](../set-the-properties-of-a-data-flow-component.md).  
   
- Some properties of transformations can be set by using property expressions. For more information, see [Data Flow Properties that Can Be Set by Using Expressions](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8).  
+ Some properties of transformations can be set by using property expressions. For more information, see [Data Flow Properties that Can Be Set by Using Expressions](/previous-versions/sql/sql-server-2016/ms136104(v=sql.130)).  
   
 ## Transformations with Custom Properties  
-  
-||||  
-|-|-|-|  
-|[Aggregate](#aggregate)|[Export Column](#extract)|[Row Count](#rowcount)|  
-|[Audit](#audit)|[Fuzzy Grouping](#fgroup)|[Row Sampling](#rowsamp)|  
-|[Cache Transform](#cachetransform)|[Fuzzy Lookup](#flookup)|[Script Component](#script)|  
-|[Character Map](#charmap)|[Import Column](#insert)|[Slowly Changing Dimension](#scd)|  
-|[Conditional Split](#condsplit)|[Lookup](#lookup)|[Sort](#sort)|  
-|[Copy Column](#copymap)|[Merge Join](#mjoin)|[Term Extraction](#textract)|  
-|[Data Conversion](#dataconv)|[OLE DB Command](#oledbcmd)|[Term Lookup](#tlookup)|  
-|[Data Mining Query](#dmquery)|[Percentage Sampling](#percent)|[Unpivot](#unpivot)|  
-|[Derived Column](#derived)|[Pivot](#pivot)||  
-  
+
+:::row:::
+    :::column:::
+        [Aggregate](#aggregate)  
+        [Audit](#audit)  
+        [Cache Transform](#cachetransform)  
+        [Character Map](#charmap)  
+        [Conditional Split](#condsplit)  
+        [Copy Column](#copymap)  
+        [Data Conversion](#dataconv)  
+        [Data Mining Query](#dmquery)  
+        [Derived Column](#derived)  
+    :::column-end:::
+    :::column:::
+        [Export Column](#extract)  
+        [Fuzzy Grouping](#fgroup)  
+        [Fuzzy Lookup](#flookup)  
+        [Import Column](#insert)  
+        [Lookup](#lookup)  
+        [Merge Join](#mjoin)  
+        [OLE DB Command](#oledbcmd)  
+        [Percentage Sampling](#percent)  
+        [Pivot](#pivot)  
+    :::column-end:::
+    :::column:::
+        [Row Count](#rowcount)  
+        [Row Sampling](#rowsamp)  
+        [Script Component](#script)  
+        [Slowly Changing Dimension](#scd)  
+        [Sort](#sort)  
+        [Term Extraction](#textract)  
+        [Term Lookup](#tlookup)  
+        [Unpivot](#unpivot)  
+    :::column-end:::
+:::row-end:::
+
 ### Transformations Without Custom Properties  
  The following transformations have no custom properties at the component, input, or output levels: [Merge Transformation](../../../integration-services/data-flow/transformations/merge-transformation.md), [Multicast Transformation](../../../integration-services/data-flow/transformations/multicast-transformation.md), and [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md). They use only the properties common to all data flow components.  
   
@@ -129,7 +153,7 @@ ms.author: chugu
 |ValidateExternalMetadata|Boolean|Indicates whether the Cache Transform is validated by using external data sources at design time. If the property is set to **False**, validation against external data sources occurs at run time.<br /><br /> The default value it **True**.|  
 |AvailableInputColumns|String|A list of the available input columns.|  
 |InputColumns|String|A list of the selected input columns.|  
-|CacheColumnName|String|Specifies the name of the column that is mapped to a selected input column.<br /><br /> The name of the column in the CacheColumnName property must match the name of the corresponding column listed on the **Columns** page of the **Cache Connection Manager Editor**.<br /><br /> For more information, see [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)|  
+|CacheColumnName|String|Specifies the name of the column that is mapped to a selected input column.<br /><br /> The name of the column in the CacheColumnName property must match the name of the corresponding column listed on the **Columns** page of the **Cache Connection Manager Editor**.<br /><br /> For more information, see [Cache Connection Manager Editor](../../connection-manager/cache-connection-manager.md)|  
   
 ##  <a name="charmap"></a> Character Map Transformation Custom Properties  
  The Character Map transformation has only the properties common to all data flow components at the component level.  
@@ -181,7 +205,7 @@ ms.author: chugu
   
 |Property|Data type|Description|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|A value that indicates whether the column uses the quicker, but locale-insensitive, fast parsing routines that [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides, or the locale-sensitive standard parsing routines. The default value of this property is **False**. For more information, see [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) and [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). .<br /><br /> Note: This property is not available in the **Data Conversion Transformation Editor**, but can be set by using the **Advanced Editor**.|  
+|FastParse|Boolean|A value that indicates whether the column uses the quicker, but locale-insensitive, fast parsing routines that [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides, or the locale-sensitive standard parsing routines. The default value of this property is **False**. For more information, see [Fast Parse](../parsing-data.md) and [Standard Parse](../parsing-data.md). .<br /><br /> Note: This property is not available in the **Data Conversion Transformation Editor**, but can be set by using the **Advanced Editor**.|  
 |SourceInputColumnLineageId|Integer|The **LineageID** of the input column that is the source of the output column.|  
   
  The input, the input columns, and the output of the Data Conversion transformation have no custom properties.  
@@ -340,7 +364,7 @@ ms.author: chugu
 |DefaultCodePage|Integer|The default code page to use when code page information is not available from the data source.|  
 |MaxMemoryUsage|Integer|The maximum cache size for the lookup table. The default value of this property is **25**, which means that the cache size has no limit.|  
 |MaxMemoryUsage64|Integer|The maximum cache size for the lookup table on a 64-bit computer.|  
-|NoMatchBehavior|Integer (enumeration)|A value that specifies whether rows without matching entries in the reference dataset are treated as errors.<br /><br /> When the property is set to **Treat rows with no matching entries as errors** (0), the rows without matching entries are treated as errors. You can specify what should happen when this type of error occurs by using the **Error Output** page of the **Lookup Transformation Editor** dialog box. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).<br /><br /> When the property is set to **Send rows with no matching entries to the no match output** (1), the rows are not treaded as errors.<br /><br /> The default value is **Treat rows with no matching entries as errors** (0).|  
+|NoMatchBehavior|Integer (enumeration)|A value that specifies whether rows without matching entries in the reference dataset are treated as errors.<br /><br /> When the property is set to **Treat rows with no matching entries as errors** (0), the rows without matching entries are treated as errors. You can specify what should happen when this type of error occurs by using the **Error Output** page of the **Lookup Transformation Editor** dialog box. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](./lookup-transformation.md).<br /><br /> When the property is set to **Send rows with no matching entries to the no match output** (1), the rows are not treaded as errors.<br /><br /> The default value is **Treat rows with no matching entries as errors** (0).|  
 |ParameterMap|String|A semicolon-delimited list of lineage IDs that map to the parameters used in the **SqlCommand** statement.|  
 |ReferenceMetaDataXML|String|Metadata for the columns in the lookup table that the transformation copies to its output.|  
 |SqlCommand|String|The SELECT statement that populates the lookup table.|  
@@ -626,8 +650,7 @@ ms.author: chugu
   
 ## See Also  
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
- [Path Properties](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
- [Data Flow Properties that Can Be Set by Using Expressions](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
-  
+ [Common Properties](../set-the-properties-of-a-data-flow-component.md)   
+ [Path Properties](../integration-services-paths.md)   
+ [Data Flow Properties that Can Be Set by Using Expressions](/previous-versions/sql/sql-server-2016/ms136104(v=sql.130))  
   

@@ -1,8 +1,9 @@
 ---
+description: "ParentCatalog Property (ADOX)"
 title: "ParentCatalog Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -38,14 +39,14 @@ f1_keywords:
 helpviewer_keywords: 
   - "ParentCatalog property [ADOX]"
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ParentCatalog Property (ADOX)
 Specifies the parent catalog of a Table, User, or Column object to provide access to provider-specific properties.  
   
 ## Settings and Return Values  
- Sets and returns a [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md) object. Setting **ParentCatalog** to an open **Catalog** allows access to provider-specific properties prior to appending a table or column to a **Catalog** collection.  
+ Sets and returns a [Catalog](./catalog-object-adox.md) object. Setting **ParentCatalog** to an open **Catalog** allows access to provider-specific properties prior to appending a table or column to a **Catalog** collection.  
   
 ## Remarks  
  Some data providers allow provider-specific property values to be written only at creation: that is, when a table or column is appended to its **Catalog** collection. To access these properties before appending these objects to a **Catalog**, specify the **Catalog** in the **ParentCatalog** property first.  
@@ -53,11 +54,18 @@ Specifies the parent catalog of a Table, User, or Column object to provide acces
  An error occurs when the table or column is appended to a different **Catalog** than the **ParentCatalog**.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|  
-|[User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
-  
+
+:::row:::
+    :::column:::
+        [Column Object (ADOX)](./column-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Table Object (ADOX)](./table-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [User Object (ADOX)](./user-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
- [ParentCatalog Property Example (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
+ [ParentCatalog Property Example (VB)](./parentcatalog-property-example-vb.md)

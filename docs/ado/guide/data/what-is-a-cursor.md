@@ -1,8 +1,9 @@
 ---
+description: "What is a Cursor?"
 title: "What is a Cursor? | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "cursors [ADO], about cursors"
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # What is a Cursor?
 Operations in a relational database act on a complete set of rows. The set of rows returned by a SELECT statement consists of all the rows that satisfy the conditions in the WHERE clause of the statement. This complete set of rows returned by the statement is known as the result set. Applications, especially those that are interactive and online, cannot always work effectively with the entire result set as a unit. These applications need a mechanism to work with one row or a small block of rows at a time. Cursors are an extension to result sets that provide that mechanism.  

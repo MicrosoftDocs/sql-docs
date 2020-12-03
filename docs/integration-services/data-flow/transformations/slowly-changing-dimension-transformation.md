@@ -1,4 +1,5 @@
 ---
+description: "Slowly Changing Dimension Transformation"
 title: "Slowly Changing Dimension Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2019"
@@ -20,7 +21,7 @@ ms.author: chugu
 ---
 # Slowly Changing Dimension Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Slowly Changing Dimension transformation coordinates the updating and inserting of records in data warehouse dimension tables. For example, you can use this transformation to configure the transformation outputs that insert and update records in the DimProduct table of the [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] database with data from the Production.Products table in the AdventureWorks OLTP database.  
@@ -87,7 +88,7 @@ ms.author: chugu
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -107,5 +108,4 @@ ms.author: chugu
   
 -   [Handling Slowly Changing Dimensions in SSIS](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Handling-Slowly-Changing-Dimensions-in-SSIS/ba-p/387599)
 -   [Optimizing the Slowly Changing Dimension Wizard](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Optimizing-the-Slowly-Changing-Dimension-Wizard/ba-p/387702)
-  
   

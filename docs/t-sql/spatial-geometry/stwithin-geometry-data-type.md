@@ -1,4 +1,5 @@
 ---
+description: "STWithin (geometry Data Type)"
 title: "STWithin (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -19,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STWithin (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns 1 if a **geometry** instance is completely within another **geometry** instance; otherwise, returns 0. The `STWithin` command is case-sensitive.
   
@@ -30,7 +31,9 @@ Returns 1 if a **geometry** instance is completely within another **geometry** i
 .STWithin ( other_geometry )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geometry*  
  Is another **geometry** instance to compare against the instance on which `STWithin()` is invoked.  
   

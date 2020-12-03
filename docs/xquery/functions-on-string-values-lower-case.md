@@ -1,5 +1,6 @@
 ---
 title: "lower-case  Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery function lower-case() that converts each character in a specified string to its lower case equivalent.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Functions on String Values - lower-case
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   The lower-case function converts each character in *$arg* to its lower case equivalent. The Microsoft Windows binary case conversion for Unicode code points specifies how characters are converted to lower case. This standard is not identical to the mapping for Unicode code point standard.  
   
@@ -30,9 +31,8 @@ fn:lower-case($arg as xs:string?) as xs:string
   
 ## Arguments  
   
-|||  
-|-|-|  
 |Term|Definition|  
+|-|-|
 |*$arg*|The string value to be converted to lower case.|  
   
 ## Remarks  

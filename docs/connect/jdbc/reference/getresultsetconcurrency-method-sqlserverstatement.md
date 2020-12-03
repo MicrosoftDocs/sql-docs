@@ -1,4 +1,5 @@
 ---
+description: "getResultSetConcurrency Method (SQLServerStatement)"
 title: "getResultSetConcurrency Method (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 47ef6547-5ec7-4cf5-a4d4-e34cbeec72eb
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getResultSetConcurrency Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

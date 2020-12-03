@@ -1,4 +1,5 @@
 ---
+description: "Post-migration Validation and Optimization Guide"
 title: "Post-migration Validation and Optimization Guide | Microsoft Docs"
 ms.date: 01/09/2019
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: "harinid"
 ---
 # Post-migration Validation and Optimization Guide
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] post migration step is very crucial for reconciling any data accuracy and completeness, as well as uncover performance issues with the workload.
 
@@ -31,13 +32,13 @@ When migrating from an older version of [!INCLUDE[ssNoVersion](../includes/ssnov
 
 This is because starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], all Query Optimizer changes are tied to the latest [database compatibility level](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), so plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` database option to the latest one. This capability, in combination with Query Store gives you a great level of control over the query performance in the upgrade process. 
 
-For more information on Query Optimizer changes introduced in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], see [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx).
+For more information on Query Optimizer changes introduced in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], see [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](/previous-versions/dn673537(v=msdn.10)).
 
 ### Steps to resolve
 
 Change the [database compatibility level](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) to the source version, and follow the recommended upgrade workflow as shown in the following picture:
 
-![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![Diagram showing the recommended upgrade workflow.](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
 
 For more information on this topic, see [Keep performance stability during the upgrade to newer SQL Server](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
 
@@ -60,7 +61,7 @@ A potential problem arises when that first compilation may not have used the mos
 5.	Rewrite the query to use the hint `DISABLE_PARAMETER_SNIFFING`. Same effect as using the local variable technique by totally disabling parameter sniffing, unless `OPTION(RECOMPILE)`, `WITH RECOMPILE` or `OPTIMIZE FOR <value>` is used.
 
 > [!TIP] 
-> Leverage the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Plan Analysis feature to quickly identify if this is an issue. More information available [here](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
+> Leverage the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Plan Analysis feature to quickly identify if this is an issue. More information available [here](/archive/blogs/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier).
 
 ## <a name="MissingIndexes"></a> Missing indexes
 
@@ -161,8 +162,8 @@ Table Valued Functions return a table data type that can be an alternative to vi
 ##  <a name="Additional_Reading"></a> Additional Reading
 
  [Best Practice with the Query Store](../relational-databases/performance/best-practice-with-the-query-store.md)  
-[Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+[Memory-Optimized Tables](./in-memory-oltp/sample-database-for-in-memory-oltp.md)  
 [User-Defined Functions](../relational-databases/user-defined-functions/user-defined-functions.md)  
-[Table Variables and Row Estimations - Part 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
-[Table Variables and Row Estimations - Part 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
+[Table Variables and Row Estimations - Part 1](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-1)  
+[Table Variables and Row Estimations - Part 2](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-2)  
 [Execution Plan Caching and Reuse](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)

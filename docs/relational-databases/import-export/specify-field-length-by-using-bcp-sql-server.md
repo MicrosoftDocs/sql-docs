@@ -1,5 +1,6 @@
 ---
 title: "Specify Field Length by Using bcp (SQL Server) | Microsoft Docs"
+description: In SQL Server, if necessary, bcp prompts for field length, default field lengths, and impact of field-length on data storage in files that contain char data.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -19,7 +20,7 @@ ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specify Field Length by Using bcp (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The field length indicates the maximum number of characters that are required to represent data in character format. The field length is already known if the data is stored in the native format; for example, the **int** data type takes 4 bytes. If you have indicated 0 for the prefix length, the **bcp** command prompts you for field length, the default field lengths, and the impact of field-length on data storage in data files that contain **char** data.  
   
 ## The bcp Prompt for Field Length  

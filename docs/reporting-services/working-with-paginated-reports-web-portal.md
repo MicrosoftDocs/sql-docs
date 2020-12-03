@@ -1,5 +1,6 @@
 ---
 title: "Working with paginated reports (web portal) | Microsoft Docs"
+description: Learn how to view and manage the properties of a paginated report within the web portal. Also, learn to use Report Builder to create or edit paginated reports.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -25,7 +26,7 @@ To create a new shared dataset, you can do the following.
   
 2.  Select **Paginated Report**.  
   
-    ![ssRSWebPortal-new-report](../reporting-services/media/ssrswebportal-new-report.png)  
+    ![Screenshot showing the New dropdown list with the Paginated Report option called out.](../reporting-services/media/ssrswebportal-new-report.png)  
   
 3.  This will either launch Report Builder, or prompt you to download it.  
   
@@ -40,28 +41,28 @@ To manage an existing paginated report, you can do the following.
   
 1.  Select the **ellipsis (...)** for the dataset you want to manage.  
       
-    ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
+    ![Screenshot showing the user selecting the ellipsis option for the dataset.](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
 2.  Select **Manage** which will take you to the edit screen.  
     
-    ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
+    ![Screenshot showing the ellipsis option selected and the MANAGE option called out.](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
 ## Properties  
   
 On the properties screen, you can change the **name** and **description** for the paginated report. You can also **Delete**, **Move**, **Create Linked Report**, **Edit in Report Builder**, **Download** or **replace**.  
     
-![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
+![Screenshot showing the Properties screen of the Edit Company Sales dialog box.](../reporting-services/media/ssrswebportal-report-properties.png)  
    
 ## Parameters  
   
 You can modify existing parameters of a paginated report. To add a new parameter, you must edit the report in Report Builder or SQL Server Data Tools.  
   
-![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
+![Screenshot showing the Parameters screen of the Edit Company Sales dialog box.](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
 ## Data Source  
 You can point to a shared data source, or enter connection information for a custom data source.  
   
-![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
+![Screenshot showing the Data Sources screen of the Edit Company Sales dialog box.](../reporting-services/media/ssrswebportal-report-datasource.png)  
   
 The following options are used to specify a custom data source.  
   
@@ -73,7 +74,7 @@ Specify a data processing extension that is used to process data from the data s
   
 Specify the connection string that the report server uses to connect to the data source. The connection type determines the syntax you should use. For example, a connection string for the XML data processing extension is a URL to an XML document. In most cases, a typical connection string specifies the database server and a data file. The following example illustrates a connection string used to connect to a SQL Server database that is named MyData:  
   
-    data source=(a SQL Server instance);initial catalog=MyData  
+`data source=(a SQL Server instance);initial catalog=MyData`
   
 A connection string can be configured as an expression so that you can specify the data source at run time. Data source expressions are defined in the report in Report Designer. Data source expressions cannot be defined, viewed, or modified in the web portal. However, you can replace a data source expression by clicking **Override Default** to type in a static connection string. If you want to switch back to the expression, click **Revert to Defaul**. The report server stores the original connection string in case you need to restore it. To use data source expressions, you must use the data source connection information that was originally published in the report. Shared data sources do not support the use of expressions in the connection string.  
   
@@ -112,12 +113,12 @@ You can also choose the type of credential this would be. Either Windows authent
   
 This allows you to not provide any credentials for the data source. If a data source requires a user logon, choosing this option will have no effect. You should only choose this option if the data source connection does not require user credentials.  
   
-To use this option, you must have previously configured the unattended execution account for your report server. The unattended execution account is used to connect to external data sources when other courses of credentials are not available. If you specify this option and the account is not configured, the connection to the report data source will fail and report processing will not occur. For more information about this account, see [Configure the Unattended Execution Account (SSRS Configuration Manager)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+To use this option, you must have previously configured the unattended execution account for your report server. The unattended execution account is used to connect to external data sources when other courses of credentials are not available. If you specify this option and the account is not configured, the connection to the report data source will fail and report processing will not occur. For more information about this account, see [Configure the Unattended Execution Account (Report Server Configuration Manager)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## Subscriptions  
 A Reporting Services subscription is a configuration that delivers a report at a specific time or in response to an event, and in a file format that you specify. For example, every Wednesday, save the MonthlySales.rdl report as a Microsoft Word document to a file share. Subscriptions can be used to schedule and automate the delivery of a report and with a specific set of report parameter values. For more information, see [Working with subscriptions](working-with-subscriptions-web-portal.md).
   
-![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
+![Screenshot showing the Subscriptions screen of the Edit Company Sales dialog box.](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## Dependent Items  
 Use the Dependent Items page to view a list of items that are referencing this report. The icon for each item type indicates what it is. You can then select the **ellipsis (...)** on each item to manage those items further.  
@@ -131,11 +132,11 @@ You have options when it comes to caching data for a paginated report. You will 
   
 3.  **Always run this report against pregenerated snapshots** will cache the report layout and data for a given time period. You can run a report as a report snapshot to prevent the report from being run at arbitrary times (for example, during a scheduled backup). The snapshot can be refreshed on a schedule. [Learn more]  
   
-![ssRSWebPortal-report-caching1](../reporting-services/media/ssrswebportal-report-caching1.png)  
+![Screenshot showing the Caching screen of the Edit Company Sales dialog box with the Always run this report with the most recent data option selected.](../reporting-services/media/ssrswebportal-report-caching1.png)  
    
 Selecting **Cache Copies of this report and use them when available** will present you with some more options.  
   
-![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
+![Screenshot showing the Caching screen of the Edit Company Sales dialog box with the Cache copies of this report and use them when available option selected.](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
 For more information, see [Working with snapshots](working-with-snapshots-web-portal.md).
   
@@ -158,7 +159,7 @@ To create a new cache refresh plan, select **New Cache Refresh Plan**. You can t
   
 Once you are done, you can select **Create Cache Refresh Plan**.  
   
-![ssRSWebPortal-report-caching3](../reporting-services/media/ssrswebportal-report-caching3.png)  
+![Screenshot of the Edit Company Sales dialog box showing the Create Cache Refresh Plan option.](../reporting-services/media/ssrswebportal-report-caching3.png)  
   
 > [!NOTE]
 > SQL Server Agent needs to be running to create a cache refresh plan.  

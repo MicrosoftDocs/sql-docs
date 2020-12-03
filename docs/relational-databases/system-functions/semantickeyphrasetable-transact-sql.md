@@ -1,4 +1,5 @@
 ---
+description: "semantickeyphrasetable (Transact-SQL)"
 title: "semantickeyphrasetable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -19,7 +20,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # semantickeyphrasetable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a table with zero, one, or more rows for key phrases associated with the specified columns in the specified table.  
   

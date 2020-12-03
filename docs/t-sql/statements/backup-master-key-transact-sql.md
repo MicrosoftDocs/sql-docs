@@ -1,4 +1,5 @@
 ---
+description: "BACKUP MASTER KEY (Transact-SQL)"
 title: "BACKUP MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -26,7 +27,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # BACKUP MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Exports the database master key.  
   
@@ -34,13 +35,14 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 BACKUP MASTER KEY TO FILE = 'path_to_file'   
     ENCRYPTION BY PASSWORD = 'password'  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  FILE ='*path_to_file*'  
  Specifies the complete path, including file name, to the file to which the master key will be exported. This may be a local path or a UNC path to a network location.  
   
@@ -58,7 +60,7 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
 ## Examples  
  The following example creates a backup of the `AdventureWorks2012` master key. Because this master key is not encrypted by the service master key, a password must be specified when it is opened.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = 'sfj5300osdVdgwdfkli7';  
 BACKUP MASTER KEY TO FILE = 'c:\temp\exportedmasterkey'   

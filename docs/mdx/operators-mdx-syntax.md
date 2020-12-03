@@ -1,4 +1,5 @@
 ---
+description: "Operators (MDX Syntax)"
 title: "Operators (MDX Syntax) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -76,7 +77,7 @@ author: minewiskan
 ### Determining Results  
  When you combine simple expressions to form a complex expression, the rules for the operators combined with the rules for data type precedence determine the data type of the resulting value.  
   
- If the result is a character or Unicode value, the rules for the operators combined with the rules for collation precedence determines the collation of the result. For more information about collations, see [Languages and Collations &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services).  
+ If the result is a character or Unicode value, the rules for the operators combined with the rules for collation precedence determines the collation of the result. For more information about collations, see [Languages and Collations &#40;Analysis Services&#41;](/analysis-services/languages-and-collations-analysis-services).  
   
  There are also rules that determine the precision, scale, and length of the result based on the precision, scale, and length of the simple expressions.  
   
@@ -94,5 +95,4 @@ author: minewiskan
 ## See Also  
  [MDX Operator Reference &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [MDX Syntax Elements &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
-  
   

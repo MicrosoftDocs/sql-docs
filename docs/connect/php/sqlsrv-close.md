@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_close"
 title: "sqlsrv_close | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "sqlsrv_close"
   - "API Reference, sqlsrv_close"
 ms.assetid: 6ac6209c-a134-4f8f-b88b-8eefaa1cbc7f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

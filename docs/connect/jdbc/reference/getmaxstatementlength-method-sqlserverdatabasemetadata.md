@@ -1,4 +1,5 @@
 ---
+description: "getMaxStatementLength Method (SQLServerDatabaseMetaData)"
 title: "getMaxStatementLength Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: f45fcf45-b9e7-4d14-a90a-ebc542ac7755
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getMaxStatementLength Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

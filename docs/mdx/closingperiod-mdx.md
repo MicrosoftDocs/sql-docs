@@ -1,4 +1,5 @@
 ---
+description: "ClosingPeriod (MDX)"
 title: "ClosingPeriod (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

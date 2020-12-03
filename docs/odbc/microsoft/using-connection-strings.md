@@ -1,4 +1,5 @@
 ---
+description: "Using Connection Strings"
 title: "Using Connection Strings | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "connecting to data source [ODBC], Visual FoxPro"
   - "Visual FoxPro data source [ODBC], connecting"
 ms.assetid: 57634960-47e9-49bf-95c1-6e3702ac8166
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using Connection Strings
 You can use a connection string to connect to a Visual FoxPro data source.  

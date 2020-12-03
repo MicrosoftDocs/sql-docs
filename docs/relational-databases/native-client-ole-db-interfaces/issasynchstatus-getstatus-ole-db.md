@@ -1,5 +1,6 @@
 ---
-title: "ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs"
+description: "ISSAsynchStatus::GetStatus (Native Client OLE DB provider)"
+title: "ISSAsynchStatus::GetStatus (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -13,12 +14,12 @@ apitype: "COM"
 helpviewer_keywords: 
   - "GetStatus method"
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# ISSAsynchStatus::GetStatus (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# ISSAsynchStatus::GetStatus (Native Client OLE DB Provider)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the status of an asynchronously executing operation.  
   

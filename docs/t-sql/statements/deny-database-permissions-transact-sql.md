@@ -1,4 +1,5 @@
 ---
+description: "DENY Database Permissions (Transact-SQL)"
 title: "DENY Database Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2019"
@@ -21,7 +22,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # DENY Database Permissions (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Denies permissions on a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -29,7 +30,7 @@ Denies permissions on a database in [!INCLUDE[ssNoVersion](../../includes/ssnove
 
 ## Syntax
 
-```
+```syntaxsql
 DENY <permission> [ ,...n ]
     TO <database_principal> [ ,...n ] [ CASCADE ]
     [ AS <database_principal> ]
@@ -47,6 +48,8 @@ DENY <permission> [ ,...n ]
   | Database_user_mapped_to_asymmetric_key
   | Database_user_with_no_login
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

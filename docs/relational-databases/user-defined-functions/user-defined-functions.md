@@ -1,4 +1,5 @@
 ---
+description: "User-Defined Functions"
 title: "User-Defined Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
@@ -18,7 +19,7 @@ ms.author: "jroth"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # User-Defined Functions
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Like functions in programming languages, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user-defined functions are routines that accept parameters, perform an action, such as a complex calculation, and return the result of that action as a value. The return value can either be a single scalar value or a result set.  
    
 ##  <a name="Benefits"></a> User-defined functions  
@@ -36,7 +37,7 @@ Why use user-defined functions (UDFs)?
   
 -   They can reduce network traffic.  
   
-     An operation that filters data based on some complex constraint that cannot be expressed in a single scalar expression can be expressed as a function. The function can then invoked in the WHERE clause to reduce the number or rows sent to the client.  
+     An operation that filters data based on some complex constraint that cannot be expressed in a single scalar expression can be expressed as a function. The function can then be invoked in the WHERE clause to reduce the number of rows sent to the client.  
   
 > [!IMPORTANT]
 > [!INCLUDE[tsql](../../includes/tsql-md.md)] UDFs in queries can only be executed on a single thread (serial execution plan). Therefore using UDFs inhibits parallel query processing. For more information about parallel query processing, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing).
@@ -83,27 +84,111 @@ The types of statements that are valid in a function include:
 -   `EXECUTE` statements calling an extended stored procedure.  
   
 ### Built-in system functions  
- The following nondeterministic built-in functions can be used in Transact-SQL user-defined functions.  
+ The following nondeterministic built-in functions can be used in Transact-SQL user-defined functions.
   
-|||  
-|-|-|  
-|CURRENT_TIMESTAMP|@@MAX_CONNECTIONS|  
-|GET_TRANSMISSION_STATUS|@@PACK_RECEIVED|  
-|GETDATE|@@PACK_SENT|  
-|GETUTCDATE|@@PACKET_ERRORS|  
-|@@CONNECTIONS|@@TIMETICKS|  
-|@@CPU_BUSY|@@TOTAL_ERRORS|  
-|@@DBTS|@@TOTAL_READ|  
-|@@IDLE|@@TOTAL_WRITE|  
-|@@IO_BUSY||  
-  
+:::row:::
+    :::column:::
+        CURRENT_TIMESTAMP
+    :::column-end:::
+    :::column:::
+        @@MAX_CONNECTIONS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GET_TRANSMISSION_STATUS
+    :::column-end:::
+    :::column:::
+        @@PACK_RECEIVED
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GETDATE
+    :::column-end:::
+    :::column:::
+        @@PACK_SENT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GETUTCDATE
+    :::column-end:::
+    :::column:::
+        @@PACKET_ERRORS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@CONNECTIONS
+    :::column-end:::
+    :::column:::
+        @@TIMETICKS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@CPU_BUSY
+    :::column-end:::
+    :::column:::
+        @@TOTAL_ERRORS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@DBTS
+    :::column-end:::
+    :::column:::
+        @@TOTAL_READ
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@IDLE
+    :::column-end:::
+    :::column:::
+        @@TOTAL_WRITE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@IO_BUSY
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+ 
  The following nondeterministic built-in functions **cannot** be used in [!INCLUDE[tsql](../../includes/tsql-md.md)]  user-defined functions.  
   
-|||  
-|-|-|  
-|NEWID|RAND|  
-|NEWSEQUENTIALID|TEXTPTR|  
-  
+:::row:::
+    :::column:::
+        NEWID
+    :::column-end:::
+    :::column:::
+        RAND
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        NEWSEQUENTIALID
+    :::column-end:::
+    :::column:::
+        TEXTPTR
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+ 
  For a list of deterministic and nondeterministic built-in system functions, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ##  <a name="SchemaBound"></a> Schema-bound functions  
@@ -124,9 +209,8 @@ The types of statements that are valid in a function include:
   
 ##  <a name="Tasks"></a> More examples!  
   
-|||  
-|-|-|  
-|**Task Description**|**Topic**|  
+|Task Description|Topic|  
+|-|-|    
 |Describes how to create a Transact-SQL user-defined function.|[Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |Describes how create a CLR function.|[Create CLR Functions](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
 |Describes how to create a user-defined aggregate function|[Create User-defined Aggregates](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  

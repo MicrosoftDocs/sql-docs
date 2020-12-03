@@ -1,8 +1,9 @@
 ---
+description: "Optimize Property-Dynamic (ADO)"
 title: "Optimize Property-Dynamic (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -11,21 +12,21 @@ apitype: "COM"
 helpviewer_keywords: 
   - "Optimize property [ADO]"
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Optimize Property-Dynamic (ADO)
-Specifies whether an index should be created on a [field](../../../ado/reference/ado-api/field-object.md).  
+Specifies whether an index should be created on a [field](./field-object.md).  
   
 ## Settings and Return Values  
  Sets or returns a **Boolean** value that indicates whether an index should be created.  
   
 ## Remarks  
- An index can improve the performance of operations that find or sort values in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). The index is internal to ADO; you cannot explicitly access or use it in your application.  
+ An index can improve the performance of operations that find or sort values in a [Recordset](./recordset-object-ado.md). The index is internal to ADO; you cannot explicitly access or use it in your application.  
   
  To create an index on a field, set the **Optimize** property to **True**. To delete the index, set this property to **False**.  
   
- **Optimize** is a dynamic property appended to the [Field](../../../ado/reference/ado-api/field-object.md) object [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection when the [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) property is set to **adUseClient**.  
+ **Optimize** is a dynamic property appended to the [Field](./field-object.md) object [Properties](./properties-collection-ado.md) collection when the [CursorLocation](./cursorlocation-property-ado.md) property is set to **adUseClient**.  
   
 ## Usage  
   
@@ -41,11 +42,11 @@ fld.Properties("Optimize") = False   'Delete an index
 ```  
   
 ## Applies To  
- [Field Object](../../../ado/reference/ado-api/field-object.md)  
+ [Field Object](./field-object.md)  
   
 ## See Also  
- [Optimize Property Example (VB)](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
- [Optimize Property Example (VC++)](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
- [Filter Property](../../../ado/reference/ado-api/filter-property.md)   
- [Find Method (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [Sort Property](../../../ado/reference/ado-api/sort-property.md)
+ [Optimize Property Example (VB)](./optimize-property-example-vb.md)   
+ [Optimize Property Example (VC++)](./optimize-property-example-vc.md)   
+ [Filter Property](./filter-property.md)   
+ [Find Method (ADO)](./find-method-ado.md)   
+ [Sort Property](./sort-property.md)

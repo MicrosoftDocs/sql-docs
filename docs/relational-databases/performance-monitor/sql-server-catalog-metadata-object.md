@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Catalog Metadata Object | Microsoft Docs"
+description: Learn about the SQLServer:Catalog Metadata performance object, which provides counters for catalog metadata for SQL Server.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -10,11 +11,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Catalog Metadata"
 ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Catalog Metadata Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The **SQLServer:Catalog Metadata** performance object provides counters for catalog metadata for SQL Server.
 
 This following table describes the SQL Server **Catalog Metadata** performance objects.

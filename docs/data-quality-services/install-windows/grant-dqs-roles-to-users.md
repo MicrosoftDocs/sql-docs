@@ -1,4 +1,5 @@
 ---
+description: "Grant DQS Roles to Users"
 title: "Grant DQS Roles to Users"
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -12,7 +13,7 @@ ms.author: sawinark
 ---
 # Grant DQS Roles to Users
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
 
   This topic describes how to create SQL logins based on a Windows principal, and grant [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) roles on the DQS_MAIN database.  
   

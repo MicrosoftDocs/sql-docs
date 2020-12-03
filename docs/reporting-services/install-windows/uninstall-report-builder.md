@@ -1,4 +1,5 @@
 ---
+description: "Uninstall Report Builder"
 title: "Uninstall Report Builder | Microsoft Docs"
 ms.date: 05/30/2017
 ms.prod: reporting-services

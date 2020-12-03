@@ -1,11 +1,12 @@
 ---
 title: "Analysis Server Properties (Advanced Tab)"
+description: Learn about the options on the Advanced tab in the Analysis Server Properties dialog box, such as the dump directory and the instance ID.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 author: markingmyname
@@ -13,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Analysis Server Properties (Advanced Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   This service is the Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. If custom properties are defined, they appear on this tab, with their values.  
   
 ## Options  

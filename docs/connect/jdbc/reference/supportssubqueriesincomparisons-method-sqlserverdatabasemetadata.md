@@ -1,4 +1,5 @@
 ---
+description: "supportsSubqueriesInComparisons Method (SQLServerDatabaseMetaData)"
 title: "supportsSubqueriesInComparisons Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 467d32e6-b47e-4095-9f8b-73e07fb814e8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # supportsSubqueriesInComparisons Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

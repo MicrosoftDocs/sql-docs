@@ -1,5 +1,6 @@
 ---
 title: "Back Up Database (Backup Options Page) | Microsoft Docs"
+description: In SQL Server, use the Backup Options page of the Back Up Database dialog box to view or modify options for backup set, compression, and encryption.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -11,11 +12,11 @@ f1_keywords:
   - "sql13.swb.backupdatabase.options.f1"
   - "swb.backupdatabase.options.f1"
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Back Up Database (Backup Options Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the  **Backup Options** page of the **Back Up Database** dialog box to view or modify database backup options.  
   
  **To create a backup by using SQL Server Management Studio**  

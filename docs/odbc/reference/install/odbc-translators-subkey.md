@@ -1,4 +1,5 @@
 ---
+description: "ODBC Translators Subkey"
 title: "ODBC Translators Subkey | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "subkeys [ODBC], translator subkey"
   - "registry entries for components [ODBC], translator subkey"
 ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ODBC Translators Subkey
 The values under the ODBC Translators subkey list the installed translators. The format of these values is shown in the following table.  

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_fts_parser (Transact-SQL)"
 title: "sys.dm_fts_parser (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -22,7 +23,7 @@ ms.reviewer: mikeray
 ---
 # sys.dm_fts_parser (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the final tokenization result after applying a given [word breaker](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md), and [stoplist](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) combination to a query string input. The tokenization result is equivalent to the output of the Full-Text Engine for the specified query string.  
   

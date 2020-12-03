@@ -1,4 +1,5 @@
 ---
+description: "setLoginTimeout Method (SQLServerDataSource)"
 title: "setLoginTimeout Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: b63d1cf4-dc1b-4e35-9a56-50436642eaaf
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setLoginTimeout Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

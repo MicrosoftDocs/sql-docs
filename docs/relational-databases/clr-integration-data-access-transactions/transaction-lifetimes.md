@@ -1,5 +1,6 @@
 ---
 title: "Transaction Lifetimes | Microsoft Docs"
+description: Learn about transaction lifetimes in SQL Server CLR integration. Transactions started in Transact-SQL stored procedures differ from ones started in managed code.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Transaction Lifetimes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   There is an important difference between transactions started in [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures and those started in managed code: common language runtime (CLR) code cannot unbalance the transaction state on entry or exit of a CLR invocation. Be aware of the following implications of this difference:  
   
 -   A transaction started inside a CLR frame must be committed or rolled back, or else [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates an error when the frame is exited.  

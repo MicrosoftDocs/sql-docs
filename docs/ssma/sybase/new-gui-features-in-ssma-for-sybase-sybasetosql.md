@@ -1,4 +1,5 @@
 ---
+description: "New GUI Features in SSMA For Sybase (SybaseToSQL)"
 title: "New GUI Features in SSMA For Sybase (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # New GUI Features in SSMA For Sybase (SybaseToSQL)
 This chapter describes new features of SSMA User Interface.  
@@ -51,7 +52,7 @@ You can set/remove a bookmark in the following ways:
 -   Use Ctrl+Shift+&lt;0..9&gt; to set numbered bookmark  
   
 ### Bookmark navigation  
-You can walk thru the bookmarks in the following ways:  
+You can walk through the bookmarks in the following ways:  
   
 -   Use buttons Next Bookmark, Previous Bookmark on the top of the SQL window  
   

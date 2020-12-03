@@ -1,4 +1,5 @@
 ---
+description: "Integration Services Features Supported by the Editions of SQL Server"
 title: "Integration Services Features Supported by the Editions of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Integration Services features supported by the editions of SQL Server
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  This topic provides details about the features of SQL Server Integration Services (SSIS) supported by the different editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)].  
@@ -38,6 +39,7 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
 |Scale Out Master|Yes|||||
 |Scale Out Worker|Yes|Yes <sup>1</sup>|TBD|TBD|TBD|
 |Support for Microsoft Dynamics AX and Microsoft Dynamics CRM in OData components <sup>2</sup>|Yes|Yes||||
+|Linux support|Yes|Yes|||Yes|
 
 <sup>1</sup> If you run packages that require Enterprise-only features in Scale Out, the Scale Out Workers must also run on instances of SQL Server Enterprise.
 
@@ -47,7 +49,10 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
 
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL Server Import and Export Wizard|Yes|Yes|Yes|Yes|Yes|  
+|SQL Server Import and Export Wizard|Yes|Yes|Yes|Yes<sup>1</sup>|Yes<sup>1</sup>|
+
+<sup>1</sup> DTSWizard.exe is not provided with SQL on Linux. However, dtexec on Linux can be used to execute a package created by DTSWizard on Windows.
+
 
 ## <a name="IS"></a> Integration Services  
   

@@ -1,9 +1,9 @@
 ---
 title: "Quickstart: Back up & restore database"
 titleSuffix: SQL Server
-description: This quickstart shows how to back up and restore a SQL Server database on premises. 
-author: MashaMSFT 
-ms.author: mathoma 
+description: In this article, learn how to create a new database, take a backup of the database, and restore the backup in SQL Server.
+author: cawrites 
+ms.author: chadam 
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.prod_service: backup-restore
 ms.assetid:
 ---
 # Quickstart: Backup and restore a SQL Server database on-premises
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In this quickstart, you will create a new database, take a simple backup of it, and then restore it. 
 

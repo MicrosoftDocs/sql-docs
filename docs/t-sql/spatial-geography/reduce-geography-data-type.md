@@ -1,5 +1,6 @@
 ---
-title: "Reduce (geography Data Type ) | Microsoft Docs"
+description: "Reduce (geography Data Type )"
+title: Reduce (geography Data Type )
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -19,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Reduce (geography Data Type )
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns an approximation of the given **geography** instance produced by running the Douglas-Peucker algorithm on the instance with the given tolerance.  
   
@@ -32,11 +33,12 @@ ms.author: mlandzic
 .Reduce ( tolerance )  
 ```  
   
-## Arguments  
-  
-|||  
-|-|-|  
-|Term|Definition|  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+
+|Term|Definition|
+|----|----------|
 |*tolerance*|Is a value of type **float**. *tolerance* is the tolerance to input to the Douglas-Peucker algorithm. *tolerance* must be a positive number.|  
   
 ## Return Types  

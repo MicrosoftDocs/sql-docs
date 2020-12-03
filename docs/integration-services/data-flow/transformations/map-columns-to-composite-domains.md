@@ -1,4 +1,5 @@
 ---
+description: "Map Columns to Composite Domains"
 title: "Map Columns to Composite Domains | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Map Columns to Composite Domains
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   A composite domain consists of two or more single domains. You can map multiple columns to the domain, or you can map a single column with delimited values to the domain.  
@@ -34,7 +35,7 @@ ms.author: chugu
   
 5.  As needed, modify the names that appear in the **Source Alias**, **Output Alias**, and **Status Alias** fields.  
   
-6.  As needed, set properties on the **Advanced** tab. For more information about the properties, see [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md).  
+6.  As needed, set properties on the **Advanced** tab. For more information about the properties, see [DQS Cleansing Transformation Editor Dialog Box](./dqs-cleansing-transformation.md).  
   
 ### To map a column with delimited values to a composite domain  
   
@@ -48,9 +49,8 @@ ms.author: chugu
   
 5.  As needed, modify the names that appear in the **Source Alias**, **Output Alias**, and **Status Alias** fields.  
   
-6.  As needed, set properties on the **Advanced** tab. For more information about the properties, see [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md).  
+6.  As needed, set properties on the **Advanced** tab. For more information about the properties, see [DQS Cleansing Transformation Editor Dialog Box](./dqs-cleansing-transformation.md).  
   
 ## See Also  
  [DQS Cleansing Transformation](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
-  
   

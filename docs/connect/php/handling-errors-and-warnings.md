@@ -1,15 +1,16 @@
 ---
-title: "Handling Errors and Warnings | Microsoft Docs"
+title: "Handling errors and warnings"
+description: "This topic provides information about handling errors and warnings when using the Microsoft SQLSRV Driver for PHP for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Handling Errors and Warnings
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

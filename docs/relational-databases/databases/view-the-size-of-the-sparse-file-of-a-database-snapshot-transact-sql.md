@@ -1,10 +1,10 @@
 ---
 title: "View size of sparse file of a Database Snapshot (T-SQL)"
+description: Use Transact-SQL to verify that a SQL Server database file is a sparse file and find its actual and maximum sizes. Database snapshots use sparse files.
 ms.date: "07/28/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.custom: ""
 ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -21,7 +21,7 @@ ms.author: "sstein"
 ms.custom: "seo-lt-2019"
 ---
 # View the Size of the Sparse File of a Database Snapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to use [!INCLUDE[tsql](../../includes/tsql-md.md)] to verify that a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database file is a sparse file and to find out its actual and maximum sizes. Sparse files, which are a feature of the NTFS file system, are used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database snapshots.  
   
 > [!NOTE]  

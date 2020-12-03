@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES"
 title: "LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -7,16 +8,16 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: c1595263-6264-4a43-9535-5eb76ece3a57
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| --------- | ----- |
 |Product Name|SQL Server|  
 |Event ID|287|  
 |Event Source|SQL Server Local Database Runtime 12.0|  

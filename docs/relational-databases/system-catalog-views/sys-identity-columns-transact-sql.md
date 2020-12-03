@@ -1,4 +1,5 @@
 ---
+description: "sys.identity_columns (Transact-SQL)"
 title: "sys.identity_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -22,7 +23,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.identity_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Contains a row for each column that is an identity column.  
   
@@ -34,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**seed_value**|**sql_variant**|Seed value for this identity column. The data type of the seed value is the same as the data type of the column itself.|  
 |**increment_value**|**sql_variant**|Increment value for this identity column. The data type of the seed value is the same as the data type of the column itself.|  
 |**last_value**|**sql_variant**|Last value generated for this identity column. The data type of the seed value is the same as the data type of the column itself.|  
-|**is_not_for_replication**|**bit**|Identity column is declared NOT FOR REPLICATION.|  
+|**is_not_for_replication**|**bit**|Identity column is declared NOT FOR REPLICATION. **Note:** This column does not apply to Azure Synapse Analytics.|  
   
 > [!NOTE]  
 >  To create an automatically incrementing number that can be used in multiple tables or that can be called from applications without referencing any table, see [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md).  

@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_cdc_is_bit_set (Transact-SQL)"
 title: "sys.fn_cdc_is_bit_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,7 +23,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # sys.fn_cdc_is_bit_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Indicates whether a captured column has been updated by checking whether its ordinal position is set within a provided bitmask.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Sequence and QNames (XQuery) | Microsoft Docs"
+description: Learn about the fundamental concepts of sequences and QNames in XQuery.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -19,7 +20,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Sequence and QNames (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes the following fundamental concepts of XQuery:  
   
@@ -133,7 +134,7 @@ WHERE ProductModelID=7;
 |xdt|http://www.w3.org/2004/07/xpath-datatypes|  
 |fn|http://www.w3.org/2004/07/xpath-functions|  
 |(no prefix)|`urn:schemas-microsoft-com:xml-sql`|  
-|sqltypes|https://schemas.microsoft.com/sqlserver/2004/sqltypes|  
+|sqltypes|`https://schemas.microsoft.com/sqlserver/2004/sqltypes`|  
 |xml|`http://www.w3.org/XML/1998/namespace`|  
 |(no prefix)|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   

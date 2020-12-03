@@ -1,4 +1,5 @@
 ---
+description: "Non-SQL Server Subscribers"
 title: "Non-SQL Server Subscribers | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
@@ -22,7 +23,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Non-SQL Server Subscribers  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 The following non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers can subscribe to snapshot and transactional publications using push subscriptions. Subscriptions are supported for the two most recent versions of each database listed using the most recent version of the OLE DB provider listed.  
   

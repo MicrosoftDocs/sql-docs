@@ -1,4 +1,5 @@
 ---
+description: "New GUI Features in SSMA for Access to SQL"
 title: "New GUI Features in SSMA for Access to SQL | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # New GUI Features in SSMA for Access to SQL
 This chapter describes new features of SSMA User Interface  
@@ -51,7 +52,7 @@ You can set/remove a bookmark in the following ways:
 -   Use Ctrl+Shift+&lt;0..9&gt; to set numbered bookmark  
   
 ### Bookmark navigation  
-You can walk thru the bookmarks in the following ways:  
+You can walk through the bookmarks in the following ways:  
   
 -   Use buttons Next Bookmark, Previous Bookmark on the top of the SQL window  
   

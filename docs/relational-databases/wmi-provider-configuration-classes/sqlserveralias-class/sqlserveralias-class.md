@@ -1,4 +1,5 @@
 ---
+description: "SqlServerAlias Class"
 title: "SqlServerAlias Class"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SqlServerAlias class"
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SqlServerAlias Class
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The [SqlServerAlias Class](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) class represents a server connection alias.  
   
  A server connection alias is required when both the following occur:  
@@ -32,6 +33,5 @@ ms.author: "carlrab"
  **Note:** The [SqlServerAlias Class](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) inherits the **Put** method from the Provider class. However, it does not return any results as indicated by the **Provider::Put** method. For more information, see the WMI documentation.  
   
 ## See Also  
- [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

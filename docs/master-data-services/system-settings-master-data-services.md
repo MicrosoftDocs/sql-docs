@@ -1,5 +1,6 @@
 ---
 title: System Settings
+description: Learn how to configure the system settings for all web applications and web services associated with a Master Data Services database.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: lle
 ---
 # System Settings (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   For all web applications and web services associated with a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database, you can configure system settings.  
   
@@ -106,7 +107,7 @@ ms.author: lle
 |**Notification email interval**|**NotificationInterval**|The frequency, in seconds, that email notifications are sent. The default value is **120** seconds (2 minutes).|  
 |**Number of notifications in a single email**|**NotificationsPerEmail**|The maximum number of validation issues that will be listed in a single notification email. Additional issues, if they exist, are not included in the email, but are available in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
 |**Default email format**|**EmailFormat**|The format for all email notifications. The default value is **HTML** or **1**. The database setting of **2** indicates **Text**.<br /><br /> Note: You can override this for an individual user in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], by changing and saving the **Email format** on the user's **General** tab.|  
-|**Regular expression for email address**|**EmailRegExPattern**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the regular expression used to validate the email address entered on a user's **General** tab. For more information about regular expressions, see [Regular Expression Language Elements](https://go.microsoft.com/fwlink/?LinkId=164401) in the MSDN library.|  
+|**Regular expression for email address**|**EmailRegExPattern**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the regular expression used to validate the email address entered on a user's **General** tab. For more information about regular expressions, see [Regular Expression Language Elements](/dotnet/standard/base-types/regular-expression-language-quick-reference) in the MSDN library.|  
 |**Database Mail account**|**EmailProfilePrincipalAccount**|Displays the Database Mail account to use when sending email notifications. The default profile is **mds_email_user**.|  
 |**Database Mail profile**|**DatabaseMailProfile**|The Database Mail profile to use when sending email notifications. The default value is blank.|  
 ||**ValidationIssueHTML**|In HTML format, the text of the email users get when a business rule fails validation.|  
@@ -151,5 +152,4 @@ ms.author: lle
   
 ## See Also  
  [Database Object Security &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
-  
   

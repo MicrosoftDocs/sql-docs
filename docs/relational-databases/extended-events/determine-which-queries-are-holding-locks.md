@@ -1,5 +1,6 @@
 ---
 title: "Determine Which Queries Are Holding Locks"
+description: This article shows a method of finding which query holds a lock. Database administrators may need to find the source of locks that hinder database performance.
 ms.date: "10/18/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -19,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Determine Which Queries Are Holding Locks
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Database administrators often need to identify the source of locks that are hindering database performance.  
   

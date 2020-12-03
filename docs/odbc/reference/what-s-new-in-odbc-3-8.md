@@ -1,4 +1,5 @@
 ---
+description: "What&#39;s New in ODBC 3.8"
 title: "What&#39;s New in ODBC 3.8 | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # What&#39;s New in ODBC 3.8
 Windows 8 includes an updated version of ODBC 3.8. ODBC 3.8 in Windows 8 includes the following features:  
@@ -18,9 +19,9 @@ Windows 8 includes an updated version of ODBC 3.8. ODBC 3.8 in Windows 8 include
   
 -   [Asynchronous Execution (Notification Method)](../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
   
--   [Data Access Tracing (Windows 8)](https://msdn.microsoft.com/library/windows/desktop/hh829624.aspx)  
+-   [Data Access Tracing (Windows 8)](/previous-versions/windows/desktop/hh829624(v=vs.85))  
   
--   PowerShell commands have been added to help you manage ODBC data sources, ODBC drivers, ODBC Performance Counter, and data access tracing at the command line.  For more information see [Windows Data Access Components PowerShell Commands](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
+-   PowerShell commands have been added to help you manage ODBC data sources, ODBC drivers, ODBC Performance Counter, and data access tracing at the command line.  For more information see [Windows Data Access Components PowerShell Commands](/previous-versions/windows/desktop/jj134064(v=vs.85)).  
   
  Windows 7 includes an updated version of ODBC, ODBC 3.8. ODBC 3.8 includes the following features:  
   

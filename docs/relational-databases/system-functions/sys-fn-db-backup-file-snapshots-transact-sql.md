@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_db_backup_file_snapshots (Transact-SQL)"
 title: "sys.fn_db_backup_file_snapshots (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/03/2015"
@@ -14,7 +15,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # sys.fn_db_backup_file_snapshots (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Returns Azure snapshots associated with the database files. If the specified database is not found or if the database files are not stored in the Microsoft Azure Blob storage service, no rows are returned. Use this system function in conjunction with the **sys.sp_delete_backup_file_snapshot** system stored procedure to identify and delete orphaned backup snapshots. For more information, see [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   

@@ -1,5 +1,6 @@
 ---
-title: "Using statements with stored procedures | Microsoft Docs"
+title: "Using statements with stored procedures"
+description: "Learn how to execute stored procedures using the Microsoft JDBC Driver for SQL Server and how to use input and output parameters to pass data to and from them."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using statements with stored procedures
 

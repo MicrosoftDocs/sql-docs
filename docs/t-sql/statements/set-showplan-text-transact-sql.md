@@ -1,4 +1,5 @@
 ---
+description: "SET SHOWPLAN_TEXT (Transact-SQL)"
 title: "SET SHOWPLAN_TEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -24,11 +25,11 @@ helpviewer_keywords:
   - "stopping statement execution"
   - "estimated execution information [SQL Server]"
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SET SHOWPLAN_TEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Causes Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] not to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. Instead, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns detailed information about how the statements are executed.  
   
@@ -36,12 +37,14 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_TEXT { ON | OFF }  
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  The setting of SET SHOWPLAN_TEXT is set at execute or run time and not at parse time.  
   
  When SET SHOWPLAN_TEXT is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns execution information for each [!INCLUDE[tsql](../../includes/tsql-md.md)] statement without executing it. After this option is set ON, execution plan information about all subsequent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] statements is returned until the option is set OFF. For example, if a CREATE TABLE statement is executed while SET SHOWPLAN_TEXT is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message from a subsequent SELECT statement involving that same table informing the user that the specified table does not exist. Therefore, subsequent references to this table fail. When SET SHOWPLAN_TEXT is OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes statements without generating a report with execution plan information.  
@@ -55,7 +58,8 @@ SET SHOWPLAN_TEXT { ON | OFF }
 |Column name|Description|  
 |-----------------|-----------------|  
 |**StmtText**|For rows which are not of type PLAN_ROW, this column contains the text of the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. For rows of type PLAN_ROW, this column contains a description of the operation. This column contains the physical operator and may optionally also contain the logical operator. This column may also be followed by a description which is determined by the physical operator. For more information about physical operators, see the **Argument** column in [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md).|  
-  
+|||
+
  For more information about the physical and logical operators that can be seen in Showplan output, see [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   
 ## Permissions  
@@ -74,7 +78,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  This is the query using an index:  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_TEXT ON;  
@@ -103,7 +107,7 @@ StmtText
   
  Here is the query not using an index:  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_TEXT ON;  

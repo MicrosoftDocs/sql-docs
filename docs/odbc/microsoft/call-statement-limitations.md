@@ -1,4 +1,5 @@
 ---
+description: "CALL Statement Limitations"
 title: "CALL Statement Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "CALL statement limitations [ODBC]"
   - "ODBC SQL grammar, CALL statement limitations"
 ms.assetid: 5802891f-27f6-48b3-aeeb-aaef400b318c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # CALL Statement Limitations
 (This limitation applies to the Microsoft Access driver only.)  

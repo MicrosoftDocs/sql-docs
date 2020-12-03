@@ -1,8 +1,8 @@
 ---
 title: VDI Backup Specification - SQL Server on Linux
-description: SQL Server Backup Virtual Device Interface Specification.
-author: MikeRayMSFT
-ms.author: mikeray
+description: Learn about the interfaces provided by the SQL Server on Linux virtual device interface (VDI) client SDK.
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ---
 # SQL Server on Linux VDI client SDK Specification
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This document covers the interfaces provided by the SQL Server on Linux virtual device interface (VDI) client SDK. Independent software vendors (ISVs) can use the Virtual Backup Device Application Programming Interface (API) to integrate SQL Server into their products. In general, VDI on Linux behaves similarly to VDI on Windows with the following changes:
 

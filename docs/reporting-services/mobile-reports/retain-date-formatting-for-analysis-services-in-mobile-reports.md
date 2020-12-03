@@ -1,5 +1,6 @@
 ---
 title: "Retain date formatting for Analysis Services in mobile reports | Reporting Services | Microsoft Docs"
+description: In Mobile Report Publisher, add a measure to a shared dataset in Report Builder so that dates in Analysis Services data sources retain their data type.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -25,11 +26,11 @@ The workaround for this is to add a calculated member when you're creating a sha
  
    [Internet Sales].[Ship Date].CurrentMember.MemberValue
    
-   ![ssas-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-calculated-member-report-builder.png)
+   ![Screenshot of the Calculated Member Builder dialog box with the Expression text box called out.](../../reporting-services/mobile-reports/media/ssas-calculated-member-report-builder.png)
    
 2. Now you can append this calculated member to the set of columns by dragging it from the Calculated Members list in the bottom left and dropping it in the column grid on the right.  
 
-   ![ssas-query-designer-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
+   ![Screenshot of the Query Designer with the Calculated Members section called out.](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
    
 ### See also
 

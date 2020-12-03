@@ -1,4 +1,5 @@
 ---
+description: "MSqreader_agents (Transact-SQL)"
 title: "MSqreader_agents (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSqreader_agents system table"
 ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # MSqreader_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSqreader_agents** table contains one row for each Queue Reader Agent running at the local Distributor. This table is stored in the distribution database.  
   

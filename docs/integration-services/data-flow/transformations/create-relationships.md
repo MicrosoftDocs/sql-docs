@@ -1,4 +1,5 @@
 ---
+description: "Create Relationships"
 title: "Create Relationships | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Create Relationships
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Create Relationships** dialog box to edit mappings between the source columns and the lookup table columns that you configured in the Fuzzy Lookup Transformation Editor, the Lookup Transformation Editor, and the Term Lookup Transformation Editor.  
@@ -48,8 +49,7 @@ ms.author: chugu
   
 ## See Also  
  [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Fuzzy Lookup Transformation Editor &#40;Columns Tab&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [Lookup Transformation Editor &#40;Columns Page&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
- [Term Lookup Transformation Editor &#40;Term Lookup Tab&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
-  
+ [Fuzzy Lookup Transformation Editor &#40;Columns Tab&#41;](./fuzzy-lookup-transformation.md)   
+ [Lookup Transformation Editor &#40;Columns Page&#41;](./lookup-transformation.md)   
+ [Term Lookup Transformation Editor &#40;Term Lookup Tab&#41;](./term-lookup-transformation.md)  
   

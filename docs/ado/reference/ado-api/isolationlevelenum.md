@@ -1,8 +1,9 @@
 ---
+description: "IsolationLevelEnum"
 title: "IsolationLevelEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "IsolationLevelEnum enumeration [ADO]"
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # IsolationLevelEnum
-Specifies the level of transaction isolation for a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  
+Specifies the level of transaction isolation for a [Connection](./connection-object-ado.md) object.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -47,4 +48,4 @@ Specifies the level of transaction isolation for a [Connection](../../../ado/ref
 |AdoEnums.IsolationLevel.SERIALIZABLE|  
   
 ## Applies To  
- [IsolationLevel Property](../../../ado/reference/ado-api/isolationlevel-property.md)
+ [IsolationLevel Property](./isolationlevel-property.md)

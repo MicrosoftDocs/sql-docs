@@ -1,10 +1,10 @@
 ---
 title: Transact-SQL Editor Options
+description: Become familiar with Transact-SQL Editor options. Learn about query execution properties and query results properties, and see how to adjust the values.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 f1_keywords: 
-  - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_GRID"
   - "sql.data.tools.SqlExecutionAdvancedSettingsOption"
   - "sql.data.tools.SqlExecutionAnsiSettingsDlg"
   - "sql.data.tools.SqlResultToTextSettingsDlg"
@@ -12,18 +12,19 @@ f1_keywords:
   - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.GENERAL"
   - "sql.data.tools.unittesting.tsqleditor"
   - "sql.data.tools.SqlResultsToGridSettingsDlg"
+  - "sql.data.tools.queryresults.executequeryfailure"
   - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.GENERAL"
   - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.EDITOR_TAB_AND_STATUS_BAR"
   - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.GENERAL"
   - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_TEXT"
   - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_EXECUTION.ANSI"
   - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_EXECUTION.GENERAL"
+  - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_GRID"
   - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.ONLINE_EDITING"
   - "VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_EXECUTION.ADVANCED"
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017

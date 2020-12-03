@@ -1,4 +1,5 @@
 ---
+description: "DROP DEFAULT (Transact-SQL)"
 title: "DROP DEFAULT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "DROP DEFAULT statement"
   - "defaults [SQL Server], removing"
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP DEFAULT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes one or more user-defined defaults from the current database.  
   
@@ -31,11 +32,13 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *IF EXISTS*  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
@@ -60,7 +63,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 ### A. Dropping a default  
  If a default has not been bound to a column or to an alias data type, it can just be dropped using DROP DEFAULT. The following example removes the user-created default named `datedflt`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  
@@ -72,7 +75,7 @@ GO
   
  Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] you can use the following syntax.  
   
-```  
+```sql  
 DROP DEFAULT IF EXISTS datedflt;  
 GO  
 ```  
@@ -80,7 +83,7 @@ GO
 ### B. Dropping a default that has been bound to a column  
  The following example unbinds the default associated with the `EmergencyContactPhone` column of the `Contact` table and then drops the default named `phonedflt`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
    BEGIN   

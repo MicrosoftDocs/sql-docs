@@ -1,5 +1,6 @@
 ---
 title: "Memory-optimized tables using interpreted T-SQL"
+description: "Learn about accessing memory-optimized tables using interpreted Transact-SQL (Transact-SQL batches or stored procedures in SQL Server)."
 ms.custom: seo-dt-2019
 ms.date: "05/31/2016"
 ms.prod: sql  
@@ -45,14 +46,42 @@ For more information about table hints, see. [Table Hints &#40;Transact-SQL&#41;
   
 The following table hints are not supported when accessing a memory-optimized table using interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
-  
-|||||  
-|-|-|-|-|  
-|HOLDLOCK|IGNORE_CONSTRAINTS|IGNORE_TRIGGERS|NOWAIT|  
-|PAGLOCK|READCOMMITTED|READCOMMITTEDLOCK|READPAST|  
-|READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
-|TABLOCKXX|UPDLOCK|XLOCK||  
-  
+:::row:::
+    :::column:::
+        HOLDLOCK
+
+        PAGLOCK
+
+        READUNCOMMITTED
+
+        TABLOCKXX
+    :::column-end:::
+    :::column:::
+        IGNORE_CONSTRAINTS
+
+        READCOMMITTED
+
+        ROWLOCK
+
+        UPDLOCK
+    :::column-end:::
+    :::column:::
+        IGNORE_TRIGGERS
+
+        READCOMMITTEDLOCK
+
+        SPATIAL_WINDOW_MAX_CELLS = *integer*
+
+        XLOCK
+    :::column-end:::
+    :::column:::
+        NOWAIT
+
+        READPAST
+
+        TABLOCK
+    :::column-end:::
+:::row-end:::
 
 When accessing a memory-optimized table from an explicit or implicit transaction using interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)], you must do at least one of the following:  
   
@@ -60,11 +89,10 @@ When accessing a memory-optimized table from an explicit or implicit transaction
   
 - Set the database option [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT](../../t-sql/statements/alter-database-transact-sql-set-options.md) to ON.  
   
-An isolation level table hint is not required for memory-optimized tables accessed by queries running in [auto-commit mode](https://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00).  
+An isolation level table hint is not required for memory-optimized tables accessed by queries running in [auto-commit mode](../../odbc/reference/develop-app/auto-commit-mode.md).  
   
 ## See Also
 
 [Transact-SQL Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
 
-[Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-
+[Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)

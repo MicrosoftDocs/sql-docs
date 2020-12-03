@@ -1,4 +1,5 @@
 ---
+description: "GeomFromGML (geography Data Type)"
 title: "GeomFromGML (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
@@ -20,7 +21,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # GeomFromGML (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Constructs a **geography** instance given a representation in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subset of the Geography Markup Language (GML).
   
@@ -35,7 +36,9 @@ This **geography** data type method supports **FullGlobe** instances or spatial 
 GeomFromGml ( GML_input, SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *GML_input*  
  Is an XML input from which the GML will return a value.  
   

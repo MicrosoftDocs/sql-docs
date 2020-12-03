@@ -1,4 +1,5 @@
 ---
+description: "sp_syspolicy_configure (Transact-SQL)"
 title: "sp_syspolicy_configure (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # sp_syspolicy_configure (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Configures settings for Policy-Based Management, such as whether Policy-Based Management is enabled.  
   

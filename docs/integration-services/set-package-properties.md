@@ -1,4 +1,5 @@
 ---
+description: "Set Package Properties"
 title: "Set Package Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -28,7 +29,7 @@ ms.author: chugu
 ---
 # Set Package Properties
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   When you create a package in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by using the graphical interface that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides, you set the properties of the package object in the Properties window.  
@@ -57,7 +58,7 @@ ms.author: chugu
   
 ### To set package properties in the Properties window  
   
--   [Set the Properties of a Package](https://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
+-   [Set the Properties of a Package]()  
   
 ## Properties by Category  
  The following tables list the package properties by category.  
@@ -165,4 +166,3 @@ ms.author: chugu
 4.  Edit the package properties in the **Properties** window.  
   
 5.  On the **File** menu, click **Save Selected Items** to save the updated package.  
-  

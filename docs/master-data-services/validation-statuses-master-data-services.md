@@ -1,4 +1,5 @@
 ---
+description: "Validation Statuses (Master Data Services)"
 title: Validation Statuses
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Validation Statuses (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the **Version Management** functional area, on the **Validate Version** page, the following statuses are possible.  
   

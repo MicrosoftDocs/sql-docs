@@ -1,4 +1,5 @@
 ---
+description: "Project Settings (Migration) (AccessToSQL)"
 title: "Project Settings (Migration) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -10,8 +11,8 @@ helpviewer_keywords:
   - "Migration settings"
   - "Project Settings dialog box, Migration"
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Project Settings (Migration) (AccessToSQL)
 The Migration project settings let you configure how data is migrated to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure.  
@@ -81,5 +82,4 @@ Specifies whether SSMA should correct Access dates that are earlier than the ear
 Batch size used during data migration. A transaction is logged after each batch. By default, the batch size for all schemes is 10000.  
   
 ## See Also  
-[User Interface Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[User Interface Reference(Access)](./user-interface-reference-accesstosql.md)  

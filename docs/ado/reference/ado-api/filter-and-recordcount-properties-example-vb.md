@@ -1,8 +1,9 @@
 ---
+description: "Filter and RecordCount Properties Example (VB)"
 title: "Filter and RecordCount Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,11 +14,11 @@ helpviewer_keywords:
   - "RecordCount property [ADO], Visual Basic example"
   - "Filter property [ADO], Visual Basic example"
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Filter and RecordCount Properties Example (VB)
-This example open a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) on the Publishers table in the ***Pubs*** database. It then uses the [Filter](../../../ado/reference/ado-api/filter-property.md) property to limit the number of visible records to those publishers in a particular country/region. The **RecordCount** property is used to show the difference between the filtered and unfiltered recordsets.  
+This example open a [Recordset](./recordset-object-ado.md) on the Publishers table in the ***Pubs*** database. It then uses the [Filter](./filter-property.md) property to limit the number of visible records to those publishers in a particular country/region. The **RecordCount** property is used to show the difference between the filtered and unfiltered recordsets.  
   
 ```  
 'BeginFilterVB  
@@ -109,6 +110,6 @@ Attribute VB_Name = "Filter"
 ```  
   
 ## See Also  
- [Filter Property](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount Property (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Filter Property](./filter-property.md)   
+ [RecordCount Property (ADO)](./recordcount-property-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

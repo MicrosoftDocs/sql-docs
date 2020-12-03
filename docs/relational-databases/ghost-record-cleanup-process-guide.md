@@ -1,5 +1,6 @@
 ---
 title: "Ghost cleanup process guide | Microsoft Docs"
+description: Learn about the ghost cleanup process, a background process that deletes records off of pages that have been marked for deletion in SQL Server.
 ms.custom: ""
 ms.date: "05/02/2018"
 ms.prod: "sql"
@@ -39,7 +40,7 @@ The below query can identify how many ghosted records exist in a single database
 
 ## Disable the ghost cleanup
 
-On high-load systems with many deletes, the ghost cleanup process can cause a performance issue from keeping pages in the buffer pool and generating IO. As such, it is possible to disable this process with the use of trace flag 661. More information about this can be found in [Tuning options for SQL Server when running high performance workloads](https://support.microsoft.com/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa). However, there are performance implications from disabling the process.
+On high-load systems with many deletes, the ghost cleanup process can cause a performance issue from keeping pages in the buffer pool and generating IO. As such, it is possible to disable this process with the use of [trace flag 661](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). However, there are performance implications from disabling the process.
 
 Disabling the ghost cleanup process can cause your database to grow unnecessarily large and can lead to performance issues. Since the ghost cleanup process removes records that are marked as ghosts, disabling the process will leave these records on the page, preventing SQL Server from reusing this space. This forces SQL Server to add data to new pages instead, leading to bloated database files, and can also cause [page splits](indexes/specify-fill-factor-for-an-index.md). Page splits lead to performance issues when creating execution plans, and when doing scan operations. 
 

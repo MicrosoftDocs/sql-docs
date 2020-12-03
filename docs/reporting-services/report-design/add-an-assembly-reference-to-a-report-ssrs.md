@@ -1,5 +1,6 @@
 ---
-title: "Add an Assembly Reference to a Report (SSRS) | Microsoft Docs"
+title: "Add an Assembly Reference to a Report | Microsoft Docs"
+description: Learn how to provide an assembly reference to a report so that the report processor can resolve names in Report Builder.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -37,6 +38,5 @@ ms.author: maggies
   
 ## See Also  
  [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Report Properties Dialog Box, References](https://msdn.microsoft.com/library/4639d368-9918-4bb1-9953-7a724ca78dea)  
-  
+ [Report Properties Dialog Box, References](./custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)  
   

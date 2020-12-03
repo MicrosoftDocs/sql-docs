@@ -1,8 +1,9 @@
 ---
+description: "GetRows Method Example (JScript)"
 title: "GetRows Method Example (JScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,11 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "Getrows method [ADO], JScript example"
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # GetRows Method Example (JScript)
-This example uses the [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) method to retrieve all rows of the *Custiomers* table from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) and to fill an array with the resulting data. The **GetRows** method will return fewer than the desired number of rows in two cases: either if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) has been reached, or if **GetRows** tried to retrieve a record that was deleted by another user. The function returns **False** only if the second case occurs. Cut and paste the following code to Notepad or another text editor, and save it as **GetRowsJS.asp**.  
+This example uses the [GetRows](./getrows-method-ado.md) method to retrieve all rows of the *Custiomers* table from a [Recordset](./recordset-object-ado.md) and to fill an array with the resulting data. The **GetRows** method will return fewer than the desired number of rows in two cases: either if [EOF](./bof-eof-properties-ado.md) has been reached, or if **GetRows** tried to retrieve a record that was deleted by another user. The function returns **False** only if the second case occurs. Cut and paste the following code to Notepad or another text editor, and save it as **GetRowsJS.asp**.  
   
 ```  
 <!-- BeginGetRowsJS -->  
@@ -153,5 +154,5 @@ BODY {
 ```  
   
 ## See Also  
- [GetRows Method (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [GetRows Method (ADO)](./getrows-method-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

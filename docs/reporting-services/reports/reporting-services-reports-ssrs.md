@@ -1,5 +1,6 @@
 ---
-title: "Reporting Services Reports (SSRS) | Microsoft Docs"
+title: "Reporting Services Reports | Microsoft Docs"
+description: Learn details about Reporting Services reports, including the benefits of the reports, how to create paginated reports, and how to view reports.
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,5 +1,6 @@
 ---
 title: "Add drillthrough from a mobile report to other mobile reports or URLs | Microsoft Docs"
+description: You can add drillthrough from any gauge, chart, or data grid in a Reporting Services mobile report to another mobile report or custom URL.
 ms.date: 09/20/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -17,9 +18,9 @@ A *drillthrough*  is a link from a source report that opens another target repor
   
 When you view the source mobile report in the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] web portal and select an element with a drillthrough target, you go to that target, either another mobile report or a URL.  
 
-Report items with drillthrough, either to a URL or another mobile report, have the drillthrough icon ![mobile-report-drill-through-icon](../../reporting-services/mobile-reports/media/mobile-report-drill-through-icon.png) in the upper-right corner.
+Report items with drillthrough, either to a URL or another mobile report, have the drillthrough icon :::image type="icon" source="../../reporting-services/mobile-reports/media/mobile-report-drill-through-icon.png"::: in the upper-right corner.
 
-![mobile-report-gauge-drill-through](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png) 
+![Screenshot of a mobile report gauge with a drillthrough.](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png)
 
 >**Tip**: Create the target report and save it to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] web portal first. If you plan to pass parameters from the source report, add the parameters to the target report, too. Then you can set up drillthrough from the source report to the target report. [Add parameters to a mobile report](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
  
@@ -36,7 +37,7 @@ Report items with drillthrough, either to a URL or another mobile report, have t
  
 4. After you select a target mobile report, you see its available input parameters, including properties that can be bound to navigator controls and parameters configured on datasets of the target mobile report.  
 
-   ![mobile-report-drillthrough-target](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-target.PNG)
+   ![Screenshot of the Configure target report dialog box showing available Report parameters.](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-target.PNG)
    
    *Drillthrough properties for the target mobile report*  
   
@@ -49,7 +50,7 @@ Report items with drillthrough, either to a URL or another mobile report, have t
   
 3. In **Set drillthrough URL**, enter the destination URL to go to when the visualization is clicked, and select from **Available parameters** listed on the right. A preview of the custom URL combined with sample resolved parameters (if included) is displayed in the panel below.  
   
-   ![mobile-report-drillthrough-url](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
+   ![Screenshot of the Set drillthrough URL dialog box.](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
   
    *Drill through to custom URL properties*  
   

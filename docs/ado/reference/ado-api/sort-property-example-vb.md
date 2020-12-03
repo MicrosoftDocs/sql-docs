@@ -1,8 +1,9 @@
 ---
+description: "Sort Property Example (VB)"
 title: "Sort Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,11 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "Sort property [ADO], Visual Basic example"
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Sort Property Example (VB)
-This example uses the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object's [Sort](../../../ado/reference/ado-api/sort-property.md) property to reorder the rows of a **Recordset** derived from the ***Authors*** table of the ***Pubs*** database. A secondary utility routine prints each row.  
+This example uses the [Recordset](./recordset-object-ado.md) object's [Sort](./sort-property.md) property to reorder the rows of a **Recordset** derived from the ***Authors*** table of the ***Pubs*** database. A secondary utility routine prints each row.  
   
 ```  
 'BeginSortVB  
@@ -104,5 +105,5 @@ Attribute VB_Name = "Sort"
 ```  
   
 ## See Also  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Sort Property](../../../ado/reference/ado-api/sort-property.md)
+ [Recordset Object (ADO)](./recordset-object-ado.md)   
+ [Sort Property](./sort-property.md)

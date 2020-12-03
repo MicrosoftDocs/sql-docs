@@ -1,4 +1,5 @@
 ---
+description: "SQLSetStmtAttr Function"
 title: "SQLSetStmtAttr Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetStmtAttr function [ODBC]"
 ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetStmtAttr Function
 **Conformance**  

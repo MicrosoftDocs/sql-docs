@@ -1,4 +1,5 @@
 ---
+description: "CREATE COLUMNSTORE INDEX (Transact-SQL)"
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2019"
@@ -26,12 +27,12 @@ helpviewer_keywords:
   - "CREATE COLUMNSTORE INDEX statement"
   - "CREATE INDEX statement"
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE COLUMNSTORE INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Convert a rowstore table to a clustered columnstore index or create a nonclustered columnstore index. Use a columnstore index to efficiently run real-time operational analytics on an OLTP workload or to improve data compression and query performance for data warehousing workloads.  
   
@@ -57,7 +58,7 @@ Learn more:
   
 ## Syntax  
   
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create a clustered columnstore index on disk-based table.  
@@ -95,8 +96,8 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
   
 ```  
   
-```
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
@@ -105,7 +106,9 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 [;]  
 
 ```
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 
 Some of the options are not available in all database engine versions. The following table shows the versions when the options are introduced in CLUSTERED COLUMNSTORE and NONCLUSTERED COLUMNSTORE indexes:
 
@@ -234,7 +237,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
    For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]
->  Parallel index operations are not available in every edition of [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Parallel index operations are not available in every edition of [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 ###### ONLINE = [ON | OFF]   
 - `ON` specifies that the columnstore index remains online and available while the new copy of the index is being built.
@@ -292,7 +295,7 @@ The term default, in this context, is not a keyword. It is an identifier for the
 ##  <a name="GenRemarks"></a> General Remarks  
 A  columnstore index can be created on a temporary table. When the table is dropped or the session ends, the index is also dropped.  
 
-An ordered clustered columnstore index can be created on columns of any data types supported in Azure SQL Data Warehouse except for string columns.  
+An ordered clustered columnstore index can be created on columns of any data types supported in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] except for string columns.  
  
 ## Filtered Indexes  
 A filtered index is an optimized nonclustered index, suited for queries that select a small percentage of rows from a table. It uses a filter predicate to index a portion of the data in the table. A well-designed filtered index can improve query performance, reduce storage costs, and reduce maintenance costs.  
@@ -417,10 +420,10 @@ These limitations apply only to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)
   
 ```sql  
 CREATE TABLE SimpleTable(  
-    ProductKey [int] NOT NULL,   
-    OrderDateKey [int] NOT NULL,   
-    DueDateKey [int] NOT NULL,   
-    ShipDateKey [int] NOT NULL);  
+    ProductKey [INT] NOT NULL,   
+    OrderDateKey [INT] NOT NULL,   
+    DueDateKey [INT] NOT NULL,   
+    ShipDateKey [INT] NOT NULL);  
 GO  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_Simple ON SimpleTable;  
 GO  
@@ -431,10 +434,10 @@ GO
   
 ```sql  
 CREATE TABLE SimpleTable (  
-    ProductKey [int] NOT NULL,   
-    OrderDateKey [int] NOT NULL,   
-    DueDateKey [int] NOT NULL,   
-    ShipDateKey [int] NOT NULL);  
+    ProductKey [INT] NOT NULL,   
+    OrderDateKey [INT] NOT NULL,   
+    DueDateKey [INT] NOT NULL,   
+    ShipDateKey [INT] NOT NULL);  
 GO  
 CREATE CLUSTERED INDEX cl_simple ON SimpleTable (ProductKey);  
 GO  
@@ -453,10 +456,10 @@ GO
 ```sql  
 --Create the table for use with this example.  
 CREATE TABLE SimpleTable (  
-    ProductKey [int] NOT NULL,   
-    OrderDateKey [int] NOT NULL,   
-    DueDateKey [int] NOT NULL,   
-    ShipDateKey [int] NOT NULL);  
+    ProductKey [INT] NOT NULL,   
+    OrderDateKey [INT] NOT NULL,   
+    DueDateKey [INT] NOT NULL,   
+    ShipDateKey [INT] NOT NULL);  
 GO  
   
 --Create two nonclustered indexes for use with this example  
@@ -485,10 +488,10 @@ GO
     ```sql  
     --Create a rowstore table with a clustered index and a nonclustered index.  
     CREATE TABLE MyFactTable (  
-        ProductKey [int] NOT NULL,  
-        OrderDateKey [int] NOT NULL,  
-         DueDateKey [int] NOT NULL,  
-         ShipDateKey [int] NOT NULL )  
+        ProductKey [INT] NOT NULL,  
+        OrderDateKey [INT] NOT NULL,  
+         DueDateKey [INT] NOT NULL,  
+         ShipDateKey [INT] NOT NULL )  
     )  
     WITH (  
         CLUSTERED INDEX ( ProductKey )  
@@ -602,10 +605,10 @@ WITH ( DROP_EXISTING = ON );
   
 ```sql  
 CREATE TABLE SimpleTable  
-(ProductKey [int] NOT NULL,   
-OrderDateKey [int] NOT NULL,   
-DueDateKey [int] NOT NULL,   
-ShipDateKey [int] NOT NULL);  
+(ProductKey [INT] NOT NULL,   
+OrderDateKey [INT] NOT NULL,   
+DueDateKey [INT] NOT NULL,   
+ShipDateKey [INT] NOT NULL);  
 GO  
 CREATE CLUSTERED INDEX cl_simple ON SimpleTable (ProductKey);  
 GO  
@@ -774,5 +777,3 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ORDER ( PRODUCTKEY,SHIPDATE );
 WITH (DROP_EXISTING = ON)
 ```
-
-

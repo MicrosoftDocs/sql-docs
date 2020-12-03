@@ -1,8 +1,9 @@
 ---
+description: "MemberTypeEnum"
 title: "MemberTypeEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "MemberTypeEnum enumeration [ADO MD]"
 ms.assetid: 5d8132c0-7ca2-4f86-8336-1b34213869ad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # MemberTypeEnum
-Specifies the setting for the [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) property of a [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) object.  
+Specifies the setting for the [Type](./type-property-ado-md.md) property of a [Member](./member-object-ado-md.md) object.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  

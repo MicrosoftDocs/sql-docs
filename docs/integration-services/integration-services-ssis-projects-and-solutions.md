@@ -1,4 +1,5 @@
 ---
+description: "Integration Services (SSIS) Projects and Solutions"
 title: "Integration Services (SSIS) Projects and Solutions | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/20/2019"
@@ -21,7 +22,7 @@ ms.author: chugu
 ---
 # Integration Services (SSIS) Projects and Solutions
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the development of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages.  
   
@@ -58,7 +59,7 @@ ms.author: chugu
 ## Folders in Integration Services projects  
  The following diagram shows the folders in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
-![ssis-solution-explorer.png](media/ssis-solution-explorer.png)
+![Screenshot of Solution Explorer showing the folders in the project.](media/ssis-solution-explorer.png)
   
  The following table describes the folders that appear in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
   
@@ -97,7 +98,7 @@ ms.author: chugu
   
      The **Integration Services Project** template creates an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project that contains a single, empty package.
 
-  ![ssis-ssdt-new-project.png](media/ssis-ssdt-new-project.png)
+  ![Screenshot of the New Project dialog box with the Integration Services Project - Business Intelligence template highlighted.](media/ssis-ssdt-new-project.png)
   
 4.  (Optional) Edit the project name and the location.  
   

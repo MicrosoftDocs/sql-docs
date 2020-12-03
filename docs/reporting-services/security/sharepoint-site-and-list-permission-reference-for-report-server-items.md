@@ -1,4 +1,5 @@
 ---
+description: "SharePoint Site and List Permission Reference for Report Server Items"
 title: "SharePoint Site and List Permission Reference for Report Server Items | Microsoft Docs"
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -30,11 +31,18 @@ ms.author: maggies
 |Visitor|**V**|  
   
  Permissions that do not affect a report server are not listed. All personalization permissions are excluded from this reference article. Although you can include report server items in a personalized Web site, the report server does not directly handle personalization requests or operations.  
-  
-||  
-|-|  
-| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode &#124; SharePoint 2010 and SharePoint 2013.|  
-  
+
+[!INCLUDE[applies](../../includes/applies-md.md)]
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
+    :::column-end:::
+    :::column:::
+        SharePoint 2010 and SharePoint 2013  
+    :::column-end:::
+:::row-end:::
+
 ## List Permissions  
  Permissions that you set on the library that contains report server items determine how users access those items.  
   

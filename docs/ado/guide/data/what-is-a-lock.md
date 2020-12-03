@@ -1,8 +1,9 @@
 ---
+description: "What is a Lock?"
 title: "What is a Lock? | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "cursors [ADO], locking"
   - "locks [ADO], about locking"
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # What is a Lock?
 Locking is the process by which a DBMS restricts access to a row in a multi-user environment. When a row or column is exclusively locked, other users are not permitted to access the locked data until the lock is released. This ensures that two users cannot simultaneously update the same column in a row.  

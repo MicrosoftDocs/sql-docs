@@ -1,5 +1,6 @@
 ---
 title: "Server Properties (Processors Page) | Microsoft Docs"
+description: Get acquainted with processor settings in SQL Server. Learn which options control the number of worker threads, the processor assignment, and other properties.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -10,11 +11,11 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.serverproperties.processor.f1"
 ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Server Properties - Processors Page
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to view or modify your processor options. Processor affinity settings are only enabled when more than one processor is installed.  
   
 ## Options  

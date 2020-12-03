@@ -1,4 +1,5 @@
 ---
+description: "HOST_NAME Values"
 title: "HOST_NAME Values | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -14,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # HOST_NAME Values
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Merge publications with parameterized filters use the SUSER_SNAME() function and/or the HOST_NAME() function to filter data. The function is specified in the New Publication Wizard or the **Publication Properties** dialog box.  
   

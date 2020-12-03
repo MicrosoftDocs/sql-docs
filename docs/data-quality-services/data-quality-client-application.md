@@ -1,4 +1,5 @@
 ---
+description: "Data Quality Client Application"
 title: "Data Quality Client Application"
 ms.date: "10/01/2012"
 ms.prod: sql
@@ -12,7 +13,7 @@ ms.author: sawinark
 ---
 # Data Quality Client Application
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   The [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application enables you to perform data quality operations using a standalone tool. This application enables you to create knowledge bases, create and run data quality projects, and perform administrative tasks.  
   

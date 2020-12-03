@@ -1,15 +1,16 @@
 ---
-title: "PDO::getAttribute | Microsoft Docs"
+title: "PDO::getAttribute"
+description: "API reference for the PDO::getAttribute function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
-ms.date: "07/13/2017"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,6 +37,7 @@ The following table contains the list of supported attributes.
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Specifies whether the column names should be in a specific case. PDO::CASE_LOWER forces lower case column names, PDO::CASE_NATURAL leaves the column name as returned by the database, and PDO::CASE_UPPER forces column names to upper case.<br /><br />The default is PDO::CASE_NATURAL.<br /><br />This attribute can also be set using PDO::setAttribute.|  
 |PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Array of strings|Describes the versions of the driver and related libraries. Returns an array with the following elements: ODBC version (*MajorVer*.*MinorVer*), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client DLL name and version, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] version (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
+|PDO::ATTR_DEFAULT_STR_PARAM|PDO|PDO::PARAM_STR_CHAR<br /><br />PDO::PARAM_STR_NATL|If not set to PDO::PARAM_STR_CHAR, PDO::PARAM_STR_NATL is returned.|
 |PDO::ATTR_DRIVER_NAME|PDO|String|Always returns "sqlsrv".|  
 |PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|String|Indicates the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] version (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
 |PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|Specifies how failures should be handled by the driver.<br /><br />PDO::ERRMODE_SILENT (the default) sets the error codes and information.<br /><br />PDO::ERRMODE_WARNING raises an E_WARNING.<br /><br />PDO::ERRMODE_EXCEPTION raises an exception.<br /><br />This attribute can also be set using PDO::setAttribute.|  

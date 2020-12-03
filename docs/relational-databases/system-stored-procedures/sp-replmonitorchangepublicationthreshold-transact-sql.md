@@ -14,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replmonitorchangepublicationthreshold"
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_replmonitorchangepublicationthreshold (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the monitoring threshold metric for a publication. This stored procedure, which is used to monitor replication, is executed at the Distributor on the distribution database.  
   

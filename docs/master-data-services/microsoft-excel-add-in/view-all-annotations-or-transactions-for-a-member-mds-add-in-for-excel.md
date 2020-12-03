@@ -1,4 +1,5 @@
 ---
+description: "View All Annotations or Transactions for a Member (MDS Add-in for Excel)"
 title: View Annotations or Transactions
 ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # View All Annotations or Transactions for a Member (MDS Add-in for Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], view annotations (comments) and transactions for rows of data (members) when you want to view updates to the data over time.  
   

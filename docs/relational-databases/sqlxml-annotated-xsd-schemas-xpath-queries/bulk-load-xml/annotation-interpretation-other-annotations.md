@@ -1,5 +1,6 @@
 ---
 title: "Other Annotations (SQLXML)"
+description: View a list of SQLXML annotations with a description of how each one is interpreted by XML Bulk Load.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -24,7 +25,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Annotation Interpretation - Other Annotations
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   In addition to the annotations discussed in the previous topics in this section, XML Bulk Load interprets these other annotations, as follows:  
   
  **sql:id-prefix**  

@@ -1,5 +1,6 @@
 ---
 title: "Invalid Characters and Escape Rules | Microsoft Docs"
+description: Learn how invalid XML characters are handled by the FOR XML clause, and learn the escape rules for characters that are invalid in XML names.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Invalid Characters and Escape Rules
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic describes how invalid XML characters are handled by the FOR XML clause, and lists the escape rules for characters that are invalid in XML names.  
   
 ## For XML and Invalid Characters  

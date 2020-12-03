@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_xe_database_session_events (Azure SQL Database)"
 title: "sys.dm_xe_database_session_events"
 titleSuffix: Azure SQL Database
 ms.date: "06/10/2016"
@@ -7,13 +8,13 @@ ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.topic: "language-reference"
 ms.assetid: 9e985a19-f93f-4c56-b644-12c529298011
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ms.custom: seo-lt-2019
 ---
 # sys.dm_xe_database_session_events (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Returns information about session events. Events are discrete execution points. Predicates can be applied to events to stop them from firing if the event does not contain the required information.  
   

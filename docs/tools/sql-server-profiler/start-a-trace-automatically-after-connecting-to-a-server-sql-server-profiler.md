@@ -1,6 +1,7 @@
 ---
 title: Start a Trace Automatically after Connecting to a Server
 titleSuffix: SQL Server Profiler
+description: Learn how to start tracing event data automatically in SQL Server Profiler after connecting to an instance of SQL Server.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
@@ -15,7 +16,7 @@ ms.date: 03/14/2017
 
 # Start a Trace Automatically after Connecting to a Server (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic describes how to start traces automatically after connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

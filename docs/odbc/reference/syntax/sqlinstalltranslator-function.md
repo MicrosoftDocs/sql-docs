@@ -1,4 +1,5 @@
 ---
+description: "SQLInstallTranslator Function"
 title: "SQLInstallTranslator Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLInstallTranslator function [ODBC]"
 ms.assetid: 453b21ff-3c2b-4069-8ff7-5c727f062d89
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLInstallTranslator Function
 **Conformance**  

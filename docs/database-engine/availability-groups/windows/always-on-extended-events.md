@@ -6,13 +6,13 @@ ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 ---
 # Configure extended events for Always On availability groups
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   SQL Server defines extended events that are specific to Always On availability groups. You can monitor these extended events in a session to help with root-cause diagnosis when you troubleshoot an availability group. You can view the availability group extended events using the following query:  
   
 ```sql  
@@ -242,9 +242,8 @@ GO
   
 #### Event fields  
   
-||||  
-|-|-|-|  
 |Name|Type_name|Description|  
+|-|-|-|  
 |availability_group_id|guid|The ID of the availability group.|  
 |availability_group_name|unicode_string|The name of the availability group, if available.|  
 |availability_replica_id|guid|The ID of the availability replica.|  

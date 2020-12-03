@@ -1,4 +1,5 @@
 ---
+description: "LocalDBFormatMessage Function"
 title: "LocalDBFormatMessage Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,11 +14,11 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # LocalDBFormatMessage Function
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Returns the localized textual description for the specified SQL Server Express LocalDB error.  
   
  **Header file:** sqlncli.h  

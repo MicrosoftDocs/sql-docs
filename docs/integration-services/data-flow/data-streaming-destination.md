@@ -1,4 +1,5 @@
 ---
+description: "Data Streaming Destination"
 title: "Data Streaming Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Data Streaming Destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The **Data Streaming Destination** is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) destination component that lets the **OLE DB Provider for SSIS** consume output of an SSIS package as a tabular result set. You can create a linked server that uses the OLE DB Provider for SSIS and then run a SQL query on the linked server to display data returned by the SSIS package.  

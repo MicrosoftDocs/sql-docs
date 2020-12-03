@@ -1,4 +1,5 @@
 ---
+description: "sys.sysservers (Transact-SQL)"
 title: "sys.sysservers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -22,7 +23,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # sys.sysservers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each server that an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can access as an OLE DB data source.  
   

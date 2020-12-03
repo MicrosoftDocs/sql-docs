@@ -1,4 +1,5 @@
 ---
+description: "isBeforeFirst Method (SQLServerResultSet)"
 title: "isBeforeFirst Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: e0e2bd28-6949-47dc-b9dd-145ffb337069
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # isBeforeFirst Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

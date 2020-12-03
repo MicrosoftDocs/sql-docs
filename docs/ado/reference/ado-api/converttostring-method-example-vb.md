@@ -1,8 +1,9 @@
 ---
+description: "ConvertToString Method Example (VB)"
 title: "ConvertToString Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ConvertToString method [ADO], Visual Basic example"
 ms.assetid: 31731e4f-3c0c-451e-8cbc-c9df28fabf6c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ConvertToString Method Example (VB)
 ```  
@@ -93,5 +94,5 @@ End Sub
 ```  
   
 ## See Also  
- [ConvertToString Method (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ConvertToString Method (RDS)](../rds-api/converttostring-method-rds.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

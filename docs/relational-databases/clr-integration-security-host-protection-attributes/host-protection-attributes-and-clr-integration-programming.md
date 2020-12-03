@@ -1,6 +1,6 @@
 ---
 title: "Common Language Runtime (CLR) Host Protection Attributes"
-description: The common language runtime (CLR) provides a mechanism to annotate managed application programming interfaces (APIs) that are part of the .NET Framework with certain attributes.
+description: The CLR provides a mechanism to annotate managed APIs in the .NET Framework with attributes such as SharedState, Synchronization, and ExternalProcessMgmt.
 ms.custom: "seo-lt-2019"
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -19,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Host Protection Attributes and CLR Integration Programming
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The common language runtime (CLR) provides a mechanism to annotate managed application programming interfaces (APIs) that are part of the .NET Framework with certain attributes that may be of interest to a host of the CLR, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Examples of such host protection attributes (HPAs) include:  
   
 -   **SharedState**, which indicates whether the API exposes the ability to create or manage shared state (for example, static class fields).  

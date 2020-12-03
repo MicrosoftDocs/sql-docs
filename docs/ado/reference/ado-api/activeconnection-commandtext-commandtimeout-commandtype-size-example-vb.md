@@ -1,8 +1,9 @@
 ---
+description: "ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (VB)"
 title: "Stored Procedure Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "ActiveConnection property [ADO], Visual Basic example"
   - "Direction property [ADO], Visual Basic example"
 ms.assetid: dade4531-0bcc-4a52-8f86-b110ba2a3f9d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (VB)
-This example uses the [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md), and [Direction](../../../ado/reference/ado-api/direction-property.md) properties to execute a stored procedure.  
+This example uses the [ActiveConnection](./activeconnection-property-ado.md), [CommandText](./commandtext-property-ado.md), [CommandTimeout](./commandtimeout-property-ado.md), [CommandType](./commandtype-property-ado.md), [Size](./size-property-ado-parameter.md), and [Direction](./direction-property.md) properties to execute a stored procedure.  
   
 ```  
 'BeginActiveConnectionVB  
@@ -128,14 +129,14 @@ End Sub
 ```  
   
 ## See Also  
- [ActiveCommand Property (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [CommandText Property (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
- [CommandTimeout Property (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
- [CommandType Property (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Direction Property](../../../ado/reference/ado-api/direction-property.md)   
- [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)   
- [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Size Property (ADO Parameter)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
+ [ActiveCommand Property (ADO)](./activecommand-property-ado.md)   
+ [Command Object (ADO)](./command-object-ado.md)   
+ [CommandText Property (ADO)](./commandtext-property-ado.md)   
+ [CommandTimeout Property (ADO)](./commandtimeout-property-ado.md)   
+ [CommandType Property (ADO)](./commandtype-property-ado.md)   
+ [Connection Object (ADO)](./connection-object-ado.md)   
+ [Direction Property](./direction-property.md)   
+ [Parameter Object](./parameter-object.md)   
+ [Record Object (ADO)](./record-object-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)   
+ [Size Property (ADO Parameter)](./size-property-ado-parameter.md)

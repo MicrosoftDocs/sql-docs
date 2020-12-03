@@ -1,5 +1,6 @@
 ---
 title: "Scalability | Microsoft Docs"
+description: Learn about enhancements to scalability to on-disk storage for memory-optimized tables in SQL Server, such as using multiple threads to persist tables.
 ms.custom: ""
 ms.date: "08/27/2015"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Scalability
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] contains scalability enhancements to the on-disk storage for memory-optimized tables. 
 
 ## Multiple threads to persist memory-optimized tables  

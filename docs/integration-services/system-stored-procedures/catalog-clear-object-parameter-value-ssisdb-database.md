@@ -1,4 +1,5 @@
 ---
+description: "catalog.clear_object_parameter_value (SSISDB Database)"
 title: "catalog.clear_object_parameter_value (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,10 +14,10 @@ ms.author: chugu
 ---
 # catalog.clear_object_parameter_value (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Clears the value of a parameter for an existing [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project or package that is stored on the server.  
   

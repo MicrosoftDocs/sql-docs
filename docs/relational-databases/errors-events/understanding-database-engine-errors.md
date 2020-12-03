@@ -1,5 +1,6 @@
 ---
 title: "Understanding Database Engine Errors | Microsoft Docs"
+description: Learn about the attributes of errors raised by the SQL Server Database Engine and how to access all system and user-defined error messages from sys.messages.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Understanding Database Engine Errors
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Errors raised by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] have the attributes described in the following table.  
   
 |Attribute|Description|  

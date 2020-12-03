@@ -1,4 +1,5 @@
 ---
+description: "Backing Up and Restoring DQS Databases"
 title: "Backing Up and Restoring DQS Databases"
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -12,7 +13,7 @@ ms.author: sawinark
 ---
 # Backing Up and Restoring DQS Databases
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to back up and restore the DQS databases.  
   

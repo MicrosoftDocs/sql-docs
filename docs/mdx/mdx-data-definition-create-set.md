@@ -1,4 +1,5 @@
 ---
+description: "MDX Data Definition - CREATE SET"
 title: "CREATE SET Statement (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -43,9 +44,9 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
 ## Remarks  
  A named set is a set of dimension members (or an expression that defines a set) that you create to use again. For example, a named set makes it possible to define a set of dimension members that consists of the set of the top ten stores by sales. This set can be defined statically, or by means of a function like [TopCount](../mdx/topcount-mdx.md). This named set can then be used wherever the set of the top 10 stores is needed.  
   
- The CREATE SET statement creates a named set that remains available throughout the session, and therefore, can be used in multiple queries in a session. For more information, see [Creating Session-Scoped Calculated Members &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
+ The CREATE SET statement creates a named set that remains available throughout the session, and therefore, can be used in multiple queries in a session. For more information, see [Creating Session-Scoped Calculated Members &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
   
- You can also define a named set for use by a single query. To define such a set, you use the WITH clause in the SELECT statement. For more information about the WITH clause, see [Creating Query-Scoped Named Sets &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets).  
+ You can also define a named set for use by a single query. To define such a set, you use the WITH clause in the SELECT statement. For more information about the WITH clause, see [Creating Query-Scoped Named Sets &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets).  
   
  The *Set_Expression* clause can contain any function that supports MDX syntax. Sets created with the CREATE SET statement that do not specify the SESSION clause have session scope. Use the WITH clause to create a set with query scope.  
   
@@ -55,7 +56,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  A user-defined set can occur within one of the scopes listed in the following table.  
   
  Query scope  
- The visibility and lifetime of the set is limited to the query. The set is defined in an individual query. Query scope overrides session scope. For more information, see [Creating Query-Scoped Named Sets &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets).  
+ The visibility and lifetime of the set is limited to the query. The set is defined in an individual query. Query scope overrides session scope. For more information, see [Creating Query-Scoped Named Sets &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets).  
   
  Session scope  
  The visibility and lifetime of the set is limited to the session in which it is created. (The lifetime is less than the session duration if a DROP SET statement is issued on the set.) The CREATE SET statement creates a set with session scope. Use the WITH clause to create a set with query scope.  
@@ -96,5 +97,4 @@ SELECT [Core Products] ON 0
 ## See Also  
  [DROP SET Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
  [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

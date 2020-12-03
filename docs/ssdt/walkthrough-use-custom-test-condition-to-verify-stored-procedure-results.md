@@ -1,12 +1,12 @@
 ---
 title: Custom Test Condition to Verify the Results of a Stored Procedure
+description: Walk through the steps of setting up a custom test condition that checks whether a stored procedure returns the correct number of columns.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
@@ -30,7 +30,7 @@ This walkthrough illustrates the following tasks:
   
 -   How to test the new test condition.  
   
-You must have Visual Studio 2010 or Visual Studio 2012 with the latest version of SQL Server Data Tools to complete this walkthrough. For more information, see [Install SQL Server Data Tools](../ssdt/install-sql-server-data-tools.md).  
+You must have Visual Studio 2010 or Visual Studio 2012 with the latest version of SQL Server Data Tools to complete this walkthrough. For more information, see [Install SQL Server Data Tools](./download-sql-server-data-tools-ssdt.md).  
   
 ## Creating a Custom Test Condition  
 First, you will create a class library.  
@@ -90,7 +90,7 @@ Next, you will add the necessary references to the project.
     The required references will be shown under the **References** node of the project in **Solution Explorer**.  
   
 ## Creating the ResultSetColumnCountCondition Class  
-Now, you will rename **Class1** to **ResultSetColumnCountCondition** and derive it from [testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). The **ResultSetColumnCountCondition** class is a simple test condition that verifies that the number of columns returned in the ResultSet. You can use this condition to make sure that the contract for a stored procedure is correct.  
+Now, you will rename **Class1** to **ResultSetColumnCountCondition** and derive it from [testcondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)). The **ResultSetColumnCountCondition** class is a simple test condition that verifies that the number of columns returned in the ResultSet. You can use this condition to make sure that the contract for a stored procedure is correct.  
   
 1.  In **Solution Explorer**, right-click Class1.cs, click **Rename**, and type **ResultSetColumnCountCondition.cs**.  
   
@@ -110,13 +110,13 @@ Now, you will rename **Class1** to **ResultSetColumnCountCondition** and derive 
         public class ResultSetColumnCountCondition  
     ```  
   
-4.  Derive the class from [testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx):  
+4.  Derive the class from [testcondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)):  
   
     ```  
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  Add [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx). See [How to: Create Test Conditions for the SQL Server Unit Test Designer](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) for more information about UnitTesting.Conditions.ExportTestConditionAttribute.  
+5.  Add [ExportTestConditionAttribute](/previous-versions/sql/sql-server-data-tools/jj856578(v=vs.103)). See [How to: Create Test Conditions for the SQL Server Unit Test Designer](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) for more information about UnitTesting.Conditions.ExportTestConditionAttribute.  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  
@@ -399,4 +399,3 @@ To view the new test condition:
   
 ## See Also  
 [Custom Test Conditions  for SQL Server Unit Tests](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
-  

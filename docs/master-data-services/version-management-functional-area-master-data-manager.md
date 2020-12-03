@@ -1,4 +1,5 @@
 ---
+description: "Version Management Functional Area (Master Data Manager)"
 title: Version Management Functional Area
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Version Management Functional Area (Master Data Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the Version Management functional area, administrators can validate data, review and reverse transactions, create versioned copies of data, and flag versions of data for subscribing systems. For more information about administrators, see [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   

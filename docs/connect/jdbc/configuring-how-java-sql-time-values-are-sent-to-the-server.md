@@ -1,4 +1,5 @@
 ---
+description: "Configuring how java.sql.Time values are sent to the server"
 title: "Configuring how java.sql.Time values are sent to the server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Configuring how java.sql.Time values are sent to the server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ ms.author: genemi
   
  If you want to use the **datetime** and **smalldatetime**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types when working with java.sql.Time values, you should set the **sendTimeAsDatetime** connection property to **true**. If you want to use the **time** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type when working with java.sql.Time values, you should set the **sendTimeAsDatetime** connection property to **false**.  
   
- Be aware that sending java.sql.Time values into a parameter whose data type can also store the date, that default dates are different depending on whether the java.sql.Time value is sent as a **datetime** (1/1/1970) or **time** (1/1/1900) value. For more information about data conversions when sending data to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Using Date and Time Data](https://go.microsoft.com/fwlink/?LinkID=145211).  
+ Be aware that sending java.sql.Time values into a parameter whose data type can also store the date, that default dates are different depending on whether the java.sql.Time value is sent as a **datetime** (1/1/1970) or **time** (1/1/1900) value. For more information about data conversions when sending data to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Using Date and Time Data](/previous-versions/sql/sql-server-2008-r2/ms180878(v=sql.105)).  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3.0, **sendTimeAsDatetime** is true by default. In a future release, the **sendTimeAsDatetime** connection property may be set to false by default.  
   
@@ -57,5 +58,4 @@ SendTimeAsDatetime must be false for encrypted columns as encrypted columns don'
   
 ## See also
  [Understanding the JDBC driver data types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: "sysmail_delete_log_sp (Transact-SQL)"
 title: "sysmail_delete_log_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_delete_log_sp"
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sysmail_delete_log_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes events from the Database Mail log. Deletes all events in the log or those events meeting a date or type criteria.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Audit Fulltext Event Class"
 title: "Audit Fulltext Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -12,7 +13,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Fulltext Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Audit Fulltext** event class occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connects to and communicates with the full-text filter daemon process.  
   
 ## Audit Fulltext Event Class Data Columns  

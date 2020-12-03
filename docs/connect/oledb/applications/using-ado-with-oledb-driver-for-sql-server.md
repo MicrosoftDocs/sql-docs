@@ -1,6 +1,6 @@
 ---
-title: "Using ADO with OLE DB Driver for SQL Server | Microsoft Docs"
-description: "Using ADO with OLE DB Driver for SQL Server"
+title: "Using ADO with OLE DB Driver"
+description: "Learn how to use ADO with OLE DB Driver, including new features like multiple active result sets, query notifications, user-defined types, or the xml data type."
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
@@ -13,11 +13,11 @@ helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], ADO"
   - "ADO [OLE DB Driver for SQL Server]"
   - "MSOLEDBSQL, ADO"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using ADO with OLE DB Driver for SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -35,7 +35,7 @@ ms.author: pelopes
 
 -   `DataTypeCompatibility=80`  
 
- For more information about the ADO connections string keywords supported in OLE DB Driver for SQL Server, see [Using Connection String Keywords with OLE DB Driver for SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ For more information about the ADO connections string keywords supported in OLE DB Driver for SQL Server, see [Using Connection String Keywords with OLE DB Driver for SQL Server](using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
 
  The following is an example of establishing an ADO connection string that is fully enabled to work with OLE DB Driver for SQL Server, including the enabling of the MARS feature:  
 
@@ -161,4 +161,4 @@ Set con = Nothing
  In prior versions of the OLE DB provider, this code would cause an implicit connection to be created on the second execution because only one active set of results could be opened per a single connection. Because the implicit connection was not pooled in the OLE DB connection pool this would cause additional overhead. With the MARS feature exposed by the OLE DB Driver for SQL Server, you get multiple active results on the one connection.  
 
 ## See Also  
- [Building Applications with OLE DB Driver for SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [Building Applications with OLE DB Driver for SQL Server](building-applications-with-oledb-driver-for-sql-server.md)  

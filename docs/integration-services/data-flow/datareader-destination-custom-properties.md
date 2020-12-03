@@ -1,4 +1,5 @@
 ---
+description: "DataReader Destination Custom Properties"
 title: "DataReader Destination Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # DataReader Destination Custom Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The DataReader destination has both custom properties and the properties common to all data flow components.  
@@ -31,6 +32,5 @@ ms.author: chugu
  For more information, see [DataReader Destination](../../integration-services/data-flow/datareader-destination.md).  
   
 ## See Also  
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   

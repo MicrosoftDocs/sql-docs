@@ -1,7 +1,8 @@
 ---
-title: "Retrieve Character Data as a Stream Using the SQLSRV Driver | Microsoft Docs"
+title: "Retrieve character data as a stream using the SQLSRV driver"
+description: "This topic describes how to retrieve character data as a stream when using the Microsoft SQLSRV Driver for PHP for SQL Server"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "retrieving data, as a character stream"
   - "streaming data"
 ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # How to: Retrieve Character Data as a Stream Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

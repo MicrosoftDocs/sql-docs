@@ -1,4 +1,5 @@
 ---
+description: "sp_changedistributor_property (Transact-SQL)"
 title: "sp_changedistributor_property (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changedistributor_property"
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_changedistributor_property (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the properties of the Distributor. This stored procedure is executed at the Distributor on any database.  
   

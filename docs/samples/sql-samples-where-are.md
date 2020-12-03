@@ -1,6 +1,6 @@
 ---
 title: "Microsoft SQL samples | Microsoft Docs"
-description: Documentation for sample databases and links to samples for Microsoft SQL products.
+description: View information about the WideWorldImporters and AdventureWorks sample databases, Azure samples and templates, and code samples for Microsoft SQL products.
 ms.date: "04/04/2018"
 ms.reviewer: ""
 ms.prod: sql
@@ -12,7 +12,7 @@ ms.author: mathoma
 ---
 # SQL samples
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Locations of sample databases and code samples for Microsoft SQL products.
 
@@ -34,7 +34,7 @@ The database downloads and samples are in the [SQL Server samples](https://githu
 
 - [WideWorldImporters readme and samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers) on GitHub.
 
-- [Tutorial: Load WideWorldImportersDW to Azure SQL Data Warehouse](/azure/sql-data-warehouse/load-data-wideworldimportersdw)
+- [Tutorial: Load WideWorldImportersDW to Azure Synapse Analytics](/azure/sql-data-warehouse/load-data-wideworldimportersdw)
 
 
 ## AdventureWorks sample database

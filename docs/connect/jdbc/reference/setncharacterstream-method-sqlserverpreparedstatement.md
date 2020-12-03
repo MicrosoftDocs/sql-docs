@@ -1,4 +1,5 @@
 ---
+description: "setNCharacterStream Method (SQLServerPreparedStatement)"
 title: "setNCharacterStream Method to java.io.Reader object | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2c245f0e-85ec-4d94-93ac-4957aa52b984
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setNCharacterStream Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Diagnostic Handling Rules"
 title: "Diagnostic Handling Rules | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "SQLGetDiagRec function [ODBC], diagnostic handling rules"
   - "diagnostic information [ODBC], SqlGetDiagRec"
 ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Diagnostic Handling Rules
 The following rules govern diagnostic handling in **SQLGetDiagRec** and **SQLGetDiagField**.  

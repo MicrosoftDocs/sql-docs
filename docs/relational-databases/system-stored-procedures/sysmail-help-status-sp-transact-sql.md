@@ -1,4 +1,5 @@
 ---
+description: "sysmail_help_status_sp (Transact-SQL)"
 title: "sysmail_help_status_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_help_status_sp"
 ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sysmail_help_status_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays the status of Database Mail queues. Use **sysmail_start_sp** to start the Database Mail queues and **sysmail_stop_sp** to stop the Database Mail queues.  
   

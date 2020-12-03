@@ -1,4 +1,5 @@
 ---
+description: "Usage Counting"
 title: "Usage Counting | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "installing ODBC components [ODBC], usage counts"
   - "subkeys [ODBC], usage counts"
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Usage Counting
 > [!NOTE]  

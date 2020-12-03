@@ -1,4 +1,5 @@
 ---
+description: "INSERT - SQL Command"
 title: "INSERT - SQL Command | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "INSERT [ODBC]"
 ms.assetid: 9b648198-349f-46f6-b869-13d129945971
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # INSERT - SQL Command
 Appends a record to the end of a table that contains the specified field values.  

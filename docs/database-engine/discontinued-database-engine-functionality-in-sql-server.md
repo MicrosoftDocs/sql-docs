@@ -1,7 +1,8 @@
 ---
-title: "Discontinued database engine functionality | Microsoft Docs"
+title: Discontinued database engine functionality
+description: Learn which database engine functionality and features were discontinued in SQL Server 2019 (15.x), SQL Server 2016 (13.x), and previous versions.
 ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -37,7 +38,7 @@ ms.author: mikeray
 monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Discontinued database engine functionality in SQL Server
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes the [!INCLUDE[ssDE](../includes/ssde-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)].  
 
@@ -62,13 +63,13 @@ For current configuration options, see [ALTER DATABASE SCOPED CONFIGURATION (Tra
 
 - ActiveX subsystem is discontinued. Use command line or PowerShell scripts instead.
 
-- Startup parameters **-h** and **-g**. For more information, see [Database Engine Service Startup Options](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
+- Startup parameters **-h** and **-g**. For more information, see [Database Engine Service Startup Options](/previous-versions/sql/2014/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
 
 - Secure Sockets Layer (SSL) encryption is discontinued. Use Transport Layer Security (TLS) instead. For more information, see [Enable Encrypted Connections to the Database Engine](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
 
 ## Previous Versions
 
-- [Discontinued Database Engine Functionality in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
+- [Discontinued Database Engine Functionality in SQL Server 2014](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
 ### See also
 

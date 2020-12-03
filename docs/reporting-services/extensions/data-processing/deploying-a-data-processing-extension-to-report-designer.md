@@ -1,5 +1,6 @@
 ---
 title: "How to: Deploy a Data Processing Extension to Report Designer | Microsoft Docs"
+description: Find out how to deploy a data processing extension to Report Designer by learning which entries to add to which configuration files.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

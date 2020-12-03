@@ -1,4 +1,5 @@
 ---
+description: "User Interface Reference (DB2ToSQL)"
 title: "User Interface Reference (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # User Interface Reference (DB2ToSQL)
 This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2.  
@@ -16,15 +17,14 @@ This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssno
 ## In This Section  
 The following table lists the SSMA dialog boxes:  
   
-|||  
-|-|-|  
 |Topic|Description|  
+|-|-|  
 |[Advanced Object Selection &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|Use the **Advanced Object Select** dialog box to find database objects by using filter criteria, and then select or clear those objects.|  
 |[Assessment Report &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Use the Assessment Report to view the results of the conversion of DB2 objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, and to estimate the time and complexity of a migration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Connecting to DB2 Database &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Use the **Connect to DB2** dialog box to connect to the DB2 database that you want to migrate.|  
 |[Connect to SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|Use the **Connect to SQL Server** dialog box to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which you want to migrate.|  
 |[Data Migration Report &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|Displays the results of migrating data from DB2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Data Migration Settings](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|Use the **Extended Data Migration Settings** tab to write custom queries for data migration.|  
+|[Data Migration Settings](./data-migration-settings-db2tosql.md)|Use the **Extended Data Migration Settings** tab to write custom queries for data migration.|  
 |[Edit Type Mapping &#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|Use the **New Type Mapping** or **Edit Type Mapping** dialog boxes to create or modify the mapping of data types between the source and target databases and database objects.|  
 |[Global Settings &#40;Editor&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|Use the Editor page of the **Global Settings** dialog box to configure code editor options.|  
 |[Global Settings &#40;Dialogs&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|Use the Dialogs page of the **Global Settings** dialog box to configure default dialog box and warning settings.|  
@@ -43,4 +43,3 @@ The following table lists the SSMA dialog boxes:
 ## See Also  
 [Getting Started with SSMA for DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
 [Migrating DB2 Databases to SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
-  

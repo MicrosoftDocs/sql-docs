@@ -1,5 +1,6 @@
 ---
 title: "Add a Snapshot to Report History - Reporting Services | Microsoft Docs"
+description: Learn details about how to manually add a snapshot to report history in SQL Server Reporting Services (SSRS).
 ms.prod: reporting-services
 ms.technology: reporting-services
 ms.topic: conceptual
@@ -65,7 +66,7 @@ Report snapshots are not saved in a particular rendering format. Instead, report
 - [Configure Execution Properties for a Report  &#40;Report Manager&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Limit Report History &#40;Report Manager&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [Schedules](../../reporting-services/subscriptions/schedules.md)   
-- [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end
 
@@ -154,6 +155,6 @@ Report snapshots are not saved in a particular rendering format. Instead, report
 - [Configure Execution Properties for a Report (web portal)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Limit Report History (web portal)](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [Schedules](../../reporting-services/subscriptions/schedules.md)   
-- [the web portal  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [the web portal  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end

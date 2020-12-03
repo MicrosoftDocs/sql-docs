@@ -1,4 +1,5 @@
 ---
+description: "Audit Backup and Restore Event Class"
 title: "Audit Backup and Restore Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,7 +14,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Audit Backup and Restore Event Class
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **Audit Backup/Restore** event class occurs whenever a backup or restore command is issued.  
   
 ## Audit Backup/Restore Event Class Data Columns  

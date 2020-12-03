@@ -1,8 +1,9 @@
 ---
+description: "Refresh Method Example (VB)"
 title: "Refresh Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,11 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "Refresh method [ADO], Visual Basic example"
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Refresh Method Example (VB)
-This example demonstrates using the [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) method to refresh the [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection for a stored procedure [Command](../../../ado/reference/ado-api/command-object-ado.md) object.  
+This example demonstrates using the [Refresh](./refresh-method-ado.md) method to refresh the [Parameters](./parameters-collection-ado.md) collection for a stored procedure [Command](./command-object-ado.md) object.  
   
 ```vb
 'BeginRefreshVB  
@@ -115,6 +116,6 @@ End Sub
 ```  
   
 ## See Also  
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Refresh Method (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
+ [Command Object (ADO)](./command-object-ado.md)   
+ [Parameters Collection (ADO)](./parameters-collection-ado.md)   
+ [Refresh Method (ADO)](./refresh-method-ado.md)

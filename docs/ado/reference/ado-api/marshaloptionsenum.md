@@ -1,8 +1,9 @@
 ---
+description: "MarshalOptionsEnum"
 title: "MarshalOptionsEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "MarshalOptionsEnum enumeration [ADO]"
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # MarshalOptionsEnum
 Specifies which records should be returned to the server.  
@@ -33,4 +34,4 @@ Specifies which records should be returned to the server.
 |AdoEnums.MarshalOptions.MODIFIEDONLY|  
   
 ## Applies To  
- [MarshalOptions Property (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)
+ [MarshalOptions Property (ADO)](./marshaloptions-property-ado.md)

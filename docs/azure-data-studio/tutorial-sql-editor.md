@@ -1,18 +1,17 @@
 ---
 title: Use the Transact-SQL editor to create database objects
-titleSuffix: Azure Data Studio
-description: This tutorial demonstrates the key features in Azure Data Studio that simplify working with T-SQL.
-ms.prod: sql
+description: Follow this tutorial to learn how to use the Transact-SQL editor to perform core database tasks, including creation and search of database objects.
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: "tutorial"
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "alayu, maghan, sstein"
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
 ---
 
-# Tutorial: Use the Transact-SQL editor to create database objects - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# Tutorial: Use the Transact-SQL editor to create database objects - Azure Data Studio
 
 Creating and running queries, stored procedures, scripts, etc. are the core tasks of database professionals. This tutorial demonstrates the key features in the T-SQL editor to create database objects.
 
@@ -55,18 +54,18 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
 ## Use T-SQL snippets to create stored procedures
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] provides many built-in T-SQL snippets for quickly creating statements.
+Azure Data Studio provides many built-in T-SQL snippets for quickly creating statements.
 
 
 1. Open a new query editor by pressing **Ctrl+N**.
 
 2. Type **sql** in the editor, arrow down to **sqlCreateStoredProcedure**, and press the *Tab* key (or *Enter*) to load the create stored procedure snippet.
 
-   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
+   ![Screenshot showing the Query Editor with sql typed in the editor and the sqlCreateStoredProcedure option called out.](./media/tutorial-sql-editor/snippet-list.png)
 
 3. The create stored procedure snippet has two fields set up for quick edit, *StoredProcedureName* and *SchemaName*. Select *StoredProcedureName*, right-click, and select **Change All Occurrences**. Now type *getCustomer* and all *StoredProcedureName* entries change to *getCustomer*.
 
-   ![snippet](./media/tutorial-sql-editor/snippet.png)
+   ![Screenshot showing the Query Editor with the Change All Occurrences option called out.](./media/tutorial-sql-editor/snippet.png)
 
 5. Change all occurrences of *SchemaName* to *dbo*. 
 6. The snippet contains placeholder parameters and body text that needs updating. The *EXECUTE* statement also contains placeholder text because it doesn't know how many parameters the procedure will have. For this tutorial update the snippet so it looks like the following code:
@@ -109,7 +108,7 @@ The stored procedure is now created, and the **RESULTS** pane displays the retur
 
 ## Use Peek Definition 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] provides the ability to view an objects definition using the peek definition feature. This section creates a second stored procedure and uses peek definition to see what columns are in a table to quickly create the body of the stored procedure.
+Azure Data Studio provides the ability to view an objects definition using the peek definition feature. This section creates a second stored procedure and uses peek definition to see what columns are in a table to quickly create the body of the stored procedure.
 
 1. Open a new editor by pressing **Ctrl+N**. 
 

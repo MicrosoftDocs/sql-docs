@@ -1,4 +1,5 @@
 ---
+description: "SQLExtendedFetch (Cursor Library)"
 title: "SQLExtendedFetch (Cursor Library) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLExtendedFetch function [ODBC], Cursor Library"
 ms.assetid: 06fbf06f-127b-475c-b636-7b784918475d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLExtendedFetch (Cursor Library)
 > [!IMPORTANT]  

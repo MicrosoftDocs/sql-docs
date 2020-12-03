@@ -1,4 +1,5 @@
 ---
+description: "Returning Array Parameters from Stored Procedures"
 title: "Returning Array Parameters from Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "stored procedures [ODBC], ODBC driver for Oracle"
   - "ODBC driver for Oracle [ODBC], stored procedures"
 ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Returning Array Parameters from Stored Procedures
 > [!IMPORTANT]  

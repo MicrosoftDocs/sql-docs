@@ -1,4 +1,5 @@
 ---
+description: "Configure Basic Authentication on the Report Server"
 title: "Configure Basic Authentication on the Report Server | Microsoft Docs"
 ms.date: 08/26/2016
 ms.prod: reporting-services
@@ -21,7 +22,7 @@ ms.author: maggies
   
  Before you enable Basic authentication, verify that your security infrastructure supports it. Under Basic authentication, the Report Server Web service will pass credentials to the local security authority. If the credentials specify a local user account, the user is authenticated by the local security authority on the report server computer and the user will get a security token that is valid for local resources. Credentials for domain user accounts are forwarded to and authenticated by a domain controller. The resulting ticket is valid for network resources.  
   
- Channel encryption, such as Secure Sockets Layer (SSL), is required if you want to mitigate the risk of having credentials intercepted while in transit to a domain controller in your network. By itself, Basic authentication transmits the user name in clear text and the password in base-64 encoding. Adding channel encryption makes the packet unreadable. For more information, see [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Channel encryption, such as Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), is required if you want to mitigate the risk of having credentials intercepted while in transit to a domain controller in your network. By itself, Basic authentication transmits the user name in clear text and the password in base-64 encoding. Adding channel encryption makes the packet unreadable. For more information, see [Configure TLS Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
  After you enable Basic authentication, be aware that users cannot select the **Windows integrated security** option when setting connection properties to an external data source that provides data to a report. The option will be grayed out in the data source property pages.  
   

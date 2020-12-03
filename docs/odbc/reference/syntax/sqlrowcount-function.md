@@ -1,4 +1,5 @@
 ---
+description: "SQLRowCount Function"
 title: "SQLRowCount Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"
@@ -18,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLRowCount function [ODBC]"
 ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLRowCount Function
 **Conformance**  

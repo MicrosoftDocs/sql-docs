@@ -1,5 +1,6 @@
 ---
 title: "Database Checkpoints (SQL Server) | Microsoft Docs"
+description: Learn about checkpoints, known good points from which the SQL Server Database Engine can start applying changes contained in the log during recovery.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -29,7 +30,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Checkpoints (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
  A *checkpoint* creates a known good point from which the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] can start applying changes contained in the log during recovery after an unexpected shutdown or crash.
 
 ##  <a name="Overview"></a> Overview   

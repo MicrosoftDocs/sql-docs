@@ -1,4 +1,5 @@
 ---
+description: "setString Method (long, java.lang.String, int, int)"
 title: "setString Method (long, java.lang.String, int, int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setString Method (long, java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

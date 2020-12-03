@@ -1,4 +1,5 @@
 ---
+description: "Slash Star (Block Comment) (Transact-SQL)"
 title: "Slash Star (Block Comment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"
@@ -33,14 +34,15 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 /*  
 text_of_comment  
 */  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *text_of_comment*  
  Is the text of the comment. This is one or more character strings.  
   
@@ -53,8 +55,8 @@ text_of_comment
   
  For example, the following code generates an error.  
   
-```  
-DECLARE @comment AS varchar(20);  
+```sql  
+DECLARE @comment AS VARCHAR(20);  
 GO  
 /*  
 SELECT @comment = '/*';  
@@ -65,21 +67,20 @@ GO
   
  To work around this error, make the following change.  
   
-```  
-DECLARE @comment AS varchar(20);  
+```sql  
+DECLARE @comment AS VARCHAR(20);  
 GO  
 /*  
 SELECT @comment = '/*';  
 */ */  
 SELECT @@VERSION;  
 GO  
-  
 ```  
   
 ## Examples  
  The following example uses comments to explain what the section of the code is supposed to do.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 /*  

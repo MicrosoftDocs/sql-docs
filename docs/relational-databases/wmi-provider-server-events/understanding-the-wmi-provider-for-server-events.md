@@ -1,5 +1,6 @@
 ---
 title: "Understanding the WMI Provider for Server Events"
+description: Learn how the WMI Provider for Server Events uses Windows Management Instrumentation to monitor events by turning SQL Server into a managed WMI object.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,14 +13,14 @@ helpviewer_keywords:
   - "SQL Server Agent [WMI]"
   - "WMI Provider for Server Events, about WMI Provider for Server Events"
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Understanding the WMI Provider for Server Events
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The WMI Provider for Server Events lets you use the Windows Management Instrumentation (WMI) to monitor events in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The provider works by turning [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] into a managed WMI object. Any event that can generate an event notification in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be leveraged by the WMI by using this provider. Additionally, as a management application that interacts with the WMI, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can respond to these events, increasing the scope of events covered by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent over earlier releases.  
   
- Management applications such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events using the WMI Provider for Server Events by issuing WMI Query Language (WQL) statements. WQL is a simplified subset of structured query language (SQL), with some WMI-specific extensions. In using WQL, an application retrieves an event type against a specific database or database object. The WMI Provider for Server Events translates the query into an event notification, effectively creating an event notification in the target database. For more information about how event notifications work in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [WMI Provider for Server Events Concepts](https://technet.microsoft.com/library/ms180560.aspx). The events that can be queried are listed in [WMI Provider for Server Events Classes and Properties](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
+ Management applications such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events using the WMI Provider for Server Events by issuing WMI Query Language (WQL) statements. WQL is a simplified subset of structured query language (SQL), with some WMI-specific extensions. In using WQL, an application retrieves an event type against a specific database or database object. The WMI Provider for Server Events translates the query into an event notification, effectively creating an event notification in the target database. For more information about how event notifications work in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [WMI Provider for Server Events Concepts](./wmi-provider-for-server-events-concepts.md). The events that can be queried are listed in [WMI Provider for Server Events Classes and Properties](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
  When an event occurs that triggers the event notification to send a message, the message goes to a predefined target service in **msdb** that is named **SQL/Notifications/ProcessWMIEventProviderNotification/v1.0**. The service puts the event into a predefined queue in **msdb** that is named **WMIEventProviderNotificationQueue**. (Both the service and the queue are created dynamically by the provider when it first connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) The provider then reads the event data from this queue and transforms it into managed object format (MOF) before returning it to the application. The following illustration shows this process.  
   
@@ -55,9 +56,8 @@ GO
   
  The provider DLL, Sqlwep.dll, is loaded only one time into the WMI host service of the operating system of the server, regardless of how many instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are on the server.  
   
- For an example of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent management application that uses the WMI Provider for Server Events, see [Sample: Creating a SQL Server Agent Alert Using the WMI Provider for Server Events](https://technet.microsoft.com/library/ms186385.aspx). For an example of a management application that uses the WMI Provider for Server Events in managed code, see [Sample: Using the WMI Event Provider in Managed Code](https://technet.microsoft.com/library/ms179315.aspx). More information is also available about WMI in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
+ For an example of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent management application that uses the WMI Provider for Server Events, see [Sample: Creating a SQL Server Agent Alert Using the WMI Provider for Server Events](./sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md). For an example of a management application that uses the WMI Provider for Server Events in managed code, see [Sample: Using the WMI Event Provider in Managed Code](./sample-using-the-wmi-event-provider-with-the-net-framework.md). More information is also available about WMI in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
   
 ## See Also  
- [WMI Provider for Server Events Concepts](https://technet.microsoft.com/library/ms180560.aspx)  
-  
+ [WMI Provider for Server Events Concepts](./wmi-provider-for-server-events-concepts.md)  
   

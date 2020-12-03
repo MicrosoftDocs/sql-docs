@@ -1,4 +1,5 @@
 ---
+description: "Indexes on Computed Columns"
 title: "Indexes on Computed Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/19/2018"
@@ -19,7 +20,7 @@ ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Indexes on Computed Columns
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 You can define indexes on computed columns as long as the following requirements are met:  
   

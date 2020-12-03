@@ -1,5 +1,6 @@
 ---
 title: "Access the Reporting Services WMI Provider | Microsoft Docs"
+description: Learn how to access the Reporting Services WMI provider that exposes two WMI classes for administration of Native mode report server instances through scripting. 
 ms.date: 11/02/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -29,7 +30,7 @@ ms.author: maggies
 |MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>*\v13|Provides basic information required for a client to connect to an installed report server.|  
 |MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>*\v13\Admin|Represents the installation and run-time parameters of a report server instance. These parameters are stored in the configuration file for the report server.<br /><br /> **\*\* Important \*\*** This class is only accessible with administrative privileges.|  
   
- An instance of each of the above classes is created for each report server instance. You can use any Microsoft or third party tools to access the WMI objects exposed by the report server, including WMI programming interfaces exposed by the .NET Framework itself. This topic describes how to access and use the WMI class instances with the PowerShell command [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx).  
+ An instance of each of the above classes is created for each report server instance. You can use any Microsoft or third party tools to access the WMI objects exposed by the report server, including WMI programming interfaces exposed by the .NET Framework itself. This topic describes how to access and use the WMI class instances with the PowerShell command [Get-WmiObject](/previous-versions//dd315295(v=technet.10)).  
   
 ## Determine the Instance Name in the Namespace String  
  The instance name in the namespace path for the Reporting Services WMI classes is an encoding of the instance names that you specify when installing the named Reporting Services instances. Namely, special characters in the instance names are encoded. For example, an underline (_) is encoded as "_5f", so an instance name of "My_Instance" is encoded as "My_5fInstance" in the WMI namespace path.  
@@ -80,5 +81,4 @@ PS C:\windows\system32> $rsconfig.GetAdminSiteUrl()
 ## See Also  
  [Reporting Services WMI Provider Library Reference &#40;SSRS&#41;](../../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
-  
   

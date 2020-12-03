@@ -1,4 +1,5 @@
 ---
+description: "Configure column encryption in-place with Transact-SQL"
 title: "Configure column encryption in-place with Transact-SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/10/2019
@@ -12,7 +13,7 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions" 
 ---
 # Configure column encryption in-place with Transact-SQL
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 This article describes how to perform cryptographic operations in-place on columns using Always Encrypted with secure enclaves with the [ALTER TABLE Statement](../../../odbc/microsoft/alter-table-statement.md)/`ALTER COLUMN` statement. For basic information about in-place encryption and general pre-requisites, see [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md).
 
@@ -29,7 +30,7 @@ As any query that uses a server-side secure enclave, an `ALTER TABLE`/`ALTER COL
 The remainder of this article describes how to trigger in-place encryption using the `ALTER TABLE`/`ALTER COLUMN` statement from SQL Server Management Studio. Alternatively, you can issue `ALTER TABLE`/`ALTER COLUMN` from your application. 
 
 > [!NOTE]
-> Currently, tools other than SSMS, including the [Invoke-Sqlcmd](https://docs.microsoft.com/powershell/module/sqlserver/invoke-sqlcmd) cmdlet in the SqlServer PowerShell module and [sqlcmd](../../../tools/sqlcmd-utility.md), do not support using `ALTER TABLE`/`ALTER COLUMN` for in-place cryptographic operations.
+> Currently, tools other than SSMS, including the [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) cmdlet in the SqlServer PowerShell module and [sqlcmd](../../../tools/sqlcmd-utility.md), do not support using `ALTER TABLE`/`ALTER COLUMN` for in-place cryptographic operations.
 
 ## Perform in-place encryption with Transact-SQL in SSMS
 ### Pre-requisites

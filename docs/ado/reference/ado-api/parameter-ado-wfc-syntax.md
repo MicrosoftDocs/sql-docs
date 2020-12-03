@@ -1,8 +1,9 @@
 ---
+description: "Parameter (ADO - WFC Syntax)"
 title: "Parameter (ADO - WFC Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "02/15/2017"
 ms.reviewer: ""
@@ -11,8 +12,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "Parameter collection [ADO], ADO/WFC syntax"
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Parameter (ADO - WFC Syntax)
 ## package com.ms.wfc.data  
@@ -59,7 +60,7 @@ public AdoProperties getProperties()
 ```  
   
 ## Parameter Accessor Methods  
- The [Value](../../../ado/reference/ado-api/value-property-ado.md) property of a [Parameter](../../../ado/reference/ado-api/parameter-object.md) object gets or sets the content of that object. The content is represented as a VARIANT, a type of object that can be assigned a value and any of several data types.  
+ The [Value](./value-property-ado.md) property of a [Parameter](./parameter-object.md) object gets or sets the content of that object. The content is represented as a VARIANT, a type of object that can be assigned a value and any of several data types.  
   
  ADO/WFC implements the **Value** property with the **getValue** method, which returns a VARIANT object; and the **setValue** method, which takes a VARIANT as an argument. VARIANTs are highly efficient in certain languages, such as Microsoft Visual Basic.  
   
@@ -89,4 +90,4 @@ public void setNull()
 ```  
   
 ## See Also  
- [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter Object](./parameter-object.md)

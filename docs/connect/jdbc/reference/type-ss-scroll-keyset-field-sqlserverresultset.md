@@ -1,4 +1,5 @@
 ---
+description: "TYPE_SS_SCROLL_KEYSET Field (SQLServerResultSet)"
 title: "TYPE_SS_SCROLL_KEYSET Field (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 2b16123e-07ab-4c73-9509-e0425910680b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # TYPE_SS_SCROLL_KEYSET Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

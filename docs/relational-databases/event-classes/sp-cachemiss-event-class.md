@@ -1,4 +1,5 @@
 ---
+description: "SP:CacheMiss Event Class"
 title: "SP:CacheMiss Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SP:CacheMiss Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The SP:CacheMiss event class indicates that the procedure is not found in the cache. If the SP:CacheMiss event class occurs frequently, it can indicate that more memory should be made available to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], thereby increasing the size of the procedure cache.  
   
 ## SP:CacheMiss Event Class Data Columns  

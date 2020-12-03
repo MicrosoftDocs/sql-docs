@@ -13,13 +13,13 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Lesson 1: Create and Apply an Off By Default Policy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Using Policy-Based Management policies, you can administer one or more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], one or more instance objects, server instances, one or more databases, or one or more database objects. As the database administrator, you want to ensure that certain servers do not have Database Mail enabled. In this lesson, you will create a condition and a policy that sets that server option. You will test the server to see whether it complies with the policy. Then, you will use the policy to reconfigure the server to bring the server into compliance.  
 
 ## Prerequisites
 To complete this tutorial, you need SQL Server Management Studio, and access to a server that's running SQL Server. 
 
-- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
   
 ## Create the mail-off condition
@@ -86,6 +86,5 @@ To complete this tutorial, you need SQL Server Management Studio, and access to 
    
 ## Next Lesson  
 [Lesson 2: Create and Apply a Naming Standards Policy](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
-  
   
   

@@ -1,5 +1,6 @@
 ---
 title: "Disable Resource Governor | Microsoft Docs"
+description: Learn how to disable the Resource Governor by using either SQL Server Management Studio or Transact-SQL. You must have the CONTROL SERVER permission.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -9,11 +10,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, disabling"
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Disable Resource Governor
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   You can disable the Resource Governor by using either [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or Transact-SQL.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  

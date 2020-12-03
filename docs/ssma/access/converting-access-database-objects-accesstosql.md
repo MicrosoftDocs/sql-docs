@@ -1,5 +1,6 @@
 ---
 title: "Converting Access Database Objects (AccessToSQL) | Microsoft Docs"
+description: Learn how to select Access database objects after you connect to SQL Server/Azure SQL Database, and then convert the schemas to SQL Server/SQL Database schemas.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -27,11 +28,11 @@ helpviewer_keywords:
   - "translating Access to SQL Azure"
   - "translating Access to SQL Server"
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Converting Access Database Objects (AccessToSQL)
-After you have added Access databases and connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, SSMA displays metadata for Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database objects. You can now select Access database objects, and then convert the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure schemas.  
+After you have added Access databases and connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, SSMA displays metadata for Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database objects. You can now select Access database objects, and then convert the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure schemas.  
   
 ## The Conversion Process  
 Converting database objects takes the object definitions from the Access metadata, converts them into equivalent [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, and then loads this information into the project. You can then view the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects and their properties by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure Metadata Explorer.  
@@ -42,7 +43,7 @@ Converting database objects takes the object definitions from the Access metadat
 During the conversion, SSMA prints status to the Output pane, and error, warning, and informational messages to the Error List pane. Use this information to determine whether you need to modify your Access databases or your conversion process to obtain the desired conversion results. You can also use the information in the [Preparing Access Databases for Migration](preparing-access-databases-for-migration-accesstosql.md) topic to determine what will and will not be converted.  
   
 ## Setting Conversion Options  
-Before converting objects, review the project conversion options in the **Project Settings** dialog box. By using this dialog box, you can set how SSMA converts indexed memo columns, primary keys, foreign key constraints, timestamps, and tables without indexes. For more information, see [Project Settings (Conversion)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+Before converting objects, review the project conversion options in the **Project Settings** dialog box. By using this dialog box, you can set how SSMA converts indexed memo columns, primary keys, foreign key constraints, timestamps, and tables without indexes. For more information, see [Project Settings (Conversion)](./project-settings-conversion-accesstosql.md)  
   
 ## Conversion Results  
 The following table shows which Access objects are converted, and the resulting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects:  
@@ -108,9 +109,8 @@ After you convert Access metadata to [!INCLUDE[ssNoVersion](../../includes/ssnov
   
 You can now view the changes in the code on the **SQL** tab.  
   
-## Next Step  
+## Next steps  
 The next step in the migration process is [load converted database objects into SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md)  
   
 ## See Also  
 [Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-  

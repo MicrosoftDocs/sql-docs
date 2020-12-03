@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cdc_get_ddl_history (Transact-SQL)"
 title: "sys.sp_cdc_get_ddl_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "sp_cdc_get_ddl_history"
   - "sys.sp_cdc_get_ddl_history"
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
-author: rothja
-ms.author: jroth
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_get_ddl_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the data definition language (DDL) change history associated with the specified capture instance since change data capture was enabled for that capture instance. Change data capture is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   

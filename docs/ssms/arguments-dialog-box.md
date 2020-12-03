@@ -1,4 +1,5 @@
 ---
+description: "Arguments Dialog Box"
 title: "Arguments Dialog Box"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -15,7 +16,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Arguments Dialog Box
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The **Arguments** dialog box specifies new or existing arguments for a tool. This dialog box appears when you launch an external tool that has the **Prompt for arguments** option selected in the **External Tools** dialog box.  
   
 ## Options  

@@ -1,16 +1,17 @@
 ---
+description: "SELECT INTO (DMX)"
 title: "SELECT INTO (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # SELECT INTO (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Creates a new mining model that is built on the mining structure of an existing mining model. The **SELECT INTO** statement creates the new mining model by copying schema and other information that is not specific to the actual algorithm.  
   
@@ -34,7 +35,7 @@ FROM <existing model>
  Optional. A comma-separated list of provider-defined parameters for the algorithm.  
   
  *expression*  
- An expression that evaluates to a valid filter condition on the training data. For more information about expressions that can be used as filters, see [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
+ An expression that evaluates to a valid filter condition on the training data. For more information about expressions that can be used as filters, see [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
   
  *existing model*  
  The name of the existing model to be copied.  
@@ -47,7 +48,7 @@ FROM <existing model>
  The **WITH DRILLTHROUGH** clause enables drillthrough on the new mining model. Drillthrough can only be enabled when you create the model.  
   
 ## Example 1: Altering the Parameters of the Model  
- The following example creates a new mining model based on an existing mining model, `TM_Clustering`, which you create in the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). In the new model, the CLUSTER_COUNT parameter is modified so that a maximum of five clusters will exist in the new model. In contrast, the existing model uses the default value, which is 10.  
+ The following example creates a new mining model based on an existing mining model, `TM_Clustering`, which you create in the [Basic Data Mining Tutorial](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)). In the new model, the CLUSTER_COUNT parameter is modified so that a maximum of five clusters will exist in the new model. In contrast, the existing model uses the default value, which is 10.  
   
 ```  
 SELECT * INTO [New_Clustering]  
@@ -71,5 +72,4 @@ FROM [TM Clustering]
  [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

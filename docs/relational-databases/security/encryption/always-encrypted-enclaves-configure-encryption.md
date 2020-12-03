@@ -1,4 +1,5 @@
 ---
+description: "Configure column encryption in-place using Always Encrypted with secure enclaves"
 title: "Configure column encryption in-place using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/10/2019
@@ -12,7 +13,7 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions" 
 ---
 # Configure column encryption in-place using Always Encrypted with secure enclaves 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) supports cryptographic operations on database columns in-place - inside a secure enclave in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In-place encryption eliminates the need to move the data for such operations outside of the database, making the cryptographic operations faster and more reliable. 
 
@@ -36,7 +37,7 @@ A user or an application triggering cryptographic operations must have permissio
 You can only trigger in-place encryption using [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) from SQL Server Management Studio or your custom application. See [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md).
 
 > [!NOTE]
-> Currently, the [Always Encrypted wizard](always-encrypted-wizard.md) and the [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/module/sqlserver/set-sqlcolumnencryption) cmdlet do not support in-place encryption, and always download the data for cryptographic operations, even if your configuration meets the above requirements. 
+> Currently, the [Always Encrypted wizard](always-encrypted-wizard.md) and the [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption) cmdlet do not support in-place encryption, and always download the data for cryptographic operations, even if your configuration meets the above requirements. 
 
 ## Next Steps
 - [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)

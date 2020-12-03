@@ -1,4 +1,5 @@
 ---
+description: "Importing Visual FoxPro Data into Microsoft Access"
 title: "Importing Visual FoxPro Data into Microsoft Access | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC], Access"
   - "Visual FoxPro data [ODBC], importing"
 ms.assetid: a3591295-0a76-4e3c-b4fa-8bd4f1cde705
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Importing Visual FoxPro Data into Microsoft Access
 You can import data stored in a Visual FoxPro database into a Microsoft Access database using the Import option.  

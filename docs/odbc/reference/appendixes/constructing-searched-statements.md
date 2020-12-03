@@ -1,4 +1,5 @@
 ---
+description: "Constructing Searched Statements"
 title: "Constructing Searched Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "cursor library [ODBC], searched statements"
   - "SQL statements [ODBC], searched statements"
 ms.assetid: e429254c-c43f-4fbf-98b2-5f1ed53501ff
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Constructing Searched Statements
 > [!IMPORTANT]  

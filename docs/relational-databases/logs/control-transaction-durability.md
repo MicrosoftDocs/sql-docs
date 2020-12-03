@@ -1,5 +1,6 @@
 ---
 title: "Control Transaction Durability | Microsoft Docs"
+description: Learn about delayed durable transactions. SQL Server transaction commits can be fully durable or delayed durable, also known as lazy commit.
 ms.custom: ""
 ms.date: "09/16/2016"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Control Transaction Durability
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction commits can be either fully durable, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default, or delayed durable (also known as lazy commit).    
     

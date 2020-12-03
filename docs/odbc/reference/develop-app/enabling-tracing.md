@@ -1,4 +1,5 @@
 ---
+description: "Enabling Tracing"
 title: "Enabling Tracing | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "tracing options [ODBC], enabling"
 ms.assetid: 48e318bd-2487-4708-a698-ea01f36a45e9
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Enabling Tracing
 Tracing can be enabled in the following three ways:  

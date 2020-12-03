@@ -1,4 +1,5 @@
 ---
+description: "Move System Databases"
 title: "Move System Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2016"
@@ -29,7 +30,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Move System Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to move system databases in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Moving system databases may be useful in the following situations:  
   
@@ -47,7 +48,7 @@ ms.author: "sstein"
 >  If you move a system database and later rebuild the master database, you must move the system database again because the rebuild operation installs all system databases to their default location.  
 
 > [!IMPORTANT]  
->  After moving files, the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] service account must have permission to access the files in new file folder location.
+>  After moving files, the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] service account must have permission to access the files in the new file folder location. For more information, see [Configure File System Permissions for Database Engine Access](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md).
     
   
 ##  <a name="Planned"></a> Planned Relocation and Scheduled Disk Maintenance Procedure  
@@ -117,7 +118,7 @@ ms.author: "sstein"
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-     For more information about using the **sqlcmd** utility, see [Use the sqlcmd Utility](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
+     For more information about using the **sqlcmd** utility, see [Use the sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md).  
   
 4.  Exit the **sqlcmd** utility or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -263,5 +264,4 @@ ms.author: "sstein"
  [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Rebuild System Databases](../../relational-databases/databases/rebuild-system-databases.md)  
-  
   

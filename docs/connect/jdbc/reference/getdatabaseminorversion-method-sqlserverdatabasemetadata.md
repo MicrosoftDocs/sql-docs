@@ -1,4 +1,5 @@
 ---
+description: "getDatabaseMinorVersion Method (SQLServerDatabaseMetaData)"
 title: "getDatabaseMinorVersion Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 18163668-60d6-4d54-aaf1-c338b8c90f2a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getDatabaseMinorVersion Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

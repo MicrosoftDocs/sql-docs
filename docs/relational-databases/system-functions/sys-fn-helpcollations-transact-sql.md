@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_helpcollations (Transact-SQL)"
 title: "sys.fn_helpcollations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
@@ -23,7 +24,7 @@ monikerRange: ">=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sq
 ---
 # sys.fn_helpcollations (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a list of all supported collations.  
   
@@ -51,7 +52,7 @@ fn_helpcollations ()
  The following example returns all collation names starting with the letter `L` and that are binary sort collations.
 
 > [!Note]
-> Azure SQL Data Warehouse queries against fn_helpcollations() must be run in the master database.  
+> Azure Synapse Analytics queries against fn_helpcollations() must be run in the master database.  
   
 ```sql  
 SELECT Name, Description FROM fn_helpcollations()  
@@ -78,4 +79,4 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
 
 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
 [COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
-[Database collation support for Azure SQL Data Warehouse](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  
+[Database collation support for Azure Synapse Analytics](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  

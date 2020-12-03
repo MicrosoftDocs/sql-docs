@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_get_field"
 title: "sqlsrv_get_field | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/26/2018"
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_get_field"
   - "retrieving data, as a single field"
 ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

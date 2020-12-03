@@ -1,5 +1,6 @@
 ---
 title: "Full Database Backups (SQL Server) | Microsoft Docs"
+description: In SQL Server, a full database backup backs up the whole database. Full database backups represent the database at the time the backup finished.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "size [SQL Server], backups"
   - "database backups [SQL Server], about backing up databases"
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Full Database Backups (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   A full database backup backs up the whole database. This includes part of the transaction log so that the full database can be recovered after a full database backup is restored. Full database backups represent the database at the time the backup finished.  
   
 > [!TIP]  
@@ -99,6 +100,5 @@ GO
 ## See Also  
  [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [Backup and Restore of Analysis Services Databases](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)  
-  
+ [Backup and Restore of Analysis Services Databases](/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)  
   

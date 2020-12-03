@@ -1,6 +1,6 @@
 ---
 title: Manage SQL Server on Linux with PowerShell
-description: This article provides an overview of using PowerShell on Windows with SQL Server on Linux.
+description: Learn details about SQL Server PowerShell and see a couple of examples on how to use Windows with SQL Server on Linux. 
 author: VanMSFT 
 ms.author: vanto
 ms.date: 10/02/2017
@@ -11,7 +11,7 @@ ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ---
 # Use PowerShell on Windows to Manage SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article introduces [SQL Server PowerShell](../powershell/sql-server-powershell.md) and walks you through a couple of examples on how to use it with SQL Server on Linux. PowerShell support for SQL Server is currently available on Windows, MacOS, & Linux. This article walks you through using a Windows machine to connect to a remote SQL Server instance on Linux.
 
@@ -86,7 +86,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## Using the SQL Server PowerShell Provider
 
-Another option for connecting to your SQL Server instance is to use the [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).  This provider allows you to navigate SQL Server instance similar to as if you were navigating the tree structure in Object Explorer, but at the cmdline.  By default this provider is presented as a PSDrive named `SQLSERVER:\` which you can use to connect & navigate SQL Server instances that your domain account has access to.  See [Configuration steps](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps) for information on how to setup Active Directory authentication for SQL Server on Linux.
+Another option for connecting to your SQL Server instance is to use the [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md).  This provider allows you to navigate SQL Server instance similar to as if you were navigating the tree structure in Object Explorer, but at the cmdline.  By default this provider is presented as a PSDrive named `SQLSERVER:\` which you can use to connect & navigate SQL Server instances that your domain account has access to.  See [Configuration steps](./sql-server-linux-active-directory-auth-overview.md#configuration-steps) for information on how to setup Active Directory authentication for SQL Server on Linux.
 
 You can also use SQL authentication with the SQL Server PowerShell Provider. To do this, use the `New-PSDrive` cmdlet to create a new PSDrive and supply the proper credentials in order to connect.
 
@@ -122,7 +122,7 @@ AdventureWorksDW2016 Normal      172.00 MB   74.76 MB Simple       130 sa
 AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
 ```
 
-If you need to see all databases on your instance, one option is to use the [Get-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlDatabase) cmdlet.
+If you need to see all databases on your instance, one option is to use the [Get-SqlDatabase](/powershell/module/sqlserver/Get-SqlDatabase) cmdlet.
 
 ## Examine SQL Server error logs
 
@@ -146,5 +146,5 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## See also
-- [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
-- [SqlServer cmdlets](https://docs.microsoft.com/powershell/module/sqlserver)
+- [SQL Server PowerShell](../powershell/sql-server-powershell.md)
+- [SqlServer cmdlets](/powershell/module/sqlserver)

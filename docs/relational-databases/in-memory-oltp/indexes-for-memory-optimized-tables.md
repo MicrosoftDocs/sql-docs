@@ -1,5 +1,6 @@
 ---
 title: "Indexes for Memory-Optimized Tables | Microsoft Docs"
+description: Learn how an index on a memory-optimized table differs from a traditional index on a disk-based table in SQL Server and Azure SQL Database.
 ms.custom: ""
 ms.date: "09/16/2019"
 ms.prod: sql
@@ -14,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Indexes on Memory-Optimized Tables
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 All memory-optimized tables must have at least one index, because it is the indexes that connect the rows together. On a memory-optimized table, every index is also memory-optimized. There are several ways in which an index on a memory-optimized table differs from a traditional index on a disk-base table:  
 
@@ -83,7 +84,7 @@ This subsection contains a Transact-SQL code block that demonstrates the syntax 
     )  
         WITH (  
         MEMORY_OPTIMIZED = ON,  
-        DURABILITY = SCHEMA\_AND_DATA);  
+        DURABILITY = SCHEMA_AND_DATA);  
     go  
         
         --------------------  
@@ -137,7 +138,7 @@ Consider a `Customers` table that has a primary key on `CustomerId`, and has an 
 
 In this scenario, the best practice is to use a nonclustered index on `(CustomerCategoryID, CustomerId)`. This index can be used for queries that use a predicate involving `CustomerCategoryID`, yet the index key does not contain duplication. Therefore, no inefficiencies in index maintenance are cause by either the duplicate CustomerCategoryID values, or by the extra column in the index.
 
-The following query shows the average number of duplicate index key values for the index on `CustomerCategoryID` in table `Sales.Customers`, in the sample database [WideWorldImporters](../../sample/world-wide-importers/wide-world-importers-documentation.md).
+The following query shows the average number of duplicate index key values for the index on `CustomerCategoryID` in table `Sales.Customers`, in the sample database [WideWorldImporters](../../samples/wide-world-importers-what-is.md).
 
 ```sql
 SELECT AVG(row_count) FROM
@@ -229,4 +230,4 @@ Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/
  [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)   
  [Hash Indexes for Memory-Optimized Tables](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [Nonclustered Indexes for Memory-Optimized Tables](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    
- [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  
+ [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

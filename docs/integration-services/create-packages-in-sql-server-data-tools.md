@@ -1,4 +1,5 @@
 ---
+description: "Create Packages in SQL Server Data Tools"
 title: "Create Packages in SQL Server Data Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # Create Packages in SQL Server Data Tools
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you can create a new package by using one of the following methods:  
@@ -41,9 +42,9 @@ ms.author: chugu
   
      The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard creates a complete package for a simple import or export. This wizard configures the connections, source, and destination, and adds any data transformations that are required to let you run the import or export immediately. You can optionally save the package to run it again later, or to refine and enhance the package in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. However, if you save the package, you must add the package to an existing [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project before you can change the package or run the package in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
- The packages that you create in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] using [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer are saved to the file system. To save a package to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or to the package store, you need to save a copy of the package. For more information, see [Save a Copy of a Package](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31).  
+ The packages that you create in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] using [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer are saved to the file system. To save a package to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or to the package store, you need to save a copy of the package. For more information, see [Save a Copy of a Package](./save-packages.md).  
 
- For a video that demonstrates how to create a basic package using the default package template, see [Creating a Basic Package (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=131023).  
+ For a video that demonstrates how to create a basic package using the default package template, see [Creating a Basic Package (SQL Server Video)](/previous-versions/sql/sql-server-2008/cc952921(v=sql.100)).  
 
 ## Get SQL Server Data Tools
 To install SQL Server Data Tools (SSDT), see [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
@@ -70,5 +71,4 @@ To install SQL Server Data Tools (SSDT), see [Download SQL Server Data Tools (SS
      ![TargetServerVersion property in project properties dialog box](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
   
  You can create, maintain, and run packages that target SQL Server 2016, SQL Server 2014, or SQL Server 2012.  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: "MSdatatype_mappings (Transact-SQL)"
 title: "MSdatatype_mappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -19,7 +20,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # MSdatatype_mappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSdatatype_mappings** view maps SQL Server data types to data types used by non-SQL Server database management systems (DBMS). This table is stored in the **msdb** database.  
   

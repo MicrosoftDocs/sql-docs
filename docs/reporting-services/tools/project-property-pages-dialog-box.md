@@ -1,5 +1,6 @@
 ---
 title: "Project Property Pages Dialog Box | Microsoft Docs"
+description: Learn about the options in the Project Property Pages dialog box that allow you to configure deployment properties for a Report Server project.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -79,7 +80,7 @@ ms.author: maggies
 
 ## Next steps
 
-[Publish Reports](https://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
+[Publish Reports](/previous-versions/sql/sql-server-2016/ms159615(v=sql.130))   
 [Publish a Report to a SharePoint Library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
 [Set Deployment Properties &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [Report Designer F1 Help](../../reporting-services/tools/report-designer-f1-help.md)  

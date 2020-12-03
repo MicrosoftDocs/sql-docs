@@ -14,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - ", listeners"
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Validation Page (Always On Availability Group Wizards)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
   This help topic describes the options of the **Validation** page. This topic applies to the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], and [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use this page to validate that your environment supports all the configuration choices you made on previous pages of the wizard.  
   

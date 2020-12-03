@@ -1,4 +1,5 @@
 ---
+description: "Enable Always Encrypted with secure enclaves for existing encrypted columns"
 title: Enable Always Encrypted with secure enclaves for existing encrypted columns | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/30/2019
@@ -12,7 +13,7 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Enable Always Encrypted with secure enclaves for existing encrypted columns 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 This article describes how to unlock the functionality of Always Encrypted with secure enclaves, and enable enclave computations for existing encrypted columns.  
 

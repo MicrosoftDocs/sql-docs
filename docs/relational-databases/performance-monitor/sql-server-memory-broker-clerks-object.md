@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Memory Broker Clerks Object | Microsoft Docs"
+description: Learn about the SQLServer:Memory Broker Clerks performance object, which provides counters for statistics related to memory broker clerks.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -10,11 +11,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Memory Broker Clerks"
 ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Memory Broker Clerks Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The **SQLServer:Memory Broker Clerks** performance object provides counters for statistics related to memory broker clerks.
 
 This following table describes the SQL Server **Memory Broker Clerks** performance objects.

@@ -1,8 +1,9 @@
 ---
+description: "Operation of Non-Parameterized Commands"
 title: "Operation of Non-Parameterized Commands | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "non-parameterized commands [ADO]"
   - "data shaping [ADO], non-parameterized commands"
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Operation of Non-Parameterized Commands
 For non-parameterized commands, all the provider commands are executed and the **Recordsets** are created during command execution. If the command is executed synchronously, all the **Recordsets** will be fully populated. If an asynchronous population mode was selected, the populated state of the **Recordsets** will depend on the population mode and the size of the **Recordsets**.  
@@ -31,11 +32,11 @@ SHAPE {SELECT * FROM Customers}
   
  When you access the reference in the chapter column, ADO automatically retrieves the **Recordset** represented by the reference. Note that in a non-parameterized command, although the entire child **Recordset** has been retrieved, the chapter only presents a subset of rows.  
   
- If the appended column has no *chapter-alias*, a name will be generated for it automatically. A [Field](../../../ado/reference/ado-api/field-object.md) object for the column will be appended to the **Recordset** object's [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) collection, and its data type will be **adChapter**.  
+ If the appended column has no *chapter-alias*, a name will be generated for it automatically. A [Field](../../reference/ado-api/field-object.md) object for the column will be appended to the **Recordset** object's [Fields](../../reference/ado-api/fields-collection-ado.md) collection, and its data type will be **adChapter**.  
   
- For information about navigating a hierarchical **Recordset**, see [Accessing Rows in a Hierarchical Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ For information about navigating a hierarchical **Recordset**, see [Accessing Rows in a Hierarchical Recordset](./accessing-rows-in-a-hierarchical-recordset.md).  
   
 ## See Also  
- [Data Shaping Example](../../../ado/guide/data/data-shaping-example.md)   
- [Formal Shape Grammar](../../../ado/guide/data/formal-shape-grammar.md)   
- [Shape Commands in General](../../../ado/guide/data/shape-commands-in-general.md)
+ [Data Shaping Example](./data-shaping-example.md)   
+ [Formal Shape Grammar](./formal-shape-grammar.md)   
+ [Shape Commands in General](./shape-commands-in-general.md)

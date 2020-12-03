@@ -1,4 +1,5 @@
 ---
+description: "Cursor Library Code Example"
 title: "Cursor Library Code Example | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "ODBC cursor library [ODBC], examples"
   - "cursor library [ODBC], examples"
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Cursor Library Code Example
 > [!IMPORTANT]  

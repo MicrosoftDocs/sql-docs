@@ -1,5 +1,6 @@
 ---
 title: "Browser Support for Reporting Services and Power View | Microsoft Docs"
+description: Learn about what browser versions are supported for managing and viewing SQL Server Reporting Services, the ReportViewer Controls and Power View.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -152,9 +153,8 @@ The following is the current list of browsers supported for the web portal.
 
 [Finding and Viewing Reports in the web portal](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services Tools](../reporting-services/tools/reporting-services-tools.md)  
-[Web portal (SSRS Native Mode)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
+[Web portal (SSRS Native Mode)](./web-portal-ssrs-native-mode.md)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
-

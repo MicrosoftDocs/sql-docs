@@ -1,4 +1,5 @@
 ---
+description: "Descriptor Transitions"
 title: "Descriptor Transitions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "transitioning states [ODBC], descriptor"
   - "descriptor transitions [ODBC]"
 ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Descriptor Transitions
 ODBC descriptors have the following three states.  

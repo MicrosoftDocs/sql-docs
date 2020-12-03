@@ -1,4 +1,5 @@
 ---
+description: "SQLSetPos Function"
 title: "SQLSetPos Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"
@@ -18,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetPos function [ODBC]"
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetPos Function
 **Conformance**  
@@ -65,7 +66,7 @@ SQLRETURN SQLSetPos(
   
  For more information, see "Comments."  
   
- **Returns**  
+## Returns  
   
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   

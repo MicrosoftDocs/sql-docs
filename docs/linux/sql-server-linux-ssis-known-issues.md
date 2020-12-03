@@ -11,7 +11,7 @@ ms.technology: linux
 ---
 # Limitations and known issues for SSIS on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article describes limitations and known issues for SQL Server Integration Services (SSIS) on Linux.
 

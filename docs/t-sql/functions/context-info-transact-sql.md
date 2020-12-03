@@ -1,4 +1,5 @@
 ---
+description: "CONTEXT_INFO  (Transact-SQL)"
 title: "CONTEXT_INFO  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "MARS [SQL Server]"
   - "session context information [SQL Server]"
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # CONTEXT_INFO  (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns the **context_info** value either set for the current session or batch, or derived through use of the [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) statement.
   
@@ -31,16 +32,18 @@ This function returns the **context_info** value either set for the current sess
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CONTEXT_INFO()  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return value
 The **context_info** value.
   
 If **context_info** was not set:
--   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns NULL.  
--   In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] returns a unique session-specific GUID.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns NULL.  
+-   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] returns a unique session-specific GUID.  
   
 ## Remarks  
 The Multiple Active Result Sets (MARS) feature enables applications to run multiple batches, or requests, at the same time, on the same connection. When one of the MARS connection batches runs SET CONTEXT_INFO, the `CONTEXT_INFO` function returns the new context value, when the `CONTEXT_INFO` function runs in the same batch as the SET statement. If the `CONTEXT_INFO` function runs in one or more of the other connection batches, the `CONTEXT_FUNCTION` does not return the new value unless those batches started after completion of the batch that ran the SET statement.

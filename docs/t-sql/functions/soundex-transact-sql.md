@@ -1,4 +1,5 @@
 ---
+description: "SOUNDEX (Transact-SQL)"
 title: "SOUNDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,12 +20,12 @@ helpviewer_keywords:
   - "strings [SQL Server], comparing"
   - "SOUNDEX values"
 ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SOUNDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a four-character (SOUNDEX) code to evaluate the similarity of two strings.  
   
@@ -32,11 +33,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 SOUNDEX ( character_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *character_expression*  
  Is an alphanumeric [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character data. *character_expression* can be a constant, variable, or column.  
   
@@ -64,7 +67,7 @@ SOUNDEX ( character_expression )
 ## Examples  
  The following example shows the SOUNDEX function and the related DIFFERENCE function. In the first example, the standard `SOUNDEX` values are returned for all consonants. Returning the `SOUNDEX` for `Smith` and `Smythe` returns the same SOUNDEX result because all vowels, the letter `y`, doubled letters, and the letter `h`, are not included.  
   
-```  
+```sql
 -- Using SOUNDEX  
 SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
 ```  
@@ -72,16 +75,12 @@ SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valid for a Latin1_General collation.  
   
 ```  
-  
------ -----   
 S530  S530    
-  
-(1 row(s) affected)  
 ```  
   
  The `DIFFERENCE` function compares the difference of the `SOUNDEX` pattern results. The following example shows two strings that differ only in vowels. The difference returned is `4`, the lowest possible difference.  
   
-```  
+```sql
 -- Using DIFFERENCE  
 SELECT DIFFERENCE('Smithers', 'Smythers');  
 GO  
@@ -90,15 +89,12 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valid for a Latin1_General collation.  
   
 ```  
------------   
 4             
-  
-(1 row(s) affected)  
 ```  
   
  In the following example, the strings differ in consonants; therefore, the difference returned is `2`, the greater difference.  
   
-```  
+```sql
 SELECT DIFFERENCE('Anothers', 'Brothers');  
 GO  
 ```  
@@ -106,10 +102,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valid for a Latin1_General collation.  
   
 ```  
------------   
 2             
-  
-(1 row(s) affected)  
 ```  
   
 ## See Also  

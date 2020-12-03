@@ -1,8 +1,9 @@
 ---
+description: "NextRecordset Method Example (VC++)"
 title: "NextRecordset Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,11 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "NextRecordset method [ADO], VC++ example"
 ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # NextRecordset Method Example (VC++)
-This example uses the [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) method to view the data in a recordset that uses a compound command statement made up of three separate **SELECT** statements.  
+This example uses the [NextRecordset](./nextrecordset-method-ado.md) method to view the data in a recordset that uses a compound command statement made up of three separate **SELECT** statements.  
   
 ```  
 // BeginNextRecordsetCpp.cpp  
@@ -133,4 +134,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [NextRecordset Method (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)
+ [NextRecordset Method (ADO)](./nextrecordset-method-ado.md)

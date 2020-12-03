@@ -1,4 +1,5 @@
 ---
+description: "Showplan Text Event Class"
 title: "Showplan Text Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan Text Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The Showplan Text event class occurs when [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes an SQL statement. The information included is a subset of the information available in Showplan All, Showplan XML Statistics Profile or Showplan XML event class.  
   
  When the Showplan Text event class is included in a trace, the amount of overhead will significantly impede performance. To minimize this, limit use of this event class to traces that monitor specific problems for brief periods of time. Showplan Text will not incur as much overhead as other Showplan event classes.  

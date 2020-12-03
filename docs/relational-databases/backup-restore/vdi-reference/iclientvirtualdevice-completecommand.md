@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
 ms.topic: reference
-author: mashamsft
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 
 # IClientVirtualDevice::CompleteCommand (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 The **CompleteCommand** function is used to notify SQL Server that a command has finished. Completion information appropriate for the command should be returned.
 

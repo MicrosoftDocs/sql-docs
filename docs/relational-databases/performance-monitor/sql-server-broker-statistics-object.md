@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Broker Statistics Object | Microsoft Docs"
+description: Learn about the SQLServer:Broker Statistics performance object, which contains performance counters that report Service Broker information for Database Engine.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -11,11 +12,11 @@ helpviewer_keywords:
   - "SQLServer:Broker Statistics"
   - "Broker Statistics object"
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Broker Statistics Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The SQLServer:Broker Statistics performance object contains performance counters that report general [!INCLUDE[ssSB](../../includes/sssb-md.md)] information for an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. The following table lists the counters that this object contains:  
   
 |SQL Server Broker Statistics counters|Description|  

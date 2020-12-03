@@ -1,4 +1,5 @@
 ---
+description: "Allocating an Environment Handle"
 title: "Allocating an Environment Handle | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -13,12 +14,12 @@ helpviewer_keywords:
   - "handles [SQL Server Native Client]"
   - "environment handles [SQLNCLI]"
 ms.assetid: 15c1b428-ea6d-4672-894c-f0e289e2da3f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Allocating an Environment Handle
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Before an application can call any ODBC function, it must initialize the ODBC environment and allocate an environment handle. This is the global context handle and placeholder for the other handles in ODBC. You do this by calling **SQLAllocHandle** with the *HandleType* parameter set to SQL_HANDLE_ENV and *InputHandle* set to SQL_NULL_HANDLE.  
   

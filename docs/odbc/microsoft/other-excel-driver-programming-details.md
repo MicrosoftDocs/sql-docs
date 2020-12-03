@@ -1,4 +1,5 @@
 ---
+description: "Other Excel Driver Programming Details"
 title: "Other Excel Driver Programming Details | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "desktop database drivers [ODBC], Excel driver"
   - "ODBC desktop database drivers [ODBC], Excel driver"
 ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Other Excel Driver Programming Details
 > [!NOTE]  

@@ -52,9 +52,9 @@
   - name: Tutorial - Deploy and run a package in Azure
     href: ../integration-services/lift-shift/ssis-azure-deploy-run-monitor-tutorial.md
   - name: Connect to data with Windows Authentication
-    href: ../integration-services/lift-shift/ssis-azure-connect-with-windows-auth.md
+    href: /azure/data-factory/ssis-azure-connect-with-windows-auth
   - name: Save files and connect to file shares
-    href: ../integration-services/lift-shift/ssis-azure-files-file-shares.md
+    href: /azure/data-factory/ssis-azure-files-file-shares
   - name: Connect to the SSIS Catalog in Azure
     href: ../integration-services/lift-shift/ssis-azure-connect-to-catalog-database.md
   - name: Validate packages deployed to Azure
@@ -65,6 +65,8 @@
     href: ../integration-services/lift-shift/ssis-azure-schedule-packages.md
   - name: Schedule packages in Azure with SSMS
     href: ../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md
+  - name: Migrate to Azure process and tools 
+    href: ../integration-services/lift-shift/ssis-migration-to-Azure.md
 - name: Install Integration Services
   href: ../integration-services/install-windows/install-integration-services.md
 - name: Installing Integration Services Versions Side by Side
@@ -82,6 +84,9 @@
   href: ../integration-services/integration-services-ssis-projects-and-solutions.md
 - name: SSIS DevOps
   href: ../integration-services/devops/ssis-devops-overview.md
+  items:
+    - name: Standalone SSIS DevOps Tools
+      href: ../integration-services/devops/ssis-devops-standalone.md
 - name: User interface
   href: ../integration-services/integration-services-user-interface.md
   items:
@@ -330,7 +335,7 @@
       href: ../integration-services/control-flow/message-queue-task.md
       items:
       - name: Select Variables
-        href: ../integration-services/control-flow/select-variables.md
+        href: ./control-flow/message-queue-task.md
       - name: Select a Package
         href: ../integration-services/control-flow/select-a-package.md
     - name: Notify Operator Task
@@ -642,7 +647,7 @@
     href: ../integration-services/data-flow/transformations/dqs-cleansing-transformation.md
     items:
     - name: DQS Cleansing Connection Manager
-      href: ../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md
+      href: ./connection-manager/dqs-cleansing-connection-manager.md
     - name: Apply Data Quality Rules to Data Source
       href: ../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md
     - name: Map Columns to Composite Domains
@@ -669,9 +674,9 @@
     - name: Implement a Lookup in No Cache or Partial Cache Mode
       href: ../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md
     - name: Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager
-      href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md
+      href: ./connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md
     - name: Implement a Lookup Transformation in Full Cache Mode Using the OLE DB Connection Manager
-      href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+      href: ./connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
     - name: Create and Deploy a Cache for the Lookup Transformation
       href: ../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md
     - name: Create Relationships
@@ -680,7 +685,7 @@
       href: ../integration-services/data-flow/transformations/cache-transform.md
       items:
       - name: Cache Connection Manager
-        href: ../integration-services/data-flow/transformations/cache-connection-manager.md
+        href: ./connection-manager/cache-connection-manager.md
   - name: Merge Transformation
     href: ../integration-services/data-flow/transformations/merge-transformation.md
   - name: Merge Join Transformation
@@ -1613,7 +1618,7 @@
   href: ../integration-services/load-data-to-from-excel-with-ssis.md
 - name: Load data to SQL Server or SQL Database
   href: ../integration-services/load-data-to-sql-database-with-ssis.md
-- name: Load data to SQL Data Warehouse
+- name: Load data to Azure Synapse Analytics
   href: ../integration-services/load-data-to-sql-data-warehouse.md
 
 
@@ -1906,7 +1911,7 @@
 - name: Resources
   items:
   - name: SSIS forum >>
-    href: https://social.msdn.microsoft.com/Forums/en-US/home
+    href: /answers/topics/sql-server-integration-services.html
   - name: Stack Overflow >>
     href: https://stackoverflow.com/questions/tagged/ssis
   - name: SSIS blog >>

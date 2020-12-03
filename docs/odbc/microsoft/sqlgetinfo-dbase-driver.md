@@ -1,4 +1,5 @@
 ---
+description: "SQLGetInfo (dBASE Driver)"
 title: "SQLGetInfo (dBASE Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "SQLGetInfo function [ODBC], dBASE Driver"
   - "DBase driver [ODBC], SQLGetInfo"
 ms.assetid: 42ffdc9c-281b-4df5-ac6d-7b34f15ecd4c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetInfo (dBASE Driver)
 > [!NOTE]  

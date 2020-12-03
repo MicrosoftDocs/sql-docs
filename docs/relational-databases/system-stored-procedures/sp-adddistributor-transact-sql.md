@@ -1,7 +1,8 @@
 ---
+description: "sp_adddistributor (Transact-SQL)"
 title: "sp_adddistributor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "06/09/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -19,7 +20,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 # sp_adddistributor (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates an entry in the [sys.sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) table (if there is not one), marks the server entry as a Distributor, and stores property information. This stored procedure is executed at the Distributor on the master database to register and mark the server as a distributor. In the case of a remote distributor, it is also executed at the Publisher from the master database to register the remote distributor.  
   
@@ -38,7 +39,10 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ## Arguments  
 `[ @distributor = ] 'distributor'`
  Is the distribution server name. *distributor* is **sysname**, with no default. This parameter is only used if setting up a remote Distributor. It adds entries for the Distributor properties in the **msdb..MSdistributor** table.  
-  
+
+> [!NOTE]
+> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled.
+
 `[ @heartbeat_interval = ] heartbeat_interval`
  Is the maximum number of minutes that an agent can go without logging a progress message. *heartbeat_interval* is **int**, with a default of 10 minutes. A SQL Server Agent job is created that runs on this interval to check the status of the replication agents that are running.  
   

@@ -1,4 +1,5 @@
 ---
+description: "setSendStringParametersAsUnicode Method (SQLServerDataSource)"
 title: "setSendStringParametersAsUnicode Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 49198d63-76cb-4843-8d04-e49b1fbb6916
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setSendStringParametersAsUnicode Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Static Aggregate Geometry Methods"
 title: "Static Aggregate Geometry Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,7 +17,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Static Aggregate Geometry Methods
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following aggregate methods as extensions to the static geometry methods of the Open Geospatial Consortium (OGC).  
   

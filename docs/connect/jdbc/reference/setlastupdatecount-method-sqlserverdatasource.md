@@ -1,4 +1,5 @@
 ---
+description: "setLastUpdateCount Method (SQLServerDataSource)"
 title: "setLastUpdateCount Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 5487631a-1107-4169-84ca-b77fd09bea66
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setLastUpdateCount Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

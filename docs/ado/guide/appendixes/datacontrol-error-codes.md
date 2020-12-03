@@ -1,8 +1,9 @@
 ---
+description: "DataControl Object Error Codes"
 title: "DataControl Error Codes | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -11,11 +12,11 @@ helpviewer_keywords:
   - "errors [ADO], DataControl"
   - "DataControl errors [ADO]"
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DataControl Object Error Codes
-The following table lists the [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object error codes. The positive decimal translation of the low two bytes, the negative decimal translation of the full error code, and the hexadecimal values are shown.
+The following table lists the [RDS.DataControl](../../reference/rds-api/datacontrol-object-rds.md) object error codes. The positive decimal translation of the low two bytes, the negative decimal translation of the full error code, and the hexadecimal values are shown.
 
 |RDS.DataControl error codes|Number|Description|
 |---------------------------------|------------|-----------------|
@@ -41,4 +42,4 @@ The following table lists the [RDS.DataControl](../../../ado/reference/rds-api/d
 |**IDS_URLMONNotFound**|4119 -2146824169 0x800A1017|DataControl **URL** property requires the system file Urlmon.dll, which cannot be found.|
 
 ## See Also
- [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
+ [DataControl Object (RDS)](../../reference/rds-api/datacontrol-object-rds.md)

@@ -1,4 +1,5 @@
 ---
+description: "syscollector_execution_log (Transact-SQL)"
 title: "syscollector_execution_log (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "data collector view"
   - "syscollector_execution_log view"
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # syscollector_execution_log (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Provides information from the execution log for a collection set or package.   
   

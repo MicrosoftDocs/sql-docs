@@ -1,4 +1,5 @@
 ---
+description: "Using Data Buffers"
 title: "Using Data Buffers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "buffers [ODBC], data"
   - "data buffers [ODBC]"
 ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using Data Buffers
 Data buffers are described by three pieces of information: their type, address, and byte length. Whenever a function needs one of these pieces of information and does not already know it, it has an argument with which the application passes it.  

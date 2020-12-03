@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Configure master instance of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Configure master instance of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
@@ -47,7 +47,7 @@ To change any of these settings, follow these steps:
 1. Restart SQL Server instance.  Replace `<namespaceName>` with the big data cluster name.
 
    ```bash
-   kubectl exec -it master-0  -c mssql-server -n <namespaceName>-- /bin/bash
+   kubectl exec -it master-0  -c mssql-server -n <namespaceName> -- /bin/bash
    supervisorctl restart mssql-server
    exit
    ```

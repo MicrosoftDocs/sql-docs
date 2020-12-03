@@ -1,4 +1,5 @@
 ---
+description: "SQLRemoveDriverManager Function"
 title: "SQLRemoveDriverManager Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLRemoveDriverManager function function [ODBC]"
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLRemoveDriverManager Function
 **Conformance**  
@@ -71,17 +72,27 @@ BOOL SQLRemoveDriverManager(
  **SQLRemoveDriverManager** does not actually remove any files. The calling program is responsible for deleting files and maintaining the file usage counts. Driver Manager files should not, however, be removed when both the component usage count and the file usage count have reached zero, because these files may be used by other applications that have not incremented the file usage count.  
   
  **SQLRemoveDriverManager** is called as part of the Uninstall process. ODBC core components (which include the Driver Manager, Cursor Library, Installer, Language Library, Administrator, thunking files, and so on) are uninstalled as a whole. The following files are not removed when **SQLRemoveDriverManager** is called as part of the Uninstall process:  
-  
-|||  
-|-|-|  
-|ODBC32DLL|ODBCCP32.DLL|  
-|ODBCCR32.DLL|ODBC16GT.DLL|  
-|ODBCCU32.DLL|ODBC32GT.DLL|  
-|ODBCINT.DLL|DS16GT.DLL|  
-|ODBCTRAC.DLL|DS32GT.DLL|  
-|MSVCRT40.DLL|ODBCAD32.EXE|  
-|ODBCCP32.CPL||  
-  
+
+:::row:::
+    :::column:::
+        ODBC32DLL  
+        ODBCCR32.DLL  
+        ODBCCU32.DLL  
+        ODBCINT.DLL  
+        ODBCTRAC.DLL  
+        MSVCRT40.DLL  
+        ODBCCP32.CPL  
+    :::column-end:::
+    :::column:::
+        ODBCCP32.DLL  
+        ODBC16GT.DLL  
+        ODBC32GT.DLL  
+        DS16GT.DLL  
+        DS32GT.DLL  
+        ODBCAD32.EXE  
+    :::column-end:::
+:::row-end:::
+
  **SQLRemoveDriverManager** is also called as part of an upgrade process. If an application detects that it has to perform an upgrade and it has previously installed the driver, the driver should be removed and then reinstalled.  
   
  **SQLRemoveDriverManager** should first be called to decrement the component usage count. **SQLInstallDriverEx** should then be called to increment the component usage count. The application setup program must replace the old core component files with the new files. The file usage counts will remain the same, and other applications that use the older version core component files will now use the newer version files.  

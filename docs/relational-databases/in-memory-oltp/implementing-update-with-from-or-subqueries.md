@@ -1,5 +1,6 @@
 ---
 title: "Implementing UPDATE with FROM or Subqueries | Microsoft Docs"
+description: Learn which syntax elements are supported on the Transact-SQL UPDATE statement in a natively compiled T-SQL module.
 ms.custom: ""
 ms.date: "11/17/2016"
 ms.prod: sql
@@ -14,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Implementing UPDATE with FROM or Subqueries
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 

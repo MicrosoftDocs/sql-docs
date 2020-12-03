@@ -1,4 +1,5 @@
 ---
+description: "Converting Data from C to SQL Data Types"
 title: "Converting Data from C to SQL Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "data conversions from C to SQL types [ODBC]"
   - "C data types [ODBC], converting to SQL types"
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Converting Data from C to SQL Data Types
 When an application calls **SQLExecute** or **SQLExecDirect**, the driver retrieves the data for any parameters bound with **SQLBindParameter** from storage locations in the application. When an application calls **SQLSetPos**, the driver retrieves the data for an update or add operation from columns bound with **SQLBindCol**. For data-at-execution parameters, the application sends the parameter data with **SQLPutData**. If necessary, the driver converts the data from the data type specified by the *ValueType* argument in **SQLBindParameter** to the data type specified by the *ParameterType* argument in **SQLBindParameter**,and then sends the data to the data source.  

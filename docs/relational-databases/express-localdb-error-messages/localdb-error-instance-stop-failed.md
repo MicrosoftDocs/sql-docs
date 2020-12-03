@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INSTANCE_STOP_FAILED"
 title: "LOCALDB_ERROR_INSTANCE_STOP_FAILED | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -7,16 +8,16 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: 4d088e21-ceeb-445f-bd0d-ed1799673da7
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_INSTANCE_STOP_FAILED
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| --------- | ----- |
 |Product Name|SQL Server|  
 |Event ID|271|  
 |Event Source|SQL Server Local Database Runtime 12.0|  

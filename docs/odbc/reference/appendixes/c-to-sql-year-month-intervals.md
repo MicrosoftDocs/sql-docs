@@ -1,4 +1,5 @@
 ---
+description: "C to SQL: Year-Month Intervals"
 title: "C to SQL: Year-Month Intervals | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "year-month intervals [ODBC]"
   - "data conversions from C to SQL types [ODBC], year-month intervals"
 ms.assetid: a0eb7b55-9db0-4375-9210-bddec4593880
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # C to SQL: Year-Month Intervals
 The identifiers for the year-month interval ODBC C data types are:  

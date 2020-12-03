@@ -1,5 +1,6 @@
 ---
 title: "Using the RenderedOutputFile Class for a Delivery Extension | Microsoft Docs"
+description: Learn how delivery extensions can use the RenderedOutputFile class, which stores a rendered report or report resources.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

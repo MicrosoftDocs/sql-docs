@@ -1,4 +1,5 @@
 ---
+description: "storesLowerCaseIdentifiers Method (SQLServerDatabaseMetaData)"
 title: "storesLowerCaseIdentifiers Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: b7dd60f5-c4f3-4b14-9a33-d95327395083
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # storesLowerCaseIdentifiers Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

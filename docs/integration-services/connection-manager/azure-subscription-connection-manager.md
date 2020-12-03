@@ -1,4 +1,5 @@
 ---
+description: "Azure Subscription Connection Manager"
 title: "Azure Subscription Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # Azure Subscription Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The **Azure Subscription connection manager** enables an SSIS package to connect to an Azure subscription by using the values you specify for the properties: Azure Subscription ID and Management Certificate.  
@@ -25,20 +26,19 @@ ms.author: chugu
   
 1.  In the **Add SSIS Connection Manager** dialog box shown above, you select **Azure Subscription**, and click **Add**.  You should see the following **Azure Subscription Connection Manager Editor** dialog box.  
   
-    ![SSIS-AzureSubscriptionConnectionManager](../../integration-services/connection-manager/media/ssis-azuresubscriptionconnectionmanager.png)
+    ![Screenshot showing the Azure Subscription Connection Manager Editor dialog box.](../../integration-services/connection-manager/media/ssis-azuresubscriptionconnectionmanager.png)
   
 2.  Enter your Azure subscription ID, which uniquely identifies an Azure subscription, for the **Azure subscription ID**.  The value can be found on the [Azure Management Portal](https://manage.windowsazure.com) under **Settings** page:  
   
-    ![SSIS-AzureSettings-SubscriptionID](../../integration-services/connection-manager/media/ssis-azuresettings-subscriptionid.png "SSIS-AzureSettings-SubscriptionID")  
+    ![Screenshot of the Azure Management Portal showing the SUBSCRIPTIONS tab of the Settings page.](../../integration-services/connection-manager/media/ssis-azuresettings-subscriptionid.png "SSIS-AzureSettings-SubscriptionID")  
   
 3.  Choose **Management certificate store location** and **Management certificate store name** from the drop-down lists.  
   
-4.  Enter **Management certificate thumbprint** or click the **Browse...** to choose a certificate from the selected store. The certificate must be uploaded as a management certificate for the subscription. To do so, click **Upload** on the following page of the Azure Portal (see this [MSDN post](https://msdn.microsoft.com/library/azure/gg551722.aspx) for more detail).  
+4.  Enter **Management certificate thumbprint** or click the **Browse...** to choose a certificate from the selected store. The certificate must be uploaded as a management certificate for the subscription. To do so, click **Upload** on the following page of the Azure Portal (see this [MSDN post](/previous-versions/azure/gg551722(v=azure.100)) for more detail).  
   
-     ![SSIS-AzureSettings-ManagementCertificate](../../integration-services/connection-manager/media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
+     ![Screenshot of the Azure Management Portal showing the MANAGEMENT CERTIFICATES tab of the Settings page.](../../integration-services/connection-manager/media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   
 5.  Click **Test Connection** to test the connection.  
   
 6.  Click **OK** to close the dialog box.  
-  
   

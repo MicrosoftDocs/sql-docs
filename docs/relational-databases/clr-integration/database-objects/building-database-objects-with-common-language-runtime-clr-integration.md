@@ -19,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Building Database Objects with Common Language Runtime (CLR) Integration
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   You can build database objects using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integration with the .NET Framework common language runtime (CLR). Managed code that runs inside of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is referred to as a "CLR routine." These routines include:  
   
 -   Scalar-valued user-defined functions (scalar UDFs)  
@@ -51,7 +51,7 @@ ms.author: "jroth"
  [SQL Server Data Types in the .NET Framework](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
  An overview of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types and their .NET Framework equivalents.  
   
- [Overview of CLR Integration Custom Attributes](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
+ [Overview of CLR Integration Custom Attributes](./clr-integration-custom-attributes-for-clr-routines.md)  
  Provides information about CLR integration custom attributes.  
   
  [CLR User-Defined Functions](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
@@ -60,13 +60,12 @@ ms.author: "jroth"
  [CLR User-Defined Types](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  Describes how to implement and use CLR user-defined types.  
   
- [CLR Stored Procedures](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
+ [CLR Stored Procedures](/dotnet/framework/data/adonet/sql/clr-stored-procedures)  
  Describes how to implement and use CLR stored procedures.  
   
- [CLR Triggers](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
+ [CLR Triggers](/dotnet/framework/data/adonet/sql/clr-triggers)  
  Describes how to implement and use CLR triggers.  
   
 ## See Also  
  [Common Language Runtime &#40;CLR&#41; Integration Overview](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
-  
   

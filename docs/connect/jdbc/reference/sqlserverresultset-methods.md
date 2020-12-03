@@ -1,4 +1,5 @@
 ---
+description: "SQLServerResultSet Methods"
 title: "SQLServerResultSet Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9a1f4d07-ada9-43c7-9281-1f059554c4d6
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLServerResultSet Methods
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

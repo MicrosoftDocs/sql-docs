@@ -1,5 +1,6 @@
 ---
 title: "Show Hidden Datasets for Parameter Values - Multidimensional Data | Microsoft Docs"
+description: Learn how to show hidden datasets for parameter values so you can display all datasets in a report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -31,8 +32,7 @@ ms.author: maggies
   
 ## See Also  
  [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
- [Reporting Services Query Designers](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
+ [Reporting Services Query Designers](/previous-versions/sql/)   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
-  
   

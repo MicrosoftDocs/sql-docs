@@ -1,4 +1,5 @@
 ---
+description: "SQLNativeSql Function"
 title: "SQLNativeSql Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLNativeSql function [ODBC]"
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLNativeSql Function
 **Conformance**  

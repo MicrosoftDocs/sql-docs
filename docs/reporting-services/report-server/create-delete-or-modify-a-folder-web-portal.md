@@ -1,5 +1,6 @@
 ---
 title: "Create, Delete, or Modify a Folder - Reporting Services | Microsoft Docs"
+description: Learn how to create, modify, and delete folders so that you can organize and manage the items that you publish to a Reporting Services report server.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -17,7 +18,7 @@ ms.author: maggies
 
 ## To create a folder  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md).  
   
 2.  In Report Manager, select the Home folder and click **New Folder**. Or, to create a folder under an existing folder, navigate to that folder in the **Contents** page and click the folder to open it. Then click **New Folder**.  
   

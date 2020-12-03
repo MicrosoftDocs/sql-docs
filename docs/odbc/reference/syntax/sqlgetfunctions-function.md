@@ -1,4 +1,5 @@
 ---
+description: "SQLGetFunctions Function"
 title: "SQLGetFunctions Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"
@@ -18,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetFunctions function [ODBC]"
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetFunctions Function
 **Conformance**  

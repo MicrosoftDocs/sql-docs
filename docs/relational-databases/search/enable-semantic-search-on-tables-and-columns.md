@@ -1,4 +1,5 @@
 ---
+description: "Enable Semantic Search on Tables and Columns"
 title: "Enable Semantic Search on Tables and Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ---
 # Enable Semantic Search on Tables and Columns
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes how to enable or disable statistical semantic indexing on selected columns that contain documents or text.  
   
  Statistical Semantic Search uses the indexes that are created by Full-Text Search, and creates additional indexes. As a result of this dependency on full-text search, you create a new semantic index when you define a new full-text index, or when you alter an existing full-text index. You can create a new semantic index by using [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, or by using the Full-Text Indexing Wizard and other dialog boxes in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], as described in this topic.  
@@ -138,7 +139,7 @@ GO
 ```  
   
 ### Add a semantic index by using SQL Server Management Studio  
- You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](./create-and-manage-full-text-indexes.md).  
 
 ## Alter a semantic index
   
@@ -177,7 +178,7 @@ GO
 ```  
   
  ### Drop a semantic index by using SQL Server Management Studio  
- You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](./create-and-manage-full-text-indexes.md).  
   
 ###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
   
@@ -274,5 +275,4 @@ GO
 ##  <a name="IssueNoResults"></a> Issue: Searching on specific column returns no results  
  **Was a non-Unicode LCID specified for a Unicode language?**  
  It is possible to enable semantic indexing on a non-Unicode column type with an LCID for a language that only has Unicode words, such as LCID 1049 for Russian. In this case, no results will ever be returned from the semantic indexes on this column.  
-  
   

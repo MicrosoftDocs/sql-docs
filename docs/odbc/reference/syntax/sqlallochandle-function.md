@@ -1,4 +1,5 @@
 ---
+description: "SQLAllocHandle Function"
 title: "SQLAllocHandle Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"
@@ -18,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLAllocHandle function [ODBC]"
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLAllocHandle Function
 **Conformance**  

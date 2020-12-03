@@ -1,4 +1,5 @@
 ---
+description: "Using 32-Bit Applications with 32-Bit Drivers"
 title: "Using 32-Bit Applications with 32-Bit Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "ODBC drivers [ODBC], 32-bit applications"
   - "32-bit applications with 32-bit drivers [ODBC]"
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using 32-Bit Applications with 32-Bit Drivers
 You can run 32-bit applications with 32-bit drivers. The 32-bit applications and the 32-bit drivers use the Win32® API.  

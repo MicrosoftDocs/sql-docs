@@ -1,5 +1,6 @@
 ---
 title: "Custom Report Item Implementation Requirements | Microsoft Docs"
+description: Learn about the development and deployment requirements that you need for custom report item implementations.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

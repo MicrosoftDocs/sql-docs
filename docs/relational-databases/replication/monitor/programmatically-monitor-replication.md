@@ -1,5 +1,6 @@
 ---
 title: "Programmatically Monitor Replication | Microsoft Docs"
+description: Replication Monitor is a graphical tool. Use Replication Monitor to monitor a replication topology in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -28,10 +29,10 @@ helpviewer_keywords:
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Programmatically Monitor Replication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Replication Monitor is a graphical tool that allows you to monitor a replication topology. You can access the same monitoring data programmatically by using [!INCLUDE[tsql](../../../includes/tsql-md.md)] replication stored procedures or replication management objects (RMO). These objects enable you to program the following tasks:  
   
 -   Monitor the state of Publishers, publications, and subscriptions.  

@@ -1,8 +1,9 @@
 ---
+description: "OLE DB Providers (ADO)"
 title: "OLE DB Providers (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "OLE DB providers [ADO]"
   - "ADO, OLE DB providers"
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # OLE DB Providers (ADO)
 OLE DB defines a set of COM interfaces to provide applications with uniform access to data that is stored in diverse information sources. This approach allows a data source to share its data through the interfaces that support the amount of DBMS functionality appropriate to the data source. By design, the high-performance architecture of OLE DB is based on its use of a flexible, component-based services model. Rather than having a prescribed number of intermediary layers between the application and the data, OLE DB requires only as many components as are needed to accomplish a particular task.  
@@ -35,6 +36,6 @@ OLE DB defines a set of COM interfaces to provide applications with uniform acce
   
  This section contains the following topics.  
   
--   [Data Providers](../../../ado/guide/data/data-providers.md)  
+-   [Data Providers](./data-providers.md)  
   
--   [Service Providers and Components](../../../ado/guide/data/service-providers-and-components.md)
+-   [Service Providers and Components](./service-providers-and-components.md)

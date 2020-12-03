@@ -1,16 +1,17 @@
 ---
+description: "IMPORT (DMX)"
 title: "IMPORT (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # IMPORT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Loads a mining model or mining structure from an Analysis Services Backup File (.abf) file onto the server.  
   
@@ -42,6 +43,5 @@ IMPORT FROM 'C:\TEMP\Association_NEW.dmb'
  [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
  [EXPORT &#40;DMX&#41;](../dmx/export-dmx.md)   
- [Export and Import Data Mining Objects](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
-  
+ [Export and Import Data Mining Objects](/analysis-services/data-mining/export-and-import-data-mining-objects)  
   

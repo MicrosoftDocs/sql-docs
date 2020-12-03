@@ -1,5 +1,6 @@
 ---
 title: "XQueries Involving Order | Microsoft Docs"
+description: View examples of XQueries that are based on the sequence in which nodes appear in a document.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # XQueries Involving Order
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Relational databases do not have a concept of sequence. For example, you cannot make a request such as "Get the first customer from the database." However, you can query an XML document and retrieve the first \<Customer> element. Then, you will always retrieve the same customer.  
   

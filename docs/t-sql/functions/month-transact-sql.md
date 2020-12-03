@@ -1,4 +1,5 @@
 ---
+description: "MONTH (Transact-SQL)"
 title: "MONTH (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,12 +23,12 @@ helpviewer_keywords:
   - "dates [SQL Server], MONTH"
   - "MONTH function [SQL Server]"
 ms.assetid: 9dd8aff7-b0fc-45df-b316-ead14ee9b8b7
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MONTH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns an integer that represents the month of the specified *date*.  
   
@@ -37,11 +38,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```sqlsyntax  
 MONTH ( date )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *date*  
  Is an expression that can be resolved to a **time**, **date**, **smalldatetime**, **datetime**, **datetime2**, or **datetimeoffset** value. The *date* argument can be an expression, column expression, user-defined variable, or string literal.  
   
@@ -56,20 +59,20 @@ MONTH ( date )
 ## Examples  
  The following statement returns `4`. This is the number of the month.  
   
-```  
+```sql  
 SELECT MONTH('2007-04-30T01:01:01.1234567 -07:00');  
 ```  
   
  The following statement returns `1900, 1, 1`. The argument for *date* is the number `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets `0` as January 1, 1900.  
   
-```  
+```sql  
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns `4`. This is the number of the month.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT TOP 1 MONTH('2007-04-30T01:01:01.1234')   
@@ -78,7 +81,7 @@ FROM dbo.DimCustomer;
   
  The following example returns `1900, 1, 1`. The argument for *date* is the number `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets `0` as January 1, 1900.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT TOP 1 YEAR(0), MONTH(0), DAY(0) FROM dbo.DimCustomer;  

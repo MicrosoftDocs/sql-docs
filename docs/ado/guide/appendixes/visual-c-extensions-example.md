@@ -1,8 +1,9 @@
 ---
+description: "Visual C++ Extensions Example"
 title: "Visual C++ Extensions Example | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "ADO, Visual C++"
   - "Visual C++ [ADO], VC++ extensions example"
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Visual C++ Extensions Example
 This program shows how values are retrieved from fields and converted to C/C++ variables.  
@@ -104,5 +105,5 @@ int main() {
 ```  
   
 ## See Also  
- [Using Visual C++ Extensions](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
- [Visual C++ Extensions Header](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ [Using Visual C++ Extensions](./using-visual-c-extensions.md)   
+ [Visual C++ Extensions Header](./visual-c-extensions-header.md)

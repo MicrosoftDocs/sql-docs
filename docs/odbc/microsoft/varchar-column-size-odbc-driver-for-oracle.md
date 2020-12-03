@@ -1,4 +1,5 @@
 ---
+description: "VARCHAR Column Size (ODBC Driver for Oracle)"
 title: "VARCHAR Column Size (ODBC Driver for Oracle) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "varchar column size [ODBC]"
   - "ODBC driver for Oracle [ODBC], data types"
 ms.assetid: eb4cb410-3d00-4251-8c5e-a06f36c4dac7
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # VARCHAR Column Size (ODBC Driver for Oracle)
 > [!IMPORTANT]  

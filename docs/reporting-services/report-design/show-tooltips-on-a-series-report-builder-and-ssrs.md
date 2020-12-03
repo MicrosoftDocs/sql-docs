@@ -1,5 +1,6 @@
 ---
-title: "Show ToolTips on a Series (Report Builder and SSRS) | Microsoft Docs"
+title: "Show ToolTips on a Series (Report Builder) | Microsoft Docs"
+description: Learn how to add a ToolTip to each data point on the series of a chart to display related information in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,4 +1,5 @@
 ---
+description: "ODBC Drivers Subkey"
 title: "ODBC Drivers Subkey | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "registry entries for components [ODBC], drivers subkey"
   - "drivers subkey [ODBC]"
 ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ODBC Drivers Subkey
 The values under the ODBC Drivers subkey list the installed drivers. The format of these values is shown in the following table.  

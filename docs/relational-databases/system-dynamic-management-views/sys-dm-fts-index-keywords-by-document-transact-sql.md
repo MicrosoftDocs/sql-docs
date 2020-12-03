@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_fts_index_keywords_by_document (Transact-SQL)"
 title: "sys.dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -24,7 +25,7 @@ ms.author: pelopes
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_index_keywords_by_document (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Returns information about the document-level content of a full-text index associated with the specified table.  
   

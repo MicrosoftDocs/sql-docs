@@ -1,4 +1,5 @@
 ---
+description: "IsNull (geometry Data Type)"
 title: "IsNull (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"
@@ -18,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # IsNull (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The type of a **geometry** instance is null. Returns 0 if the instance isn't null.
   
@@ -28,7 +29,9 @@ The type of a **geometry** instance is null. Returns 0 if the instance isn't nul
 .IsNull  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type: **bit**  
   
  CLR type: **SqlBoolean**  

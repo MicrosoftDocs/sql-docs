@@ -1,5 +1,6 @@
 ---
-title: "Step 1:  Configure development environment for Node.js development | Microsoft Docs"
+title: "Step 1: Configure development environment for Node.js"
+description: "You will need to configure your development environment with the prerequisites in order to develop an application using the Node.js Driver for SQL Server."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Step 1:  Configure development environment for Node.js development
-You will need to configure your development environment with the prerequisites in order to develop an application using the Node.js Driver for SQL Server.  The most common method is to use the node package manager (npm) to install the tedious module, but you can download the tedious module directly at [Github](https://github.com/pekim/tedious) if you prefer.  
+You will need to configure your development environment with the prerequisites in order to develop an application using the Node.js Driver for SQL Server.  The most common method is to use the node package manager (npm) to install the tedious module, but you can download the tedious module directly at [GitHub](https://github.com/pekim/tedious) if you prefer.  
   
-Note that the Node.js Driver uses the TDS protocol, which is enabled by default in SQL Server and Azure SQL Database.  No additional configuration is required.  
+The Node.js Driver uses the TDS protocol, which is enabled by default in SQL Server and Azure SQL Database.  No additional configuration is required.  
   
 ## Windows  
   
-1. **Install Node.js runtime and npm package manager**  
+1. **Install Node.js runtime and npm package manager.**  
 a. Go to [Node.js](https://nodejs.org/en/download/)  
 b. Click on the appropriate Windows installer msi link.   
 c. Once downloaded, run the msi to install Node.js  
@@ -35,7 +36,7 @@ c. Once downloaded, run the msi to install Node.js
 > npm init  
 ```  
   
-5. **Install tedious module in your project.**  This is the implementation of the TDS protocol which the driver uses to communicate to SQL Server.  
+5. **Install tedious module in your project.**  Tedious is the implementation of the TDS protocol, which is used to communicate to SQL Server.  
 ```  
 > npm install tedious  
 ```  
@@ -44,11 +45,11 @@ c. Once downloaded, run the msi to install Node.js
   
 1.  **Open terminal**  
   
-2. **Install Node.js runtime**  
+2. **Install Node.js runtime.**  
 ```  
 >sudo apt-get install node  
 ```  
-3. **Install npm (node package manager)**  
+3. **Install npm (node package manager).**  
 ```  
 > sudo apt-get install npm  
 ```  
@@ -63,17 +64,17 @@ c. Once downloaded, run the msi to install Node.js
 > sudo npm init  
 ```  
   
-6. **Install tedious module in your project.**  This is the implementation of the TDS protocol which the driver uses to communicate to SQL Server.  
+6. **Install tedious module in your project.**  Tedious is the implementation of the TDS protocol, which is used to communicate to SQL Server.  
 ```  
 > sudo npm install tedious  
 ```  
   
-## Mac  
+## macOS  
   
-1. **Install Node.js runtime and npm package manager**  
+1. **Install Node.js runtime and npm package manager.**  
 a. Go to [Node.js](https://nodejs.org/en/download/)  
-b. Click on the appropriate Mac OS installer link.  
-c. Once downloaded, run the dmg to install Node.js  
+b. Click on the appropriate macOS installer link.  
+c. Once downloaded, run 'dmg' to install Node.js  
   
 2. **Open terminal**  
   
@@ -92,4 +93,3 @@ c. Once downloaded, run the dmg to install Node.js
 ```  
 > npm install tedious  
 ```  
-  

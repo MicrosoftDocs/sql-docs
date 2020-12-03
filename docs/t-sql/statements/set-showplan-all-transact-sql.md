@@ -1,7 +1,8 @@
 ---
+description: "SET SHOWPLAN_ALL (Transact-SQL)"
 title: "SET SHOWPLAN_ALL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -24,11 +25,11 @@ helpviewer_keywords:
   - "stopping statement execution"
   - "estimated execution information [SQL Server]"
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SET SHOWPLAN_ALL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Causes Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] not to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. Instead, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns detailed information about how the statements are executed and provides estimates of the resource requirements for the statements.  
   
@@ -36,17 +37,19 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  The setting of SET SHOWPLAN_ALL is set at execute or run time and not at parse time.  
   
- When SET SHOWPLAN_ALL is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns execution information for each statement without executing it, and [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are not executed. After this option is set ON, information about all subsequent [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are returned until the option is set OFF. For example, if a CREATE TABLE statement is executed while SET SHOWPLAN_ALL is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message from a subsequent SELECT statement involving that same table, informing users that the specified table does not exist. Therefore, subsequent references to this table fail. When SET SHOWPLAN_ALL is OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes the statements without generating a report.  
+ When `SET SHOWPLAN_ALL` is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns execution information for each statement without executing it, and [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are not executed. After this option is set ON, information about all subsequent [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are returned until the option is set OFF. For example, if a CREATE TABLE statement is executed while `SET SHOWPLAN_ALL` is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message from a subsequent SELECT statement involving that same table, informing users that the specified table does not exist. Therefore, subsequent references to this table fail. When SET SHOWPLAN_ALL is OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes the statements without generating a report.  
   
- SET SHOWPLAN_ALL is intended to be used by applications written to handle its output. Use SET SHOWPLAN_TEXT to return readable output for Microsoft Win32 command prompt applications, such as the **osql** utility.  
+ `SET SHOWPLAN_ALL` is intended to be used by applications written to handle its output. Use SET SHOWPLAN_TEXT to return readable output for Microsoft Win32 command prompt applications, such as the **osql** utility.  
   
  SET SHOWPLAN_TEXT and SET SHOWPLAN_ALL cannot be specified inside a stored procedure; they must be the only statements in a batch.  
   
@@ -68,11 +71,12 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**AvgRowSize**|Estimated average row size (in bytes) of the row being passed through this operator.|  
 |**TotalSubtreeCost**|Estimated (cumulative) cost* of this operation and all child operations.|  
 |**OutputList**|Contains a comma-separated list of columns being projected by the current operation.|  
-|**Warnings**|Contains a comma-separated list of warning messages relating to the current operation. Warning messages may include the string "NO STATS:()" with a list of columns. This warning message means that the query optimizer attempted to make a decision based on the statistics for this column, but none were available. Consequently, the query optimizer had to make a guess, which may have resulted in the selection of an inefficient query plan. For more information about creating or updating column statistics (which help the query optimizer choose a more efficient query plan), see [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). This column may optionally include the string "MISSING JOIN PREDICATE", which means that a join (involving tables) is taking place without a join predicate. Accidentally dropping a join predicate may result in a query which takes much longer to run than expected, and returns a huge result set. If this warning is present, verify that the absence of a join predicate is intentional.|  
-|**Type**|Node type. For the parent node of each query, this is the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement type (for example, SELECT, INSERT, EXECUTE, and so on). For subnodes representing execution plans, the type is PLAN_ROW.|  
+|**:::no-loc text="Warnings":::**|Contains a comma-separated list of warning messages relating to the current operation. Warning messages may include the string "NO STATS:()" with a list of columns. This warning message means that the query optimizer attempted to make a decision based on the statistics for this column, but none were available. Consequently, the query optimizer had to make a guess, which may have resulted in the selection of an inefficient query plan. For more information about creating or updating column statistics (which help the query optimizer choose a more efficient query plan), see [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). This column may optionally include the string "MISSING JOIN PREDICATE", which means that a join (involving tables) is taking place without a join predicate. Accidentally dropping a join predicate may result in a query which takes much longer to run than expected, and returns a huge result set. If this warning is present, verify that the absence of a join predicate is intentional.|  
+|**:::no-loc text="Type":::**|Node type. For the parent node of each query, this is the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement type (for example, SELECT, INSERT, EXECUTE, and so on). For subnodes representing execution plans, the type is PLAN_ROW.|  
 |**Parallel**|**0** = Operator is not running in parallel.<br /><br /> **1** = Operator is running in parallel.|  
 |**EstimateExecutions**|Estimated number of times this operator will be executed while running the current query.|  
-  
+|||
+
  *Cost units are based on an internal measurement of time, not wall-clock time. They are used for determining the relative cost of a plan in comparison to other plans.  
   
 ## Permissions  
@@ -95,7 +99,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  The values in the **EstimateRows** and the **TotalSubtreeCost** columns are smaller for the first indexed query, indicating that it is processed much faster and uses fewer resources than the nonindexed query.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_ALL ON;  

@@ -1,4 +1,5 @@
 ---
+description: "Web Service Task"
 title: "Web Service Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
@@ -20,7 +21,7 @@ ms.author: chugu
 ---
 # Web Service Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Web Service task executes a Web service method. You can use the Web Service task for the following purposes:  
@@ -45,7 +46,7 @@ ms.author: chugu
   
  The WSDL file lists the methods that the Web service offers, the input parameters that the methods require, the responses that the methods return, and how to communicate with the Web service.  
   
- If the method uses input parameters, the Web Service task requires parameter values. For example, a Web service method that recommends the length of skis you should purchase based on your height requires that your height be submitted in an input parameter. The parameter values can be provided either by strings that are defined in the task, or by variables defined in the scope of the task or a parent container. The advantage of using variables is that they let you dynamically update the parameter values by using package configurations or scripts. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Package Configurations](../../integration-services/packages/package-configurations.md).  
+ If the method uses input parameters, the Web Service task requires parameter values. For example, a Web service method that recommends the length of skis you should purchase based on your height requires that your height be submitted in an input parameter. The parameter values can be provided either by strings that are defined in the task, or by variables defined in the scope of the task or a parent container. The advantage of using variables is that they let you dynamically update the parameter values by using package configurations or scripts. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Package Configurations](../packages/legacy-package-deployment-ssis.md).  
   
  Many Web service methods do not use input parameters. For example, a Web service method that gets the names of presidents who were born in the current month would not require an input parameter because the Web service can determine the current month locally.  
   
@@ -69,7 +70,7 @@ ms.author: chugu
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## Programmatic Configuration of the Web Service Task  
  For more information about programmatically setting these properties, click one of the following topics:  
@@ -86,7 +87,7 @@ ms.author: chugu
 > [!IMPORTANT]  
 >  The HTTP connection manager supports only anonymous authentication and basic authentication. It does not support Windows Authentication.  
   
- **Related Topics:**  [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md), [HTTP Connection Manager Editor &#40;Server Page&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ **Related Topics:**  [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md), [HTTP Connection Manager Editor &#40;Server Page&#41;](../connection-manager/http-connection-manager.md)  
   
  **WSDLFile**  
  Type the fully qualified path of a WSDL file that is local to the computer, or click the browse button **(...)** and locate this file.  
@@ -169,13 +170,13 @@ ms.author: chugu
  **File**  
  Select a File connection manager in the list or click \<**New Connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../connection-manager/file-connection-manager.md)  
   
 #### OutputType = Variable  
  **Variable**  
  Select a variable in the list or click \<**New Variable...**> to create a new variable.  
   
- **Related Topics:**  [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics:**  [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md)  
   
 ## Related Content  
- Video, [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=259642), on technet.microsoft.com.  
+ Video, [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com.

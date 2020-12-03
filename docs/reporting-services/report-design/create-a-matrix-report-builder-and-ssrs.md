@@ -1,5 +1,6 @@
 ---
-title: "Create a Matrix (Report Builder and SSRS) | Microsoft Docs"
+title: "Create a Matrix (Report Builder) | Microsoft Docs"
+description: Display grouped data and summary information in a matrix, which provides functionality in Report Builder similar to crosstabs and pivot tables.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

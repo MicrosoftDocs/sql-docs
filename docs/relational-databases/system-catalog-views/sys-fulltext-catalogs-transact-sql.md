@@ -1,4 +1,5 @@
 ---
+description: "sys.fulltext_catalogs (Transact-SQL)"
 title: "sys.fulltext_catalogs (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -21,7 +22,7 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ---
 # sys.fulltext_catalogs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains a row for each full-text catalog.  
   

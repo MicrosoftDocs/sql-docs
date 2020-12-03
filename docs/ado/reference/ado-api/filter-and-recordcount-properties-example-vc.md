@@ -1,8 +1,9 @@
 ---
+description: "Filter and RecordCount Properties Example (VC++)"
 title: "Filter and RecordCount Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,11 +14,11 @@ helpviewer_keywords:
   - "RecordCount property [ADO], VC++ example"
   - "Filter property [ADO], VC++ example"
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Filter and RecordCount Properties Example (VC++)
-This example uses the [Filter](../../../ado/reference/ado-api/filter-property.md) property to open a new [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) based on a specified condition applied to an existing **Recordset**. It uses the [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) property to show the number of records in the two **Recordsets**. The FilterField function is required for this procedure to run.  
+This example uses the [Filter](./filter-property.md) property to open a new [Recordset](./recordset-object-ado.md) based on a specified condition applied to an existing **Recordset**. It uses the [RecordCount](./recordcount-property-ado.md) property to show the number of records in the two **Recordsets**. The FilterField function is required for this procedure to run.  
   
 ## Example  
   
@@ -297,6 +298,6 @@ Scootney Books, USA
 ```  
   
 ## See Also  
- [Filter Property](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount Property (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Filter Property](./filter-property.md)   
+ [RecordCount Property (ADO)](./recordcount-property-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

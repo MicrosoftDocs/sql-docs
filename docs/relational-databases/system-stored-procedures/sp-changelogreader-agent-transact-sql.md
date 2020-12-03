@@ -1,4 +1,5 @@
 ---
+description: "sp_changelogreader_agent (Transact-SQL)"
 title: "sp_changelogreader_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/15/2018"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changelogreader_agent"
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_changelogreader_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes security properties of a Log Reader agent. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -38,7 +39,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
   
 ## Arguments  
 `[ @job_login = ] 'job_login'`
- Is the login for the account under which the agent runs. *job_login* is **nvarchar(257)**, with a default of NULL. On Azure SQL Database Managed Instance, use a SQL Server account. *This cannot be changed for a non-*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*  
+ Is the login for the account under which the agent runs. *job_login* is **nvarchar(257)**, with a default of NULL. On Azure SQL Managed Instance, use a SQL Server account. *This cannot be changed for a non-*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*  
   
 `[ @job_password = ] 'job_password'`
  Is the password for the account under which the agent runs. *job_password* is **sysname**, with a default of NULL.  

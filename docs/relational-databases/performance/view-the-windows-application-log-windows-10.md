@@ -1,5 +1,6 @@
 ---
 title: "View the Windows application log (Windows) | Microsoft Docs"
+description: When SQL Server is configured to use the Windows application log, each session writes events to that log. Learn how to view the Windows application log.
 ms.custom: ""
 ms.date: "02/01/2017"
 ms.prod: sql
@@ -16,12 +17,13 @@ helpviewer_keywords:
   - "monitoring [SQL Server], events"
   - "logs [SQL Server], viewing"
 ms.assetid: 168a6c6e-12df-46a9-9904-55d63ca8fe14
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # View the Windows application log (Windows 10)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured to use the Windows application log, each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session writes new events to that log. Unlike the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log, a new application log is not created each time you start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is configured to use the Windows application log, each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session writes new events to that log. Unlike the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log, a new application log is not created each time you start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## View the Windows application log  
   

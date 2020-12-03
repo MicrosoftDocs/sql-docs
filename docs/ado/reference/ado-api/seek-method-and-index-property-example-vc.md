@@ -1,8 +1,9 @@
 ---
+description: "Seek Method and Index Property Example (VC++)"
 title: "Seek Method and Index Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,11 +14,11 @@ helpviewer_keywords:
   - "Seek method [ADO], VC++ example"
   - "index property [ADO]"
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Seek Method and Index Property Example (VC++)
-This example uses the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object's [Seek](../../../ado/reference/ado-api/seek-method.md) method and [Index](../../../ado/reference/ado-api/index-property.md) property in conjunction with a given ***Employee ID***, to locate the employee's name in the ***Employees*** table of the Nwind.mdb database.  
+This example uses the [Recordset](./recordset-object-ado.md) object's [Seek](./seek-method.md) method and [Index](./index-property.md) property in conjunction with a given ***Employee ID***, to locate the employee's name in the ***Employees*** table of the Nwind.mdb database.  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -220,6 +221,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [Index Property](../../../ado/reference/ado-api/index-property.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Seek Method](../../../ado/reference/ado-api/seek-method.md)
+ [Index Property](./index-property.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)   
+ [Seek Method](./seek-method.md)

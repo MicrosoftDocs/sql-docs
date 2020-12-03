@@ -1,5 +1,6 @@
 ---
 title: "Troubleshoot connecting to the SQL Server Database Engine | Microsoft Docs"
+description: Find out how to troubleshoot connection problems. View steps to take when you cannot use TCP/IP to connect to a SQL Server Database Engine on a single server.
 ms.custom: sqlfreshmay19
 ms.date: "11/25/2019"
 ms.prod: sql
@@ -11,11 +12,11 @@ helpviewer_keywords:
   - "troubleshooting, connecting to Database Engine"
   - "connecting to Database Engine, troubleshooting"
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Troubleshoot connecting to the SQL Server Database Engine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This article lists troubleshooting techniques to use when you cannot connect to an instance of the SQL Server Database Engine on a single server.
 
@@ -47,7 +48,7 @@ This error usually means that the client can't find the SQL Server instance. Thi
 
 - This topic does not include information about SSPI errors. For SSPI errors, see [How to troubleshoot the "Cannot generate SSPI context" error message](https://support.microsoft.com/kb/811889).
 - This topic does not include information about Kerberos errors. For help, see [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).
-- This topic does not include information about SQL Azure Connectivity. For help, see [Troubleshooting connectivity issues with Microsoft Azure SQL Database](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database).
+- This topic does not include information about Azure SQL Database connectivity. For help, see [Troubleshooting connectivity issues with Microsoft Azure SQL Database](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database).
 
 ## Get instance name from Configuration Manger
 
@@ -154,12 +155,12 @@ Connecting to SQL Server by using TCP/IP requires that Windows can establish the
     - IPv4: `ping 192.168.1.101`
     - IPv6: `ping fe80::d51d:5ab5:6f09:8f48%11`
 
-1. If your network is properly configured, `ping` returns `Reply from <IP address>` followed by some additional information. If `ping` returns `Destination host unreachable` or `Request timed out`, then TCP/IP is not correctly configured. Errors at this point could indicate a problem with the client computer, the server computer, or something about the network such as a router. To troubleshoot network problems, see[Advanced troubleshooting for TCP/IP issues]a(/windows/client-management/troubleshoot-tcpip).
+1. If your network is properly configured, `ping` returns `Reply from <IP address>` followed by some additional information. If `ping` returns `Destination host unreachable` or `Request timed out`, then TCP/IP is not correctly configured. Errors at this point could indicate a problem with the client computer, the server computer, or something about the network such as a router. To troubleshoot network problems, see[Advanced troubleshooting for TCP/IP issues](/windows/client-management/troubleshoot-tcpip).
 1. Next, if the ping test succeeded using the IP address, test that the computer name can be resolved to the TCP/IP address. On the client computer, in the command prompt window, type `ping` and then the computer name of the computer that is running SQL Server. For example, `ping newofficepc` 
 1. If `ping` to the IP address succeeds, but `ping` to the computer returns `Destination host unreachable` or `Request timed out` you might have old (stale) name resolution information cached on the client computer. Type `ipconfig /flushdns` to clear the DNS (Dynamic Name Resolution) cache. Then ping the computer by name again. With the DNS cache empty, the client computer will check for the newest information about the IP address for the server computer. 
 1. If your network is properly configured, `ping` returns `Reply from <IP address>` followed by some additional information. If you can successfully ping the server computer by IP address but receive an error such as `Destination host unreachable.` or `Request timed out.` when pinging by computer name, then name resolution is not correctly configured. (For more information, see the 2006 article previously referenced, [How to Troubleshoot Basic TCP/IP Problems](https://support.microsoft.com/kb/169790).) Successful name resolution is not required to connect to SQL Server, but if the computer name cannot be resolved to an IP address, then connections must be made specifying the IP address. Name resolution can be fixed later.
 
-## <a name = "openport"></a>Open a port in the firewall
+## Open a port in the firewall
 
 By default, the Windows firewall is turned on and will block connections from another computer. To connect using TCP/IP from another computer, on the SQL Server computer you must configure the firewall to allow connections to the TCP port used by the Database Engine. The default instance is listening on TCP port 1433, by default. If you have named instances or if you changed the default instance port, the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] TCP port may be listening on another port. See [Get the SQL Server instance TCP port](#getTCP).
 
@@ -186,7 +187,7 @@ Once you can connect using TCP on the same computer, it's time to try connecting
    - Start the SQL Server Browser service. See the instructions to [start browser in SQL Server Configuration Manager](#startbrowser).
    - The SQL Server Browser service is being blocked by the firewall. Open UDP port 1434 in the firewall. Go back to the section [Open a port in the firewall](#open-a-port-in-the-firewall). Make sure you are opening a UDP port, not a TCP port.
    - The UDP port 1434 information is being blocked by a router. UDP communication (user datagram protocol) is not designed to pass through routers. This keeps the network from getting filled with low-priority traffic. You might be able to configure your router to forward UDP traffic, or you can decide to always provide the port number when you connect.
-   - If the client computer is using Windows 7 or Windows Server 2008, (or a more recent operating system,) the UDP traffic might be dropped by the client operating system because the response from the server is returned from a different IP address than was queried. This is a security feature blocking "loose source mapping." For more information, see the **Multiple Server IP Addresses** section of the Books Online topic [Troubleshooting: Timeout Expired](https://msdn.microsoft.com/library/ms190181.aspx). This is an article from SQL Server 2008 R2, but the principals still apply. You might be able to configure the client to use the correct IP address, or you can decide to always provide the port number when you connect.
+   - If the client computer is using Windows 7 or Windows Server 2008, (or a more recent operating system,) the UDP traffic might be dropped by the client operating system because the response from the server is returned from a different IP address than was queried. This is a security feature blocking "loose source mapping." For more information, see the **Multiple Server IP Addresses** section of the Books Online topic [Troubleshooting: Timeout Expired](/previous-versions/sql/sql-server-2008-r2/ms190181(v=sql.105)). This is an article from SQL Server 2008 R2, but the principals still apply. You might be able to configure the client to use the correct IP address, or you can decide to always provide the port number when you connect.
 
 3. Once you can connect using the IP address (or IP address and instance name for a named instance), attempt to connect using the computer name (or computer name and instance name for a named instance). Put `tcp:` in front of the computer name to force a TCP/IP connection. For example, for the default instance on a computer named `ACCNT27`, use `tcp:ACCNT27` For a named instance called `PAYROLL`, on that computer use `tcp:ACCNT27\PAYROLL` If you can connect using the IP address but not using the computer name, then you have a name resolution problem. Go back to the section **Testing TCP/IP connectivity**, section 4.
 

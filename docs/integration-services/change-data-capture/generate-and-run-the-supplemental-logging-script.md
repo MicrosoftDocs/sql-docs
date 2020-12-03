@@ -1,4 +1,5 @@
 ---
+description: "Generate and Run the Supplemental Logging Script"
 title: "Generate and Run the Supplemental Logging Script | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Generate and Run the Supplemental Logging Script
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the Set up Tables for Capturing Changes page to run a script on the Oracle source database that will set up supplemental logging.  

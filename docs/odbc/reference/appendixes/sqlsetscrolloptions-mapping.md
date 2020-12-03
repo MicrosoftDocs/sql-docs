@@ -1,4 +1,5 @@
 ---
+description: "SQLSetScrollOptions Mapping"
 title: "SQLSetScrollOptions Mapping | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "SQLSetScrollOptions function [ODBC], mapping"
   - "mapping deprecated functions [ODBC], SQLSetScrollOptions"
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetScrollOptions Mapping
 When an application calls **SQLSetScrollOptions** through an ODBC *3.x* driver and the driver does not support **SQLSetScrollOptions**, the call to  

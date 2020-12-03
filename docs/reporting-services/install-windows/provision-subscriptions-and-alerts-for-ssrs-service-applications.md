@@ -1,4 +1,5 @@
 ---
+description: "Provision Subscriptions and Alerts for SSRS Service Applications"
 title: "Provision Subscriptions and Alerts for SSRS Service Applications | Microsoft Docs"
 ms.date: 06/03/2016
 ms.prod: reporting-services

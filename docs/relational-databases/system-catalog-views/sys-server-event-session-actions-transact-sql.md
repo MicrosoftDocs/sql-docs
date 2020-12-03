@@ -1,4 +1,5 @@
 ---
+description: "sys.server_event_session_actions (Transact-SQL)"
 title: "sys.server_event_session_actions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "sys.server_event_session_actions catalog view"
   - "xe"
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sys.server_event_session_actions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each action on each event of an event session.  
   
@@ -40,9 +41,8 @@ ms.author: sstein
 ## Remarks  
  This view has the following relationship cardinalities.  
   
-||||  
-|-|-|-|  
-|From|To|Relationship|  
+| From | To | Relationship |
+| ---- | -- | ------------ |
 |sys.server_event_session_actions.event_session_id|sys.sys.server_event_sessions.event_session_id|Many to one|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|Many to one|  
   

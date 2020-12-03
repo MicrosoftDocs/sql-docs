@@ -1,4 +1,5 @@
 ---
+description: "SQLServerDataSourceObjectFactory Class"
 title: "SQLServerDataSourceObjectFactory Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b616632b-5987-470d-b36c-b22fa9213145
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLServerDataSourceObjectFactory Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

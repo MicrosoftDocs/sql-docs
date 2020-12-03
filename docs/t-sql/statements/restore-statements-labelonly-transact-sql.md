@@ -1,4 +1,5 @@
 ---
+description: "RESTORE Statements - LABELONLY (Transact-SQL)"
 title: "RESTORE LABELONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
@@ -33,7 +34,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 RESTORE LABELONLY   
 FROM <backup_device>   

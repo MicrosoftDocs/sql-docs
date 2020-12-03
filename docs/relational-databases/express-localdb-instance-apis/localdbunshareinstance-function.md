@@ -1,4 +1,5 @@
 ---
+description: "LocalDBUnshareInstance Function"
 title: "LocalDBUnshareInstance Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -13,11 +14,11 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # LocalDBUnshareInstance Function
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Stops the sharing of the specified SQL Server Express LocalDB instance.  
   
  **Header file:** sqlncli.h  

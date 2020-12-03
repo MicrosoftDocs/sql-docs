@@ -1,4 +1,5 @@
 ---
+description: "SQLSetParam Function"
 title: "SQLSetParam Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetParam function [ODBC]"
 ms.assetid: 2ebdc303-3802-443a-8895-69c93dff5618
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetParam Function
 **Conformance**  

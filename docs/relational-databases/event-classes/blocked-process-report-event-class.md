@@ -1,5 +1,6 @@
 ---
 title: "Blocked Process Report Event Class | Microsoft Docs"
+description: The Blocked Process Report event class indicates that a task has been blocked for more than a specified amount of time in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Blocked Process Report Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Blocked Process Report** event class indicates that a task has been blocked for more than a specified amount of time. This event class does not include system tasks or tasks that are waiting on non deadlock-detectable resources.  
   
  To configure the threshold and frequency at which reports are generated, use the **sp_configure** command to configure the **blocked process threshold** option, which can be set in seconds. By default, no blocked process reports are produced. For more information about setting the **blocked process threshold** option, see [blocked process threshold Server Configuration Option](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md).  
@@ -26,7 +27,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Data column name|Data type|Description|Column ID|Filterable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID of the database in which the lock was acquired. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] displays the name of the database if the **ServerName** data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|3|Yes|  
-|**Duration**|**bigint**|The amount of time (in milliseconds) that the process was blocked.|13|Yes|  
+|**Duration**|**bigint**|The amount of time (in microseconds) that the process was blocked.|13|Yes|  
 |**EndTime**|**datetime**|Time at which the event ended. This column is not populated for starting event classes, such as **SQL:BatchStarting** or **SP:Starting**.|15|Yes|  
 |**EventClass**|**int**|Type of event = 137.|27|No|  
 |**EventSequence**|**int**|The sequence of a given event within the request.|51|No|  

@@ -1,5 +1,6 @@
 ---
-title: "Report Parts in Report Designer (SSRS) | Microsoft Docs"
+title: "Report Parts in Report Designer | Microsoft Docs"
+description: Publish paginated report items separately to a report server or SharePoint site so that you and others can reuse them in other reports in Report Builder.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

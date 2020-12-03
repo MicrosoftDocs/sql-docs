@@ -1,5 +1,6 @@
 ---
 title: Working with KPIs in Reporting Services | Microsoft Docs
+description: Learn how you can easily measure status and performance by using KPIs in SQL Server Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -39,11 +40,11 @@ KPIs can be created in any folder in your report server.  Before you create a KP
   
 After you have determined the location of your KPI, go to that folder and select **New** > **KPI** from the top menu.  
   
-![rsCreateKPI1](../reporting-services/media/rscreatekpi1.png)  
+![Screenshot Showing the New dropdown list with the KPI option called out.](../reporting-services/media/rscreatekpi1.png)  
   
 This will present you with the **New KPI** screen.  
   
-![rsCreateKPI2](../reporting-services/media/rscreatekpi2.png)  
+![Screenshot showing the New KPI screen.](../reporting-services/media/rscreatekpi2.png)  
   
 You can either assign static values, or use data from a shared dataset. When you create a new KPI, it will be populated with a random set of manual data.  
   
@@ -64,37 +65,37 @@ To use data from a shared dataset, you can do the following steps.
   
 1. Change the fields drop down box from **Set manually**, or **Not set**, to **Dataset field**.  
   
-    ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
+    ![Screenshot showing the Value option set to Dataset field and the Pick dataset field set to Not set.](../reporting-services/media/rscreatekpi3.png)  
   
 2. Select the **ellipsis (...)** in the data box. This will bring up the **Pick a Dataset** screen.  
   
-    ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
+    ![Screenshot of the Pick a Dataset section with the Finance_KPI option being selected.](../reporting-services/media/rscreatekpi4.png)  
   
 3. Select the dataset that has the data you want to display.  
   
 4. Choose the field you want to use. Select **OK**.  
   
-    ![rsCreateKPI5](../reporting-services/media/rscreatekpi5.png)  
+    ![Screenshot showing the Pick a Field from Finance_KPI section with the Sum_Amount option being selected.](../reporting-services/media/rscreatekpi5.png)  
   
 5. Change **Value format** to match the format of your value. In this example, the value is a currency.  
   
-    ![rsCreateKPI6](../reporting-services/media/rscreatekpi6.png)  
+    ![Screenshot of the KPI preview showing the Value format option set to Currency.](../reporting-services/media/rscreatekpi6.png)  
   
 6. Select **Apply**.  
   
-    ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)
+    ![Screenshot of the KPIs showing that the Datasets has two items.](../reporting-services/media/rscreatekpi7.png)
 
 ## Configuring related content
 
 When you choose **Mobile Report**, you can choose the destination in a dialog.
 
-   ![Mobile Report](media/rscreatekpi-related-content-mobile-report.png)
+   ![Screenshot showing the Related content option set to Mobile report and the Choose a mobile report option set to Not set.](media/rscreatekpi-related-content-mobile-report.png)
 
 When you now click on the KPI in the portal, a thumbnail of the mobile report shows under the related content dropdown. Clicking on this thumbnail can directly navigate you to this report.
 
 You can also specify a custom URL. This task can be anything: a website, a SharePoint site, a URL to an SSRS report (which would allow you to pass along hardcoded parameters).
 
-![Custom URL](media/rscreatekpi-related-content-custom-url.png)
+![Screenshot showing the Related content option set to Custom URL and the Enter a URL option set to http://.](media/rscreatekpi-related-content-custom-url.png)
 
 When you now click on the KPI, the URL shows under related content.
 
@@ -106,11 +107,11 @@ To remove a KPI, you can do the following steps.
   
 1. Select the **ellipsis (...)** of the KPI you want to remove. Select **Manage**.  
   
-    ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
+    ![Screenshot of the ellipsis option for a KPI selected and the MANAGE option called out.](../reporting-services/media/rsremovekpi1.png)  
   
 2. Select **Delete**. Select **Delete** again on the confirmation dialog.  
   
-    ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
+    ![Screenshot of the Delete option.](../reporting-services/media/rsremovekpi2.png)  
   
 ## Refreshing a KPI  
   

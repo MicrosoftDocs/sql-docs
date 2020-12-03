@@ -1,4 +1,5 @@
 ---
+description: "cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)"
 title: "cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -18,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns one net change row for each source row changed within the specified Log Sequence Numbers (LSN) range.  
   

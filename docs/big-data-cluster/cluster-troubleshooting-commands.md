@@ -1,24 +1,24 @@
 ---
-title: Monitor and troubleshoot
+title: Troubleshoot Kubernetes
 titleSuffix: SQL Server big data clusters
-description: This article provides useful commands for monitoring and troubleshooting a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: This article provides useful commands for monitoring and troubleshooting a SQL Server 2019 big data cluster.
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/28/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Monitoring and troubleshoot [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# Troubleshoot [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes several useful Kubernetes commands that you can use to monitor and troubleshoot a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. It shows how to view in-depth details of a pod or other Kubernetes artifacts that are located in the big data cluster. This article also covers common tasks, such as copying files to or from a container running one of the SQL Server big data cluster services.
 
 > [!TIP]
-> For monitoring status of big data clusters components you can use [**azdata bdc status**](deployment-guidance.md#status) commands or the built-in [troubleshooting notebooks](manage-notebooks.md) in provided with Azure Data Studio.
+> For monitoring status of big data clusters components you can use [**azdata bdc status**](deployment-guidance.md#status) commands or the built-in [troubleshooting notebooks](notebooks-manage-bdc.md) in provided with Azure Data Studio.
 
 > [!TIP]
 > Run the following **kubectl** commands on either a Windows (cmd or PS) or Linux (bash) client machine. They require previous authentication in the cluster and a cluster context to run against. For example, for a previously created AKS cluster you can run `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` to download the Kubernetes cluster configuration file and set the cluster context.
@@ -113,8 +113,10 @@ The following services support external connections to the big data cluster:
 |---|---|
 | **master-svc-external** | Provides access to the master instance.<br/>(**EXTERNAL-IP,31433** and the **SA** user) |
 | **controller-svc-external** | Supports tools and clients that manage the cluster. |
-| **gateway-svc-external** | Provides access to the HDFS/Spark gateway.<br/>(**EXTERNAL-IP** and the **root** user) |
+| **gateway-svc-external** | Provides access to the HDFS/Spark gateway.<br/>(**EXTERNAL-IP** and the `<AZDATA_USERNAME>` user)<sup>1</sup>|
 | **appproxy-svc-external** | Support application deployment scenarios. |
+
+<sup>1</sup> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 > [!TIP]
 > This is a way of viewing the services with **kubectl**, but it is also possible to use `azdata bdc endpoint list` command to view these endpoints. For more information, see [Get big data cluster endpoints](deployment-guidance.md#endpoints).

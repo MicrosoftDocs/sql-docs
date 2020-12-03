@@ -1,4 +1,5 @@
 ---
+description: "Delete a Policy-Based Management Policy"
 title: "Delete a Policy-Based Management Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
@@ -14,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Delete a Policy-Based Management Policy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to delete a Policy-Based Management policy in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **In This Topic**  

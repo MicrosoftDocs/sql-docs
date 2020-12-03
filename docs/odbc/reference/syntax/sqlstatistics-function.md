@@ -1,4 +1,5 @@
 ---
+description: "SQLStatistics Function"
 title: "SQLStatistics Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLStatistics function [ODBC]"
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLStatistics Function
 **Conformance**  

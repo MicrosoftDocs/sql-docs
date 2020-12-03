@@ -1,5 +1,6 @@
 ---
 title: "Default SQL Server Network Protocol Configuration | Microsoft Docs"
+description: View factors that affect whether network protocols are turned on or off during SQL Server installation. See how to configure protocols after installation.
 ms.custom: ""
 ms.date: 01/19/2019
 ms.prod: sql
@@ -11,11 +12,11 @@ helpviewer_keywords:
   - "protocols [SQL Server], default settings"
   - "default protocols, after install"
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Default SQL Server Network Protocol Configuration
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 To enhance security, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] disables network connectivity for some new installations. Network connectivity using TCP/IP is not disabled if you are using the Enterprise, Standard, Evaluation, or Workgroup edition, or if a previous installation of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] is present. For all installations, shared memory protocol is enabled to allow local connections to the server. The [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser service might be stopped, depending on installation conditions and installation options.
 
 Use the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Network Configuration node of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Configuration Manager to configure the network protocols after installation. Use the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Services node of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Configuration Manager to configure the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser service to start automatically. For more information, see [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
@@ -41,7 +42,7 @@ The following table describes the configuration after installation.
 > If the instance is running on a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] failover cluster, it listens on those ports on each IP address selected for [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] during [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] setup.
  
 >[!NOTE]
-> When you are installing [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] with command-prompt arguments, you can specify the protocols to enable by using the `TCPENABLED` and `NPENABLED` parameters. For more information, see [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).
+> When you are installing [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] with command-prompt arguments, you can specify the protocols to enable by using the `TCPENABLED` and `NPENABLED` parameters. For more information, see [Install SQL Server from the Command Prompt](../install-windows/install-sql-server-from-the-command-prompt.md).
 
 ## Creating a Connection String
 
@@ -65,7 +66,4 @@ The [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser service
 
 [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 
-[Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)  
-
-
-
+[Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)

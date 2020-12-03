@@ -1,4 +1,5 @@
 ---
+description: "REVOKE Database Permissions (Transact-SQL)"
 title: "REVOKE Database Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -19,7 +20,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVOKE Database Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Revokes permissions granted and denied on a database.  
   
@@ -27,8 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ]    
     { TO | FROM } <database_principal> [ ,...n ]   
         [ CASCADE ]  
@@ -48,7 +48,9 @@ permission | ALL [ PRIVILEGES ]
     | Database_user_with_no_login    
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on a database. For a list of the permissions, see the Remarks section later in this topic.  
   
@@ -204,7 +206,7 @@ permission | ALL [ PRIVILEGES ]
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE CREATE CERTIFICATE FROM MelanieK;  
 GO  
@@ -215,7 +217,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE REFERENCES FROM AuditMonitor;  
 GO  
@@ -224,7 +226,7 @@ GO
 ### C. Revoking VIEW DEFINITION with CASCADE  
  The following example revokes `VIEW DEFINITION` permission on the `AdventureWorks2012` database from user `CarmineEs` and from all principals to which `CarmineEs` has granted `VIEW DEFINITION` permission.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE VIEW DEFINITION FROM CarmineEs CASCADE;  
 GO  

@@ -1,5 +1,6 @@
 ---
 title: "Report Builder in SQL Server | Microsoft Docs"
+description: Report Builder is a tool for authoring paginated reports. To create a report, you specify data to retrieve, where to get it, and how to display it.
 ms.date: 05/10/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -20,7 +21,7 @@ ms.author: maggies
 
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a tool for authoring paginated reports, for business users who prefer to work in a stand-alone environment instead of using Report Designer in Visual Studio / SSDT.  When you design a paginated report, you're creating a report definition that specifies what data to retrieve, where to get it, and how to display it. When you run the report, the report processor takes the report definition you have specified, retrieves the data, and combines it with the report layout to generate the report. You can preview your report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Then publish your report to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server in native mode or in SharePoint integrated mode (2016 and earlier). 
 
-You can also publish a paginated report to the Power BI service. Read more about [paginated reports in Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (Preview).
+You can also publish a paginated report to the Power BI service. Read more about [paginated reports in Power BI Premium](/power-bi/paginated-reports-report-builder-power-bi) (Preview).
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -88,5 +89,3 @@ You can also publish a paginated report to the Power BI service. Read more about
   
  [Keyboard Shortcuts &#40;Report Builder&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  Outlines the shortcut keys available for navigating and designing reports in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
-  
-

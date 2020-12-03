@@ -1,5 +1,6 @@
 ---
-title: "Using statements with SQL | Microsoft Docs"
+title: "Using statements with SQL"
+description: "Learn an overview of using different types of SQL statements with the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using statements with SQL
 

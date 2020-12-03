@@ -1,5 +1,6 @@
 ---
-title: "Using advanced data types | Microsoft Docs"
+title: "Using advanced data types"
+description: "Learn how to use JDBC advanced data types to convert from SQL Server data types to Java data types using the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using advanced data types
 
@@ -70,7 +71,7 @@ rs.next();
 InputStream is = rs.getBinaryStream(2);  
 ```
 
-You can also use the [getBytes](../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md) method to read the data as a byte array, as in the following:  
+You can also use the [getBytes](reference/getbytes-method-sqlserverresultset.md) method to read the data as a byte array, as in the following:  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -116,7 +117,7 @@ try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Co
 
 ### Modifying large-value types in a database
 
-In most cases, the recommended method for updating or modifying large values on the database is to pass parameters through the [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) and [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) classes by using [!INCLUDE[tsql](../../includes/tsql-md.md)] commands like `UPDATE`, `WRITE`, and `SUBSTRING`.  
+In most cases, the recommended method for updating or modifying large values on the database is to pass parameters through the [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) and [SQLServerCallableStatement](reference/sqlservercallablestatement-class.md) classes by using [!INCLUDE[tsql](../../includes/tsql-md.md)] commands like `UPDATE`, `WRITE`, and `SUBSTRING`.  
 
 If you have to replace the instance of a word in a large text file, such as an archived HTML file, you can use a Clob object, as in the following:  
 
@@ -166,12 +167,12 @@ For more information about user-defined data types, see "Using and Modifying Ins
   
 ## Sql_variant data type
 
-For information about sql_variant data type, see [Using Sql_variant data type](../../connect/jdbc/using-sql-variant-datatype.md).  
+For information about sql_variant data type, see [Using Sql_variant data type](using-sql-variant-datatype.md).  
 
 ## Spatial data types
 
-For information about spatial data types, see [Using Spatial Datatypes](../../connect/jdbc/use-spatial-datatypes.md).  
+For information about spatial data types, see [Using Spatial Datatypes](use-spatial-datatypes.md).  
 
 ## See also
 
-[Understanding the JDBC driver data types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)  

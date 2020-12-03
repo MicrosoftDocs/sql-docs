@@ -1,8 +1,9 @@
 ---
+description: "Hierarchy Object (ADO MD)"
 title: "Hierarchy Object (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,22 +14,22 @@ f1_keywords:
 helpviewer_keywords: 
   - "Hierarchy object [ADO MD]"
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Hierarchy Object (ADO MD)
-Represents one way in which the members of a [dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) can be aggregated or "rolled up." A dimension can be aggregated along one or more hierarchies.  
+Represents one way in which the members of a [dimension](./dimension-object-ado-md.md) can be aggregated or "rolled up." A dimension can be aggregated along one or more hierarchies.  
   
 ## Remarks  
  With the collections and properties of a **Hierarchy** object, you can do the following:  
   
--   Identify the **Hierarchy** with the [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) and [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) properties.  
+-   Identify the **Hierarchy** with the [Name](./name-property-ado-md.md) and [UniqueName](./uniquename-property-ado-md.md) properties.  
   
--   Return a meaningful string that describes the **Hierarchy** with the [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) property.  
+-   Return a meaningful string that describes the **Hierarchy** with the [Description](./description-property-ado-md.md) property.  
   
--   Return the [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) objects that make up the **Hierarchy** with the [Levels](../../../ado/reference/ado-md-api/levels-collection-ado-md.md) collection.  
+-   Return the [Level](./level-object-ado-md.md) objects that make up the **Hierarchy** with the [Levels](./levels-collection-ado-md.md) collection.  
   
--   Use the standard ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection to obtain additional information about the **Hierarchy** object.  
+-   Use the standard ADO [Properties](../ado-api/properties-collection-ado.md) collection to obtain additional information about the **Hierarchy** object.  
   
  The **Properties** collection contains provider-supplied properties. The following table lists properties that might be available. The actual property list may differ depending upon the implementation of the provider. See the documentation for your provider for a more complete list of available properties.  
   
@@ -50,11 +51,11 @@ Represents one way in which the members of a [dimension](../../../ado/reference/
   
  This section contains the following topic.  
   
--   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/hierarchy-object-properties-methods-and-events.md)  
+-   [Properties, Methods, and Events](./hierarchy-object-properties-methods-and-events.md)  
   
 ## See Also  
- [CubeDef Example (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [Dimension Object (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
- [Hierarchies Collection (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
- [Levels Collection (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
- [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [CubeDef Example (VBScript)](./cubedef-example-vbscript.md)   
+ [Dimension Object (ADO MD)](./dimension-object-ado-md.md)   
+ [Hierarchies Collection (ADO MD)](./hierarchies-collection-ado-md.md)   
+ [Levels Collection (ADO MD)](./levels-collection-ado-md.md)   
+ [Properties Collection (ADO)](../ado-api/properties-collection-ado.md)

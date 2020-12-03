@@ -1,4 +1,5 @@
 ---
+description: "Errors and Events Reference (Replication)"
 title: "Errors and Events Reference (Replication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -16,10 +17,10 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Errors and Events Reference (Replication)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   This section of the documentation contains cause and resolution information for a number of errors related to replication.  
   
 |Error|Message|  

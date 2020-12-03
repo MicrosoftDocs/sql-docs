@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1: Connecting to the Database Engine"
 title: "Lesson 1: Connecting to the Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/05/2018"
@@ -12,7 +13,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Lesson 1: Connecting to the Database Engine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 When you install the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], the tools that are installed depend upon the edition and your setup choices. This lesson reviews the principal tools, and shows you how to connect and perform a basic function (authorizing more users).  
 
@@ -25,7 +26,7 @@ This lesson contains the following tasks:
 - The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ships with a variety of tools. This topic describes the first tools you will need, and helps you select the right tool for the job. All tools can be accessed from the **Start** menu. Some tools, such as [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], are not installed by default. You must select the tools as part of the client components during setup. For a complete description of the tools described below, search for them in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contains only a subset of the tools.  
 
 ### Basic Tools
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) is the principal tool for administering the [!INCLUDE[ssDE](../includes/ssde-md.md)] and writing [!INCLUDE[tsql](../includes/tsql-md.md)] code. It is hosted in the [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] shell. SSMS is available as a free download from [Microsoft Download Center](https://msdn.microsoft.com/library/mt238290.aspx). The latest version can be used with older versions of the [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) is the principal tool for administering the [!INCLUDE[ssDE](../includes/ssde-md.md)] and writing [!INCLUDE[tsql](../includes/tsql-md.md)] code. It is hosted in the [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] shell. SSMS is available as a free download from [Microsoft Download Center](../ssms/download-sql-server-management-studio-ssms.md). The latest version can be used with older versions of the [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager installs with both [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and the client tools. It lets you enable server protocols, configure protocol options such as TCP ports, configure server services to start automatically, and configure client computers to connect in your preferred manner. This tool configures the more advanced connectivity elements but does not enable features.  
 
@@ -44,7 +45,7 @@ The sample databases and samples are not included with [!INCLUDE[ssNoVersion](..
 - It is easy to connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)] from tools that are running on the same computer if you know the name of the instance, and if you are connecting as a member of the local Administrators group on the computer. The following procedures must be performed on the same computer that hosts [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 > [!NOTE]  
-> This topic discusses connecting to an on-premises SQL Server. To connect to Azure SQL Database, see [Connect to SQL Database with SQL Server Management Studio and execute a sample T-SQL query](https://azure.microsoft.com/documentation/articles/sql-database-connect-query-ssms/).  
+> This topic discusses connecting to an on-premises SQL Server. To connect to Azure SQL Database, see [Connect to SQL Database with SQL Server Management Studio and execute a sample T-SQL query](/azure/azure-sql/database/connect-query-ssms).  
 
 ##### To determine the name of the instance of the Database Engine  
 
@@ -68,11 +69,11 @@ At least one administrator account was selected when [!INCLUDE[ssNoVersion_md](.
 
 2.  Select **Database Engine**.
 
-![object-explorer](../relational-databases/media/object-explorer.png)
+![Screenshot of the Object Explorer showing the Connect dropdown list and the Database Engine option called out.](../relational-databases/media/object-explorer.png)
 
 3.  In the **Server name** box, type the name of the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. For the default instance of SQL Server, the server name is the computer name. For a named instance of SQL Server, the server name is the _\<computer_name\>_**\\**_\<instance_name\>_, such as **ACCTG_SRVR\SQLEXPRESS**. The following screenshot shows connecting to the default (un-named) instance of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] on a computer named 'PracticeComputer'. The user logged into Windows is Mary from the Contoso domain. When using Windows Authentication you cannot change the user name. 
 
-![connect-to-server](../relational-databases/media/connect-to-server.png)
+![Screenshot of the Connect to Server dialog box with the Server name text box called out.](../relational-databases/media/connect-to-server.png)
 
 4.  Click **Connect**.
 
@@ -91,7 +92,7 @@ Now that you have connected to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 
 2.  On the **General** page, in the **Login name** box, type a Windows login in the format: `<domain>\\<login>`
 
-![new-login](../relational-databases/media/new-login.png)
+![Screenshot of the Login - New dialog box with the Login name text box called out.](../relational-databases/media/new-login.png)
 
 3.  In the **Default database** box, select [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] if available. Otherwise select **master**.  
 4.  On the **Server Roles** page, if the new login is to be an administrator, click **sysadmin**, otherwise leave this blank.  
@@ -104,4 +105,3 @@ Now that you have connected to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 
 ## Next Lesson  
 [Lesson 2: Connecting from Another Computer](../relational-databases/lesson-2-connecting-from-another-computer.md)    
-  

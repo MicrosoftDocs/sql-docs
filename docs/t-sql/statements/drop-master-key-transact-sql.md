@@ -1,4 +1,5 @@
 ---
+description: "DROP MASTER KEY (Transact-SQL)"
 title: "DROP MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -34,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```syntaxsql  
 DROP MASTER KEY  
 ```  
   
@@ -50,7 +51,7 @@ DROP MASTER KEY
 ## Examples  
  The following example removes the master key for the `AdventureWorks2012` database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DROP MASTER KEY;  
 GO  
@@ -59,7 +60,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example removes the master key.  
   
-```  
+```sql  
 USE master;  
 DROP MASTER KEY;  
 GO  

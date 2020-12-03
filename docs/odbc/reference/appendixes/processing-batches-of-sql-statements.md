@@ -1,4 +1,5 @@
 ---
+description: "Processing Batches of SQL Statements"
 title: "Processing Batches of SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "SQL statements [ODBC], batches"
   - "batches [ODBC], processing batches of SQL statements"
 ms.assetid: 04b93ef9-11de-47a3-8bd8-ba963c42f182
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Processing Batches of SQL Statements
 > [!IMPORTANT]  

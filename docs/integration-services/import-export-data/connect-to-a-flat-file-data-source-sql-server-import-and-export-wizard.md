@@ -1,4 +1,5 @@
 ---
+description: "Connect to a Flat File Data Source (SQL Server Import and Export Wizard)"
 title: "Connect to a Flat File Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
@@ -12,7 +13,7 @@ ms.author: chugu
 ---
 # Connect to a Flat File Data Source (SQL Server Import and Export Wizard)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This topic shows you how to connect to a **flat file** (text file) data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard. For flat files, these two pages of the wizard present different sets of options, so this topic describes the flat file source and the flat file destination separately.
@@ -255,7 +256,7 @@ On the **Preview** page, verify that the list of columns and the sample data are
  **Refresh**  
  View the effect of changing the number of rows to skip by clicking **Refresh**. This button only becomes visible after you have changed other connection options.  
  
-For more info about the **Preview** page, see the following Integration Services reference page - [Flat File Connection Manager Editor &#40;Preview Page&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md).
+For more info about the **Preview** page, see the following Integration Services reference page - [Flat File Connection Manager Editor &#40;Preview Page&#41;](../connection-manager/flat-file-connection-manager.md).
 
 ## Connect to a flat file destination
 For a flat file destination, there's only a single page of options, as shown in the following screen shot. Browse to select the file, then verify the settings in the **Format** section.
@@ -297,4 +298,3 @@ For a flat file destination, there's only a single page of options, as shown in 
 ## See also
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-

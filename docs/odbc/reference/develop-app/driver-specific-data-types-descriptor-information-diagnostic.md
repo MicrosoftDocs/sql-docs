@@ -1,4 +1,5 @@
 ---
+description: "Driver-Specific Data Types, Descriptor Types, Information Types, Diagnostic Types, and Attributes"
 title: "Driver-Specific Types - Data, Descriptor, Information, Diagnostic | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "diagnostic information [ODBC], driver-specific values"
   - "ODBC drivers [ODBC], driver-specific diagnostic values"
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Driver-Specific Data Types, Descriptor Types, Information Types, Diagnostic Types, and Attributes
 Drivers can allocate driver-specific values for the following:  

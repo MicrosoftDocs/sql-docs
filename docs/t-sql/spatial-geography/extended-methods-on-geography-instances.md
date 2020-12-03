@@ -1,4 +1,5 @@
 ---
+description: "Extended Methods on Geography Instances"
 title: "Extended Methods on Geography Instances | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Extended Methods on Geography Instances
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a number of extended methods on Open Geospatial Consortium (OGC) geography instances.  
   

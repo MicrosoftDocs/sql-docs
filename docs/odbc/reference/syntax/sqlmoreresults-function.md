@@ -1,4 +1,5 @@
 ---
+description: "SQLMoreResults Function"
 title: "SQLMoreResults Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLMoreResults function [ODBC]"
 ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLMoreResults Function
 **Conformance**  

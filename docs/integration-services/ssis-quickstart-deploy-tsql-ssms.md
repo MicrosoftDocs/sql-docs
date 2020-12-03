@@ -1,4 +1,5 @@
 ---
+description: "Deploy an SSIS project from SSMS with Transact-SQL"
 title: "Deploy an SSIS project with Transact-SQL (SSMS) | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart
@@ -11,7 +12,7 @@ ms.author: chugu
 ---
 # Deploy an SSIS project from SSMS with Transact-SQL
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -21,7 +22,7 @@ SQL Server Management Studio is an integrated environment for managing any SQL i
 
 ## Prerequisites
 
-Before you start, make sure you have the latest version of SQL Server Management Studio. To download SSMS, see [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Before you start, make sure you have the latest version of SQL Server Management Studio. To download SSMS, see [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
 ## Supported platforms
 
@@ -96,4 +97,4 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
     - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md)
     - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md)
-    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) 
+    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md)

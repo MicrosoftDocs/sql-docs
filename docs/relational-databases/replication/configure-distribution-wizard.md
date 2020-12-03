@@ -1,4 +1,5 @@
 ---
+description: "Configure Distribution Wizard"
 title: "Configure Distribution Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Configure Distribution Wizard
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   This section provides information on the following pages of the Configure Distribution Wizard:  
   
 -   [Distributor](../../relational-databases/replication/distributor.md)  

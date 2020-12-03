@@ -1,5 +1,6 @@
 ---
 title: "Keyboard Shortcuts (Report Builder) | Microsoft Docs"
+description: When you create and edit Reporting Services paginated reports in Report Builder, you have access to all the shortcut keys for navigation in Windows environment.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

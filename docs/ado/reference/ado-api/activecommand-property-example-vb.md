@@ -1,8 +1,9 @@
 ---
+description: "ActiveCommand Property Example (VB)"
 title: "ActiveCommand Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,13 +13,13 @@ dev_langs:
 helpviewer_keywords: 
   - "ActiveCommand property [ADO], Visual Basic example"
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ActiveCommand Property Example (VB)
-This example demonstrates the [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) property.  
+This example demonstrates the [ActiveCommand](./activecommand-property-ado.md) property.  
   
- A subroutine is given a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object whose **ActiveCommand** property is used to display the command text and parameter that created the **Recordset**.  
+ A subroutine is given a [Recordset](./recordset-object-ado.md) object whose **ActiveCommand** property is used to display the command text and parameter that created the **Recordset**.  
   
 ```  
 'BeginActiveCommandVB  
@@ -84,9 +85,9 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- The **ActiveCommandXprint** routine is given only a **Recordset** object, yet it must print the command text and parameter that created the **Recordset**. This can be done because the **Recordset** object's **ActiveCommand** property yields the associated [Command](../../../ado/reference/ado-api/command-object-ado.md) object.  
+ The **ActiveCommandXprint** routine is given only a **Recordset** object, yet it must print the command text and parameter that created the **Recordset**. This can be done because the **Recordset** object's **ActiveCommand** property yields the associated [Command](./command-object-ado.md) object.  
   
- The **Command** object's [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) property yields the parameterized command that created the **Recordset**. The **Command** object's [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection yields the value that was substituted for the command's parameter placeholder ("**?**").  
+ The **Command** object's [CommandText](./commandtext-property-ado.md) property yields the parameterized command that created the **Recordset**. The **Command** object's [Parameters](./parameters-collection-ado.md) collection yields the value that was substituted for the command's parameter placeholder ("**?**").  
   
  Finally, an error message or the author's name and ID are printed.  
   
@@ -115,6 +116,6 @@ End Sub
 ```  
   
 ## See Also  
- [ActiveCommand Property (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ActiveCommand Property (ADO)](./activecommand-property-ado.md)   
+ [Command Object (ADO)](./command-object-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

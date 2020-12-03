@@ -1,4 +1,5 @@
 ---
+description: "Lesson 4-4: Add a Flat File destination"
 title: "Step 4: Add a Flat File destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2019"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 4-4: Add a Flat File destination
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

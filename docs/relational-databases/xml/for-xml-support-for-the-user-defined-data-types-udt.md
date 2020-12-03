@@ -1,5 +1,6 @@
 ---
 title: "FOR XML support for user-defined data types (UDT) | Microsoft Docs"
+description: Learn about support for user-defined data types (UDT) when using the FOR XML clause.
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,7 +16,7 @@ ms.author: genemi
 ms.custom: "seo-lt-2019"
 ---
 # FOR XML Support for the User-Defined Data Types (UDT)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   FOR XML does not support common language runtime (CLR) user-defined data types (UDTs).  
   
  To use FOR XML with CLR user-defined data types, make sure that the data type has an XML serialization, and use an explicit cast to XML in the FOR XML select clause.  

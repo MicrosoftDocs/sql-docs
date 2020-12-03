@@ -1,4 +1,5 @@
 ---
+description: "HASHBYTES (Transact-SQL)"
 title: "HASHBYTES (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2016"
@@ -22,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # HASHBYTES (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the MD2, MD4, MD5, SHA, SHA1, or SHA2 hash of its input in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -30,13 +31,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 HASHBYTES ( '<algorithm>', { @input | 'input' } )  
   
 <algorithm>::= MD2 | MD4 | MD5 | SHA | SHA1 | SHA2_256 | SHA2_512   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 
 `<algorithm>`  
 Identifies the hashing algorithm to be used to hash the input. This is a required argument with no default. The single quotation marks are required. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], all algorithms other than SHA2_256, and SHA2_512 are deprecated.  
@@ -66,8 +69,8 @@ The MD2, MD4, MD5, SHA, and SHA1 algorithms are deprecated starting with [!INCLU
  The following example returns the `SHA2_256` hash of the **nvarchar** data stored in variable `@HashThis`.  
   
 ```sql  
-DECLARE @HashThis nvarchar(32);  
-SET @HashThis = CONVERT(nvarchar(32),'dslfdkjLK85kldhnv$n000#knf');  
+DECLARE @HashThis NVARCHAR(32);  
+SET @HashThis = CONVERT(NVARCHAR(32),'dslfdkjLK85kldhnv$n000#knf');  
 SELECT HASHBYTES('SHA2_256', @HashThis);  
 ```  
   
@@ -75,7 +78,7 @@ SELECT HASHBYTES('SHA2_256', @HashThis);
  The following example returns the SHA2_256 hash of the values in column `c1` in the table `Test1`.  
   
 ```sql  
-CREATE TABLE dbo.Test1 (c1 nvarchar(32));  
+CREATE TABLE dbo.Test1 (c1 NVARCHAR(32));  
 INSERT dbo.Test1 VALUES ('This is a test.');  
 INSERT dbo.Test1 VALUES ('This is test 2.');  
 SELECT HASHBYTES('SHA2_256', c1) FROM dbo.Test1;  

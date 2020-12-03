@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_fetch"
 title: "sqlsrv_fetch | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_fetch"
   - "retrieving data, as a single field"
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

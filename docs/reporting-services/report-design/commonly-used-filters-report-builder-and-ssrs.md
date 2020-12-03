@@ -1,5 +1,6 @@
 ---
-title: "Commonly Used Filters (Report Builder and SSRS) | Microsoft Docs"
+title: "Commonly Used Filters (Report Builder) | Microsoft Docs"
+description: Consider these examples of filters along with the filter equations you specify to create the filter in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

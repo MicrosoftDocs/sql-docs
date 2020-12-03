@@ -1,4 +1,5 @@
 ---
+description: "Database Suspect Data Page Event Class"
 title: "Database Suspect Data Page Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -17,7 +18,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Suspect Data Page Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Database Suspect Data Page** event class indicates when a page is added to the [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) table in [msdb](../../relational-databases/databases/msdb-database.md). Include this event class in traces that are monitoring the occurrence of suspect pages.  
   
 > [!NOTE]  

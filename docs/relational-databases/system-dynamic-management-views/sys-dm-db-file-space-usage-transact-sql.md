@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_file_space_usage (Transact-SQL)"
 title: "sys.dm_db_file_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -17,14 +18,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_file_space_usage dynamic management view"
 ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_file_space_usage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Returns space usage information for each file in the database.  
+  Returns space usage information for each data file in the database.  
   
 > [!NOTE]  
 >  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_db_file_space_usage**.  
@@ -34,9 +35,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |database_id|**smallint**|Database ID.|  
 |file_id|**smallint**|File ID.<br /><br /> file_id maps to file_id in [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) and to fileid in [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md).|  
 |filegroup_id|**smallint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Filegroup ID.|  
-|total_page_count|**bigint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Total number of pages in the file.|  
-|allocated_extent_page_count|**bigint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Total number of pages in the allocated extents in the file.|  
-|unallocated_extent_page_count|**bigint**|Total number of pages in the unallocated extents in the file.<br /><br /> Unused pages in allocated extents are not included.|  
+|total_page_count|**bigint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Total number of pages in the data file.|  
+|allocated_extent_page_count|**bigint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Total number of pages in the allocated extents in the data file.|  
+|unallocated_extent_page_count|**bigint**|Total number of pages in the unallocated extents in the data file.<br /><br /> Unused pages in allocated extents are not included.|  
 |version_store_reserved_page_count|**bigint**|Total number of pages in the uniform extents allocated for the version store. Version store pages are never allocated from mixed extents.<br /><br /> IAM pages are not included, because they are always allocated from mixed extents. PFS pages are included if they are allocated from a uniform extent.<br /><br /> For more information, see [sys.dm_tran_version_store &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).|  
 |user_object_reserved_page_count|**bigint**|Total number of pages allocated from uniform extents for user objects in the database. Unused pages from an allocated extent are included in the count.<br /><br /> IAM pages are not included, because they are always allocated from mixed extents. PFS pages are included if they are allocated from a uniform extent.<br /><br /> You can use the total_pages column in the [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) catalog view to return the reserved page count of each allocation unit in the user object. However, note that the total_pages column includes IAM pages.|  
 |internal_object_reserved_page_count|**bigint**|Total number of pages in uniform extents allocated for internal objects in the file. Unused pages from an allocated extent are included in the count.<br /><br /> IAM pages are not included, because they are always allocated from mixed extents. PFS pages are included if they are allocated from a uniform extent.<br /><br /> There is no catalog view or dynamic management object that returns the page count of each internal object.|  
@@ -90,7 +91,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
 ## Examples  
   
 ### Determing the Amount of Free Space in tempdb  
- The following query returns the total number of free pages and total free space in megabytes (MB) available in all files in **tempdb**.  
+ The following query returns the total number of free pages and total free space in megabytes (MB) available in all data files in **tempdb**.  
   
 ```sql
 USE tempdb;  

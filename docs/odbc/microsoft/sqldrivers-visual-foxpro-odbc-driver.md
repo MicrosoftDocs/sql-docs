@@ -1,4 +1,5 @@
 ---
+description: "SQLDrivers (Visual FoxPro ODBC Driver)"
 title: "SQLDrivers (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLDrivers function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 179b11e0-665f-45a2-b926-c3d870a0dab8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLDrivers (Visual FoxPro ODBC Driver)
 > [!NOTE]  

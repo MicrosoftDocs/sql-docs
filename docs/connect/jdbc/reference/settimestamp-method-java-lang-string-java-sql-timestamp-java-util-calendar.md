@@ -1,4 +1,5 @@
 ---
+description: "setTimestamp Method (java.lang.String, java.sql.Timestamp, java.util.Calendar)"
 title: "setTimestamp Method to timestamp and calendar values | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 09dca1f9-225a-4acb-9857-9a947e0829be
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setTimestamp Method (java.lang.String, java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

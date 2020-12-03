@@ -1,4 +1,5 @@
 ---
+description: "MSpeer_request (Transact-SQL)"
 title: "MSpeer_request (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpeer_request system table"
 ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # MSpeer_request (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The MSpeer_request table is used in Peer-to-Peer replication to track status requests for a given publication. This table is stored in the publication database.  
   

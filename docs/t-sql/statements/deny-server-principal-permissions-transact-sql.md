@@ -1,4 +1,5 @@
 ---
+description: "DENY Server Principal Permissions (Transact-SQL)"
 title: "DENY Server Principal Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/09/2017"
@@ -23,7 +24,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DENY Server Principal Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Denies permissions granted on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
@@ -32,7 +33,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ] }   
     ON   
     { [ LOGIN :: SQL_Server_login ]  
@@ -49,7 +50,9 @@ DENY permission [ ,...n ] }
     | server_role  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denies on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. For a list of the permissions, see the Remarks section later in this topic.  
   
@@ -121,7 +124,7 @@ GO
 ### B. Denying VIEW DEFINITION permission with CASCADE  
  The following example denies `VIEW DEFINITION` permission on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `EricKurjan` to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `RMeyyappan`. The `CASCADE` option indicates that `VIEW DEFINITION` permission on `EricKurjan` will also be denied to principals to which `RMeyyappan` granted this permission.  
   
-```  
+```sql  
 USE master;  
 DENY VIEW DEFINITION ON LOGIN::EricKurjan TO RMeyyappan   
     CASCADE;  
@@ -131,7 +134,7 @@ GO
 ### C. Denying VIEW DEFINITION permission on a server role  
  The following example denies `VIEW DEFINITION` on the `Sales` server role to the `Auditors` server role.  
   
-```  
+```sql 
 USE master;  
 DENY VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;  
 GO   

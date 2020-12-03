@@ -1,5 +1,6 @@
 ---
 title: "Delete a Resource Pool | Microsoft Docs"
+description: Learn how to delete a resource pool by using either SQL Server Management Studio or Transact-SQL. You must have the CONTROL SERVER permission.
 ms.custom: ""
 ms.date: "03/17/2016"
 ms.prod: sql
@@ -10,11 +11,11 @@ helpviewer_keywords:
   - "Resource Governor, resource pool delete"
   - "resource pools [SQL Server], delete"
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Delete a Resource Pool
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   You can delete a resource pool by using either [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or Transact-SQL.  
   

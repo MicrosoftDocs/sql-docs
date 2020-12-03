@@ -1,8 +1,9 @@
 ---
+description: "Members Example (VBScript)"
 title: "Members Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Members collection [ADO MD], VBScript example"
 ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Members Example (VBScript)
 This sample uses an MDX query string to retrieve OLAP data and writes the resulting cellset to an HTML table structure using column spanning features for multiple-dimension cellsets.  

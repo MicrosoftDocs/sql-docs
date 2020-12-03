@@ -1,4 +1,5 @@
 ---
+description: "getLabel Method (SQLServerSavepoint)"
 title: "getLabel Method (SQLServerSavepoint) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: ccc32b87-8451-46c8-a173-068d33374e57
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getLabel Method (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: "What is SQL Server Reporting Services (SSRS) | Microsoft Docs"
+title: "What is SQL Server Reporting Services | Microsoft Docs"
 description: "Learn about tools and services for mobile and paginated Reporting Services reports on premises."
 ms.date: 05/06/2019
 ms.prod: reporting-services
@@ -51,7 +51,7 @@ These sources will keep you up to date on new features in SQL Server Reporting S
 
 ## Paginated reports
 
-![ssrs-paginated-reports](../reporting-services/media/ssrs-paginated-reports.png)
+![Image of paginated reports on a desktop screen and a tablet device.](../reporting-services/media/ssrs-paginated-reports.png)
 
 Reporting Services is associated with "traditional" paginated reports, ideal for fixed-layout documents optimized for printing, such as PDF and Word files.
 
@@ -64,7 +64,7 @@ That core BI workload still exists today, so we've modernized it. Now you can cr
 
 ## Mobile reports
 
-![ssrs-mobile-reports](../reporting-services/media/ssrs-mobile-reports.png)
+![Image of mobile reports on a desktop screen and a tablet device.](../reporting-services/media/ssrs-mobile-reports.png)
 
 Mobile computing has shifted the devices we need to work, meaning people today have a different reporting need. The fixed-layout report experience doesn't work well when you introduce tablets and phones. Something designed for a wide PC screen isn't the optimal experience on a small phone screen that's not just smaller but a portrait or landscape orientation.
 
@@ -76,7 +76,7 @@ As you create visualizations, Mobile Report Publisher automatically generates sa
 
 ## Web portal
 
-![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
+![Image of the web portal laptop.](../reporting-services/media/ssrs-web-portal.png)
 
 For end users of native-mode Reporting Services, the front door is a modern web portal you can view in most browsers. You can access all your Reporting Services mobile, paginated reports, and KPIs in the new portal. KPIs can surface key business metrics at a glance in the browser, without having to open a report.
 
@@ -91,7 +91,7 @@ The content on the web portal is organized by type:
 * shared datasets
 * shared data sources
 
-You can store and manage them securely here, in the traditional folder hierarchy. Tag your favorites reports for quick access. Those with appropriate permissions are able tp manage and administer SSRS content.
+You can store and manage them securely here, in the traditional folder hierarchy. Tag your favorites reports for quick access. Those with appropriate permissions are able to manage and administer SSRS content.
 
 And you can still schedule report processing, access reports on demand, and subscribe to published reports in the new web portal.
 

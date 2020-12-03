@@ -1,4 +1,5 @@
 ---
+description: "Data-tier Applications"
 title: "Data-tier Applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2016"
@@ -16,7 +17,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Data-tier Applications
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   A data-tier application (DAC) is a logical database management entity that defines all of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects - like tables, views, and instance objects, including logins - associated with a user's database. A DAC is a self-contained unit of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database deployment that enables data-tier developers and database administrators to package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects into a portable artifact called a DAC package, also known as a DACPAC.  
   
  A BACPAC is a related artifact that encapsulates the database schema as well as the data stored in the database.  
@@ -66,7 +67,7 @@ ms.author: "sstein"
   
     -   Can use SQL Server Management Studio to extract a DACPAC from an existing database, and also perform other DAC operations.  
   
-    -   In addition, the DBA for a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] can use the Management Portal for SQL Azure for DAC operations.  
+    -   In addition, the DBA for a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] can use the Azure portal for DAC operations.  
   
 -   Independent Software Vendors:  
   
@@ -81,7 +82,7 @@ ms.author: "sstein"
   
 -   **EXTRACT** - the user can extract a database into a DACPAC.  
   
--   **DEPLOY** - the user can deploy a DACPAC to a host server. When the deployment is done from a manageability tool like SQL Server Management Studio or the Management Portal for SQL Azure, the resulting database in the host server is implicitly registered as a data-tier application.  
+-   **DEPLOY** - the user can deploy a DACPAC to a host server. When the deployment is done from a manageability tool like SQL Server Management Studio or the Azure portal, the resulting database in the host server is implicitly registered as a data-tier application.  
   
 -   **REGISTER** - the user can register a database as a data-tier application.  
   
@@ -90,7 +91,7 @@ ms.author: "sstein"
 -   **UPGRADE** - a database can be upgraded using a DACPAC. Upgrade is supported even on databases that are not previously registered as data-tier applications, but as a consequence of the upgrade, the database will be implicitly registered.  
   
 ## BACPAC  
- A BACPAC is a Windows file with a .bacpac extension that encapsulates a database's schema and data. The primary use case for a BACPAC is to move a database from one server to another - or to [migrate a database from a local server to the cloud](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/) - and archiving an existing database in an open format.  
+ A BACPAC is a Windows file with a .bacpac extension that encapsulates a database's schema and data. The primary use case for a BACPAC is to move a database from one server to another - or to [migrate a database from a local server to the cloud](/azure/azure-sql/database/migrate-to-database-from-sql-server) - and archiving an existing database in an open format.  
  Similar to the DACPAC, the BACPAC file format is open - the schema contents of the BACPAC are identical to that of the DACPAC. The data in a BACPAC is stored in JSON format.  
   
  DACPAC and BACPAC are similar but they target different scenarios. A DACPAC is focused on capturing and deploying schema, including upgrading an existing database. The primary use case for a DACPAC is to deploy a tightly defined schema to development, test, and then to production environments. And also the reverse: capturing production's schema and applying it back to test and development environments.  
@@ -123,6 +124,5 @@ ms.author: "sstein"
 |Describes how to use a wizard to deploy an existing database. The wizard uses DACs to perform the deployment.|[Deploy a Database By Using a DAC](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
 ## See also  
- [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
-  
+ [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))  
   

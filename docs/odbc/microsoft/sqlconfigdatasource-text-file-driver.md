@@ -1,4 +1,5 @@
 ---
+description: "SQLConfigDataSource (Text File Driver)"
 title: "SQLConfigDataSource (Text File Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "text file driver [ODBC], SQLConfigDataSource"
   - "SQLConfigDataSource function [ODBC], Text File Driver"
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLConfigDataSource (Text File Driver)
 > [!NOTE]  

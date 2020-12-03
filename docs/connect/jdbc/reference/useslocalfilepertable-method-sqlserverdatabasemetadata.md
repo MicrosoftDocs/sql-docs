@@ -1,4 +1,5 @@
 ---
+description: "usesLocalFilePerTable Method (SQLServerDatabaseMetaData)"
 title: "usesLocalFilePerTable Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 1fafb076-2bb7-4845-9c02-788479f00ca2
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # usesLocalFilePerTable Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

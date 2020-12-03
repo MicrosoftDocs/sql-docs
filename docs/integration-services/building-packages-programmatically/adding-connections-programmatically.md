@@ -1,4 +1,5 @@
 ---
+description: "Adding Connections Programmatically"
 title: "Adding Connections Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -27,7 +28,7 @@ ms.author: chugu
 ---
 # Adding Connections Programmatically
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> class represents physical connections to external data sources. The <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> class isolates the implementation details of the connection from the runtime. This enables the runtime to interact with each connection manager in a consistent and predictable manner. Connection managers contain a set of stock properties that all connections have in common, such as the <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A>, and <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. However, the <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> and <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> properties are ordinarily the only properties required to configure a connection manager. Unlike other programming paradigms, where connection classes expose methods such as **Open** or **Connect** to physically establish a connection to the data source, the run-time engine manages all the connections for the package while it runs.  
@@ -209,6 +210,5 @@ End Class
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Create Connection Managers](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
-  
+ [Create Connection Managers](../connection-manager/integration-services-ssis-connections.md)  
   

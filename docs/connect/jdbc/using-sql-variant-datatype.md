@@ -1,4 +1,5 @@
 ---
+description: "Using Sql_variant data type"
 title: "Using Sql_variant data type | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"
@@ -8,14 +9,14 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using Sql_variant data type
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-As of version 6.3.0, the JDBC driver supports the sql_variant datatype. Sql_variant is also supported when using features such as Table-Valued Parameters and BulkCopy with some limitations mentioned later on this page. Not all data types can be stored in the sql_variant data type. For a list of supported data types with sql_variant, check the SQL Server [Docs](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql).
+As of version 6.3.0, the JDBC driver supports the sql_variant datatype. Sql_variant is also supported when using features such as Table-Valued Parameters and BulkCopy with some limitations mentioned later on this page. Not all data types can be stored in the sql_variant data type. For a list of supported data types with sql_variant, check the SQL Server [Docs](../../t-sql/data-types/sql-variant-transact-sql.md).
 
 ##  Populating and retrieving a table:
 Assuming one has a table with a sql_variant column as:
@@ -88,4 +89,4 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 
 ## See also
 
-[Understanding the JDBC driver data types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Understanding the JDBC driver data types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

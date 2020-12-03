@@ -1,4 +1,5 @@
 ---
+description: "Value Inclusion Profile Request Options (Data Profiling Task)"
 title: "Value Inclusion Profile Request Options (Data Profiling Task) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Value Inclusion Profile Request Options (Data Profiling Task)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Request Properties** pane of the **Profile Requests** page to set the options for the **Value Inclusion Profile Request** selected in the requests pane. A Value Inclusion profile computes the overlap in the values between two columns or sets of columns. Thus, it can also determine whether a column or set of columns is appropriate to serve as a foreign key between the selected tables. This profile can also help you identify problems in your data such as invalid values. For example, you use a value inclusion profile to profile the ProductID column of a Sales table. The profile discovers that the column contains values that are not found in the ProductID column of the Products table.  

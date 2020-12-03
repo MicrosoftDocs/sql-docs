@@ -1,4 +1,5 @@
 ---
+description: "Create Table Aliases (Visual Database Tools)"
 title: Create Table Aliases
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,11 @@ helpviewer_keywords:
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
 # Create Table Aliases (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Aliases can make it easier to work with table names. Using aliases is helpful when:  
   
 -   You want to make the statement in the [SQL Pane](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) shorter and easier to read.  

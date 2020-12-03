@@ -1,4 +1,5 @@
 ---
+description: "Automatically Generate Attribute Values Other Than Code (Master Data Services)"
 title: Automatically Generate Attribute Values
 titleSuffix: Master Data Services
 ms.custom: "seo-lt-2019"
@@ -14,7 +15,7 @@ ms.author: lle
 ---
 # Automatically Generate Attribute Values Other Than Code (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], automatically generate values for an entity's attribute values when you want an integer to be automatically assigned as the value each time business rules are applied.  
   

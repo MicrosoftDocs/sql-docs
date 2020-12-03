@@ -1,4 +1,5 @@
 ---
+description: "SQLServerXADataSource Constructor ()"
 title: "SQLServerXADataSource Constructor () | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 03649d56-3319-4867-bef1-559dfd221b8b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLServerXADataSource Constructor ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

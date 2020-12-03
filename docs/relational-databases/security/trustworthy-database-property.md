@@ -1,5 +1,6 @@
 ---
 title: "TRUSTWORTHY Database Property | Microsoft Docs"
+description: Learn about the TRUSTWORTHY database property, which indicates whether the instance of SQL Server trusts the database and its contents. The default is OFF.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # TRUSTWORTHY Database Property
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The TRUSTWORTHY database property is used to indicate whether the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trusts the database and the contents within it. By default, this setting is OFF, but can be set to ON by using the ALTER DATABASE statement. For example, `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`.  
   
 > [!NOTE]  

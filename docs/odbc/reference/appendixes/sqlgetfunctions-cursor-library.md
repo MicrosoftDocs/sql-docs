@@ -1,4 +1,5 @@
 ---
+description: "SQLGetFunctions (Cursor Library)"
 title: "SQLGetFunctions (Cursor Library) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetFunctions function [ODBC], Cursor Library"
 ms.assetid: 931acd12-4eb6-4a78-9a77-157a18a9a2d0
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetFunctions (Cursor Library)
 > [!IMPORTANT]  

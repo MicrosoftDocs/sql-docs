@@ -1,5 +1,6 @@
 ---
-title: "Embedded and Shared Datasets (Report Builder and SSRS) | Microsoft Docs"
+title: "Embedded and Shared Datasets (Report Builder) | Microsoft Docs"
+description: Learn about embedded and shared datasets. Datasets contain a query command, parameters, and data options that include case sensitivity and collation. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

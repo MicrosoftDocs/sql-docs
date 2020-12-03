@@ -1,16 +1,17 @@
 ---
+description: "SELECT FROM &lt;model&gt;.SAMPLE_CASES (DMX)"
 title: "SELECT FROM &lt;model&gt;.SAMPLE_CASES (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # SELECT FROM &lt;model&gt;.SAMPLE_CASES (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Returns sample cases that are representative of the cases that are used to train the data mining model.  
   

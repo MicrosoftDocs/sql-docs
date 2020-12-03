@@ -1,5 +1,6 @@
 ---
 title: "Complete Database Restores (Full Recovery Model) | Microsoft Docs"
+description: Learn about a complete SQL Server database restore, where all data is recovered to a consistent point in time.
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -15,11 +16,11 @@ helpviewer_keywords:
   - "full recovery model [SQL Server], performing restores"
   - "log backups [SQL Server["
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
-author: mashamsft
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Complete Database Restores (Full Recovery Model)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   In a complete database restore, the goal is to restore the whole database. The whole database is offline for the duration of the restore. Before any part of the database can come online, all data is recovered to a consistent point in which all parts of the database are at the same point in time and no uncommitted transactions exist.  
   

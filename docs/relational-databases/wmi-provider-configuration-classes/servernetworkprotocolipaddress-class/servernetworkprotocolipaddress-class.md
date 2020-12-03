@@ -1,4 +1,5 @@
 ---
+description: "ServerNetworkProtocolIPAddress Class"
 title: "ServerNetworkProtocolIPAddress Class"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ServerNetworkProtocolIPAddress class"
 ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ServerNetworkProtocolIPAddress Class
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The [ServerNetworkProtocolIPAddress Class](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) represents an IP address supported by the server network protocol.  
   
  With the [ServerNetworkProtocolIPAddress Class](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) you can perform the following tasks:  

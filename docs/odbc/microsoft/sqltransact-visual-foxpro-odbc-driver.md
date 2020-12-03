@@ -1,4 +1,5 @@
 ---
+description: "SQLTransact (Visual FoxPro ODBC Driver)"
 title: "SQLTransact (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLTransact function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 92cf86c0-f7a8-44d7-b59f-a1342677440b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLTransact (Visual FoxPro ODBC Driver)
 > [!NOTE]  

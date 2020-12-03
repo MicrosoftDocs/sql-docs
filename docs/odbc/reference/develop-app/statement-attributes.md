@@ -1,4 +1,5 @@
 ---
+description: "Statement Attributes"
 title: "Statement Attributes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "SQL statements [ODBC], statement attributes"
   - "statement attributes [ODBC]"
 ms.assetid: 4c59cd8e-a713-4095-9065-20d5bdeafe43
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Statement Attributes
 Statement attributes are characteristics of the statement. For example, whether to use bookmarks and what kind of cursor to use with the statement's result set are statement attributes.  

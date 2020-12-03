@@ -1,5 +1,6 @@
 ---
 title: "What is PolyBase? | Microsoft Docs"
+description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Hadoop and Azure Blob Storage.
 ms.date: 06/10/2019
 ms.prod: sql
 ms.technology: polybase
@@ -53,11 +54,11 @@ PolyBase provides these same functionalities for the following SQL products from
 
 - SQL Server 2016 and later versions (Windows only)
 - Analytics Platform System (formerly Parallel Data Warehouse)
-- Azure SQL Data Warehouse
+- Azure Synapse Analytics
 
 ### Azure integration
 
-With the underlying help of PolyBase, T-SQL queries can also import and export data from Azure Blob Storage. Further, PolyBase enables Azure SQL Data Warehouse to import and export data from Azure Data Lake Store, and from Azure Blob Storage.
+With the underlying help of PolyBase, T-SQL queries can also import and export data from Azure Blob Storage. Further, PolyBase enables Azure Synapse Analytics to import and export data from Azure Data Lake Store, and from Azure Blob Storage.
 
 ## Why use PolyBase?
 
@@ -86,7 +87,7 @@ PolyBase enables the following scenarios in SQL Server:
 
 ## Performance
 
-- **Push computation to Hadoop.** The query optimizer makes a cost-based decision to push computation to Hadoop when doing so will improve query performance.  It uses statistics on external tables to make the cost-based decision. Pushing computation creates MapReduce jobs and leverages Hadoop's distributed computational resources.
+- **Push computation to Hadoop.** The query optimizer makes a cost-based decision to push computation to Hadoop, if that will improve query performance.  The query optimizer uses statistics on external tables to make the cost-based decision. Pushing computation creates MapReduce jobs and leverages Hadoop's distributed computational resources.
 
 - **Scale compute resources.** To improve query performance, you can use SQL Server [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md). This enables parallel data transfer between SQL Server instances and Hadoop nodes, and it adds compute resources for operating on the external data.
 

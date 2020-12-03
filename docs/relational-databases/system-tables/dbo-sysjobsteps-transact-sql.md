@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysjobsteps (Transact-SQL)"
 title: "dbo.sysjobsteps (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysjobsteps system table"
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # dbo.sysjobsteps (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains the information for each step in a job to be executed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. This table is stored in the **msdb** database.  
   
@@ -35,9 +36,9 @@ ms.author: "sstein"
 |**flags**|**int**|Reserved.|  
 |**additional_parameters**|**ntext**|Reserved.|  
 |**cmdexec_success_code**|**int**|Error-level value returned by **CmdExec** subsystem steps to indicate success.|  
-|**on_success_action**|**tinyint**|Action to be performed when a step is executed successfully.|  
+|**on_success_action**|**tinyint**|Action to be performed when a step is executed successfully.<br /><br /> **1** = (default) Quit with success<br /><br /> **2** = Quit with failure<br /><br /> **3** = Go to next step<br /><br /> **4** = Go to step _on_success_step_id_|
 |**on_success_step_id**|**int**|ID of the next step to execute when a step is executed successfully.|  
-|**on_fail_action**|**tinyint**|Action to be performed when a step is not executed successfully.|  
+|**on_fail_action**|**tinyint**|Action to be performed when a step is not executed successfully.<br /><br /> **1** = Quit with success<br /><br /> **2** = (default) Quit with failure<br /><br /> **3** = Go to next step<br /><br /> **4** = Go to step _on_fail_step_id_|
 |**on_fail_step_id**|**int**|ID of the next step to execute when a step is not executed successfully.|  
 |**server**|**sysname**|Reserved.|  
 |**database_name**|**sysname**|Name of the database in which **command** is executed if **subsystem** is TSQL.|  

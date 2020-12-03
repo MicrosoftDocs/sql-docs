@@ -1,4 +1,5 @@
 ---
+description: "Delete an Index"
 title: "Delete an Index | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"

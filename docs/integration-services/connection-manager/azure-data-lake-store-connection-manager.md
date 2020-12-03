@@ -1,10 +1,9 @@
 ---
+description: "Azure Data Lake Store Connection Manager"
 title: "Azure Data Lake Store Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
@@ -17,7 +16,7 @@ ms.reviewer: maghan
 ---
 # Azure Data Lake Store Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 A SQL Server Integration Services (SSIS) package can use the Azure Data Lake Store Connection Manager to connect to an Azure Data Lake Storage Gen1 account with one of the two following authentication types:
@@ -40,7 +39,7 @@ The Azure Data Lake Store Connection Manager is a component of the [SQL Server I
     1.  If you select the **Azure AD User Identity** authentication option, do the following things:
         1. Provide values for the **User Name** and **Password** fields. 
     
-        2. To test the connection, select **Test Connection**. If you or the tenant administrator didn't previously consent to allow SSIS to access your Data Lake Storage Gen1 data, select **Accept** when prompted. For more information about this consent experience, see [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
+        2. To test the connection, select **Test Connection**. If you or the tenant administrator didn't previously consent to allow SSIS to access your Data Lake Storage Gen1 data, select **Accept** when prompted. For more information about this consent experience, see [Integrating applications with Azure Active Directory](/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
     
         > [!NOTE] 
         > When you select the **Azure AD User Identity** authentication option, multi-factor authentication and Microsoft account authentication are not supported.
@@ -48,7 +47,7 @@ The Azure Data Lake Store Connection Manager is a component of the [SQL Server I
     2. If you select the **Azure AD Service Identity** authentication option, do the following things:
         1. Create an Azure Active Directory (AAD) application and service principal to access the Data Lake Storage Gen1 data.
     
-        2. Assign appropriate permissions to let this AAD application access your Data Lake Storage Gen1 resources. For more information about this authentication option, see [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
+        2. Assign appropriate permissions to let this AAD application access your Data Lake Storage Gen1 resources. For more information about this authentication option, see [Use portal to create Active Directory application and service principal that can access resources](/azure/azure-resource-manager/resource-group-create-service-principal-portal).
     
         3. Provide values for the **Client Id**, **Secret Key**, and **Tenant Name** fields.
     
@@ -58,5 +57,4 @@ The Azure Data Lake Store Connection Manager is a component of the [SQL Server I
 
 ## View the properties of the connection manager
 You can see the properties of the connection manager you created in the **Properties** window.  
-  
   

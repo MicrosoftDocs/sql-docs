@@ -1,5 +1,6 @@
 ---
-title: "Handling errors | Microsoft Docs"
+title: "Handling errors"
+description: "Learn about error handling and what information the SQLServerException class provides in the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8fd5b5ef-d939-4b78-b900-5b7b6ddb3eb9
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Handling errors
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

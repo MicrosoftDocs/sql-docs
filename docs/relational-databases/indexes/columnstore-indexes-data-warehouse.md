@@ -1,4 +1,5 @@
 ---
+description: "Columnstore indexes - Data Warehouse"
 title: "Columnstore indexes - Data Warehouse | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"
@@ -13,7 +14,7 @@ ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Data Warehouse
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Columnstore indexes, in conjunction with partitioning, are essential for building a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data warehouse.  
   
@@ -58,7 +59,7 @@ CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);
 ```  
   
 ### Example: Use a nonclustered index to enforce a primary key constraint on a columnstore table  
- By design, a columnstore table does not allow a primary key constraint. Now you can use a nonclustered index on a columnstore table to enforce a primary key constraint. A primary key is equivalent to a UNIQUE constraint on a non-NULL column, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implements a UNIQUE constraint as a nonclustered index. Combining these facts, the following example defines a UNIQUE constraint on the non-NULL column accountkey. The result is a nonclustered index that enforces a primary key constraint as a UNIQUE constraint on a non-NULL column.  
+ By design, a columnstore table does not allow a clustered primary key constraint. Now you can use a nonclustered index on a columnstore table to enforce a primary key constraint. A primary key is equivalent to a UNIQUE constraint on a non-NULL column, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implements a UNIQUE constraint as a nonclustered index. Combining these facts, the following example defines a UNIQUE constraint on the non-NULL column accountkey. The result is a nonclustered index that enforces a primary key constraint as a UNIQUE constraint on a non-NULL column.  
   
  Next, the table is converted to a clustered columnstore index. During the conversion, the nonclustered index persists. The result is a clustered columnstore index with a nonclustered index that enforces a primary key constraint. Since any update or insert on the columnstore table will also affect the nonclustered index, all operations that violate the unique constraint and the non-NULL will cause the entire operation to fail.  
   

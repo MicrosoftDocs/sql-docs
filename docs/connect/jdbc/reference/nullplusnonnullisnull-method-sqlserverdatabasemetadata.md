@@ -1,4 +1,5 @@
 ---
+description: "nullPlusNonNullIsNull Method (SQLServerDatabaseMetaData)"
 title: "nullPlusNonNullIsNull Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: c594736f-3a9b-463f-bbd8-eaf9221230ea
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # nullPlusNonNullIsNull Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

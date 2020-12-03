@@ -1,4 +1,5 @@
 ---
+description: "sp_syspolicy_add_policy_category (Transact-SQL)"
 title: "sp_syspolicy_add_policy_category (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # sp_syspolicy_add_policy_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a policy category that can be used with Policy-Based Management. Policy categories enable you to organize policies, and to set policy scope.  
   

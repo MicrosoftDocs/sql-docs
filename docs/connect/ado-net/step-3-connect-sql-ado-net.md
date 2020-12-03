@@ -2,20 +2,19 @@
 title: "Step 3: Proof of concept connecting to SQL using ADO.NET | Microsoft Docs"
 description: "Contains C# code examples for connecting to SQL Server, executing a query and inserting a row."
 ms.custom: ""
-ms.date: "08/15/2019"
+ms.date: "08/05/2020"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Step 3: Proof of concept connecting to SQL using ADO.NET
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 - Previous article:&nbsp;&nbsp;&nbsp;[Step 2: Create a SQL database for ADO.NET development](step-2-create-sql-database-ado-net-development.md)  
 - Next article:&nbsp;&nbsp;&nbsp;[Step 4: Connect resiliently to SQL with ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
@@ -29,9 +28,8 @@ The method **SqlConnection.Open** is used to connect to your SQL database.
 
 
 ```csharp
-// C# , ADO.NET  
 using System;
-using QC = Microsoft.Data.SqlClient;  // System.Data.dll  
+using QC = Microsoft.Data.SqlClient;
   
 namespace ProofOfConcept_SQL_CSharp  
 {  
@@ -72,9 +70,9 @@ The method SqlCommand.ExecuteReader:
   
   
 ```csharp
-using System;  // C# , ADO.NET  
-using DT = System.Data;            // System.Data.dll  
-using QC = Microsoft.Data.SqlClient;  // System.Data.dll  
+using System;
+using DT = System.Data;
+using QC = Microsoft.Data.SqlClient;
   
 namespace ProofOfConcept_SQL_CSharp  
 {  
@@ -160,9 +158,9 @@ This example demonstrates how to:
   
   
 ```csharp
-using System;  // C# , ADO.NET  
-using DT = System.Data;            // System.Data.dll  
-using QC = Microsoft.Data.SqlClient;  // System.Data.dll  
+using System;
+using DT = System.Data;
+using QC = Microsoft.Data.SqlClient;
   
 namespace ProofOfConcept_SQL_CSharp  
 {  

@@ -1,5 +1,6 @@
 ---
-title: "Associate a Query Parameter with a Report Parameter (Report Builder and SSRS) | Microsoft Docs"
+title: "Associate a Query Parameter with a Report Parameter (Report Builder) | Microsoft Docs"
+description: Learn uses for Reporting Services report parameters, the properties you can set, and how to associate a dataset query parameter with a report parameter.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

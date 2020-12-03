@@ -1,4 +1,5 @@
 ---
+description: "dbo.systargetservers (Transact-SQL)"
 title: "dbo.systargetservers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "systargetservers system table"
 ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # dbo.systargetservers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Records which target servers are currently enlisted in this multiserver operation domain.  
   

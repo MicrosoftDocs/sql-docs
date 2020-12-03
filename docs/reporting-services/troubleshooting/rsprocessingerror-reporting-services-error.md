@@ -1,5 +1,6 @@
 ---
 title: "rsProcessingError - Reporting Services Error | Microsoft Docs"
+description: "In this error reference page, learn about event ID 'rsProcessingError': Errors have occurred in SQL Server Reporting Services report processing."
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -17,7 +18,7 @@ ms.author: maggies
     
 ## Details  
   
-|||  
+|Category|Value|  
 |-|-|  
 |Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Event ID|rsProcessingError|  

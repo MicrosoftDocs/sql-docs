@@ -1,8 +1,9 @@
 ---
+description: "Error (Visual C++ Syntax Index with #import)"
 title: "Error (Visual C++ Syntax Index with #import) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Error collection [ADO], Visual C++ syntax index with #import"
 ms.assetid: 1ee59754-59c8-48e2-a4fb-242fa788c1f9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Error (Visual C++ Syntax Index with #import)
 ## Properties  

@@ -1,5 +1,6 @@
 ---
-title: "XML Connection Type (SSRS) | Microsoft Docs"
+title: "XML Connection Type | Microsoft Docs"
+description: Learn about the XML connection type to connect to and retrieve data from XML documents, Web services, or XML that is embedded in the query.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -40,7 +41,7 @@ ms.author: maggies
   
 -   Current Windows user (also known as integrated security).  
   
--   No credentials are required. If you select no credentials, Anonymous access is used. Make sure that you have defined the unattended execution account for the report server to connect to an external data source. The XML data processing extension does not pass credentials to the target URL or the Web service; the connection will be unsuccessful unless you have defined the unattended execution account. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+-   No credentials are required. If you select no credentials, Anonymous access is used. Make sure that you have defined the unattended execution account for the report server to connect to an external data source. The XML data processing extension does not pass credentials to the target URL or the Web service; the connection will be unsuccessful unless you have defined the unattended execution account. For more information, see [Configure the Unattended Execution Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  Stored and prompted credentials are not supported. Remember that if you disable Windows integrated security, you cannot use it to retrieve data. If you specify stored or prompted credentials, an error will occur at run time.  
   

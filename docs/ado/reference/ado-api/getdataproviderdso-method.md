@@ -1,8 +1,9 @@
 ---
+description: "GetDataProviderDSO Method"
 title: "GetDataProviderDSO Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "GetDataProviderDSO Method [ADO]"
 ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # GetDataProviderDSO Method
 Retrieves the underlying OLE DB Data Source object from the Shape provider.  
@@ -33,4 +34,4 @@ HRESULT GetDataProviderDSO(
  This method does not addref the interface pointer. If the caller plans to hold the pointer, the caller must do the required addref and release.  
   
 ## Applies to  
- [IDSOShapeExtensions Interface](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)
+ [IDSOShapeExtensions Interface](./idsoshapeextensions-interface.md)

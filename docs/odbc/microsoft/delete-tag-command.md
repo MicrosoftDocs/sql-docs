@@ -1,4 +1,5 @@
 ---
+description: "DELETE TAG Command"
 title: "DELETE TAG Command | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "DELETE TAG command [ODBC]"
 ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # DELETE TAG Command
 Removes a tag or tags from a compound index (.cdx) file.  

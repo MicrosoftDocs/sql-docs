@@ -1,1 +1,1 @@
- Azure Synapse Analytics (SQL DW)
+ Azure Synapse Analytics

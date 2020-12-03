@@ -1,5 +1,6 @@
 ---
 title: "Enroll an Instance of SQL Server (SQL Server Utility) | Microsoft Docs"
+description: Start monitoring the performance and configuration of an instance of SQL Server by enrolling it into an existing SQL Server Utility.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -22,7 +23,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Enroll an Instance of SQL Server (SQL Server Utility)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Enroll an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] into an existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility to monitor its performance and configuration as a managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The utility control point (UCP) collects configuration and performance information from managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] every 15 minutes. This information is stored in the utility management data warehouse (UMDW) on the UCP; the UMDW file name is sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance data is compared to policies to help identify resource use bottlenecks and consolidation opportunities.  
   
  In this release, the UCP and all managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must satisfy the following requirements:  
@@ -35,7 +36,7 @@ ms.author: mikeray
   
 -   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service accounts on the UCP and all managed instances of SQL Server must have read permission to Users in Active Directory.  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to enroll cannot be SQL Azure.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to enroll cannot be Azure SQL Database.  
   
  In this release, the UCP must satisfy the following requirements:  
   
@@ -87,12 +88,12 @@ ms.author: mikeray
  To continue, click **Next**.  
   
 ##  <a name="Instance_name"></a> Specify the Instance of SQL Server  
- To select an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the connection dialog box, click **Connect...**. Provide the computer name and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name in the format ComputerName\InstanceName. For more information, see [Connect to Server &#40;Database Engine&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ To select an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the connection dialog box, click **Connect...**. Provide the computer name and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name in the format ComputerName\InstanceName. For more information, see [Connect to Server &#40;Database Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  To continue, click **Next**.  
   
 ##  <a name="Connection_dialog"></a> Connection Dialog  
- On the Connect to Server dialog box, verify the server type, computer name, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name information. For more information, see [Connect to Server &#40;Database Engine&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ On the Connect to Server dialog box, verify the server type, computer name, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name information. For more information, see [Connect to Server &#40;Database Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
 > [!NOTE]  
 >  If the connection is encrypted, the encrypted connection is used. If the connection is not encrypted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility reconnects using an encrypted connection.  
@@ -122,7 +123,7 @@ ms.author: mikeray
 |Collection sets on the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be stopped.|Stop pre-existing collection sets on the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If the data collector is disabled, enable it, stop any running collection sets, then re-run validation rules for the Create UCP operation.<br /><br /> To enable the data collector:<br /><br /> In Object Explorer, expand the **Management** node.<br /><br /> Right-click **Data Collection**, and then click **Enable Data Collection**.<br /><br /> To stop a collection set:<br /><br /> In Object Explorer, expand the Management node, expand **Data Collection**, and then expand **System Data Collection Sets**.<br /><br /> Right-click the collection set that you want to stop, and then click **Stop Data Collection Set**.<br /><br /> A message box will display the result of this action, and a red circle on the icon for the collection set indicates that the collection set has stopped.|  
 |The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service on the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be started.|Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service on the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance, configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start manually. Otherwise, configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start automatically.|  
 |The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service on the UCP must be started.|Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service on the UCP. If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance, configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start manually. Otherwise, configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start automatically.|  
-|WMI must be configured correctly.|To troubleshoot WMI configuration, see [Troubleshoot the SQL Server Utility](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
+|WMI must be configured correctly.|To troubleshoot WMI configuration, see [Troubleshoot the SQL Server Utility](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130)).|  
 |The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account must be a valid Windows domain account on the UCP.|Specify a valid Windows domain account. To ensure that the account is valid, logon to the UCP using the Windows domain account.|  
 |If you select the proxy account option, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account must be a valid Windows domain account on the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Specify a valid Windows domain account. To ensure that the account is valid, logon to the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the Windows domain account.|  
 |The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account cannot be a built-in account, like Network Service.|Re-assign the account to a Windows domain account. To ensure that the account is valid, logon to the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the Windows domain account.|  
@@ -166,7 +167,7 @@ ms.author: mikeray
 >   
 >  Additional information:  Could not obtain information about Windows NT group/user '\<DomainName\AccountName>', error code 0x5. (Microsoft SQL Server, Error: 15404)  
 >   
->  For more information about troubleshooting this failure, see [Troubleshoot the SQL Server Utility](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
+>  For more information about troubleshooting this failure, see [Troubleshoot the SQL Server Utility](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130)).  
   
 > [!IMPORTANT]  
 >  Do not change any properties of the "Utility Information" collection set on a managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and do not turn data collection on/off manually, as data collection is controlled by a Utility agent job.  
@@ -192,6 +193,5 @@ ms.author: mikeray
 ## See Also  
  [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Monitor Instances of SQL Server in the SQL Server Utility](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Troubleshoot the SQL Server Utility](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [Troubleshoot the SQL Server Utility](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

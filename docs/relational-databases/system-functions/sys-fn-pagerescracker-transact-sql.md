@@ -1,6 +1,6 @@
 ---
 title: "sys.fn_PageResCracker (Transact-SQL) | Microsoft Docs"
-description: "Documentation for sys.fn_PageResCracker system function."
+description: Learn about the sys.fn_PageResCracker system function. See examples and view additional available resources.
 ms.custom: ""
 ms.date: "09/18/2018"
 ms.prod: sql
@@ -27,7 +27,7 @@ ms.author: "pamela"
 manager: amitban
 ---
 # sys.fn_PageResCracker (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 Returns the `db_id`, `file_id`, and `page_id` for the given `page_resource` value. 
   

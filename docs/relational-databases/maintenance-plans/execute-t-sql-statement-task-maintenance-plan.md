@@ -1,4 +1,5 @@
 ---
+description: "Execute T-SQL Statement Task (Maintenance Plan)"
 title: "Execute T-SQL Statement Task (Maintenance Plan) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,7 +17,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Execute T-SQL Statement Task (Maintenance Plan)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the **Execute T-SQL Statement Task** dialog to customize your maintenance plan by adding [!INCLUDE[tsql](../../includes/tsql-md.md)] statements of your choice to this maintenance plan.  
   
 ## Options  

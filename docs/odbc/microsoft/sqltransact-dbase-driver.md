@@ -1,4 +1,5 @@
 ---
+description: "SQLTransact (dBASE Driver)"
 title: "SQLTransact (dBASE Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "DBase driver [ODBC], SQLTransact"
   - "SQLTransact function [ODBC], dBASE Driver"
 ms.assetid: 159ca21a-ccc4-45e2-97ca-2a9387efa7df
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLTransact (dBASE Driver)
 > [!NOTE]  

@@ -1,5 +1,6 @@
 ---
 title: "Disable or Pause Report and Subscription Processing | Microsoft Docs"
+description: Manage subscriptions, pause shared schedules, disable shared data sources, block report access, manage subscription permissions, & remove delivery extensions.
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -23,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Disable or Pause Report and Subscription Processing  
-There are several approaches you can use to disable or pause [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report and subscription processing. The approaches in this article range from disabling a subscription to interrupting the data source connection. Not all approaches are possible with both [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server modes. The following tables summaries the methods and supported [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server modes:  
+There are several approaches you can use to disable or pause [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report and subscription processing. The approaches in this article range from disabling a subscription to interrupting the data source connection. Not all approaches are possible with both [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server modes. The following table summarizes the methods and supported [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server modes:  
   
 ##  <a name="bkmk_top"></a> In this article  
   
-||Supported server mode|  
+|Approach|Supported server mode|  
 |-|---------------------------|  
 |[Enable and disable subscriptions](#bkmk_disable_subscription)|Native mode|  
 |[Pause a shared schedule](#bkmk_pause_schedule)|Native and SharePoint mode|  
@@ -55,7 +56,7 @@ In the web portal, browse to the subscription from either the **My Subscriptions
   
  `RSPortal!subscription!RSPortal.exe!93!06/20/2019-01:16:51:: i INFO: Subscription 2b409d66-d4ea-408a-918c-0f9e41ce49ca enabled at 06/20/2019 01:16:51`  
   
-![PowerShell related content](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg " PowerShell related content"): **Use Windows PowerShell to disable a single subscription:** Use the following PowerShell script to disable a specific subscription. Update the server name and subscription ID in the script.  
+![PowerShell related content](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg " PowerShell related content"): **Use Windows PowerShell to disable a single subscription:** Use the following PowerShell script to disable a specific subscription. Update the server name and subscription ID in the script.  
   
 ```PS  
 #disable specific subscription  
@@ -75,7 +76,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![PowerShell related content](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") **Use Windows PowerShell to list all disabled subscriptions:** Use the following PowerShell script to list all of the disabled subscriptions on the current Native mode report server. Update the server name.  
+ ![PowerShell related content](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") **Use Windows PowerShell to list all disabled subscriptions:** Use the following PowerShell script to list all of the disabled subscriptions on the current Native mode report server. Update the server name.  
   
 ```  
 #list all disabled subscriptions  
@@ -86,7 +87,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![PowerShell related content](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") **Use Windows PowerShell to enable all disabled subscriptions:** Use the following PowerShell script to enable all subscriptions that are currently disabled. Update the server name.  
+ ![PowerShell related content](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") **Use Windows PowerShell to enable all disabled subscriptions:** Use the following PowerShell script to enable all subscriptions that are currently disabled. Update the server name.  
   
 ```  
 #enable all subscriptions  
@@ -100,7 +101,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![PowerShell related content](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") **Use Windows PowerShell to DISABLE all subscriptions:** Use the following PowerShell script to list disable **ALL** subscriptions.  
+ ![PowerShell related content](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") **Use Windows PowerShell to DISABLE all subscriptions:** Use the following PowerShell script to list disable **ALL** subscriptions.  
   
 ```  
 #DISABLE all subscriptions  
@@ -116,7 +117,7 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="bkmk_pause_schedule"></a> Pause a shared schedule  
  If a report or subscription runs from a shared schedule, you can pause the schedule to prevent processing. All report and subscription processing driven by the schedule is deferred until the schedule is resumed.  
   
--   **SharePoint mode:** ![SharePoint Settings](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") In **Site settings**, select **Manage shared schedules**. Select the schedule and click **Pause selected schedules**.  
+-   **SharePoint mode:** ![SharePoint Settings](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") In **Site settings**, select **Manage shared schedules**. Select the schedule and click **Pause selected schedules**.  
   
 -   **Native mode:** In the web portal, select the **Settings** button ![Settings button](media/ssrs-portal-settings-gear.png) from the menu bar at the top of the web portal screen, and select **Site Settings** from the drop-down menu. Select the **Schedules** tab to display the schedules page. Select the checkbox(es) next to the schedule(s) you want to enable or disable, and then select the **Enable** or **Disable** button respectively to perform the desired action. The status column will update to "Disabled" or "Enabled" accordingly.  
   
@@ -172,4 +173,3 @@ One way to make a report unavailable is to temporarily remove the role assignmen
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [The web portal of a report server (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [Securable Items](../../reporting-services/security/securable-items.md) 
-  

@@ -1,4 +1,5 @@
 ---
+description: "Getting Started with SSMA for MySQL Console (MySQLToSQL)"
 title: "Getting Started with SSMA for MySQL Console (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -10,8 +11,8 @@ helpviewer_keywords:
   - "MySQL Console, launching console"
   - "MySQL Console, output conventions"
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Getting Started with SSMA for MySQL Console (MySQLToSQL)
 This section describes the procedure to launch and get started with the MySQL console application. Also listed, herein, are the conventions used in a typical SSMA Console output window.  
@@ -45,7 +46,7 @@ Additional features:
 ## SSMA Console Output Conventions  
 Upon executing the SSMA script commands and options, the console program displays the results and messages (information, error, etc.) to the user on the console or if required, redirects to an xml output file. Each type of message in the output is signified by a unique color. For example, the text message in white color denotes script file commands; the one in green color represents a prompt for user-input, and so on.  
   
-![SSMAConsoleOutput_MySQL](../../ssma/mysql/media/ssmaconsoleoutput_mysql.jpg "SSMAConsoleOutput_MySQL")  
+![Screenshot showing an example of SSMA Console MySQL output.](../../ssma/mysql/media/ssmaconsoleoutput_mysql.jpg "SSMAConsoleOutput_MySQL")  
   
 Color-interpretation of the console output in the following table:  
   

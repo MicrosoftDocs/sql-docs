@@ -6,4 +6,4 @@ ms.date: 06/06/2019
 ms.author: owend
 ---
 
-**APPLIES TO:** ![yes](media/yes.png)SQL Server Analysis Services ![no](media/no.png)Azure Analysis Services ![no](media/no.png)Power BI Premium
+**APPLIES TO:** :::image type="icon" source="media/yes-icon.png":::SQL Server Analysis Services :::image type="icon" source="media/no-icon.png":::Azure Analysis Services :::image type="icon" source="media/no-icon.png":::Power BI Premium

@@ -15,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Evaluate Policies Dialog Box, Policy Selection Page
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to evaluate Policy-Based Management policies. By selecting the **Evaluation Results** page, you can apply policies to the items in a target set that do not comply with the policies.  
   
 ## Options  

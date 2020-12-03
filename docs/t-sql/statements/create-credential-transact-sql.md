@@ -1,4 +1,5 @@
 ---
+description: "CREATE CREDENTIAL (Transact-SQL)"
 title: "CREATE CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2019"
@@ -27,7 +28,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 ---
 # CREATE CREDENTIAL (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Creates a server-level credential. A credential is a record that contains the authentication information that is required to connect to a resource outside SQL Server. Most credentials include a Windows user and password. For example, saving a database backup to some location might require SQL Server to provide special credentials to access that location. For more information, see [Credentials (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
 
@@ -38,12 +39,14 @@ Creates a server-level credential. A credential is a record that contains the au
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE CREDENTIAL credential_name
 WITH IDENTITY = 'identity_name'
     [ , SECRET = 'secret' ]
         [ FOR CRYPTOGRAPHIC PROVIDER cryptographic_provider_name ]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -85,7 +88,7 @@ Requires **ALTER ANY CREDENTIAL** permission.
 
 ## Examples
 
-### A. Basic Example
+### A. Creating a Credential for Windows Identity
 
 The following example creates the credential called `AlterEgo`. The credential contains the Windows user `Mary5` and a password.
 
@@ -97,7 +100,7 @@ GO
 
 ### B. Creating a Credential for EKM
 
-The following example uses a previously created account called `User1OnEKM` on an EKM module through the EKM's Management tools, with a basic account type and password. The **sysadmin** account on the server creates a credential that is used to connect to the EKM account, and assigns it to the `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account:
+The following example uses a previously created account called `User1OnEKM` on an EKM module through the EKM's Management tools, with a basic account type and password. The **sysadmin** account on the server creates a credential that is used to connect to the EKM account, and assigns it to the `User1` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account:
 
 ```sql
 CREATE CREDENTIAL CredentialForEKM
@@ -106,13 +109,8 @@ CREATE CREDENTIAL CredentialForEKM
 GO
 
 /* Modify the login to assign the cryptographic provider credential */
-ALTER LOGIN Login1
+ALTER LOGIN User1
 ADD CREDENTIAL CredentialForEKM;
-
-/* Modify the login to assign a non cryptographic provider credential */
-ALTER LOGIN Login1
-WITH CREDENTIAL = AlterEgo;
-GO
 ```
 
 ### C. Creating a Credential for EKM Using the Azure Key Vault
@@ -146,7 +144,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 
 ### D. Creating a Credential using a SAS Token
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658) and managed instances in Azure SQL Database.
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658) and Azure SQL Managed Instance.
 
 The following example creates a shared access signature credential using a SAS token. For a tutorial on creating a stored access policy and a shared access signature on an Azure container, and then creating a credential using the shared access signature, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).
 
@@ -160,6 +158,15 @@ USE master
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a trailing forward slash.
     WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.
     , SECRET = 'sharedaccesssignature' -- this is the shared access signature token
+GO
+```
+
+### E. Creating a Credential for Managed Identity
+
+The following example creates the credential that represent Managed Identity of Azure SQL or Azure Synapse service. Password and secret are not applicable in this case.
+
+```sql
+CREATE CREDENTIAL ServiceIdentity WITH IDENTITY = 'Managed Identity';
 GO
 ```
 

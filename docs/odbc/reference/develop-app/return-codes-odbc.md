@@ -1,4 +1,5 @@
 ---
+description: "Return Codes ODBC"
 title: "Return Codes ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "return codes [ODBC]"
   - "diagnostic information [ODBC], return codes"
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Return Codes ODBC
 Each function in ODBC returns a code, known as its *return code,* which indicates the overall success or failure of the function. Program logic is generally based on return codes.  

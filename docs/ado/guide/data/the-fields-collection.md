@@ -1,8 +1,9 @@
 ---
+description: "The Fields Collection"
 title: "The Fields Collection | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "Field object [ADO], fields collection"
   - "Fields collection [ADO]"
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # The Fields Collection
 The **Fields** collection is one of ADO's intrinsic collections. A collection is an ordered set of items that can be referred to as a unit. For more information about ADO collections, see [The ADO Object Model](../../../ado/guide/data/ado-objects-and-collections.md).  

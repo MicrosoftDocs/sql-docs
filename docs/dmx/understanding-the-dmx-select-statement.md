@@ -1,16 +1,17 @@
 ---
+description: "Understanding the DMX Select Statement"
 title: "Understanding the DMX Select Statement | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # Understanding the DMX Select Statement
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   The [SELECT](../dmx/select-dmx.md) statement is the basis for most queries that you create with Data Mining Extensions (DMX) in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. It can perform many different kinds of tasks, such as browsing and predicting against data mining models.  
   
@@ -56,8 +57,8 @@ author: minewiskan
   
 |Query Type|Description|  
 |----------------|-----------------|  
-|SELECT FROM [NATURAL] PREDICTION JOIN|Returns a prediction that is created by joining the columns in the mining model to the columns of an internal data source.<br /><br /> The domain for this query type is the predictable columns from the model and the columns from the input data source.<br /><br /> [SELECT FROM &#60;model&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [Prediction Queries &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
-|SELECT FROM *\<model>*|Returns the most likely state of the predictable column, based only on the mining model. This query type is a shortcut for creating a prediction with an empty prediction join.<br /><br /> The domain for this query type is the predictable columns from the model.<br /><br /> [SELECT FROM &#60;model&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [Prediction Queries &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
+|SELECT FROM [NATURAL] PREDICTION JOIN|Returns a prediction that is created by joining the columns in the mining model to the columns of an internal data source.<br /><br /> The domain for this query type is the predictable columns from the model and the columns from the input data source.<br /><br /> [SELECT FROM &#60;model&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [Prediction Queries &#40;Data Mining&#41;](/analysis-services/data-mining/prediction-queries-data-mining)|  
+|SELECT FROM *\<model>*|Returns the most likely state of the predictable column, based only on the mining model. This query type is a shortcut for creating a prediction with an empty prediction join.<br /><br /> The domain for this query type is the predictable columns from the model.<br /><br /> [SELECT FROM &#60;model&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [Prediction Queries &#40;Data Mining&#41;](/analysis-services/data-mining/prediction-queries-data-mining)|  
   
  [Back to Select Types](#Select_Types)  
   
@@ -66,10 +67,10 @@ author: minewiskan
   
 |Query Type|Description|  
 |----------------|-----------------|  
-|SELECT DISTINCT FROM *\<model>*|Returns all the state values from the mining model for the specified column.<br /><br /> The data domain for this query type is the data mining model.<br /><br /> [SELECT DISTINCT FROM &#60;model &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Content Queries &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
-|SELECT FROM *\<model>*.CONTENT|Returns content that describes the mining model.<br /><br /> The data domain for this query type is the content schema rowset.<br /><br /> [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Content Queries &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
+|SELECT DISTINCT FROM *\<model>*|Returns all the state values from the mining model for the specified column.<br /><br /> The data domain for this query type is the data mining model.<br /><br /> [SELECT DISTINCT FROM &#60;model &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Content Queries &#40;Data Mining&#41;](/analysis-services/data-mining/content-queries-data-mining)|  
+|SELECT FROM *\<model>*.CONTENT|Returns content that describes the mining model.<br /><br /> The data domain for this query type is the content schema rowset.<br /><br /> [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Content Queries &#40;Data Mining&#41;](/analysis-services/data-mining/content-queries-data-mining)|  
 |SELECT FROM *\<model>*.DIMENSION_CONTENT|Returns content that describes the mining model.<br /><br /> The data domain for this query type is the content schema rowset.<br /><br /> [SELECT FROM &#60;model&#62;.DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
-|SELECT FROM *\<model>*.PMML|Returns the Predictive Model Markup Language (PMML) representation of the mining model, for algorithms that support this functionality.<br /><br /> The domain for this query type is the PMML schema rowset.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|  
+|SELECT FROM *\<model>*.PMML|Returns the Predictive Model Markup Language (PMML) representation of the mining model, for algorithms that support this functionality.<br /><br /> The domain for this query type is the PMML schema rowset.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML Rowset](/previous-versions/sql/sql-server-2012/ms126283(v=sql.110))|  
   
  [Back to Select Types](#Select_Types)  
   
@@ -87,9 +88,9 @@ author: minewiskan
   
 |Query Type|Description|  
 |----------------|-----------------|  
-|SELECT FROM *\<model>*.CASES|Returns the cases used to train the mining model.<br /><br /> The domain for this query type is the data mining model.<br /><br /> [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Create Drillthrough Queries using DMX](https://docs.microsoft.com/analysis-services/data-mining/create-drillthrough-queries-using-dmx)|  
+|SELECT FROM *\<model>*.CASES|Returns the cases used to train the mining model.<br /><br /> The domain for this query type is the data mining model.<br /><br /> [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Create Drillthrough Queries using DMX](/analysis-services/data-mining/create-drillthrough-queries-using-dmx)|  
 |SELECT FROM *\<model>*.SAMPLE_CASES|Returns a sample case, representative of the cases used to train the mining model.<br /><br /> The domain for this query type is the data mining model.<br /><br /> [SELECT FROM &#60;model&#62;.SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
-|SELECT FROM *\<structure>*. CASES|Returns the detailed data rows from the underlying mining structure, even if some details were not used in training the mining model.<br /><br /> [SELECT FROM &#60;structure&#62;.CASES](../dmx/select-from-structure-cases.md)<br /><br /> [Drillthrough Queries &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)|  
+|SELECT FROM *\<structure>*. CASES|Returns the detailed data rows from the underlying mining structure, even if some details were not used in training the mining model.<br /><br /> [SELECT FROM &#60;structure&#62;.CASES](../dmx/select-from-structure-cases.md)<br /><br /> [Drillthrough Queries &#40;Data Mining&#41;](/analysis-services/data-mining/drillthrough-queries-data-mining)|  
   
  [Back to Select Types](#Select_Types)  
   
@@ -97,5 +98,4 @@ author: minewiskan
  [Data Mining Extensions &#40;DMX&#41; Reference](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;DMX&#41; Syntax Conventions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)  
-  
   

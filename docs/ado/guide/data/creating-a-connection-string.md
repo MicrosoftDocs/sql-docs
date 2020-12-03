@@ -1,8 +1,9 @@
 ---
+description: "Creating a Connection String"
 title: "Creating a Connection String | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/20/2017"
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "connections [ADO]"
   - "connection strings [ADO]"
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Creating a Connection String
 A connection string consists of a list of argument/value pairs (that is, parameters), separated by semi-colons. For example:  
@@ -35,7 +36,7 @@ A connection string consists of a list of argument/value pairs (that is, paramet
   
  Other arguments are passed to the provider named in the *Provider* argument, without any processing by ADO.  
   
- The HelloData application in [HelloData: A Simple ADO Application](../../../ado/guide/data/hellodata-a-simple-ado-application.md) used the following connection string:  
+ The HelloData application in [HelloData: A Simple ADO Application](./hellodata-a-simple-ado-application.md) used the following connection string:  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  

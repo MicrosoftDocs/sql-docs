@@ -1,4 +1,5 @@
 ---
+description: "SQLGetDescRec Function"
 title: "SQLGetDescRec Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetDescRec function [ODBC]"
 ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetDescRec Function
 **Conformance**  

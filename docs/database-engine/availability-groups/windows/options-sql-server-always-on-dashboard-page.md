@@ -1,6 +1,6 @@
 ---
 title: "Availability group dashboard in SSMS"
-description: "A description of the 'Options' page found on the SQL Server Always On Dashboard in SQL Server Management Studio."
+description: "Learn about the Options page found on the SQL Server Always On Dashboard in SQL Server Management Studio."
 ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -10,11 +10,11 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Alwayson.Dashboard"
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Options (SQL Server Always On, Dashboard Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Use the **SQL Server Always On Dashboard** page of the [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Options** dialog box to configure the Always On Dashboard.  
   

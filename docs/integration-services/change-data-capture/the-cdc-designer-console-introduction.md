@@ -1,4 +1,5 @@
 ---
+description: "The CDC Designer Console Introduction"
 title: "The CDC Designer Console Introduction | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # The CDC Designer Console Introduction
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The section describes the installation procedures for the Change Data Capture Designer for Oracle by Attunity.  
@@ -21,7 +22,7 @@ ms.author: chugu
 ## Installation  
  The section describes the installation procedures for the Change Data Capture Designer for Oracle by Attunity.  
   
- The MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ® 2016 are part of the SQL Server 2016 Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ The MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ® 2016 are part of the SQL Server 2016 Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](https://www.microsoft.com/download/details.aspx?id=56833).  
   
 ## Supported Windows Environments  
  The CDC Designer Console can run in the following Windows environments:  

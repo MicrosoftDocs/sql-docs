@@ -1,5 +1,6 @@
 ---
 title: "contains Function (XQuery) | Microsoft Docs"
+description: Learn about using the contains function in an XQuery to determine whether a specified string value contains the specified substring value.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Functions on String Values - contains
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns a value of type xs:boolean indicating whether the value of *$arg1* contains a string value specified by *$arg2*.  
   

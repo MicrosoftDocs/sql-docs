@@ -2,8 +2,8 @@
 title: Configure a read-scale availability group (SQL Server on Linux)
 description: Learn about configuring a SQL Server Always On Availability Group (AG) for read-scale workloads on Linux.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 01/09/2019
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.technology: linux
 ---
 # Configure a SQL Server Availability Group for read-scale on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 You can configure a SQL Server Always On Availability Group (AG) for read-scale workloads on Linux. There are two types of architectures for AGs. A architecture for high availability uses a cluster manager to provide improved business continuity. This architecture also can include read-scale replicas. To create the high-availability architecture, see [Configure SQL Server Always On Availability Group for high availability on Linux](sql-server-linux-availability-group-configure-ha.md). The other architecture supports only read-scale workloads. This article explains how to create an AG without a cluster manager for read-scale workloads. This architecture provides read-scale only. It doesn't provide high availability.
 
@@ -76,6 +76,6 @@ There are two ways to connect to read-only secondary replicas. Applications can 
 
 ## Next steps
 
-* [Configure a distributed Availability Group](../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)
+* [Configure a distributed Availability Group](../database-engine/availability-groups/windows/distributed-availability-groups.md)
 * [Learn more about availability groups](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 * [Perform a forced manual failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)

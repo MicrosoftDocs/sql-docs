@@ -1,5 +1,6 @@
 ---
 title: "Enable the Prerequisites for FileTable | Microsoft Docs"
+description: To use FileTables, first turn on FILESTREAM, specify a directory, and set certain options and access levels. Learn how to meet all prerequisites.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: mikeray
 ms.reviewer: 
 ---
 # Enable the Prerequisites for FileTable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes how to enable the prerequisites for creating and using FileTables.  
   
 ##  <a name="EnablePrereq"></a> Enabling the Prerequisites for FileTable  
@@ -61,7 +62,7 @@ GO
  The available levels of non-transactional access are FULL, READ_ONLY, and OFF.  
   
  **Specify the level of non-transactional access by using Transact-SQL**  
- - When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) statement with the **NON_TRANSACTED_ACCESS** FILESTREAM option.
+ - When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) statement with the **NON_TRANSACTED_ACCESS** FILESTREAM option.
 
    ```sql
    CREATE DATABASE database_name  
@@ -87,7 +88,7 @@ GO
  The name that you specify must be unique across the instance for database-level directories.  
   
 **Specify a directory for FileTables by using Transact-SQL**  
-- When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) statement with the **DIRECTORY_NAME** FILESTREAM option.
+- When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) statement with the **DIRECTORY_NAME** FILESTREAM option.
 
    ```sql
    CREATE DATABASE database_name  
@@ -103,7 +104,7 @@ GO
     GO  
     ```  
   
--   When you **attach a database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) statement with the **FOR ATTACH** option and with the **DIRECTORY_NAME** FILESTREAM option.  
+-   When you **attach a database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) statement with the **FOR ATTACH** option and with the **DIRECTORY_NAME** FILESTREAM option.  
   
     ```sql  
     CREATE DATABASE database_name  
@@ -146,5 +147,4 @@ GO
 -   When you enable or disable non-transactional access at the database level, the operation does not check whether the directory name has been specified or whether it is unique.  
   
 -   When you drop a database that was enabled for FileTables, the database-level directory and all the directory structures of all the FileTables under it are removed.  
-  
   

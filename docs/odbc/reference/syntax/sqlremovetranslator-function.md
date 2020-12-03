@@ -1,4 +1,5 @@
 ---
+description: "SQLRemoveTranslator Function"
 title: "SQLRemoveTranslator Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLRemoveTranslator function [ODBC]"
 ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLRemoveTranslator Function
 **Conformance**  

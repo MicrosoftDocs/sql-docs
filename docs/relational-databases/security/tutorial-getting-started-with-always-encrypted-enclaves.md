@@ -2,7 +2,7 @@
 title: "Tutorial: Always Encrypted with secure enclaves using SSMS"
 description: This tutorial teaches you how to create a basic Always Encrypted with secure enclaves environment, how to encrypt data in-place, and issue rich queries against encrypted columns using SQL Server Management Studio (SSMS). 
 ms.custom: seo-lt-2019
-ms.date: 10/15/2019
+ms.date: 04/10/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -15,7 +15,7 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Tutorial: Always Encrypted with secure enclaves using SSMS
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). It will show you:
 - How to create a basic environment for testing and evaluating Always Encrypted with secure enclaves.
@@ -36,8 +36,8 @@ To get started with Always Encrypted with secure enclaves, you need at least two
   - Intel VT-x with Extended Page Tables.
   - AMD-V with Rapid Virtualization Indexing.
   - If you're running [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] in a VM, the hypervisor and physical CPU must offer nested virtualization capabilities. 
-    - On Hyper-V 2016 or later, [enable nested virtualization extensions on the VM processor](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
-    - In Azure, select a VM size that supports nested virtualization. This includes all v3 series VMs, for example Dv3 and Ev3. See [Create a nesting capable Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+    - On Hyper-V 2016 or later, [enable nested virtualization extensions on the VM processor](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
+    - In Azure, select a VM size that supports nested virtualization. This includes all v3 series VMs, for example Dv3 and Ev3. See [Create a nesting capable Azure VM](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
     - On VMWare vSphere 6.7 or later, enable Virtualization Based Security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
     - Other hypervisors and public clouds may support nested virtualization capabilities that enable Always Encrypted with VBS Enclaves as well. Check your virtualization solution's documentation for compatibility and configuration instructions.
 - [SQL Server Management Studio (SSMS) 18.3 or later](../../ssms/download-sql-server-management-studio-ssms.md).
@@ -109,14 +109,14 @@ In this step, you will configure the SQL Server computer as a guarded host regis
 
 3. Restart your SQL Server computer when prompted to complete the installation of Hyper-V.
 
-4. If your SQL Server computer is a virtual machine or if it is a legacy physical machine that does not support UEFI Secure Boot or is not equipped with IOMMU, you need to remove the VBS requirement for platform security features.
-    1. Remove the requirement in Windows registry.
+4. If your SQL Server computer is a virtual machine, a physical machine that does not support UEFI Secure Boot, or a physial machine not equipped with an IOMMU, you need to remove the VBS requirement for platform security features.
+    1. Remove the requirement for Secure Boot and IOMMU by running the following command on your SQL Server computer in an elevated PowerShell console:
 
         ```powershell
        Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
        ```
 
-    1. Restart the computer again to get VBS to come online with the lowered requirements.
+    1. Restart the SQL Server computer again to get VBS to come online with the lowered requirements.
 
         ```powershell
        Restart-Computer
@@ -258,7 +258,7 @@ In this step, you will create a column master key and a column encryption key th
     2. Select your column master key name: **CMK1**.
     3. Make sure you select either **Windows Certificate Store (Current User or Local Machine)** or **Azure Key Vault**.
     4. Select **Allow enclave computations**.
-    5. If you selected Azure Key Vault, sign in to Azure and select your key vault. For more information on how to create a key vault for Always Encrypted, see [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
+    5. If you selected Azure Key Vault, sign in to Azure and select your key vault. For more information on how to create a key vault for Always Encrypted, see [Manage your key vaults from Azure portal](/archive/blogs/kv/manage-your-key-vaults-from-new-azure-portal).
     6. Select your certificate or Azure Key Value key if it already exists, or click the **Generate Certificate** button to create a new one.
     7. Select **OK**.
 

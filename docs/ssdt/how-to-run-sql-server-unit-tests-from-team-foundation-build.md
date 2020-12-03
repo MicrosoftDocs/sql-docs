@@ -1,12 +1,12 @@
 ---
 title: Run SQL Server Unit Tests from Team Foundation Build
+description: Learn how to run SQL Server unit tests from Team Foundation Build. See how to create a build definition and run unit tests in an automated test run.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
@@ -18,15 +18,15 @@ You can use Team Foundation Build to run your SQL Server unit tests as part of a
   
 -   [Creating and Defining SQL Server Unit Tests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [How to: Configure and Run Scheduled Tests After Building Your Application](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [How to: Configure and Run Scheduled Tests After Building Your Application](/previous-versions/visualstudio/visual-studio-2010/ms182465(v=vs.100))  
   
--   [Create a Basic Build Definition](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [Create a Basic Build Definition](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
   
 Before you use these procedures, you must first configure your working environment by performing the following tasks:  
   
 -   Install Team Foundation Build and Team Foundation version control. You probably have to install Team Foundation Build and Team Foundation version control on different computers.  
   
--   Install MicrosoftSQL Server Data Tools Build Utilities on the same computer as Team Foundation Build. To install the SQL Server Data Tools Build Utilities, first perform an administrative installation point. For more information about an administrative installation point, see [Install SQL Server Data Tools](../ssdt/install-sql-server-data-tools.md). Then install SSDTBuildUtilties.msi onto the build server from the location (/location) used for the administrative installation point.  
+-   Install MicrosoftSQL Server Data Tools Build Utilities on the same computer as Team Foundation Build. To install the SQL Server Data Tools Build Utilities, first perform an administrative installation point. For more information about an administrative installation point, see [Install SQL Server Data Tools](./download-sql-server-data-tools-ssdt.md). Then install SSDTBuildUtilties.msi onto the build server from the location (/location) used for the administrative installation point.  
   
 -   Connect to an instance of Visual Studio Team Foundation Server.  
   
@@ -210,22 +210,22 @@ In this procedure, you check in all the files of your solution. These files incl
   
 1.  Connect to a computer that is running Team Foundation Server.  
   
-    For more information, see [Using Source Control Explorer](https://msdn.microsoft.com/library/ms181370(VS.100).aspx).  
+    For more information, see [Using Source Control Explorer](/previous-versions/visualstudio/visual-studio-2010/ms181370(v=vs.100)).  
   
 2.  If your solution is not already in source control, add it to source control.  
   
-    For more information, see [Add a Project or Solution to Version Control](https://msdn.microsoft.com/library/ms181374(VS.100).aspx).  
+    For more information, see [Add a Project or Solution to Version Control](/previous-versions/visualstudio/visual-studio-2010/ms181374(v=vs.100)).  
   
 3.  Click **View**, and then click **Pending Checkins**.  
   
 4.  Check in all the files of your solution.  
   
-    For more information, see [Check In Pending Changes](https://msdn.microsoft.com/library/ms181411(VS.100).aspx).  
+    For more information, see [Check In Pending Changes](/previous-versions/visualstudio/visual-studio-2010/ms181411(v=vs.100)).  
   
     > [!NOTE]  
     > You might have a specific team process that governs how automated tests are created and managed. For example, the process might require that you verify your build locally before you check in that code together with the tests that will be run on it.  
   
-    In **Solution Explorer**, a padlock icon appears next to each file to indicate that it is checked in. For more information, see [View Version Control File and Folder Properties](https://msdn.microsoft.com/library/ms245468(VS.100).aspx).  
+    In **Solution Explorer**, a padlock icon appears next to each file to indicate that it is checked in. For more information, see [View Version Control File and Folder Properties](/previous-versions/visualstudio/visual-studio-2010/ms245468(v=vs.100)).  
   
     Your tests are available to Team Foundation Build. You can now create a build definition that contains the tests that you want to run.  
   
@@ -275,11 +275,10 @@ In this procedure, you check in all the files of your solution. These files incl
   
 3.  Confirm that the values in the **Build definition**, **Build agent**, and **Drop folder for this Build** fields are all appropriate, and then click **Queue**.  
   
-    The **Queued** tab of **Build Explorer** appears. For more information, see [Manage and View Completed Builds (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) or [Manage Your Builds in Build Explorer (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx).  
+    The **Queued** tab of **Build Explorer** appears. For more information, see [Manage and View Completed Builds (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms181730(v=vs.100)) or [Manage Your Builds in Build Explorer (Visual Studio 2012)](/previous-versions/ms181732(v=vs.140)).  
   
 ## See Also  
 [Running SQL Server Unit Tests](../ssdt/running-sql-server-unit-tests.md)  
-[Create a Basic Build Definition](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[Queue a Build](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[Monitor Progress of a Running Build](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
-  
+[Create a Basic Build Definition](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
+[Queue a Build](/previous-versions/visualstudio/visual-studio-2010/ms181722(v=vs.100))  
+[Monitor Progress of a Running Build](/previous-versions/visualstudio/visual-studio-2010/ms181724(v=vs.100))  

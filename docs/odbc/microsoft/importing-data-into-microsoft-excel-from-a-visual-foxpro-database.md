@@ -1,4 +1,5 @@
 ---
+description: "Importing Data into Microsoft Excel from a Visual FoxPro Database"
 title: "Importing Data into Microsoft Excel from a Visual FoxPro Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "Visual FoxPro data [ODBC], importing"
   - "Visual FoxPro ODBC driver [ODBC], Excel"
 ms.assetid: 3085bc4c-00a7-40e5-bffb-c3962cd3d509
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Importing Data into Microsoft Excel from a Visual FoxPro Database
 You can import Visual FoxPro data into your Microsoft Excel worksheet if you have defined a data source for it. For information about creating a Visual FoxPro data source, see [Accessing a Visual FoxPro Data Source from Microsoft Excel](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md).  

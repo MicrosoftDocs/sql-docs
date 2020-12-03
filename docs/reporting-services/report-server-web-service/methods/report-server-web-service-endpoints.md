@@ -1,5 +1,6 @@
 ---
 title: "Report Server Web Service Endpoints | Microsoft Docs"
+description: The Report Server Web service provides three endpoints for managing a report server as well as executing and navigating reports.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,4 +1,5 @@
 ---
+description: "sp_set_database_firewall_rule (Azure SQL Database)"
 title: "sp_set_database_firewall_rule"
 titleSuffix: Azure SQL Database
 ms.date: "08/04/2017"
@@ -23,7 +24,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ms.custom: seo-dt-2019
 ---
 # sp_set_database_firewall_rule (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   Creates or updates the database-level firewall rules for your [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Database firewall rules can be configured for the **master** database, and for user databases on [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Database firewall rules are particularly useful when using contained database users. For more information, see [Contained Database Users - Making Your Database Portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
@@ -81,10 +82,9 @@ EXECUTE sp_set_database_firewall_rule N'Example DB Setting 1', '0.0.0.4', '0.0.0
 ```  
   
 ## See Also  
- [Azure SQL Database Firewall](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [How to: Configure Firewall Settings (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [Azure SQL Database Firewall](/azure/azure-sql/database/firewall-configure)   
+ [How to: Configure Firewall Settings (Azure SQL Database)](/azure/azure-sql/database/firewall-configure)   
  [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [sp_delete_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
  [sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
-  
   

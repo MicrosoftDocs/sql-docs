@@ -1,4 +1,5 @@
 ---
+description: "Set a Session Language"
 title: "Set a Session Language | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -24,7 +25,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set a Session Language
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The session language can be used to set how the following elements are displayed on the server, based on language and cultural preference:  
   
 -   The language that will be used for error and other system messages. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports having multiple copies of all system error strings and messages in all the languages in which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is available. These messages can be viewed in the [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) catalog view. When you install a localized version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], these system messages are translated for the language version that you install. By default, you also obtain the U.S. English set of these messages. Additionally, you can add user-defined messages in a specific language by using [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md).  

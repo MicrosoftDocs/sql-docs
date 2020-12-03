@@ -15,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Microsoft Replication Conflict Viewer (Merge Replication)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The Replication Conflict Viewer allows you to view any conflicts that have occurred during replication synchronization. Conflicts occur when the same data is modified at two separate servers, for example, at a Publisher and Subscriber, or at two different Subscribers. Replication automatically resolves conflicts using the conflict resolver you selected when the article was created. However, the Replication Conflict Viewer allows you to choose a different resolution for the conflict when necessary. The following conflicts can occur:  
   
 -   Update conflicts. Update conflicts occur when the same data is changed at two locations. One change wins, and the other one loses. You have the option to keep the existing data (the data that won), overwrite the existing data with the data that conflicted with it (the losing data), or merge the winning and losing data and update the existing data.  
@@ -27,7 +27,7 @@ ms.author: "mathoma"
  When conflicts are resolved during synchronization, the data from the losing row is written to a conflict table. Whether you accept the original resolution or choose a different resolution for the conflict, the logged conflict row is deleted from the conflict table. You should periodically review conflicts to help reduce the size of the conflict tracking tables.  
   
 > [!NOTE]  
->  Conflicts that involve logical records are not displayed in Conflict Viewer. To view information about these conflicts, use replication stored procedures. For more information, see [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+>  Conflicts that involve logical records are not displayed in Conflict Viewer. To view information about these conflicts, use replication stored procedures. For more information, see [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](./view-and-resolve-data-conflicts-for-merge-publications.md).  
   
 ## Options  
  The Replication Conflict Viewer is divided into two sections. The upper section of the dialog box shows the conflict list for the selected table. When you click an item in the conflict list, the details of the conflict are displayed in the lower section of the dialog box.  
@@ -81,5 +81,4 @@ ms.author: "mathoma"
 ## See Also  
  [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
-  
   

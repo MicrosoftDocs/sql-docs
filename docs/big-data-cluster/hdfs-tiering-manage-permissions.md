@@ -13,11 +13,11 @@ ms.technology: big-data-cluster
 
 # Manage HDFS permissions for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 HDFS as a file system is similar to the Linux based file systems that use POSIX for file permissions. In addition to the traditional POSIX permissions model, HDFS also supports POSIX access control lists (ACL). For more information, see the [Apache Hadoop article about ACLs](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#ACLs_.28Access_Control_Lists.29).
 
-The following sections provide examples of how to use the `azdata` CLI to for managing HDFS file and directory permissions.
+The following sections provide examples of how to use the [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] to for managing HDFS file and directory permissions.
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ The following sections provide examples of how to use the `azdata` CLI to for ma
   
 ## HDFS shell
 
-The `hdfs` shell capability in `azdata` allows you to issue commands directly in a shell to manage HDFS permissions on files and directories. The underlying mechanism uses WebHdfs calls to issue the commands
+The `hdfs` shell capability in [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] allows you to issue commands directly in a shell to manage HDFS permissions on files and directories. The underlying mechanism uses WebHdfs calls to issue the commands
 
 The following command will open the shell.
 
@@ -67,7 +67,7 @@ acl modify: Change completed.
 }
 ```
 
-## Create a directory in HDFS using `azdata`
+## Create a directory in HDFS using [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]
 
 Create a directory called `data` in path `/sales`.
 
@@ -105,7 +105,7 @@ azdata bdc hdfs chmod --path /sales/users --permission 1750
 
 ## Setting ACLs on files and directories
 
-To set ACLs on files and directories in HDFS, use the `azdata` commands.
+To set ACLs on files and directories in HDFS, use the [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] commands.
 
 Setting ACLs on a directory and giving named user *`tom`* read, write and execute access to directory *`data`*. 
 
@@ -128,6 +128,6 @@ azdata bdc hdfs acl set --path '/sale' --aclspec  'user::rw-,user:tom:rwx,group:
 
 ## Next steps
 
-- [`azdata` reference](reference-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] reference](../azdata/reference/reference-azdata.md)
 
 - [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

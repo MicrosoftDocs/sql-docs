@@ -1,4 +1,5 @@
 ---
+description: "cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)"
 title: "cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns one row for each change applied to the source table within the specified log sequence number (LSN) range. If a source row had multiple changes during the interval, each change is represented in the returned result set. In addition to returning the change data, four metadata columns provide the information you need to apply the changes to another data source. Row filtering options govern the content of the metadata columns as well as the rows returned in the result set. When the 'all' row filter option is specified, each change has exactly one row to identify the change. When the 'all update old' option is specified, update operations are represented as two rows: one containing the values of the captured columns before the update and another containing the values of the captured columns after the update.  
   
@@ -47,7 +48,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *to_lsn*  
  The LSN value that represents the high endpoint of the LSN range to include in the result set. *to_lsn* is **binary(10)**.  
   
- Only rows in the [cdc.&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) change table with a value in **__$start_lsn** less than or equal to *from_lsn* or equal to *to_lsn* are included in the result set.  
+ Only rows in the [cdc.&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) change table with a value in **__$start_lsn** greater than or equal to *from_lsn* and less than or equal to *to_lsn* are included in the result set.  
   
  <row_filter_option> ::= { all | all update old }  
  An option that governs the content of the metadata columns as well as the rows returned in the result set.  

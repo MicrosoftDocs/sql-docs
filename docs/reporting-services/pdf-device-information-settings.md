@@ -1,5 +1,6 @@
 ---
 title: "PDF Device Information Settings | Microsoft Docs"
+description: Learn about the device information settings that are available for rendering reports in PDF format.
 ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -24,7 +25,6 @@ ms.author: maggies
 |**ColumnSpacing**|The column spacing to set for the report. This value overrides the report's original settings.|  
 |**DpiX**|The resolution of the output device in x-direction.|  
 |**DpiY**|The resolution of the output device in y-direction.|  
-|**EmbedFonts**|Indicates whether to embed fonts into the PDF file, which is larger in size but report fonts will render correctly for all clients. A value of **None** disables font embedding.|  
 |**EndPage**|The last page of the report to render. The default value is the value for **StartPage**.|  
 |**HumanReadablePDF**|Indicates whether to render an uncompressed PDF file, which is larger in size but more human-readable in a plain-text editor. The default value is **false.**|  
 |**MarginBottom**|The bottom margin value, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, 1in). This value overrides the report's original settings.|  

@@ -1,5 +1,6 @@
 ---
 title: "Database Mirroring (SQL Server) | Microsoft Docs"
+description: Learn about database mirroring, which is a solution for increasing the availability of a SQL Server database and is implemented on a per-database basis.
 ms.custom: ""
 ms.date: "05/16/2016"
 ms.prod: sql
@@ -25,7 +26,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Database Mirroring (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] instead.  

@@ -1,5 +1,6 @@
 ---
-title: "Tracing driver operation | Microsoft Docs"
+title: "Tracing driver operation"
+description: "Learn how to use tracing to log details and resolve issues and problems when using the JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Tracing driver operation
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -17,7 +18,7 @@ ms.author: genemi
   The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports the use of tracing (or logging) to help resolve issues and problems with the JDBC driver when it's used in your application. To enable the use of tracing, the JDBC driver uses the logging APIs in java.util.logging, which provides a set of classes for creating Logger and LogRecord objects.  
   
 > [!NOTE]  
->  For the native component (sqljdbc_xa.dll) that is included with the JDBC driver, tracing is enabled by the Built-In Diagnostics (BID) framework. For information about BID, see [Data Access Tracing in SQL Server](https://go.microsoft.com/fwlink/?LinkId=70042).  
+>  For the native component (sqljdbc_xa.dll) that is included with the JDBC driver, tracing is enabled by the Built-In Diagnostics (BID) framework. For information about BID, see [Data Access Tracing in SQL Server](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)).  
   
  When you develop your application, you can make calls to Logger objects, which in turn create LogRecord objects, which are then passed to Handler objects for processing. Logger and Handler objects both use logging levels, and optionally logging filters, to regulate which LogRecords are processed. When the logging operations are complete, the Handler objects can optionally use Formatter objects to publish the log information.  
   
@@ -83,7 +84,7 @@ ms.author: genemi
 |XA|Logs messages for all XA transactions in the [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) class. The applications can set the logging level as FINE and FINER.|  
 |KerbAuthentication|Logs messages regarding type 4 Kerberos authentication (when the **authenticationScheme** connection property is set to **JavaKerberos**). The application can set the logging level as FINE or FINER.|  
 |TDS.DATA|Logs messages containing the TDS protocol-level conversation between the driver and SQL Server. The detailed contents of each TDS packet sent and received are logged in ASCII and hexadecimal. The login credentials (user names and passwords) aren't logged. All other data is logged.<br /><br /> This category creates very verbose and detailed messages, and can only be enabled by setting the logging level to FINEST.|  
-|TDS.Channel|This category traces actions of the TCP communications channel with SQL Server. The logged messages include socket opening and closing as well as reads and writes. It also traces messages related to establishing a Secure Sockets Layer (SSL) connection with SQL Server.<br /><br /> This category can only be enabled by setting the logging level to FINE, FINER, or FINEST.|  
+|TDS.Channel|This category traces actions of the TCP communications channel with SQL Server. The logged messages include socket opening and closing as well as reads and writes. It also traces messages related to establishing a Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), connection with SQL Server.<br /><br /> This category can only be enabled by setting the logging level to FINE, FINER, or FINEST.|  
 |TDS.Writer|This category traces writes to the TDS channel. Note that only the length of the writes is traced, not the contents. This category also traces issues when an attention signal is sent to the server to cancel a statement's execution.<br /><br /> This category can only be enabled by setting the logging level to FINEST.|  
 |TDS.Reader|This category traces certain read operations from the TDS channel at the FINEST level. At the FINEST level, tracing can be verbose. At WARNING and SEVERE levels, this category traces when the driver receives an invalid TDS protocol from SQL Server before the driver closes the connection.<br /><br /> This category can only be enabled by setting the logging level to FINER and FINEST.|  
 |TDS.Command|This category traces low-level state transitions and other information associated with executing TDS commands, such as [!INCLUDE[tsql](../../includes/tsql-md.md)] statement executions, ResultSet cursor fetches, commits, and so on.<br /><br /> This category can only be enabled by setting the logging level to FINEST.|  
@@ -154,5 +155,4 @@ com.microsoft.sqlserver.jdbc.level=FINEST
   
 ## See also  
  [Diagnosing problems with the JDBC driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
   

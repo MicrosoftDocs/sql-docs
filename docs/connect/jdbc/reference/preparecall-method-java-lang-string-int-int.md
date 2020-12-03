@@ -1,4 +1,5 @@
 ---
+description: "prepareCall Method (java.lang.String, int, int)"
 title: "prepareCall Method (java.lang.String, int, int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 04d36a25-7f95-4675-9690-4462671b3d67
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # prepareCall Method (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

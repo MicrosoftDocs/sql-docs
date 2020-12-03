@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_xtp_table_memory_stats (Transact-SQL)"
 title: "sys.dm_db_xtp_table_memory_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2016"
@@ -18,12 +19,12 @@ helpviewer_keywords:
   - "sys.dm_db_xtp_table_memory_stats"
   - "dm_db_xtp_table_memory_stats"
 ms.assetid: ad0efc06-3d9c-4861-9dfa-a7a87822d0c8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_table_memory_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns memory usage statistics for each [!INCLUDE[hek_2](../../includes/hek-2-md.md)] table (user and system) in the current database. The system tables have negative object IDs and are used to store run-time information for the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine. Unlike user objects, system tables are internal and only exist in-memory, therefore, they are not visible through catalog views. System tables are used to store information such as meta-data for all data/delta files in storage, merge requests, watermarks for delta files to filter rows, dropped tables, and relevant information for recovery and backups. Given that the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] engine can have up to 8,192 data and delta file pairs, for large in-memory databases, the memory taken by system tables can be a few megabytes.  
   

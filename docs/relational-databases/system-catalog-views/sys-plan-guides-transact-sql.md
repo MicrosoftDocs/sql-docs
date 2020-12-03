@@ -1,4 +1,5 @@
 ---
+description: "sys.plan_guides (Transact-SQL)"
 title: "sys.plan_guides (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.plan_guides catalog view"
 ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.plan_guides (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Contains a row for each plan guide in the database.  
   

@@ -1,4 +1,5 @@
 ---
+description: "valueOf Method (DateTimeOffset)"
 title: "valueOf Method (DateTimeOffset) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 38692b3e-ca7f-4e26-8787-1a34bb13c996
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # valueOf Method (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Installing and Configuring the ODBC Software"
 title: "Installing and Configuring the ODBC Software | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "ODBC [ODBC], configuring"
   - "installing ODBC [ODBC]"
 ms.assetid: e2580f7d-d614-4e14-a9a3-804e8061b00e
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Installing and Configuring the ODBC Software
 > [!NOTE]  

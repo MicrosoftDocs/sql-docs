@@ -1,4 +1,5 @@
 ---
+description: "sp_enclave_send_keys (Transact-SQL)"
 title: "sp_enclave_send_keys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/19/2019
@@ -21,7 +22,7 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # sp_enclave_send_keys (Transact-SQL)
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Sends columns encryption keys, defined in the database, to the server-side secure enclave used with [Always Encrypted with secure enclaves](../security/encryption/always-encrypted-enclaves.md).
 

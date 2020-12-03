@@ -1,4 +1,5 @@
 ---
+description: "Returning Results from the Script Task"
 title: "Returning Results from the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -21,7 +22,7 @@ ms.author: chugu
 ---
 # Returning Results from the Script Task
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Script task uses the <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A> and the optional <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A> properties to return status information to the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] runtime that can be used to determine the path of the workflow after the Script task has finished.  

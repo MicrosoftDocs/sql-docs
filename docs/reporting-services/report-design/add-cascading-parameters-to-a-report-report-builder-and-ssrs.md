@@ -1,5 +1,6 @@
 ---
-title: "Add Cascading Parameters to a Report (Report Builder and SSRS) | Microsoft Docs"
+title: "Add Cascading Parameters to a Report (Report Builder) | Microsoft Docs"
+description: Find out how to use cascading parameters in your reports in Report Builder to manage large amounts of report data. 
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -115,7 +116,7 @@ ms.author: maggies
   
  Next, you will set the properties of the second parameter to use this dataset to populate its available values at run time.  
   
-## To set available values for a report parameter  
+## To set available values for the second parameter  
   
 1.  In the Report Data pane, in the Parameters folder, right-click the first parameter, and then click **Parameter Properties**.  
   

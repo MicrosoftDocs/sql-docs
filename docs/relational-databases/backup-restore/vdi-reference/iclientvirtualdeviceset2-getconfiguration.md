@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
 ms.topic: reference
-author: mashamsft
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 
 # IClientVirtualDeviceSet2::GetConfiguration (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 The **GetConfiguration** function is used to wait for the server to configure the virtual device set.
 

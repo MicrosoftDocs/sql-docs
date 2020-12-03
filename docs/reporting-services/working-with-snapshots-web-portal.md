@@ -1,5 +1,6 @@
 ---
 title: "Working with snapshots (web portal) | Microsoft Docs"
+description: Create a cache snapshot to allow for faster loading of specific execution properties. You can also work with history snapshots to capture points in time.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -26,7 +27,7 @@ You can create a cache snapshot, to allow for faster loading of specific executi
   
 You can create a snapshot by doing the following.  
   
-![ssRSWebPortal-report-caching4](../reporting-services/media/ssrswebportal-report-caching4.png)  
+![Screenshot showing the Caching screen of the Edit Company Sales dialog box with three magenta circles with the numbers 1, 2, and 3 in them designating the three steps below the screenshot.](../reporting-services/media/ssrswebportal-report-caching4.png)  
   
 1.  On the **Caching** page, select **Always run this report against pregenerated snapshots** to enable the options for creating a snapshot.  
   
@@ -44,7 +45,7 @@ Report history is always viewed within the context of the report from which it o
   
 To generate a history snapshot, the report must be able to run unattended (that is, it must use stored credentials; parameterized reports must contain default parameter values for all parameters). Report history can be generated manually or as a scheduled operation. History properties on the report determine the ways in which report history can be created.  
   
-![ssRSWebPortal-historysnapshots1](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
+![Screenshot showing the History Snapshots screen of the Edit Company Sales dialog box with three magenta circles with the numbers 1, 2, and 3 in them designating the three steps below the screenshot.](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
    
 1.  To create a history snapshot, select **+ New History Snapshot**. This will process the report and add an entry to the list.  
   
@@ -56,7 +57,7 @@ To generate a history snapshot, the report must be able to run unattended (that 
   
 Selecting **Schedule and Settings** will provide additional options to schedule and control retention of created snapshots.  
   
-![ssRSWebPortal-historysnapshots2](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
+![Screenshot showing the Schedule and Advanced sections.](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
    
 You can optionally create a schedule for the snapshots to get created. You can also prevent other people from creating new snapshots. Unchecking **Allow people to create snapshots manually** will disable the **+ New Snapshot History button**.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Comparing native and SharePoint Reporting Services report servers | Microsoft Docs"
+description: Learn about the central piece of a SQL Server Reporting Services installation, which consists of a processing engine and extensions to add functionality.
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -36,7 +37,7 @@ A Reporting Services report server runs in one of two deployment modes; Native m
   
  A Reporting Services report server supports two modes of deployment for report server instances:  
   
--   **Native mode**: including native mode with SharePoint web parts, where a report server runs as an application server that provides all processing and management capability exclusively through Reporting Services components. You configure a native mode report server with Reporting Services configuration manager and SQL Server Management Studio.  
+-   **Native mode**: including native mode with SharePoint web parts, where a report server runs as an application server that provides all processing and management capability exclusively through Reporting Services components. You configure a native mode report server with Report Server Configuration Manager and SQL Server Management Studio.  
   
 -   **SharePoint mode**: where a report server is installed as part of a SharePoint server farm.  Deploy and configure SharePoint mode by using PowerShell commands or SharePoint content management pages.  
   
@@ -133,8 +134,8 @@ A Reporting Services report server runs in one of two deployment modes; Native m
   
 |Task|Link|  
 |----------|----------|  
-|Review Hardware and software requirements.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99).|  
-|Install Reporting Services in SharePoint mode.|[Install Reporting Services SharePoint Mode for SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
+|Review Hardware and software requirements.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](/previous-versions/sql/sql-server-2016/jj714188(v=sql.130)).|  
+|Install Reporting Services in SharePoint mode.|[Install Reporting Services SharePoint Mode for SharePoint 2010](../install-windows/install-the-first-report-server-in-sharepoint-mode.md)|  
 |Explains how to tune the memory settings for the Report Server Web service and Windows service.|[Configure Available Memory for Report Server Applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |Explains recommended steps to configure are report server for remote administration.|[Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |Provides instructions for configuring the availability of **My Reports** on a Native report server instance.|[Enable and Disable My Reports](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  

@@ -1,8 +1,9 @@
 ---
+description: "Adding Records Using AddNew Method"
 title: "Adding Records Using AddNew | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "ADO, adding data"
   - "editing data [ADO], AddNew method"
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Adding Records Using AddNew Method
 This is the basic syntax of the **AddNew** method:

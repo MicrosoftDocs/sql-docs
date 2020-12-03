@@ -1,4 +1,5 @@
 ---
+description: "Using result set metadata"
 title: "Using result set metadata | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5e37529a-30db-48c8-b90a-ae9657d0f6b0
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Using result set metadata

@@ -1,4 +1,5 @@
 ---
+description: "SQLFreeEnv Function"
 title: "SQLFreeEnv Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLFreeEnv function [ODBC]"
 ms.assetid: 32000150-e120-445e-b269-43200f813b2a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLFreeEnv Function
 **Conformance**  

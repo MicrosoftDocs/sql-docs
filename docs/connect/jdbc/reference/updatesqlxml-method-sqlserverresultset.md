@@ -1,4 +1,5 @@
 ---
+description: "updateSQLXML Method (SQLServerResultSet)"
 title: "updateSQLXML Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: abe8ff37-72e5-4ec1-a226-6b68dbf2c1b4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # updateSQLXML Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

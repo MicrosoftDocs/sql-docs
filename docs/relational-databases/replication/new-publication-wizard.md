@@ -1,4 +1,5 @@
 ---
+description: "New Publication Wizard"
 title: "New Publication Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -42,7 +43,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # New Publication Wizard
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This section provides information on the following pages of the New Publication Wizard:  
   
 -   [Oracle Publisher](../../relational-databases/replication/oracle-publisher.md)  

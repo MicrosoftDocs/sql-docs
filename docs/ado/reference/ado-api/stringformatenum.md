@@ -1,8 +1,9 @@
 ---
+description: "StringFormatEnum"
 title: "StringFormatEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,15 +14,15 @@ f1_keywords:
 helpviewer_keywords: 
   - "StringFormatEnum enumeration [ADO]"
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # StringFormatEnum
-Specifies the format when retrieving a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) as a string.  
+Specifies the format when retrieving a [Recordset](./recordset-object-ado.md) as a string.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
-|**adClipString**|2|Delimits rows by *RowDelimiter*, columns by *ColumnDelimiter*, and null values by *NullExpr*. These three parameters of the [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) method are valid only with a *StringFormat* of **adClipString**.|  
+|**adClipString**|2|Delimits rows by *RowDelimiter*, columns by *ColumnDelimiter*, and null values by *NullExpr*. These three parameters of the [GetString](./getstring-method-ado.md) method are valid only with a *StringFormat* of **adClipString**.|  
   
 ## ADO/WFC Equivalent  
  Package: **com.ms.wfc.data**  
@@ -31,4 +32,4 @@ Specifies the format when retrieving a [Recordset](../../../ado/reference/ado-ap
 |AdoEnums.StringFormat.CLIPSTRING|  
   
 ## Applies To  
- [GetString Method (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)
+ [GetString Method (ADO)](./getstring-method-ado.md)

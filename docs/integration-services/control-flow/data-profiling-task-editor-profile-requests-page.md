@@ -1,4 +1,5 @@
 ---
+description: "Data Profiling Task Editor (Profile Requests Page)"
 title: "Data Profiling Task Editor (Profile Requests Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -17,7 +18,7 @@ ms.author: chugu
 ---
 # Data Profiling Task Editor (Profile Requests Page)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Profile Requests Page** of the **Data Profiling Task Editor** to select and configure the profiles that you want to compute. In a single Data Profiling task, you can compute multiple profiles for multiple columns or combinations of columns in multiple tables or views.  

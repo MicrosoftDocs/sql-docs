@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_xtp_transaction_stats (Transact-SQL)"
 title: "sys.dm_xtp_transaction_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_xtp_transaction_stats dynamic management view"
 ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_xtp_transaction_stats (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Reports statistics about transactions that have run since the server started.  
   

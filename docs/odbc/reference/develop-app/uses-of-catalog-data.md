@@ -1,4 +1,5 @@
 ---
+description: "Uses of Catalog Data"
 title: "Uses of Catalog Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "functions [ODBC], catalog functions"
   - "catalog functions [ODBC], using catalog data"
 ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Uses of Catalog Data
 Applications use catalog data in a variety of ways. Here are some common uses:  

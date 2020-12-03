@@ -1,6 +1,6 @@
 ---
 title: "Updating an Application from SQL Server 2005 Native Client | Microsoft Docs"
-description: "Updating an application from SQL Server 2005 Native Client"
+description: Learn about the breaking changes in OLE DB Driver for SQL Server since SQL Server Native Client in SQL Server 2005 (9.x).
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
@@ -10,11 +10,11 @@ ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "OLE DB Driver for SQL Server, updating applications"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
-# Updating an Application from SQL Server 2005 Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Updating Applications from SQL Server 2005 Native Client
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

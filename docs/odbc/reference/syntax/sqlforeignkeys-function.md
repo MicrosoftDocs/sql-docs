@@ -1,4 +1,5 @@
 ---
+description: "SQLForeignKeys Function"
 title: "SQLForeignKeys Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLForeignKeys function [ODBC]"
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLForeignKeys Function
 **Conformance**  

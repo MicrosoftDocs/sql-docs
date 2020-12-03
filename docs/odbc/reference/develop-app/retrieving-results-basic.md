@@ -1,4 +1,5 @@
 ---
+description: "Retrieving Results (Basic)"
 title: "Retrieving Results (Basic) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "data sources [ODBC], result sets"
   - "empty result sets [ODBC]"
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Retrieving Results (Basic)
 A *result set* is a set of rows on the data source that matches certain criteria. It is a conceptual table that results from a query and that is available to an application in tabular form. **SELECT** statements, catalog functions, and some procedures create result sets. In the following example, the first SQL statement creates a result set containing all the rows and all the columns in the Orders table, and the second SQL statement creates a result set containing OrderID, SalesPerson, and Status columns for the rows in the Orders table in which the Status is OPEN:  

@@ -1,6 +1,6 @@
 ---
 title: Develop and Deploy SQL Server databases for Linux  | Microsoft Docs
-description: 
+description: SQL Server Data Tools with Visual Studio is a powerful development and database lifecycle management environment for SQL Server on Linux.
 author: VanMSFT 
 ms.author: vanto
 ms.date: 03/17/2017
@@ -12,7 +12,7 @@ ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 
 # Use Visual Studio to create databases for SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and database lifecycle management (DLM) environment for SQL Server on Linux. You can develop, build, test, and publish your database from a source-controlled project. Like you develop your application code.
 
@@ -42,13 +42,13 @@ SQL Server on Linux is supported by SSDT version 17.0 RC or later.
 
 3. Click **New** in **Local Git Repository** section on the **Connect** page.
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="Screenshot of the Local Git Repository section with the New option called out." style="width: 300px;"/>
 
 4. Click **Create**. After the local Git repository is created, double-click **SSDTRepo**.
 
 5. Click **New** in the **Solutions** section. Select **SQL Server** under **Other Languages** node in the **New Project** dialog.
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="Screenshot of the Solutions section with the New option and SQL Server option called out." style="width: 480px;"/>
 
 6. Type in **TutorialDB** for the name and click **OK** to create a new database project.
 
@@ -64,7 +64,7 @@ SQL Server on Linux is supported by SSDT version 17.0 RC or later.
 
 4. Using table designer, add two columns, Name `nvarchar(50)` and Location `nvarchar(50)`, as shown in the picture. SSDT generates the `CREATE TABLE` script as you add the columns in the designer.
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="add columns" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="Screenshot of the table designer with the Name and Location values called out." style="width: 480px;"/>
 
 5. Save the **Table1.sql** file.
 
@@ -72,7 +72,7 @@ SQL Server on Linux is supported by SSDT version 17.0 RC or later.
 
 1. Open the database project menu on **TutorialDB** and select **Build**. SSDT compiles .sql source code files in your project and builds a Data-tier Application package (dacpac) file. This can be used to publish a database to your SQL Server instance on Linux. 
 
-   <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="Screenshot showing the TutorialDB with the Build option called out." style="width: 400px;"/>
 
 2. Check the build success message in **Output** window in Visual Studio. 
 
@@ -105,7 +105,7 @@ If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements](../t-sql
 For more information about developing a database with SQL Data Tools, see the below articles.
 
 * [Download and Install Visual Studio](https://www.visualstudio.com/downloads/)
-* [Download and Install SSDT](https://aka.ms/ssdt-download)
-* [SSDT MSDN documents](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)
-* [Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx)
-* [Transact-SQL Reference (Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx)
+* [Download and Install SSDT](../ssdt/download-sql-server-data-tools-ssdt.md)
+* [SSDT MSDN documents](/previous-versions/sql/sql-server-data-tools/hh272686(v=vs.103))
+* [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)
+* [Transact-SQL Reference (Database Engine)](../t-sql/language-reference.md)

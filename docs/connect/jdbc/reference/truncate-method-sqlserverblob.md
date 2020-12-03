@@ -1,4 +1,5 @@
 ---
+description: "truncate Method (SQLServerBlob)"
 title: "truncate Method (SQLServerBlob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: ef181e04-003a-442a-9b7e-0c508a7cc873
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # truncate Method (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

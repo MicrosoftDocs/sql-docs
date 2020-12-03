@@ -1,4 +1,5 @@
 ---
+description: "Understand SQL Server Management Studio Windows Management"
 title: "Understand SQL Server Management Studio Windows Management"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -17,7 +18,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Understand SQL Server Management Studio Windows Management
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The tool windows in [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] are a highly functional, flexible, and efficient system that allows you to:  
   
 -   Maximize the user workspace for development and management.  
@@ -39,6 +40,5 @@ Some components can be configured in either tabbed mode where components appear 
 > When a login (or a contained database user) connects and is authenticated, the connection caches identity information about the login. For a Windows Authentication login, this includes information about membership in Windows groups. The identity of the login remains authenticated as long as the connection is maintained. To force changes in the identity, such as a password reset or change in Windows group membership, the login must logoff from the authentication authority (Windows or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), and log in again. A member of the **sysadmin** fixed server role or any login with the **ALTER ANY CONNECTION** permission can use the **KILL** command to end a connection and force a login to reconnect. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] can reuse connection information when opening multiple connections to Object Explorer and Query Editor windows. Close all connections to force reconnection.  
   
 ## See Also  
-[Use SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
+[Use SQL Server Management Studio](./sql-server-management-studio-ssms.md)  
 [The SQL Server Management Studio Environment](../ssms/the-sql-server-management-studio-environment.md)  
-  

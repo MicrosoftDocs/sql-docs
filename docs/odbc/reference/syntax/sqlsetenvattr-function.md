@@ -1,4 +1,5 @@
 ---
+description: "SQLSetEnvAttr Function"
 title: "SQLSetEnvAttr Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"
@@ -18,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetEnvAttr function [ODBC]"
 ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetEnvAttr Function
 **Conformance**  

@@ -1,4 +1,5 @@
 ---
+description: "Instr (MDX)"
 title: "Instr (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -89,9 +90,8 @@ from [Adventure Works]
   
  The following table displays the obtained results.  
   
-|||  
+|Field in measures|Results|  
 |-|-|  
-||Results|  
 |lowercase found in lowercase string|16|  
 |uppercase found in lowercase string|16|  
 |searched string is empty|0|  

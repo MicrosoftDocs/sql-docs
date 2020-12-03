@@ -1,5 +1,6 @@
 ---
 title: "sys.remote_data_archive_tables (Transact-SQL) | Microsoft Docs"
+description: Learn how sys.remote_data_archive_tables contains one row for each remote table that stores data from a Stretch-enabled local table.
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
@@ -20,7 +21,7 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ---
 # Stretch Database Catalog Views - sys.remote_data_archive_tables
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Contains one row for each remote table that stores data from a Stretch-enabled local table.  
   

@@ -5,13 +5,12 @@ ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.date: 09/17/2017    
 ms.prod: sql
-ms.technology: 
-ms.prod_service: "database-engine"
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
 ---
 # SQL Server development partners
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 For support developing SQL Server database solutions, choose from a wide variety of industry-leading tools.  This article highlights Microsoft partner companies with development solutions for Microsoft SQL Server.
 
 ## Our development partners

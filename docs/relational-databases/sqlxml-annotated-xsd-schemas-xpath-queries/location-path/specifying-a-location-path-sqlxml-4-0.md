@@ -1,5 +1,6 @@
 ---
 title: "Specifying a Location Path (SQLXML)"
+description: Learn how to specify a location path in an SQLXML 4.0 XPath query to select a set of nodes relative to the context node and generate a node-set.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -19,7 +20,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying a Location Path (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   XPath queries are specified in the form of an expression. There are various kinds of expressions. A location path is an expression that selects a set of nodes relative to the context node. The result of evaluating a location path is a node-set.  
   
 ## Types of Location Paths  

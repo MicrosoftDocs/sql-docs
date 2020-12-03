@@ -1,4 +1,5 @@
 ---
+description: "INDEXPROPERTY (Transact-SQL)"
 title: "INDEXPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/26/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
   - "indexes [SQL Server], viewing"
   - "indexes [SQL Server], properties"
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # INDEXPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the named index or statistics property value of a specified table identification number, index or statistics name, and property name. Returns NULL for XML indexes.  
   
@@ -30,11 +31,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 INDEXPROPERTY ( object_ID , index_or_statistics_name , property )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *object_ID*  
  Is an expression that contains the object identification number of the table or indexed view for which to provide index property information. *object_ID* is **int**.  
   
@@ -76,7 +79,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 ## Examples  
  The following example returns the values for the **IsClustered**, **IndexDepth**, and **IndexFillFactor** properties for the `PK_Employee_BusinessEntityID` index of the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT   
     INDEXPROPERTY(OBJECT_ID('HumanResources.Employee'),  
         'PK_Employee_BusinessEntityID','IsClustered')AS [Is Clustered],  
@@ -100,7 +103,7 @@ Is Clustered Index Depth Fill Factor
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example examines the properties of one of the indexes on the `FactResellerSales` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT   

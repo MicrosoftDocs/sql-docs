@@ -1,4 +1,5 @@
 ---
+description: "Revert a Database to a Database Snapshot"
 title: "Revert a Database to a Database Snapshot | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
@@ -15,7 +16,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Revert a Database to a Database Snapshot
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   If data in an online database becomes damaged, in some cases, reverting the database to a database snapshot that predates the damage might be an appropriate alternative to restoring the database from a backup. For example, reverting a database might be useful for reverse a recent serious user error, such as a dropped table. However, all changes made after the snapshot was created are lost.  
   
 -   **Before you begin:**  
@@ -135,7 +136,7 @@ GO
   
  For the code for creating the sample database and snapshots on which this example depends, see:  
   
--   For the **Sales** database and the **sales_snapshot0600** snapshot, see "Creating a database with filegroups" and "Creating a database snapshot" in [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+-   For the **Sales** database and the **sales_snapshot0600** snapshot, see "Creating a database with filegroups" and "Creating a database snapshot" in [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
 -   For the **sales_snapshot1200** snapshot, see "Creating a snapshot on the Sales database" in [Create a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
@@ -165,5 +166,4 @@ GO
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Database Mirroring and Database Snapshots &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
-  
   

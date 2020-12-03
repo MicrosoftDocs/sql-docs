@@ -1,4 +1,5 @@
 ---
+description: "sys.xml_schema_component_placements (Transact-SQL)"
 title: "sys.xml_schema_component_placements (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -21,7 +22,7 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ---
 # sys.xml_schema_component_placements (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row per placement for XML schema components.  
    

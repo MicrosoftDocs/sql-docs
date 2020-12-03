@@ -1,4 +1,5 @@
 ---
+description: "Reinitialize Subscription(s) - All Subscriptions"
 title: "Reinitialize Subscription(s) - All Subscriptions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -14,10 +15,10 @@ helpviewer_keywords:
 ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Reinitialize Subscription(s) - All Subscriptions
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **Reinitialize Subscription(s)** dialog box allows you to mark all subscriptions to a publication for reinitialization. Reinitialization involves applying a snapshot to each Subscriber; it is performed by the Distribution Agent for subscriptions to transactional publications and by the Merge Agent for subscriptions to merge publications.  
   
 ## Options  

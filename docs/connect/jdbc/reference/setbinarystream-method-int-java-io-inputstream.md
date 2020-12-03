@@ -1,4 +1,5 @@
 ---
+description: "setBinaryStream Method (int, java.io.InputStream)"
 title: "setBinaryStream Method (int, java.io.InputStream) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6c32b904-c44b-472e-a084-38f008a742b4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setBinaryStream Method (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,6 @@
 ---
 title: "Namespace Support in PATH Mode | Microsoft Docs"
+description: Learn about namespace support when using PATH mode to generate XML from a SELECT query.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Namespace Support in PATH Mode
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Namespace support in the PATH mode is provided by using WITH NAMESPACES. For example, the following query demonstrates the WITH NAMESPACES syntax to declare a namespace ("a:") that can then be used in the subsequent SELECT statement:  
   
 ```  

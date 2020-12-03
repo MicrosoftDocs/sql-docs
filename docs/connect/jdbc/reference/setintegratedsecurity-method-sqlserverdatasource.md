@@ -1,4 +1,5 @@
 ---
+description: "setIntegratedSecurity Method (SQLServerDataSource)"
 title: "setIntegratedSecurity Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 4c968ee4-b041-424a-bf69-cc2c4a4f51c6
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setIntegratedSecurity Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

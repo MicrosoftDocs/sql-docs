@@ -1,4 +1,5 @@
 ---
+description: "Create a Data Quality Project"
 title: "Create a Data Quality Project"
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ ms.author: sawinark
 ---
 # Create a Data Quality Project
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to create a data quality project by using [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. A data quality project is used to run the cleansing or matching activity in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   

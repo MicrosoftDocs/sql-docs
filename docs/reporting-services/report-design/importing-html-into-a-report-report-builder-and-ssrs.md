@@ -1,5 +1,5 @@
 ---
-title: "Importing HTML into a Report (Report Builder and SSRS) | Microsoft Docs"
+title: "Importing HTML into a Report (Report Builder) | Microsoft Docs"
 ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

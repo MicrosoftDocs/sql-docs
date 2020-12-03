@@ -1,4 +1,5 @@
 ---
+description: "Using Member Expressions"
 title: "Using Member Expressions | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -53,9 +54,8 @@ Dimension_Name
  Many MDX functions exist that return members. For a full list, see [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  For more information about member names and member keys, see [Working with Members, Tuples, and Sets &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
+>  For more information about member names and member keys, see [Working with Members, Tuples, and Sets &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## See Also  
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
-  
   

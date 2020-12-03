@@ -1,4 +1,5 @@
 ---
+description: "getResultSetHoldability Method (SQLServerStatement)"
 title: "getResultSetHoldability Method (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 053549ee-2018-47ab-9538-789dac2b150a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getResultSetHoldability Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

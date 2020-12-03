@@ -1,5 +1,6 @@
 ---
 title: "Create, Alter, and Drop FileTables | Microsoft Docs"
+description: In SQL Server, the FileTables feature uses a directory structure to store files. Learn how to create a new FileTable or alter or drop an existing FileTable.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Create, Alter, and Drop FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes how to create a new FileTable, or alter or drop an existing FileTable.  
   
 ##  <a name="BasicsCreate"></a> Creating a FileTable  
@@ -153,9 +154,8 @@ GO
  **Indexes that are created when you create a new FileTable**  
  When you create a new FileTable, the following system-defined indexes are also created:  
   
-|||  
+|Columns|Index type|  
 |-|-|  
-|**Columns**|**Index type**|  
 |[path_locator] ASC|Primary Key, nonclustered|  
 |[parent_path_locator] ASC,<br /><br /> [name] ASC|Unique, nonclustered|  
 |[stream_id] ASC|Unique, nonclustered|  
@@ -169,7 +169,7 @@ GO
 |Check constraints|The system-defined check constraints enforce the following requirements:<br /><br /> Valid filenames.<br /><br /> Valid file attributes.<br /><br /> Parent object must be a directory.<br /><br /> Namespace hierarchy is locked during file manipulation.|  
   
  **Naming convention for the system-defined constraints**  
- The system-defined constaints described above are named in the format **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** where:  
+ The system-defined constraints described above are named in the format **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** where:  
   
 -   *<constraint_type>* is CK (check constraint), DF (default constraint), FK (foreign key), PK (primary key), or UQ (unique constraint).  
   

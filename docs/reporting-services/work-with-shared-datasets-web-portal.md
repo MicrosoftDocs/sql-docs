@@ -1,5 +1,6 @@
 ---
 title: "Working with shared datasets (web portal) | Microsoft Docs"
+description: View and manage the properties of a shared dataset within the web portal. Use the web portal to create or edit shared datasets in the Report Builder.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -26,7 +27,7 @@ To create a new shared dataset, you can do the following.
   
 2.  Select **Dataset**.  
   
-    ![ssRSDataset-NewDataset](../reporting-services/media/ssrsdataset-newdataset.png)  
+    ![Screenshot showing the New dropdown list with the Dataset option called out.](../reporting-services/media/ssrsdataset-newdataset.png)  
   
 3.  This will either launch Report Builder, or prompt you to download it.  
   
@@ -45,17 +46,17 @@ To manage an existing shared dataset, you can do the following.
   
 1.  Select the **ellipsis (...)** for the dataset you want to manage.  
   
-    ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
+    ![Screenshot showing the user selecting the ellipsis option for the dataset.](../reporting-services/media/ssrsdataset-ellipse.png)  
   
 2.  Select **Manage** which will take you to the edit screen.  
   
-    ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
+    ![Screenshot showing the ellipsis option selected and the MANAGE option called out.](../reporting-services/media/ssrsdataset-manage.png)  
   
 ## Properties
   
 On the properties screen, you can change the **name** and **description** for the dataset. You can also **Delete**, **Move**, **Edit in Report Builder**, **Download** or **Replace**.  
   
-![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
+![Screenshot showing the Properties screen of the Edit Company Sales dialog box.](../reporting-services/media/ssrsdataset-properties.png)  
   
 ## Caching
   
@@ -65,17 +66,17 @@ You have options when it comes to caching data for a dataset. You will start off
   
 2.  **Cache copies of this report and use them when available** will place a temporary copy of the data in a cache for use with items that use this dataset. Caching usually improves performance because the data is returned from the cache instead of running the dataset query again.  
   
-![ssRSDataset-Caching1](../reporting-services/media/ssrsdataset-caching1.png)  
+![Screenshot showing the Caching screen of the Edit Company Sales dialog box with the Always run this report with the most recent data option selected.](../reporting-services/media/ssrsdataset-caching1.png)  
   
 Selecting **Cache Copies of this report and use them when available** will present you with some more options.  
   
-![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
+![Screenshot showing the Caching screen of the Edit Company Sales dialog box with the Cache copies of this report and use them when available option selected.](../reporting-services/media/ssrsdataset-caching2.png)  
   
 ### Cache Expiration  
   
 You can control whether you want to expire the cache, for the shared dataset, after a certain amount of time, or if you would prefer to do that on a schedule. You can use a shared schedule.  
   
-![ssRSDataset-Caching3](../reporting-services/media/ssrsdataset-caching3.png)  
+![Screenshot showing the Cache expires on a schedule option selected.](../reporting-services/media/ssrsdataset-caching3.png)  
   
 > [!NOTE]
 > Setting an expiration does not refresh the cache. Without a cache refresh plan, the data will be refreshed on the next execution of the dataset.  
@@ -92,7 +93,7 @@ To create a new cache refresh plan, select **New Cache Refresh Plan**. You can t
   
 Once you are done, you can select **Create Cache Refresh Plan**.  
   
-![ssRSDataset-Caching4](../reporting-services/media/ssrsdataset-caching4.png)  
+![Screenshot of the Edit Company Sales dialog box showing the Create Cache Refresh Plan option.](../reporting-services/media/ssrsdataset-caching4.png)  
   
 > [!NOTE]
 > SQL Server Agent needs to be running to create a cache refresh plan.  

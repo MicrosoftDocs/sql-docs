@@ -1,6 +1,6 @@
 ---
 title: "Pagination in reports (Report Builder  and SSRS) | Microsoft Docs"
-description: Pagination refers to the number of pages within a paginated report and how report items are arranged on these pages. Pagination in Reporting Services depends on the rendering extension you use to view and deliver the report.
+description: Learn about the number of pages within a paginated report and how report items are arranged on these pages in Report Builder.
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

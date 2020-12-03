@@ -1,7 +1,8 @@
 ---
+description: "CREATE INDEX (Transact-SQL)"
 title: "CREATE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 11/12/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -52,12 +53,12 @@ helpviewer_keywords:
   - "XML indexes [SQL Server], creating"
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
-ms.author: carlrab
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE INDEX (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Creates a relational index on a table or view. Also called a rowstore index because it is either a clustered or nonclustered B-tree index. You can create a rowstore index before there is data in the table. Use a rowstore index to improve query performance, especially when the queries select from specific columns or require values to be sorted in a particular order.
 
@@ -97,7 +98,7 @@ For additional types of indexes, see:
 
 ### Syntax for SQL Server and Azure SQL Database
 
-```
+```syntaxsql
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
     ON <object> ( column [ ASC | DESC ] [ ,...n ] )
     [ INCLUDE ( column_name [ ,...n ] ) ]
@@ -125,13 +126,13 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | STATISTICS_INCREMENTAL = { ON | OFF }
   | DROP_EXISTING = { ON | OFF }
   | ONLINE = { ON | OFF }
-  | RESUMABLE = {ON | OF }
+  | RESUMABLE = { ON | OFF }
   | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }
   | ALLOW_PAGE_LOCKS = { ON | OFF }
-  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
   | MAXDOP = max_degree_of_parallelism
-  | DATA_COMPRESSION = { NONE | ROW | PAGE}
+  | DATA_COMPRESSION = { NONE | ROW | PAGE }
      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
      [ , ...n ] ) ]
 }
@@ -162,7 +163,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 > Avoid using this syntax structure in new development work, and plan to modify applications that currently use the feature.
 > Use the syntax structure specified in <relational_index_option> instead.
 
-```
+```syntaxsql
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
     ON <object> ( column_name [ ASC | DESC ] [ ,...n ] )
     [ WITH <backward_compatible_index_option> [ ,...n ] ]
@@ -185,11 +186,11 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 }
 ```
 
-### Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+### Syntax for Azure Synapse Analytics and Parallel Data Warehouse
 
-```
+```syntaxsql
 
-CREATE CLUSTERED COLUMNSTORE INDEX INDEX index_name
+CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON [ database_name . [ schema ] . | schema . ] table_name
     [ORDER (column[,...n])]
     [WITH ( DROP_EXISTING = { ON | OFF } )]
@@ -204,6 +205,8 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 
 
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -465,7 +468,7 @@ ONLINE = { ON | **OFF** }
 Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is OFF.
 
 > [!IMPORTANT]
-> Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
+> Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
 
 ON      
 Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source table. This enables queries or updates to the underlying table and indexes to proceed. At the start of the operation, a Shared (S) lock is held on the source object for a very short period of time. At the end of the operation, for a short period of time, an S (Shared) lock is acquired on the source if a nonclustered index is being created; or an SCH-M (Schema Modification) lock is acquired when a clustered index is created or dropped online and when a clustered or nonclustered index is being rebuilt. ONLINE cannot be set to ON when an index is being created on a local temporary table.
@@ -557,7 +560,7 @@ Uses the actual number of processors or fewer based on the current system worklo
  For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 > [!NOTE]
-> Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+> Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
 DATA_COMPRESSION      
 Specifies the data compression option for the specified index, partition number, or range of partitions. The options are as follows:
@@ -814,7 +817,7 @@ The following restrictions apply to partitioned indexes:
 To evaluate how changing the compression state will affect a table, an index, or a partition, use the [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) stored procedure.
 
 ## Permissions
-Requires `ALTER` permission on the table or view. User must be a member of the `sysadmin` fixed server role or the `db_ddladmin` and `db_owner` fixed database roles.
+Requires `ALTER` permission on the table or view. User must be a member of the `sysadmin` fixed server role or the `db_ddladmin` or `db_owner` fixed database roles.
 
 ## Limitations and Restrictions
 In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], you cannot create:
@@ -888,7 +891,7 @@ INSERT INTO Production.UnitMeasure (UnitMeasureCode, Name, ModifiedDate)
 
 The resulting error message is:
 
-```cmd
+```
 Server: Msg 2601, Level 14, State 1, Line 1
 Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_UnitMeasure_Name'. The statement has been terminated.
 ```
@@ -950,7 +953,7 @@ GO
 
 Here are the results of the second `INSERT` statement.
 
-```cmd
+```
 Server: Msg 2601, Level 14, State 1, Line 5
 Cannot insert duplicate key row in object '#Test' with unique index
 'AK_Index'. The statement has been terminated.
@@ -1197,4 +1200,4 @@ WITH (DROP_EXISTING = ON);
 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)     
 [sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)    
 [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)     
-[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)     
+[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)

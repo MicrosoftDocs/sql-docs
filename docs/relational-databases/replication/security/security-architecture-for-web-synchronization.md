@@ -1,4 +1,5 @@
 ---
+description: "Security Architecture for Web Synchronization"
 title: "Security Architecture for Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Security Architecture for Web Synchronization
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enables fine-grained control over the configuration of Web synchronization security. This topic provides a comprehensive list of all the components that can be included in a Web synchronization configuration and information about the connections that are made between components. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
  The following illustration shows all the possible connections, but some connections might not be required in a particular topology. For example, a connection to an FTP server is required only if the snapshot is delivered by using FTP.  
@@ -61,7 +62,7 @@ ms.author: "mathoma"
  <sup>1</sup> Integrated authentication can be used only if all computers are in the same domain or are in multiple domains that have trust relationships with each other.  
   
 > [!NOTE]  
->  Delegation is required if you use Integrated Authentication. We recommend that you use Basic Authentication and SSL for connections from the Subscriber to IIS.  
+>  Delegation is required if you use Integrated Authentication. We recommend that you use Basic Authentication and TLS for connections from the Subscriber to IIS.  
   
 ## E. Connection to the Publisher  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener and Merge Replication Reconciler components are hosted on the computer that is running IIS. These components perform the following actions:  
@@ -124,7 +125,7 @@ ms.author: "mathoma"
   
 -   Xmlsub  
   
- The account should also be part of IIS_WPG group. For more information, see the section "Setting Permissions for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener" in [Configure IIS for Web Synchronization](../../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
+ The account should also be part of IIS_WPG group. For more information, see the section "Setting Permissions for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener" in [Configure IIS for Web Synchronization](../configure-iis-7-for-web-synchronization.md).  
   
 |Type of account|Where the account is specified|  
 |---------------------|------------------------------------|  
@@ -133,5 +134,4 @@ ms.author: "mathoma"
 ## See Also  
  [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
-  
   

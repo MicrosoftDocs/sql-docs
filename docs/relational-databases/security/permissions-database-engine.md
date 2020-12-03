@@ -1,7 +1,8 @@
 ---
 title: "Permissions (Database Engine) | Microsoft Docs"
+description: Consult this complete list of SQL Server permissions to find out which permissions apply to platforms that you use.
 ms.custom: ""
-ms.date: "01/03/2017"
+ms.date: "10/30/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -16,16 +17,17 @@ helpviewer_keywords:
   - "security [SQL Server], permissions"
   - "naming conventions [SQL Server]"
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-author: VanMSFT
-ms.author: vanto
+author: AndreasWolter
+ms.author: anwolter
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Permissions (Database Engine)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] securable has associated permissions that can be granted to a principal. Permissions in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] are managed at the server level assigned to logins and server roles, and at the database level assigned to database users and database roles. The model for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] has the same system for the  database permissions, but the server level permissions are not available. This topic contains the complete list of permissions. For a typical implementation of the permissions, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-The total number of permissions for [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is 237. Most permissions apply to all platforms, but some do not. For example server level permissions cannot be granted on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and a few permissions only make sense on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] exposed 230 permissions. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] exposed 219 permissions. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] exposed 214 permissions. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] exposed 195 permissions. The [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) topic specifies which topics are new in recent versions.
+The total number of permissions for [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] is 248. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] exposes 254 permissions. Most permissions apply to all platforms, but some do not. For example server level permissions cannot be granted on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and a few permissions only make sense on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+New permissions are being introduced gradually with new release. [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] exposed 238 permissions. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] exposed 230 permissions. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] exposed 219 permissions. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] exposed 214 permissions. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] exposed 195 permissions. The [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) topic specifies which permissions are new in recent versions.
 
 Once you understand the permissions, apply server level permissions to logins and database level permissions users with the [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md), and [DENY](../../t-sql/statements/deny-transact-sql.md) statements. For Example:   
 ```sql
@@ -96,8 +98,8 @@ For tips on planning a permissions system, see [Getting Started with Database En
 |Permission|Applies to|  
 |----------------|----------------|  
 |ALTER|All classes of objects except TYPE.|  
-|CONTROL|All classes of objects: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE, USER,<br />VIEW, and<br />XML SCHEMA COLLECTION|  
-|DELETE|All classes of objects except DATABASE SCOPED CONFIGURATION, and SERVER.|  
+|CONTROL|All classes of objects: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br /> USER,<br />VIEW, and<br />XML SCHEMA COLLECTION|  
+|DELETE|All classes of objects except DATABASE SCOPED CONFIGURATION, SERVER, and TYPE.|  
 |EXECUTE|CLR types, external scripts, procedures ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR), scalar and aggregate functions ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR), and synonyms|  
 |IMPERSONATE|Logins and users|  
 |INSERT|Synonyms, tables and columns, views and columns. Permission can be granted at the database, schema, or object level.|  

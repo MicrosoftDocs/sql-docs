@@ -1,4 +1,5 @@
 ---
+description: "dataDefinitionIgnoredInTransactions Method (SQLServerDatabaseMetaData)"
 title: "Does Database Ignore Data Definition Statement Within Transaction | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 1674fb46-43a7-46d0-9f05-cf993d3bc032
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # dataDefinitionIgnoredInTransactions Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

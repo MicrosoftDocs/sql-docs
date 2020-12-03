@@ -1,5 +1,6 @@
 ---
-title: "Hide Legend Items on the Chart (Report Builder and SSRS) | Microsoft Docs"
+title: "Hide Legend Items on the Chart (Report Builder) | Microsoft Docs"
+description: Discover how to choose items that appear on the legend to display the essential data in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -33,6 +34,5 @@ By default, any series added to a non-Shape chart in a [!INCLUDE[ssRSnoversion](
  [Formatting Data Points on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [Add a Moving Average to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)   
- [Legend Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)  
-  
+ [Legend Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](./chart-legend-formatting-report-builder.md)  
   

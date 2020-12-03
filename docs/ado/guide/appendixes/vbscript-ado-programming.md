@@ -1,8 +1,9 @@
 ---
+description: "VBScript ADO Programming"
 title: "VBScript ADO Programming | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "ADO, VBScript"
   - "VBScript [ADO]"
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # VBScript ADO Programming
 ## Creating an ADO Project  
@@ -68,7 +69,7 @@ Response.Write("Success!")
 </HTML>  
 ```  
   
- More specific VBScript examples are included with the ADO documentation. For more information, see [ADO Code Examples in Microsoft Visual Basic Scripting Edition](../../../ado/reference/ado-api/ado-code-examples-vbscript.md).  
+ More specific VBScript examples are included with the ADO documentation. For more information, see [ADO Code Examples in Microsoft Visual Basic Scripting Edition](../../reference/ado-api/ado-code-examples-vbscript.md).  
   
 ## Differences Between VBScript and Visual Basic  
  Using ADO with VBScript is similar to using ADO with Visual Basic in many ways, including how syntax is used. However, some significant differences exist:  

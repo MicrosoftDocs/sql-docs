@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysproxysubsystem (Transact-SQL)"
 title: "dbo.sysproxysubsystem (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysproxysubsystem system table"
 ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # dbo.sysproxysubsystem (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Records which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent subsystem is used by each proxy account. This table is stored in the **msdb** database.  
   

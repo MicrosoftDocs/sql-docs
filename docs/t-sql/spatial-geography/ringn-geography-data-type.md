@@ -1,4 +1,5 @@
 ---
+description: "RingN (geography Data Type)"
 title: "RingN (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,18 +20,19 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # RingN (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the specified ring of the **geography** instance: `1 ≤ n ≤ NumRings()`.  
   
 ## Syntax  
   
-```  
-  
-.RingN (expression )  
-```  
-  
-## Arguments  
+```syntaxsql
+.RingN (expression )
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is an **int** expression between 1 and the number of rings in a **polygon** instance.  
   

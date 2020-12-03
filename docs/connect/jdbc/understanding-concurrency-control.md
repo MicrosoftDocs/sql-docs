@@ -1,5 +1,6 @@
 ---
-title: "Understanding concurrency control | Microsoft Docs"
+title: "Understanding concurrency control"
+description: "Learn about concurrency control and how to preserve database integrity when developing a multi-user application with the JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Understanding concurrency control
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

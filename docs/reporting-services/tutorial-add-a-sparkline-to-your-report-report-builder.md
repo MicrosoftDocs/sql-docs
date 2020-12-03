@@ -1,5 +1,6 @@
 ---
 title: "Tutorial: Add a Sparkline to Your Report (Report Builder) | Microsoft Docs"
+description: Learn how to use the Report Builder to create a basic table with a sparkline chart in a Reporting Services paginated report.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -17,7 +18,7 @@ In this tutorial in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], 
   
 Sparklines and data bars are small, simple charts that convey a lot of information in a little space, often in tables and matrices in [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] reports. The following illustration shows a report similar to the one that you will create.  
   
-![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
+![Screenshot showing the report builder sparkline.](../reporting-services/media/report-builder-sparkline-final.png)  
      
 Estimated time to complete this tutorial: 30 minutes.  
   
@@ -128,7 +129,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
   
 8.  Drag **SalesDate** to **Column groups**.  
 
-    ![report-builder-sparkline-arrange-fields](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
+    ![Screenshot showing how to arrange fields.](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
 9. Click **Next**.  
   
@@ -142,7 +143,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
   
     *  The third row will appear once for the table to display the grand totals.  
     
-    ![report-builder-sparkline-choose-layout](../reporting-services/media/report-builder-sparkline-choose-layout.png)
+    ![Screenshot showing how to choose a layout.](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
 11. Click **Next**.  
   
@@ -152,7 +153,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
   
     Look in the Grouping pane. If you can't see the Grouping pane, on the **View** menu, click **Grouping**. The Row Groups pane shows one row group: **Product**. The Column Groups pane shows one column group: **SalesDate**. Detail data is all the data that is retrieved by the dataset query.  
     
-    ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
+    ![Screenshot showing the report builder grouping pane.](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
 15. Click **Run** to preview the report.  
 
@@ -163,15 +164,15 @@ By default, the summary data for the **Sales** field displays a general number. 
   
 2.  Click the cell in the second row (under the column headings row) in the **SalesDate** column. Hold down the Ctrl key and select all cells that contain `[Sum(Sales)]`. 
 
-    ![report-builder-select-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
+    ![Screenshot showing how to select sum sales.](../reporting-services/media/report-builder-select-sum-sales.png) 
   
 3.  On the **Home** tab > **Number** group, click **Currency**. The cells change to show the formatted currency.  
 
-    ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
+    ![Screenshot showing the sim sales replaced by placeholder currency values.](../reporting-services/media/report-builder-placeholder-currency.png)
   
     If your regional setting is English (United States), the default sample text is [**$12,345.00**]. If you do not see an example currency value, in the **Numbers** group, click **Placeholder Styles** > **Sample Values**.  
     
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![Screenshot showing the Sample Values option selected.](../reporting-services/media/report-builder-placeholder-value-button.png)
    
 ### <a name="FormatDates"></a>2b. (Optional) Format Data as Dates  
 By default, the **SalesDate** field displays both date and time information. You can format them to display only the date.  
@@ -194,11 +195,11 @@ The **SalesDate** values display in the default date format, and the summary val
   
 3.  Right-click, point to **Insert Column**, and then click **Left**.  
 
-    ![report-builder-add-column-left](../reporting-services/media/report-builder-add-column-left.png)
+    ![Screenshot showing how to insert a left column.](../reporting-services/media/report-builder-add-column-left.png)
   
 4.  In the new column, right-click the cell in the `[Product]` row > **Insert** > **Sparkline**.  
 
-    ![report-builder-insert-sparkline](../reporting-services/media/report-builder-insert-sparkline.png)
+    ![Screenshot showing how to insert a sparkline.](../reporting-services/media/report-builder-insert-sparkline.png)
   
 5.  In the **Select Sparkline Type** dialog box, make sure the first sparkline in the **Column** row is selected, then click **OK**.  
   
@@ -206,7 +207,7 @@ The **SalesDate** values display in the default date format, and the summary val
   
 7.  Click the plus (+) sign in the Values box, then click **Sales**. 
 
-    ![report-builder-sparkline-values](../reporting-services/media/report-builder-sparkline-values.png) 
+    ![Screenshot showing how to add values to the report builder sparkline. ](../reporting-services/media/report-builder-sparkline-values.png) 
   
     The values in the **Sales** field are now the values for the sparkline.  
   
@@ -218,7 +219,7 @@ The **SalesDate** values display in the default date format, and the summary val
   
     Also, for each row the tallest bar is the height of the row. This is misleading, too, because the largest values for each row are not equal: the largest value for Budget Movie-Maker is $10,400, but for Slim Digital it's $26,576 - more than twice as large. And yet the largest bars in those two rows are about the same height. All the sparklines need to use the same scale.  
   
-     ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
+     ![Screenshot showing a report builder sparkline that is misaligned.](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
 ## <a name="AlignSparklines"></a>4. Align the Sparklines Vertically and Horizontally  
 Sparklines are hard to read when they don't all use the same measurements. Both the horizontal and vertical axes for each need to match the rest.  
@@ -245,7 +246,7 @@ Sparklines are hard to read when they don't all use the same measurements. Both 
   
 Now all the bars in each sparkline align with the bars in the other sparklines, and the heights are relative.  
   
-![report-builder-sparkline-aligned](../reporting-services/media/report-builder-sparkline-aligned.png)
+![Screenshot showing a report builder sparkline that is aligned.](../reporting-services/media/report-builder-sparkline-aligned.png)
   
 ## <a name="Width"></a>7. (Optional) Change Column Widths  
 By default, each cell in a table contains a text box. A text box expands vertically to accommodate text when the page is rendered. In the rendered report, each row expands to the height of the tallest rendered text box in the row. The height of the row on the design surface has no affect on the height of the row in the rendered report.  

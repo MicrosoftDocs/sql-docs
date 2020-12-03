@@ -1,8 +1,9 @@
 ---
+description: "Connection (ADO for Visual C++ Syntax)"
 title: "Connection (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Connection collection [ADO], ADO for Visual C++ syntax"
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Connection (ADO for Visual C++ Syntax)
 ## Methods  
@@ -71,4 +72,4 @@ WillExecute(BSTR *Source, CursorTypeEnum *CursorType, LockTypeEnum *LockType, lo
 ```  
   
 ## See Also  
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection Object (ADO)](./connection-object-ado.md)

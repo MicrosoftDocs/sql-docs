@@ -1,5 +1,6 @@
 ---
 title: "Setting the Url Property of the Web Service | Microsoft Docs"
+description: In your Microsoft .NET Framework applications, you can modify the base URL of the Report Server Web service to which your application is directed.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

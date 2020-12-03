@@ -1,5 +1,6 @@
 ---
 title: "substring Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery function substring() that returns the specified portion of a source string.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Functions on String Values - substring
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns part of the value of *$sourceString*, starting at the position indicated by the value of *$startingLoc,* and continues for the number of characters indicated by the value of *$length*.  
   

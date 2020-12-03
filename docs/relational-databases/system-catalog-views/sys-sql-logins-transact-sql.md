@@ -1,4 +1,5 @@
 ---
+description: "sys.sql_logins (Transact-SQL)"
 title: "sys.sql_logins (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/20/2016"
@@ -33,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallpr
 |**is_expiration_checked**|**bit**|Password expiration is checked.|  
 |**password_hash**|**varbinary(256)**|Hash of SQL login password. Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.|  
   
- For a list of columns that this view inherits, see [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ For a list of columns that this view inherits, see [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). The columns `owning_principal_id` and `is_fixed_role` is not inherited from sys.server_principals.
   
 ## Remarks  
  To view both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication logins and Windows authentication logins, see [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -42,6 +43,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallpr
   
 ## Permissions  
  Any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication login can see their own login name, and the sa login. To see other logins, requires ALTER ANY LOGIN, or a permission on the login.  
+ To view the contents of the password_hash column, the CONTROL SERVER permission is required.
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

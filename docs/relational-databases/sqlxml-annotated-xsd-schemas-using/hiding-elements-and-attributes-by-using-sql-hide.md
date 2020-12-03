@@ -1,5 +1,6 @@
 ---
 title: "Hiding Elements and Attributes by Using sql:hide"
+description: Learn how to use the sql:hide annotation to hide elements and attributes when executing an XPath query against an XSD schema.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -27,7 +28,7 @@ ms.reviewer: ""
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Hiding Elements and Attributes by Using sql:hide
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   When an XPath query is executed against an XSD schema, the resulting XML document has elements and attributes that are specified in the schema. You can specify that some elements and attributes be hidden in the schema by using the **sql:hide** annotation. This is useful when the selection criteria of the query require particular elements or attributes in the schema, but you do not want them returned in the XML document that is generated.  
   
  The **sql:hide** annotation takes a Boolean value (0=false, 1=true). The acceptable values are 0, 1, true, and false.  

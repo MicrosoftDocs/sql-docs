@@ -1,5 +1,6 @@
 ---
 title: "New Shared Schedule (Management Studio) | Microsoft Docs"
+description: Learn how to create a new shared schedule to run published reports and subscriptions using the options on the New Schedule page in SQL Server Management Studio.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

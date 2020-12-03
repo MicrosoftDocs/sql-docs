@@ -1,4 +1,5 @@
 ---
+description: "setAsciiStream Method  (java.lang.String, java.io.InputStream, int)"
 title: "setAsciiStream Method  to input stream bytes - int | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 6ea23386-201f-41af-8232-225de3476765
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setAsciiStream Method  (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

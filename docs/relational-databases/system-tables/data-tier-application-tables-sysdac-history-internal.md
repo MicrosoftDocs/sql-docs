@@ -1,4 +1,5 @@
 ---
+description: "Data-tier Application Tables - sysdac_history_internal"
 title: "sysdac_history_internal (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysdac_history_internal"
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # Data-tier Application Tables - sysdac_history_internal
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains information about the actions taken to manage data-tier applications (DAC). This table is stored in the **dbo** schema of the **msdb** database.  
   
@@ -48,9 +49,8 @@ ms.author: "sstein"
 ## Remarks  
  DAC management actions, such as deploying or deleting a DAC, generate multiple steps. Each action is assigned an action identifier. Each step is assigned a sequence number and a row in **sysdac_history_internal**, where the status of the step is recorded. Each row is created when the action step starts, and is updated as needed to reflect the status of the operation. For example, a deploy DAC action could be assigned **action_id** 12 and get four rows in **sysdac_history_internal**:  
   
-|||||  
-|-|-|-|-|  
-|**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
+| action_id | sequence_id | action_type_name | dac_object_type_name |
+| --------- | ----------- | ---------------- | -------------------- |
 |12|0|create|dacpac|  
 |12|1|create|login|  
 |12|2|create|database|  

@@ -1,5 +1,6 @@
 ---
 title: "Rename a Report Server Computer | Microsoft Docs"
+description: Learn how to reconfigure a report server after a computer name change. SQL Server Reporting Services might not be accessible after a computer name change.
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -41,7 +42,7 @@ ms.author: maggies
   
 ## See also  
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Start and Stop the Report Server Service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
  [rsconfig Utility &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)  

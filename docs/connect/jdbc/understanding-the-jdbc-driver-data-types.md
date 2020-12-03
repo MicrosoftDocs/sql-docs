@@ -1,5 +1,6 @@
 ---
-title: "Understanding the JDBC driver data types | Microsoft Docs"
+title: "Understanding the JDBC driver data types"
+description: "Learn about JDBC data types and how the Microsoft JDBC Driver for SQL Server converts those types to database types."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Understanding the JDBC driver data types
 

@@ -1,7 +1,8 @@
 ---
-title: "How to: Specify PHP Data Types | Microsoft Docs"
+title: "How to: specify PHP data types"
+description: "Learn how to specify PHP Data Types when retrieving data using the Microsoft Drivers for PHP for SQL Server"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "converting data types"
   - "streaming data"
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # How to: Specify PHP Data Types
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

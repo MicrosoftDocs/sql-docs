@@ -1,4 +1,5 @@
 ---
+description: "Connecting with SQLBrowseConnect"
 title: "Connecting with SQLBrowseConnect | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "SQLBrowseConnect function [ODBC], connecting"
   - "connecting to data source [ODBC], SQLBrowseConnect"
 ms.assetid: 6c2e9f76-b766-48df-b109-246bb05ae45d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Connecting with SQLBrowseConnect
 **SQLBrowseConnect**, like **SQLDriverConnect**, uses a connection string. However, by using **SQLBrowseConnect**, an application can construct a complete connection string at run time. This allows the application to do two things:  

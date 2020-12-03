@@ -1,8 +1,9 @@
 ---
+description: "Item Property Example (VC++)"
 title: "Item Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,13 +13,13 @@ dev_langs:
 helpviewer_keywords: 
   - "Item property [ADO], VC++ example"
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Item Property Example (VC++)
-This example demonstrates how the [Item](../../../ado/reference/ado-api/item-property-ado.md) property accesses members of a collection. The example opens the ***Authors*** table of the ***Pubs*** database with a parameterized command.  
+This example demonstrates how the [Item](./item-property-ado.md) property accesses members of a collection. The example opens the ***Authors*** table of the ***Pubs*** database with a parameterized command.  
   
- The parameter in the command issued against the database is accessed from the [Command](../../../ado/reference/ado-api/command-object-ado.md) object's [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection by index and name. Then the fields of the returned [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) are accessed from that object's [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) collection by index and name.  
+ The parameter in the command issued against the database is accessed from the [Command](./command-object-ado.md) object's [Parameters](./parameters-collection-ado.md) collection by index and name. Then the fields of the returned [Recordset](./recordset-object-ado.md) are accessed from that object's [Fields](./fields-collection-ado.md) collection by index and name.  
   
 ```  
 // BeginItemCpp.cpp  
@@ -226,8 +227,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Item Property (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
- [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Command Object (ADO)](./command-object-ado.md)   
+ [Fields Collection (ADO)](./fields-collection-ado.md)   
+ [Item Property (ADO)](./item-property-ado.md)   
+ [Parameters Collection (ADO)](./parameters-collection-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

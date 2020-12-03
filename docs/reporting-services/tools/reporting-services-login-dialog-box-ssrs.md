@@ -1,5 +1,6 @@
 ---
-title: "Reporting Services Login Dialog Box (SSRS) | Microsoft Docs"
+title: "Reporting Services Login Dialog Box | Microsoft Docs"
+description: Learn how to use the Reporting Services Login dialog box to provide credentials to publish reports to the report server. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

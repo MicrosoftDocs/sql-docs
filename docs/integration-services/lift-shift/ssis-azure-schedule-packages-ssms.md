@@ -13,11 +13,11 @@ ms.reviewer: maghan
 ---
 # Schedule the execution of SSIS packages deployed in Azure with SQL Server Management Studio (SSMS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
-You can use SQL Server Management Studio (SSMS) to schedule SSIS packages deployed to Azure SQL Database. SQL Server on premises and SQL Database Managed Instance have SQL Server Agent and Managed Instance Agent respectively as a first-class SSIS job scheduler. SQL Database, on the other hand, does not have a built-in first-class SSIS job scheduler. The SSMS feature described in this article provides a familiar user interface that's similar to SQL Server Agent for scheduling packages deployed to SQL Database.
+You can use SQL Server Management Studio (SSMS) to schedule SSIS packages deployed to Azure SQL Database. SQL Server on premises and SQL Managed Instance have SQL Server Agent and Managed Instance Agent respectively as a first-class SSIS job scheduler. SQL Database, on the other hand, does not have a built-in first-class SSIS job scheduler. The SSMS feature described in this article provides a familiar user interface that's similar to SQL Server Agent for scheduling packages deployed to SQL Database.
 
 If you're using SQL Database to host the SSIS catalog, `SSISDB`, you can use this SSMS feature to generate the Data Factory pipelines, activities, and triggers required to schedule SSIS packages. Later you can optionally edit and extend these objects in Data Factory.
 
@@ -69,5 +69,5 @@ The feature described in this article requires SQL Server Management Studio vers
 To learn about other methods for scheduling an SSIS package, see [Schedule the execution of an SSIS package on Azure](ssis-azure-schedule-packages.md).
 
 To learn more about Azure Data Factory pipelines, activities, and triggers, see the following articles:
--   [Pipelines and activities in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
--   [Pipeline execution and triggers in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)
+-   [Pipelines and activities in Azure Data Factory](/azure/data-factory/concepts-pipelines-activities)
+-   [Pipeline execution and triggers in Azure Data Factory](/azure/data-factory/concepts-pipeline-execution-triggers)

@@ -1,6 +1,6 @@
 ---
-title: "Parameter and Rowset Metadata | Microsoft Docs"
-description: "Parameter and rowset metadata"
+title: Parameter and rowset metadata (OLE DB driver)
+description: Learn about the DBBINDING type and type members related to OLE DB Driver for SQL Server date and time enhancements.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -10,11 +10,11 @@ ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "metadata [OLE DB]"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Metadata - Parameter and Rowset
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

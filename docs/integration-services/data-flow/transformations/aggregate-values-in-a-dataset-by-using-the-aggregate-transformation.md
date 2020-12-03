@@ -1,5 +1,6 @@
 ---
-title: "Aggregate Values in a Dataset by Using the Aggregate Transformation | Microsoft Docs"
+description: "Aggregate Values in a Dataset with the Aggregate Transformation"
+title: "Aggregate Values in a Dataset with the Aggregate Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -15,9 +16,9 @@ ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: chugugrace
 ms.author: chugu
 ---
-# Aggregate Values in a Dataset by Using the Aggregate Transformation
+# Aggregate Values in a Dataset with the Aggregate Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To add and configure an Aggregate transformation, the package must already include at least one Data Flow task and one source.  

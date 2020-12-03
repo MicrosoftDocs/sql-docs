@@ -1,5 +1,6 @@
 ---
-title: "Spatial data types sample for MSSQL JDBC Driver | Microsoft Docs"
+title: "Spatial data types sample for JDBC Driver"
+description: "This JDBC Driver for SQL Server sample application demonstrates how to create, insert, and retrieve Geometry and Geography spatial data types from the database."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -7,28 +8,28 @@ ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Spatial data types sample
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to create, insert and retrieve Spatial Data types (Geometry and Geography).
-  
-The code file for this sample is named SpatialDataTypes.java, and it can be found in the following location:  
+
+The code file for this sample is named SpatialDataTypes.java, and it can be found in the following location:
 
 ```bash
-\<installation directory>\sqljdbc_<version>\<language>\samples\datatypes  
+\<installation directory>\sqljdbc_<version>\<language>\samples\datatypes
 ```
 
-## Requirements  
+## Requirements
 
-To run this sample application, you must set the classpath to include the mssql-jdbc jar file. For more information about how to set the classpath, see [Using the JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).  
+To run this sample application, you must set the classpath to include the mssql-jdbc jar file. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
 
-> [!NOTE]  
-> The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
-  
+> [!NOTE]
+> The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](system-requirements-for-the-jdbc-driver.md).
+
 ## Example
 
 In the following example, the sample code creates a table called SpatialDataTypesTable_JDBC_Sample that contains 'Geometry' and 'Geography' columns.
@@ -89,7 +90,6 @@ public class SpatialDataTypes {
 }
 ```
 
-## See also  
+## See also
 
-[Working with JDBC data types](../../connect/jdbc/working-with-data-types-jdbc.md)  
-  
+[Working with JDBC data types](working-with-data-types-jdbc.md)

@@ -1,4 +1,5 @@
 ---
+description: "Overview: Exporting Data (Master Data Services)"
 title: Exporting Data
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,7 +18,7 @@ ms.author: lle
 ---
 # Overview: Exporting Data (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This article introduces the types of subscription view formats and how to determine when views need to be edited due to changes to model objects.  
   

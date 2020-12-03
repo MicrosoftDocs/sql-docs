@@ -1,4 +1,5 @@
 ---
+description: "SQLServerPreparedStatement Methods"
 title: "SQLServerPreparedStatement Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f0e1be74-b7a3-4b81-8835-0a8bc3aaa3f5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLServerPreparedStatement Methods
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

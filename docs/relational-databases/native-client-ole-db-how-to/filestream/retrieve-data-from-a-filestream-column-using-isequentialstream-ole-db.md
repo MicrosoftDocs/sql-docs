@@ -1,4 +1,5 @@
 ---
+description: "Retrieve Data from a FILESTREAM Column Using ISequentialStream in SQL Server Native Client (OLE DB)"
 title: "FILESTREAM using ISequentialStream (OLE DB)"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Retrieve Data from a FILESTREAM Column Using ISequentialStream (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Retrieve Data from a FILESTREAM Column Using ISequentialStream in SQL Server Native Client (OLE DB)
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This sample shows uses an ISequentialStream interface in an ICommandText interface to retrieve a single record from a Filestream column.  
   

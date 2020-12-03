@@ -5,19 +5,19 @@
 ### Code examples can differ for Azure SQL Database
 -->
 
-Some Transact-SQL code examples written for SQL Server on-premises need small changes to run on Azure SQL Database service in the cloud. One catagory of such code examples involves system views whose name prefixess differ slightly between the two database systems:
+Some Transact-SQL code examples written for SQL Server on-premises need small changes to run on Azure SQL Database service in the cloud. One category of such code examples involves system views whose name prefixes differ slightly between the two database systems:
 
 - **server\_** &nbsp; - &nbsp; _prefix for on-premises_
-- **database\_** &nbsp; - &nbsp; _prefix for Azure SQL DB service in the cloud_
+- **database\_** &nbsp; - &nbsp; _prefix for Azure SQL Database_
 
-For illustration, the following table lists and compares two subsets of the system views. For brevity, the subsets are restricted to view names that also contains the string `_event`. The subsets have differing name prefixes because they come the two different database systems.
+For illustration, the following table lists and compares two subsets of the system views. For brevity, the subsets are restricted to view names that also contain the string `_event`. The subsets have differing name prefixes because they come from two different database systems.
 
 | Name from on-premises 2017 | Name from cloud service |
 | :------------------------- | :---------------------- |
 | server_event_notifications<br />server_event_session_actions<br />server_event_session_events<br />server_event_session_fields<br />server_event_session_targets<br />server_event_sessions<br />server_events<br />server_trigger_events | database_event_session_actions<br />database_event_session_events<br />database_event_session_fields<br />database_event_session_targets<br />database_event_sessions |
 | &nbsp; | &nbsp; |
 
-The two lists in the preceding table are accurate as of June 2019. But the table contents here may become outdated, because its content will not be maintained here. For accurate lists, run the following T-SQL SELECT statement. Run the SELECT twice, once on each database system.
+The two lists in the preceding table are accurate as of June 2019. But the table contents here may become outdated, because they will not be maintained here. For accurate lists, run the following T-SQL SELECT statement. Run the SELECT twice, once on each database system.
 
 ```sql
 SELECT name

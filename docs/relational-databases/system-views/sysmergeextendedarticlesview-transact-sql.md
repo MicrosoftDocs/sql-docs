@@ -1,4 +1,5 @@
 ---
+description: "sysmergeextendedarticlesview (Transact-SQL)"
 title: "sysmergeextendedarticlesview (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,7 +20,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # sysmergeextendedarticlesview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **sysmergeextendedarticlesview** view exposes article information. This view is stored in the publication database at the Publisher and subscription database at the Subscriber.  
   

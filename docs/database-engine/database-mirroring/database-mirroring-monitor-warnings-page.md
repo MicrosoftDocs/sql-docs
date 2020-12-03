@@ -1,5 +1,6 @@
 ---
 title: "Database Mirroring Monitor (Warnings Page) | Microsoft Docs"
+description: Use this read-only Database Mirroring Monitor page to view warnings supported on database mirroring events and the warning threshold values, if available.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Database Mirroring Monitor (Warnings Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Displays a read-only list of warnings supported on database mirroring events and the specified warning threshold values, if available.  
   
  **To use SQL Server Management Studio to monitor database mirroring**  

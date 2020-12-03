@@ -1,12 +1,15 @@
 ---
+description: "Manage Metadata When Making a Database Available on Another Server"
 title: "Manage metadata when making a database available on another server"
-ms.custom: ""
-ms.date: "08/24/2016"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
+ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
+author: "stevestein"
+ms.author: "sstein"
+ms.custom: seo-dt-2019
 helpviewer_keywords: 
   - "cross-database queries [SQL Server]"
   - "logins [SQL Server], recreating on another server instance"
@@ -31,13 +34,9 @@ helpviewer_keywords:
   - "extended stored procedures [SQL Server], metadata"
   - "credentials [SQL Server], metadata"
   - "copying databases"
-ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-author: "stevestein"
-ms.author: "sstein"
-ms.custom: seo-dt-2019
 ---
 # Manage Metadata When Making a Database Available on Another Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This article is relevant in the following situations:  
   
 -   Configuring the availability replicas of an [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] availability group.  
@@ -52,7 +51,7 @@ ms.custom: seo-dt-2019
   
  Some applications depend on information, entities, and/or objects that are outside of the scope of a single user database. Typically, an application has dependencies on the **master** and **msdb** databases, and also on the user database. Anything stored outside of a user database that is required for the correct functioning of that database must be made available on the destination server instance. For example, the logins for an application are stored as metadata in the **master** database, and they must be re-created on the destination server. If an application or database maintenance plan depends on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, whose metadata is stored in the **msdb** database, you must re-create those jobs on the destination server instance. Similarly, the metadata for a server-level trigger is stored in **master**.  
   
- When you move the database for an application to another server instance, you must re-create all the metadata of the dependant entities and objects in **master** and **msdb** on the destination server instance. For example, if a database application uses server-level triggers, just attaching or restoring the database on the new system is not enough. The database will not work as expected unless you manually re-create the metadata for those triggers in the **master** database.  
+ When you move the database for an application to another server instance, you must re-create all the metadata of the dependent entities and objects in **master** and **msdb** on the destination server instance. For example, if a database application uses server-level triggers, just attaching or restoring the database on the new system is not enough. The database will not work as expected unless you manually re-create the metadata for those triggers in the **master** database.  
   
 ##  <a name="information_entities_and_objects"></a> Information, Entities, and Objects That Are Stored Outside of User Databases  
  The remainder of this article summarizes the potential issues that might affect a database that is being made available on another server instance. You might have to re-create one or more of the types of information, entities, or objects listed in the following list. To see a summary, click the link for the item.  

@@ -24,14 +24,15 @@ When you create reports with Report Designer, it creates a report server project
   
 1. From the **File** menu, select **New** > **Project**.  
 
-    ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
+    ![Screenshot of Visual Studio showing File > New > Project selected.](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
 2. In the left-most column under **Installed**, select **Reporting Services**. In some cases, it may be under the group **Business Intelligence**.
 
-    ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
+    ![Screenshot of the New Project dialog box showing Reporting Services selected and the Report Server Project template highlighted.](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
     > [!IMPORTANT]
-    > For VS, if you don't see Reporting Services in the left column, add the Report Designer by installing the SSDT workload. From the **Tools** menu, select **Get Tools and Features...** and select the **SQL Server Data Tools** from the workloads displayed. If you don't see the Report Services objects in the center column, add the Reporting Services extensions. From the **Tools** menu, select **Extensions and Updates** > **Online**. In the center column, select **Microsoft Reporting Services Projects** > **Download** from the displayed extensions. For SSDT, See [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
+    > For VS, if you don't see Reporting Services in the left column, add the Report Designer by installing the SSDT workload. From the **Tools** menu, select **Get Tools and Features...** and select the **SQL Server Data Tools** from the workloads displayed. If you don't see the Report Services objects in the center column, add the Reporting Services extensions. From the **Tools** menu, select **Extensions and Updates** > **Online**. In the center column, select **Microsoft Reporting Services Projects** > **Download** from the displayed extensions. For SSDT, See [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md). In Visual Studio 2019, if previous steps didn't work, try installing [Microsoft Reporting Service Project extension](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio).
+
 
 3. Select the **Report Server Project** icon &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;in the center column of the **New Project** dialog box.
 
@@ -45,7 +46,7 @@ When you create reports with Report Designer, it creates a report server project
 
 2. Select **Add** > **New Item**.
 
-    ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
+    ![Screenshot of Solution Explorer showing Reports > Add > New Item selected.](../reporting-services/media/ssrs-ssdt-add-report.png)
 
 3. In the **Add New Item** window, select the **Report** icon.
 
@@ -53,7 +54,7 @@ When you create reports with Report Designer, it creates a report server project
 
 5. Select the **Add button** on the lower right side of the **Add New Item** dialog box to complete the process. Report Designer opens and displays the Sales Orders report file in Design view.
 
-    ![ssrs-ssdt-01-new-report-designer](media/ssrs-ssdt-01-new-report-designer.png)
+    ![Screenshot of Visual Studow showing the Report Designer and the Sales Orders report in Design view.](media/ssrs-ssdt-01-new-report-designer.png)
 
 ## Next steps
 

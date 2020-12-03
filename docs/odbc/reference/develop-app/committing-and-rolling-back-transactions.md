@@ -1,4 +1,5 @@
 ---
+description: "Committing and Rolling Back Transactions"
 title: "Committing and Rolling Back Transactions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "transactions [ODBC], rolling back"
   - "transactions [ODBC], committing"
 ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Committing and Rolling Back Transactions
 To commit or roll back a transaction in manual-commit mode, an application calls **SQLEndTran**. Drivers for DBMSs that support transactions typically implement this function by executing a **COMMIT** or **ROLLBACK** statement. The Driver Manager does not call **SQLEndTran** when the connection is in auto-commit mode; it simply returns SQL_SUCCESS, even if the application attempts to roll back the transaction. Because drivers for DBMSs that do not support transactions are always in auto-commit mode, they can either implement **SQLEndTran** to return SQL_SUCCESS without doing anything or not implement it at all.  

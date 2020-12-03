@@ -1,4 +1,5 @@
 ---
+description: "registerOutParameter Method (int, int, int)"
 title: "registerOutParameter Method (int, int, int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: d902d4e0-881f-4182-814c-0ede9a8da7fd
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # registerOutParameter Method (int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

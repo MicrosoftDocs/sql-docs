@@ -1,8 +1,9 @@
 ---
+description: "Overview of Multidimensional Schemas and Data"
 title: "Overview of Multidimensional Schemas and Data | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "multidimensional schemas and data"
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Overview of Multidimensional Schemas and Data
 ## Understanding Multidimensional Schemas  
@@ -25,7 +26,7 @@ ms.author: genemi
   
  A *member* is a data item in a dimension. Typically, you create a caption or describe a measure of the database using members.  
   
- Cubes are represented by [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) objects in ADO MD. Dimensions, hierarchies, levels, and members are also represented by their corresponding ADO MD objects: [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md), and [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
+ Cubes are represented by [CubeDef](../../reference/ado-md-api/cubedef-object-ado-md.md) objects in ADO MD. Dimensions, hierarchies, levels, and members are also represented by their corresponding ADO MD objects: [Dimension](../../reference/ado-md-api/dimension-object-ado-md.md), [Hierarchy](../../reference/ado-md-api/hierarchy-object-ado-md.md), [Level](../../reference/ado-md-api/level-object-ado-md.md), and [Member](../../reference/ado-md-api/member-object-ado-md.md).  
   
 ### Dimensions  
  The dimensions of a cube depend on your business entities and types of data to be modeled in the database. Typically, each dimension is an independent entry point or mechanism for selecting data.  
@@ -78,8 +79,8 @@ Hamburg, Munich, Stuttgart}
  This example also illustrates another characteristic: Some members of the Week level of the Year-Week hierarchy do not appear in any level of the Year-Quarter hierarchy. Thus, a hierarchy need not include all members of a dimension.  
   
 ## See Also  
- [ADO MD Object Model](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Programming with ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [Using ADO with ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
- [Working with Multidimensional Data](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+ [ADO MD Object Model](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (Multidimensional) (ADO MD)](./ado-multidimensional-ado-md.md)   
+ [Programming with ADO MD](./programming-with-ado-md.md)   
+ [Using ADO with ADO MD](./using-ado-with-ado-md.md)   
+ [Working with Multidimensional Data](./working-with-multidimensional-data.md)

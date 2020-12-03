@@ -1,4 +1,5 @@
 ---
+description: "sp_enum_proxy_for_subsystem (Transact-SQL)"
 title: "sp_enum_proxy_for_subsystem (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,7 +21,7 @@ author: VanMSFT
 ---
 # sp_enum_proxy_for_subsystem (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lists permissions for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxies to access subsystems.  
   

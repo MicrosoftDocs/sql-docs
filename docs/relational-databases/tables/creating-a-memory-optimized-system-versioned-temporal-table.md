@@ -1,4 +1,5 @@
 ---
+description: "Creating a Memory-Optimized System-Versioned Temporal Table"
 title: "Creating a Memory-Optimized System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/05/2016"
@@ -8,13 +9,15 @@ ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 1c1fc682-bf5b-4096-a0ff-3235d71c205a
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a Memory-Optimized System-Versioned Temporal Table
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 Similar to creating a disk-based history table, you can create a memory-optimized temporal table in a number of ways.
 

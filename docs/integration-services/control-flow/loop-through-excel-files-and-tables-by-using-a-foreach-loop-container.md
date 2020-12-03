@@ -1,5 +1,6 @@
 ---
-title: "Loop through Excel Files and Tables by Using a Foreach Loop Container | Microsoft Docs"
+description: "Loop through Excel Files and Tables with a Foreach Loop Container"
+title: "Loop through Excel Files and Tables with a Foreach Loop Container | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2018"
 ms.prod: sql
@@ -15,9 +16,9 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
 ---
-# Loop through Excel Files and Tables by Using a Foreach Loop Container
+# Loop through Excel Files and Tables with a Foreach Loop Container
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The procedures in this topic describe how to loop through the Excel workbooks in a folder, or through the tables in an Excel workbook, by using the Foreach Loop container with the appropriate enumerator.  
@@ -33,7 +34,7 @@ ms.author: chugu
   
      If you do not use a variable for the Extended Properties argument, then you must add it manually to the expression that contains the connection string.  
   
-3.  Add a Foreach Loop container to the **Control Flow** tab. For information about how to configure the Foreach Loop Container, see [Configure a Foreach Loop Container](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+3.  Add a Foreach Loop container to the **Control Flow** tab. For information about how to configure the Foreach Loop Container, see [Configure a Foreach Loop Container](./foreach-loop-container.md).  
   
 4.  On the **Collection** page of the **Foreach Loop Editor**, select the Foreach File enumerator, specify the folder in which the Excel workbooks are located, and specify the file filter (ordinarily *.xlsx).  
   
@@ -41,7 +42,7 @@ ms.author: chugu
   
 6.  Close the **Foreach Loop Editor**.  
   
-7.  Add an Excel connection manager to the package as described in [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655). Select an existing Excel workbook file for the connection to avoid validation errors.  
+7.  Add an Excel connection manager to the package as described in [Add, Delete, or Share a Connection Manager in a Package](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130)). Select an existing Excel workbook file for the connection to avoid validation errors.  
   
     > [!IMPORTANT]  
     >  To avoid validation errors as you configure tasks and data flow components that use this Excel connection manager, select an existing Excel workbook in the **Excel Connection Manager Editor**. The connection manager will not use this workbook at run time after you configure an expression for the **ConnectionString** property as described in the following steps. After you create and configure the package, you can clear the value of the **ConnectionString** property in the Properties window. However, if you clear this value, the connection string property of the Excel connection manager is no longer valid until the Foreach Loop runs. Therefore you must set the **DelayValidation** property to **True** on the tasks in which the connection manager is used, or on the package, to avoid validation errors.  
@@ -70,11 +71,11 @@ ms.author: chugu
   
 ## To loop through Excel tables by using the Foreach ADO.NET Schema Rowset enumerator  
   
-1.  Create an ADO.NET connection manager that uses the Microsoft ACE OLE DB Provider to connect to an Excel workbook. On the All page of the **Connection Manager** dialog box, make sure that you enter the Excel version - in this case, Excel 12.0 - as the value of the Extended Properties property. For more information, see [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+1.  Create an ADO.NET connection manager that uses the Microsoft ACE OLE DB Provider to connect to an Excel workbook. On the All page of the **Connection Manager** dialog box, make sure that you enter the Excel version - in this case, Excel 12.0 - as the value of the Extended Properties property. For more information, see [Add, Delete, or Share a Connection Manager in a Package](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130)).  
   
 2.  Create a string variable that will receive the name of the current table on each iteration of the loop.  
   
-3.  Add a Foreach Loop container to the **Control Flow** tab. For information about how to configure the Foreach Loop container, see [Configure a Foreach Loop Container](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+3.  Add a Foreach Loop container to the **Control Flow** tab. For information about how to configure the Foreach Loop container, see [Configure a Foreach Loop Container](./foreach-loop-container.md).  
   
 4.  On the **Collection** page of the **Foreach Loop Editor**, select the Foreach ADO.NET Schema Rowset enumerator.  
   
@@ -93,11 +94,10 @@ ms.author: chugu
   
 ## See Also  
  [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
- [Configure a Foreach Loop Container](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
+ [Configure a Foreach Loop Container](./foreach-loop-container.md)   
  [Add or Change a Property Expression](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Excel Source](../../integration-services/data-flow/excel-source.md)   
  [Excel Destination](../../integration-services/data-flow/excel-destination.md)   
  [Working with Excel Files with the Script Task](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
-  
   

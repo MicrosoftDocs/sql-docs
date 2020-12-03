@@ -1,4 +1,5 @@
 ---
+description: "Showplan Text (Unencoded) Event Class"
 title: "Showplan Text (Unencoded) Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan Text (Unencoded) Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The Showplan Text (Unencoded) event class occurs when [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes an SQL statement. This event class is the same as the Showplan Text event class, except the event information is formatted as a string rather than as binary data.  
   
  The information included is a subset of the information available in Showplan All, Showplan XML, or Showplan XML Statistics Profile event classes.  

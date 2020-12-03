@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_844"
 title: "MSSQLSERVER_844 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -13,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_844
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|844|  
 |Event Source|MSSQLSERVER|  
@@ -26,19 +27,42 @@ ms.author: mathoma
 |Symbolic Name|BUFLATCH_TIMEOUT_CONTINUE|  
 |Message Text|Time-out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database id: %d, allocation unit id: %I64d%ls, task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p.  Continuing to wait.|  
   
-## Explanation  
-A process is waiting to acquire a latch. This problem can be caused by an I/O operation taking too long to complete. Typically this type of error is the result of other tasks blocking system processes. In some instances, this error may be the result of hardware failure.  
-  
+## Explanation
+A SQL process is waiting to acquire a latch. This problem can be caused by an I/O operation taking too long to complete. Typically this type of error is the result of other tasks blocking system processes. In some cases, this error may be caused by hardware failure.  When this error message occurs, you may notice that the computer and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stop responding.
+
+## Cause
+This error message is dependent on the overall environment of your system. Any of the following circumstances may lead to an overstressed system:
+
+- Hardware that doesn't meet your input/output (I/O) and memory needs
+- Improperly configured and tested settings
+- Inefficient design
+
+ You may observe error 844 when your system is under a heavy load and can't meet the workload demands. Some of the most common causes of a stressed environment are:
+
+- Hardware problems
+- Compressed volumes
+- Non-default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuration settings
+- Inefficient queries or index design
+- Frequent database AutoGrow or AutoShrink operations
+
 ## User Action  
 Try the following to prevent this error from occurring:  
   
--   Reduce workload.  
-  
--   Check for associated I/O failures in error log or event log. I/O failures typically point to a disk malfunction.  
-  
--   Check the error log for non-yielding tasks and other critical errors.  
-  
--   If critical errors such as asserts frequently occur, resolve these problems.  
-  
-If the error persists, contact Microsoft Customer Service and Support.  
-  
+- Determine if you have any hardware bottlenecks. See [Identifying Bottlenecks](../performance/identify-bottlenecks.md) for a good place to start. If necessary, upgrade your hardware so it can service the needs of your environment's configuration, queries, and load.
+
+- Verify that all your hardware functions properly. Check for any logged errors and run any diagnostics provided by your hardware vendor. Check for associated I/O failures in error log or event log. I/O failures typically point to a disk malfunction.  
+- Make sure that your disk volumes aren't compressed. Storing data and log files on compressed drives isn't supported, see [Database Files and Filegroups](../databases/database-files-and-filegroups.md). For additional information on compressed drive support, review the following article: [SQL Server Databases Not Supported on Compressed Volumes](https://support.microsoft.com/EN-US/help/231347)
+
+- See if the error messages disappear when you turn off all the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuration options:
+   - The [priority boost option](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md)
+   - The [lightweight pooling (fiber mode) option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)
+   - The [set working set size option](../../database-engine/configure-windows/set-working-set-size-server-configuration-option.md)
+
+    For more information see [HOW TO: Determine Proper SQL Server Configuration Settings](https://support.microsoft.com/EN-US/help/319942)
+
+- Tune queries to reduce resources used on the system. Performance tuning will help reduce the stress on a system and improve response time for individual queries
+- Set the AutoShrink property to OFF to reduce the overhead of changes to your database size
+- Make sure you set the AutoGrow property to increments that are large enough to be infrequent. Schedule a job to check the available space in your databases, and then increase the database size during non-peak hours.
+- Check the error log for non-yielding tasks and other critical errors. Resolve those errors first as they could point to the root cause of the underlying issue.
+- If critical errors such as asserts frequently occur, resolve these problems
+- If the 844 error messages are infrequent, then you can ignore the errors

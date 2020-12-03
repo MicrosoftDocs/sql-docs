@@ -1,4 +1,5 @@
 ---
+description: "Column Properties (General Page)"
 title: "Column Properties (General Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ ms.author: sstein
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Column Properties (General Page)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   Use this page to view properties for the selected column.  
   
@@ -32,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The type of data that the column can hold. If the data type is a system data type, then the system data type is displayed. If the data type is a user-defined data type, the system data type that makes up the user-defined data type is displayed.  
   
  **Primary Key**  
- Indicates whether the column is a primary key. Possible values are **True**and **False**.  
+ Indicates whether the column is a primary key. Possible values are **True** and **False**.  
   
  **Allow Nulls**  
  Indicates whether the column accepts null values. Possible values are **True** and **False**.  

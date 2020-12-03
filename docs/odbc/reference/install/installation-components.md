@@ -1,4 +1,5 @@
 ---
+description: "Installation Components"
 title: "Installation Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "installing ODBC components [ODBC], setup program"
   - "ODBC [ODBC], component installation"
 ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Installation Components
 > [!NOTE]  

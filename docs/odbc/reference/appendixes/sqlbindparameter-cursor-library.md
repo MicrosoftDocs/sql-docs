@@ -1,4 +1,5 @@
 ---
+description: "SQLBindParameter (Cursor Library)"
 title: "SQLBindParameter (Cursor Library) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLBindParameter function [ODBC], Cursor Library"
 ms.assetid: 04c53e4c-cd1d-40b2-9997-684ebe43499f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLBindParameter (Cursor Library)
 > [!IMPORTANT]  

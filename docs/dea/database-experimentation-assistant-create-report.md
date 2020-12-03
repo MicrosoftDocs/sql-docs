@@ -1,15 +1,15 @@
 ---
 title: Create analysis reports 
-description: Create Analysis Reports in Database Experimentation Assistant
-ms.date: 11/21/2019
+description: Generate an analysis report in Database Experimentation Assistant (DEA). Analysis reports provide insights about the performance implications of proposed changes.
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ms.custom: "seo-lt-2019"
 ---
@@ -20,29 +20,24 @@ After you replay the source trace on both of your target servers, you can genera
 
 ## Create an analysis report
 
-In DEA, select the menu icon. In the expanded menu, select  **Analysis Reports** next to the checklist icon.
+1. In DEA, select the list icon, specify the server name and authentication type, select or deselect the **Encrypt connection** and **Trust server certificate** check boxes as appropriate for your scenario, and then select **Connect**.
 
-![Analysis menu](./media/database-experimentation-assistant-create-report/dea-create-reports-menu.png)
+   ![Connect to server with trace files](./media/database-experimentation-assistant-create-report/dea-connect-to-server-with-trace-files.png)
 
-Under **Analysis Reports**, select **New analysis report**.
+2. On the **Analysis Reports** screen, select **New analysis report**.
 
-![New Analysis Report menu](./media/database-experimentation-assistant-create-report/dea-create-reports-new-report.png)
+   ![Create new analysis report](./media/database-experimentation-assistant-create-report/dea-create-an-analysis-report.png)
 
-Enter or select the following information:
+3. On the **New analysis report** screen, specify a name for the report, the storage location and path to the Target 1 and Target 2 trace files, and then select **Start**.
 
-- **Report name**: Enter a name for your report. The report name is used both for A and B databases. Example: *A (or B)* + *report name* + *unique identifier*.
-- **Server name**: Enter the name of the server computer that you want to include in A, B, and analysis databases.
-- **SQL Server instance name**: Enter the name of the SQL Server instance to use for the report.
-- **Trace for source server**: Enter the SQL Server (2008 R2) first trace (.trc) file.
-- **Trace for target server**: Enter the target SQL Server (2014) first .trc file.
+   ![Specify new analysis report details](./media/database-experimentation-assistant-create-report/dea-new-analysis-report-details.png)
 
-![New analysis report page](./media/database-experimentation-assistant-create-report/dea-create-reports-inputs.png)
+   If the information you entered is valid, the analysis report is created.
 
-## Generate a report
+   ![Newly created analysis report](./media/database-experimentation-assistant-create-report/dea-newly-created-analysis-report.png)
 
-After you enter or select the required information on the **New analysis report** page, select **Start** to start creating the report. If the information you entered is valid, the analysis report is created. Otherwise, the text boxes that have invalid information are highlighted with red. Make sure that you enter the correct values, and then select **Start**.
-
-A new analysis report is generated. The analysis database follows the naming scheme Analysis + *user-specified report name* + *unique identifier*.
+      > [!NOTE]
+      > If any of the the information you entered is invalid, the text boxes containing the incorrect  information are highlighted in red. Make any necessary corrections, and then select **Start** again.
 
 ## Frequently asked questions about analysis reports
 
@@ -53,10 +48,6 @@ DEA uses statistical tests to analyze your workload and determine how each query
 **Q: Can I create a new analysis report while another report is being generated?**
 
 No.  Currently, only one report can be generated at a time to prevent conflicts. However, you can run more than one capture and replay at the same time.
-
-**Q: I upgraded DEA to version 2.0. Can I still view and use my old reports?**
-
-Yes. To view previously generated reports, you must update the schema of the report. For more information, see [DEA 2.0: Update database schema for analysis report in DEA](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-updating-db-schema-for-analysis-report-in-the-database-experimentation-assistant/).
 
 **Q: Can I generate an analysis report by using the command prompt?**
 
@@ -100,7 +91,7 @@ Check the database on the analysis computer that's running SQL Server to confirm
 
 If data doesn't exist, the data might not have copied correctly or the database might be corrupt. If only some data is missing, the trace files created in capture or replay might not have captured your workload accurately. If the data is there, check the log files in %temp%\\DEA to see if any errors were logged. Then, try again to generate the analysis report.
 
-More questions or feedback? Submit feedback through the DEA tool by choosing the smiley icon in the lower-left corner. 
+More questions or feedback? Submit feedback through the DEA tool by choosing the smiley icon in the lower-left corner.
 
 ## See also
 

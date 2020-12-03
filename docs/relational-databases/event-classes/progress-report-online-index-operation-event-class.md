@@ -1,7 +1,7 @@
 ---
+description: "Progress Report: Online Index Operation Event Class"
 title: "Progress Report: Online Index Operation Event Class"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ms.custom: "seo-lt-2019"
 ---
 # Progress Report: Online Index Operation Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The Progress Report: Online Index Operation event class indicates the progress of an online index build operation while the build process is running.  
   
 ## Progress Report: Online Index Operation Event Class Data Columns  

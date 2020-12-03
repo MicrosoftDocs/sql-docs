@@ -1,6 +1,6 @@
 ---
 title: Features supported by different editions - SQL Server Reporting Services | Microsoft Docs
-description: "This topic explains the SQL Server Reporting Services (SSRS) features supported by the different editions of SQL Server. SQL Server Evaluation edition is available for a 180-day trial period."
+description: Learn about SQL Server Reporting Services (SSRS) features supported by the different editions of SQL Server. 
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -84,7 +84,6 @@ The following software client applications are available on the Microsoft Downlo
 |Tool name|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
 |---------------|----------------|--------------|------------------------|-------------|---------------| 
 | Power BI Desktop optimized for Power BI Report Server, **.pbix** | Yes, with Software Assurance | | | | Yes |
-
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], **.rdl** and **.rds**|Yes|Yes|Yes|Yes|Yes|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)], **.rsmobile**|Yes||||Yes|  
 |Power BI apps for mobile devices (iOS, Windows 10, and Android), **.rsmobile**|Yes||||Yes|  

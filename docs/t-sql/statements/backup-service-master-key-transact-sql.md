@@ -1,4 +1,5 @@
 ---
+description: "BACKUP SERVICE MASTER KEY (Transact-SQL)"
 title: "BACKUP SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -26,7 +27,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # BACKUP SERVICE MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Exports the service master key.  
   
@@ -34,13 +35,14 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'   
     ENCRYPTION BY PASSWORD = 'password'  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  FILE **='***path_to_file***'**  
  Specifies the complete path, including file name, to the file to which the service master key will be exported. This may be a local path or a UNC path to a network location.  
   
@@ -56,7 +58,7 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
 ## Examples  
  In the following example, the service master key is backed up to a file.  
   
-```  
+```sql  
 BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_key' ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  
 ```  
   

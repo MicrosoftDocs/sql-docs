@@ -1,7 +1,8 @@
 ---
 title: "Designing Assemblies | Microsoft Docs"
+description: This article describes factors to consider when you design an assembly to host on SQL Server, including packaging, managing, and restrictions on assemblies.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "04/24/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: clr
@@ -14,7 +15,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Assemblies - Designing
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes the following factors you should consider when you design assemblies:  
   
 -   Packaging assemblies  
@@ -95,19 +96,22 @@ eUI
  Any assembly that is referenced by your custom assembly must be loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using CREATE ASSEMBLY. The following [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assemblies are already loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and, therefore, can be referenced by custom assemblies without having to use CREATE ASSEMBLY.  
   
 ```  
-custommarshallers.dll  
-Microsoft.visualbasic.dll  
-Microsoft.visualc.dll  
+CustomMarshalers.dll  
+Microsoft.VisualBasic.dll  
+Microsoft.VisualC.dll  
 mscorlib.dll  
-system.data.dll  
+System.dll  
+System.Configuration.dll  
+System.Core.dll  
+System.Data.dll  
+System.Data.OracleClient.dll  
 System.Data.SqlXml.dll  
-system.dll  
-system.security.dll  
-system.web.services.dll  
-system.xml.dll  
-System.Transactions  
-System.Data.OracleClient  
-System.Configuration  
+System.Deployment.dll  
+System.Security.dll  
+System.Transactions.dll  
+System.Web.Services.dll  
+system.Xml.dll  
+System.Xml.Linq.dll  
 ```  
   
 ## See Also  

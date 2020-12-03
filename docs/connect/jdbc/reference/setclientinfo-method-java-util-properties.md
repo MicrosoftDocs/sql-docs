@@ -1,4 +1,5 @@
 ---
+description: "setClientInfo Method (java.util.Properties)"
 title: "setClientInfo Method (java.util.Properties) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b2a8ec0b-40a2-44d1-90d9-a810d4132e56
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setClientInfo Method (java.util.Properties)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

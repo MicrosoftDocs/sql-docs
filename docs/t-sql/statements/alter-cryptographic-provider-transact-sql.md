@@ -1,4 +1,5 @@
 ---
+description: "ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)"
 title: "ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/20/2017"
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Alters a cryptographic provider within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from an Extensible Key Management (EKM) provider.  
   
@@ -29,13 +30,16 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql  
 ALTER CRYPTOGRAPHIC PROVIDER provider_name   
     [ FROM FILE = path_of_DLL ]  
     ENABLE | DISABLE  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *provider_name*  
  Name of the Extensible Key Management provider.  
   
@@ -73,21 +77,21 @@ When the header file used to create the EKM provider dll is out of date, ALTER C
  The following example alters a cryptographic provider, called `SecurityProvider` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], to a newer version of a .dll file. This new version is named `c:\SecurityProvider\SecurityProvider_v2.dll` and is installed on the server. The provider's certificate must be installed on the server.  
   
 1. Disable the provider to perform the upgrade. This will terminate all open cryptographic sessions.  
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 DISABLE;  
 GO  
 ```  
 
 2. Upgrade the provider .dll file. The GUID must the same as the previous version, but the version can be different.  
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider  
 FROM FILE = 'c:\SecurityProvider\SecurityProvider_v2.dll';  
 GO  
 ```  
 
 3. Enable the upgraded provider.   
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 ENABLE;  
 GO  

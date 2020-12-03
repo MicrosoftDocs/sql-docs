@@ -1,4 +1,5 @@
 ---
+description: "Retrieving Data as a Stream Using the SQLSRV Driver"
 title: "Retrieving Data as a Stream Using the SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Retrieving Data as a Stream Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

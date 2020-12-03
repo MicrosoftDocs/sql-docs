@@ -1,5 +1,6 @@
 ---
-title: "Change Row Height or Column Width (Report Builder and SSRS) | Microsoft Docs"
+title: "Change Row Height or Column Width (Report Builder) | Microsoft Docs"
+description: Learn about setting a a column width or a fixed row height with text box properties for rendered reports in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

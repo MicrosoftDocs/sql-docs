@@ -1,4 +1,5 @@
 ---
+description: "Power BI Report Server Integration (Configuration Manager)"
 title: "Power BI Report Server Integration (Configuration Manager) | Microsoft Docs"
 author: maggiesMSFT
 ms.author: maggies
@@ -18,9 +19,9 @@ The  **Power BI Integration** page  in [!INCLUDE[ssRSnoversion](../../includes/s
 
 In addition to an active internet connection so you can browse to the [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] service, the following are requirements to complete [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]integration.
 
-- **Azure Active Directory:** Your organization must use Azure Active Directory, which provides directory and identity management for Azure services and web applications. For more information, see [What is Azure Active Directory?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
+- **Azure Active Directory:** Your organization must use Azure Active Directory, which provides directory and identity management for Azure services and web applications. For more information, see [What is Azure Active Directory?](/azure/active-directory/fundamentals/active-directory-whatis)
 
-- **Managed Tenant:** The [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] dashboard you want to pin report items to must be part of an Azure AD managed tenant.  A managed tenant is created automatically the first time your organization subscribes to Azure services such as Office 365 and Microsoft Intune.   Viral tenants are currently not supported.  For more information, see  the sections "What is an Azure AD tenant" and "how to get an Azure AD Directory" in [What is an Azure AD directory?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
+- **Managed Tenant:** The [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] dashboard you want to pin report items to must be part of an Azure AD managed tenant.  A managed tenant is created automatically the first time your organization subscribes to Azure services such as Microsoft 365 and Microsoft Intune.   Viral tenants are currently not supported.  For more information, see  the sections "What is an Azure AD tenant" and "how to get an Azure AD Directory" in [What is an Azure AD directory?](/previous-versions/azure/azure-services/jj573650(v=azure.100)#BKMK_WhatIsAnAzureADTenant)
 
 - The user performing the [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] integration needs to be a member of the Azure AD tenant, a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] system administrator and a system administrator for the ReportServer catalog database.
 
@@ -40,7 +41,7 @@ An administrator can review the  [!INCLUDE[ssRSnoversion](../../includes/ssrsnov
 
 ## <a name="bkmk_steps2integrate"></a> To Integrate and Register the Report Server
 
-Complete the following steps from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. For more information, see [Reporting Services Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+Complete the following steps from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. For more information, see [Report Server Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
 1. Select the [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] integration page.
 
@@ -123,7 +124,7 @@ This sections summarizes the basic steps and technologies involved when you inte
 
 The second time a user pins an item, the steps 1-4 are skipped and instead the App id and URLS are retrieved from the ReportServer database and the flow continues with step 5.
 
-![ssRS-pin-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
+![Diagram showing what happens when a user pins a report item to a dashboard.](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
 
  **When a subscription fires to refresh a dashboard tile:**
 
@@ -137,7 +138,7 @@ The second time a user pins an item, the steps 1-4 are skipped and instead the A
 
 5. If the token is not valid, and error is returned and logged with the report server.  No status or other information is sent to the dashboard.
 
-![ssRS-subscription-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
+![Diagram showing what happens when a subscription fires to refresh a dashboard tile.](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 

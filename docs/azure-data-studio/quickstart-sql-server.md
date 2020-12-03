@@ -1,48 +1,47 @@
 ---
 title: "Quickstart: Connect and query SQL Server"
-titleSuffix: Azure Data Studio
-description: This quickstart shows how to use Azure Data Studio to connect to SQL Server and run a query
-ms.prod: sql
+description: Do a quickstart in which you use Azure Data Studio to connect to SQL Server and then use Transact-SQL (T-SQL) statements to create a database.
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: "quickstart"
 author: "yualan"
 ms.author: "alayu"
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "alayu, maghan, sstein"
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
 ---
-# Quickstart: Connect and query SQL Server using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# Quickstart: Use Azure Data Studio to connect and query SQL Server
 
-This quickstart shows how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to SQL Server, and then use Transact-SQL (T-SQL) statements to create the *TutorialDB* used in [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
+This quickstart shows how to use Azure Data Studio to connect to SQL Server, and then use Transact-SQL (T-SQL) statements to create the *TutorialDB* used in Azure Data Studio tutorials.
 
 ## Prerequisites
 
-To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], and access to SQL Server.
+To complete this quickstart, you need Azure Data Studio, and access to SQL Server.
 
-- [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
+- [Install Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 
 If you don't have access to a SQL Server, select your platform from the following links (make sure you remember your SQL Login and Password!):
 
 - [Windows - Download SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
-- [macOS - Download SQL Server 2017 on Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
-- [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) - You only need to follow the steps up to *Create and Query Data*.
+- [macOS - Download SQL Server 2017 on Docker](../linux/quickstart-install-connect-docker.md)
+- [Linux - Download SQL Server 2017 Developer Edition](../linux/sql-server-linux-overview.md#install) - You only need to follow the steps up to *Create and Query Data*.
 
 ## Connect to a SQL Server
 
-1. Start **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. Start **Azure Data Studio**.
 
-2. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Welcome** page should open. If you don't see the **Welcome** page, select **Help** > **Welcome**. Select **New Connection** to open the **Connection** pane:
+2. The first time you run Azure Data Studio the **Welcome** page should open. If you don't see the **Welcome** page, select **Help** > **Welcome**. Select **New Connection** to open the **Connection** pane:
 
    ![New Connection Icon](media/quickstart-sql-server/new-connection-icon.png)
 
 3. This article uses *SQL Login*, but *Windows Authentication* is supported. Fill in the fields as follows:
 
-- **Server Name:** Enter server name here. For example, localhost.
-- **Authentication Type:** SQL Login
-- **User name:** User name for the SQL Server
-- **Password:** Password for the SQL Server
-- **Database Name:** \<Default\>
-- **Server Group:** \<Default\>
+   - **Server Name:** Enter server name here. For example, localhost.
+   - **Authentication Type:** SQL Login
+   - **User name:** User name for the SQL Server
+   - **Password:** Password for the SQL Server
+   - **Database Name:** \<Default\>
+   - **Server Group:** \<Default\>
 
    ![New Connection Screen](media/quickstart-sql-server/new-connection-screen.png)
 
@@ -54,22 +53,22 @@ The following steps create a database named **TutorialDB**:
 
 2. Paste the following snippet into the query window: and then select **Run**.
 
- ```sql
- USE master
- GO
- IF NOT EXISTS (
-  SELECT name
-  FROM sys.databases
-  WHERE name = N'TutorialDB'
- )
-  CREATE DATABASE [TutorialDB];
- GO
- IF SERVERPROPERTY('ProductVersion') > '12'
-  ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON;
- GO
- ```
+    ```sql
+    USE master
+    GO
+    IF NOT EXISTS (
+     SELECT name
+     FROM sys.databases
+     WHERE name = N'TutorialDB'
+    )
+     CREATE DATABASE [TutorialDB];
+    GO
+    IF SERVERPROPERTY('ProductVersion') > '12'
+     ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON;
+    GO
+    ```
 
-After the query completes, the new **TutorialDB** appears in the list of databases. If you don't see it, right-click the **Databases** node and select **Refresh**.
+   After the query completes, the new **TutorialDB** appears in the list of databases. If you don't see it, right-click the **Databases** node and select **Refresh**.
 
    ![Create database](media/quickstart-sql-server/create-database.png)
 
@@ -86,22 +85,22 @@ The query editor is still connected to the *master* database, but we want to cre
    > [!NOTE]
    > You can append this too, or overwrite the previous query in the editor. Note that clicking **Run** executes only the query that is selected. If nothing is selected, clicking **Run** executes all queries in the editor.
 
- ```sql
- -- Create a new table called 'Customers' in schema 'dbo'
- -- Drop the table if it already exists
- IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
-  DROP TABLE dbo.Customers;
- GO
- -- Create the table in the specified schema
- CREATE TABLE dbo.Customers
- (
-  CustomerId int NOT NULL PRIMARY KEY, -- primary key column
-  Name nvarchar(50) NOT NULL,
-  Location nvarchar(50) NOT NULL,
-  Email nvarchar(50) NOT NULL
- );
- GO
- ```
+    ```sql
+    -- Create a new table called 'Customers' in schema 'dbo'
+    -- Drop the table if it already exists
+    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
+     DROP TABLE dbo.Customers;
+    GO
+    -- Create the table in the specified schema
+    CREATE TABLE dbo.Customers
+    (
+     CustomerId int NOT NULL PRIMARY KEY, -- primary key column
+     Name nvarchar(50) NOT NULL,
+     Location nvarchar(50) NOT NULL,
+     Email nvarchar(50) NOT NULL
+    );
+    GO
+    ```
 
 After the query completes, the new **Customers** table appears in the list of tables. You might need to right-click the **TutorialDB > Tables** node and select **Refresh**.
 
@@ -109,26 +108,26 @@ After the query completes, the new **Customers** table appears in the list of ta
 
 - Paste the following snippet into the query window and click **Run**:
 
- ```sql
- -- Insert rows into table 'Customers'
- INSERT INTO dbo.Customers
-  ([CustomerId], [Name], [Location], [Email])
- VALUES
-  ( 1, N'Orlando', N'Australia', N''),
-  ( 2, N'Keith', N'India', N'keith0@adventure-works.com'),
-  ( 3, N'Donna', N'Germany', N'donna0@adventure-works.com'),
-  ( 4, N'Janet', N'United States', N'janet1@adventure-works.com')
- GO
- ```
+    ```sql
+    -- Insert rows into table 'Customers'
+    INSERT INTO dbo.Customers
+     ([CustomerId], [Name], [Location], [Email])
+    VALUES
+     ( 1, N'Orlando', N'Australia', N''),
+     ( 2, N'Keith', N'India', N'keith0@adventure-works.com'),
+     ( 3, N'Donna', N'Germany', N'donna0@adventure-works.com'),
+     ( 4, N'Janet', N'United States', N'janet1@adventure-works.com')
+    GO
+    ```
 
 ## View the data returned by a query
 
-1. Paste the following snippet into the query window and click **Run**:
+ - Paste the following snippet into the query window and click **Run**:
 
- ```sql
- -- Select rows from table 'Customers'
- SELECT * FROM dbo.Customers;
- ```
+   ```sql
+   -- Select rows from table 'Customers'
+   SELECT * FROM dbo.Customers;
+   ```
 
    ![Select results](media/quickstart-sql-server/select-results.png)
 

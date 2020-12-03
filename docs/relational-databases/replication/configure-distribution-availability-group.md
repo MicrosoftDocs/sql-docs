@@ -22,7 +22,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Set up replication distribution database in Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This article explains how to set up a SQL Server replication distribution databases in an Always On availability group (AG).
 
@@ -68,7 +68,7 @@ After a distribution database in the AG is configured based on the steps describ
    >[!NOTE]
    >Before executing any of replication stored procedures (for example - `sp_dropdistpublisher`, `sp_dropdistributiondb`, `sp_dropdistributor`, `sp_adddistributiondb`, `sp_adddistpublisher`) on secondary replica, make sure the replica is fully synchronized.
 
-- All secondary replicas in a distribution database AG must be readable.
+- All secondary replicas in a distribution database AG should be readable. If a secondary replica is not readable, distributor properties in SQL Server Management Studio on the particular secondary replica can not be accessed, however replication will continue to work correctly. 
 - All the nodes in the distribution database AG need to use the same domain account to run SQL Server Agent, and this domain account needs to have the same privilege on each node.
 - If any replication agents run under a proxy account, the proxy account needs to exist in every node in the distribution database AG and have the same privilege on each node.
 - Make changes to distributor or distribution database properties in all replicas participating in distribution database AG.
@@ -111,12 +111,18 @@ This example configures a new distributor and publisher and puts the distributio
 
    The value of `@working_directory` should be a network path independent of DIST1, DIST2, and DIST3.
 
-1. On DIST2 and DIST3, run:  
+1. On DIST2 and DIST3, if the replica is readable as a secondary, run:  
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   If a replica is not readable as a secondary, perform failover such that the replica becomes the primary, and run 
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    The value of `@working_directory` should be the same as the previous step.
 
 ### Publisher workflow
@@ -190,12 +196,18 @@ This example adds a new distributor to an existing replication configuration wit
    sp_adddistributiondb 'distribution'
    ```
 
-4. On DIST3, run: 
+4. On DIST3, if the replica is readable as a secondary, run: 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   If the replica is not readable as a secondary, perform failover such that the replica becomes the primary, and run:
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    The value of `@working_directory` should be the same as what was specified for DIST1 and DIST2.
 
 4. On DIST3, you must recreate Linked Servers to the subscribers.
@@ -366,7 +378,7 @@ WITH IP
 ((N'10.0.0.8', N'255.255.255.0')) , PORT=1500);
 GO
 
--- STEP 5 - Enable SQLNode1 also as a Distributor
+-- STEP 5 - Enable SQLNode2 also as a Distributor
 :CONNECT SQLNODE2
 EXEC sp_adddistributiondb @database = 'DistributionDB', @security_mode = 1;
 GO

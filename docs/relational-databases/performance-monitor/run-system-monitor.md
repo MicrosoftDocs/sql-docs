@@ -1,5 +1,6 @@
 ---
 title: "Run System Monitor | Microsoft Docs"
+description: System Monitor uses remote procedure calls to collect information from SQL Server. Any user who has permissions to run System Monitor can monitor SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,11 +15,11 @@ helpviewer_keywords:
   - "starting Windows NT System Monitor"
   - "RPC"
 ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Run System Monitor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   System Monitor uses remote procedure calls (RPCs) to collect information from Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Any user who has Microsoft Windows permissions to run System Monitor can use System Monitor to monitor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  

@@ -1,4 +1,5 @@
 ---
+description: "Certification by SAP"
 title: "Certification by SAP | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Certification by SAP
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Microsoft Connector 1.1 for SAP BW has received certification from SAP for integration with SAP NetWeaver.  

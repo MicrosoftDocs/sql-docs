@@ -1,4 +1,5 @@
 ---
+description: "Glossary of Terms for Oracle Publishing"
 title: "Glossary of Terms for Oracle Publishing | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Glossary of Terms for Oracle Publishing
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   You should be familiar with the following Oracle terms when configuring and administering Oracle publishing. For a complete list of Oracle terms, see the Oracle online documentation.  
   
 #### Index Organized Tables (IOT)  

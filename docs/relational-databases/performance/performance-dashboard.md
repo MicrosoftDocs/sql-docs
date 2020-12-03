@@ -1,9 +1,10 @@
 ---
 title: "Performance Dashboard | Microsoft Docs"
+description: Learn about SQL Server Management Studio Performance Dashboard, which provides fast insight into SQL Server and Azure SQL Managed Instance.
 ms.custom: ""
-ms.date: 12/14/2019
+ms.date: 11/13/2020
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,7 +17,7 @@ ms.author: pelopes
 manager: amitban
 ---
 # Performance Dashboard
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] version 17.2 and later includes the Performance Dashboard. This dashboard was designed to visually provide fast insight into the performance state of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] Managed Instance. 
 
@@ -71,8 +72,9 @@ The **Waits** report filters out all idle and sleep waits. For more information 
 
 The **Expensive Queries** reports are reset when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarts because the data in the underlying DMVs is cleared. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], detailed information about expensive queries can be found in the Query Store. 
 
+
 > [!NOTE]
-> The Performance Dashboard was first released as a standalone download for [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415), and later updated for [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063).
+> The Performance Dashboard was first released as a standalone download for [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415), and later updated for [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063). While the SQL Server Management Studio report renderer does not support clipboard access to text contained in the reports, the text can be accessed via the standalone reports.  Download the standlone reports if you need to copy query text from the reports.
 
 ## Permissions  
 On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` and `ALTER TRACE` permissions. 

@@ -1,5 +1,6 @@
 ---
 title: "Install PolyBase on Windows | Microsoft Docs"
+description: Learn to install PolyBase as a single node or PolyBase scale-out group. You can use an installation wizard or a command prompt. Finally, enable PolyBase.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -13,7 +14,7 @@ monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Install PolyBase on Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 To install a trial version of SQL Server, go to [SQL Server evaluations](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
    

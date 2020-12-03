@@ -1,84 +1,82 @@
 ---
 title: View analysis reports for SQL Server upgrades
-description: View analysis reports in Database Experimentation Assistant
+description: Learn how to view and understand analysis reports for performance insights in Database Experimentation Assistant (DEA).
 ms.custom: "seo-lt-2019"
-ms.date: 11/22/2019
+ms.date: 02/04/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ---
 
 # View analysis reports in Database Experimentation Assistant
 
-After you use Database Experimentation Assistant (DEA) to [create an analysis report](database-experimentation-assistant-create-report.md), use the steps below to review the report for performance insights based on your A/B test.
+After you use Database Experimentation Assistant (DEA) to [create an analysis report](database-experimentation-assistant-create-report.md), you can review the report for performance insights based on the A/B test you performed.
 
-## Select a server
+## Open an existing analysis report
 
-In DEA, select the menu icon. In the expanded menu, select **Analysis Reports** next to the checklist icon to open the Analysis Reports window.
+1. In DEA, select the list icon, specify the server name and authentication type, select or deselect the **Encrypt connection** and **Trust server certificate** check boxes as appropriate for your scenario, and then select **Connect**.
 
-Under **Analysis Reports**, enter the name of a computer running SQL Server that has an analysis database, and then select **Connect**.
+   ![Connect to server with the report](./media/database-experimentation-assistant-view-report/dea-connect-to-server-with-report-files.png)
 
-![Connect to an existing report](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
+2. On the **Analysis Reports** screen, on the left-hand side, select the entry for the report you want to view.
 
-If you're missing any dependencies, the **Prerequisites** page prompts you with links to install them. If necessary, install the prerequisites, and then select **Try again**.
-
-![Prerequisites page](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
-
-## Select an analysis report to view
-
-In the list of analysis reports, double-click a report to open it.
-
-![View existing report](./media/database-experimentation-assistant-view-report/dea-view-report-view-existing.png)
-
-You can get insights into how well your workload is represented, as shown in this example chart:
-
-![Workload Rep Charts](./media/database-experimentation-assistant-view-report/dea-view-report-workload-compare.png)
+   ![Open an existing report file](./media/database-experimentation-assistant-view-report/dea-select-report-to-view.png)
 
 ## View and understand the analysis report
 
 This section walks you through the analysis report.
 
-### Query categories
+On the first page of your report, information about the version and build information for the target servers on which the experiment was run appears. Threshold allows you to adjust the sensitivity or tolerance of your A/B Test analysis. By default, threshold is set at 5%; any improvement in performance that is >= 5% is categorized as ‘Improved’.  The dropdown allows you to evaluate the report with different performance thresholds.
 
-Select different slices of the left pie chart to show only the queries that fall under that category.
+You can export the data in the report to a CSV file be selecting **Export** button.  On any page of the analysis report, you can select **Print** to print what is visible on the screen at that moment.
 
-![Report pie slices](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
+### Query distribution
 
-- **Degraded queries**: Queries that performed better in A than in B.  
-- **Errors**: Queries that show errors in instance B but not in instance A.  
-- **Improved queries**: Queries that ran better in instance B than in instance A.  
-- **Indeterminate queries**: Queries that had an indeterminate performance change.  
-- **Same**: Queries in which performance stayed the same across instances A and B.
+- Select different slices of the pie charts to show only the queries that belong to that category.
+
+   ![Report categories as pie slices](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
+
+  - **Degraded**: Queries that performed worse on Target 2 than on Target 1.
+  - **Errors**: Queries that showed errors at least one time on at least one of the targets.
+  - **Improved**: Queries that performed better on Target 2 than on Target 1.
+  - **Cannot Evaluate**: Queries that had a sample size too small for statistical analysis. For A/B testing analysis, DEA requires the same queries to have at least 15 executions on each target.
+  - **Same**: Queries that have no statistical difference between Target 1 and Target 2.
+
+  Error queries, if any, are shown in separate charts; a bar chart classifying errors by type and a pie chart classifying errors by Error ID.
+
+   ![Error query charts](./media/database-experimentation-assistant-view-report/dea-error-query-charts.png)
+
+  There are four possible types of errors:
+
+  - **Existing Errors**: Errors that exist on both Target 1 and Target 2.
+  - **New Errors**: Errors that are new on Target 2.
+  - **Resolved Errors**: Errors that exist on Target 1 but are resolved on Target 2.
+  - **Upgrade Blockers**: Errors that block upgrade to target server.
+
+  Clicking on any bar or pie section in the charts drills down into the category and shows performance metrics, even for the **Cannot Evaluate** category.
+
+  In addition, the dashboard shows the top five improved and degraded queries to provide a quick performance overview.
 
 ### Individual query drill-down
 
-You can select the query template links to see more detailed information about specific queries.
+You can select query template links for more detailed information about specific queries.
 
-![Query drill-down](./media/database-experimentation-assistant-view-report/dea-view-report-drilldown.png)
+![Drill down into a specific query](./media/database-experimentation-assistant-view-report/dea-query-drill-down-report.png)
 
-Select a specific query to open a comparison summary for the query.
+- Select a specific query to open the related comparison summary.
 
-![Comparison Summary](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
+   ![Comparison summary](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
 
-You can see the A and B instances that the query ran on. You can also see a template of what the query might look like. A table displays query information that is specific to instances A and B.
+   You can find summary statistics for that query, such as the number of executions, mean duration, mean CPU, mean reads/writes, and error count.  If the query is an error query, the **Error Information** tab shows you more detail about the error.  On the **Query Plan Information** tab, you can find information about the query plans used for the query on Target 1 and Target 2.
 
-### Error queries
-
-The comparison summary report has expandable **Error Information** and **Query Plan Information** sections. The sections show the errors and plan information for both instances.
-
-Select the error (red) pie to show these types of errors:
-
-- **Existing errors**: Errors that were in A.
-- **New errors**: Errors that were in B.
-- **Resolved errors**: Errors that were in A but not in B.
-
-![Error charts](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
+   > [!NOTE]
+   > If you are analyzing extended event (.XEL) files, query plan information isn't collected to limit the memory pressure on the user’s computer.
 
 ## See also
 

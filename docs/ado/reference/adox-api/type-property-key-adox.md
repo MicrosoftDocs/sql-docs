@@ -1,8 +1,9 @@
 ---
+description: "Type Property (Key) (ADOX)"
 title: "Type Property (Key) (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,22 +18,22 @@ f1_keywords:
 helpviewer_keywords: 
   - "Type property [ADOX]"
 ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Type Property (Key) (ADOX)
 Indicates the type of the key.  
   
 ## Settings and Return Values  
- Sets or returns a **Long** value that can be one of the [KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md) constants. The default value is **adKeyPrimary**.  
+ Sets or returns a **Long** value that can be one of the [KeyTypeEnum](./keytypeenum.md) constants. The default value is **adKeyPrimary**.  
   
 ## Remarks  
- This property is read-only on [Key](../../../ado/reference/adox-api/key-object-adox.md) objects already appended to a collection.  
+ This property is read-only on [Key](./key-object-adox.md) objects already appended to a collection.  
   
 ## Applies To  
- [Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [Key Object (ADOX)](./key-object-adox.md)  
   
 ## See Also  
- [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Type Property (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
- [Type Property (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+ [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Type Property (Column) (ADOX)](./type-property-column-adox.md)   
+ [Type Property (Table) (ADOX)](./type-property-table-adox.md)

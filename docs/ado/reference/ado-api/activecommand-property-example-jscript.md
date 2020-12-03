@@ -1,8 +1,9 @@
 ---
+description: "ActiveCommand Property Example (JScript)"
 title: "ActiveCommand Property Example (JScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,11 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "ActiveCommand property [ADO], JScript example"
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ActiveCommand Property Example (JScript)
-This example demonstrates the [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) property. Cut and paste the following code to Notepad or another text editor, and save it as **ActiveCommandJS.asp**.  
+This example demonstrates the [ActiveCommand](./activecommand-property-ado.md) property. Cut and paste the following code to Notepad or another text editor, and save it as **ActiveCommandJS.asp**.  
   
 ```  
 <!-- BeginActiveCommandJS -->  
@@ -120,6 +121,6 @@ if (strName.length > 0)
 ```  
   
 ## See Also  
- [ActiveCommand Property (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ActiveCommand Property (ADO)](./activecommand-property-ado.md)   
+ [Command Object (ADO)](./command-object-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

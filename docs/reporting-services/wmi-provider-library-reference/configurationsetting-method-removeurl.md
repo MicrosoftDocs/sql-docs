@@ -1,4 +1,5 @@
 ---
+description: "RemoveURL Method (WMI MSReportServer_ConfigurationSetting)"
 title: "RemoveURL Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -53,7 +54,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
   
  Before calling the [ReserveURL](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-reserveurl.md) method, you must supply a value for the VirtualDirectory configuration property for the *Application* parameter. Use the [SetVirtualDirectory Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) method to set the VirtualDirectory property.  
   
- If an SSL Certificate was provisioned by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and no other URLs need it, it is removed.  
+ If a TLS/SSL Certificate was provisioned by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and no other URLs need it, it is removed.  
   
  This method causes all non-configuration app domains to hard recycle and stop during this operation; app domains are restarted after this operation complete.  
   

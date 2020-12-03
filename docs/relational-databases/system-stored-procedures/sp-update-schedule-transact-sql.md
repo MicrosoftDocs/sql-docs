@@ -1,4 +1,5 @@
 ---
+description: "sp_update_schedule (Transact-SQL)"
 title: "sp_update_schedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_schedule"
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_update_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the settings for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent schedule.  
   

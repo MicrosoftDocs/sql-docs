@@ -1,4 +1,5 @@
 ---
+description: "Table Name Limitations"
 title: "Table Name Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "table name limitations [ODBC]"
   - "Excel driver [ODBC], table name limitations"
 ms.assetid: d9843e4b-1d05-4d5a-9dc3-ee9ec59edb97
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Table Name Limitations
 Table names can contain any valid characters (for example, spaces). If table names contain any characters except letters, numbers, and underscores, the name must be delimited by enclosing it in back quotes (`).  

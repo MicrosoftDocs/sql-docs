@@ -1,4 +1,5 @@
 ---
+description: "sp_replicationdboption (Transact-SQL)"
 title: "sp_replicationdboption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -17,7 +18,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # sp_replicationdboption (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Sets a replication database option for the specified database. This stored procedure is executed at the Publisher or Subscriber on any database.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Options (Environment - Help - Online Page)"
 title: "Options (Environment - Help - Online Page)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -14,7 +15,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Options (Environment - Help - Online Page)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The **Options** dialog box lets you specify the Help sources to use for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] searches, including F1 Help. On the **Tools** menu, click **Options**, expand the **Environment** folder, select **Help**, and then click **Online**. If the **Online** page does not appear in the list, select the **Show all settings** check box in the **Options** dialog box.  
   
 **When loading Help content**  

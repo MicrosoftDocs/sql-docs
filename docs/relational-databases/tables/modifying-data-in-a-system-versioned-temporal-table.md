@@ -1,4 +1,5 @@
 ---
+description: "Modifying Data in a System-Versioned Temporal Table"
 title: "Modifying Data in a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"
@@ -8,13 +9,15 @@ ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modifying data in a system-versioned temporal table
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 Data in a system-versioned temporal table is modified using regular DML statements with one important difference: period column data cannot be directly modified. When data is updated, it is versioned, with the previous version of each updated row is inserted into the history table. When data is deleted, the delete is logical, with the row moved into the history table from the current table - it is not permanently deleted.
 
@@ -30,7 +33,7 @@ You can construct your **INSERT** statement when you have visible **PERIOD** col
 
   ```sql
   -- Insert with column list and without period columns
-  INSERT INTO [dbo].[Department]0
+  INSERT INTO [dbo].[Department]
     (  [DeptID]
           , [DeptName]
           , [ManagerID]
@@ -44,7 +47,7 @@ You can construct your **INSERT** statement when you have visible **PERIOD** col
          ) ;
    ```
 
-- If you do specify the**PERIOD** columns in the column list in your **INSERT** statement, then you need to specify **DEFAULT** as their value.
+- If you do specify the **PERIOD** columns in the column list in your **INSERT** statement, then you need to specify **DEFAULT** as their value.
 
   ```sql
   INSERT INTO [dbo].[Department]
@@ -144,7 +147,7 @@ If you try to perform PARTITION SWITCH from a table without period definition yo
 
 ## Updating data
 
-You update data in the current table with a regular **UPDATE** statement. You can update data in the current table from the history table to for the "oops" scenario. However, you cannot update **PERIOD** columns and you cannot directly updated data in the history table while **SYSTEM_VERSIONING = ON**.
+You update data in the current table with a regular **UPDATE** statement. You can update data in the current table from the history table for the "oops" scenario. However, you cannot update **PERIOD** columns and you cannot directly update data in the history table while **SYSTEM_VERSIONING = ON**.
 
 Set **SYSTEM_VERSIONING = OFF** and update rows from current and history table but keep in mind that way system will not preserve history of changes.
 

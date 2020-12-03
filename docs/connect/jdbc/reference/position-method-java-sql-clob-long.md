@@ -1,4 +1,5 @@
 ---
+description: "position Method (java.sql.Clob, long)"
 title: "position Method (java.sql.Clob, long) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: b2fb34d5-1d34-4764-a795-712d9c6aa313
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # position Method (java.sql.Clob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

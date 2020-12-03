@@ -13,7 +13,7 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Always Encrypted with secure enclaves
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
  
 Always Encrypted with secure enclaves provides additional functionality to the [Always Encrypted](always-encrypted-database-engine.md) feature.
 
@@ -21,7 +21,7 @@ Introduced in SQL Server 2016, Always Encrypted protects the confidentiality of 
 
 Without the enhancements discussed in this article, Always Encrypted protects the data by encrypting it on the client side and never allowing the data or the corresponding cryptographic keys to appear in plaintext inside the SQL Server Engine. As a result, the functionality on encrypted columns inside the database is severely restricted. The only operations SQL Server can perform on encrypted data are equality comparisons (only available with deterministic encryption). All other operations, including cryptographic operations (initial data encryption or key rotation) and or rich computations (for example, pattern matching) are not supported inside the database. Users need to move their data outside of the database to perform these operations on the client-side.
 
-Always Encrypted *with secure enclaves* addresses these limitations by allowing computations on plaintext data inside a secure enclave on the server side. A secure enclave is a protected region of memory within the SQL Server process, and acts as a trusted execution environment for processing sensitive data inside the SQL Server engine. A secure enclave appears as a black box to the rest of the SQL Server and other processes on the hosting machine. There is no way to view any data or code inside the enclave from the outside, even with a debugger.  
+Always Encrypted *with secure enclaves* addresses these limitations by allowing computations on plaintext data inside a secure enclave on the server side. A secure enclave is a protected region of memory within the SQL Server process, and acts as a trusted execution environment for processing sensitive data inside the SQL Server engine. A secure enclave appears as a opaque box to the rest of the SQL Server and other processes on the hosting machine. There is no way to view any data or code inside the enclave from the outside, even with a debugger.  
 
 
 Always Encrypted uses secure enclaves as illustrated in the following diagram:
@@ -45,7 +45,7 @@ With secure enclaves, Always Encrypted protects the confidentiality of sensitive
 
 - **In-place encryption** - cryptographic operations on sensitive data, for example: initial data encryption or rotating a column encryption key, are performed inside the secure enclave and do not require moving the data outside of the database. You can issue in-place encryption using the ALTER TABLE Transact-SQL statement, and you do not need to use tools, such as the Always Encrypted wizard in SSMS or the Set-SqlColumnEncryption PowerShell cmdlet.
 
-- **Rich computations (preview)** - operations on encrypted columns, including pattern matching (the LIKE predicate) and range comparisons, are supported inside the secure enclave, which unlocks Always Encrypted to a broad range of applications and scenarios that require such computations to be performed inside the database system.
+- **Rich computations** - operations on encrypted columns, including pattern matching (the LIKE predicate) and range comparisons, are supported inside the secure enclave, which unlocks Always Encrypted to a broad range of applications and scenarios that require such computations to be performed inside the database system.
 
 ## Secure Enclave Attestation
 
@@ -57,7 +57,7 @@ The attestation process SQL Server supports for VBS secure enclaves in [!INCLUDE
 
 ## Supported Client Drivers
 
-To use Always Encrypted with secure enclaves, an application must use a client driver that supports the feature. You need to configure the application and the client driver to enable enclave computations and enclave attestation. For details, including the list of supported client drivers, see [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
+To use Always Encrypted with secure enclaves, an application must use a client driver that supports the feature. You need to configure the application and the client driver to enable enclave computations and enclave attestation. For details, including the list of supported client drivers, see [Develop applications using Always Encrypted](always-encrypted-client-development.md).
 
 ## Enclave-enabled Keys
 
@@ -120,7 +120,7 @@ If an instance of SQL Server fails, its databases may be left in a state where t
 > [!IMPORTANT]
 > Microsoft strongly recommends enabling [Accelerated database recovery (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) for your database, **before** creating the first index on an enclave-enabled column encrypted with randomized encryption.
 
-With the [traditional database recovery process](https://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (that follows the [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) recovery model), to undo a change to an index, SQL Server needs to wait until an application provides the column encryption key for the column to the enclave, which can take a long time. ADR dramatically reduces the number of undo operations that must be deferred because a column encryption key is not available in the cache inside the enclave. Consequently, it substantially increases the database availability by minimizing a chance for a new transaction to get blocked. With ADR enabled, SQL Server still may need a column encryption key to complete cleaning up old data versions but it does that as a background task that does not impact the availability of the database or user transactions. You may, however, see error messages in the error log, indicating failed cleanup operations due to a missing column encryption key.
+With the [traditional database recovery process](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (that follows the [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) recovery model), to undo a change to an index, SQL Server needs to wait until an application provides the column encryption key for the column to the enclave, which can take a long time. ADR dramatically reduces the number of undo operations that must be deferred because a column encryption key is not available in the cache inside the enclave. Consequently, it substantially increases the database availability by minimizing a chance for a new transaction to get blocked. With ADR enabled, SQL Server still may need a column encryption key to complete cleaning up old data versions but it does that as a background task that does not impact the availability of the database or user transactions. You may, however, see error messages in the error log, indicating failed cleanup operations due to a missing column encryption key.
 
 ### Indexes on Enclave-enabled Columns using Deterministic Encryption
 
@@ -151,7 +151,7 @@ Always Encrypted with secure enclaves addresses some limitations of Always Encry
 - Pattern matching (LIKE) and comparison operators on column encrypted using randomized encryption.
     > [!NOTE]
     > The above operations are supported for character string columns that use collations with a binary2 sort order (BIN2 collations). Character string columns using non-BIN2 collations can be encrypted using randomized encryption and enclave-enabled column encryption keys. However, the only new functionality that is enabled for such columns is in-place encryption.
-- Creating nonclustered indexes on columns using randomized encryption.
+- Creating nonclustered indexes and statistics on columns using randomized encryption.
 
 All other limitations for Always Encrypted listed at [Feature Details](always-encrypted-database-engine.md#feature-details) also apply to Always Encrypted with secure enclaves.
 
@@ -182,5 +182,3 @@ The following limitations are specific to Always Encrypted with secure enclaves:
 - [Query columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-query-columns.md)
 - [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
-
-

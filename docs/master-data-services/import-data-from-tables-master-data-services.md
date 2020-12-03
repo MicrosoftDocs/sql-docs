@@ -1,5 +1,6 @@
 ---
 title: Import Data from Tables
+description: Import data from tables and make data changes to a model, in bulk. Use this procedure to add, update, and delete data in the Master Data Services database.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Import Data from Tables (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   You can add data and make data changes to a model in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], in bulk.  
   
@@ -43,7 +44,7 @@ ms.author: lle
   
 2.  Open [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and connect to the Database Engine instance for your [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
-     For more information, see [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b).  
+     For more information, see [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md).  
   
 3.  Import data into the staging tables by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export wizard.  
   
@@ -70,5 +71,4 @@ ms.author: lle
      In Master Data Manager, navigate to the **Explorer** functional area for your model, and then apply business rules to validate the data. For more information , see [Validate Specific Members against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md). You can also use a stored procedure to validate the data. For more information, see [Validation Stored Procedure &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
      When you load data by from the staging tables, the data is not automatically validated against business rules. For more information on what validation is and when it occurs, see [Validation &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md).  
-  
   

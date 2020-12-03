@@ -1,5 +1,6 @@
 ---
 title: "Peer-to-Peer Transactional Replication | Microsoft Docs"
+description: In SQL Server, peer-to-peer replication provides a scale-out and high-availability solution by maintaining copies of data across multiple server instances.
 ms.custom: ""
 ms.date: "08/29/2016"
 ms.prod: sql
@@ -18,7 +19,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Peer-to-Peer - Transactional Replication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Peer-to-peer replication provides a scale-out and high-availability solution by maintaining copies of data across multiple server instances, also referred to as *nodes*. Built on the foundation of transactional replication, peer-to-peer replication propagates transactionally consistent changes in near real-time. This enables applications that require scale-out of read operations to distribute the reads from clients across multiple nodes. Because data is maintained across the nodes in near real-time, peer-to-peer replication provides data redundancy, which increases the availability of data.  
   
@@ -150,7 +151,7 @@ ms.author: "mathoma"
 ### Maintenance Considerations  
  Some actions require the system to be quiescent. This means stopping activity on published tables at all nodes and making sure that each node has received all changes from all other nodes.  
   
-||SQL Server 2005 peers only or mix of SQL Server 2005 peers with SQL Server 2008 peers and higher|SQL Server 2005 peers only or mix of SQL Server 2005 peers with SQL Server 2008 peers and higher|SQL2008 peers and higher|SQL2008 peers and higher|  
+|Action|SQL Server 2005 peers only or mix of SQL Server 2005 peers with SQL Server 2008 peers and higher|SQL Server 2005 peers only or mix of SQL Server 2005 peers with SQL Server 2008 peers and higher|SQL2008 peers and higher|SQL2008 peers and higher|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
 |Adding a node to the topology|2 nodes in complete topology: No quiescing required. Use `sync_type = 'initialize with backup'`.|More than 2 nodes: Quiescing required.|`sync_type = 'replication support only'`: Quiescing required.|`sync_type = 'initialize with backup'` and `'initialize from lsn'`: No quiescing required.|  
   

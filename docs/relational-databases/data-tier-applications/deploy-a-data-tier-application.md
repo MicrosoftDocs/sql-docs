@@ -1,4 +1,5 @@
 ---
+description: "Deploy a Data-tier Application"
 title: "Deploy a Data-tier Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2017"
@@ -23,7 +24,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Deploy a Data-tier Application
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Deploy a data-tier application (DAC) from a DAC package to an existing instance of the database engine or Azure SQL Database  using a wizard or a PowerShell script. 
   
  The deployment process registers a DAC instance by storing the DAC definition in the **msdb** system database (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]); creates a database, then populates that database with all the database objects defined in the DAC.  

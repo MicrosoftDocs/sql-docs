@@ -1,4 +1,5 @@
 ---
+description: "Filestream and FileTable System Stored Procedures (Transact-SQL)"
 title: "Filestream and FileTable System Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -16,7 +17,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Filestream and FileTable system stored procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section describes the system stored procedures to the FileTable and Filestream feature.  
 

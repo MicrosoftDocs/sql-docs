@@ -1,4 +1,5 @@
 ---
+description: "Run an SSIS package from SSMS with Transact-SQL"
 title: "Run an SSIS package with Transact-SQL (SSMS) | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart
@@ -11,7 +12,7 @@ ms.author: chugu
 ---
 # Run an SSIS package from SSMS with Transact-SQL
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This quickstart demonstrates how to use SQL Server Management Studio (SSMS) to connect to the SSIS Catalog database, and then use Transact-SQL statements to run an SSIS package stored in the SSIS Catalog.
@@ -20,7 +21,7 @@ SQL Server Management Studio is an integrated environment for managing any SQL i
 
 ## Prerequisites
 
-Before you start, make sure you have the latest version of SQL Server Management Studio (SSMS). To download SSMS, see [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Before you start, make sure you have the latest version of SQL Server Management Studio (SSMS). To download SSMS, see [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
 An Azure SQL Database server listens on port 1433. If you're trying to connect to an Azure SQL Database server from within a corporate firewall, this port must be open in the corporate firewall for you to connect successfully.
 
@@ -100,4 +101,4 @@ GO
     - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md)
     - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md)
-    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) 
+    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md)

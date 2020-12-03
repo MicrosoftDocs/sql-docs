@@ -1,1 +1,0 @@
-<Token>**APPLIES TO:** ![yes](media/yes.png)SQL Server (Windows only) ![no](media/no.png)Azure SQL Database ![yes](media/yes.png)Azure Synapse Analytics (SQL DW) ![yes](media/yes.png)Parallel Data Warehouse </Token>

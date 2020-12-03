@@ -1,5 +1,6 @@
 ---
 title: "Backup to URL best practices & troubleshooting"
+description: Learn about best practices and troubleshooting tips for SQL Server backup and restores to Azure Blob storage.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # SQL Server backup to URL best practices and troubleshooting
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   This topic includes best practices and troubleshooting tips for SQL Server backup and restores to the Azure Blob service.  
   
@@ -36,7 +37,7 @@ ms.author: mikeray
   
 -   Using the `WITH COMPRESSION` option during backup can minimize your storage costs and storage transaction costs. It can also decrease the time taken to complete the backup process.  
 
-- Set `MAXTRANSFERSIZE` and `BLOCKSIZE` arguments as recomended at [SQL Server Backup to URL](./sql-server-backup-to-url.md).
+- Set `MAXTRANSFERSIZE` and `BLOCKSIZE` arguments as recommended at [SQL Server Backup to URL](./sql-server-backup-to-url.md).
   
 ## Handling Large Files  
   
@@ -60,7 +61,7 @@ ms.author: mikeray
     (SELECT * FROM sys.credentials   
     WHERE credential_identity = 'mycredential')  
     CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
-    ,SECRET = '<storage access key> ;  
+    , SECRET = '<storage access key>' ;  
     ```  
   
 -   The credential exists but the login account that is used to run the backup command does not have permissions to access the credentials. Use a login account in the **db_backupoperator** role with ***Alter any credential*** permissions.  
@@ -85,7 +86,7 @@ ms.author: mikeray
   
     -   You can also find information by reviewing the Windows Event Log - Under Application logs with the name `SQLBackupToUrl`.  
 
-    -   Consider COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE and multiple URL arguments when backing up large databases.  See [Backing up a VLDB to Azure Blob Storage](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/)
+    -   Consider COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE and multiple URL arguments when backing up large databases.  See [Backing up a VLDB to Azure Blob Storage](/archive/blogs/sqlcat/backing-up-a-vldb-to-azure-blob-storage)
   
 		```console
 		Msg 3202, Level 16, State 1, Line 1
@@ -175,4 +176,3 @@ To resolve this issue, create a configuration file that allows the Backup to URL
  [Restoring From Backups Stored in Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
-  

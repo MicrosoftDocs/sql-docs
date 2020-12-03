@@ -1,4 +1,5 @@
 ---
+description: "DATETIMEOFFSETFROMPARTS (Transact-SQL)"
 title: "DATETIMEOFFSETFROMPARTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "DATETIMEOFFSETFROMPARTS function"
 ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATETIMEOFFSETFROMPARTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Returns a **datetimeoffset** value for the specified date and time arguments. The returned value has a precision specified by the precision argument, and an offset as specified by the offset arguments.  
   
@@ -28,11 +29,13 @@ Returns a **datetimeoffset** value for the specified date and time arguments. Th
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, hour_offset, minute_offset, precision )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 
 *year*  
 An integer expression that specifies a year.  
@@ -85,7 +88,7 @@ SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Resu
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Result  
 ----------------------------------
 2010-12-31 14:23:23.0000000 +12:00  
@@ -112,7 +115,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ----------------------------------  
 2011-08-15 14:30:00.5 +12:30  
   

@@ -1,4 +1,5 @@
 ---
+description: "Executing the SSMA Console (OracleToSQL)"
 title: "Executing the SSMA Console (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -11,9 +12,9 @@ helpviewer_keywords:
   - "Script File Commands, Script Generation Commands,Manageability Commands"
   - "Script File Commands,Project Commands"
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Executing the SSMA Console (OracleToSQL)
 Microsoft provides you with a robust set of script file commands to execute and control SSMA activities. The console application uses certain standard script file commands as enumerated in this section.  
@@ -655,7 +656,7 @@ convert-sql-statement
   
 -   `write-converted-sql-to` specifies the file (or) folder path where the converted T-SQL is to be stored. When a folder path is specified along with the `sql-files` attribute, each source file will have a corresponding target T-SQL file created under the specified folder. When a folder path is specified along with the `sql` attribute, the converted T-SQL is written to a file named **Result.out** under the specified folder.  
   
--   `sql` specifies the Oracle sql statements to be converted, one or more statements can be seperated using a ";"  
+-   `sql` specifies the Oracle sql statements to be converted, one or more statements can be separated using a ";"  
   
 -   `sql-files` specifies the path of the sql files which has to be converted to T-SQL code.  
   

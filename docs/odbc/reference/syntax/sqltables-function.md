@@ -1,4 +1,5 @@
 ---
+description: "SQLTables Function"
 title: "SQLTables Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLTables function [ODBC]"
 ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLTables Function
 **Conformance**  

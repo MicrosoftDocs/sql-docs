@@ -1,5 +1,6 @@
 ---
 title: "Database Properties (Mirroring Page) | Microsoft Docs"
+description: "Learn how to configure mirroring properties and view a mirroring session's status. See how to start, pause, or remove a mirroring session."
 ms.custom: ""
 ms.date: "08/25/2016"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Database Properties (Mirroring Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Access this page from the principal database, and use it to configure and to modify the properties of database mirroring for a database. Also use it to launch the Configure Database Mirroring Security Wizard, to view the status of a mirroring session, and to pause or remove the database mirroring session.  
   
 > **IMPORTANT!!!** Security must be configured before you can start mirroring. If mirroring has not been started, you must begin by using the wizard. The **Mirroring** page textboxes are disabled until the wizard has been finished.  
@@ -29,7 +30,7 @@ ms.author: "sstein"
   
  If the wizard completes successfully, the action taken depends on whether mirroring has already begun, as follows:  
   
-|||  
+|Mirroring state|Action taken|  
 |-|-|  
 |If mirroring has not begun.|The property page caches that connection information and, also, caches a value that indicates whether the mirror database has the partner property set.<br /><br /> At the end of the wizard, you are prompted to start database mirroring using the default server network addresses and operating mode. If you need to change the addresses or operating mode, click **Do Not Start Mirroring**.|  
 |If mirroring has begun.|If the witness server was changed in the wizard, it is set accordingly.|  

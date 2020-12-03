@@ -1,15 +1,16 @@
 ---
-title: "PDOStatement Class | Microsoft Docs"
+title: "PDOStatement Class"
+description: "API reference for the PDOStatement Class in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ef2db0b3-b10e-4898-8bfc-d5e4baca18ef
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # PDOStatement Class
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

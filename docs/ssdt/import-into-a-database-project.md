@@ -1,5 +1,6 @@
 ---
 title: Import into a Database Project
+description: Find out how to import objects into a database project from a live database, a data-tier application, and a script. Learn about importing encrypted objects.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,7 +11,6 @@ f1_keywords:
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017

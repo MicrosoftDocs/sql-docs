@@ -1,5 +1,6 @@
 ---
 title: "Upgrade SQL Server Management Tools | Microsoft Docs"
+description: This article describes support for upgrading SQL Server Management Tools and management components, such as SQL Server Agent.
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
@@ -9,13 +10,13 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "management tools, upgrading"
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
-author: "stevestein"
-ms.author: "sstein"
+author: "cawrites"
+ms.author: "chadam"
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Upgrade SQL Server Management Tools
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later. This article documents support and behavior for upgrading [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Tools and management components such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, Database Mail, Maintenance Plans, XPStar, and XPWeb.  
   
@@ -45,7 +46,6 @@ Consider the following issues before you upgrade to [!INCLUDE[ssCurrent](../../i
   
 ## See Also  
  [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [Backward Compatibility_deleted](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)   
+ [Backward Compatibility_deleted](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))   
  [Upgrade SQL Server Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
-  
   

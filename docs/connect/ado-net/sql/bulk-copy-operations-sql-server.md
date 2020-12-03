@@ -1,19 +1,19 @@
 ---
 title: "Bulk copy operations in SQL Server"
 description: "Describes the bulk copy functionality for the .NET Data Provider for SQL Server."
-ms.date: "09/30/2019"
+ms.date: "06/15/2020"
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Bulk copy operations in SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Microsoft SQL Server includes a popular command-line utility named **bcp** for quickly bulk copying large files into tables or views in SQL Server databases. The <xref:Microsoft.Data.SqlClient.SqlBulkCopy> class allows you to write managed code solutions that provide similar functionality. There are other ways to load data into a SQL Server table (INSERT statements, for example) but <xref:Microsoft.Data.SqlClient.SqlBulkCopy> offers a significant performance advantage over them.  
   
@@ -40,6 +40,9 @@ Describes how to do multiple bulk copy operations of data into an instance of SQ
   
 [Transaction and bulk copy operations](transaction-bulk-copy-operations.md)  
 Describes how to perform a bulk copy operation within a transaction, including how to commit or rollback the transaction.  
+
+[Order hints for bulk copy operations](bulk-copy-order-hints.md)  
+Describes how to use order hints to improve bulk copy performance.
   
 ## Next steps
 - [SQL Server and ADO.NET](index.md)

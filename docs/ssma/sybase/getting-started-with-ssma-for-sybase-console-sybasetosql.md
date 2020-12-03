@@ -1,4 +1,5 @@
 ---
+description: "Getting Started with the SSMA for Sybase Console (SybaseToSQL)"
 title: "Getting Started with the SSMA for Sybase Console (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/30/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "Sybase Console,Output Conventions"
   - "Sybase Console,Procedure for Using Console"
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Getting Started with the SSMA for Sybase Console (SybaseToSQL)
 This section describes the procedure for launching and getting started with the SSMA for Sybase console application. Also listed herein are the conventions used in a typical SSMA Console output window.  
@@ -46,7 +47,7 @@ Additional features:
 ## SSMA Console output conventions  
 Upon executing the SSMA script commands and options, the console program displays the results and messages (information, error, etc.) to the user on the console or, if necessary, redirects to an xml output file. Each type of message in the output is signified by a unique color. For example, the text message in white color denotes script file commands; the one in green color represents a prompt for user-input, and so on.  
   
-![SSMAConsoleOutput_Sybase](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMAConsoleOutput_Sybase")  
+![Screenshot showing an example of SSMA Console Sybase output.](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMAConsoleOutput_Sybase")  
   
 Color-interpretation of the console output appears in the following table:  
   

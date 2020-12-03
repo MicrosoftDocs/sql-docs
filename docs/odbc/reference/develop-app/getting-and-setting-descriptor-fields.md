@@ -1,4 +1,5 @@
 ---
+description: "Getting and Setting Descriptor Fields"
 title: "Getting and Setting Descriptor Fields | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "descriptors [ODBC], retrieving or setting field values"
 ms.assetid: 394fe500-803d-463f-ae95-f8eb87b66bc8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Getting and Setting Descriptor Fields
 This section describes the methods an application can use to retrieve or set the values in descriptor fields.  

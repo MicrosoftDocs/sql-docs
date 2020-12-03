@@ -1,4 +1,5 @@
 ---
+description: "Interval Data Types"
 title: "Interval Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -23,8 +24,8 @@ helpviewer_keywords:
   - "C data types [ODBC], interval"
   - "interval fields [ODBC]"
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Interval Data Types
 An interval is defined as the difference between two dates and times. Intervals are expressed in one of two different ways. One is a *year-month* interval that expresses intervals in terms of years and an integral number of months. The other is a *day-time* interval that expresses intervals in terms of days, minutes, and seconds. These two types of intervals are distinct and cannot be mixed, because months can have varying numbers of days.  

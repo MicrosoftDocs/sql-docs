@@ -1,4 +1,5 @@
 ---
+description: "getPooledConnection Method (java.lang.String, java.lang.String)"
 title: "getPooledConnection Method (java.lang.String, java.lang.String) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: f2e6391d-9aaf-4b09-ae1c-a27c1ada6301
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getPooledConnection Method (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

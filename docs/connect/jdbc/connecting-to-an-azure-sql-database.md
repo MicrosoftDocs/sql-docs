@@ -52,7 +52,8 @@ The KeepAliveTime and KeepAliveInterval values are in milliseconds. These settin
 > [!NOTE]
 > TcpMaxDataRetransmissions is not controllable on Windows Vista or Windows 2008 and higher.
 
-To perform this configuration when running in Azure create a startup task to add the registry keys.  For example, add the following Startup task to the service definition file:  
+To perform this configuration when running in Azure, create a startup task to add the registry keys.  For example, add the following Startup task to the service definition file:  
+
 
 ```xml
 <Startup>  

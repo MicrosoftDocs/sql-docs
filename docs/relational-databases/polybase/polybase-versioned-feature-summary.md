@@ -29,7 +29,7 @@ This table lists the key features for PolyBase and the products in which they're
 |Export data to Hadoop  |Yes|No|No| Yes|
 |Query, import from, export to Azure HDInsight |No|No|No|No
 |Push down query computations to Hadoop|Yes|No|No|Yes|  
-|Import data from Azure Blob storage|Yes|No|Yes|Yes|
+|Import data from Azure Blob storage|Yes|Yes|Yes|Yes|
 |Export data to Azure Blob storage|Yes|No|Yes|Yes|  
 |Import data from Azure Data Lake Store|No|No|Yes|No|
 |Export data to Azure Data Lake Store|No|No|Yes|No|

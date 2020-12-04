@@ -126,17 +126,17 @@ For almost all other configuration that does not meet previous conditions, the r
 1. Enable trace flag 3982 as a startup parameter (which is default behavior for SQL Server in Linux ecosystem), while ensuring trace flag 3979 is not enabled as a startup parameter
 2. Use mssql-conf to configure control.writethrough = 1 and control.alternatewritethrough = 1
 
-## Kernel and CPU settings for high performance
+### Kernel and CPU settings for high performance
 
 Following section describes the recommended Linux Operating System settings related to high performance and throughput for a SQL Server installation. See your Linux Operating System documentation for the process to configure these settings. Using ***tuned*** as described helps configure many CPU and kernel configuration described below.
 
-### Using tuned to configure Kernel settings
+#### Using ***tuned*** to configure Kernel settings
 
  For Red Hat Enterprise Linux (RHEL) users, the [tuned](https://tuned-project.org) throughput-performance profile configure some kernel and CPU settings automatically (except for C-States). Starting with RHEL 8.0, a ***tuned*** profile named **mssql** was co-developed with Red Hat and offers finer Linux performance related tunings for SQL Server workloads. This profile includes the RHEL throughput-performance profile and we present its definitions below for your review with other Linux distros and RHEL releases without this profile.
 
  For SUSE Linux Enterprise Server 12 SP5, Ubuntu 18.04 and Red Hat Enterprise Linux 7.x, the ***tuned*** package can be installed manually. It can be used to create and configure the **mssql** profile as described below.
 
-#### Proposed Linux settings using a tuned mssql profile
+##### Proposed Linux settings using a tuned mssql profile
 
 ```bash
 #
@@ -188,7 +188,7 @@ or
 tuned-adm list
 ```
 
-### CPU settings recommendation
+#### CPU settings recommendation
 
 The following table provides recommendations for CPU settings:
 
@@ -201,7 +201,7 @@ The following table provides recommendations for CPU settings:
 
 Using ***tuned*** as described earlier automatically configures CPU frequency governor, ENERGY_PERF_BIAS and min_perf_pct settings appropriately due to the throughput-performance profile being used as base for **mssql** profile. C-States parameter must be configured manually according to the documentation provided by Linux or system distributor.
 
-### Disk settings recommendations
+#### Disk settings recommendations
 
 The following table provides recommendations for disk settings:
 
@@ -220,7 +220,7 @@ The following table provides recommendations for disk settings:
 
 Using the **mssql** ***tuned*** profile configures the **vm.swappiness**, **vm.dirty_\*** and **kernel.sched_\*** settings. The disk readahead configuration using ***blockdev*** command must be performed manually.
 
-### Kernel setting auto numa balancing for multi-node NUMA systems
+#### Kernel setting auto numa balancing for multi-node NUMA systems
 
 If you install SQL Server on a multi-node **NUMA** systems, the following **kernel.numa_balancing** kernel setting is enabled by default. To allow SQL Server to operate at maximum efficiency on a **NUMA** system, disable auto numa balancing on a multi-node NUMA system:
 
@@ -230,7 +230,7 @@ sysctl -w kernel.numa_balancing=0
 
 Using the **mssql** ***tuned*** profile configures the **kernel.numa_balancing** option.
 
-### Kernel settings for Virtual Address Space
+#### Kernel settings for Virtual Address Space
 
 The default setting of **vm.max_map_count** (which is 65536) may not be high enough for a SQL Server installation. For this reason, change the **vm.max_map_count** value to at least 262144 for a SQL Server deployment, and refer to the [Proposed Linux settings using a tuned mssql profile](#proposed-linux-settings-using-a-tuned-mssql-profile) section for further tunings of these kernel parameters. The max value for vm.max_map_count is 2147483647.
 
@@ -240,7 +240,7 @@ sysctl -w vm.max_map_count=1600000
 
 Using the **mssql** ***tuned*** profile configures the **vm.max_map_count** option.
 
-### Leave Transparent Huge Pages (THP) enabled
+#### Leave Transparent Huge Pages (THP) enabled
 
 Most Linux installations should have this option on by default. We recommend for the most consistent performance experience to leave this configuration option enabled. However, in case of high memory paging activity in SQL Server deployments with multiple instances for example or SQL Server execution with other memory demanding applications on the server, we suggest testing your applications performance after executing the following command 
 
@@ -260,11 +260,11 @@ tuned-adm profile mssql
 
 Using the **mssql** ***tuned*** profile configures the **transparent_hugepage** option.
 
-### swapfile
+#### swapfile
 
 Ensure you have a properly configured swapfile to avoid any out of memory issues. Consult your Linux documentation for how to create and properly size a swapfile.
 
-### Virtual Machines and Dynamic Memory
+#### Virtual Machines and Dynamic Memory
 
 If you are running SQL Server on Linux in a virtual machine, ensure you select options to fix the amount of memory reserved for the virtual machine. Do not use features like Hyper-V Dynamic Memory.
 

@@ -137,7 +137,7 @@ The following example creates an external data source with the following paramet
 | Instance | `27017`|
 | Replica set | `myRepl`|
 | TLS | `true`|
-| Pushdown computiation | `On`|
+| Pushdown computation | `On`|
 
 ```sql
 CREATE EXTERNAL DATA SOURCE external_data_source_name

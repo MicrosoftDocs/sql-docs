@@ -46,57 +46,96 @@ The following recommendations are optional configuration settings that you may c
 
 Consider using the following Linux Operating System configuration settings to experience the best performance for a SQL Server Installation.
 
-### Kernel settings for high performance
-These are the recommended Linux Operating System settings related to high performance and throughput for a SQL Server installation. See your Linux Operating System documentation for the process to configure these settings.
+### Storage configuration recommendation
 
+#### Use storage subsystem with appropriate IOPS, throughput and redundancy
 
+The storage subsystem hosting data, transaction log and other associated files (such as checkpoint files for in-memory OLTP) should be capable of managing both average and peak workload gracefully. Normally in on-premise environments the storage vendor support appropriate hardware RAID configuration with striping across multiple disks to ensure appropriate IOPS, Throughput and redundancy. Though this differs across different storage vendors and different storage offerings with varying architectures.
 
-> [!Note]
-> For Red Hat Enterprise Linux (RHEL) users, the [tuned](https://tuned-project.org) throughput-performance profile configure these settings automatically (except for C-States). Starting with RHEL 8.0, a /usr/lib/tuned built-in mssql profile was co-developed with Red Hat and offers finer Linux performance related tunings for SQL Server workloads. This profile includes the RHEL throughput-performance profile and we present its definitions below for your review with other Linux distros and RHEL releases without this profile.
+For SQL Server on Linux deployed on Azure Virtual Machines, you should consider using software RAID to ensure appropriate IOPS and Throughput requirements are achieved. Please refer to following article when configuring SQL Server on Azure virtual machines for similar storage considerations.
 
-The following table provides recommendations for CPU settings:
+[Storage configuration for SQL Server VMs](https://docs.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/storage-configuration)
 
-| Setting | Value | More information |
-|---|---|---|
-| CPU frequency governor | performance | See the **cpupower** command |
-| ENERGY_PERF_BIAS | performance | See the **x86_energy_perf_policy** command |
-| min_perf_pct | 100 | See your documentation on intel p-state |
-| C-States | C1 only | See your Linux or system documentation on how to ensure C-States is set to C1 only |
-
-The following table provides recommendations for disk settings:
-
-| Setting | Value | More information |
-|---|---|---|
-| disk readahead | 4096 | See the **blockdev** command |
-| sysctl settings | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 10 | See the **sysctl** command |
-
-### Kernel setting auto numa balancing for multi-node NUMA systems
-
-If you install SQL Server on a multi-node **NUMA** systems, the following **kernel.numa_balancing** kernel setting is enabled by default. To allow SQL Server to operate at maximum efficiency on a **NUMA** system, disable auto numa balancing on a multi-node NUMA system:
+Following is an example of how to create software raid in Linux on Azure Virtual Machines. Please note that following is just an example and you should use appropriate number of data disks for the required throughput and IOPS for volumes for based on the data, transaction log and tempdb IO requirements. In this example, 8 data disks were attached to the Azure Virtual Machine - 4 to host data files, 2 for transaction log and 2 for tempdb workload.
 
 ```bash
-sysctl -w kernel.numa_balancing=0
+# To locate the devices (for example /dev/sdc) for RAID creation, use the lsblk command
+# For Data volume, using 4 devices, in RAID 5 configuration with 8KB stripes
+mdadm --create --verbose /dev/md0 --level=raid5 --chunk=8K --raid-devices=4 /dev/sdc /dev/sdd /dev/sde /dev/sdf
+
+# For Log volume, using 2 devices in RAID 10 configuration with 64KB stripes
+mdadm --create --verbose /dev/md1 --level=raid10 --chunk=64K --raid-devices=2 /dev/sdg /dev/sdh
+
+
+# For tempdb volume, using 2 devices in RAID 0 configuration with 64KB stripes
+mdadm --create --verbose /dev/md2 --level=raid0 --chunk=64K --raid-devices=2 /dev/sdi /dev/sdj
+
+# Formatting the volume with XFS filesystem
+mkfs.xfs /dev/md0 -f -L datavolume
+mkfs.xfs /dev/md1 -f -L logvolume
+mkfs.xfs /dev/md2 -f -L tempdb
 ```
 
-### Kernel settings for Virtual Address Space
+#### Disable last accessed date/time on file systems for SQL Server data and log files
 
-The default setting of **vm.max_map_count** (which is 65536) may not be high enough for a SQL Server installation. For this reason, change the **vm.max_map_count** value to at least 262144 for a SQL Server deployment, and refer to the [Proposed Linux settings using a tuned mssql profile](#proposed-linux-settings-using-a-tuned-mssql-profile) section for further tunings of these kernel parameters. The max value for vm.max_map_count is 2147483647.
+To ensure that the drive(s) attached to the system are remounted automatically after a reboot, they must be added to the /etc/fstab file. It is also highly recommended that the UUID (Universally Unique Identifier) is used in /etc/fstab to refer to the drive rather than just the device name (such as, /dev/sdc1).
+
+Use of **noatime** attribute with any file system that is used to store SQL Server data and log files is highly recommended. Refer to your Linux documentation on how to set this attribute. An example of how to enable **noatime** option for a volume mounted in Azure Virtual Machine is below.
+
+The mount point entry in ***/etc/fstab***:
 
 ```bash
-sysctl -w vm.max_map_count=1600000
+UUID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /data1  xfs     rw,attr2,**noatime**  0 0
 ```
 
-### Proposed Linux settings using a tuned mssql profile
+In the example above, UUID represents the device which you can find using ***blkid*** command.
+
+#### File System Configuration recommendation
+
+SQL Server supports both EXT4 and XFS file systems to host the database, transaction log and additional files such as checkpoint files for in-memory OLTP in SQL Server. Microsoft recommends using XFS file system for hosting the SQL Server data and transaction log files.
+
+Additionally, there are certain versions of supported Linux distributions which provide support for FUA I/O subsystem capability to provide data durability. SQL Server uses FUA capability to provide highly efficient and reliable I/O for SQL server workload. For additional information on FUA support by Linux distribution and it's impact for SQL Server, please read following blog.
+
+[SQL Server On Linux: Forced Unit Access (Fua) Internals](https://bobsql.com/sql-server-on-linux-forced-unit-access-fua-internals/)
+
+SUSE Linux Enterprise Server 12 SP5 and Red Hat Enterprise Linux 8.0 onwards support FUA capability in the I/O subsystem. If you are using SQL Server 2017 CU6 and above or SQL Server 2019, you should use following configuration for high performing and efficient I/O implementation with FUA by SQL Server.
+
+Use recommended configuration listed below if following conditions are met.
+
+- Using SQL Server 2017 CU6 or newer, or SQL Server 2019
+- Using a Linux distribution and version that supports FUA capability, (Red Hat Enterprise Linux 8.0 or higher or SUSE Linux Enterprise Server 12 SP5)
+- On storage subsystem and/or hardware that supports and is configured for FUA capability
+
+Recommended configuration:
+1. Enable trace flag 3979 as a startup parameter
+2. Use mssql-conf to configure control.writethrough = 1 and control.alternatewritethrough = 0
+
+For almost all other configuration that does not meet previous conditions, the recommended configuration is as following.
+
+1. Enable trace flag 3982 as a startup parameter (which is default behavior for SQL Server in Linux ecosystem), while ensuring trace flag 3979 is not enabled as a startup parameter
+2. Use mssql-conf to configure control.writethrough = 1 and control.alternatewritethrough = 1
+
+## Kernel and CPU settings for high performance
+
+Following section describes the recommended Linux Operating System settings related to high performance and throughput for a SQL Server installation. See your Linux Operating System documentation for the process to configure these settings. Using ***tuned*** as described helps configure many CPU and kernel configuration described below.
+
+### Using tuned to configure Kernel settings
+
+ For Red Hat Enterprise Linux (RHEL) users, the [tuned](https://tuned-project.org) throughput-performance profile configure some kernel and CPU settings automatically (except for C-States). Starting with RHEL 8.0, a ***tuned*** profile named **mssql** was co-developed with Red Hat and offers finer Linux performance related tunings for SQL Server workloads. This profile includes the RHEL throughput-performance profile and we present its definitions below for your review with other Linux distros and RHEL releases without this profile.
+
+ For SUSE Linux Enterprise Server 12 SP5, Ubuntu 18.04 and Red Hat Enterprise Linux 7.x, the ***tuned*** package can be installed manually. It can be used to create and configure the **mssql** profile as described below.
+
+#### Proposed Linux settings using a tuned mssql profile
 
 ```bash
 #
 # A tuned configuration for SQL Server on Linux
 #
-    
+
 [main]
 summary=Optimize for Microsoft SQL Server
 include=throughput-performance
-    
+
 [cpu]
 force_latency=5
 
@@ -138,9 +177,56 @@ or
 tuned-adm list
 ```
 
-### Disable last accessed date/time on file systems for SQL Server data and log files
+### CPU settings recommendation
+The following table provides recommendations for CPU settings:
 
-Use the **noatime** attribute with any file system that is used to store SQL Server data and log files. Refer to your Linux documentation on how to set this attribute.
+| Setting | Value | More information |
+|---|---|---|
+| CPU frequency governor | performance | See the **cpupower** command |
+| ENERGY_PERF_BIAS | performance | See the **x86_energy_perf_policy** command |
+| min_perf_pct | 100 | See your documentation on intel p-state |
+| C-States | C1 only | See your Linux or system documentation on how to ensure C-States is set to C1 only |
+
+Using ***tuned*** as described earlier automatically configures CPU frequency governor, ENERGY_PERF_BIAS and min_perf_pct settings appropriately due to the throughput-performance profile being used as base for **mssql** profile. C-States parameter must be configured manually according to the documentation provided by Linux or system distributor.
+
+### Disk settings recommendations
+
+The following table provides recommendations for disk settings:
+
+| Setting | Value | More information |
+|---|---|---|
+| disk readahead | 4096 | See the **blockdev** command |
+| sysctl settings | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 1 | See the **sysctl** command |
+
+**Description:**
+
+**vm.swappiness** - this parameters controls relative weight given to swapping out runtime memory by limiting the the kernel to swap out SQL Server process memory pages.
+
+**vm.dirty_\*** - SQL Server file write accesses are uncached satisfying its data integrity requirements. These parameters allow efficient asynchronous write performance and lower the storage IO impact of Linux caching writes by allowing large enough caching while throttling flushing.
+
+**kernel.sched_\*** - These parameter values represent the current recommendation for tweaking the Completely Fair Scheduling (CFS) algorithm in Linux Kernel, to improve throughput of network and storage IO calls with respect to inter-process preemption and resumption of threads.
+
+Using the **mssql** ***tuned*** profile configures the **vm.swappiness**, **vm.dirty_\*** and **kernel.sched_\*** settings. The disk readahead configuration using ***blockdev*** command must be performed manually.
+
+### Kernel setting auto numa balancing for multi-node NUMA systems
+
+If you install SQL Server on a multi-node **NUMA** systems, the following **kernel.numa_balancing** kernel setting is enabled by default. To allow SQL Server to operate at maximum efficiency on a **NUMA** system, disable auto numa balancing on a multi-node NUMA system:
+
+```bash
+sysctl -w kernel.numa_balancing=0
+```
+
+Using the **mssql** ***tuned*** profile configures the **kernel.numa_balancing** option.
+
+### Kernel settings for Virtual Address Space
+
+The default setting of **vm.max_map_count** (which is 65536) may not be high enough for a SQL Server installation. For this reason, change the **vm.max_map_count** value to at least 262144 for a SQL Server deployment, and refer to the [Proposed Linux settings using a tuned mssql profile](#proposed-linux-settings-using-a-tuned-mssql-profile) section for further tunings of these kernel parameters. The max value for vm.max_map_count is 2147483647.
+
+```bash
+sysctl -w vm.max_map_count=1600000
+```
+
+Using the **mssql** ***tuned*** profile configures the **vm.max_map_count** option.
 
 ### Leave Transparent Huge Pages (THP) enabled
 
@@ -149,16 +235,18 @@ Most Linux installations should have this option on by default. We recommend for
 ```bash
 echo madvise > /sys/kernel/mm/transparent_hugepage/enabled
 ```
-or modifying the mssql tuned profile with the line
+or modifying the **mssql** ***tuned*** profile with the line
 
 ```bash
 vm.transparent_hugepages=madvise
 ```
-and make the mssql profile active after the modification
+and make the **mssql** active after the modification
 ```bash
 tuned-adm off
 tuned-adm profile mssql
 ```
+
+Using the **mssql** ***tuned*** profile configures the **transparent_hugepage** option.
 
 ### swapfile
 

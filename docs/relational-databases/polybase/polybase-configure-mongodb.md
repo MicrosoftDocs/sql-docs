@@ -74,6 +74,10 @@ The following Transact-SQL commands are used in this section:
 >
 >For an example, see [Create an external table for MongoDB](../../t-sql/statements/create-external-table-transact-sql.md#k-create-an-external-table-for-mongodb).
 
+## MongoDB connection options
+
+For information about MongoDB connection options, see [MongoDB documentation: Connection String URI Format](https://docs.mongodb.com/manual/reference/connection-string/#connection-string-options).
+
 ## Flattening
 
 Flattening  is enabled for nested and repeated data from MongoDB document collections. User is required to enable `create an external table` and explicitly specify a relational schema over MongoDB document collections that may have nested and/or repeated data. 

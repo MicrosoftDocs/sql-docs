@@ -32,7 +32,7 @@ In addition to above, deploying SQL Server 2019 big data cluster also requires:
 
 * [azdata](../azdata/install/deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
-* [Azure CLI (if deploying in Azure)](/cli/azure/install-azure-cli?view=azure-cli-latest)
+* [Azure CLI (if deploying in Azure)](/cli/azure/install-azure-cli)
 
 ## Launch the notebook
 

@@ -113,9 +113,9 @@ FROM sys.dm_os_sys_info;
  The following query uses **sys.dm_os_performance_counters** to observe the SQL Server instance's current **page life expectancy** value.
 ```
 SELECT
-case when object_name = 'SQLServer:Buffer Manager' and counter_name = 'Page life expectancy' then cntr_value end AS PLE_s
+case when object_name like '%Buffer Manager%' and counter_name = 'Page life expectancy' then cntr_value end AS PLE_s
 FROM sys.dm_os_performance_counters    
-WHERE case when object_name = 'SQLServer:Buffer Manager' and counter_name = 'Page life expectancy' then cntr_value end is not null;
+WHERE case when object_name like '%Buffer Manager%' and counter_name = 'Page life expectancy' then cntr_value end is not null;
 ```
 
 ## See Also

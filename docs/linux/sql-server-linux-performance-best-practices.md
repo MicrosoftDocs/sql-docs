@@ -69,12 +69,25 @@ mdadm --create --verbose /dev/md1 --level=raid10 --chunk=64K --raid-devices=2 /d
 
 # For tempdb volume, using 2 devices in RAID 0 configuration with 64KB stripes
 mdadm --create --verbose /dev/md2 --level=raid0 --chunk=64K --raid-devices=2 /dev/sdi /dev/sdj
+```
 
+#### File System Configuration recommendation
+
+SQL Server supports both EXT4 and XFS file systems to host the database, transaction log and additional files such as checkpoint files for in-memory OLTP in SQL Server. Microsoft recommends using XFS file system for hosting the SQL Server data and transaction log files.
+
+```bash
 # Formatting the volume with XFS filesystem
 mkfs.xfs /dev/md0 -f -L datavolume
 mkfs.xfs /dev/md1 -f -L logvolume
 mkfs.xfs /dev/md2 -f -L tempdb
 ```
+
+> [!NOTE]
+> It is possible to configure the XFS file system to be case insensitive when creating and formatting the XFS volume. It is not the frequently used configuration in Linux ecosystem but can be used for compatibility reasons.
+>
+> Example: mkfs.xfs /dev/md0 -f -n version=ci -L datavolume
+> 
+> In the example, parameters "-n version=ci" are used to configure the XFS filesystem to be case insensitive.
 
 #### Disable last accessed date/time on file systems for SQL Server data and log files
 
@@ -85,16 +98,14 @@ Use of **noatime** attribute with any file system that is used to store SQL Serv
 The mount point entry in ***/etc/fstab***:
 
 ```bash
-UUID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /data1  xfs     rw,attr2,**noatime**  0 0
+UUID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /data1  xfs     rw,attr2,noatime  0 0
 ```
 
 In the example above, UUID represents the device which you can find using ***blkid*** command.
 
-#### File System Configuration recommendation
+#### SQL Server and FUA I/O subsystem capability
 
-SQL Server supports both EXT4 and XFS file systems to host the database, transaction log and additional files such as checkpoint files for in-memory OLTP in SQL Server. Microsoft recommends using XFS file system for hosting the SQL Server data and transaction log files.
-
-Additionally, there are certain versions of supported Linux distributions which provide support for FUA I/O subsystem capability to provide data durability. SQL Server uses FUA capability to provide highly efficient and reliable I/O for SQL server workload. For additional information on FUA support by Linux distribution and it's impact for SQL Server, please read following blog.
+There are certain versions of supported Linux distributions which provide support for FUA I/O subsystem capability to provide data durability. SQL Server uses FUA capability to provide highly efficient and reliable I/O for SQL server workload. For additional information on FUA support by Linux distribution and it's impact for SQL Server, please read following blog.
 
 [SQL Server On Linux: Forced Unit Access (Fua) Internals](https://bobsql.com/sql-server-on-linux-forced-unit-access-fua-internals/)
 
@@ -167,7 +178,7 @@ chmod +x /usr/lib/tuned/mssql/tuned.conf
 tuned-adm profile mssql
 ```
 
-Verify its enabling with
+Verify its enabled with,
 
 ```bash
 tuned-adm active
@@ -178,6 +189,7 @@ tuned-adm list
 ```
 
 ### CPU settings recommendation
+
 The following table provides recommendations for CPU settings:
 
 | Setting | Value | More information |

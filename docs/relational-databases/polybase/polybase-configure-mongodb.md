@@ -37,22 +37,22 @@ The following Transact-SQL commands are used in this section:
 1. Create a database scoped credential for accessing the MongoDB source.
 
     ```sql
-    /*  specify credentials to external data source
-    *  IDENTITY: user name for external source. 
+    /* Specify credentials to external data source.
+    *  IDENTITY: user name for external source.
     *  SECRET: password for external source.
     */
+
     CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
     ```
-    
+
    > [!IMPORTANT] 
-   > The MongoDB ODBC Connector for PolyBase supports only basic authentication, not Kerberos authentication.    
-    
+   > The MongoDB ODBC Connector for PolyBase supports only basic authentication, not Kerberos authentication.
+
 1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
     ```sql
-    /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
+    /* LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-    *CONNECTION_OPTIONS: Specify driver location
     *  CREDENTIAL: the database scoped credential, created above.
     */
     CREATE EXTERNAL DATA SOURCE external_data_source_name
@@ -69,12 +69,13 @@ The following Transact-SQL commands are used in this section:
     CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
     ```
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 >Once you have created an external data source, you can use the [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) command to create a queryable table over that source.
 >
 >For an example, see [Create an external table for MongoDB](../../t-sql/statements/create-external-table-transact-sql.md#k-create-an-external-table-for-mongodb).
 
 ## Flattening
+
 Flattening  is enabled for nested and repeated data from MongoDB document collections. User is required to enable `create an external table` and explicitly specify a relational schema over MongoDB document collections that may have nested and/or repeated data. 
 JSON nested/repeated data types will be flattened as follows
 
@@ -106,10 +107,10 @@ As an example, SQL Server evaluates the MongoDB sample dataset restaurant collec
 
 Object address will be flattened as below:
 
-* Nested field restaurant.address.building becomes restaurant.address_building
-* Nested field restaurant.address.coord becomes restaurant.address_coord
-* Nested field restaurant.address.street becomes restaurant.address_street
-* Nested field restaurant.address.zipcode becomes restaurant.address_zipcode
+- Nested field `restaurant.address.building` becomes `restaurant.address_building`
+- Nested field `restaurant.address.coord` becomes `restaurant.address_coord`
+- Nested field `restaurant.address.street` becomes `restaurant.address_street`
+- Nested field `restaurant.address.zipcode` becomes `restaurant.address_zipcode`
 
 Array grades will be flattened as below:
 
@@ -123,7 +124,28 @@ Array grades will be flattened as below:
 
 ## Cosmos DB Connection
 
-Using the Cosmos DB mongo api and the Mongo DB PolyBase connector you can create an external table of a **Cosmos DB instance**. This accomplished by following the same steps listed above. Make sure the Database scoped credential, Server address, port, and location string reflect that of the Cosmos DB server. 
+Using the Cosmos DB Mongo API and the Mongo DB PolyBase connector you can create an external table of a **Cosmos DB instance**. This accomplished by following the same steps listed above. Make sure the Database scoped credential, Server address, port, and location string reflect that of the Cosmos DB server.
+
+## Examples
+
+The following example creates an external data source with the following parameters:
+
+| Parameter | Value|
+|---|---|
+| Name | `external_data_source_name`|
+| Service | `mongodb0.example.com`|
+| Instance | `27017`|
+| Replica set | `myRepl`|
+| TLS | `true`|
+| Pushdown computiation | `On`|
+
+```sql
+CREATE EXTERNAL DATA SOURCE external_data_source_name
+    WITH (LOCATION = 'mongodb://mongodb0.example.com:27017',
+    CONNECTION_OPTION = 'replicaSet=myRepl','tls=true',
+    PUSHDOWN = ON ,
+    CREDENTIAL = credential_name);
+```
 
 ## Next steps
 

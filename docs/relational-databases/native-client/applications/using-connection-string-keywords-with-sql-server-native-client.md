@@ -1,5 +1,5 @@
 ---
-title: "Using Connection String Keywords"
+title: "Using connection string keywords"
 description: Some SQL Server Native Client APIs use connection strings to specify connection attributes. Connection strings are keyword/value pairs.
 ms.custom: ""
 ms.date: "08/01/2016"

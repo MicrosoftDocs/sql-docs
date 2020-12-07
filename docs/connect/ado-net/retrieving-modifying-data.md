@@ -21,16 +21,23 @@ A primary function of any database application is connecting to a data source an
 
 ## In this section
 
-[Connecting to a data source](connecting-to-data-source.md)
+[Connecting to a data source](connecting-to-data-source.md)  
 Describes how to establish a connection to a data source and how to work with connection events.
 
-[Connection strings](connection-strings.md)
+[Connection strings](connection-strings.md)  
 Contains topics describing various aspects of using connection strings, including connection string keywords, security info, and storing and retrieving them.
 
-[Connection pooling](connection-pooling.md)
+[Connection pooling](connection-pooling.md)  
 Describes connection pooling for the Microsoft SqlClient Data Provider for SQL Server.
+
+[Commands and Parameters](commands-parameters.md)  
+Contains topics describing how to create commands and command builders, configure parameters, and how to execute commands to retrieve and modify data.
+
+[DataAdapters and DataReaders](dataadapters-datareaders.md)  
+Contains topics describing DataReaders, DataAdapters, parameters, handling DataAdapter events and performing batch operations.
 
 ## See also
 
 - [Data type mappings in ADO.NET](data-type-mappings-ado-net.md)
 - [SQL Server and ADO.NET](./sql/index.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

@@ -42,7 +42,7 @@ When registering Service Principal Names (SPN), you can use the hostname of the 
 
 Ensure there is forwarding host (A) entry added in Active Directory for the Linux host IP address, mapping to the name of the SQL container. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`, and my container name is `sql1`. We add the forwarding host entry in the Active Directory as shown below. The entry ensure that when users connect to sql1.contoso.com, it reaches the right host.
 
-:::image type="content" source="media/sql-server-linux-containers-ad-auth-tutorial/host-a-record.png" alt-text="add host record":::
+:::image type="content" source="media/sql-server-linux-containers-ad-auth-adutil-tutorial/host-a-record.png" alt-text="add host record":::
 
 For this tutorial, we're using an environment in Azure with three VMs. One VM acting as the windows domain controller (DC), with the domain name `contoso.com`. The Domain Controller name of `adVM.contoso.com`. The second machine is a Windows machine called `winbox`, running Windows 10 desktop, which is used as a client box and has SQL Server Management Studio (SSMS) installed. The third machine is an Ubuntu 18.04 LTS machine named `myubuntu`, which hosts the SQL Server containers. All machines have been joined to the `contoso.com` domain. For more information, see [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-join-domain.md).
 
@@ -110,7 +110,7 @@ On the Linux host machine, use the following commands to install adutil-preview.
 1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil, which is placed in the path `/usr/share/adutil/`.
 
     ```bash
-     sudo ACCEPT_EULA=Y zypper install -y adutil-preview
+    sudo ACCEPT_EULA=Y zypper install -y adutil-preview
     ```
 
 ## Creating the AD user, SPNs, and SQL Server service keytab
@@ -133,19 +133,19 @@ Enabling AD authentication on SQL Server on Linux containers requires steps 1-3 
     > Before you run this command, the host should already be part of the domain as shown in the previous step.
 
     ```bash
-         kinit privilegeduser@DOMAIN.COM
+    kinit privilegeduser@DOMAIN.COM
     ```
 
     Example: For the environment described above, my privileged account is `amvin@CONTOSO.COM`
 
     ```bash
-         kinit amvin@CONTOSO.COM
+    kinit amvin@CONTOSO.COM
     ```
 
 2. Using the adutil tool, create the new user that will be used as the privileged AD Account by SQL Server.
 
    ```bash
-    adutil user create --name sqluser -distname CN=sqluser,CN=Users,DC=CONTOSO,DC=COM --password 'P@ssw0rd'
+   adutil user create --name sqluser -distname CN=sqluser,CN=Users,DC=CONTOSO,DC=COM --password 'P@ssw0rd'
    ```
 
     > [!NOTE]
@@ -184,7 +184,7 @@ Create the keytab file which contains entries for each of the 4 SPNs created pre
 To create the keytab for all the SPNs, we can use the `createauto` option:
 
 ```bash
-   adutil keytab createauto -k /container/sql1/secrets/mssql.keytab -p 5433 -H sql1.contoso.com --password 'P@ssw0rd' -s MSSQLSvc
+adutil keytab createauto -k /container/sql1/secrets/mssql.keytab -p 5433 -H sql1.contoso.com --password 'P@ssw0rd' -s MSSQLSvc
 ```
 
 > [!NOTE]
@@ -201,7 +201,7 @@ When given a choice to choose the encryption types (enc types), you can choose m
 If you’d like to non-interactively choose the encryption type, you can specify your choice of encryption type with the -e argument in the above command. For additional help on the adutil commands, run the command below.
 
 ```bash
- adutil keytab createauto --help
+adutil keytab createauto --help
 ```
 
 > [!NOTE]
@@ -293,7 +293,7 @@ chmod 440 /container/sqlco/secrets /mssql.keytab
 1. Make sure there is enough permission on these folders for the user running the docker/podman command. When the container starts, the user needs access to the folder path created. In this example, we provided the below permissions given to the folder path:
 
     ```bash
-        sudo chmod 755 /container/sql1/
+    sudo chmod 755 /container/sql1/
     ```
 
 ## Mount the config files and deploy the SQL Server container
@@ -301,11 +301,11 @@ chmod 440 /container/sqlco/secrets /mssql.keytab
 Run your SQL Server container, and mount the correct AD configuration files which were previously created as shown below:
 
 ```bash
- sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=\<YourStrong@Passw0rd\>" \
- -p 5433:1433 --name sql1 \
- -v /container/sql1:/var/opt/mssql \
- -v /container/sql1/krb5.conf:/etc/krb5.conf \
- -d mcr.microsoft.com/mssql/server:2019-latest
+sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=\<YourStrong@Passw0rd\>" \
+-p 5433:1433 --name sql1 \
+-v /container/sql1:/var/opt/mssql \
+-v /container/sql1/krb5.conf:/etc/krb5.conf \
+-d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
 > [!NOTE]
@@ -314,15 +314,15 @@ Run your SQL Server container, and mount the correct AD configuration files whic
 Our example would contain the following commands:
 
 ```bash
- sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=P@ssw0rd" -p 5433:1433 --name sql1 \
- -v /container/sql1:/var/opt/mssql/ \
- -v /container/sql1/krb5.conf:/etc/krb5.conf \
- --dns-search contoso.com \
- --dns 10.0.0.4 \
- --add-host adVM.contoso.com:10.0.0.4 \
- --add-host contoso.com:10.0.0.4 \
- --add-host contoso:10.0.0.4 \
- -d mcr.microsoft.com/mssql/server:2019-latest
+sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=P@ssw0rd" -p 5433:1433 --name sql1 \
+-v /container/sql1:/var/opt/mssql/ \
+-v /container/sql1/krb5.conf:/etc/krb5.conf \
+--dns-search contoso.com \
+--dns 10.0.0.4 \
+--add-host adVM.contoso.com:10.0.0.4 \
+--add-host contoso.com:10.0.0.4 \
+--add-host contoso:10.0.0.4 \
+-d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
 > [!NOTE]
@@ -342,7 +342,7 @@ SELECT name FROM sys.server_principals;
 
 ## Connect to SQL Server using AD authentication.
 
-To connect using SSMS or ADS, log in to the SQL Server with windows credentials using the SQL Server name and port number (name could be the container name or the host name). For our example, the server name would be `sql1.contoso.com, 5433`.
+To connect using [SSMS](../ssms/download-sql-server-management-studio-ssms.md) or [ADS](../azure-data-studio/download-azure-data-studio.md), log in to the SQL Server with Windows credentials using the SQL Server name and port number (name could be the container name or the host name). For our example, the server name would be `sql1.contoso.com, 5433`.
 
 You can also use a tool like [sqlcmd](../tools/sqlcmd-utility.md) to connect to the SQL Server in your container.
 

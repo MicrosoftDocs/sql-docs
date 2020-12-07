@@ -40,7 +40,7 @@ To setup your container, you'll need to know in advance what ports the container
 
 When registering Service Principal Names (SPN), you can use the hostname of the machine or the name of the container, but you should set it up according to what you'd like to see when you connect to the container externally.
 
-Ensure there is forwarding host (A) entry added in Active Directory for the Linux host IP address, mapping to the name of the SQL container. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`, and my container name is `sql1`. We add the forwarding host entry in the Active Directory as shown below. The entry ensure that when users connect to sql1.contoso.com, it reaches the right host.
+Ensure there is forwarding host (A) entry added in Active Directory for the Linux host IP address, mapping to the name of the SQL container. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`, and my container name is `sql1`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to sql1.contoso.com, it reaches the right host.
 
 :::image type="content" source="media/sql-server-linux-containers-ad-auth-adutil-tutorial/host-a-record.png" alt-text="add host record":::
 
@@ -196,7 +196,7 @@ adutil keytab createauto -k /container/sql1/secrets/mssql.keytab -p 5433 -H sql1
 > `--password`: This is the password of the privileged AD user account that was created earlier.
 > `-e` or `--enctype`: Encryption types for the keytab entry. Use a comma-separated list of values. If not specified, an interactive prompt will be presented.
 
-When given a choice to choose the encryption types (enc types), you can choose more than one. For this example, we chose `aes256-cts-hmac-sha1-96` and `arcfour-hmac`. Ensure you choose the enc type that is supported by the host and domain.
+When given a choice to choose the encryption types, you can choose more than one. For this example, we chose `aes256-cts-hmac-sha1-96` and `arcfour-hmac`. Ensure you choose the encryption type that is supported by the host and domain.
 
 If you’d like to non-interactively choose the encryption type, you can specify your choice of encryption type with the -e argument in the above command. For additional help on the adutil commands, run the command below.
 

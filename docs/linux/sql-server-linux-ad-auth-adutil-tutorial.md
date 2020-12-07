@@ -99,7 +99,7 @@ On the Linux host machine, use the following commands to install adutil-preview.
 
 ## Domain machine preparation
 
-Ensure there is forwarding host (A) entry added in Active Directory for the Linux host IP address. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`. We add the forwarding host entry in the Active Directory as shown below. The entry ensure that when users connect to myubuntu.contoso.com, it reaches the right host.
+Ensure there is forwarding host (A) entry added in Active Directory for the Linux host IP address. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to myubuntu.contoso.com, it reaches the right host.
 
 :::image type="content" source="media/sql-server-linux-ad-auth-adutil-tutorial/host-a-record.png" alt-text="add host record":::
 
@@ -178,7 +178,7 @@ adutil keytab createauto -k /var/opt/mssql/secrets/mssql.keytab -p 1433 -H  myub
 > `--password`: This is the password of the privileged AD user account that was created earlier.
 > `-e` or `--enctype`: Encryption types for the keytab entry. Use a comma-separated list of values. If not specified, an interactive prompt will be presented.
 
-When given a choice to choose the encryption types (enc types), you can choose more than one. For this example, we chose `aes256-cts-hmac-sha1-96` and `arcfour-hmac`. Ensure you choose the enc type that is supported by the host and domain.
+When given a choice to choose the encryption types, you can choose more than one. For this example, we chose `aes256-cts-hmac-sha1-96` and `arcfour-hmac`. Ensure you choose the encryption type that is supported by the host and domain.
 
 If you’d like to non-interactively choose the encryption type, you can specify your choice of encryption type with the -e argument in the above command. For additional help on the adutil commands, run the command below.
 

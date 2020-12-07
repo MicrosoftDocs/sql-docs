@@ -33,3 +33,5 @@ Describes how to use an **InfoMessage** event to retrieve informational messages
 
 - [Connection strings](connection-strings.md)
 - [Connection pooling](connection-pooling.md)
+- [Commands and parameters](commands-parameters.md)
+- [DataAdapters and DataReaders](dataadapters-datareaders.md)

@@ -89,13 +89,19 @@ mkfs.xfs /dev/md2 -f -L tempdb
 > 
 > In the example, parameters "-n version=ci" are used to configure the XFS filesystem to be case insensitive.
 
+##### Persistent Memory filesystem recommendation
+
+For the filesystem configuration on Persistent Memory devices, the block allocation for the underlying filesystem should be 2MB. For additional information on this topic, please review following article.
+
+[Technical considerations](sql-server-linux-configure-pmem.md#technical-considerations)
+
 #### Disable last accessed date/time on file systems for SQL Server data and log files
 
 To ensure that the drive(s) attached to the system are remounted automatically after a reboot, they must be added to the /etc/fstab file. It is also highly recommended that the UUID (Universally Unique Identifier) is used in /etc/fstab to refer to the drive rather than just the device name (such as, /dev/sdc1).
 
 Use of **noatime** attribute with any file system that is used to store SQL Server data and log files is highly recommended. Refer to your Linux documentation on how to set this attribute. An example of how to enable **noatime** option for a volume mounted in Azure Virtual Machine is below.
 
-The mount point entry in ***/etc/fstab***:
+The mount point entry in ***/etc/fstab***
 
 ```bash
 UUID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /data1  xfs     rw,attr2,noatime  0 0
@@ -212,13 +218,13 @@ The following table provides recommendations for disk settings:
 
 **Description:**
 
-**vm.swappiness** - this parameters controls relative weight given to swapping out runtime memory by limiting the the kernel to swap out SQL Server process memory pages.
+**vm.swappiness**:  this parameters controls relative weight given to swapping out runtime memory by limiting the the kernel to swap out SQL Server process memory pages.
 
-**vm.dirty_\*** - SQL Server file write accesses are uncached satisfying its data integrity requirements. These parameters allow efficient asynchronous write performance and lower the storage IO impact of Linux caching writes by allowing large enough caching while throttling flushing.
+**vm.dirty_\***: SQL Server file write accesses are uncached satisfying its data integrity requirements. These parameters allow efficient asynchronous write performance and lower the storage IO impact of Linux caching writes by allowing large enough caching while throttling flushing.
 
-**kernel.sched_\*** - These parameter values represent the current recommendation for tweaking the Completely Fair Scheduling (CFS) algorithm in Linux Kernel, to improve throughput of network and storage IO calls with respect to inter-process preemption and resumption of threads.
+**kernel.sched_\***: These parameter values represent the current recommendation for tweaking the Completely Fair Scheduling (CFS) algorithm in Linux Kernel, to improve throughput of network and storage IO calls with respect to inter-process preemption and resumption of threads.
 
-Using the **mssql** ***tuned*** profile configures the **vm.swappiness**, **vm.dirty_\*** and **kernel.sched_\*** settings. The disk readahead configuration using ***blockdev*** command must be performed manually.
+Using the **mssql** ***tuned*** profile configures the **vm.swappiness**, **vm.dirty_\*** and **kernel.sched_\*** settings. The disk readahead configuration using ***blockdev*** command are per device and must be performed manually.
 
 #### Kernel setting auto numa balancing for multi-node NUMA systems
 
@@ -260,7 +266,12 @@ tuned-adm profile mssql
 
 Using the **mssql** ***tuned*** profile configures the **transparent_hugepage** option.
 
-#### swapfile
+#### Additional advanced Kernel/OS configuration
+
+1. For best storage IO performance, the use of Linux multiqueue scheduling for block devices is recommended. This enables the block layer performance to scale well with fast solid-state drives (SSDs) and multi-core systems. Please check the documentation if it is enableed by default in your Linux distributions. In most other cases booting the kernel with **scsi_mod.use_blk_mq=y** enables it, though documentation of the Linux distribution in use may have additional guidance on it. This is consistent to the upstream Linux kernel.
+2. As multipath IO is often used for SQL Server deployments, the device mapper (DM) multipath target should also be configured to use the blk-mq infrastructure by enabling the **dm_mod.use_blk_mq=y** kernel boot option. The default value is n (disabled). This setting, when the underlying SCSI devices are using blk-mq, reduces locking overhead at the DM layer. Please refer to the documentation of the Linux distribution in use for additional guidance on how to configure it.
+
+#### Configure swapfile
 
 Ensure you have a properly configured swapfile to avoid any out of memory issues. Consult your Linux documentation for how to create and properly size a swapfile.
 

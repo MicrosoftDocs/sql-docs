@@ -10029,7 +10029,7 @@
       - name: Troubleshoot Docker containers
         href: linux/sql-server-linux-docker-container-troubleshooting.md
       - name: Setup AD Authentication using adutil
-        href: linux/sql-server-linux-containers-ad-auth-tutorial.md
+        href: linux/sql-server-linux-containers-ad-auth-adutil-tutorial.md
     - name: Develop
       href: linux/sql-server-linux-develop-overview.md
       items:

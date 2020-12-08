@@ -427,6 +427,18 @@ There is no need to split Parquet and ORC files because the COPY command will au
 ### Are there any limitations on the number or size of files?
 There are no limitations on the number or size of files; however, for best performance, we recommend files that are at least 4MB.
 
+### Are there any known issues with the COPY statement?
+If you have a Synapse workspace that was created prior to 12/07/2020, you may run into a similar error message when authenticating using Managed Identity:
+
+*com.microsoft.sqlserver.jdbc.SQLServerException: Managed Service Identity has not been enabled on this server. Please enable Managed Service Identity and try again.*
+
+Follow these steps to work around this issue by re-registering the workspace's managed identity:
+
+1. Go to your Synapse workspace in the Azure portal
+2. Go to the Managed identities blade 
+3. If the “Allow Pipelines” option is already checked, you must uncheck this setting and save
+4. Check the "Allow Pipelines" option and save
+
 
 ## See also  
 

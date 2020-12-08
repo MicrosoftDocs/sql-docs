@@ -84,7 +84,7 @@ Always back up your database master key. For more information on database master
     -- Save the result in column CardNumber_Encrypted.    
     UPDATE Sales.CreditCard  
     SET CardNumber_Encrypted = EncryptByKey(Key_GUID('CreditCards_Key11')  
-        , CardNumber, 1, HashBytes('SHA1', CONVERT( varbinary  
+        , CardNumber, 1, HASHBYTES('SHA2_256', CONVERT( varbinary  
         , CreditCardID)));  
     GO  
   
@@ -102,7 +102,7 @@ Always back up your database master key. For more information on database master
     SELECT CardNumber, CardNumber_Encrypted   
         AS 'Encrypted card number', CONVERT(nvarchar,  
         DecryptByKey(CardNumber_Encrypted, 1 ,   
-        HashBytes('SHA1', CONVERT(varbinary, CreditCardID))))  
+        HASHBYTES('SHA2_256', CONVERT(varbinary, CreditCardID))))  
         AS 'Decrypted card number' FROM Sales.CreditCard;  
     GO  
     ```  

@@ -2,7 +2,7 @@
 title: "Driver history for Microsoft SQL Server | Microsoft Docs"
 description: "This page describes Microsoft's historical data connection technologies for connecting to SQL Server."
 ms.custom: ""
-ms.date: 05/06/2020
+ms.date: 12/08/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -33,7 +33,15 @@ There are three distinct generations of Microsoft OLE DB providers for SQL Serve
 
 ## ADO.NET
 
-ADO.NET was introduced with the Microsoft .NET Framework and continues to be improved and maintained. It is a core component of the Microsoft .NET Framework. For more information, see [Microsoft ADO.NET for SQL Server](ado-net/microsoft-ado-net-sql-server.md).
+ADO.NET is a set of classes that defines an interface for accessing any kind of data source, both relational and non-relational. ADO.NET was introduced with the Microsoft .NET Framework and continues to be improved and maintained in .NET. The SqlClient library is an ADO.NET data provider that provides connectivity to SQL Server and Azure SQL data sources.
+
+### System.Data.SqlClient
+
+System.Data.SqlClient is included as part of .NET Framework and .NET Core. Up until 2019, it was receiving regular feature updates. With the announcements of the [future of .NET Core, .NET Framework](https://devblogs.microsoft.com/dotnet/net-core-is-the-future-of-net/), and [.NET in general](https://devblogs.microsoft.com/dotnet/introducing-net-5/), development of SqlClient needed to shift to a package outside of .NET. System.Data.SqlClient is still supported but is not receiving feature updates and should not be used for new development.
+
+### Microsoft.Data.SqlClient
+
+[Introduced in 2019](https://devblogs.microsoft.com/dotnet/introducing-the-new-microsoftdatasqlclient/), the Microsoft SqlClient Data Provider for SQL Server is an ADO.NET data provider supporting applications that target .NET Framework, .NET Core, and .NET Standard. For more information about the Microsoft.Data.SqlClient namespace, see [Microsoft ADO.NET for SQL Server](ado-net/microsoft-ado-net-sql-server.md).
 
 ## JDBC
 

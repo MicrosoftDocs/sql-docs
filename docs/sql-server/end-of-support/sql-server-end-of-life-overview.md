@@ -5,7 +5,7 @@ ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: cawrites    
+author: cawrites
 ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"

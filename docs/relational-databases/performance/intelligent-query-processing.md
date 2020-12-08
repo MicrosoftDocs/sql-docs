@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Intelligent query processing in SQL databases
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The intelligent query processing (IQP) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort to adopt. 
 
@@ -34,8 +34,8 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 The following table details all intelligent query processing features, along with any requirement they have for database compatibility level.
 
-| **IQP Feature** | **Supported in Azure SQL Database** | **Supported in SQL Server** |**Description** |
-| --- | --- | --- |--- |
+| **IQP Feature** | **Supported in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]** | **Supported in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** |**Description** |
+| ---------------- | ------- | ------- | ---------------- |
 | [Adaptive Joins (Batch Mode)](#batch-mode-adaptive-joins) | Yes, under compatibility level 140| Yes, starting in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] under compatibility level 140|Adaptive joins dynamically select a join type during runtime based on actual input rows.|
 | [Approximate Count Distinct](#approximate-query-processing) | Yes| Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|Provide approximate COUNT DISTINCT for big data scenarios with the benefit of high performance and a low memory footprint. |
 | [Batch Mode on Rowstore](#batch-mode-on-rowstore) | Yes, under compatibility level 150| Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] under compatibility level 150|Provide batch mode for CPU-bound relational DW workloads without requiring columnstore indexes.  | 
@@ -385,7 +385,6 @@ Set the database to to compatibility level 150. No other changes are required.
 Even if a query does not access any tables with columnstore indexes, the query processor, using heuristics, will decide whether to consider batch mode. The heuristics consist of these checks:
 1. An initial check of table sizes, operators used, and estimated cardinalities in the input query.
 2. Additional checkpoints, as the optimizer discovers new, cheaper plans for the query. If these alternative plans don't make significant use of batch mode, the optimizer stops exploring batch mode alternatives.
-
 
 If batch mode on rowstore is used, you see the actual run mode as **batch mode** in the query plan. The scan operator uses batch mode for on-disk heaps and B-tree indexes. This batch mode scan can evaluate batch mode bitmap filters. You might also see other batch mode operators in the plan. Examples are hash joins, hash-based aggregates, sorts, window aggregates, filters, concatenation, and compute scalar operators.
 

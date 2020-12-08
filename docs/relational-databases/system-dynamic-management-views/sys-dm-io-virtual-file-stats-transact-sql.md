@@ -70,7 +70,7 @@ ID of the file. *file_id* is int, with no default. Valid inputs are the ID numbe
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|Database name.</br></br>For Azure Synapse Analytics, this is the name of the database stored on the node which is identified by pdw_node_id. Each node has one tempdb database that has 13 files. Each node also has one database per distribution, and each distribution database has 5 files. For example, if each node contains 4 distributions, the results show 20 distribution database files per pdw_node_id. 
+|**database_name**|**sysname**|**Does not apply to:**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Database name.</br></br>For Azure Synapse Analytics, this is the name of the database stored on the node which is identified by pdw_node_id. Each node has one tempdb database that has 13 files. Each node also has one database per distribution, and each distribution database has 5 files. For example, if each node contains 4 distributions, the results show 20 distribution database files per pdw_node_id. 
 |**database_id**|**smallint**|ID of database.|  
 |**file_id**|**smallint**|ID of file.|  
 |**sample_ms**|**bigint**|Number of milliseconds since the computer was started. This column can be used to compare different outputs from this function.</br></br>The data type is **int** for [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  

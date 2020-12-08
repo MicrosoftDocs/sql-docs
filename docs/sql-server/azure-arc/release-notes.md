@@ -18,7 +18,7 @@ ms.prod: sql
 
 ### Breaking change
 
-This release introduces an updated [resource provider](../../azure-resource-manager/management/azure-services-resource-providers.md) called `Microsoft.AzureArcData`. Before you can continue using Azure Arc enabled SQL Server, you need to register this resource provider. See the resource provider registration instructions in the [Prerequisites](connect.md#prerequisites) section.
+This release introduces an updated [resource provider](/azure/azure-resource-manager/management/azure-services-resource-providers.md) called `Microsoft.AzureArcData`. Before you can continue using Azure Arc enabled SQL Server, you need to register this resource provider. See the resource provider registration instructions in the [Prerequisites](connect.md#prerequisites) section.
 
 If you have existing existing SQL Server - Azure Arc resources, use these steps to migrate them to Microsoft.AzureArcData namespace.
 
@@ -43,7 +43,7 @@ If you have existing existing SQL Server - Azure Arc resources, use these steps 
 ### Other changes
 
 * The *TCPPorts* property in the **SQL Server - Azure Arc** resource type has been renamed to *TCPStaticPorts*
-* The permissions required aren’t as broad as they used to be. See the [Required permission](overview.md#required-premissions) section for details.
+* The permissions required aren’t as broad as they used to be. See the [Required permission](overview.md#required-permissions) section for details.
 
 ### Known issues
 

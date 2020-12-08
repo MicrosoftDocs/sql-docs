@@ -39,6 +39,7 @@ Data Definition Language (DDL) statements defines data structures. Use these sta
 - ENABLE TRIGGER
 - RENAME
 - UPDATE STATISTICS
+- TRUNCATE TABLE
 
 ## Data Manipulation Language
 
@@ -50,7 +51,6 @@ Data Manipulation Language (DML) affect the information stored in the database. 
 - SELECT
 - UPDATE
 - MERGE
-- TRUNCATE TABLE
 
 ## Permissions statements
 

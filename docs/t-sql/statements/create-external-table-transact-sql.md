@@ -98,7 +98,7 @@ column_name <data_type>
 The one to three-part name of the table to create. For an external table, SQL stores only the table metadata along with basic statistics about the file or folder that is referenced in Hadoop or Azure blob storage. No actual data is moved or stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!IMPORTANT]
-> For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
+> For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.  
 
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.

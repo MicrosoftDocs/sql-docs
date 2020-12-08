@@ -32,33 +32,33 @@ This tutorial consists of the following tasks:
 The following are required before configuring AD authentication:
 
 - Have an AD Domain Controller (Windows) in your network.
-- Install the adutil-preview tool on a SQL Server container host machine. Follow the section below based on the Linux distribution that you are running to install adutil-preview.
+- Install the adutil-preview tool on a Linux host machine which is joined to a domain. Follow the "Install adutil-preview" section below based on the Linux distribution that you are running to install the adutil-preview tool.
 
 ## Container deployment and preparation
 
-To setup your container, you'll need to know in advance what ports the container will be using on the host. The default port, 1433, might be mapped differently on your container host. For this tutorial, port 5433 on the host will be mapped to port 1433 of the container. For more information, see our quickstart, [Run SQL Server container images with Docker](quickstart-install-connect-docker.md)
+To setup your container, you'll need to know in advance the port that will be used by the container on the host. The default port, 1433, might be mapped differently on your container host. For this tutorial, port 5433 on the host will be mapped to port 1433 of the container. For more information, see our quickstart, [Run SQL Server container images with Docker](quickstart-install-connect-docker.md)
 
 When registering Service Principal Names (SPN), you can use the hostname of the machine or the name of the container, but you should set it up according to what you'd like to see when you connect to the container externally.
 
-Ensure there is forwarding host (A) entry added in Active Directory for the Linux host IP address, mapping to the name of the SQL container. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`, and my container name is `sql1`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to sql1.contoso.com, it reaches the right host.
+Ensure there is forwarding host (A) entry added in Active Directory for the Linux host IP address, mapping to the name of the SQL container. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`, and my SQL container name is `sql1`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to sql1.contoso.com, it reaches to the right host.
 
 :::image type="content" source="media/sql-server-linux-containers-ad-auth-adutil-tutorial/host-a-record.png" alt-text="add host record":::
 
-For this tutorial, we're using an environment in Azure with three VMs. One VM acting as the windows domain controller (DC), with the domain name `contoso.com`. The Domain Controller name of `adVM.contoso.com`. The second machine is a Windows machine called `winbox`, running Windows 10 desktop, which is used as a client box and has SQL Server Management Studio (SSMS) installed. The third machine is an Ubuntu 18.04 LTS machine named `myubuntu`, which hosts the SQL Server containers. All machines have been joined to the `contoso.com` domain. For more information, see [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-join-domain.md).
+For this tutorial, we're using an environment in Azure with three VMs. One VM acting as the windows domain controller (DC), with the domain name `contoso.com`. The Domain Controller is named `adVM.contoso.com`. The second machine is a Windows machine called `winbox`, running Windows 10 desktop, which is used as a client box and has SQL Server Management Studio (SSMS) installed. The third machine is an Ubuntu 18.04 LTS machine named `myubuntu`, which hosts the SQL Server containers. All machines have been joined to the `contoso.com` domain. For more information, see [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-join-domain.md).
 
 > [!NOTE]
 > Joining the host container machine to the domain is not mandatory, as you can see later in this article.
 
 ## Install adutil-preview
 
-On the Linux host machine, use the following commands to install adutil-preview.
+On the Linux host machine, use the following commands to install adutil-preview based on the linux distribution.
 
 ### RHEL
 
 1. Download the Microsoft Red Hat repository configuration file.
 
     ```bash
-    sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsofcom/config/rhel/8/prod.repo
+    sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
     ```
 
 1. If you had a previous version of adutil installed, remove any older adutil packages.
@@ -67,7 +67,7 @@ On the Linux host machine, use the following commands to install adutil-preview.
     sudo yum remove adutil
     ```
 
-1. Run the following commands to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil, which is placed in the path `/usr/share/adutil/`.
+1. Run the following commands to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil, the EULA is placed at `/usr/share/adutil/` for reference.
 
     ```bash
     sudo ACCEPT_EULA=Y yum install -y adutil-preview
@@ -87,7 +87,7 @@ On the Linux host machine, use the following commands to install adutil-preview.
     sudo apt-get remove adutil-preview
     ```
 
-1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil, which is placed in the path `/usr/share/adutil/`.
+1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil, the EULA is placed at `/usr/share/adutil/` for reference..
 
     ```bash
     sudo ACCEPT_EULA=Y apt-get install -y adutil-preview
@@ -107,11 +107,15 @@ On the Linux host machine, use the following commands to install adutil-preview.
     sudo zypper remove adutil
     ```
 
-1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil, which is placed in the path `/usr/share/adutil/`.
+1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil, the EULA is placed at `/usr/share/adutil/` for reference.
 
     ```bash
     sudo ACCEPT_EULA=Y zypper install -y adutil-preview
     ```
+    
+## Join Linux host to AD domain- Optional
+Join your SQL Server Linux host with an Active Directory domain controller. For information on how to join an active directory domain, see [Join SQL Server on a Linux host to an Active Directory domain](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-active-directory-join-domain?view=sql-server-ver15).
+
 
 ## Creating the AD user, SPNs, and SQL Server service keytab
 
@@ -121,7 +125,7 @@ If you do not want the SQL Server on Linux container host to be part of the doma
 
  2. Create and configure the SQL Server service keytab file.
 
-Copy the mssql.keytab file created to the SQL container Linux host machine and configure the container to use the mssql.keytab. Optionally, you can also join your Linux host that will run the SQL container to the AD domain and follow the below steps on the same machine.
+Copy the mssql.keytab file created here to the host machine which will run the SQL Container and configure the container to use the copied mssql.keytab. Optionally, you can also join your Linux host that will run the SQL container to the AD domain and follow the below steps on the same machine.
 
 ### Create an AD user for SQL Server and set the ServicePrincipalName using the adutil tool
 
@@ -172,14 +176,14 @@ Enabling AD authentication on SQL Server on Linux containers requires steps 1-3 
     > [!NOTE]
     >
     > - `addauto` will create the SPNs automatically, provided sufficient privileges are present for the kinit account.
-    > - `-n`: name of the user account created in previous step, for which the SQL SPNs will be registered.
+    > - `-n`: Name of the account the SPNs will be assigned to.
     > - `-s`: The service name to use for generating SPNs. In this case, it is for SQL Server service, and hence the service name is MSSQLSvc.
     > - `-H`: The hostname to use for generating SPNs. If not specified, the local host's FQDN will be used. Please provide the FQDN for the container name as well. In this case, the container name is `sql1` and the FQDN is `sql1.contoso.com`.
     > - `-p`: The port to use for generating SPNs. If not specified, SPNs will be generated without a port. SQL connections will only work in this case when the SQL Server is listening to the default port, 1433.
 
 ### Create the SQL Server service keytab file
 
-Create the keytab file which contains entries for each of the 4 SPNs created previously, and one for the user. The keytab file will be mounted in the container, so it doesn't need to be created in the host machines `/var/opt/mssql/secrets/mssql.keytab` file. You can safely change this path, as long as the resulting keytab is mounted correctly when using docker/podman to run the container.
+Create the keytab file which contains entries for each of the 4 SPNs created previously, and one for the user. The keytab file will be mounted to the container, so it can be created at any location on the host. You can safely change this path, as long as the resulting keytab is mounted correctly when using docker/podman to deploy the container.
 
 To create the keytab for all the SPNs, we can use the `createauto` option:
 
@@ -191,7 +195,7 @@ adutil keytab createauto -k /container/sql1/secrets/mssql.keytab -p 5433 -H sql1
 >
 > - `-k`: Path where you would like the `mssql.keytab` file to be created. In the above example the directory "/container/sql1/secrets” should already exist on the host.
 > - `-p`: The port to use for generating SPNs. If not specified, SPNs will be generated without a port.
-> - `-H`: The hostname to use for generating SPNs. If not specified, the local     host's FQDN will be used. Please provide the FQDN for the container name as well. In this case, the container name is `sql1` and the FQDN is `sql1.contoso.com`.
+> - `-H`: The hostname to use for generating SPNs. If not specified, the local host's FQDN will be used. Please provide the FQDN for the container name as well. In this case, the container name is `sql1` and the FQDN is `sql1.contoso.com`.
 > - `-s`: The service name to use for generating SPNs. In this case, it is for SQL Server service, and hence the service name is MSSQLSvc.
 > `--password`: This is the password of the privileged AD user account that was created earlier.
 > `-e` or `--enctype`: Encryption types for the keytab entry. Use a comma-separated list of values. If not specified, an interactive prompt will be presented.
@@ -205,15 +209,7 @@ adutil keytab createauto --help
 ```
 
 > [!NOTE]
-> `arcfour-hmac` is a weak encryption and not a recommended encryption type to be used in production environment. For example, on RHEL 8 machines, `arcfour-hmac` is a deprecated algorithm, and it is recommended that you enable AES encryption on the domain if you want to avoid using the `arcfour-hmac` encryption type. If you still want to enable `arcfour-hmac`, you can change the crypto policy by modifying it using the command:
->
-> `update-crypto-policies --show`
->
-> If the results shows `default`, then `arcfour-hmac` is disabled. You will need to change this to `legacy` to enable the `arcfour-hmac` encryption type. Doing this is NOT RECOMMENDED for production environment as this setting is less secure. You can change the crypto policy to legacy by running the following command:
->
->`update-crypto-policies --set LEGACY`
->
-> For more information about the crypto policies, see [here](https://www.redhat.com/en/blog/consistent-security-crypto-policies-red-hat-enterprise-linux-8).
+> `arcfour-hmac` is a weak encryption and not a recommended encryption type to be used in production environment.
 
 To create the keytab for the user, the command is:
 
@@ -224,14 +220,14 @@ adutil keytab create -k /container/sql1/secrets/mssql.keytab -p sqluser --passwo
 > [!NOTE]
 >
 > - `-k`: Path where you would like the `mssql.keytab` file to be created. In the above example the directory "/container/sql1/secrets” should already exist on the host.
-> - `-p`: Is the user name that was created in previous steps.
+> - `-p`: Principal to add to the keytab.
 
 The adutil keytab create/autocreate does not overwrite the previous files, it just appends to the file if already present.
 
-Ensure the keytab created has the read permissions for the containers.
+Ensure the keytab created has the right permissions set when deploying the container.
 
 ```bash
-chmod 440 /container/sqlco/secrets /mssql.keytab
+chmod 440 /container/sql1/secrets/mssql.keytab
 ```
 
 > [!NOTE]
@@ -249,44 +245,26 @@ chmod 440 /container/sqlco/secrets /mssql.keytab
 
     > [!NOTE]
     >
-    > - `privilagedadaccount`: The account name for the user that was created in earlier steps.
-    > - `kerberoskeytabfile`: The path on the container where the mssql.keytab file will be located.
+    > - `privilagedadaccount`: Privileged AD user to use for AD authentication.
+    > - `kerberoskeytabfile`: The path in the container where the mssql.keytab file will be located.
 
-1. Create a krb5.conf file. Your file should look like the following. The casing matters on these files.
+1. Create a krb5.conf file. Here is a sample shown below. The casing matters on these files.
 
     ```output
     [libdefaults]
     default_realm = DOMAIN.COM
 
     [realms]
-    DOMAIN.COM = {
-    kdc = dc.domain.com
-    admin_server = dc.domain.com
-    default_domain = DOMAIN.COM
-    }
+     CONTOSO.COM = {
+         kdc = adVM.contoso.com
+         admin_server = adVM.contoso.com
+         default_domain = CONTOSO.COM
+     }
 
     [domain_realm]
-    domain.com = DOMAIN.COM
-    .domain.com = DOMAIN.COM
-    ```
+     .contoso.com = CONTOSO.COM
+     contoso.com = CONTOSO.COM
 
-    Here is an example. Our sample domain name is `contoso.com` and the DC name is `adVM.contoso.com`.
-
-    ```output
-    [libdefaults]
-    default_realm = CONTOSO.COM
-
-    [realms]
-    CONTOSO.COM = {
-    kdc = adVM.contoso.com
-    admin_server = adVM.contoso.com
-    default_domain = CONTOSO.COM
-    }
-
-    [domain_realm]
-    .contoso.com = CONTOSO.COM
-    contoso.com = CONTOSO.COM
-    ```
 
 1. Copy all files, `mssql.conf`, `krb5.conf`, `mssql.keytab` to a location that will be mounted to the SQL Server container. In this example, these files are placed on the host at the following locations: `mssql.conf` and `krb5.conf` at `/container/sql1/`. `mssql.keytab` is placed at the location `/container/sql1/secrets/`.
 

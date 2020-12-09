@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "alerts [SQL Server], creating"
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Set up a SQL Server database alert (Windows)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Quickstart: SQL backup and restore to Azure Blob storage service
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ GO
 USE [SQLTestDB]
 GO
 CREATE TABLE SQLTest (
-	ID INT NOT NULL PRIMARY KEY,
-	c1 VARCHAR(100) NOT NULL,
-	dt1 DATETIME NOT NULL DEFAULT getdate()
+    ID INT NOT NULL PRIMARY KEY,
+    c1 VARCHAR(100) NOT NULL,
+    dt1 DATETIME NOT NULL DEFAULT getdate()
 )
 GO
 

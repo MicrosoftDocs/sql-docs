@@ -25,13 +25,14 @@ Although rows are not returned by the **ExecuteNonQuery** method, input and outp
 
 ## In this section
 
-[Updating data in a data source](update-data-inside-data-source.md)
+[Updating data in a data source](update-data-inside-data-source.md)  
 Describes how to execute commands or stored procedures that modify data in a database.
 
-[Performing catalog operations](perform-catalog-operations.md)
+[Performing catalog operations](perform-catalog-operations.md)  
 Describes how to execute commands that modify database schema.
 
 ## See also
 
 - [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
 - [Commands and parameters](commands-parameters.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

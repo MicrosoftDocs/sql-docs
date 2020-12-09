@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Batch Resp Statistics"
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Batch Resp Statistics Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

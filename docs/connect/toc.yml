@@ -43,6 +43,8 @@
       href: ../connect/ado-net/enable-eventsource-tracing.md
     - name: AppContext switches
       href: ../connect/ado-net/appcontext-switches.md
+    - name: Troubleshooting guide
+      href: ../connect/ado-net/sqlclient-troubleshooting-guide.md
     - name: Finding additional information
       href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
   - name: Data Type Mappings In ADO.NET
@@ -96,6 +98,27 @@
           href: ../connect/ado-net/update-data-inside-data-source.md
         - name: Performing Catalog Operations
           href: ../connect/ado-net/perform-catalog-operations.md
+    - name: DataAdapters and DataReaders
+      href: ../connect/ado-net/dataadapters-datareaders.md
+      items: 
+      - name: Retrieve data by a DataReader
+        href: ../connect/ado-net/retrieve-data-by-datareader.md
+      - name: Populate a DataSet from a DataAdapter
+        href: ../connect/ado-net/populate-dataset-from-dataadapter.md
+      - name: DataAdapter parameters
+        href: ../connect/ado-net/dataadapter-parameters.md
+      - name: Add existing constraints to a DataSet
+        href: ../connect/ado-net/add-existing-constraints-to-dataset.md
+      - name: DataAdapter, DataTable, and DataColumn mappings
+        href: ../connect/ado-net/dataadapter-datatable-datacolumn-mappings.md
+      - name: Paging through a query result
+        href: ../connect/ado-net/paging-through-query-result.md
+      - name: Update data sources with DataAdapters
+        href: ../connect/ado-net/update-data-sources-with-dataadapters.md
+      - name: Handle DataAdapter events
+        href: ../connect/ado-net/handle-dataadapter-events.md
+      - name: Batch operations using DataAdapters
+        href: ../connect/ado-net/batch-operations-using-dataadapters.md
     - name: Transactions and concurrency
       href: ../connect/ado-net/transactions-and-concurrency.md
       items:
@@ -5219,6 +5242,8 @@
       href: ../connect/oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md
     - name: Using Azure Active Directory
       href: ../connect/oledb/features/using-azure-active-directory.md
+    - name: Using Data Classification
+      href: ../connect/oledb/features/using-data-classification.md
     - name: Using Database Mirroring
       href: ../connect/oledb/features/using-database-mirroring.md
     - name: Using Encryption Without Validation
@@ -5489,6 +5514,12 @@
           href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md
         - name: ISSCommandWithParameters::SetParameterProperties
           href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md
+        - name: ISSDataClassification
+          items:
+          - name: ISSDataClassification
+            href: oledb/ole-db-interfaces/issdataclassification-ole-db.md
+          - name: ISSDataClassification::GetSensitivityClassification
+            href: oledb/ole-db-interfaces/issdataclassification-getsensitivityclassification-ole-db.md
       - name: How to
         href: ../connect/oledb/ole-db-how-to/ole-db-how-to-topics.md
         items:

@@ -38,7 +38,7 @@ Azure Data Studio is built on the same framework as Visual Studio Code, so exten
 To simplify the process of creating extensions, we've built an [extension generator](https://code.visualstudio.com/docs/extensions/yocode) using Yeoman. To install it, run the following from the command prompt:
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## Create your wizard extension
@@ -99,7 +99,7 @@ Once you are familiar with the template, here are some additional ideas to try:
 To share with others you need to package the extension into a single file. This can be published to the Azure Data Studio extension marketplace, or shared among your team or community. To do this, you need to install another npm package from the command line:
 
 ```console
-npm install -g vsce`
+npm install -g vsce
 ```
 
 Edit the `README.md` to your liking, then navigate to the base directory of the extension, and run `vsce package`. You can optionally link a repository with your extension or continue without one. To add one, add a similar line to your `package.json` file.

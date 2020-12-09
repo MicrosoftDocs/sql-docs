@@ -57,7 +57,7 @@ ms.custom: "seo-lt-2019"
   
 -   To import data from data files with fixed-length or fixed-width fields, use a format file. For more information, see [XML Format Files &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
--   Comma-separated value (CSV) files are not supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bulk-import operations. However, in some cases, a CSV file can be used as the data file for a bulk import of data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Note that the field terminator of a CSV file does not have to be a comma. To be usable as a data file for bulk import, a CSV file must comply with the following restrictions:  
+-  Starting with SQL Server 2017, a CSV file can be used as the data file for a bulk import of data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Note that the field terminator of a CSV file does not have to be a comma. To be usable as a data file for bulk import, a CSV file must comply with the following restrictions:  
   
     -   Data fields never contain the field terminator.  
   

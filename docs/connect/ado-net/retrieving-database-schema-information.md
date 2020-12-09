@@ -29,7 +29,7 @@ Describes the **GetSchema** method and how it can be used to retrieve and restri
 Describes schema restrictions that can be used with **GetSchema**. 
 
 [Common schema collections](common-schema-collections.md)  
-Describes all of the common schema collections supported by all of the .NET Framework managed providers.  
+Describes all of the common schema collections supported by all of the .NET managed providers.  
   
 [SQL Server schema collections](sql-server-schema-collections.md)  
 Describes the additional schema collections supported by the Microsoft SqlClient Data Provider for SQL Server. 

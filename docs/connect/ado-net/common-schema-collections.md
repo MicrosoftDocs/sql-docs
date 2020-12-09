@@ -1,6 +1,6 @@
 ---
 title: "Common schema collections"
-description: "Describes all of the common schema collections supported by all of the .NET Framework managed providers."
+description: "Describes all of the common schema collections supported by all of the .NET managed providers."
 ms.date: "11/30/2020"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,7 +16,7 @@ ms.reviewer: v-chmalh
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-The common schema collections are the schema collections that are implemented by each of the .NET Framework managed providers. You can query a .NET Framework managed provider to determine the list of supported schema collections by calling the **GetSchema** method with no arguments, or with the schema collection name "MetaDataCollections". This will return a <xref:System.Data.DataTable> with a list of the supported schema collections, the number of restrictions that they each support, and the number of identifier parts that they use. These collections describe all of the required columns. Providers are free to add additional columns if they wish. For example, the Microsoft SqlClient Data Provider for SQL Server adds ParameterName to the restrictions collection.  
+The common schema collections are the schema collections that are implemented by each of the .NET managed providers. You can query a .NET managed provider to determine the list of supported schema collections by calling the **GetSchema** method with no arguments, or with the schema collection name "MetaDataCollections". This will return a <xref:System.Data.DataTable> with a list of the supported schema collections, the number of restrictions that they each support, and the number of identifier parts that they use. These collections describe all of the required columns. Providers are free to add additional columns if they wish. For example, the Microsoft SqlClient Data Provider for SQL Server adds ParameterName to the restrictions collection.  
 
 If a provider is unable to determine the value of a required column, it will return null.  
   
@@ -67,9 +67,9 @@ This schema collection exposes information about the data types that are support
 |ColumnSize|long|The length of a non-numeric column or parameter refers to either the maximum or the length defined for this type by the provider.<br /><br /> For character data, this is the maximum or defined length in units, defined by the data source. <br /><br /> For date-time data types, this is the length of the string representation (assuming the maximum allowed precision of the fractional seconds component).<br /><br /> If the data type is numeric, this is the upper bound on the maximum precision of the data type.|  
 |CreateFormat|string|Format string that represents how to add this column to a data definition statement, such as CREATE TABLE. Each element in the CreateParameter array should be represented by a "parameter marker" in the format string.<br /><br /> For example, the SQL data type DECIMAL needs a precision and a scale. In this case, the format string would be "DECIMAL({0},{1})".|  
 |CreateParameters|string|The creation parameters that must be specified when creating a column of this data type. Each creation parameter is listed in the string, separated by a comma in the order they are to be supplied.<br /><br /> For example, the SQL data type DECIMAL needs a precision and a scale. In this case, the creation parameters should contain the string "precision, scale".<br /><br /> In a text command to create a DECIMAL column with a precision of 10 and a scale of 2, the value of the CreateFormat column might be DECIMAL({0},{1})" and the complete type specification would be DECIMAL(10,2).|  
-|DataType|string|The name of the .NET Framework type of the data type.|  
+|DataType|string|The name of the .NET type of the data type.|  
 |IsAutoincrementable|bool|true—Values of this data type may be auto-incrementing.<br /><br /> false—Values of this data type may not be auto-incrementing.<br /><br /> Note that this merely indicates whether a column of this data type may be auto-incrementing, not that all columns of this type are auto-incrementing.|  
-|IsBestMatch|bool|true—The data type is the best match between all data types in the data store and the .NET Framework data type indicated by the value in the DataType column.<br /><br /> false—The data type is not the best match.<br /><br /> For each set of rows in which the value of the DataType column is the same, the IsBestMatch column is set to true in only one row.|  
+|IsBestMatch|bool|true—The data type is the best match between all data types in the data store and the .NET data type indicated by the value in the DataType column.<br /><br /> false—The data type is not the best match.<br /><br /> For each set of rows in which the value of the DataType column is the same, the IsBestMatch column is set to true in only one row.|  
 |IsCaseSensitive|bool|true—The data type is a character type and is case-sensitive.<br /><br /> false—The data type is not a character type or is not case-sensitive.|  
 |IsFixedLength|bool|true—Columns of this data type created by the data definition language (DDL) will be of fixed length.<br /><br /> false—Columns of this data type created by the DDL will be of variable length.<br /><br /> DBNull.Value—It is not known whether the provider will map this field with a fixed-length or variable-length column.|  
 |IsFixedPrecisionScale|bool|true—The data type has a fixed precision and scale.<br /><br /> false—The data type does not have a fixed precision and scale.|  

@@ -23,7 +23,7 @@ A transaction is a set of related tasks that either succeeds (commit) or fails (
 
 ## Working with System.Transactions
 
-In the .NET Framework and .NET Core, distributed transactions are managed through the API in the <xref:System.Transactions> namespace. The <xref:System.Transactions> API will delegate distributed transaction handling to a transaction monitor such as the Microsoft Distributed Transaction Coordinator (MS DTC) when multiple persistent resource managers are involved. For more information, see [Transaction Fundamentals](/dotnet/framework/data/transactions/transaction-fundamentals).
+In .NET, distributed transactions are managed through the API in the <xref:System.Transactions> namespace. The <xref:System.Transactions> API will delegate distributed transaction handling to a transaction monitor such as the Microsoft Distributed Transaction Coordinator (MS DTC) when multiple persistent resource managers are involved. For more information, see [Transaction Fundamentals](/dotnet/framework/data/transactions/transaction-fundamentals).
 
 ADO.NET 2.0 introduced support for enlisting in a distributed transaction using the `EnlistTransaction` method, which enlists a connection in a <xref:System.Transactions.Transaction> instance. In previous versions of ADO.NET, explicit enlistment in distributed transactions was performed using the `EnlistDistributedTransaction` method of a connection to enlist a connection in a <xref:System.EnterpriseServices.ITransaction> instance, which is supported for backwards compatibility. For more information on Enterprise Services transactions, see [Interoperability with Enterprise Services and COM+ Transactions](/dotnet/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).
 

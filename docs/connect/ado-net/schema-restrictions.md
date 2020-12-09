@@ -1,6 +1,6 @@
 ---
 title: "Schema restrictions"
-description: "Describes schema restrictions that can be used with GetSchema."
+description: "Describes schema restrictions that can be used with GetSchema when using the Microsoft SqlClient Data Provider for SQL Server."
 ms.date: "11/26/2020"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -2,7 +2,7 @@
 description: "Upgrade Analysis Services"
 title: "Upgrade Analysis Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/12/2017"
+ms.date: "12/09/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -75,6 +75,7 @@ manager: erikre
   
 |Database model|Compatibility level|Compatible versions|  
 |-|-|-|  
+|Tabular|1500|SQL Server 2019|
 |Tabular|1400|SQL Server 2017|
 |Tabular|1200|SQL Server 2016|  
 |Tabular|1103|SQL Server 2014|  

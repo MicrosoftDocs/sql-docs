@@ -155,27 +155,6 @@ The following examples demonstrate how to use the <xref:Microsoft.Data.SqlClient
 |Table|@Table|TABLE_NAME|3|  
 |Name|@Name|CONSTRAINT_NAME|4|  
   
-## SQL Server 2008 schema restrictions  
-
- The following tables list the restrictions for SQL Server 2008 schema collections. These restrictions are valid beginning with version 3.5 SP1 of the .NET Framework and SQL Server 2008. They are not supported in earlier versions of the .NET Framework and SQL Server.  
-  
-### ColumnSetColumns  
-  
-|Restriction Name|Parameter Name|Restriction Default|Restriction Number|  
-|----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|TABLE_CATALOG|1|  
-|Owner|@Owner|TABLE_SCHEMA|2|  
-|Table|@Table|TABLE_NAME|3|  
-  
-### AllColumns  
-  
-|Restriction Name|Parameter Name|Restriction Default|Restriction Number|  
-|----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|TABLE_CATALOG|1|  
-|Owner|@Owner|TABLE_SCHEMA|2|  
-|Table|@Table|TABLE_NAME|3|  
-|Column|@Column|COLUMN_NAME|4|  
-  
 ## See also
 
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

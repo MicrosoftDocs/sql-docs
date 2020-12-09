@@ -51,13 +51,6 @@ The Microsoft SqlClient Data Provider for SQL Server supports additional schema 
 |table_schema|String|Schema that contains the table the index is associated with.|  
 |table_name|String|Table Name.|  
 |index_name|String|Index Name.|  
-
-### Indexes (SQL Server 2008)  
-
-Beginning with SQL Server 2008, the following columns have been added to the Indexes schema collection to support new spatial types, filestream and sparse columns. These columns are not supported in earlier versions of SQL Server.  
-  
-|ColumnName|DataType|Description|  
-|----------------|--------------|-----------------|  
 |type_desc|String|The type of the index will be one of the following:<br /><br /> -   HEAP<br />-   CLUSTERED<br />-   NONCLUSTERED<br />-   XML<br />-   SPATIAL|  
 
 ## IndexColumns  
@@ -148,18 +141,11 @@ Beginning with SQL Server 2008, the following columns have been added to the Ind
 |CHARACTER_SET_SCHEMA|String|Always returns NULL.|  
 |CHARACTER_SET_NAME|String|Returns the unique name for the character set if this column is character data or text data type. Otherwise, NULL is returned.|  
 |COLLATION_CATALOG|String|Returns master, indicating the database in which the collation is defined, if the column is character data or text data type. Otherwise, this column is NULL.|  
-
-### Columns (SQL Server 2008)  
-
- Beginning with SQL Server 2008, the following columns have been added to the Columns schema collection to support new spatial types, filestream and sparse columns. These columns are not supported in earlier versions of SQL Server.  
-  
-|ColumnName|DataType|Description|  
-|----------------|--------------|-----------------|  
 |IS_FILESTREAM|String|YES if the column has FILESTREAM attribute.<br /><br /> NO if the column does not have FILESTREAM attribute.|  
 |IS_SPARSE|String|YES if the column is a sparse column.<br /><br /> NO if the column is not a sparse column.|  
 |IS_COLUMN_SET|String|YES if the column is a column set column.<br /><br /> NO if the column is not a column set column.|  
 
-### AllColumns  
+## AllColumns  
 
  The AllColumns schema collection is used to support sparse columns. AllColumns has the same restrictions and resulting DataTable schema as the Columns schema collection. The only difference is that AllColumns includes column set columns that are not included in the Columns schema collection. The following table describes these columns.  
   
@@ -187,7 +173,7 @@ Beginning with SQL Server 2008, the following columns have been added to the Ind
 |IS_SPARSE|String|YES if the column is a sparse column.<br /><br /> NO if the column is not a sparse column.|  
 |IS_COLUMN_SET|String|YES if the column is a column set column.<br /><br /> NO if the column is not a column set column.|  
 
-### ColumnSetColumns
+## ColumnSetColumns
 
 The ColumnSetColumns schema collection is used to support sparse columns. The ColumnSetColumns schema collection returns the schema for all of the columns in a column set. The following table describes these columns.  
   

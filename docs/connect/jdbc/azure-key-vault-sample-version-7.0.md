@@ -17,7 +17,7 @@ ms.author: v-daenge
 
 ## Sample application using Azure Key Vault feature
 
-This application is runnable using JDBC Driver 7.0 and above and Azure-Keyvault (version 1.0.0),  Adal4j (version 1.6.0), and their dependencies.  The underlying dependencies can be resolved by adding these libraries to the pom file of the project as described [here](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
+This application is runnable using JDBC Driver 7.0, 8.0 and Azure-Keyvault (version 1.0.0),  Adal4j (version 1.6.0), and their dependencies.  The underlying dependencies can be resolved by adding these libraries to the pom file of the project as described [here](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
 
 ```java
 import java.net.URISyntaxException;
@@ -240,5 +240,6 @@ public class AKV {
 
 ## See also
 
+[Azure Key vault sample version 9.0](../../connect/jdbc/azure-key-vault-sample-version-9.0.md) 
 [Azure Key vault sample version 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
 [Azure Key vault sample version 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)  

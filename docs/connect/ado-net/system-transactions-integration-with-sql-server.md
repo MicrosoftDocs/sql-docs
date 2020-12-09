@@ -16,7 +16,7 @@ ms.reviewer: v-chmalh
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-The .NET Framework version 2.0 introduced a transaction framework that can be accessed through the <xref:System.Transactions> namespace. This framework exposes transactions in a way that is fully integrated in the .NET Framework, including ADO.NET.  
+.NET includes a transaction framework that can be accessed through the <xref:System.Transactions> namespace. This framework exposes transactions in a way that is fully integrated in .NET, including ADO.NET.  
   
 In addition to the programmability enhancements, <xref:System.Transactions> and ADO.NET can work together to coordinate optimizations when you work with transactions. A promotable transaction is a lightweight (local) transaction that can be automatically promoted to a fully distributed transaction on an as-needed basis.
 

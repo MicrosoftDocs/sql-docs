@@ -159,11 +159,9 @@ Beginning with SQL Server 2008, the following columns have been added to the Ind
 |IS_SPARSE|String|YES if the column is a sparse column.<br /><br /> NO if the column is not a sparse column.|  
 |IS_COLUMN_SET|String|YES if the column is a column set column.<br /><br /> NO if the column is not a column set column.|  
 
-### AllColumns (SQL Server 2008)  
+### AllColumns  
 
- Beginning with SQL Server 2008, the AllColumns schema collection has been added to support sparse columns. AllColumns is not supported in earlier versions of SQL Server.  
-  
- AllColumns has the same restrictions and resulting DataTable schema as the Columns schema collection. The only difference is that AllColumns includes column set columns that are not included in the Columns schema collection. The following table describes these columns.  
+ The AllColumns schema collection is used to support sparse columns. AllColumns has the same restrictions and resulting DataTable schema as the Columns schema collection. The only difference is that AllColumns includes column set columns that are not included in the Columns schema collection. The following table describes these columns.  
   
 |ColumnName|DataType|Description|  
 |----------------|--------------|-----------------|  
@@ -189,9 +187,9 @@ Beginning with SQL Server 2008, the following columns have been added to the Ind
 |IS_SPARSE|String|YES if the column is a sparse column.<br /><br /> NO if the column is not a sparse column.|  
 |IS_COLUMN_SET|String|YES if the column is a column set column.<br /><br /> NO if the column is not a column set column.|  
 
-### ColumnSetColumns (SQL Server 2008)  
+### ColumnSetColumns
 
- Beginning with SQL Server 2008, the ColumnSetColumns schema collection has been added to support sparse columns. ColumnSetColumns is not supported in earlier versions of SQL Server. The ColumnSetColumns schema collection returns the schema for all of the columns in a column set. The following table describes these columns.  
+The ColumnSetColumns schema collection is used to support sparse columns. The ColumnSetColumns schema collection returns the schema for all of the columns in a column set. The following table describes these columns.  
   
 |ColumnName|DataType|Description|  
 |----------------|--------------|-----------------|  

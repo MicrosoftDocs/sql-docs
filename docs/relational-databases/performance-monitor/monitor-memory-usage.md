@@ -74,5 +74,4 @@ process_physical_memory_low,
 process_virtual_memory_low  
 FROM sys.dm_os_process_memory;  
 ```  
-  
-  
+

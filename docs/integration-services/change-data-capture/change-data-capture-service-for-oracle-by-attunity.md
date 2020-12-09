@@ -23,6 +23,7 @@ ms.author: chugu
 
 Download Microsoft Change Data Capture Designer and Service for Oracle by Attunity for corresponding SQL Server version from below links:
 
+- [Microsoft SQL Server 2012 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=51606)
 - [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=55802)
 - [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=56610)
 - [Microsoft SQL Server 2019 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=100303)
@@ -51,6 +52,8 @@ Download Microsoft Change Data Capture Designer and Service for Oracle by Attuni
 -   Oracle Database 10g Release 2
 -   Oracle Database 11g Release 1 and Release 2
 -   Oracle Database 12c in classic installation. (Multitenant installation is not supported.)  
+-   Oracle Database 18c in classic installation. (Multitenant installation is not supported.) 
+-   Oracle Database 19c in classic installation. (Multitenant installation is not supported.) 
   
 ### Target SQL Server Database  
  For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  

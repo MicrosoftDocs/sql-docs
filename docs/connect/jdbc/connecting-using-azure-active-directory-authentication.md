@@ -362,7 +362,7 @@ provision a contained database user for your application principal. For more inf
 	CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
 	```
 
-3.	On the client machine (on which, you want to run the example), download the [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) library and its dependencies, and include them in the Java build path. Note that the azure-activedirectory-library-for-java is only needed to run this specific example. The example uses the APIs from this library to retrieve the access token from Azure Azure AD. If you already have an access token, you can skip this step. Note that you also need to remove the section in the example that retrieves access token.
+3.	On the client machine (on which, you want to run the example), download the [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) library and its dependencies, and include them in the Java build path. Note that the microsoft-authentication-library-for-java is only needed to run this specific example. The example uses the APIs from this library to retrieve the access token from Azure Azure AD. If you already have an access token, you can skip this step. Note that you also need to remove the section in the example that retrieves access token.
 
 In the following example, replace the STS URL, Client ID, Client Secret, server and database name with your values.
 
@@ -375,9 +375,11 @@ import java.util.concurrent.Future;
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
 // The azure-activedirectory-library-for-java is needed to retrieve the access token from the AD.
-import com.microsoft.aad.adal4j.AuthenticationContext;
-import com.microsoft.aad.adal4j.AuthenticationResult;
-import com.microsoft.aad.adal4j.ClientCredential;
+import com.microsoft.aad.msal4j.ClientCredentialFactory;
+import com.microsoft.aad.msal4j.ClientCredentialParameters;
+import com.microsoft.aad.msal4j.ConfidentialClientApplication;
+import com.microsoft.aad.msal4j.IAuthenticationResult;
+import com.microsoft.aad.msal4j.IClientCredential;
 
 public class AADTokenBased {
 
@@ -389,11 +391,19 @@ public class AADTokenBased {
         String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 
-        AuthenticationContext context = new AuthenticationContext(stsurl, false, Executors.newFixedThreadPool(1));
-        ClientCredential cred = new ClientCredential(clientId, clientSecret);
-
-        Future<AuthenticationResult> future = context.acquireToken(spn, cred, null);
-        String accessToken = future.get().getAccessToken();
+	String scope = spn +  "/.default";
+	Set<String> scopes = new HashSet<>();
+        scopes.add(scope);
+	
+	ExecutorService executorService = Executors.newSingleThreadExecutor();
+	IClientCredential credential = ClientCredentialFactory.createFromSecret(clientSecret);
+	ConfidentialClientApplication clientApplication = ConfidentialClientApplication
+	        .builder(clientId, credential).executorService(executorService).authority(stsurl).build();
+	CompletableFuture<IAuthenticationResult> future = clientApplication
+	        .acquireToken(ClientCredentialParameters.builder(scopes).build());
+			
+	IAuthenticationResult authenticationResult = future.get();
+	String accessToken = authenticationResult.accessToken();
 
         System.out.println("Access Token: " + accessToken);
 

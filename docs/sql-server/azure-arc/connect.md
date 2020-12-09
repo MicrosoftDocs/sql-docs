@@ -87,11 +87,11 @@ Go [Azure portal](https://ms.portal.azure.com/#home) and open the newly register
 
 ![Validate connected SQL server ](media/join/validate-sql-server-azure-arc.png)
 
-## Un-register the SQL Server - Azure Arc resources
+## Disconnect your SQL Server instance
 
-To remove an existing __SQL Server - Azure Arc__ resource, go to the resource group that contains it and remove it from the list of resources in the group.
+To disconnect your SQL Server instance from Azure Arc, go to Azure portal, open the __SQL Server - Azure Arc__ resource for that instance, and click the **Unregister** button.
 
-![Unregister SQL Server](media/join/delete-sql-server-azure-arc.png)
+![Unregister SQL Server](media/join/unregister-sql-server-azure-arc.png)
 
 ## Next steps
 

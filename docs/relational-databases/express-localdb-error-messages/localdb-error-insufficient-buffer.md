@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: ff67bda8-7e5c-4b06-8d7b-9985b6059a98
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_INSUFFICIENT_BUFFER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

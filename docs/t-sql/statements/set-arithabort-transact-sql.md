@@ -37,16 +37,14 @@ Ends a query when an overflow or divide-by-zero error occurs during query execut
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
-  
+
+### Syntax for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] and [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)]
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
-  
 SET ARITHABORT { ON | OFF }
 ```
 
+### Syntax for [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
-
 SET ARITHABORT ON
 ```
   

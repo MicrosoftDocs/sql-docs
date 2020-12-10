@@ -127,7 +127,7 @@ For more information about changes in SQL Server Reporting Services, see the Upg
   
     2. Rswebapplication.config  
   
-    3. Rssvrpolicy.config  
+    3. Rssrvpolicy.config  
   
     4. Rsmgrpolicy.config  
   

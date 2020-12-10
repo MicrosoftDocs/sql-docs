@@ -4,7 +4,7 @@ description: Learn about SQL Server Management Studio Performance Dashboard, whi
 ms.custom: ""
 ms.date: 11/13/2020
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 

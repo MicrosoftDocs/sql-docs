@@ -114,9 +114,9 @@ The DATA parameter is used to specify the data used for scoring or prediction. D
 **RUNTIME = ONNX**
 
 > [!IMPORTANT]
-> The `RUNTIME = ONNX` argument is only available in [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) and [Azure SQL Edge](/azure/sql-database-edge/onnx-overview).
+> The `RUNTIME = ONNX` argument is only available in [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview), [Azure SQL Edge](/azure/sql-database-edge/onnx-overview), and [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is).
 
-Indicates the machine learning engine used for model execution. The `RUNTIME` parameter value is always `ONNX`. The parameter is required for Azure SQL Edge. On Azure SQL Managed Instance, the parameter is optional and only used when using ONNX models.
+Indicates the machine learning engine used for model execution. The `RUNTIME` parameter value is always `ONNX`. The parameter is required for Azure SQL Edge and Azure Synapse Analytics. On Azure SQL Managed Instance, the parameter is optional and only used when using ONNX models.
 
 **WITH ( <result_set_definition> )**
 
@@ -180,7 +180,7 @@ DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE mode
 
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+    DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 ::: moniker-end
@@ -201,7 +201,7 @@ CREATE VIEW predictions
 AS
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
-             DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+             DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -210,6 +210,8 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 
 A common use case for prediction is to generate a score for input data, and then insert the predicted values into a table. The following example assumes the calling application uses a stored procedure to insert a row containing the predicted value into a table:
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
@@ -217,6 +219,20 @@ INSERT INTO loan_applications (c1, c2, c3, c4, score)
 SELECT d.c1, d.c2, d.c3, d.c4, p.score
 FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 ```
+
+:::moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```sql
+DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
+
+INSERT INTO loan_applications (c1, c2, c3, c4, score)
+SELECT d.c1, d.c2, d.c3, d.c4, p.score
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH(score FLOAT) AS p;
+```
+
+:::moniker-end
 
 - The results of `PREDICT` are stored in a table called PredictionResults. 
 - The model is stored as `varbinary(max)` column in table call **Models**. Additional information such as ID and description can be saved in the table to identify the model.

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "statistics [SQL Server], deleting"
   - "deleting statistics"
 ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete Statistics

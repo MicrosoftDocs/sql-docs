@@ -75,15 +75,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 #### If the person connecting will be connecting to only one database  
   
-1.  Create a login for the Windows groups. (If using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication, skip the Active Directory steps, and create [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication logins here.)  
+1.  In the user database, create a contained database user for the Windows group. (If using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication, skip the Active Directory steps, and create contained database user [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication here.  
   
-2.  In the user database, create a contained database user for the Windows group. (If using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication, skip the Active Directory steps, and create contained database user [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication here.  
+1.  In the user database, create one or more user-defined database roles, each representing a similar function. For example financial analyst, and sales analyst.  
   
-3.  In the user database, create one or more user-defined database roles, each representing a similar function. For example financial analyst, and sales analyst.  
+1.  Add the database users to one or more user-defined database roles.  
   
-4.  Add the database users to one or more user-defined database roles.  
-  
-5.  Grant permissions to the user-defined database roles.  
+1.  Grant permissions to the user-defined database roles.  
   
  The typical result at this point, is that a Windows user is a member of a Windows group. The Windows group has a login in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. The login is mapped to a user identity in the user-database. The user is a member of a database role. Now you need to add permissions to the role.  
   

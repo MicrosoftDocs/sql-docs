@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Attach Query Hints to a Plan Guide
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

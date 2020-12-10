@@ -118,5 +118,5 @@ GO
  [DML Triggers](../../relational-databases/triggers/dml-triggers.md)   
  [Logon Triggers](../../relational-databases/triggers/logon-triggers.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
-  
+ [EVENT DATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

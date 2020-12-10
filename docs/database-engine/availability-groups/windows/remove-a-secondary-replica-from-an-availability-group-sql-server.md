@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], configuring"
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Remove a Secondary Replica from an Availability Group (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

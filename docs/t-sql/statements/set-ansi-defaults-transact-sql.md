@@ -32,15 +32,13 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 
 ## Syntax
 
+### Syntax for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] and [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)]
 ```syntaxsql
--- Syntax for SQL Server
-
 SET ANSI_DEFAULTS { ON | OFF }
 ```
 
+### Syntax for [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
 ```syntaxsql
--- Syntax for Azure Synapse and Parallel Data Warehouse
-
 SET ANSI_DEFAULTS ON
 ```
 

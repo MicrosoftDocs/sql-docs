@@ -97,6 +97,9 @@ column_name <data_type>
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
 The one to three-part name of the table to create. For an external table, SQL stores only the table metadata along with basic statistics about the file or folder that is referenced in Hadoop or Azure blob storage. No actual data is moved or stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
+> [!IMPORTANT]
+> For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.  
+
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
 
@@ -651,6 +654,9 @@ column_name <data_type>
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
 The one to three-part name of the table to create. For an external table, SQL stores only the table metadata along with basic statistics about the file or folder that is referenced in Azure SQL Database. No actual data is moved or stored in Azure SQL Database.
 
+> [!IMPORTANT]
+> For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
+
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
 
@@ -794,6 +800,7 @@ See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-da
 
 ## Syntax
 
+### [[!INCLUDE[sss-dedicated-pool-md.md](../../includes/sss-dedicated-pool-md.md)]](#tab/dedicated)
 ```syntaxsql
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
@@ -816,14 +823,31 @@ column_name <data_type>
     | REJECT_VALUE = reject_value,  
     | REJECT_SAMPLE_VALUE = reject_sample_value,
     | REJECTED_ROW_LOCATION = '/REJECT_Directory'
-  
 }  
 ```
+### [[!INCLUDE[sssod-md.md](../../includes/sssod-md.md)]](#tab/serverless)
+```syntaxsql
+CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name } 
+    ( <column_definition> [ ,...n ] )   
+    WITH ( 
+        LOCATION = 'folder_or_filepath',   
+        DATA_SOURCE = external_data_source_name,   
+        FILE_FORMAT = external_file_format_name   
+    )   
+[;]   
+<column_definition> ::= 
+column_name <data_type> 
+    [ COLLATE collation_name ] 
+```
+---
 
 ## Arguments
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
 The one to three-part name of the table to create. For an external table, only the table metadata along with basic statistics about the file or folder that is referenced in Azure Data Lake, Hadoop, or Azure blob storage. No actual data is moved or stored when external tables are created.
+
+> [!IMPORTANT]
+> For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
 
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
@@ -1088,6 +1112,9 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
 The one to three-part name of the table to create. For an external table, Analytics Platform System stores only the table metadata along with basic statistics about the file or folder that is referenced in Hadoop or Azure blob storage. No actual data is moved or stored in Analytics Platform System.
+
+> [!IMPORTANT]
+> For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
 
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.

@@ -1,33 +1,26 @@
 ---
-description: "Latest updates for Microsoft SQL Server"
-title: Latest updates for Microsoft SQL Server
-TOCTitle: Latest updates for Microsoft SQL Server
-ms:assetid: 0d1835fd-2b44-47cf-8f90-305ca14b7823
-ms:mtpsurl: https://technet.microsoft.com/library/Ff803383(v=MSDN.10)
-ms:contentKeyID: 31804705
-ms.date: 09/02/2020
+description: A list of the latest cumulative updates and service packs, with build numbers for Microsoft SQL Server.
+title: Latest updates for SQL Server
+ms.date: 11/30/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
-mtps_version: v=MSDN.10
 ---
 
 # Latest updates for Microsoft SQL Server
 
-Find and manage updates in one place for your SQL Server Products. Follow the [SQL Server Release Blog](https://aka.ms/sqlreleases) to receive information about updates and to download the updates.
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-This page tracks the latest updates to all supported versions of SQL Server. 
+This article lists the latest updates for SQL Server products. Follow the [SQL Server Release Blog](https://aka.ms/sqlreleases) to receive information about updates and to download the updates.
 
-For information about previous updates, see the [SQL Server builds blog](https://sqlserverbuilds.blogspot.com/). 
-
-For more information about which products are supported please consult the [Microsoft Product Lifecycle Page](https://support.microsoft.com/lifecycle/). 
+For more information about which products are supported please consult the [Microsoft Product Lifecycle Page](/lifecycle/products/?terms=sql).
 
 ## Latest updates
 
-Each of the following links provides information for all of the applicable products and technologies listed in the **Applies To** section of this page.
+Each of the following links provides information for all of the applicable products and technologies.
 
 |Product Versions   | Latest Service Pack |  Latest GDR | Latest cumulative update | CU Release Date | General Guidance  |
 |--|--|--|--|--|--|
@@ -48,25 +41,21 @@ Each of the following links provides information for all of the applicable produ
 |SQL Server 2008 R2 |SP2 [(KB 2630458)](https://support.microsoft.com/kb/2630458)|[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058)|CU 13 [(KB 2967540)](https://support.microsoft.com/kb/2967540)|6/30/2014|[SQL Server 2008 R2 SP2 Installation](https://www.microsoft.com/download/details.aspx?id=30437)|
 |SQL Server 2008 |SP4 [(KB 2979596)](https://support.microsoft.com/kb/2979596)|[4057114](https://support.microsoft.com/help/4057114/security-update-for-vulnerabilities-in-sql-server)|N/A|N/A|[SQL Server 2008 Servicing](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|
 |SQL Server 2008|SP3 [(KB 2546951)](https://support.microsoft.com/kb/2546951)|[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058)|CU 17 [(KB 2958696)](https://support.microsoft.com/kb/2958696)|5/19/2014|[SQL Server 2008 Servicing](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|
-|SQL Server 2005 |SP4 [(KB 2463332)](https://support.microsoft.com/kb/2463332)|N/A|N/A|N/A|[SQL Server 2005 Installation](/previous-versions/sql/sql-server-2005/ms143516(v=sql.90))|
-|SQL Server 2000|SP4 [(KB 290211)](https://support.microsoft.com/kb/290211)|N/A|N/A|N/A|[SQL Server 2000 Installation](https://technet.microsoft.com/library/aa197941(sql.80).aspx)|
 
 **Learn how to test updates:** [Testing and Developing Supportability Roadmaps for ISV Applications (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
 
 [!INCLUDE [sql-server-servicing-updates-version-15](../../includes/sql-server-servicing-updates-version-15.md)]
 
-### Knowledge base
+## Knowledge base
 
-  - KB 935897: [An Incremental Servicing Model is available from the SQL Server team to deliver hotfixes for reported problems](https://support.microsoft.com/kb/935897)
-  - KB 824684: [Description of the standard terminology that is used to describe Microsoft software updates](https://support.microsoft.com/kb/824684)
-  - KB 822499: [Naming schema for Microsoft SQL Server software update packages](https://support.microsoft.com/kb/822499)
-  - KB 321185: [How to determine the version and edition of SQL Server and its components](https://support.microsoft.com/kb/321185)
+- KB 935897: [An Incremental Servicing Model is available from the SQL Server team to deliver hotfixes for reported problems](https://support.microsoft.com/kb/935897)
+- KB 824684: [Description of the standard terminology that is used to describe Microsoft software updates](https://support.microsoft.com/kb/824684)
+- KB 822499: [Naming schema for Microsoft SQL Server software update packages](https://support.microsoft.com/kb/822499)
+- KB 321185: [How to determine the version and edition of SQL Server and its components](https://support.microsoft.com/kb/321185)
 
-### Additional resources
+## Additional resources
 
-  - [SQL Customer Advisory Team Site](/archive/blogs/sqlcat/)
-  - [SQL Server DevCenter](../../sql-server/index.yml)
-  - [SQL Server TechCenter](../../sql-server/index.yml)
-  - [SQL Server Product Information Center](https://www.microsoft.com/sqlserver/default.aspx)
-  - [SQL Server builds blog](https://sqlserverbuilds.blogspot.com/)
-  - [SQL Server release blogs](https://aka.ms/sqlreleases)
+- [SQL Server documentation](../../sql-server/index.yml)
+- [SQL Server product information center](https://www.microsoft.com/sqlserver/default.aspx)
+- [SQL Server release blogs](https://aka.ms/sqlreleases)
+- [How to determine the version, edition, and update level of SQL Server and its components](https://support.microsoft.com/help/321185/how-to-determine-the-version-edition-and-update-level-of-sql-server-an)

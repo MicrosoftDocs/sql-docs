@@ -36,15 +36,13 @@ Specifies ISO compliant behavior of the Equals (=) and Not Equal To (<>) compari
 
 ## Syntax
 
+### Syntax for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] and [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)]
 ```syntaxsql
--- Syntax for SQL Server
-
 SET ANSI_NULLS { ON | OFF }
 ```
 
+### Syntax for [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
-
 SET ANSI_NULLS ON
 ```
 

@@ -53,6 +53,11 @@ For this tutorial, we're using an environment in Azure with three VMs. One VM ac
 
 On the Linux host machine, use the following commands to install adutil-preview based on the linux distribution.
 
+> [!NOTE]
+> For this preview version, we are aware that on certain Linux distributions, if the Adutil installation is attempted without the ACCEPT_EULA parameter the installation 
+> experience is hindered. Hence our recommendation below for now is to install the adutil-preview tool with the ACCEPT_EULA=Y set, you can read the preview EULA[Link to the page with PReview EULA] ahead of the 
+> installation. We are actively working on this and this should be fixed for the GA release. 
+
 ### RHEL
 
 1. Download the Microsoft Red Hat repository configuration file.

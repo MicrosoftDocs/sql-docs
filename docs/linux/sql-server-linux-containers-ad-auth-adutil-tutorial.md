@@ -32,7 +32,7 @@ This tutorial consists of the following tasks:
 The following are required before configuring AD authentication:
 
 - Have an AD Domain Controller (Windows) in your network.
-- Install the adutil-preview tool on a Linux host machine which is joined to a domain. Follow the "Install adutil-preview" section below based on the Linux distribution that you are running to install the adutil-preview tool.
+- Install the adutil-preview tool on a Linux host machine which is joined to a domain. Follow the [Install adutil-preview](#install-adutil-preview) section below based on the Linux distribution that you are running to install the adutil-preview tool.
 
 ## Container deployment and preparation
 
@@ -40,7 +40,7 @@ To setup your container, you'll need to know in advance the port that will be us
 
 When registering Service Principal Names (SPN), you can use the hostname of the machine or the name of the container, but you should set it up according to what you'd like to see when you connect to the container externally.
 
-Ensure there is forwarding host (A) entry added in Active Directory for the Linux host IP address, mapping to the name of the SQL container. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`, and my SQL container name is `sql1`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to sql1.contoso.com, it reaches to the right host.
+Ensure there is forwarding host (A) entry added in Active Directory for the Linux host IP address, mapping to the name of the SQL Server container. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`, and my SQL Server container name is `sql1`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to sql1.contoso.com, it reaches the right host.
 
 :::image type="content" source="media/sql-server-linux-containers-ad-auth-adutil-tutorial/host-a-record.png" alt-text="add host record":::
 
@@ -72,7 +72,7 @@ On the Linux host machine, use the following commands to install adutil-preview 
     sudo yum remove adutil
     ```
 
-1. Run the following commands to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil, the EULA is placed at `/usr/share/adutil/` for reference.
+1. Run the following commands to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
 
     ```bash
     sudo ACCEPT_EULA=Y yum install -y adutil-preview
@@ -92,7 +92,7 @@ On the Linux host machine, use the following commands to install adutil-preview 
     sudo apt-get remove adutil
     ```
 
-1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil, the EULA is placed at `/usr/share/adutil/` for reference..
+1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
 
     ```bash
     sudo ACCEPT_EULA=Y apt-get install -y adutil-preview
@@ -112,15 +112,11 @@ On the Linux host machine, use the following commands to install adutil-preview 
     sudo zypper remove adutil
     ```
 
-1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil, the EULA is placed at `/usr/share/adutil/` for reference.
+1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path `/usr/share/adutil/`.
 
     ```bash
     sudo ACCEPT_EULA=Y zypper install -y adutil-preview
     ```
-    
-## Join Linux host to AD domain- Optional
-Join your SQL Server Linux host with an Active Directory domain controller. For information on how to join an active directory domain, see [Join SQL Server on a Linux host to an Active Directory domain](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-active-directory-join-domain?view=sql-server-ver15).
-
 
 ## Creating the AD user, SPNs, and SQL Server service keytab
 
@@ -130,7 +126,7 @@ If you do not want the SQL Server on Linux container host to be part of the doma
 
  2. Create and configure the SQL Server service keytab file.
 
-Copy the mssql.keytab file created here to the host machine which will run the SQL Container and configure the container to use the copied mssql.keytab. Optionally, you can also join your Linux host that will run the SQL container to the AD domain and follow the below steps on the same machine.
+Copy the mssql.keytab file created here to the host machine which will run the SQL Server container, and configure the container to use the copied mssql.keytab. Optionally, you can also join your Linux host that will run the SQL Server container to the AD domain and follow the below steps on the same machine.
 
 ### Create an AD user for SQL Server and set the ServicePrincipalName using the adutil tool
 

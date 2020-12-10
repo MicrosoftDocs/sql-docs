@@ -104,19 +104,19 @@ For almost all other configuration that doesn't meet the previous conditions, th
 
 ### Kernel and CPU settings for high performance
 
-The following section describes the recommended Linux OS settings related to high performance and throughput for a SQL Server installation. See your Linux OS documentation for the process to configure these settings. Using ***tuned*** as described helps configure many CPUs and kernel configurations described below.
+The following section describes the recommended Linux OS settings related to high performance and throughput for a SQL Server installation. See your Linux OS documentation for the process to configure these settings. Using [***Tuned***](https://tuned-project.org) as described helps configure many CPUs and kernel configurations described below.
 
-#### Using ***tuned*** to configure Kernel settings
+#### Using ***Tuned*** to configure Kernel settings
 
-For Red Hat Enterprise Linux (RHEL) users, the [tuned](https://tuned-project.org) throughput-performance profile configures some kernel and CPU settings automatically (except for C-States). Starting with RHEL 8.0, a ***tuned*** profile named **mssql** was codeveloped with Red Hat and offers finer Linux performance-related tunings for SQL Server workloads. This profile includes the RHEL throughput-performance profile and we present its definitions below for your review with other Linux distros and RHEL releases without this profile.
+For Red Hat Enterprise Linux (RHEL) users, the [Tuned](https://tuned-project.org) throughput-performance profile configures some kernel and CPU settings automatically (except for C-States). Starting with RHEL 8.0, a ***Tuned*** profile named **mssql** was codeveloped with Red Hat and offers finer Linux performance-related tunings for SQL Server workloads. This profile includes the RHEL throughput-performance profile and we present its definitions below for your review with other Linux distros and RHEL releases without this profile.
 
-For SUSE Linux Enterprise Server 12 SP5, Ubuntu 18.04, and Red Hat Enterprise Linux 7.x, the ***tuned*** package can be installed manually. It can be used to create and configure the **mssql** profile as described below.
+For SUSE Linux Enterprise Server 12 SP5, Ubuntu 18.04, and Red Hat Enterprise Linux 7.x, the ***Tuned*** package can be installed manually. It can be used to create and configure the **mssql** profile as described below.
 
-##### Proposed Linux settings using a tuned mssql profile
+##### Proposed Linux settings using a Tuned mssql profile
 
 ```bash
 #
-# A tuned configuration for SQL Server on Linux
+# A Tuned configuration for SQL Server on Linux
 #
 
 [main]
@@ -147,7 +147,7 @@ kernel.sched_min_granularity_ns = 15000000
 kernel.sched_wakeup_granularity_ns = 2000000
 ```
 
-To enable this tuned profile, save these definitions in a **tuned.conf** file under a `/usr/lib/tuned/mssql` folder, and enable the profile using the following commands:
+To enable this Tuned profile, save these definitions in a **tuned.conf** file under a `/usr/lib/tuned/mssql` folder, and enable the profile using the following commands:
 
 ```bash
 chmod +x /usr/lib/tuned/mssql/tuned.conf
@@ -177,7 +177,7 @@ The following table provides recommendations for CPU settings:
 | min_perf_pct | 100 | See your documentation on intel p-state |
 | C-States | C1 only | See your Linux or system documentation on how to ensure C-States is set to C1 only |
 
-Using ***tuned*** as described earlier automatically configures CPU frequency governor, ENERGY_PERF_BIAS, and min_perf_pct settings appropriately due to the throughput-performance profile being used as base for the **mssql** profile. C-States parameter must be configured manually according to the documentation provided by Linux or the system distributor.
+Using ***Tuned*** as described earlier automatically configures CPU frequency governor, ENERGY_PERF_BIAS, and min_perf_pct settings appropriately due to the throughput-performance profile being used as base for the **mssql** profile. C-States parameter must be configured manually according to the documentation provided by Linux or the system distributor.
 
 #### Disk settings recommendations
 
@@ -196,7 +196,7 @@ The following table provides recommendations for disk settings:
 
 - **kernel.sched_\***: These parameter values represent the current recommendation for tweaking the Completely Fair Scheduling (CFS) algorithm in the Linux Kernel, to improve throughput of network and storage IO calls with respect to inter-process preemption and resumption of threads.
 
-Using the **mssql** ***tuned*** profile configures the **vm.swappiness**, **vm.dirty_\*** and **kernel.sched_\*** settings. The disk `readahead` configuration using `blockdev` command is per device and must be performed manually.
+Using the **mssql** ***Tuned*** profile configures the **vm.swappiness**, **vm.dirty_\*** and **kernel.sched_\*** settings. The disk `readahead` configuration using `blockdev` command is per device and must be performed manually.
 
 #### Kernel setting auto numa balancing for multi-node NUMA systems
 
@@ -206,17 +206,17 @@ If you install SQL Server on a multi-node **NUMA** system, the following **kerne
 sysctl -w kernel.numa_balancing=0
 ```
 
-Using the **mssql** ***tuned*** profile configures the **kernel.numa_balancing** option.
+Using the **mssql** ***Tuned*** profile configures the **kernel.numa_balancing** option.
 
 #### Kernel settings for Virtual Address Space
 
-The default setting of **vm.max_map_count** (which is 65536) may not be high enough for a SQL Server installation. For this reason, change the **vm.max_map_count** value to at least 262144 for a SQL Server deployment, and refer to the [Proposed Linux settings using a tuned mssql profile](#proposed-linux-settings-using-a-tuned-mssql-profile) section for further tunings of these kernel parameters. The max value for vm.max_map_count is 2147483647.
+The default setting of **vm.max_map_count** (which is 65536) may not be high enough for a SQL Server installation. For this reason, change the **vm.max_map_count** value to at least 262144 for a SQL Server deployment, and refer to the [Proposed Linux settings using a Tuned mssql profile](#proposed-linux-settings-using-a-tuned-mssql-profile) section for further tunings of these kernel parameters. The max value for vm.max_map_count is 2147483647.
 
 ```bash
 sysctl -w vm.max_map_count=1600000
 ```
 
-Using the **mssql** ***tuned*** profile configures the **vm.max_map_count** option.
+Using the **mssql** ***Tuned*** profile configures the **vm.max_map_count** option.
 
 #### Leave Transparent Huge Pages (THP) enabled
 
@@ -226,7 +226,7 @@ Most Linux installations should have this option on by default. We recommend for
 echo madvise > /sys/kernel/mm/transparent_hugepage/enabled
 ```
 
-Or modify the **mssql** ***tuned*** profile with the line:
+Or modify the **mssql** ***Tuned*** profile with the line:
 
 ```bash
 vm.transparent_hugepages=madvise
@@ -239,7 +239,7 @@ tuned-adm off
 tuned-adm profile mssql
 ```
 
-Using the **mssql** ***tuned*** profile configures the **transparent_hugepage** option.
+Using the **mssql** ***Tuned*** profile configures the **transparent_hugepage** option.
 
 #### Additional advanced Kernel/OS configuration
 

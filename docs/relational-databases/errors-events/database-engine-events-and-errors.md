@@ -3988,7 +3988,7 @@ ORDER BY message_id
 |    8628    |    17    |    Yes    |    A time out occurred while waiting to optimize the query. Rerun the query.    |
 |    [8630](mssqlserver-8630-database-engine-error.md)    |    17    |    No    |    Internal Query Processor Error: The query processor encountered an unexpected error during execution.    |
 |    8631    |    17    |    No    |    Internal error: Server stack limit has been reached. Please look for potentially deep nesting in your query, and try to simplify it.    |
-|    8632    |    17    |    No    |    Internal error: An expression services limit has been reached. Please look for potentially complex expressions in your query, and try to simplify them.    |
+|    [8632](mssqlserver-8632-database-engine-error.md)    |    17    |    No    |    Internal error: An expression services limit has been reached. Please look for potentially complex expressions in your query, and try to simplify them.    |
 |    8633    |    16    |    No    |    The query processor could not produce a query plan because distributed query does not support materializing intermediate results with default in DML queries over remote sources. Try to use actual default values instead of default or split the update into multiple statements, one only containing the DEFAULT assignment, the other with the rest.    |
 |    8634    |    17    |    No    |    The query processor received an error from a cluster communication layer.    |
 |    8635    |    16    |    No    |    The query processor could not produce a query plan for a query with a spatial index hint. Reason: %S_MSG. Try removing the index hints or removing SET FORCEPLAN.    |
@@ -6399,7 +6399,7 @@ ORDER BY message_id
 |    15578    |    16    |    No    |    There is already a master key in the database. Please drop it before performing this statement.    |
 |    15579    |    16    |    No    |    Adding an encryption to the symmetric key failed. An encryption by the same %S_MSG '%.*s' may already exist.    |
 |    15580    |    16    |    No    |    Cannot drop %S_MSG because %S_MSG '%.*s' is encrypted by it.    |
-|    15581    |    16    |    No    |    Please create a master key in the database or open the master key in the session before performing this operation.    |
+|    [15581](mssqlserver-15581-database-engine-error.md)    |    16    |    No    |    Please create a master key in the database or open the master key in the session before performing this operation.    |
 |    15583    |    10    |    No    |    The module being signed is marked to execute as owner. If the owner changes the signature will not be valid.    |
 |    15584    |    10    |    No    |    An error occurred while decrypting %S_MSG '%.*ls' that was encrypted by the old master key. The error was ignored because the FORCE option was specified.    |
 |    15585    |    10    |    No    |    The current master key cannot be decrypted. The error was ignored because the FORCE option was specified.    |

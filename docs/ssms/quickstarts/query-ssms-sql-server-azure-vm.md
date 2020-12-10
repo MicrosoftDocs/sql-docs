@@ -1,6 +1,6 @@
 ---
-title: Create and query Azure SQL Database or Azure Managed Instance in SSMS
-description: Create and query Azure SQL Database or Azure Managed Instance by running basic T-SQL queries in using SQL Server Management Studio (SSMS).
+title: Create and query SQL Server on an Azure VM in SSMS
+description: Create and query SQL Server on an Azure VM by running basic T-SQL queries in using SQL Server Management Studio (SSMS).
 ms.prod: sql
 ms.technology: ssms
 ms.topic: quickstart
@@ -11,11 +11,11 @@ ms.custom: ""
 ms.date: 12/14/2020
 ---
 
-# Quickstart: Create and query Azure SQL Database or Azure Managed Instance in SSMS
+# Quickstart: Create and query SQL Server on an Azure Virtual Machine in SSMS
 
-[!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-This quickstart teaches you how to use SQL Server Management Studio (SSMS) to connect to your Azure SQL Database or Azure SQL Managed Instance and run some basic Transact-SQL (T-SQL) commands.
+This quickstart teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server on an Azure VM and run some basic Transact-SQL (T-SQL) commands.
 
 The article demonstrates how to follow the below steps:
 

@@ -61,11 +61,13 @@ The article demonstrates how to follow the below steps:
 
 ## Troubleshoot connectivity issues
 
-To review troubleshooting techniques to use when you can't connect to an instance of your SQL Server Database Engine on a single server, visit [Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance](https://docs.mi/azure/azure-sql/database/troubleshoot-common-errors-issues).
+You can encounter connection problems caused by reconfiguration, firewall settings, a connection timeout, incorrect login information or failure to apply best practices and design guidelines during the application design process. For more information on how to troubleshoot connection problems, visit [Troubleshooting connectivity issues](https://docs.microsoft.com/azure/azure-sql/database/troubleshoot-common-errors-issues).
+
+You can prevent, troubleshoot, diagnose, and mitigate connection and transient errors that you encounter when interacting with Azure SQL Database or Azure SQL Managed Instance. For more information, visit [Troubleshoot transient connection errors](https://docs.microsoft.com/azure/azure-sql/database/troubleshoot-common-connectivity-issues).
 
 ## Next steps
 
 Advance to the next article to learn how to create.
 
 > [!div class="nextstepaction"]
-> [Create and query a database](query-ssms-sql-server.md)
+> [Create and query an Azure SQL Database](query-ssms-sql-server.md)

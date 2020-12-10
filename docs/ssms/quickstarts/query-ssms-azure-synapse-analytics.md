@@ -1,6 +1,6 @@
 ---
-title: Create and query Azure SQL Database or Azure Managed Instance in SSMS
-description: Create and query Azure SQL Database or Azure Managed Instance by running basic T-SQL queries in using SQL Server Management Studio (SSMS).
+title: Create and query a dedicated SQL pool in Azure Synapse Analytics in SSMS
+description: Create and query a a dedicated SQL pool in Azure Synapse Analytics by running basic T-SQL queries in SQL Server Management Studio (SSMS).
 ms.prod: sql
 ms.technology: ssms
 ms.topic: quickstart
@@ -11,9 +11,9 @@ ms.custom: ""
 ms.date: 12/14/2020
 ---
 
-# Quickstart: Create and query Azure SQL Database or Azure Managed Instance in SSMS
+# Quickstart: Create and query a dedicated SQL pool in Azure Synapse Analytics in SSMS
 
-[!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 This quickstart teaches you how to use SQL Server Management Studio (SSMS) to connect to your Azure SQL Database or Azure SQL Managed Instance and run some basic Transact-SQL (T-SQL) commands.
 
@@ -28,7 +28,7 @@ The article demonstrates how to follow the below steps:
 
 ## Prerequisites
 
-- [Quickstart: Connect to Azure SQL Database using SQL Server Management Studio (SSMS)](connect-ssms-azure-sql.md)
+- [Quickstart: Connect to Azure SQL Database using SQL Server Management Studio (SSMS)](connect-ssms-azure-synspase-analytics.md)
 
 ## Create a database
 

@@ -62,4 +62,4 @@ To review troubleshooting techniques to use when you can't connect to an instanc
 Advance to the next article to learn how to create...
 
 > [!div class="nextstepaction"]
-> [Create and query a database](query-ssms-sql-server.md)
+> [Create and query a SQL Server database](query-ssms-sql-server.md)

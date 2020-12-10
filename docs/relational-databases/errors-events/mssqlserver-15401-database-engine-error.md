@@ -73,6 +73,6 @@ Verify that your name resolution mechanism (such as, WINS, DNS, HOSTS, or LMHOST
 
 ## See Also
 
-- [Test a channel between the local computer and its domain](/powershell/module/microsoft.powershell.management/test-computersecurechannel?view=powershell-5.1#example-1--test-a-channel-between-the-local-computer-and-its-domain)
+- [Test a channel between the local computer and its domain](/powershell/module/microsoft.powershell.management/test-computersecurechannel#example-1--test-a-channel-between-the-local-computer-and-its-domain)
 - [LogonSessions v1.4](/sysinternals/downloads/logonsessions)
 - [sp_change_users_login (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)

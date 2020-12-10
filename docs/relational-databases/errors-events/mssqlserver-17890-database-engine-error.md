@@ -86,24 +86,24 @@ Below, you can find information on each of these categories
 
 - **Application-Related issues**: Applications together may consume all of the RAM on the system. If new requests for memory are made, the OS attempts to satisfy them and if there is no free memory, it will trim the working set of running applications to satisfy the memory requests. In such cases, you may observe that the working set for most if not all applications drop significantly. To observe this, collect the following Performance Monitor counter for all applications on the system:
 
-        Performance object: Process
-        Counter: Working Set
-    
-    Also, monitor the following counter to correlate how much physical memory is available on the system.
-    
-        Performance object: Memory
-        Counter: Available Memory (MB)
-    
-    The typical behavior that you may observe is reduction of Available memory close to 0 MB while at the same time a sudden drop of the Working Set counters for most (all) processes on the system. If you observe such behavior, you may need to take steps to reduce memory usage on the system, which includes for example reducing Max Server Memory for SQL Server.
-    
+  - Performance object: Process
+  - Counter: Working Set
+  
+  Also, monitor the following counter to correlate how much physical memory is available on the system.
+  
+  - Performance object: Memory
+  - Counter: Available Memory (MB)
+  
+  The typical behavior that you may observe is reduction of Available memory close to 0 MB while at the same time a sudden drop of the Working Set counters for most (all) processes on the system. If you observe such behavior, you may need to take steps to reduce memory usage on the system, which includes for example reducing Max Server Memory for SQL Server.
+  
     Applications may also use the system cache too much, and may cause a large growth of the system cache. To respond to the growth of the system cache, the system pages out the working set of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process or of other applications. If you experience this problem, you can use some memory management functions in the application. These functions control the system cache space that file I/O operations can use in the application. For example, you can use the SetSystemFileCacheSize function and the GetSystemFileCacheSize function to control the system cache space that file I/O operations can use.
-    
+  
     You can use the Memory performance object to view the values of various counters in this object to determine whether the system cache working set uses too much memory. For example, you can view the Cache Bytes and System Cache Resident Bytes counters. For more information about this topic, see:
-    
+  
     - [Too Much Cache](/archive/blogs/ntdebugging/too-much-cache)
     - [Microsoft Windows Dynamic Cache Service](/archive/blogs/ntdebugging/microsoft-windows-dynamic-cache-service)
     - [You experience performance issues in applications and services when the system file cache consumes most of the physical RAM](https://support.microsoft.com/help/976618)
-    
+  
     You can download and deploy the "Microsoft Windows Dynamic Cache Service" to control the memory that is consumed by the system cache.
 
 - **Device Driver Issues**: If a device driver uses the `MmAllocateContiguousMemory` function, and if it sets the value of the HighestAcceptableAddress parameter to less than 4 gigabytes (GB), the Windows operating system may page out the working set of the processes on the system including [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. To resolve this problem, contact the vendor of the device driver for driver updates.

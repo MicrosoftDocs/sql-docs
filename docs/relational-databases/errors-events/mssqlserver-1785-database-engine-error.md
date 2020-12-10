@@ -76,4 +76,4 @@ go
 
 ### See Also
 
-[Cascading Referential Integrity](/sql/relational-databases/tables/primary-and-foreign-key-constraints?view=sql-server-ver15#referential-integrity)
+[Cascading Referential Integrity](/sql/relational-databases/tables/primary-and-foreign-key-constraints#referential-integrity)

@@ -36,10 +36,9 @@ The following are required before configuring AD authentication:
 ## Install adutil-preview
 
 On the Linux host machine, use the following commands to install adutil-preview.
+
 > [!NOTE]
-> For this preview version, we are aware that on certain Linux distributions, if the Adutil installation is attempted without the ACCEPT_EULA parameter the installation 
-> experience is hindered. Hence our recommendation below for now is to install the adutil-preview tool with the ACCEPT_EULA=Y set, you can read the preview EULA [link to the preview EULA] ahead of the 
-> installation. We are actively working on this and this should be fixed for the GA release. 
+> For this preview version, we are aware that on certain Linux distributions, if the adutil installation is attempted without the `ACCEPT_EULA` parameter, the installation experience is hindered. Our recommendation below is to install the adutil-preview tool with `ACCEPT_EULA=Y` set. You can read the preview EULA [link to the preview EULA] ahead of the installation. We are actively working on this and this should be fixed for the GA release. 
 
 ### RHEL
 
@@ -55,7 +54,7 @@ On the Linux host machine, use the following commands to install adutil-preview.
     sudo yum remove adutil
     ```
 
-1. Run the following commands to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil,the EULA is placed at '/usr/share/adutil/' for reference.
+1. Run the following commands to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path '/usr/share/adutil/'.
 
     ```bash
     sudo ACCEPT_EULA=Y yum install -y adutil-preview
@@ -75,7 +74,7 @@ On the Linux host machine, use the following commands to install adutil-preview.
     sudo apt-get remove adutil
     ```
 
-1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil, the EULA is placed at '/usr/share/adutil/' for reference.
+1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path '/usr/share/adutil/'.
 
     ```bash
     sudo ACCEPT_EULA=Y apt-get install -y adutil-preview
@@ -95,7 +94,7 @@ On the Linux host machine, use the following commands to install adutil-preview.
     sudo zypper remove adutil
     ```
 
-1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil, the EULA is placed at '/usr/share/adutil/' for reference.
+1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path '/usr/share/adutil/'.
 
     ```bash
     sudo ACCEPT_EULA=Y zypper install -y adutil-preview
@@ -193,7 +192,7 @@ adutil keytab createauto --help
 > [!NOTE]
 > `arcfour-hmac` is a weak encryption and not a recommended encryption type to be used in production environment.
 
-Now add an entry in the keytab for the principal name and its password that will be used by SQL Server to connect to AD:
+Add an entry in the keytab for the principal name and its password that will be used by SQL Server to connect to AD:
 
 ```bash
 adutil keytab create -k /var/opt/mssql/secrets/mssql.keytab -p sqluser --password 'P@ssw0rd!'
@@ -206,7 +205,7 @@ adutil keytab create -k /var/opt/mssql/secrets/mssql.keytab -p sqluser --passwor
 
 The adutil keytab create/autocreate does not overwrite the previous files, it just appends to the file if already present.
 
-Ensure the keytab created is owned by the `mssql` user and only the `mssql` user has read/write access to the file. You can run chown and chmod commands as shown below:
+Ensure the keytab created is owned by the `mssql` user and only the `mssql` user has read/write access to the file. You can run the `chown` and `chmod` commands as shown below:
 
 ```bash
 chown mssql. /var/opt/mssql/secrets/mssql.keytab

@@ -140,7 +140,7 @@ Download the [zip file containing the Python language extension for Windows](htt
 Register this Python language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) for each database you want to use it in. Use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) to connect to SQL Server and run the following T-SQL command. Modify the path in this statement to reflect the location of the downloaded language extension zip file (python-lang-extension.zip).
 
 > [!NOTE]
-> Python is a reserved word. Use a different name for the external language, for example, "myPython".
+> **Python** is a reserved word and can't be used as the name for a new external language name. Use a different name instead. For example, you can use **myPython**.
 
 ```sql
 CREATE EXTERNAL LANGUAGE [myPython]
@@ -287,7 +287,7 @@ Register this Python language extension with [CREATE EXTERNAL LANGUAGE](../../t-
 Modify the path in this statement to reflect the location of the downloaded language extension zip file (python-lang-extension.zip).
 
 > [!NOTE]
->Python is a reserved word. Use a different name for the external language, for example, "myPython".
+> **Python** is a reserved word and can't be used as the name for a new external language name. Use a different name instead. For example, you can use **myPython**.
 
 ```sql
 CREATE EXTERNAL LANGUAGE myPython 

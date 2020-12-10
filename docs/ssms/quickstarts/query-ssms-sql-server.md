@@ -37,7 +37,7 @@ Create a database named TutorialDB by following the below steps:
 
 1. Right-click your server instance in Object Explorer, and then select **New Query**:
 
-   ![The New Query link](media/query-ssms-sql-server/new-query.png)
+   :::image type="content" source="media/query-ssms-sql-server/new-query.png" alt-text="The New Query link":::
 
 2. Paste the following T-SQL code snippet into the query window:
 
@@ -55,7 +55,7 @@ Create a database named TutorialDB by following the below steps:
 
 3. Execute the query by selecting **Execute** or selecting F5 on your keyboard.
 
-   ![The Execute command](media/query-ssms-sql-server/execute.png)
+   :::image type="content" source="media/query-ssms-sql-server/execute.png" alt-text="The Execute command":::
   
     After the query is complete, the new TutorialDB database appears in the list of databases in Object Explorer. If it isn't displayed, right-click the **Databases** node, and then select **Refresh**.
 
@@ -65,7 +65,7 @@ In this section, you create a table in the newly created TutorialDB database. Be
 
 1. In the database drop-down list, select the database that you want, as shown here:
 
-   ![Change database](media/query-ssms-sql-server/change-db.png)
+   :::image type="content" source="media/query-ssms-sql-server/change-db.png" alt-text="Change database":::
 
 2. Paste the following T-SQL code snippet into the query window:
 
@@ -122,7 +122,7 @@ The results of a query are visible below the query text window. To query the Cus
 
     The results of the query are displayed under the area where the text was entered.
 
-   ![The Results list](media/query-ssms-sql-server/query-results.png)
+   :::image type="content" source="media/query-ssms-sql-server/query-results.png" alt-text="The Results list":::
 
     You can also modify the way results are presented by selecting one of the following options:
 
@@ -140,7 +140,7 @@ You can find information about the connection properties under the results of yo
 - You can determine which server and database you're connected to, and the username that you use.
 - You can also view the query duration and the number of rows that are returned by the previously executed query.
 
-    ![Connection properties](media/query-ssms-sql-server/connection-properties.png)
+   :::image type="content" source="media/query-ssms-sql-server/connection-properties.png" alt-text="Connection properties":::
 
 ## Additional tools
 

@@ -66,13 +66,13 @@ On the Linux host machine, use the following commands to install adutil-preview.
 1. Register the Microsoft Ubuntu repository.
 
     ```bash
-    sudo curl https://packages.microsoft.com/config/ubuntu/18.04/prolist | sudo tee /etc/apt/sources.list.d/msprod.list
+    sudo curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
     ```
 
 1. If you had a previous version of adutil installed, please remove any older adutil packages using the below commands
 
     ```bash
-    sudo apt-get remove adutil-preview
+    sudo apt-get remove adutil
     ```
 
 1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil, the EULA is placed at '/usr/share/adutil/' for reference.
@@ -86,7 +86,7 @@ On the Linux host machine, use the following commands to install adutil-preview.
 1. Add the Microsoft SQL Server repository to Zypper.
 
     ```bash
-    sudo zypper addrepo -fc <https://packages.microsoft.com/config/sle12/prod.repo>
+    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
     ```
 
 1. If you had a previous version of adutil installed, remove any older adutil packages.

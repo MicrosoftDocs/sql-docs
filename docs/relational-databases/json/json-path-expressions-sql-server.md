@@ -16,7 +16,7 @@ ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # JSON Path Expressions (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
  Use JSON path expressions to reference the properties of JSON objects.  
   

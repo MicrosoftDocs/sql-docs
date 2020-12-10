@@ -39,7 +39,7 @@ Azure Data Studio is built on the same framework as Visual Studio Code, so exten
 To simplify the process of creating extensions, we've built an [extension generator](https://code.visualstudio.com/docs/extensions/yocode) using Yeoman. To install it, run the code in the command prompt below:
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## Create your keymap extension
@@ -132,7 +132,7 @@ Key maps are one of the quickest extensions to create, so your new extension sho
 To share with others, you need to package the extension into a single file. This can be published to the Azure Data Studio extension Marketplace, or shared among your team or community. To do this, you need to install another npm package from the command line:
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 Navigate to the base directory of the extension, and run `vsce package`. I had to add in a couple of extra lines to stop the *vsce* tool from complaining:

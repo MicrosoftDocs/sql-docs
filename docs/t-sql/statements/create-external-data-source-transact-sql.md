@@ -119,7 +119,8 @@ Additional notes and guidance when setting the location:
 
 ### CONNECTION_OPTIONS = *key_value_pair*
 
-Specifies additional options when connecting over `ODBC` to an external data source.
+Specifies additional options when connecting over `ODBC` to an external data source. To use multiple connection options, separate them by a semi-colon.
+
 
 The name of the driver is required as a minimum, but there are other options such as `APP='<your_application_name>'` or `ApplicationIntent= ReadOnly|ReadWrite` that are also useful to set and can assist with troubleshooting.
 

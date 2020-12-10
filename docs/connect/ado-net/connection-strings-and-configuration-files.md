@@ -19,7 +19,7 @@ ms.reviewer: v-chmalh
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-Embedding connection strings in your application's code can lead to security vulnerabilities and maintenance problems. Unencrypted connection strings compiled into an application's source code can be viewed using the [Ildasm.exe (IL Disassembler)](/dotnet/docs/framework/tools/ildasm-exe-il-disassembler.md) tool. Moreover, if the connection string ever changes, your application must be recompiled. For these reasons, we recommend storing connection strings in an application configuration file.
+Embedding connection strings in your application's code can lead to security vulnerabilities and maintenance problems. Unencrypted connection strings compiled into an application's source code can be viewed using the [Ildasm.exe (IL Disassembler)](/dotnet/framework/tools/ildasm-exe-il-disassembler) tool. Moreover, if the connection string ever changes, your application must be recompiled. For these reasons, we recommend storing connection strings in an application configuration file.
 
 ## Working with Application Configuration Files
 
@@ -188,5 +188,5 @@ For more information about securing ASP.NET applications, see [Securing ASP.NET 
 - [Connection String Builders](connection-string-builders.md)
 - [Protecting Connection Information](protecting-connection-information.md)
 - [Using the Configuration Classes](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [Configuring Apps](/dotnet/docs/framework/configure-apps/index.md)
+- [Configuring Apps](/dotnet/framework/configure-apps/index)
 - [ASP.NET Web Site Administration](/previous-versions/aspnet/6hy1xzbw(v=vs.100))

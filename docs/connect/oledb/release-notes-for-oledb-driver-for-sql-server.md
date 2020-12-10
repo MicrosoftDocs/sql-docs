@@ -1,7 +1,7 @@
 ---
 title: "Release notes for OLE DB Driver"
 description: "This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server."
-ms.date: "09/30/2020"
+ms.date: "12/01/2020"
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -26,7 +26,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 ![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2135577)  
 ![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2135722)  
 
-Released: September 2020
+Released: December 1, 2020
 
 If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
     For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x40a)  
@@ -36,8 +36,8 @@ If you need to download the installer in a language other than the one detected 
 
 | Feature added | Details |
 | :------------ | :------ |
-| Support for [SQL Data Discovery and Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification) | [Using data classification](features/using-data-classification.md) |
-| Azure Active Directory authentication support (`ActiveDirectoryServicePrincipal`) | [Using Azure Active Directory](features/using-azure-active-directory.md) |
+| Support for [SQL Data Discovery and Classification](../../relational-databases/security/sql-data-discovery-and-classification.md) | [Using data classification](features/using-data-classification.md) |
+| Azure Active Directory Service Principal authentication support (`ActiveDirectoryServicePrincipal`) | [Using Azure Active Directory](features/using-azure-active-directory.md) |
 
 ### Bugs fixed
 

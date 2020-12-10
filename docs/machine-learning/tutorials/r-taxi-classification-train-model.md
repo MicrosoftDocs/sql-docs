@@ -97,7 +97,7 @@ Because the stored procedure already includes a definition of the input data, yo
 
 3. When the statement has completed, open the table *nyc_taxi_models*. Processing of the data and fitting the model might take a while.
 
-   You can see that one new row has been added, which contains the serialized model in the column _model_ and the model name **TrainLog_model** in the column _name_.
+   You can see that one new row has been added, which contains the serialized model in the column _model_ and the model name **RTrainLogit_model** in the column _name_.
 
    ```text
    model                        name

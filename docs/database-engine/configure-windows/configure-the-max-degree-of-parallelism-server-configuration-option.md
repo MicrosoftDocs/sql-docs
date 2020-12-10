@@ -33,7 +33,7 @@ ms.custom: contperfq4
 
 -   If the affinity mask option is not set to the default, it may restrict the number of processors available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on symmetric multiprocessing (SMP) systems. 
   
--   Setting max degree of parallelism (MAXDOP) to 0 allows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use all the available processors up to 64 processors. However, this is not the recommended value for most cases. For more information on the recommended values for max degree of parallelism, see the [#Guidelines](Guidelines) section in this page.
+-   Setting max degree of parallelism (MAXDOP) to 0 allows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use all the available processors up to 64 processors. However, this is not the recommended value for most cases. For more information on the recommended values for max degree of parallelism, see the [Recommendations](#Recommendations) section in this page.
 
 -   To suppress parallel plan generation, set **max degree of parallelism** to 1. Set the value to a number from 1 to 32,767 to specify the maximum number of processor cores that can be used during a single query execution. If a value greater than the number of available processors is specified, the actual number of available processors is used. If the computer has only one processor, the **max degree of parallelism** value is ignored.  
 

@@ -38,7 +38,7 @@ The following are required before configuring AD authentication:
 On the Linux host machine, use the following commands to install adutil-preview.
 > [!NOTE]
 > For this preview version, we are aware that on certain Linux distributions, if the Adutil installation is attempted without the ACCEPT_EULA parameter the installation 
-> experience is hindered. Hence our recommendation below for now is to install the adutil-preview tool with the ACCEPT_EULA=Y set, you can read the preview EULA ahead of the 
+> experience is hindered. Hence our recommendation below for now is to install the adutil-preview tool with the ACCEPT_EULA=Y set, you can read the preview EULA [link to the preview EULA] ahead of the 
 > installation. We are actively working on this and this should be fixed for the GA release. 
 
 ### RHEL

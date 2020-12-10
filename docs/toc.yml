@@ -9960,6 +9960,9 @@
       href: linux/sql-server-linux-run-sql-server-agent-job.md
     - name: Setup AD Authentication
       href: linux/sql-server-linux-active-directory-authentication.md
+      items:
+      - name: Setup AD Authentication using adutil
+        href: linux/sql-server-linux-ad-auth-adutil-tutorial.md
     - name: Create failover cluster instance
       href: linux/sql-server-linux-shared-disk-cluster-configure.md
       items:
@@ -10025,6 +10028,8 @@
         href: linux/sql-server-linux-configure-msdtc-docker.md
       - name: Troubleshoot Docker containers
         href: linux/sql-server-linux-docker-container-troubleshooting.md
+      - name: Setup AD Authentication using adutil
+        href: linux/sql-server-linux-containers-ad-auth-adutil-tutorial.md
     - name: Develop
       href: linux/sql-server-linux-develop-overview.md
       items:

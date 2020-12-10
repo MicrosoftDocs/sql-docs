@@ -11,11 +11,11 @@ ms.custom: ""
 ms.date: 12/14/2020
 ---
 
-# Quickstart: Create and query a SQL Server database by using SQL Server Management Studio (SSMS)
+# Quickstart: Create and query an Azure SQL Database or Azure SQL Managed Instance by using SQL Server Management Studio (SSMS)
 
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-This quickstart teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands.
+This quickstart teaches you how to use SQL Server Management Studio (SSMS) to connect to your Azure SQL Database or Azure SQL Managed Instance and run some basic Transact-SQL (T-SQL) commands.
 
 The article demonstrates how to follow the below steps:
 
@@ -28,7 +28,7 @@ The article demonstrates how to follow the below steps:
 
 ## Prerequisites
 
-- [Quickstart: Connect to SQL Server using SQL Server Management Studio (SSMS)](connect-ssms-sql-server.md)
+- [Quickstart: Connect to Azure SQL Database using SQL Server Management Studio (SSMS)](connect-ssms-azure-sql.md)
 
 ## Create a database
 
@@ -36,25 +36,26 @@ Create a database named TutorialDB by following the below steps:
 
 1. Right-click your server instance in Object Explorer, and then select **New Query**:
 
-   :::image type="content" source="media/query-ssms-sql-server/new-query.png" alt-text="The New Query link":::
+   :::image type="content" source="media/query-ssms-azure-sql/new-query.png" alt-text="The New Query link":::
 
 2. Paste the following T-SQL code snippet into the query window:
 
     ```sql
-    USE master
-    GO
     IF NOT EXISTS (
-       SELECT name
-       FROM sys.databases
-       WHERE name = N'TutorialDB'
+    SELECT name
+    FROM sys.databases
+    WHERE name = N'TutorialDB'
     )
     CREATE DATABASE [TutorialDB]
     GO
-   ```
+    
+    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
+    GO
+    ```
 
 3. Execute the query by selecting **Execute** or selecting F5 on your keyboard.
 
-   :::image type="content" source="media/query-ssms-sql-server/execute.png" alt-text="The Execute command":::
+   :::image type="content" source="media/query-ssms-azure-sql/execute.png" alt-text="The Execute command":::
   
     After the query is complete, the new TutorialDB database appears in the list of databases in Object Explorer. If it isn't displayed, right-click the **Databases** node, and then select **Refresh**.
 
@@ -64,7 +65,7 @@ In this section, you create a table in the newly created TutorialDB database. Be
 
 1. In the database drop-down list, select the database that you want, as shown here:
 
-   :::image type="content" source="media/query-ssms-sql-server/change-db.png" alt-text="Change database":::
+   :::image type="content" source="media/query-ssms-azure-sql/change-db.png" alt-text="Change database":::
 
 2. Paste the following T-SQL code snippet into the query window:
 
@@ -90,7 +91,7 @@ In this section, you create a table in the newly created TutorialDB database. Be
 
 After the query is complete, the new Customers table is displayed in the list of tables in Object Explorer. If the table isn't displayed, right-click the **TutorialDB** > **Tables** node in Object Explorer, and then select **Refresh**.
 
-   :::image type="content" source="media/query-ssms-sql-server/new-table.png" alt-text="New table":::
+   :::image type="content" source="media/query-ssms-azure-sql/new-table.png" alt-text="New table":::
 
 ## Insert rows into the new table
 
@@ -121,11 +122,11 @@ The results of a query are visible below the query text window. To query the Cus
 
     The results of the query are displayed under the area where the text was entered.
 
-   :::image type="content" source="media/query-ssms-sql-server/query-results.png" alt-text="The Results list":::
+   :::image type="content" source="media/query-ssms-azure-sql/query-results.png" alt-text="The Results list":::
 
     You can also modify the way results are presented by selecting one of the following options:
 
-   ![Three options for displaying query results](media/query-ssms-sql-server/results.png)
+   ![Three options for displaying query results](media/query-ssms-azure-sql/results.png)
 
    - The first button displays the results in **Text View**, as shown in the image in the next section.
    - The middle button displays the results in **Grid View**, which is the default option.
@@ -139,7 +140,7 @@ You can find information about the connection properties under the results of yo
 - You can determine which server and database you're connected to, and the username that you use.
 - You can also view the query duration and the number of rows that are returned by the previously executed query.
 
-   :::image type="content" source="media/query-ssms-sql-server/connection-properties.png" alt-text="Connection properties":::
+   :::image type="content" source="media/query-ssms-azure-sql/connection-properties.png" alt-text="Connection properties":::
 
 ## Additional tools
 

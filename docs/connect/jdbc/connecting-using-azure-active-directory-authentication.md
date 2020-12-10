@@ -30,7 +30,9 @@ Possible values are:
     * **ActiveDirectoryPassword**
         * Supported since driver version **v6.0**, `authentication=ActiveDirectoryPassword` can be used to connect to an Azure SQL Database/Data Warehouse using an Azure AD user name and password.
     * **ActiveDirectoryInteractive**
-        * Supported starting driver version **v9.1**, `authentication=ActiveDirectoryInteractive` can be used to connect to an Azure SQL Database/Data Warehouse using an interactive mode that supports Multi-Factor Authentication.
+        * Supported starting driver version **v9.1**, `authentication=ActiveDirectoryInteractive` can be used to connect to an Azure SQL Database/Data Warehouse using an interactive interactive authentication flow.
+    * **ActiveDirectoryServicePrincipal**
+        * Supported starting driver version **v9.1**, `authentication=ActiveDirectoryServicePrincipal` can be used to connect to an Azure SQL Database/Data Warehouse using the client ID and secret of a service principal identity.
     * **SqlPassword**
         * Use `authentication=SqlPassword` to connect to a SQL Server using userName/user and password properties.
     * **NotSpecified**
@@ -333,6 +335,61 @@ You have successfully logged on as: <your user name>
 > [!NOTE]  
 > A contained user database must exist and a contained database user representing the specified Azure AD user or one of the groups, the specified Azure AD user belongs to, must exist in the database, and must have the CONNECT permission (except for Azure Active Directory server admin or group)
 
+## Connecting using ActiveDirectoryServicePrincipal authentication mode
+The following example shows how to use `authentication=ActiveDirectoryServicePrincipal` mode.
+
+Before building and running the example:
+1.	On the client machine (on which, you want to run the example), download the [azure-activedirectory-library-for-java library](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies, and include them in the Java build path
+2.	Locate the following lines of code and replace the server/database name with your server/database name.
+	```java
+	ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
+	ds.setDatabaseName("demo"); // replace with your database name
+	```
+3.	Locate the following lines of code and replace user name, with the name of the Azure AD user you want to connect as.
+	```java
+	ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
+	```
+
+The example to use ActiveDirectoryInteractive authentication mode:
+```java
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class AADServicePrincipal {
+    public static void main(String[] args) throws Exception{
+        String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your AAD secure principal ID.
+        String principalSecret = "..."; // Replace with your AAD principal secret.
+
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setDatabaseName("demo"); // Replace with your database
+	ds.setAuthentication("ActiveDirectoryServicePrincipal");
+	ds.setAADSecurePrincipalId(principalId);
+	ds.setAADSecurePrincipalSecret(principalSecret);
+	  
+	// Optional
+        ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
+        
+        try (Connection connection = ds.getConnection(); 
+                Statement stmt = connection.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
+}
+```
+If connection is established, you should see the following message as output:
+```
+You have successfully logged on as: <your user name>
+```
+
+> [!NOTE]  
+> A contained user database must exist and a contained database user representing the specified Azure AD user or one of the groups, the specified Azure AD user belongs to, must exist in the database, and must have the CONNECT permission (except for Azure Active Directory server admin or group)
 ## Connecting using access token
 Applications/services can retrieve an access token from the Azure Active Directory and use that to connect to Azure SQL Database/Data Warehouse.
 

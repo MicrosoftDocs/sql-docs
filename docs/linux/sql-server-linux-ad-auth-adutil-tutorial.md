@@ -4,7 +4,7 @@ description: Step by step on how to configure Active Directory authentication wi
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.date: 12/07/2020
+ms.date: 12/10/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
@@ -12,6 +12,9 @@ moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allv
 ---
 
 # Tutorial: Configure Active Directory authentication with SQL Server on Linux using adutil
+
+> [!NOTE]
+> **adutil** is currently in **public preview**
 
 This tutorial explains how to configure Active Directory (AD) authentication for SQL Server on Linux using adutil. For another method of configuring AD authentication using ktpass, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
 
@@ -31,14 +34,14 @@ This tutorial consists of the following tasks:
 The following are required before configuring AD authentication:
 
 - Have an AD Domain Controller (Windows) in your network.
-- Install the adutil-preview tool on a Linux host machine. Follow the section below based on the Linux distribution that you are running to install adutil-preview.
+- Install the adutil-preview tool on a Linux host machine. Follow the section below based on the Linux distribution that you're running to install adutil-preview.
 
 ## Install adutil-preview
 
 On the Linux host machine, use the following commands to install adutil-preview.
 
 > [!NOTE]
-> For this preview version, we are aware that on certain Linux distributions, if the adutil installation is attempted without the `ACCEPT_EULA` parameter, the installation experience is hindered. Our recommendation below is to install the adutil-preview tool with `ACCEPT_EULA=Y` set. You can read the preview EULA [link to the preview EULA] ahead of the installation. We are actively working on this and this should be fixed for the GA release. 
+> For this preview version, we are aware that on certain Linux distributions, if the adutil installation is attempted without the `ACCEPT_EULA` parameter, the installation experience is hindered. Our recommendation below is to install the adutil-preview tool with `ACCEPT_EULA=Y` set. You can read the preview [EULA](https://go.microsoft.com/fwlink/?linkid=2151376) ahead of the installation. We are actively working on this and this should be fixed for the GA release.
 
 ### RHEL
 
@@ -68,7 +71,7 @@ On the Linux host machine, use the following commands to install adutil-preview.
     sudo curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
     ```
 
-1. If you had a previous version of adutil installed, please remove any older adutil packages using the below commands
+1. If you had a previous version of adutil installed, remove any older adutil packages using the below commands
 
     ```bash
     sudo apt-get remove adutil
@@ -102,7 +105,7 @@ On the Linux host machine, use the following commands to install adutil-preview.
 
 ## Domain machine preparation
 
-Ensure there is forwarding host (A) entry added in Active Directory for the Linux host IP address. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to myubuntu.contoso.com, it reaches the right host.
+Make sure there is forwarding host (A) entry added in Active Directory for the Linux host IP address. In this tutorial, the IP address of `myubuntu` host machine is `10.0.0.10`. We add the forwarding host entry in Active Directory as shown below. The entry ensures that when users connect to myubuntu.contoso.com, it reaches the right host.
 
 :::image type="content" source="media/sql-server-linux-ad-auth-adutil-tutorial/host-a-record.png" alt-text="add host record":::
 
@@ -114,7 +117,7 @@ Join your SQL Server Linux host with an Active Directory domain controller. For 
 
 ## Create an AD user for SQL Server and set the ServicePrincipalName (SPN) using the adutil tool
 
-1. Obtain or renew the Kerberos TGT (ticket-granting ticket) using the `kinit` command. Please use a privileged account for the `kinit` command. The account needs to have permission to connect to the domain, and also should be able to create accounts and SPNs in the domain.
+1. Obtain or renew the Kerberos TGT (ticket-granting ticket) using the `kinit` command. Use a privileged account for the `kinit` command. The account needs to have permission to connect to the domain, and also should be able to create accounts and SPNs in the domain.
 
     > [!IMPORTANT]
     > Before you run this command, the host machine should already be part of the domain as shown in the previous step.
@@ -150,7 +153,7 @@ Join your SQL Server Linux host with an Active Directory domain controller. For 
     adutil user create --help
     ```
 
-3. Register SPNs to the prinicpal created above. Use the machine FQDN. In this tutorial, we're using SQL Server's default port, 1433. Your port number could be different.
+3. Register SPNs to the principal created above. Use the machine FQDN. In this tutorial, we're using SQL Server's default port, 1433. Your port number could be different.
 
     ```bash
     adutil spn addauto -n sqluser -s MSSQLSvc -H myubuntu.contoso.com -p 1433
@@ -166,7 +169,7 @@ Join your SQL Server Linux host with an Active Directory domain controller. For 
 
 ## Create the SQL Server service keytab file
 
-Create the keytab file which contains entries for each of the 4 SPNs created previously, and one for the user.
+Create the keytab file that contains entries for each of the 4 SPNs created previously, and one for the user.
 
 ```bash
 adutil keytab createauto -k /var/opt/mssql/secrets/mssql.keytab -p 1433 -H myubuntu.contoso.com --password 'P@ssw0rd' -s MSSQLSvc 
@@ -203,7 +206,7 @@ adutil keytab create -k /var/opt/mssql/secrets/mssql.keytab -p sqluser --passwor
 > - `-k`: Path where you would like the `mssql.keytab` file to be created.
 > - `-p`: Principal to add to the keytab.
 
-The adutil keytab create/autocreate does not overwrite the previous files, it just appends to the file if already present.
+The adutil keytab create/autocreate doesn't overwrite the previous files, it just appends to the file if already present.
 
 Ensure the keytab created is owned by the `mssql` user and only the `mssql` user has read/write access to the file. You can run the `chown` and `chmod` commands as shown below:
 
@@ -251,4 +254,4 @@ sqlcmd -E -S 'myubuntu.contoso.com'
 ## Next Steps
 
 - [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-auth-overview.md)
-- If you are interested on how to configure AD authentication with SQL Server on Linux containers, see [Configure Active Directory authentication with SQL Server on Linux  containers](sql-server-linux-containers-ad-auth-adutil-tutorial.md)
+- If you're interested on how to configure AD authentication with SQL Server on Linux containers, see [Configure Active Directory authentication with SQL Server on Linux  containers](sql-server-linux-containers-ad-auth-adutil-tutorial.md)

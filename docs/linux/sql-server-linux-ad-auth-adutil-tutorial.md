@@ -181,8 +181,8 @@ adutil keytab createauto -k /var/opt/mssql/secrets/mssql.keytab -p 1433 -H myubu
 > - `-p`: The port to use for generating SPNs. If not specified, SPNs will be generated without a port.
 > - `-H`: The hostname to use for generating SPNs. If not specified, the local host's FQDN will be used. In this case, the host name is `myubuntu` and the FQDN is `myubuntu.contoso.com`.
 > - `-s`: The service name to use for generating SPNs. In this case, it is for SQL Server service, and hence the service name is `MSSQLSvc`.
-> `--password`: This is the password of the privileged AD user account that was created earlier.
-> `-e` or `--enctype`: Encryption types for the keytab entry. Use a comma-separated list of values. If not specified, an interactive prompt will be presented.
+> - `--password`: This is the password of the privileged AD user account that was created earlier.
+> - `-e` or `--enctype`: Encryption types for the keytab entry. Use a comma-separated list of values. If not specified, an interactive prompt will be presented.
 
 When given a choice to choose the encryption types, you can choose more than one. For this example, we chose `aes256-cts-hmac-sha1-96` and `arcfour-hmac`. Ensure you choose the encryption type that is supported by the host and domain.
 

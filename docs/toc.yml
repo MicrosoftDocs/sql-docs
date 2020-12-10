@@ -8512,6 +8512,24 @@
       items:
       - name: Connect & query SQL Server
         href: ssms/quickstarts/connect-query-sql-server.md
+      - name: Connect to SQL Server
+        href: ssms/quickstarts/connect-ssms-sql-server.md
+      - name: Create & query a SQL Server database
+        href: ssms/quickstarts/query-ssms-sql-server.md
+      - name: Connect to Azure SQL Database
+        href: ssms/quickstarts/connect-ssms-azure-sql.md
+      - name: Create & query an Azure SQL Database
+        href: ssms/quickstarts/query-ssms-azure-sql.md
+      - name: Connect & query SQL Server
+        href: ssms/quickstarts/connect-query-sql-server.md
+      - name: Connect to a dedicated SQL pool in Azure Synapse Analytics
+        href: ssms/quickstarts/connect-ssms-azure-synapse-analytics.md
+      - name: Create & query a dedicated SQL pool in Azure Synapse Analytics
+        href: ssms/quickstarts/query-ssms-azure-synapse-analytics.md
+      - name: Connect to a SQL Server on Azure VM
+        href: ssms/quickstarts/connect-ssms-sql-server-azure-vm.md
+      - name: Create & query SQL Server on Azure VM
+        href: ssms/quickstarts/query-sql-server-azure-vm.md
     - name: Tutorials
       items:
       - name: SSMS Configuration

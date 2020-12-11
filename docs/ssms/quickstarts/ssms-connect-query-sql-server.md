@@ -1,25 +1,26 @@
 ---
-title: Create and query SQL Server on an Azure VM in SSMS
-description: Create and query SQL Server on an Azure VM by running basic T-SQL queries in using SQL Server Management Studio (SSMS).
+title: Connect and query a SQL Server instance using SQL Server Management Studio (SSMS)
+description: Connect to a SQL Server instance in SSMS. Create and query a SQL Server database in SSMS running basic T-SQL queries.
 ms.prod: sql
 ms.technology: ssms
 ms.topic: quickstart
 author: markingmyname
 ms.author: maghan
-ms.reviewer: sstein
+ms.reviewer: sstein, mikeray
 ms.custom: ""
 ms.date: 12/14/2020
 ---
 
-# Quickstart: Create and query SQL Server on an Azure Virtual Machine in SSMS
+# Quickstart: Connect and query a SQL Server instance using SQL Server Management Studio (SSMS)
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-This quickstart teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server on an Azure VM and run some basic Transact-SQL (T-SQL) commands.
+Get started with SQL Server by using SQL Server Management Studio (SSMS) to connect to a SQL Server instance and create and query a SQL Server database.
 
 The article demonstrates how to follow the below steps:
 
 > [!div class="checklist"]
+> - Connect to a SQL Server instance
 > - Create a database
 > - Create a table in your new database
 > - Insert rows into your new table
@@ -28,34 +29,64 @@ The article demonstrates how to follow the below steps:
 
 ## Prerequisites
 
-- [Quickstart: Connect to Azure SQL Database using SQL Server Management Studio (SSMS)](connect-ssms-azure-sql.md)
+- [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md) installed.
+- [SQL Server instance](https://www.microsoft.com/sql-server/sql-server-downloads) installed and configured.
+
+## Connect to a SQL Server instance
+
+1. Start SQL Server Management Studio. The first time you run SSMS, the **Connect to Server** window opens. If it doesn't open, you can open it manually by selecting **Object Explorer** > **Connect** > **Database Engine**.
+
+    :::image type="content" source="media/ssms-connect-query-sql-server/connect-object-explorer.png" alt-text="Connect link in Object Explorer":::
+
+2. The **Connect to Server** dialog box appears. Enter the following information:
+
+    |   Setting   |   Suggested Value(s)   |   Description   |
+    |--------------|-----------------------|-----------------|
+    | **Server type** | Database engine | For **Server type**, select **Database Engine** (usually the default option). |
+    | **Server name** | The fully qualified server name | For **Server name**, enter the name of your SQL Server (you can also use *localhost* as the server name if you're connecting locally). If you're NOT using the default instance - ***MSSQLSERVER*** - you must enter in the server name and the instance name. </br> </br> If you're unsure how to determine your SQL Server instance name, see [Additional tips and tricks for using SSMS](../tutorials/ssms-tricks.md#find-sql-server-instance-name). |
+    | **Authentication** | Windows Authentication </br> </br> SQL Server Authentication | Windows Authentication is set as default. </br> </br> You can also use **SQL Server Authentication** to connect. However, if you select **SQL Server Authentication**, a username and password are required. </br> </br> For more information about authentication types, see [Connect to the server (database engine)](../f1-help/connect-to-server-database-engine.md). |
+    | **Login** | Server account user ID | The user ID from the server account used to log in to the server. A login is required when using **SQL Server Authentication**. |
+    | **Password** | Server account password | The password from the server account used to log in the server. A password is required when using **SQL Server Authentication**. |
+
+    :::image type="content" source="media/ssms-connect-query-sql-server/connect-to-sql-server-object-explorer.png" alt-text="Server name field for SQL Server":::
+
+    You can also modify additional connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the fields.
+
+3. After you've completed all the fields, select **Connect**.
+
+4. To verify that your SQL Server connection succeeded, expand and explore the objects within **Object Explorer** where the server name, the SQL Server version, and the username are displayed. These objects are different depending on the server type.
+
+    :::image type="content" source="media/ssms-connect-query-sql-server/connect-on-prem.png" alt-text="Connecting to an on-premises server":::
+
+## Troubleshoot connectivity issues
+
+To review troubleshooting techniques to use when you can't connect to an instance of your SQL Server Database Engine on a single server, visit [Troubleshoot connecting to the SQL Server Database Engine](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
 
 ## Create a database
 
-Create a database named TutorialDB by following the below steps:
+Now let's create a database named TutorialDB by following the below steps:
 
 1. Right-click your server instance in Object Explorer, and then select **New Query**:
 
-   :::image type="content" source="media/query-ssms-azure-sql/new-query.png" alt-text="The New Query link":::
+   :::image type="content" source="media/ssms-connect-query-sql-server/new-query.png" alt-text="The New Query link":::
 
 2. Paste the following T-SQL code snippet into the query window:
 
     ```sql
+    USE master
+    GO
     IF NOT EXISTS (
-    SELECT name
-    FROM sys.databases
-    WHERE name = N'TutorialDB'
+       SELECT name
+       FROM sys.databases
+       WHERE name = N'TutorialDB'
     )
     CREATE DATABASE [TutorialDB]
     GO
-    
-    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
-    GO
-    ```
+   ```
 
 3. Execute the query by selecting **Execute** or selecting F5 on your keyboard.
 
-   :::image type="content" source="media/query-ssms-azure-sql/execute.png" alt-text="The Execute command":::
+   :::image type="content" source="media/ssms-connect-query-sql-server/execute.png" alt-text="The Execute command":::
   
     After the query is complete, the new TutorialDB database appears in the list of databases in Object Explorer. If it isn't displayed, right-click the **Databases** node, and then select **Refresh**.
 
@@ -65,7 +96,7 @@ In this section, you create a table in the newly created TutorialDB database. Be
 
 1. In the database drop-down list, select the database that you want, as shown here:
 
-   :::image type="content" source="media/query-ssms-azure-sql/change-db.png" alt-text="Change database":::
+   :::image type="content" source="media/ssms-connect-query-sql-server/change-db.png" alt-text="Change database":::
 
 2. Paste the following T-SQL code snippet into the query window:
 
@@ -91,7 +122,7 @@ In this section, you create a table in the newly created TutorialDB database. Be
 
 After the query is complete, the new Customers table is displayed in the list of tables in Object Explorer. If the table isn't displayed, right-click the **TutorialDB** > **Tables** node in Object Explorer, and then select **Refresh**.
 
-   :::image type="content" source="media/query-ssms-azure-sql/new-table.png" alt-text="New table":::
+   :::image type="content" source="media/ssms-connect-query-sql-server/new-table.png" alt-text="New table":::
 
 ## Insert rows into the new table
 
@@ -122,11 +153,11 @@ The results of a query are visible below the query text window. To query the Cus
 
     The results of the query are displayed under the area where the text was entered.
 
-   :::image type="content" source="media/query-ssms-azure-sql/query-results.png" alt-text="The Results list":::
+   :::image type="content" source="media/ssms-connect-query-sql-server/query-results.png" alt-text="The Results list":::
 
     You can also modify the way results are presented by selecting one of the following options:
 
-   ![Three options for displaying query results](media/query-ssms-azure-sql/results.png)
+   ![Three options for displaying query results](media/ssms-connect-query-sql-server/results.png)
 
    - The first button displays the results in **Text View**, as shown in the image in the next section.
    - The middle button displays the results in **Grid View**, which is the default option.
@@ -140,7 +171,7 @@ You can find information about the connection properties under the results of yo
 - You can determine which server and database you're connected to, and the username that you use.
 - You can also view the query duration and the number of rows that are returned by the previously executed query.
 
-   :::image type="content" source="media/query-ssms-azure-sql/connection-properties.png" alt-text="Connection properties":::
+   :::image type="content" source="media/ssms-connect-query-sql-server/connection-properties.png" alt-text="Connection properties":::
 
 ## Additional tools
 

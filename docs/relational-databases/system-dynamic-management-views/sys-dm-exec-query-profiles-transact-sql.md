@@ -85,7 +85,7 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the *standa
 
 ## Permissions  
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and Azure SQL Managed Instance, requires `VIEW DATABASE STATE` permission and membership of the `db_owner` database role.   
-On [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
+On [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the `Server admin` or an `Azure Active Directory admin` account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
    
 ## Examples  
  Step 1: Login to a session in which you plan to run the query you will analyze with `sys.dm_exec_query_profiles`. To configure the query for profiling use `SET STATISTICS PROFILE ON`. Run your query in this same session.  

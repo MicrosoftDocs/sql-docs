@@ -2,7 +2,7 @@
 description: "Always Encrypted API reference for the JDBC driver"
 title: "Always Encrypted API reference for the JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "12/10/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -33,6 +33,7 @@ ms.author: v-daenge
 |New methods:<br /><br /> `public static void setColumnEncryptionTrustedMasterKeyPaths(Map<String, List\<String>> trustedKeyPaths)`<br /><br /> `public static void updateColumnEncryptionTrustedMasterKeyPaths(String server, List\<String> trustedKeyPaths)`<br /><br /> `public static void removeColumnEncryptionTrustedMasterKeyPaths(String server)`|Allows you to set/update/remove a list of trusted key paths for a database server. If while processing an application query the driver receives a key path that's not on the list, the query will fail. This property provides additional protection against security attacks that involve a compromised SQL Server sending fake key paths, which may lead to leaking key store credentials.|  
 |New method:<br /><br /> `public static Map<String, List\<String>> getColumnEncryptionTrustedMasterKeyPaths()`|Returns a list of trusted key paths for a database server.|  
 |New method:<br /><br /> `public static void registerColumnEncryptionKeyStoreProviders (Map\<String, SQLServerColumnEncryptionKeyStoreProvider> clientKeyStoreProviders)`|Allows you to register custom key store providers. It's a dictionary that maps key store provider names to key store provider implementations.<br /><br /> To use the JVM key store, you need to instantiate a SQLServerColumnEncryptionJVMKeyStoreProvider object with JVM keystore credentials and register it with the driver. The name for this provider must be 'MSSQL_JVM_KEYSTORE'.<br /><br /> To use the Azure Key Vault store, you need to instantiate a SQLServerColumnEncryptionAzureKeyStoreProvider object and register it with the driver. The name for this provider must be 'AZURE_KEY_VAULT'.|
+|New method:<br /><br /> `public static void unregisterColumnEncryptionKeyStoreProviders (Map\<String, SQLServerColumnEncryptionKeyStoreProvider> clientKeyStoreProviders)`|Allows you to unregister all the custom key store providers by clearing the dictionary that maps key store provider names to key store provider implementations.|
 |`public final boolean getSendTimeAsDatetime()`|Returns the setting of the sendTimeAsDatetime connection property.|
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)`|Modifies the setting of the sendTimeAsDatetime connection property.|
 
@@ -71,7 +72,9 @@ ms.author: v-daenge
 |Name|Description|  
 |----------|-----------------|  
 |`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Decrypts the specified encrypted value of a column encryption key. The encrypted value is expected to be encrypted using the certificate with the specified key path and using the specified algorithm.<br /><br /> **The format of the key path should be one of the following:**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Overrides SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
-|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Encrypts a column encryption key using the certificate with the specified key path and using the specified algorithm.<br /><br /> **The format of the key path should be one of the following:**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Overrides SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Encrypts a column encryption key using the certificate with the specified key path and using the specified algorithm.<br /><br /> **The format of the key path should be one of the following:**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Overrides SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|
+|`public boolean verifyColumnEncryptionKey (String masterKeyPath, boolean allowEnclaveComputations, byte[] signature)`|Verifies the signature of the column encryption key using the certificate.<br /><br /> **The format of the key path should be one of the following:**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Overrides SQLServerColumnEncryptionKeyStoreProvider. verifyColumnEncryptionKey(String, boolean, Byte[]).)|  
+
 |`public void setName (String name)`|Sets the name of this key store provider.|
 |`public String getName ()`|Gets the name of this key store provider.|
   

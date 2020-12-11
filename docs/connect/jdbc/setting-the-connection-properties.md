@@ -116,7 +116,7 @@ The following table lists all the currently available connection string properti
 > The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] takes the server default values for connection properties except for ANSI_DEFAULTS and IMPLICIT_TRANSACTIONS. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] automatically sets ANSI_DEFAULTS to ON and IMPLICIT_TRANSACTIONS to OFF.
 
 > [!Important]
-> If authentication is set to ActiveDirectoryPassword, the following library needs to be included in classpath: [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java). It can be found on [Maven Repository](https://mvnrepository.com/artifact/com.microsoft.azure/adal4j). The simplest way to download the library and its dependencies is using Maven:
+> If authentication is set to ActiveDirectoryPassword, the following library needs to be included in classpath: [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java). It can be found on [Maven Repository](https://mvnrepository.com/artifact/com.microsoft.azure/msal4j). The simplest way to download the library and its dependencies is using Maven:
 > 1. First, install Maven on your system
 > 2. Go to the [GitHub page](https://github.com/Microsoft/mssql-jdbc) of the driver
 > 3. Download the pom.xml file

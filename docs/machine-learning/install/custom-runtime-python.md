@@ -41,14 +41,12 @@ Before installing a custom Python runtime, install the following:
 > [!NOTE]
 > If you have Machine Learning Services installed on SQL Server 2019, the extensibility framework is already installed and you can skip this step.
 
-Language Extensions use the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution.
+Follow the steps below to install [Language Extensions](../../language-extensions/language-extensions-overview.md), which is used for the custom Python runtime.
 
 1. Start the setup wizard for SQL Server 2019.
   
 1. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
     
-    ![SQL Server 2019 installation CU3 or later](../install/media/2019setup-installation-page-mlsvcs.png) 
-
 1. On the **Feature Selection** page, select these options:
   
     - **Database Engine Services**
@@ -57,7 +55,7 @@ Language Extensions use the extensibility framework for executing external code.
   
     - **Machine Learning Services and Language Extensions**
    
-       Select **Machine Learning Services and Language Extensions**. There's no need to select Python.
+       Select **Machine Learning Services and Language Extensions**. Do not select Python, as you will be installing the custom Python runtime later.
 
     ![SQL Server 2019 CU3 or later installation features](../install/media/sql-feature-selection.png) 
 
@@ -66,17 +64,9 @@ Language Extensions use the extensibility framework for executing external code.
     + Database Engine Services
     + Machine Learning Services and Language Extensions
 
-1. After setup is complete, if you're instructed to restart the computer, do so now. It's important to read the message from the Installation Wizard when you've finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
+1. After the setup is complete, restart the computer if you're ask to do so. 
 
-
-## Install Python 3.7 
-
-Install [Python 3.7]( https://www.python.org/downloads/release/python-379/) and add it to the PATH.
-
-![Add Python 3.7 to path.](../install/media/python-379.png) 
-
-
-#### Install pandas
+## Install pandas
 
 Install the [pandas](https://pandas.pydata.org/) package for Python from an *elevated* command prompt:
 

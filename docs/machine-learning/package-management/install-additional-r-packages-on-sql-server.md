@@ -3,7 +3,7 @@ title: Install new R packages
 description: Learn how to use sqlmlutils to install new R packages to an instance of SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/04/2020
+ms.date: 12/10/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
@@ -47,94 +47,20 @@ This article describes how to use functions in the [**sqlmlutils**](https://gith
 
 To use **sqlmlutils**, you first need to install it on the client computer you use to connect to SQL Server.
 
-The **sqlmlutils** package depends on the **RODBCext** package, and **RODBCext** depends on a number of other packages. The following procedures install all of these packages in the correct order.
-
-### Install sqlmlutils online
-
-If the client computer has Internet access, you can download and install **sqlmlutils** and its dependent packages online.
-
 1. Download the latest **sqlmlutils** file (`.zip` for Windows, `.tar.gz` for Linux) from https://github.com/Microsoft/sqlmlutils/tree/master/R/dist to the client computer. Don't expand the file.
 
-1. Open a **Command Prompt** and run the following commands to install the packages **RODBCext** and **sqlmlutils**. Substitute the path to the **sqlmlutils** file you downloaded. The **RODBCext** package is found online and installed.
+   If the client computer doesn't have an Internet connection, you can download the **sqlmlutils** package using a computer that does have Internet access, then copy the file to a folder on the client computer and install the package offline.
+
+1. Open a **Command Prompt** and run the following command to install the **sqlmlutils** package. Substitute the path to the **sqlmlutils** file you downloaded.
 
    ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```console
-   R -e "install.packages('RODBCext', repos='https://mran.microsoft.com/snapshot/2019-02-01/')"
    R CMD INSTALL sqlmlutils_0.7.1.zip
    ```
    ::: moniker-end
 
    ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
    ```console
-   R -e "install.packages('RODBCext', repos='https://mran.microsoft.com/snapshot/2019-02-01/')"
-   R CMD INSTALL sqlmlutils_0.7.1.tar.gz
-   ```
-   ::: moniker-end
-
-### Install sqlmlutils offline
-
-If the client computer doesn't have an Internet connection, you need to download the packages **RODBCext** and **sqlmlutils** in advance using a computer that does have Internet access. You then can copy the files to a folder on the client computer and install the packages offline.
-
-The **RODBCext** package has a number of dependent packages, and identifying all dependencies for a package gets complicated. We recommend that you use [**miniCRAN**](https://andrie.github.io/miniCRAN/) to create a local repository folder for the package that includes all the dependent packages.
-For more information, see [Create a local R package repository using miniCRAN](create-a-local-package-repository-using-minicran.md).
-
-The **sqlmlutils** package consists of a single file that you can copy to the client computer and install.
-
-On a computer with Internet access:
-
-1. Install **miniCRAN**. See [Install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) for details.
-
-1. In RStudio, run the following R script to create a local repository of the package **RODBCext**. This example assumes the repository will be created in the folder `rodbcext`.
-
-   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-   ```R
-   CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2019-02-01/")
-   local_repo <- "rodbcext"
-   pkgs_needed <- "RODBCext"
-   pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
-
-   makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.5");
-   ```
-   ::: moniker-end
-
-   ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
-   ```R
-   CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2019-02-01/")
-   local_repo <- "rodbcext"
-   pkgs_needed <- "RODBCext"
-   pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
-
-   makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "source", Rversion = "3.5");
-   ```
-   ::: moniker-end
-
-   For the `Rversion` value, use the version of R installed on SQL Server. To verify the installed version, use the following T-SQL command.
-
-   ```sql
-   EXECUTE sp_execute_external_script @language = N'R'
-    , @script = N'print(R.version)'
-   ```
-
-1. Download the latest **sqlmlutils** file (`.zip` for Windows, `.tar.gz` for Linux) from [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist). Don't expand the file.
-
-1. Copy the entire **RODBCext** repository folder and the **sqlmlutils** file to the client computer.
-
-On the client computer you use to connect to SQL Server:
-
-1. Open a command prompt.
-
-1. Run the following commands to install **RODBCext** and then **sqlmlutils**. Substitute the full paths to the **RODBCext** repository folder and the **sqlmlutils** file you copied to this computer.
-
-   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-   ```console
-   R -e "install.packages('RODBCext', repos='rodbcext')"
-   R CMD INSTALL sqlmlutils_0.7.1.zip
-   ```
-   ::: moniker-end
-
-   ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
-   ```console
-   R -e "install.packages('RODBCext', repos='rodbcext')"
    R CMD INSTALL sqlmlutils_0.7.1.tar.gz
    ```
    ::: moniker-end

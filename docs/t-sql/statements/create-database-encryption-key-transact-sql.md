@@ -74,7 +74,7 @@ CREATE DATABASE ENCRYPTION KEY
 WITH ALGORITHM = { AES_128 \| AES_192 \| AES_256 \| TRIPLE_DES_3KEY  }  
 Specifies the encryption algorithm that is used for the encryption key.
 
-> [!NOTE]
+> [!WARNING]
 > Beginning with SQL Server 2016, all algorithms other than AES_128, AES_192, and AES_256 are deprecated. 
 > To use older algorithms (not recommended) you must set the database to database compatibility level 120 or lower.  
   

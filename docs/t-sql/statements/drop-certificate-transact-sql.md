@@ -41,7 +41,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallpr
 ```synaxsql  
 DROP CERTIFICATE certificate_name  
 ```  
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

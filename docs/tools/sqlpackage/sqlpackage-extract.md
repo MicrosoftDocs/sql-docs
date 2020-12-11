@@ -1,6 +1,6 @@
 ---
 title: SqlPackage Extract
-description: Learn how to automate database development tasks with SqlPackage.exe. View examples and available parameters, properties, and SQLCMD variables.
+description: Learn how to automate database development tasks with SqlPackage.exe Extract. View examples and available parameters, properties, and SQLCMD variables.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -13,7 +13,7 @@ ms.date: 12/11/2020
 ---
 
 # SqlPackage Extract parameters and properties
-The SqlPackage.exe Extract action creates a schema of a live database from SQL Server or Azure SQL Database to a DACPAC package (.dacpac file). By default, data is not included in the .dacpac file. To include data, utilize the [Export action](sqlpackage-export). 
+The SqlPackage.exe Extract action creates a schema of a live database from SQL Server or Azure SQL Database to a DACPAC package (.dacpac file). By default, data is not included in the .dacpac file. To include data, utilize the [Export action](sqlpackage-export.md). 
 
 ## Command-Line Syntax
 

@@ -770,7 +770,7 @@ After you have followed one of these approaches, you can use MSBuild to pass in 
         > If you deploy a database project that is identical to the target database, the resulting report will not be very meaningful. For more meaningful results, either deploy changes to a database or deploy a new database.  
   
 ## Command-line deployment using generated dacpac file  
-Once a SQL project has been built, a dacpac file is created that can be used to deploy the schema from the command line, and which can enable deployment from a different machine such as a build machine. SqlPackage is a command-line utility that enables deployment of dacpacs with a full range of options that enable users to deploy a dacpac or generate a deployment script, among other actions. For more information, see [SqlPackage.exe](../tools/sqlpackage.md).  
+Once a SQL project has been built, a dacpac file is created that can be used to deploy the schema from the command line, and which can enable deployment from a different machine such as a build machine. SqlPackage is a command-line utility that enables deployment of dacpacs with a full range of options that enable users to deploy a dacpac or generate a deployment script, among other actions. For more information, see [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md).  
   
 > [!NOTE]  
 > To successfully deploy dacpacs built from projects with the DeploymentContributors property defined, the DLL(s) containing your deployment contributor(s) must be installed on the machine being used. This is because they have been marked as required for the deployment to complete successfully.  

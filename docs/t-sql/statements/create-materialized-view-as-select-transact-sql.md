@@ -37,7 +37,7 @@ helpviewer_keywords:
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT  
 ms.author: xiaoyul
-monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest"
 ---
 # CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 

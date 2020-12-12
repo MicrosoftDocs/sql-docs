@@ -11,7 +11,7 @@ ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: cawrites
 ms.author: chadam
 manager: erikre
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Analysis Services with Always On Availability Groups
 

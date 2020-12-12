@@ -17,7 +17,7 @@ dev_langs:
   - "TSQL"
 author: kevinvngo
 ms.author: kevin
-monikerRange: "=sqlallproducts-allversions||=azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest"
 ---
 # COPY (Transact-SQL)
 

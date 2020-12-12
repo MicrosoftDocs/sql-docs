@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017"
 ---
 # Release notes for SQL Server Reporting Services (SSRS) 2017 and later
 

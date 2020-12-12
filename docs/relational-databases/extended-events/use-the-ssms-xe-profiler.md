@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: "yualan"
 ms.author: "alayu"
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017"
 ---
 # Use the SSMS XEvent Profiler
 

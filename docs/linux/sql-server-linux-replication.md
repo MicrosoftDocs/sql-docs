@@ -9,7 +9,7 @@ ms.topic: article
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: linux
-monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # SQL Server Replication on Linux
 

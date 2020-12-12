@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "SQL Graph" 
 author: "shkale-msft"
 ms.author: "shkale"
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # Edge constraints
 

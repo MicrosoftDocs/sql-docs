@@ -12,7 +12,7 @@ dev_langs:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: "genemi"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Nondeterministic conversion of literal date strings into DATE values
 

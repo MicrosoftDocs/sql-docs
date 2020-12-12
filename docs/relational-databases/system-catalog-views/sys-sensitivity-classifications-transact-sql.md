@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "labels [SQL]"
   - "information types"
   - "rank"
-monikerRange: ">= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest"
 ---
 # sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

@@ -38,11 +38,11 @@ ms.date: 12/11/2019
   
 ## <a name="ViewState"></a> How to Configure View State Validation
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 To run a scale-out deployment on an NLB cluster, you must configure view state validation so that users can view interactive HTML reports.  You must do this for the Report Server Web Service.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 To run a scale-out deployment on an NLB cluster, you must configure view state validation so that users can view interactive HTML reports.
 ::: moniker-end
   
@@ -50,7 +50,7 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
   
  To work around this issue, you can generate an arbitrary validation key to support view state validation, and then manually configure each report server node to use the same key. You can use any randomly generated hexadecimal sequence. The validation algorithm (such as SHA1) determines how long the hexadecimal sequence must be.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 1. Generate a validation key and decryption key by using the autogenerate functionality provided by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In the end, you must have a single <`machineKey`> entry that you can paste into the Web.config file for each Report Server instance in the scale-out deployment.  
   
@@ -70,7 +70,7 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 1. Generate a validation key and decryption key by using the autogenerate functionality provided by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In the end, you must have a single \<**MachineKey**> entry that you can paste into the RSReportServer.config file for each report server instance in the scale-out deployment.
 

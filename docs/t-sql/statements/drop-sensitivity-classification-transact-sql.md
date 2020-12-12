@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "labels [SQL]"
   - "information types"
   - "data classification"
-monikerRange: " >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: " >= sql-server-ver15 || = azuresqldb-current"
 ---
 # DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-ver15"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 
 # Deprecated database engine features in [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]

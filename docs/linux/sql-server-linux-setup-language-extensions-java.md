@@ -9,7 +9,7 @@ ms.date: 11/12/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Install SQL Server Java Language Extension on Linux
 

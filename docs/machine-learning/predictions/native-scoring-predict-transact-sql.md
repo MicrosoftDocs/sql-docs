@@ -9,7 +9,7 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 
 # Native scoring using the PREDICT T-SQL function with SQL machine learning
@@ -55,13 +55,13 @@ The model formats supported by the `PREDICT` function depends on the SQL platfor
 | Azure SQL Edge | Yes | No |
 | Azure Synapse Analytics | Yes | No |
 
-::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest"
 ### ONNX models
 
 The model must be in an [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) model format.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
 ### RevoScale models
 
 The model must be trained in advance using one of the supported **rx** algorithms listed below using the [RevoScaleR](../r/ref-r-revoscaler.md) or [revoscalepy](../python/ref-py-revoscalepy.md) package.
@@ -101,7 +101,7 @@ Unsupported model types include the following types:
 ::: moniker-end
 
 ## Examples
-::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest"
 ### PREDICT with an ONNX model
 
 This example shows how to use an ONNX model stored in the `dbo.models` table for native scoring.
@@ -140,7 +140,7 @@ FROM PREDICT(MODEL = @model, DATA = predict_input, RUNTIME=ONNX) WITH (variable1
 > Because the columns and values returned by **PREDICT** can vary by model type, you must define the schema of the returned data by using a **WITH** clause.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017"
 ### PREDICT with RevoScale model
 
 In this example, you create a model using **RevoScaleR** in R, and then call the real-time prediction function from T-SQL.

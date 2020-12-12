@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: 8e712c15-6bfa-4d71-b303-9526101e5594
 author: cawrites
 ms.author: chadam
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Check parameters for the System Configuration Checker
 

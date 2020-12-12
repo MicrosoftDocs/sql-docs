@@ -21,9 +21,10 @@ Connecting to a data source can be time consuming. To minimize the cost of openi
 
 ## In This Section  
 
-[SQL Server Connection Pooling (ADO.NET)](sql-server-connection-pooling.md)
+[SQL Server Connection Pooling (ADO.NET)](sql-server-connection-pooling.md)  
 Provides an overview of connection pooling and describes how connection pooling works in SQL Server.
 
 ## See also
 
 - [Retrieving and Modifying Data in ADO.NET](retrieving-modifying-data.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

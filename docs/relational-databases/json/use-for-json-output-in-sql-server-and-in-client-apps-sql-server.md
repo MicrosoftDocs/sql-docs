@@ -16,7 +16,7 @@ ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use FOR JSON output in SQL Server and in client apps (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
 The following examples demonstrate some of the ways to use the **FOR JSON** clause and its JSON output in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or in client apps.  
   

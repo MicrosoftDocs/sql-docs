@@ -143,7 +143,7 @@ object_id   TableName    index_id    IndexName                                  
 
 For more information, see [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
 
-### To check the fragmentation of a columnstore index using [!INCLUDE[tsql](../../includes/tsql-md.md)]
+### To check the fragmentation of a columnstore index using Transact-SQL
 
 The following example finds the average fragmentation percentage of all indexes in the `dbo.FactResellerSalesXL_CCI` table in the `AdventureWorksDW2016` database.
 
@@ -175,7 +175,7 @@ object_id   TableName                   index_id    IndexName                   
 ### Check index fragmentation using SQL Server Management Studio
 
 > [!NOTE]
-> [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] cannot be used to compute fragmentation of columnstore indexes in SQL Server and cannot be used to compute fragmentation of any indexes in Azure SQL Database. Use the preceding [!INCLUDE[tsql](../../includes/tsql-md.md)] [example](#to-check-the-fragmentation-of-a-columnstore-index-using-) for these scenarios.
+> [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] cannot be used to compute fragmentation of columnstore indexes in SQL Server and cannot be used to compute fragmentation of any indexes in Azure SQL Database. Use the preceding [!INCLUDE[tsql](../../includes/tsql-md.md)] [example](#to-check-the-fragmentation-of-a-columnstore-index-using-transact-sql).
 
 1. In Object Explorer, Expand the database that contains the table on which you want to check an index's fragmentation.
 2. Expand the **Tables** folder.

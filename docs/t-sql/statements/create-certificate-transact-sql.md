@@ -27,10 +27,10 @@ helpviewer_keywords:
 ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE CERTIFICATE (Transact-SQL)
-[!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
+[!INCLUDE [sql-asdb-pdw](../../includes/applies-to-version/sql-asdb-pdw.md)]
 
   Adds a certificate to a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -79,11 +79,9 @@ CREATE CERTIFICATE certificate_name [ AUTHORIZATION user_name ]
     START_DATE = 'datetime' | EXPIRY_DATE = 'datetime'  
 ```  
   
-> [!Note]
-> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
    
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 CREATE CERTIFICATE certificate_name   
     { <generate_new_keys> | FROM <existing_keys> }  
@@ -106,7 +104,6 @@ CREATE CERTIFICATE certificate_name
 <date_options> ::=  
     START_DATE ='datetime' | EXPIRY_DATE ='datetime'  
 ```  
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

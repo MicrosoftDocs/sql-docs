@@ -27,7 +27,7 @@ ms.author: maghan
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Configuration Manager  
   
-#### To enable connections to SQL Server through Microsoft Proxy Server  
+#### To enable connections to SQL Server through proxy server  
   
 1.  Follow the steps in [Configure a Server to Listen on a Specific TCP Port &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md) to determine which TCP/IP ports are used by the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or to configure the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to use a desired port.  
   

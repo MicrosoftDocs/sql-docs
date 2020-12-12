@@ -73,7 +73,7 @@ A number of packages, referred to as *system packages*, are pre-installed in a S
 
 ## Examples
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 Add the custom R package, `customPackage`, to a database:
 
 ```sql

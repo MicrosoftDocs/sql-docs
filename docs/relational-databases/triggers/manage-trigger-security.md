@@ -59,7 +59,7 @@ What this trigger means is that as soon as a user that has permission to execute
 
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 -   Be aware of the DML and DDL triggers that exist in the database by querying the [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) catalog view. The following query returns all DML and database-level DDL triggers in the current database:  
   

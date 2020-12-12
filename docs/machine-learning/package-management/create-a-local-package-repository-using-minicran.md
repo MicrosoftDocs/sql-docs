@@ -107,7 +107,7 @@ pdb[, c("Package", "Version", "License")]
 
 After you have a local repository with the packages you need, move the package repository to the SQL Server computer. The following procedure describes how to install the packages using R tools.
 
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 > [!NOTE]
 > The recommended method for installing packages is using **sqlmlutils**. See [Install new R packages with sqlmlutils](install-additional-r-packages-on-sql-server.md).
 ::: moniker-end

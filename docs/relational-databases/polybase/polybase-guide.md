@@ -103,7 +103,7 @@ Before using PolyBase, you must [install the PolyBase feature](polybase-installa
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-linux-ver15||>= sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15||>= sql-server-ver15"
 
 ## Next steps
 

@@ -98,7 +98,7 @@ How much you change your code depends on whether you intend to submit the R code
 
 ### Improve performance and security
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + Avoid writing predictions or intermediate results to file. Write predictions to a table instead, to avoid data movement.
 ::: moniker-end
 
@@ -164,6 +164,6 @@ To view examples of how an R solution can be deployed in SQL Server, see these s
 
 + [R tutorial: Predict NYC taxi fares with binary classification](../tutorials/r-taxi-classification-introduction.md)
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + [End-to-End Data Science Solution](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) - Includes a comparison of feature engineering in R and T-SQL
 ::: moniker-end

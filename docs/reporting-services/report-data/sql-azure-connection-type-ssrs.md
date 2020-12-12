@@ -147,7 +147,7 @@ For more information, see [ODBC Connection Type &#40;SSRS&#41;](../../reporting-
 
 For more information about platform and version support, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 
 ## Azure SQL Database and AAD
 

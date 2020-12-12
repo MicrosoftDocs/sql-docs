@@ -21,7 +21,7 @@ This article describes how to use standard R tools to install new R packages to 
 In addition to standard R tools, you can install R packages using:
 
 + [RevoScaleR](install-r-packages-with-revoscaler.md)
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [T-SQL](install-r-packages-with-tsql.md) (CREATE EXTERNAL LIBRARY)
 ::: moniker-end
 

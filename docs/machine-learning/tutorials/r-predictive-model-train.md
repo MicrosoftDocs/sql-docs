@@ -15,16 +15,16 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 # Tutorial: Create a predictive model in R with SQL machine learning
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 In part three of this four-part tutorial series, you'll train a predictive model in R. In the next part of this series, you'll deploy this model in a SQL Server database with Machine Learning Services or on Big Data Clusters.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 In part three of this four-part tutorial series, you'll train a predictive model in R. In the next part of this series, you'll deploy this model in a SQL Server database with Machine Learning Services.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 In part three of this four-part tutorial series, you'll train a predictive model in R. In the next part of this series, you'll deploy this model in a database with SQL Server R Services.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 In part three of this four-part tutorial series, you'll train a predictive model in R. In the next part of this series, you'll deploy this model in an Azure SQL Managed Instance database with Machine Learning Services.
 ::: moniker-end
 

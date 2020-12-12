@@ -54,7 +54,7 @@ The **New Column Master Key** dialog allows you to generate a column master key 
 
 Once you complete the dialog, SQL Server Management Studio creates metadata for your column master key in the database. The dialog achieves this by generating and issuing a [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) statement.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 If you're configuring an enclave-enabled column master key, SSMS also signs the metadata using the column master key. 
 

@@ -32,7 +32,7 @@ Deploying a DAC package may also result in creating or removing metadata objects
 ## Performance considerations
 To perform cryptographic operations, a tool you use to deploy a DACPAC needs to move the data out of the database. The tool creates a new table (or tables) with the desired encryption configuration in the database, loads all data from the original tables, performs the requested cryptographic operations, uploads the data to the new table(s), and then swaps the original table(s) with the new table(s). Running cryptographic operations can take a long time. During that time, your database is not available to write transactions. 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > If you are using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can run cryptographic operations in-place, without moving data out of the database. See [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md). Note that in-place encryption is not available for DACPAC deployments.

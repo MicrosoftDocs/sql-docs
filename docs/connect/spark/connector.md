@@ -20,7 +20,7 @@ This library contains the source code for the Apache Spark Connector for SQL Ser
 
 [Apache Spark](https://spark.apache.org/) is a unified analytics engine for large-scale data processing.
 
-You can import the connector into your project through the Maven coordinates: `com.microsoft.azure:spark-mssql-connector:1.0.0`. You can also build the connector from source or download the jar from the Release section in GitHub. For the latest information about the connector, see [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).
+The connector is available on Maven: https://search.maven.org/search?q=spark-mssql-connector and can be imported using the coordinate: `com.microsoft.azure:spark-mssql-connector:<latest version>`. You can also build the connector from source or download the jar from the Release section in GitHub. For the latest information about the connector, see [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).
 
 ## Supported Features
 

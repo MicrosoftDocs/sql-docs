@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 author: cawrites
 ms.author: chadam
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Rename a Computer that Hosts a Stand-Alone Instance of SQL Server
 

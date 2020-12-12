@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: ronortloff
 ms.author: rortloff
-monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest"
 ---
 # CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 

@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b 
 author: pmasl 
 ms.author: pelopes
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -25,7 +25,7 @@ In this quickstart, you install SQL Server 2017 on Ubuntu 18.04. You then connec
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 In this quickstart, you install SQL Server 2019 on Ubuntu 18.04. You then connect with **sqlcmd** to create your first database and run queries.
 
@@ -56,7 +56,7 @@ For other system requirements, see [System requirements for SQL Server on Linux]
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 You must have an Ubuntu 16.04 or 18.04 machine with **at least 2 GB** of memory.
 
@@ -130,7 +130,7 @@ At this point, SQL Server is running on your Ubuntu machine and is ready to use!
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a id="install"></a>Install SQL Server
 

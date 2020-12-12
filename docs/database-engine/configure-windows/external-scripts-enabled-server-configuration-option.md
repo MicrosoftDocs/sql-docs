@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # External Scripts Enabled server configuration option
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

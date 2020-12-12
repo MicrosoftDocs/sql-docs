@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Best Practices for Replication Administration
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

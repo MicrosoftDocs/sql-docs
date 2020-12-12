@@ -30,7 +30,7 @@ helpviewer_keywords:
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # ALTER DATABASE SET options (Transact-SQL)
 

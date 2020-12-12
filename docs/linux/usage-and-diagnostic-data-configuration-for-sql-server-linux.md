@@ -77,7 +77,7 @@ To disable usage and diagnostic data collection on docker, you must have Docker 
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Add an `mssql.conf` file with the lines `[telemetry]` and `customerfeedback = false` in the host directory:
 
@@ -170,7 +170,7 @@ To enable Local Audit on docker, you must have Docker [persist your data](./sql-
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. The target directory for new Local Audit logs will be in the container. Create a target directory for new Local Audit logs in the host directory on your machine. The following example creates a new **/audit** directory:
 

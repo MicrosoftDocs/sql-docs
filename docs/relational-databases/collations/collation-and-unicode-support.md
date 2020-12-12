@@ -32,7 +32,7 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: "pmasl"
 ms.author: "sstein"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Collation and Unicode support

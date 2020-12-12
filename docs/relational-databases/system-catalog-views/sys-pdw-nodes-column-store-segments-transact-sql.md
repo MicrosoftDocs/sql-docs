@@ -13,7 +13,7 @@ ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
 author: julieMSFT
 ms.author: jrasnick
 manager: jrj
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sys.pdw_nodes_column_store_segments (Transact-SQL)
 

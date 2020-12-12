@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication to Memory-Optimized Table Subscribers
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -24,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Disable Indexes and Constraints
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

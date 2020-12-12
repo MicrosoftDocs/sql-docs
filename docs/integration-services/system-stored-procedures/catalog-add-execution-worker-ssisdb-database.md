@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
 author: chugugrace
 ms.author: chugu
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-2017"
 ---
 # catalog.add_execution_worker (SSISDB Database)
 

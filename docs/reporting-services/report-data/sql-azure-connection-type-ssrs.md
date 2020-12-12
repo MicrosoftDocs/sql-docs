@@ -8,7 +8,7 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-2016"
 ---
 
 # Azure SQL Connection Type (SSRS)

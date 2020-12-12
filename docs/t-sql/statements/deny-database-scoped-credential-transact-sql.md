@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DENY Database Scoped Credential (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # ALTER WORKLOAD GROUP (Transact-SQL)
 

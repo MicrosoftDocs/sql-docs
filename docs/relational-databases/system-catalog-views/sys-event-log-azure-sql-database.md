@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: markingmyname
 ms.author: maghan
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 # sys.event_log (Azure SQL Database)
 

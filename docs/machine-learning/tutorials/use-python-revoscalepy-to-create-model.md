@@ -9,7 +9,7 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # Use Python with revoscalepy to create a model that runs remotely on SQL Server
 [!INCLUDE [SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]

@@ -22,7 +22,7 @@ ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

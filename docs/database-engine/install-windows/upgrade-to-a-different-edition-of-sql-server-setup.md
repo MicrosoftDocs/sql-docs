@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: cawrites
 ms.author: chadam
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Upgrade to a Different Edition of SQL Server (Setup)
 

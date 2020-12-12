@@ -8,7 +8,7 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 
 # Install Python packages with sqlmlutils

@@ -9,7 +9,7 @@ ms.technology: system-objects
 ms.topic: "language-reference"
 author: jaszymas
 ms.author: jaszymas
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-ver15"
 
 ---
 # sys.dm_column_encryption_enclave (Transact-SQL)

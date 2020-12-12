@@ -17,7 +17,7 @@ ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -121,7 +121,7 @@ Requires `CONTROL SERVER` permission.
 ## Examples
 
 The following statement changes an external pool, restricting the CPU usage to 50 percent and the maximum memory to 25 percent of the available memory on the computer.
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
 WITH (

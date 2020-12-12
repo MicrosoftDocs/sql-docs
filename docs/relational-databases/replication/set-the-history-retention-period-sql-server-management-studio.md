@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: c288daab-5181-4d4b-ba2a-8a147098e758
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Set the History Retention Period (SQL Server Management Studio)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -9,7 +9,7 @@ ms.author: maghan
 reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 
 # Azure Active Directory support in SQL Server Data Tools (SSDT)

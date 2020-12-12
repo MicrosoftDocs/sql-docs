@@ -10,7 +10,7 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 
 # Get Python package information

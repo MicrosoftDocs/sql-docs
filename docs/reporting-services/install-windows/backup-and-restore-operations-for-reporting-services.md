@@ -28,7 +28,7 @@ ms.date: 05/08/2019
     - [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
     - [Migrate a Reporting Services Installation &#40;Native Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-    ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+    ::: moniker range="=sql-server-2016"
   
     - [Migrate a Reporting Services Installation &#40;SharePoint Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
 
@@ -45,7 +45,7 @@ ms.date: 05/08/2019
   
  For more information about backup and recovery of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases, see [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"  
+::: moniker range="=sql-server-2016"
 
 > [!IMPORTANT]  
 >  If your report server is in SharePoint mode, there are additional databases to be concerned with, including SharePoint configuration databases and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] alerting database. In SharePoint mode, three databases are created for each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. The **reportserver**, **reportservertempdb**, and **dataalerting** databases. For more information, see [Backup and Restore Reporting Services SharePoint Service Applications](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)  

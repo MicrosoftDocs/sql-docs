@@ -16,7 +16,7 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 # NOTE: sp_rxPredict is not supported on Linux.
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # sp_rxPredict  
 [!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]

@@ -8,7 +8,7 @@ ms.date: 11/10/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # What is SQL Server Machine Learning Services with Python and R?
 [!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]

@@ -8,7 +8,7 @@ ms.date: 07/14/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 
 # Plot histograms in Python 

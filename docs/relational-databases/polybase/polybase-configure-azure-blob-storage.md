@@ -8,7 +8,7 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
-monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
+monikerRange: ">= sql-server-2016"
 ms.custom: seo-dt-2019, seo-lt-2019
 
 ---

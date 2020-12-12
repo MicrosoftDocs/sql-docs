@@ -11,7 +11,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: linux
 titleSuffix: SQL Server on Linux
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Configure SQL Server Replication on Linux
 

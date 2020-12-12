@@ -10,7 +10,7 @@ ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change the Word Breaker Used for US English and UK English
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

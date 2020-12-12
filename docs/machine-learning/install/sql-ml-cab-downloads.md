@@ -8,7 +8,7 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # CAB downloads for offline installation of cumulative updates for SQL Server Machine Learning Services
 

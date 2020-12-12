@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Synchronize a Subscription Using Windows Synchronization Manager
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

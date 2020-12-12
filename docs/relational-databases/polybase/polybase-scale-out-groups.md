@@ -15,7 +15,7 @@ ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
-monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
+monikerRange: ">= sql-server-2016"
 ---
 # PolyBase scale-out groups
 

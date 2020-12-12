@@ -12,7 +12,7 @@ dev_langs:
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT 
 ms.author: xiaoyul
-monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azure-sqldw-latest"
 ---
 # sys.pdw_materialized_view_distribution_properties (Transact-SQL) (preview)
 

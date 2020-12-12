@@ -12,7 +12,7 @@ dev_langs:
 ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
 author: markingmyname
 ms.author: maghan
-monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016"
 ---
 # sys.dm_pdw_network_credentials (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

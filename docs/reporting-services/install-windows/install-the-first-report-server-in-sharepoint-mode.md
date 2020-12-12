@@ -8,7 +8,7 @@ ms.prod_service: "reporting-services-sharepoint"
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Install the first Report Server in SharePoint mode
 

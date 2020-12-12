@@ -20,7 +20,7 @@ ms.assetid:
 author: markingmyname
 ms.author: maghan
 
-monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.index_resumable_operations (Transact-SQL)
 

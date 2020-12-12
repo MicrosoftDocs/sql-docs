@@ -10,7 +10,7 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020  
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 
 # R tutorials for SQL machine learning

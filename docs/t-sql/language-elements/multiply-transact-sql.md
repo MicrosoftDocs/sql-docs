@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 34beb660-db19-46ca-ac90-2218471457bf
 author: rothja
 ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # * (Multiplication) (Transact-SQL)

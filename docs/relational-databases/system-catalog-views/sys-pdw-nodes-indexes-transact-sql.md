@@ -12,7 +12,7 @@ dev_langs:
 ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
 author: ronortloff
 ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sys.pdw_nodes_indexes (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

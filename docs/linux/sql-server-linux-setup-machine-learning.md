@@ -9,7 +9,7 @@ ms.date: 11/24/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning-services
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Install SQL Server Machine Learning Services (Python and R) on Linux
 

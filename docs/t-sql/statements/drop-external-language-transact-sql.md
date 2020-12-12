@@ -10,7 +10,7 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 
 # DROP EXTERNAL LANGUAGE (Transact-SQL)  

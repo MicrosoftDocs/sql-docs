@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "PREDICT clause"
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest"
 ---
 # PREDICT (Transact-SQL)
 

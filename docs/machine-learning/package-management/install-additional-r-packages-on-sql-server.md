@@ -9,7 +9,7 @@ author: garyericson
 ms.author: garye
 
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 
 # Install new R packages with sqlmlutils
@@ -57,14 +57,14 @@ If the client computer has Internet access, you can download and install **sqlml
 
 1. Open a **Command Prompt** and run the following commands to install the packages **RODBCext** and **sqlmlutils**. Substitute the path to the **sqlmlutils** file you downloaded. The **RODBCext** package is found online and installed.
 
-   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-ver15"
    ```console
    R -e "install.packages('RODBCext', repos='https://mran.microsoft.com/snapshot/2019-02-01/')"
    R CMD INSTALL sqlmlutils_0.7.1.zip
    ```
    ::: moniker-end
 
-   ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-linux-ver15"
    ```console
    R -e "install.packages('RODBCext', repos='https://mran.microsoft.com/snapshot/2019-02-01/')"
    R CMD INSTALL sqlmlutils_0.7.1.tar.gz
@@ -86,7 +86,7 @@ On a computer with Internet access:
 
 1. In RStudio, run the following R script to create a local repository of the package **RODBCext**. This example assumes the repository will be created in the folder `rodbcext`.
 
-   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-ver15"
    ```R
    CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2019-02-01/")
    local_repo <- "rodbcext"
@@ -97,7 +97,7 @@ On a computer with Internet access:
    ```
    ::: moniker-end
 
-   ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-linux-ver15"
    ```R
    CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2019-02-01/")
    local_repo <- "rodbcext"
@@ -125,14 +125,14 @@ On the client computer you use to connect to SQL Server:
 
 1. Run the following commands to install **RODBCext** and then **sqlmlutils**. Substitute the full paths to the **RODBCext** repository folder and the **sqlmlutils** file you copied to this computer.
 
-   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-ver15"
    ```console
    R -e "install.packages('RODBCext', repos='rodbcext')"
    R CMD INSTALL sqlmlutils_0.7.1.zip
    ```
    ::: moniker-end
 
-   ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-linux-ver15"
    ```console
    R -e "install.packages('RODBCext', repos='rodbcext')"
    R CMD INSTALL sqlmlutils_0.7.1.tar.gz
@@ -174,7 +174,7 @@ On a computer with Internet access:
 
 1. Run the following R script to create a local repository for **glue**. This example creates the repository folder in `c:\downloads\glue`.
 
-   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-ver15"
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/glue"
@@ -185,7 +185,7 @@ On a computer with Internet access:
    ```
    ::: moniker-end
 
-   ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-linux-ver15"
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/glue"

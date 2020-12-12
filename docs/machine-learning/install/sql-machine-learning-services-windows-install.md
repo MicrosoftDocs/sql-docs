@@ -8,7 +8,7 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017"
 ---
 # Install SQL Server Machine Learning Services (Python and R) on Windows
 
@@ -61,17 +61,17 @@ For local installations, you must run the setup as an administrator. If you inst
   
 1. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![New SQL Server stand-alone installation](media/2017setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![New SQL Server stand-alone installation](media/2019setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
 1. On the **Feature Selection** page, select these options:
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
 
    - **Database Engine Services**
      
@@ -83,7 +83,7 @@ For local installations, you must run the setup as an administrator. If you inst
 
    ::: moniker-end
 
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
 
    - **Database Engine Services**
      
@@ -103,15 +103,15 @@ For local installations, you must run the setup as an administrator. If you inst
      
      Check this option to add the Microsoft Python packages, the Python 3.5 executable, and select libraries from the Anaconda distribution.
      
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    For information on installing and using Java, see [Install SQL Server Language Extensions on Windows](../../language-extensions/install/windows-java.md).
    ::: moniker-end
    
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![Feature options for R and Python](media/2017setup-features-page-mls-rpy.PNG "Setup options for R and Python")
    ::: moniker-end
    
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![Feature options for R and Python](media/2019setup-features-page-mls-rpy.png "Setup options for R and Python")
    ::: moniker-end
    

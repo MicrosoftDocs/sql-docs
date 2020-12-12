@@ -8,7 +8,7 @@ ms.date: 10/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Use R code profiling functions to improve performance
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

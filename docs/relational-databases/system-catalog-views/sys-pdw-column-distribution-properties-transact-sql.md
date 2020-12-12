@@ -12,7 +12,7 @@ dev_langs:
 ms.assetid: 46b74f99-2e22-4dbd-872a-533fce0e239c
 author: ronortloff
 ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sys.pdw_column_distribution_properties (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

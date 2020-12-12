@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 25b7af05-2721-4b24-9083-fb671e8bf4e0
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Securing Replication Over the Internet
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: "rothja"
 ms.author: "jroth"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DDL Triggers
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

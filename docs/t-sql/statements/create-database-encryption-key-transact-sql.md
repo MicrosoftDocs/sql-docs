@@ -28,7 +28,7 @@ helpviewer_keywords:
 ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 
 # CREATE DATABASE ENCRYPTION KEY (Transact-SQL)

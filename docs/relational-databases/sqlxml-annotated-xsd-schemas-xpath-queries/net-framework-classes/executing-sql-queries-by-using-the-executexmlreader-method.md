@@ -17,7 +17,7 @@ ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
 author: MightyPen
 ms.author: genemi
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing SQL Queries by Using the ExecuteXMLReader Method
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

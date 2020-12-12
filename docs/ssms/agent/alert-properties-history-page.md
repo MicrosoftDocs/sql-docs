@@ -13,7 +13,7 @@ ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Alert Properties (History Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

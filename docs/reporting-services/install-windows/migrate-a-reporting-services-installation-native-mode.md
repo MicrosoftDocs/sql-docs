@@ -159,7 +159,7 @@ For more information about changes in SQL Server Reporting Services, see the Upg
   
 1. Choose the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance to use. SQL Server Reporting Services requires that you use one of the following versions to host the report server database:  
   
-    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+    ::: moniker range="=sql-server-2017"
     * [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]
 
     * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
@@ -171,7 +171,7 @@ For more information about changes in SQL Server Reporting Services, see the Upg
     * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
     ::: moniker-end
 
-    ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+    ::: moniker range="=sql-server-2016"
     * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 
     * [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  

@@ -9,7 +9,7 @@ ms.technology: high-availability
 ms.topic: reference
 author: cawrites
 ms.author: chadam
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Always On availability group system object reference
 

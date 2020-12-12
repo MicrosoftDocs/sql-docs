@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Properties (Log On Tab)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

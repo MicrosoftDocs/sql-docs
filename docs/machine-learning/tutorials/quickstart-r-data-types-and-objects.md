@@ -10,7 +10,7 @@ author: garyericson
 ms.author: garye
 
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 
 # Quickstart: Data structures, data types, and objects using R with SQL machine learning

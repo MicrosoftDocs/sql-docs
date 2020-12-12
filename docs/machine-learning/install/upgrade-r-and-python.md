@@ -7,7 +7,7 @@ ms.date: 09/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+monikerRange: "=sql-server-2016||=sql-server-2017"
 ---
 # Upgrade Python and R runtime with binding in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]

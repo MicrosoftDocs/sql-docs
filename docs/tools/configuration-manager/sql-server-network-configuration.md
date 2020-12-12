@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: ef2e5e6a-e2cf-4391-803c-23096dee1a14
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Network Configuration
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

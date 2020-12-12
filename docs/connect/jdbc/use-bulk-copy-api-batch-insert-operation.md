@@ -1,8 +1,8 @@
 ---
 title: "Bulk copy API for batch insert in JDBC"
-description: "Microsoft JDBC Driver for SQL Server supports using Bulk Copy for batch insert operations against Azure Data Warehouse for faster loading of data into the database."
+description: "Microsoft JDBC Driver for SQL Server supports using Bulk Copy for batch insert operations for faster loading of data into the database."
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "12/11/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -17,15 +17,14 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC Driver 7.0 for SQL Server supports using Bulk Copy API for batch insert operations for Azure Data Warehouse. This feature allows users to enable driver to perform Bulk Copy operation underneath when executing batch insert operations. The driver aims to achieve improvement in performance while inserting the same data as the driver would have with regular batch insert operation. The driver parses the user's SQL Query, leveraging the Bulk Copy API in lieu of the usual batch insert operation. Below are various ways to enable the Bulk Copy API for batch insert feature, as well as the list of its limitations. This page also contains a small sample code that demonstrates a usage and the performance increase as well.
+Microsoft JDBC Driver 9.1 for SQL Server and above supports using Bulk Copy API for batch insert operations. This feature allows users to enable driver to perform Bulk Copy operation underneath when executing batch insert operations. The driver aims to achieve improvement in performance while inserting the same data as the driver would have with regular batch insert operation. The driver parses the user's SQL Query, leveraging the Bulk Copy API in lieu of the usual batch insert operation. Below are various ways to enable the Bulk Copy API for batch insert feature, as well as the list of its limitations. This page also contains a small sample code that demonstrates a usage and the performance increase as well.
 
 This feature is only applicable to PreparedStatement and CallableStatement's `executeBatch()` & `executeLargeBatch()` APIs.
 
 ## Prerequisites
 
-There are two prerequisites to enable Bulk Copy API for batch insert.
+Prerequisite to enable Bulk Copy API for batch insert.
 
-* The server must be Azure Data Warehouse.
 * The query must be an insert query (the query may contain comments, but the query must start with the INSERT keyword for this feature to come into effect).
 
 ## Enabling bulk copy API for batch insert
@@ -74,9 +73,9 @@ Below is an example code that demonstrates the use case for a batch insert opera
         String tableName = "batchTest";
         String tableNameBulkCopyAPI = "batchTestBulk";
 
-        String azureDWconnectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>";
 
-        try (Connection con = DriverManager.getConnection(azureDWconnectionUrl); // connects to an Azure Data Warehouse.
+        try (Connection con = DriverManager.getConnection(connectionUrl);
                 Statement stmt = con.createStatement();
                 PreparedStatement pstmt = con.prepareStatement("insert into " + tableName + " values (?, ?)");) {
 
@@ -100,7 +99,7 @@ Below is an example code that demonstrates the use case for a batch insert opera
             System.out.println("Finished. Time taken : " + (end - start) + " milliseconds.");
         }
 
-        try (Connection con = DriverManager.getConnection(azureDWconnectionUrl + ";useBulkCopyForBatchInsert=true"); // connects to an Azure Data Warehouse, with useBulkCopyForBatchInsert connection property set to true.
+        try (Connection con = DriverManager.getConnection(connectionUrl + ";useBulkCopyForBatchInsert=true"); // connects to an Azure Data Warehouse, with useBulkCopyForBatchInsert connection property set to true.
                 Statement stmt = con.createStatement();
                 PreparedStatement pstmt = con.prepareStatement("insert into " + tableNameBulkCopyAPI + " values (?, ?)");) {
 

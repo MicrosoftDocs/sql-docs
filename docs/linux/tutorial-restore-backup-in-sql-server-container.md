@@ -7,7 +7,7 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
+moniker: ">= sql-server-linux-2017 || >= sql-server-2017 "
 ---
 # Restore a SQL Server database in a Linux Docker container
 
@@ -20,7 +20,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 This tutorial demonstrates how to move and restore a SQL Server backup file into a SQL Server 2019 Linux container image running on Docker.
 
@@ -102,7 +102,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Open a bash terminal on Linux/Mac or an elevated PowerShell session on Windows.
 
@@ -459,7 +459,7 @@ In addition to taking database backups for protecting your data, you can also us
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Stop the **sql1** container.
 
@@ -523,7 +523,7 @@ In this tutorial, you learned how to back up a database on Windows and move it t
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running SQL Server 2019. You learned how to:
 

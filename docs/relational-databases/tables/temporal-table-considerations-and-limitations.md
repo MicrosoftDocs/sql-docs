@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Temporal Table Considerations and Limitations
 

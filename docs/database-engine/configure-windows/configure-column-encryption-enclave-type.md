@@ -10,7 +10,7 @@ ms.technology: configuration
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-ver15"
 ---
 # Configure the enclave type for Always Encrypted Server Configuration Option
 

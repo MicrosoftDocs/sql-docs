@@ -20,7 +20,7 @@ Learn about what's new in the different versions of SQL Server [!INCLUDE[ssRSnov
 
 For information about Power BI Report Server, see [What is Power BI Report Server?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## SQL Server 2019 Reporting Services
 
@@ -58,7 +58,7 @@ The newly released version of Report Builder is fully compatible with the 2016, 
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 ## SQL Server 2017 Reporting Services
 

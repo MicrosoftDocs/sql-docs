@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: ed7ee22d-c7c1-4a1e-a225-ec37a1ecfdaa
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Agent &lt;server&gt; (SQL Server Configuration Manager)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

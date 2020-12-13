@@ -84,7 +84,7 @@ ms.author: chadam
 ms.reviewer: ""
 ms.custom: ""
 ms.date: 07/26/2019
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 
 # Install SQL Server from the Command Prompt

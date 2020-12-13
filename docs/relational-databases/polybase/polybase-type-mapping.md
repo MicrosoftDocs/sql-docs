@@ -51,7 +51,7 @@ For external tables that reference files in external data sources, the column an
 | decimal       | Decimal                   | decimal        | BigDecimalWritable    | Applies to Hive0.11 and later. |
 
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-ver15 "
 
 ## Oracle Type mapping reference
 

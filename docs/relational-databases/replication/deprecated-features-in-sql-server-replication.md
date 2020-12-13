@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Deprecated Features in SQL Server Replication
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

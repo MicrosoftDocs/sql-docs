@@ -8,7 +8,7 @@ ms.technology: release-landing
 ms.topic: "article"
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15"
 ---
 # What's new in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 

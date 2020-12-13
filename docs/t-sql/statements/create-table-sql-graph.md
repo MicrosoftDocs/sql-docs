@@ -32,7 +32,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: "shkale-msft"
 ms.author: "shkale"
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE TABLE (SQL Graph)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]

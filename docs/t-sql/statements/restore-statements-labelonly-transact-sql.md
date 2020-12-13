@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # RESTORE Statements - LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]

@@ -28,7 +28,7 @@ ms.author: maggies
   
  - **Native** `https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
  - **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
@@ -42,7 +42,7 @@ ms.author: maggies
   
  **Native** `https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
 
@@ -53,7 +53,7 @@ ms.author: maggies
   
  **Native** `https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
@@ -80,7 +80,7 @@ ms.author: maggies
   
  **Native** `https://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rs:Command=GetChildren`  
 

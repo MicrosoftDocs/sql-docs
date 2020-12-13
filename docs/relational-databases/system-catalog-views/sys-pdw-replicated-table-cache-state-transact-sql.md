@@ -11,7 +11,7 @@ dev_langs:
   - "TSQL"
 author: "ronortloff"
 ms.author: "rortloff"
-monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azure-sqldw-latest"
 ---
 # sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]

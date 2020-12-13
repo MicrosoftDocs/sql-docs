@@ -15,7 +15,7 @@ ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View the Extended Events Equivalents to SQL Trace Event Classes
 

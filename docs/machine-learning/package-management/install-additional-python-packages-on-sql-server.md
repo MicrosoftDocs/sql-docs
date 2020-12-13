@@ -8,31 +8,31 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 
 # Install Python packages with sqlmlutils
 
 [!INCLUDE [SQL Server 2019 SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 This article describes how to use functions in the [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) package to install new Python packages to an instance of [Machine Learning Services on SQL Server](../sql-server-machine-learning-services.md) and on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md). The packages you install can be used in Python scripts running in-database using the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL statement.
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 This article describes how to use functions in the [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) package to install new Python packages to an instance of [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). The packages you install can be used in Python scripts running in-database using the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL statement.
 ::: moniker-end
 
 For more information about package location and installation paths, see [Get Python package information](../package-management/python-package-information.md).
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
 > The **sqlmlutils** package described in this article is used for adding Python packages to SQL Server 2019 or later. For SQL Server 2017 and earlier, see [Install packages with Python tools](./install-python-packages-standard-tools.md?view=sql-server-2017).
 ::: moniker-end
 
 ## Prerequisites
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 + You must have [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) installed with the Python language option.
 ::: moniker-end
 
@@ -102,7 +102,7 @@ In the following example, you'll add the [text-tools](https://pypi.org/project/t
 
 If the client computer you use to connect to SQL Server has Internet access, you can use **sqlmlutils** to find the **text-tools** package and any dependencies over the Internet, and then install the package to a SQL Server instance remotely.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 1. On the client computer, open **Python** or a Python environment.
 
@@ -110,7 +110,7 @@ If the client computer you use to connect to SQL Server has Internet access, you
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15||=azuresqldb-mi-current"
 
 1. On the client computer, open **Python** or a Python environment.
 
@@ -144,13 +144,13 @@ Use **sqlmlutils** to install each package (WHL file) you find in the local fold
 
 In this example, **text-tools** has no dependencies, so there is only one file from the `text-tools` folder for you to install. In contrast, a package such as **scikit-plot** has 11 dependencies, so you would find 12 files in the folder (the **scikit-plot** package and the 11 dependent packages), and you would install each of them.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 Run the following Python script. Substitute the actual file path and name of the package, and your own SQL Server database connection information (if you use Windows Authentication, you don't need the `uid` and `pwd` parameters). Repeat the `sqlmlutils.SQLPackageManager` statement for each package file in the folder.
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 Run the following Python script. Substitute the actual file path and name of the package, and your own SQL Server database connection information. Repeat the `sqlmlutils.SQLPackageManager` statement for each package file in the folder.
 

@@ -20,7 +20,7 @@ ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 # sys.database_connection_stats (Azure SQL Database)
 

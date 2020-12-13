@@ -29,7 +29,7 @@ helpviewer_keywords:
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: pmasl
 ms.author: umajay
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest"
 ---
 
 # DBCC CHECKIDENT (Transact-SQL)

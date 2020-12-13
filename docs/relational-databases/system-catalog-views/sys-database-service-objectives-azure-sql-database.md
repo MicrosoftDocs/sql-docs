@@ -16,7 +16,7 @@ ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 # sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]

@@ -13,7 +13,7 @@ dev_langs:
 ms.assetid: ccd82fed-1a3f-47de-85c4-1c9bdd80b027
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Memory-Optimized Table Dynamic Management Views (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 20f92233-c912-4382-8993-8e2e23d03fbe
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Deadlock Graph Event Class
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

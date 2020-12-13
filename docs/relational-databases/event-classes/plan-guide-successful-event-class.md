@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Plan Guide Successful Event Class
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -97,7 +97,7 @@ And you can still schedule report processing, access reports on demand, and subs
 
 More about the [Web portal](../reporting-services/web-portal-ssrs-native-mode.md).
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## Reporting Services in SharePoint integrated mode
 

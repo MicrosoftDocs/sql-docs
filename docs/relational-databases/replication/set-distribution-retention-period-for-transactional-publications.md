@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 9a98c53a-fea5-4235-b23d-6c69587c5676
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Set Distribution Retention Period for Transactional Publications
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

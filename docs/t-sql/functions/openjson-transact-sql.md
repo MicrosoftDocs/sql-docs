@@ -17,7 +17,7 @@ ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: jroth
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
 ---
 # OPENJSON (Transact-SQL)
 

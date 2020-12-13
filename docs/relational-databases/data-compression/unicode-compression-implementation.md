@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Unicode Compression Implementation
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

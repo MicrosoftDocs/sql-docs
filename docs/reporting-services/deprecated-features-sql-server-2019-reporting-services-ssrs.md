@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-ver15"
 ---
 
 # Deprecated features in SQL Server 2019 Reporting Services

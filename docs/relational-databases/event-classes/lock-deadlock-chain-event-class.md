@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Lock:Deadlock Chain Event Class
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

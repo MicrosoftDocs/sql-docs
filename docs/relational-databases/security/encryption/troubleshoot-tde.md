@@ -13,7 +13,7 @@ ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 # Common errors for transparent data encryption with customer-managed keys in Azure Key Vault
 

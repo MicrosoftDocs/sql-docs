@@ -35,7 +35,7 @@ helpviewer_keywords:
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016"
 ---
 # Discontinued database engine functionality in SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

@@ -9,7 +9,7 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 
-monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+monikerRange: "=sql-server-2016||=sql-server-2017"
 ---
 # Change the default R or Python language runtime version
 

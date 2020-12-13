@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Identity and Access Control (Replication)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || >= sql-server-2016"
 ---
 # Delete an Index
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # ERROR_STATE (Transact-SQL)

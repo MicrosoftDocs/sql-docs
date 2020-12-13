@@ -11,7 +11,7 @@ dev_langs:
 ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
 author: ronortloff
 ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ms.custom: seo-dt-2019
 ---
 # sp_pdw_add_network_credentials (Azure Synapse Analytics)

@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: cawrites
 ms.author: chadam
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Plan and test the database engine upgrade plan
 

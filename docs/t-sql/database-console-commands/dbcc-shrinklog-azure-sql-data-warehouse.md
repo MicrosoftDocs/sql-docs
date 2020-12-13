@@ -11,7 +11,7 @@ dev_langs:
   - "TSQL"
 author: pmasl
 ms.author: umajay
-monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016"
 ---
 
 # DBCC SHRINKLOG (Parallel Data Warehouse)

@@ -34,7 +34,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-2017"
 ---
 # Editions and supported features of SQL Server 2017
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]

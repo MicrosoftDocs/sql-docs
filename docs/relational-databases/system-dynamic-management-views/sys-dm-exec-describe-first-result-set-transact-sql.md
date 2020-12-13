@@ -18,7 +18,7 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ""
 ms.date: "06/10/2016"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # sys.dm_exec_describe_first_result_set (Transact-SQL)

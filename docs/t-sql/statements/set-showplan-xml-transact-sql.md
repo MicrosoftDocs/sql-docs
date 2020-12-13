@@ -24,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET SHOWPLAN_XML (Transact-SQL)
 

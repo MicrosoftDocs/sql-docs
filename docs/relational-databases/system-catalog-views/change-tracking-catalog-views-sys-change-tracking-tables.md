@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change Tracking Catalog Views - sys.change_tracking_tables
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

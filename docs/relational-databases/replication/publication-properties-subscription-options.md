@@ -13,7 +13,7 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publication Properties, Subscription Options
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

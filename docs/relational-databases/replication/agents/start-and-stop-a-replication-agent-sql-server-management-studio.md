@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Start and Stop a Replication Agent (SQL Server Management Studio)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

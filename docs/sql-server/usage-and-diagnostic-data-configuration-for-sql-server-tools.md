@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016"
 ---
 # Configure usage and diagnostic data collection for SQL Server tools (CEIP)
 

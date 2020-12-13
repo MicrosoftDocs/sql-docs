@@ -12,7 +12,7 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
-monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016"
 ---
 # PolyBase Transact-SQL reference
 

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: cawrites
 ms.author: chadam
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server from the Installation Wizard (Setup)
 
@@ -43,7 +43,7 @@ Before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], re
 > [!NOTE]  
 > For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
 
-::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016 <=sql-server-2017"
 
 ###  <a name="bkmk_ga_instalpatch"></a> Install patch requirement
 
@@ -215,7 +215,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-ver15"
 ## To install SQL Server 2019 
   
 1. Insert the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media. From the root folder, double-click **Setup.exe**. To install from a network share, locate the root folder on the share, and then double-click **Setup.exe**.  

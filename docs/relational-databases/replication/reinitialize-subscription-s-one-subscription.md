@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 9b0cf0be-d1f1-4163-a0ca-d6f095aa707e
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Reinitialize Subscription(s) - One Subscription
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

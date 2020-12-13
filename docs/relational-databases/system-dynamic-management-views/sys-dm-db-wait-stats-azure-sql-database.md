@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: markingmyname
 ms.author: maghan
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 # sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

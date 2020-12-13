@@ -8,7 +8,7 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017"
 ---
 # Install SQL Server Machine Learning Services (Python and R) on Windows
 
@@ -33,7 +33,7 @@ Learn how to install SQL Server Machine Learning Services on Windows. You can us
   + Using a different library and executable files will create inconsistent results, than what you are running in SQL Server.
   + R and Python scripts running in external libraries can't be managed by SQL Server, leading to resource contention.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 > [!NOTE]
 > Machine Learning Services is installed by default on **SQL Server Big Data Clusters**. You don't need to follow the steps in this article if you use a **Big Data Cluster**. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
@@ -45,11 +45,11 @@ Learn how to install SQL Server Machine Learning Services on Windows. You can us
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 For more information on which SQL Server editions support Python and R integration with Machine Learning Services, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 For more information on which SQL Server editions support Python and R integration with Machine Learning Services, see [Editions and supported features of SQL Server 2019 (15.x)](../../sql-server/editions-and-components-of-sql-server-version-15.md).
 ::: moniker-end
 
@@ -61,17 +61,17 @@ For local installations, you must run the setup as an administrator. If you inst
   
 1. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![New SQL Server stand-alone installation](media/2017setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![New SQL Server stand-alone installation](media/2019setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
 1. On the **Feature Selection** page, select these options:
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
 
    - **Database Engine Services**
      
@@ -83,7 +83,7 @@ For local installations, you must run the setup as an administrator. If you inst
 
    ::: moniker-end
 
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
 
    - **Database Engine Services**
      
@@ -103,15 +103,15 @@ For local installations, you must run the setup as an administrator. If you inst
      
      Check this option to add the Microsoft Python packages, the Python 3.5 executable, and select libraries from the Anaconda distribution.
      
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    For information on installing and using Java, see [Install SQL Server Language Extensions on Windows](../../language-extensions/install/windows-java.md).
    ::: moniker-end
    
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![Feature options for R and Python](media/2017setup-features-page-mls-rpy.PNG "Setup options for R and Python")
    ::: moniker-end
    
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![Feature options for R and Python](media/2019setup-features-page-mls-rpy.png "Setup options for R and Python")
    ::: moniker-end
    
@@ -119,7 +119,7 @@ For local installations, you must run the setup as an administrator. If you inst
    > 
    > Don't select the option for **Machine Learning Server (Standalone)**. The option to install Machine Learning Server under **Shared Features** is intended for use on a separate computer.
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 4. On the **Consent to Install Microsoft R Open** page, select **Accept** and then **Next**. 
 
@@ -145,7 +145,7 @@ The license agreement covers:
 
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 
 1. On the **Consent to Install Microsoft R Open** page, select **Accept** and then **Next**. This license agreement covers Microsoft R Open, which includes a distribution of the open-source R base packages and tools, together with enhanced R packages and connectivity providers from the Microsoft development team.
 
@@ -266,7 +266,7 @@ Use the following steps to verify that all components used to launch external sc
 >
 > For example, you can add the following line to generate an arbitrary column name: `WITH RESULT SETS ((Col1 AS int))`
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 <!-- There are no updates yet available for 2019, and there's no 2019 update list site. When updates become available, add 2019 information to this section. -->
 
 <a name="apply-cu"></a>
@@ -307,7 +307,7 @@ At the instance level, additional configuration might include:
 * [Create a login for SQLRUserGroup](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 * [Manage disk quotas](/windows/desktop/fileio/managing-disk-quotas) to avoid external scripts running tasks that exhaust disk space
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 In SQL Server 2019 on Windows, the isolation mechanism has changed. This mechanism affects **SQLRUserGroup**, firewall rules, file permission, and implied authentication. For more information, see [Isolation changes for Machine Learning Services](sql-server-machine-learning-services-2019.md).
 ::: moniker-end
 
@@ -325,7 +325,7 @@ On the database, you might need the following configuration updates:
 
 Now that you have everything working, you might also want to optimize the server to support machine learning or install a pre-trained machine learning model.
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 ### Add more worker accounts
 
 If you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](../administration/scale-concurrent-execution-external-scripts.md).

@@ -10,7 +10,7 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current"
 ---
 
 # R tutorial: Explore and visualize data
@@ -74,7 +74,7 @@ In the original public dataset, the taxi identifiers and trip records were provi
 
 ## Create plots using R in T-SQL
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!IMPORTANT]
 > Starting in SQL Server 2019, the isolation mechanism requires you to give appropriate permissions to the directory where the plot file is stored. For more information on how to set these permissions, see the [File permissions section in SQL Server 2019 on Windows: Isolation changes for Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end

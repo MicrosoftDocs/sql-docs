@@ -2,7 +2,7 @@
 description: "System requirements for the JDBC driver"
 title: "System requirements for the JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/24/2020"
+ms.date: "12/11/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -21,6 +21,8 @@ ms.author: v-daenge
 - Java Runtime Environment
 
 ## Java Runtime Environment requirements  
+
+ Starting with the Microsoft JDBC Driver 9.1 for SQL Server, Java Development Kit (JDK) 15.0 and Java Runtime Environment (JRE) 15.0 are supported.
 
  Starting with the Microsoft JDBC Driver 8.4 for SQL Server, Java Development Kit (JDK) 14.0 and Java Runtime Environment (JRE) 14.0 are supported.
 
@@ -41,6 +43,31 @@ ms.author: v-daenge
  Starting with the [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], the JDBC driver support for Java Database Connectivity (JDBC) Spec API has been extended to include the JDBC 4.0 API. The JDBC 4.0 API was introduced as part of the Java Development Kit (JDK) 6.0 and Java Runtime Environment (JRE) 6.0. JDBC 4.0 is a superset of the JDBC 3.0 API.
   
  When you deploy the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] on Windows and UNIX operating systems, you must use the installation packages, *sqljdbc_\<version>_enu.exe*, and *sqljdbc_\<version>_enu.tar.gz*, respectively. For more information about how to deploy the JDBC Driver, see [Deploying the JDBC driver](../../connect/jdbc/deploying-the-jdbc-driver.md) topic.  
+
+**Microsoft JDBC Driver 9.1 for SQL Server:**  
+
+  The JDBC Driver 9.1 includes three JAR class libraries in each installation package: **mssql-jdbc-9.1.1.jre8.jar**, **mssql-jdbc-9.1.1.jre11.jar**, and **mssql-jdbc-9.1.1.jre15.jar**.
+
+  The JDBC Driver 9.1 is designed to work with and be supported by all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 15.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 15.0.
+  
+  The following chart summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 9.1 for SQL Server:  
+  
+  |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
+|---------|-----------------------------|----------------------|-----------------|   
+|mssql-jdbc-9.1.1.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception.<br /><br /> New Features in 9.1 include: JDK 15 support, support for authentication to Azure Key Vault using Managed Identity, extended support for bulk copy for Azure Data Warehouse, Azure SQL DNS caching, support for backwards compatibility for streaming LOB objects, and client certificate authentication for loopback scenarios. |
+|mssql-jdbc-9.1.1.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception.<br /><br /> New Features in 9.1 include: JDK 15 support, support for authentication to Azure Key Vault using Managed Identity, extended support for bulk copy for Azure Data Warehouse, Azure SQL DNS caching, support for backwards compatibility for streaming LOB objects, and client certificate authentication for loopback scenarios. |
+|mssql-jdbc-9.1.1.jre15.jar|4.3|15|Requires a Java Runtime Environment (JRE) 15.0. Using JRE 13.0 or lower throws an exception.<br /><br /> New Features in 9.1 include: JDK 15 support, support for authentication to Azure Key Vault using Managed Identity, extended support for bulk copy for Azure Data Warehouse, Azure SQL DNS caching, support for backwards compatibility for streaming LOB objects, and client certificate authentication for loopback scenarios. |
+
+
+  The JDBC Driver 9.1 is also available on the Maven Central Repository and can be added to a Maven project by adding the following code in the POM.XML:  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>9.1.1.jre11</version>
+</dependency>
+```
 
 **Microsoft JDBC Driver 8.4 for SQL Server:**  
 

@@ -88,11 +88,28 @@ You can restore your sample database using Transact-SQL (T-SQL). An example to r
 
 To restore AdventureWorks2019, modify values as appropriate to your environment and then run the following Transact-SQL (T-SQL) command:
 
+## Windows
+
 ```sql
 USE [master]
 RESTORE DATABASE [AdventureWorks2019] 
 FROM  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\AdventureWorks2019.bak' 
 WITH  FILE = 1,  NOUNLOAD,  STATS = 5
+GO
+
+```
+
+## SQL Server on Linux
+
+You need to chagen Windows filesystem path to Linux file system path.
+
+```sql
+USE [master]
+RESTORE DATABASE [AdventureWorks2019]
+FROM DISK = '/var/opt/mssql/backup/AdventureWorks2019.bak'
+WITH MOVE 'AdventureWorks2017' TO '/var/opt/mssql/data/AdventureWorks2019.mdf',
+MOVE 'AdventureWorks2017_log' TO '/var/opt/mssql/data/AdventureWorks2019_log.ldf',
+FILE = 1,  NOUNLOAD,  STATS = 5
 GO
 
 ```

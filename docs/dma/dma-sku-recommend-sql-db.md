@@ -39,7 +39,7 @@ The following are instructions to help you determine the SKU recommendations and
 - Ensure that your computer has [PowerShell Version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) or later, which is required to run all scripts. For information about how to find out which version of PowerShell is installed on your computer, see the article [Download and install Windows PowerShell 5.1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
   > [!NOTE]
   > To collect machine information, the data collection script uses the Get-WmiObject cmdlet, which was deprecated in PowerShell 6. To run this script in PowerShell 6 or 7, you must replace the WMI cmdlets with the newer CIM cmdlets.
-- Ensure that your computer has the Azure Powershell Module installed. For more information, see the article [Install the Azure PowerShell module](/powershell/azure/install-az-ps?view=azps-1.8.0).
+- Ensure that your computer has the Azure Powershell Module installed. For more information, see the article [Install the Azure PowerShell module](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true).
 - Verify that the PowerShell file **SkuRecommendationDataCollectionScript.ps1**, which is required to collect the performance counters, is installed in the DMA folder.
 - Ensure that the computer on which you'll perform this process has Administrator permissions to the computer that is hosting your databases.
 
@@ -234,4 +234,4 @@ To input provisioning information and make changes to the recommendations, updat
 
 ## Next step
 
-- For a complete listing of commands for running DMA from the CLI, see the article [Run Data Migration Assistant from the command line](./dma-commandline.md?view=sql-server-2017).
+- For a complete listing of commands for running DMA from the CLI, see the article [Run Data Migration Assistant from the command line](./dma-commandline.md).

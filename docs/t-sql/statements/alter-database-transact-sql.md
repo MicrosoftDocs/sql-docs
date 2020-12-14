@@ -275,7 +275,7 @@ GO
 
 ## See Also
 
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
@@ -295,7 +295,7 @@ GO
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_** &nbsp;
@@ -778,7 +778,7 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
@@ -920,7 +920,7 @@ ALTER DATABASE WideWorldImporters
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
@@ -1099,7 +1099,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)

@@ -279,7 +279,7 @@ Specifies to create an index on the table. This can be a clustered index, or a n
  
    >[!NOTE]
   > A user creating a table with a column that uses a user-defined type needs the REFERENCES permission on the user-defined type.
-  > If this table must be created in TempDB, then either the REFERENCES permission needs to be granted explicitly each time **before** the table is created, or this data type and REFERENCES permissions need to be added to the Model database. If this is done, then this data type and permissions will be available in TempDB permanently. Otherwise, the user-defined data type and permissions will disappear when SQL Server is restarted. For more information, see [CREATE TABLE](./create-table-transact-sql.md?view=sql-server-2017#permissions-1)
+  > If this table must be created in TempDB, then either the REFERENCES permission needs to be granted explicitly each time **before** the table is created, or this data type and REFERENCES permissions need to be added to the Model database. If this is done, then this data type and permissions will be available in TempDB permanently. Otherwise, the user-defined data type and permissions will disappear when SQL Server is restarted. For more information, see [CREATE TABLE](./create-table-transact-sql.md#permissions-1)
   
 ## Examples  
   

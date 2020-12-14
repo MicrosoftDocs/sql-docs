@@ -880,7 +880,7 @@ WHERE r.command = 'RESTORE DATABASE'
 
 :::row:::
     :::column:::
-        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
+        [SQL Server](restore-statements-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)

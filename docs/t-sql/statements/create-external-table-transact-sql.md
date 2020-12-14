@@ -604,7 +604,7 @@ WITH
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_** &nbsp;
@@ -773,7 +773,7 @@ WITH
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)
@@ -1057,7 +1057,7 @@ AS SELECT * FROM
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)

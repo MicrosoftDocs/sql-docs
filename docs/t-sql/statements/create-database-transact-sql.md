@@ -64,7 +64,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -889,7 +889,7 @@ GO
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_**
@@ -901,7 +901,7 @@ GO
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1327,7 +1327,7 @@ CREATE DATABASE test_zone_redundancy
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1339,7 +1339,7 @@ CREATE DATABASE test_zone_redundancy
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1413,7 +1413,7 @@ See [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1425,7 +1425,7 @@ See [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1550,7 +1550,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)

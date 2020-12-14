@@ -143,5 +143,5 @@ GO
 - [RESTORE MASTER KEY](../../t-sql/statements/restore-master-key-transact-sql.md)
 - [DROP MASTER KEY](../../t-sql/statements/drop-master-key-transact-sql.md)
 - [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [Database Detach and Attach](../../relational-databases/databases/database-detach-and-attach-sql-server.md)

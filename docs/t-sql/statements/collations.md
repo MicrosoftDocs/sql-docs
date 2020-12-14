@@ -149,7 +149,7 @@ Chiapas
 
 ### B. Additional examples
 
-For additional examples that use **COLLATE**, see [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) example **G. Creating a database and specifying a collation name and options**, and [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) example **V. Changing column collation**.
+For additional examples that use **COLLATE**, see [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md#examples) example **G. Creating a database and specifying a collation name and options**, and [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) example **V. Changing column collation**.
 
 ## See Also
 
@@ -157,7 +157,7 @@ For additional examples that use **COLLATE**, see [CREATE DATABASE](../../t-sql/
 - [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
 - [Collation Precedence](../../t-sql/statements/collation-precedence-transact-sql.md)
 - [Constants](../../t-sql/data-types/constants-transact-sql.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
 - [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
 - [Table data type](../../t-sql/data-types/table-transact-sql.md)

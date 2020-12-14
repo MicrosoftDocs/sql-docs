@@ -692,7 +692,7 @@ GO
 
 ## See Also
 
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
@@ -711,7 +711,7 @@ GO
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Managed Instance \*_**<br />&nbsp;

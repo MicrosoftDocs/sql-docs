@@ -19,7 +19,7 @@ The SqlPackage.exe Export action exports a live database from SQL Server or Azur
 
 **SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   
-```
+```bash
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
 

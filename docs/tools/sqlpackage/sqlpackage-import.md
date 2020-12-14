@@ -19,7 +19,7 @@ The SqlPackage.exe Import action imports the schema and table data from a BACPAC
 
 **SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   
-```
+```bash
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
 

@@ -19,7 +19,7 @@ The SqlPackage.exe Extract action creates a schema of a live database from SQL S
 
 **SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   
-```
+```bash
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
 

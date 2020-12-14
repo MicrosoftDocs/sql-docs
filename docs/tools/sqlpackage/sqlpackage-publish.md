@@ -19,7 +19,7 @@ The SqlPackage.exe publish operation incrementally updates the schema of a targe
 
 **SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   
-```
+```bash
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
 

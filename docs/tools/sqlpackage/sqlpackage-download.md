@@ -33,7 +33,7 @@ DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacse
 Installing the nuget package via the .NET CLI is accomplished with this command:
 
 ```cmd
-> dotnet add package Microsoft.SqlServer.DACFx
+dotnet add package Microsoft.SqlServer.DACFx
 ```
 
 >[!NOTE]

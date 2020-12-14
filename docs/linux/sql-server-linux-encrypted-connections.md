@@ -41,6 +41,7 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
 ```bash
 openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
 sudo chown mssql:mssql mssql.pem mssql.key 
+sudo usermod -a -G ssl-cert mssql 
 sudo chmod 600 mssql.pem mssql.key   
 sudo mv mssql.pem /etc/ssl/certs/ 
 sudo mv mssql.key /etc/ssl/private/ 
@@ -50,11 +51,12 @@ sudo mv mssql.key /etc/ssl/private/
 
 ```bash
 systemctl stop mssql-server 
-cat /var/opt/mssql/mssql.conf 
+sudo cat /var/opt/mssql/mssql.conf 
 sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
 sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
 sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
 sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
+systemctl restart mssql-server 
 ```
 
 - **Register the certificate on your client machine (Windows, Linux, or macOS)**
@@ -98,7 +100,9 @@ sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0
 ```bash
 openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
 sudo chown mssql:mssql mssql.pem mssql.key 
-sudo chmod 600 mssql.pem mssql.key   
+sudo usermod -a -G ssl-cert mssql 
+sudo chmod 600 mssql.pem
+mssql.key   
 sudo mv mssql.pem /etc/ssl/certs/ 
 sudo mv mssql.key /etc/ssl/private/ 
 ```
@@ -107,11 +111,12 @@ sudo mv mssql.key /etc/ssl/private/
 
 ```bash
 systemctl stop mssql-server 
-cat /var/opt/mssql/mssql.conf 
+sudo cat /var/opt/mssql/mssql.conf 
 sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
 sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
 sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
 sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
+systemctl restart mssql-server 
 ```
 
 -	**Example connection strings** 

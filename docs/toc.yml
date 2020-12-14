@@ -8510,12 +8510,10 @@
         href: ssms/sql-server-management-studio-ssms.md
     - name: Quickstarts
       items:
-      - name: Connect & query SQL Server
-        href: ssms/quickstarts/connect-query-sql-server.md
       - name: Connect and query SQL Server
         href: ssms/quickstarts/ssms-connect-query-sql-server.md
       - name: Connect & query SQL Server on Azure VM
-        href: ssms/quickstarts/ssms-connect-query-sql-azure-vm.md
+        href: ssms/quickstarts/ssms-connect-query-sql-server-azure-vm.md
       - name: Connect and query Azure SQL Database
         href: ssms/quickstarts/ssms-connect-query-azure-sql.md
       - name: Connect and query a dedicated SQL pool in Azure Synapse Analytics

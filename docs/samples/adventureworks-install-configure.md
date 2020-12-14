@@ -86,9 +86,8 @@ For more information on restoring a SQL Server database, see [Restore a database
 
 You can restore your sample database using Transact-SQL (T-SQL). An example to restore AdventureWorks2019 is provided below, but the database name and installation file path may vary depending on your environment. 
 
-To restore AdventureWorks2019, modify values as appropriate to your environment and then run the following Transact-SQL (T-SQL) command:
+To restore AdventureWorks2019 to **Windows**, modify values as appropriate to your environment and then run the following Transact-SQL (T-SQL) command:
 
-## Windows
 
 ```sql
 USE [master]
@@ -99,9 +98,8 @@ GO
 
 ```
 
-## SQL Server on Linux
+To restore AdventureWorks2019 to **Linux**, change the Windows filesystem path to Linux, and then run the following Transact-SQL (T-SQL) command: 
 
-You need to chagen Windows filesystem path to Linux file system path.
 
 ```sql
 USE [master]
@@ -111,7 +109,6 @@ WITH MOVE 'AdventureWorks2017' TO '/var/opt/mssql/data/AdventureWorks2019.mdf',
 MOVE 'AdventureWorks2017_log' TO '/var/opt/mssql/data/AdventureWorks2019_log.ldf',
 FILE = 1,  NOUNLOAD,  STATS = 5
 GO
-
 ```
 
 # [Azure Data Studio](#tab/data-studio)

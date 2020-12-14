@@ -22,18 +22,21 @@ This article is a summary of PolyBase features available for SQL Server products
 
 This table lists the key features for PolyBase and the products in which they're available.  
 
-|**Feature** |**SQL Server 2016** |**Azure SQL Database** |**Azure Synapse Analytics** |**Parallel Data Warehouse** |
+|**Feature** |**SQL Server** (Beginning with 2016) |**Azure SQL Database** |**Azure Synapse Analytics** |**Parallel Data Warehouse** |
 |---------|---------|---------|---------|---------|
 |Query Hadoop data with [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|No|No|Yes|
 |Import data from Hadoop|Yes|No|No|Yes|
 |Export data to Hadoop  |Yes|No|No| Yes|
 |Query, import from, export to Azure HDInsight |No|No|No|No
 |Push down query computations to Hadoop|Yes|No|No|Yes|  
-|Import data from Azure Blob storage|Yes|No|Yes|Yes|
+|Import data from Azure Blob storage|Yes|Yes<sup>*</sup>|Yes|Yes|
 |Export data to Azure Blob storage|Yes|No|Yes|Yes|  
 |Import data from Azure Data Lake Store|No|No|Yes|No|
 |Export data to Azure Data Lake Store|No|No|Yes|No|
 |Run PolyBase queries from Microsoft BI tools|Yes|No|Yes|Yes|
+
+<sup>*</sup> Introduced in SQL Server 2017, see [Examples of bulk access to data in Azure Blob storage](../import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+
 
 ## Pushdown computation supported by T-SQL operators
 

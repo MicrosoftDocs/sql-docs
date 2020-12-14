@@ -1,6 +1,6 @@
 ---
 description: "Azure Key Vault sample 7.0"
-title: "Azure Key Vault sample | Microsoft Docs"
+title: "Azure Key Vault sample 7.0 | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

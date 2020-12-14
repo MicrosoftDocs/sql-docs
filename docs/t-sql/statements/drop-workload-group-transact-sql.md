@@ -48,7 +48,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||
 
 :::row:::
     :::column:::
-        [SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)
+        [SQL Server](drop-workload-group-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Managed Instance \*_** &nbsp;
@@ -69,7 +69,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||
 
 :::row:::
     :::column:::
-        [SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)
+        [SQL Server](drop-workload-group-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Managed Instance](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)

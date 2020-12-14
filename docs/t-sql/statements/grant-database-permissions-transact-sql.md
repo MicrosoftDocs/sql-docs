@@ -263,7 +263,7 @@ GO
 
 - [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)
 - [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [GRANT](../../t-sql/statements/grant-transact-sql.md)
 - [Permissions](../../relational-databases/security/permissions-database-engine.md)
 - [Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)

@@ -779,7 +779,7 @@ ALTER TABLE with the SET FILESTREAM_ON clause succeeds only if the table has no 
 
 If you specify *partition_scheme_name*, the rules for [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) apply. Be sure the table is already partitioned for row data, and its partition scheme uses the same partition function and columns as the FILESTREAM partition scheme.
 
-*filestream_filegroup_name* specifies the name of a FILESTREAM filegroup. The filegroup must have one file that's defined for the filegroup by using a [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017) or [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement, or an error results.
+*filestream_filegroup_name* specifies the name of a FILESTREAM filegroup. The filegroup must have one file that's defined for the filegroup by using a [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) or [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement, or an error results.
 
 **"**default**"** specifies the FILESTREAM filegroup with the DEFAULT property set. If there's no FILESTREAM filegroup, an error results.
 

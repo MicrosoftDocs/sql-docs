@@ -57,7 +57,7 @@ If the client computer has Internet access, you can download and install **sqlml
 
 1. Open a **Command Prompt** and run the following commands to install the packages **odbc** and **sqlmlutils**. Substitute the path to the **sqlmlutils** file you downloaded. The **odbc** package is found online and installed.
 
-   ::: moniker range=">=sql-server-ver15"
+   ::: moniker range=">=sql-server-ver15||=azuresqldb-mi-current"
    ```console
    R -e "install.packages('odbc')"
    R CMD INSTALL sqlmlutils_1.0.0.zip
@@ -86,7 +86,7 @@ On a computer with Internet access:
 
 1. In RStudio, run the following R script to create a local repository of the package **odbc**. This example assumes the repository will be created in the folder `odbc`.
 
-   ::: moniker range=">=sql-server-ver15"
+   ::: moniker range=">=sql-server-ver15||=azuresqldb-mi-current"
    ```R
    CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2019-02-01/")
    local_repo <- "odbc"
@@ -125,7 +125,7 @@ On the client computer you use to connect to SQL Server:
 
 1. Run the following commands to install **odbc** and then **sqlmlutils**. Substitute the full paths to the **odbc** repository folder and the **sqlmlutils** file you copied to this computer.
 
-   ::: moniker range=">=sql-server-ver15"
+   ::: moniker range=">=sql-server-ver15||=azuresqldb-mi-current"
    ```console
    R -e "install.packages('odbc', repos='odbc')"
    R CMD INSTALL sqlmlutils_1.0.0.zip
@@ -174,7 +174,7 @@ On a computer with Internet access:
 
 1. Run the following R script to create a local repository for **glue**. This example creates the repository folder in `c:\downloads\glue`.
 
-   ::: moniker range=">=sql-server-ver15"
+   ::: moniker range=">=sql-server-ver15||=azuresqldb-mi-current"
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/glue"

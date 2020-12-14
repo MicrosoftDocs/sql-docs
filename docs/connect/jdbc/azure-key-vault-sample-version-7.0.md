@@ -1,6 +1,6 @@
 ---
-description: "Azure Key Vault sample"
-title: "Azure Key Vault sample | Microsoft Docs"
+description: "Azure Key Vault sample 7.0"
+title: "Azure Key Vault sample 7.0 | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -11,7 +11,7 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ---
-# Azure Key Vault sample
+# Azure Key Vault sample 7.0
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 

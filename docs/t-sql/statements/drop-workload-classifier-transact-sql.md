@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "DROP WORKLOAD CLASSIFIER statement"
 author: ronortloff
 ms.author: rortloff
-monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest"
 ---
 # DROP WORKLOAD CLASSIFIER (Transact-SQL)
 

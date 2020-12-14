@@ -12,7 +12,7 @@ dev_langs:
 ms.assetid: 
 author: XiaoyuMSFT 
 ms.author: xiaoyul
-monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest"
 ---
 
 # sys.pdw_nodes_dm_exec_sql_text (Transact-SQL)

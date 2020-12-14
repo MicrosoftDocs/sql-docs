@@ -9,7 +9,7 @@ ms.topic: language-reference
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 
 # CREATE EXTERNAL LANGUAGE (Transact-SQL)

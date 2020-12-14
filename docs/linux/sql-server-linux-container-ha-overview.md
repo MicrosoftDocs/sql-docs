@@ -8,7 +8,7 @@ ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
-monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # High availability for SQL Server containers
 

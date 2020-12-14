@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
 author: markingmyname
 ms.author: maghan
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ms.custom: seo-dt-2019
 ---
 # sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)

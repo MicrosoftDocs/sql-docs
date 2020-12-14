@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 12/9/2020
+ms.date: 12/11/2020
 ---
 
 # Download and install Azure Data Studio
@@ -21,9 +21,9 @@ Azure Data Studio offers a modern editor experience with IntelliSense, code snip
 
 | Platform | Download | Release date | Version |
 |----------|----------|--------------|---------|
-| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2150927)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2150928)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2151312) | December 9, 2020 | 1.25.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2151311) | December 9, 2020 | 1.25.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2151506)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2151407)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2151508) | December 9, 2020 | 1.25.0 |
+| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2150927)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2150928)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2151312) | December 11, 2020 | 1.25.1 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2151311) | December 11, 2020 | 1.25.1 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2151506)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2151407)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2151508) | December 11, 2020 | 1.25.1 |
 
 **For details about the latest release, see the [release notes](./release-notes-azure-data-studio.md).**
 

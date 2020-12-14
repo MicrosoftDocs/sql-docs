@@ -17,13 +17,13 @@ helpviewer_keywords:
   - "DROP WORKLOAD GROUP statement"
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # DROP WORKLOAD GROUP (Transact-SQL)
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -44,7 +44,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 [!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
   
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
@@ -65,7 +65,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 [!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::

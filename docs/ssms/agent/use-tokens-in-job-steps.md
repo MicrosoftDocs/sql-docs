@@ -17,7 +17,7 @@ ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Use Tokens in Job Steps
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Indexes with Included Columns
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

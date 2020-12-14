@@ -8,17 +8,17 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # CAB downloads for offline installation of cumulative updates for SQL Server Machine Learning Services
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Download Python and R CAB files for SQL Server Machine Learning Services. These CAB files contain updates to the Machine Learning Services (Python and R) feature and are used when installing SQL Server on a server without internet access.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Download Python and R CAB files for SQL Server 2016 R Services. These CAB files contain updates to the the R Services feature and are used when installing SQL Server on a server without internet access.
 ::: moniker-end
 
@@ -26,17 +26,17 @@ Below you will find download links to CAB files for each cumulative update. For 
 
 ## Prerequisites
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Start with a baseline installation. On SQL Server Machine Learning Services, the initial release is the baseline installation. 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Start with a baseline installation.  On SQL Server 2016 R Services, you can start with the initial release, SP1, or SP2. 
 ::: moniker-end
 
 You can also apply cumulative updates.
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 
 ## SQL Server 2019 CABs
 
@@ -77,7 +77,7 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 ## SQL Server 2017 CABs
 
@@ -148,7 +148,7 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 <a name="bkmk_2016Installers"></a>
 

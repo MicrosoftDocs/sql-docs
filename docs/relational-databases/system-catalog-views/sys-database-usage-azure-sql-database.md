@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 # sys.database_usage (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

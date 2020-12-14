@@ -10,21 +10,21 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current"
 ---
 
 # Python tutorial: Predict NYC taxi fares with binary classification
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 In this five-part tutorial series for SQL programmers, you'll learn about Python integration in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 In this five-part tutorial series for SQL programmers, you'll learn about Python integration in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=azuresqldb-mi-current"
 In this five-part tutorial series for SQL programmers, you'll learn about Python integration in [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
@@ -53,7 +53,7 @@ In [part five](python-taxi-classification-deploy-model.md), you'll learn how to 
 
 ## Prerequisites
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 + Install [SQL Server Machine Learning Services with Python](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 ::: moniker-end
 

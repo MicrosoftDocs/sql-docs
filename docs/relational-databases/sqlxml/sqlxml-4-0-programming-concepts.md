@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML 4.0 Programming Concepts
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

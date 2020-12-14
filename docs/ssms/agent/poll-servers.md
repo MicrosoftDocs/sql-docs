@@ -17,7 +17,7 @@ ms.assetid: 96f5fd43-3edd-4418-9dd0-4d34e618890e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Poll Servers
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

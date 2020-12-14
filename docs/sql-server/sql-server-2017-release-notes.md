@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: "= sql-server-2017"
 ---
 # SQL Server 2017 Release Notes
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]

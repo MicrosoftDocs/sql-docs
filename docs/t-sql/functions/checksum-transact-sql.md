@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 ---
 # CHECKSUM (Transact-SQL)

@@ -46,7 +46,7 @@ helpviewer_keywords:
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016"
 ---
 # BACKUP (Transact-SQL)
 
@@ -58,7 +58,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -983,7 +983,7 @@ WHERE r.command LIKE 'BACKUP%'
 - [Piecemeal Restore of Databases With Memory-Optimized Tables](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
@@ -1197,7 +1197,7 @@ WITH STATS = 5, COPY_ONLY;
 [Restore database](restore-statements-transact-sql.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
@@ -1303,7 +1303,7 @@ BACKUP DATABASE errors under the following conditions:
 - Attempt to start a backup within a transaction.
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017"
 ## General Remarks
 
 Before you perform a database backup, use [DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) to decrease the size of your database.
@@ -1317,7 +1317,7 @@ If you cancel a BACKUP command, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] wi
 Full backups and differential backups are stored in separate directories. Naming conventions are not enforced for specifying that a full backup and differential backup belong together. You can track this through your own naming conventions. Alternatively, you can track this by using the WITH DESCRIPTION option to add a description, and then by using the RESTORE HEADERONLY statement to retrieve the description.
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 ## Limitations and Restrictions
 
 You cannot perform a differential backup of the master database. Only full backups of the master database are supported.

@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: dc1704da-eacd-4d26-b529-c996f958ca4b
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Shared Memory Properties
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

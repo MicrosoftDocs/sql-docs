@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: "=azuresqldb-current||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

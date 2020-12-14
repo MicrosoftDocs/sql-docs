@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using the Query Store with In-Memory OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

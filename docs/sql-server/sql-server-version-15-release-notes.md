@@ -9,7 +9,7 @@ ms.topic: "article"
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: "= sql-server-ver15"
 ---
 # [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] release notes
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]

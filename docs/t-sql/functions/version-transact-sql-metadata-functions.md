@@ -13,7 +13,7 @@ dev_langs:
 ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # Version - Transact SQL Metadata functions
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Temporal table system consistency checks
 

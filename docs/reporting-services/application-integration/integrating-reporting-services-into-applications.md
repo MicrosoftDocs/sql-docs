@@ -9,7 +9,7 @@ ms.technology: application-integration
 ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= sql-server-2016"
 
 ---
 # Integrating Reporting Services into Applications

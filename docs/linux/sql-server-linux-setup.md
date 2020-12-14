@@ -49,7 +49,7 @@ SQL Server is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterpris
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 [!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
 

@@ -20,7 +20,7 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: "pamela"
 manager: amitban
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15"
 ---
 # sys.dm_db_page_info (Transact-SQL)
 

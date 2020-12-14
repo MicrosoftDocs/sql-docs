@@ -1,6 +1,6 @@
 ---
 title: Install Python custom runtime
-description: Learn how to install a Python custom runtime for SQL Server.
+description: Learn how to install a Python custom runtime for SQL Server using Language Extensions.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/30/2020
@@ -10,12 +10,12 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
-# Install a custom Python runtime for SQL Server
+# Install a Python custom runtime for SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes how to install a custom Python runtime for running external Python scripts with SQL Server. The custom runtime uses the [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md).
+This article describes how to install a Python custom runtime for running external Python scripts with SQL Server. The custom runtime uses the [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md).
 
-The custom Python runtime allows you to use your own version of the Python runtime with SQL Server instead of the default runtime version installed with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
+The Python custom runtime allows you to use your own version of the Python runtime with SQL Server, instead of the default runtime version installed with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 
 ::: moniker range=">=sql-server-ver15"
 

@@ -8,7 +8,7 @@ ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: Susan Hui
+author: lilgreenbird
 ms.author: v-susanh
 ---
 # Azure Key Vault sample

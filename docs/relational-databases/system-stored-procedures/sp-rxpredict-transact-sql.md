@@ -53,7 +53,7 @@ Additional score columns, such as confidence interval, can be returned if the al
 To enable use of the stored procedure, SQLCLR must be enabled on the instance.
 
 > [!NOTE]
-> There are security implications to enabing this option. Use an alternative implementation, such as the [Transact-SQL PREDICT](../../t-sql/queries/predict-transact-sql.md?view=sql-server-2017&preserve-view=true) function, if SQLCLR cannot be enabled on your server.
+> There are security implications to enabling this option. Use an alternative implementation, such as the [Transact-SQL PREDICT](../../t-sql/queries/predict-transact-sql.md?view=sql-server-2017&preserve-view=true) function, if SQLCLR cannot be enabled on your server.
 
 The user needs `EXECUTE` permission on the database.
 

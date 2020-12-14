@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: cawrites
 ms.author: chadam
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Configure SQL Server on a Server Core Installation
 

@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Use Alerts for Replication Agent Events
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

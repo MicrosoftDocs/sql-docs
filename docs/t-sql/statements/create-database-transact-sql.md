@@ -2,7 +2,7 @@
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, and Analytics Platform System
 ms.custom: "references_regions"
-ms.date: 10/30/2020
+ms.date: 12/11/2020
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -36,7 +36,7 @@ helpviewer_keywords:
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016"
 ---
 # CREATE DATABASE
 
@@ -48,7 +48,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -885,7 +885,7 @@ GO
 - [Binary Large Object - Blob Data](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
@@ -1323,7 +1323,7 @@ CREATE DATABASE test_zone_redundancy
 - [ALTER DATABASE - Azure SQL Database](alter-database-transact-sql.md?view=azuresqldb-currentls)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
@@ -1359,7 +1359,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 ```
 
 > [!IMPORTANT]
-> To add files or set containment for a database in a managed instance, use the [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldbmi) statement.
+> To add files or set containment for a database in a managed instance, use the [ALTER DATABASE](alter-database-transact-sql.md?tabs=sqldbmi) statement.
 
 ## Arguments
 
@@ -1409,7 +1409,7 @@ CREATE DATABASE TestDB1;
 See [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
@@ -1546,7 +1546,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 - [DROP DATABASE - Transact-SQL](../../t-sql/statements/drop-database-transact-sql.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::

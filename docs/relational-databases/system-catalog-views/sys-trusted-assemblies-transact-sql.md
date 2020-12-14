@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]

@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
 zone_pivot_groups: cs1-command-shell
 ---
 
@@ -31,7 +31,7 @@ In this quickstart, you use Docker to pull and run the SQL Server 2017 container
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 > [!NOTE]
 > Starting with SQL Server 2019 CU3, Ubuntu 18.04 is supported.
@@ -185,7 +185,7 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 <!--End of 2017 "Pull and run" section-->
 
 <!--This is the 2019 version of the "Pull and run" section-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a id="pullandrun2019"></a> Pull and run the 2019 container image
 

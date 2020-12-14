@@ -43,7 +43,7 @@ helpviewer_keywords:
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # ALTER DATABASE (Transact-SQL) File and Filegroup Options
 
@@ -53,7 +53,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -707,7 +707,7 @@ GO
 - [Database File Initialization](../../relational-databases/databases/database-instant-file-initialization.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::

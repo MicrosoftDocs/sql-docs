@@ -20,7 +20,7 @@ In this quickstart, you install SQL Server 2017 or SQL Server 2019 on SUSE Linux
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 In this quickstart, you install SQL Server 2019 on SUSE Linux Enterprise Server (SLES) v12. You then connect with **sqlcmd** to create your first database and run queries.
 
@@ -42,7 +42,7 @@ You must have a SLES v12 SP2 machine with **at least 2 GB** of memory. The file 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 You must have a SLES v12 SP2, SP3, SP4 or SP5 machine with **at least 2 GB** of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
 
@@ -123,7 +123,7 @@ At this point, SQL Server is running on your SLES machine and is ready to use!
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a id="install"></a>Install SQL Server 2019
 

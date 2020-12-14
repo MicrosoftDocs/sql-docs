@@ -13,7 +13,7 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create and Manage Full-Text Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

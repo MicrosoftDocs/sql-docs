@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Working with Query Notifications
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

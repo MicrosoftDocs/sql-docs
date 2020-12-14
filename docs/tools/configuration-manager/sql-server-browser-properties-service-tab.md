@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Browser Properties (Service Tab)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

@@ -20,7 +20,7 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating CDATA Sections Using sql:use-cdata (SQLXML 4.0)
 

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Validate All Subscriptions
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

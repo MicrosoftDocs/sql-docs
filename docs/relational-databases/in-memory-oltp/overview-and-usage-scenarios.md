@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: "kevin-farlee"
 ms.author: "kfarlee"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Overview and Usage Scenarios
 

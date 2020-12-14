@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: f374c885-3fee-434a-93fb-dfe6e0bcd100
 author: rothja
 ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # &amp;= (Bitwise AND Assignment) (Transact-SQL)

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest"
+monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # TRY_PARSE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

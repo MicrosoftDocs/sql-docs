@@ -11,7 +11,7 @@ ms.topic: "language-reference"
 ms.assetid: 605eb49a-225c-4186-a341-e90403c82b60
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication Language Reference
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

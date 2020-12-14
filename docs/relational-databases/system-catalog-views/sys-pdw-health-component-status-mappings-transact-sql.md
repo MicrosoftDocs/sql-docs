@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 4272cfad-5ad7-493d-9edd-d9111619bda0
 author: ronortloff
 ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016"
 ---
 # sys.pdw_health_component_status_mappings (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

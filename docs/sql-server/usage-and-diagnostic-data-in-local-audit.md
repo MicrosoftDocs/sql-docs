@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Local audit for SQL Server usage and diagnostic data collection (CEIP)
 

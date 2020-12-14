@@ -12,7 +12,7 @@ dev_langs:
 ms.assetid: 59bb3e9c-2829-49a0-b382-652ed1f54f88
 author: ronortloff
 ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016"
 ---
 # sys.pdw_diag_events (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

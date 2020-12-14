@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Allow Non-Administrators to Use Replication Monitor
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

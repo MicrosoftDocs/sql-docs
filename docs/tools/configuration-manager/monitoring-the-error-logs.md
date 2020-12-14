@@ -25,7 +25,7 @@ helpviewer_keywords:
 ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Monitoring the Error Logs
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

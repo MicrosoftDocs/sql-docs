@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 257f3b8d-93c0-4444-87f1-ea211bd8cad0
 author: "rothja"
 ms.author: "jroth"
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_virtualservernodes (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]

@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_unforce_plan (Transact-SQL)
 

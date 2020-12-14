@@ -9,7 +9,7 @@ ms.date: 09/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
+moniker: ">= sql-server-linux-2017 || >= sql-server-2017"
 zone_pivot_groups: cs1-command-shell
 ---
 
@@ -68,7 +68,7 @@ If the SQL Server container fails to run, try the following tests:
     ::: moniker-end
     
     <!--SQL Server 2019 on Linux-->
-    ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+    ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
     
     ::: zone pivot="cs1-bash"
     ```bash
@@ -137,7 +137,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ::: zone pivot="cs1-bash"
 ```bash
@@ -245,7 +245,7 @@ Now you can run commands as though you are running them at the terminal inside t
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 - Get started with SQL Server 2019 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md?view=sql-server-ver15).
 

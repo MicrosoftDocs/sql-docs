@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: markingmyname
 ms.author: maghan
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # sys.dm_xtp_gc_queue_stats (Transact-SQL)
 

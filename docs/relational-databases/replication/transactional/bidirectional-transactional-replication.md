@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 98772e95-67ed-4010-8108-5113dbe709ff
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Bidirectional Transactional Replication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

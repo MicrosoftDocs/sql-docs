@@ -12,7 +12,7 @@ dev_langs:
 ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current" 
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current" 
 ---
 # Develop applications using Always Encrypted with secure enclaves
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]

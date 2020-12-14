@@ -83,6 +83,12 @@ Use KILL _UOW_ to stop orphaned distributed transactions. These transactions are
   
 WITH STATUSONLY  
 Generates a progress report about a specified _session ID_ or _UOW_ that is being rolled back because of an earlier KILL statement. KILL WITH STATUSONLY doesn't end or roll back the _session ID_ or _UOW_. The command only displays the current progress of the rollback.  
+
+WITH COMMIT
+Kills a distributed transaction with commit. See See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md) for more information. Only applicable to distributed transactions. 
+
+WITH ROLLBACK
+Kills a distributed transaction with roll back. See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md) for more information. Only applicable to distributed transactions. 
   
 ## Remarks  
 KILL is commonly used to end a process that is blocking other important processes with locks. KILL can also be used to stop a process that is executing a query that is using necessary system resources. System processes and processes running an extended stored procedure can't be ended.  

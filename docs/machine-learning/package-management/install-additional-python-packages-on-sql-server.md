@@ -27,7 +27,7 @@ For more information about package location and installation paths, see [Get Pyt
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
-> The **sqlmlutils** package described in this article is used for adding Python packages to SQL Server 2019 or later. For SQL Server 2017 and earlier, see [Install packages with Python tools](./install-python-packages-standard-tools.md?view=sql-server-2017).
+> The **sqlmlutils** package described in this article is used for adding Python packages to SQL Server 2019 or later. For SQL Server 2017 and earlier, see [Install packages with Python tools](./install-python-packages-standard-tools.md?view=sql-server-2017&preserve-view=true).
 ::: moniker-end
 
 ## Prerequisites

@@ -30,7 +30,7 @@ Possible values are:
     * **ActiveDirectoryPassword**
         * Supported since driver version **v6.0**, `authentication=ActiveDirectoryPassword` can be used to connect to an Azure SQL Database/Data Warehouse using an Azure AD user name and password.
     * **ActiveDirectoryInteractive**
-        * Supported starting driver version **v9.1**, `authentication=ActiveDirectoryInteractive` can be used to connect to an Azure SQL Database/Data Warehouse using an interactive interactive authentication flow.
+        * Supported starting driver version **v9.1**, `authentication=ActiveDirectoryInteractive` can be used to connect to an Azure SQL Database/Data Warehouse using an interactive authentication flow.
     * **ActiveDirectoryServicePrincipal**
         * Supported starting driver version **v9.1**, `authentication=ActiveDirectoryServicePrincipal` can be used to connect to an Azure SQL Database/Data Warehouse using the client ID and secret of a service principal identity.
     * **SqlPassword**

@@ -7,8 +7,8 @@ ms.topic: quickstart
 author: markingmyname
 ms.author: maghan
 ms.reviewer: sstein, mikeray
-ms.custom: ""
-ms.date: 12/14/2020
+ms.custom: contperf-fy21q2
+ms.date: 12/15/2020
 ---
 
 # Quickstart: Connect and query an Azure SQL Database or an Azure Managed Instance using SQL Server Management Studio (SSMS)

@@ -86,10 +86,12 @@ Generates a progress report about a specified _session ID_ or _UOW_ that is bein
 
 _WITH COMMIT_   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+
 Kills a distributed transaction with commit. See See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md) for more information. Only applicable to distributed transactions. 
 
 _WITH ROLLBACK_   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+
 Kills a distributed transaction with roll back. See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md) for more information. Only applicable to distributed transactions. 
   
 ## Remarks  

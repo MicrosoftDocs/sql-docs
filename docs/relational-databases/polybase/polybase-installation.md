@@ -10,7 +10,7 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
-monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
+monikerRange: ">= sql-server-2016"
 ---
 # Install PolyBase on Windows
 
@@ -111,7 +111,7 @@ Use the values in this table to create installation scripts. The SQL Server Poly
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-ver15 "
 
 |SQL Server component|Parameter and values|Description|  
 |--------------------------|--------------------------|-----------------|  

@@ -412,7 +412,7 @@ The following recommendations apply to the SMB file server:
 The MaxDOP setting applies only to SQL Server 2019 and later.
 -->
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## <a name="maxdop"><a/> Database Engine Configuration - MaxDOP page
 

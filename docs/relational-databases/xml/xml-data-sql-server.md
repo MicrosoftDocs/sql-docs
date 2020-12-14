@@ -14,7 +14,7 @@ ms.author: jroth
 ms.reviewer: ""
 ms.custom: ""
 ms.date: 04/03/2020
-# monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+# monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # XML Data (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

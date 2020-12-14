@@ -13,7 +13,7 @@ ms.custom: seo-dt-2019
 # What's new in Analytics Platform System, a scale-out MPP data warehouse
 See what's new in the latest Appliance Updates for Microsoft Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
 
-::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016-au7 "
 <a name="h2-aps-cu7.7"></a>
 ## APS CU7.7
 Release date - November 2020
@@ -173,7 +173,7 @@ With APS AU7 software, an Intel BIOS update is provided which fixes a problem de
 Microsoft advises all customers to install the BIOS updated. Microsoft has measured the effect of Kernel Virtual Address Shadowing (KVAS), Kernel Page Table Indirection (KPTI) and Indirect Branch Prediction mitigation (IBP) on various SQL workloads in various environments. The measurements found significant degradation on some workloads. Based on the results, the recommendation is that you test the performance effect of enabling BIOS update before you deploy them in a production environment. See SQL Server guidance [here](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
 
 ::: moniker-end
-::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016 "
 <a name="h2-aps-au6"></a>
 ## APS 2016
 This section described the new features for APS 2016-AU6.

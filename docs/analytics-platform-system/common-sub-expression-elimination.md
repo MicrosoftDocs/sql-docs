@@ -9,7 +9,7 @@ ms.date: "12/17/2018"
 ms.author: "murshedz"
 ms.reviewer: "martinle"
 ms.custom: seo-dt-2019
-monikerRange: ">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016-au7"
 ---
 # Common subexpression elimination explained
 

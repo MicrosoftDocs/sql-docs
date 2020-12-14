@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 
 ms.custom: contperfq1
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 
 # Quickstart: Run simple Python scripts with SQL machine learning

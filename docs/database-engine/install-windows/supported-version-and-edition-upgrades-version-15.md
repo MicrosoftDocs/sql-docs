@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: cawrites
 ms.author: chadam
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017"
 ---
 # Supported version & edition upgrades (SQL Server 2019)
 

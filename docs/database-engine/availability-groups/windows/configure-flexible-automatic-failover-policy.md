@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: cawrites
 ms.author: chadam
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ms.custom: "seo-lt-2019"
 ---
 # Configure a flexible automatic failover policy for an Always On availability group

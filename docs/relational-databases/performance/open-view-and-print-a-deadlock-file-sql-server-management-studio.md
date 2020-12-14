@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Open, view, and print a deadlock file in SQL Server Management Studio (SSMS)
 

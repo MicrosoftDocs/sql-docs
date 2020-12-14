@@ -289,7 +289,7 @@ GO
 
 :::row:::
     :::column:::
-        [SQL Server](alter-login-transact-sql.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_**
@@ -466,7 +466,7 @@ GO
 
 :::row:::
     :::column:::
-        [SQL Server](alter-login-transact-sql.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
@@ -747,7 +747,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 
 :::row:::
     :::column:::
-        [SQL Server](alter-login-transact-sql.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
@@ -921,7 +921,7 @@ GO
 
 :::row:::
     :::column:::
-        [SQL Server](alter-login-transact-sql.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)

@@ -889,7 +889,7 @@ GO
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_**
@@ -1327,7 +1327,7 @@ CREATE DATABASE test_zone_redundancy
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1413,7 +1413,7 @@ See [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1550,7 +1550,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)

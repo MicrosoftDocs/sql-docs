@@ -987,7 +987,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 :::row:::
     :::column:::
-        [SQL Server](backup-transact-sql.md?view=sql-server-2016&preserve-view=true)
+        [SQL Server](backup-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Managed Instance \*_** &nbsp;
@@ -1201,7 +1201,7 @@ WITH STATS = 5, COPY_ONLY;
 
 :::row:::
     :::column:::
-        [SQL Server](backup-transact-sql.md?view=sql-server-2016&preserve-view=true)
+        [SQL Server](backup-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)

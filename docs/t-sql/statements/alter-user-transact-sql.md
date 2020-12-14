@@ -222,7 +222,7 @@ GO
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_**
@@ -414,7 +414,7 @@ GO
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -690,7 +690,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -819,7 +819,7 @@ GO
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)

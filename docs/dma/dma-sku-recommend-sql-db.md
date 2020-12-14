@@ -234,4 +234,4 @@ To input provisioning information and make changes to the recommendations, updat
 
 ## Next step
 
-- For a complete listing of commands for running DMA from the CLI, see the article [Run Data Migration Assistant from the command line](./dma-commandline.md?view=sql-server-2017&preserve-view=true).
+- For a complete listing of commands for running DMA from the CLI, see the article [Run Data Migration Assistant from the command line](./dma-commandline.md).

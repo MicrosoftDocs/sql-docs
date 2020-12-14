@@ -40,7 +40,7 @@ This 6-minute video provides an introduction into running SQL Server on containe
 To pull and run the Docker container images for SQL Server 2017 and SQL Server 2019, follow the prerequisites and steps in the following quickstart:
 
 - [Run the SQL Server 2017 container image with Docker](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)
-- [Run the SQL Server 2019 container image with Docker](quickstart-install-connect-docker.md?view=sql-server-ver15)
+- [Run the SQL Server 2019 container image with Docker](quickstart-install-connect-docker.md?view=sql-server-ver15&preserve-view=true)
 
 This configuration article provides additional usage scenarios in the following sections.
 

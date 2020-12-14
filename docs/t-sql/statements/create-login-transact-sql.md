@@ -290,7 +290,7 @@ CHECK_EXPIRATION = OFF ;
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure SQL Database \*_**
@@ -411,7 +411,7 @@ GO
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
@@ -615,7 +615,7 @@ GO
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
@@ -746,7 +746,7 @@ GO
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017&preserve-view=true)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)

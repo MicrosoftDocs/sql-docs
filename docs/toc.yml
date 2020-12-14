@@ -8516,7 +8516,7 @@
         href: ssms/quickstarts/ssms-connect-query-sql-server.md
       - name: Connect & query SQL Server on Azure VM
         href: ssms/quickstarts/ssms-connect-query-sql-azure-vm.md.md
-        - name: Connect and query Azure SQL Database
+      - name: Connect and query Azure SQL Database
         href: ssms/quickstarts/ssms-connect-query-azure-sql.md
       - name: Connect and query a dedicated SQL pool in Azure Synapse Analytics
         href: ssms/quickstarts/ssms-connect-query-azure-synapse-analytics.md.md

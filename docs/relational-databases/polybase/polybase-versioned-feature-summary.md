@@ -22,7 +22,7 @@ This article is a summary of PolyBase features available for SQL Server products
 
 This table lists the key features for PolyBase and the products in which they're available.  
 
-|**Feature** |**SQL Server 2016** |**Azure SQL Database** |**Azure Synapse Analytics** |**Parallel Data Warehouse** |
+|**Feature** |**SQL Server** (Beginning with 2017) |**Azure SQL Database** |**Azure Synapse Analytics** |**Parallel Data Warehouse** |
 |---------|---------|---------|---------|---------|
 |Query Hadoop data with [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|No|No|Yes|
 |Import data from Hadoop|Yes|No|No|Yes|

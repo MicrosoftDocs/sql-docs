@@ -91,7 +91,7 @@ This section lists some common issues that you might run across in the course of
   
     Before you run R code using the server, you might want to check that the database can be reached from your R development environment. Both [Server Explorer in Visual Studio](/previous-versions/x603htbk(v=vs.140)) and [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) are free tools with powerful database connectivity and management features.
   
-    If you don't want to install additional database management tools, you can create a test connection to the SQL Server instance by using the [ODBC Data Source Administrator](../../odbc/admin/odbc-data-source-administrator.md?view=sql-server-2017) in Control Panel. If the database is configured correctly and you enter the correct user name and password, you should be able to see the database you just created and select it as your default database.
+    If you don't want to install additional database management tools, you can create a test connection to the SQL Server instance by using the [ODBC Data Source Administrator](../../odbc/admin/odbc-data-source-administrator.md) in Control Panel. If the database is configured correctly and you enter the correct user name and password, you should be able to see the database you just created and select it as your default database.
   
     Common reasons for connection failures include remote connections are not enabled for the server, and Named Pipes protocol is not enabled. You can find more troubleshooting tips in this article: [Troubleshoot Connecting to the SQL Server Database Engine](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
   

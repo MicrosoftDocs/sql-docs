@@ -72,5 +72,5 @@ The following code example adds an event handler for the `FillError` event of th
 ## See also
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
-- [Events](/dotnet/standard/events/index.md)
+- [Events](/dotnet/standard/events/index)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

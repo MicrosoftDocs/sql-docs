@@ -1467,7 +1467,7 @@ SET QUERY_STORE = ON
 - [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
 - [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)
 - [Statistics](../../relational-databases/statistics/statistics.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [Enable and Disable Change Tracking](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
@@ -1482,7 +1482,7 @@ SET QUERY_STORE = ON
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_** &nbsp;
@@ -2377,7 +2377,7 @@ SET QUERY_STORE = ON
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
@@ -3172,7 +3172,7 @@ SET QUERY_STORE = ON
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)

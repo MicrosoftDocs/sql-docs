@@ -52,7 +52,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-set-options.md)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_** &nbsp;
@@ -76,7 +76,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
@@ -98,7 +98,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)

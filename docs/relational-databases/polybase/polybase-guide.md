@@ -1,7 +1,7 @@
 ---
 title: "What is PolyBase? | Microsoft Docs"
 description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Hadoop and Azure Blob Storage.
-ms.date: 06/10/2019
+ms.date: 12/14/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: "overview"
@@ -15,38 +15,41 @@ helpviewer_keywords:
   - "Hadoop export"
   - "Hadoop export, PolyBase overview"
   - "Hadoop import, PolyBase overview"
+ms.custom: contperf-fy21q2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
+
 # What is PolyBase?
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
-<!--SQL Server 2016/2017-->
-::: moniker range="= sql-server-2016 || = sql-server-2017 || >= aps-pdw-2016 || = azure-sqldw-latest"
+PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources. The same query can also access relational tables in your instance of SQL Server. PolyBase enables the same query to also join the data from external sources and and SQL Server.
 
-PolyBase enables your SQL Server 2016 instance to process Transact-SQL queries that read data from Hadoop. The same query can also access relational tables in your SQL Server. PolyBase enables the same query to also join the data from Hadoop and SQL Server. In SQL Server, an [external table](../../t-sql/statements/create-external-table-transact-sql.md) or [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md) provides the connection to Hadoop.
+To use PolyBase, in an instance of SQL Server:
+
+1. [Install PolyBase on Windows](polybase-installation.md)
+1. Create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md)
+1. Create an [external table](../../t-sql/statements/create-external-table-transact-sql.md)
+
+Together, these provide the connection to the external data source.
+
+SQL Server 2016 introduces PolyBase with support for connections to Hadoop and Azure Blob Storage.
+
+SQL Server 2019 introduces additional connectors, including SQL Server, Oracle, Teradata, and MongoDB.
 
 ![PolyBase logical](../../relational-databases/polybase/media/polybase-logical.png "PolyBase logical")
 
-PolyBase pushes some computations to the Hadoop node to optimize the overall query. However, PolyBase external access is not limited to Hadoop. Other unstructured non-relational tables are also supported, such as delimited text files.
+PolyBase pushes some computations to the external source to optimize the overall query. PolyBase external access is not limited to Hadoop. Other unstructured non-relational tables are also supported, such as delimited text files.
 
-> [!TIP]
-> SQL Server 2019 introduces new connectors for PolyBase, including SQL Server, Oracle, Teradata, and MongoDB. For more information, see the [PolyBase documentation for SQL Server 2019](polybase-guide.md?view=sql-server-ver15)
+Examples of external connectors include:
 
-::: moniker-end
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
-
-PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources. SQL Server 2016 and higher can access external data in Hadoop and Azure Blob Storage. Starting in SQL Server 2019, you can now use PolyBase to access external data in [SQL Server](polybase-configure-sql-server.md), [Oracle](polybase-configure-oracle.md), [Teradata](polybase-configure-teradata.md), and [MongoDB](polybase-configure-mongodb.md).
-
-The same queries that access external data can also target relational tables in your SQL Server instance. This allows you to combine data from external sources with high-value relational data in your database. In SQL Server, an [external table](../../t-sql/statements/create-external-table-transact-sql.md) or [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md) provides the connection to Hadoop.
-
-PolyBase pushes some computations to the Hadoop node to optimize the overall query. However, PolyBase external access is not limited to Hadoop. Other unstructured non-relational tables are also supported, such as delimited text files.
-
-::: moniker-end
+- [SQL Server](polybase-configure-sql-server.md)
+- [Oracle](polybase-configure-oracle.md)
+- [Teradata](polybase-configure-teradata.md)
+- [MongoDB](polybase-configure-mongodb.md)
 
 ### Supported SQL products and services
 
@@ -62,20 +65,20 @@ With the underlying help of PolyBase, T-SQL queries can also import and export d
 
 ## Why use PolyBase?
 
-In the past it was more difficult to join your SQL Server data with external data. You had the two following unpleasant options:
+PolyBase allows you to join data from a SQL Server instance with external data. Prior to PolyBase to join data to external data sources you could either:
 
-- Transfer half your data so that all your data was in one format or the other.
+- Transfer half your data so that all the data was in one location.
 - Query both sources of data, then write custom query logic to join and integrate the data at the client level.
 
-PolyBase avoids those unpleasant options by using T-SQL to join the data.
+PolyBase allows you to simply use Transact-SQL to join the data.
 
-To keep things simple, PolyBase does not require you to install additional software to your Hadoop environment. You query external data by using the same T-SQL syntax used to query a database table. The support actions implemented by PolyBase all happen transparently. The query author does not need any knowledge about Hadoop.
+PolyBase does not require you to install additional software to your Hadoop environment. You query external data by using the same T-SQL syntax used to query a database table. The support actions implemented by PolyBase all happen transparently. The query author does not need any knowledge about the external source.
 
 ### PolyBase uses
 
 PolyBase enables the following scenarios in SQL Server:
 
-- **Query data stored in Hadoop from SQL Server or PDW.** Users are storing data in cost-effective distributed and scalable systems, such as Hadoop. PolyBase makes it easy to query the data by using T-SQL.
+- **Query data stored in Hadoop from a SQL Server instance or PDW.** Users are storing data in cost-effective distributed and scalable systems, such as Hadoop. PolyBase makes it easy to query the data by using T-SQL.
 
 - **Query data stored in Azure Blob Storage.** Azure blob storage is a convenient place to store data for use by Azure services.  PolyBase makes it easy to access the data by using T-SQL.
 
@@ -91,23 +94,10 @@ PolyBase enables the following scenarios in SQL Server:
 
 - **Scale compute resources.** To improve query performance, you can use SQL Server [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md). This enables parallel data transfer between SQL Server instances and Hadoop nodes, and it adds compute resources for operating on the external data.
 
-<!--SQL Server 2016/2017-->
-::: moniker range="=sql-server-2016||=sql-server-2017"
-
 ## Next steps
 
 Before using PolyBase, you must [install the PolyBase feature](polybase-installation.md). Then see the following configuration guides depending on your data source:
 
-- [Hadoop](polybase-configure-hadoop.md)
-- [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
-
-::: moniker-end
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-linux-ver15||>= sql-server-ver15"
-
-## Next steps
-
-Before using PolyBase, you must [install the PolyBase feature](polybase-installation.md). Then see the following configuration guides depending on your data source:
 - [Hadoop](polybase-configure-hadoop.md)
 - [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
 - [SQL Server](polybase-configure-sql-server.md)
@@ -115,5 +105,3 @@ Before using PolyBase, you must [install the PolyBase feature](polybase-installa
 - [Teradata](polybase-configure-teradata.md)
 - [MongoDB](polybase-configure-mongodb.md)
 - [ODBC Generic Types](polybase-configure-odbc-generic.md)
-
-::: moniker-end

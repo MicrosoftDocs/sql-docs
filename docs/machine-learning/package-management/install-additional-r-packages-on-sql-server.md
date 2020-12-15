@@ -67,14 +67,14 @@ If the client computer has Internet access, you can download and install **sqlml
    ::: moniker range=">=sql-server-ver15||=azuresqldb-mi-current"
    ```console
    R.exe -e "install.packages('odbc')"
-   R CMD INSTALL sqlmlutils_1.0.0.zip
+   R.exe CMD INSTALL sqlmlutils_1.0.0.zip
    ```
    ::: moniker-end
 
    ::: moniker range=">=sql-server-linux-ver15"
    ```console
-   R -e "install.packages('odbc')"
-   R CMD INSTALL sqlmlutils_1.0.0.tar.gz
+   R.exe -e "install.packages('odbc')"
+   R.exe CMD INSTALL sqlmlutils_1.0.0.tar.gz
    ```
    ::: moniker-end
 
@@ -134,15 +134,15 @@ On the client computer you use to connect to SQL Server:
 
    ::: moniker range=">=sql-server-ver15||=azuresqldb-mi-current"
    ```console
-   R -e "install.packages('odbc', repos='odbc')"
-   R CMD INSTALL sqlmlutils_1.0.0.zip
+   R.exe -e "install.packages('odbc', repos='odbc')"
+   R.exe CMD INSTALL sqlmlutils_1.0.0.zip
    ```
    ::: moniker-end
 
    ::: moniker range=">=sql-server-linux-ver15"
    ```console
-   R -e "install.packages('odbc', repos='odbc')"
-   R CMD INSTALL sqlmlutils_1.0.0.tar.gz
+   R.exe -e "install.packages('odbc', repos='odbc')"
+   R.exe CMD INSTALL sqlmlutils_1.0.0.tar.gz
    ```
    ::: moniker-end
 

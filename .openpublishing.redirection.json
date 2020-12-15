@@ -59089,6 +59089,26 @@
       "source_path": "docs/ssma/db2/connecting-to-sql-server-db2etosql.md",
       "redirect_url": "/sql/ssma/db2/connecting-to-sql-server-db2tosql",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/sqlpackage.md",
+      "redirect_url": "/sql/tools/sqlpackage/sqlpackage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/sqlpackage-download.md",
+      "redirect_url": "/sql/tools/sqlpackage/sqlpackage-download",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/sqlpackage-pipelines.md",
+      "redirect_url": "/sql/tools/sqlpackage/sqlpackage-pipelines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/release-notes-sqlpackage.md",
+      "redirect_url": "/sql/tools/sqlpackage/release-notes-sqlpackage",
+      "redirect_document_id": true
     }
   ]
 }

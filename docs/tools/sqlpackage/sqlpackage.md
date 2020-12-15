@@ -26,9 +26,9 @@ ms.date: 11/4/2020
   
 - [Import](sqlpackage-import.md): Imports the schema and table data from a BACPAC package into a new user database in an instance of SQL Server or Azure SQL Database.  
   
-- [DeployReport](sqlpackage-deploydriftreport.md): Creates an XML report of the changes that would be made by a publish action.  
+- [DeployReport](sqlpackage-deploy-drift-report.md): Creates an XML report of the changes that would be made by a publish action.  
   
-- [DriftReport](sqlpackage-deploydriftreport.md): Creates an XML report of the changes that have been made to a registered database since it was last registered.  
+- [DriftReport](sqlpackage-deploy-drift-report.md): Creates an XML report of the changes that have been made to a registered database since it was last registered.  
   
 - [Script](sqlpackage-script.md): Creates a Transact-SQL incremental update script that updates the schema of a target to match the schema of a source.  
   

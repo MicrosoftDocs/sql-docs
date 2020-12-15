@@ -9749,7 +9749,7 @@
       - name: SqlPackage Import
         href: tools/sqlpackage/sqlpackage-import.md
       - name: SqlPackage Deploy & Drift Reports
-        href: tools/sqlpackage/sqlpackage-deploydriftreport.md
+        href: tools/sqlpackage/sqlpackage-deploy-drift-report.md
       - name: SqlPackage Script
         href: tools/sqlpackage/sqlpackage-script.md
     - name: SqlPackage in development pipelines

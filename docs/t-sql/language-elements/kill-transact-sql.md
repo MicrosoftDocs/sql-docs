@@ -50,7 +50,7 @@ KILL ends a normal connection, which internally stops the transactions that are 
 ```syntaxsql  
 -- Syntax for SQL Server  
   
-KILL { session ID | UOW } [ WITH STATUSONLY ]   
+KILL { session ID | UOW } [ WITH STATUSONLY | WITH COMMIT | WITH ROLLBACK ]   
 ```  
   
 ```syntaxsql  
@@ -74,25 +74,21 @@ JOIN sys.dm_exec_connections AS conn
     ON sess.session_id = conn.session_id;
 ```  
   
+
+
 _UOW_  
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
 Identifies the Unit of Work ID (UOW) of distributed transactions. _UOW_ is a GUID that may be obtained from the request_owner_guid column of the sys.dm_tran_locks dynamic management view. _UOW_ also can be obtained from the error log or through the MS DTC monitor. For more information about monitoring distributed transactions, see the MS DTC documentation.  
   
 Use KILL _UOW_ to stop orphaned distributed transactions. These transactions aren't associated with any real session ID, but instead are associated artificially with session ID = '-2'. This session ID makes it easier to identify orphaned transactions by querying the session ID column in sys.dm_tran_locks, sys.dm_exec_sessions, or sys.dm_exec_requests dynamic management views.  
+
+The UOW specification has three options: 
   
-_WITH STATUSONLY_  
-Generates a progress report about a specified _session ID_ or _UOW_ that is being rolled back because of an earlier KILL statement. KILL WITH STATUSONLY doesn't end or roll back the _session ID_ or _UOW_. The command only displays the current progress of the rollback.  
+- _WITH STATUSONLY_: Generates a progress report about a specified _session ID_ or _UOW_ that is being rolled back because of an earlier KILL statement. KILL WITH STATUSONLY doesn't end or roll back the _session ID_ or _UOW_. The command only displays the current progress of the rollback.
+- _WITH COMMIT_: Kills a distributed transaction with commit. See See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md) for more information. Only applicable to distributed transactions. 
+- _WITH ROLLBACK_: Kills a distributed transaction with roll back. See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md) for more information. Only applicable to distributed transactions. 
 
-_WITH COMMIT_   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
-
-Kills a distributed transaction with commit. See See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md) for more information. Only applicable to distributed transactions. 
-
-_WITH ROLLBACK_   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
-
-Kills a distributed transaction with roll back. See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md) for more information. Only applicable to distributed transactions. 
   
 ## Remarks  
 KILL is commonly used to end a process that is blocking other important processes with locks. KILL can also be used to stop a process that is executing a query that is using necessary system resources. System processes and processes running an extended stored procedure can't be ended.  

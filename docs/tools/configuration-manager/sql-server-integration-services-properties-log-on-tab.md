@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: c0eb1b87-6bb0-475e-8492-0fd3c3f910ea
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # SQL Server Integration Services Properties (Log On Tab)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

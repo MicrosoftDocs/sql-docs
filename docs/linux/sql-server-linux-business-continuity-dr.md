@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
-moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
+moniker: ">= sql-server-linux-2017 || >= sql-server-2017 "
 ---
 # Business continuity and database recovery - SQL Server on Linux
 

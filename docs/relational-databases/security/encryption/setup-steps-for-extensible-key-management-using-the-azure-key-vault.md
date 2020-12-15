@@ -2,7 +2,7 @@
 title: "Set up Transparent Data Encryption (TDE) Extensible Key Management with Azure Key Vault"
 description: Install and configure the SQL Server Connector for Azure Key Vault. 
 ms.custom: seo-lt-2019
-ms.date: "10/08/2020"
+ms.date: "11/25/2020"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,6 +12,7 @@ helpviewer_keywords:
   - "EKM, with key vault setup"
   - "SQL Server Connector, setup"
   - "SQL Server Connector"
+  - "TDE, AKV, EKM"
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: Rupp29
 ms.author: arupp
@@ -252,13 +253,13 @@ The key vault and key that you create here are used by the SQL Server Database E
 1. Generate an asymmetric key in the key vault. You can do so in either of two ways: import an existing key or create a new key.  
 
      > [!NOTE]
-     > SQL Server supports only 2048-bit RSA keys.
+     > SQL Server supports only 2048-bit & 3072-bit RSA keys and 2048-bit & 3072-bit RSA-HSM keys.
 
 ### Best practices
 
 To ensure quick key recovery and be able to access your data outside of Azure, we recommend the following best practices:
 
-- Create your encryption key locally on a local hardware security module (HSM) device. Be sure to use an asymmetric RSA 2048 key so that it's supported by SQL Server.
+- Create your encryption key locally on a local hardware security module (HSM) device. Be sure to use an asymmetric RSA 2048 or 3072 key so that it's supported by SQL Server.
 - Import the encryption key to your Azure key vault. This process is described in the next sections.
 - Before you use the key in your Azure key vault for the first time, do an Azure key vault key backup. For more information, see the [Backup-AzureKeyVaultKey]() command.
 - Whenever you make any changes to the key (for example, adding ACLs, tags, or key attributes), be sure to do another Azure key vault key backup.
@@ -268,7 +269,7 @@ To ensure quick key recovery and be able to access your data outside of Azure, w
 
 ### Types of keys
 
-You can generate either of two types of keys in an Azure key vault that will work with SQL Server. Both types are asymmetric 2048-bit RSA keys.  
+You can generate four types of keys in an Azure key vault that will work with SQL Server. Asymmetric 2048-bit & 3072-bit RSA keys and  2048-bit & 3072-bit RSA-HSM keys.
   
 - **Software-protected**: Processed in software and encrypted at rest. Operations on software-protected keys occur on Azure virtual machines. We recommend this type for keys that are not used in a production deployment.  
 
@@ -334,7 +335,8 @@ Download the SQL Server Connector from the [Microsoft Download Center](https://g
 > - Starting with version 1.0.3.0, the SQL Server Connector reports relevant error messages to the Windows event logs for troubleshooting.
 > - Starting with version 1.0.4.0, there is support for private Azure clouds, including Azure China, Azure Germany, and Azure Government.
 > - There is a breaking change in version 1.0.5.0 in terms of the thumbprint algorithm. You may experience database restore failures after upgrading to 1.0.5.0. For more information, see [KB article 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
-> - **Starting with version 1.0.5.0 (TimeStamp: September 2020), the SQL Server Connector supports filtering messages and network request retry logic.**
+> - Starting with version 1.0.5.0 (TimeStamp: September 2020), the SQL Server Connector supports filtering messages and network request retry logic.
+> - **Starting with updated version 1.0.5.0 (TimeStamp: November 2020), the SQL Server Connector supports RSA 2048, RSA 3072, RSA-HSM 2048 and RSA-HSM 3072 keys.**
   
   ![Screenshot of the SQL Server Connector installation wizard](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png)  
   

@@ -9,7 +9,7 @@ ms.date: "06/27/2018"
 ms.author: "murshedz"
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-monikerRange: ">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016-au7"
 ---
 # Configure auto statistics
 

@@ -13,7 +13,7 @@ dev_langs:
 helpviewer_keywords: 
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: "=azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # Title (Transact-SQL)
 
@@ -25,7 +25,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -48,11 +48,11 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-set-options.md)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_** &nbsp;
@@ -72,11 +72,11 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
@@ -94,11 +94,11 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 ## Azure SQL Managed Instance
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)

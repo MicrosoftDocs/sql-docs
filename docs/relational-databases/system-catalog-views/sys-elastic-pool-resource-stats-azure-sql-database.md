@@ -18,7 +18,7 @@ ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 # sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

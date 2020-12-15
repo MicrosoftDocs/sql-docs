@@ -9,7 +9,7 @@ ms.date: 8/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15"
 ---
 # Install PolyBase on Linux
 

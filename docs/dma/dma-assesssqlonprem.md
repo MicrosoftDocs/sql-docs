@@ -146,7 +146,7 @@ If you want further extend these assessments to the entire data estate and find 
 
 Doing so allows you to view the consolidated results on the Azure Migrate hub project.
 
-Detailed, step-by-step guidance for target readiness assessments is available [here](./dma-assess-sql-data-estate-to-sqldb.md?view=sql-server-2017).
+Detailed, step-by-step guidance for target readiness assessments is available [here](./dma-assess-sql-data-estate-to-sqldb.md).
 
    ![Upload results to Azure Migrate](../dma/media/dma-assesssqlonprem/upload-to-azure-migrate.png)
 

@@ -10,7 +10,7 @@ ms.custom: seo-lt-2019
 ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= sql-server-2016"
 ---
 # Choose between URL access and SOAP in Reporting Services
 

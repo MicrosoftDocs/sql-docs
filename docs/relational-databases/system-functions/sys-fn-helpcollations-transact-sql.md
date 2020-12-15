@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: "rothja"
 ms.author: "jroth"
-monikerRange: ">=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_helpcollations (Transact-SQL)
 

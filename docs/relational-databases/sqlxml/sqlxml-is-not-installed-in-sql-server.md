@@ -12,7 +12,7 @@ ms.topic: "reference"
 ms.assetid: 3dbb4f65-41de-48b8-ad62-47c9d7932de3
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML Is Not Installed in SQL Server
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

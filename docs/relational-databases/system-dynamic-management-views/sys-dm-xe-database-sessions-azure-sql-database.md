@@ -9,7 +9,7 @@ ms.topic: "language-reference"
 ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
 author: markingmyname
 ms.author: maghan
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 # sys.dm_xe_database_sessions (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

@@ -8,7 +8,7 @@ ms.date: 11/10/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # What is SQL Server Machine Learning Services with Python and R?
 [!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -17,7 +17,7 @@ Machine Learning Services is a feature in SQL Server that gives the ability to r
 
 For machine learning on other SQL platforms, see the [SQL machine learning documentation](index.yml).
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
 > For executing Java in SQL Server, see the [Java Language Extension documentation](../language-extensions/java-overview.md).
 ::: moniker-end
@@ -38,7 +38,7 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
 
 ## Get started with Machine Learning Services
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 1. [Install SQL Server Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install.md) or [on Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). You can also use [Machine Learning Services on Big Data Clusters](../big-data-cluster/machine-learning-services.md) and [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 1. Configure your development tools. You can use [run Python and R scripts in Azure Data Studio notebooks](install/sql-machine-learning-azure-data-studio.md). You can also run T-SQL in [Azure Data Studio](../azure-data-studio/what-is.md).
@@ -49,14 +49,14 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
    + [R tutorials for SQL machine learning](tutorials/r-tutorials.md)
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 + Write your first Python or R script.
 
    + [Python tutorials for SQL machine learning](tutorials/python-tutorials.md)
    + [R tutorials for SQL machine learning](tutorials/r-tutorials.md)
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 1. [Install SQL Server Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install.md).
 
 1. Configure your development tools. You can use [run Python and R scripts in Azure Data Studio notebooks](install/sql-machine-learning-azure-data-studio.md). You can also use T-SQL in [Azure Data Studio](../azure-data-studio/what-is.md).
@@ -98,13 +98,13 @@ You can use open-source packages and frameworks, in addition to Microsoft's ente
 
 For more information on which packages are installed with Machine Learning Services and how to install other packages, see:
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 + [Get Python package information](package-management/python-package-information.md)
 + [Install Python packages with sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md)
 + [Get R package information](package-management/r-package-information.md)
 + [Install new R packages with sqlmlutils](package-management/install-additional-r-packages-on-sql-server.md).
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [Get Python package information](package-management/python-package-information.md)
 + [Install packages with Python tools on SQL Server](package-management/install-python-packages-standard-tools.md)
 + [Get R package information](package-management/r-package-information.md)

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publishing Stored Procedure Execution in Transactional Replication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

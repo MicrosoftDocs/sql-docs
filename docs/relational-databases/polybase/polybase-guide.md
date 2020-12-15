@@ -28,13 +28,11 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azur
 
 PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources. The same query can also access relational tables in your instance of SQL Server. PolyBase enables the same query to also join the data from external sources and and SQL Server.
 
-To use PolyBase, in an instance of SQL Server, create:
+To use PolyBase, in an instance of SQL Server:
 
-- An [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md)
-
-   &
-
-- An [external table](../../t-sql/statements/create-external-table-transact-sql.md)
+1. [Install PolyBase on Windows](polybase-installation.md)
+1. Create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md)
+1. Create an [external table](../../t-sql/statements/create-external-table-transact-sql.md)
 
 Together, these provide the connection to the external data source.
 

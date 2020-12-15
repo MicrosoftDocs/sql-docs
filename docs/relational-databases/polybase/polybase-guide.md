@@ -40,7 +40,7 @@ Together, these provide the connection to the external data source.
 
 SQL Server 2016 introduces PolyBase with support for connections to Hadoop and Azure Blob Storage.
 
-SQL Server 2019 introduces additional connectors, including SQL Server, Oracle, Teradata, and MongoDB. For more information, see the [PolyBase documentation for SQL Server 2019](polybase-guide.md?view=sql-server-ver15)
+SQL Server 2019 introduces additional connectors, including SQL Server, Oracle, Teradata, and MongoDB.
 
 ![PolyBase logical](../../relational-databases/polybase/media/polybase-logical.png "PolyBase logical")
 

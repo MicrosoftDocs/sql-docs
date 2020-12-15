@@ -53,13 +53,13 @@ Additional score columns, such as confidence interval, can be returned if the al
 To enable use of the stored procedure, SQLCLR must be enabled on the instance.
 
 > [!NOTE]
-> There are security implications to enabing this option. Use an alternative implementation, such as the [Transact-SQL PREDICT](../../t-sql/queries/predict-transact-sql.md?view=sql-server-2017) function, if SQLCLR cannot be enabled on your server.
+> There are security implications to enabling this option. Use an alternative implementation, such as the [Transact-SQL PREDICT](../../t-sql/queries/predict-transact-sql.md?view=sql-server-2017&preserve-view=true) function, if SQLCLR cannot be enabled on your server.
 
 The user needs `EXECUTE` permission on the database.
 
 ### Supported algorithms
 
-To create and train model, use one of the supported algorithms for R or Python, provided by [SQL Server Machine Learning Services (R or Python)](../../machine-learning/sql-server-machine-learning-services.md), [SQL Server 2016 R Services](../../machine-learning/r/sql-server-r-services.md), [SQL Server Machine Learning Server (Standalone) (R or Python)](../../machine-learning/r/r-server-standalone.md), or [SQL Server 2016 R Server (Standalone)](../../machine-learning/r/r-server-standalone.md?view=sql-server-2016).
+To create and train model, use one of the supported algorithms for R or Python, provided by [SQL Server Machine Learning Services (R or Python)](../../machine-learning/sql-server-machine-learning-services.md), [SQL Server 2016 R Services](../../machine-learning/r/sql-server-r-services.md), [SQL Server Machine Learning Server (Standalone) (R or Python)](../../machine-learning/r/r-server-standalone.md), or [SQL Server 2016 R Server (Standalone)](../../machine-learning/r/r-server-standalone.md?view=sql-server-2016&preserve-view=true).
 
 #### R: RevoScaleR models
 

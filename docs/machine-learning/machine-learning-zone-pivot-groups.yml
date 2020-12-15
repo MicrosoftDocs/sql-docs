@@ -9,7 +9,6 @@ groups:
     title: Windows
   - id: python-custom-runtime-linux
     title: Linux
-groups:
 - id: r-custom-runtime-platform
   title: Platform
   prompt: Choose your platform

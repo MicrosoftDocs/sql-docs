@@ -15,7 +15,7 @@ ms.date: 12/11/2020
 # SqlPackage Publish parameters, properties, and SQLCMD variables
 The SqlPackage.exe publish operation incrementally updates the schema of a target database to match the structure of a source database. Publishing a deployment package that contains user data for all or a subset of tables update the table data in addition to the schema. Data deployment overwrites the schema and data in existing tables of the target database. Data deployment will not change existing schema or data in the target database for tables not included in the deployment package.  
 
-## Command-Line Syntax
+## Command-line syntax
 
 **SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   

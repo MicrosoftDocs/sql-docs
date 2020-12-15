@@ -12,11 +12,11 @@ ms.reviewer: "maghan; sstein"
 ms.date: 12/11/2020
 ---
 
-# SqlPackage Deploy Report and Drift Report
+# SqlPackage deploy report and drift report
 The SqlPackage.exe [DeployReport](#deployreport-action-parameters) action creates an XML report of the changes that would be made by a publish action.
 The SqlPackage.exe [DriftReport](#driftreport-action-parameters) action creates an XML report of the changes that have been made to the registered database since it was last registered.  
 
-## Command-Line Syntax
+## Command-line syntax
 
 **SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   

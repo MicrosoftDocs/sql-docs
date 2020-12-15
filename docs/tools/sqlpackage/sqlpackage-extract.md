@@ -15,7 +15,7 @@ ms.date: 12/11/2020
 # SqlPackage Extract parameters and properties
 The SqlPackage.exe Extract action creates a schema of a live database from SQL Server or Azure SQL Database to a DACPAC package (.dacpac file). By default, data is not included in the .dacpac file. To include data, utilize the [Export action](sqlpackage-export.md). 
 
-## Command-Line Syntax
+## Command-line syntax
 
 **SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   
@@ -24,7 +24,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 ```
 
 > [!NOTE]
-> When a database with SQL authentication user credentials is extracted, the password is replaced with a different password of suitable complexity. It is assumed that after the dacpac is published that the user password is changed.
+> When a database with password credentials (for example, a SQL authentication user) is extracted, the password is replaced with a different password of suitable complexity. SqlPackage or DacFx users should change the password after the dacpac is published.
 
 ## Parameters for the Extract action
 

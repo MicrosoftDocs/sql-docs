@@ -15,7 +15,7 @@ ms.date: 12/4/2020
 # SqlPackage Script parameters and properties
 The SqlPackage.exe Script action creates a Transact-SQL incremental update script that updates the schema of a target database to match the schema of a source database. 
 
-## Command-Line Syntax
+## Command-line syntax
 
 **SqlPackage.exe** initiates the actions specified using the parameters, properties, and SQLCMD variables specified on the command line.  
   

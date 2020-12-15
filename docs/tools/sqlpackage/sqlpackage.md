@@ -82,3 +82,11 @@ Commands that return the following exit codes:
 
 - 0 = success
 - non-zero = failure
+
+
+## New steps
+
+- Learn more about [SqlPackage Extract](sqlpackage-extract.md)
+- Learn more about [SqlPackage Publish](sqlpackage-publish.md)
+- Learn more about [SqlPackage Export](sqlpackage-export.md)
+- Learn more about [SqlPackage Import](sqlpackage-import.md)

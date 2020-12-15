@@ -51,7 +51,7 @@ Examples of external connectors include:
 - [SQL Server](polybase-configure-sql-server.md)
 - [Oracle](polybase-configure-oracle.md)
 - [Teradata](polybase-configure-teradata.md)
-- [MongoDB](polybase-configure-mongodb.md).
+- [MongoDB](polybase-configure-mongodb.md)
 
 ### Supported SQL products and services
 

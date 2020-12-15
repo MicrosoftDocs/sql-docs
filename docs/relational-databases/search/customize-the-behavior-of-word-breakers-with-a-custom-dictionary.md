@@ -10,7 +10,7 @@ ms.assetid: a8e278d1-aeaa-48f1-a0c6-5de232c983e4
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---
 # Customize behavior of word breakers with a custom dictionary (SQL Server Search)

@@ -9,7 +9,7 @@ ms.author: maghan
 reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 
 # Azure Active Directory support in SQL Server Data Tools (SSDT)
@@ -44,7 +44,7 @@ For more information, see [Connecting to SQL Database By Using Azure Active Dire
 
 ## Active Directory Interactive Authentication
 
-*Active Directory Interactive Authentication* is available when connecting to the listed Azure SQL products with SSDT, but only with [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2) or a later version.
+*Active Directory Interactive Authentication* is available when connecting to the listed Azure SQL products with SSDT, but only with [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2&preserve-view=true) or a later version.
 
 - [Download and install for .NET Framework, any version](https://www.microsoft.com/net/download/all).
 - [Visual Studio 2017 version 15.6](/visualstudio/releasenotes/vs2017-relnotes), or a later version.

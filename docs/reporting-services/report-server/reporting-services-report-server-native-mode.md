@@ -48,7 +48,7 @@ ms.author: maggies
   
 -   Database administrator permissions for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that hosts the database.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 -   If you are installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on a domain controller, you must be a domain administrator.  
 

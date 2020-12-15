@@ -42,7 +42,7 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
 - Download [AdventureWorks2017 sample database.](../../samples/adventureworks-install-configure.md)
 
 
-Instructions for restoring databases in SSMS are here: [Restore a database.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
+Instructions for restoring databases in SSMS are here: [Restore a database.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
 
   >[!NOTE]
   > This tutorial is meant for a user familiar with using SQL Server Management Studio and basic database administration tasks. 

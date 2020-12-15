@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017"
 ---
 # STRING_ESCAPE (Transact-SQL)
 

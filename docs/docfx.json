@@ -220,6 +220,10 @@
         "tools/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017",
         "t-sql/**/*.md": "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017",
         "xquery/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017"
+      },
+      
+      "zone_pivot_group_filename": {
+        "docs/machine-learning/**/*.md": "machine-learning/machine-learning-zone-pivot-groups.yml"
       }
     },
 

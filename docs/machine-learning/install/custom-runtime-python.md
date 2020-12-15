@@ -8,6 +8,7 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
+zone_pivot_groups: python-custom-runtime-platform
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Install a Python custom runtime for SQL Server
@@ -17,7 +18,7 @@ This article describes how to install a Python custom runtime for running extern
 
 The Python custom runtime allows you to use your own version of the Python runtime with SQL Server, instead of the default runtime version installed with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 
-::: moniker range=">=sql-server-ver15"
+::: zone pivot="python-custom-runtime-windows"
 
 > [!NOTE]
 > This article describes how to install a custom runtime for Python on Windows. To install on Linux, see [Install a Python custom runtime for SQL Server on Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
@@ -138,9 +139,9 @@ FROM (CONTENT = N'/path/to/python-lang-extension.zip', FILE_NAME = 'pythonextens
 GO
 ```
 
-::: moniker-end
+::: zone-end
 
-::: moniker range=">=sql-server-linux-ver15"
+::: zone pivot="python-custom-runtime-linux"
 
 You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md).
 
@@ -285,11 +286,11 @@ FROM (CONTENT = N'/PATH/TO/python-lang-extension.zip', FILE_NAME = 'libPythonExt
 GO
 ```
 
-::: moniker-end
+::: zone-end
 
 ## Enable external script execution in SQL Server
 
-An external script in Python can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run against SQL Server. 
+An external script in Python can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run against SQL Server.
 
 To enable external scripts, execute the following SQL commands using [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md), connected to SQL Server.
 

@@ -28,7 +28,7 @@ landingContent:
       - text: SQL Server on a Windows VM
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
       - text: SQL Server on a Linux VM
-        url: ../linux/quickstart-install-onnect-query-sql-server-clouds.md
+        url: ../linux/quickstart-install-connect-clouds.md
       - text: Azure Database Migration Service
         url: /azure/dms/dms-overview
 

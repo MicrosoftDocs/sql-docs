@@ -15,7 +15,7 @@ ms.date: 12/15/2020
 
 [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
 
-Get started with SQL Server by using SQL Server Management Studio (SSMS) to connect to an Azure SQL database.
+Get started using SQL Server Management Studio (SSMS) to connect to your Azure SQL Database and run some Transact-SQL (T-SQL) commands.
 
 The article demonstrates how to follow the below steps:
 
@@ -54,9 +54,11 @@ The article demonstrates how to follow the below steps:
 
     :::image type="content" source="media/ssms-connect-query-azure-sql/connect-to-azure-sql-object-explorer.png" alt-text="Server name field for Azure SQL":::
 
+3. After you've completed all the fields, select **Connect**.
+
     You can also modify additional connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options.
 
-3. After selecting **Connect** when you first try to connect to your database with SSMS, a prompt appears to configure the firewall. Once you sign in, fill in your Azure account login information and continue to set the firewall rule. Then select **OK**. This prompt is a one time action. Once you configure the firewall, either with SSMS or in the Azure portal, before connecting with SSMS, the firewall prompt doesn't appear.
+   If you haven't set up your firewall settings, a prompt appears to configure the firewall. Once you sign in, fill in your Azure account login information and continue to set the firewall rule. Then select **OK**. This prompt is a one time action. Once you configure the firewall, the firewall prompt shouldn't appear appear.
 
     :::image type="content" source="media/ssms-connect-query-azure-sql/azure-sql-firewall-sign-in-3.png" alt-text="Azure SQL New Firewall Rule":::
 
@@ -66,7 +68,7 @@ The article demonstrates how to follow the below steps:
 
 ## Troubleshoot connectivity issues
 
-You can encounter connection problems caused by reconfiguration, firewall settings, a connection timeout, incorrect login information, or failure to apply best practices and design guidelines during the application design process. For more information on how to troubleshoot connection problems, visit [Troubleshooting connectivity issues](https://docs.microsoft.com/azure/azure-sql/database/troubleshoot-common-errors-issues).
+You can experience connection problems with Azure Synapse Analytics. For more information on troubleshooting connection problems, visit [Troubleshooting connectivity issues](https://docs.microsoft.com/azure/azure-sql/database/troubleshoot-common-errors-issues).
 
 You can prevent, troubleshoot, diagnose, and mitigate connection and transient errors that you encounter when interacting with Azure SQL Database or Azure SQL Managed Instance. For more information, visit [Troubleshoot transient connection errors](https://docs.microsoft.com/azure/azure-sql/database/troubleshoot-common-connectivity-issues).
 
@@ -188,7 +190,7 @@ You can also use [Azure Data Studio](../../azure-data-studio/download-azure-data
 
 ## Next steps
 
-The best way to get acquainted with SSMS is through hands-on practice. These articles help you with various features available within SSMS. These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
+The best way to get acquainted with SSMS is through hands-on practice. These articles help you with various features available within SSMS.
 
 - [SQL Server Management Studio (SSMS) Query Editor](../f1-help/database-engine-query-editor-sql-server-management-studio.md)
 - [Scripting](../tutorials/scripting-ssms.md)

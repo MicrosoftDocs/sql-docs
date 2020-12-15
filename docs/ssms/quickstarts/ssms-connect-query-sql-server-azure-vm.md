@@ -15,7 +15,7 @@ ms.date: 12/15/2020
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-Get started with SQL Server by using SQL Server Management Studio (SSMS) to connect to a SQL Server instance and create and query a SQL Server database on an Azure virtual Machine.
+Get started using SQL Server Management Studio (SSMS) to connect to your SQL Server instance on an Azure Virtual Machine and run some Transact-SQL (T-SQL) commands.
 
 > [!div class="checklist"]
 > - Connect to a SQL Server instance
@@ -74,9 +74,9 @@ To connect to the SQL Server Database Engine from the Internet, consider creatin
 
     :::image type="content" source="media/ssms-connect-query-sql-server-azure-vm/connect-to-azure-sql-vm-object-explorer.png" alt-text="Server name field for SQL virtual Machines":::
 
-    You can also modify additional connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options.
-
 3. After you've completed all the fields, select **Connect**.
+
+    You can also modify additional connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options.
 
 4. To verify that your SQL Server on Azure VM succeeded, expand and explore the objects within **Object Explorer** where the server name, the SQL Server version, and the username are displayed. These objects are different depending on the server type.
 
@@ -217,7 +217,7 @@ You can also use [Azure Data Studio](../../azure-data-studio/download-azure-data
 
 ## Next steps
 
-The best way to get acquainted with SSMS is through hands-on practice. These articles help you with various features available within SSMS. These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
+The best way to get acquainted with SSMS is through hands-on practice. These articles help you with various features available within SSMS.
 
 - [SQL Server Management Studio (SSMS) Query Editor](../f1-help/database-engine-query-editor-sql-server-management-studio.md)
 - [Scripting](../tutorials/scripting-ssms.md)

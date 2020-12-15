@@ -20,24 +20,20 @@ The Python custom runtime allows you to use your own version of the Python runti
 
 ::: zone pivot="python-custom-runtime-windows"
 
-> [!NOTE]
-> This article describes how to install a custom runtime for Python on Windows. To install on Linux, see [Install a Python custom runtime for SQL Server on Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
-
-## Pre-install checklist for Windows
+## Prerequisites
 
 Before installing a custom Python runtime, install the following:
 
-+ [Cumulative Update (CU) 3 or later for SQL Server 2019](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
++ Install the [Cumulative Update (CU) 3 or later](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) for SQL Server 2019.
 
-+ [Python 3.7](https://www.python.org/downloads/).
++ Install [Python 3.7](https://www.python.org/downloads/) on the server.
 
-    The Python language extension used for the custom Python runtime currently support Python 3.7 only. If you would like to use a different version of Python, follow the instruction in the [Python Language Extension GitHub repo](https://github.com/microsoft/sql-server-language-extensions/tree/master/language-extensions/python) to modify and rebuild the extension.
+    The Python language extension used for the custom Python runtime currently supports Python 3.7 only. If you would like to use a different version of Python, follow the instruction in the [Python Language Extension GitHub repo](https://github.com/microsoft/sql-server-language-extensions/tree/master/language-extensions/python) to modify and rebuild the extension.
 
-    During the installation of Python, add Python to the PATH.
+    > [!IMPORTANT]
+    > During the installation of Python, check **Add Python 3.7 to PATH**.
 
-    ![Add Python 3.7 to path.](../install/media/python-379.png)
-
-## Add SQL Server Language Extensions for Windows
+## Install SQL Server Language Extensions
 
 > [!NOTE]
 > If you have Machine Learning Services installed on SQL Server 2019, the extensibility framework is already installed and you can skip this step.

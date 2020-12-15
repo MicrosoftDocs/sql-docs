@@ -84,7 +84,7 @@ Commands that return the following exit codes:
 - non-zero = failure
 
 
-## New steps
+## Next steps
 
 - Learn more about [SqlPackage Extract](sqlpackage-extract.md)
 - Learn more about [SqlPackage Publish](sqlpackage-publish.md)

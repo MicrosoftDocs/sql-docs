@@ -3,7 +3,7 @@ title: Install new R packages
 description: Learn how to use sqlmlutils to install new R packages to an instance of SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/11/2020
+ms.date: 12/15/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
@@ -29,6 +29,13 @@ This article describes how to use functions in the [**sqlmlutils**](https://gith
 ## Prerequisites
 
 - Install [R](https://www.r-project.org) and [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) on the client computer you use to connect to SQL Server. You can use any R IDE for running scripts, but this article assumes RStudio.
+
+  Install the same version of R that's installed on SQL Server. To verify the SQL version, use the following T-SQL command.
+
+  ```sql
+  EXECUTE sp_execute_external_script @language = N'R'
+   , @script = N'print(R.version)'
+  ```
 
 - Install [Azure Data Studio](../../azure-data-studio/what-is.md) on the client computer you use to connect to SQL Server. You can use other database management or query tools, but this article assumes Azure Data Studio.
 
@@ -59,7 +66,7 @@ If the client computer has Internet access, you can download and install **sqlml
 
    ::: moniker range=">=sql-server-ver15||=azuresqldb-mi-current"
    ```console
-   R -e "install.packages('odbc')"
+   R.exe -e "install.packages('odbc')"
    R CMD INSTALL sqlmlutils_1.0.0.zip
    ```
    ::: moniker-end
@@ -73,7 +80,7 @@ If the client computer has Internet access, you can download and install **sqlml
 
 ### Install sqlmlutils offline
 
-If the client computer doesn't have an Internet connection, you need to download the packages **odbc** and **sqlmlutils** in advance using a computer that does have Internet access. You then can copy the files to a folder on the client computer and install the packages offline.
+If the client computer doesn't have an Internet connection, you need to download the **odbc** and **sqlmlutils** packages in advance using a computer that does have Internet access. You then can copy the files to a folder on the client computer and install the packages offline.
 
 The **odbc** package has a number of dependent packages, and identifying all dependencies for a package gets complicated. We recommend that you use [**miniCRAN**](https://andrie.github.io/miniCRAN/) to create a local repository folder for the package that includes all the dependent packages.
 For more information, see [Create a local R package repository using miniCRAN](create-a-local-package-repository-using-minicran.md).
@@ -88,7 +95,7 @@ On a computer with Internet access:
 
    ::: moniker range=">=sql-server-ver15||=azuresqldb-mi-current"
    ```R
-   CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2019-02-01/")
+   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "odbc"
    pkgs_needed <- "odbc"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -99,7 +106,7 @@ On a computer with Internet access:
 
    ::: moniker range=">=sql-server-linux-ver15"
    ```R
-   CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2019-02-01/")
+   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "odbc"
    pkgs_needed <- "odbc"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);

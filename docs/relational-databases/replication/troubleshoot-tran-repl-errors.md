@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "replication [SQL Server], tutorials"
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Troubleshooter: Find errors with SQL Server transactional replication 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

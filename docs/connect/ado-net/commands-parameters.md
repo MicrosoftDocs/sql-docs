@@ -23,21 +23,22 @@ You can also configure those objects as properties of the command. You can also 
 
 ## In this section
 
-[Executing a Command](execute-command.md)
+[Executing a Command](execute-command.md)  
 Describes the ADO.NET `Command` object and how to use it to execute queries and commands against a data source.
 
-[Configuring parameters](configure-parameters.md)
+[Configuring parameters](configure-parameters.md)  
 Describes working with `Command` parameters, including direction, data types, and parameter syntax.
 
 [Generating commands with CommandBuilders](generate-commands-with-commandbuilders.md)  
 Describes how to use command builders to automatically generate INSERT, UPDATE, and DELETE commands for a `DataAdapter` that has a single-table SELECT command.
 
-[Obtaining a single value from a database](obtain-single-value-from-database.md)
+[Obtaining a single value from a database](obtain-single-value-from-database.md)  
 Describes how to use the `ExecuteScalar` method of a `Command` object to return a single value from a database query.
 
-[Using commands to modify data](use-commands-to-modify-data.md)
+[Using commands to modify data](use-commands-to-modify-data.md)  
 Describes how to use the Microsoft SqlClient data provider for SQL Server to execute stored procedures or data definition language (DDL) statements.
 
 ## See also
 
 - [Connecting to a data source](connecting-to-data-source.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

@@ -9960,6 +9960,9 @@
       href: linux/sql-server-linux-run-sql-server-agent-job.md
     - name: Setup AD Authentication
       href: linux/sql-server-linux-active-directory-authentication.md
+      items:
+      - name: Setup AD Authentication using adutil
+        href: linux/sql-server-linux-ad-auth-adutil-tutorial.md
     - name: Create failover cluster instance
       href: linux/sql-server-linux-shared-disk-cluster-configure.md
       items:
@@ -10025,6 +10028,8 @@
         href: linux/sql-server-linux-configure-msdtc-docker.md
       - name: Troubleshoot Docker containers
         href: linux/sql-server-linux-docker-container-troubleshooting.md
+      - name: Setup AD Authentication using adutil
+        href: linux/sql-server-linux-containers-ad-auth-adutil-tutorial.md
     - name: Develop
       href: linux/sql-server-linux-develop-overview.md
       items:
@@ -10637,6 +10642,8 @@
           href: relational-databases/errors-events/mssqlserver-8621-database-engine-error.md
         - name: 8630
           href: relational-databases/errors-events/mssqlserver-8630-database-engine-error.md
+        - name: 8632
+          href: relational-databases/errors-events/mssqlserver-8632-database-engine-error.md
         - name: 8642
           href: relational-databases/errors-events/mssqlserver-8642-database-engine-error.md
         - name: 8645
@@ -10775,6 +10782,8 @@
           href: relational-databases/errors-events/mssqlserver-15404-database-engine-error.md
         - name: 15517
           href: relational-databases/errors-events/mssqlserver-15517-database-engine-error.md
+        - name: 15581
+          href: relational-databases/errors-events/mssqlserver-15581-database-engine-error.md
         - name: 15599
           href: relational-databases/errors-events/mssqlserver-15599-database-engine-error.md
         - name: 15661

@@ -1,5 +1,5 @@
 ---
-title: SqlPackage Deploy Report and Drift Report
+title: SqlPackage deploy report and drift report
 description: Learn how to automate database development tasks with SqlPackage.exe Deploy Report and Drift Report. View examples and available parameters, properties, and SQLCMD variables.
 ms.prod: sql
 ms.prod_service: sql-tools

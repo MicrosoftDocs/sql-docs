@@ -34,11 +34,11 @@ Consider the following scenarios.
 
 ### Scenario 1
 
-You create a common language runtime (CLR) routine that references a Microsoft .NET Framework assembly. The .NET Framework assembly is not documented in Knowledge Base article 922672. Then, you install the .NET Framework 3.5 or a .NET Framework 2.0-based hotfix.
+You create a common language runtime (CLR) routine that references a Microsoft .NET Framework assembly. The .NET Framework assembly is not documented in [922672](/troubleshoot/sql/database-design/policy-untested-net-framework-assemblies). Then, you install the .NET Framework 3.5 or a .NET Framework 2.0-based hotfix.
 
 ### Scenario 2
 
-You create an assembly, and then you register the assembly in a Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Then, you install a different version of the assembly in the Global Assembly Cache (GAC).
+You create an assembly, and then you register the assembly in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Then, you install a different version of the assembly in the Global Assembly Cache (GAC).
 
 When you execute the CLR routine or use the assembly from either of these scenarios in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you receive an error message that resembles the following:
 
@@ -74,7 +74,7 @@ If the problem still exists after you do this, drop the assembly from the databa
 
 ## More information
 
-We do not recommend that you use .NET Framework assemblies that are not documented in [Support policy for untested .NET Framework assemblies in the SQL Server CLR-hosted environment](https://support.microsoft.com/help/922672). It lists the assemblies that are tested in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR-hosted environment.
+We do not recommend that you use .NET Framework assemblies that are not documented in [Support policy for untested .NET Framework assemblies in the SQL Server CLR-hosted environment](/troubleshoot/sql/database-design/policy-untested-net-framework-assemblies). It lists the assemblies that are tested in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR-hosted environment.
 
 ### Description of CLR routines
 
@@ -173,13 +173,13 @@ Assume that the MyDateTime data type occupies 9 bytes in storage.
 1. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, create a new table that contains a column of the `VARBINARY(9)` data type by running the following statement:
 
     ```sql
-    CREATE TABLE TempTable (c1 VARBINARY(9))
+    CREATE TABLE TempTable (c1 VARBINARY(9));
     ```
 
 2. Run the following INSERT ... SELECT statement to populate the TempTable table:
 
     ```sql
-    INSERT INTO TempTable SELECT CAST(c1 as VARBINARY(9)) FROM MyTable
+    INSERT INTO TempTable SELECT CAST(c1 as VARBINARY(9)) FROM MyTable;
     ```
 
 3. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, follow these steps:
@@ -195,7 +195,7 @@ Assume that the MyDateTime data type occupies 9 bytes in storage.
 5. Run the following INSERT ... SELECT statement to populate the MyTable table:
 
     ```sql
-    INSERT INTO MyTable SELECT c1 FROM TempTable
+    INSERT INTO MyTable SELECT c1 FROM TempTable;
     ```
 
 ## References

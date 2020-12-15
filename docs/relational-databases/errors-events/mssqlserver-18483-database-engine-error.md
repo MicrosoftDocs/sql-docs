@@ -30,7 +30,7 @@ ms.author: ramakoni
 
 ## Explanation
 
-This error occurs when you try to configure replication distributor on system is restored using the hard disk image of another computer where the SQL instance is originally installed. An error message similar to the following is reported to the user:
+This error occurs when you try to configure a replication distributor on a system that was restored using the hard disk image of another computer where the SQL instance was originally installed. An error message similar to the following is reported to the user:
 
 > SQL Server Management Studio could not configure '\<Server>\<Instance>' as the Distributor for '\<Server>\<Instance>' . Error 18483: Could not connect to server '\<Server>\<Instance>' because 'distributor_admin' is not defined as a remote login at the server. Verify that you have specified the correct login name. %.*ls.
 
@@ -51,26 +51,26 @@ To work around this problem, replace the [!INCLUDE[ssNoVersion](../../includes/s
 
     -- Declare local variables
     DECLARE @serverproperty_servername varchar(100),
-    @servername varchar(100)
+    @servername varchar(100);
 
     -- Get the value returned by the SERVERPROPERTY system function
-    SELECT @serverproperty_servername = CONVERT(varchar(100), SERVERPROPERTY('ServerName'))
+    SELECT @serverproperty_servername = CONVERT(varchar(100), SERVERPROPERTY('ServerName'));
 
     -- Get the value returned by @@SERVERNAME global variable
-    SELECT @servername = CONVERT(varchar(100), @@SERVERNAME)
+    SELECT @servername = CONVERT(varchar(100), @@SERVERNAME);
 
     -- Drop the server with incorrect name
-    EXEC sp_dropserver @server=@servername
+    EXEC sp_dropserver @server=@servername;
 
     -- Add the correct server as a local server
-    EXEC sp_addserver @server=@serverproperty_servername, @local='local'
+    EXEC sp_addserver @server=@serverproperty_servername, @local='local';
     ```
 
 2. Restart the computer running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-3. To verify that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] name and the network name of the computer are the same, run the following Transact-SQL statement in SQL Query Analyzer:
+3. To verify that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] name and the network name of the computer are the same, run the following Transact-SQL statement:
 
     ```sql
-    SELECT @@SERVERNAME, SERVERPROPERTY('ServerName')
+    SELECT @@SERVERNAME, SERVERPROPERTY('ServerName');
     ```
 
 ## More information
@@ -81,20 +81,20 @@ You can use the `@@SERVERNAME` global variable or the `SERVERPROPERTY`('ServerNa
 
 On the computer where you deployed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a disk image, follow these steps:
 
-1. Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Manager.
-2. Expand **SQL Server Group**, and then click your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name.
-3. On the **Tools** menu, point to
- **Replication,** and then click **Configure Publishing, Subscribers, and Distribution**.
-4. In the **Configure Publishing and Distribution Wizard for '<**Server**>\<**Instance**>'** dialog box, click **Next**.
-5. In the **Select Distributor** dialog box, click to select the **Make '\<**Server**>\<**Instance**>' its own Distributor; SQL Server will create a distribution database and log** check box, and then click **Next**.
-6. In the **Configure SQL Server Agent** dialog box, click **Next**.
-7. In the **Specify Snapshot Folder** dialog box, click **Next**.
+1. Start [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)].
+2. In the **Object Explorer**, expand your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name.
+3. Right-click on the **Replication** folder and click **Configure distribution Replication**, and then click **Configure Publishing, Subscribers, and Distribution**.
+4. In the **Configure Distribution** Wizard dialog box, click **Next**.
+5. In the **Distributor** dialog box, click to select the '\<**Server**>\<**Instance**>' will act as its own Distributor; SQL Server will create a distribution database and log radio button, and then click **Next**.
+6. In the **SQL Server Agent Start** dialog box, click **Next**.
+7. In the **Snapshot Folder** dialog box, click **Next**.
 
     > [!NOTE]
     > If you receive a message to confirm the snapshot folder path, click **Yes**.
-8. In the **Customize the Configuration** dialog box, click to select the **No, use the following default settings** check box, and then click **Next**.
-9. In the **Completing the Configure Publishing and Distribution Wizard** dialog box, click
- **Finish**.
+8. In the **Distribution Database** dialog box, click **Next**.
+9. In the **Publishers** dialog box, click **Next**.
+10. In the **Wizard Actions** dialog box, click **Next**.
+11. In the **Complete the Wizard** dialog box, click **Finish**.
 
 ## See Also
 

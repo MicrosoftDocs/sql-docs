@@ -32,7 +32,7 @@ ms.author: ramakoni
 
 This error occurs when you try to execute a remote procedure call (RPC) from one server to another (for example, by executing a stored procedure on a remote computer with a statement such as `EXEC SERV_REMOTE.pubs..byroyalty`). An error message similar to the following is reported to the user
 
-> Error 18482: Could not connect to server \<ServerName> because \<ServerName> is not defined as a remote server. Verify that you have specified the correct server name.
+> Error 18482: Could not connect to server \<SERV_REMOTE> because \<SERV_REMOTE> is not defined as a remote server. Verify that you have specified the correct server name.
 
 ## Cause
 
@@ -67,7 +67,7 @@ After running those steps, the sysservers table should look like the following:
 > [!NOTE]
 > Server ID (srvid) should be 0 for the local server.
 
-There may be some cases wherein the entries in sysservers table look correct, but when you run `select @@servername`, it returns Null. In these scenarios, you should still run through Steps 1 through 3 listed above to fix the issue.
+There may be some cases wherein the entries in sysservers table look correct, but when you run `select @@servername`, it returns NULL. In these scenarios, you should still run through Steps 1 through 3 listed above to fix the issue.
 
 ## More Information
 

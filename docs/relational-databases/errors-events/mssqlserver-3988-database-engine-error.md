@@ -30,16 +30,16 @@ ms.author: ramakoni
 
 ## Explanation
 
-This error occurs when you execute a distributed query that joins multiple tables hosted by remote instances of Microsoft SQL Server while the `XACT_ABORT` session setting is **ON**. An error message similar to the following is reported to the user:
+This error occurs when you execute a distributed query that joins multiple tables hosted by remote instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] while the `XACT_ABORT` session setting is **ON**. An error message similar to the following is reported to the user:
 
 > Msg 3988, Level 16, State 1, Line #  
 New transaction is not allowed because there are other threads running in the session.
 
 ## Cause
 
-There are some design limitations in the way SQL Server handles distributed queries (DQs) when the following conditions are true:
+There are some design limitations in the way [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handles distributed queries (DQs) when the following conditions are true:
 
-- SQL Server joins multiple tables of one remote SQL Server data source.
+- SQL Server joins multiple tables of one remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source.
 - The session that is issuing the query is not enlisted in a distributed transaction.
 
 In this situation, an attempt to run the query may raise either of the two errors that are mentioned in the **Explanation** section.

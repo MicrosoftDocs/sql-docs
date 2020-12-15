@@ -47,30 +47,29 @@ You can enforce referential integrity in several ways. Declarative Referential I
 The following sample code is an example of a FOREIGN KEY creation attempt that generates the error message:
 
 ```sql
-Use tempdb
-go
+USE tempdb
+GO
 
-create table table1 (user_ID integer not null primary key, user_name
-char(50) not null)
-go
+CREATE TABLE table1 (user_ID INTEGER NOT NULL PRIMARY KEY, user_name
+CHAR(50) NOT NULL)
+GO
 
-create table table2 (author_ID integer not null primary key, author_name
-char(50) not null, lastModifiedBy integer not null, addedby integer not
-null)
-go
+CREATE TABLE table2 (author_ID INTEGER NOT NULL PRIMARY KEY, author_name
+CHAR(50) NOT NULL, lastModifiedBy INTEGER NOT NULL, addedby INTEGER NOT NULL)
+GO
 
-alter table table2 add constraint fk_one foreign key (lastModifiedby)
-references table1 (user_ID) on delete cascade on update cascade
-go
+ALTER TABLE table2 ADD CONSTRAINT fk_one FOREIGN KEY (lastModifiedby)
+REFERENCES table1 (user_ID) ON DELETE CASCADE ON UPDATE cascade
+GO
 
-alter table table2 add constraint fk_two foreign key (addedby)
-references table1(user_ID) on delete no action on update cascade
-go
+ALTER TABLE table2 ADD CONSTRAINT fk_two FOREIGN KEY (addedby)
+REFERENCES table1(user_ID) ON DELETE NO ACTION ON UPDATE cascade
+GO
 --this fails with the error because it provides a second cascading path to table2.
 
-alter table table2 add constraint fk_two foreign key (addedby)
-references table1 (user_ID) on delete no action on update no action
-go
+ALTER TABLE table2 ADD CONSTRAINT fk_two FOREIGN KEY (addedby)
+REFERENCES table1 (user_ID) ON DELETE NO ACTION ON UPDATE NO ACTION
+GO
 -- this works.
 ```
 

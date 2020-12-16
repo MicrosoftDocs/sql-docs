@@ -2,7 +2,7 @@
 description: "Azure Key Vault sample"
 title: "Azure Key Vault sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/09/2020"
+ms.date: "12/15/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -17,7 +17,7 @@ ms.author: v-susanh
 
 ## Sample application using Azure Key Vault feature
 
-This application is runnable using JDBC Driver 9.1 and above and Azure-Security-Keyvault (version 4.2.1),  Azure-Identity (version 1.1.3), and their dependencies.  The underlying dependencies can be resolved by adding these libraries to the pom file of the project as described [here](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
+This application is runnable using JDBC Driver 9.2 and above and Azure-Security-Keyvault (version 4.2.1),  Azure-Identity (version 1.1.3), and their dependencies.  The underlying dependencies can be resolved by adding these libraries to the pom file of the project as described [here](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
 
 ```java
 import java.net.URISyntaxException;

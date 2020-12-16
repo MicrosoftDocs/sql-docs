@@ -49,37 +49,10 @@ ms.author: chadam
  Following are some quick ways to troubleshoot errors when backing up to or restoring from the Azure Blob storage service.  
   
  To avoid errors due to unsupported options or limitations, review the list of limitations, and support for BACKUP and RESTORE commands information in the [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) article.  
-  
- **Authentication Errors:**  
-  
--   The `WITH CREDENTIAL` is a new option and required to back up to or restore from the Azure Blob storage service. Failures related to credential could be the following:  
-  
-     The credential specified in the **BACKUP** or **RESTORE** command does not exist. To avoid this issue, you can include T-SQL statements to create the credential if one does not exist in the backup statement. The following is an example you can use:  
-  
-    ```sql  
-    IF NOT EXISTS  
-    (SELECT * FROM sys.credentials   
-    WHERE credential_identity = 'mycredential')  
-    CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
-    , SECRET = '<storage access key>' ;  
-    ```  
-  
--   The credential exists but the login account that is used to run the backup command does not have permissions to access the credentials. Use a login account in the **db_backupoperator** role with ***Alter any credential*** permissions.  
-  
--   Verify the storage account name and key values. The information stored in the credential must match the property values of the Azure storage account you are using in the backup and restore operations.  
-  
- **Backup Errors/Failures:**  
- 
-- When backing up a database, you may see error `Operating system error 50(The request is not supported)` for the following reasons: 
 
-    - The specified storage account is not General Purpose V1/V2.
-    - The SAS token is more than 128 characters.
-    - The SAS token had a `?` symbol at the beginning of the token when the credential was created. If yes, then remove it.
-    - The current connection is unable to connect to the storage account from the current machine using Storage xplorer or SQL Server Management Studio (SSMS). 
-    - The policy assigned to the SAS token is expired. Create a new policy using Azure Storage Explorer and either create a new SAS token using the policy or alter the credential and try backing up again. 
-  
--   Parallel backups to the same blob cause one of the backups to fail with an **Initialization failed** error.  
-  
+
+-   Parallel backups to the same blob cause one of the backups to fail with an **Initialization failed** error. 
+
 -   If you're using page blobs, for example, `BACKUP... TO URL... WITH CREDENTIAL`, use the following error logs to help with troubleshooting backup errors:  
   
     -   Set trace flag 3051 to turn on logging to a specific error log with the following format in:  
@@ -129,6 +102,38 @@ ms.author: chadam
      `Exception Message: The remote server returned an error: (409) Conflict..`  
   
      When such error occurs, the blob files need to be deleted. For more information on this scenario and how to correct this problem, see [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)  
+
+
+### Authentication errors
+  
+
+-   The `WITH CREDENTIAL` is a new option and required to back up to or restore from the Azure Blob storage service. Failures related to credential could be the following:  
+  
+     The credential specified in the **BACKUP** or **RESTORE** command does not exist. To avoid this issue, you can include T-SQL statements to create the credential if one does not exist in the backup statement. The following is an example you can use:  
+  
+    ```sql  
+    IF NOT EXISTS  
+    (SELECT * FROM sys.credentials   
+    WHERE credential_identity = 'mycredential')  
+    CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
+    , SECRET = '<storage access key>' ;  
+    ```  
+  
+-   The credential exists but the login account that is used to run the backup command does not have permissions to access the credentials. Use a login account in the **db_backupoperator** role with ***Alter any credential*** permissions.  
+  
+-   Verify the storage account name and key values. The information stored in the credential must match the property values of the Azure storage account you are using in the backup and restore operations.  
+  
+### Operating system error 50
+ 
+- When backing up a database, you may see error `Operating system error 50(The request is not supported)` for the following reasons: 
+
+    - The specified storage account is not General Purpose V1/V2.
+    - The SAS token is more than 128 characters.
+    - The SAS token had a `?` symbol at the beginning of the token when the credential was created. If yes, then remove it.
+    - The current connection is unable to connect to the storage account from the current machine using Storage xplorer or SQL Server Management Studio (SSMS). 
+    - The policy assigned to the SAS token is expired. Create a new policy using Azure Storage Explorer and either create a new SAS token using the policy or alter the credential and try backing up again. 
+  
+
   
 ## Proxy Errors  
  If you are using Proxy Servers to access the internet, you may see the following issues:  

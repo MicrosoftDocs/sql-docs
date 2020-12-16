@@ -82,18 +82,14 @@ _UOW_
   
 Identifies the Unit of Work ID (UOW) of distributed transactions. _UOW_ is a GUID that may be obtained from the request_owner_guid column of the sys.dm_tran_locks dynamic management view. _UOW_ also can be obtained from the error log or through the MS DTC monitor. For more information about monitoring distributed transactions, see the MS DTC documentation.  
   
-Use KILL _UOW_ to stop orphaned distributed transactions. These transactions aren't associated with any real session ID, but instead are associated artificially with session ID = '-2'. This session ID makes it easier to identify orphaned transactions by querying the session ID column in sys.dm_tran_locks, sys.dm_exec_sessions, or sys.dm_exec_requests dynamic management views.  
+Use KILL \<transaction_ID> _UOW_ to stop unresolved distributed transactions. These transactions aren't associated with any real session ID, but instead are associated artificially with session ID = '-2'. This session ID makes it easier to identify unresolved transactions by querying the session ID column in sys.dm_tran_locks, sys.dm_exec_sessions, or sys.dm_exec_requests dynamic management views.  
 
-  
-_WITH STATUSONLY_
-Generates a progress report about a specified _session ID_ or _UOW_ that is being rolled back because of an earlier KILL statement. KILL WITH STATUSONLY doesn't end or roll back the _session ID_ or _UOW_. The command only displays the current progress of the rollback.
+Use KILL \<transaction_ID> _WITH STATUSONLY_ to generate a progress report about a specified _session ID_ or _UOW_ that is being rolled back because of an earlier KILL statement.
+KILL WITH STATUSONLY doesn't end or roll back the _session ID_ or _UOW_. The command only displays the current progress of the rollback.
 
-_WITH COMMIT_
-Kills an unresolved distributed transaction with commit. See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md) for more information. Only applicable to distributed transactions, you must specify a _UOW_ to use this option. 
+Use KILL \<transaction_ID> _WITH COMMIT_ to kill an an unresolved distributed transaction with commit. See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md) for more information. Only applicable to distributed transactions, you must specify a _UOW_ to use this option. 
 
-_WITH ROLLBACK_
-Kills an unresolved distributed transaction with rollback. See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md) for more information. Only applicable to distributed transactions, you must specify a _UOW_ to use this option. 
-
+Use KILL \<transaction_ID> _WITH ROLLBACK_ to kill an unresolved distributed transaction with rollback. See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md) for more information. Only applicable to distributed transactions, you must specify a _UOW_ to use this option. 
 
   
 ## Remarks  

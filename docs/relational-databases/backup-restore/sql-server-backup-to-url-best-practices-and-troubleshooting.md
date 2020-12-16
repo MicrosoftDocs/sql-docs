@@ -96,9 +96,11 @@ WITH COMPRESSION, MAXTRANSFERSIZE = 4194304, BLOCKSIZE = 65536;
 
 When restoring from a compressed backup, you might see the following error:  
   
-`SqlException 3284 occurred. Severity: 16 State: 5  
+```
+SqlException 3284 occurred. Severity: 16 State: 5  
 Message Filemark on device 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' is not aligned.           
-Reissue the Restore statement with the same block size used to create the backupset: '65536' looks like a possible value.`  
+Reissue the Restore statement with the same block size used to create the backupset: '65536' looks like a possible value.  
+```
   
 To solve this error, reissue the **RESTORE** statement with **BLOCKSIZE = 65536** specified.  
   
@@ -110,7 +112,8 @@ Error during backup due to blobs that have active lease on them:
 If a backup statement is reattempted, backup operation might fail with an error similar to the following:  
 
 ```
-Backup to URL received an exception from the remote endpoint. Exception Message: The remote server returned an error: (412) There is currently a lease on the blob and no lease ID was specified in the request. 
+Backup to URL received an exception from the remote endpoint. Exception Message: 
+The remote server returned an error: (412) There is currently a lease on the blob and no lease ID was specified in the request. 
 ```
 
 If a restore statement is attempted on a backup blob file that has an active lease, the restore operation fails with an error similar to the following:  

@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: "06/08/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"

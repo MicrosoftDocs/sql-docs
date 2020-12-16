@@ -6,7 +6,7 @@ ms.custom: seo-lt-2019
 ms.date: "12/11/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], interoperability"

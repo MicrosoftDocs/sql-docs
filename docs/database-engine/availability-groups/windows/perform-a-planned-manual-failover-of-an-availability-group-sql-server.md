@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: "10/25/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.manualfailover.f1"

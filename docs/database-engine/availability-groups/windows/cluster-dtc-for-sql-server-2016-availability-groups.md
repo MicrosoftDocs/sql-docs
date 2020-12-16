@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "08/30/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: cawrites

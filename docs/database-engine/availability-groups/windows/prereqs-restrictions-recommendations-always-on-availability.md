@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], server instance"

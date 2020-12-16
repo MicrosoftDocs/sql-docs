@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: "10/24/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid:
 author: cawrites

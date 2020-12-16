@@ -1,5 +1,5 @@
 ---
-title: "Backup to URL best practices & troubleshooting"
+title: "Back up to URL best practices & troubleshooting"
 description: Learn about best practices and troubleshooting tips for SQL Server backup and restores to Azure Blob storage.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
@@ -12,7 +12,7 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: cawrites
 ms.author: chadam
 ---
-# SQL Server backup to URL best practices and troubleshooting
+# SQL Server back up to URL best practices and troubleshooting
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
@@ -71,7 +71,7 @@ You can also find information by reviewing the Windows Event Log - Under Applica
 
 **The request could not be performed because of an I/O device error.**
 
-Consider COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE and multiple URL arguments when backing up large databases.  See [Backing up a VLDB to Azure Blob Storage](/archive/blogs/sqlcat/backing-up-a-vldb-to-azure-blob-storage)
+Consider COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE, and multiple URL arguments when backing up large databases.  See [Backing up a VLDB to Azure Blob Storage](/archive/blogs/sqlcat/backing-up-a-vldb-to-azure-blob-storage)
 
 The error: 
 
@@ -123,7 +123,7 @@ When backing up a database, you may see error `Operating system error 50(The req
    - The specified storage account is not General Purpose V1/V2.
    - The SAS token is more than 128 characters.
    - The SAS token had a `?` symbol at the beginning of the token when the credential was created. If yes, then remove it.
-   - The current connection is unable to connect to the storage account from the current machine using Storage xplorer or SQL Server Management Studio (SSMS). 
+   - The current connection is unable to connect to the storage account from the current machine using Storage Explorer or SQL Server Management Studio (SSMS). 
    - The policy assigned to the SAS token is expired. Create a new policy using Azure Storage Explorer and either create a new SAS token using the policy or alter the credential and try backing up again. 
 
 ***Authentication errors**

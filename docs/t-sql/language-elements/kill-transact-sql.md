@@ -91,7 +91,7 @@ Is used to generate a progress report for a specified _UOW_ or _session_ID that 
 KILL WITH STATUSONLY doesn't end or roll back the _UOW_. The command only displays the current progress of the rollback.
 
 _WITH COMMIT_   
-Is used to kill an an unresolved distributed transaction with commit. See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md) for more information. Only applicable to distributed transactions, you must specify a _UOW_ to use this option. 
+Is used to kill an unresolved distributed transaction with commit. See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md) for more information. Only applicable to distributed transactions, you must specify a _UOW_ to use this option. 
 
 _WITH ROLLBACK_   
 Is used to kill an unresolved distributed transaction with rollback. See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md) for more information. Only applicable to distributed transactions, you must specify a _UOW_ to use this option. 

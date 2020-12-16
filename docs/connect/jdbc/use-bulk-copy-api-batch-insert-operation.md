@@ -17,7 +17,7 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC Driver 9.1 for SQL Server and above supports using Bulk Copy API for batch insert operations. This feature allows users to enable driver to do Bulk Copy operation underneath when executing batch insert operations. The driver aims to achieve improvement in performance while inserting the same data as the driver would have with regular batch insert operation. The driver parses the user's SQL Query, using the Bulk Copy API instead of the usual batch insert operation. Below are various ways to enable the Bulk Copy API for batch insert feature and lists its limitations. This page also contains a small sample code that demonstrates a usage and the performance increase as well.
+Microsoft JDBC Driver 9.2 for SQL Server and above supports using Bulk Copy API for batch insert operations. This feature allows users to enable driver to do Bulk Copy operation underneath when executing batch insert operations. The driver aims to achieve improvement in performance while inserting the same data as the driver would have with regular batch insert operation. The driver parses the user's SQL Query, using the Bulk Copy API instead of the usual batch insert operation. Below are various ways to enable the Bulk Copy API for batch insert feature and lists its limitations. This page also contains a small sample code that demonstrates a usage and the performance increase as well.
 
 This feature is only applicable to PreparedStatement and CallableStatement's `executeBatch()` & `executeLargeBatch()` APIs.
 

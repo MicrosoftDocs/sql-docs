@@ -47471,6 +47471,21 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/ssms/tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md",
+      "redirect_url": "/sql/ssms/tutorials/ssms-connect-query-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/tutorials/lesson-1-1-start-sql-server-management-studio.md",
+      "redirect_url": "/sql/ssms/tutorials/ssms-connect-query-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md",
+      "redirect_url": "/sql/ssms/tutorials/ssms-connect-query-sql-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/ssms/tutorials/lesson-1-3-change-the-environment-layout.md",
       "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
       "redirect_document_id": false
@@ -47503,6 +47518,16 @@
     {
       "source_path": "docs/ssms/tutorials/lesson-1-9-summary-basic-navigation.md",
       "redirect_url": "/sql/docs/ssms/tutorials/ssms-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/tutorials/lesson-2-writing-transact-sql.md",
+      "redirect_url": "/sql/ssms/tutorials/ssms-connect-query-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/tutorials/lesson-2-1-connecting-with-query-editor.md",
+      "redirect_url": "/sql/ssms/tutorials/ssms-connect-query-sql-server",
       "redirect_document_id": false
     },
     {
@@ -52393,6 +52418,11 @@
     {
       "source_path": "docs/mdx/analysis-services-language-reference.md",
       "redirect_url": "/sql/mdx/multidimensional-expressions-mdx-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/tutorials/tutorial-sql-server-management-studio.md",
+      "redirect_url": "/sql/ssms/tutorials/ssms-connect-query-sql-server",
       "redirect_document_id": false
     },
     {
@@ -59041,6 +59071,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/ssms/tutorials/connect-query-sql-server.md",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/azure-data-studio/sanddance-extension.md",
       "redirect_url": "/sql/azure-data-studio/extensions/sanddance-extension",
       "redirect_document_id": true
@@ -59056,10 +59091,6 @@
       "redirect_document_id": true
     },
     {
-<<<<<<< HEAD
-      "source_path": "docs/ssms/quickstarts/connect-query-sql-server.md",
-      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
-=======
       "source_path": "docs/tools/sqlpackage.md",
       "redirect_url": "/sql/tools/sqlpackage/sqlpackage",
       "redirect_document_id": true
@@ -59077,7 +59108,11 @@
     {
       "source_path": "docs/tools/release-notes-sqlpackage.md",
       "redirect_url": "/sql/tools/sqlpackage/release-notes-sqlpackage",
->>>>>>> b0ae5f6a469fe2a0b0a4669ac0d949513416a09b
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/quickstarts/connect-query-sql-server.md",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": true
     }
   ]

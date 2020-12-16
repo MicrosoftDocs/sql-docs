@@ -1,5 +1,5 @@
 ---
-title: Install new R packages
+title: Install R packages with sqlmlutils
 description: Learn how to use sqlmlutils to install new R packages to an instance of SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
@@ -12,25 +12,29 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 
-# Install new R packages with sqlmlutils
+# Install R packages with sqlmlutils
 
 [!INCLUDE [SQL Server 2019 SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
-This article describes how to use functions in the [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) package to install new R packages to an instance of [Machine Learning Services on SQL Server](../sql-server-machine-learning-services.md) and on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md). The packages you install can be used in R scripts running in-database using the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL statement.
+This article describes how to use functions in the [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) package to install R packages to an instance of [Machine Learning Services on SQL Server](../sql-server-machine-learning-services.md) and on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md). The packages you install can be used in R scripts running in-database using the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL statement.
 
 > [!NOTE]
 > The **sqlmlutils** package described in this article is used for adding R packages to SQL Server 2019 or later. For SQL Server 2017 and earlier, see [Install packages with R tools](./install-r-packages-standard-tools.md?view=sql-server-2017&preserve-view=true).
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current"
-This article describes how to use functions in the [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) package to install new R packages to an instance of [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). The packages you install can be used in R scripts running in-database using the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL statement.
+This article describes how to use functions in the [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) package to install R packages to an instance of [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). The packages you install can be used in R scripts running in-database using the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL statement.
 ::: moniker-end
 
 ## Prerequisites
 
 - Install [R](https://www.r-project.org) and [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) on the client computer you use to connect to SQL Server. You can use any R IDE for running scripts, but this article assumes RStudio.
 
-  Install the same version of R that's installed on SQL Server. To verify the SQL version, use the following T-SQL command.
+  The version of R on the client computer must match the version of R on the server, and packages you install must be compliant with the version of R you have.
+  For information on which version of R is included with each SQL Server version, see [Python and R versions](../sql-server-machine-learning-services.md#versions).
+  
+  To verify the version of R on a particular SQL Server, use the following T-SQL command.
 
   ```sql
   EXECUTE sp_execute_external_script @language = N'R'
@@ -269,6 +273,17 @@ If you would like to remove the **glue** package, run the following R script. Us
 
 ```R
 sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLIC")
+```
+
+## More sqlmlutils functions
+
+The **sqlmlutils** package contains a number of functions for managing R packages, and for creating, managing, and running stored procedures and queries in a SQL Server. For details, see the [sqlmlutils R README file](https://github.com/microsoft/sqlmlutils/tree/master/R).
+
+For information about any **sqlmlutils** function, use the R **help** function or **?** operator. For example:
+
+```R
+library(sqlmlutils)
+help("sql_install.packages")
 ```
 
 ## Next steps

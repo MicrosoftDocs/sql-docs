@@ -2,7 +2,7 @@
 description: "Azure Key Vault sample version 6.0.0"
 title: "Azure Key Vault sample version 6.0.0 | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "12/12/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -222,5 +222,6 @@ public class AKV_600 {
 
 ## See also
 
+[Azure Key vault sample version 9.1](../../connect/jdbc/azure-key-vault-sample-version-9.1.md)  
 [Azure Key Vault sample version 7.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
 [Azure Key Vault sample version 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)

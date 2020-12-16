@@ -2,7 +2,7 @@
 title: "Connecting using Azure Active Directory authentication"
 description: "Learn how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "12/11/2020"
+ms.date: "12/15/2020"
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
@@ -30,9 +30,9 @@ Possible values are:
     * **ActiveDirectoryPassword**
         * Supported since driver version **v6.0**, `authentication=ActiveDirectoryPassword` can be used to connect to an Azure SQL Database/Data Warehouse using an Azure AD user name and password.
     * **ActiveDirectoryInteractive**
-        * Supported starting driver version **v9.1**, `authentication=ActiveDirectoryInteractive` can be used to connect to an Azure SQL Database/Data Warehouse using an interactive authentication flow.
+        * Supported starting driver version **v9.2**, `authentication=ActiveDirectoryInteractive` can be used to connect to an Azure SQL Database/Data Warehouse using an interactive authentication flow.
     * **ActiveDirectoryServicePrincipal**
-        * Supported starting driver version **v9.1**, `authentication=ActiveDirectoryServicePrincipal` can be used to connect to an Azure SQL Database/Data Warehouse using the client ID and secret of a service principal identity.
+        * Supported starting driver version **v9.2**, `authentication=ActiveDirectoryServicePrincipal` can be used to connect to an Azure SQL Database/Data Warehouse using the client ID and secret of a service principal identity.
     * **SqlPassword**
         * Use `authentication=SqlPassword` to connect to a SQL Server using userName/user and password properties.
     * **NotSpecified**

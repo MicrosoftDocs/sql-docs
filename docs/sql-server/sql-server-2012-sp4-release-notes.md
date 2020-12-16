@@ -226,7 +226,7 @@ Previously, DACFx did not preserve the state (WITH CHECK/NOCHECK) of check const
   
 -   Import BACPAC - Import a .bacpac file to create a new or populate an empty SQL Server or Azure SQL Database.  
   
-Full SqlPackage.exe documentation on MSDN can be found [here](../tools/sqlpackage.md).  
+Full SqlPackage.exe documentation on MSDN can be found [here](../tools/sqlpackage/sqlpackage.md).  
   
 **Package compatibility**  
   

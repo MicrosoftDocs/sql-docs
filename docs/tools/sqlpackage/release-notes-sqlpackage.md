@@ -7,27 +7,14 @@ ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.prod_service: sql-tools
 ms.topic: conceptual
-author: pensivebrian
-ms.author: broneill
-manager: kenvh
+author: dzsquared
+ms.author: drskwier
 ---
 # Release notes for SqlPackage.exe
 
 **[Download the latest version](sqlpackage-download.md)**
 
 This article lists the features and fixes delivered by the released versions of SqlPackage.exe.
-
-<!--
-TODO:
-The Introduction text needs to add clarity regarding the relationship between
-'SqlPackage.exe' and 'DacFx' (the Microsoft 'Data-Tier Application Framework').
-One added sentence would be sufficient.
-
-Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
-
-I discussed this with SStein (SteveStein).
-Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
--->
 
 ## 18.6 sqlpackage
 

@@ -59056,8 +59056,28 @@
       "redirect_document_id": true
     },
     {
+<<<<<<< HEAD
       "source_path": "docs/ssms/quickstarts/connect-query-sql-server.md",
       "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
+=======
+      "source_path": "docs/tools/sqlpackage.md",
+      "redirect_url": "/sql/tools/sqlpackage/sqlpackage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/sqlpackage-download.md",
+      "redirect_url": "/sql/tools/sqlpackage/sqlpackage-download",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/sqlpackage-pipelines.md",
+      "redirect_url": "/sql/tools/sqlpackage/sqlpackage-pipelines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/tools/release-notes-sqlpackage.md",
+      "redirect_url": "/sql/tools/sqlpackage/release-notes-sqlpackage",
+>>>>>>> b0ae5f6a469fe2a0b0a4669ac0d949513416a09b
       "redirect_document_id": true
     }
   ]

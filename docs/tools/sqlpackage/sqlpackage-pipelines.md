@@ -12,7 +12,7 @@ ms.reviewer: "maghan; sstein"
 ms.date: 11/4/2020
 ---
 
-# SqlPackage in Development Pipelines
+# SqlPackage in development pipelines
 
 **SqlPackage.exe** is a command-line utility that automates several database development tasks and can be incorporated into CI/CD pipelines.
 

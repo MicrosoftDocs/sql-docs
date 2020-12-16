@@ -9732,15 +9732,28 @@
       - name: Feedback >> 
         href: https://aka.ms/sqlfeedback
   - name: SqlPackage.exe
+    href: tools/sqlpackage/sqlpackage.md
     items:
     - name: Install sqlpackage
-      href: tools/sqlpackage-download.md
+      href: tools/sqlpackage/sqlpackage-download.md
     - name: Release notes
-      href: tools/release-notes-sqlpackage.md
-    - name: sqlpackage ref
-      href: tools/sqlpackage.md
+      href: tools/sqlpackage/release-notes-sqlpackage.md
+    - name: SqlPackage Actions
+      items:
+      - name: SqlPackage Extract
+        href: tools/sqlpackage/sqlpackage-extract.md
+      - name: SqlPackage Publish
+        href: tools/sqlpackage/sqlpackage-publish.md
+      - name: SqlPackage Export
+        href: tools/sqlpackage/sqlpackage-export.md
+      - name: SqlPackage Import
+        href: tools/sqlpackage/sqlpackage-import.md
+      - name: SqlPackage Deploy & Drift Reports
+        href: tools/sqlpackage/sqlpackage-deploy-drift-report.md
+      - name: SqlPackage Script
+        href: tools/sqlpackage/sqlpackage-script.md
     - name: SqlPackage in development pipelines
-      href: tools/sqlpackage-pipelines.md
+      href: tools/sqlpackage/sqlpackage-pipelines.md
   - name: SQL Server Profiler
     href: tools/sql-server-profiler/sql-server-profiler.md
     items:

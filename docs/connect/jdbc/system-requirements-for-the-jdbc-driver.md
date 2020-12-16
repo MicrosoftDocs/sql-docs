@@ -65,7 +65,7 @@ ms.author: v-daenge
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>9.1.1.jre11</version>
+    <version>9.2.0.jre11</version>
 </dependency>
 ```
 

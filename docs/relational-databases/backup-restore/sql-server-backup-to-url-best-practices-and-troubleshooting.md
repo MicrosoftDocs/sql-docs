@@ -77,7 +77,8 @@ The error:
 
 ```console
 Msg 3202, Level 16, State 1, Line 1
-Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 1117(The request could not be performed because of an I/O device error.)
+Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 
+1117(The request could not be performed because of an I/O device error.)
 Msg 3013, Level 16, State 1, Line 1
 BACKUP DATABASE is terminating abnormally.
 ```
@@ -98,7 +99,7 @@ When restoring from a compressed backup, you might see the following error:
   
 ```
 SqlException 3284 occurred. Severity: 16 State: 5  
-Message Filemark on device 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' is not aligned.           
+Message Filemark on device 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' is not aligned.
 Reissue the Restore statement with the same block size used to create the backupset: '65536' looks like a possible value.  
 ```
   
@@ -132,7 +133,7 @@ When backing up a database, you may see error `Operating system error 50(The req
    - The current connection is unable to connect to the storage account from the current machine using Storage Explorer or SQL Server Management Studio (SSMS). 
    - The policy assigned to the SAS token is expired. Create a new policy using Azure Storage Explorer and either create a new SAS token using the policy or alter the credential and try backing up again. 
 
-***Authentication errors**
+**Authentication errors**
   
 The `WITH CREDENTIAL` is a new option and required to back up to or restore from the Azure Blob storage service.
 

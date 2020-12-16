@@ -2,7 +2,7 @@
 description: "SUSER_NAME (Transact-SQL)"
 title: "SUSER_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "12/12/2020"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, sql-database"
 ms.reviewer: ""
@@ -27,7 +27,7 @@ ms.author: vanto
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SUSER_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Returns the login identification name of the user.  
   

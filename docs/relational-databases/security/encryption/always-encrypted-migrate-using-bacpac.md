@@ -30,7 +30,7 @@ For detailed information about how to export and import a database, see:
 - [Import a BACPAC File to Create a New User Database](../../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)
 - [Export an Azure SQL database to a BACPAC file](/azure/sql-database/sql-database-export)
 - [Import a BACPAC file to a database in Azure SQL Database](/azure/sql-database/sql-database-import)
-- [SqlPackage.exe](../../../tools/sqlpackage.md)
+- [SqlPackage.exe](../../../tools/sqlpackage/sqlpackage.md)
 
 ## Permissions for migrating databases with encrypted columns
 

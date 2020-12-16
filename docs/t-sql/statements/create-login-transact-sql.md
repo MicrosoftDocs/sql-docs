@@ -55,7 +55,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -290,7 +290,7 @@ CHECK_EXPIRATION = OFF ;
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure SQL Database \*_**
@@ -302,7 +302,7 @@ CHECK_EXPIRATION = OFF ;
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -411,7 +411,7 @@ GO
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
@@ -423,7 +423,7 @@ GO
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -615,7 +615,7 @@ GO
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
@@ -627,7 +627,7 @@ GO
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -746,7 +746,7 @@ GO
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)

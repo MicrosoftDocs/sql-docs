@@ -165,6 +165,6 @@ DROP DATABASE sales_snapshot0600;
 ## See Also
 
 - [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

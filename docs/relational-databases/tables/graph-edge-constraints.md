@@ -338,5 +338,4 @@ WHERE EC.parent_object_id = object_id('bought');
 [CREATE TABLE (SQL Graph)](../../t-sql/statements/create-table-sql-graph.md)  
 [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
 
-For information about graph technology in SQL Server, see [Graph processing with SQL Server and Azure SQL Database](../graphs/sql-graph-overview.md?view=sql-server-2017).
-
+For information about graph technology in SQL Server, see [Graph processing with SQL Server and Azure SQL Database](../graphs/sql-graph-overview.md).

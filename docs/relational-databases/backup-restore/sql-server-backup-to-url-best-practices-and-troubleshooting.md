@@ -46,9 +46,10 @@ ms.author: chadam
 -   Using the `WITH COMPRESSION` option as recommended in the [Managing Backups](#managing-backups-mb1) section, it is very important when backing up large files.  
   
 ## Troubleshooting Backup To or Restore from URL  
- Following are some quick ways to troubleshoot errors when backing up to or restoring from the Azure Blob storage service.  
+
+Following are some quick ways to troubleshoot errors when backing up to or restoring from the Azure Blob storage service.  
   
- To avoid errors due to unsupported options or limitations, review the list of limitations, and support for BACKUP and RESTORE commands information in the [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) article.  
+To avoid errors due to unsupported options or limitations, review the list of limitations, and support for BACKUP and RESTORE commands information in the [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) article.  
 
 
 -   Parallel backups to the same blob cause one of the backups to fail with an **Initialization failed** error. 
@@ -68,6 +69,9 @@ ms.author: chadam
     -   You can also find information by reviewing the Windows Event Log - Under Application logs with the name `SQLBackupToUrl`.  
 
     -   Consider COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE and multiple URL arguments when backing up large databases.  See [Backing up a VLDB to Azure Blob Storage](/archive/blogs/sqlcat/backing-up-a-vldb-to-azure-blob-storage)
+
+
+**The request could not be performed because of an I/O device error.**
   
 		```console
 		Msg 3202, Level 16, State 1, Line 1
@@ -84,6 +88,8 @@ ms.author: chadam
         WITH COMPRESSION, MAXTRANSFERSIZE = 4194304, BLOCKSIZE = 65536;  
         ```  
 
+**Message Filemark on device is not aligned.**
+
 -   When restoring from a compressed backup, you might see the following error:  
   
     -   `SqlException 3284 occurred. Severity: 16 State: 5  
@@ -91,6 +97,8 @@ ms.author: chadam
   
         To solve this error, reissue the **RESTORE** statement with **BLOCKSIZE = 65536** specified.  
   
+**Failed backup activity can result in blobs with active leases.**
+
 -   Error during backup due to blobs that have active lease on them: Failed backup activity can result in blobs with active leases.  
   
      If a backup statement is reattempted, backup operation might fail with an error similar to the following:  
@@ -104,7 +112,7 @@ ms.author: chadam
      When such error occurs, the blob files need to be deleted. For more information on this scenario and how to correct this problem, see [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)  
 
 
-### Authentication errors
+***Authentication errors**
   
 
 -   The `WITH CREDENTIAL` is a new option and required to back up to or restore from the Azure Blob storage service. Failures related to credential could be the following:  
@@ -123,7 +131,7 @@ ms.author: chadam
   
 -   Verify the storage account name and key values. The information stored in the credential must match the property values of the Azure storage account you are using in the backup and restore operations.  
   
-### Operating system error 50
+***OS error 50: The request is not supported**
  
 - When backing up a database, you may see error `Operating system error 50(The request is not supported)` for the following reasons: 
 

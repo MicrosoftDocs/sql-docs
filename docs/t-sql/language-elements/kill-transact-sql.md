@@ -89,12 +89,12 @@ _WITH STATUSONLY_
 Is used to generate a progress report for a specified _UOW_ or `session_id` that is being rolled back because of an earlier KILL statement. KILL WITH STATUSONLY doesn't end or roll back the UOW or session ID. The command only displays the current progress of the rollback.
 
 _WITH COMMIT_   
-Is used to kill an unresolved distributed transaction with commit. See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md#manage-unresolved-transactions) for more information. Only applicable to distributed transactions, you must specify a _UOW_ to use this option. 
+Is used to kill an unresolved distributed transaction with commit. Only applicable to distributed transactions, you must specify a _UOW_ to use this option.  See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md#manage-unresolved-transactions) for more information.
 
 [Manage unresolved transactions]
 
 _WITH ROLLBACK_   
-Is used to kill an unresolved distributed transaction with rollback. See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md#manage-unresolved-transactions) for more information. Only applicable to distributed transactions, you must specify a _UOW_ to use this option. 
+Is used to kill an unresolved distributed transaction with rollback. Only applicable to distributed transactions, you must specify a _UOW_ to use this option.  See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md#manage-unresolved-transactions) for more information.
 
 
   

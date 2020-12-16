@@ -65,10 +65,10 @@ KILL 'session_id'
 
 ## Arguments
 
-_session ID_
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later  
+_session ID_   
 Is the session ID of the process to end. _session ID_ is a unique integer (**int**) that is assigned to each user connection when the connection is made. The session ID value is tied to the connection for the duration of the connection. When the connection ends, the integer value is released and can be reassigned to a new connection.  
 The following query can help you identify the `session_id` that you want to kill:  
+
  ```sql  
  SELECT conn.session_id, host_name, program_name,
      nt_domain, login_name, connect_time, last_request_end_time 
@@ -81,7 +81,7 @@ JOIN sys.dm_exec_connections AS conn
 Use KILL \<session_ID> _WITH STATUSONLY_ to generate a progress report about a specified _session ID_ that is being rolled back because of an earlier KILL statement. KILL WITH STATUSONLY doesn't end or roll back the  _session ID_. The command only displays the current progress of the rollback.
 
 
-_UOW_    
+_UOW_   
 Identifies the Unit of Work ID (UOW) of distributed transactions. _UOW_ is a GUID that may be obtained from the request_owner_guid column of the sys.dm_tran_locks dynamic management view. _UOW_ also can be obtained from the error log or through the MS DTC monitor. For more information about monitoring distributed transactions, see the MS DTC documentation.  
   
 Use KILL \<UOW> to stop unresolved distributed transactions. These transactions aren't associated with any real session ID, but instead are associated artificially with session ID = '-2'. This session ID makes it easier to identify unresolved transactions by querying the session ID column in sys.dm_tran_locks, sys.dm_exec_sessions, or sys.dm_exec_requests dynamic management views.  

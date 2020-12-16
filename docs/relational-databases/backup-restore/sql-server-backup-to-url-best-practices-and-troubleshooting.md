@@ -104,12 +104,15 @@ To solve this error, reissue the **RESTORE** statement with **BLOCKSIZE = 65536*
   
 **Failed backup activity can result in blobs with active leases.**
 
-Error during backup due to blobs that have active lease on them: `Failed backup activity can result in blobs with active leases.`  
+Error during backup due to blobs that have active lease on them:
+`Failed backup activity can result in blobs with active leases.`  
 
 If a backup statement is reattempted, backup operation might fail with an error similar to the following:  
-  
-`Backup to URL received an exception from the remote endpoint. Exception Message: The remote server returned an error: (412) There is currently a lease on the blob and no lease ID was specified in the request.`  
-  
+
+```
+Backup to URL received an exception from the remote endpoint. Exception Message: The remote server returned an error: (412) There is currently a lease on the blob and no lease ID was specified in the request. 
+```
+
 If a restore statement is attempted on a backup blob file that has an active lease, the restore operation fails with an error similar to the following:  
   
 `Exception Message: The remote server returned an error: (409) Conflict..`  
@@ -128,17 +131,20 @@ When backing up a database, you may see error `Operating system error 50(The req
 
 ***Authentication errors**
   
-The `WITH CREDENTIAL` is a new option and required to back up to or restore from the Azure Blob storage service. Failures related to credential could be the following:  
+The `WITH CREDENTIAL` is a new option and required to back up to or restore from the Azure Blob storage service.
+
+Failures related to credential could be the following: `The credential specified in the **BACKUP** or **RESTORE** command does not exist. `
+
+To avoid this issue, you can include T-SQL statements to create the credential if one does not exist in the backup statement. The following is an example you can use:  
+
   
-     The credential specified in the **BACKUP** or **RESTORE** command does not exist. To avoid this issue, you can include T-SQL statements to create the credential if one does not exist in the backup statement. The following is an example you can use:  
-  
-    ```sql  
-    IF NOT EXISTS  
-    (SELECT * FROM sys.credentials   
-    WHERE credential_identity = 'mycredential')  
-    CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
-    , SECRET = '<storage access key>' ;  
-    ```  
+```sql  
+IF NOT EXISTS  
+(SELECT * FROM sys.credentials   
+WHERE credential_identity = 'mycredential')  
+CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
+, SECRET = '<storage access key>' ;  
+```  
   
 The credential exists but the login account that is used to run the backup command does not have permissions to access the credentials. Use a login account in the **db_backupoperator** role with ***Alter any credential*** permissions.  
   

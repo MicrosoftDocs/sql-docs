@@ -184,6 +184,6 @@ public class AKV_6_2_2 {
 
 ## See also
 
-[Azure Key vault sample version 9.1](../../connect/jdbc/azure-key-vault-sample-version-9.1.md)  
+[Azure Key vault sample version 9.2](../../connect/jdbc/azure-key-vault-sample-version-9.2.md)  
 [Azure Key Vault sample version 7.0.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
 [Azure Key Vault sample version 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)

@@ -66,9 +66,9 @@ KILL 'session_id'
 ## Arguments
 
 _session ID_   
-Is the session ID of the process to end. _session ID_ is a unique integer (**int**) that is assigned to each user connection when the connection is made. The session ID value is tied to the connection for the duration of the connection. When the connection ends, the integer value is released and can be reassigned to a new connection.  
+Is the session ID of the process to end. `session_id` is a unique integer (**int**) that is assigned to each user connection when the connection is made. The session ID value is tied to the connection for the duration of the connection. When the connection ends, the integer value is released and can be reassigned to a new connection.  
 
-The following query can help you identify the _session_id_ that you want to kill:  
+The following query can help you identify the `session_id` that you want to kill:  
 
  ```sql  
  SELECT conn.session_id, host_name, program_name,
@@ -81,15 +81,15 @@ JOIN sys.dm_exec_connections AS conn
 
 
 _UOW_   
-Identifies the Unit of Work ID (UOW) of distributed transactions. _UOW_ is a GUID that may be obtained from the request_owner_guid column of the sys.dm_tran_locks dynamic management view. _UOW_ also can be obtained from the error log or through the MS DTC monitor. For more information about monitoring distributed transactions, see the MS DTC documentation.  
+Identifies the Unit of Work ID (UOW) of distributed transactions. _UOW_ is a GUID that may be obtained from the request_owner_guid column of the `sys.dm_tran_locks` dynamic management view. _UOW_ also can be obtained from the error log or through the MS DTC monitor. For more information about monitoring distributed transactions, see the MS DTC documentation.  
   
-Use KILL \<UOW> to stop unresolved distributed transactions. These transactions aren't associated with any real session ID, but instead are associated artificially with session ID = '-2'. This session ID makes it easier to identify unresolved transactions by querying the session ID column in sys.dm_tran_locks, sys.dm_exec_sessions, or sys.dm_exec_requests dynamic management views.  
+Use KILL \<UOW> to stop unresolved distributed transactions. These transactions aren't associated with any real session ID, but instead are associated artificially with session ID = '-2'. This session ID makes it easier to identify unresolved transactions by querying the session ID column in `sys.dm_tran_locks`,` sys.dm_exec_sessions`, or `sys.dm_exec_requests` dynamic management views.  
 
 _WITH STATUSONLY_   
-Is used to generate a progress report for a specified _UOW_ or _session_ID_ that is being rolled back because of an earlier KILL statement. KILL WITH STATUSONLY doesn't end or roll back the _UOW_ or _session_ID_. The command only displays the current progress of the rollback.
+Is used to generate a progress report for a specified _UOW_ or `session_id` that is being rolled back because of an earlier KILL statement. KILL WITH STATUSONLY doesn't end or roll back the UOW or session ID. The command only displays the current progress of the rollback.
 
 _WITH COMMIT_   
-Is used to kill an unresolved distributed transaction with commit. See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md) for more information. Only applicable to distributed transactions, you must specify a _UOW_ to use this option. 
+Is used to kill an unresolved distributed transaction with commit. See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md#manage-unresolved-transactions) for more information. Only applicable to distributed transactions, you must specify a _UOW_ to use this option. 
 
 _WITH ROLLBACK_   
 Is used to kill an unresolved distributed transaction with rollback. See [distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md) for more information. Only applicable to distributed transactions, you must specify a _UOW_ to use this option. 

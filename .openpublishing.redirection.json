@@ -47472,17 +47472,17 @@
     },
     {
       "source_path": "docs/ssms/tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/ssms/tutorials/lesson-1-1-start-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/ssms/tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md",
-      "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
     },
     {
@@ -47522,12 +47522,12 @@
     },
     {
       "source_path": "docs/ssms/tutorials/lesson-2-writing-transact-sql.md",
-      "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/ssms/tutorials/lesson-2-1-connecting-with-query-editor.md",
-      "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
     },
     {
@@ -52422,7 +52422,7 @@
     },
     {
       "source_path": "docs/ssms/tutorials/tutorial-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
     },
     {
@@ -59072,7 +59072,7 @@
     },
     {
       "source_path": "docs/ssms/tutorials/connect-query-sql-server.md",
-      "redirect_url": "/sql/ssms/quickstarts/connect-query-sql-server",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
     },
     {
@@ -59109,6 +59109,11 @@
       "source_path": "docs/tools/release-notes-sqlpackage.md",
       "redirect_url": "/sql/tools/sqlpackage/release-notes-sqlpackage",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/quickstarts/connect-query-sql-server.md",
+      "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
+      "redirect_document_id": false
     }
   ]
 }

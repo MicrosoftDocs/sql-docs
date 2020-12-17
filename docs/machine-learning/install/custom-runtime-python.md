@@ -22,7 +22,7 @@ The Python custom runtime allows you to use your own version of the Python runti
 
 ## Prerequisites
 
-Before installing a custom Python runtime, install the following:
+Before installing a Python custom runtime, install the following:
 
 + Install the [Cumulative Update (CU) 3 or later](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) for SQL Server 2019.
 
@@ -35,26 +35,26 @@ Before installing a custom Python runtime, install the following:
 
 ## Install SQL Server Language Extensions
 
-> [!NOTE]
-> If you have Machine Learning Services installed on SQL Server 2019, the extensibility framework is already installed and you can skip this step.
+> [!IMPORTANT]
+> If you have [Machine Learning Services](../sql-server-machine-learning-services.md) installed on SQL Server 2019, Language Extensions is already installed and you can skip this step.
 
-Follow the steps below to install [Language Extensions](../../language-extensions/language-extensions-overview.md), which is used for the custom Python runtime.
+Follow the steps below to install [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md), which is used for the Python custom runtime.
 
 1. Start the setup wizard for SQL Server 2019.
   
 1. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
-    
+
 1. On the **Feature Selection** page, select these options:
   
-    - **Database Engine Services**
+    + **Database Engine Services**
   
         To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
   
-    - **Machine Learning Services and Language Extensions**
-   
-       Select **Machine Learning Services and Language Extensions**. Do not select Python, as you will be installing the custom Python runtime later.
+    + **Machine Learning Services and Language Extensions**
 
-    ![SQL Server 2019 CU3 or later installation features](../install/media/sql-feature-selection.png) 
+        Select **Machine Learning Services and Language Extensions**. Do not select Python, as you will be installing the custom Python runtime later.
+
+        ![SQL Server 2019 CU3 or later installation features](../install/media/sql-feature-selection.png) 
 
 1. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
   

@@ -45,7 +45,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)
+        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -431,7 +431,7 @@ To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
         [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)
+        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -659,7 +659,7 @@ To see this example in use, see [BULK INSERT][bulk_insert_example].
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)
+        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
 

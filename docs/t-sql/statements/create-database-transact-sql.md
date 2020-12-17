@@ -1498,7 +1498,7 @@ Specifies the compute size (service objective). For more information about servi
 
 Use [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) to see the database properties.
 
-Use [ALTER DATABASE - Azure Synapse Analytics](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7) to change the max size, or service objective values later.
+Use [ALTER DATABASE - Azure Synapse Analytics](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) to change the max size, or service objective values later.
 
 Azure Synapse is set to COMPATIBILITY_LEVEL 130 and cannot be changed. For more details, see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
 
@@ -1541,7 +1541,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 ## See Also
 
-- [ALTER DATABASE- Azure Synapse Analytics](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+- [ALTER DATABASE- Azure Synapse Analytics](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 - [CREATE TABLE- Azure Synapse Analytics](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)
 - [DROP DATABASE - Transact-SQL](../../t-sql/statements/drop-database-transact-sql.md)
 
@@ -1699,7 +1699,7 @@ CREATE DATABASE mytest
 
 ## See Also
 
-- [ALTER DATABASE - Analytics Platform System](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+- [ALTER DATABASE - Analytics Platform System](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 
 ::: moniker-end

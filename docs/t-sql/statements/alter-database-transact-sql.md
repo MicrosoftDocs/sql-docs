@@ -54,7 +54,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -307,7 +307,7 @@ GO
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -790,7 +790,7 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -932,7 +932,7 @@ ALTER DATABASE WideWorldImporters
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1091,7 +1091,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 ## See Also
 
-- [CREATE DATABASE (Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
+- [CREATE DATABASE (Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=azure-sqldw-latest)
 - [Azure Synapse Analytics list of reference articles](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
@@ -1326,7 +1326,7 @@ ALTER DATABASE
 
 ## See Also
 
-- [CREATE DATABASE - Analytics Platform System](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
+- [CREATE DATABASE - Analytics Platform System](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 
 ::: moniker-end

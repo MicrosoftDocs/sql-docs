@@ -46,7 +46,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         [Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)
+        [Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -613,7 +613,7 @@ WITH
         [Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)
+        [Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -782,7 +782,7 @@ WITH
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)
+        [Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
 

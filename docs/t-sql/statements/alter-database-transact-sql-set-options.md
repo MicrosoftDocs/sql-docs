@@ -3316,7 +3316,7 @@ SELECT name, is_result_set_caching_on FROM sys.databases
 WHERE name = <'Your_Database_Name'>
 ```
 
-Run this command to check if a query was executed using cached result.  The result_cache_hit column returns 1 for cache hit, 0 for cache miss, and negative values for reasons why result set caching was not used.  Check [sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md?view=aps-pdw-2016-au7) for details.  
+Run this command to check if a query was executed using cached result.  The result_cache_hit column returns 1 for cache hit, 0 for cache miss, and negative values for reasons why result set caching was not used.  Check [sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) for details.  
 
 ```sql
 SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests

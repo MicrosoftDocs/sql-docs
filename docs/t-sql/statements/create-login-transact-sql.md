@@ -49,7 +49,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure SQL<br />Managed Instance](create-login-transact-sql.mdview=azuresqldb-mi-current&preserve-view=true)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
@@ -296,7 +296,7 @@ CHECK_EXPIRATION = OFF ;
         **_\* Azure SQL Database \*_**
     :::column-end:::
     :::column:::
-        [Azure SQL<br />Managed Instance](create-login-transact-sql.mdview=azuresqldb-mi-current&preserve-view=true)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
@@ -621,7 +621,7 @@ GO
         [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure SQL<br />Managed Instance](create-login-transact-sql.mdview=azuresqldb-mi-current&preserve-view=true)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -752,7 +752,7 @@ GO
         [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure SQL<br />Managed Instance](create-login-transact-sql.mdview=azuresqldb-mi-current&preserve-view=true)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)

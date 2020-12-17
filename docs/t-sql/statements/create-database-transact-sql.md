@@ -58,7 +58,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](create-database-transact-sql.mdview=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
@@ -895,7 +895,7 @@ GO
         **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](create-database-transact-sql.mdview=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
@@ -1384,7 +1384,7 @@ The following are `CREATE DATABASE` limitations:
 - `WITH`options are not supported.
 
   > [!TIP]
-  > As workaround, use [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?view=azuresqldb-mi-current). after `CREATE DATABASE` to set database options and to add files.
+  > As workaround, use [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.mdview=azuresqldb-mi-current&preserve-view=true). after `CREATE DATABASE` to set database options and to add files.
 
 ## Permissions
 
@@ -1406,7 +1406,7 @@ CREATE DATABASE TestDB1;
 
 ## See also
 
-See [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+See [ALTER DATABASE](alter-database-transact-sql.mdview=azuresqldb-mi-current&preserve-view=true)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest"
@@ -1419,7 +1419,7 @@ See [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](create-database-transact-sql.mdview=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -1556,7 +1556,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](create-database-transact-sql.mdview=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)

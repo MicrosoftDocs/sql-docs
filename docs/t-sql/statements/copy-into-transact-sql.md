@@ -269,8 +269,8 @@ IDENTITY_INSERT specifies whether the identity value or values in the imported d
 
 The user executing the Copy Command must have the following permissions: 
 
-- [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
-- [INSERT ](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
+- [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md#remarks)
+- [INSERT ](grant-database-permissions-transact-sql.md#remarks)
 
 Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
 

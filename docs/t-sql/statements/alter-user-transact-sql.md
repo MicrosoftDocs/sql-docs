@@ -45,7 +45,7 @@ Renames a database user or changes its default schema.
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-user-transact-sql.mdview=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
@@ -228,7 +228,7 @@ GO
         **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-user-transact-sql.mdview=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
@@ -696,7 +696,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-user-transact-sql.mdview=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -825,7 +825,7 @@ GO
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-user-transact-sql.mdview=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)

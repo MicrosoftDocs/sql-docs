@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: "02/25/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords: 
   - "read-only routing"

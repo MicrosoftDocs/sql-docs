@@ -52,7 +52,7 @@ PASSWORD = '<complex password>';
 
 Always back up your database master key. For more information on database master keys, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
 
-## Example: Encrypt with symmetric encryption & authenticator
+## Example: Encrypt with symmetric encryption and authenticator
   
 1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

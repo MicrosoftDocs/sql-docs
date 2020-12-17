@@ -106,12 +106,34 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 ## Arguments
  PARTITION BY  
  Divides the query result set into partitions. The window function is applied to each partition separately and computation restarts for each partition.  
+ If PARTITION BY is not specified, the function treats all rows of the query result set as a single partition.
+ Function will be applied on all rows in the partition if you don't specify `ORDER BY` clause.
   
  *value_expression*  
- Specifies the column by which the rowset is partitioned. *value_expression* can only refer to columns made available by the FROM clause. *value_expression* cannot refer to expressions or aliases in the select list. *value_expression* can be a column expression, scalar subquery, scalar function, or user-defined variable.  
+ Specifies the column by which the rowset is partitioned. *value_expression* can only refer to columns made available by the FROM clause. *value_expression* cannot refer to expressions or aliases in the select list. *value_expression* can be a column expression, scalar subquery, scalar function, or user-defined variable. 
+ 
+ ```sql
+ select 
+	  object_id, type
+	, [min]	= min(object_id) over(partition by type)
+	, [max]	= max(object_id) over(partition by type)
+from sys.objects
+```
+
+|object_id | type | min | max |
+|---|---|---|---|
+| 68195293	| PK	| 68195293	| 711673583 |
+| 631673298	| PK	| 68195293	| 711673583 |
+| 711673583	| PK	| 68195293	| 711673583 |
+| ... | ...	| ... |
+| 3	| S | 3	| 98 |
+| 5	| S |	3	| 98 |
+| 6	| S |	3	| 98 |
   
  \<ORDER BY clause>  
- Defines the logical order of the rows within each partition of the result set. That is, it specifies the logical order in which the window functioncalculation is performed.  
+ Defines the logical order of the rows within each partition of the result set. That is, it specifies the logical order in which the window function calculation is performed. 
+- If it is not specified, the default order is `ASC` and window function will use all rows in partition.
+- If it is specified, and in ROWS/RANGE is not specified, then default `RANGE UNBOUNDED PRECEDING AND CURRENT ROW` is used as default for window frame by the functions that can accept optional ROWS/RANGE specification (for example `min` or `max`). 
   
  *order_by_expression*  
  Specifies a column or expression on which to sort. *order_by_expression* can only refer to columns made available by the FROM clause. An integer cannot be specified to represent a column name or alias.  
@@ -167,6 +189,22 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  More than one window function can be used in a single query with a single FROM clause. The OVER clause for each function can differ in partitioning and ordering.  
   
  If PARTITION BY is not specified, the function treats all rows of the query result set as a single group. 
+
+```sql
+select 
+	  object_id
+	, [min]				= min(object_id) over()
+	, [max]				= max(object_id) over()
+from sys.objects
+```
+ 
+|object_id | min | max |
+|---|---|---|
+| 3	| 3	| 2139154666 |
+| 5	| 3	| 2139154666 |
+| ... | ...	| ... |
+| 2139154666 |	3 |	2139154666 |
+| 2123154609 |	3	| 2139154666 |
  
 ### Important!
 

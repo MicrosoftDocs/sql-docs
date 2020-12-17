@@ -176,7 +176,7 @@ To create a SQL Server credential, follow these steps:
 In this section, you will back up the AdventureWorks2016 database in your on-premises SQL Server 2016 instance to the Azure container that you created in [Section 1](#1---create-stored-access-policy-and-shared-access-storage).
   
 > [!NOTE]  
-> If you wish to backup a SQL Server 2012 SP1 CU2 or later database or a SQL Server 2014 database to this Azure container, you can use the  deprecated syntax documented [here](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) to backup to URL using the WITH CREDENTIAL syntax.  
+> If you wish to backup a SQL Server 2012 SP1 CU2 or later database or a SQL Server 2014 database to this Azure container, you can use the  deprecated syntax documented [here](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014&preserve-view=true) to backup to URL using the WITH CREDENTIAL syntax.  
   
 To back up a database to Blob storage, follow these steps:  
   

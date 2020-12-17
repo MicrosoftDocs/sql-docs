@@ -54,13 +54,13 @@ In the following row, select whichever product name you're interested in. Doing 
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1488,10 +1488,10 @@ SET QUERY_STORE = ON
         **_\* SQL Database \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -2362,7 +2362,7 @@ SET QUERY_STORE = ON
 - [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 - [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
 - [Statistics](../../relational-databases/statistics/statistics.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-currentls)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [Enable and Disable Change Tracking](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
@@ -2380,13 +2380,13 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -3157,7 +3157,7 @@ SET QUERY_STORE = ON
 - [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 - [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
 - [Statistics](../../relational-databases/statistics/statistics.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
 - [Enable and Disable Change Tracking](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
@@ -3175,10 +3175,10 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -3316,7 +3316,7 @@ SELECT name, is_result_set_caching_on FROM sys.databases
 WHERE name = <'Your_Database_Name'>
 ```
 
-Run this command to check if a query was executed using cached result.  The result_cache_hit column returns 1 for cache hit, 0 for cache miss, and negative values for reasons why result set caching was not used.  Check [sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md?view=aps-pdw-2016-au7) for details.  
+Run this command to check if a query was executed using cached result.  The result_cache_hit column returns 1 for cache hit, 0 for cache miss, and negative values for reasons why result set caching was not used.  Check [sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) for details.  
 
 ```sql
 SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests

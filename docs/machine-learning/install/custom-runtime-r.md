@@ -56,9 +56,9 @@ Language Extensions use the extensibility framework for executing external code.
 
     - **Machine Learning Services and Language Extensions**
 
-       Select **Machine Learning Services and Language Extensions**. There's no need to select R.
+        Select **Machine Learning Services and Language Extensions**. There's no need to select R.
 
-    ![SQL Server 2019 CU3 or later installation features](../install/media/sql-feature-selection.png)
+        :::image type="content" source="media/2019-setup-language-extensions.png" alt-text="SQL Server 2019 Language Extensions setup.":::
 
 1. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
 

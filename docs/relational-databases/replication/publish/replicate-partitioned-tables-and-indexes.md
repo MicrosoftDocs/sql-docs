@@ -72,7 +72,7 @@ Peer-to-peer replication is not supported with partition switching.
 
 Using variables with partition switching on tables published with transactional replication or Change Data Capture (CDC) is not supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement.
 
-For example, the following partition switching code will not work with CDC enabled on TableA, or with TableA participating in a transactional publication: 
+For example, the following partition switching code will not work with CDC enabled on the database, or with TableA participating in a transactional publication: 
 
 ```sql
 DECLARE @SomeVariable INT = $PARTITION.pf_test(10);

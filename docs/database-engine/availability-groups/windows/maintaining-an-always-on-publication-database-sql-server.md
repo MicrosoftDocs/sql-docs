@@ -98,7 +98,7 @@ ms.author: chadam
 
 There may be instances (replacing older server, OS upgrade, etc) where you want to remove an original publisher from an Always On availability group. Follow the steps in this section to remove the publisher from the availability group. 
 
-Assume you have an availability group configured between replicas N1, N2, and D1 as part of availability group AG1. N1 and N2 are the primary and secondary replicas that serve as the publisher, and D1 is the distributor. You would like to replace the original publisher N1 with the new publisher N3. 
+Assume you have servers N1, N2, and D1, where N1 and N2 are the primary and secondary replica of availability group AG1, N1 is the original publisher of a transactional publication and D1 is the distributor. You would like to replace the original publisher N1 with the new publisher N3. 
 
 To remove the publisher, follow these steps: 
 

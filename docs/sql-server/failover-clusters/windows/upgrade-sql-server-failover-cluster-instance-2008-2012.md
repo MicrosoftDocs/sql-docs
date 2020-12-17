@@ -4,7 +4,7 @@ description: Describes how to upgrade your SQL Server failover cluster instances
 ms.date: "06/15/2020"
 ms.custom: seo-lt-2019
 ms.prod: sql
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "upgrading failover clusters"

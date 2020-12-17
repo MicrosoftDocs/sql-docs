@@ -38,11 +38,23 @@ For more information about package location and installation paths, see [Get Pyt
 
 + Install [Azure Data Studio](../../azure-data-studio/what-is.md) on the client computer you use to connect to SQL Server. You can use other database management or query tools, but this article assumes Azure Data Studio.
 
-+ Install the Python kernel in Azure Data Studio. You can also install and use Python from the command line, and you may want a Python development environment such as [Visual Studio Code](https://code.visualstudio.com/download) with the [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
++ Install the Python kernel in Azure Data Studio. You can also install and use Python from the command line, and you can use an alternative Python development environment such as [Visual Studio Code](https://code.visualstudio.com/download) with the [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
+
+  The version of Python on the client computer must match the version of Python on the server, and packages you install must be compliant with the version of Python you have.
+  For information on which version of Python is included with each SQL Server version, see [Python and R versions](../sql-server-machine-learning-services.md#versions).
+  
+  To verify the version of Python on a particular SQL Server instance, use the following T-SQL command.
+
+  ```sql
+  EXECUTE sp_execute_external_script
+    @language = N'Python',
+    @script = N'
+  import sys
+  print(sys.version)
+  '
+  ```
 
 ### Other considerations
-
-+ Packages must be compliant with the version of Python you have, and the version of Python on the server must match the version of Python on the client computer. For information on which version of Python is included with each SQL Server version, see the [Python and R versions](../sql-server-machine-learning-services.md#versions). To confirm the version of Python in a particular SQL instance, see [View the version of Python](python-package-information.md#bkmk_SQLPythonVersion).
 
 + The Python package library is located in the Program Files folder of your SQL Server instance and, by default, installing in this folder requires administrator permissions. For more information, see [Package library location](../package-management/python-package-information.md#default-python-library-location).
 
@@ -150,7 +162,7 @@ Run the following Python script. Substitute the actual file path and name of the
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15"
+::: moniker range=">=sql-server-linux-ver15||=azuresqldb-mi-current"
 
 Run the following Python script. Substitute the actual file path and name of the package, and your own SQL Server database connection information. Repeat the `sqlmlutils.SQLPackageManager` statement for each package file in the folder.
 
@@ -184,6 +196,17 @@ If you would like to remove the **text-tools** package, use the following Python
 
 ```python
 sqlmlutils.SQLPackageManager(connection).uninstall("text-tools")
+```
+
+## More sqlmlutils functions
+
+The **sqlmlutils** package contains a number of functions for managing Python packages, and for creating, managing, and running stored procedures and queries in a SQL Server. For details, see the [sqlmlutils Python README file](https://github.com/microsoft/sqlmlutils/tree/master/Python).
+
+For information about any **sqlmlutils** function, use the Python **help** function. For example:
+
+```Python
+import sqlmlutils
+help(SQLPackageManager.install)
 ```
 
 ## Next steps

@@ -29,7 +29,7 @@ ms.author: jroth
 |[Views](./views-collection-adox.md)|Contains all **View** objects of a catalog.|  
   
 ## See Also  
- [ADOX API Reference](./adox-object-model.md?view=sql-server-ver15)   
+ [ADOX API Reference](./adox-object-model.md)   
  [ADOX Object Model](./adox-object-model.md)   
  [ADOX Objects](./adox-objects.md)   
  [ADO Extensions for Data Definition Language and Security (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

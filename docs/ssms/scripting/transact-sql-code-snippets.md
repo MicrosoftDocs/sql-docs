@@ -30,4 +30,4 @@ A [!INCLUDE[tsql](../../includes/tsql-md.md)].code snippet is a template contain
   
 ## See Also
 
-[Query and Text Editors &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)
+[Query and Text Editors &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)

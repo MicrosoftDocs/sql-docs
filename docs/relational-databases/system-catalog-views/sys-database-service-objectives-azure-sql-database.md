@@ -26,7 +26,7 @@ Returns the edition (service tier), service objective (pricing tier) and elastic
   
  For information on pricing, see [SQL Database options and performance: SQL Database Pricing](https://azure.microsoft.com/pricing/details/sql-database/) and [Azure Synapse Analytics Pricing](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
- To change the service settings, see [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-transact-sql.md) and [ALTER DATABASE (Azure Synapse Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest).  
+ To change the service settings, see [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-transact-sql.md) and [ALTER DATABASE (Azure Synapse Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true).  
   
  The sys.database_service_objectives view contains the following columns.  
   

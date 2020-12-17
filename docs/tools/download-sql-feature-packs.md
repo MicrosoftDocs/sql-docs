@@ -106,8 +106,8 @@ This article provides a brief explanation of the various downloads and stand-alo
 ## See also
 
 - [SQL Server Management Studio documentation](../ssms/download-sql-server-management-studio-ssms.md)
-- [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15)
-- [Additional updates and service packs](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md?view=sql-server-ver15)
+- [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
+- [Additional updates and service packs](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

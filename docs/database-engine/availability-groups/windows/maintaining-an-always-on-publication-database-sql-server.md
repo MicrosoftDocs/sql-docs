@@ -93,6 +93,27 @@ ms.author: chadam
     ```  
   
      At this point, the copy of the published database can be retained or dropped.  
+
+## Remove original publisher
+
+There may be instances (replacing older server, OS upgrade, etc) where you want to remove an original publisher from an Always On availability group. Follow the steps in this section to remove the publisher from the availability group. 
+
+Assume you have an availability group configured between replicas N1, N2, and D1 as part of availability group AG1. N1 and N2 are the primary and secondary replicas that serve as the publisher, and D1 is the distributor. You would like to replace the original publisher N1 with the new publisher N3. 
+
+To remove the publisher, follow these steps: 
+
+1. Install and configure SQL Server to the node N3. The version of SQL Server must be the same as the original publisher. 
+1. On distributor server D1, add N3 as a publisher using [sp_adddistpublisher](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md). 
+1. Configure N3 as a publisher with D1 as its distributor. 
+1. Add N3 as a replica to availability group AG1. 
+1. On the N3 replica, verify that the push subscribers for the publication appear as linked servers. Use either [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or SQL Server Management Studio. 
+1. Once N3 is synchronized, fail the availability group over to N3 as primary. 
+1. Remove N1 from availability group AG1. 
+
+Please consider the following:
+- Do not remove remote server of the original publisher (N1 in this case) or any metadata associated with it from the distributor, even if the server can no longer be accessed. The server metadata for the original publisher is needed at the distributor to satisfy publication metadata queries and without it replication will fail. 
+- For SQL Server 2014, once the original publisher is removed, you will not be able to use original publisher name for administering replication in Replication Monitor. If you try to register new replica/s as publisher in Replication Monitor, information will not show as there is no metadata associated with it. For administering replication in this scenario, you will have to right-click individual publications and subscriptions in SQL Server Management Studio (SSMS).
+- For SQL Server 2016 SP2-CU3, SQL Server 2017 CU6 and above, register the listener of the availability group publisher in Replication Monitor to administer replication using SQL Server Management Studio version 17.7 and above. 
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

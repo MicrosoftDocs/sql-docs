@@ -60,10 +60,35 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  When partitions have the exact same partition scheme at the publishers and subscribers you can turn on *allow_partition_switch* along with *replication_partition_switch* which will only replicate the partition switch statement to the subscriber. You can also turn on *allow_partition_switch* without replicating the DDL. This is useful in the case where you want to roll old months out of the partition but keep the replicated partition in place for another year for backup purposes at the subscriber.  
   
  If you enable partition switching on SQL Server 2008 R2 through the current version, you might also need split and merge operations in near future. Before executing a split or merge operation on a replicated table ensure that the partition in question does not have any pending replicated commands. You should also ensure that no DML operations are executed on the partition during the split and merge operations. If there are transactions which the log reader has not processed, or if DML operations are performed on a partition of a replicated table while a split or merge operation is executed (involving the same partition), it could lead to a processing error with log reader agent. In order to correct the error, it might require a re-initialization of the subscription.  
-  
-> [!WARNING]  
->  You should not enable partition switching for Peer-to-Peer publications, due to the hidden column which is used to detect and resolve conflict.  
-  
+
+### Unsupported scenarios
+
+The following scenarios are supported when using replication with partition switching: 
+
+**Peer-to-peer replication**   
+Peer-to-peer replication is not supported with partition switching. 
+
+**Use of variables with partition switching on tables with CDC**   
+
+Using variables with partition switching on tables with Change Data Capture (CDC) is not supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement.
+
+For example, the following partition switching code will not work with an objected traced by CDC: 
+
+```sql
+DECLARE @SomeVariable INT = $PARTITION.pf_test(10);
+ALTER TABLE dbo.TableA
+SWITCH TO dbo.TableB 
+PARTITION @SomeVariable;
+```
+
+Instead, switch your partition using the partition function directly, such as the following example: 
+
+```sql
+ALTER TABLE NonPartitionedTable 
+SWITCH TO PartitionedTable PARTITION $PARTITION.pf_test(10);
+```
+
+
 ### Enabling Partition Switching  
  The following properties for transactional publications enable users to control the behavior of partition switching in a replicated environment:  
   

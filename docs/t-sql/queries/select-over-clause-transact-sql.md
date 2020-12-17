@@ -131,7 +131,8 @@ from sys.objects
 | 6	| S |	3	| 98 |
   
  \<ORDER BY clause>  
- Defines the logical order of the rows within each partition of the result set. That is, it specifies the logical order in which the window function calculation is performed. - If it is not specified, the default order is `ASC` and window function will use all rows in partition.
+ Defines the logical order of the rows within each partition of the result set. That is, it specifies the logical order in which the window function calculation is performed. 
+- If it is not specified, the default order is `ASC` and window function will use all rows in partition.
 - If it is specified, and in ROWS/RANGE is not specified, then default `RANGE UNBOUNDED PRECEDING AND CURRENT ROW` is used as default for window frame by the functions that can accept optional ROWS/RANGE specification (for example `min` or `max`). 
   
  *order_by_expression*  

@@ -33,7 +33,7 @@ Before installing a Python custom runtime, install the following:
     > [!IMPORTANT]
     > During the installation of Python, check **Add Python 3.7 to PATH**.
 
-## Install SQL Server Language Extensions
+## Install Language Extensions
 
 > [!IMPORTANT]
 > If you have [Machine Learning Services](../sql-server-machine-learning-services.md) installed on SQL Server 2019, Language Extensions is already installed and you can skip this step.

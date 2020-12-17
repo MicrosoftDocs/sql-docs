@@ -54,7 +54,7 @@ Follow the steps below to install [SQL Server Language Extensions](../../languag
 
         Select **Machine Learning Services and Language Extensions**. Do not select Python, as you will be installing the custom Python runtime later.
 
-        ![SQL Server 2019 CU3 or later installation features](../install/media/sql-feature-selection.png) 
+        :::image type="content" source="media/2019-setup-language-extensions.png" alt-text="SQL Server 2019 Language Extensions setup.":::
 
 1. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
   

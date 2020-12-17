@@ -28,16 +28,16 @@ Download and install the latest .NET Framework release and macOS and Linux previ
 For details about the latest release, see the [release notes](release-notes-sqlpackage.md). To download additional languages, see the [Available Languages](#available-languages) section.
 
 ## DacFx
-DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) is a related mechanism for integrating database deployment into your application pipeline.  The DacServices API is available in a package through nuget, [Microsoft.SqlServer.DACFx](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx).  The current DacFx version is 150.4897.1.
+SqlPackage is a command-line interface for the DacFx framework, exposing some of the public DacFx APIs. DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) is a related mechanism for integrating database deployment into your application pipeline.  The DacServices API is available in a package through NuGet, [Microsoft.SqlServer.DACFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DACFx).  The current DacFx version is 150.4897.1.
 
-Installing the nuget package via the .NET CLI is accomplished with this command:
+Installing the NuGet package via the .NET CLI is accomplished with this command:
 
 ```cmd
-> dotnet add package Microsoft.SqlServer.DACFx
+dotnet add package Microsoft.SqlServer.DACFx
 ```
 
 >[!NOTE]
-> Additional nuget packages were published under the DacFx name, "Microsoft.SqlServer.DacFx.x64" and "Microsoft.SqlServer.DacFx.x86". Support for both platforms is covered under the "Microsoft.SqlServer.DACFx" package. New references should be made to this package, not the x64 or x86 variants.
+> Additional NuGet packages were published under the DacFx name, "Microsoft.SqlServer.DacFx.x64" and "Microsoft.SqlServer.DacFx.x86". Support for both platforms is covered under the "Microsoft.SqlServer.DACFx" package. New references should be made to this package, not the x64 or x86 variants.
 
 ## Get sqlpackage for Windows
 

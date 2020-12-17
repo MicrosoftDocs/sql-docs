@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CircularString
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

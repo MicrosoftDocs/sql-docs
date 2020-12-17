@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: f168f0d6-cb11-45d4-9781-c374d7f388ee
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG014005
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

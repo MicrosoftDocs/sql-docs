@@ -16,7 +16,7 @@ ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 author: MightyPen
 ms.author: genemi
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Template Files by Using the CommandStream Property
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

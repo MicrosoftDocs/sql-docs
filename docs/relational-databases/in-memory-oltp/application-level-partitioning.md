@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Application-Level Partitioning
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -12,7 +12,7 @@ dev_langs:
 ms.assetid: 1af14fe0-e562-4f48-a7f0-783f300a88ac
 author: ronortloff
 ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sys.pdw_table_mappings (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

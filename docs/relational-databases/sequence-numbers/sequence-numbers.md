@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sequence Numbers
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

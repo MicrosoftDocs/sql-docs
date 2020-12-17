@@ -13,7 +13,7 @@ dev_langs:
 ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transact-SQL statements
 
@@ -39,6 +39,7 @@ Data Definition Language (DDL) statements defines data structures. Use these sta
 - ENABLE TRIGGER
 - RENAME
 - UPDATE STATISTICS
+- TRUNCATE TABLE
 
 ## Data Manipulation Language
 
@@ -50,7 +51,6 @@ Data Manipulation Language (DML) affect the information stored in the database. 
 - SELECT
 - UPDATE
 - MERGE
-- TRUNCATE TABLE
 
 ## Permissions statements
 

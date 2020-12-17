@@ -187,6 +187,12 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 ## Known issues
 
+### MSDTC capabilities can not be enabled for SQL Server master instance running within BDC
+
+- **Affected releases**: All big data cluster deployment configurations, irrespective of the release.
+
+- **Issue and customer impact**: With SQL Server deployed within BDC as SQL Server master instance, the MSDTC feature can not be enabled. There is no workaround to this issue.
+
 ### HA SQL Server Database Encryption key encryptor rotation
 
 - **Affected releases**: All big data cluster HA deployments irrespective of the release.

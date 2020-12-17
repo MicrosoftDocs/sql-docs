@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 author: "markingmyname"
 ms.author: "maghan"
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SMO Syntax Conventions
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

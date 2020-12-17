@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: fb0c87e5-43b9-466a-a8df-11b3851dc6d0
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_task_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the `Server admin` or an `Azure Active Directory admin` account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
 
 ## Remarks  
  IAM pages are not included in any of the page counts reported by this view.  

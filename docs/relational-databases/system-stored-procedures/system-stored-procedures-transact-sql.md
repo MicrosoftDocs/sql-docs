@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System Stored Procedures (Transact-SQL)
 

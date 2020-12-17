@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Cardinality Estimation (SQL Server)

@@ -10,7 +10,7 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions" 
+monikerRange: ">= sql-server-ver15" 
 ---
 # Configure column encryption in-place with Transact-SQL
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]

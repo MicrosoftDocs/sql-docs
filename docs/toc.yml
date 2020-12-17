@@ -8510,8 +8510,14 @@
         href: ssms/sql-server-management-studio-ssms.md
     - name: Quickstarts
       items:
-      - name: Connect & query SQL Server
-        href: ssms/quickstarts/connect-query-sql-server.md
+      - name: Connect and query SQL Server
+        href: ssms/quickstarts/ssms-connect-query-sql-server.md
+      - name: Connect & query SQL Server on Azure VM
+        href: ssms/quickstarts/ssms-connect-query-sql-server-azure-vm.md
+      - name: Connect and query Azure SQL Database
+        href: ssms/quickstarts/ssms-connect-query-azure-sql.md
+      - name: Connect and query a dedicated SQL pool in Azure Synapse Analytics
+        href: ssms/quickstarts/ssms-connect-query-azure-synapse-analytics.md
     - name: Tutorials
       items:
       - name: SSMS Configuration
@@ -9732,15 +9738,28 @@
       - name: Feedback >> 
         href: https://aka.ms/sqlfeedback
   - name: SqlPackage.exe
+    href: tools/sqlpackage/sqlpackage.md
     items:
     - name: Install sqlpackage
-      href: tools/sqlpackage-download.md
+      href: tools/sqlpackage/sqlpackage-download.md
     - name: Release notes
-      href: tools/release-notes-sqlpackage.md
-    - name: sqlpackage ref
-      href: tools/sqlpackage.md
+      href: tools/sqlpackage/release-notes-sqlpackage.md
+    - name: SqlPackage Actions
+      items:
+      - name: SqlPackage Extract
+        href: tools/sqlpackage/sqlpackage-extract.md
+      - name: SqlPackage Publish
+        href: tools/sqlpackage/sqlpackage-publish.md
+      - name: SqlPackage Export
+        href: tools/sqlpackage/sqlpackage-export.md
+      - name: SqlPackage Import
+        href: tools/sqlpackage/sqlpackage-import.md
+      - name: SqlPackage Deploy & Drift Reports
+        href: tools/sqlpackage/sqlpackage-deploy-drift-report.md
+      - name: SqlPackage Script
+        href: tools/sqlpackage/sqlpackage-script.md
     - name: SqlPackage in development pipelines
-      href: tools/sqlpackage-pipelines.md
+      href: tools/sqlpackage/sqlpackage-pipelines.md
   - name: SQL Server Profiler
     href: tools/sql-server-profiler/sql-server-profiler.md
     items:
@@ -9960,6 +9979,9 @@
       href: linux/sql-server-linux-run-sql-server-agent-job.md
     - name: Setup AD Authentication
       href: linux/sql-server-linux-active-directory-authentication.md
+      items:
+      - name: Setup AD Authentication using adutil
+        href: linux/sql-server-linux-ad-auth-adutil-tutorial.md
     - name: Create failover cluster instance
       href: linux/sql-server-linux-shared-disk-cluster-configure.md
       items:
@@ -10025,6 +10047,8 @@
         href: linux/sql-server-linux-configure-msdtc-docker.md
       - name: Troubleshoot Docker containers
         href: linux/sql-server-linux-docker-container-troubleshooting.md
+      - name: Setup AD Authentication using adutil
+        href: linux/sql-server-linux-containers-ad-auth-adutil-tutorial.md
     - name: Develop
       href: linux/sql-server-linux-develop-overview.md
       items:

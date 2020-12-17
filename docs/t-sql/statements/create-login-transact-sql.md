@@ -27,7 +27,7 @@ helpviewer_keywords:
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE LOGIN (Transact-SQL)
 
@@ -39,7 +39,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -55,7 +55,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -286,11 +286,11 @@ CHECK_EXPIRATION = OFF ;
 - [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure SQL Database \*_**
@@ -302,7 +302,7 @@ CHECK_EXPIRATION = OFF ;
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -407,11 +407,11 @@ GO
 - [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
@@ -423,7 +423,7 @@ GO
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -611,11 +611,11 @@ GO
 - [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
@@ -627,7 +627,7 @@ GO
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -742,11 +742,11 @@ GO
 - [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)

@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: bc5c0be2-990b-4032-a5e6-41ce98661698
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Database Object Management Event Class
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

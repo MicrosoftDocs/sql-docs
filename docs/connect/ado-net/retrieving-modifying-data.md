@@ -1,7 +1,7 @@
 ---
 title: "Retrieving and modifying data"
-description: In the .NET Framework, Microsoft SqlClient Data Provider for SQL Server serves as a bridge between an application and a data source to read and update data.
-ms.date: "11/13/2020"
+description: In .NET, Microsoft SqlClient Data Provider for SQL Server serves as a bridge between an application and a data source to read and update data.
+ms.date: "11/30/2020"
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
 ms.prod: sql
 ms.prod_service: connectivity
@@ -35,6 +35,12 @@ Contains topics describing how to create commands and command builders,
 
 [DataAdapters and DataReaders](dataadapters-datareaders.md)  
 Contains topics describing DataReaders, DataAdapters, parameters, handling DataAdapter events and performing batch operations.
+
+[Transactions and concurrency](transactions-and-concurrency.md)
+Contains topics describing how to perform local transactions, distributed transactions, and work with optimistic concurrency.
+
+[Retrieving database schema information](retrieving-database-schema-information.md)
+Describes how to obtain available databases or catalogs, tables and views in a database, constraints that exist for tables, and other schema information from a data source.
 
 ## See also
 

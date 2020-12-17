@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 440875ab-b0e9-4966-8c16-01503558fedd
 author: jaszymas
 ms.author: jaszymas
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.column_encryption_key_values (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---
 # Specify file storage type using bcp (SQL Server)

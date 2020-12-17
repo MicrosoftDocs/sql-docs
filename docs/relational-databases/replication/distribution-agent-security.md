@@ -15,10 +15,10 @@ helpviewer_keywords:
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Distribution Agent Security
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-2016"
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The **Distribution Agent Security** dialog box allows you to specify the Windows account under which the Distribution Agent runs. The Distribution Agent runs at the Distributor for push subscriptions and at the Subscriber for pull subscriptions. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account is also referred to as the *process account*, because the agent process runs under this account. Additional options available in the dialog box depend on how you access it:  
   
@@ -99,7 +99,7 @@ Persist Security Info=False;Connection Pooling=True;
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  
 ::: moniker-end
   
-::: monikerRange="azuresqldb-mi-current"
+::: moniker range="azuresqldb-mi-current"
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 The **Distribution Agent Security** dialog box allows you to specify the SQL authentication account under which the Distribution Agent runs. The Distribution Agent runs at the Distributor for push subscriptions and at the Subscriber for pull subscriptions.  Additional options available in the dialog box depend on how you access it:  
   

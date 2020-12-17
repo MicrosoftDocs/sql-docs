@@ -12,7 +12,7 @@ dev_langs:
   - "TSQL"
 author: XiaoyuMSFT 
 ms.author: xiaoyul
-monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azure-sqldw-latest"
 ---
 
 # DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  

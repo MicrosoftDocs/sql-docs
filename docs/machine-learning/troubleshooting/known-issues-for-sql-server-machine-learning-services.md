@@ -8,7 +8,7 @@ ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Known issues in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

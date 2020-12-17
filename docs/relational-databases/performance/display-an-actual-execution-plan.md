@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Display an Actual Execution Plan
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

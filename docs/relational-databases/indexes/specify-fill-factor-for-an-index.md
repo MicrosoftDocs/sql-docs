@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || >= sql-server-2016"
 ---
 # Specify Fill Factor for an Index
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

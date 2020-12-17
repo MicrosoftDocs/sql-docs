@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_createstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

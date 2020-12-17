@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 author: cawrites
 ms.author: chadam
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # WSFC cluster service is offline
 

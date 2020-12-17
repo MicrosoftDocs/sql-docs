@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 0f3ae521-6b19-43ad-b2c4-3822adb19591
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONSTRAINT_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

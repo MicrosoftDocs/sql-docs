@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Enhance General Replication Performance
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

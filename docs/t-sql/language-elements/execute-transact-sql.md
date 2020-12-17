@@ -31,7 +31,7 @@ helpviewer_keywords:
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # EXECUTE (Transact-SQL)
@@ -46,7 +46,7 @@ Executes a command string or character string within a [!INCLUDE[tsql](../../inc
   
 ## Syntax  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-ver15"
 The following code block shows the syntax in SQL Server 2019. Alternatively, see [syntax in SQL Server 2017 and earlier](execute-transact-sql.md?view=sql-server-2017&preserve-view=true) instead. 
 
 ```syntaxsql
@@ -109,7 +109,7 @@ Execute a pass-through command against a linked server
 ```  
 ::: moniker-end
 
-::: monikerRange=">=sql-server-2016 ||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 
 The following code block shows the syntax in SQL Server 2017 and earlier. Alternatively, see [syntax in SQL Server 2019](execute-transact-sql.md?view=sql-server-ver15&preserve-view=true) instead.
 

@@ -16,7 +16,7 @@ ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # View Job Step Information
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

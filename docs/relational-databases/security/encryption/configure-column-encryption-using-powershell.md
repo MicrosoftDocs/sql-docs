@@ -11,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure column encryption using Always Encrypted with PowerShell
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 This article provides the steps for setting the target Always Encrypted configuration for database columns using the [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) cmdlet (in the *SqlServer* PowerShell module). The **Set-SqlColumnEncryption** cmdlet modifies both the schema of the target database as well as the data stored in the selected columns. The data stored in a column can be encrypted, re-encrypted, or decrypted, depending on the specified target encryption settings for the columns and the current encryption configuration.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > If you are using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can run cryptographic operations in-place, without moving data out of the database. See [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md). Note that the PowerShell does not support in-place encryption.

@@ -21,7 +21,7 @@ ms.assetid: 4cb37dc6-1134-405d-8590-58b44dcf63b2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Disable or Reactivate an Alert
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

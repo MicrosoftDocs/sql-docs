@@ -88,7 +88,7 @@ The SMO APIs aren't yet available on Linux or macOS in a consumable way. We port
 
 Yes.
 
-[SqlPackage.exe](../tools/sqlpackage-download.md) is now available on .NET Core for Windows, macOS, and Linux.  SQL Projects (SSDT) functionality is enabled in Azure Data Studio in the [SQL Database Projects extension](extensions/sql-database-project-extension.md).
+[SqlPackage.exe](../tools/sqlpackage/sqlpackage-download.md) is now available on .NET Core for Windows, macOS, and Linux.  SQL Projects (SSDT) functionality is enabled in Azure Data Studio in the [SQL Database Projects extension](extensions/sql-database-project-extension.md).
 
 ## Will SQL PowerShell cmdlets be available on Linux and macOS?
 

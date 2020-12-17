@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -33,7 +33,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -96,6 +96,9 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
 The one to three-part name of the table to create. For an external table, SQL stores only the table metadata along with basic statistics about the file or folder that is referenced in Hadoop or Azure blob storage. No actual data is moved or stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+> [!IMPORTANT]
+> For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.  
 
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
@@ -597,11 +600,11 @@ WITH
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_** &nbsp;
@@ -650,6 +653,9 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
 The one to three-part name of the table to create. For an external table, SQL stores only the table metadata along with basic statistics about the file or folder that is referenced in Azure SQL Database. No actual data is moved or stored in Azure SQL Database.
+
+> [!IMPORTANT]
+> For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
 
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
@@ -763,11 +769,11 @@ WITH
 - [Get started with cross-database queries (vertical partitioning)](/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)
@@ -839,6 +845,9 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
 The one to three-part name of the table to create. For an external table, only the table metadata along with basic statistics about the file or folder that is referenced in Azure Data Lake, Hadoop, or Azure blob storage. No actual data is moved or stored when external tables are created.
+
+> [!IMPORTANT]
+> For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
 
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
@@ -1044,11 +1053,11 @@ AS SELECT * FROM
 - [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)
@@ -1103,6 +1112,9 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
 The one to three-part name of the table to create. For an external table, Analytics Platform System stores only the table metadata along with basic statistics about the file or folder that is referenced in Hadoop or Azure blob storage. No actual data is moved or stored in Analytics Platform System.
+
+> [!IMPORTANT]
+> For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
 
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.

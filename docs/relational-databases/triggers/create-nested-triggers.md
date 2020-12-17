@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 author: "rothja"
 ms.author: "jroth"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Nested Triggers
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

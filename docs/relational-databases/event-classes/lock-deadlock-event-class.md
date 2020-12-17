@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Lock:Deadlock Event Class
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

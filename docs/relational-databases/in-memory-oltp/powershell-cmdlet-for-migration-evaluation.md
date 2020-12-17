@@ -186,4 +186,4 @@ And next is an approximation of what the table looks like.
 
 ## Related links
 
-- Reference documentation: [Save-SqlMigrationReport](/powershell/module/sqlserver/save-sqlmigrationreport?view=sqlserver-ps)
+- Reference documentation: [Save-SqlMigrationReport](/powershell/module/sqlserver/save-sqlmigrationreport)

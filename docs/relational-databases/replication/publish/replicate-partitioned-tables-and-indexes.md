@@ -63,16 +63,16 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 
 ### Unsupported scenarios
 
-The following scenarios are supported when using replication with partition switching: 
+The following scenarios are not supported when using replication with partition switching: 
 
 **Peer-to-peer replication**   
 Peer-to-peer replication is not supported with partition switching. 
 
-**Use of variables with partition switching on tables with CDC**   
+**Use of variables with partition switching**   
 
-Using variables with partition switching on tables with Change Data Capture (CDC) is not supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement.
+Using variables with partition switching on tables published with transactional replication or Change Data Capture (CDC) is not supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement.
 
-For example, the following partition switching code will not work with an objected traced by CDC: 
+For example, the following partition switching code will not work with CDC enabled on TableA, or with TableA participating in a transactional publication: 
 
 ```sql
 DECLARE @SomeVariable INT = $PARTITION.pf_test(10);

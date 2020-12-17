@@ -104,7 +104,12 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- PARTITION BY  
+
+### PARTITION BY  
+
+```sqlsyntax
+PARTITION BY *value_expression* 
+```
  Divides the query result set into partitions. The window function is applied to each partition separately and computation restarts for each partition.  
  If PARTITION BY is not specified, the function treats all rows of the query result set as a single partition.
  Function will be applied on all rows in the partition if you don't specify `ORDER BY` clause.
@@ -125,7 +130,7 @@ from sys.objects
 | 2123154609 |	3 | 2139154666 |
 | 2139154666 |	3 | 2139154666 |
   
- PARTITION BY *value_expression*  
+#### PARTITION BY *value_expression*  
  Specifies the column by which the rowset is partitioned. *value_expression* can only refer to columns made available by the FROM clause. *value_expression* cannot refer to expressions or aliases in the select list. *value_expression* can be a column expression, scalar subquery, scalar function, or user-defined variable. 
  
  ```sql
@@ -148,7 +153,12 @@ from sys.objects
 | 98	| S |	3	| 98 |
 | ... | ...	| ... |
   
- \<ORDER BY clause>  
+### ORDER BY  
+
+```sqlsyntax
+ORDER BY *order_by_expression* [collate] [ASC|DESC]  
+```
+
  Defines the logical order of the rows within each partition of the result set. That is, it specifies the logical order in which the window function calculation is performed. 
  - If it is not specified, the default order is `ASC` and window function will use all rows in partition.
  - If it is specified, and in ROWS/RANGE is not specified, then default `RANGE UNBOUNDED PRECEDING AND CURRENT ROW` is used as default for window frame by the functions that can accept optional ROWS/RANGE specification (for example `min` or `max`). 
@@ -164,8 +174,8 @@ from sys.objects
 |object_id | type | min | max |
 |---|---|---|---|
 | 68195293	| PK	| 68195293	| 68195293 |
-| 631673298	| PK	| 68195293	| 711673583 |
-| 711673583	| PK	| 68195293	| 631673298 |
+| 631673298	| PK	| 68195293	| 631673298 |
+| 711673583	| PK	| 68195293	| 711673583 |
 | ... | ...	| ... |
 | 3	| S | 3	| 3 |
 | 5	| S |	3 | 5 |
@@ -185,7 +195,7 @@ from sys.objects
  **ASC** | DESC  
  Specifies that the values in the specified column should be sorted in ascending or descending order. ASC is the default sort order. Null values are treated as the lowest possible values.  
   
- ROWS | RANGE  
+### ROWS | RANGE  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. 
   
  Further limits the rows within the partition by specifying start and end points within the partition. This is done by specifying a range of rows with respect to the current row either by logical association or physical association. Physical association is achieved by using the ROWS clause.  
@@ -195,7 +205,7 @@ from sys.objects
 > [!NOTE]  
 >  ROWS or RANGE requires that the ORDER BY clause be specified. If ORDER BY contains multiple order expressions, CURRENT ROW FOR RANGE considers all columns in the ORDER BY list when determining the current row.  
   
- UNBOUNDED PRECEDING  
+#### UNBOUNDED PRECEDING  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Specifies that the window starts at the first row of the partition. UNBOUNDED PRECEDING can only be specified as window starting point.  
@@ -203,17 +213,20 @@ from sys.objects
  \<unsigned value specification> PRECEDING  
  Specified with \<unsigned value specification>to indicate the number of rows or values to precede the current row. This specification is not allowed for RANGE.  
   
- CURRENT ROW  
+#### CURRENT ROW  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. 
   
  Specifies that the window starts or ends at the current row when used with ROWS or the current value when used with RANGE. CURRENT ROW can be specified as both a starting and ending point.  
   
- BETWEEN \<window frame bound > AND \<window frame bound >  
+#### BETWEEN AND  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. 
   
+```sqlsyntax
+BETWEEN \<window frame bound > AND \<window frame bound >  
+```
  Used with either ROWS or RANGE to specify the lower (starting) and upper (ending) boundary points of the window. \<window frame bound> defines the boundary starting point and \<window frame bound> defines the boundary end point. The upper bound cannot be smaller than the lower bound.  
   
- UNBOUNDED FOLLOWING  
+#### UNBOUNDED FOLLOWING  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. 
   
  Specifies that the window ends at the last row of the partition. UNBOUNDED FOLLOWING can only be specified as a window end point. For example RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING defines a window that starts with the current row and ends with the last row of the partition.  

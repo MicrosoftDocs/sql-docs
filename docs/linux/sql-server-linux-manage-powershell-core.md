@@ -21,10 +21,10 @@ All of the steps PowerShell Core below will work in a regular terminal, or you c
 
 For more information on installing PowerShell Core on various supported and experimental platforms, see the following articles:
 
-- [Installing PowerShell Core on Windows](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
-- [Installing PowerShell Core on Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [Installing PowerShell Core on macOS](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
-- [Installing PowerShell Core on ARM](/powershell/scripting/install/powershell-core-on-arm?view=powershell-6)
+- [Installing PowerShell Core on Windows](/powershell/scripting/install/installing-powershell-core-on-windows)
+- [Installing PowerShell Core on Linux](/powershell/scripting/install/installing-powershell-core-on-linux)
+- [Installing PowerShell Core on macOS](/powershell/scripting/install/installing-powershell-core-on-macos)
+- [Installing PowerShell Core on ARM](/powershell/scripting/install/powershell-core-on-arm)
 
 ## Install the SqlServer module
 

@@ -35,7 +35,7 @@ Before installing a Python custom runtime, install the following:
 
 ## Install Language Extensions
 
-> [!IMPORTANT]
+> [!NOTE]
 > If you have [Machine Learning Services](../sql-server-machine-learning-services.md) installed on SQL Server 2019, Language Extensions is already installed and you can skip this step.
 
 Follow the steps below to install [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md), which is used for the Python custom runtime.
@@ -48,7 +48,7 @@ Follow the steps below to install [SQL Server Language Extensions](../../languag
   
     + **Database Engine Services**
   
-        To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
+        To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a new or an existing instance.
   
     + **Machine Learning Services and Language Extensions**
 
@@ -61,7 +61,7 @@ Follow the steps below to install [SQL Server Language Extensions](../../languag
     + Database Engine Services
     + Machine Learning Services and Language Extensions
 
-1. After the setup is complete, restart the computer if you're ask to do so. 
+1. After the setup is complete, restart the machine if you're asked to do so.
 
 ## Install pandas
 

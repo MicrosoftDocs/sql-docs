@@ -32,7 +32,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 |Partition function|CREATE PARTITION FUNCTION|  
 |Partition scheme|CREATE PARTITION SCHEME|  
   
- The first set of properties related to partitioning are the article schema options that determine whether partitioning objects should be copied to the Subscriber. These schema options can be set in the following ways:  
+ The first set of partitioning properties are the article schema options that determine whether partitioning objects should be copied to the Subscriber. These schema options can be set in the following ways:  
   
 -   In the **Article Properties** page of the New Publication Wizard or the Publication Properties dialog box. To copy the objects listed in the previous table, specify a value of **true** for the properties **Copy table partitioning schemes** and **Copy index partitioning schemes**. For information about how to access the **Article Properties** page, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   

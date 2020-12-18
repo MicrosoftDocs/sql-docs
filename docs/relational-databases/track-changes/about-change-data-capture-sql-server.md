@@ -19,8 +19,7 @@ ms.author: jroth
 # About Change Data Capture (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-> [!NOTE]
-> CDC is now supported for SQL Server 2017 on Linux starting with CU18, and SQL Server 2019 on Linux.
+
 
   Change data capture records insert, update, and delete activity that is applied to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. This makes the details of the changes available in an easily consumed relational format. Column information and the metadata that is required to apply the changes to a target environment is captured for the modified rows and stored in change tables that mirror the column structure of the tracked source tables. Table-valued functions are provided to allow systematic access to the change data by consumers.  
   
@@ -132,9 +131,20 @@ CREATE TABLE T1(
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
 
-## Columnstore indexes
+## Limitations
 
+Change data capture has the following limitations: 
+
+**Linux**   
+CDC is now supported for SQL Server 2017 on Linux starting with CU18, and SQL Server 2019 on Linux.
+
+**Columnstore indexes**   
 Change data capture cannot be enabled on tables with a clustered columnstore index. Starting with SQL Server 2016, it can be enabled on tables with a non-clustered columnstore index.
+
+**Partition switching with variables**   
+Using variables with partition switching on databases or tables with Change Data Capture (CDC) is not supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement. See [partition switching limitations](replicate-partitioned-tables-and-index.md#replication-support-for-partition-switching) to learn more. 
+
+
 
 ## See Also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

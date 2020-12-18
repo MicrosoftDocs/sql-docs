@@ -78,9 +78,9 @@ Add or modify the system environment variable **PYTHONHOME**.
 1. In the Windows search box, type *environment* and select **Edit the system environment variables**.
 1. In the **Advanced** tab, select **Environment Variables**.
 1. Under **System variables**, select **New** to create **PYTHONHOME** to point to your Python 3.7 installation location. If PYTHONHOME already exists, select **Edit** to point it to the Python 3.7 installation location.
-1. Select **OK** to close the window.
+1. Select **OK** to close all the windows.
 
-:::image type="content" source="media/pythonhome-env-variable.png" alt-text="PYTHONHOME environment variable.":::
+    :::image type="content" source="media/pythonhome-env-variable.png" alt-text="PYTHONHOME environment variable.":::
 
 ## Grant access to the custom Python installation folder
 
@@ -94,8 +94,7 @@ Append the instance name to `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME`). In
     icacls "%PYTHONHOME%" /grant "NT Service\MSSQLLAUNCHPAD":(OI)(CI)RX /T
     ```
 
-    > [!NOTE]
-    > For named instance, the command will be `icacls "%PYTHONHOME%" /grant "NT Service\MSSQLLAUNCHPAD$SQL01":(OI)(CI)RX /T`for an instance called **SQL01**.
+    For named instance, the command will be `icacls "%PYTHONHOME%" /grant "NT Service\MSSQLLAUNCHPAD$SQL01":(OI)(CI)RX /T`for an instance called **SQL01**.
 
 2. Give permissions to **SID S-1-15-2-1**.
 
@@ -103,10 +102,11 @@ Append the instance name to `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME`). In
     icacls "%PYTHONHOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
 
-    > [!NOTE]
-    > The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to **ALL APPLICATION PACKAGES** on an English version of Windows. Alternatively, you can use `icacls "%R_HOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
+    The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to **ALL APPLICATION PACKAGES** on an English version of Windows. Alternatively, you can use `icacls "%R_HOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
 
 ## Restart SQL Server Launchpad service
+
+Follow these steps to restart the SQL Server Launchpad service.
 
 From an *elevated* command prompt, run the following commands. Replace "MSSQLSERVER" with the name of your SQL Server instance.
 

@@ -82,7 +82,7 @@ Add or modify the system environment variable **PYTHONHOME**.
 
     :::image type="content" source="media/pythonhome-env-variable.png" alt-text="PYTHONHOME environment variable.":::
 
-## Grant access to the custom Python installation folder
+## Grant access to Python folder
 
 Run the following **icacls** commands from a new *elevated* command prompt to grant **READ & EXECUTE** access to **PYTHONHOME** to **SQL Server Launchpad Service** and SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**).
 
@@ -102,7 +102,7 @@ Run the following **icacls** commands from a new *elevated* command prompt to gr
 
     The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to **ALL APPLICATION PACKAGES** on an English version of Windows. Alternatively, you can use `icacls "%R_HOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
 
-## Restart SQL Server Launchpad service
+## Restart SQL Server Launchpad
 
 Follow these steps to restart the SQL Server Launchpad service.
 
@@ -279,7 +279,7 @@ GO
 
 ::: zone-end
 
-## Enable external script execution in SQL Server
+## Enable external script
 
 An external script in Python can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run against SQL Server.
 
@@ -290,7 +290,7 @@ sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH OVERRIDE;  
 ```
 
-## Verify language extension installation
+## Verify installation
 
 This SQL script tests the functionality of the installed language extension.
 

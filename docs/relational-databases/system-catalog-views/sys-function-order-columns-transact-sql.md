@@ -24,7 +24,7 @@ ms.author: maghan
 # sys.function_order_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Returns one row per column that is a part of an **ORDER** expression of a commmon language runtime (CLR) table-valued function.  
+  Returns one row per column that is a part of an **ORDER** expression of a common language runtime (CLR) table-valued function.  
 
   
 |Column name|Data type|Description|  

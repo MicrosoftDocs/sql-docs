@@ -71,17 +71,16 @@ Install the [pandas](https://pandas.pydata.org/) package for Python from an *ele
 python.exe -m pip install pandas
 ```
 
-## Update the system environment variables
+## Add environment variable
 
-Add or modify PYTHONHOME as a system environment variable.
+Add or modify the system environment variable **PYTHONHOME**.
 
-+ In the Windows search box, type "environment" and select **Edit the system environment variables**.
-+ In the **Advanced** tab, select **Environment Variables**.
-+ Under **System variables**, select **New** to create PYTHONHOME to point to the Python 3.7 installation location.
-If PYTHONHOME already exists, select **Edit** to point it to the Python 3.7 installation location.
-+ Select **OK** to close remaining windows.
+1. In the Windows search box, type *environment* and select **Edit the system environment variables**.
+1. In the **Advanced** tab, select **Environment Variables**.
+1. Under **System variables**, select **New** to create **PYTHONHOME** to point to your Python 3.7 installation location. If PYTHONHOME already exists, select **Edit** to point it to the Python 3.7 installation location.
+1. Select **OK** to close the window.
 
-![Create PYTHONHOME system variable.](../install/media/sys-pythonhome.png)
+:::image type="content" source="media/pythonhome-env-variable.png" alt-text="PYTHONHOME environment variable.":::
 
 ## Grant access to the custom Python installation folder
 

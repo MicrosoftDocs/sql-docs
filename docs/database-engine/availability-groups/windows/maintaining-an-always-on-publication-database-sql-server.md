@@ -57,7 +57,7 @@ ms.author: chadam
   
      Do not remove the remote server for the original publisher from the distributor, even if the server can no longer be accessed. The server metadata for the original publisher is needed at the distributor to satisfy publication metadata queries.  
   
--   If a complete availability group is removed, the behavior with regard to a member replicated database is the same as when a published database is removed from an availability group. Replication can be resumed from the last primary as soon as the database has been restored and the redirection has been modified. If the database is restored at its original publisher, redirection should be removed. If the database is restored at a different host, redirection should be explicitly directed to the new host.  
+-   If a complete availability group is removed, the behavior regarding a member replicated database is the same as when a published database is removed from an availability group. Replication can be resumed from the last primary as soon as the database has been restored and the redirection has been modified. If the database is restored at its original publisher, redirection should be removed. If the database is restored at a different host, redirection should be explicitly directed to the new host.  
   
     > [!NOTE]  
     >  When an availability group is removed that has published member databases, or a published database is removed from an availability group, all copies of the published databases will be left in the recovering state. If restored, each will appear as a published database. Only one copy should be retained with publication metadata. To disable replication for a published database copy, first remove all subscriptions and publications from the database.  
@@ -96,7 +96,7 @@ ms.author: chadam
 
 ## Remove original publisher
 
-There may be instances (replacing older server, OS upgrade, etc) where you want to remove an original publisher from an Always On availability group. Follow the steps in this section to remove the publisher from the availability group. 
+There may be instances (replacing older server, OS upgrade, etc.) where you want to remove an original publisher from an Always On availability group. Follow the steps in this section to remove the publisher from the availability group. 
 
 Assume you have servers N1, N2, and D1, where N1 and N2 are the primary and secondary replica of availability group AG1, N1 is the original publisher of a transactional publication and D1 is the distributor. You would like to replace the original publisher N1 with the new publisher N3. 
 

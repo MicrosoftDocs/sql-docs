@@ -109,24 +109,26 @@ Follow these steps to restart the SQL Server Launchpad service.
 1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 1. Under **SQL Server Services** right click on **SQL Server Lanchpad (MSSQLSERVER)** and select **Restart**. If you using a named instance, the instance name will be shown instead of **(MSSQLSERVER)**.
 
-## Download Python language extension
+## Register Python language extension
 
-Download the **python-lang-extension-windows.zip** file from the [SQL Server Language Extensions GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases).
+1. Download the **python-lang-extension-windows.zip** file from the [SQL Server Language Extensions GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases).
 
-Alternatively, you can use the debug version (**python-lang-extension-windows-debug.zip**) in a development or test environment. The debug version provides verbose logging information to investigate any errors, and is not recommended for production environments.
+    Alternatively, you can use the debug version (**python-lang-extension-windows-debug.zip**) in a development or test environment. The debug version provides verbose logging information to investigate any errors, and is not recommended for production environments.
 
-## Register external language on Windows
+1. Use [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the Python language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md). 
 
-Register this Python language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) for each database you want to use it in. Use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) to connect to SQL Server and run the following T-SQL command. Modify the path in this statement to reflect the location of the downloaded language extension zip file (python-lang-extension.zip).
+    Modify the path in this statement to reflect the location of the downloaded language extension zip file (**python-lang-extension-windows.zip**).
 
-> [!NOTE]
-> **Python** is a reserved word and can't be used as the name for a new external language name. Use a different name instead. For example, you can use **myPython**.
+    ```sql
+    CREATE EXTERNAL LANGUAGE [myPython]
+    FROM (CONTENT = N'/path/to/python-lang-extension.zip', FILE_NAME = 'pythonextension.dll');
+    GO
+    ```
 
-```sql
-CREATE EXTERNAL LANGUAGE [myPython]
-FROM (CONTENT = N'/path/to/python-lang-extension.zip', FILE_NAME = 'pythonextension.dll');
-GO
-```
+    Execute the statement for each database you want to use the Python language extension in.
+
+    > [!NOTE]
+    > **Python** is a reserved word and can't be used as the name for a new external language name. Use a different name instead. For example, you can use **myPython**.
 
 ::: zone-end
 

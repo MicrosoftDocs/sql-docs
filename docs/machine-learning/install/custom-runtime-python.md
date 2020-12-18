@@ -110,7 +110,7 @@ Follow these steps to restart the SQL Server Launchpad service.
 
 1. Under **SQL Server Services**, right click on **SQL Server Lanchpad (MSSQLSERVER)** and select **Restart**. If you using a named instance, the instance name will be shown instead of **(MSSQLSERVER)**.
 
-## Register Python language extension
+## Register language extension
 
 Follow these steps to download and register the Python language extension, which is used for the Python custom runtime.
 

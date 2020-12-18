@@ -105,10 +105,10 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 
 ## Arguments
 
-Window functions mith have the following arguments in their `OVER` clause:
+Window functions might have the following arguments in their `OVER` clause:
 - [PARTITION BY](#partition-by) that divides the query result set into partitions.
 - [ORDER BY](#order-by) that defines the logical order of the rows within each partition of the result set. 
-- [ROWS/RANGE](#rows--range) that limits the rows within the partition by specifying start and end points within the partition.
+- [ROWS/RANGE](#rows-or-range) that limits the rows within the partition by specifying start and end points within the partition. It requires `ORDER BY` argument and the defualt value is from the start of partition to the current element if the `ORDER BY` argument is specified.
 
 If you don't specify any argument, the window functions will be applied on the entire result set.
 ```sql
@@ -201,7 +201,7 @@ from sys.objects
  **ASC** | DESC  
  Specifies that the values in the specified column should be sorted in ascending or descending order. ASC is the default sort order. Null values are treated as the lowest possible values.  
   
-### ROWS | RANGE  
+### ROWS or RANGE  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. 
   
  Further limits the rows within the partition by specifying start and end points within the partition. This is done by specifying a range of rows with respect to the current row either by logical association or physical association. Physical association is achieved by using the ROWS clause.  

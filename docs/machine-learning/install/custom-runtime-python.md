@@ -112,6 +112,8 @@ Follow these steps to restart the SQL Server Launchpad service.
 
 ## Register Python language extension
 
+Follow these steps to download and register the Python language extension, which is used for the Python custom runtime.
+
 1. Download the **python-lang-extension-windows.zip** file from the [SQL Server Language Extensions GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases).
 
     Alternatively, you can use the debug version (**python-lang-extension-windows-debug.zip**) in a development or test environment. The debug version provides verbose logging information to investigate any errors, and is not recommended for production environments.

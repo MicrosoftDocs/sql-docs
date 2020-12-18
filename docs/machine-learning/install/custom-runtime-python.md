@@ -111,7 +111,9 @@ Follow these steps to restart the SQL Server Launchpad service.
 
 ## Download Python language extension
 
-Download the [zip file containing the Python language extension for Windows](https://github.com/microsoft/sql-server-language-extensions/releases). Recommended to use the release version in production. Use the debug version in development or test since it provides verbose logging information to investigate any errors.
+Download the **python-lang-extension-windows.zip** file from the [SQL Server Language Extensions GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases).
+
+Alternatively, you can use the debug version (**python-lang-extension-windows-debug.zip**) in a development or test environment. The debug version provides verbose logging information to investigate any errors, and is not recommended for production environments.
 
 ## Register external language on Windows
 

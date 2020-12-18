@@ -32,5 +32,5 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |Describes the conditions under which IntelliSense may not work.|Troubleshooting IntelliSense (SQL Server Management Studio)|  
   
 ## See Also  
- [Query and Text Editors &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)  
+ [Query and Text Editors &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)  
   

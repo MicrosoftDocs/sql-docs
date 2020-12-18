@@ -203,6 +203,6 @@ ms.author: maggies
   
 ## See Also  
  [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Troubleshoot Report Builder](/previous-versions/sql/2014/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
+ [Troubleshoot Report Builder](/previous-versions/sql/2014/reporting-services/troubleshoot-report-builder?view=sql-server-2014&preserve-view=true)  
   
   

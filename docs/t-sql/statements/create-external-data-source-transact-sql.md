@@ -39,13 +39,13 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)
+        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -401,8 +401,8 @@ To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 [create_dsc]: ./create-database-scoped-credential-transact-sql.md
 [create_eff]: ./create-external-file-format-transact-sql.md
 [create_etb]: ./create-external-table-transact-sql.md
-[create_etb_as_sel]: ./create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest
-[create_tbl_as_sel]: ./create-table-as-select-azure-sql-data-warehouse.md?view=azure-sqldw-latest
+[create_etb_as_sel]: ./create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true
+[create_tbl_as_sel]: ./create-table-as-select-azure-sql-data-warehouse.md?view=azure-sqldw-latest&preserve-view=true
 
 [alter_eds]: ./alter-external-data-source-transact-sql.md
 
@@ -428,10 +428,10 @@ To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
         **_\* SQL Database \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)
+        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -653,13 +653,13 @@ To see this example in use, see [BULK INSERT][bulk_insert_example].
         [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)
+        [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -670,7 +670,7 @@ To see this example in use, see [BULK INSERT][bulk_insert_example].
 Creates an external data source for PolyBase. External data sources are used to establish connectivity and support the following primary use case: Data virtualization and data load using [PolyBase][intro_pb]
 
 > [!IMPORTANT]  
-> To create an external data source to query a SQL Analytics resource using Azure SQL Database with [elastic query][remote_eq], see [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current).
+> To create an external data source to query a SQL Analytics resource using Azure SQL Database with [elastic query][remote_eq], see [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current&preserve-view=true).
 
 ## Syntax
 
@@ -892,8 +892,8 @@ WITH
 [create_dsc]: ./create-database-scoped-credential-transact-sql.md
 [create_eff]: ./create-external-file-format-transact-sql.md
 [create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
-[create_etb_as_sel]: ./create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest
-[create_tbl_as_sel]: ./create-table-as-select-azure-sql-data-warehouse.md?view=azure-sqldw-latest
+[create_etb_as_sel]: ./create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true
+[create_tbl_as_sel]: ./create-table-as-select-azure-sql-data-warehouse.md?view=azure-sqldw-latest&preserve-view=true
 
 [alter_eds]: ./alter-external-data-source-transact-sql.md
 
@@ -923,10 +923,10 @@ WITH
         [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
@@ -1138,8 +1138,8 @@ WITH
 [create_dsc]: ./create-database-scoped-credential-transact-sql.md
 [create_eff]: ./create-external-file-format-transact-sql.md
 [create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
-[create_etb_as_sel]: ./create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest
-[create_tbl_as_sel]: ./create-table-as-select-azure-sql-data-warehouse.md?view=azure-sqldw-latest
+[create_etb_as_sel]: ./create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true
+[create_tbl_as_sel]: ./create-table-as-select-azure-sql-data-warehouse.md?view=azure-sqldw-latest&preserve-view=true
 
 [alter_eds]: ./alter-external-data-source-transact-sql.md
 

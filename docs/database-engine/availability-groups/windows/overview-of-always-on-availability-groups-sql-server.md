@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "04/29/2020"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "secondary databases [SQL Server], in availability group"

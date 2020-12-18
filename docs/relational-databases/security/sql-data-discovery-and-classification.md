@@ -110,7 +110,7 @@ You can manage the information protection policy using [SSMS 18.4](../../ssms/do
 SQL Server 2019 introduces [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) system catalog view. This view returns information types and sensitivity labels. 
 
 > [!NOTE]
-> This view requires **VIEW ANY SENSITIVITY CLASSIFICATION** permission. For more information, see [Metadata Visibility Configuration](./metadata-visibility-configuration.md?view=sql-server-ver15).
+> This view requires **VIEW ANY SENSITIVITY CLASSIFICATION** permission. For more information, see [Metadata Visibility Configuration](./metadata-visibility-configuration.md).
 
 On SQL Server 2019 instances, query `sys.sensitivity_classifications` to review all classified columns with their corresponding classifications. For example: 
 
@@ -190,12 +190,10 @@ You can use T-SQL to add/remove column classifications, as well as retrieve all 
 # [PowerShell Cmdlet](#tab/sql-powelshell)
 You can use PowerShell Cmdlet to add/remove column classifications, as well as retrieve all classifications and get recommendations for the entire database.
 
-- [Get-SqlSensitivityClassification](/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
-- [Get-SqlSensitivityRecommendations](/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
-- [Set-SqlSensitivityClassification](/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
-- [Remove-SqlSensitivityClassification](/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
-
----
+- [Get-SqlSensitivityClassification](/powershell/module/sqlserver/Get-SqlSensitivityClassification)
+- [Get-SqlSensitivityRecommendations](/powershell/module/sqlserver/Get-SqlSensitivityRecommendations)
+- [Set-SqlSensitivityClassification](/powershell/module/sqlserver/Set-SqlSensitivityClassification)
+- [Remove-SqlSensitivityClassification](/powershell/module/sqlserver/Remove-SqlSensitivityClassification)
 
 ## <a id="subheading-6"></a>Next steps
 

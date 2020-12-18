@@ -427,7 +427,7 @@ This updates the SQL Server image for any new containers you create, but it does
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-- Get started with SQL Server 2019 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md?view=sql-server-ver15)
+- Get started with SQL Server 2019 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md)
 
 ::: moniker-end
 

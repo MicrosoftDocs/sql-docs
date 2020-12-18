@@ -45,16 +45,16 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -301,13 +301,13 @@ GO
         **_\* SQL Database \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -322,10 +322,10 @@ Because of its length, the `ALTER DATABASE` syntax is separated into the multipl
 ALTER DATABASE   
 The current article provides the syntax and related information for changing the name and the collation of a database.
 
-[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-currentls)    
+[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true)    
 Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE.
 
-[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-currentls)   
+[ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-current&preserve-view=true)   
 Provides the syntax and related information for the SET options of ALTER DATABASE that are related to database compatibility levels.
 
 ## Syntax
@@ -758,7 +758,7 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
 
 ## See also
 
-- [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-currentls)
+- [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
@@ -781,16 +781,16 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
         [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -901,7 +901,7 @@ ALTER DATABASE WideWorldImporters
 
 ## See also
 
-- [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current)
+- [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
@@ -923,16 +923,16 @@ ALTER DATABASE WideWorldImporters
         [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1091,7 +1091,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 ## See Also
 
-- [CREATE DATABASE (Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
+- [CREATE DATABASE (Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
 - [Azure Synapse Analytics list of reference articles](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
@@ -1102,13 +1102,13 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
         [SQL Server](alter-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
@@ -1326,7 +1326,7 @@ ALTER DATABASE
 
 ## See Also
 
-- [CREATE DATABASE - Analytics Platform System](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
+- [CREATE DATABASE - Analytics Platform System](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 
 ::: moniker-end

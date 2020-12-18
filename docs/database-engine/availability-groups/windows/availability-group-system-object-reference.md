@@ -5,7 +5,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "04/03/2010"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: reference
 author: cawrites
 ms.author: chadam

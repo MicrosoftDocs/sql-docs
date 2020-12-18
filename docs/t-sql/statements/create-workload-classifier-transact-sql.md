@@ -80,7 +80,7 @@ SELECT COUNT(*)
 ```
 
 *WLM_CONTEXT*  
-Specifies the session context value that a request can be classified against.  context is an optional parameter of type nvarchar(255).  Use the [sys.sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest) with the variable name equal to `wlm_context` prior to submitting a request to set the session context.
+Specifies the session context value that a request can be classified against.  context is an optional parameter of type nvarchar(255).  Use the [sys.sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) with the variable name equal to `wlm_context` prior to submitting a request to set the session context.
 
 Example:
 

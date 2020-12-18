@@ -883,7 +883,7 @@ WHERE r.command = 'RESTORE DATABASE'
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_**

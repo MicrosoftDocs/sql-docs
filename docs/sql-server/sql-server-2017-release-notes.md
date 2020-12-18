@@ -24,7 +24,7 @@ This article describes limitations and issues with SQL Server 2017. For related 
 - [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Spin up a Virtual Machine with SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 > [!NOTE]
-> SQL Server 2019 preview is now available. For more information, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
+> SQL Server 2019 preview is now available. For more information, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15&preserve-view=true).
 
 ## SQL Server 2017 - general availability release (October 2017)
 ### Database Engine

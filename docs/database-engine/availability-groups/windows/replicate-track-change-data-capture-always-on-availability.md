@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "08/21/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change tracking [SQL Server], AlwaysOn Availability Groups"

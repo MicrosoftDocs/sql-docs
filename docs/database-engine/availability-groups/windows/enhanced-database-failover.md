@@ -4,7 +4,7 @@ description: "Steps to enable enhanced database failover, which triggers a failo
 ms.custom: "seodec18"
 ms.date: 06/03/2020
 ms.prod: sql
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
 - "Availability Groups [SQL Server], enhanced database failover"

@@ -284,9 +284,9 @@ GO
 
 ## Enable external script
 
-An external script in Python can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run against SQL Server.
+A Python external script can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-To enable external scripts, execute the following SQL commands using [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md), connected to SQL Server.
+To enable external scripts, use [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to execute the statement below.
 
 ```sql
 sp_configure 'external scripts enabled', 1;
@@ -295,7 +295,7 @@ RECONFIGURE WITH OVERRIDE;
 
 ## Verify installation
 
-This SQL script tests the functionality of the installed language extension.
+Use the following SQL script to verify the installation and functionality of the Python custom runtime.
 
 ```sql
 EXEC sp_execute_external_script

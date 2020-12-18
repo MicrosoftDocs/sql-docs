@@ -105,15 +105,12 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 
 ## Arguments
 
-### PARTITION BY  
+Window functions might have the following arguments in their `OVER` clause:
+- [PARTITION BY](#partition-by) that divides the query result set into partitions.
+- [ORDER BY](#order-by) that defines the logical order of the rows within each partition of the result set. 
+- [ROWS/RANGE](#rows-or-range) that limits the rows within the partition by specifying start and end points within the partition. It requires `ORDER BY` argument and the default value is from the start of partition to the current element if the `ORDER BY` argument is specified.
 
-```sqlsyntax
-PARTITION BY *value_expression* 
-```
- Divides the query result set into partitions. The window function is applied to each partition separately and computation restarts for each partition.  
- If PARTITION BY is not specified, the function treats all rows of the query result set as a single partition.
- Function will be applied on all rows in the partition if you don't specify `ORDER BY` clause.
- 
+If you don't specify any argument, the window functions will be applied on the entire result set.
 ```sql
 select 
 	  object_id
@@ -129,6 +126,16 @@ from sys.objects
 | ... | ... | ... |
 | 2123154609 |	3 | 2139154666 |
 | 2139154666 |	3 | 2139154666 |
+
+### PARTITION BY  
+ Divides the query result set into partitions. The window function is applied to each partition separately and computation restarts for each partition.  
+
+```sqlsyntax
+PARTITION BY *value_expression* 
+```
+ 
+ If PARTITION BY is not specified, the function treats all rows of the query result set as a single partition.
+ Function will be applied on all rows in the partition if you don't specify `ORDER BY` clause.
   
 #### PARTITION BY *value_expression*  
  Specifies the column by which the rowset is partitioned. *value_expression* can only refer to columns made available by the FROM clause. *value_expression* cannot refer to expressions or aliases in the select list. *value_expression* can be a column expression, scalar subquery, scalar function, or user-defined variable. 
@@ -156,7 +163,7 @@ from sys.objects
 ### ORDER BY  
 
 ```sqlsyntax
-ORDER BY *order_by_expression* [collate] [ASC|DESC]  
+ORDER BY *order_by_expression* [COLLATE *collation_name*] [ASC|DESC]  
 ```
 
  Defines the logical order of the rows within each partition of the result set. That is, it specifies the logical order in which the window function calculation is performed. 
@@ -195,12 +202,35 @@ from sys.objects
  **ASC** | DESC  
  Specifies that the values in the specified column should be sorted in ascending or descending order. ASC is the default sort order. Null values are treated as the lowest possible values.  
   
-### ROWS | RANGE  
+### ROWS or RANGE  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. 
   
  Further limits the rows within the partition by specifying start and end points within the partition. This is done by specifying a range of rows with respect to the current row either by logical association or physical association. Physical association is achieved by using the ROWS clause.  
   
  The ROWS clause limits the rows within a partition by specifying a fixed number of rows preceding or following the current row. Alternatively, the RANGE clause logically limits the rows within a partition by specifying a range of values with respect to the value in the current row. Preceding and following rows are defined based on the ordering in the ORDER BY clause. The window frame "RANGE ... CURRENT ROW ..." includes all rows that have the same values in the ORDER BY expression as the current row. For example, ROWS BETWEEN 2 PRECEDING AND CURRENT ROW means that the window of rows that the function operates on is three rows in size, starting with 2 rows preceding until and including the current row.  
+ 
+```sql
+select
+	  object_id
+	, [preceding]	= count(*) over(order by object_id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW )
+	, [central]	= count(*) over(order by object_id ROWS BETWEEN 2 PRECEDING AND 2 FOLLOWING )
+	, [following]	= count(*) over(order by object_id ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
+from sys.objects
+order by object_id asc
+```
+
+|object_id | preceding | central | following |
+|---|---|---|---|
+| 3	| 1	| 3	| 156 |
+| 5	| 2	| 4	| 155 |
+| 6	| 3	| 5	| 154 |
+| 7	| 4	| 5	| 153 |
+| 8	| 5	| 5	| 152 |
+| ...   | ...	| ...   | ... |
+| 2112726579	| 153	| 5	| 4 |
+| 2119678599	| 154	| 5	| 3 |
+| 2123154609	| 155	| 4	| 2 |
+| 2139154666	| 156	| 3	| 1 | 
   
 > [!NOTE]  
 >  ROWS or RANGE requires that the ORDER BY clause be specified. If ORDER BY contains multiple order expressions, CURRENT ROW FOR RANGE considers all columns in the ORDER BY list when determining the current row.  
@@ -222,7 +252,7 @@ from sys.objects
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. 
   
 ```sqlsyntax
-BETWEEN \<window frame bound > AND \<window frame bound >  
+BETWEEN <window frame bound > AND <window frame bound >  
 ```
  Used with either ROWS or RANGE to specify the lower (starting) and upper (ending) boundary points of the window. \<window frame bound> defines the boundary starting point and \<window frame bound> defines the boundary end point. The upper bound cannot be smaller than the lower bound.  
   

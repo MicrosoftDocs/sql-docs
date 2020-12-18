@@ -108,7 +108,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 Window functions might have the following arguments in their `OVER` clause:
 - [PARTITION BY](#partition-by) that divides the query result set into partitions.
 - [ORDER BY](#order-by) that defines the logical order of the rows within each partition of the result set. 
-- [ROWS/RANGE](#rows-or-range) that limits the rows within the partition by specifying start and end points within the partition. It requires `ORDER BY` argument and the defualt value is from the start of partition to the current element if the `ORDER BY` argument is specified.
+- [ROWS/RANGE](#rows-or-range) that limits the rows within the partition by specifying start and end points within the partition. It requires `ORDER BY` argument and the default value is from the start of partition to the current element if the `ORDER BY` argument is specified.
 
 If you don't specify any argument, the window functions will be applied on the entire result set.
 ```sql
@@ -128,11 +128,12 @@ from sys.objects
 | 2139154666 |	3 | 2139154666 |
 
 ### PARTITION BY  
+ Divides the query result set into partitions. The window function is applied to each partition separately and computation restarts for each partition.  
 
 ```sqlsyntax
 PARTITION BY *value_expression* 
 ```
- Divides the query result set into partitions. The window function is applied to each partition separately and computation restarts for each partition.  
+ 
  If PARTITION BY is not specified, the function treats all rows of the query result set as a single partition.
  Function will be applied on all rows in the partition if you don't specify `ORDER BY` clause.
   

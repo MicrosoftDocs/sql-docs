@@ -142,7 +142,7 @@ CDC is now supported for SQL Server 2017 on Linux starting with CU18, and SQL Se
 Change data capture cannot be enabled on tables with a clustered columnstore index. Starting with SQL Server 2016, it can be enabled on tables with a non-clustered columnstore index.
 
 **Partition switching with variables**   
-Using variables with partition switching on databases or tables with Change Data Capture (CDC) is not supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement. See [partition switching limitations](replicate-partitioned-tables-and-index.md#replication-support-for-partition-switching) to learn more. 
+Using variables with partition switching on databases or tables with Change Data Capture (CDC) is not supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement. See [partition switching limitations](../replication/publish/replicate-partitioned-tables-and-indexes.md#replication-support-for-partition-switching) to learn more. 
 
 
 

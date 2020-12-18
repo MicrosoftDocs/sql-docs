@@ -107,7 +107,8 @@ Run the following **icacls** commands from a new *elevated* command prompt to gr
 Follow these steps to restart the SQL Server Launchpad service.
 
 1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
-1. Under **SQL Server Services** right click on **SQL Server Lanchpad (MSSQLSERVER)** and select **Restart**. If you using a named instance, the instance name will be shown instead of **(MSSQLSERVER)**.
+
+1. Under **SQL Server Services**, right click on **SQL Server Lanchpad (MSSQLSERVER)** and select **Restart**. If you using a named instance, the instance name will be shown instead of **(MSSQLSERVER)**.
 
 ## Register Python language extension
 
@@ -128,7 +129,7 @@ Follow these steps to restart the SQL Server Launchpad service.
     Execute the statement for each database you want to use the Python language extension in.
 
     > [!NOTE]
-    > **Python** is a reserved word and can't be used as the name for a new external language name. Use a different name instead. For example, you can use **myPython**.
+    > **Python** is a reserved word and can't be used as the name for a new external language name. Use a different name instead. For example, the statement above uses **myPython**.
 
 ::: zone-end
 

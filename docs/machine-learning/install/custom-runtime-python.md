@@ -84,9 +84,7 @@ Add or modify the system environment variable **PYTHONHOME**.
 
 ## Grant access to the custom Python installation folder
 
-Run the following **icacls** commands from a new *elevated* command prompt to grant READ & EXECUTE access to PYTHONHOME to **SQL Server Launchpad Service** and SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**). The launchpad service username is: `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME` is the instance name of your SQL Server. The commands will recursively grant access to all files and folders under the given directory path.
-
-Append the instance name to `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME`). In this example, INSTANCENAME is the default instance `MSSQLSERVER`.
+Run the following **icacls** commands from a new *elevated* command prompt to grant **READ & EXECUTE** access to **PYTHONHOME** to **SQL Server Launchpad Service** and SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**).
 
 1. Give permissions to **SQL Server Launchpad Service user name**.
 
@@ -94,7 +92,7 @@ Append the instance name to `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME`). In
     icacls "%PYTHONHOME%" /grant "NT Service\MSSQLLAUNCHPAD":(OI)(CI)RX /T
     ```
 
-    For named instance, the command will be `icacls "%PYTHONHOME%" /grant "NT Service\MSSQLLAUNCHPAD$SQL01":(OI)(CI)RX /T`for an instance called **SQL01**.
+    For named instance, the command will be `icacls "%PYTHONHOME%" /grant "NT Service\MSSQLLAUNCHPAD$SQL01":(OI)(CI)RX /T` for an instance called **SQL01**.
 
 2. Give permissions to **SID S-1-15-2-1**.
 
@@ -108,14 +106,8 @@ Append the instance name to `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME`). In
 
 Follow these steps to restart the SQL Server Launchpad service.
 
-From an *elevated* command prompt, run the following commands. Replace "MSSQLSERVER" with the name of your SQL Server instance.
-
-```CMD
-net stop MSSQLLAUNCHPAD$MSSQLSERVER
-net start MSSQLLAUNCHPAD$MSSQLSERVER
-```
-
-Alternatively, right-click the SQL Server Launchpad service in the **Services** app of the system and click the **Restart** command. Or use [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md) to restart the service.
+1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+1. Under **SQL Server Services** right click on **SQL Server Lanchpad (MSSQLSERVER)** and select **Restart**. If you using a named instance, the instance name will be shown instead of **(MSSQLSERVER)**.
 
 ## Download Python language extension
 

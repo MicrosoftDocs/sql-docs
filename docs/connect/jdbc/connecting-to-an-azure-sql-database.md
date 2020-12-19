@@ -2,7 +2,7 @@
 title: "Connecting to an Azure SQL database"
 description: "This article discusses issues when using the Microsoft JDBC Driver for SQL Server to connect to an Azure SQL Database."
 ms.custom: ""
-ms.date: "12/03/2020"
+ms.date: "12/18/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -37,6 +37,12 @@ When connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], idle co
 
 - Idle by the Azure SQL Gateway, where TCP **keepalive** messages might be occurring (making the connection not idle from a TCP perspective), but not had an active query in 30 minutes. In this scenario, the Gateway will determine that the TDS connection is idle at 30 minutes and terminate the connection.  
   
+To address the second point and avoid the Gateway terminating idle connections, you can:
+
+1. Use the **Redirect** [connection policy](/azure/azure-sql/database/connectivity-architecture#connection-policy) when configuring your Azure SQL data source.
+
+1. Keep connections active via lightweight activity. This method is not recommended and should only be used if there are no other possible options.
+
 To address the first point and avoid dropping idle connections by a network component, the following registry settings (or their non-Windows equivalents) should be set on the operating system where the driver is loaded:  
   
 |Registry Setting|Recommended Value|  
@@ -63,12 +69,6 @@ To perform this configuration when running in Azure, create a startup task to ad
 ```
 
 Then add a AddKeepAlive.cmd file to your project. Set the "Copy to Output Directory" setting to Copy always. The following script is a sample AddKeepAlive.cmd file:  
-
-To address the second point and avoid the Gateway terminating idle connections, you can:
-
-1. Use the **Redirect** [connection policy](/azure/azure-sql/database/connectivity-architecture#connection-policy) when configuring your Azure SQL data source.
-
-1. Keep connections active via lightweight activity. This method is not recommended and should only be used if there are no other possible options.
 
 ```bat
 if exist keepalive.txt goto done  

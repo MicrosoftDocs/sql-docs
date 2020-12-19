@@ -39,9 +39,9 @@ When connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], idle co
   
 To address the second point and avoid the Gateway terminating idle connections, you can:
 
-1. Use the **Redirect** [connection policy](/azure/azure-sql/database/connectivity-architecture#connection-policy) when configuring your Azure SQL data source.
+* Use the **Redirect** [connection policy](/azure/azure-sql/database/connectivity-architecture#connection-policy) when configuring your Azure SQL data source.
 
-1. Keep connections active via lightweight activity. This method is not recommended and should only be used if there are no other possible options.
+* Keep connections active via lightweight activity. This method is not recommended and should only be used if there are no other possible options.
 
 To address the first point and avoid dropping idle connections by a network component, the following registry settings (or their non-Windows equivalents) should be set on the operating system where the driver is loaded:  
   

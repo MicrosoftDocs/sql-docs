@@ -86,12 +86,13 @@ Use the following steps to install the **mssql-tools** on Red Hat Enterprise Lin
    source ~/.bashrc
    ```
 
-## <a id="ubuntu"></a>Install tools on Ubuntu 16.04
+## <a id="ubuntu"></a>Install tools on Ubuntu 16.04, 18.04, 20.04
 
 Use the following steps to install the **mssql-tools** on Ubuntu.
 
 > [!NOTE]
 > Ubuntu 18.04 is supported starting with SQL Server 2019 CU3. If you are using Ubuntu 18.04, change the repository path from `/ubuntu/16.04` to `/ubuntu/18.04`.
+> For Ubuntu 20.04, change the repository path to `/ubuntu/20.04`.
 
 1. Import the public repository GPG keys.
 
@@ -100,9 +101,17 @@ Use the following steps to install the **mssql-tools** on Ubuntu.
    ```
 
 1. Register the Microsoft Ubuntu repository.
-
+   Ubuntu 16.04
    ```bash
    curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+   ```
+   Ubuntu 18.04
+   ```bash
+   curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+   ```
+   Ubuntu 20.04
+   ```bash
+   curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
 1. Update the sources list and run the installation command with the unixODBC developer package.

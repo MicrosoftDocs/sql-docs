@@ -101,6 +101,7 @@ Use the following steps to install the **mssql-tools** on Ubuntu.
    ```
 
 1. Register the Microsoft Ubuntu repository.
+
    Ubuntu 16.04
    ```bash
    curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list

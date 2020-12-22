@@ -23,11 +23,11 @@ This topic discusses support for asynchronous programming in the Microsoft SqlCl
 
 The Microsoft SqlClient Data Provider for SQL Server includes methods from **System.Data.SqlClient** in order to maintain backwards compatibility for applications migrating to <xref:Microsoft.Data.SqlClient>. It isn't recommended to use the following legacy asynchronous programming methods for new development:
 
-1. <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
+- <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
 
-2. <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A?displayProperty=nameWithType>
+- <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A?displayProperty=nameWithType>
 
-3. <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>
+- <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>
 
 > [!TIP]
 > In the Microsoft SqlClient Data Provider for SQL Server, these legacy methods no longer require `Asynchronous Processing=true` in the connection string.

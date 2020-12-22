@@ -141,6 +141,20 @@
         href: ../connect/ado-net/common-schema-collections.md
       - name: SQL Server schema collections
         href: ../connect/ado-net/sql-server-schema-collections.md
+    - name: Retrieve identity or autonumber values
+      href: ../connect/ado-net/retrieve-identity-or-autonumber-values.md
+    - name: Retrieve binary data
+      href: ../connect/ado-net/retrieve-binary-data.md
+    - name: Modify data with stored procedures
+      href: ../connect/ado-net/modify-data-with-stored-procedures.md
+    - name: Data tracing in SqlClient
+      href: ../connect/ado-net/data-tracing.md
+    - name: Performance counters in SqlClient
+      href: ../connect/ado-net/performance-counters.md
+    - name: Asynchronous programming
+      href: ../connect/ado-net/asynchronous-programming.md
+    - name: SqlClient streaming support
+      href: ../connect/ado-net/sqlclient-streaming-support.md
   - name: SQL Server and ADO.NET
     href: ../connect/ado-net/sql/index.md
     items:

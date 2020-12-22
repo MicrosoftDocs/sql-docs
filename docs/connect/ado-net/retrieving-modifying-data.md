@@ -36,11 +36,32 @@ Contains topics describing how to create commands and command builders,
 [DataAdapters and DataReaders](dataadapters-datareaders.md)  
 Contains topics describing DataReaders, DataAdapters, parameters, handling DataAdapter events and performing batch operations.
 
-[Transactions and concurrency](transactions-and-concurrency.md)
+[Transactions and concurrency](transactions-and-concurrency.md)  
 Contains topics describing how to perform local transactions, distributed transactions, and work with optimistic concurrency.
 
-[Retrieving database schema information](retrieving-database-schema-information.md)
+[Retrieving database schema information](retrieving-database-schema-information.md)  
 Describes how to obtain available databases or catalogs, tables and views in a database, constraints that exist for tables, and other schema information from a data source.
+
+[Retrieve identity or autonumber values](retrieve-identity-or-autonumber-values.md)  
+Provides an example of mapping the values generated for an **identity** column in a SQL Server table to a column of an inserted row in a table. Discusses merging identity values in a `DataTable`.  
+  
+[Retrieve Binary Data](retrieve-binary-data.md)  
+Describes how to retrieve binary data or large data structures using `CommandBehavior`.`SequentialAccess` to modify the default behavior of a `DataReader`.  
+  
+[Modify data with stored procedures](modify-data-with-stored-procedures.md)  
+Describes how to use stored procedure input parameters and output parameters to insert a row in a database, returning a new identity value.  
+
+[Data tracing in ADO.NET](data-tracing.md)  
+Describes how Microsoft SqlClient Data Provider for SQL Server provides built-in data tracing functionality.  
+  
+[Performance counters](performance-counters.md)  
+Describes performance counters available for Microsoft SqlClient Data Provider for SQL Server.  
+  
+[Asynchronous programming](asynchronous-programming.md)  
+Describes Microsoft SqlClient Data Provider for SQL Server support for asynchronous programming.  
+  
+[SqlClient streaming support](sqlclient-streaming-support.md)  
+Discusses how to write applications that stream data from SQL Server without having it fully loaded in memory.  
 
 ## See also
 

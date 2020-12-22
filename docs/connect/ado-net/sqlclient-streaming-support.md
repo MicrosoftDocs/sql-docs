@@ -21,10 +21,10 @@ Streaming support between SQL Server and an application supports unstructured da
 
 Streaming support to and from SQL Server simplifies writing applications that stream data, without having to fully load the data into memory, resulting in fewer memory overflow exceptions.
 
-Streaming support will also enable middle-tier applications to scale better, especially in scenarios where business objects connect to SQL Azure in order to send, retrieve, and manipulate large BLOBs.
+Streaming support will also enable middle-tier applications to scale better, especially in scenarios where business objects connect to Azure SQL in order to send, retrieve, and manipulate large BLOBs.
 
 > [!WARNING]
-> The members added to support streaming are used to retrieve data from queries and to pass parameters to queries and stored procedures. The streaming feature addresses basic OLTP and data migration scenarios and is applicable to on-premises and off-premises data migrations environments.
+> The members that support streaming are used to retrieve data from queries and to pass parameters to queries and stored procedures. The streaming feature addresses basic OLTP and data migration scenarios and is applicable to on-premises and off-premises data migrations environments.
 
 ## Streaming support from SQL Server
 
@@ -32,29 +32,29 @@ Streaming support from SQL Server introduces new functionality in the <xref:Syst
 
 The following members were added to <xref:Microsoft.Data.SqlClient.SqlDataReader> to enable streaming support from SQL Server:
 
-1. <xref:Microsoft.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>
+- <xref:Microsoft.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>
 
-2. <xref:Microsoft.Data.SqlClient.SqlDataReader.GetFieldValue%2A?displayProperty=nameWithType>
+- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetFieldValue%2A?displayProperty=nameWithType>
 
-3. <xref:Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueAsync%2A>
+- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueAsync%2A>
 
-4. <xref:Microsoft.Data.SqlClient.SqlDataReader.GetStream%2A>
+- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetStream%2A>
 
-5. <xref:Microsoft.Data.SqlClient.SqlDataReader.GetTextReader%2A>
+- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetTextReader%2A>
 
-6. <xref:Microsoft.Data.SqlClient.SqlDataReader.GetXmlReader%2A>
+- <xref:Microsoft.Data.SqlClient.SqlDataReader.GetXmlReader%2A>
 
 The following members were added to <xref:System.Data.Common.DbDataReader> to enable streaming support from SQL Server:
 
-1. <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>
+- <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>
 
-2. <xref:System.Data.Common.DbDataReader.GetStream%2A>
+- <xref:System.Data.Common.DbDataReader.GetStream%2A>
 
-3. <xref:System.Data.Common.DbDataReader.GetTextReader%2A>
+- <xref:System.Data.Common.DbDataReader.GetTextReader%2A>
 
 ## Streaming support to SQL Server
 
-Streaming support to SQL Server introduces new functionality in the <xref:Microsoft.Data.SqlClient.SqlParameter> class so it can accept and react to <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, and <xref:System.IO.TextReader> objects. <xref:Microsoft.Data.SqlClient.SqlParameter> is used to pass parameters to queries and stored procedures.
+Streaming support to SQL Server is in the <xref:Microsoft.Data.SqlClient.SqlParameter> class so it can accept and react to <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, and <xref:System.IO.TextReader> objects. <xref:Microsoft.Data.SqlClient.SqlParameter> is used to pass parameters to queries and stored procedures.
 
 > [!NOTE]
 > Disposing a <xref:Microsoft.Data.SqlClient.SqlCommand> object or calling <xref:Microsoft.Data.SqlClient.SqlCommand.Cancel%2A> must cancel any streaming operation. If an application sends <xref:System.Threading.CancellationToken>, cancellation is not guaranteed.
@@ -151,7 +151,7 @@ The sample shows how to do the following:
 
 - Cancelling the transfer of a large BLOB.
 
-- Streaming from one SQL Server to another using the new asynchronous feature.
+- Streaming from one SQL Server to another using the asynchronous feature.
 
 [!code-csharp[SqlClient_Streaming_ToServer#1](~/../sqlclient/doc/samples/SqlClient_Streaming_ToServer.cs#1)]
 

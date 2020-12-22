@@ -66,7 +66,7 @@ The performance counters `NumberOfFreeConnections`, `NumberOfActiveConnections`,
 The following console application shows how to retrieve performance counter values in your application. Connections must be open and active for information to be returned for all of the Microsoft SqlClient Data Provider for SQL Server performance counters.
 
 > [!NOTE]
-> This example uses the sample **AdventureWorks** database included with SQL Server. The connection strings provided in the sample code assume that the database is installed and available on the local computer, and that you have created SQL Server logins that match those supplied in the connection strings. You may need to enable SQL Server logins if your server is configured using the default security settings which allow only Windows Authentication. Modify the connection strings as necessary to suit your environment.
+> This example uses the sample [**AdventureWorks** database](../../samples/adventureworks-install-configure.md). The connection strings provided in the sample code assume that the database is installed and available on the local computer, and that you have created logins that match those supplied in the connection strings. You may need to enable SQL Server logins if your server is configured using the default security settings which allow only Windows Authentication. Modify the connection strings as necessary to suit your environment.
 
 ### Example
 

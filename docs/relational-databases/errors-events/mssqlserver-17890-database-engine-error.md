@@ -40,9 +40,9 @@ You might also notice a sudden performance degradation with query execution and 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitors the various memories related information about the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. In this case, it has detected that the working set of the process is less than 50% of the committed process memory. As a result this warning is printed. The normal causes of this warning are:
 
-1. The operating system pages out large portions of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] committed memory to the paging file.
-2. This could be due to sudden increased demand for memory from other applications or operating system needs.
-3. This could also happen when certain device drivers request contiguous memory allocations for their needs.
+- The operating system pages out large portions of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] committed memory to the paging file.
+- This could be due to sudden increased demand for memory from other applications or operating system needs.
+- This could also happen when certain device drivers request contiguous memory allocations for their needs.
 
 ## User action
 
@@ -111,7 +111,9 @@ Below, you can find information on each of these categories
     When a device driver tries to allocate memory, the Windows operating system may page out the working set of other applications. This Windows hotfix lets you use event tracing to find the device driver that causes problem. To find more information about the specific driver that causes the working set trimming behavior, see [Identifying Drivers That Allocate Contiguous Memory](/previous-versions/windows/desktop/xperf/identifying-drivers-that-allocate-contiguous-memory).
 
 - **Operating System Issues**: To resolve the known issues that cause the Windows operating system to page out the working set of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process, apply the hotfixes that are described in the following Microsoft Knowledge Base articles.
-Note: Hotfixes are cumulative. A later version of a hotfix contains the earlier versions of that hotfix.
+
+  > [!NOTE]
+  > Hotfixes are cumulative. A later version of a hotfix contains the earlier versions of that hotfix.
 
   - The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set may be trimmed when the system is using some advanced TCP features. For more information, see [How to troubleshoot advanced network performance features such as RSS and NetDMA](/troubleshoot/windows-server/networking/troubleshoot-network-performance-features-rss-netdma).
 

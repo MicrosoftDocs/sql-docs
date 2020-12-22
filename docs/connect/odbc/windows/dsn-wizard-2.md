@@ -44,6 +44,11 @@ Specifies that the driver authenticate to SQL Server using Azure Active Director
 
 Specifies that the driver authenticate to SQL Server using a Managed Identity.
 
+### With Active Directory Service Principal authentication
+
+Specifies that the driver authenticate to SQL Server using an Azure Active Directory Service Principal.
+
+
 ### Login ID
 
 Specifies the login ID the driver uses when connecting to SQL Server if **With SQL Server Authentication using a login ID and password entered by the user** or **With Active Directory Password authentication using a login ID and password entered by the user** or **With Active Directory Interactive authentication using a login ID entered by the user** is selected. If **With Managed Identity authentication** is selected, specify the object ID of the managed identity or leave blank to use the default identity. This field only applies to the connection made to determine the server default settings; it does not apply to subsequent connections made using the data source after it has been created except if using Managed Identity authentication.

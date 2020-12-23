@@ -24,3 +24,7 @@ Floating-point numbers generally do not have an exact binary representation. Ins
 To minimize these effects, you should use the closest match between numeric types that is available to you. For example, if you are working with SQL Server, the exact numeric value may change if you convert a Transact-SQL value of real type to a value of float type. In the .NET Framework, converting a <xref:System.Single> to a <xref:System.Double> may also produce unexpected results. In both of these cases, a good strategy is to make all the values in the application use the same numeric type. You can also use a fixed-precision decimal type, or cast floating-point numbers to a fixed-precision decimal type before you work with them.
 
 To work around problems with equality comparison, consider coding your application so that variations in the least significant digits are ignored. For example, instead of comparing to see whether two numbers are equal, subtract one number from the other number. If the difference is within an acceptable margin of rounding, your application can treat the numbers as if they are the same.
+
+## See also
+
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

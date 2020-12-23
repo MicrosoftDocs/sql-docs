@@ -193,8 +193,16 @@ Use the following steps to install the **mssql-tools** on Ubuntu.
 
 1. Register the Microsoft Ubuntu repository.
 
+   Ubuntu version 18.04
+
    ```bash
    curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+   ```
+   
+   Ubuntu version 20.04
+   
+   ```bash
+   curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
 1. Update the sources list and run the installation command with the unixODBC developer package. For more information, see [Install the Microsoft ODBC driver for SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).

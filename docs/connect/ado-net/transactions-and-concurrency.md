@@ -45,7 +45,7 @@ Describes optimistic and pessimistic concurrency, and how you can test for concu
 
 - [Transaction fundamentals](/dotnet/framework/data/transactions/transaction-fundamentals)
 - [Connecting to data source](connecting-to-data-source.md)
-- [Commands and Parameters](commands-parameters.md)
+- [Commands and parameters](commands-parameters.md)
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [DbProviderFactories](dbproviderfactories.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

@@ -52,7 +52,7 @@ Any number of `DataAdapter` objects can be used with a `DataSet`. Each `DataAdap
   
 ### Example  
 
-The following code example populates a list of customers from the `Northwind` database on Microsoft SQL Server, and a list of orders from the `Northwind` database stored in Microsoft Access 2000. The filled tables are related with a `DataRelation`, and the list of customers is then displayed with the orders for that customer.
+The following code example populates a list of customers from the `Northwind` database on Microsoft SQL Server, and a list of orders from the `Northwind` database stored in Microsoft Access. The filled tables are related with a `DataRelation`, and the list of customers is then displayed with the orders for that customer.
 
 [!code-csharp[SqlDataAdapter_FillDataSet#2](~/../sqlclient/doc/samples/SqlDataAdapter_FillDataSet.cs#2)]
 

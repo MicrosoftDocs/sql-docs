@@ -26,5 +26,5 @@ Provides an overview of connection pooling and describes how connection pooling 
 
 ## See also
 
-- [Retrieving and Modifying Data in ADO.NET](retrieving-modifying-data.md)
+- [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

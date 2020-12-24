@@ -76,7 +76,7 @@ The .NET Framework 2.0 introduced new classes in the <xref:System.Configuration>
 > [!NOTE]
 > The **machine.config** file also contains a **connectionStrings** section, which contains connection strings used by Visual Studio. When retrieving connection strings by provider name from the **app.config** file in a Windows application, the connection strings in **machine.config** get loaded first, and then the entries from **app.config**. Adding **clear** immediately after the **connectionStrings** element removes all inherited references from the data structure in memory, so that only the connection strings defined in the local **app.config** file are considered.
 
-### Work with the configuration classes
+### Work with the configuration files
 
 Starting with the .NET Framework 2.0, <xref:System.Configuration.ConfigurationManager> is used when working with configuration files on the local computer, replacing the deprecated <xref:System.Configuration.ConfigurationSettings>. <xref:System.Web.Configuration.WebConfigurationManager> is used to work with ASP.NET configuration files. It is designed to work with configuration files on a Web server, and allows programmatic access to configuration file sections such as **system.web**.
 
@@ -91,7 +91,7 @@ You can use the <xref:System.Configuration.ConnectionStringSettingsCollection> t
 |<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|The fully qualified provider name. Maps to the **providerName** attribute.|  
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|The connection string. Maps to the **connectionString** attribute.|  
 
-### Example: listing all connection strings
+### Example: Listing all connection strings
 
 This example iterates through the <xref:System.Configuration.ConnectionStringSettingsCollection> and displays the <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>, and <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> properties in the console window.
 
@@ -100,13 +100,13 @@ This example iterates through the <xref:System.Configuration.ConnectionStringSet
 
 [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](~/../SqlClient/doc/samples/ConnectionStringSettings_RetrieveFromConfig.cs#1)]
 
-### Example: retrieving a connection string by name
+### Example: Retrieving a connection string by name
 
 This example demonstrates how to retrieve a connection string from a configuration file by specifying its name. The code creates a <xref:System.Configuration.ConnectionStringSettings> object, matching the supplied input parameter to the <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> name. If no matching name is found, the function returns `null` (`Nothing` in Visual Basic).
 
 [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](~/../SqlClient/doc/samples/ConnectionStringSettings_RetrieveFromConfigByName.cs#1)]
 
-### Example: retrieving a connection string by provider name
+### Example: Retrieving a connection string by provider name
 
 This example demonstrates how to retrieve a connection string by specifying the provider name in the format *Microsoft.Data.SqlClient*. The code iterates through the <xref:System.Configuration.ConnectionStringSettingsCollection> and returns the connection string for the first <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> found. If the provider name is not found, the function returns `null` (`Nothing` in Visual Basic).
 
@@ -185,9 +185,9 @@ For more information about securing ASP.NET applications, see [Securing ASP.NET 
 
 ## See also
 
-- [Connection String Builders](connection-string-builders.md)
-- [Protecting Connection Information](protecting-connection-information.md)
-- [Using the Configuration Classes](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [Configuring Apps](/dotnet/framework/configure-apps/index)
-- [ASP.NET Web Site Administration](/previous-versions/aspnet/6hy1xzbw(v=vs.100))
+- [Connection string builders](connection-string-builders.md)
+- [Protecting connection information](protecting-connection-information.md)
+- [Using the configuration classes](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
+- [Configuring apps](/dotnet/framework/configure-apps/index)
+- [ASP.NET web site administration](/previous-versions/aspnet/6hy1xzbw(v=vs.100))
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

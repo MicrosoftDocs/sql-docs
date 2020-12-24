@@ -17,7 +17,9 @@ ms.reviewer: v-chmalh
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-The process of obtaining a <xref:System.Data.Common.DbProviderFactory> involves passing information about a data provider to the <xref:System.Data.Common.DbProviderFactories> class. Based on this information, the <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> method creates a strongly typed provider factory. For example, to create a <xref:Microsoft.Data.SqlClient.SqlClientFactory>, you can pass `GetFactory` a string with the provider name specified as "**Microsoft.Data.SqlClient**". The other overload of `GetFactory` takes a <xref:System.Data.DataRow>. Once you create the provider factory, you can then use its methods to create additional objects. Some of the methods of a `SqlClientFactory` include <xref:Microsoft.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:Microsoft.Data.SqlClient.SqlClientFactory.CreateCommand%2A>, and <xref:Microsoft.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.
+The process of obtaining a <xref:System.Data.Common.DbProviderFactory> involves passing information about a data provider to the <xref:System.Data.Common.DbProviderFactories> class. Based on this information, the <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> method creates a strongly typed provider factory. For example, to create a <xref:Microsoft.Data.SqlClient.SqlClientFactory>, you can pass `GetFactory` a string with the provider name specified as "**Microsoft.Data.SqlClient**".
+
+The other overload of `GetFactory` takes a <xref:System.Data.DataRow>. Once you create the provider factory, you can then use its methods to create additional objects. Some of the methods of a `SqlClientFactory` include <xref:Microsoft.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:Microsoft.Data.SqlClient.SqlClientFactory.CreateCommand%2A>, and <xref:Microsoft.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.
 
 ## Register SqlClientFactory
 
@@ -37,7 +39,7 @@ To retrieve the <xref:Microsoft.Data.SqlClient.SqlClientFactory> object by the <
 The **invariant** attribute identifies the underlying data provider. This three-part naming syntax is also used when creating a new factory and for identifying the provider in an application configuration file so that the provider name, along with its associated connection string, can be retrieved at run time.  
 
 > [!NOTE]  
-> Since in .NET core, there is no GAC or global configuration anymore, the <xref:Microsoft.Data.SqlClient.SqlClientFactory> object should be register by <xref:System.Data.Common.DbProviderFactories.RegisterFactory%2A> method in your project first.
+> In .NET core, since there is no GAC or global configuration support, the <xref:Microsoft.Data.SqlClient.SqlClientFactory> object should be registered by calling <xref:System.Data.Common.DbProviderFactories.RegisterFactory%2A> method in the project.
 
 The following sample shows how to use the <xref:Microsoft.Data.SqlClient.SqlClientFactory> in a .NET core application.
 
@@ -47,5 +49,5 @@ The following sample shows how to use the <xref:Microsoft.Data.SqlClient.SqlClie
 
 - [DbProviderFactories](dbproviderfactories.md)
 - [Connection strings](connection-strings.md)
-- [Using the Configuration Classes](/previous-versions/aspnet/ms228063(v=vs.100))
+- [Using the configuration classes](/previous-versions/aspnet/ms228063(v=vs.100))
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

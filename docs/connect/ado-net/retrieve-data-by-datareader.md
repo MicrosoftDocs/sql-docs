@@ -38,7 +38,7 @@ The following example iterates through a **DataReader** object and returns two c
 
 ## Close the DataReader  
 
-Always call the **Close** method when you have finished using the **DataReader** object.
+Always call the `Close()` method when you have finished using the `DataReader` object.
 
 > [!NOTE]
 > If your **Command** contains output parameters or return values, those values are not available until the **DataReader** is closed.  

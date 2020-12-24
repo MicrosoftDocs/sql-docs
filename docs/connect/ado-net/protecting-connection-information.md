@@ -39,7 +39,7 @@ The fixed identity account should be a low-privilege account that has been grant
 
 A connection string injection attack can occur when dynamic string concatenation is used to build connection strings based on user input. If the user input is not validated and malicious text or characters not escaped, an attacker can potentially access sensitive data or other resources on the server. To address this problem, Microsoft SqlClient Data Provider for SQL Server introduced new connection string builder class to validate connection string syntax and ensure that additional parameters are not introduced. For more information, see [Connection String Builders](connection-string-builders.md).
 
-## Use Persist Security Info=false
+## Use "Persist Security Info=false"
 
 The default value for `Persist Security Info` is false; we recommend using this default in all connection strings. Setting `Persist Security Info` to `true` or `yes` allows security-sensitive information, including the user ID and password, to be obtained from a connection after it has been opened. When `Persist Security Info` is set to `false` or `no`, security information is discarded after it is used to open the connection, ensuring that an untrusted source does not have access to security-sensitive information.
 

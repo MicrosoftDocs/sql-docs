@@ -2,7 +2,7 @@
 title: "Best practices with Query Store | Microsoft Docs"
 description: Learn best practices for using SQL Server Query Store with your workload, such as using the latest SQL Server Management Studio and Query Performance Insight.
 ms.custom: ""
-ms.date: "09/02/2020"
+ms.date: "12/23/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -118,7 +118,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
 ```
 
-**Size Based Cleanup Mode**: Specifies whether automatic data cleanup takes place when Query Store data size approaches the limit. Activate size-based cleanup to make sure that Query Store always runs in read-write mode and collects the latest data.
+**Size Based Cleanup Mode**: Specifies whether automatic data cleanup takes place when Query Store data size approaches the limit. Activate size-based cleanup to make sure that Query Store always runs in read-write mode and collects the latest data.  Note that there is no guarantee under heavy workloads that Query Store cleanup will consistently maintain the data size under the limit. It is possible for the automatic data cleanup to fall behind and to switch (temporarily) into read-only mode.
 
 ```sql
 ALTER DATABASE [QueryStoreDB]

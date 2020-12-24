@@ -433,7 +433,7 @@ The global trace flags 7745 and 7752 can be used to improve availability of data
 
 ## <a name="geosyncreplicas"></a> Using Query Store in Azure SQL Database active geo-replication
 
-Avoid mismatched tiers of Azure SQL Databases when enabling Query Store on a secondary active geo-replica of Azure SQL Database. The secondary database should be at or near the same compute size of the primary database, in the same service tier of the primary database. Look for the HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO wait type which indicates transaction log rate throttling on the primary replica. For more information on estimating and configuring the size of the secondary replica, see [Configuring secondary database](/azure/azure-sql/database/active-geo-replication-overview#configuring-secondary-database).
+Avoid mismatched tiers of Azure SQL Databases when enabling Query Store on a secondary active geo-replica of Azure SQL Database. The secondary database should be at or near the same compute size of the primary database, in the same service tier of the primary database. Look for the HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO wait type which indicates transaction log rate throttling on the primary replica. For more on estimating and configuring the size of the secondary Azure SQL database of active geo-replication, see [Configuring secondary database](/azure/azure-sql/database/active-geo-replication-overview#configuring-secondary-database).
 
 
 ## See also

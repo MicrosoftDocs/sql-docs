@@ -42,6 +42,9 @@ Contains topics describing how to perform local transactions, distributed transa
 [Retrieving database schema information](retrieving-database-schema-information.md)  
 Describes how to obtain available databases or catalogs, tables and views in a database, constraints that exist for tables, and other schema information from a data source.
 
+[DbProviderFactories](dbproviderfactories.md)  
+Describes the provider factory model and demonstrates how to use the base classes in the `System.Data.Common` namespace.  
+
 [Retrieve identity or autonumber values](retrieve-identity-or-autonumber-values.md)  
 Provides an example of mapping the values generated for an **identity** column in a SQL Server table to a column of an inserted row in a table. Discusses merging identity values in a `DataTable`.  
   
@@ -51,10 +54,10 @@ Describes how to retrieve binary data or large data structures using `CommandBeh
 [Modify data with stored procedures](modify-data-with-stored-procedures.md)  
 Describes how to use stored procedure input parameters and output parameters to insert a row in a database, returning a new identity value.  
 
-[Data tracing in ADO.NET](data-tracing.md)  
+[Data tracing in SqlClient](data-tracing.md)  
 Describes how Microsoft SqlClient Data Provider for SQL Server provides built-in data tracing functionality.  
   
-[Performance counters](performance-counters.md)  
+[Performance counters in SqlClient](performance-counters.md)  
 Describes performance counters available for Microsoft SqlClient Data Provider for SQL Server.  
   
 [Asynchronous programming](asynchronous-programming.md)  

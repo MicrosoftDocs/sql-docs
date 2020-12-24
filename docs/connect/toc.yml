@@ -141,6 +141,11 @@
         href: ../connect/ado-net/common-schema-collections.md
       - name: SQL Server schema collections
         href: ../connect/ado-net/sql-server-schema-collections.md
+    - name: DbProviderFactories
+      href: ../connect/ado-net/dbproviderfactories.md
+      items:
+      - name: Obtain a SqlClientFactory
+        href: ../connect/ado-net/obtain-sqlclientfactory.md
     - name: Retrieve identity or autonumber values
       href: ../connect/ado-net/retrieve-identity-or-autonumber-values.md
     - name: Retrieve binary data

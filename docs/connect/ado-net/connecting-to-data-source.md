@@ -21,7 +21,7 @@ In the Microsoft SqlClient data provider, you use a **Connection** object to con
 
 The Microsoft SqlClient Data Provider for SQL Server includes a <xref:Microsoft.Data.SqlClient.SqlConnection> type that is derived from a <xref:System.Data.Common.DbConnection> class.
 
-## In This Section  
+## In this section  
 
 [Establishing the Connection](establishing-connection.md)\
 Describes how to use a **Connection** object to establish a connection to a data source.
@@ -35,3 +35,5 @@ Describes how to use an **InfoMessage** event to retrieve informational messages
 - [Connection pooling](connection-pooling.md)
 - [Commands and parameters](commands-parameters.md)
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
+- [Transactions and concurrency](transactions-and-concurrency.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

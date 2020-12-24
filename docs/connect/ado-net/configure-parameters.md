@@ -25,7 +25,7 @@ Parameterized commands can also improve query execution performance, because the
 
 A <xref:System.Data.Common.DbParameter> object can be created by using its constructor, or by adding it to the <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> by calling the `Add` method of the <xref:System.Data.Common.DbParameterCollection> collection. The `Add` method will take as input either constructor arguments or an existing parameter object, depending on the data provider.
 
-## Supplying the ParameterDirection property
+## Supply the ParameterDirection property
 
 When adding parameters, you must supply a <xref:System.Data.ParameterDirection> property for parameters other than input parameters. The following table shows the `ParameterDirection` values that you can use with the <xref:System.Data.ParameterDirection> enumeration.
 
@@ -36,12 +36,12 @@ When adding parameters, you must supply a <xref:System.Data.ParameterDirection> 
 |<xref:System.Data.ParameterDirection.Output>|The parameter is an output parameter.|
 |<xref:System.Data.ParameterDirection.ReturnValue>|The parameter represents a return value from an operation such as a stored procedure, built-in function, or user-defined function.|
 
-## Working with parameter placeholders
+## Work with parameter placeholders
 
 The syntax for parameter placeholders depends on the data source. The Microsoft SqlClient Data Provider for SQL Server handles naming and specifying parameters and parameter placeholders differently. 
 The SqlClient data provider uses named parameters in the format `@`*parametername*.
 
-## Specifying parameter data types
+## Specify parameter data types
 
 The data type of a parameter is specific to the Microsoft SqlClient Data Provider for SQL Server. Specifying the type converts the value of the `Parameter` to the Microsoft SqlClient Data Provider for SQL Server type before passing the value to the data source. You may also specify the type of a `Parameter` in a generic manner by setting the `DbType` property of the `Parameter` object to a particular <xref:System.Data.DbType>.
 
@@ -84,7 +84,7 @@ The Microsoft SqlClient Data Provider for SQL Server type of a `Parameter` objec
 > [!NOTE]
 > When you send a null parameter value to the server, you must specify <xref:System.DBNull>, not `null` (`Nothing` in Visual Basic). The null value in the system is an empty object that has no value. <xref:System.DBNull> is used to represent null values.
 
-## Deriving parameter information
+## Derive parameter information
 
 Parameters can also be derived from a stored procedure using the `DbCommandBuilder` class. The `SqlCommandBuilder` class provides a static method, `DeriveParameters`, which automatically populates the parameters collection of a command object that uses parameter information from a stored procedure. Note that `DeriveParameters` overwrites any existing parameter information for the command.
 
@@ -118,4 +118,6 @@ This example demonstrates how to call a SQL Server stored procedure in the `Nort
 ## See also
 
 - [Commands and parameters](commands-parameters.md)
+- [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Data type mappings in ADO.NET](data-type-mappings-ado-net.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

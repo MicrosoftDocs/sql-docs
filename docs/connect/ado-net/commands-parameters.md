@@ -1,5 +1,5 @@
 ---
-title: "Commands and Parameters"
+title: "Commands and parameters"
 description: Learn how to use Command objects for Microsoft SqlClient Data Provider for SQL Server to run commands and return results from a data source.
 ms.date: "11/25/2020"
 ms.assetid: b623f810-d871-49a5-b0f5-078cc3c34db6
@@ -40,5 +40,6 @@ Describes how to use the Microsoft SqlClient data provider for SQL Server to exe
 
 ## See also
 
+- [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Connecting to a data source](connecting-to-data-source.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

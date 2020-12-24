@@ -1,5 +1,5 @@
 ---
-title: "Floating-Point numbers"
+title: "Floating-point numbers"
 description: Learn some of the issues when working with floating-point numbers in the Microsoft SqlClient Data Provider for SQL Server.
 ms.date: "11/13/2020"
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
@@ -11,7 +11,7 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
 ---
-# Floating-Point numbers
+# Floating-point numbers
 
 [!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -19,7 +19,7 @@ ms.reviewer: v-chmalh
 
 This topic describes some of the issues that developers frequently encounter when they work with floating-point numbers in the Microsoft SqlClient Data Provider for SQL Server. These issues are caused by the way that computers store floating-point numbers, and are not specific to a particular provider such as <xref:Microsoft.Data.SqlClient>.
 
-## Floating-Point pitfall
+## Floating-point pitfall
 
 Floating-point numbers generally do not have an exact binary representation. Instead, the computer stores an approximation of the number. At different times, different numbers of binary digits may be used to represent the number. When a floating point number is converted from one representation to another representation, the least significant digits of that number may vary slightly. Conversion typically occurs when the number is cast from one type to another type. The variation occurs whether the conversion occurs within a database, between types that represent database values, or between types. Because of these changes, numbers that would logically be equal may have changes in their least-significant digits that cause them to have different values. The number of digits of precision in the number may be larger or smaller than expected. When formatted as a string, the number may not show the expected value.
 

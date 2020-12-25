@@ -2,7 +2,7 @@
 description: "MSSQLSERVER_6602"
 title: MSSQLSERVER_6602
 ms.custom: ""
-ms.date: 10/27/2020
+ms.date: 12/25/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
 ms.technology: supportability

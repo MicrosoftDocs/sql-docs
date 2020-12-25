@@ -2,7 +2,7 @@
 description: "MSSQLSERVER_6522"
 title: MSSQLSERVER_6522
 ms.custom: ""
-ms.date: 10/27/2020
+ms.date: 12/25/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
 ms.technology: supportability
@@ -46,8 +46,6 @@ When you execute the CLR routine or use the assembly from either of these scenar
 A .NET Framework error occurred during execution of user defined routine or aggregate 'getsid':
 >
 > System.IO.FileLoadException: Could not load file or assembly 'System.DirectoryServices, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. Assembly in host store has a different signature than assembly in GAC. (Exception from HRESULT: 0x80131050)
->
-> System.IO.FileLoadException:
 
 ## Possible cause
 

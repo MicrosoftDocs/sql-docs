@@ -2,7 +2,7 @@
 description: "MSSQLSERVER_1785"
 title: MSSQLSERVER_1785
 ms.custom: ""
-ms.date: 10/27/2020
+ms.date: 12/25/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
 ms.technology: supportability
@@ -73,6 +73,6 @@ GO
 -- this works.
 ```
 
-### See Also
+### See also
 
 [Cascading Referential Integrity](/sql/relational-databases/tables/primary-and-foreign-key-constraints#referential-integrity)

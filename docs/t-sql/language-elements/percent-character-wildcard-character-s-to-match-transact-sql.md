@@ -32,7 +32,7 @@ ms.author: jroth
 ## Examples  
  The following example returns all the first names of people in the `Person` table of `AdventureWorks2012` that start with `Dan`.  
   
-```  
+```syntaxsql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName  

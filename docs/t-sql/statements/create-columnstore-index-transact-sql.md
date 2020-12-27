@@ -29,7 +29,7 @@ helpviewer_keywords:
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -237,7 +237,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
    For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]
->  Parallel index operations are not available in every edition of [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Parallel index operations are not available in every edition of [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 ###### ONLINE = [ON | OFF]   
 - `ON` specifies that the columnstore index remains online and available while the new copy of the index is being built.
@@ -396,7 +396,7 @@ You cannot use cursors or triggers on a table with a clustered columnstore index
 These limitations apply only to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. In this release, we introduced updateable clustered columnstore indexes. Nonclustered columnstore indexes were still read-only.  
 
 -   Change tracking. You cannot use change tracking with columnstore indexes.  
--   Change data capture. You cannot use change data capture for nonclustered columnstore index (NCCI) because they are read-only. It does work for clustered columnstore indexes (CCI).  
+-   Change data capture. Change data capture cannot be enabled on tables with a clustered columnstore index. Starting with SQL Server 2016, it can be enabled on tables with a non-clustered columnstore index.  
 -   Readable secondary. You cannot access  a clustered columnstore index (CCI) from a readable secondary of an Always OnReadable availability group.  You can access a nonclustered columnstore index (NCCI) from a readable secondary.  
 -   Multiple Active Result Sets (MARS). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] uses MARS for  read-only connections to tables with a columnstore index. However, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] does not support MARS for concurrent data manipulation language (DML) operations on a table with a columnstore index. When this occurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] terminates the connections and aborts the transactions.  
 -  Nonclustered columnstore indexes cannot be created on a view or indexed view.
@@ -777,5 +777,3 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ORDER ( PRODUCTKEY,SHIPDATE );
 WITH (DROP_EXISTING = ON)
 ```
-
-

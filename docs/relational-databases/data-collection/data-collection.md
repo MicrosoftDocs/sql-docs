@@ -24,7 +24,7 @@ ms.author: mathoma
   
  The data collector enables you to adjust the scope of data collection to suit your test and production environments. The data collector also uses a data warehouse, a relational database that enables you to manage the data that you collect by setting different retention periods for your data.  
   
- The data collector supports dynamic tuning for data collection and is extensible through its API. For more information, see [Data Collector Programming](https://docs.microsoft.com/sql/relational-databases/system-functions/data-collector-functions-transact-sql).  
+ The data collector supports dynamic tuning for data collection and is extensible through its API. For more information, see [Data Collector Programming](../system-functions/data-collector-functions-transact-sql.md).  
   
  The following illustration shows how the data collector fits in the overall strategy for data collection and data management in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -45,7 +45,7 @@ ms.author: mathoma
   
 -   Proxy accounts  
   
- For more information, see [Automated Administration Tasks &#40;SQL Server Agent&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0).  
+ For more information, see [Automated Administration Tasks &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md).  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) is used to execute packages that collect data from individual data providers. You should be familiar with the following [!INCLUDE[ssIS](../../includes/ssis-md.md)] tools and concepts:  
   
@@ -113,5 +113,3 @@ ms.author: mathoma
 |Use the Management Data Warehouse to collect data from a server that is a data collection target.|[Management Data Warehouse](../../relational-databases/data-collection/management-data-warehouse.md)| 
 |Exploit the server-side trace capabilities of SQL Server Profiler to export a trace definition that you can use to create a collection set that uses the Generic SQL Trace collector type| [Use SQL Server Profiler to Create a SQL Trace Collection Set (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
-  
-

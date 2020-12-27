@@ -2,7 +2,7 @@
 title: "Service Principal Names (SPNs) in Client Connections (OLE DB) | Microsoft Docs"
 description: Learn about OLE DB Driver for SQL Server properties and member functions that support service principal names in client applications.
 ms.custom: ""
-ms.date: "06/12/2018"
+ms.date: "09/30/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -41,7 +41,7 @@ ms.author: v-daenge
 |Name|Type|Usage|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR, readonly|Returns the authentication method used for the connection. The value returned to the application is the value that Windows returns to OLE DB Driver for SQL Server. The following are possible values: <br />"NTLM", which is returned when a connection is opened using NTLM authentication.<br />"Kerberos", which is returned when a connection is opened using Kerberos authentication.<br /><br /> If a connection has been opened and the authentication method cannot be determined, VT_EMPTY is returned.<br /><br /> This property can only be read when a data source has been initialized. If you attempt to read the property before a data source has been initialized, IDBProperties::GetProperies will return DB_S_ERRORSOCCURRED or DB_E_ERRORSOCCURRED, as appropriate, and DBPROPSTATUS_NOTSUPPORTED will be set in DBPROPSET_PROPERTIESINERROR for this property. This behavior is in accordance with the OLE DB core specification.|  
-|SSPROP_MUTUALLYAUTHENICATED|VT_BOOL, readonly|Returns VARIANT_TRUE if the servers on the connection were mutually authenticated; otherwise, returns VARIANT_FALSE.<br /><br /> This property can only be read when a data source has been initialized. If there is an attempt to read the property before a data source has been initialized, IDBProperties::GetProperies will return DB_S_ERRORSOCCURRED or DB_E_ERRORSOCCURRED, as appropriate, and DBPROPSTATUS_NOTSUPPORTED will be set in DBPROPSET_PROPERTIESINERROR for this property. This behavior is in accordance with the OLE DB core specification<br /><br /> If this attribute is queried for a connection that did not use Windows Authentication, VARIANT_FALSE is returned.|  
+|SSPROP_MUTUALLYAUTHENTICATED|VT_BOOL, readonly|Returns VARIANT_TRUE if the servers on the connection were mutually authenticated; otherwise, returns VARIANT_FALSE.<br /><br /> This property can only be read when a data source has been initialized. If there is an attempt to read the property before a data source has been initialized, IDBProperties::GetProperies will return DB_S_ERRORSOCCURRED or DB_E_ERRORSOCCURRED, as appropriate, and DBPROPSTATUS_NOTSUPPORTED will be set in DBPROPSET_PROPERTIESINERROR for this property. This behavior is in accordance with the OLE DB core specification<br /><br /> If this attribute is queried for a connection that did not use Windows Authentication, VARIANT_FALSE is returned.|  
   
 ## OLE DB API Support for SPNs  
  The following table describes the OLE DB member functions that support SPNs in client connections:  

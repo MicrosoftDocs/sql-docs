@@ -5,7 +5,7 @@ ms.custom: "ag-guide, seodec18"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
@@ -84,7 +84,7 @@ To view the RTO and RPO within the dashboard, do the following:
 1. In SQL Server Management Studio, expand the **Always On High Availability** node, right-click the name of your availability group, and select **Show Dashboard**. 
 1. Select **Add/Remove Columns** under the **Group by** tab. Check both **Estimated Recovery Time(seconds)** [RTO] and **Estimated Data Loss (time)** [RPO]. 
 
-   ![rto-rpo-dashboard.png](media/rto-rpo-dashboard.png)
+   ![Screenshot showing the RTO RPO dashboard.](media/rto-rpo-dashboard.png)
 
 ### Calculation of secondary database RTO 
 The recovery time calculation determines how much time is needed to recover the *secondary database* after a failover happens.  The failover time is usually short and constant. The detection time depends on cluster-level settings and not on the individual availability replicas. 

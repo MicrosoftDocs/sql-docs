@@ -11,8 +11,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.backuptourl.createcred.f1"
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Create Credential - Authenticate to Azure Storage
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +25,7 @@ ms.author: mikeray
   
 ## Azure Credentials  
  **Management Certificate**  
- Use this option to specify a certificate from the local certificate store that matches the management certificate from Azure. For more information on Azure management certificate, see [Create and Upload a Management Certificate for Azure](https://go.microsoft.com/fwlink/?LinkId=320781).  
+ Use this option to specify a certificate from the local certificate store that matches the management certificate from Azure. For more information on Azure management certificate, see [Create and Upload a Management Certificate for Azure](/previous-versions/azure/gg551722(v=azure.100)).  
   
  **Subscription**  
  Select, type, or paste your Azure subscription ID that matches the management certificate from the local certificate store.  
@@ -38,5 +38,4 @@ ms.author: mikeray
   
 ## Storage Account  
  Select the storage account you want to use to store the backup files on.  
-  
   

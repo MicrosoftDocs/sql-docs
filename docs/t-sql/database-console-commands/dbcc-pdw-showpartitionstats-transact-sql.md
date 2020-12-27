@@ -11,7 +11,7 @@ dev_langs:
   - "TSQL"
 author: pmasl
 ms.author: umajay
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 
 # DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
@@ -29,6 +29,8 @@ Displays the size and number of rows for each partition of a table in a [!INCLUD
 DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema_name.] table_name  ")  
 [;]  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments  
  `[ database_name . [ schema_name ] . | schema_name . ] table_name`  

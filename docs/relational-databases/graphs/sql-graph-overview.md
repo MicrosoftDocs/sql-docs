@@ -15,7 +15,7 @@ ms.assetid:
 author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
-monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Graph processing with SQL Server and Azure SQL Database
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -49,7 +49,7 @@ CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
-![person-friends-tables](../../relational-databases/graphs/media/person-friends-tables.png "Person node and friends edge tables")  
+![Diagram showing the Nodes and Edges are stored as tables.](../../relational-databases/graphs/media/person-friends-tables.png "Person node and friends edge tables")  
 Nodes and Edges are stored as tables  
 
 ### Query language extensions  

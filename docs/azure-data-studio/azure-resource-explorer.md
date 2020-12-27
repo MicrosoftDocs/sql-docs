@@ -96,4 +96,4 @@ Azure Resource Explorer provide quick access that helps you connect to SQL Serve
 ## Next steps
 
 - [Use [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] to connect and query Azure SQL database](quickstart-sql-database.md)
-- [Use [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] to connect and query data in Azure SQL Data Warehouse](quickstart-sql-dw.md)
+- [Use [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] to connect and query data in Azure Synapse Analytics](quickstart-sql-dw.md)

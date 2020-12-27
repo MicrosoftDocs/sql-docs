@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fetching BLOB Data by Using IRow::Open and ISequentialStream
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,6 +77,5 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
  Large data can be bound or retrieved by using the **ISequentialStream** interface. For bound columns, the status flag indicates if the data is truncated by setting DBSTATUS_S_TRUNCATED.  
   
 ## See Also  
- [Fetching BLOB Data Using IRow](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
-  
+ [Fetching BLOB Data Using IRow](./fetching-a-single-row-with-irow.md)  
   

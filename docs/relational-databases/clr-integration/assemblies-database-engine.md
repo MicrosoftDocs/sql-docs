@@ -25,7 +25,7 @@ ms.author: "jroth"
   
 -   CLR functions. For more information, see [Create CLR Functions](../../relational-databases/user-defined-functions/create-clr-functions.md).  
   
--   CLR stored procedures. For more information, see [CLR Stored Procedures](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33).  
+-   CLR stored procedures. For more information, see [CLR Stored Procedures](/dotnet/framework/data/adonet/sql/clr-stored-procedures).  
   
 -   CLR triggers. For more information, see [Create CLR Triggers](../../relational-databases/triggers/create-clr-triggers.md).  
   
@@ -53,5 +53,4 @@ ms.author: "jroth"
   
 ## See Also  
  [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

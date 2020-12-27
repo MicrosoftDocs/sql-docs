@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 50a7b098-a3fb-4df6-ae42-1272d6346338
 author: rothja
 ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # &gt; (Greater Than) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ expression > expression
 ### A. Using > in a simple query  
  The following example returns all rows in the `HumanResources.Department` table that have a value in `DepartmentID` that is greater than the value 13.  
   
-```  
+```sql  
 --Uses AdventureWorks  
   
 SELECT DepartmentID, Name  
@@ -77,10 +77,9 @@ DepartmentID Name
   
 ### B. Using > to compare two variables  
   
-```  
-DECLARE @a int = 45, @b int = 40;  
+```sql  
+DECLARE @a INT = 45, @b INT = 40;  
 SELECT IIF ( @a > @b, 'TRUE', 'FALSE' ) AS Result;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

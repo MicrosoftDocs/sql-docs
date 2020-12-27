@@ -50,7 +50,7 @@ ms.author: lle
   
 -   Microsoft SQL Server 2008 R2 Developer (64-bit) x64  
   
- For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). 
+ For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). 
   
 ### Operating System  
  For information about the supported Windows operating systems and other requirements for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], see [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
@@ -71,5 +71,4 @@ ms.author: lle
  [Master Data Services Database](../../master-data-services/master-data-services-database.md)   
  [Connect to a Master Data Services Database Dialog Box](../../master-data-services/connect-to-a-master-data-services-database-dialog-box.md)   
  [Create Database Wizard &#40;Master Data Services Configuration Manager&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
-  
   

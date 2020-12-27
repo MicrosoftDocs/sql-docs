@@ -15,6 +15,7 @@ f1_keywords:
   - "CREATE_SEARCH_PROPERTY_TSQL"
   - "CREATE SEARCH PROPERTY"
   - "CREATE SEARCH PROPERTY LIST"
+  - sql13.swb.spl.newsearchpropertylist.f1
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 

@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.databases (Transact-SQL)
 
@@ -151,7 +151,7 @@ The following example queries the `sys.databases` and `sys.dm_database_copies` v
   
 ```sql
 -- Execute from the master database.  
-SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percentage_complete  
+SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percent_complete  
 FROM sys.databases AS a  
 INNER JOIN sys.dm_database_copies AS b ON a.database_id = b.database_id  
 WHERE a.state = 7;  

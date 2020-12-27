@@ -16,7 +16,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Starting from a pre-defined set of configuration profiles that are built into the `azdata` management tool, you can easily modify the default settings to better suit your BDC workload requirements. The structure of the configuration files enables you to granularly update settings for each service of the resource.
+Starting from a pre-defined set of configuration profiles that are built into the [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] management tool, you can easily modify the default settings to better suit your BDC workload requirements. The structure of the configuration files enables you to granularly update settings for each service of the resource.
 
 Watch this 13-minute video for an overview of big data cluster configuration:
 
@@ -644,7 +644,7 @@ For disabling the container that runs ElasticSearch to run in privileged mode, y
 }
 ```
 
-You can manually edit the `control.json` and add the above section to the `spec`, or you can create a patch file `elasticsearch-patch.json` like below and use `azdata` CLI to patch the `control.json` file:
+You can manually edit the `control.json` and add the above section to the `spec`, or you can create a patch file `elasticsearch-patch.json` like below and use [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] to patch the `control.json` file:
 
 ```json
 {

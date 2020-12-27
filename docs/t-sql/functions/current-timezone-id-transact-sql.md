@@ -67,6 +67,6 @@ W. Europe Standard Time
   
 ## See also
 
-[SQL Managed Instance Time Zone](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[SQL Managed Instance Time Zone](/azure/sql-database/sql-database-managed-instance-timezone)
 
-[CURRENT_TIMEZONE()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-transact-sql)
+[CURRENT_TIMEZONE()](./current-timezone-transact-sql.md)

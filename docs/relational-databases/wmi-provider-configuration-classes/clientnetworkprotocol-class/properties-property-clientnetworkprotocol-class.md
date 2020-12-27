@@ -21,7 +21,7 @@ ms.author: maghan
 ---
 # Properties Property (ClientNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Gets the properties associated with the current client network protocol specified by the [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx).  
+  Gets the properties associated with the current client network protocol specified by the [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md).  
   
 ## Syntax  
   
@@ -40,6 +40,5 @@ object.Properties [= value]
 ## Remarks  
   
 ## See Also  
- [Configuring Client Network Protocols and Net-Libraries](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configuring Client Network Protocols and Net-Libraries](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

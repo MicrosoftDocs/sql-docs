@@ -12,7 +12,7 @@ dev_langs:
 ms.assetid: df659c55-4f63-45f8-8afe-ce300031bc5b
 author: markingmyname
 ms.author: maghan
-monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016"
 ---
 # sys.dm_pdw_diag_processing_stats (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -28,6 +28,6 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |**lost_events_count**|**bigint**|The number of events lost.|  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

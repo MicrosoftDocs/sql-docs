@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Server-Level Roles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
   
  You can add server-level principals ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins, Windows accounts, and Windows groups) into server-level roles. Each member of a fixed server role can add other logins to that same role. Members of user-defined server roles cannot add other server principals to the role.  
 > [!NOTE]
->  Server-level permissions are not available in SQL Database or SQL Data Warehouse. For more information about SQL Database, see [Controlling and granting database access.](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)
+>  Server-level permissions are not available in SQL Database or Azure Synapse Analytics. For more information about SQL Database, see [Controlling and granting database access.](/azure/sql-database/sql-database-manage-logins)
   
 ## Fixed Server-Level Roles  
  The following table shows the fixed server-level roles and their capabilities.  
@@ -98,5 +98,4 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
  [REVOKE Server Principal Permissions &#40;Transact-SQL&#41;](../../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)   
  [DENY Server Principal Permissions &#40;Transact-SQL&#41;](../../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)   
  [Create a Server Role](../../../relational-databases/security/authentication-access/create-a-server-role.md)  
-  
   

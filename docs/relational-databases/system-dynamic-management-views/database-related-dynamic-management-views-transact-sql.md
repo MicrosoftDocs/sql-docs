@@ -48,7 +48,7 @@ ms.author: maghan
     :::column-end:::
 :::row-end:::
 
-DMV's unique to SQL Database or SQL Data Warehouse.   
+DMV's unique to SQL Database or Azure Synapse Analytics.   
 
 :::row:::
     :::column:::

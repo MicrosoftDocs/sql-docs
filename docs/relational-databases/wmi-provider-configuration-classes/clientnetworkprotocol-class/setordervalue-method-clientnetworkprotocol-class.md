@@ -46,6 +46,5 @@ object.SetOrderValue(OrderValue)
 ## Remarks  
   
 ## See Also  
- [Client Protocols Properties (Order Tab)](https://technet.microsoft.com/library/ms187884.aspx)  
-  
+ [Client Protocols Properties (Order Tab)](../../../tools/configuration-manager/client-protocols-properties-order-tab.md)  
   

@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
 author: RothJa
 ms.author: jroth
-# monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+# monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # Example: Retrieving Binary Data
 

@@ -129,5 +129,4 @@ Import functionality reads the server id and password information from the secur
 8. Please confirm password: xxxxxxxx  
   
 ## See Also  
-[Executing the SSMA Console (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
-  
+[Executing the SSMA Console (MySQL)](./executing-the-ssma-console-mysqltosql.md)  

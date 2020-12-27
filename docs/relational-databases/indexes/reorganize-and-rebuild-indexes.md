@@ -30,7 +30,7 @@ helpviewer_keywords:
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Resolve index fragmentation by reorganizing or rebuilding indexes
 
@@ -80,7 +80,7 @@ Similarly, removing fragmentation in a heap (a table with no clustered index) is
 
 <sup>2</sup> Rebuilding an index can be executed online or offline. Reorganizing an index is always executed online. To achieve availability similar to the reorganize option, you should rebuild indexes online. For more information, see [INDEX](#rebuild-an-index) and [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
 
-Indexes with fragmentation or less than 5 percent do not need to be defragmented because the benefit from removing such a small amount of fragmentation is almost always vastly outweighed by the CPU cost incurred to reorganize or rebuild the index. Also, rebuilding or reorganizing small rowstore indexes generally does not reduce actually fragmentation. 
+Indexes with fragmentation of less than 5 percent do not need to be defragmented because the benefit from removing such a small amount of fragmentation is almost always vastly outweighed by the CPU cost incurred to reorganize or rebuild the index. Also, rebuilding or reorganizing small rowstore indexes generally does not reduce actual fragmentation. 
 Up to, and including, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] allocates space using mixed extents. Therefore, pages of small indexes are sometimes stored on mixed extents. Mixed extents are shared by up to eight objects, so the fragmentation in a small index might not be reduced after reorganizing or rebuilding it. See also [Considerations specific to rebuilding rowstore indexes](#considerations-specific-to-rebuilding-rowstore-indexes). For more information about extents, see the [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md#extents).
 
 ### Detecting fragmentation of columnstore indexes
@@ -143,7 +143,7 @@ object_id   TableName    index_id    IndexName                                  
 
 For more information, see [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
 
-### To check the fragmentation of a columnstore index using [!INCLUDE[tsql](../../includes/tsql-md.md)]
+### To check the fragmentation of a columnstore index using Transact-SQL
 
 The following example finds the average fragmentation percentage of all indexes in the `dbo.FactResellerSalesXL_CCI` table in the `AdventureWorksDW2016` database.
 
@@ -175,7 +175,7 @@ object_id   TableName                   index_id    IndexName                   
 ### Check index fragmentation using SQL Server Management Studio
 
 > [!NOTE]
-> [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] cannot be used to compute fragmentation of columnstore indexes in SQL Server and cannot be used to compute fragmentation of any indexes in Azure SQL Database. Use the preceding [!INCLUDE[tsql](../../includes/tsql-md.md)] [example](#to-check-the-fragmentation-of-a-columnstore-index-using-) for these scenarios.
+> [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] cannot be used to compute fragmentation of columnstore indexes in SQL Server and cannot be used to compute fragmentation of any indexes in Azure SQL Database. Use the preceding [!INCLUDE[tsql](../../includes/tsql-md.md)] [example](#to-check-the-fragmentation-of-a-columnstore-index-using-transact-sql).
 
 1. In Object Explorer, Expand the database that contains the table on which you want to check an index's fragmentation.
 2. Expand the **Tables** folder.
@@ -430,4 +430,4 @@ Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)], you may still
 - [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)
 - [Get started with Columnstore for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 - [Columnstore Indexes for Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)
-- [Columnstore indexes and the merge policy for rowgroups](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)
+- [Columnstore indexes and the merge policy for rowgroups](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)

@@ -39,6 +39,5 @@ ms.author: "sstein"
   
 -   Using the Generate Scripts Wizard to publish databases  
   
-     You can use the Generate Scripts Wizard to transfer a database from a local computer to a Web hosting provider. For more information, see [Generate and Publish Scripts Wizard](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md).  
-  
+     You can use the Generate Scripts Wizard to transfer a database from a local computer to a Web hosting provider. For more information, see [Generate and Publish Scripts Wizard](../../ssms/scripting/generate-and-publish-scripts-wizard.md).  
   

@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure column encryption using Always Encrypted Wizard
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +31,7 @@ The wizard works by moving data out of the database and performing cryptographic
 > [!NOTE]
 > Running cryptographic operations can take a long time. During that time, your database is not available to write transactions. PowerShell is a recommended tool for cryptographic operations on larger tables. See [Configure column encryption using Always Encrypted with PowerShell](configure-column-encryption-using-powershell.md).
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > If you are using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can run cryptographic operations in-place, without moving data out of the database. See [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md). Note that the wizard does not support in-place encryption.
@@ -41,8 +41,8 @@ The wizard works by moving data out of the database and performing cryptographic
 Use PowerShell is a recommended 
 
  - For an end-to-end walk-through that shows how to configure Always Encrypted with the wizard and use it in a client application, see the following Azure SQL Database tutorials:
-    - [Protect sensitive data in Azure SQL Database with Always Encrypted and column master keys in Windows certificate store](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-    - [Protect sensitive data in Azure SQL Database with Always Encrypted and column master keys in Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
+    - [Protect sensitive data in Azure SQL Database with Always Encrypted and column master keys in Windows certificate store](/azure/azure-sql/database/always-encrypted-certificate-store-configure)
+    - [Protect sensitive data in Azure SQL Database with Always Encrypted and column master keys in Azure Key Vault](/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
 
  - For a video that includes using the wizard, see [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted). Also, see the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Security Team blog [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](https://techcommunity.microsoft.com/t5/SQL-Server/SSMS-Encryption-Wizard-Enabling-Always-Encrypted-in-a-Few-Easy/ba-p/384545).  
  - For information about Always Encrypted keys, see [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md).

@@ -5,14 +5,14 @@ ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: reference
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], troubleshooting"
   - "Availability Groups [SQL Server], policies"
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Policy based management for operational issues with Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: "08/30/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], server instance"
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], disabling"
   - "Availability Groups [SQL Server], enabling"
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Enable or Disable Always On availability group feature
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

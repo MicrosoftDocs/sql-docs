@@ -26,7 +26,7 @@ helpviewer_keywords:
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: "rothja"
 ms.author: "jroth"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Memory Management Architecture Guide
 
@@ -75,7 +75,7 @@ By using AWE and the Locked Pages in Memory privilege, you can provide the follo
 <sup>6</sup> If lock pages in memory privilege (LPIM) is granted (either on 32-bit for AWE support or on 64-bit by itself), we recommend also setting max server memory. For more information on LPIM, refer to [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)
 
 > [!NOTE]
-> Older versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] could run on a 32-bit operating system. Accessing more than 4 gigabytes (GB) of memory on a 32-bit operating system required Address Windowing Extensions (AWE) to manage the memory. This is not necessary when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on 64-bit operation systems. For more information about AWE, see [Process Address Space](https://msdn.microsoft.com/library/ms189334.aspx) and [Managing Memory for Large Databases](https://msdn.microsoft.com/library/ms191481.aspx) in the [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] documentation.   
+> Older versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] could run on a 32-bit operating system. Accessing more than 4 gigabytes (GB) of memory on a 32-bit operating system required Address Windowing Extensions (AWE) to manage the memory. This is not necessary when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on 64-bit operation systems. For more information about AWE, see [Process Address Space](/previous-versions/sql/sql-server-2008-r2/ms189334(v=sql.105)) and [Managing Memory for Large Databases](/previous-versions/sql/sql-server-2008-r2/ms191481(v=sql.105)) in the [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] documentation.   
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 

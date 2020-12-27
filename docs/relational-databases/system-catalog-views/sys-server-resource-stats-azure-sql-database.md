@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: "=azuresqldb-current||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -48,7 +48,7 @@ The **sys.server_resource_stats** view has different definitions depending on th
 
  
 > [!TIP]  
->  For more context about these limits and service tiers, see the topics [Managed Instance service tiers](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers).  
+>  For more context about these limits and service tiers, see the topics [Managed Instance service tiers](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers).  
     
 ## Permissions  
  This view is available to all user roles with permissions to connect to the **master** database.  
@@ -72,4 +72,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## See Also  
- [Managed Instance service tiers](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)
+ [Managed Instance service tiers](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

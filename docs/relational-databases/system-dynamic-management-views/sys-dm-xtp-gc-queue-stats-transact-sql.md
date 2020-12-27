@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: markingmyname
 ms.author: maghan
-monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
@@ -49,7 +49,7 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-
 ## User Scenario  
  This output shows that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is either running on 4 cores or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance has been affinitized to 4 cores:  
   
- This output shows that there are no work items in the queues to process. For queue 0, the total work items de-queued since SQL Startup are 15625 and the max queue depth has been 215625.  
+ This output shows that there are no work items in the queues to process. For queue 0, the total work items de-queued since SQL Startup are 15625 and the max queue depth has been 15625.  
   
 ```  
 queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth  last_service_ticks  

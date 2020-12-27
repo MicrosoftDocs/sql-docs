@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "restore sequences [SQL Server], piecemeal"
   - "simple recovery model [SQL Server], RESTORE examples"
 ms.assetid: 9834b14a-4e56-4654-b190-c2a38624b6b4
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Example: Piecemeal Restore of Database (Simple Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

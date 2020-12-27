@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # A Guide to Query Processing for Memory-Optimized Tables
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -294,6 +294,5 @@ Regarding this query plan:
 - The full index scan on IX_CustomerID has been replaced with an index seek. This resulted in scanning 5 rows, instead of the 830 rows required for the full index scan.  
   
 ## See Also  
- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [Memory-Optimized Tables](./sample-database-for-in-memory-oltp.md)  
   

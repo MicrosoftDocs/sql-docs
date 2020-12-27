@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: markingmyname
 ms.author: maghan
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 # sys.sp_cleanup_temporal_history (Transact-SQL)
 
@@ -60,4 +60,4 @@ select @rowcnt
 
 ## Next steps
 
-[Temporal tables retention policy](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)
+[Temporal tables retention policy](/azure/sql-database/sql-database-temporal-tables-retention-policy)

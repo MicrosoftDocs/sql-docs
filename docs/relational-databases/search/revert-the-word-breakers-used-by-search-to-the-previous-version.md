@@ -10,7 +10,7 @@ ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---
 # Revert word breakers used by Search to previous version (SQL Server Search)
@@ -375,5 +375,4 @@ ms.custom: "seo-lt-2019"
   
 ## See Also  
  [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [Behavior Changes to Full-Text Search](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15)
- 
+ [Behavior Changes to Full-Text Search](./full-text-search.md)

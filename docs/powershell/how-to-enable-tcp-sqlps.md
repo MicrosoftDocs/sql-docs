@@ -16,8 +16,7 @@ ms.date: 08/06/2020
 
 ## How to enable the TCP protocol when connected to the console with SQLPS.
 
-> [!Note]
-> The **SQLPS** module is included with the SQL Server installation (for backwards compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **[SqlServer](sql-server-powershell.md)** module.
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 1. Open a command prompt and type:
 
@@ -87,10 +86,6 @@ ms.date: 08/06/2020
 
     Restart-Service -Name MSSQLSERVER -Force
     ```
-
-
-
-
 
 ## Next steps
 

@@ -8,7 +8,7 @@ ms.date: 10/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: ">= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-ver15  || >= sql-server-ver15"
 ---
 # Configure persistent memory (PMEM) for SQL Server on Linux
 
@@ -81,7 +81,7 @@ mount -o dax,noatime /dev/pmem0 /mnt/dax
 
 Once the device has been configured with `ndctl`, created, and mounted, you can place database files in it or create a new database.
 
-Because PMEM devices are O_DIRECT (direct I/O) safe, consider enabling trace flag 3979 to disable the forced flush mechanism. For more information see [FUA support](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux). Forced unit access internals are covered here [FUA internals](https://blogs.msdn.microsoft.com/bobsql/2018/12/18/sql-server-on-linux-forced-unit-access-fua-internals/).
+Because PMEM devices are O_DIRECT (direct I/O) safe, consider enabling trace flag 3979 to disable the forced flush mechanism. For more information see [FUA support](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux). Forced unit access internals are covered here [FUA internals](/archive/blogs/bobsql/sql-server-on-linux-forced-unit-access-fua-internals).
 
 ## Next steps
 

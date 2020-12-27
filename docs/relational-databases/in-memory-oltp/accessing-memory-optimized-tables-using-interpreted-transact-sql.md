@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Accessing Memory-Optimized Tables Using Interpreted Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -89,11 +89,10 @@ When accessing a memory-optimized table from an explicit or implicit transaction
   
 - Set the database option [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT](../../t-sql/statements/alter-database-transact-sql-set-options.md) to ON.  
   
-An isolation level table hint is not required for memory-optimized tables accessed by queries running in [auto-commit mode](https://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00).  
+An isolation level table hint is not required for memory-optimized tables accessed by queries running in [auto-commit mode](../../odbc/reference/develop-app/auto-commit-mode.md).  
   
 ## See Also
 
 [Transact-SQL Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
 
-[Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-
+[Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)

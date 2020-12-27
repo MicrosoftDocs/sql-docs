@@ -5,7 +5,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.reviewer: ""
 ms.prod: sql
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "adding nodes"
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "clusters [SQL Server], creating"
   - "removing nodes"
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 
 # Create a New Always On Failover Cluster Instance (Setup)

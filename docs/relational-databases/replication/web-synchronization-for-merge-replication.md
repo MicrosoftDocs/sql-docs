@@ -31,7 +31,7 @@ ms.author: "mathoma"
   
  The [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] IT department has configured each portable computer with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and has enabled merge replication to use Web synchronization. The Merge Agent on each portable computer has an Internet URL that points to the replication components that are installed on a computer that is running [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS). These components synchronize the Subscriber with the Publisher. Each representative can now connect through any available Internet connection without using a remote dial-up connection, and can upload and download the appropriate data. The Internet connection uses Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL); therefore, a virtual private network (VPN) is not required.  
   
- For information about how to configure the components that are required for Web synchronization, see [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md), [Configure IIS for Web Synchronization](../../relational-databases/replication/configure-iis-for-web-synchronization.md), and [Configure IIS 7 for Web Synchronization](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
+ For information about how to configure the components that are required for Web synchronization, see [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md), [Configure IIS for Web Synchronization](./configure-iis-7-for-web-synchronization.md), and [Configure IIS 7 for Web Synchronization](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
   
 > [!NOTE]  
 >  Web synchronization is designed for synchronizing data with portable computers, handheld devices, and other clients. Web synchronization is not intended for high-volume server-to-server applications.  
@@ -79,5 +79,4 @@ ms.author: "mathoma"
 ## See Also  
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
-  
   

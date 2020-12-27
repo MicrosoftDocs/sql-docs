@@ -124,7 +124,7 @@ Your application will connect to the **ContosoHR** database from the [Tutorial: 
 
 2. Build and run the application.
 
-## See Also
+## See also
 
 - [Using Always Encrypted with the Microsoft .NET Data Provider for SQL Server](sqlclient-support-always-encrypted.md)
 - [Example demonstrating use of Azure Key Vault provider with Always Encrypted](azure-key-vault-example.md)

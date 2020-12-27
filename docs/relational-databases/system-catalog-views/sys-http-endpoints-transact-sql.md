@@ -24,6 +24,8 @@ ms.author: maghan
 # sys.http_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
+ [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+
   Contains a row for each endpoint created in the server that uses the HTTP protocol.  
   
 |Column name|Data type|Description|  

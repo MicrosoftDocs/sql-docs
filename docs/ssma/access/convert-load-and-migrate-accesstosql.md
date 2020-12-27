@@ -30,6 +30,5 @@ Shows the associated conversion or migration report.
   
 ## See Also
 
-[User Interface Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[User Interface Reference(Access)](./user-interface-reference-accesstosql.md)  
 [Migration Wizard](migration-wizard-accesstosql.md)  
-  

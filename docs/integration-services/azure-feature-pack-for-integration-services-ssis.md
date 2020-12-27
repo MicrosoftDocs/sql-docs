@@ -124,7 +124,7 @@ The following Java builds have been tested.
 
 ### Set Up Zulu's OpenJDK on Azure-SSIS Integration Runtime
 
-This should be done via [custom setup interface](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for Azure-SSIS Integration Runtime.
+This should be done via [custom setup interface](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for Azure-SSIS Integration Runtime.
 Suppose `zulu8.33.0.1-jdk8.0.192-win_x64.zip` is used.
 The blob container could be organized as follows.
 
@@ -174,18 +174,18 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 5.  Use the Azure HDInsight Blob Download Task to download the Pig/Hive output data from the Azure Blob Storage.
 
-![SSIS-AzureConnector-BigDataScenario](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
+![Screenshot showing the SSIS Azure Connector Big Data Scenario.](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
  
 ## Scenario: Managing data in the cloud
  Use the Azure Blob Destination in an SSIS package to write output data to Azure Blob Storage, or use the Azure Blob Source to read data from an Azure Blob Storage.
 
-![SSIS-AzureConnector-CloudArchive-1](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
+![Screenshot showing the data flow from the OLE DB Source to the Azure Blob Destination.](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
  
- ![SSIS-AzureConnector-CloudArchive-2](../integration-services/media/ssis-azureconnector-cloudarchive-2.png)
+ ![Screenshot showing the data flow from the Azure Blob Source to the OLE DB Destination.](../integration-services/media/ssis-azureconnector-cloudarchive-2.png)
 
  Use the Foreach Loop Container with the Azure Blob Enumerator to process data in multiple blob files.
 
-![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
+![Screenshot showing the control flow Foreach Loop container.](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
 
 ## Release Notes
 

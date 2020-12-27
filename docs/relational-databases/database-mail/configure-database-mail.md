@@ -434,7 +434,7 @@ ms.author: sstein
  The **mailitem_id** of the test e-mail message.  
   
  **Troubleshoot**  
- Click to open Books Online to the [Troubleshooting Database Mail](https://msdn.microsoft.com/library/ms188663.aspx)topic.  
+ Click to open Books Online to the [Troubleshooting Database Mail](/previous-versions/sql/sql-server-2008-r2/ms188663(v=sql.105))topic.  
   
  [Database Mail Configuration Wizard](#DBWizard)  
   
@@ -454,5 +454,4 @@ ms.author: sstein
 6.  Execute the script to create the configuration.  
   
 7.  The script does not grant any database users access to the profile. Therefore, by default, the profile can only be used by members of the **sysadmin** fixed security role. For more information about granting access to profiles, see [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)  
-  
   

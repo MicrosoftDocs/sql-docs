@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
  The following table lists the types of entities for which dependency information is created and maintained. Dependency information is not created or maintained for rules, defaults, temporary tables, temporary stored procedures, or system objects.  
 
 > [!NOTE]
-> Azure SQL Data Warehouse and Parallel Data Warehouse support tables, views, filtered statistics, and Transact-SQL stored procedures entity types from this list.  Dependency information is created and maintained for tables, views, and filtered statistics only.  
+> Azure Synapse Analytics and Parallel Data Warehouse support tables, views, filtered statistics, and Transact-SQL stored procedures entity types from this list.  Dependency information is created and maintained for tables, views, and filtered statistics only.  
   
 |Entity type|Referencing entity|Referenced entity|  
 |-----------------|------------------------|-----------------------|  

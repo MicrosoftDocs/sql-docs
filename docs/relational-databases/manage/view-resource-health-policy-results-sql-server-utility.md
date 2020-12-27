@@ -37,6 +37,6 @@ Use the Utility dashboard in [!INCLUDE[ssManStudioFull](../../includes/ssmanstud
 
 - [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)
 - [Reduce Noise in CPU Utilization Policies &#40;SQL Server Utility&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)
-- [Deployed Data-tier Application Details &#40;SQL Server Utility&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)
-- [Managed Instance Details &#40;SQL Server Utility&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)
-- [Utility Administration &#40;SQL Server Utility&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)
+- [Deployed Data-tier Application Details &#40;SQL Server Utility&#41;](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130))
+- [Managed Instance Details &#40;SQL Server Utility&#41;](./utility-explorer-f1-help.md)
+- [Utility Administration &#40;SQL Server Utility&#41;](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130))

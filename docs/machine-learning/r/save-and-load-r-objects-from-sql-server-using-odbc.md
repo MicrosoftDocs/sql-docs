@@ -9,7 +9,7 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Save and load R objects from SQL Server using ODBC
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -40,7 +40,7 @@ By default, any object that you call from R to move to SQL Server is serialized 
 
 - `rxListKeys` lists as key-value pairs all the available objects. This helps you determine the names and versions of the R objects.
 
-For detailed help on the syntax of each function, use R help. Details are also available in the [ScaleR reference](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
+For detailed help on the syntax of each function, use R help. Details are also available in the [ScaleR reference](/r-server/r-reference/revoscaler/revoscaler).
 
 ## How to store R objects in SQL Server using ODBC
 

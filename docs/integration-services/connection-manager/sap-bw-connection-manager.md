@@ -44,12 +44,12 @@ ms.author: chugu
   
  If you do not know all the values that are required to configure the connection manager, you might have to ask your SAP administrator.  
   
- For a walkthrough that demonstrates how to configure and use the SAP BW connection manager, source, and destination, see the white paper, [Using SQL Server 2008 Integration Services with SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). This white paper also shows how to configure the required objects in SAP BW.  
+ For a walkthrough that demonstrates how to configure and use the SAP BW connection manager, source, and destination, see the white paper, [Using SQL Server 2008 Integration Services with SAP BI 7.0](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100)). This white paper also shows how to configure the required objects in SAP BW.  
   
 ### Using the SSIS Designer to Configure the Source  
  For more information about the properties of the SAP BW connection manager that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [SAP BW Connection Manager Editor](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
+-   [SAP BW Connection Manager Editor]()  
   
 ## SAP BW Connection Manager Editor
   Use the **SAP BW Connection Manager Editor** to specify the properties to use to connect to an SAP Netweaver BW version 7 system.  
@@ -148,5 +148,4 @@ ms.author: chugu
   
 ## See Also  
  [Microsoft Connector for SAP BW Components](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
-  
   

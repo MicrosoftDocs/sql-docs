@@ -67,7 +67,7 @@ The **sqlsrv_query** function is well-suited for one-time queries and should be 
   
 For more information, see [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
-## Example  
+## Example 1  
 In the following example, a single row is inserted into the *Sales.SalesOrderDetail* table of the AdventureWorks database. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 > [!NOTE]  
@@ -114,7 +114,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## Example  
+## Example 2  
 The following example updates a field in the *Sales.SalesOrderDetail* table of the AdventureWorks database. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
@@ -153,7 +153,7 @@ sqlsrv_close($conn);
 > [!NOTE]
 > It is recommended to use strings as inputs when binding values to a [decimal or numeric column](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](https://php.net/manual/en/language.types.float.php). The same applies to bigint columns, especially when the values are outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
-## Example  
+## Example 3  
 This code sample shows how to bind a decimal value as an input parameter.  
 
 ```
@@ -177,7 +177,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## Example
+## Example 4
 This code sample shows how to create a table of [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) types and fetch the inserted data.
 
 ```

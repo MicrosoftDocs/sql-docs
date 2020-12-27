@@ -67,7 +67,7 @@ ms.author: mathoma
  Use this page to select a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database server and management data warehouse. The management data warehouse is a relational database that will store collected data.  
   
 > [!NOTE]  
->  You must have the appropriate level of permissions in order to create the management data warehouse on the server. For more information, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). You also must have the appropriate level of permissions to create logins for management data warehouse roles.  
+>  You must have the appropriate level of permissions in order to create the management data warehouse on the server. For more information, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md). You also must have the appropriate level of permissions to create logins for management data warehouse roles.  
   
  **Server name**  
  Specifies the name of the server that will host the management data warehouse.  
@@ -133,5 +133,4 @@ ms.author: mathoma
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [Data Collection](../../relational-databases/data-collection/data-collection.md)   
  [Manage Data Collection](../../relational-databases/data-collection/manage-data-collection.md)  
-  
   

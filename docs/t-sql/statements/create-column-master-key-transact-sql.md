@@ -78,7 +78,7 @@ The following table shows the names of system providers:
     |'MSSQL_CERTIFICATE_STORE'|Windows Certificate Store| 
     |'MSSQL_CSP_PROVIDER'|A store, such as a hardware security module (HSM), that supports Microsoft CryptoAPI.|
     |'MSSQL_CNG_STORE'|A store, such as a hardware security module (HSM), that supports Cryptography API: Next Generation.|  
-    |'AZURE_KEY_VAULT'|See [Getting Started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
+    |'AZURE_KEY_VAULT'|See [Getting Started with Azure Key Vault](/azure/key-vault/general/overview)|  
     |'MSSQL_JAVA_KEYSTORE'| Java Key Store.}
   
 
@@ -95,7 +95,7 @@ The path of the key in the column master key store. The key path must be valid f
      Where:  
   
     *CertificateStoreLocation*  
-    Certificate store location, which must be Current User or Local Machine. For more information, see [Local Machine and Current User Certificate Stores](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx).  
+    Certificate store location, which must be Current User or Local Machine. For more information, see [Local Machine and Current User Certificate Stores](/windows-hardware/drivers/install/local-machine-and-current-user-certificate-stores).  
   
     *CertificateStore*  
     Certificate store name, for example 'My'.  
@@ -246,4 +246,3 @@ WITH (
 * [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
 * [Overview of Key Management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
 * [Manage keys for Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
-  

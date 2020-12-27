@@ -32,8 +32,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
-  
+```syntaxsql 
 expression !> expression  
 ```  
   

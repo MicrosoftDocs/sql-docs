@@ -5,14 +5,14 @@ ms.custom: "seodec18"
 ms.date: "04/20/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: reference
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], about"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Always On availability groups: interoperability (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

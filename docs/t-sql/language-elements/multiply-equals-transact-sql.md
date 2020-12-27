@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: 816ff5dc-9a40-4c07-8351-39c194dbc079
 author: rothja
 ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # *= (Multiplication Assignment) (Transact-SQL)
@@ -34,7 +34,7 @@ Multiplies two numbers and sets a value to the result of the operation. For exam
   
 ## Syntax  
   
-```  
+```syntaxsql  
 expression *= expression  
 ```  
   

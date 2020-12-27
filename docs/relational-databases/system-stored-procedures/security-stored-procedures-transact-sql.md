@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Security Stored Procedures (Transact-SQL)
 
@@ -121,7 +121,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 :::row-end:::
 :::row:::
     :::column:::
-        [sp_dropalias](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md) (Deprecated) 
+        [sp_dropalias](./system-stored-procedures-transact-sql.md) (Deprecated) 
     :::column-end:::
     :::column:::
         [sys.sp_drop_trusted_assembly]( sys-sp-drop-trusted-assembly-transact-sql.md) 
@@ -274,5 +274,4 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## See Also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-  
   

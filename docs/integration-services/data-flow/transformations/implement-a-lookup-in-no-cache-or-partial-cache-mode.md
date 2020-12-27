@@ -102,11 +102,10 @@ ms.author: chugu
     > [!NOTE]  
     >  The optional SQL statement that you specify on this page overrides and replaces the table name that you specified on the **Connection** page of the **Lookup Transformation Editor**.  
   
-13. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+13. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](./lookup-transformation.md).  
   
 14. Click **OK** to save your changes to the Lookup transformation, and then run the package.  
   
 ## See Also  
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

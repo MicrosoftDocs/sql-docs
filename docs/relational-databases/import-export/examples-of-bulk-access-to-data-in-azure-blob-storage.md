@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---
 # Examples of bulk access to data in Azure Blob storage
@@ -34,7 +34,7 @@ Bulk access to Azure blob storage from SQL Server, requires at least [!INCLUDE[s
 All of the examples below require a database scoped credential referencing a shared access signature.
 
 > [!IMPORTANT]
-> The external data source must be created with a database scoped credential that uses the `SHARED ACCESS SIGNATURE` identity. To create a shared access signature for your storage account, see the **Shared access signature** property on the storage account property page, in the Azure portal. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). For more information on credentials, see [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+> The external data source must be created with a database scoped credential that uses the `SHARED ACCESS SIGNATURE` identity. To create a shared access signature for your storage account, see the **Shared access signature** property on the storage account property page, in the Azure portal. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). For more information on credentials, see [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
 Create a database scoped credential using the `IDENTITY` which must be `SHARED ACCESS SIGNATURE`. Use the SAS token generated for the blob storage account. Verify that your SAS token does not have a leading `?`, that you have at least read permission on the object that should be loaded, and that the expiration period is valid (all dates are in UTC time).
 

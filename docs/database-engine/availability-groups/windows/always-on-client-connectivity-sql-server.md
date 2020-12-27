@@ -5,15 +5,15 @@ ms.custom: "seodec18"
 ms.date: "07/28/2020"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], listeners"
   - "Availability Groups [SQL Server], prerequisites and restrictions"
   - "Availability Groups [SQL Server], client connectivity"
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Driver and client connectivity support for availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

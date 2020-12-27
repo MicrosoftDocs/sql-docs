@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a Login
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,9 +60,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
     2.  Under **From this location**, click **Locations...** to open the **Locations** dialog box and select one of the available server locations. When finished, click **OK**.  
   
-    3.  Under **Enter the object name to select (examples)**, enter the user or group name that you want to find. For more information, see [Select Users, Computers, or Groups Dialog Box](https://technet.microsoft.com/library/cc771712.aspx).  
+    3.  Under **Enter the object name to select (examples)**, enter the user or group name that you want to find. For more information, see [Select Users, Computers, or Groups Dialog Box](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771712(v=ws.11)).  
   
-    4.  Click **Advanced...** for more advanced search options. For more information, see [Select Users, Computers, or Groups Dialog Box - Advanced Page](https://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Click **Advanced...** for more advanced search options. For more information, see [Select Users, Computers, or Groups Dialog Box - Advanced Page](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733110(v=ws.11)).  
   
     5.  Click **OK**.  
   
@@ -269,5 +269,4 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## See Also  
  [Security Center for SQL Server Database Engine and Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "restoring databases [SQL Server], renaming"
   - "database creation [SQL Server], restoring with move"
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Restore a Database to a New Location (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

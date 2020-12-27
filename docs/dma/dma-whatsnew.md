@@ -78,7 +78,7 @@ The assessment workflow helps you detect the following issues, which can affect 
   - Behavioral changes: The schema objects reported may continue to work, but they may exhibit a different behavior, for example performance degradation.
   - Informational issues: These objects won't impact the migration but may have been deprecated from feature SQL Server releases.
 
-After the assessment is complete, use our [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) to perform the migration of your SQL Server databases to SQL Managed Instance.  DMS supports both [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (one-time) and [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (minimal-downtime) database migrations to SQL Managed Instance.
+After the assessment is complete, use our [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) to perform the migration of your SQL Server databases to SQL Managed Instance.  DMS supports both [offline](/azure/dms/tutorial-sql-server-to-managed-instance) (one-time) and [online](/azure/dms/tutorial-sql-server-managed-instance-online) (minimal-downtime) database migrations to SQL Managed Instance.
 
 ## Data Migration Assistant v4.0
 
@@ -136,7 +136,7 @@ If the physical back-up file is on a computer running:
 
 ### Migrating Windows logins
 
-While the migration of Active Directory (AD) logins is officially supported by SQL Server 2017 on Linux, it requires additional configuration to work successfully. Refer to the article [Active Directory Authentication with SQL Server on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) for detailed information about setting up Active Directory logins on SQL Server 2017 on Linux. After performing the required configuration, the setup is complete and you can migrate Active Directory logins as usual. Standard SQL Authentication works as expected without any additional setup.
+While the migration of Active Directory (AD) logins is officially supported by SQL Server 2017 on Linux, it requires additional configuration to work successfully. Refer to the article [Active Directory Authentication with SQL Server on Linux](../linux/sql-server-linux-active-directory-authentication.md) for detailed information about setting up Active Directory logins on SQL Server 2017 on Linux. After performing the required configuration, the setup is complete and you can migrate Active Directory logins as usual. Standard SQL Authentication works as expected without any additional setup.
 
 ## Data Migration Assistant v3.2
 

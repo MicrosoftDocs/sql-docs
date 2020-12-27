@@ -27,5 +27,4 @@ Quick view of the SSMA Console command line options:
 |8|-?|No|Not Applicable|Not Applicable|  
   
 ## See Also  
-[Executing the SSMA Console (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
-  
+[Executing the SSMA Console (Oracle)](./executing-the-ssma-console-oracletosql.md)  

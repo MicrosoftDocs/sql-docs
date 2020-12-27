@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Replace in Files
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -98,10 +98,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Indicates how to interpret special characters entered in the **Find what** or **Replace with** text boxes. The options include **Wildcards** and **Regular Expressions**.  
   
  **Regular Expressions**  
- Special notations define patterns of text to match. For a list, see [Search Text with Regular Expressions](../../relational-databases/scripting/search-text-with-regular-expressions.md).  
+ Special notations define patterns of text to match. For a list, see [Search Text with Regular Expressions](./search-text-with-regular-expressions.md).  
   
  **Wildcards**  
- Special characters such as asterisks (`*`) and question marks (`?`) represent one or more characters. For a list, see [Search Text with Wildcards](../../relational-databases/scripting/search-text-with-wildcards.md).  
+ Special characters such as asterisks (`*`) and question marks (`?`) represent one or more characters. For a list, see [Search Text with Wildcards](./search-text-with-wildcards.md).  
   
  **Look at these file types**  
  This list indicates the types of files to search through in the directories specified in **Look in**. If this box is left blank, all of the files in the directories specified in **Look in** will be searched.  
@@ -149,4 +149,4 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  This toolbar tab changes the dialog box to a **Find in Symbols** dialog box.  
   
 ## See Also  
- [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

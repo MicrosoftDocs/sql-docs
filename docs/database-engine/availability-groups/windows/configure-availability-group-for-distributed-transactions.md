@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: "02/06/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords: 
   - "database mirroring [SQL Server], interoperability"
@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "troubleshooting [SQL Server], cross-database transactions"
 ms.assetid: 
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Configure distributed transactions for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

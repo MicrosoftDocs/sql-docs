@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||=azuresqldb-mi-current"
 ---
 # FILESTREAM (SQL Server)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only.md)]

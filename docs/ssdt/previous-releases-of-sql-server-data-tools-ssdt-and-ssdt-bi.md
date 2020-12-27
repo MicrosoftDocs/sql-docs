@@ -10,7 +10,7 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 06/17/2020
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 
 # Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)
@@ -133,7 +133,7 @@ This **SSDT for Visual Studio 2012** release can be installed in the following l
 | [Spanish](https://go.microsoft.com/fwlink/?linkid=518814&clcid=0x40a) | 6D81FB572A7003C54C29D2ACF076D2CED4A1CA80F329BFF9D41A806920D64EEE |
 
 > [!Note]
-> SSDT supports the two most recent versions of Visual Studio. With the release of Visual Studio 2019, SSDT versions for Visual Studio 2015 and earlier are no longer updated. SSDT for Visual Studio 2010 is no longer available. For more information, see the *FAQ* section of [this SSDT team blog post](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
+> SSDT supports the two most recent versions of Visual Studio. With the release of Visual Studio 2019, SSDT versions for Visual Studio 2015 and earlier are no longer updated. SSDT for Visual Studio 2010 is no longer available. For more information, see the *FAQ* section of [this SSDT team blog post](/archive/blogs/ssdt/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017).
 
 ## SQL BI: Analysis Services, Reporting Services, Integration services
 

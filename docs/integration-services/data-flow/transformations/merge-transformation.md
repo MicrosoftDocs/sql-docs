@@ -58,7 +58,7 @@ ms.author: chugu
   
  For more information about the properties that you can programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -90,5 +90,4 @@ ms.author: chugu
  [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

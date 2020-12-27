@@ -33,7 +33,6 @@ ms.author: jroth
 ## Syntax  
   
 ```syntaxsql
-  
 OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  
   
@@ -60,7 +59,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
 ## Examples  
  The following example opens a cursor and fetches all the rows.  
   
-```  
+```sql  
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT LastName, FirstName  
 FROM AdventureWorks2012.HumanResources.vEmployee  

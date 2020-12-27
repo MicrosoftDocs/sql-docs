@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: "polybase, sql-data-warehouse, pdw"
-monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
+monikerRange: ">= sql-server-2016"
 ---
 
 # Troubleshoot PolyBase Kerberos connectivity
@@ -249,7 +249,7 @@ If you are still having issues accessing Kerberos, follow the steps below to deb
 4. If KDC can only support AES256, make sure [JCE policy files](http://www.oracle.com/technetwork/java/javase/downloads/index.html) are installed.
 
 ## See also
-[Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)  
+[Integrating PolyBase with Cloudera using Active Directory Authentication](/archive/blogs/microsoftrservertigerteam/integrating-polybase-with-cloudera-using-active-directory-authentication)  
 [Cloudera's Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Hortonworks' Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
 [PolyBase troubleshooting](polybase-troubleshooting.md)

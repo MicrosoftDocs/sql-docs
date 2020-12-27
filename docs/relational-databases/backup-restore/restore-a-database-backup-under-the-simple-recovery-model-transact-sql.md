@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "database backups [SQL Server], full backups"
   - "restoring databases [SQL Server], full backups"
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Restore a database backup under the simple recovery model (Transact-SQL)
 

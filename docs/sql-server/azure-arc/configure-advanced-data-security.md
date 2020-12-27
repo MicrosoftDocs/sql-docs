@@ -44,17 +44,17 @@ The next step is needed only if you have not yet configured the MMA agent on the
 
 1. For more details, see [Extension management with Azure Arc](/azure/azure-arc/servers/manage-vm-extensions)
 
-## Enable advanced data security
+## Enable Azure Defender
 
-Next, you need to enable advanced data security for SQL Server instance.
+Next, you need to enable Azure Defender for SQL Server instance.
 
 1. Go to Security Center and open the **Pricing & settings** page from the sidebar.
 
 1. Select the workspace that you have configured for the MMA extension in the previous step
 
-1. Select **Standard**. Make sure the option for **SQL servers on Machine (Preview)** is enabled.
+1. Select **Azure Defender On**. Make sure the option for **SQL servers on machines** is turned on.
 
-   ![Upgrade workspace](media/configure-advanced-data-security/upgrade-log-analytics-workspace.png)
+   ![Upgrade workspace](media/configure-advanced-data-security/enable-azure-defender.png)
 
  > [!NOTE]
    > The first scan to generate the vulnerability assessment will happen within 24 hours after enabling advanced data security. After that, auto scans will be performed every week on Sunday.
@@ -71,7 +71,7 @@ Explore security anomalies and threats in Azure Security Center.
 
    ![Vulnerability report](media/configure-advanced-data-security/vulnerabilities-report.png)
 
-1. Click on any security alert for full details and further explore the attack in [Azure Sentinel](https://docs.microsoft.com/azure/sentinel/overview). The following diagram is an example of the brute force alert.
+1. Click on any security alert for full details and further explore the attack in [Azure Sentinel](/azure/sentinel/overview). The following diagram is an example of the brute force alert.
 
    ![Brute force alert](media/configure-advanced-data-security/brute-force-alert.png)
 

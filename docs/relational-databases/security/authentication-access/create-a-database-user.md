@@ -24,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---   
 # Create a Database User
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ##  <a name="Understanding"></a> Understanding the Types of Users  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] presents 6 options when creating a database user. The following graphic shows the 6 options in the green box, and indicates what they represent.  
   
- ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
+ ![Diagram that explains the different types of users.](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
 ### Selecting the Type of User  
  **Login or user that is not mapped to a login**  

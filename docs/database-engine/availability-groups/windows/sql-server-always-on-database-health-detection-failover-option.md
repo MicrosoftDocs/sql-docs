@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords:
   - "AlwaysOn"
@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "High Availability"
   - "SQL Server"
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Availability group database level health detection failover option
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

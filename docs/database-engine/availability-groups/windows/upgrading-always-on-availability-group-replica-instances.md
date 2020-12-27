@@ -5,11 +5,11 @@ ms.custom: "seo-lt-2019"
 ms.date: "01/10/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Upgrading Always On Availability Group Replica Instances
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

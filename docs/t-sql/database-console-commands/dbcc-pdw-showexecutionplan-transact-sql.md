@@ -12,7 +12,7 @@ dev_langs:
   - "TSQL"
 author: pmasl
 ms.author: umajay
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 
 # DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
@@ -39,6 +39,8 @@ Syntax for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
 [ ; ]  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments  
  *distribution_id*  

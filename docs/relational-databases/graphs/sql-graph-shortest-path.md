@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "SQL graph, MATCH statement"
 author: shkale-msft
 ms.author: shkale
-monikerRange: "=azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-ver15||=azuresqldb-mi-current"
 ---
 # SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]

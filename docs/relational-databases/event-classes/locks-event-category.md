@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 27d6afa2-7dab-4fe7-a1ad-064b879dc654
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Locks Event Category
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

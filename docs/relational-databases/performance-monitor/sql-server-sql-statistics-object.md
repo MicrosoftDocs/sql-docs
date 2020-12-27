@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQLServer:SQL Statistics"
   - "SQL Statistics object"
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, SQL Statistics Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

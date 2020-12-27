@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: "02/25/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords: 
   - "read-only routing"
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], client connectivity"
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Configure read-only routing for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

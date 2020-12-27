@@ -71,7 +71,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
  Disabling a disabled plan guide or enabling an enabled plan guide has no effect and runs without error.  
   
- Plans guides are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). However, you can execute **sp_control_plan_guide** with the DROP or DROP ALL option in any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Plans guides are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). However, you can execute **sp_control_plan_guide** with the DROP or DROP ALL option in any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Permissions  
  To execute **sp_control_plan_guide** on a plan guide of type OBJECT (created specifying **@type ='**OBJECT**'** ) requires ALTER permission on the object that is referenced by the plan guide. All other plan guides require ALTER DATABASE permission.  
@@ -134,5 +134,4 @@ EXEC sp_control_plan_guide N'DISABLE ALL';
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [Plan Guides](../../relational-databases/performance/plan-guides.md)  
-  
   

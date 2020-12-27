@@ -4,6 +4,10 @@ description: Learn about database references and how to use them. View the proce
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
+f1_keywords:
+  - sql.data.tools.adddatabasereference.dialog
+  - sql.data.tools.newdatabase.dialog
+  - sql.data.tools.criticalerror.dialog
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”

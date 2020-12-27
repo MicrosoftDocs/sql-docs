@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], about"
@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "AlwaysOn [SQL Server], see Availability Groups [SQL Server]"
   - "Availability Groups [SQL Server]"
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Always On availability groups: a high-availability and disaster-recovery solution
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

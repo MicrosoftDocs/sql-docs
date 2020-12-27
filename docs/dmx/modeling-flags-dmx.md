@@ -43,10 +43,10 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
   
  For an example of the syntax for specifying a modeling flga on a mining model column, see [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
- For more information about working with mining model columns, see [Mining Model Columns](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
+ For more information about working with mining model columns, see [Mining Model Columns](/analysis-services/data-mining/mining-model-columns).  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Data Mining Extensions &#40;DMX&#41; Reference](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; Syntax Elements](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -56,5 +56,4 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Structure and Usage of DMX Prediction Queries](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Understanding the DMX Select Statement](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

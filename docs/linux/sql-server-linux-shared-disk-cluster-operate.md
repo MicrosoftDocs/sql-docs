@@ -2,8 +2,8 @@
 title: Manually fail an FCI over - SQL Server on Linux
 description: Learn to manually fail a failover cluster instance (FCI) on SQL Server on Linux, specifically Red Hat Linux Enterprise, Ubuntu, and Suse Linux Enterprise Server.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 12/06/2019
 ms.topic: conceptual

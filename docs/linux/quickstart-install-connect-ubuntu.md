@@ -25,7 +25,7 @@ In this quickstart, you install SQL Server 2017 on Ubuntu 18.04. You then connec
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 In this quickstart, you install SQL Server 2019 on Ubuntu 18.04. You then connect with **sqlcmd** to create your first database and run queries.
 
@@ -41,29 +41,29 @@ In this quickstart, you install SQL Server 2019 on Ubuntu 18.04. You then connec
 
 You must have an Ubuntu 16.04 or 18.04 machine with **at least 2 GB** of memory.
 
-To install Ubuntu 18.04 on your own machine, go to <http://releases.ubuntu.com/bionic/>. You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+To install Ubuntu 18.04 on your own machine, go to <http://releases.ubuntu.com/bionic/>. You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
-> At this time, the [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) for Windows 10 is not supported as an installation target.
+> At this time, the [Windows Subsystem for Linux](/windows/wsl/about) for Windows 10 is not supported as an installation target.
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 > [!NOTE]
 > Ubuntu 18.04 is supported starting with SQL Server 2017 CU20. If you want to use the instructions on this article with Ubuntu 18.04, make sure you use the correct [repository path](sql-server-linux-change-repo.md), `18.04` instead of `16.04`.
 >
-> If you are running SQL Server on a lower version, the configuration is possible with [modifications](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/).
+> If you are running SQL Server on a lower version, the configuration is possible with [modifications](/archive/blogs/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts).
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 You must have an Ubuntu 16.04 or 18.04 machine with **at least 2 GB** of memory.
 
-To install Ubuntu 18.04 on your own machine, go to <http://releases.ubuntu.com/bionic/>. You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+To install Ubuntu 18.04 on your own machine, go to <http://releases.ubuntu.com/bionic/>. You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
-> At this time, the [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) for Windows 10 is not supported as an installation target.
+> At this time, the [Windows Subsystem for Linux](/windows/wsl/about) for Windows 10 is not supported as an installation target.
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -130,7 +130,7 @@ At this point, SQL Server is running on your Ubuntu machine and is ready to use!
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a id="install"></a>Install SQL Server
 

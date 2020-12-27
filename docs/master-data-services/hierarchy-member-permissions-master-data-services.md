@@ -58,7 +58,7 @@ ms.author: lle
 -   If one hierarchy node is assigned any combination of **Create**/**Read**/**Update**/**Delete** permissions and another node is assigned **Deny** permissions, access to the members in the node is denied.  
   
 ## External Resources  
- Blog post, [Security Improvements](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay), on msdn.com.  
+ Blog post, [Security Improvements](/archive/blogs/e7/improvements-to-autoplay), on msdn.com.  
   
 ## See Also  
  [Assign Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
@@ -66,5 +66,4 @@ ms.author: lle
  [Members &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [Hierarchies &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)   
  [Immediately Apply Member Permissions &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
-  
   

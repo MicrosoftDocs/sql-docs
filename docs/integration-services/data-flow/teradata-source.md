@@ -25,7 +25,7 @@ The source uses the Teradata connection manager to connect to the Teradata sourc
 
 You can log the calls that the Teradata source makes to the Teradata Parallel Transporter (TPT) API. To do so, enable package logging and then select the **Diagnostic** event at the package level.
 
-You can log the Open Database Connectivity (ODBC) calls that the Teradata source makes to the Teradata ODBC driver by enabling the ODBC driver manager trace. For more information, see [How to generate an ODBC trace with the ODBC Data Source Administrator](https://docs.microsoft.com/sql/odbc/admin/setting-tracing-options).
+You can log the Open Database Connectivity (ODBC) calls that the Teradata source makes to the Teradata ODBC driver by enabling the ODBC driver manager trace. For more information, see [How to generate an ODBC trace with the ODBC Data Source Administrator](../../odbc/admin/setting-tracing-options.md).
 
 ## Parallelism
 

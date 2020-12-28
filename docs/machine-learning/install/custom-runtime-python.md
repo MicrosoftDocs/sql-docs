@@ -201,12 +201,12 @@ sudo apt-get install python3.7 python3-pip libpython3.7
 sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
 ```
 
-## Using a custom installation of Python 3.7
+## Custom installation of Python
 
-> [!NOTE]
-> If you have installed Python in the default location of `/usr/lib/python3.7`, you can skip to [the next section](#download-python-linux).
+> [!IMPORTANT]
+> If you have installed Python 3.7 in the default location of `/usr/lib/python3.7`, you can skip this section.
 
-If you built your own version of Python 3.7, use the following commands so that SQL Server can find and load your custom installation.
+If you built your own version of Python 3.7, use the following commands to let SQL Server know your custom installation.
 
 ### Update the environment variables
 
@@ -216,14 +216,14 @@ If you built your own version of Python 3.7, use the following commands so that 
       sudo systemctl edit mssql-launchpadd
       ```
 
-    + Insert the following text in the `/etc/systemd/system/mssql-launchpadd.service.d/override.conf` file that opens. Set value of PYTHONHOME to the custom Python installation path.
+    1. Insert the following text in the `/etc/systemd/system/mssql-launchpadd.service.d/override.conf` file that opens. Set value of PYTHONHOME to the custom Python installation path.
 
-      ```vi
-      [Service]
-      Environment="PYTHONHOME=/path/to/installation/of/python3.7"
-      ```
+    ```
+    [Service]
+    Environment="PYTHONHOME=/path/to/installation/of/python3.7"
+    ```
 
-    + Save and close.
+    1. Save and close.
 
 2. Make sure `libpython3.7m.so.1.0` can be loaded.
 

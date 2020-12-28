@@ -210,43 +210,45 @@ If you built your own version of Python 3.7, use the following commands to let S
 
 ### Update the environment variables
 
-1. Edit the mssql-launchpadd service to add the PYTHONHOME environment variable to the file `/etc/systemd/system/mssql-launchpadd.service.d/override.conf`
+First, edit the **mssql-launchpadd** service to add the **PYTHONHOME** environment variable to the file `/etc/systemd/system/mssql-launchpadd.service.d/override.conf`
 
-      ```bash
-      sudo systemctl edit mssql-launchpadd
-      ```
+1. Open the file with systemctl
 
-    1. Insert the following text in the `/etc/systemd/system/mssql-launchpadd.service.d/override.conf` file that opens. Set value of PYTHONHOME to the custom Python installation path.
+    ```bash
+    sudo systemctl edit mssql-launchpadd
+    ```
+
+1. Insert the following text in the `/etc/systemd/system/mssql-launchpadd.service.d/override.conf` file that opens. Set value of **PYTHONHOME** to the custom Python installation path.
 
     ```
     [Service]
     Environment="PYTHONHOME=/path/to/installation/of/python3.7"
     ```
 
-    1. Save and close.
+1. Save the file and close the editor.
 
-2. Make sure `libpython3.7m.so.1.0` can be loaded.
+Next, make sure `libpython3.7m.so.1.0` can be loaded.
 
-    + Create a custom-python.conf file in `/etc/ld.so.conf.d`.
+1. Create a custom-python.conf file in `/etc/ld.so.conf.d`.
 
-      ```bash
-      sudo vi /etc/ld.so.conf.d/custom-python.conf
-      ```
+    ```bash
+    sudo vi /etc/ld.so.conf.d/custom-python.conf
+    ```
 
-    + In the file that opens, add the path to **libpython3.7m.so.1.0** from the custom Python installation.
+1. In the file that opens, add the path to **libpython3.7m.so.1.0** from the custom Python installation.
 
-      ```vi
-      /path/to/installation/of/python3.7/lib
-      ```
+    ```
+    /path/to/installation/of/python3.7/lib
+    ```
 
-    + Save and close the new file.
+1. Save the new file and close the editor.
 
-    + Run `ldconfig` and verify `libpython3.7m.so.1.0` can be loaded by running the following commands and checking that all the dependent libraries can be found.
+1. Run `ldconfig` and verify `libpython3.7m.so.1.0` can be loaded by running the following commands and checking that all the dependent libraries can be found.
 
-      ```bash
-      sudo ldconfig
-      ldd /path/to/installation/of/python3.7/lib/libpython3.7m.so.1.0
-      ```
+    ```bash
+    sudo ldconfig
+    ldd /path/to/installation/of/python3.7/lib/libpython3.7m.so.1.0
+    ```
 
 ### Grant access to the custom Python folder
 

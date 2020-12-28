@@ -159,7 +159,8 @@ Before installing a Python custom runtime, install the following:
 
 Follow the steps below to install [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md) on Linux, which is used for the Python custom runtime.
 
-### Ubuntu
+#### [Ubuntu](#tab/ubuntu)
+
 > [!TIP]
 > If possible, `update` to refresh packages on the system prior to installation. Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
 
@@ -168,17 +169,20 @@ Follow the steps below to install [SQL Server Language Extensions](../../languag
 sudo apt-get install mssql-server-extensibility
 ```
 
-### Red Hat
+#### [RHEL](#tab/rhel)
 ```bash
 # Install as root or sudo
 sudo yum install mssql-server-extensibility
 ```
 
+#### [SLES](#tab/sles)
 ### Suse
 ```bash
 # Install as root or sudo
 sudo zypper install mssql-server-extensibility
 ```
+
+---
 
 ## Install Python 3.7 and pandas
 

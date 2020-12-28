@@ -169,14 +169,14 @@ sudo apt-get install mssql-server-extensibility
 > [!NOTE]
 > If possible, `apt-get update` to refresh the packages on the system prior to the installation. Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
 
-#### [RHEL](#tab/rhel)
+#### [Red Hat Enterprise Linux (RHEL)](#tab/rhel)
 
 ```bash
 # Install as root or sudo
 sudo yum install mssql-server-extensibility
 ```
 
-#### [SLES](#tab/sles)
+#### [SUSE Linux Enterprise Server (SLES)](#tab/sles)
 
 ```bash
 # Install as root or sudo

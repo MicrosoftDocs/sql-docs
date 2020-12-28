@@ -5,11 +5,11 @@ ms.custom: seo-lt-2019
 ms.date: "05/02/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid:
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Mechanics and guidelines of lease, cluster, and health check timeouts for Always On availability groups 
 

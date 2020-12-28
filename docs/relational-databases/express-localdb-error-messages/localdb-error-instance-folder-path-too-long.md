@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: c178a308-8d99-47fc-8a49-5a480dc592f6
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

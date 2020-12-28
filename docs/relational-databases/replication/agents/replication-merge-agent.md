@@ -286,7 +286,12 @@ replmerg [-?]
  Specifies whether the output should be verbose. If the verbose level is **0**, only error messages are printed. If the verbose level is **1**, all of the progress report messages are printed. If the verbose level is **2** (default), all error messages and progress report messages are printed, which is useful for debugging.  
   
  **-ParallelUploadDownload** [**0**\|**1**]  
- Specifies whether the Merge Agent should process in parallel the changes uploaded to the Publisher and those downloaded to the Subscriber, which is useful in high volume environments with high network bandwidth. If **ParallelUploadDownload** is **1**, then parallel processing is enabled.  
+ Specifies whether the Merge Agent should process in parallel the changes uploaded to the Publisher and those downloaded to the Subscriber, which can be useful in high volume environments with high network bandwidth. However, note the warning below for cases where **ParallelUploadDownload** is set to **1**.
+ 
+This parameter is on the list for possible deprecation soon. We recommend setting the **ParallelUploadDownload** parameter to 0 and avoiding use of the "High Volume Server-to-Server" Merge agent Profile, as **ParallelUploadDownload** is set to 1 in this profile.
+
+> [!WARNING]
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]
   
  **-PacketSize**  
  Is the packet size, in bytes. The default is 4096 (bytes).  

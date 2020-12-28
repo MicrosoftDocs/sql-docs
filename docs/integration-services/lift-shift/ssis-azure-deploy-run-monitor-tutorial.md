@@ -85,7 +85,7 @@ To learn more about deploying packages and about the Deployment Wizard, see [Dep
 
 2. On the **Select Source** page, select the existing SSIS project to deploy.
     -   To deploy a project deployment file that you created, select **Project deployment file** and enter the path to the .ispac file.
-    -   To deploy a project that resides in an SSIS catalog, select **Integration Services catalog**, and then enter the server name and the path to the project in the catalog.
+    -   To deploy a project that resides in an SSIS catalog, select **Integration Services catalog**, and then enter the server name and the path to the project in the catalog. Only projects that reside in SSISDB hosted by SQL Server can be redeployed in this step.
     -   Select **Next** to see the **Select Destination** page.
   
 3.  On the **Select Destination** page, select the destination for the project.

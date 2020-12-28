@@ -8,7 +8,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: 
-ms.date: 10/22/2020
+ms.date: 12/15/2020
 ---
 
 # SQL Database Projects extension (Preview)
@@ -51,14 +51,36 @@ Watch this short 10-minute video for an introduction to the SQL Database Project
 
 ## Known limitations
 
-1. Adding project references and loading existing project references in Azure Data Studio viewlet is not currently supported.
-2. Loading files as link is not supported in Azure Data Studio viewlet today, however the files will be loaded at the top level in tree and build will incorporate these files as expected.
-3. Pre-Post deploy script adding and loading in viewlet is not supported as of today, however if you manually add these files in project they will be honored at build time.
-4. SQLCLR objects in project are not supported in .NET Core version of DacFx.
-5. Tasks (build/publish) are not user-defined.
-6. Publish targets defined by DacFx.
-7. Source control integration and new project creation do not automatically create .gitignore file.
-8. WSL environment support is limited.
+- Loading files as link is not supported in Azure Data Studio viewlet today, however the files will be loaded at the top level in tree and build will incorporate these files as expected.
+- SQLCLR objects in project are not supported in .NET Core version of DacFx.
+- Tasks (build/publish) are not user-defined.
+- Publish targets defined by DacFx.
+- WSL environment support is limited.
+
+## Workspace
+SQL database projects in Azure Data Studio are contained within a logical workspace.  A workspace manages the folder(s) visible in the Explorer pane as well as the project(s) visible in the Project pane. Adding and removing projects from a workspace can be accomplished through the Azure Data Studio interface in the Projects pane. However, the settings for a workspace can be manually edited in the `.code-workspace` file if necessary.
+
+In the example `.code-workspace` file below, the `folders` array lists all folders included in the Explorer pane and the `dataworkspace.projects` array within `settings` lists all the SQL projects included in the Projects pane.
+
+```json
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "WideWorldImportersDW",
+			"path": "..\\WideWorldImportersDW"
+		}
+	],
+	"settings": {
+		"dataworkspace.projects": [
+			"AdventureWorksLT.sqlproj",
+			"..\\WideWorldImportersDW\\WideWorldImportersDW.sqlproj"
+		]
+	}
+}
+```
 
 ## Next steps
 

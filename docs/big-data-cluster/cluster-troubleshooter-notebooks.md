@@ -75,7 +75,7 @@ A set of notebooks for repairing known situations and states of a SQL Server Big
 |Name |Description |
 |---|---|---|---|
 |TSG005 - Forwarding loop detected|Use this notebook to dealing with forwarding loop detected since the utility dnsmasq can put a local loopback in resolv.conf, which can cause the controller pods to go into a CrashLoopBackOff during initial cluster deployment: https://askubuntu.com/questions/627899/nameserver-127-0-1-1-in-resolv-conf-wont-go-away|
-|TSG011 - Restart sparkhistory server|Use this notebook to restart sparkhistory server since the sparkhistory java process can hang during startup. Restarting the sparkhistory server (supervisorctl restart sparkhistory) can resolve this issue.|
+|TSG011 - Restart sparkhistory server|Use this notebook to restart sparkhistory server since the sparkhistory java process can stop responding during startup. Restarting the sparkhistory server (supervisorctl restart sparkhistory) can resolve this issue.|
 |TSG018 - Kill sqlservr process on the master pool| Use this notebook when T-SQL SHUTDOWN does not successfully re-cycle the ./sqlservr process. Use this notebook to kill the main sqlservr process which will get automatically restarted by the ./sqlservr front end process.|
 |TSG024 - Namenode is in safe mode| Use this notebook when HDFS gets itself into Safe mode. For example if too many Pods are re-cycled too quickly in the Storage Pool then Safe mode may be automatically enabled.|
 |TSG028 - Restart node manager on all storage pool nodes| Use this notebook when needs to restart node manager on all storage pool nodes.|
@@ -99,4 +99,3 @@ A set of notebooks for repairing known situations and states of a SQL Server Big
 ## Next steps
 
 For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
-

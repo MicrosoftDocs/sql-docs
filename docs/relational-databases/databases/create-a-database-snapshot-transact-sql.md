@@ -32,7 +32,7 @@ ms.author: "sstein"
   
 -   The source database cannot be configured as a scalable shared database.  
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 - The source database must not contain a MEMORY_OPTIMIZED_DATA filegroup.
 

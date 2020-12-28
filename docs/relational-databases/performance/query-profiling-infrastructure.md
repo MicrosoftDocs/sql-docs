@@ -4,7 +4,7 @@ description: Learn how the SQL Server Database Engine accesses runtime informati
 ms.custom: ""
 ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 

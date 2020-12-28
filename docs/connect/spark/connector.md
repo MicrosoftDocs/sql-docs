@@ -20,7 +20,7 @@ This library contains the source code for the Apache Spark Connector for SQL Ser
 
 [Apache Spark](https://spark.apache.org/) is a unified analytics engine for large-scale data processing.
 
-You can import the connector into your project through the Maven coordinates: `com.microsoft.azure:spark-mssql-connector:1.0.0`. You can also build the connector from source or download the jar from the Release section in GitHub. For the latest information about the connector, see [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).
+You can get the connector from [Maven](https://search.maven.org/search?q=spark-mssql-connector). To import the connector, use the coordinate `com.microsoft.azure:spark-mssql-connector:<latest version>`. You can also build the connector from source or download the jar from the Release section in GitHub. For the latest information about the connector, see [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).
 
 ## Supported Features
 
@@ -39,7 +39,7 @@ You can import the connector into your project through the Maven coordinates: `c
 | Azure SQL Databases                  | Supported                       |
 
 > [!NOTE]
-> Azure Synapse Analytics (Azure SQL DW) use is not tested with this connector. While it may work, there may be unintended consequences.
+> Azure Synapse Analytics use is not tested with this connector. While it may work, there may be unintended consequences.
 
 ### Supported Options
 The Apache Spark Connector for SQL Server and Azure SQL supports the options defined here: [SQL DataSource JDBC](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)

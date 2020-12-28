@@ -43,8 +43,8 @@ ms.author: maghan
 |symmetric_key_import|**tinyint**|0 (not supported)<br /><br /> 1 (supported)|  
 |symmetric_key_persistance|**tinyint**|0 (not supported)<br /><br /> 1 (supported)|  
   
-## Remarks  
- The sys.dm_cryptographic_provider_properties view is visible to the public.  
+## Permissions  
+ The **sys.dm_cryptographic_provider_properties** view is visible to the public.  
   
 ## See Also  
  [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

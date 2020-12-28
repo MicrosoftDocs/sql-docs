@@ -11,8 +11,8 @@ f1_keywords:
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ms.reviewer: ""
 ---
 # Configure advanced options for SQL Server managed backup to Microsoft Azure

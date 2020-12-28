@@ -5,15 +5,15 @@ ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: end-user-help
 f1_keywords: 
   - "sql13.swb.availabilitygroupproperties.backuppreferences.f1"
 helpviewer_keywords: 
   - "read-only routing"
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Availability Group Properties: New Availability Group (Backup Preferences Page)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

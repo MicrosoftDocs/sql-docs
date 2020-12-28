@@ -1,0 +1,13 @@
+# Default .gitignore for a new provisioned repository in MicrosoftDocs org
+
+log/
+xhtml/
+packages/
+obj/
+_site/
+Tools/NuGet/
+.optemp/
+
+.openpublishing.build.mdproj
+.openpublishing.buildcore.ps1
+packages.config

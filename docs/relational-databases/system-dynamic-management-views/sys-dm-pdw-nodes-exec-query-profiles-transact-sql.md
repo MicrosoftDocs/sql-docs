@@ -12,7 +12,7 @@ dev_langs:
 ms.assetid: 
 author: XiaoyuMSFT 
 ms.author: xiaoyul
-monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest"
 ---
 
 # sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
@@ -67,7 +67,7 @@ The counters returned are per operator per thread. The results are dynamic and d
   
 ## Remarks
 
-The same remarks in [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15) apply.  
+The same remarks in [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md) apply.  
 
 ## Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  

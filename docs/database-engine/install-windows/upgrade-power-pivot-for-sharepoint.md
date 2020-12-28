@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: "Minewiskan"
 ms.author: "owend"
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 manager: erikre
 ---
 # Upgrade Power Pivot for SharePoint

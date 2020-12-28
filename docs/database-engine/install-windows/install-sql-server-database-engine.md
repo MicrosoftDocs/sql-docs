@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server], installing"
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server Database Engine
 
@@ -33,15 +33,15 @@ The following features are installed when you select **[!INCLUDE[ssNoVersion](..
   
 -   [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md) - is an optional component  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-ver15"
 -   [Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R and Python) and [Language Extensions](../..//language-extensions/install/windows-java.md) (Java) - is an optional component
 ::: moniker-end
 
-::: monikerRange=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 -   [Machine Learning Services (In-Database)](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R and Python) - is an optional component
 ::: moniker-end
 
-::: monikerRange=">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016 <=sql-server-2016"
 -   [R Services (In-Database)](../../machine-learning/install/sql-r-services-windows-install.md) - is an optional component
 ::: moniker-end
 

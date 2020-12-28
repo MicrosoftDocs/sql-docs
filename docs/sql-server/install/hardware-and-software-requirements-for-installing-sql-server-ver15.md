@@ -43,8 +43,8 @@ helpviewer_keywords:
   - "disk space [SQL Server]"
   - "localized SQL Server versions"
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
-ms.author: mikeray
-author: MikeRayMSFT
+ms.author: chadam
+author: cawrites
 ---
 # SQL Server 2019: Hardware and software requirements
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

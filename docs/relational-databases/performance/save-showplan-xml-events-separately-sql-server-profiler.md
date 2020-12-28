@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "saving Showplan XML events"
   - "events [SQL Server], Showplan XML"
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Save Showplan XML events separately (SQL Server Profiler)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

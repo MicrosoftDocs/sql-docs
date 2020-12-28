@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "subqueries [SQL Server], correlated"
   - "subqueries [SQL Server], types"
 ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
-author: julieMSFT
-ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Subqueries (SQL Server)

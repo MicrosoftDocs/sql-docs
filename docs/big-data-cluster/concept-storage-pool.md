@@ -11,23 +11,23 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# What is the storage pool ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?
+# What is the storage pool in a SQL Server big data cluster?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes the role of the *SQL Server storage pool* in a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (BDC). The following sections describe the architecture and functionality of a SQL storage pool.
+This article describes the role of the *SQL Server storage pool* in a SQL Server big data cluster. The following sections describe the architecture and functionality of a storage pool.
 
 ## Storage pool architecture
 
-The storage pool is the local HDFS (Hadoop) cluster in the SQL Server BDC ecosystem. It provides persistent storage for unstructured and semi-structured data. Data files, such as Parquet or delimited text, can be stored in the storage pool. To persist storage each pod in the pool has a Persistent Volume attached to it. The storage pool files are accessible via [PolyBase](../relational-databases/polybase/polybase-guide.md) through SQL Server or directly using an Apache Knox Gateway.
+The storage pool is the local HDFS (Hadoop) cluster in a SQL Server big data cluster. It provides persistent storage for unstructured and semi-structured data. Data files, such as Parquet or delimited text, can be stored in the storage pool. To persist storage each pod in the pool has a persistent volume attached to it. The storage pool files are accessible via [PolyBase](../relational-databases/polybase/polybase-guide.md) through SQL Server or directly using an Apache Knox Gateway.
 
-A classical HDFS setup consists of a set of commodity-hardware computers with storage attached. The data is spread in blocks across the nodes for fault tolerance and leveraging of parallel processing. One of the nodes in the cluster functions as the Name Node and contains the metadata information about the files located in the data nodes.
+A classical HDFS setup consists of a set of commodity-hardware computers with storage attached. The data is spread in blocks across the nodes for fault tolerance and leveraging of parallel processing. One of the nodes in the cluster functions as the name node and contains the metadata information about the files located in the data nodes.
 
 ![Classic HDFS setup](media/concept-storage-pool/classic-hdfs-setup.png)
 
 The storage pool consists of storage nodes that are members of a HDFS cluster. It runs one or more Kubernetes pods with each pod hosting the following containers:
 
-- A Hadoop container linked to a Persistent Volume (storage). All containers of this type together form the Hadoop cluster. Within the Hadoop container is a YARN node manager process that can create on-demand Apache Spark worker processes. The Spark head node hosts the hive metastore, spark history, and YARN job history containers.
+- A Hadoop container linked to a persistent volume (storage). All containers of this type together form the Hadoop cluster. Within the Hadoop container is a YARN node manager process that can create on-demand Apache Spark worker processes. The Spark head node hosts the hive metastore, spark history, and YARN job history containers.
 - A SQL Server instance to read data from HDFS using OpenRowSet technology.
 - `collectd` for collecting of metrics data.
 - `fluentbit` for collecting of log data.

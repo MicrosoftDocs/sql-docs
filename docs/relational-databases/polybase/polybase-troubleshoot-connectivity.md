@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: "polybase, sql-data-warehouse, pdw"
-monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
+monikerRange: ">= sql-server-2016"
 ---
 
 # Troubleshoot PolyBase Kerberos connectivity

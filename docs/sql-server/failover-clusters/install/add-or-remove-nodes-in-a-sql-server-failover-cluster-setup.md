@@ -5,7 +5,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.reviewer: ""
 ms.prod: sql
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "adding nodes"
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "cluster maintenance [SQL Server]"
   - "removing nodes"
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 
 # Add or remove nodes in a failover cluster instance (Setup)

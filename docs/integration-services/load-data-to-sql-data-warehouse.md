@@ -1,6 +1,6 @@
 ---
-title: Load data into Azure Synapse Analytics with SQL Server Integration Services (SSIS) | Microsoft Docs
-description: Shows you how to create a SQL Server Integration Services (SSIS) package to move data from a wide variety of data sources to Azure Synapse Analytics.
+title: Load data into Azure Synapse Analytics with SQL Server Integration Services (SSIS)
+description: Shows you how to create a SQL Server Integration Services (SSIS) package to move data from a wide variety of data sources into a dedicated SQL pool in Azure Synapse Analytics.
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: "integration-services"
@@ -11,13 +11,11 @@ ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
 ---
-# Load data into Azure Synapse Analytics with SQL Server Integration Services (SSIS)
+# Load data into a dedicated SQL pool in Azure Synapse Analytics with SQL Server Integration Services (SSIS)
 
-[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[asa](../includes/applies-to-version/asa.md)]
 
-
-
-Create a SQL Server Integration Services (SSIS) package to load data into [Azure Synapse Analytics](/azure/sql-data-warehouse/index). You can optionally restructure, transform, and cleanse the data as it passes through the SSIS data flow.
+Create a SQL Server Integration Services (SSIS) package to load data into a dedicated SQL pool in Azure Synapse Analytics](/azure/sql-data-warehouse/index). You can optionally restructure, transform, and cleanse the data as it passes through the SSIS data flow.
 
 This article shows you how to do the following things:
 
@@ -35,8 +33,8 @@ A detailed introduction to SSIS is beyond the scope of this article. To learn mo
 
 - [How to Create an ETL Package](ssis-how-to-create-an-etl-package.md)
 
-## Options for loading data into SQL Data Warehouse with SSIS
-SQL Server Integration Services (SSIS) is a flexible set of tools that provides a variety of options for connecting to, and loading data into, SQL Data Warehouse.
+## Options for loading data into Azure Synapse Analytics with SSIS
+SQL Server Integration Services (SSIS) is a flexible set of tools that provides a variety of options for connecting to, and loading data into, Azure Synapse Analytics.
 
 1. The preferred method, which provides the best performance, is to create a package that uses the [Azure SQL DW Upload Task](control-flow/azure-sql-dw-upload-task.md) to load the data. This task encapsulates both source and destination information. It assumes that your source data is stored locally in delimited text files.
 
@@ -48,7 +46,7 @@ To step through this tutorial, you need the following things:
 1. **SQL Server Integration Services (SSIS)**. SSIS is a component of SQL Server and requires a licensed version, or the developer or evaluation version, of SQL Server. To get an evaluation version of SQL Server, see [Evaluate SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (optional). To get the free Visual Studio Community Edition, see [Visual Studio Community][Visual Studio Community]. If you don't want to install Visual Studio, you can install SQL Server Data Tools (SSDT) only. SSDT installs a version of Visual Studio with limited functionality.
 3. **SQL Server Data Tools for Visual Studio (SSDT)**. To get SQL Server Data Tools for Visual Studio, see [Download SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
-4. **An Azure Synapse Analytics database and permissions**. This tutorial connects to a SQL Data Warehouse instance and loads data into it. You have to have permission to connect, to create a table, and to load data.
+4. **An Azure Synapse Analytics database and permissions**. This tutorial connects to a dedicated SQL pool in Azure Synapse Analytics instance and loads data into it. You have to have permission to connect, to create a table, and to load data.
 
 ## Create a new Integration Services project
 1. Launch Visual Studio.
@@ -74,7 +72,7 @@ To continue the tutorial with this option, you need the following things:
 
 - The [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. The SQL DW Upload task is a component of the Feature Pack.
 
-- An [Azure Blob Storage](/azure/storage/) account. The SQL DW Upload task loads data from Azure Blob Storage into Azure Synapse Analytics. You can load files that are already in Blob Storage, or you can load files from your computer. If you select files on your computer, the SQL DW Upload task uploads them to Blob Storage first for staging, and then loads them into SQL Data Warehouse.
+- An [Azure Blob Storage](https://docs.microsoft.com/azure/storage/) account. The SQL DW Upload task loads data from Azure Blob Storage into Azure Synapse Analytics. You can load files that are already in Blob Storage, or you can load files from your computer. If you select files on your computer, the SQL DW Upload task uploads them to Blob Storage first for staging, and then loads them into your dedicated SQL pool.
 
 ### Add and configure the SQL DW Upload Task
 
@@ -92,7 +90,7 @@ For more control, you can manually create a package that emulates the work done 
 
 1. Use the Azure Blob Upload Task to stage the data in Azure Blob Storage. To get the Azure Blob Upload task, download the [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
 
-2. Then use the SSIS Execute SQL task to launch a PolyBase script that loads the data into SQL Data Warehouse. For an example that loads data from Azure Blob Storage into SQL Data Warehouse (but not with SSIS), see [Tutorial: Load data to Azure Synapse Analytics](/azure/sql-data-warehouse/load-data-wideworldimportersdw).
+2. Then use the SSIS Execute SQL task to launch a PolyBase script that loads the data into your dedicated SQL pool. For an example that loads data from Azure Blob Storage into dedicated SQL pool (but not with SSIS), see [Tutorial: Load data to Azure Synapse Analytics](/azure/sql-data-warehouse/load-data-wideworldimportersdw).
 
 ## Option 2 - Use a source and destination
 
@@ -100,7 +98,7 @@ The second approach is a typical package which uses a Data Flow task that contai
 
 This tutorial uses SQL Server as the data source. SQL Server runs on premises or on an Azure virtual machine.
 
-To connect to SQL Server and to SQL Data Warehouse, you can use an ADO.NET connection manager and source and destination, or an OLE DB connection manager and source and destination. This tutorial uses ADO.NET because it has the fewest configuration options. OLE DB may provide slightly better performance than ADO.NET.
+To connect to SQL Server and to a dedicated SQL pool, you can use an ADO.NET connection manager and source and destination, or an OLE DB connection manager and source and destination. This tutorial uses ADO.NET because it has the fewest configuration options. OLE DB may provide slightly better performance than ADO.NET.
 
 As a shortcut, you can use the SQL Server Import and Export Wizard to create the basic package. Then, save the package, and open it in Visual Studio or SSDT to view and customize it. For more info, see [Import and Export Data with the SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
@@ -108,9 +106,9 @@ As a shortcut, you can use the SQL Server Import and Export Wizard to create the
 
 To continue the tutorial with this option, you need the following things:
 
-1. **Sample data**. This tutorial uses sample data stored in SQL Server in the AdventureWorks sample database as the source data to be loaded into SQL Data Warehouse. To get the AdventureWorks sample database, see [AdventureWorks Sample Databases][AdventureWorks 2014 Sample Databases].
+1. **Sample data**. This tutorial uses sample data stored in SQL Server in the AdventureWorks sample database as the source data to be loaded into a dedicated SQL pool. To get the AdventureWorks sample database, see [AdventureWorks Sample Databases][AdventureWorks 2014 Sample Databases].
 
-2. **A firewall rule**. You have to create a firewall rule on SQL Data Warehouse with the IP address of your local computer before you can upload data to the SQL Data Warehouse.
+2. **A firewall rule**. You have to create a firewall rule on your dedicated SQL pool with the IP address of your local computer before you can upload data to the dedicated SQL pool.
 
 ### Create the basic data flow
 1. Drag a Data Flow Task from the Toolbox to the center of the design surface (on the **Control Flow** tab).
@@ -169,9 +167,9 @@ To continue the tutorial with this option, you need the following things:
 3. In the **Configure ADO.NET Connection Manager** dialog box, click the **New** button to open the **Connection Manager** dialog box and create a new data connection.
 4. In the **Connection Manager** dialog box, do the following things.
    1. For **Provider**, select the SqlClient Data Provider.
-   2. For **Server name**, enter the SQL Data Warehouse name.
+   2. For **Server name**, enter the dedicated SQL pool name.
    3. In the **Log on to the server** section, select **Use SQL Server authentication** and enter authentication information.
-   4. In the **Connect to a database** section, select an existing SQL Data Warehouse database.
+   4. In the **Connect to a database** section, select an existing dedicated SQL pool database.
    5. Click **Test Connection**.
    6. In the dialog box that reports the results of the connection test, click **OK** to return to the **Connection Manager** dialog box.
    7. In the **Connection Manager** dialog box, click **OK** to return to the **Configure ADO.NET Connection Manager** dialog box.
@@ -182,8 +180,8 @@ To continue the tutorial with this option, you need the following things:
 7. In the **Create Table** dialog box, do the following things.
    
    1. Change the name of the destination table to **SalesOrderDetail**.
-   2. Remove the **rowguid** column. The **uniqueidentifier** data type is not supported in SQL Data Warehouse.
-   3. Change the data type of the **LineTotal** column to **money**. The **decimal** data type is not supported in SQL Data Warehouse. For info about supported data types, see [CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)].
+   2. Remove the **rowguid** column. The **uniqueidentifier** data type is not supported in dedicated SQL pool.
+   3. Change the data type of the **LineTotal** column to **money**. The **decimal** data type is not supported in dedicated SQL pool. For info about supported data types, see [CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)].
       
        ![Screenshot of the Create Table dialog box, with code to create a table named SalesOrderDetail with LineTotal as a money column and no rowguid column.][12b]
    4. Click **OK** to create the table and return to the **ADO.NET Destination Editor**.

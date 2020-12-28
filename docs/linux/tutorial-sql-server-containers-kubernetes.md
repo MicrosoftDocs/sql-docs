@@ -60,7 +60,7 @@ Create an SA password in the Kubernetes cluster. Kubernetes can manage sensitive
 
 The following command creates a password for the SA account:
 
-   ```azurecli
+   ```console
    kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
    ```  
 
@@ -105,7 +105,7 @@ Configure a [persistent volume](https://kubernetes.io/docs/concepts/storage/pers
 
 1. Create the persistent volume claim in Kubernetes.
 
-   ```azurecli
+   ```console
    kubectl apply -f <Path to pvc.yaml file>
    ```
 
@@ -117,7 +117,7 @@ Configure a [persistent volume](https://kubernetes.io/docs/concepts/storage/pers
 
 1. Verify the persistent volume claim.
 
-   ```azurecli
+   ```console
    kubectl describe pvc <PersistentVolumeClaim>
    ```
 
@@ -125,7 +125,7 @@ Configure a [persistent volume](https://kubernetes.io/docs/concepts/storage/pers
 
    In the preceding step, the persistent volume claim is named `mssql-data`. To see the metadata about the persistent volume claim, run the following command:
 
-   ```azurecli
+   ```console
    kubectl describe pvc mssql-data
    ```
 
@@ -139,7 +139,7 @@ Configure a [persistent volume](https://kubernetes.io/docs/concepts/storage/pers
 
 1. Verify the persistent volume.
 
-   ```azurecli
+   ```console
    kubectl describe pv
    ```
 
@@ -238,7 +238,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
 
 1. Create the deployment.
 
-   ```azurecli
+   ```console
    kubectl apply -f <Path to sqldeployment.yaml file>
    ```
 
@@ -259,7 +259,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
 
 1. Verify the services are running. Run the following command:
 
-   ```azurecli
+   ```console
    kubectl get services 
    ```
 
@@ -275,13 +275,13 @@ In this step, create a manifest to describe the container based on the SQL Serve
 
 1. You can also verify the container is running as non-root by running the following command:
 
-    ```azurecli
+    ```console
     kubectl.exe exec <name of SQL POD> -it -- /bin/bash 
     ```
 
     and then run 'whoami' you should see the username as mssql. Which is a non-root user.
 
-    ```azurecli
+    ```console
     whoami
     ```
 
@@ -314,7 +314,7 @@ To verify failure and recovery, you can delete the pod. Do the following steps:
 
 1. List the pod running SQL Server.
 
-   ```azurecli
+   ```console
    kubectl get pods
    ```
 
@@ -322,7 +322,7 @@ To verify failure and recovery, you can delete the pod. Do the following steps:
 
 1. Delete the pod.
 
-   ```azurecli
+   ```console
    kubectl delete pod mssql-deployment-0
    ```
 

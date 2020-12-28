@@ -4,7 +4,7 @@ description: Learn how the Query Tuning Assistant guides you through the recomme
 ms.custom: seo-dt-2019
 ms.date: "02/13/2019"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 f1_keywords: 

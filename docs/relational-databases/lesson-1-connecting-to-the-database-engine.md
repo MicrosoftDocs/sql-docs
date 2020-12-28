@@ -69,11 +69,11 @@ At least one administrator account was selected when [!INCLUDE[ssNoVersion_md](.
 
 2.  Select **Database Engine**.
 
-![object-explorer](../relational-databases/media/object-explorer.png)
+![Screenshot of the Object Explorer showing the Connect dropdown list and the Database Engine option called out.](../relational-databases/media/object-explorer.png)
 
 3.  In the **Server name** box, type the name of the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. For the default instance of SQL Server, the server name is the computer name. For a named instance of SQL Server, the server name is the _\<computer_name\>_**\\**_\<instance_name\>_, such as **ACCTG_SRVR\SQLEXPRESS**. The following screenshot shows connecting to the default (un-named) instance of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] on a computer named 'PracticeComputer'. The user logged into Windows is Mary from the Contoso domain. When using Windows Authentication you cannot change the user name. 
 
-![connect-to-server](../relational-databases/media/connect-to-server.png)
+![Screenshot of the Connect to Server dialog box with the Server name text box called out.](../relational-databases/media/connect-to-server.png)
 
 4.  Click **Connect**.
 
@@ -92,7 +92,7 @@ Now that you have connected to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 
 2.  On the **General** page, in the **Login name** box, type a Windows login in the format: `<domain>\\<login>`
 
-![new-login](../relational-databases/media/new-login.png)
+![Screenshot of the Login - New dialog box with the Login name text box called out.](../relational-databases/media/new-login.png)
 
 3.  In the **Default database** box, select [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] if available. Otherwise select **master**.  
 4.  On the **Server Roles** page, if the new login is to be an administrator, click **sysadmin**, otherwise leave this blank.  

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Reosurce Pool Stats object"
   - "SQLServer: Resource Pool Stats object"
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Resource Pool Stats Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

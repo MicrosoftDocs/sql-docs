@@ -5,15 +5,15 @@ ms.custom: ""
 ms.date: "08/24/2016"
 ms.reviewer: ""
 ms.prod: sql
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "clusters [SQL Server], preinstallation checklist"
   - "installing failover clusters"
   - "failover clustering [SQL Server], preinstallation checklist"
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Before Installing Failover Clustering
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -164,7 +164,7 @@ ms.author: mathoma
   
 -   Remote Administration must be enabled.  
   
--   For the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] port, use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager to check the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] network configuration for the TCP/IP protocol for the instance you want to unblock. You must enable the TCP port for IPALL if you want to connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using TCP after installation. By default, SQL Browser listens on UDP port 1434.  
+- For SQL Server instances using a non-default port, use the network configuration of the SQL Server Configuration Manager to determine the port used by the SQL Server instance you want to unblock. Enable the TCP port for IPALL in the firewall if you want to connect to your SQL Server instance using the [SQL Server Browser Service](../../../tools/configuration-manager/sql-server-browser-service.md), which uses a different IP address than the clustered instance, and UDP port 1434. 
   
 -   Failover cluster Setup operations include a rule that checks network binding order. Although binding orders might seem correct, you might have disabled or "ghosted" NIC configurations on the system. "Ghosted" NIC configurations can affect the binding order and cause the binding order rule to issue a warning. To avoid this situation, use the following steps to identify and remove disabled network adapters:  
   

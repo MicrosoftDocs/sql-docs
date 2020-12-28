@@ -21,7 +21,7 @@ This documentation provides an overview of how to use ADO objects to work with d
 
 -   [Introduction](./ado-introduction.md)
 
--   [ActiveX Data Objects (ADO)](./data/ado-fundamentals.md?view=sql-server-ver15)
+-   [ActiveX Data Objects (ADO)](./data/ado-fundamentals.md)
 
 -   [Remote Data Services (RDS)](./remote-data-service/remote-data-service-rds.md)
 
@@ -29,4 +29,4 @@ This documentation provides an overview of how to use ADO objects to work with d
 
 -   [ADO Extensions for Data Definition Language and Security (ADOX)](./extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
 
--   [Appendixes](./appendixes/appendix-a-providers.md?view=sql-server-ver15)
+-   [Appendixes](./appendixes/appendix-a-providers.md)

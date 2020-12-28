@@ -13,7 +13,17 @@ ms.custom: seo-dt-2019
 # What's new in Analytics Platform System, a scale-out MPP data warehouse
 See what's new in the latest Appliance Updates for Microsoft Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
 
-::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016-au7 "
+<a name="h2-aps-cu7.7"></a>
+## APS CU7.7
+Release date - November 2020
+
+### SCVMM2016
+APS CU7.7 software upgrades VMM VM to Windows Server 2016 and installs SCVMM2016. SCVMM 2012 R2 that is currently in use has an end of life date of July 2022. The newer SCVMM is needed to be supported making CU7.7 a mandatory upgrade. Customers are urged to upgrade to CU7.7 as soon as possible.
+
+### SSIS destination adapter for SQL Server 2019 as target
+New APS SSIS destination adapter that supports SQL Server 2019 as deployment target can be downloaded from [download site](https://www.microsoft.com/download/details.aspx?id=57472).
+
 <a name="h2-aps-cu7.6"></a>
 ## APS CU7.6
 Release date - April 2020
@@ -29,13 +39,13 @@ Customers will now be able to alter views. See [ALTER VIEW (Transact-SQL)](../t-
 Release date - September 2019
 
 ### Alter External Data Source
-Customers will be able to alter external data source definition with the CU7.5 update. Customers with Hadoop name node high availability can now alter the data source to change the arguments when a failover happens. For APS, only the LOCATION, RESOURCE_MANAGER_LOCATION and CREDENTIAL can be changed. See [alter external data source](../t-sql/statements/alter-external-data-source-transact-sql.md?view=sql-server-2017) for more information.
+Customers will be able to alter external data source definition with the CU7.5 update. Customers with Hadoop name node high availability can now alter the data source to change the arguments when a failover happens. For APS, only the LOCATION, RESOURCE_MANAGER_LOCATION and CREDENTIAL can be changed. See [alter external data source](../t-sql/statements/alter-external-data-source-transact-sql.md?view=sql-server-2017&preserve-view=true) for more information.
 
 ### CDH 5.15 and 5.16 support with PolyBase
 PolyBase on APS with CU7.5 update now supports CDH 5.15 and 5.16 versions of Hadoop distribution from Cloudera. Use option 6 for CDH 5.x versions. 
 
 ### Try_Convert and Try_Cast support
-CU7.5 APS now supports [TRY_CAST](../t-sql/functions/try-cast-transact-sql.md?view=sql-server-2017) and [TRY_CONVERT](../t-sql/functions/try-convert-transact-sql.md?view=sql-server-2017) tsql functions. Both of these functions returns a value converted to the specified data type if the convert succeeds; otherwise, returns null.
+CU7.5 APS now supports [TRY_CAST](../t-sql/functions/try-cast-transact-sql.md?view=sql-server-2017&preserve-view=true) and [TRY_CONVERT](../t-sql/functions/try-convert-transact-sql.md?view=sql-server-2017&preserve-view=true) tsql functions. Both of these functions returns a value converted to the specified data type if the convert succeeds; otherwise, returns null.
 
 <a name="h2-aps-cu7.4"></a>
 ## APS CU7.4
@@ -163,7 +173,7 @@ With APS AU7 software, an Intel BIOS update is provided which fixes a problem de
 Microsoft advises all customers to install the BIOS updated. Microsoft has measured the effect of Kernel Virtual Address Shadowing (KVAS), Kernel Page Table Indirection (KPTI) and Indirect Branch Prediction mitigation (IBP) on various SQL workloads in various environments. The measurements found significant degradation on some workloads. Based on the results, the recommendation is that you test the performance effect of enabling BIOS update before you deploy them in a production environment. See SQL Server guidance [here](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
 
 ::: moniker-end
-::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016 "
 <a name="h2-aps-au6"></a>
 ## APS 2016
 This section described the new features for APS 2016-AU6.

@@ -8,8 +8,8 @@ ms.date: 08/06/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Tips for using R packages
 
@@ -31,11 +31,11 @@ If you need to install multiple packages, or want to ensure that everyone in you
 
 There are multiple sources for R packages, such as [CRAN](https://cran.r-project.org/) and [Bioconductor](https://www.bioconductor.org/). The official site for the R language (<https://www.r-project.org/>) lists many of these resources. Microsoft offers [MRAN](https://mran.microsoft.com/) for its distribution of open-source R ([MRO](https://mran.microsoft.com/open)) and other packages. Many packages are published to GitHub, where developers can obtain the source code.
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 R packages run on multiple computing platforms. Be sure that the versions you install are Windows binaries.
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 R packages run on multiple computing platforms. Be sure that the versions you install are Linux binaries.
 ::: moniker-end
 
@@ -85,9 +85,9 @@ Using the following guidelines will help you avoid "package not found" errors.
 
 ## See also
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 + [Install packages with R tools](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [Install new R packages with sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

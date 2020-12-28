@@ -5,15 +5,15 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.agdashboard.drp2joined.issues.f1"
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Secondary database is not joined
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

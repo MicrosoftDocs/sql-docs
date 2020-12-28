@@ -131,7 +131,7 @@ To add the *slow queries widget* to your dashboard, edit the *dashboard.database
 
 5. View the query's execution plan:
 
-   ![showplan](./media/tutorial-qds-sql-server/showplan.png)
+   ![Screenshot showing the query's execution plan.](./media/tutorial-qds-sql-server/showplan.png)
 
 ## Next steps
 

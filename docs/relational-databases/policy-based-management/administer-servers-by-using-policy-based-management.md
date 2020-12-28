@@ -24,7 +24,7 @@ ms.author: vanto
 ---
 # Administer Servers by Using Policy-Based Management
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-   Policy-Based Management is a policy based system for managing one or more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use is to create conditions that contain condition expressions. Then, create policies that apply the conditions to database target objects.  
+   Policy-Based Management is a policy based system for managing one or more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use it to create conditions that contain condition expressions. Then, create policies that apply the conditions to database target objects.  
 
 For example, as the database administrator, you may want to ensure that certain servers do not have Database Mail enabled, so you  create a condition and a policy that sets that server option. 
    

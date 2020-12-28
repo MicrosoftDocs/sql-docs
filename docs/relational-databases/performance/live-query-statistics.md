@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "lightweight query profiling"
   - "lightweight profiling"
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Live Query Statistics
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

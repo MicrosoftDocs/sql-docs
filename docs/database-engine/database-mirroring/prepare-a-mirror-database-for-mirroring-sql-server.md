@@ -6,7 +6,7 @@ ms.date: "11/10/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], preparing for mirroring"

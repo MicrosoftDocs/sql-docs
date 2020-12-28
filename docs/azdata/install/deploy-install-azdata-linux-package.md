@@ -57,7 +57,7 @@ For Linux distributions with `apt` there is a package for the `azdata-cli`. The 
    For Ubuntu 20.04 client run:
 
     ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/prod.list)
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/prod.list)"
     ```
 
 4. Install `azdata-cli`.

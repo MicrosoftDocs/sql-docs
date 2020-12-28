@@ -152,6 +152,8 @@ Before installing a Python custom runtime, install the following:
 
 + Install [Python 3.7](https://www.python.org/downloads/) on the server.
 
+    The Python language extension used for the custom Python runtime currently supports Python 3.7 only. If you would like to use a different version of Python, follow the instruction in the [Python Language Extension GitHub repo](https://github.com/microsoft/sql-server-language-extensions/tree/master/language-extensions/python) to modify and rebuild the extension.
+
 ## Install Language Extensions
 
 > [!NOTE]

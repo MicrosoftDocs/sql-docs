@@ -170,13 +170,14 @@ sudo apt-get install mssql-server-extensibility
 ```
 
 #### [RHEL](#tab/rhel)
+
 ```bash
 # Install as root or sudo
 sudo yum install mssql-server-extensibility
 ```
 
 #### [SLES](#tab/sles)
-### Suse
+
 ```bash
 # Install as root or sudo
 sudo zypper install mssql-server-extensibility

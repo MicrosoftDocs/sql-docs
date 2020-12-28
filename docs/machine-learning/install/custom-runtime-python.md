@@ -152,7 +152,7 @@ Before installing a Python custom runtime, install the following:
 
 + Install [Python 3.7](https://www.python.org/downloads/) on the server.
 
-## Add SQL Server Language Extensions for Linux
+## Install Language Extensions
 
 > [!NOTE]
 > If you have [Machine Learning Services](../sql-server-machine-learning-services.md) installed on SQL Server 2019, the **mssql-server-extensibility** package for Language Extensions is already installed and you can skip this step.
@@ -221,7 +221,7 @@ sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
 
 If you built your own version of Python 3.7, use the following commands to let SQL Server know your custom installation.
 
-### Update the environment variables
+### Add environment variable
 
 First, edit the **mssql-launchpadd** service to add the **PYTHONHOME** environment variable to the file `/etc/systemd/system/mssql-launchpadd.service.d/override.conf`
 
@@ -263,7 +263,7 @@ Next, make sure `libpython3.7m.so.1.0` can be loaded.
     ldd /path/to/installation/of/python3.7/lib/libpython3.7m.so.1.0
     ```
 
-### Grant access to the custom Python folder
+### Grant access to Python folder
 
 Set the `datadirectories` option in the extensibility section of /var/opt/mssql/mssql.conf file to the custom python installation.
 
@@ -271,7 +271,7 @@ Set the `datadirectories` option in the extensibility section of /var/opt/mssql/
 sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/installation/of/python3.7
 ```
 
-### Restart the mssql-launchpadd service
+### Restart mssql-launchpadd
 
 ```bash
 sudo systemctl restart mssql-launchpadd

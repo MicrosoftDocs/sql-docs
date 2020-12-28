@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 # Install a Python custom runtime for SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes how to install a Python custom runtime for running external Python scripts with SQL Server. The custom runtime uses the [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md) and can be used for machine learning scripts.
+This article describes how to install a Python custom runtime for running external Python scripts with SQL Server. The custom runtime uses the [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md) and can be used for executing machine learning scripts.
 
 The Python custom runtime allows you to use your own version of the Python runtime with SQL Server, instead of the default runtime version installed with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 
@@ -306,7 +306,7 @@ Follow these steps to download and register the Python language extension, which
 
 ## Enable external script
 
-A Python external script can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+You can execute a Python external script with the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 To enable external scripts, use [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to execute the statement below.
 
@@ -331,5 +331,6 @@ print(sys.executable)'
 
 ## Next steps
 
++ [Install an R custom runtime for SQL Server](custom-runtime-r.md)
 + [Extensibility framework in SQL Server](../concepts/extensibility-framework.md)
 + [Language Extensions Overview](../../language-extensions/language-extensions-overview.md)

@@ -64,7 +64,7 @@ Follow the steps below to install [SQL Server Language Extensions](../../languag
 1. After the setup is complete, restart the machine if you're asked to do so.
 
 > [!IMPORTANT]
-> If you install a new instance of SQL Server 2019, then install the [Cumulative Update (CU) 3 or later](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) before you continue.
+> If you install a new instance of SQL Server 2019 with Language Extensions, then install the [Cumulative Update (CU) 3 or later](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) before you continue to the next step.
 
 ## Install pandas
 
@@ -218,7 +218,7 @@ sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
 
 ## Custom installation of Python
 
-> [!IMPORTANT]
+> [!NOTE]
 > If you have installed Python 3.7 in the default location of `/usr/lib/python3.7`, you can skip this section and move on to the [Register language extension](#register-language-extension-linux) section.
 
 If you built your own version of Python 3.7, use the following commands to let SQL Server know your custom installation.

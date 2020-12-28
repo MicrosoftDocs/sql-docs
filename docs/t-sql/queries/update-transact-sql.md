@@ -164,7 +164,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Is either the [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) function, subject to provider capabilities.  
   
  WITH **(** \<Table_Hint_Limited> **)**  
- Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required. NOLOCK and READUNCOMMITTED are not allowed. For information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required. NOLOCK, READUNCOMMITTED, and NOEXPAND are not allowed. For information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  @*table_variable*  
  Specifies a [table](../../t-sql/data-types/table-transact-sql.md) variable as a table source.  

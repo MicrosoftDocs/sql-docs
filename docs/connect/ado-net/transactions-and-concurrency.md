@@ -29,22 +29,23 @@ Transactions involving different resource managers, such as a transaction betwee
 
 ## In this section
 
- [Local transactions](local-transactions.md)  
- Demonstrates how to perform transactions against a database.  
+[Local transactions](local-transactions.md)  
+Demonstrates how to perform transactions against a database.  
   
- [Distributed transactions](distributed-transactions.md)  
- Describes how to perform distributed transactions in ADO.NET.  
+[Distributed transactions](distributed-transactions.md)  
+Describes how to perform distributed transactions in ADO.NET.  
   
- [System.Transactions integration with SQL Server](system-transactions-integration-with-sql-server.md)  
- Describes <xref:System.Transactions> integration with SQL Server for working with distributed transactions.  
+[System.Transactions integration with SQL Server](system-transactions-integration-with-sql-server.md)  
+Describes <xref:System.Transactions> integration with SQL Server for working with distributed transactions.  
   
- [Optimistic concurrency](optimistic-concurrency.md) 
- Describes optimistic and pessimistic concurrency, and how you can test for concurrency violations.  
+[Optimistic concurrency](optimistic-concurrency.md) 
+Describes optimistic and pessimistic concurrency, and how you can test for concurrency violations.  
 
 ## See also
 
 - [Transaction fundamentals](/dotnet/framework/data/transactions/transaction-fundamentals)
 - [Connecting to data source](connecting-to-data-source.md)
-- [Commands and Parameters](commands-parameters.md)
+- [Commands and parameters](commands-parameters.md)
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
+- [DbProviderFactories](dbproviderfactories.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

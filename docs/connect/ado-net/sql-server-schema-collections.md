@@ -251,5 +251,5 @@ The ColumnSetColumns schema collection is used to support sparse columns. The Co
 
 ## See also
 
-- [Retrieving Database Schema Information](retrieving-database-schema-information.md)
+- [Retrieving database schema information](retrieving-database-schema-information.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

@@ -157,17 +157,17 @@ Before installing a Python custom runtime, install the following:
 > [!NOTE]
 > If you have [Machine Learning Services](../sql-server-machine-learning-services.md) installed on SQL Server 2019, the **mssql-server-extensibility** package for Language Extensions is already installed and you can skip this step.
 
-Follow the steps below to install [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md) on Linux, which is used for the Python custom runtime.
+Follow the commands below to install [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md) on Linux, which is used for the Python custom runtime.
 
 #### [Ubuntu](#tab/ubuntu)
-
-> [!TIP]
-> If possible, `update` to refresh packages on the system prior to installation. Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
 
 ```bash
 # Install as root or sudo
 sudo apt-get install mssql-server-extensibility
 ```
+
+> [!NOTE]
+> If possible, `apt-get update` to refresh the packages on the system prior to the installation. Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
 
 #### [RHEL](#tab/rhel)
 

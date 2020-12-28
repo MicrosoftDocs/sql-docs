@@ -1,6 +1,6 @@
 ---
 title: Install Python custom runtime
-description: Learn how to install a Python custom runtime for SQL Server using Language Extensions.
+description: Learn how to install a Python custom runtime for SQL Server using Language Extensions. The Python custom runtime can be used for machine learning.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/30/2020
@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 # Install a Python custom runtime for SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes how to install a Python custom runtime for running external Python scripts with SQL Server. The custom runtime uses the [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md).
+This article describes how to install a Python custom runtime for running external Python scripts with SQL Server. The custom runtime uses the [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md) and can be used for machine learning scripts.
 
 The Python custom runtime allows you to use your own version of the Python runtime with SQL Server, instead of the default runtime version installed with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 
@@ -62,6 +62,9 @@ Follow the steps below to install [SQL Server Language Extensions](../../languag
     + Machine Learning Services and Language Extensions
 
 1. After the setup is complete, restart the machine if you're asked to do so.
+
+> [!IMPORTANT]
+> If you install a new instance of SQL Server 2019, then install the [Cumulative Update (CU) 3 or later](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) before you continue.
 
 ## Install pandas
 
@@ -124,7 +127,7 @@ Follow these steps to download and register the Python language extension, which
 
     ```sql
     CREATE EXTERNAL LANGUAGE [myPython]
-    FROM (CONTENT = N'/path/to/python-lang-extension.zip', FILE_NAME = 'pythonextension.dll');
+    FROM (CONTENT = N'/path/to/python-lang-extension-windows.zip', FILE_NAME = 'pythonextension.dll');
     GO
     ```
 
@@ -137,33 +140,24 @@ Follow these steps to download and register the Python language extension, which
 
 ::: zone pivot="python-custom-runtime-linux"
 
-You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md).
-
-> [!NOTE]
-> This article describes how to install a custom runtime for Python on Linux. To install on Windows, see the [Install a Python custom runtime for SQL Server on Windows](custom-runtime-python.md?view=sql-server-ver15&preserve-view=true)
-
-## Pre-install checklist on Linux
+## Prerequisites
 
 Before installing a Python custom runtime, install the following:
 
-+ [SQL Server 2019 for Linux (Cumulative Update 3 or later)](../../linux/sql-server-linux-setup.md).
-When you install SQL Server on Linux, you must configure a Microsoft repository. For more information, see [configuring repositories](../../linux/sql-server-linux-change-repo.md)
++ Install SQL Server 2019 for Linux. You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md).
 
-  > [!NOTE]
-  > Python custom runtime requires Cumulative Update (CU) 3 or later for SQL Server 2019.
++ Upgrade to Cumulative Update (CU) 3 or later for SQL Server 2019.
+    1. Configure the repositories for Cumulative Updates. For more information, see [Configure repositories for installing and upgrading SQL Server on Linux](../../linux/sql-server-linux-change-repo.md).
+    1. Update the **mssql-server** package to the latest Cumulative Update. For more information, see [the Update or Upgrade SQL Server section in the installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md#upgrade).
 
-+ [SQL Server Language Extensions on Linux with the extensibility framework](../../linux/sql-server-linux-setup-language-extensions-java.md).
-
-+ [Python 3.7](https://www.python.org/downloads/release/python-379/).
++ Install [Python 3.7](https://www.python.org/downloads/) on the server.
 
 ## Add SQL Server Language Extensions for Linux
 
 > [!NOTE]
-> If you have Machine Learning Services installed on SQL Server 2019, the **mssql-server-extensibility** package for language extensions is already installed and you can skip this step.
+> If you have [Machine Learning Services](../sql-server-machine-learning-services.md) installed on SQL Server 2019, the **mssql-server-extensibility** package for Language Extensions is already installed and you can skip this step.
 
-Language Extensions use the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution.
-
-Use the following commands to install Language Extensions, depending on your version of Linux.
+Follow the steps below to install [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md) on Linux, which is used for the Python custom runtime.
 
 ### Ubuntu
 > [!TIP]

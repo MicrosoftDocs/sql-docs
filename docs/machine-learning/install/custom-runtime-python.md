@@ -161,13 +161,26 @@ Follow the commands below to install [SQL Server Language Extensions](../../lang
 
 #### [Ubuntu](#tab/ubuntu)
 
-```bash
-# Install as root or sudo
-sudo apt-get install mssql-server-extensibility
-```
+1. If possible, run this command to refresh the packages on the system prior to the installation.
 
-> [!NOTE]
-> If possible, `apt-get update` to refresh the packages on the system prior to the installation. Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
+    ```bash
+    # Install as root or sudo
+    sudo apt-get update
+    ```
+
+1. Ubuntu might not have the https apt transport option. To install it, run this command.
+
+    ```bash
+    # Install as root or sudo
+    apt-get install apt-transport-https
+    ```
+
+1. Install **mssql-server-extensibility** with this command.
+
+    ```bash
+    # Install as root or sudo
+    sudo apt-get install mssql-server-extensibility
+    ```
 
 #### [Red Hat Enterprise Linux (RHEL)](#tab/rhel)
 

@@ -217,7 +217,7 @@ sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
 ## Custom installation of Python
 
 > [!IMPORTANT]
-> If you have installed Python 3.7 in the default location of `/usr/lib/python3.7`, you can skip this section and move on to the [Register language extension](#register-language-extension) section.
+> If you have installed Python 3.7 in the default location of `/usr/lib/python3.7`, you can skip this section and move on to the [Register language extension](#register-language-extension-linux) section.
 
 If you built your own version of Python 3.7, use the following commands to let SQL Server know your custom installation.
 
@@ -277,7 +277,7 @@ sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/instal
 sudo systemctl restart mssql-launchpadd
 ```
 
-<a name="register-language-extension"></a>
+<a name="register-language-extension-linux"></a>
 
 ## Register language extension
 

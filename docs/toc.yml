@@ -10807,10 +10807,10 @@
           href: relational-databases/errors-events/mssqlserver-14420-database-engine-error.md
         - name: 14421
           href: relational-databases/errors-events/mssqlserver-14421-database-engine-error.md
-        - name: 15404
-          href: relational-databases/errors-events/mssqlserver-15404-database-engine-error.md
         - name: 15401
           href: relational-databases/errors-events/mssqlserver-15401-database-engine-error.md
+        - name: 15404
+          href: relational-databases/errors-events/mssqlserver-15404-database-engine-error.md
         - name: 15517
           href: relational-databases/errors-events/mssqlserver-15517-database-engine-error.md
         - name: 15581

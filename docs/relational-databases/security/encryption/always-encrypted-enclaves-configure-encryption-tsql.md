@@ -36,11 +36,12 @@ The remainder of this article describes how to trigger in-place encryption using
 ## Perform in-place encryption with Transact-SQL in SSMS
 ### Pre-requisites
 - Pre-requisites described in [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md).
-- SQL Server Management Studio 18.3 or higher.
+- SQL Server Management Studio 18.3 or higher when using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+- SQL Server Management Studio 18.8 or higher when using !INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ### Steps
 1. Open a query window with Always Encrypted and enclave computations enabled in the database connection. For details, see [Enabling and disabling Always Encrypted for a database connection ](always-encrypted-query-columns-ssms.md#en-dis).
-2. In the query window, issue the `ALTER TABLE`/`ALTER COLUMN` statement, specifying an enclave-enabled column encryption key in the `ENCRYPTED WITH` clause. If your column is a string column (for example, `char`, `varchar`, `nchar`, `nvarchar`), you may also need to change the collation to a BIN2 collation. 
+2. In the query window, issue the `ALTER TABLE`/`ALTER COLUMN` statement, specifying the target encryption configuration for a column you want to encrypt, decrypt or re-encrypt. If you are encrypting or re-encrypting the column, using the `ENCRYPTED WITH` clause. If your column is a string column (for example, `char`, `varchar`, `nchar`, `nvarchar`), you may also need to change the collation to a BIN2 collation. 
     
     > [!NOTE]
     > If your column master key is stored in Azure Key Vault, you might be prompted to sign in to Azure.

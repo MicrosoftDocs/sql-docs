@@ -34,12 +34,17 @@ To create an enclave-enabled column encryption key, you need to ensure that you 
 The following sections provide more details on how to provision enclave-enabled keys using SSMS and PowerShell.
 
 ## Provision enclave-enabled keys using SQL Server Management Studio
-In SQL Server Management Studio 18.3 or higher, you can provision:
+In SQL Server Management Studio you can provision:
 - An enclave-enabled column master key using the **New Column Master Key** dialog.
 - An enclave-enabled column encryption key using the **New Column Encryption Key** dialog.
 
 > [!NOTE]
 > The [Always Encrypted wizard](always-encrypted-wizard.md) does not currently support generating enclave-enabled keys. You can, however, create enclave-enabled keys using the above dialogs first, and then when you run the wizard, select an already existing enclave-enabled column encryption for columns that you want to encrypt.
+
+Minimum SSMS version requirements:
+
+- SSMS 18.3 when using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+- SSMS 18.8 when using !INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ### Provision enclave-enabled column master keys with the New Column Master Key dialog
 To provision an enclave-enabled column master key, follow the steps in [Provision Column Master Keys with the New Column Master Key Dialog](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog). Make sure you select **Allow enclave computations**. See the below screenshot:

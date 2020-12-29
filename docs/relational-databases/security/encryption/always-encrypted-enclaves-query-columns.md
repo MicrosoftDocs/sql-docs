@@ -1,5 +1,5 @@
 ---
-title: "Query columns using Always Encrypted with secure enclaves"
+title: "Run Transact-SQL statements using secure enclaves"
 description: "Run Data Definition Language (DDL) statements to configure encryption for your column or manage indexes on encrypted columns, and query encrypted columns"
 ms.custom: ""
 ms.date: 12/09/2020
@@ -10,7 +10,7 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: ">= sql-server-ver15"
+monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Run Transact-SQL statements using secure enclaves
 
@@ -38,7 +38,7 @@ The following [Data Manipulation Language (DML)](../../../t-sql/statements/state
   - [BETWEEN (Transact-SQL)](../../../t-sql/language-elements/between-transact-sql.md)
   - [IN (Transact-SQL)](../../../t-sql/language-elements/in-transact-sql.md)
   - [LIKE (Transact-SQL)](../../../t-sql/language-elements/like-transact-sql.md)
-  - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select).
+  - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select)
   - [Joins](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] supports only nested loop joins. [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] supports nested loop, hash, and merge joins
   - [SELECT - ORDER BY Clause (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md). Supported in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]
   - [SELECT - GROUP BY Clause (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). Supported in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]
@@ -85,9 +85,9 @@ Make sure you run your statements from a query window that uses a connection tha
     ![Connect to server with attestation using SSMS](./media/always-encrypted-enclaves/column-encryption-setting.png)
 
 4. Select **Connect**.
-5. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable** if you plan to run parameterized DML queries.
+5. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable** if you plan to run parameterized DML queries. For more information, see [Parameterization for Always Encrypted](always-encrypted-query-columns-ssms.md#param).
 
-For additional information, see [Enabling and disabling Always Encrypted for a database connection](always-encrypted-query-columns-ssms.md#en-dis)
+For additional information, see [Enabling and disabling Always Encrypted for a database connection](always-encrypted-query-columns-ssms.md#en-dis).
 
 ### Prerequisites for running T-SQL statements using enclaves in Azure Data Studio
 
@@ -106,6 +106,92 @@ Make sure you run your statements from a query window that uses a connection tha
 4. Click **OK** to close **Advanced Properties**.
 
 For additional information, see [Enabling and disabling Always Encrypted for a database connection](always-encrypted-query-columns-ads.md#enabling-and-disabling-always-encrypted-for-a-database-connection).
+
+If you plan to run parameterized DML queries, you also need to enable [Parameterization for Always Encrypted](always-encrypted-query-columns-ads.md#parameterization-for-always-encrypted).
+
+## Examples
+
+This section includes examples of DML queries using enclaves. 
+
+The examples use the below schema.
+
+```sql
+CREATE SCHEMA [HR];
+GO
+
+CREATE TABLE [HR].[Jobs](
+ [JobID] [int] IDENTITY(1,1) PRIMARY KEY,
+ [JobTitle] [nvarchar](50) NOT NULL,
+ [MinSalary] [money] ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
+ [MaxSalary] [money] ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
+);
+GO
+
+CREATE TABLE [HR].[Employees](
+ [EmployeeID] [int] IDENTITY(1,1) PRIMARY KEY,
+ [SSN] [char](11) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
+ [FirstName] [nvarchar](50) NOT NULL,
+ [LastName] [nvarchar](50) NOT NULL,
+ [Salary] [money] ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
+ [JobID] [int] NULL,
+ FOREIGN KEY (JobID) REFERENCES [HR].[Jobs] (JobID)
+);
+GO
+```
+
+### Exact match search
+
+The below query performs an exact match search on the encrypted `SSN` string column.
+
+```sql
+DECLARE @SSN char(11) = '795-73-9838';
+SELECT * FROM [HR].[Employees] WHERE [SSN] = @SSN;
+GO
+```
+
+### Pattern matching search
+
+The below query performs a pattern matching search on the encrypted `SSN` string column, searching for employees with the specified last for digits of a social security number.
+
+```sql
+DECLARE @SSN char(11) = '795-73-9838';
+SELECT * FROM [HR].[Employees] WHERE [SSN] = @SSN;
+GO
+```
+
+### Range comparison
+
+The below query performs a range comparison on the encrypted  `Salary`  column, searching for employees with salaries within the specified range.
+
+```sql
+DECLARE @MinSalary money = 40000;
+DECLARE @MaxSalary money = 45000;
+SELECT * FROM [HR].[Employees] WHERE [Salary] > @MinSalary AND [Salary] < @MaxSalary;
+GO
+```
+
+### Joins
+
+The below query performs a join between `Employees` and `Jobs` tables using the encrypted `Salary` column. The query retrieves employees with salaries outside of a salary range for employee's job.
+
+```sql
+SELECT * FROM [HR].[Employees] e
+JOIN [HR].[Jobs] j
+ON e.[JobID] = j.[JobID] AND e.[Salary] > j.[MaxSalary] OR e.[Salary] < j.[MinSalary];
+GO
+```
+
+### Sorting
+
+The below query sorts employee records based on the encrypted `Salary` column, retrieving 10 employees with the highest salaries.
+> [!NOTE]
+> Sorting encrypted columns is supported in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], but not in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
+
+```sql
+SELECT TOP(10) * FROM [HR].[Employees]
+ORDER BY [Salary] DESC;
+GO
+```
 
 ## Troubleshoot common issues when running statements using enclaves
 
@@ -171,7 +257,7 @@ Errors can occur at various steps in the above workflow due to misconfigurations
 
 This section lists common errors you may encounter when using `ALTER TABLE`/`ALTER COLUMN` for in-place encryption (in addition to attestation errors described in earlier sections). For more information, see [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md).
 
-- The column encryption key you're trying to use to encrypt, decrypt, or re-encrypt data isn't an enclave-enabled key. For more information about in-lace encryption, see [Prerequisites](always-encrypted-enclaves-configure-encryption.md#prerequisites). For information on how to provision enclave-enabled keys, see [Provision enclave-enabled keys](always-encrypted-enclaves-provision-keys.md).
+- The column encryption key you're trying to use to encrypt, decrypt, or re-encrypt data isn't an enclave-enabled key. For more information about prerequisites for in-place encryption, see [Prerequisites](always-encrypted-enclaves-configure-encryption.md#prerequisites). For information on how to provision enclave-enabled keys, see [Provision enclave-enabled keys](always-encrypted-enclaves-provision-keys.md).
 - You haven't enabled Always Encrypted and enclave computations for the database connection. See [Prerequisites for running statements using secure enclaves](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves).
 - Your `ALTER TABLE`/`ALTER COLUMN` statement triggers a cryptographic operation and it changes the column data type or sets a collation with a code page different from the current collation code page. Combining cryptographic operations with data type or collation page changes isn't allowed. To address the problem, use separate statements; one statement to change the data type or collation code page and another statement for in-place encryption.
 
@@ -189,3 +275,5 @@ This section lists common errors you may encounter when you run confidential DML
 
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+- [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md)
+- [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)

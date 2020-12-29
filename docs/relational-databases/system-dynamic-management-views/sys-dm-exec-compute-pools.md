@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-2017"
 ---
 # sys.dm_exec_compute_pools (Transact-SQL)
 [!INCLUDE[sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]

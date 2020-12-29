@@ -12,9 +12,9 @@ helpviewer_keywords:
   - "upgrading SQL Server, migrating query plans"
   - "plan guides [SQL Server], migrating query plans"
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Change the Database Compatibility Level and use the Query Store
 

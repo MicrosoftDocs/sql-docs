@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sample Database for In-Memory OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  This sample showcases the In-Memory OLTP feature. It shows  memory-optimized tables and natively compiled stored procedures, and can be used to demonstrate performance benefits of In-Memory OLTP.  
   
 > [!NOTE]  
->  To view this topic for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], see [Extensions to AdventureWorks to Demonstrate In-Memory OLTP](./overview-and-usage-scenarios.md?view=sql-server-ver15#in-memory-oltp-overview).  
+>  To view this topic for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], see [Extensions to AdventureWorks to Demonstrate In-Memory OLTP](./overview-and-usage-scenarios.md#in-memory-oltp-overview).  
   
  The sample migrates five tables in the AdventureWorks database to memory-optimized, and it includes a demo workload for sales order processing. You can use this demo workload to see the performance benefit of using In-Memory OLTP on your server.  
   

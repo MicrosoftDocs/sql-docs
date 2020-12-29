@@ -14,7 +14,7 @@ dev_langs:
   - "TSQL"
 author: "joesackmsft"
 ms.author: "josack"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # APPROX_COUNT_DISTINCT (Transact-SQL)
 

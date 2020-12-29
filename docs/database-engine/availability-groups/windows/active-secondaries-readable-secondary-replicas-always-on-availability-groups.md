@@ -5,7 +5,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "06/06/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection access to availability replicas"
@@ -156,7 +156,7 @@ ms.author: chadam
   
  Only [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can create and update temporary statistics. However, you can delete temporary statistics and monitor their properties using the same tools that you use for permanent statistics:  
   
--   Delete temporary statistics using the [DROP STATISTICS](../../../t-sql/statements/drop-statistics-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement.  
+-   Delete temporary statistics using the [DROP STATISTICS](../../../t-sql/statements/drop-statistics-transact-sql.md) [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement.  
   
 -   Monitor statistics using the **sys.stats** and **sys.stats_columns** catalog views. **sys_stats** includes a column, **is_temporary**, to indicate which statistics are permanent and which are temporary.  
   

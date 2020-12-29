@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "database restores [SQL Server], device restores"
   - "devices [SQL Server]"
 ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Restore a Backup from a Device (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

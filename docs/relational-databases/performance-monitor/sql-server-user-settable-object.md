@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "User Settable object"
   - "SQLServer:User Settable"
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, User Settable Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

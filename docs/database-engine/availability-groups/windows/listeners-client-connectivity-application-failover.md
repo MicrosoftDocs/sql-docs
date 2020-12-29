@@ -5,7 +5,7 @@ ms.custom: contperfq1
 ms.date: "02/27/2020"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], listeners"

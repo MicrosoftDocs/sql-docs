@@ -5,11 +5,11 @@ ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.reviewer: ""
 ms.prod: sql
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Install Client Tools on a SQL Server Failover Cluster
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

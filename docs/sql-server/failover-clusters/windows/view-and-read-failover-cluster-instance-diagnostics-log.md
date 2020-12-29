@@ -5,11 +5,11 @@ ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # View and Read Failover Cluster Instance Diagnostics Log
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

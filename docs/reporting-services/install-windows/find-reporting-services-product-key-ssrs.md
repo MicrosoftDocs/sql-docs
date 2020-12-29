@@ -9,7 +9,7 @@ ms.custom: seo-lt-2019​, seo-mmd-2019
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-2017"
 ---
 # Find the product key for SQL Server Reporting Services
 

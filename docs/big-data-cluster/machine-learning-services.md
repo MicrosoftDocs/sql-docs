@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Clusters
 description: Learn how you can run Python and R scripts on the master instance of a SQL Server Big Data Clusters with Machine Learning Services.
 author: dphansen
 ms.author: davidph
-ms.date: 04/30/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
@@ -17,7 +17,7 @@ ms.technology: machine-learning-bdc
 You can run Python and R scripts on the master instance of [SQL Server Big Data Clusters](big-data-cluster-overview.md) with [Machine Learning Services](../machine-learning/index.yml).
 
 > [!NOTE]
-> You can also run Java code on the master instance with [SQL Server Language Extensions](../language-extensions/language-extensions-overview.md). Following the steps below will also enable Language Extensions.
+> You can also run Java code on the master instance of SQL Server Big Data Clusters with the [Java Language Extension](../language-extensions/java-overview.md). Following the steps below will also enable [SQL Server Language Extensions](../language-extensions/language-extensions-overview.md).
 
 ## Enable Machine Learning Services
 

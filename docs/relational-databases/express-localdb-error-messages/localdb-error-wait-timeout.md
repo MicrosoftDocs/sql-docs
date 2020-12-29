@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: e5b55efa-daa1-4c39-aa71-eeb7707ed601
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_WAIT_TIMEOUT
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

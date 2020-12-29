@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "workload groups [SQL Server]"
   - "workload groups [SQL Server], overview"
 ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Resource Governor Workload Group
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

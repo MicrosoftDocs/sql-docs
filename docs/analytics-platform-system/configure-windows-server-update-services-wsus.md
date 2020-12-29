@@ -140,7 +140,7 @@ To configure WSUS, you need to:
   
     Unselect all selected updates.  
   
-    Select **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**, and **System Center 2012 R2 - Virtual Machine Manager**, and then click **Next**.  
+    Select **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**, **System Center 2012 R2 - Virtual Machine Manager**, **Windows Server 2016**,  and **System Center 2016 - Virtual Machine Manager** and then click **Next**.  
   
 9. Choose classifications.  
   
@@ -149,9 +149,9 @@ To configure WSUS, you need to:
   
     Unselect all previously selected updates.  
   
-    Select **Critical Updates** and **Security Updates** for the updates that will be synchronized for the Analytics Platform System appliance, and then click **Next**.  
+    Select **Critical Updates**, **Security Updates** and **Update Rollups** for the updates that will be synchronized for the Analytics Platform System appliance, and then click **Next**.  
   
-    ![Choose classifications](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
+    ![Choose classifications](./media/configure-windows-server-update-services-wsus/sql-server-pdw-wsus-choose-classifications.png "sql-server-pdw-wsus-choose-classifications")  
   
 10. Configure the synchronization schedule.  
   

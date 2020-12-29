@@ -912,7 +912,7 @@ ORDER BY message_id
 |    1779    |    16    |    No    |    Table '%.*ls' already has a primary key defined on it.    |
 |    1781    |    16    |    No    |    Column already has a DEFAULT bound to it.    |
 |    1784    |    16    |    No    |    Cannot create the foreign key '%.*ls' because the referenced column '%.*ls.%.*ls' is a non-persisted computed column.    |
-|    1785    |    16    |    No    |    Introducing FOREIGN KEY constraint '%.*ls' on table '%.*ls' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints.    |
+|    [1785](mssqlserver-1785-database-engine-error.md)    |    16    |    No    |    Introducing FOREIGN KEY constraint '%.*ls' on table '%.*ls' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints.    |
 |    1786    |    16    |    No    |    Either column '%.*ls.%.*ls' or referencing column '%.*ls.%.*ls' in foreign key '%.*ls' is a timestamp column. This data type cannot be used with cascading referential integrity constraints.    |
 |    1787    |    16    |    No    |    Cannot define foreign key constraint '%.*ls' with cascaded DELETE or UPDATE on table '%.*ls' because the table has an INSTEAD OF DELETE or UPDATE TRIGGER defined on it.    |
 |    1788    |    16    |    No    |    Cascading foreign key '%.*ls' cannot be created where the referencing column '%.*ls.%.*ls' is an identity column.    |
@@ -1842,8 +1842,8 @@ ORDER BY message_id
 |    3985    |    16    |    No    |    An error occurred during the changing of transaction context. This is usually caused by low memory in the system. Try to free up more memory.    |
 |    3986    |    19    |    No    |    The transaction timestamps ran out. Restart the server.    |
 |    3987    |    10    |    No    |    SNAPSHOT ISOLATION is always enabled in this database.    |
-|    3988    |    16    |    No    |    New transaction is not allowed because there are other threads running in the session.    |
-|    3989    |    16    |    No    |    New request is not allowed to start because it should come with valid transaction descriptor.    |
+|    [3988](mssqlserver-3988-database-engine-error.md)    |    16    |    No    |    New transaction is not allowed because there are other threads running in the session.    |
+|    [3989](mssqlserver-3989-database-engine-error.md)   |    16    |    No    |    New request is not allowed to start because it should come with valid transaction descriptor.    |
 |    3990    |    16    |    No    |    Transaction is not allowed to commit inside of a user defined routine, trigger or aggregate because the transaction is not started in that CLR level. Change application logic to enforce strict transaction nesting.    |
 |    3991    |    16    |    No    |    The context transaction which was active before entering user defined routine, trigger or aggregate "%.*ls" has been ended inside of it, which is not allowed. Change application logic to enforce strict transaction nesting.    |
 |    3992    |    16    |    No    |    Transaction count has been changed from %d to %d inside of user defined routine, trigger or aggregate "%.*ls". This is not allowed and user transaction will be rolled back. Change application logic to enforce strict transaction nesting.    |
@@ -2903,7 +2903,7 @@ ORDER BY message_id
 |    6519    |    16    |    No    |    Type '%.*ls' is not yet supported for CLR operations.    |
 |    6520    |    16    |    No    |    A .NET Framework error occurred during statement execution.    |
 |    6521    |    16    |    No    |    A .NET Framework error occurred during statement execution: %.*ls.    |
-|    6522    |    16    |    No    |    A .NET Framework error occurred during execution of user-defined routine or aggregate "%.*ls": %ls.    |
+|    [6522](mssqlserver-6522-database-engine-error.md)    |    16    |    No    |    A .NET Framework error occurred during execution of user-defined routine or aggregate "%.*ls": %ls.    |
 |    6523    |    16    |    No    |    Method, property or field '%ls' of class '%ls' in assembly '%.*ls' is static.    |
 |    6524    |    16    |    No    |    Cannot use computed column in the result table of a streaming user-defined function (column '%.*ls').    |
 |    6525    |    16    |    No    |    Cannot use '%s' constraint in the result table of a streaming user-defined function.    |
@@ -2983,7 +2983,7 @@ ORDER BY message_id
 |    6599    |    16    |    No    |    Found an empty native serialization class '%.*ls'. Empty native serialization classes are not allowed.    |
 |    6600    |    16    |    No    |    XML error: %.*ls    |
 |    6601    |    10    |    No    |    The XML parse error 0x%x occurred on line number %d, near the XML text "%.*ls".    |
-|    6602    |    16    |    No    |    The error description is '%.*ls'.    |
+|    [6602](mssqlserver-6602-database-engine-error.md)    |    16    |    No    |    The error description is '%.*ls'.    |
 |    6603    |    16    |    No    |    XML parsing error: %.*ls    |
 |    6605    |    16    |    No    |    %.*ls: Failed to obtain an IPersistStream interface on the XML text.    |
 |    6607    |    16    |    No    |    %.*ls: The value supplied for parameter number %d is invalid.    |
@@ -3988,7 +3988,7 @@ ORDER BY message_id
 |    8628    |    17    |    Yes    |    A time out occurred while waiting to optimize the query. Rerun the query.    |
 |    [8630](mssqlserver-8630-database-engine-error.md)    |    17    |    No    |    Internal Query Processor Error: The query processor encountered an unexpected error during execution.    |
 |    8631    |    17    |    No    |    Internal error: Server stack limit has been reached. Please look for potentially deep nesting in your query, and try to simplify it.    |
-|    8632    |    17    |    No    |    Internal error: An expression services limit has been reached. Please look for potentially complex expressions in your query, and try to simplify them.    |
+|    [8632](mssqlserver-8632-database-engine-error.md)    |    17    |    No    |    Internal error: An expression services limit has been reached. Please look for potentially complex expressions in your query, and try to simplify them.    |
 |    8633    |    16    |    No    |    The query processor could not produce a query plan because distributed query does not support materializing intermediate results with default in DML queries over remote sources. Try to use actual default values instead of default or split the update into multiple statements, one only containing the DEFAULT assignment, the other with the rest.    |
 |    8634    |    17    |    No    |    The query processor received an error from a cluster communication layer.    |
 |    8635    |    16    |    No    |    The query processor could not produce a query plan for a query with a spatial index hint. Reason: %S_MSG. Try removing the index hints or removing SET FORCEPLAN.    |
@@ -6275,7 +6275,7 @@ ORDER BY message_id
 |    15397    |    16    |    No    |    The %S_MSG is not protected by a password. A decryption password cannot be used for this operation.    |
 |    15398    |    11    |    No    |    Only objects in the master database owned by dbo can have the startup setting changed.    |
 |    15399    |    11    |    No    |    Could not change startup option because this option is restricted to objects that have no parameters.    |
-|    15401    |    11    |    No    |    Windows NT user or group '%s' not found. Check the name again.    |
+|    [15401](mssqlserver-15401-database-engine-error.md)    |    11    |    No    |    Windows NT user or group '%s' not found. Check the name again.    |
 |    15402    |    11    |    No    |    '%s' is not a fixed server role.    |
 |    15403    |    16    |    No    |    The server principal "%.*ls" does not exist, does not have server access, or you do not have permission.    |
 |    [15404](mssqlserver-15404-database-engine-error.md)    |    16    |    No    |    Could not obtain information about Windows NT group/user '%ls', error code %#lx.    |
@@ -6399,7 +6399,7 @@ ORDER BY message_id
 |    15578    |    16    |    No    |    There is already a master key in the database. Please drop it before performing this statement.    |
 |    15579    |    16    |    No    |    Adding an encryption to the symmetric key failed. An encryption by the same %S_MSG '%.*s' may already exist.    |
 |    15580    |    16    |    No    |    Cannot drop %S_MSG because %S_MSG '%.*s' is encrypted by it.    |
-|    15581    |    16    |    No    |    Please create a master key in the database or open the master key in the session before performing this operation.    |
+|    [15581](mssqlserver-15581-database-engine-error.md)    |    16    |    No    |    Please create a master key in the database or open the master key in the session before performing this operation.    |
 |    15583    |    10    |    No    |    The module being signed is marked to execute as owner. If the owner changes the signature will not be valid.    |
 |    15584    |    10    |    No    |    An error occurred while decrypting %S_MSG '%.*ls' that was encrypted by the old master key. The error was ignored because the FORCE option was specified.    |
 |    15585    |    10    |    No    |    The current master key cannot be decrypted. The error was ignored because the FORCE option was specified.    |
@@ -6692,7 +6692,7 @@ ORDER BY message_id
 |    [17887](mssqlserver-17887-database-engine-error.md)    |    10    |    Yes    |    IO Completion Listener (0x%lx) Worker 0x%p appears to be non-yielding on Node %ld. Approx CPU Used: kernel %I64d ms, user %I64d ms, Interval: %I64d.    |
 |    17888    |    10    |    Yes    |    All schedulers on Node %d appear deadlocked due to a large number of worker threads waiting on %ls. Process Utilization %d%%.    |
 |    17889    |    16    |    Yes    |    A new connection was rejected because the maximum number of connections on session ID %d has been reached. Close an existing connection on this session and retry.%.*ls    |
-|    17890    |    10    |    Yes    |    A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: %d seconds. Working set (KB): %I64d, committed (KB): %I64d, memory utilization: %d%%.    |
+|    [17890](mssqlserver-17890-database-engine-error.md)    |    10    |    Yes    |    A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: %d seconds. Working set (KB): %I64d, committed (KB): %I64d, memory utilization: %d%%.    |
 |    17891    |    10    |    Yes    |    Resource Monitor (0x%lx) Worker 0x%p appears to be non-yielding on Node %ld. Memory freed: %I64d KB. Approx CPU Used: kernel %I64d ms, user %I64d ms, Interval: %I64d.    |
 |    [17892](mssqlserver-17892-database-engine-error.md)    |    14    |    Yes    |    Logon failed for login '%.*ls' due to trigger execution.%.*ls    |
 |    17894    |    10    |    Yes    |    Dispatcher (0x%lx) from dispatcher pool '%.*ls' Worker 0x%p appears to be non-yielding on Node %ld. Approx CPU Used: kernel %I64d ms, user %I64d ms, Interval: %I64d.    |
@@ -6817,8 +6817,8 @@ ORDER BY message_id
 |    18469    |    10    |    No    |    [CLIENT: %.*hs]    |
 |    18470    |    14    |    Yes    |    Login failed for user '%.*ls'. Reason: The account is disabled.%.*ls    |
 |    18471    |    14    |    No    |    The login failed for user "%.*ls". The password change failed. The user does not have permission to change the password. %.*ls    |
-|    18482    |    16    |    Yes    |    Could not connect to server '%.*ls' because '%.*ls' is not defined as a remote server. Verify that you have specified the correct server name. %.*ls.    |
-|    18483    |    16    |    Yes    |    Could not connect to server '%.*ls' because '%.*ls' is not defined as a remote login at the server. Verify that you have specified the correct login name. %.*ls.    |
+|    [18482](mssqlserver-18482-database-engine-error.md)    |    16    |    Yes    |    Could not connect to server '%.*ls' because '%.*ls' is not defined as a remote server. Verify that you have specified the correct server name. %.*ls.    |
+|    [18483](mssqlserver-18483-database-engine-error.md)    |    16    |    Yes    |    Could not connect to server '%.*ls' because '%.*ls' is not defined as a remote login at the server. Verify that you have specified the correct login name. %.*ls.    |
 |    18485    |    16    |    Yes    |    Could not connect to server '%.*ls' because it is not configured to accept remote logins. Use the remote access configuration option to allow remote logins.%.*ls    |
 |    18486    |    14    |    Yes    |    Login failed for user '%.*ls' because the account is currently locked out. The system administrator can unlock it. %.*ls    |
 |    18487    |    14    |    Yes    |    Login failed for user '%.*ls'. Reason: The password of the account has expired.%.*ls    |

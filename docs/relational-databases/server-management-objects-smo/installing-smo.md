@@ -17,7 +17,7 @@ ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 author: "markingmyname"
 ms.author: "maghan"
 
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Installing SMO

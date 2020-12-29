@@ -9,7 +9,7 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
-monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=sql-server-2016"
 ---
 # Install SQL Server 2016 R Services
 

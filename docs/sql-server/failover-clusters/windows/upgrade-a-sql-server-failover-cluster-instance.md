@@ -5,15 +5,15 @@ ms.custom: "seo-lt-2019"
 ms.date: "11/21/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading failover cluster instances"
   - "clusters [SQL Server], upgrading"
   - "failover clustering [SQL Server], upgrading"
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 
 # Upgrade a failover cluster instance 

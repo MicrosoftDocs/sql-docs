@@ -12,7 +12,7 @@ ms.tgt_pltfrm: ""
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-ver15"
 ---
 # Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]

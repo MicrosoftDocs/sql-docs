@@ -5,14 +5,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
 ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # View Cluster Quorum NodeWeight Settings
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

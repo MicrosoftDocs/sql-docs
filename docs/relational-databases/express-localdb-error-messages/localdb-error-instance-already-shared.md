@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: 35b4d6fa-ebb9-49d3-aaab-d4e37b6f3760
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_INSTANCE_ALREADY_SHARED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

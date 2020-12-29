@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "plan guides [SQL Server], deleting"
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Delete a Plan Guide
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

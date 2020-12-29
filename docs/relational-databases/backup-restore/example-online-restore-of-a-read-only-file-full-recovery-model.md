@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "online restores [SQL Server], full recovery model"
   - "restore sequences [SQL Server], online"
 ms.assetid: 7ea2d2af-086f-48dc-9636-38dc194c7090
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Example: Online Restore of a Read-Only File (Full Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

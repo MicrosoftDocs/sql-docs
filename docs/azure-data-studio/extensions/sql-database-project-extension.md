@@ -8,7 +8,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: 
-ms.date: 10/22/2020
+ms.date: 12/15/2020
 ---
 
 # SQL Database Projects extension (Preview)
@@ -56,6 +56,31 @@ Watch this short 10-minute video for an introduction to the SQL Database Project
 - Tasks (build/publish) are not user-defined.
 - Publish targets defined by DacFx.
 - WSL environment support is limited.
+
+## Workspace
+SQL database projects in Azure Data Studio are contained within a logical workspace.  A workspace manages the folder(s) visible in the Explorer pane as well as the project(s) visible in the Project pane. Adding and removing projects from a workspace can be accomplished through the Azure Data Studio interface in the Projects pane. However, the settings for a workspace can be manually edited in the `.code-workspace` file if necessary.
+
+In the example `.code-workspace` file below, the `folders` array lists all folders included in the Explorer pane and the `dataworkspace.projects` array within `settings` lists all the SQL projects included in the Projects pane.
+
+```json
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "WideWorldImportersDW",
+			"path": "..\\WideWorldImportersDW"
+		}
+	],
+	"settings": {
+		"dataworkspace.projects": [
+			"AdventureWorksLT.sqlproj",
+			"..\\WideWorldImportersDW\\WideWorldImportersDW.sqlproj"
+		]
+	}
+}
+```
 
 ## Next steps
 

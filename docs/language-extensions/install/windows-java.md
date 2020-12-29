@@ -8,7 +8,7 @@ ms.date: 11/11/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15"
 ---
 # Install SQL Server Java Language Extension on Windows
 

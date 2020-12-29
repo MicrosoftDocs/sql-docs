@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Broker / DBM Transport object"
   - "SQLServer:Broker/DBM Transport"
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Broker - DBM Transport Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

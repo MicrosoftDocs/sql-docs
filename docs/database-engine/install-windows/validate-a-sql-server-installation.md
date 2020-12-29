@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "validating installations [SQL Server]"
 ms.assetid: 1689af50-d2b8-4aa6-8f27-cc7127157fc8
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Validate a SQL Server Installation
 

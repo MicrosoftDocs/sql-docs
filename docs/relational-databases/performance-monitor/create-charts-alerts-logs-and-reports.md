@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "System Monitor [SQL Server], logs"
   - "Windows System Monitor [SQL Server], logs"
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Create Charts, Alerts, Logs, and Reports
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -26,7 +26,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azur
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
-PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources. The same query can also access relational tables in your instance of SQL Server. PolyBase enables the same query to also join the data from external sources and and SQL Server.
+PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources. The same query can also access relational tables in your instance of SQL Server. PolyBase enables the same query to also join the data from external sources and SQL Server.
 
 To use PolyBase, in an instance of SQL Server:
 

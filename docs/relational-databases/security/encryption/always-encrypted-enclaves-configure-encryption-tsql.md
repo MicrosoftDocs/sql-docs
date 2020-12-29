@@ -37,7 +37,7 @@ The remainder of this article describes how to trigger in-place encryption using
 ### Pre-requisites
 - Pre-requisites described in [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md).
 - SQL Server Management Studio 18.3 or higher when using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
-- SQL Server Management Studio 18.8 or higher when using !INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
+- SQL Server Management Studio 18.8 or higher when using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ### Steps
 1. Open a query window with Always Encrypted and enclave computations enabled in the database connection. For details, see [Enabling and disabling Always Encrypted for a database connection ](always-encrypted-query-columns-ssms.md#en-dis).

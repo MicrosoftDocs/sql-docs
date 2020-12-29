@@ -44,7 +44,7 @@ In SQL Server Management Studio you can provision:
 Minimum SSMS version requirements:
 
 - SSMS 18.3 when using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
-- SSMS 18.8 when using !INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
+- SSMS 18.8 when using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ### Provision enclave-enabled column master keys with the New Column Master Key dialog
 To provision an enclave-enabled column master key, follow the steps in [Provision Column Master Keys with the New Column Master Key Dialog](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog). Make sure you select **Allow enclave computations**. See the below screenshot:

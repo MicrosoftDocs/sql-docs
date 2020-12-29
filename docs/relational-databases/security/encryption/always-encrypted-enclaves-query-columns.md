@@ -71,23 +71,27 @@ Your environment needs to meet the following requirements to support executing s
 
 ### Prerequisites for running T-SQL statements using enclaves in SSMS
 
-To use SQL Server Management Studio to run statements using secure enclaves, follow the instructions in [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md). Here are a few things that are specific to enclaves you should be aware of:
+Minimum version requirements for SQL Server Management Studio:
 
-Minimum version: **SSMS 18.7.2** or higher is recommended.
+- SSMS 18.3 when using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+- SSMS 18.8 when using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 Make sure you run your statements from a query window that uses a connection that has Always Encrypted and the correct attestation URL configured.
 
 1. In the **Connect to Server** dialog, specify your server name, select an authentication method, and specify your credentials.
 2. Click **Options >>** and select the **Always Encrypted** tab.
-3. Select the **Enable Always Encrypted (column encryption)** checkbox and specify your enclave attestation URL. For example, ht<span>tps://</span>hgs.bastion.local/Attestation or ht<span>tps://MyAttestationProvider.us.attest.azure.net/attest/SgxEnclave?api-version=2018-09-01-preview.
+3. Select the **Enable Always Encrypted (column encryption)** checkbox and specify your enclave attestation URL. For example, `https://hgs.bastion.local/Attestation` or `https://contososqlattestation.uks.attest.azure.net/attest/SgxEnclave?api-version=201 8-09-01-preview`.
+
+    ![Connect to server with attestation using SSMS](./media/always-encrypted-enclaves/column-encryption-setting.png)
+
 4. Select **Connect**.
 5. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable** if you plan to run parameterized DML queries.
 
+For additional information, see [Enabling and disabling Always Encrypted for a database connection](always-encrypted-query-columns-ssms.md#en-dis)
+
 ### Prerequisites for running T-SQL statements using enclaves in Azure Data Studio
 
-To use Azure Data Studio to run statements using secure enclaves, follow the instructions in [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md). Here are a few things that are specific to enclaves you should be aware of:
-
-Minimum version: **1.23** or higher is recommended.
+The minimum recommended version **1.23** or higher is recommended.
 
 Make sure you run your statements from a query window that uses a connection that has Always Encrypted enabled and both the correct attestation protocol and the attestation URL configured.
 
@@ -97,7 +101,11 @@ Make sure you run your statements from a query window that uses a connection tha
     - If you're using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] set **Attestation Protocol** to **Host Guardian Service** and enter your Host Guardian Service attestation URL in the **Enclave Attestation URL** field.
     - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], set **Attestation Protocol** to **Azure Attestation** and enter the attestation URL referencing your policy in Microsoft Azure Attestation in the **Enclave Attestation URL** field.
 
+    ![Connect to server with attestation using Azure Data Studio](./media/always-encrypted-enclaves/azure-data-studio-connect-with-enclaves.png)
+
 4. Click **OK** to close **Advanced Properties**.
+
+For additional information, see [Enabling and disabling Always Encrypted for a database connection](always-encrypted-query-columns-ads.md#enabling-and-disabling-always-encrypted-for-a-database-connection).
 
 ## Troubleshoot common issues when running statements using enclaves
 

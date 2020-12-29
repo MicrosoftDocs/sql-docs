@@ -80,7 +80,7 @@ The two key benefits of Always Encrypted with secure enclaves are in-place encry
 
 ### In-place encryption
 
-In-place encryption allows cryptographic operations on database columns inside the secure enclave, without moving the data outside of the database. In-place encryption improves the performance and the reliability of encryption. You can perform in-place encryption using the [ALTER TABLE (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) statement. You can also use tools, such as the [Always Encrypted Wizard](always-encrypted-wizard.md) or [PowerShell](configure-always-encrypted-keys-using-powershell.md).
+In-place encryption allows cryptographic operations on database columns inside the secure enclave, without moving the data outside of the database. In-place encryption improves the performance and the reliability of encryption. You can perform in-place encryption using the [ALTER TABLE (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) statement. 
 
 The cryptographic operations supported in-place are:
 

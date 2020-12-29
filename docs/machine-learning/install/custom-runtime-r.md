@@ -1,9 +1,9 @@
 ---
 title: Install R custom runtime
-description: Learn how to install an R custom runtime for SQL Server.
+description: earn how to install an R custom runtime for SQL Server using Language Extensions. The R custom runtime can be used for machine learning.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/20/2020
+ms.date: 12/29/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph

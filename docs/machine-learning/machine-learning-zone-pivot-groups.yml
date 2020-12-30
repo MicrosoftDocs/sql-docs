@@ -1,7 +1,7 @@
 # YamlMime:ZonePivotGroups
 # GitHub repository = 'MicrosoftDocs/sql-docs-pr/docs/machine-learning'
 groups:
-- id: platforms
+- id: sqlml-platforms
   title: Platforms
   prompt: Choose a platform
   pivots:

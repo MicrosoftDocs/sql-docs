@@ -58,12 +58,6 @@ In addition, if you store your column master key in Azure Key Vault, you also ne
    Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory
    ```
 
-6. Specify the `Attestation Protocol` and the `Enclave Attestation Url` in the connection string, which will be used in your application to communicate with your database.
-
-  ```cs
-   Attestation Protocol = HGS; Enclave Attestation Url = http://hgs.bastion.local/Attestation; Column Encryption Setting = Enabled
-   ```
-
 ## Step 2: Implement your application logic
 
 Your application will connect to the **ContosoHR** database from [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) or - [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started) and it will run a query that contains the `LIKE` predicate on the **SSN** column and a range comparison on the **Salary** column.
@@ -131,7 +125,7 @@ Your application will connect to the **ContosoHR** database from [Tutorial: Gett
 2. Update the database connection string.
     1. Set the valid server name and your database authentication settings.
     2. Set the value of the `Attestation Protocol` keyword to:
-       - `HGS` - if you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS).
+       - `HGS` - if you're using [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS).
        - `AAS` - if you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation.
     3. Set `Enclave Attestation URL` to an attestation URL for your environment.
 

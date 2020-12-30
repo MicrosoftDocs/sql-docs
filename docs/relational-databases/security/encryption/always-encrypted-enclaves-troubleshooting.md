@@ -90,9 +90,8 @@ This section lists common errors you may encounter when you run confidential DML
 - The column encryption key configured for the column you're querying isn't an enclave-enabled key.
 - You haven't enabled Always Encrypted and enclave computations for the database connection. For more information, see [Prerequisites for running statements using secure enclaves](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves).
 - The column you're querying uses deterministic encryption. Confidential DML queries using secure enclaves aren't supported with deterministic encryption. For more information on how to change the encryption type to randomized, see [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md).
-- The string column you're querying uses a collation that isn't a BIN2 or UTF-8 collation. Change the collation to BIN2 or UTF-8. For more information, see [DML statements using secure enclaves](#dml-statements-using-secure-enclaves).
-- Your query triggers an unsupported operation. For the list of operations supported inside enclaves, see [DML statements using secure enclaves](#dml-statements-using-secure-enclaves).
-
+- The string column you're querying uses a collation that isn't a BIN2 or UTF-8 collation. Change the collation to BIN2 or UTF-8. For more information, see [DML statements using secure enclaves](always-encrypted-enclaves-query-columns.md#dml-statements-using-secure-enclaves).
+- Your query triggers an unsupported operation. For the list of operations supported inside enclaves, see [DML statements using secure enclaves](always-encrypted-enclaves-query-columns.md#dml-statements-using-secure-enclaves).
 ## Next Steps
 
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)

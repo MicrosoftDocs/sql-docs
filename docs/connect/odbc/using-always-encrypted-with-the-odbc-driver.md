@@ -20,7 +20,7 @@ author: v-chojas
 
 ### Introduction
 
-This article provides information on how to develop ODBC applications using [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) or [Always Encrypted with Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) and the [ODBC Driver for SQL Server](microsoft-odbc-driver-for-sql-server.md).
+This article provides information on how to develop ODBC applications using [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) or [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) and the [ODBC Driver for SQL Server](microsoft-odbc-driver-for-sql-server.md).
 
 Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the ODBC Driver for SQL Server, achieves this by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. Always Encrypted *with secure enclaves* extends this feature to enable richer functionality on sensitive data while keeping the data confidential.
 
@@ -67,7 +67,7 @@ Beginning with version 17.4, the driver supports Always Encrypted with Secure En
 
 - `<attestation URL>` - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
 
-  - If you're using [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see[Determine and share the HGS attestation URL](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
+  - If you're using [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
   - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
 
 
@@ -677,9 +677,9 @@ When encountering difficulties in using Always Encrypted, start by checking the 
 
 - The CMK which encrypts the CEK has accessible metadata on the server and is also accessible from the client.
 
-- `ColumnEncryption` is enabled in the DSN, connection string, or connection attribute, and if using the Secure Enclave, has the correct format.
+- `ColumnEncryption` is enabled in the DSN, connection string, or connection attribute, and if using the secure enclave, has the correct format.
 
-Additionally, when using the Secure Enclave, attestation failures identify the step in the attestation process where the failure occurred, according to the following table:
+Additionally, when using the secure enclave, attestation failures identify the step in the attestation process where the failure occurred, according to the following table:
 
 |Step|Description|
 |----|-----------|

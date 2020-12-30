@@ -73,9 +73,9 @@ In this step, you'll create and test an index on an encrypted column. You'll be 
 1. Open a query window and execute the below statements to encrypt the **LastName** column in the **Employees** table. You'll create and use an index on that column in later steps.
 
    ```sql  
-   ALTER TABLE [dbo].[Employees]
+   ALTER TABLE [HR].[Employees]
    ALTER COLUMN [LastName] [nvarchar](50) COLLATE Latin1_General_BIN2 
-   ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized    ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL;
+   ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL;
    GO   
    ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
    GO
@@ -84,7 +84,7 @@ In this step, you'll create and test an index on an encrypted column. You'll be 
 1. Create an index on the **LastName** column. Since you're connected to the database with Always Encrypted enabled, the client driver inside SSMS transparently provides **CEK1** (the column encryption key, protecting the **LastName** column) to the enclave, which is needed to create the index.
 
    ```sql
-   CREATE INDEX IX_LastName ON [Employees] ([LastName])
+   CREATE INDEX IX_LastName ON [HR].[Employees] ([LastName])
    INCLUDE ([EmployeeID], [FirstName], [SSN], [Salary]);
    GO
    ```
@@ -95,7 +95,7 @@ In this step, you'll create and test an index on an encrypted column. You'll be 
 
        ```sql
        DECLARE @LastNamePrefix NVARCHAR(50) = 'Aber%';
-       SELECT * FROM [dbo].[Employees] WHERE [LastName] LIKE @LastNamePrefix;
+       SELECT * FROM [HR].[Employees] WHERE [LastName] LIKE @LastNamePrefix;
        GO
       ```
 
@@ -108,7 +108,7 @@ In this step, you'll create an index on an encrypted column, pretending to be tw
 1. Using the SSMS instance **without** Always Encrypted enabled, execute the below statement to drop the index on the **LastName** column.
 
    ```sql
-   DROP INDEX IX_LastName ON [Employees]; 
+   DROP INDEX IX_LastName ON [HR].[Employees]; 
    GO
    ```
 
@@ -128,7 +128,7 @@ In this step, you'll create an index on an encrypted column, pretending to be tw
 
         ```sql
         DECLARE @LastNamePrefix NVARCHAR(50) = 'Aber%';
-        SELECT * FROM [dbo].[Employees] WHERE [LastName] LIKE @LastNamePrefix;
+        SELECT * FROM [HR].[Employees] WHERE [LastName] LIKE @LastNamePrefix;
         GO
         ```
 
@@ -136,7 +136,7 @@ In this step, you'll create an index on an encrypted column, pretending to be tw
     1. In the SSMS instance **without** Always Encrypted enabled, execute the below statements in a query window.
 
         ```sql
-        CREATE INDEX IX_LastName ON [Employees] ([LastName])
+        CREATE INDEX IX_LastName ON [HR].[Employees] ([LastName])
         INCLUDE ([EmployeeID], [FirstName], [SSN], [Salary]);
         GO
         ```
@@ -147,7 +147,7 @@ In this step, you'll create an index on an encrypted column, pretending to be tw
 
         ```sql
         DECLARE @LastNamePrefix NVARCHAR(50) = 'Aber%';
-        SELECT * FROM [dbo].[Employees] WHERE [LastName] LIKE @LastNamePrefix;
+        SELECT * FROM [HR].[Employees] WHERE [LastName] LIKE @LastNamePrefix;
         GO
         ```
 

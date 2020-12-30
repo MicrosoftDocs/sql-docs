@@ -58,10 +58,10 @@ The following [Data Manipulation Language (DML)](../../../t-sql/statements/state
 Your environment needs to meet the following requirements to support executing statements that use a secure enclave.
 
 - Your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance or your database and server in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] must be correctly configured to support enclaves and attestation. For more information, see [Set up the secure enclave and attestation](configure-always-encrypted-enclaves.md#set-up-the-secure-enclave-and-attestation).
-- You need to obtain an attestation URL for your environment for your attestation service administrator.
+- You need to obtain an attestation URL from your environment from your attestation service administrator.
 
   - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], see [Determine the attestation URL for your attestation policy](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
+  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
 
 - If you're connecting to your database using your application, it must use a client driver that supports Always Encrypted with secure enclaves. The application must connect to the database with Always Encrypted enabled for the database connection and the attestation protocol and the attestation URL properly configured. For detailed information, see [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md).
 - If you're using SQL Server Management Studio (SSMS) or Azure SQL Data Studio, you need to enable Always Encrypted and configure the attestation protocol and the attestation URL when connecting to your database. See the following sections for details.
@@ -270,6 +270,9 @@ This section lists common errors you may encounter when you run confidential DML
 - The column you're querying uses deterministic encryption. Confidential DML queries using secure enclaves aren't supported with deterministic encryption. For more information on how to change the encryption type to randomized, see [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md).
 - The string column you're querying uses a collation that isn't a BIN2 or UTF-8 collation. Change the collation to BIN2 or UTF-8. For more information, see [DML statements using secure enclaves](#dml-statements-using-secure-enclaves).
 - Your query triggers an unsupported operation. For the list of operations supported inside enclaves, see [DML statements using secure enclaves](#dml-statements-using-secure-enclaves).
+
+## Next Steps
+- [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
 
 ## See also
 

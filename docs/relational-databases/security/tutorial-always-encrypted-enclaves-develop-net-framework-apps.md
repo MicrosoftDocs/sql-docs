@@ -15,7 +15,8 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15"
 ---
 # Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves
-[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 This tutorial teaches you how to develop an application that issues database queries that use a server-side secure enclave for [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). 
 
@@ -54,54 +55,85 @@ To use Always Encrypted with secure enclaves in a .NET Framework application, yo
 
 7. Locate the `<configuration>` section and add or update the `<configSections>` sections.
 
-   a. If the `<configuration>` section does **not** contain the `<configSections>` section, add the following content immediately below `<configuration>`.
+   1. If the `<configuration>` section does **not** contain the `<configSections>` section, add the following content immediately below `<configuration>`.
 
       ```xml
       <configSections>
-         <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
       </configSections>
       ```
 
-   b. If the `<configuration>` section already contains the `<configSections>` section, add the following line within the `<configSections>`:
+   2. If the `<configuration>` section already contains the `<configSections>` section, add the following line within the `<configSections>`:
 
       ```xml
       <section name="SqlColumnEncryptionEnclaveProviders"  type="System.   Data.SqlClient.   SqlColumnEncryptionEnclaveProviderConfigurationSection, System.   Data,  Version=4.0.0.0, Culture=neutral,    PublicKeyToken=b77a5c561934e089" />
       ```
 
-8. Inside the configuration section, below the `<configSections>`, add the following section, which specifies an enclave provider to be used to attest and interact with VBS enclaves:
+8. Inside the `<configuration>` section, below `</configSections>`, add a new section, which specifies an enclave provider to be used to attest and interact with your server-side secure enclave.
 
-   ```xml
-   <SqlColumnEncryptionEnclaveProviders>
-       <providers>
-           <add name="VBS"  type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider,  Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders,    Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"/>
-       </providers>
-   </SqlColumnEncryptionEnclaveProviders>
-   ```
+   1. If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS) (you've completed [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)), add the below section.
 
-Here is a complete example of an app.config file for a simple console application.
+      ```xml
+      <SqlColumnEncryptionEnclaveProviders>
+        <providers>
+          <add name="VBS"  type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider,  Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders,    Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"/>
+        </providers>
+      </SqlColumnEncryptionEnclaveProviders>
+      ```
 
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<configuration>
-  <configSections>
-    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  </configSections>
-  <SqlColumnEncryptionEnclaveProviders>
-    <providers>
-      <add name="VBS"  type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider,  Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders,    Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"/>
-    </providers>
-  </SqlColumnEncryptionEnclaveProviders>
-  <startup> 
-    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
-  </startup>
-</configuration>
-```
+      Here is a complete example of an app.config file for a simple console application.
+
+      ```xml
+      <?xml version="1.0" encoding="utf-8" ?>
+      <configuration>
+        <configSections>
+          <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        </configSections>
+        <SqlColumnEncryptionEnclaveProviders>
+          <providers>
+            <add name="VBS"  type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider,  Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders,    Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"/>
+          </providers>
+        </SqlColumnEncryptionEnclaveProviders>
+        <startup> 
+         <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
+        </startup>
+      </configuration>
+      ```
+
+   1. If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation (you have completed [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)), add the below section.
+
+      ```xml
+      <SqlColumnEncryptionEnclaveProviders>
+        <providers>
+          <add name="SGX" type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.AzureAttestationEnclaveProvider, Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+        </providers>
+      </SqlColumnEncryptionEnclaveProviders>
+      ```
+
+      Here is a complete example of an app.config file for a simple console application.
+
+      ```xml
+      <?xml version="1.0" encoding="utf-8" ?>
+      <configuration>
+        <configSections>
+          <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        </configSections>
+        <SqlColumnEncryptionEnclaveProviders>
+          <providers>
+            <add name="SGX" type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.AzureAttestationEnclaveProvider, Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+          </providers>
+        </SqlColumnEncryptionEnclaveProviders>
+        <startup> 
+         <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
+        </startup>
+      </configuration>
+      ```
 
 ## Step 2: Implement your application logic
 
 Your application will connect to the **ContosoHR** database from [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md) or [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started) and it will run a query that contains the `LIKE` predicate on the **SSN** column and a range comparison on the **Salary** column.
 
-1. Replace the content of the Program.cs file (generated by Visual Studio) with the below code. Update the database connection string with your server name and the enclave attestation URL for your environment. You may also update database authentication settings.
+1. Replace the content of the Program.cs file (generated by Visual Studio) with the below code. Update the database connection string with your server name, database authentication settings, and the enclave attestation URL for your environment.
 
     ```cs
     using System;
@@ -117,19 +149,21 @@ Your application will connect to the **ContosoHR** database from [Tutorial: Gett
     
                 string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = http://hgs.bastion.local/Attestation; Integrated Security = true";
 
+                //string connectionString = "Data Source = myserver.database.windows.net; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = https://myattestationprovider.uks.attest.azure.net/attest/SgxEnclave?api-version=2018-09-01-preview; User ID=user; Password=password";
+
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
                     SqlCommand cmd = connection.CreateCommand();
-                    cmd.CommandText = @"SELECT [SSN], [FirstName], [LastName], [Salary] FROM [dbo].[Employees] WHERE [SSN] LIKE @SSNPattern AND [Salary] > @MinSalary;";
+                    cmd.CommandText = @"SELECT [SSN], [FirstName], [LastName], [Salary] FROM [HR].[Employees] WHERE [SSN] LIKE @SSNPattern AND [Salary] > @MinSalary;";
 
                     SqlParameter paramSSNPattern = cmd.CreateParameter();
 
                     paramSSNPattern.ParameterName = @"@SSNPattern";
                     paramSSNPattern.DbType = DbType.AnsiStringFixedLength;
                     paramSSNPattern.Direction = ParameterDirection.Input;
-                    paramSSNPattern.Value = "%1111";
+                    paramSSNPattern.Value = "%9838";
                     paramSSNPattern.Size = 11;
 
                     cmd.Parameters.Add(paramSSNPattern);
@@ -148,7 +182,6 @@ Your application will connect to the **ContosoHR** database from [Tutorial: Gett
                     while (reader.Read())
 
                     {
-                        Console.WriteLine(reader);
                         Console.WriteLine(reader[0] + ", " + reader[1] + ", " + reader[2] + ", " + reader[3]);
                     }   
                     Console.ReadKey();

@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "SET STATISTICS IO statement"
   - "statistical information [SQL Server], disk activity"
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SET STATISTICS IO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

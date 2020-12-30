@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], automatic page repair"
   - "sys.dm_db_mirroring_auto_page_repair dynamic management view"
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Database Mirroring - sys.dm_db_mirroring_auto_page_repair
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

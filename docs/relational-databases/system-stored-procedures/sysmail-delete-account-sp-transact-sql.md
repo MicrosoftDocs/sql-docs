@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_delete_account_sp"
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sysmail_delete_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

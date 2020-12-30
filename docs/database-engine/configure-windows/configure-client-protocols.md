@@ -31,7 +31,7 @@ ms.author: maghan
   
 -   Configure a single client application to use a different network protocol by creating an alias. For more information, see [Create or Delete a Server Alias for Use by a Client &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   
--   Some client applications, such as sqlcmd.exe, can specify the protocol as part of the connection string. For more information, see [Connect to the Database Engine With sqlcmd](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md).  
+-   Some client applications, such as sqlcmd.exe, can specify the protocol as part of the connection string. For more information, see [Connect to the Database Engine With sqlcmd](../../ssms/scripting/sqlcmd-connect-to-the-database-engine.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Configuration Manager  
   
@@ -62,5 +62,4 @@ ms.author: maghan
   
 ## See Also  
  [Configure the remote login timeout Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)  
-  
   

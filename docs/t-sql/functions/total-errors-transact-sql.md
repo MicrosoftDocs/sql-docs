@@ -34,7 +34,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
+```syntaxsql
 @@TOTAL_ERRORS  
 ```  
   
@@ -49,7 +49,7 @@ ms.author: jrasnick
 ## Examples  
  This example shows the number of errors encountered by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as of the current date and time.  
   
-```  
+```sql
 SELECT @@TOTAL_ERRORS AS 'Errors', GETDATE() AS 'As of';  
 ```  
   

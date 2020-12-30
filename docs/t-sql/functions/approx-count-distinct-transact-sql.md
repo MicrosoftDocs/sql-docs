@@ -14,7 +14,7 @@ dev_langs:
   - "TSQL"
 author: "joesackmsft"
 ms.author: "josack"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # APPROX_COUNT_DISTINCT (Transact-SQL)
 
@@ -26,9 +26,7 @@ This function returns the approximate number of unique non-null values in a grou
   
 ## Syntax  
   
-```sql
--- Syntax for Azure SQL Database, Azure SQL Data Warehouse and Parallel Data Warehouse  
-
+```syntaxsql
 APPROX_COUNT_DISTINCT ( expression )   
 ```  
   

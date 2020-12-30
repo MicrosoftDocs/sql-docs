@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm\_db\_tuning\_recommendations (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -165,7 +165,7 @@ INNER JOIN sys.query_store_query AS qsq ON qsq.query_id = rp.query_id
 INNER JOIN sys.query_store_query_text AS qsqt ON qsqt.query_text_id = qsq.query_text_id;
 ```
 
-For more information about JSON functions that can be used to query values in the recommendation view, see [JSON Support](../../relational-databases/json/index.md) in [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
+For more information about JSON functions that can be used to query values in the recommendation view, see [JSON Support](../json/json-data-sql-server.md) in [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
   
 ## Permissions  
 
@@ -176,5 +176,4 @@ Requires the `VIEW DATABASE STATE` permission for the database in [!INCLUDE[ssSD
  [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [JSON Support](../../relational-databases/json/index.md)
- 
+ [JSON Support](../json/json-data-sql-server.md)

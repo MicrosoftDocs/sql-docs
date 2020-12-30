@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_remoteoption"
 ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_remoteoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "query optimizer [SQL Server], optimizing process"
   - "overriding query optimizer process"
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SET FORCEPLAN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

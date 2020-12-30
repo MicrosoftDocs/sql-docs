@@ -4,12 +4,12 @@ description: Learn how to run Windows PowerShell steps in a SQL Server Agent job
 ms.custom: seo-lt-2019
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: markingmyname
 ms.author: maghan
+ms.reviewer: matteot, drskwier
 ---
 # Run Windows PowerShell Steps in SQL Server Agent
 
@@ -19,11 +19,7 @@ Use SQL Server Agent to run SQL Server PowerShell scripts at scheduled times.
   
 **To run PowerShell from SQL Server Agent, using:**  [PowerShell Job Step](#PShellJob), [Command Prompt Job Step](#CmdExecJob)  
   
-> [!IMPORTANT]
-> There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
-> Previous versions of the **SqlServer** module *were* included with SQL Server Management Studio (SSMS), but only with the 16.x versions of SSMS. To use PowerShell with SSMS 17.0 and later, the **SqlServer** module must be installed from the PowerShell Gallery.
-> To install the **SqlServer** module, see [Install SQL Server PowerShell](download-sql-server-ps-module.md).
-
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 There are several types of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job steps. Each type is associated with a subsystem that implements a specific environment, such as a replication agent or command prompt environment. You can code Windows PowerShell scripts, and then use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to include the scripts in jobs that run at scheduled times or in response to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] events. Windows PowerShell scripts can be run using either a command prompt job step or a PowerShell job step.  
 

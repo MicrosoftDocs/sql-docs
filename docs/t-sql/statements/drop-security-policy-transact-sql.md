@@ -55,7 +55,7 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
   
 ## Example  
   
-```  
+```sql  
 DROP SECURITY POLICY secPolicy;  
 ```  
   

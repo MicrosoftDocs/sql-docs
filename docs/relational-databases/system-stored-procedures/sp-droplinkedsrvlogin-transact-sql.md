@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_droplinkedsrvlogin"
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -67,7 +67,7 @@ Use DBCC OPENTRAN to determine whether an open transaction exists within the tra
 ## Result Sets  
 DBCC OPENTRAN returns the following result set when there are no open transactions:
   
-```sql
+```
 No active open transactions.  
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
@@ -80,7 +80,7 @@ Requires membership in the **sysadmin** fixed server role or the **db_owner** fi
 The following example obtains transaction information for the current database. Results may vary.
   
 ```sql  
-CREATE TABLE T1(Col1 int, Col2 char(3));  
+CREATE TABLE T1(Col1 INT, Col2 CHAR(3));  
 GO  
 BEGIN TRAN  
 INSERT INTO T1 VALUES (101, 'abc');  
@@ -115,7 +115,7 @@ The following example loads the results of the DBCC OPENTRAN command into a temp
 ```sql  
 -- Create the temporary table to accept the results.  
 CREATE TABLE #OpenTranStatus (  
-   ActiveTransaction varchar(25),  
+   ActiveTransaction VARCHAR(25),  
    Details sql_variant   
    );  
 -- Execute the command, putting the results in the table.  

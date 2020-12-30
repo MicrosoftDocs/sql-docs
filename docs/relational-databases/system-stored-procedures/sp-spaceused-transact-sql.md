@@ -16,9 +16,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_spaceused"
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,6 +36,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 [, [ @oneresultset = ] oneresultset ]  
 [, [ @include_total_xtp_storage = ] include_total_xtp_storage ]
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
 

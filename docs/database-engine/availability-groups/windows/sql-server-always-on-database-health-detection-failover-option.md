@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords:
   - "AlwaysOn"
@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "High Availability"
   - "SQL Server"
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Availability group database level health detection failover option
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -180,11 +180,8 @@ In this example output, the fault_type shows that a critical event happened on t
 
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
-* [Flexible Failover Policy for Automatic Failover of an Availability Group (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)
+* [Flexible Failover Policy for Automatic Failover of an Availability Group (SQL Server)](./configure-flexible-automatic-failover-policy.md)
 
-* [Enhance AlwaysOn Failover Policy to Test SQL Server Database Data and Log Drives](https://blogs.msdn.microsoft.com/alwaysonpro/2016/01/14/enhance-alwayson-failover-policy-to-test-sql-server-database-data-and-log-drives/)
+* [Enhance AlwaysOn Failover Policy to Test SQL Server Database Data and Log Drives](/archive/blogs/alwaysonpro/enhance-alwayson-failover-policy-to-test-sql-server-database-data-and-log-drives)
 
 * [Extended Events](../../../relational-databases/extended-events/extended-events.md)
-
-
-

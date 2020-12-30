@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "dm_os_server_diagnostics_log_configurations"
   - "sys.dm_os_server_diagnostics_log_configurations"
 ms.assetid: c09ea433-d283-4f83-af69-d458aad59217
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_server_diagnostics_log_configurations
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

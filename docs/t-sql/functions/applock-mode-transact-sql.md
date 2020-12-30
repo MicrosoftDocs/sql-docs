@@ -31,7 +31,7 @@ This function returns the lock mode held by the lock owner on a particular appli
   
 ## Syntax  
   
-```sql
+```syntaxsql
 APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )  
 ```  
   
@@ -77,7 +77,7 @@ User A runs:
 USE AdventureWorks2012;  
 GO  
 BEGIN TRAN;  
-DECLARE @result int;  
+DECLARE @result INT;  
 EXEC @result=sp_getapplock  
     @DbPrincipal='public',  
     @Resource='Form1',  

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_category"
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_prepexecrpc"
 ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_prepexecrpc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

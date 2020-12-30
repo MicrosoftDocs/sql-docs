@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Restore and recovery of memory-optimized tables
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,6 +62,5 @@ Memory-optimized tables can generally be loaded into memory at the speed of I/O,
 -   Large memory-optimized tables with one or more nonclustered indexes can cause high CPU utilization. Unlike a hash index whose bucket count is sized at create time, nonclustered indexes grow dynamically.  
   
 ## See also  
- [Backup, Restore, and Recovery of Memory-Optimized Tables](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  
+ [Backup, Restore, and Recovery of Memory-Optimized Tables](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))  
   

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "restoring files [SQL Server], restorefile system table"
   - "file restores [SQL Server], restorefile system table"
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # restorefile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

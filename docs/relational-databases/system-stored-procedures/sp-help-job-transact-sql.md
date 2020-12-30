@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_job"
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

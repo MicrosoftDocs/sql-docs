@@ -36,19 +36,19 @@ The shape of the icon in the middle of the join line indicates how the tables or
   
 |**Join line icon**|**Description**|  
 |----------------------|-------------------|  
-|![Visual Database Tools icon](../../ssms/visual-db-tools/media/dv3wbih.gif "Visual Database Tools icon")|Inner join (created using an equal sign).|  
-|![Visual Database Tools icon](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools icon")|Inner join based on the "greater than" operator.|  
-|![Visual Database Tools icon](../../ssms/visual-db-tools/media/dv3wbij.gif "Visual Database Tools icon")|Outer join in which all rows from the table represented on the left will be included, even if they do not have matches in the related table.|  
-|![Visual Database Tools icon](../../ssms/visual-db-tools/media/dv3wbik.gif "Visual Database Tools icon")|Outer join in which all rows from the table represented on the right will be included, even if they do not have matches in the related table.|  
-|![Visual Database Tools icon](../../ssms/visual-db-tools/media/dv3wbil.gif "Visual Database Tools icon")|Full outer join in which all rows from both tables will be included, even if they do not have matches in the related table.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbih.gif":::|Inner join (created using an equal sign).|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbii.gif":::|Inner join based on the "greater than" operator.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbij.gif":::|Outer join in which all rows from the table represented on the left will be included, even if they do not have matches in the related table.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbik.gif":::|Outer join in which all rows from the table represented on the right will be included, even if they do not have matches in the related table.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbil.gif":::|Full outer join in which all rows from both tables will be included, even if they do not have matches in the related table.|  
   
 The symbols on the ends of the join line indicate the type of join. The following table lists the types of joins and the icons displayed on the ends of the join line.  
   
 |**Icon on ends of join line**|**Type of join**|  
 |---------------------------------|--------------------|  
-|![Visual Database Tools icon](../../ssms/visual-db-tools/media/dv3wbim.gif "Visual Database Tools icon")|One-to-one join.|  
-|![Visual Database Tools icon](../../ssms/visual-db-tools/media/dv3wbin.gif "Visual Database Tools icon")|One-to-many join.|  
-|![Visual Database Tools icon](../../ssms/visual-db-tools/media/dv3wbio.gif "Visual Database Tools icon")|Query and View Designer cannot determine the join type. This situation occurs most often when you have created a join manually.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbim.gif":::|One-to-one join.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbin.gif":::|One-to-many join.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbio.gif":::|Query and View Designer cannot determine the join type. This situation occurs most often when you have created a join manually.|  
   
 ## SQL Pane  
 A join can be expressed in a number of ways in an SQL statement. The exact syntax depends on the database you are using and on how you have defined the join.  

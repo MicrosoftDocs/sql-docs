@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Lock:Timeout Event Class
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

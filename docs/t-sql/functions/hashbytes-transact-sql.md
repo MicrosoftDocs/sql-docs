@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # HASHBYTES (Transact-SQL)
 
@@ -69,8 +69,8 @@ The MD2, MD4, MD5, SHA, and SHA1 algorithms are deprecated starting with [!INCLU
  The following example returns the `SHA2_256` hash of the **nvarchar** data stored in variable `@HashThis`.  
   
 ```sql  
-DECLARE @HashThis nvarchar(32);  
-SET @HashThis = CONVERT(nvarchar(32),'dslfdkjLK85kldhnv$n000#knf');  
+DECLARE @HashThis NVARCHAR(32);  
+SET @HashThis = CONVERT(NVARCHAR(32),'dslfdkjLK85kldhnv$n000#knf');  
 SELECT HASHBYTES('SHA2_256', @HashThis);  
 ```  
   
@@ -78,7 +78,7 @@ SELECT HASHBYTES('SHA2_256', @HashThis);
  The following example returns the SHA2_256 hash of the values in column `c1` in the table `Test1`.  
   
 ```sql  
-CREATE TABLE dbo.Test1 (c1 nvarchar(32));  
+CREATE TABLE dbo.Test1 (c1 NVARCHAR(32));  
 INSERT dbo.Test1 VALUES ('This is a test.');  
 INSERT dbo.Test1 VALUES ('This is test 2.');  
 SELECT HASHBYTES('SHA2_256', c1) FROM dbo.Test1;  

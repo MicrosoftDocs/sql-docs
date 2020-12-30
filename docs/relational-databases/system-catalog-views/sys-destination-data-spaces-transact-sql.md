@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.destination_data_spaces catalog view"
 ms.assetid: 92df932b-ad5c-43f8-81f4-b158823ab189
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.destination_data_spaces (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

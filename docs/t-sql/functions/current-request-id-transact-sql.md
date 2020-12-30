@@ -28,7 +28,7 @@ This function returns the ID of the current request within the current session.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CURRENT_REQUEST_ID()  
 ```  
 

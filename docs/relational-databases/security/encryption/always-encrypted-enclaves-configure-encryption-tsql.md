@@ -10,7 +10,7 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions" 
+monikerRange: ">= sql-server-ver15" 
 ---
 # Configure column encryption in-place with Transact-SQL
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -30,7 +30,7 @@ As any query that uses a server-side secure enclave, an `ALTER TABLE`/`ALTER COL
 The remainder of this article describes how to trigger in-place encryption using the `ALTER TABLE`/`ALTER COLUMN` statement from SQL Server Management Studio. Alternatively, you can issue `ALTER TABLE`/`ALTER COLUMN` from your application. 
 
 > [!NOTE]
-> Currently, tools other than SSMS, including the [Invoke-Sqlcmd](https://docs.microsoft.com/powershell/module/sqlserver/invoke-sqlcmd) cmdlet in the SqlServer PowerShell module and [sqlcmd](../../../tools/sqlcmd-utility.md), do not support using `ALTER TABLE`/`ALTER COLUMN` for in-place cryptographic operations.
+> Currently, tools other than SSMS, including the [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) cmdlet in the SqlServer PowerShell module and [sqlcmd](../../../tools/sqlcmd-utility.md), do not support using `ALTER TABLE`/`ALTER COLUMN` for in-place cryptographic operations.
 
 ## Perform in-place encryption with Transact-SQL in SSMS
 ### Pre-requisites

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "e-mail [SQL Server], stored procedures"
   - "system stored procedures [SQL Server], mail"
 ms.assetid: 3bdb0e6d-9d09-465e-9a3f-7a8ccd53aca8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Database Mail Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

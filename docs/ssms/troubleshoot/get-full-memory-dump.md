@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.reviewer: dineth, sstein
+ms.reviewer: drskwier, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
 ---
@@ -22,13 +22,13 @@ In this article, you learn how to capture diagnostic information to troubleshoot
 
 To capture diagnostic information to troubleshoot, follow the steps below.
 
-1. Download [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
+1. Download [ProcDump](/sysinternals/downloads/procdump).
 
 2. Unzip the download into a folder.
 
 3. Open a Command Prompt (such as `cmd.exe`), and run the following command.
 
-    ```
+    ```console
     <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
     ```
 
@@ -56,7 +56,7 @@ You can also get the Full Memory Dump of SSMS when it throws an OutOfMemoryExcep
 
 To capture diagnostic information to troubleshoot an OutOfMemoryException from SSMS, Follow the steps below.
 
-1. Download [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
+1. Download [ProcDump](/sysinternals/downloads/procdump).
 
 2. Unzip the download into a folder.
 

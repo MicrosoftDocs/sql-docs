@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_articlecolumn"
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_articlecolumn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

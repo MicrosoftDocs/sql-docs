@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addmergealternatepublisher"
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

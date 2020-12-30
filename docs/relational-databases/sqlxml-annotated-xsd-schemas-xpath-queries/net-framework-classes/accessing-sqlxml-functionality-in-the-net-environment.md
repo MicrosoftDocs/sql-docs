@@ -16,7 +16,7 @@ ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
 author: MightyPen
 ms.author: genemi
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Accessing SQLXML Functionality in the .NET Environment
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

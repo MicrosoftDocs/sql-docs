@@ -31,7 +31,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 EncryptByPassPhrase ( { 'passphrase' | @passphrase }   
     , { 'cleartext' | @cleartext }  
   [ , { add_authenticator | @add_authenticator }  
@@ -76,15 +75,15 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 ## Examples  
  The following example updates a record in the `SalesCreditCard` table and encrypts the value of the credit card number stored in column `CardNumber_EncryptedbyPassphrase`, using the primary key as an authenticator.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Create a column in which to store the encrypted data.  
 ALTER TABLE Sales.CreditCard   
-    ADD CardNumber_EncryptedbyPassphrase varbinary(256);   
+    ADD CardNumber_EncryptedbyPassphrase VARBINARY(256);   
 GO  
 -- First get the passphrase from the user.  
-DECLARE @PassphraseEnteredByUser nvarchar(128);  
+DECLARE @PassphraseEnteredByUser NVARCHAR(128);  
 SET @PassphraseEnteredByUser   
     = 'A little learning is a dangerous thing!';  
   

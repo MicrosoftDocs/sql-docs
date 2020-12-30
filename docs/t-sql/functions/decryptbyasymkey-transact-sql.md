@@ -30,8 +30,7 @@ This function uses an asymmetric key to decrypt encrypted data.
   
 ## Syntax  
   
-```syntaxsql
-  
+```syntaxsql  
 DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }   
     [ , 'Asym_Key_Password' ] )  
 ```  
@@ -63,8 +62,8 @@ Compared to symmetric encryption / decryption, asymmetric key encryption / decry
 ## Examples  
 This example decrypts ciphertext originally encrypted with asymmetric key `JanainaAsymKey02`. `AdventureWorks2012.ProtectedData04` stored this asymmetric key. The example decrypted the returned data with asymmetric key `JanainaAsymKey02`. The example used password `pGFD4bb925DGvbd2439587y` to decrypt this asymmetric key. The example converted the returned plaintext to type **nvarchar**.  
   
-```  
-SELECT CONVERT(nvarchar(max),  
+```sql
+SELECT CONVERT(NVARCHAR(max),  
     DecryptByAsymKey( AsymKey_Id('JanainaAsymKey02'),   
     ProtectedData, N'pGFD4bb925DGvbd2439587y' ))   
 AS DecryptedData   

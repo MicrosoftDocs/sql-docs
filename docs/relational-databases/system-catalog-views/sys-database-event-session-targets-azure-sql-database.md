@@ -9,9 +9,9 @@ ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_event_session_targets (Azure SQL Database)
 

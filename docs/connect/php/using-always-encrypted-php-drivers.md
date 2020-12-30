@@ -1,6 +1,6 @@
 ---
-description: "Using Always Encrypted with the PHP Drivers for SQL Server"
-title: "Using Always Encrypted with the PHP Drivers for SQL Server | Microsoft Docs"
+title: "Using Always Encrypted with the PHP Drivers for SQL Server"
+description: "Learn how to use Always Encrypted with the PHP Drivers for SQL Server to protect sensitive data in your application."
 ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: connectivity

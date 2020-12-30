@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_drop_agent_parameter"
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

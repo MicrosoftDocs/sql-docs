@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_enumcustomresolvers"
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

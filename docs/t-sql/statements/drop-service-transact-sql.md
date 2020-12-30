@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "DROP SERVICE statement"
   - "removing services"
 ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,7 +33,6 @@ ms.author: carlrab
 ## Syntax  
   
 ```syntaxsql
-  
 DROP SERVICE service_name  
 [ ; ]  
 ```  
@@ -55,7 +54,7 @@ DROP SERVICE service_name
 ## Examples  
  The following example drops the service `//Adventure-Works.com/Expenses`.  
   
-```  
+```sql  
 DROP SERVICE [//Adventure-Works.com/Expenses] ;  
 ```  
   

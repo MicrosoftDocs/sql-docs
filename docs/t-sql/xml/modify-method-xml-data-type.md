@@ -23,8 +23,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 modify (XML_DML)  
 ```  
   

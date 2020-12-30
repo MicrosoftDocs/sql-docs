@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "ALTER DATABASE statement, database mirroring"
   - "database mirroring [SQL Server], Transact-SQL"
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER DATABASE (Transact-SQL) Database Mirroring
 
@@ -241,6 +241,6 @@ The following example assumes that the server is the current principal.
 
 ## See Also
 
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [sys.database_mirroring_witnesses](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)

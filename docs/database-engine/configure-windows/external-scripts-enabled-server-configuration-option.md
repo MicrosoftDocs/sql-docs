@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # External Scripts Enabled server configuration option
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -36,6 +36,10 @@ You must enable the external script enabled option before you can execute an ext
     [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] has support for both the R and Python languages.
 
     Install the **Machine Learning Services** feature during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup to enable the execution of external scripts. Be sure to select at least one language during initial setup: either R or Python, or both.
+    
++ For [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] and later[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] has support for all R, Python, Java and other third party languages.
+
+Install the Machine Learning Services and Language Extensions feature during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup to enable the execution of external scripts for any supported language.
 
 ## Additional requirements
 

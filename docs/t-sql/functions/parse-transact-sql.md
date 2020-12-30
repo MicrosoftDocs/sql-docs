@@ -28,8 +28,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 PARSE ( string_value AS data_type [ USING culture ] )  
 ```  
   
@@ -132,7 +131,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 ### A. PARSE into datetime2  
   
-```  
+```sql  
 SELECT PARSE('Monday, 13 December 2010' AS datetime2 USING 'en-US') AS Result;  
 ```  
   
@@ -148,7 +147,7 @@ Result
   
 ### B. PARSE with currency symbol  
   
-```  
+```sql  
 SELECT PARSE('€345,98' AS money USING 'de-DE') AS Result;  
 ```  
   
@@ -164,7 +163,7 @@ Result
   
 ### C. PARSE with implicit setting of language  
   
-```  
+```sql  
 -- The English language is mapped to en-US specific culture  
 SET LANGUAGE 'English';  
 SELECT PARSE('12/16/2010' AS datetime2) AS Result;  

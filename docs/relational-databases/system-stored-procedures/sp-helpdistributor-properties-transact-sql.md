@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpdistributor_properties"
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpdistributor_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

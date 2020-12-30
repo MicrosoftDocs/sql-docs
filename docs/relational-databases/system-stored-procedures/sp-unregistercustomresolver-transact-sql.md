@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_unregistercustomresolver"
 ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_unregistercustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

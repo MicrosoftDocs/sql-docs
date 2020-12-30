@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "modifying message types"
   - "message types [Service Broker], modifying"
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -30,8 +30,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```syntaxsql
-  
+```syntaxsql 
 ALTER MESSAGE TYPE message_type_name  
    VALIDATION =  
     {  NONE   
@@ -76,7 +75,7 @@ ALTER MESSAGE TYPE message_type_name
 ## Examples  
  The following example changes the message type `//Adventure-Works.com/Expenses/SubmitExpense` to require that the message body contain a well-formed XML document.  
   
-```  
+```sql  
 ALTER MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/SubmitExpense]  
     VALIDATION = WELL_FORMED_XML ;  

@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_clr_loaded_assemblies dynamic management view"
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Policy-Based Management, stored procedures"
   - "stored procedures [Policy-Based Management]"
 ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Policy-Based Management Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_trace_create"
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_trace_create (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

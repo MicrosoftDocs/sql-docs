@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "transaction log backups [SQL Server], viewing backup sets"
   - "backing up [SQL Server], viewing backup sets"
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # View the data and log files in a backup set (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -30,7 +30,6 @@ ms.author: maghan
 |2|Enables FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] and Win32 streaming access.|  
   
 ## See Also  
- [Database Engine Configuration - Filestream](https://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)   
+ [Database Engine Configuration - Filestream](../install-windows/install-sql-server.md)   
  [Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
-  
   

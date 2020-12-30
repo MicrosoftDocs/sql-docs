@@ -96,7 +96,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ### A. Denying VIEW DEFINITION permission on an availability group  
  The following example denies `VIEW DEFINITION` permission on availability group `MyAg` to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `ZArifin`.  
   
-```  
+```sql  
 USE master;  
 DENY VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;  
 GO  
@@ -105,7 +105,7 @@ GO
 ### B. Denying TAKE OWNERSHIP permission with the CASCADE OPTION  
  The following example denies `TAKE OWNERSHIP` permission on availability group `MyAg` to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user `PKomosinski` with the `CASCADE` option.  
   
-```  
+```sql  
 USE master;  
 DENY TAKE OWNERSHIP ON AVAILABILITY GROUP::MyAg TO PKomosinski   
     CASCADE;  

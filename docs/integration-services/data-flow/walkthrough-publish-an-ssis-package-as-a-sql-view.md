@@ -250,7 +250,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
  Timeout indicates the number of seconds that the OLE DB provider for SSIS can wait before new data arrives from the SSIS package. By default, the timeout is 60 seconds. You can specify an integer value for the timeout between 20 and 32000.  
   
- Parameters contain the value of both package parameters and project parameters. The rules for parameters are same as parameters in [DTExec](https://msdn.microsoft.com/library/hh231187.aspx).  
+ Parameters contain the value of both package parameters and project parameters. The rules for parameters are same as parameters in [DTExec](../packages/dtexec-utility.md).  
   
  The following list specifies the special characters allowed in the query clause:  
   
@@ -264,6 +264,5 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
 ## See Also  
  [Data Streaming Destination](../../integration-services/data-flow/data-streaming-destination.md)   
- [Configure Data Streaming Destination](../../integration-services/data-flow/configure-data-streaming-destination.md)  
-  
+ [Configure Data Streaming Destination](./data-streaming-destination.md)  
   

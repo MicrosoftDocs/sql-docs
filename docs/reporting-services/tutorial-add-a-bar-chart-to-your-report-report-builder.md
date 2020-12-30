@@ -1,6 +1,6 @@
 ---
 title: "Tutorial: Add a Bar Chart to Your Report (Report Builder) | Microsoft Docs"
-description: Learn how to create a Reporting Services paginated report with a column chart displaying a series as a set of vertical bars grouped by category.
+description: Learn how to use a wizard in Report Builder to create a bar chart in a Reporting Services paginated report.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -22,7 +22,7 @@ A bar chart displays category data horizontally. This can help to:
   
 The following illustration shows the bar chart that you will create, with sales for 2014 and 2015 for the top five salespeople, from most to least 2015 sales.  
   
-![report-builder-bar-chart](../reporting-services/media/report-builder-bar-chart.png) 
+![Screenshot of a report builder bar chart.](../reporting-services/media/report-builder-bar-chart.png) 
   
  
 > [!NOTE]  

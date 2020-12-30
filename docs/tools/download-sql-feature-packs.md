@@ -44,7 +44,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 | [SQL Server Semantic Language Statistics](../relational-databases/search/install-and-configure-semantic-search.md) | The Semantic Language Statistics Database is a required component for the Statistical Semantic Search feature in Microsoft SQL Server. |
 | [SQL Server Shared Management Objects](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | SQL Server Management Objects (SMO) is a .NET Framework object model that enables software developers to create client-side applications to manage and administer SQL Server objects and services. |
 | [System CLR Types](https://go.microsoft.com/fwlink/?linkid=2108808) | The SQL Server System CLR Types package contains the components implementing the geometry, geography, and hierarchy ID types in SQL Server. **Note: This component also requires [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)**. |
-| [Windows PowerShell Extensions for Microsoft SQL Server](../database-engine/install-windows/install-sql-server-powershell.md?view=sql-server-2017) | The Microsoft Windows PowerShell Extensions for SQL Server include a provider and a set of cmdlets that enable administrators and developers to build PowerShell scripts for managing instances of SQL Server. |
+| [Windows PowerShell Extensions for Microsoft SQL Server](../database-engine/install-windows/install-sql-server-powershell.md) | The Microsoft Windows PowerShell Extensions for SQL Server include a provider and a set of cmdlets that enable administrators and developers to build PowerShell scripts for managing instances of SQL Server. |
 |||
 
 ## Database engine
@@ -106,8 +106,8 @@ This article provides a brief explanation of the various downloads and stand-alo
 ## See also
 
 - [SQL Server Management Studio documentation](../ssms/download-sql-server-management-studio-ssms.md)
-- [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15)
-- [Additional updates and service packs](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md?view=sql-server-ver15)
+- [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
+- [Additional updates and service packs](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

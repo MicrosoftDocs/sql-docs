@@ -39,9 +39,9 @@ ms.author: chugu
 ## DDL Statements  
  The DDL statements are represented as statements in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language (ASSL), and framed in an XML for Analysis (XMLA) command.  
   
--   ASSL is used to define and describe an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and the databases and database objects it contains. For more information, see [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla).  
+-   ASSL is used to define and describe an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and the databases and database objects it contains. For more information, see [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla).  
   
--   XMLA is a command language that is used to send action commands, such as Create, Alter, or Process, to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [XML for Analysis  &#40;XMLA&#41; Reference](https://docs.microsoft.com/analysis-services/xmla/xml-for-analysis-xmla-reference).  
+-   XMLA is a command language that is used to send action commands, such as Create, Alter, or Process, to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [XML for Analysis  &#40;XMLA&#41; Reference](/analysis-services/xmla/xml-for-analysis-xmla-reference).  
   
  If the DDL code is stored in a separate file, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Execute DDL task uses a File connection manager to specify the path of the file. For more information, see [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
   
@@ -223,7 +223,7 @@ ms.author: chugu
   
  For more information about setting these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## Programmatic Configuration of the Analysis Services Execute DDL Task  
  For more information about programmatically setting these properties, click the following topic:  
@@ -278,4 +278,3 @@ ms.author: chugu
  Select a variable in the list, or click \<**New variable...**> and use the **Add Variable** dialog box to create a new variable.  
   
  **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)  
-  

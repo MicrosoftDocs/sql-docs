@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "compiling queries [SQL Server]"
   - "NOEXEC option"
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SET NOEXEC (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

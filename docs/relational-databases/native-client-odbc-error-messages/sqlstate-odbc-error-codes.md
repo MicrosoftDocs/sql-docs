@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 84cce528-edb0-473f-a85f-3eb87fbe2cf3
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLSTATE (ODBC Error Codes)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,11 +26,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  For more information about the state error codes, see the following topics:  
   
--   [Appendix A: ODBC Error Codes](https://go.microsoft.com/fwlink/?LinkId=89356)  
+-   [Appendix A: ODBC Error Codes](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   
--   [SQLSTATE Mappings](https://go.microsoft.com/fwlink/?LinkId=89355)  
+-   [SQLSTATE Mappings](../../odbc/reference/develop-app/sqlstate-mappings.md)  
   
 ## See Also  
  [Handling Errors and Messages](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
-  
   

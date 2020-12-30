@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "starting Windows System Monitor"
   - "Windows System Monitor [SQL Server], starting"
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Start System Monitor (Windows)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: c58ca25d-d6ea-48fa-93bb-c9374b0b2a2b
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DIFFERENCE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ An alphanumeric [expression](../../t-sql/language-elements/expressions-transact-
 ## Examples  
 The first part of this example compares the `SOUNDEX` values of two very similar strings. For a Latin1_General collation, `DIFFERENCE` returns a value of `4`. The second part of the example compares the `SOUNDEX` values for two very different strings, and for a Latin1_General collation, `DIFFERENCE` returns a value of `0`.  
   
-```  
+```sql  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  
 SELECT SOUNDEX('Green'), SOUNDEX('Greene'), DIFFERENCE('Green','Greene');  
 GO  

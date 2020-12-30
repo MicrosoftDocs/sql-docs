@@ -193,8 +193,8 @@ FETCH NEXT FROM vend_cursor;
 ```sql  
 SET NOCOUNT ON;  
   
-DECLARE @vendor_id int, @vendor_name nvarchar(50),  
-    @message varchar(80), @product nvarchar(50);  
+DECLARE @vendor_id INT, @vendor_name NVARCHAR(50),  
+    @message VARCHAR(80), @product NVARCHAR(50);  
   
 PRINT '-------- Vendor Products Report --------';  
   

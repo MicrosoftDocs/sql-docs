@@ -1,6 +1,6 @@
 Creates a Resource Governor workload group and associates the workload group with a Resource Governor resource pool. Resource Governor is not available in every edition of [!INCLUDE[msCoName](msconame-md.md)][!INCLUDE[ssNoVersion](ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).
 
-![Topic link icon](../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../database-engine/configure-windows/media/topic-link.gif"::: [Transact-SQL Syntax Conventions](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## Syntax
 

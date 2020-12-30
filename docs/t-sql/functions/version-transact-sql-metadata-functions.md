@@ -13,7 +13,7 @@ dev_langs:
 ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # Version - Transact SQL Metadata functions
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -24,8 +24,8 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## Syntax  
   
-```  
--- Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql
+-- Azure Synapse Analytics and Parallel Data Warehouse  
 VERSION ( )  
 ```  
   
@@ -37,7 +37,7 @@ A table name must be specified in a [FROM](../../t-sql/queries/from-transact-sql
 ## Examples  
 The following example returns the version number.  
   
-```  
+```sql
 SELECT VERSION();  
 ```  
   

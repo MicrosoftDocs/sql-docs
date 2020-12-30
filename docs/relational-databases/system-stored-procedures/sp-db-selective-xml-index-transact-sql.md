@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_db_selective_xml_index procedure"
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

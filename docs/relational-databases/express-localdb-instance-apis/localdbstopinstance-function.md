@@ -14,8 +14,8 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # LocalDBStopInstance Function
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -20,7 +20,7 @@ This library contains the source code for the Apache Spark Connector for SQL Ser
 
 [Apache Spark](https://spark.apache.org/) is a unified analytics engine for large-scale data processing.
 
-You can build the connector from source or download the jar from the Release section in GitHub. For the latest information about the connector, see [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).
+You can get the connector from [Maven](https://search.maven.org/search?q=spark-mssql-connector). To import the connector, use the coordinate `com.microsoft.azure:spark-mssql-connector:<latest version>`. You can also build the connector from source or download the jar from the Release section in GitHub. For the latest information about the connector, see [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).
 
 ## Supported Features
 
@@ -39,19 +39,20 @@ You can build the connector from source or download the jar from the Release sec
 | Azure SQL Databases                  | Supported                       |
 
 > [!NOTE]
-> Azure Synapse Analytics (Azure SQL DW) use is not tested with this connector. While it may work, there may be unintended consequences.
+> Azure Synapse Analytics use is not tested with this connector. While it may work, there may be unintended consequences.
 
 ### Supported Options
 The Apache Spark Connector for SQL Server and Azure SQL supports the options defined here: [SQL DataSource JDBC](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)
 
-In addition, the following options are supported
+In addition following options are supported
 
 | Option | Default | Description |
 | --------- | ------------------ | ------------------------------------------ |
-| `reliabilityLevel` | `BEST_EFFORT` | `BEST_EFFORT` or `NO_DUPLICATES`. `NO_DUPLICATES` implements a reliable insert in executor restart scenarios |
-| `dataPoolDataSource` | `none` | `none` implies the value is not set and the connector should write to a single instance of SQL Server. Set this value to data source name to write to a data pool table in a SQL Server Big Data Cluster|
+| `reliabilityLevel` | `BEST_EFFORT` | `BEST_EFFORT` or `NO_DUPLICATES`. `NO_DUPLICATES` implements an reliable insert in executor restart scenarios |
+| `dataPoolDataSource` | `none` | `none` implies the value is not set and the connector should write to SQL Server single instance. Set this value to data source name to write a data pool table in Big Data Clusters|
 | `isolationLevel` | `READ_COMMITTED` | Specify the isolation level |
 | `tableLock` | `false` | Implements an insert with `TABLOCK` option to improve write performance |
+| `schemaCheckEnabled` | `true` | Disables strict data frame and sql table schema check when set to false |
 
 Other [bulk copy options](../jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions) can be set as options on the `dataframe` and will be passed to `bulkcopy` APIs on write
 
@@ -224,3 +225,5 @@ The Apache Spark Connector for Azure SQL and SQL Server is an open-source projec
 ## Next steps
 
 Visit the [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).
+
+For information about isolation levels, see [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).

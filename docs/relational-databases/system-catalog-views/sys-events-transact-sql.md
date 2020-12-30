@@ -18,9 +18,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.events catalog view"
 ms.assetid: f245a97a-80fc-43fb-a6e4-139420c9a47a
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.events (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

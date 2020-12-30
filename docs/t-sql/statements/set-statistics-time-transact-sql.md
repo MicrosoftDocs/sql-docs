@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "compile times [SQL Server]"
   - "execution processing time [SQL Server]"
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SET STATISTICS TIME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -29,7 +29,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name  
     TO <database_principal> [ ,...n ]  
     [ WITH GRANT OPTION ]  
@@ -133,7 +132,7 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 ## Examples  
  The following example grants `VIEW DEFINITION` permission with `GRANT OPTION` on the user-defined type `PhoneNumber` to user `KhalidR`. `PhoneNumber` is located in the schema `Telemarketing`.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   
     TO KhalidR WITH GRANT OPTION;  
 GO  

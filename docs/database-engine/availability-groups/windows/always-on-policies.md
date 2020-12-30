@@ -5,8 +5,8 @@ ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: availability-groups
+ms.topic: how-to
 ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
@@ -27,6 +27,5 @@ ms.author: jroth
 3.  To view all the availability groups system policies, in the **Select a page** pane, click **Policy Selection**.  
   
 ## Next steps  
- [The Always On health model, part 2: Extending the health model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model).   
-  
+ [The Always On health model, part 2: Extending the health model](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model).   
   

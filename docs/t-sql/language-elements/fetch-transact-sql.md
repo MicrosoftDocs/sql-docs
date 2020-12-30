@@ -132,7 +132,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 -- Declare the variables to store the values returned by FETCH.  
-DECLARE @LastName varchar(50), @FirstName varchar(50);  
+DECLARE @LastName VARCHAR(50), @FirstName VARCHAR(50);  
   
 DECLARE contact_cursor CURSOR FOR  
 SELECT LastName, FirstName FROM Person.Person  

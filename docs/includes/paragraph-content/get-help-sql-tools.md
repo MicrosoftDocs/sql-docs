@@ -8,7 +8,7 @@ ms.author: jroth
 
 ## :::image type="icon" source="../media/info-tip.png" border="false"::: Get help for SQL tools
 
-- [All the ways to get help](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)
+- [All the ways to get help](../../sql-server/sql-server-get-help.md)
 - [Submit an Azure Data Studio Git issue](https://github.com/Microsoft/azuredatastudio/issues)
 - [Contribute to Azure Data Studio](https://github.com/Microsoft/azuredatastudio)
 - [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools&filter=alltypes&sort=lastpostdesc)

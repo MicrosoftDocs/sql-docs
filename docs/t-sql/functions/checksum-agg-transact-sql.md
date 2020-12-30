@@ -30,7 +30,7 @@ This function returns the checksum of the values in a group. `CHECKSUM_AGG` igno
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CHECKSUM_AGG ( [ ALL | DISTINCT ] expression )  
 ```  
   
@@ -64,7 +64,7 @@ These examples use `CHECKSUM_AGG` to detect changes in the `Quantity` column of 
 ```sql
 --Get the checksum value before the column value is changed.  
 
-SELECT CHECKSUM_AGG(CAST(Quantity AS int))  
+SELECT CHECKSUM_AGG(CAST(Quantity AS INT))  
 FROM Production.ProductInventory;  
 GO  
 ```  
@@ -83,7 +83,7 @@ WHERE Quantity=100;
 GO  
 
 --Get the checksum of the modified column.  
-SELECT CHECKSUM_AGG(CAST(Quantity AS int))  
+SELECT CHECKSUM_AGG(CAST(Quantity AS INT))  
 FROM Production.ProductInventory;  
 ```  
   

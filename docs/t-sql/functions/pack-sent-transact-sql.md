@@ -33,7 +33,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```sql
+```syntaxsql
 @@PACK_SENT  
 ```  
   

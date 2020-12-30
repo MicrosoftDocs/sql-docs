@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.sp_cdc_generate_wrapper_function"
   - "sp_cdc_generate_wrapper_function"
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

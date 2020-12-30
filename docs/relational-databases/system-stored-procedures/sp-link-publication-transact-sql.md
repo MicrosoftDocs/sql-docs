@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_link_publication"
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_link_publication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

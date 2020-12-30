@@ -15,8 +15,8 @@ apilocation:
 helpviewer_keywords: 
   - "AcceptPause property"
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # AcceptPause Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

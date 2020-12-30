@@ -139,7 +139,7 @@ GO
 ```  
   
 ### Add a semantic index by using SQL Server Management Studio  
- You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](./create-and-manage-full-text-indexes.md).  
 
 ## Alter a semantic index
   
@@ -178,7 +178,7 @@ GO
 ```  
   
  ### Drop a semantic index by using SQL Server Management Studio  
- You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](./create-and-manage-full-text-indexes.md).  
   
 ###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
   
@@ -275,5 +275,4 @@ GO
 ##  <a name="IssueNoResults"></a> Issue: Searching on specific column returns no results  
  **Was a non-Unicode LCID specified for a Unicode language?**  
  It is possible to enable semantic indexing on a non-Unicode column type with an LCID for a language that only has Unicode words, such as LCID 1049 for Russian. In this case, no results will ever be returned from the semantic indexes on this column.  
-  
   

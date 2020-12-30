@@ -104,7 +104,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
   
  For more information about installing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using setup, see [Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
- For more information about installing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using a command prompt, see [Install SQL Server 2016 from the Command Prompt](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). When you use a command prompt, [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] is available as a feature parameter.  
+ For more information about installing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using a command prompt, see [Install SQL Server 2016 from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). When you use a command prompt, [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] is available as a feature parameter.  
   
  For a brief description with links to additional information about pre-installation tasks, see [Install Master Data Services](../master-data-services/install-windows/install-master-data-services.md).  
   
@@ -188,6 +188,9 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
         ![mds_2016ConfigManager_WebConfig_CreateWebApplication](../master-data-services/media/mds-2016configmanager-webconfig-createwebapplication.png)   
   
      For more information about the **Create Web Application** dialog box, see [Create Web Application Dialog Box &#40;Master Data Services Configuration Manager&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).  
+
+    > [!NOTE] 
+    >  If your domain implement [2020 LDAP channel binding and LDAP signing requirements for Windows](https://support.microsoft.com/en-us/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows). You will see issue "The credentials could not be verified in Active Directory." when you using domain account to create Application Pool. For workaround, instead of domain user, use a **local machine user**. This can bypass the credential checking with Active Directory. After creating the web application, you can change the identity to domain user in **Internet Information Services (IIS) Manager**.
   
 12. On the **Web Configuration** page in the **Web application** box, click the application you've created, and then click **Select** in the  **Associate Application with Database** section.  
   
@@ -288,5 +291,4 @@ For more information about the settings on the Web Configuration page, see [Web 
  [Master Data Manager Web Application](../master-data-services/master-data-manager-web-application.md)   
  [Database Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [What's New in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
-  
   

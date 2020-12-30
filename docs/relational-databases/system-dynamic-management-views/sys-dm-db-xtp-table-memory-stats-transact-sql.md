@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "sys.dm_db_xtp_table_memory_stats"
   - "dm_db_xtp_table_memory_stats"
 ms.assetid: ad0efc06-3d9c-4861-9dfa-a7a87822d0c8
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

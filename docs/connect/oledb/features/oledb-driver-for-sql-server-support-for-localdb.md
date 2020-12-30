@@ -23,7 +23,7 @@ ms.author: v-daenge
   
 -   [SQL Server Express LocalDB Reference](../../../relational-databases/sql-server-express-localdb-reference.md)  
   
--   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
+-   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-express-localdb.md)  
   
  To summarize, LocalDB allows you to:  
   
@@ -41,5 +41,4 @@ SERVER=(localdb)\v11.0
   
 ## See Also  
  [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md)  
-  
   

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "CREATE SERVICE statement"
   - "contracts [Service Broker], service creation"
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

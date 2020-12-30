@@ -1,7 +1,7 @@
 ---
 description: "Run an SSIS package with PowerShell"
 title: "Run an SSIS package with PowerShell | Microsoft Docs"
-ms.date: "05/21/2018"
+ms.date: "09/17/2020"
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: "integration-services"
@@ -27,7 +27,7 @@ You can use the information in this quickstart to run an SSIS package on the fol
 
 -   SQL Server on Windows.
 
--   Azure SQL Database. For more info about deploying and running packages in Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+-   SSIS integration runtime (IR) in Azure Data Factory (ADF), where SSIS catalog (SSISDB) is hosted by Azure SQL Managed Instance (MI). For more info about deploying and running packages in Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 You cannot use the information in this quickstart to run an SSIS package on Linux. For more info about running packages on Linux, see [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md).
 

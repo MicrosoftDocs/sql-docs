@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_updatenotification"
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_update_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

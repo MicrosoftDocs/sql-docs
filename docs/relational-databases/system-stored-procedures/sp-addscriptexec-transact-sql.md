@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addscriptexec"
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addscriptexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

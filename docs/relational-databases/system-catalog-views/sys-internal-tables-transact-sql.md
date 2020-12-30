@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "internal tables"
   - "sys.internal_tables catalog view"
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.internal_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

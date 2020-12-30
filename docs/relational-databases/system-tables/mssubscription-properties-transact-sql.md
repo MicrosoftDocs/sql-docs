@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsubscription_properties system table"
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

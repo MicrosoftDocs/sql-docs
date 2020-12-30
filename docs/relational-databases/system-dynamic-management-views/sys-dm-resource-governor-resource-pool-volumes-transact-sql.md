@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "dm_resource_governor_resource_pool_volumes"
   - "sys.dm_resource_governor_resource_pool_volumes"
 ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

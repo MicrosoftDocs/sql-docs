@@ -32,7 +32,6 @@ ms.author: maghan
 >**NOTE:** After changing the default locations, you must stop and start the SQL Server service to complete the change.  
   
 ## See also  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
  [Create a Database](../../relational-databases/databases/create-a-database.md)  
-  
   

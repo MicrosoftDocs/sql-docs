@@ -87,7 +87,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], both certificates 
 ## Examples  
 This example encrypts the text stored in `@cleartext` with the asymmetric key `JanainaAsymKey02`. The statement inserts the encrypted data into the `ProtectedData04` table.  
   
-```  
+```sql  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   
     VALUES( N'Data encrypted by asymmetric key ''JanainaAsymKey02''',  
     EncryptByAsymKey(AsymKey_ID('JanainaAsymKey02'), @cleartext) );  

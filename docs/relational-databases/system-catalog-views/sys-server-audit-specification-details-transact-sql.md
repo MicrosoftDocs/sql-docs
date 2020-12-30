@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.server_audit_specification_details catalog view"
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.server_audit_specification_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

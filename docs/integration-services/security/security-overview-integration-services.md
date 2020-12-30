@@ -94,7 +94,7 @@ ms.author: chugu
   
  If you store configurations in the file system instead of in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], make sure to secure the folders that contain the package configuration files.  
   
- For more information about configurations, see [Package Configurations](../../integration-services/packages/package-configurations.md).  
+ For more information about configurations, see [Package Configurations](../packages/legacy-package-deployment-ssis.md).  
   
 ### Controlling Access to the Integration Services Service  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service to list stored packages. To prevent unauthorized users from viewing information about packages that are stored on local and remote computers, and thereby learning private information, restrict access to computers that run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
@@ -115,7 +115,7 @@ ms.author: chugu
 ### Configuration Files  
  If you have sensitive information in a configuration, such as login and password information, you should consider saving the configuration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or use an access control list (ACL) to restrict access to the location or folder where you store the files and allow access only to certain accounts. Typically, you would grant access to the accounts that you permit to run packages, and to the accounts that manage and troubleshoot packages, which may include reviewing the contents of configuration, checkpoint, and log files. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the more secure storage because it offers protection at the server and database levels. To save configurations to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuration type. To save to the file system, you use the XML configuration type.  
   
- For more information, see [Package Configurations](../../integration-services/packages/package-configurations.md), [Create Package Configurations](../../integration-services/packages/create-package-configurations.md), and [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
+ For more information, see [Package Configurations](../packages/legacy-package-deployment-ssis.md), [Create Package Configurations](../packages/legacy-package-deployment-ssis.md), and [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 ### Checkpoint Files  
  Similarly, if the checkpoint file that the package uses includes sensitive information, you should use an access control list (ACL) to secure the location or folder where you store the file. Checkpoint files save current state information on the progress of the package as well as the current values of variables. For example, the package may include a custom variable that contains a telephone number. For more information, see [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
@@ -141,4 +141,4 @@ ms.author: chugu
   
 -   [Sign a Package by Using a Digital Certificate](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
--   [Set or Change the Protection Level of Packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
+-   [Set or Change the Protection Level of Packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)

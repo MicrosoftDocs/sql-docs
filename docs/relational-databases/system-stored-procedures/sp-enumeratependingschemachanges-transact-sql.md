@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_enumeratependingschemachanges"
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

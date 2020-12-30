@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "sys.sp_query_store_force_plan"
   - "sp_query_store_force_plan"
 ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_force_plan (Transact-SQL)
 

@@ -2,7 +2,7 @@
 title: "Understanding XA transactions"
 description: "The Microsoft JDBC Driver for SQL Server provides support for Java Platform, Enterprise Edition/JDBC 2.0 optional distributed transactions."
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "09/29/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -57,7 +57,7 @@ The following steps are required if you want to use XA data sources together wit
 > The JDBC distributed transaction components are included in the xa directory of the JDBC driver installation. These components include the xa_install.sql and sqljdbc_xa.dll files. If you have different versions of the JDBC driver on different clients, it is recommended to use the newest sqljdbc_xa.dll on the server.  
 
 > [!NOTE]  
-> Starting with SQL Server 2019 public preview CTP 2.0, the JDBC XA distributed transaction components are included in the SQL Server engine, and can be enabled or disabled with a system stored procedure.
+> The JDBC XA distributed transaction components are included in the SQL Server engine in SQL Server 2017 starting with cumulative update 16 and in SQL Server 2019, and can be enabled or disabled with a system stored procedure.
 > To enable the required components to perform XA distributed transactions using the JDBC driver, execute the following stored procedure.
 >
 > EXEC sp_sqljdbc_xa_install
@@ -80,11 +80,11 @@ On Windows Vista and later:
   
 4. Click the **Security** tab on the **Local DTC Properties** dialog box.  
   
-5. Select the **Enable XA Transactions** check box, and then click **OK**. This will cause an MS DTC service restart.
+5. Select the **Enable XA Transactions** check box, and then click **OK**. This action will cause an MS DTC service restart.
   
 6. Click **OK** again to close the **Properties** dialog box, and then close **Component Services**.  
   
-7. Stop and then restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to make sure that it syncs up with the MS DTC changes.  
+7. Stop and then restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to make sure that it syncs with the MS DTC changes.  
 
 ### Configuring the JDBC distributed transaction components  
 
@@ -139,15 +139,15 @@ A timeout value is set for each transaction when it's started and the transactio
   
 - `XADefaultTimeout = 60`, `XAMaxTimeout = 0`
   
-     Means all transactions will have a 60 second timeout if the client doesn't specify any timeout. If the client specifies a timeout, then that timeout value will be used. No maximum value for timeout is enforced.  
+     Means all transactions will have a 60-second timeout if the client doesn't specify any timeout. If the client specifies a timeout, then that timeout value will be used. No maximum value for timeout is enforced.  
   
 - `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
-     Means all transactions will have a 30 second timeout if the client doesn't specify any timeout. If client specifies any timeout, then the client's timeout will be used as long as it is less than 60 seconds (the max value).  
+     Means all transactions will have a 30-second timeout if the client doesn't specify any timeout. If client specifies any timeout, then the client's timeout will be used as long as it is less than 60 seconds (the max value).  
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   
-     Means all transactions will have a 30 second timeout (the max value) if the client does not specify any timeout. If the client specifies any timeout, then the client's timeout will be used as long as it is less than 30 seconds (the max value).  
+     Means all transactions will have a 30-second timeout (the max value) if the client does not specify any timeout. If the client specifies any timeout, then the client's timeout will be used as long as it is less than 30 seconds (the max value).  
   
 ### Upgrading sqljdbc_xa.dll
 
@@ -164,14 +164,14 @@ When you install a new version of the JDBC driver, you should also use sqljdbc_x
   
 ### Configuring the user-defined roles
 
-To grant permissions to a specific user to participate in distributed transactions with the JDBC driver, add the user to the SqlJDBCXAUser role. For example, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code to add a user named 'shelby' (SQL standard login user named 'shelby') to the SqlJDBCXAUser role:  
+To grant permissions to a specific user to participate in distributed transactions with the JDBC driver, add the user to the SqlJDBCXAUser role. For example, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code to add a user named 'shelly' (SQL standard login user named 'shelly') to the SqlJDBCXAUser role:  
 
 ```sql
 USE master  
 GO  
-EXEC sp_grantdbaccess 'shelby', 'shelby'  
+EXEC sp_grantdbaccess 'shelly', 'shelly'  
 GO  
-EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'  
+EXEC sp_addrolemember [SqlJDBCXAUser], 'shelly'  
 ```
 
 SQL user-defined roles are defined per database. To create your own role for security purposes, you'll have to define the role in each database, and add users in a per database manner. The SqlJDBCXAUser role is strictly defined in the master database because it's used to grant access to the SQL JDBC extended stored procedures that reside in master. You'll have to first grant individual users access to master, and then grant them access to the SqlJDBCXAUser role while you're logged into the master database.  

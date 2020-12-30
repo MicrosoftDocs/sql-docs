@@ -12,7 +12,7 @@ dev_langs:
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: pmasl
 ms.author: umajay
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 
 # DBCC PDW_SHOWSPACEUSED (Transact-SQL)
@@ -34,6 +34,8 @@ DBCC PDW_SHOWSPACEUSED
 DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name .] table_name  " )  
 [;]  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments
 

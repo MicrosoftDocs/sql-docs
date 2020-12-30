@@ -65,7 +65,7 @@ DROP INDEX index_name ON <object>
 ## Example  
  The following example shows a DROP INDEX statement.  
   
-```  
+```sql  
 DROP INDEX sxi_index ON tbl;  
 ```  
   

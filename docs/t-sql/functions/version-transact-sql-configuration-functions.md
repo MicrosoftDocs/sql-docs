@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # &#x40;&#x40;Version - Transact SQL Configuration Functions
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 @@VERSION  
 ```  
 
@@ -84,7 +84,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### A: Return the current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  The following example shows returning the version information for the current installation.  
   
-```  
+```sql
 SELECT @@VERSION AS 'SQL Server Version';  
 ```  
   
@@ -92,7 +92,7 @@ SELECT @@VERSION AS 'SQL Server Version';
   
 ### B. Return the current version of [!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
   
-```  
+```sql
 SELECT @@VERSION AS 'SQL Server PDW Version';  
 ```  
   

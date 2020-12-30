@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: "rothja"
 ms.author: "jroth"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Transaction Log Architecture and Management Guide
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -250,7 +250,6 @@ We recommend the following articles and books for additional information about t
 [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)       
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-[Understanding Logging and Recovery in SQL Server by Paul Randal](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    
+[Understanding Logging and Recovery in SQL Server by Paul Randal](/previous-versions/technet-magazine/dd392031(v=msdn.10))    
 [SQL Server Transaction Log Management by Tony Davis and Gail Shaw](https://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
-  
   

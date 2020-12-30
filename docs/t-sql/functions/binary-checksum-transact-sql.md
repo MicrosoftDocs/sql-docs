@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,6 +34,8 @@ Returns the binary checksum value computed over a row of a table or over a list 
 BINARY_CHECKSUM ( * | expression [ ,...n ] )   
 ```  
   
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
@@ -81,7 +83,7 @@ This example uses `BINARY_CHECKSUM` to detect changes in a table row.
 ```sql
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE myTable (column1 int, column2 varchar(256));  
+CREATE TABLE myTable (column1 INT, column2 VARCHAR(256));  
 GO  
 INSERT INTO myTable VALUES (1, 'test');  
 GO  

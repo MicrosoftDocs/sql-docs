@@ -50,7 +50,7 @@ ms.author: "jroth"
 -   [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
   
 ## Accessing Native Code  
- CLR functions can be used to access native (unmanaged) code, such as code written in C or C++, via the use of PInvoke from managed code (see [Calling Native Functions from Managed Code](https://go.microsoft.com/fwlink/?LinkID=181929) for details). This can allow you to re-use legacy code as CLR UDFs, or write performance-critical UDFs in native code. This requires using an UNSAFE assembly. See [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) for cautions about use of UNSAFE assemblies.  
+ CLR functions can be used to access native (unmanaged) code, such as code written in C or C++, via the use of PInvoke from managed code (see [Calling Native Functions from Managed Code](/cpp/dotnet/calling-native-functions-from-managed-code) for details). This can allow you to re-use legacy code as CLR UDFs, or write performance-critical UDFs in native code. This requires using an UNSAFE assembly. See [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) for cautions about use of UNSAFE assemblies.  
   
 ## See Also  
  [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
@@ -58,5 +58,4 @@ ms.author: "jroth"
  [Execute User-defined Functions](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)   
  [View User-defined Functions](../../relational-databases/user-defined-functions/view-user-defined-functions.md)   
  [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

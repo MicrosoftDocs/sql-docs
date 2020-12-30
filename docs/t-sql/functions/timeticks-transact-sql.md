@@ -32,8 +32,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 @@TIMETICKS  
 ```  
   
@@ -47,7 +46,7 @@ ms.author: jrasnick
   
 ## Examples  
   
-```  
+```sql
 SELECT @@TIMETICKS AS 'Time Ticks';  
 ```  
   

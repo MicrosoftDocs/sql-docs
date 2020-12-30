@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_repldone"
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_repldone (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

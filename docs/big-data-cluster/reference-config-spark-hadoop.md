@@ -271,6 +271,7 @@ The following `hdfs` configurations are unsupported and cannot be changed in the
 |          |                             |                               | hadoop.http.authentication.kerberos.keytab            |
 |          |                             |                               | hadoop.http.filter.initializers                       |
 |          |                             |                               | hadoop.security.group.mapping.*                       |                               |
+|          |                             |                               | hadoop.security.key.provider.path                     |                               |
 |          | mapred-env                  | mapred-env.sh                 |                                                       |
 |          | hdfs-site                   | hdfs-site.xml                 | dfs.namenode.name.dir                                 |
 |          |                             |                               | dfs.datanode.data.dir                                 |

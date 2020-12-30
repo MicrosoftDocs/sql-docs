@@ -27,7 +27,7 @@ helpviewer_keywords:
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +72,7 @@ This example prints the ASCII value and character for each character in the stri
 SET TEXTSIZE 0;  
 -- Create variables for the character string and for the current   
 -- position in the string.  
-DECLARE @position int, @string char(8);  
+DECLARE @position INT, @string CHAR(8);  
 -- Initialize the current position and the string variables.  
 SET @position = 1;  
 SET @string = 'New Moon';  

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "database dynamic management objects [SQL Server]"
   - "dynamic management objects [SQL Server], database"
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Database Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.author: carlrab
     :::column-end:::
 :::row-end:::
 
-DMV's unique to SQL Database or SQL Data Warehouse.   
+DMV's unique to SQL Database or Azure Synapse Analytics.   
 
 :::row:::
     :::column:::

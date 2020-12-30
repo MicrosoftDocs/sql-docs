@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_showrowreplicainfo"
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

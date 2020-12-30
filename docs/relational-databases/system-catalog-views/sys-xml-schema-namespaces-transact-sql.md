@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_namespaces catalog view"
 ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.xml_schema_namespaces (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

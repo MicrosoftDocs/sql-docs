@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server], Database Engine"
   - "stored procedures [SQL Server], Database Engine"
 ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Database Engine Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

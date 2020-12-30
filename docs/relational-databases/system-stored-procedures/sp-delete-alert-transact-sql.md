@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_alert"
 ms.assetid: a831315e-793d-41c4-8333-b324bb2bc614
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_delete_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

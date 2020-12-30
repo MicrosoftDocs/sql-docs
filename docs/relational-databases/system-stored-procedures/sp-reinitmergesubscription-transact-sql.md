@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_reinitmergesubscription"
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,10 +57,13 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
   
  If you add, drop, or change a parameterized filter, pending changes at the Subscriber cannot be uploaded to the Publisher during reinitialization. If you want to upload pending changes, synchronize all subscriptions before changing the filter.  
   
-## Example  
+## Examples  
+
+### A. Reinitialize the push subscription and lose pending changes
+
  [!code-sql[HowTo#sp_reinitmergepushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_1.sql)]  
   
-## Example  
+### B. Reinitialize the push subscription and upload pending changes
  [!code-sql[HowTo#sp_reinitmergepushsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_2.sql)]  
   
 ## Permissions  

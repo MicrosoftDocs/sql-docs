@@ -23,7 +23,7 @@ ms.date: 05/15/2019
  Use Configuration Manager to create and manage sets of project properties in project configurations. Configuration Manager is a feature supported by [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], on which [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is based.  
   
 > [!NOTE]  
-> Do not confuse this feature with the Reporting Services Configuration Manager, which is used to configure Reporting Services after installation. For more information, see [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
+> Do not confuse this feature with the Report Server Configuration Manager, which is used to configure Reporting Services after installation. For more information, see [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
 >
 > [!NOTE]  
 > In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], the action of publishing reports from a Report Server project or solution is known as *deploying reports*.  

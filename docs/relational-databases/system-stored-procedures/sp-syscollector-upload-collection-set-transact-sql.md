@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sp_syscollector_upload_collection_set"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_upload_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

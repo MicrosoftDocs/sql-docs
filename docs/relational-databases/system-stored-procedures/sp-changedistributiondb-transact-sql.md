@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changedistributiondb"
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_changedistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

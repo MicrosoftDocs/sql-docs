@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "Size property"
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Size Property (ClientNetLibInfo Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,6 +40,5 @@ object.Size [= value]
 ## Remarks  
   
 ## See Also  
- [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

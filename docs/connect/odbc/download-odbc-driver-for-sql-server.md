@@ -33,7 +33,7 @@ Version 17.6.1 is the latest general availability (GA) version. If you have a pr
 - Released: July 31, 2020
 
 > [!Note]
-> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](https://aka.ms/downloadmsodbcsqlenglish). You can download different languages from the US-English version site by selecting [available languages](#available-languages).
+> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](). You can download different languages from the US-English version site by selecting [available languages](#available-languages).
 
 ## Available languages
 

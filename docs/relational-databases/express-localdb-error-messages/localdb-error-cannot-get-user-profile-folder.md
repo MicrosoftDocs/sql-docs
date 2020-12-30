@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: 3625c9cb-579c-4b4b-be74-0d4de7b64bb6
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

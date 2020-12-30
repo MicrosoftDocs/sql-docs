@@ -35,7 +35,7 @@ This function returns the filegroup name for the specified filegroup identificat
   
 ## Syntax  
   
-```  
+```syntaxsql  
 FILEGROUP_NAME ( filegroup_id )   
 ```  
   
@@ -55,7 +55,7 @@ The filegroup ID number whose filegroup name `FILEGROUP_NAME` will return. *file
 ## Examples  
 This example returns the filegroup name for filegroup ID `1` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  
 GO  
 ```  

@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_mergecleanupmetadata"
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

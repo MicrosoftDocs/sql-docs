@@ -33,7 +33,6 @@ ms.author: jroth
 ## Syntax  
   
 ```syntaxsql
-  
 KILL QUERY NOTIFICATION SUBSCRIPTION   
    { ALL | subscription_id }  
 ```  
@@ -62,14 +61,14 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
 ### A. Removing all query notification subscriptions in the instance  
  The following example removes all query notification subscriptions in the instance.  
   
-```  
+```sql  
 KILL QUERY NOTIFICATION SUBSCRIPTION ALL ;  
 ```  
   
 ### B. Removing a single query notification subscription  
  The following example removes the query notification subscription with the id `73`.  
   
-```  
+```sql  
 KILL QUERY NOTIFICATION SUBSCRIPTION 73 ;  
 ```  
   

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_can_tlog_be_applied"
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

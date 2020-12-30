@@ -203,7 +203,7 @@ The following example uses `OBJECT_ID` and the `sys.indexes` catalog view to obt
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @id int, @indid int  
+DECLARE @id INT, @indid INT  
 SET @id = OBJECT_ID('Production.Product')  
 SELECT @indid = index_id   
 FROM sys.indexes  
@@ -240,12 +240,12 @@ The following example shows a simple way to defragment all indexes in a database
 /*Perform a 'USE <database name>' to select the database in which to run the script.*/  
 -- Declare variables  
 SET NOCOUNT ON;  
-DECLARE @tablename varchar(255);  
-DECLARE @execstr   varchar(400);  
-DECLARE @objectid  int;  
-DECLARE @indexid   int;  
-DECLARE @frag      decimal;  
-DECLARE @maxfrag   decimal;  
+DECLARE @tablename VARCHAR(255);  
+DECLARE @execstr   VARCHAR(400);  
+DECLARE @objectid  INT;  
+DECLARE @indexid   INT;  
+DECLARE @frag      DECIMAL;  
+DECLARE @maxfrag   DECIMAL;  
   
 -- Decide on the maximum fragmentation to allow for.  
 SELECT @maxfrag = 30.0;  
@@ -258,26 +258,26 @@ DECLARE tables CURSOR FOR
   
 -- Create the table.  
 CREATE TABLE #fraglist (  
-   ObjectName char(255),  
-   ObjectId int,  
-   IndexName char(255),  
-   IndexId int,  
-   Lvl int,  
-   CountPages int,  
-   CountRows int,  
-   MinRecSize int,  
-   MaxRecSize int,  
-   AvgRecSize int,  
-   ForRecCount int,  
-   Extents int,  
-   ExtentSwitches int,  
-   AvgFreeBytes int,  
-   AvgPageDensity int,  
-   ScanDensity decimal,  
-   BestCount int,  
-   ActualCount int,  
-   LogicalFrag decimal,  
-   ExtentFrag decimal);  
+   ObjectName CHAR(255),  
+   ObjectId INT,  
+   IndexName CHAR(255),  
+   IndexId INT,  
+   Lvl INT,  
+   CountPages INT,  
+   CountRows INT,  
+   MinRecSize INT,  
+   MaxRecSize INT,  
+   AvgRecSize INT,  
+   ForRecCount INT,  
+   Extents INT,  
+   ExtentSwitches INT,  
+   AvgFreeBytes INT,  
+   AvgPageDensity INT,  
+   ScanDensity DECIMAL,  
+   BestCount INT,  
+   ActualCount INT,  
+   LogicalFrag DECIMAL,  
+   ExtentFrag DECIMAL);  
   
 -- Open the cursor.  
 OPEN tables;  

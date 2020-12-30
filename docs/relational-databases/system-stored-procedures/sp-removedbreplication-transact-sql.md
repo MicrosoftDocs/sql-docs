@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_removedbreplication"
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_removedbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,15 +58,17 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
   
  **sp_removedbreplication** cannot be used against a database that is marked as read-only.  
   
-## Example  
- [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
-  
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_removedbreplication**.  
   
-## Example  
+## Examples
+
+### A. Remove replication objects, AdventureWorks2012Replica subscription database
+ [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
-```  
+### B. Remove replication objects, AdventureWorksReplica subscription database
+  
+```sql
 -- Remove replication objects from the subscription database on MYSUB.  
 DECLARE @subscriptionDB AS sysname  
 SET @subscriptionDB = N'AdventureWorksReplica'  

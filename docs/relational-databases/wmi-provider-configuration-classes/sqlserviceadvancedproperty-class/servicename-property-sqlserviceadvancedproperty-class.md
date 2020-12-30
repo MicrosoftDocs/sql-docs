@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ServiceName property"
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ServiceName Property (SqlServiceAdvancedProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

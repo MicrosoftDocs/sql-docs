@@ -31,8 +31,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespace ] )  
 ```  
   
@@ -61,7 +60,7 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
 ## Examples  
  The following example retrieves the  XML schema collection `ProductDescriptionSchemaCollection` from the production relational schema in the `AdventureWorks` database.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
 SELECT xml_schema_namespace(N'production',N'ProductDescriptionSchemaCollection');  

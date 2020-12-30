@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpfile"
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

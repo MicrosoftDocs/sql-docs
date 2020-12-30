@@ -90,7 +90,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Can I perform an unattended installation of SQL Server on Linux?**
 
-   Yes. For a discussion of unattended installation, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md#unattended). See the sample scripts for [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md), and [Ubuntu](sample-unattended-install-ubuntu.md). You can also review [this sample script](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/) created by the SQL Server Customer Advisory Team.
+   Yes. For a discussion of unattended installation, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md#unattended). See the sample scripts for [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md), and [Ubuntu](sample-unattended-install-ubuntu.md). You can also review [this sample script](/archive/blogs/sqlcat/unattended-install-and-configuration-for-sql-server-2017-on-linux) created by the SQL Server Customer Advisory Team.
 
 ## Tools
 
@@ -112,7 +112,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **What tools are available to monitor SQL Server performance on Linux?**
 
-   You can use [system dynamic management views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) to collect various types of information about SQL Server, including Linux process information. You can use [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) to improve query performance. Other tools, such as the built-in [Performance Dashboard](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/), work remotely in SQL Server Management Studio (SSMS) from Windows.
+   You can use [system dynamic management views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) to collect various types of information about SQL Server, including Linux process information. You can use [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) to improve query performance. Other tools, such as the built-in [Performance Dashboard](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in), work remotely in SQL Server Management Studio (SSMS) from Windows.
 
    > [!TIP]
    > One way to improve performance is to properly configure your Linux operating system and the SQL Server insance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
@@ -125,7 +125,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Does SQL Server on Linux support multiple instances on the same host?**
 
-   We recommend running multiple containers on a host to have multiple distinct instances. This is easily achieved using docker, but each container needs to listen on a different port. For more information, see [Run multiple SQL Server containers](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
+   We recommend running multiple containers on a host to have multiple distinct instances. This is easily achieved using docker, but each container needs to listen on a different port. For more information, see [Run multiple SQL Server containers](./sql-server-linux-docker-container-deployment.md#multiple).
 
 1. **Is Active Directory Authentication supported on Linux?**
 

@@ -9,7 +9,7 @@ ms.custom: ""
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 
 # SQL Server help and feedback
@@ -26,9 +26,9 @@ Customers without a support plan can ask the community for help, or submit a bug
 
 If you're interested in engaging the vibrant SQL Server community for assistance, there are multiple options available.
 
-### Microsoft Q&A 
+### Microsoft Q & A
 
-- [SQL Server Q&A](https://docs.microsoft.com/answers/products/sql-server)
+You can also get help by searching and posting questions on [Microsoft Q & A](/answers/products/sql-server).
 
 ### Communities
 
@@ -76,7 +76,7 @@ The following SQL Server blogs provide the latest information about SQL Server:
 
 - [SQL Server Blog](https://cloudblogs.microsoft.com/sqlserver/)
 - [SQL ReplTalk](https://blogs.msdn.microsoft.com/repltalk/)
-- [SQL Tiger Team](https://blogs.msdn.microsoft.com/sql_server_team/)
+- [SQL Tiger Team](/archive/blogs/sql_server_team/)
 - [SQL Support Team](https://techcommunity.microsoft.com/t5/SQL-Server-Support/bg-p/SQLServerSupport/)
 
 
@@ -86,5 +86,3 @@ If you would like to download and review the license information for SQL Server,
 
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
-

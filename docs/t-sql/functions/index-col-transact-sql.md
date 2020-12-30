@@ -32,8 +32,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]  
     table_or_view_name', index_id , key_id )   
 ```  
@@ -69,7 +68,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
 ### A. Using INDEX_COL to return an index column name  
  The following example returns the column names of the two key columns in the index `PK_SalesOrderDetail_SalesOrderID_LineNumber`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   

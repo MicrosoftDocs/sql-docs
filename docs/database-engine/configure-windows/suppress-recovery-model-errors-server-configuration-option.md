@@ -16,7 +16,7 @@ ms.author: mlandzic
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md](../../includes/tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md)]
 
-SQL Server [recovery models](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server) control transaction log maintenance. Full recovery model ensures no work is lost because of a lost or damaged data file, and supports recovery to an arbitrary point in time within backup retention policy. Full recovery model is a default and the only recovery model supported in SQL Managed Instance. Attempts to change recovery model in SQL Managed Instance will return error message.
+SQL Server [recovery models](../../relational-databases/backup-restore/recovery-models-sql-server.md) control transaction log maintenance. Full recovery model ensures no work is lost because of a lost or damaged data file, and supports recovery to an arbitrary point in time within backup retention policy. Full recovery model is a default and the only recovery model supported in SQL Managed Instance. Attempts to change recovery model in SQL Managed Instance will return error message.
 
 Use the **suppress recovery model errors** advanced configuration option to specify whether commands for changing database recovery model, executed on SQL Managed Instance, will return error or warning only. When this option is set to 1 (ON) on SQL Managed Instance, executing command ALTER DATABASE SET RECOVERY will not change the recovery model of the database, still it will not return error but warning message instead. When this option is set to 0 (OFF) on SQL Managed Instance, executing command ALTER DATABASE SET RECOVERY will return error message.
 

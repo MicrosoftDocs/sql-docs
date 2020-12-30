@@ -12,9 +12,9 @@ helpviewer_keywords:
   - "Setup [SQL Server], steps"
   - "SQL Server, installing"
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server from the Installation Wizard (Setup)
 
@@ -26,8 +26,8 @@ This article provides a step-by-step procedure for installing a new instance of 
 
 For other ways to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see:  
 
-* [Install SQL Server from the command prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
-* [Install SQL Server by using a configuration file](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)  
+* [Install SQL Server from the command prompt](./install-sql-server-from-the-command-prompt.md)  
+* [Install SQL Server by using a configuration file](./install-sql-server-using-a-configuration-file.md)  
 * [Install SQL Server by using SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
 * [Create a new SQL Server failover cluster &#40;Setup&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
 * [Upgrade SQL Server by using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
@@ -43,7 +43,7 @@ Before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], re
 > [!NOTE]  
 > For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
 
-::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016 <=sql-server-2017"
 
 ###  <a name="bkmk_ga_instalpatch"></a> Install patch requirement
 
@@ -64,7 +64,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
 1. On the **License Terms** page, review the license agreement. If you agree, select the **I accept the license terms** check box, and then select **Next**.  
     
    > [!NOTE]
-   > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback).
+   > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
 
 1. In the **Global Rules** page, Setup will automatically advance to the **Product Updates** page if there are no rule errors.  
   
@@ -215,7 +215,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-ver15"
 ## To install SQL Server 2019 
   
 1. Insert the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media. From the root folder, double-click **Setup.exe**. To install from a network share, locate the root folder on the share, and then double-click **Setup.exe**.  
@@ -232,7 +232,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
    > If an Enterprise Server/CAL license Product Key is entered, and the machine has more than 20 physical cores, or 40 logical cores when Hyper-Threading is enabled, a warning is shown during setup. You can still continue setup by selecting the **Check this box to acknowledge this limitation or click Back/Cancel to enter an Enterprise Core product license that supports the operating system maximum** check box, or click **Back** and enter a License Key that supports the operating system maximum number of processors.
 
    > [!NOTE]
-   > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback).
+   > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
 
 1. In the **Global Rules** page, Setup will automatically advance to the **Product Updates** page if there are no rule errors.  
   
@@ -300,11 +300,11 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
   
 1. Use the **Database Engine Configuration - Server Configuration** page to specify the following options:  
   
-    * **Security Mode**: Select **Windows Authentication** or **Mixed Mode Authentication** for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you select **Mixed Mode Authentication**, you must provide a strong password for the built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator account.  
+    * **Security Mode**: Select **Windows Authentication** or **Mixed Mode Authentication** for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you select **Mixed Mode Authentication**, you must provide a strong password for the built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator account (sa).  
   
        After a device establishes a successful connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the security mechanism is the same for both Windows authentication and mixed mode authentication. For more information, see [Database Engine Configuration - Server Configuration page](../../sql-server/install/instance-configuration.md#serverconfig).
   
-    * **SQL Server Administrators**: You must specify at least one system administrator for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that have administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    * **SQL Server Administrators**: You must specify at least one system administrator for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that have administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  You can also add a Windows Domain Group, to establish a shared SQL Administrator Group in Active Directory with sysadmin Access to SQL Server. 
   
      Use the **Database Engine Configuration - Data Directories** page to specify nondefault installation directories. To install to the default directories, select **Next**.  
   
@@ -320,14 +320,14 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
     > [!NOTE]  
     > This page is only available in Setup starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    For more information, see the [Database Engine Configuration - MaxDOP page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop). 
+    For more information, see the [Database Engine Configuration - MaxDOP page](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#maxdop). 
 
      Use the **Database Engine Configuration - Memory** page to specify the **min server memory** and **max server memory** values that this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use after startup. You can use the default values, use the calculated recommended values, or manually specify your own values after you've chosen the **Recommended** option.
      
     > [!NOTE]  
     > This page is only available in Setup starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    For more information, see the [Database Engine Configuration - Memory page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
+    For more information, see the [Database Engine Configuration - Memory page](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#memory). 
 
      Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
@@ -395,7 +395,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
 
 ## Next steps
 
-[Configure your new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-instances-sql-server?view=sql-server-2017).  
+[Configure your new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation](../../database-engine/configure-windows/database-engine-instances-sql-server.md).  
   
 To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and enables key services and features. For more information, see [Surface area configuration](../../relational-databases/security/surface-area-configuration.md).  
   
@@ -405,4 +405,4 @@ To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../
 * [Repair a failed SQL Server installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
 * [View and read SQL Server Setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 * [Upgrade to SQL Server by using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
-* [Install SQL Server from the command prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 
+* [Install SQL Server from the command prompt](./install-sql-server-from-the-command-prompt.md)

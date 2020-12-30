@@ -36,8 +36,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 USER_ID ( [ 'user' ] )  
 ```  
   
@@ -60,7 +59,7 @@ USER_ID ( [ 'user' ] )
 ## Examples  
  The following example returns the identification number for the `AdventureWorks2012` user `Harold`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 SELECT USER_ID('Harold');  
 GO  

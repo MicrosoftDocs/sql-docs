@@ -32,8 +32,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 ORIGINAL_LOGIN( )  
 ```  
   
@@ -52,7 +51,7 @@ ORIGINAL_LOGIN( )
   >[!NOTE]
   > Although the ORIGINAL_LOGIN function is supported on Azure SQL Database, the following script will fail because *Execute as LOGIN* is not supported on Azure SQL Database. 
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Create a temporary login and user.  

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "monitoring [SQL Server], events"
   - "logs [SQL Server], viewing"
 ms.assetid: 168a6c6e-12df-46a9-9904-55d63ca8fe14
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # View the Windows application log (Windows 10)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

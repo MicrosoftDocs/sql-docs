@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "dm_resource_governor_resource_pool_affinity"
   - "sys.dm_resource_governor_resource_pool_affinity"
 ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

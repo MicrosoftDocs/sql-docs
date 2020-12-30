@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sp_syscollector_delete_collecton_item"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

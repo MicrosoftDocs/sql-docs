@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_targetsvrgrp_member"
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_delete_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

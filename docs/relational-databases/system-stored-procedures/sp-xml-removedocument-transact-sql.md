@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_xml_removedocument"
 ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_xml_removedocument (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

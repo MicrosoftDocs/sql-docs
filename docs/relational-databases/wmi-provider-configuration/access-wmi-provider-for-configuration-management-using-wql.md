@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "WQL [WMI]"
   - "WMI Provider for Configuration Management, WQL"
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Access WMI Provider for Configuration Management using WQL
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -22,7 +22,7 @@ In this quickstart, you install SQL Server 2017 or SQL Server 2019 on Red Hat En
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 In this quickstart, you install SQL Server 2019 on Red Hat Enterprise Linux (RHEL) 8. You then connect with **sqlcmd** to create your first database and run queries.
 
@@ -34,20 +34,20 @@ In this quickstart, you install SQL Server 2019 on Red Hat Enterprise Linux (RHE
 ## Prerequisites
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-You must have a RHEL 7.3 - 7.8, or 8.0 - 8.2 machine with **at least 2 GB** of memory.
+You must have a RHEL 7.3 - 7.8, or 8.0 - 8.3 machine with **at least 2 GB** of memory.
 
 ::: moniker-end
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-You must have a RHEL 7.3, 7.4, 7.5, 7.6, or 8.0 machine with **at least 2 GB** of memory.
+You must have a RHEL 7.3 - 7.8, or 8.0 - 8.3 machine with **at least 2 GB** of memory.
 
 ::: moniker-end
 
-To install Red Hat Enterprise Linux on your own machine, go to [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image RHEL` in the call to `az vm create`.
+To install Red Hat Enterprise Linux on your own machine, go to [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image RHEL` in the call to `az vm create`.
 
 If you have previously installed a CTP or RC release of SQL Server, you must first remove the old repository before following these steps. For more information, see [Configure Linux repositories for SQL Server 2017 and 2019](sql-server-linux-change-repo.md).
 
@@ -123,7 +123,7 @@ At this point, SQL Server is running on your RHEL machine and is ready to use!
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a id="install"></a>Install SQL Server
 

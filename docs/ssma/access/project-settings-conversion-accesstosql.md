@@ -106,5 +106,4 @@ Displays a message in the assessment report and in the Output pane when an objec
 -   **Full Mode**: True  
   
 ## See Also  
-[User Interface Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[User Interface Reference(Access)](./user-interface-reference-accesstosql.md)  

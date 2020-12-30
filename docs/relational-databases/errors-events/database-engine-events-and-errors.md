@@ -507,7 +507,7 @@ ORDER BY message_id
 |    829    |    21    |    Yes    |    Database ID %d, Page %S_PGID is marked RestorePending, which may indicate disk corruption. To recover from this state, perform a restore.    |
 |    830    |    10    |    No    |    stale page (a page read returned a log sequence number (LSN) (%u:%u:%u) that is older than the last one that was written (%u:%u:%u))    |
 |    831    |    20    |    No    |    Unable to deallocate a kept page.    |
-|    832    |    24    |    Yes    |    A page that should have been constant has changed (expected checksum: %08x, actual checksum: %08x, database %d, file '%ls', page %S_PGID). This usually indicates a memory failure or other hardware or OS corruption.    |
+|    [832](mssqlserver-832-database-engine-error.md)    |    24    |    Yes    |    A page that should have been constant has changed (expected checksum: %08x, actual checksum: %08x, database %d, file '%ls', page %S_PGID). This usually indicates a memory failure or other hardware or OS corruption.    |
 |    [833](mssqlserver-833-database-engine-error.md)    |    10    |    No    |    SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file '%ls' in database '%ls' (%d). The OS file handle is 0x%p. The offset of the latest long I/O is: %#016I64x    |
 |    [844](mssqlserver-844-database-engine-error.md)    |    10    |    No    |    Time out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database id: %d, allocation unit id: %I64d%ls, task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p. Continuing to wait.    |
 |    [845](mssqlserver-845-database-engine-error.md)    |    17    |    No    |    Time-out occurred while waiting for buffer latch type %d for page %S_PGID, database ID %d.    |
@@ -517,6 +517,9 @@ ORDER BY message_id
 |    849    |    10    |    Yes    |    Using locked pages for buffer pool.    |
 |    850    |    10    |    Yes    |    %I64u MB of large page memory allocated.    |
 |    851    |    10    |    No    |    the page is in an OFFLINE file which cannot be read    |
+|    [854](mssqlserver-854-database-engine-error.md)    |    10    |    Yes    |    Machine supports memory error recovery. SQL memory protection is enabled to recover from memory corruption.    |
+|    [855](mssqlserver-855-database-engine-error.md)    |    10    |    Yes    |    Uncorrectable hardware memory corruption detected. Your system may become unstable. Check the Windows event log for more details.    |
+|    [856](mssqlserver-856-database-engine-error.md)    |    10    |    Yes    |    SQL Server has detected hardware memory corruption in database '%ls', file ID: %u, page ID; %u, memory address: 0x%I64x and has successfully recovered the page.    |
 |    902    |    16    |    No    |    To change the %ls, the database must be in state in which a checkpoint can be executed.    |
 |    904    |    16    |    No    |    Database %ld cannot be autostarted during server shutdown or startup.    |
 |    [905](mssqlserver-905-database-engine-error.md)    |    21    |    Yes    |    Database '%.*ls' cannot be started in this edition of SQL Server because it contains a partition function '%.*ls'. Only Enterprise edition of SQL Server supports partitioning.    |
@@ -909,7 +912,7 @@ ORDER BY message_id
 |    1779    |    16    |    No    |    Table '%.*ls' already has a primary key defined on it.    |
 |    1781    |    16    |    No    |    Column already has a DEFAULT bound to it.    |
 |    1784    |    16    |    No    |    Cannot create the foreign key '%.*ls' because the referenced column '%.*ls.%.*ls' is a non-persisted computed column.    |
-|    1785    |    16    |    No    |    Introducing FOREIGN KEY constraint '%.*ls' on table '%.*ls' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints.    |
+|    [1785](mssqlserver-1785-database-engine-error.md)    |    16    |    No    |    Introducing FOREIGN KEY constraint '%.*ls' on table '%.*ls' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints.    |
 |    1786    |    16    |    No    |    Either column '%.*ls.%.*ls' or referencing column '%.*ls.%.*ls' in foreign key '%.*ls' is a timestamp column. This data type cannot be used with cascading referential integrity constraints.    |
 |    1787    |    16    |    No    |    Cannot define foreign key constraint '%.*ls' with cascaded DELETE or UPDATE on table '%.*ls' because the table has an INSTEAD OF DELETE or UPDATE TRIGGER defined on it.    |
 |    1788    |    16    |    No    |    Cascading foreign key '%.*ls' cannot be created where the referencing column '%.*ls.%.*ls' is an identity column.    |
@@ -1426,7 +1429,7 @@ ORDER BY message_id
 |    3010    |    16    |    No    |    Invalid backup mirror specification. All mirrors must have the same number of members.    |
 |    3011    |    16    |    No    |    All backup devices must be of the same general class (for example, DISK and TAPE).    |
 |    3012    |    17    |    No    |    VDI ran out of buffer when SQL Server attempted to send differential information to SQL Writer.    |
-|    3013    |    16    |    No    |    %hs is terminating abnormally.    |
+|    [3013](mssqlserver-3013-database-engine-error.md)    |    16    |    No    |    BACKUP DATABASE is terminating abnormally.    |
 |    3014    |    10    |    No    |    %hs successfully processed %I64d pages in %d.%03d seconds (%d.%03d MB/sec).    |
 |    3015    |    10    |    No    |    %hs is not yet implemented.    |
 |    3016    |    16    |    No    |    Backup of file '%ls' is not permitted because it contains pages subject to an online restore sequence. Complete the restore sequence before taking the backup, or restrict the backup to exclude this file.    |
@@ -1435,7 +1438,7 @@ ORDER BY message_id
 |    3019    |    16    |    No    |    The restart-checkpoint file '%ls' is from a previous interrupted RESTORE operation and is inconsistent with the current RESTORE command. The restart command must use the same syntax as the interrupted command, with the addition of the RESTART clause. Alternatively, reissue the current statement without the RESTART clause.    |
 |    3021    |    16    |    No    |    Cannot perform a backup or restore operation within a transaction.    |
 |    3022    |    10    |    No    |    This backup is a file backup of read-write data from a database that uses the simple recovery model. This is only appropriate if you plan to set the filegroup to read-only followed by a differential file backup. Consult Books Online for more information on managing read-only data for the simple recovery model. In particular, consider how partial backups are used.    |
-|    3023    |    16    |    No    |    Backup, file manipulation operations (such as ALTER DATABASE ADD FILE) and encryption changes on a database must be serialized. Reissue the statement after the current backup or file manipulation operation is completed.    |
+|    [3023](mssqlserver-3023-database-engine-error.md)    |    16    |    No    |    Backup, file manipulation operations (such as ALTER DATABASE ADD FILE) and encryption changes on a database must be serialized. Reissue the statement after the current backup or file manipulation operation is completed.    |
 |    3024    |    16    |    No    |    You can only perform a full backup of the master database. Use BACKUP DATABASE to back up the entire master database.    |
 |    3025    |    16    |    No    |    Missing database name. Reissue the statement specifying a valid database name.    |
 |    3027    |    16    |    No    |    The filegroup "%.*ls" is not part of database "%.*ls".    |
@@ -1619,7 +1622,8 @@ ORDER BY message_id
 |    3280    |    16    |    No    |    Backups on raw devices are not supported. '%ls' is a raw device.    |
 |    3281    |    10    |    No    |    Released and initiated rewind on '%ls'.    |
 |    3283    |    16    |    No    |    The file "%ls" failed to initialize correctly. Examine the error logs for more details.    |
-|    3284    |    16    |    No    |    Filemark on device '%ls' is not aligned. Re-issue the Restore statement with the same blocksize used to create the backupset: '%d' looks like a possible value.    |
+|    3284    |    16    |    No    |    Filemark on device '%ls' is not aligned. Re-issue the restore statement with the same blocksize used to create the backupset: '%d' looks like a possible value.    |
+|    3285    |    10    |    Yes    |    Filemark on device '%ls' appears not to be aligned. The restore operation will proceed using less efficient I/O.  To avoid this, re-issue the Restore statement with the same blocksize used to create the backupset: '%d' looks like a possible value.    |
 |    3301    |    21    |    Yes    |    The transaction log contains a record (logop %d) that is not valid. The log has been corrupted. Restore the database from a full backup, or repair the database.    |
 |    3302    |    21    |    Yes    |    Redoing of logged operations in database '%.*ls' failed to reach end of log at log record ID %S_LSN. This indicates corruption around log record ID %S_LSN. Restore the database from a full backup, or repair the database.    |
 |    [3313](mssqlserver-3313-database-engine-error.md)    |    21    |    Yes    |    During redoing of a logged operation in database '%.*ls', an error occurred at log record ID %S_LSN. Typically, the specific failure is previously logged as an error in the Windows Event Log service. Restore the database from a full backup, or repair the database.    |
@@ -1760,7 +1764,7 @@ ORDER BY message_id
 |    3856    |    10    |    No    |    Attribute (%ls) exists but should not for row (%ls) in sys.%ls%ls.    |
 |    3857    |    10    |    No    |    The attribute (%ls) is required but is missing for row (%ls) in sys.%ls%ls.    |
 |    3858    |    10    |    No    |    The attribute (%ls) of row (%ls) in sys.%ls%ls has an invalid value.    |
-|    3859    |    10    |    No    |    Warning: The system catalog was updated directly in database ID %d, most recently at %S_DATE.    |
+|    [3859](mssqlserver-3859-database-engine-error.md)    |    10    |    No    |    Warning: The system catalog was updated directly in database ID %d, most recently at %S_DATE.    |
 |    3860    |    10    |    No    |    Cannot upgrade database ID 32767. This ID value is reserved for SQL Server internal use.    |
 |    3862    |    10    |    No    |    CLR type '%.*ls'.'%.*ls' is disabled because the on disk format for this CLR type has been changed. Use DROP TYPE to remove this disabled type.    |
 |    3864    |    23    |    Yes    |    Could not find an entry for index with ID %d on object with ID %d in database with ID %d. Possible schema corruption. Run DBCC CHECKDB.    |
@@ -1838,8 +1842,8 @@ ORDER BY message_id
 |    3985    |    16    |    No    |    An error occurred during the changing of transaction context. This is usually caused by low memory in the system. Try to free up more memory.    |
 |    3986    |    19    |    No    |    The transaction timestamps ran out. Restart the server.    |
 |    3987    |    10    |    No    |    SNAPSHOT ISOLATION is always enabled in this database.    |
-|    3988    |    16    |    No    |    New transaction is not allowed because there are other threads running in the session.    |
-|    3989    |    16    |    No    |    New request is not allowed to start because it should come with valid transaction descriptor.    |
+|    [3988](mssqlserver-3988-database-engine-error.md)    |    16    |    No    |    New transaction is not allowed because there are other threads running in the session.    |
+|    [3989](mssqlserver-3989-database-engine-error.md)   |    16    |    No    |    New request is not allowed to start because it should come with valid transaction descriptor.    |
 |    3990    |    16    |    No    |    Transaction is not allowed to commit inside of a user defined routine, trigger or aggregate because the transaction is not started in that CLR level. Change application logic to enforce strict transaction nesting.    |
 |    3991    |    16    |    No    |    The context transaction which was active before entering user defined routine, trigger or aggregate "%.*ls" has been ended inside of it, which is not allowed. Change application logic to enforce strict transaction nesting.    |
 |    3992    |    16    |    No    |    Transaction count has been changed from %d to %d inside of user defined routine, trigger or aggregate "%.*ls". This is not allowed and user transaction will be rolled back. Change application logic to enforce strict transaction nesting.    |
@@ -1983,7 +1987,7 @@ ORDER BY message_id
 |    4202    |    16    |    No    |    BACKUP LOG is not possible because bulk logged changes exist in the database and one or more filegroups are unavailable.    |
 |    4208    |    16    |    No    |    The statement %hs is not allowed while the recovery model is SIMPLE. Use BACKUP DATABASE or change the recovery model using ALTER DATABASE.    |
 |    4212    |    16    |    No    |    Cannot back up the log of the master database. Use BACKUP DATABASE instead.    |
-|    4214    |    16    |    No    |    BACKUP LOG cannot be performed because there is no current database backup.    |
+|    [4214](mssqlserver-4214-database-engine-error.md)    |    16    |    No    |    BACKUP LOG cannot be performed because there is no current database backup.    |
 |    4215    |    10    |    No    |    The log was not truncated because records at the beginning of the log are pending replication or Change Data Capture. Ensure the Log Reader Agent or capture job is running or use sp_repldone to mark transactions as distributed or captured.    |
 |    4217    |    10    |    No    |    BACKUP LOG cannot modify the database because the database is read-only. The backup will continue, although subsequent backups will duplicate the work of this backup.    |
 |    4218    |    16    |    No    |    Bulk-logged operations exist in the database. Perform a BACKUP LOG.    |
@@ -2326,7 +2330,7 @@ ORDER BY message_id
 |    5004    |    16    |    No    |    To use ALTER DATABASE, the database must be in a writable state in which a checkpoint can be executed.    |
 |    5006    |    16    |    No    |    Could not get exclusive use of %S_MSG '%.*ls' to perform the requested operation.    |
 |    5008    |    16    |    No    |    This ALTER DATABASE statement is not supported. Correct the syntax and execute the statement again.    |
-|    5009    |    16    |    No    |    One or more files listed in the statement could not be found or could not be initialized.    |
+|    [5009](mssqlserver-5009-database-engine-error.md)    |    16    |    No    |    One or more files listed in the statement could not be found or could not be initialized.    |
 |    5010    |    16    |    No    |    Log file name cannot be generated from a raw device. The log file name and path must be specified.    |
 |    5011    |    14    |    No    |    User does not have permission to alter database '%.*ls', the database does not exist, or the database is not in a state that allows access checks.    |
 |    5012    |    16    |    No    |    The name of the primary filegroup cannot be changed.    |
@@ -2456,7 +2460,7 @@ ORDER BY message_id
 |    5177    |    16    |    Yes    |    An unexpected error occurred while checking the sector size for file '%.*ls'. Move the file to a local NTFS volume, where the sector size can be retrieved. Check the SQL Server error log for more information.    |
 |    5178    |    16    |    Yes    |    Cannot use file '%.*ls' because it was originally formatted with sector size %d and is now on a volume with sector size %d. Move the file to a volume with a sector size that is the same as or smaller than the original sector size.    |
 |    5179    |    16    |    Yes    |    Cannot use file '%.*ls', because it is on a volume with sector size %d. SQL Server supports a maximum sector size of 4096 bytes. Move the file to a volume with a compatible sector size.    |
-|    5180    |    22    |    Yes    |    Could not open File Control Bank (FCB) for invalid file ID %d in database '%.*ls'. Verify the file location. Execute DBCC CHECKDB.    |
+|    [5180](mssqlserver-5180-database-engine-error.md)    |    22    |    Yes    |    Could not open File Control Bank (FCB) for invalid file ID %d in database '%.*ls'. Verify the file location. Execute DBCC CHECKDB.    |
 |    5181    |    16    |    No    |    Could not restart database "%.*ls". Reverting to the previous status.    |
 |    5182    |    10    |    Yes    |    New log file '%.*ls' was created.    |
 |    5183    |    16    |    No    |    Cannot create the file "%ls". Use WITH MOVE to specify a usable physical file name. Use WITH REPLACE to overwrite an existing file.    |
@@ -2899,7 +2903,7 @@ ORDER BY message_id
 |    6519    |    16    |    No    |    Type '%.*ls' is not yet supported for CLR operations.    |
 |    6520    |    16    |    No    |    A .NET Framework error occurred during statement execution.    |
 |    6521    |    16    |    No    |    A .NET Framework error occurred during statement execution: %.*ls.    |
-|    6522    |    16    |    No    |    A .NET Framework error occurred during execution of user-defined routine or aggregate "%.*ls": %ls.    |
+|    [6522](mssqlserver-6522-database-engine-error.md)    |    16    |    No    |    A .NET Framework error occurred during execution of user-defined routine or aggregate "%.*ls": %ls.    |
 |    6523    |    16    |    No    |    Method, property or field '%ls' of class '%ls' in assembly '%.*ls' is static.    |
 |    6524    |    16    |    No    |    Cannot use computed column in the result table of a streaming user-defined function (column '%.*ls').    |
 |    6525    |    16    |    No    |    Cannot use '%s' constraint in the result table of a streaming user-defined function.    |
@@ -2979,7 +2983,7 @@ ORDER BY message_id
 |    6599    |    16    |    No    |    Found an empty native serialization class '%.*ls'. Empty native serialization classes are not allowed.    |
 |    6600    |    16    |    No    |    XML error: %.*ls    |
 |    6601    |    10    |    No    |    The XML parse error 0x%x occurred on line number %d, near the XML text "%.*ls".    |
-|    6602    |    16    |    No    |    The error description is '%.*ls'.    |
+|    [6602](mssqlserver-6602-database-engine-error.md)    |    16    |    No    |    The error description is '%.*ls'.    |
 |    6603    |    16    |    No    |    XML parsing error: %.*ls    |
 |    6605    |    16    |    No    |    %.*ls: Failed to obtain an IPersistStream interface on the XML text.    |
 |    6607    |    16    |    No    |    %.*ls: The value supplied for parameter number %d is invalid.    |
@@ -3205,7 +3209,7 @@ ORDER BY message_id
 |    7101    |    16    |    No    |    You need an active user transaction in order to use text pointers for a table with the option "text in row" set to ON.    |
 |    7102    |    20    |    Yes    |    Internal Error: Text manager cannot continue with current statement. Run DBCC CHECKTABLE.    |
 |    7104    |    16    |    No    |    Offset or size of data type is not valid. Data type must be of type int or smallint.    |
-|    7105    |    22    |    Yes    |    The Database ID %d, Page %S_PGID, slot %d for LOB data type node does not exist. This is usually caused by transactions that can read uncommitted data on a data page. Run DBCC CHECKTABLE.    |
+|    [7105](mssqlserver-7105-database-engine-error.md)    |    22    |    Yes    |    The Database ID %d, Page %S_PGID, slot %d for LOB data type node does not exist. This is usually caused by transactions that can read uncommitted data on a data page. Run DBCC CHECKTABLE.    |
 |    7106    |    16    |    Yes    |    Internal error: An attempt was made to update a LOB data type using a read-only text pointer.    |
 |    7107    |    16    |    No    |    You can have only 1,024 in-row text pointers in one transaction    |
 |    7108    |    22    |    Yes    |    Database ID %d, page %S_PGID, slot %d, link number %d is invalid. Run DBCC CHECKTABLE.    |
@@ -3984,7 +3988,7 @@ ORDER BY message_id
 |    8628    |    17    |    Yes    |    A time out occurred while waiting to optimize the query. Rerun the query.    |
 |    [8630](mssqlserver-8630-database-engine-error.md)    |    17    |    No    |    Internal Query Processor Error: The query processor encountered an unexpected error during execution.    |
 |    8631    |    17    |    No    |    Internal error: Server stack limit has been reached. Please look for potentially deep nesting in your query, and try to simplify it.    |
-|    8632    |    17    |    No    |    Internal error: An expression services limit has been reached. Please look for potentially complex expressions in your query, and try to simplify them.    |
+|    [8632](mssqlserver-8632-database-engine-error.md)    |    17    |    No    |    Internal error: An expression services limit has been reached. Please look for potentially complex expressions in your query, and try to simplify them.    |
 |    8633    |    16    |    No    |    The query processor could not produce a query plan because distributed query does not support materializing intermediate results with default in DML queries over remote sources. Try to use actual default values instead of default or split the update into multiple statements, one only containing the DEFAULT assignment, the other with the rest.    |
 |    8634    |    17    |    No    |    The query processor received an error from a cluster communication layer.    |
 |    8635    |    16    |    No    |    The query processor could not produce a query plan for a query with a spatial index hint. Reason: %S_MSG. Try removing the index hints or removing SET FORCEPLAN.    |
@@ -6271,7 +6275,7 @@ ORDER BY message_id
 |    15397    |    16    |    No    |    The %S_MSG is not protected by a password. A decryption password cannot be used for this operation.    |
 |    15398    |    11    |    No    |    Only objects in the master database owned by dbo can have the startup setting changed.    |
 |    15399    |    11    |    No    |    Could not change startup option because this option is restricted to objects that have no parameters.    |
-|    15401    |    11    |    No    |    Windows NT user or group '%s' not found. Check the name again.    |
+|    [15401](mssqlserver-15401-database-engine-error.md)    |    11    |    No    |    Windows NT user or group '%s' not found. Check the name again.    |
 |    15402    |    11    |    No    |    '%s' is not a fixed server role.    |
 |    15403    |    16    |    No    |    The server principal "%.*ls" does not exist, does not have server access, or you do not have permission.    |
 |    [15404](mssqlserver-15404-database-engine-error.md)    |    16    |    No    |    Could not obtain information about Windows NT group/user '%ls', error code %#lx.    |
@@ -6395,7 +6399,7 @@ ORDER BY message_id
 |    15578    |    16    |    No    |    There is already a master key in the database. Please drop it before performing this statement.    |
 |    15579    |    16    |    No    |    Adding an encryption to the symmetric key failed. An encryption by the same %S_MSG '%.*s' may already exist.    |
 |    15580    |    16    |    No    |    Cannot drop %S_MSG because %S_MSG '%.*s' is encrypted by it.    |
-|    15581    |    16    |    No    |    Please create a master key in the database or open the master key in the session before performing this operation.    |
+|    [15581](mssqlserver-15581-database-engine-error.md)    |    16    |    No    |    Please create a master key in the database or open the master key in the session before performing this operation.    |
 |    15583    |    10    |    No    |    The module being signed is marked to execute as owner. If the owner changes the signature will not be valid.    |
 |    15584    |    10    |    No    |    An error occurred while decrypting %S_MSG '%.*ls' that was encrypted by the old master key. The error was ignored because the FORCE option was specified.    |
 |    15585    |    10    |    No    |    The current master key cannot be decrypted. The error was ignored because the FORCE option was specified.    |
@@ -6537,7 +6541,7 @@ ORDER BY message_id
 |    17109    |    10    |    Yes    |    FallBack certificate was successfully created.    |
 |    17110    |    10    |    Yes    |    Registry startup parameters: %.*ls    |
 |    17111    |    10    |    Yes    |    Logging SQL Server messages in file '%s'.    |
-|    17112    |    16    |    Yes    |    An invalid startup option %c was supplied, either from the registry or the command prompt. Correct or remove the option.    |
+|    [17112](mssqlserver-17112-database-engine-error.md)    |    16    |    Yes    |    An invalid startup option %c was supplied, either from the registry or the command prompt. Correct or remove the option.    |
 |    17113    |    16    |    Yes    |    Error %ls occurred while opening file '%ls' to obtain configuration information at startup. An invalid startup option might have caused the error. Verify your startup options, and correct or remove them if necessary.    |
 |    17114    |    16    |    Yes    |    Error %ls occurred while opening file '%ls' to obtain configuration information at startup time. An invalid startup option might have caused the error. Verify your startup options, and correct or remove them if necessary.    |
 |    17115    |    10    |    Yes    |    Command Line Startup Parameters:%.*ls    |
@@ -6650,7 +6654,7 @@ ORDER BY message_id
 |    17656    |    10    |    Yes    |    Warning ******************    |
 |    17657    |    10    |    Yes    |    Attempting to change default collation to %s.    |
 |    17658    |    10    |    Yes    |    SQL Server started in single-user mode. This an informational message only. No user action is required.    |
-|    17659    |    10    |    Yes    |    Warning: System table ID %d has been updated directly in database ID %d and cache coherence may not have been maintained. SQL Server should be restarted.    |
+|    [17659](mssqlserver-17659-database-engine-error.md)    |    10    |    Yes    |    Warning: System table ID %d has been updated directly in database ID %d and cache coherence may not have been maintained. SQL Server should be restarted.    |
 |    [17660](mssqlserver-17660-database-engine-error.md)    |    10    |    Yes    |    Starting without recovery. This is an informational message only. No user action is required.    |
 |    17661    |    10    |    Yes    |    Recovering all databases, but not clearing tempdb. This is an informational message only. No user action is required.    |
 |    17663    |    10    |    Yes    |    Server name is '%s'. This is an informational message only. No user action is required.    |
@@ -6688,9 +6692,9 @@ ORDER BY message_id
 |    [17887](mssqlserver-17887-database-engine-error.md)    |    10    |    Yes    |    IO Completion Listener (0x%lx) Worker 0x%p appears to be non-yielding on Node %ld. Approx CPU Used: kernel %I64d ms, user %I64d ms, Interval: %I64d.    |
 |    17888    |    10    |    Yes    |    All schedulers on Node %d appear deadlocked due to a large number of worker threads waiting on %ls. Process Utilization %d%%.    |
 |    17889    |    16    |    Yes    |    A new connection was rejected because the maximum number of connections on session ID %d has been reached. Close an existing connection on this session and retry.%.*ls    |
-|    17890    |    10    |    Yes    |    A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: %d seconds. Working set (KB): %I64d, committed (KB): %I64d, memory utilization: %d%%.    |
+|    [17890](mssqlserver-17890-database-engine-error.md)    |    10    |    Yes    |    A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: %d seconds. Working set (KB): %I64d, committed (KB): %I64d, memory utilization: %d%%.    |
 |    17891    |    10    |    Yes    |    Resource Monitor (0x%lx) Worker 0x%p appears to be non-yielding on Node %ld. Memory freed: %I64d KB. Approx CPU Used: kernel %I64d ms, user %I64d ms, Interval: %I64d.    |
-|    17892    |    20    |    Yes    |    Logon failed for login '%.*ls' due to trigger execution.%.*ls    |
+|    [17892](mssqlserver-17892-database-engine-error.md)    |    14    |    Yes    |    Logon failed for login '%.*ls' due to trigger execution.%.*ls    |
 |    17894    |    10    |    Yes    |    Dispatcher (0x%lx) from dispatcher pool '%.*ls' Worker 0x%p appears to be non-yielding on Node %ld. Approx CPU Used: kernel %I64d ms, user %I64d ms, Interval: %I64d.    |
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
 
@@ -6813,8 +6817,8 @@ ORDER BY message_id
 |    18469    |    10    |    No    |    [CLIENT: %.*hs]    |
 |    18470    |    14    |    Yes    |    Login failed for user '%.*ls'. Reason: The account is disabled.%.*ls    |
 |    18471    |    14    |    No    |    The login failed for user "%.*ls". The password change failed. The user does not have permission to change the password. %.*ls    |
-|    18482    |    16    |    Yes    |    Could not connect to server '%.*ls' because '%.*ls' is not defined as a remote server. Verify that you have specified the correct server name. %.*ls.    |
-|    18483    |    16    |    Yes    |    Could not connect to server '%.*ls' because '%.*ls' is not defined as a remote login at the server. Verify that you have specified the correct login name. %.*ls.    |
+|    [18482](mssqlserver-18482-database-engine-error.md)    |    16    |    Yes    |    Could not connect to server '%.*ls' because '%.*ls' is not defined as a remote server. Verify that you have specified the correct server name. %.*ls.    |
+|    [18483](mssqlserver-18483-database-engine-error.md)    |    16    |    Yes    |    Could not connect to server '%.*ls' because '%.*ls' is not defined as a remote login at the server. Verify that you have specified the correct login name. %.*ls.    |
 |    18485    |    16    |    Yes    |    Could not connect to server '%.*ls' because it is not configured to accept remote logins. Use the remote access configuration option to allow remote logins.%.*ls    |
 |    18486    |    14    |    Yes    |    Login failed for user '%.*ls' because the account is currently locked out. The system administrator can unlock it. %.*ls    |
 |    18487    |    14    |    Yes    |    Login failed for user '%.*ls'. Reason: The password of the account has expired.%.*ls    |
@@ -8394,7 +8398,7 @@ ORDER BY message_id
 |    23207    |    16    |    No    |    Could not add Share item for '%ls' in Catalog.    |
 |    23208    |    16    |    No    |    ItemPath '%ls' does not exist in Store.    |
 |    23209    |    16    |    No    |    Could not update Store state in Catalog.    |
-|    23210    |    16    |    No    |    Itempath '%ls' is a file-backed item or within it's sub-tree.    |
+|    23210    |    16    |    No    |    Itempath '%ls' is a file-backed item or within its sub-tree.    |
 |    23211    |    16    |    No    |    Could not start Store Manager. Please look in WinFS UT Log for details.    |
 |    23212    |    16    |    No    |    Itempath '%ls' is a compound item.    |
 |    23401    |    16    |    No    |    Operation failed with HRESULT 0x%x.    |
@@ -9104,4 +9108,4 @@ ORDER BY message_id
 ## See Also
 
 [Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)
-[Cause and Resolution of Database Engine Errors](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)
+[Cause and Resolution of Database Engine Errors](/previous-versions/sql/sql-server-2016/ms365262(v=sql.130))

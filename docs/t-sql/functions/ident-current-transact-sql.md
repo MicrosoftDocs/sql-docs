@@ -31,7 +31,7 @@ Returns the last identity value generated for a specified table or view. The las
   
 ## Syntax  
   
-```  
+```syntaxsql  
 IDENT_CURRENT( 'table_or_view' )  
 ```  
   
@@ -89,8 +89,8 @@ GO
 IF OBJECT_ID(N't7', N'U') IS NOT NULL   
     DROP TABLE t7;  
 GO  
-CREATE TABLE t6(id int IDENTITY);  
-CREATE TABLE t7(id int IDENTITY(100,1));  
+CREATE TABLE t6(id INT IDENTITY);  
+CREATE TABLE t7(id INT IDENTITY(100,1));  
 GO  
 CREATE TRIGGER t6ins ON t6 FOR INSERT   
 AS  

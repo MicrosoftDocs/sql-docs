@@ -43,7 +43,7 @@ Returns information about all spinlock waits organized by type.
 
 ## Permissions  
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.    
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the `Server admin` or an `Azure Active Directory admin` account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.    
   
 ## Remarks  
  
@@ -407,7 +407,7 @@ GO
 
  [When is Spinlock a Significant Driver of CPU utilization in SQL Server?](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
- [Diagnosing and Resolving Spinlock Contention on SQL Server](https://www.microsoft.com/download/details.aspx?id=26666)
+ [Diagnosing and Resolving Spinlock Contention on SQL Server](../diagnose-resolve-spinlock-contention.md)
   
   
 

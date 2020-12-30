@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.trace_categories catalog view"
 ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.trace_categories (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

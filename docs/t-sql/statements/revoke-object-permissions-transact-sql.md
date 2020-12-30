@@ -29,7 +29,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON   
     [ OBJECT :: ][ schema_name ]. object_name [ ( column [ ,...n ] ) ]  
         { FROM | TO } <database_principal> [ ,...n ]   
@@ -150,7 +149,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 ### A. Revoking SELECT permission on a table  
  The following example revokes `SELECT` permission from the user `RosaQdM` on the table `Person.Address` in the `AdventureWorks2012` database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE SELECT ON OBJECT::Person.Address FROM RosaQdM;  
 GO  
@@ -159,7 +158,7 @@ GO
 ### B. Revoking EXECUTE permission on a stored procedure  
  The following example revokes `EXECUTE` permission on the stored procedure `HumanResources.uspUpdateEmployeeHireInfo` from an application role called `Recruiting11`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     FROM Recruiting11;  
@@ -169,7 +168,7 @@ GO
 ### C. Revoking REFERENCES permission on a view with CASCADE  
  The following example revokes `REFERENCES` permission on the column `BusinessEntityID` in the view `HumanResources.vEmployee` from the user `Wanida` with `CASCADE`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     FROM Wanida CASCADE;  

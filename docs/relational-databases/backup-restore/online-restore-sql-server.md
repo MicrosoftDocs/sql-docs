@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "online restores [SQL Server]"
   - "online restores [SQL Server], about online restores"
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
-author: mashamsft
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Online Restore (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

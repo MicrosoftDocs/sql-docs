@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_reconcile_indexes stored procedure"
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_rda_reconcile_indexes (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

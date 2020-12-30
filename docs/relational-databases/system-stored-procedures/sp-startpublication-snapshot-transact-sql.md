@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_startpublication_snapshot"
 ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_startpublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

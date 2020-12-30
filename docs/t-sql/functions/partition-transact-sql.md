@@ -29,8 +29,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 [ database_name. ] $PARTITION.partition_function_name(expression)  
 ```  
   
@@ -59,10 +58,10 @@ ms.author: jrasnick
 ### A. Getting the partition number for a set of partitioning column values  
  The following example creates a partition function `RangePF1` that will partition a table or index into four partitions. $PARTITION is used to determine that the value `10`, representing the partitioning column of `RangePF1`, would be put in partition 1 of the table.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-CREATE PARTITION FUNCTION RangePF1 ( int )  
+CREATE PARTITION FUNCTION RangePF1 ( INT )  
 AS RANGE FOR VALUES (10, 100, 1000) ;  
 GO  
 SELECT $PARTITION.RangePF1 (10) ;  
@@ -74,7 +73,7 @@ GO
   
  To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015).  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT $PARTITION.TransactionRangePF1(TransactionDate) AS Partition,   
@@ -90,7 +89,7 @@ GO
 > [!NOTE]  
 >  To execute this example, you must first run the PartitionAW.sql script against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. For more information, see [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015).  
   
-```  
+```sql  
 SELECT * FROM Production.TransactionHistory  
 WHERE $PARTITION.TransactionRangePF1(TransactionDate) = 5 ;  
 ```  

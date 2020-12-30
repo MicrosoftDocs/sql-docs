@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 5b885376-87aa-41f1-9e18-04987aead250
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ This function returns a **date** value that maps to the specified year, month, a
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DATEFROMPARTS ( year, month, day )  
 ```  
   
@@ -62,7 +62,7 @@ SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Result  
 ----------------------------------  
 2010-12-31  

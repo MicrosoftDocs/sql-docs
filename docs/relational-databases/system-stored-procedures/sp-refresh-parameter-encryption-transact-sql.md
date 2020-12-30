@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "sp_refresh_parameter_encryption"
   - "Always Encrypted, sp_refresh_parameter_encryption"
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_refresh_parameter_encryption (Transact-SQL)
 

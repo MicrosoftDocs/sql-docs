@@ -35,8 +35,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 BACKUP MASTER KEY TO FILE = 'path_to_file'   
     ENCRYPTION BY PASSWORD = 'password'  
 ```  
@@ -61,7 +60,7 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
 ## Examples  
  The following example creates a backup of the `AdventureWorks2012` master key. Because this master key is not encrypted by the service master key, a password must be specified when it is opened.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = 'sfj5300osdVdgwdfkli7';  
 BACKUP MASTER KEY TO FILE = 'c:\temp\exportedmasterkey'   

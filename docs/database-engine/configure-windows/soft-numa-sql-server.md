@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "non-uniform memory access"
   - "soft-NUMA"
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Soft-NUMA (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

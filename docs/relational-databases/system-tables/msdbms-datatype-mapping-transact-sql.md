@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdbms_datatype_mapping system table"
 ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSdbms_datatype_mapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

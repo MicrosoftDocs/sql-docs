@@ -22,14 +22,14 @@ In addition to **azdata** and the cluster status notebook, there is another way 
 
 The following prerequisites are required to launch the notebook:
 
-* Latest version of [Azure Data Studio](https://aka.ms/getazuredatastudio)
+* Latest version of [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 * [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] extension installed in Azure Data Studio](../azure-data-studio/data-virtualization-extension.md)
 
 In addition to above, SQL Server 2019 Big Data Cluster also requires:
 
 * **azdata**
-    - [Windows installer](deploy-install-azdata-installer.md)
-    - [Linux package manager](deploy-install-azdata-linux-package.md)
+    - [Windows installer](../azdata/install/deploy-install-azdata-installer.md)
+    - [Linux package manager](../azdata/install/deploy-install-azdata-linux-package.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
 * [Azure CLI](/cli/azure/install-azure-cli)
 

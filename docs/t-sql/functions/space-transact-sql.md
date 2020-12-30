@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: b4fac3b8-2d47-4c11-a6a6-009e5a538f40
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SPACE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ SPACE ( integer_expression )
 ## Examples  
  The following example trims the last names and concatenates a comma, two spaces, and the first names of people listed in the `Person` table in `AdventureWorks2012`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT RTRIM(LastName) + ',' + SPACE(2) +  LTRIM(FirstName)  
@@ -64,7 +64,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example trims the last names and concatenates a comma, two spaces, and the first names of people listed in the `DimCustomer` table in `AdventureWorksPDW2012`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT RTRIM(LastName) + ',' + SPACE(2) +  LTRIM(FirstName)  

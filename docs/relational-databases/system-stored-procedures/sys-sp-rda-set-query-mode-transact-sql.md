@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_set_query_mode stored procedure"
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

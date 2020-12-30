@@ -15,8 +15,8 @@ apilocation:
 helpviewer_keywords: 
   - "ClientNetLibInfo class"
 ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ClientNetLibInfo Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -25,6 +25,5 @@ ms.author: "carlrab"
  The client network library file lets the client instance communicate over a network with an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using a specific network protocol.  
   
 ## See Also  
- [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

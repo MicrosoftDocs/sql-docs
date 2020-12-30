@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: ronortloff
 ms.author: rortloff
-monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest"
 ---
 # CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -48,6 +48,7 @@ WITH
 [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]) 
 [;]
 ```
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments
 
@@ -79,7 +80,7 @@ SELECT COUNT(*)
 ```
 
 *WLM_CONTEXT*  
-Specifies the session context value that a request can be classified against.  context is an optional parameter of type nvarchar(255).  Use the [sys.sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest) with the variable name equal to `wlm_context` prior to submitting a request to set the session context.
+Specifies the session context value that a request can be classified against.  context is an optional parameter of type nvarchar(255).  Use the [sys.sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest&preserve-view=true) with the variable name equal to `wlm_context` prior to submitting a request to set the session context.
 
 Example:
 
@@ -174,7 +175,7 @@ CREATE WORKLOAD CLASSIFIER wgcELTRole
 
 ## See Also
 
-[SQL Data Warehouse Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)</br>
+[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)</br>
 [DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)</br>
 [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)</br>
 [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)

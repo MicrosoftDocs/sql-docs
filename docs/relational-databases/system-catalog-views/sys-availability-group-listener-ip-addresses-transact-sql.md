@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], listeners"
   - "sys.availability_group_listener_ip_addresses catalog view"
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.availability_group_listener_ip_addresses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -5,8 +5,8 @@ ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: failover-cluster-instance
+ms.topic: how-to
 helpviewer_keywords: 
   - "user accounts [SQL Server], failover clustering"
   - "clusters [SQL Server], maintaining"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "removing nodes"
   - "virtual servers [SQL Server], adding nodes"
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Failover Cluster Instance Administration and Maintenance
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

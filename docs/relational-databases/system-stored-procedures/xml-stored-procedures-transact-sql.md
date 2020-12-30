@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server], XML"
   - "XML [SQL Server], system stored procedures"
 ms.assetid: 11c84ddb-662b-43a6-9625-9eaa589f0966
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # XML Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

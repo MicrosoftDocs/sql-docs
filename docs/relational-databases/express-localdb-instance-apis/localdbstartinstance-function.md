@@ -14,8 +14,8 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # LocalDBStartInstance Function
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

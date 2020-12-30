@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # INDEXPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 INDEXPROPERTY ( object_ID , index_or_statistics_name , property )   
 ```  
   
@@ -79,7 +79,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 ## Examples  
  The following example returns the values for the **IsClustered**, **IndexDepth**, and **IndexFillFactor** properties for the `PK_Employee_BusinessEntityID` index of the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT   
     INDEXPROPERTY(OBJECT_ID('HumanResources.Employee'),  
         'PK_Employee_BusinessEntityID','IsClustered')AS [Is Clustered],  
@@ -103,7 +103,7 @@ Is Clustered Index Depth Fill Factor
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example examines the properties of one of the indexes on the `FactResellerSales` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT   

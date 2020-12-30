@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sp_fulltext_service"
   - "Full-Text Search Upgrade Option"
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_fulltext_service (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

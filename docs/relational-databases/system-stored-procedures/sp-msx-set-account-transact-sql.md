@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_msx_set_account"
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_msx_set_account (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

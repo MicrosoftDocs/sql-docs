@@ -14,8 +14,8 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # LocalDBUnshareInstance Function
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

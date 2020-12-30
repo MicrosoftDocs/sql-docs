@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
 author: MightyPen
 ms.author: genemi
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVOKE XML Schema Collection Permissions (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -29,7 +29,6 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
 ## Syntax  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON   
     XML SCHEMA COLLECTION :: [ schema_name . ]  
     XML_schema_collection_name  
@@ -121,7 +120,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## Examples  
  The following example revokes `EXECUTE` permission on the XML schema collection `Invoices4` from the user `Wanida`. The XML schema collection `Invoices4` is located inside the `Sales` schema of the `AdventureWorks2012` database.  
   
- ```
+ ```sql
  USE AdventureWorks2012;  
  REVOKE EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 FROM Wanida;  
  GO

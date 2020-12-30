@@ -2,7 +2,7 @@
 title: "Connecting using ODBC"
 description: "Learn how to create a connection to a database from Linux or macOS using the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
-ms.date: 09/01/2020
+ms.date: 09/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -61,6 +61,8 @@ To connect to a named instance on a static port, use <b>Server=</b>*servername*,
 Alternatively, you can add the DSN information to a template file, and execute the following command to add it to `~/.odbc.ini` :
  - **odbcinst -i -s -f** _template_file_  
 
+For complete documentation on ini files and `odbcinst`, see the [unixODBC documention](http://www.unixodbc.org/odbcinst.html). For entries in the `odbc.ini` file specific to the ODBC Driver for SQL Server, see [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) for ones supported on Linux and macOS.
+
 You can verify that your driver is working by using `isql` to test the connection, or you can use this command:
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
@@ -70,7 +72,7 @@ You can use Transport Layer Security (TLS), previously known as Secure Sockets L
 
 Enabling encryption increases security at the expense of performance.
 
-For more information, see [Encrypting Connections to SQL Server](https://go.microsoft.com/fwlink/?LinkId=220900) and [Using Encryption Without Validation](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
+For more information, see [Encrypting Connections to SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)) and [Using Encryption Without Validation](../../../relational-databases/native-client/features/using-encryption-without-validation.md).
 
 Regardless of the settings for **Encrypt** and **TrustServerCertificate**, the server login credentials (user name and password) are always encrypted. The following table shows the effect of the **Encrypt** and **TrustServerCertificate** settings.  
 

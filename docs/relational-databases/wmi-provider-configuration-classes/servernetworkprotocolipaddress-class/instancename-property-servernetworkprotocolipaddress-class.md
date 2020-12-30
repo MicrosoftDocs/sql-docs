@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "InstanceName property"
 ms.assetid: e23e2b64-2a74-474f-a425-39ca439ac37a
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # InstanceName Property (ServerNetworkProtocolIPAddress Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

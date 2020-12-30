@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_resetsnapshotdeliveryprogress"
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_start_job"
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

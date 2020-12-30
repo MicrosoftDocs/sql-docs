@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Insert Surround-with Transact-SQL snippets
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Inserting Surround-with Snippets  
  Surround-with snippets can be launched by one of three ways: through a keyboard shortcut, through the **Edit** menu, and through the context menu.  
   
- After inserting the snippet, you must change the replacement text to form a valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. For more information, see [Complete Transact-SQL Snippets](../../relational-databases/scripting/complete-transact-sql-snippets.md).  
+ After inserting the snippet, you must change the replacement text to form a valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. For more information, see [Complete Transact-SQL Snippets](./complete-transact-sql-snippets.md).  
   
 #### To insert a surround-with snippet  
   
@@ -41,6 +41,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Select the name of the snippet (BEGIN, IF, or WHILE) from the list either by using the mouse, or by typing the name of the snippet and pressing TAB or ENTER.  
   
 ## See Also  
- [Insert Transact-SQL Snippets](../../relational-databases/scripting/insert-transact-sql-snippets.md)  
-  
+ [Insert Transact-SQL Snippets](./insert-transact-sql-snippets.md)  
   

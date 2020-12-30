@@ -27,7 +27,7 @@ ms.author: v-daenge
  [Data Access Blog](https://techcommunity.microsoft.com/t5/sql-server/bg-p/SQLServer/label-name/SQLServerDrivers)  
  This blog site provides information about data access technologies and allows you to interact directly with members of the product team.  
   
- [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  
+ [Windows Data Access Components](/previous-versions/windows/desktop/ms692897(v=vs.85))  
  This site contains the latest Windows Data Access Components (Windows DAC) SDK documentation. Windows DAC is the version of the data access components (called MDAC in earlier versions) that is included in Windows Vista and Windows Server 2008.  
   
  The Window DAC SDK includes documentation for ActiveX Data Objects (ADO), OLE DB, and Open Database Connectivity (ODBC).  
@@ -35,5 +35,4 @@ ms.author: v-daenge
 
 ## See Also  
  [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)  
-  
   

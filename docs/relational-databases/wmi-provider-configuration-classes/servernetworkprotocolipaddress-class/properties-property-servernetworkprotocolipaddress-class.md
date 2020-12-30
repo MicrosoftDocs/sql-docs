@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "Properties property"
 ms.assetid: 7de217be-50fe-463e-af44-fdd6b79a7045
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Properties Property (ServerNetworkProtocolIPAddress Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

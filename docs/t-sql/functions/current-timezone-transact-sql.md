@@ -38,7 +38,7 @@ This function returns the name of the time zone observed by a server or an insta
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CURRENT_TIMEZONE ( )  
 ```
   
@@ -67,6 +67,6 @@ SELECT CURRENT_TIMEZONE();
   
 ## See also
 
-[SQL Managed Instance Time Zone](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[SQL Managed Instance Time Zone](/azure/sql-database/sql-database-managed-instance-timezone)
 
-[CURRENT_TIMEZONE_ID()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-id-transact-sql)
+[CURRENT_TIMEZONE_ID()](./current-timezone-id-transact-sql.md)

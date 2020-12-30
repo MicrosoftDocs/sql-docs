@@ -11,7 +11,7 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Configure Editors (SQL Server Management Studio)
@@ -37,7 +37,7 @@ You can customize the operation of the [!INCLUDE[ssManStudioFull](../../includes
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to specify that an editor be opened by double-clicking on a file with a specified extension in Windows Explorer.|[Associate File Extensions to a Code Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)|  
-|Describes how to customize fonts to make code and text more readable.|[Change Font Color, Size, and Style](../../relational-databases/scripting/change-font-color-size-and-style.md)|  
-|Describes how to view properties.|[Use the Properties Window in Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)|  
-|Location of the F1 help pages for the editor options dialogs.|[Query Options Pages F1 Help](https://docs.microsoft.com/sql/ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio)|
+|Describes how to specify that an editor be opened by double-clicking on a file with a specified extension in Windows Explorer.|[Associate File Extensions to a Code Editor](./associate-file-extensions-to-a-code-editor.md)|  
+|Describes how to customize fonts to make code and text more readable.|[Change Font Color, Size, and Style](./change-font-color-size-and-style.md)|  
+|Describes how to view properties.|[Use the Properties Window in Management Studio](./use-the-properties-window-in-management-studio.md)|  
+|Location of the F1 help pages for the editor options dialogs.|[Query Options Pages F1 Help](../f1-help/f1-help-for-server-connections-sql-server-management-studio.md)|

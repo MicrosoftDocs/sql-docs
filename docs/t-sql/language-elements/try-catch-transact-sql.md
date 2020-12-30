@@ -29,7 +29,7 @@ helpviewer_keywords:
 ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
 author: rothja
 ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRY...CATCH (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -135,7 +135,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- The ERROR\_\* functions also work in a `CATCH` block inside a [natively compiled stored procedure](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ The ERROR\_\* functions also work in a `CATCH` block inside a [natively compiled stored procedure](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).  
   
 ## Errors Unaffected by a TRY...CATCH Construct  
  TRY...CATCH constructs do not trap the following conditions:  
@@ -313,7 +313,8 @@ BEGIN CATCH
         ROLLBACK TRANSACTION;  
     END;  
   
-    -- Test whether the transaction is committable.  
+    -- Test whether the transaction is committable.
+    -- You may want to commit a transaction in a catch block if you want to commit changes to statements that ran prior to the error.
     IF (XACT_STATE()) = 1  
     BEGIN  
         PRINT  
@@ -362,5 +363,3 @@ GO
  [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)   
  [SET XACT_ABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
-  
-

@@ -35,7 +35,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@PROCID  
 ```  
   
@@ -47,18 +47,18 @@ ms.author: vanto
 ## Examples  
  The following example uses `@@PROCID` as the input parameter in the `OBJECT_NAME` function to return the name of the stored procedure in the `RAISERROR` message.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'usp_FindName', 'P' ) IS NOT NULL   
 DROP PROCEDURE usp_FindName;  
 GO  
 CREATE PROCEDURE usp_FindName  
-    @lastname varchar(40) = '%',   
-    @firstname varchar(20) = '%'  
+    @lastname VARCHAR(40) = '%',   
+    @firstname VARCHAR(20) = '%'  
 AS  
-DECLARE @Count int;  
-DECLARE @ProcName nvarchar(128);  
+DECLARE @Count INT;  
+DECLARE @ProcName NVARCHAR(128);  
 SELECT LastName, FirstName  
 FROM Person.Person   
 WHERE FirstName LIKE @firstname AND LastName LIKE @lastname;  

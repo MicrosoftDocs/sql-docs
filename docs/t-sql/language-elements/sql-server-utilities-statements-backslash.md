@@ -40,7 +40,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql  
 <first section of string> \  
 <continued section of string>  
 ```  
@@ -63,10 +63,9 @@ This command returns the first and continued sections of the string as one strin
 
 The following example uses a backslash and a carriage return to split a character string into two lines.  
   
-```  
+```sql  
 SELECT 'abc\  
 def' AS [ColumnResult];  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -81,10 +80,9 @@ def' AS [ColumnResult];
 
 The following example uses a backslash and a carriage return to split a binary string into two lines.  
 
-```  
+```sql  
 SELECT 0xabc\
 def AS [ColumnResult];  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

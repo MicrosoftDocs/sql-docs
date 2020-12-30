@@ -43,9 +43,8 @@ ms.author: sawinark
   
 -   Create a new knowledge base using the default knowledge base. To create a knowledge base from an existing knowledge base, see [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md).  
   
--   Use it in the [DQS Cleansing component in Integration Services](https://go.microsoft.com/fwlink/?LinkId=238830) and [Master Data Services Add-in for Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
+-   Use it in the [DQS Cleansing component in Integration Services](/previous-versions/sql/sql-server-2012/ee677619(v=sql.110)) and [Master Data Services Add-in for Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
   
 ## See Also  
  [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
-  
   

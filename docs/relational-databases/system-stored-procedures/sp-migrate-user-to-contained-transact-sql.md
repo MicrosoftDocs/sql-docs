@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_migrate_user_to_contained"
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

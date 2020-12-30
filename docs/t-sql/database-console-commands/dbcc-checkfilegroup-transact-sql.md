@@ -35,7 +35,6 @@ Checks the allocation and structural integrity of all tables and indexed views i
 ## Syntax  
   
 ```syntaxsql
-  
 DBCC CHECKFILEGROUP   
 [  
     [ ( { filegroup_name | filegroup_id | 0 }   
@@ -150,7 +149,7 @@ DBCC CHECKFILEGROUP returns the following result set (values may vary):
 -   Except when ESTIMATEONLY or NO_INFOMSGS is specified.  
 -   For the current database, if no database is specified, whether or not any options (except NOINDEX) are specified.  
   
-```sql
+```
 DBCC results for 'master'.  
 DBCC results for 'sys.sysrowsetcolumns'.  
 There are 630 rows in 7 pages for object 'sys.sysrowsetcolumns'.  
@@ -168,12 +167,12 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 If NO_INFOMSGS is specified, DBCC CHECKFILEGROUP returns:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
  If ESTIMATEONLY is specified, DBCC CHECKFILEGROUP returns (values may vary):  
 
-```sql
+```
 Estimated TEMPDB space needed for CHECKALLOC (KB)
 -------------------------------------------------   
 15  
@@ -196,8 +195,7 @@ Requires membership in the **sysadmin** fixed server role or the **db_owner** fi
 ### A. Checking the PRIMARY filegroup in the a database  
 The following example checks the primary filegroup of the current database.
   
-```sql  
-  
+```sql
 DBCC CHECKFILEGROUP;  
 GO  
 ```  
@@ -205,7 +203,7 @@ GO
 ### B. Checking the AdventureWorks PRIMARY filegroup without nonclustered indexes  
 The following example checks the `AdventureWorks2012` database primary filegroup (excluding nonclustered indexes) by specifying the identification number of the primary filegroup, and by specifying `NOINDEX`.
   
-```sql  
+```sql
 USE AdventureWorks2012;  
 GO  
 DBCC CHECKFILEGROUP (1, NOINDEX);  
@@ -215,7 +213,7 @@ GO
 ### C. Checking the PRIMARY filegroup with options  
 The following example checks the `master` database primary filegroup and specifies the option `ESTIMATEONLY`.
   
-```sql  
+```sql
 USE master;  
 GO  
 DBCC CHECKFILEGROUP (1)  

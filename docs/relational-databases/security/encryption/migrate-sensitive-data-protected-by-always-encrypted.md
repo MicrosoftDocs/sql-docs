@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk load encrypted data to columns using Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ To load encrypted data without performing metadata checks on the server during b
 ## Data Migration Scenarios  
 The following table shows the recommended settings appropriate for several migration scenarios.  
  
-![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
+![Screenshot of a table showing the recommended settings appropriate for several migration scenarios.](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
 
 ## Bulk Loading of Encrypted Data  
 Use the following process to load encrypted data.  

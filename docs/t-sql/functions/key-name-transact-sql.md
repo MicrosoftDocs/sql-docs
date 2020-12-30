@@ -28,8 +28,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 KEY_NAME ( ciphertext | key_guid )   
 ```  
   
@@ -53,7 +52,7 @@ KEY_NAME ( ciphertext | key_guid )
 ### A. Displaying the name of a symmetric key using the key_guid  
  The **master** database contains a symmetric key named ##MS_ServiceMasterKey##. The following example gets the GUID of that key from the sys.symmetric_keys dynamic management view, assigns it to a variable, and then passes that variable to the KEY_NAME function to demonstrate how to return the name that corresponds to the GUID.  
   
-```  
+```sql  
 USE master;  
 GO  
 DECLARE @guid uniqueidentifier ;  
@@ -66,7 +65,7 @@ SELECT KEY_NAME(@guid) AS [Name of Key];
 ### B. Displaying the name of a symmetric key using the cipher text  
  The following example demonstrates the entire process of creating a symmetric key and populating data into a table. The example then shows how KEY_NAME returns the name of the key when passed the encrypted text.  
   
-```  
+```sql 
 -- Create a symmetric key  
 CREATE SYMMETRIC KEY TestSymKey   
    WITH ALGORITHM = AES_128,  
@@ -76,8 +75,8 @@ CREATE SYMMETRIC KEY TestSymKey
 GO  
 -- Create a table for the demonstration  
 CREATE TABLE DemoKey  
-(IDCol int IDENTITY PRIMARY KEY,  
-SecretCol varbinary(256) NOT NULL)  
+(IDCol INT IDENTITY PRIMARY KEY,  
+SecretCol VARBINARY(256) NOT NULL)  
 GO  
 -- Open the symmetric key if not already open  
 OPEN SYMMETRIC KEY TestSymKey   
@@ -94,15 +93,14 @@ GO
 SELECT * FROM DemoKey;  
 GO  
 -- Decrypt the data  
-DECLARE @ciphertext varbinary(256);  
+DECLARE @ciphertext VARBINARY(256);  
 SELECT @ciphertext = SecretCol  
 FROM DemoKey WHERE IDCol = 1 ;  
 SELECT CAST (  
 DECRYPTBYKEY( @ciphertext)  
-AS varchar(100) ) AS SecretText ;  
+AS VARCHAR(100) ) AS SecretText ;  
 -- Use KEY_NAME to view the name of the key  
 SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;  
-  
 ```  
   
 ## See Also  

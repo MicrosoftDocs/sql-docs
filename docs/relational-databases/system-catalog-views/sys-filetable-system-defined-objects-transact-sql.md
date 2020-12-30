@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.filetable_system_defined_objects catalog view"
 ms.assetid: 62022e6b-46f6-495f-b14b-53f41e040361
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.filetable_system_defined_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

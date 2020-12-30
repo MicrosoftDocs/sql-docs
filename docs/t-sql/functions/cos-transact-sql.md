@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: c9fa8ae1-3373-4f3e-9b97-fa05077c1040
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,15 +47,15 @@ An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of ty
 This example returns the `COS` value of the specified angle:
   
 ```sql
-DECLARE @angle float;  
+  DECLARE @angle FLOAT;  
 SET @angle = 14.78;  
-SELECT 'The COS of the angle is: ' + CONVERT(varchar,COS(@angle));  
+SELECT 'The COS of the angle is: ' + CONVERT(VARCHAR,COS(@angle));  
 GO  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 The COS of the angle is: -0.599465                        
   
 (1 row(s) affected)  

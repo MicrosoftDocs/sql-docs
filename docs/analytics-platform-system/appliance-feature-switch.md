@@ -8,7 +8,7 @@ ms.topic: "conceptual"
 ms.date: "06/27/2018"
 ms.author: "murshedz"
 ms.reviewer: "martinle"
-monikerRange: ">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016-au7"
 ---
 
 # Appliance Feature Switches

@@ -7,12 +7,13 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.design.table.scriptpanel"
   - "sql.data.tools.design.table.context.view"
+  - "Microsoft.Data.Relational.Design.PW.RelationshipsDescriptor.OnDelete"
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
-ms.date: 02/09/2017
+ms.date: 02/09/2017 
 ---
 
 # How to: Create Database Objects Using Table Designer

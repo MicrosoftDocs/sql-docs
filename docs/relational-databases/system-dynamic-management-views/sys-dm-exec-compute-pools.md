@@ -17,9 +17,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_compute_pools dynamic management view"
 ms.assetid: 
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-2017"
 ---
 # sys.dm_exec_compute_pools (Transact-SQL)
 [!INCLUDE[sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]

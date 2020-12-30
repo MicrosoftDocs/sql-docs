@@ -23,7 +23,7 @@ ms.author: v-daenge
   Large data can be bound or retrieved using the **ISequentialStream** interface. For bound columns, the status flag DBSTATUS_S_TRUNCATED indicates that the data is truncated.  
   
 > [!IMPORTANT]  
->  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference).  
   
 ### To fetch columns using IRow::GetColumns (or IRow::Open) and ISequentialStream  
   
@@ -669,5 +669,4 @@ GO
   
 ## See Also  
  [OLE DB How-to Topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

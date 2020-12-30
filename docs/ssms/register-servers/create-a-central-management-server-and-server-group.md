@@ -60,7 +60,7 @@ This topic describes how to designate an instance of [!INCLUDE[ssNoVersion](../.
   
 4.  In **Registered Server**, enter a server name and optional description.  
   
-5.  From the **Connection Properties** tab, review or modify the network  and connection properties. For more information, see [Connect to Server &#40;Connection Properties Page&#41; Database Engine](https://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)  
+5.  From the **Connection Properties** tab, review or modify the network  and connection properties. For more information, see [Connect to Server &#40;Connection Properties Page&#41; Database Engine](../f1-help/connect-to-server-connection-properties-page-database-engine.md)  
   
 6.  Click **Test**, to test the connection.  
   
@@ -74,13 +74,12 @@ This topic describes how to designate an instance of [!INCLUDE[ssNoVersion](../.
   
 3.  From **Registered Servers**, right-click the server group and click **New Server Registration**.  
   
-4.  From New Server Registration, select an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Create a New Registered Server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md). Add more servers as appropriate.  
+4.  From New Server Registration, select an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Create a New Registered Server &#40;SQL Server Management Studio&#41;](./create-a-new-registered-server-sql-server-management-studio.md). Add more servers as appropriate.  
   
 #### To execute queries against several configuration targets at the same time  
   
--   After you create a central management server, one or more server groups, and one or more registered servers, you can execute queries against a whole group at the same time. For more information about how to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements on the servers in a server group at the same time, see [Execute Statements Against Multiple Servers Simultaneously &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md).  
+-   After you create a central management server, one or more server groups, and one or more registered servers, you can execute queries against a whole group at the same time. For more information about how to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements on the servers in a server group at the same time, see [Execute Statements Against Multiple Servers Simultaneously &#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md).  
   
 ## See Also  
  [Administer Multiple Servers Using Central Management Servers](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
-  
   

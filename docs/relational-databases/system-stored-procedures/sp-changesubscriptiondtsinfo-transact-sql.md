@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changesubscriptiondtsinfo"
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

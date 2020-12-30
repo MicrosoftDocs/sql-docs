@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_droparticle"
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_droparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

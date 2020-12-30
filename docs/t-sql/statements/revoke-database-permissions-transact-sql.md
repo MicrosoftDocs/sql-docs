@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 442acfc6-af97-40a3-b546-91cd485ee2be
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVOKE Database Permissions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ]    
     { TO | FROM } <database_principal> [ ,...n ]   
         [ CASCADE ]  
@@ -207,7 +206,7 @@ permission | ALL [ PRIVILEGES ]
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE CREATE CERTIFICATE FROM MelanieK;  
 GO  
@@ -218,7 +217,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE REFERENCES FROM AuditMonitor;  
 GO  
@@ -227,7 +226,7 @@ GO
 ### C. Revoking VIEW DEFINITION with CASCADE  
  The following example revokes `VIEW DEFINITION` permission on the `AdventureWorks2012` database from user `CarmineEs` and from all principals to which `CarmineEs` has granted `VIEW DEFINITION` permission.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE VIEW DEFINITION FROM CarmineEs CASCADE;  
 GO  

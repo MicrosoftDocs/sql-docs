@@ -35,6 +35,5 @@ ms.author: sawinark
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to create a user and grant DQS roles using SQL Server Management Studio.|[Manage DQS Users in SSMS](https://msdn.microsoft.com/library/955af01d-00da-4c51-9311-f3848749df54)|  
-  
+|Describes how to create a user and grant DQS roles using SQL Server Management Studio.|[Manage DQS Users in SSMS](./data-quality-services-features-and-tasks.md)|  
   

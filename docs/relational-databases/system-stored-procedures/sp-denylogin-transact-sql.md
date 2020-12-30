@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_denylogin"
 ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_denylogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

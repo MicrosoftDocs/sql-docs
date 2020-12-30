@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpuser"
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpuser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

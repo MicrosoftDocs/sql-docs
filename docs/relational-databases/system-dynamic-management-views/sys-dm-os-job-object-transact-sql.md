@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 # sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -52,5 +52,4 @@ On SQL Database, requires the `VIEW DATABASE STATE` permission in the database.
  
 ## See Also  
 
-For information on Managed Instances, see [SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
-  
+For information on Managed Instances, see [SQL Managed Instance](/azure/sql-database/sql-database-managed-instance).

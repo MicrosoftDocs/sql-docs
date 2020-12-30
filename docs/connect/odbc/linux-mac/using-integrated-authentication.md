@@ -122,7 +122,7 @@ The time on the Linux or macOS computer and the time on the Kerberos Key Distrib
 
 If Kerberos authentication fails, the ODBC driver on Linux or macOS does not use NTLM authentication.  
 
-For more information about authenticating Linux or macOS computers with Active Directory, see [Authenticate Linux Clients with Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048). For more information about configuring Kerberos, see the [MIT Kerberos Documentation](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+For more information about authenticating Linux or macOS computers with Active Directory, see [Authenticate Linux Clients with Active Directory](/previous-versions/technet-magazine/dd228986(v=msdn.10)#id0060048). For more information about configuring Kerberos, see the [MIT Kerberos Documentation](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## See Also  
 [Programming Guidelines](programming-guidelines.md)

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Wait Statistics object"
   - "SQLServer:Wait Statistics"
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Wait Statistics Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

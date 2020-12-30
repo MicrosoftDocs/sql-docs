@@ -24,7 +24,7 @@ ms.author: vanto
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Date/time when the auditable action is fired.|**datetime2**|Yes|  
 |**sequence_no**|Tracks the sequence of records within a single audit record that was too large to fit in the write buffer for audits.|**int**|Yes|  
-|**action_id**|ID of the action<br /><br /> Tip: To use **action_id** as a predicate it must be converted from a character string to a numeric value. For more information, see [Filter SQL Server Audit on action_id / class_type predicate](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate).|**varchar(4)**|Yes|  
+|**action_id**|ID of the action<br /><br /> Tip: To use **action_id** as a predicate it must be converted from a character string to a numeric value. For more information, see [Filter SQL Server Audit on action_id / class_type predicate](/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate).|**varchar(4)**|Yes|  
 |**succeeded**|Indicates whether or not the permission check of the action triggering the audit event succeeded or failed. |**bit**<br /> - 1 = Success, <br />0 = Fail|Yes|  
 |**permission_bitmask**|When applicable, shows the permissions that were granted, denied, or revoked|**bigint**|No|  
 |**is_column_permission**|Flag indicating a column level permission|**bit** <br />- 1 = True, <br />0 = False|No|  
@@ -104,5 +104,4 @@ ms.author: vanto
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)  
   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
-  
   

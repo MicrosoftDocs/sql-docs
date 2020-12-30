@@ -39,7 +39,6 @@ ms.author: jroth
 ## Syntax  
   
 ```syntaxsql
-  
 BEGIN DISTRIBUTED { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable ]   
 [ ; ]  
@@ -82,7 +81,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
 > [!NOTE]  
 >  Unless MS DTC is currently installed on the computer running the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], this example produces an error message. For more information about installing MS DTC, see the Microsoft Distributed Transaction Coordinator documentation.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BEGIN DISTRIBUTED TRANSACTION;  

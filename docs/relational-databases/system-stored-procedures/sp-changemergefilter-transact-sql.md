@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changemergefilter"
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_changemergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

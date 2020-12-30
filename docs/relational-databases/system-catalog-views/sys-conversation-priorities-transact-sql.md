@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Service Broker, conversations"
   - "sys.conversation_priorities catalog view"
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.conversation_priorities (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

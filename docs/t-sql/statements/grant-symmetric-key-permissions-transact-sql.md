@@ -31,7 +31,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 GRANT permission [ ,...n ]    
     ON SYMMETRIC KEY :: symmetric_key_name   
     TO <database_principal> [ ,...n ] [ WITH GRANT OPTION ]  
@@ -126,7 +125,7 @@ GRANT permission [ ,...n ]
 ## Examples  
  The following example grants `ALTER` permission on the symmetric key `SamInventory42` to the database user `HamidS`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GRANT ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS;  
 GO  

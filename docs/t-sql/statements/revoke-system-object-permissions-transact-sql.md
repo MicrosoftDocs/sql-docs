@@ -27,7 +27,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal   
 ```  
   
@@ -63,7 +62,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
 ## Examples  
  The following example revokes `EXECUTE` permission on `sp_addlinkedserver` from `public`.  
   
-```  
+```sql  
 REVOKE EXECUTE ON sys.sp_addlinkedserver FROM public;  
 GO  
 ```  

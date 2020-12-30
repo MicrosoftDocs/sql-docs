@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_batch_params"
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_batch_params (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -75,7 +75,6 @@ EXECUTE sp_batch_params @SQLString;
   
 ## See Also  
  [Running Stored Procedures](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [Running Stored Procedures How-to Topics &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
+ [Running Stored Procedures How-to Topics &#40;ODBC&#41;](../native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)   
  [Running Stored Procedures &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
-  
   

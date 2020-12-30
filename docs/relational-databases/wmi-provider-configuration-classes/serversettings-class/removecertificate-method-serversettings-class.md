@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "RemoveCertificate method"
 ms.assetid: 9ffdbc39-93f5-48fb-859a-86a3ad545827
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # RemoveCertificate Method (ServerSettings Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

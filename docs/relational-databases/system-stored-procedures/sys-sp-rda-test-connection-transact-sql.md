@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_test_connection stored procedure"
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_rda_test_connection (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

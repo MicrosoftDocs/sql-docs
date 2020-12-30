@@ -18,9 +18,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_wait_stats dynamic management view"
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ Returns information about all the waits encountered by threads that executed. Yo
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the `Server admin` or an `Azure Active Directory admin` account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
 
 ##  <a name="WaitTypes"></a> Types of Waits  
  **Resource waits** occur when a worker requests access to a resource that is not available because the resource is being used by some other worker or is not yet available. Examples of resource waits are locks, latches, network and disk I/O waits. Lock and latch waits are waits on synchronization objects  
@@ -130,7 +130,7 @@ This command resets all counters to 0.
 |BROKER_TRANSMISSION_OBJECT |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |BROKER_TRANSMISSION_TABLE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |BROKER_TRANSMISSION_WORK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|BROKER_TRANSMITTER |Occurs when the Service Broker transmitter is waiting for work. Service Broker has a component known as the Transmitter which schedules messages from multiple dialogs to be sent across the wire over one or more connection endpoints. The transmitter has 2 dedicated threads for this purpose. This wait type is charged when these transmitter threads are waiting for dialog messages to be sent using the transport connections. High values of waiting_tasks_count for this wait type point to intermittent work for these transmitter threads and are not indications of any performance problem. If service broker is not used at all, waiting_tasks_count should be 2 (for the 2 transmitter threads) and wait_time_ms should be twice the duration since instance startup. See [Service broker wait stats](https://blogs.msdn.microsoft.com/sql_service_broker/2008/12/01/service-broker-wait-types).|
+|BROKER_TRANSMITTER |Occurs when the Service Broker transmitter is waiting for work. Service Broker has a component known as the Transmitter which schedules messages from multiple dialogs to be sent across the wire over one or more connection endpoints. The transmitter has 2 dedicated threads for this purpose. This wait type is charged when these transmitter threads are waiting for dialog messages to be sent using the transport connections. High values of waiting_tasks_count for this wait type point to intermittent work for these transmitter threads and are not indications of any performance problem. If service broker is not used at all, waiting_tasks_count should be 2 (for the 2 transmitter threads) and wait_time_ms should be twice the duration since instance startup. See [Service broker wait stats](/archive/blogs/sql_service_broker/service-broker-wait-types).|
 |BUILTIN_HASHKEY_MUTEX |May occur after startup of instance, while internal data structures are initializing. Will not recur once data structures have initialized.| 
 |CHANGE_TRACKING_WAITFORCHANGES |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |CHECK_PRINT_RECORD |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
@@ -1025,5 +1025,4 @@ This command resets all counters to 0.
  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
  [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
-  
   

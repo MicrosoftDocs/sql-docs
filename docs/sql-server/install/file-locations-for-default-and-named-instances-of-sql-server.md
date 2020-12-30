@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # File Locations for Default and Named Instances of SQL Server
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -136,7 +136,6 @@ Note that the default drive for file locations is *systemdrive*, normally drive 
 >  Data files are always expected to be found in a child directory named Data. For example, specify C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<InstanceName>\ to specify the root path to the data directory of the system databases during upgrade when data files are found under C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<InstanceName>\MSSQL\Data.  
   
 ## See Also  
- [Database Engine Configuration - Data Directories](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   
- [Analysis Services Configuration - Data Directories](https://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb)  
-  
+ [Database Engine Configuration - Data Directories](../../database-engine/install-windows/install-sql-server.md)   
+ [Analysis Services Configuration - Data Directories](../../database-engine/install-windows/install-sql-server.md)  
   

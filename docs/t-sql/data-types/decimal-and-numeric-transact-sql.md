@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # decimal and numeric (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,8 +69,8 @@ The following example creates a table using the **decimal** and **numeric** data
 ```sql
 CREATE TABLE dbo.MyTable  
 (  
-  MyDecimalColumn decimal(5,2)  
-,MyNumericColumn numeric(10,5)
+  MyDecimalColumn DECIMAL(5,2)  
+,MyNumericColumn NUMERIC(10,5)
   
 );  
   

@@ -32,7 +32,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }   
     ON   
     { [ LOGIN :: SQL_Server_login ]  
@@ -114,7 +113,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ### A. Revoking IMPERSONATE permission on a login  
  The following example revokes `IMPERSONATE` permission on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `WanidaBenshoof` from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login created from the Windows user `AdvWorks\YoonM`.  
   
-```  
+```sql  
 USE master;  
 REVOKE IMPERSONATE ON LOGIN::WanidaBenshoof FROM [AdvWorks\YoonM];  
 GO  
@@ -123,7 +122,7 @@ GO
 ### B. Revoking VIEW DEFINITION permission with CASCADE  
  The following example revokes `VIEW DEFINITION` permission on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `EricKurjan` from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `RMeyyappan`. The `CASCADE` option indicates that `VIEW DEFINITION` permission on `EricKurjan` will also be revoked from the principals to which `RMeyyappan` granted this permission.  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON LOGIN::EricKurjan FROM RMeyyappan   
     CASCADE;  
@@ -133,7 +132,7 @@ GO
 ### C. Revoking VIEW DEFINITION permission on a server role  
  The following example revokes `VIEW DEFINITION` on the `Sales` server role to the `Auditors` server role.  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;  
 GO   

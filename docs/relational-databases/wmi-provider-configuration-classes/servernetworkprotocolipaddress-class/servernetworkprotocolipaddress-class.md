@@ -17,8 +17,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ServerNetworkProtocolIPAddress class"
 ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ServerNetworkProtocolIPAddress Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

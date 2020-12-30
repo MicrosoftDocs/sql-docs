@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_setsubscriptionxactseqno"
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -12,11 +12,11 @@ helpviewer_keywords:
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15"
 ---
 # Manage accelerated database recovery
 
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver2019.md)]
 
 ## Enabling and controlling ADR
 

@@ -12,7 +12,7 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
-monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016"
 ---
 # PolyBase Transact-SQL reference
 
@@ -115,7 +115,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## Create external tables for Azure blob storage  
-Applies to: SQL Server (starting with 2016), Azure SQL Data Warehouse, Parallel Data Warehouse
+Applies to: SQL Server (starting with 2016), Azure Synapse Analytics, Parallel Data Warehouse
 
 **1. Create Database Scoped Credential**  
 
@@ -190,9 +190,9 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## Create external tables for Azure Data Lake Store
-Applies to: Azure SQL Data Warehouse
+Applies to: Azure Synapse Analytics
 
-For more information, see [Load with Azure Data Lake Store](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
+For more information, see [Load with Azure Data Lake Store](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
 
 **1. Create Database Scoped Credential**   
 
@@ -561,5 +561,5 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 For examples of queries, see [PolyBase Queries](../../relational-databases/polybase/polybase-queries.md).  
   
 ## See Also  
-[Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+[Get started with PolyBase](./polybase-guide.md)   
 [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)

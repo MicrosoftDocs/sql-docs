@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdistributor system table"
 ms.assetid: 981e9903-0b4b-4508-ac6d-2ee4c813a3d0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSdistributor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

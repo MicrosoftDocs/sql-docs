@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "monitoring events [WMI]"
   - "events [WMI]"
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # WMI Provider for Server Events Concepts
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSlogreader_history system table"
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSlogreader_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

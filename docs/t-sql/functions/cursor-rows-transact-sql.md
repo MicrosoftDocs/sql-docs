@@ -31,7 +31,7 @@ This returns the number of qualifying rows currently in the last cursor opened o
   
 ## Syntax  
   
-```
+```syntaxsql
 @@CURSOR_ROWS  
 ```  
 

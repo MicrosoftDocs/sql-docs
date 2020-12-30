@@ -39,7 +39,7 @@ Connection resiliency applies when the connection is idle. Failures that occur w
 
 ## Example
 
-The following code connects to a database and executes a query. The connection is interrupted by killing the session and a new query is attempted using the broken connection. This example uses the [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx) sample database.
+The following code connects to a database and executes a query. The connection is interrupted by killing the session and a new query is attempted using the broken connection. This example uses the [AdventureWorks](/previous-versions/sql/sql-server-2008/ms124501(v=sql.100)) sample database.
 
 In this example, we specify a buffered cursor before breaking the connection. If we do not specify a buffered cursor, the connection would not be reestablished because there would be an active server-side cursor and thus the connection would not be idle when broken. However, in that case we could call sqlsrv_free_stmt() before breaking the connection to vacate the cursor, and the connection would be successfully reestablished.
 

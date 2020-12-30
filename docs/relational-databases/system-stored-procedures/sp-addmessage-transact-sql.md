@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addmessage"
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

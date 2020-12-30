@@ -124,7 +124,7 @@ The following table defines the default format and rules for loading literal val
 |Decimal literal|fffnn.fffn<br /><br />Example: 1234.5678|A value larger than 1 or less than 0 is converted to 1. For example, the values 123.45 and -123.45 are converted to 1.|  
   
 ### decimal Data Type  
-The following table defines the rules for loading literal values into a column of type **decimal** (*p,s*). Data conversion rules are the same as for SQL Server. For more information, see [Data Type Conversion (Database Engine)](https://go.microsoft.com/fwlink/?LinkId=202128) on MSDN.  
+The following table defines the rules for loading literal values into a column of type **decimal** (*p,s*). Data conversion rules are the same as for SQL Server. For more information, see [Data Type Conversion (Database Engine)](/previous-versions/sql/sql-server-2008-r2/ms191530(v=sql.105)) on MSDN.  
   
 |Input Data Type|Input Data Examples|  
 |-------------------|-----------------------|  
@@ -180,4 +180,3 @@ The following table defines the default format and rules for loading literal val
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 
 -->
-  

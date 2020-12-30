@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: "rothja"
 ms.author: "jroth"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Pages and Extents Architecture Guide
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -92,7 +92,7 @@ Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], the default for mo
 > [!NOTE]
 > Up to, and including, [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], trace flag 1118 can be used to change the default allocation to always use uniform extents. For more information about this trace flag, see [DBCC TRACEON - Trace Flags](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 >   
-> Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], the functionality provided by TF 1118 is automatically enabled for tempdb. For user databases, this behavior is controlled by the `SET MIXED_PAGE_ALLOCATION` option of `ALTER DATABASE`, with the default value set to OFF, and trace flag 1118 has no effect. For more information, see [ALTER DATABASE SET Options (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+> Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], the functionality provided by TF 1118 is automatically enabled for tempdb and all user databases. For user databases, this behavior is controlled by the `SET MIXED_PAGE_ALLOCATION` option of `ALTER DATABASE`, with the default value set to OFF, and trace flag 1118 has no effect. For more information, see [ALTER DATABASE SET Options (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the `sys.dm_db_database_page_allocations` system function can report page allocation information for a database, table, index, and partition.
 

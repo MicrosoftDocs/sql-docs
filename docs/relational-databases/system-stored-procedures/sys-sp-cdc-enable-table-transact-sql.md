@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sys.sp_cdc_enable_table"
   - "sp_cdc_enable_table"
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

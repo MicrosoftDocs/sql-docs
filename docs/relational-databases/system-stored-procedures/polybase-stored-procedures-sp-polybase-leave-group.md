@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_polybase_leave_group"
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_polybase_leave_group (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -51,7 +51,6 @@ EXEC sp_polybase_leave_group ;
 ```  
   
 ## See Also  
- [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [Get started with PolyBase](../polybase/polybase-guide.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

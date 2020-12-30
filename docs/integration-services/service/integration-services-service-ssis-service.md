@@ -362,16 +362,14 @@ When you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 
   
 6.  Restart the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service.  
   
-### Connecting by using a Local Account  
- If you are working in a local Windows account on a client computer, you can connect to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on a remote computer only if a local account that has the same name and password and the appropriate rights exists on the remote computer.  
+### Connecting by using a Local Account
+
+If you are working in a local Windows account on a client computer, you can connect to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on a remote computer only if a local account that has the same name and password and the appropriate rights exists on the remote computer.  
   
-### By default the SSIS service does not support delegation  
-By default the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service does not support the delegation of credentials, or what is sometimes referred to as a double hop. In this scenario, you are working on a client computer, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is running on a second computer, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running on a third computer. First, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] successfully passes your credentials from the client computer to the second computer on which the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is running. Then, however, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service cannot delegate your credentials from the second computer to the third computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running.
+### SSIS Windows service doesn't support delegation
 
-You can enable delegation of credentials by granting the **Trust this user for delegation to any service (Kerberos Only)** right to the SQL Server service account, which launches the Integration Services service (ISServerExec.exe) as a child process. Before you grant this right, consider whether it meets the security requirements of your organization.
+SSIS doesn't support the delegation of credentials, sometimes referred to as a double hop. In this scenario, you're working on a client computer, SSIS is installed on a second computer, and SQL Server is installed on a third computer. Although SSMS successfully passes your credentials from the client computer to the second computer (where SSIS is running), SSIS can't delegate your credentials from the second computer to the third computer (where SQL Server is running).
 
-For more info, see [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/).
- 
 ## Configure the firewall
   
  The Windows firewall system helps prevent unauthorized access to computer resources over a network connection. To access [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] through this firewall, you have to configure the firewall to enable access.  

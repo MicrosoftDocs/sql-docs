@@ -20,7 +20,7 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server is one technology that you can use to access data in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  For a discussion of the different data-access technologies, see [Data Access Technologies Road Map](https://go.microsoft.com/fwlink/?LinkID=179186)  
+  OLE DB Driver for SQL Server is one technology that you can use to access data in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  For a discussion of the different data-access technologies, see [Data Access Technologies Road Map](../connect-history.md)  
   
  When deciding whether to use OLE DB Driver for SQL Server as the data access technology of your application, you should consider several factors.  
   
@@ -37,5 +37,4 @@ ms.author: v-daenge
 ## See Also  
  [OLE DB Driver for SQL Server](oledb-driver-for-sql-server.md)  
  [OLE DB How-to Topics](ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

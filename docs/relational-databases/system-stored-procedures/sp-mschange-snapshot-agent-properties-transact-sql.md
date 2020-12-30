@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_MSchange_snapshot_agent_properties"
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

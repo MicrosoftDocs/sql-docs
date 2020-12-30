@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 OBJECTPROPERTYEX ( id , property )  
 ```  
   
@@ -172,7 +172,7 @@ OBJECTPROPERTYEX ( id , property )
 ## Remarks  
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] assumes that *object_id* is in the current database context. A query that references an *object_id* in another database will return NULL or incorrect results. For example, in the following query the current database context is the master database. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] will try to return the property value for the specified *object_id* in that database instead of the database that is specified in the query. The query returns incorrect results because the view `vEmployee` is not in the master database.  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID(N'AdventureWorks2012.HumanResources.vEmployee'), 'IsView');  
@@ -190,7 +190,7 @@ GO
 ### A. Finding the base type of an object  
  The following example creates a SYNONYM `MyEmployeeTable` for the `Employee` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database and then returns the base type of the SYNONYM.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE SYNONYM MyEmployeeTable FOR HumanResources.Employee;  
@@ -210,18 +210,17 @@ U
 ### B. Returning a property value  
  The following example returns the number of UPDATE triggers on the specified table.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID(N'HumanResources.Employee'), N'TABLEUPDATETRIGGERCOUNT');  
 GO  
-  
 ```  
   
 ### C. Finding tables that have a FOREIGN KEY constraint  
  The following example uses the `TableHasForeignKey` property to return all the tables that have a FOREIGN KEY constraint.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT name, object_id, schema_id, type_desc  
@@ -229,7 +228,6 @@ FROM sys.objects
 WHERE OBJECTPROPERTYEX(object_id, N'TableHasForeignKey') = 1  
 ORDER BY name;  
 GO  
-  
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -237,7 +235,7 @@ GO
 ### D: Finding the base type of an object  
  The following example returns the base type of `dbo.DimReseller` object.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OBJECTPROPERTYEX ( object_id(N'dbo.DimReseller'), N'BaseType')AS BaseType;  

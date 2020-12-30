@@ -67,7 +67,7 @@ Select the way you want to see tables in the designers:
   
 -   **Name Only**  
   
-    Shows only the table header with it's name.  
+    Shows only the table header with its name.  
   
 -   **Custom**  
   

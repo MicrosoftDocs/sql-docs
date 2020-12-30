@@ -132,7 +132,7 @@ AS *granting_principal*
 ### A. Granting permissions to a full-text catalog  
  The following example grants `Ted` the `CONTROL` permission on the full-text catalog `ProductCatalog`.  
   
-```  
+```sql  
 GRANT CONTROL  
     ON FULLTEXT CATALOG :: ProductCatalog  
     TO Ted ;  
@@ -141,7 +141,7 @@ GRANT CONTROL
 ### B. Granting permissions to a stoplist  
  The following example grants `Mary` the `VIEW DEFINITION` permission on the full-text stoplist `ProductStoplist`.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION  
     ON FULLTEXT STOPLIST :: ProductStoplist  
     TO Mary ;  

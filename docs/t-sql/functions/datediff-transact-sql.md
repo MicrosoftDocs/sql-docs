@@ -30,7 +30,7 @@ helpviewer_keywords:
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATEDIFF (Transact-SQL)
 
@@ -44,7 +44,7 @@ See [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-tra
   
 ## Syntax  
   
-```
+```syntaxsql
 DATEDIFF ( datepart , startdate , enddate )  
 ```  
   
@@ -165,8 +165,8 @@ SELECT DATEDIFF(day, startDate, endDate) AS 'Duration'
 In this example, user-defined variables serve as arguments for *startdate* and *enddate*.
   
 ```sql
-DECLARE @startdate datetime2 = '2007-05-05 12:10:09.3312722';  
-DECLARE @enddate   datetime2 = '2007-05-04 12:10:09.3312722';   
+DECLARE @startdate DATETIME2 = '2007-05-05 12:10:09.3312722';  
+DECLARE @enddate   DATETIME2 = '2007-05-04 12:10:09.3312722';   
 SELECT DATEDIFF(day, @startdate, @enddate);  
 ```  
   

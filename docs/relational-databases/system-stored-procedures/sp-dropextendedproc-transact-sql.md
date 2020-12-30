@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dropextendedproc"
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dropextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

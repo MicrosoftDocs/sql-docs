@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_create_plan_guide"
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_create_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

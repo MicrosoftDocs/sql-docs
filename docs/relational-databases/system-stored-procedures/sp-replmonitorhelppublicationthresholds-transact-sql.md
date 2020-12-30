@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replmonitorhelppublicationthresholds"
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

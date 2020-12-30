@@ -121,7 +121,7 @@ The following example checks the constraint integrity of the table `Table1` in t
 ```sql  
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE Table1 (Col1 int, Col2 char (30));  
+CREATE TABLE Table1 (Col1 INT, Col2 CHAR(30));  
 GO  
 INSERT INTO Table1 VALUES (100, 'Hello');  
 GO  

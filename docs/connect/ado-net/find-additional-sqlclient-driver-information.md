@@ -26,7 +26,7 @@ For more information about the Microsoft SqlClient Data Provider for SQL Server 
 |--------------|-----------------|  
 |[.NET Runtime GitHub Repository](https://github.com/dotnet/runtime)|This repo contains the library implementation for .NET Core.|
 |[Microsoft SqlClient Data Provider for SQL Server GitHub Repository](https://github.com/dotnet/SqlClient)|This repo contains the source code for the SqlClient driver.|  
-|[.NET API Browser](https://docs.microsoft.com/dotnet/api/)|This site contains .NET API information for the driver.|  
+|[.NET API Browser](/dotnet/api/)|This site contains .NET API information for the driver.|  
   
 ## Next steps
- [Overview of the SqlClient driver](overview-sqlclient-driver.md)  
+ [Overview of the SqlClient driver](overview-sqlclient-driver.md)

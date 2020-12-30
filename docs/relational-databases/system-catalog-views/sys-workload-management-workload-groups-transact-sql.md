@@ -12,7 +12,7 @@ dev_langs:
   - "TSQL"
 author: "ronortloff"
 ms.author: "rortloff"
-monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.workload_management_workload_groups (Transact-SQL)
 
@@ -41,4 +41,4 @@ Requires VIEW SERVER STATE permission.
 
 ## Next steps
 
- For a list of all the catalog views for SQL Data Warehouse and Parallel Data Warehouse, see [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). To create a workload group, see [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md). For more information on workload classification, see [Workload Isolation](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)
+ For a list of all the catalog views for Azure Synapse Analytics and Parallel Data Warehouse, see [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). To create a workload group, see [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md). For more information on workload classification, see [Workload Isolation](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)

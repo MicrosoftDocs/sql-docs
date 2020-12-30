@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Broker Event Category
 
@@ -40,6 +40,5 @@ The **Broker** event category contains general Service Broker events.
  Two security audit events are also provided for Service Broker. For more information on those events, see [Audit Broker Login Event Class](../../relational-databases/event-classes/audit-broker-login-event-class.md) and [Audit Broker Conversation Event Class](../../relational-databases/event-classes/audit-broker-conversation-event-class.md).  
   
 ## See Also  
- [Security Audit Event Category](https://docs.microsoft.com/analysis-services/trace-events/security-audit-event-category)  
-  
+ [Security Audit Event Category](/analysis-services/trace-events/security-audit-event-category)  
   

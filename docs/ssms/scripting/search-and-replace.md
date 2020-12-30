@@ -28,7 +28,7 @@ helpviewer_keywords:
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Search and Replace
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,10 +45,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Generally, you cannot search items with graphical views.  
   
 ## See Also  
- [Search an Active Document Incrementally](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
- [Search Documents Interactively](../../relational-databases/scripting/search-documents-interactively.md)   
- [Search Documents Using Results Lists](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [Search Text with Wildcards](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [Search Text with Regular Expressions](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [Search an Active Document Incrementally](./search-an-active-document-incrementally.md)   
+ [Search Documents Interactively](./search-documents-interactively.md)   
+ [Search Documents Using Results Lists](./search-documents-using-results-lists.md)   
+ [Search Text with Wildcards](./search-text-with-wildcards.md)   
+ [Search Text with Regular Expressions](./search-text-with-regular-expressions.md)  
   

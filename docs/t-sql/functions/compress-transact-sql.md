@@ -26,7 +26,7 @@ This function compresses the input expression, using the GZIP algorithm. The fun
   
 ## Syntax  
   
-```sql
+```syntaxsql
 COMPRESS ( expression )  
 ```  
   

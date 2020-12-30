@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: b57decda-b0c1-4ef6-8c81-491956de2890
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fetching BLOB Data Using IRow::GetColumns and ISequentialStream
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -83,6 +83,5 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 ```  
   
 ## See Also  
- [Fetching BLOB Data Using IRow](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
-  
+ [Fetching BLOB Data Using IRow](./fetching-a-single-row-with-irow.md)  
   

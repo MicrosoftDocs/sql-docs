@@ -37,7 +37,6 @@ ms.author: jroth
  ## Syntax  
   
 ```syntaxsql
-  
 SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }  
 [ ; ]  
 ```  
@@ -67,7 +66,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
 ## Examples  
  The following example shows how to use a transaction savepoint to roll back only the modifications made by a stored procedure if an active transaction is started before the stored procedure is executed.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  

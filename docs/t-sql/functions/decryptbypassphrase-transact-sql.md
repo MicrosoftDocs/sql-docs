@@ -31,7 +31,6 @@ This function decrypts data originally encrypted with a passphrase.
 ## Syntax  
   
 ```syntaxsql
-  
 DecryptByPassPhrase ( { 'passphrase' | @passphrase }   
     , { 'ciphertext' | @ciphertext }  
   [ , { add_authenticator | @add_authenticator }  
@@ -78,10 +77,10 @@ If an authenticator was included at the time of the ciphertext encryption, `DECR
 ## Examples  
 This example decrypts the record updated in [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md).  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 -- Get the passphrase from the user.  
-DECLARE @PassphraseEnteredByUser nvarchar(128);  
+DECLARE @PassphraseEnteredByUser NVARCHAR(128);  
 SET @PassphraseEnteredByUser   
 = 'A little learning is a dangerous thing!';  
   

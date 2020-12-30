@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "dynamic management objects [SQL Server], transactions"
 ms.assetid: 4db9f715-995e-4e71-9544-26eb59e9fae0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Transaction Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CREATE RESOURCE POOL"
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

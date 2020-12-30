@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Upgrade to a Different Edition of SQL Server (Setup)
 
@@ -84,6 +84,5 @@ setup.exe /q /ACTION=editionupgrade /InstanceName=MSSQLSERVER /PID=<appropriateP
 
 ## See Also  
  [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Backward Compatibility_deleted](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
-  
+ [Backward Compatibility_deleted](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))  
   

@@ -31,7 +31,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SCOPE_IDENTITY()  
 ```  
   
@@ -62,8 +62,8 @@ SCOPE_IDENTITY()
 USE tempdb;  
 GO  
 CREATE TABLE TZ (  
-   Z_id  int IDENTITY(1,1)PRIMARY KEY,  
-   Z_name varchar(20) NOT NULL);  
+   Z_id  INT IDENTITY(1,1)PRIMARY KEY,  
+   Z_name VARCHAR(20) NOT NULL);  
   
 INSERT TZ  
    VALUES ('Lisa'),('Mike'),('Carla');  
@@ -81,8 +81,8 @@ Z_id   Z_name
 ```  
 ```sql 
 CREATE TABLE TY (  
-   Y_id  int IDENTITY(100,5)PRIMARY KEY,  
-   Y_name varchar(20) NULL);  
+   Y_id  INT IDENTITY(100,5)PRIMARY KEY,  
+   Y_name VARCHAR(20) NULL);  
   
 INSERT TY (Y_name)  
    VALUES ('boathouse'), ('rocks'), ('elevator');  

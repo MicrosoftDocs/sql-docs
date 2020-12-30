@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_indexes catalog view"
 ms.assetid: 3408de72-b067-4fda-b5d5-8e856dfd9db3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.xml_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

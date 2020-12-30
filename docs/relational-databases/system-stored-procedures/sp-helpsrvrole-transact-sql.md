@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpsrvrole"
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpsrvrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

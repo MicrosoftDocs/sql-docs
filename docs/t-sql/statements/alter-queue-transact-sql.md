@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "unavailable queues [SQL Server]"
   - "activation stored procedures [Service Broker]"
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -70,7 +70,6 @@ WITH
 {  
    ( MAXDOP = max_degree_of_parallelism )  
 }  
-  
 ```  
   
 
@@ -174,14 +173,14 @@ Unlike REORGANIZE on user tables, REORGANIZE on a queue is always performed as a
 ### A. Making a queue unavailable  
  The following example makes the `ExpenseQueue` queue unavailable to receive messages.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH STATUS = OFF ;  
 ```  
   
 ### B. Changing the activation stored procedure  
  The following example changes the stored procedure that the queue starts. The stored procedure executes as the user who ran the `ALTER QUEUE` statement.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
         PROCEDURE_NAME = new_stored_proc,  
@@ -191,14 +190,14 @@ ALTER QUEUE ExpenseQueue
 ### C. Changing the number of queue readers  
  The following example sets to `7` the maximum number of stored procedure instances that [!INCLUDE[ssSB](../../includes/sssb-md.md)] starts for this queue.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  
 ```  
   
 ### D. Changing the activation stored procedure and the EXECUTE AS account  
  The following example changes the stored procedure that [!INCLUDE[ssSB](../../includes/sssb-md.md)] starts. The stored procedure executes as the user `SecurityAccount`.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
         PROCEDURE_NAME = AdventureWorks2012.dbo.new_stored_proc ,  
@@ -208,7 +207,7 @@ ALTER QUEUE ExpenseQueue
 ### E. Setting the queue to retain messages  
  The following example sets the queue to retain messages. The queue retains all messages sent to or from services that use this queue until the conversation that contains the message ends.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH RETENTION = ON ;  
 ```  
   
@@ -225,7 +224,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
  The following example rebuilds queue indexes'  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)   
 ```  
   
@@ -235,7 +234,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
   
  The following example reorganizes queue indexes  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
@@ -243,7 +242,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
   
 **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   
 ```  
   

@@ -13,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "spatial indexes [SQL Server], stored procedures"
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Spatial Index Stored Procedures - Arguments and Properties
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -317,10 +317,9 @@ ms.author: carlrab
 ## Requirements  
   
 ## See Also  
- [Spatial Index Stored Procedures &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [Spatial Index Stored Procedures &#40;Transact-SQL&#41;]()   
  [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [XQuery Basics](../../xquery/xquery-basics.md)   
  [XQuery Language Reference &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
-  
   

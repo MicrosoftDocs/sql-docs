@@ -19,7 +19,7 @@ Pie charts with too many slices can look cluttered. Learn to collect many small 
  
  The [Tutorial: Add a Pie Chart to Your Report (Report Builder)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md) walks you through collecting small slices into a single slice, if you'd like to try this with sample data first.
  
- ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
+ ![Screenshot of a report builder pie chart showing the Other slice.](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
  You can also collect small slices into a second pie chart that is called out from a collected slice of the first pie chart. The second pie chart is drawn to the right of the original pie chart.  
   
@@ -36,7 +36,7 @@ Pie charts with too many slices can look cluttered. Learn to collect many small 
   
 4.  Set the CollectedStyle property to **SingleSlice**.  
 
-    ![report-builder-pie-chart-single-slice-property](../../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
+    ![Screenshot of a report builder pie chart showing how to configure a single slice property.](../../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
   
 5.  Set the collected threshold value and type of threshold. The following examples are common ways of setting collected thresholds.  
   

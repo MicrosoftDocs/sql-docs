@@ -16,8 +16,8 @@ apilocation:
 helpviewer_keywords: 
   - "CInstance class"
 ms.assetid: a79e6049-963f-4ff7-8d3c-dc9ee45b4e2f
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # CInstance Class
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

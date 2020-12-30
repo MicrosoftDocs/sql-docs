@@ -20,8 +20,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.endpoint_webmethods catalog view"
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.endpoint_webmethods (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

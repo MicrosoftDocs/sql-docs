@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_markpendingschemachange"
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

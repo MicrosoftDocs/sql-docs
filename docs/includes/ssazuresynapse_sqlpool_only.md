@@ -6,4 +6,4 @@ ms.date: 06/11/2020
 ms.author: mikeray
 ---
 
-Azure Synapse Analytics (SQL pool only)
+Azure Synapse Analytics (dedicated SQL pool only)

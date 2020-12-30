@@ -36,7 +36,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 SUSER_SID ( [ 'login' ] [ , Param2 ] )   
 ```  
   
@@ -75,7 +74,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ### A. Using SUSER_SID  
  The following example returns the security identification number (SID) for the current security context.  
   
-```  
+```sql
 SELECT SUSER_SID();  
 ```  
   
@@ -84,7 +83,7 @@ SELECT SUSER_SID();
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later
   
-```  
+```sql
 SELECT SUSER_SID('sa');  
 GO  
 ```  
@@ -94,7 +93,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later
   
-```  
+```sql
 SELECT SUSER_SID('London\Workstation1');  
 GO  
 ```  
@@ -102,15 +101,15 @@ GO
 ### D. Using SUSER_SID as a DEFAULT constraint  
  The following example uses `SUSER_SID` as a `DEFAULT` constraint in a `CREATE TABLE` statement.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE sid_example  
 (  
-login_sid   varbinary(85) DEFAULT SUSER_SID(),  
-login_name  varchar(30) DEFAULT SYSTEM_USER,  
-login_dept  varchar(10) DEFAULT 'SALES',  
-login_date  datetime DEFAULT GETDATE()  
+login_sid   VARBINARY(85) DEFAULT SUSER_SID(),  
+login_name  VARCHAR(30) DEFAULT SYSTEM_USER,  
+login_dept  VARCHAR(10) DEFAULT 'SALES',  
+login_date  DATETIME DEFAULT GETDATE()  
 );   
 GO  
 INSERT sid_example DEFAULT VALUES;  
@@ -122,7 +121,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later
   
-```  
+```sql
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  
 ```  
   

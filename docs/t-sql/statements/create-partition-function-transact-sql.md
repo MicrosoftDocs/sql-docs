@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], functions"
   - "CREATE PARTITION FUNCTION statement"
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

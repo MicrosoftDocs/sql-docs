@@ -22,7 +22,7 @@ ms.author: v-daenge
   
  You can get the client connection ID programmatically by using [ISQLServerConnection Interface](../../connect/jdbc/reference/isqlserverconnection-interface.md). The connection ID will also be present in any connection-related exceptions.  
   
- When there's a connection error, the client connection ID in the server's Built In Diagnostics (BID) trace information and in the connectivity ring buffer can help correlate the client connections to connections on the server. For more information about BID traces on the server, see [Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805). Note, the data access tracing article also contains information about data access trace, which doesn't apply to the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]; see [Tracing driver operation](../../connect/jdbc/tracing-driver-operation.md) for information on doing a data access trace using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+ When there's a connection error, the client connection ID in the server's Built In Diagnostics (BID) trace information and in the connectivity ring buffer can help correlate the client connections to connections on the server. For more information about BID traces on the server, see [Data Access Tracing](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)). Note, the data access tracing article also contains information about data access trace, which doesn't apply to the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]; see [Tracing driver operation](../../connect/jdbc/tracing-driver-operation.md) for information on doing a data access trace using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   
  The JDBC Driver also sends a thread-specific activity ID. The activity ID is captured in the extended events sessions if the sessions are started with the TRACK_CAUSAILITY option enabled. For performance issues with an active connection, you can get the activity ID from the client's trace (ActivityID field) and then locate the activity ID in the extended events output. The activity ID in extended events is a 16-byte GUID (not the same as the GUID for the client connection ID) appended with a 4-byte sequence number. The sequence number represents the order of a request within a thread. The ActivityId is sent for SQL batch statements and RPC requests. To enable sending ActivityId to the server, you first need to specify the following key-value pair in the Logging.Properties file:  
   
@@ -48,4 +48,4 @@ add target ring_buffer with (track_causality=on)
   
 ## See also
 
-[Diagnosing problems with the JDBC driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+[Diagnosing problems with the JDBC driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)

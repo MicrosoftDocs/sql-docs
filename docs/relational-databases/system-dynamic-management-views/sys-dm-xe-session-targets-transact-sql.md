@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sys.dm_xe_session_targets dynamic management view"
   - "extended events [SQL Server], views"
 ms.assetid: 76fbc3e1-ad88-4a47-8bf1-471c3bee5ad8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_xe_session_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

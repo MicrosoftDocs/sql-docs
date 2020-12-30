@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "triggers [SQL Server], creating"
   - "database-scoped triggers [SQL Server]"
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ms.reviewer: mathoma
 ---
 

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Instance Name page [SQL Server Installation Wizard]"
   - "SQL Server Installation Wizard, Instance Name page"
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 robots: noindex,nofollow
 ---
 
@@ -412,7 +412,7 @@ The following recommendations apply to the SMB file server:
 The MaxDOP setting applies only to SQL Server 2019 and later.
 -->
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## <a name="maxdop"><a/> Database Engine Configuration - MaxDOP page
 

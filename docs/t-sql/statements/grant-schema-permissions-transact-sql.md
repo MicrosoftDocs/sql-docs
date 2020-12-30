@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Schema Permissions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -129,13 +129,13 @@ AS *granting_principal*
   
 ### A. Granting INSERT permission on schema HumanResources to guest  
   
-```  
+```sql  
 GRANT INSERT ON SCHEMA :: HumanResources TO guest;  
 ```  
   
 ### B. Granting SELECT permission on schema Person to database user WilJo  
   
-```  
+```sql  
 GRANT SELECT ON SCHEMA :: Person TO WilJo WITH GRANT OPTION;  
 ```  
   

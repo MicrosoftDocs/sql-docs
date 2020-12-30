@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 1f6f13ae-56a2-4ef1-93f5-8e6151b83e1d
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP ROLE (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -34,15 +34,16 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server  
   
 DROP ROLE [ IF EXISTS ] role_name  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
+
+```syntaxsql  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+
 DROP ROLE role_name  
 ```  
   
@@ -77,7 +78,7 @@ DROP ROLE role_name
 ## Examples  
  The following example drops the database role `purchasing` from the `AdventureWorks2012` database.  
   
-```  
+```sql  
 DROP ROLE purchasing;  
 GO  
 ```  

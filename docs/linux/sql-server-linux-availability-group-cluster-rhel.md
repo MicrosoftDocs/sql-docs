@@ -2,8 +2,8 @@
 title: "RHEL: Configure availability group for SQL Server in Linux"
 description: Learn to configure an availability group when running Red Hat Enterprise Linux (RHEL) for SQL Server. 
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 01/23/2020
 ms.topic: conceptual

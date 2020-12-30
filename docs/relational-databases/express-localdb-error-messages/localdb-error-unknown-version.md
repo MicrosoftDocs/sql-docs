@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: f2a04023-ed42-4516-b59c-7a1b8a5395d4
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_UNKNOWN_VERSION
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

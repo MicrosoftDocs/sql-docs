@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: wmi
 ms.topic: "reference"
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SqlErrorLogFile Class
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -89,10 +89,9 @@ Next
   
      **\<Drive>:\Program Files\Microsoft SQL Server\MSSQL11** **.\<InstanceName>\MSSQL\Log**  
   
- If you are connecting through a firewall, ensure that an exception is set in the firewall for WMI on remote target computers. For more information, see [Connecting to WMI Remotely Starting with Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
+ If you are connecting through a firewall, ensure that an exception is set in the firewall for WMI on remote target computers. For more information, see [Connecting to WMI Remotely Starting with Windows Vista](/windows/win32/wmisdk/connecting-to-wmi-remotely-starting-with-vista).  
   
 ## See Also  
  [SqlErrorLogEvent Class](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)   
  [View Offline Log Files](../../relational-databases/logs/view-offline-log-files.md)  
-  
   

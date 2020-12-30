@@ -29,7 +29,7 @@ helpviewer_keywords:
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: pmasl
 ms.author: umajay
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest"
 ---
 
 # DBCC CHECKIDENT (Transact-SQL)
@@ -43,7 +43,6 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
 ## Syntax  
   
 ```syntaxsql
-
 -- Syntax for SQL Server and Azure SQL Database  
 
 DBCC CHECKIDENT
@@ -54,16 +53,16 @@ DBCC CHECKIDENT
 [ WITH NO_INFOMSGS ]  
 ```  
 
-```console
--- Syntax for Azure SQL Data Warehouse
+```syntaxsql
+-- Syntax for Azure Synapse Analytics
 DBCC CHECKIDENT   
  (   
     table_name  
         [RESEED, new_reseed_value ]   
 )  
 [ WITH NO_INFOMSGS ]  
-
 ```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
@@ -128,7 +127,7 @@ DBCC CHECKIDENT
 
  Caller must own the schema that contains the table, or be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role.
 
-Azure SQL Data Warehouse requires **db_owner** permissions.
+[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] requires **db_owner** permissions.
   
 ## Examples  
   

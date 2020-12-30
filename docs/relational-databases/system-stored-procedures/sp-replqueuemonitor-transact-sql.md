@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replqueuemonitor"
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

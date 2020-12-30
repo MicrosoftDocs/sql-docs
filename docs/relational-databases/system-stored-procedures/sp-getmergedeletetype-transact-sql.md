@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_getmergedeletetype"
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

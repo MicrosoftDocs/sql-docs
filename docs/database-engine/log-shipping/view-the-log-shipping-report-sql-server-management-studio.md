@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: log-shipping
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing log shipping reports"
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "log shipping [SQL Server], monitoring"
   - "log shipping [SQL Server], viewing reports"
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # View the Log Shipping Report (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

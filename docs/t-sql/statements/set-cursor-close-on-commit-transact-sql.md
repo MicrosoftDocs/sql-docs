@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "cursors [SQL Server], closing"
   - "SET CURSOR_CLOSE_ON_COMMIT statement"
 ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

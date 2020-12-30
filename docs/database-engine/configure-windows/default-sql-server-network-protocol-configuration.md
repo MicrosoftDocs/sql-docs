@@ -42,7 +42,7 @@ The following table describes the configuration after installation.
 > If the instance is running on a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] failover cluster, it listens on those ports on each IP address selected for [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] during [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] setup.
  
 >[!NOTE]
-> When you are installing [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] with command-prompt arguments, you can specify the protocols to enable by using the `TCPENABLED` and `NPENABLED` parameters. For more information, see [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).
+> When you are installing [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] with command-prompt arguments, you can specify the protocols to enable by using the `TCPENABLED` and `NPENABLED` parameters. For more information, see [Install SQL Server from the Command Prompt](../install-windows/install-sql-server-from-the-command-prompt.md).
 
 ## Creating a Connection String
 
@@ -66,7 +66,4 @@ The [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser service
 
 [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 
-[Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)  
-
-
-
+[Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)

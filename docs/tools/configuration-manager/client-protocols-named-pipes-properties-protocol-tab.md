@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 30fbae62-2f2e-4d36-9c6e-3444fff68781
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Client Protocols - Named Pipes Properties (Protocol Tab)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

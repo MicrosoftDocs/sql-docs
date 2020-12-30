@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_operator"
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_delete_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

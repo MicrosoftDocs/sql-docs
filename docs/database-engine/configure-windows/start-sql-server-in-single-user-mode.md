@@ -67,11 +67,10 @@ net start "SQL Server (MSSQLSERVER)" -m"Microsoft SQL Server Management Studio -
 6.  Once the operation is complete, close the command prompt and bring back the SQL and other resources online through cluster administrator.  
   
 ## See Also  
- [Start, Stop, or Pause the SQL Server Agent Service](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)   
+ [Start, Stop, or Pause the SQL Server Agent Service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [Diagnostic Connection for Database Administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)   
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
  [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
-  
   

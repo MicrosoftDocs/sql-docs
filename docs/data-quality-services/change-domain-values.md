@@ -95,7 +95,7 @@ ms.author: sawinark
   
 11. **Delete selected domain value(s)**: To remove one or more existing values from the domain, select the values in the Value table, and then click the **Delete selected domain value(s)** icon. An entry of DQS_NULL cannot be deleted, so if you choose multiple values to delete, and an entry of DQS_NULL is one of them, the operation will fail.  
   
-12. Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+12. Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="FollowUp"></a> Follow Up: After Changing Domain Values  
  After you change domain values, you can perform other domain management tasks on the domain, you can perform knowledge discovery to add knowledge to the domain, or you can add a matching policy to the domain. For more information, see [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md), [Managing a Domain](../data-quality-services/managing-a-domain.md), or [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
@@ -130,5 +130,4 @@ ms.author: sawinark
   
 ##  <a name="Null"></a> How to Handle Null Equivalents  
  Each value table in the **Domain Values** tab includes a DQS_NULL value. A null in a data source will appear as SQL_NULL in the value table. You can set one or more null equivalents as synonyms to DQS_NULL. When you do so, all nulls and null equivalents will be processed as DQS_NULL.  
-  
   

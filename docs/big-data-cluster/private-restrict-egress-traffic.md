@@ -245,9 +245,9 @@ azdata bdc create --config-profile private-bdc-aks --accept-eula yes
 
 Use a third-party firewall to restrict egress traffic when deployed BDC with AKS private cluster. For example, see [Azure Marketplace firewalls](https://azuremarketplace.microsoft.com/marketplace/apps?search=firewall&page=1). Third-party firewalls can be used in private deployment solutions with more compliant configurations. The firewall should provide the following network rules:
 
-* All the required outbound network rules and FQDNs for AKS clusters and all wildcard HTTP/HTTPS endpoints and dependencies that can vary with your AKS cluster based on a number of qualifiers and your actual requirements.
-* Azure Global required network rules / FQDN/application rules mentioned here.
-* Optional recommended FQDN / application rules for AKS clusters mentioned here. 
+* All the [required outbound network rules and FQDNs for AKS clusters](/azure/aks/limit-egress-traffic#required-outbound-network-rules-and-fqdns-for-aks-clusters) and all wildcard HTTP/HTTPS endpoints and dependencies that can vary with your AKS cluster based on a number of qualifiers and your actual requirements.
+* Azure Global required network rules / FQDN/application rules mentioned [here](/azure/aks/limit-egress-traffic#azure-global-required-network-rules).
+* Optional recommended FQDN / application rules for AKS clusters mentioned [here](/azure/aks/limit-egress-traffic#optional-recommended-fqdn--application-rules-for-aks-clusters). 
 
 Please check how to [manage BDC in AKS private cluster](private-manage.md)  and then the next step is to [connect to BDC cluster](connect-to-big-data-cluster.md).
 

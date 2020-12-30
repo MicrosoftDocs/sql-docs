@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_registercustomresolver"
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_registercustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

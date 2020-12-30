@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursor_execute"
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_cursorexecute (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

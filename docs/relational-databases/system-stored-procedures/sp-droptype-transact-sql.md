@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_droptype"
 ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_droptype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -74,7 +74,7 @@ Integral part (precision-scale = 21) is less than 32, so this case is case (1) i
 
 The following expression returns result `0.000001` to fit into `decimal(38,6)`:
 ```sql
-select cast(0.0000009000 as decimal(30,10)) * cast(1.0000000000 as decimal(30,10)) [decimal(38, 6)]
+SELECT CAST(0.0000009000 AS DECIMAL(30,10)) * CAST(1.0000000000 AS DECIMAL(30,10)) [decimal(38, 6)]
 ```
 In this case precision is 61, and scale is 20.
 Scale is greater than 6 and integral part (`precision-scale = 41`) is greater than 32. This case is case (3) in multiplication rules and result type is `decimal(38,6)`.

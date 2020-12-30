@@ -59,7 +59,7 @@ To retrieve the last fetch status of a specific cursor, query the **fetch_status
 ## Examples  
 This example uses `@@FETCH_STATUS` to control cursor activities in a `WHILE` loop.  
   
-```  
+```sql  
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT BusinessEntityID, JobTitle  
 FROM AdventureWorks2012.HumanResources.Employee;  

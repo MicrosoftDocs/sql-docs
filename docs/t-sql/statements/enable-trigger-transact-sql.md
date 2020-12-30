@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "DML triggers, enabling"
   - "ENABLE TRIGGER statement"
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -51,7 +51,7 @@ After a hardware loss or disk failure affecting the database files, you can rest
 As you restore each log backup, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reapplies all the modifications recorded in the log to roll forward all the transactions. When the last log backup is restored, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] then uses the log information to roll back all transactions that were not complete at that point. For more information, see [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### Supporting transactional replication
-The Log Reader Agent monitors the transaction log of each database configured for transactional replication and copies the transactions marked for replication from the transaction log into the distribution database. For more information, see [How Transactional Replication Works](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105)).
+The Log Reader Agent monitors the transaction log of each database configured for transactional replication and copies the transactions marked for replication from the transaction log into the distribution database. For more information, see [How Transactional Replication Works](/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105)).
 
 ### Supporting high availability and disaster recovery solutions
 The standby-server solutions, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], database mirroring, and log shipping, rely heavily on the transaction log. 
@@ -187,5 +187,4 @@ When transactional replication is enabled, `SELECT INTO` operations are fully lo
 [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-  
   

@@ -123,13 +123,13 @@ The following lists the types of values that cannot be stored by using **sql_var
  The following example, creates a table with a sql_variant data type. Then the example retrieves `SQL_VARIANT_PROPERTY` information about the `colA` value `46279.1` where `colB` =`1689`, given that `tableA` has `colA` that is of type `sql_variant` and `colB`.  
   
 ```sql    
-CREATE   TABLE tableA(colA sql_variant, colB int)  
-INSERT INTO tableA values ( cast (46279.1 as decimal(8,2)), 1689)  
+CREATE TABLE tableA(colA sql_variant, colB INT)  
+INSERT INTO tableA values ( CAST(46279.1 as decimal(8,2)), 1689)  
 SELECT   SQL_VARIANT_PROPERTY(colA,'BaseType') AS 'Base Type',  
          SQL_VARIANT_PROPERTY(colA,'Precision') AS 'Precision',  
          SQL_VARIANT_PROPERTY(colA,'Scale') AS 'Scale'  
 FROM      tableA  
-WHERE      colB = 1689  
+WHERE     colB = 1689  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Note that each of these three values is a **sql_variant**.  

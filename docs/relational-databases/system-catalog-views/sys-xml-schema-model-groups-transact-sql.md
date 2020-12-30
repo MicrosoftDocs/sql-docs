@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_model_groups catalog view"
 ms.assetid: 566556dc-a8c8-465c-9196-c7e0ae092a8a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.xml_schema_model_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

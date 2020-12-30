@@ -24,8 +24,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CREATE BROKER PRIORITY statement"
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,6 @@ ms.author: carlrab
 ## Syntax  
   
 ```syntaxsql
-  
 CREATE BROKER PRIORITY ConversationPriorityName  
 FOR CONVERSATION  
 [ SET ( [ CONTRACT_NAME = {ContractName | ANY } ]  
@@ -163,7 +162,7 @@ FOR CONVERSATION
 ### A. Assigning a priority level to both directions of a conversation.  
  These two conversation priorities ensure that all operations that use `SimpleContract` between `TargetService` and the `InitiatorAService` are assigned priority level 3.  
   
-```  
+```sql  
 CREATE BROKER PRIORITY InitiatorAToTargetPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -181,7 +180,7 @@ CREATE BROKER PRIORITY TargetToInitiatorAPriority
 ### B. Setting the priority level for all conversations that use a contract  
  Assigns a priority level of `7` to all operations that use a contract named `SimpleContract`. This assumes that there are no other priorities that specify both `SimpleContract` and either a local or a remote service.  
   
-```  
+```sql 
 CREATE BROKER PRIORITY SimpleContractDefaultPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -193,7 +192,7 @@ CREATE BROKER PRIORITY SimpleContractDefaultPriority
 ### C. Setting a base priority level for a database.  
  Defines conversation priorities for two specific services, and then defines a conversation priority that will match all other conversation endpoints. This does not replace the default priority, which is always 5, but does minimize the number of items that are assigned the default.  
   
-```  
+```sql 
 CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/ClaimPriority]  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = ANY,  

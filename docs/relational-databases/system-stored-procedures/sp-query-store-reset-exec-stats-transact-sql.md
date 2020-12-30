@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "sp_query_store_reset_exec_stats"
   - "sys.sp_query_store_reset_exec_stats"
 ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_reset_exec_stats (Transact-SQL)
 

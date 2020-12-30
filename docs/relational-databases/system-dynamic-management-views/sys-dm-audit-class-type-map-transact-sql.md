@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_audit_class_type_map dynamic management view"
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -32,7 +32,7 @@ ms.author: carlrab
 |**securable_class_desc**|**nvarchar(120)**|The securable object that maps to the class_type being audited. Is NULL if the class_type does not map to a securable object. Can be related to class_desc in sys.dm_audit_actions.|  
   
 ## Permissions  
- Principal must have **SELECT** permission. By default, this is granted to Public.  
+This view is visible to the public.  
   
 ## See Also  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

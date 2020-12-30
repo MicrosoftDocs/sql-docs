@@ -30,7 +30,7 @@ For more information, see [Always Encrypted (Database Engine)](../../relational-
 
 Configure Always Encrypted in your database. This involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you do not already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). In particular, your database should contain the metadata definitions for a Column Master Key (CMK), a Column Encryption Key (CEK), and a table containing one or more columns encrypted using that CEK.
 
-If you are using Always Encrypted with secure enclaves, see [Develop applications using Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md) for additional prerequisites.
+If you are using Always Encrypted with secure enclaves, see [Develop applications using Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md) for additional prerequisites.
 
 ### Enabling Always Encrypted in an ODBC Application
 
@@ -62,24 +62,24 @@ Note that enabling Always Encrypted is not sufficient for encryption or decrypti
 Beginning with version 17.4, the driver supports Always Encrypted with Secure Enclaves. To enable the use of the enclave when connecting to a database, set the `ColumnEncryption` DSN key, connection string keyword or connection attribute to the following value: `<attestation protocol>\<attestation URL>`, where:
 
 - `<attestation protocol>` - specifies a protocol used for enclave attestation.
-  - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), `<attestation protocol>` should be `VBS-HGS`.
-  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, `<attestation protocol>` should be `SGX-AAS`.
+  - If you're using [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), `<attestation protocol>` should be `VBS-HGS`.
+  - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, `<attestation protocol>` should be `SGX-AAS`.
 
 - `<attestation URL>` - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
 
-  - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
+  - If you're using [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see[Determine and share the HGS attestation URL](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
+  - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
 
 
 Examples of connection strings enabling enclave computations for a database connection:
 
-- [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]:
+- [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)]:
   
    ```
    Driver=ODBC Driver 17 for SQL Server;Server=myServer.myDomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://myAttestationServer.mydomain/Attestation
    ```
 
-- [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] :
+- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] :
   
    ```
    Driver=ODBC Driver 17 for SQL Server;Server=myServer.database.windows.net;Uid=myUsername;Pwd=myPassword;Encrypt=yes;ColumnEncryption=SGX-AAS,https://myAttestationProvider.uks.attest.azure.net/attest/SgxEnclave?api-version=2018-09-01-preview

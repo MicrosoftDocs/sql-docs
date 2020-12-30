@@ -20,7 +20,7 @@ This article describes how to install a custom runtime for running R scripts wit
 
 + An installation of Machine Learning Services with SQL Server 2019. The language extension can be used with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) after completing some additional configuration steps.
 
-::: moniker range=">=sql-server-ver15"
+::: zone pivot="platform-windows"
 
 > [!NOTE]
 > This article describes how to install a custom runtime for R on Windows. To install on Linux, see the [Install an R custom runtime for SQL Server on Linux](custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true)
@@ -174,9 +174,9 @@ FROM (CONTENT = N'/path/to/R-lang-extension.zip', FILE_NAME = 'libRExtension.dll
 GO
 ```
 
-::: moniker-end
+::: zone-end
 
-::: moniker range=">=sql-server-linux-ver15"
+::: zone pivot="platform-linux"
 
 You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md#supportedplatforms).
 
@@ -354,7 +354,7 @@ FROM (CONTENT = N'/path/to/R-lang-extension.zip', FILE_NAME = 'libRExtension.so.
 GO
 ```
 
-::: moniker-end
+::: zone-end
 
 ## Enable external script execution in SQL Server
 

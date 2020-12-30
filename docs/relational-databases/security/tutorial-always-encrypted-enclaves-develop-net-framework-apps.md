@@ -16,7 +16,7 @@ monikerRange: ">= sql-server-ver15"
 ---
 # Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves
 
-[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 This tutorial teaches you how to develop an application that issues database queries that use a server-side secure enclave for [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). 
 
@@ -71,7 +71,7 @@ To use Always Encrypted with secure enclaves in a .NET Framework application, yo
 
 8. Inside the `<configuration>` section, below `</configSections>`, add a new section, which specifies an enclave provider to be used to attest and interact with your server-side secure enclave.
 
-   1. If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS) (you've completed [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)), add the below section.
+   1. If you're using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS) (you've completed [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)), add the below section.
 
       ```xml
       <SqlColumnEncryptionEnclaveProviders>
@@ -100,7 +100,7 @@ To use Always Encrypted with secure enclaves in a .NET Framework application, yo
       </configuration>
       ```
 
-   1. If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation (you have completed [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)), add the below section.
+   1. If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation (you have completed [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)), add the below section.
 
       ```xml
       <SqlColumnEncryptionEnclaveProviders>

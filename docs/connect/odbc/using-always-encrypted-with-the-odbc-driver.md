@@ -24,7 +24,7 @@ This article provides information on how to develop ODBC applications using [Alw
 
 Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the ODBC Driver for SQL Server, achieves this by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. Always Encrypted *with secure enclaves* extends this feature to enable richer functionality on sensitive data while keeping the data confidential.
 
-For more information, see [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) and [Always Encrypted with Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+For more information, see [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) and [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ### Prerequisites
 
@@ -76,13 +76,13 @@ Examples of connection strings enabling enclave computations for a database conn
 - [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)]:
   
    ```
-   Driver=ODBC Driver 17 for SQL Server;Server=myServer.myDomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://myAttestationServer.mydomain/Attestation
+   Driver=ODBC Driver 17 for SQL Server;Server=myServer.myDomain;Database=myDataBase;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://myHGSServer.myDomain/Attestation
    ```
 
 - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] :
   
    ```
-   Driver=ODBC Driver 17 for SQL Server;Server=myServer.database.windows.net;Uid=myUsername;Pwd=myPassword;Encrypt=yes;ColumnEncryption=SGX-AAS,https://myAttestationProvider.uks.attest.azure.net/attest/SgxEnclave?api-version=2018-09-01-preview
+   Driver=ODBC Driver 17 for SQL Server;Server=myServer.database.windows.net;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Encrypt=yes;ColumnEncryption=SGX-AAS,https://myAttestationProvider.uks.attest.azure.net/attest/SgxEnclave?api-version=2018-09-01-preview
    ```
 
 If the server and attestation service are configured correctly, as well as enclave-enabled CMKs and CEKs for the desired columns, you should now be able to execute queries which use the enclave such as in-place encryption and rich computations, in addition to the existing functionality provided by Always Encrypted. See [Configure Always Encrypted with secure enclaves](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) for more information.

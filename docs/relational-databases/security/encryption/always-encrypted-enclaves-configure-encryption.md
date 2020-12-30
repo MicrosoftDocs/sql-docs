@@ -43,3 +43,6 @@ You can only trigger in-place encryption using [ALTER TABLE ALTER COLUMN (Transa
 - [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
 - [Create and use indexes on column using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
+
+## See Also  
+- [Troubleshoot common issues for Always Encrypted with secure enclaves](always-encrypted-enclaves-troubleshooting.md)

@@ -63,7 +63,7 @@ To use Always Encrypted with secure enclaves in a .NET Framework application, yo
       </configSections>
       ```
 
-   2. If the `<configuration>` section already contains the `<configSections>` section, add the following line within the `<configSections>`:
+   2. If the `<configuration>` section already contains the `<configSections>` section, add the following line within the `<configSections>` section:
 
       ```xml
       <section name="SqlColumnEncryptionEnclaveProviders"  type="System.   Data.SqlClient.   SqlColumnEncryptionEnclaveProviderConfigurationSection, System.   Data,  Version=4.0.0.0, Culture=neutral,    PublicKeyToken=b77a5c561934e089" />
@@ -71,7 +71,7 @@ To use Always Encrypted with secure enclaves in a .NET Framework application, yo
 
 8. Inside the `<configuration>` section, below `</configSections>`, add a new section, which specifies an enclave provider to be used to attest and interact with your server-side secure enclave.
 
-   1. If you're using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS) (you've completed [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)), add the below section.
+   1. If you're using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS) (you're using the database from [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)), add the below section.
 
       ```xml
       <SqlColumnEncryptionEnclaveProviders>
@@ -100,7 +100,7 @@ To use Always Encrypted with secure enclaves in a .NET Framework application, yo
       </configuration>
       ```
 
-   1. If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation (you have completed [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)), add the below section.
+   1. If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation (you are using the database from [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)), add the below section.
 
       ```xml
       <SqlColumnEncryptionEnclaveProviders>
@@ -173,7 +173,7 @@ Your application will connect to the **ContosoHR** database from [Tutorial: Gett
                     MinSalary.ParameterName = @"@MinSalary";
                     MinSalary.DbType = DbType.Currency;
                     MinSalary.Direction = ParameterDirection.Input;
-                    MinSalary.Value = 900;
+                    MinSalary.Value = 20000;
 
                     cmd.Parameters.Add(MinSalary);
                     cmd.ExecuteNonQuery();

@@ -104,7 +104,7 @@ Your application will connect to the **ContosoHR** database from [Tutorial: Gett
                     MinSalary.ParameterName = @"@MinSalary";
                     MinSalary.DbType = DbType.Currency;
                     MinSalary.Direction = ParameterDirection.Input;
-                    MinSalary.Value = 900;
+                    MinSalary.Value = 20000;
 
                     cmd.Parameters.Add(MinSalary);
                     cmd.ExecuteNonQuery();

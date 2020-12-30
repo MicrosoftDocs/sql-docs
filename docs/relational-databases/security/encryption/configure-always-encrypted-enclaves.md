@@ -59,6 +59,7 @@ See the following articles for details:
 ## Run Transact-SQL statements using secure enclaves
 See the following articles for details:
 - [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md)
+- [Troubleshoot common issues for Always Encrypted with secure enclaves](always-encrypted-enclaves-troubleshooting.md)
 
 ## Create and use indexes on enclave-enabled columns
 See the following articles for details:

@@ -163,6 +163,9 @@ In this step, you will enable the functionality of Always Encrypted using enclav
     1. In the **Connect to Server** dialog, specify your server name, select an authentication method and specify your credentials.
     1. Click **Options >>** and select the **Always Encrypted** tab.
     1. Make sure the **Enable Always Encrypted (column encryption)** checkbox is **not** selected.
+
+          ![Connect to server with attestation using SSMS](./encryption/media/always-encrypted-enclaves/connect-without-always-encrypted-ssms.png)
+
     1. Select **Connect**.
 
 2. Open a new query window, and execute the below statement to set the secure enclave type to Virtualization Based Security (VBS).
@@ -276,6 +279,9 @@ In this step, you will encrypt the data stored in the **SSN** and **Salary** col
     1. In the **Connect to Server** dialog, specify your server name, select an authentication method and specify your credentials.
     1. Click **Options >>** and select the **Always Encrypted** tab.
     1. Select the **Enable Always Encrypted (column encryption)** checkbox and specify your enclave attestation URL (for example, ht<span>tp://</span>hgs.bastion.local/Attestation).
+
+          ![Connect to server with attestation using SSMS](./encryption/media/always-encrypted-enclaves/column-encryption-setting.png)
+
     1. Select **Connect**.
     1. If you are prompted to enable Parameterization for Always Encrypted queries, select **Enable**.
 

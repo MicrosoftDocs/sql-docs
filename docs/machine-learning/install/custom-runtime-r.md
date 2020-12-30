@@ -1,6 +1,6 @@
 ---
 title: Install R custom runtime
-description: earn how to install an R custom runtime for SQL Server using Language Extensions. The R custom runtime can be used for machine learning.
+description: Learn how to install an R custom runtime for SQL Server using Language Extensions. The R custom runtime can be used for machine learning.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 12/29/2020
@@ -15,63 +15,57 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes how to install a custom runtime for running R scripts with SQL Server. The custom runtime uses language extension technology built on an extensibility framework for executing external code. The custom runtime for R can be used in the following scenarios:
+This article describes how to install a R custom runtime for running external R scripts with SQL Server. The custom runtime uses the [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md) and can be used for executing machine learning scripts.
 
-+ An installation of SQL Server with extensibility framework.
-
-+ An installation of Machine Learning Services with SQL Server 2019. The language extension can be used with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) after completing some additional configuration steps.
+The R custom runtime allows you to use your own version of the R runtime with SQL Server, instead of the default runtime version installed with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 
 ::: zone pivot="platform-windows"
 
-> [!NOTE]
-> This article describes how to install a custom runtime for R on Windows. To install on Linux, see the [Install an R custom runtime for SQL Server on Linux](custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true)
-
-## Pre-install checklist
+## Prerequisites
 
 Before installing an R custom runtime, install the following:
 
-+ [SQL Server 2019 for Windows (Cumulative Update 3 or later)](../../database-engine/install-windows/install-sql-server.md).
++ Install the [Cumulative Update (CU) 3 or later](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) for SQL Server 2019.
 
-+ [SQL Server Language Extensions on Windows with the extensibility framework](../../language-extensions/install/windows-java.md).
-
-+ [R Version 3.3 or higher](https://cran.r-project.org/).
++ Install [R version 3.3 or later](https://cran.r-project.org/) for Windows on the server.
 
 ## Add SQL Server Language Extensions for Windows
 
 > [!NOTE]
-> If you have Machine Learning Services installed on SQL Server 2019, the extensibility framework for language extensions with the Launchpad service is already installed and you can skip this step.
+> If you have [Machine Learning Services](../sql-server-machine-learning-services.md) installed on SQL Server 2019, Language Extensions is already installed and you can skip this step.
 
-Language Extensions use the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution.
+Follow the steps below to install [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md), which is used for the Python custom runtime.
 
 1. Start the setup wizard for SQL Server 2019.
-
+  
 1. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
-    ![SQL Server 2019 installation CU3 or later](../install/media/2019setup-installation-page-mlsvcs.png)
-
 1. On the **Feature Selection** page, select these options:
+  
+    + **Database Engine Services**
+  
+        To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a new or an existing instance.
+  
+    + **Machine Learning Services and Language Extensions**
 
-    - **Database Engine Services**
-
-        To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
-
-    - **Machine Learning Services and Language Extensions**
-
-        Select **Machine Learning Services and Language Extensions**. There's no need to select R.
+        Select **Machine Learning Services and Language Extensions**. Do not select R, as you will be installing the custom R runtime later.
 
         :::image type="content" source="media/2019-setup-language-extensions.png" alt-text="SQL Server 2019 Language Extensions setup.":::
 
 1. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
-
+  
     + Database Engine Services
     + Machine Learning Services and Language Extensions
 
-1. After setup is complete, if you're instructed to restart the computer, do so now. It's important to read the message from the Installation Wizard when you've finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
+1. After the setup is complete, restart the machine if you're asked to do so.
+
+> [!IMPORTANT]
+> If you install a new instance of SQL Server 2019 with Language Extensions, then install the [Cumulative Update (CU) 3 or later](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) before you continue to the next step.
 
 ## Install R
 
 > [!NOTE]
->For SQL Machine Learning Services, R is already installed in the **R_SERVICES** folder of your SQL Server instance. For example, "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES". If you want to keep using this path as your R_HOME, skip to the next step of installing Rcpp. Otherwise, if you want to use a different runtime of R, continue here to install it.
+> For SQL Machine Learning Services, R is already installed in the **R_SERVICES** folder of your SQL Server instance. For example, "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES". If you want to keep using this path as your R_HOME, skip to the next step of installing Rcpp. Otherwise, if you want to use a different runtime of R, continue here to install it.
 
 Install [R (3.3 or higher)](https://cran.r-project.org/bin/windows/base/) and note the path where it's installed. This path is your **R_HOME**. For example, as shown here, R_HOME is "C:\Program Files\R\R-4.0.2"
 

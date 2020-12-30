@@ -18,7 +18,7 @@ This article describes how to install a Python custom runtime for running extern
 
 The Python custom runtime allows you to use your own version of the Python runtime with SQL Server, instead of the default runtime version installed with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 
-::: zone pivot="python-custom-runtime-windows"
+::: zone pivot="platform-windows"
 
 ## Prerequisites
 
@@ -138,7 +138,7 @@ Follow these steps to download and register the Python language extension, which
 
 ::: zone-end
 
-::: zone pivot="python-custom-runtime-linux"
+::: zone pivot="platform-linux"
 
 ## Prerequisites
 

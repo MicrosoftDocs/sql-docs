@@ -19,6 +19,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 This article describes how to deploy the Host Guardian Service (HGS) as an attestation service for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
 Before you start, make sure to read the [Plan for Host Guardian Service attestation](./always-encrypted-enclaves-host-guardian-service-plan.md) article for a full list of prerequisites and architectural guidance.
 
+> [!NOTE]
+> The HGS administrator is responsible for executing all steps described in this article. See [Roles and responsibilities when configuring attestation with HGS](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs).
+
 ## Step 1: Set up the first HGS computer
 
 The Host Guardian Service (HGS) runs as a clustered service on one or more computers.
@@ -231,7 +234,7 @@ It is recommended that all production instances of HGS use an HTTPS binding.
 
 ## Step 6: Determine and share the HGS attestation URL
 
-As the HGS administrator you need share the attestation URL of HGS with both admins of SQL server computers and application admins in your organization. The administrators of SQL Server computers will need the attestation URL to register SQL server computers with HGS. Application admins will need the attestation URL to configure how their apps connect to SQL Server.
+As the HGS administrator you need share the attestation URL of HGS with both SQL server computer administrators and application administrators in your organization. The SQL Server computers administrators will need the attestation URL to verify SQL Server computers can attest with HGS. Application administrators will need the attestation URL to configure how their apps connect to SQL Server.
 
 To determine the attestation URL, run the following cmdlet.
 

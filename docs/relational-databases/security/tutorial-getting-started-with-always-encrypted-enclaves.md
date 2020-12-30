@@ -164,7 +164,7 @@ In this step, you will enable the functionality of Always Encrypted using enclav
     1. Click **Options >>** and select the **Always Encrypted** tab.
     1. Make sure the **Enable Always Encrypted (column encryption)** checkbox is **not** selected.
 
-          ![Connect to server with attestation using SSMS](./encryption/media/always-encrypted-enclaves/connect-without-always-encrypted-ssms.png)
+          ![Connect to server without Always Encrypted](./encryption/media/always-encrypted-enclaves/connect-without-always-encrypted-ssms.png)
 
     1. Select **Connect**.
 

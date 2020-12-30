@@ -18,10 +18,16 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 This article describes how to register [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers to attest with the Host Guardian Service (HGS).
 
-Before you start, make sure you have deployed at least one HGS computer and set up the attestation service.
+> [!NOTE]
+> The process of registering a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] with HGS requires a joint effort of the HGS administrator and the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator. See [Roles and responsibilities when configuring attestation with HGS](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs).
+
+Before you start, make sure you have deployed at least one HGS computer and set up the HGS attestation service.
 See [Deploy the Host Guardian Service for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](./always-encrypted-enclaves-host-guardian-service-deploy.md) for more information.
 
 ## Step 1: Install the attestation client components
+
+> [!NOTE]
+> This step should be performed by the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator.
 
 To allow a SQL client to verify it's talking to a trustworthy [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer, the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer must successfully attest with the Host Guardian Service.
 The attestation process is managed by an optional Windows component called the HGS Client.
@@ -38,6 +44,9 @@ The steps below will help you install this component and begin attesting.
 3. Restart to complete the installation.
 
 ## Step 2: Verify virtualization-based security is running
+
+> [!NOTE]
+> This step should be performed by the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator.
 
 When you install the Host Guardian Hyper-V Support feature, virtualization-based security (VBS) is automatically configured and enabled.
 The enclaves for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted are protected by and run inside the VBS environment.
@@ -80,7 +89,10 @@ Contact your IT help desk to see if they deploy policies that manage your VBS co
 
 ## Step 3: Configure the attestation URL
 
-Next, you'll configure the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer with the URL for theHGS attestation service.
+> [!NOTE]
+> This step should be performed by the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator.
+
+Next, you'll configure the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer with the URL for the HGS attestation service, you have obtained from the HGS administrator.
 
 In an elevated PowerShell console, update and run the following command to configure the attestation URL.
 
@@ -100,6 +112,14 @@ The `AttestationMode` field in the cmdlet output indicates which attestation mod
 Proceed to [Step 4A](#step-4a-register-a-computer-in-tpm-mode) to register the computer in TPM mode or [Step 4B](#step-4b-register-a-computer-in-host-key-mode) to register the computer in host key mode.
 
 ## Step 4A: Register a computer in TPM mode
+
+> [!NOTE]
+> This step is performed jointly by the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator and the HGS administrator. See the below notes for details.
+
+### Prepare
+
+> [!NOTE]
+> This action should be performed by the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator.
 
 In this step, you collect information about the computer TPM state and register it with HGS.
 
@@ -122,6 +142,9 @@ HGS only requires that a computer attesting matches one policy from each policy 
 For example, if you have three TPM baselines registered on HGS, the computer measurements can match any one of those baselines to meet the policy requirement.
 
 ### Configure a code integrity policy
+
+> [!NOTE]
+> This below steps should be performed by the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator.
 
 HGS requires that every computer attesting in TPM mode has a Windows Defender Application Control (WDAC) policy applied.
 WDAC code integrity policies restrict which software can run on a computer by checking each process that tries to execute code against a list of trusted publishers and file hashes.
@@ -148,6 +171,9 @@ If you are already using a custom WDAC code integrity policy on the computers to
 
 ### Collect TPM attestation information
 
+> [!NOTE]
+> This below steps should be performed by the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator.
+
 Repeat the following steps for each [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer that will be attesting with HGS:
 
 1. With the computer in a known-good state, run the following commands in PowerShell to collect the TPM attestation information:
@@ -165,9 +191,17 @@ Repeat the following steps for each [!INCLUDE [ssnoversion-md](../../../includes
     Copy-Item -Path "$env:SystemRoot\System32\CodeIntegrity\SIPolicy.p7b" -Destination "$path\$name-CIpolicy.bin"
     ```
 
-2. Copy the three attestation files to the HGS server.
+2. Share the three attestation files with the HGS administrator. 
 
-3. On the HGS server, run the following commands in an elevated PowerShell console to register the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer:
+### Register the SQL Server computer with HGS
+
+> [!NOTE]
+> This below steps should be performed by the HGS administrator.
+
+Repeat the following steps for each [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer that will be attesting with HGS:
+
+1. Copy the attestation files, you obtained from !INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator to the HGS server. 
+2. On the HGS server, run the following commands in an elevated PowerShell console to register the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer:
 
     ```powershell
     # TIP: REMEMBER TO CHANGE THE FILENAMES
@@ -207,34 +241,56 @@ Get-HgsAttestationTpmPolicy
 
 ## Step 4B: Register a computer in host key mode
 
+> [!NOTE]
+> This step is performed jointly by the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator and the HGS administrator. See the below notes for details.
+
 This step will walk you through the process to generate a unique key for the host and register it with HGS.
 If the HGS attestation service is configured to use TPM mode, follow the guidance in [Step 4A](#step-4a-register-a-computer-in-tpm-mode) instead.
 
+### Generate a key for a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer
+
+> [!NOTE]
+> This part should be performed jointly by the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator.
+
 Host key attestation works by generating an asymmetric key pair on the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer and providing HGS with the public half of that key.
-To generate the key pair, run the following command in an elevated PowerShell console:
 
-```powershell
-Set-HgsClientHostKey
-Get-HgsClientHostKey -Path "$HOME\Desktop\$env:computername-key.cer"
-```
+Repeat the following steps for each [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer that will be attesting with HGS:
 
-If you've already created a host key and want to generate a new key pair, use the following commands instead:
+1. To generate the key pair, run the following command in an elevated PowerShell console:
 
-```powershell
-Remove-HgsClientHostKey
-Set-HgsClientHostKey
-Get-HgsClientHostKey -Path "$HOME\Desktop\$env:computername-key.cer"
-```
+    ```powershell
+    Set-HgsClientHostKey
+    Get-HgsClientHostKey -Path "$HOME\Desktop\$env:computername-key.cer"
+    ```
 
-Once you have generated the host key, copy the certificate file to an HGS server and run the following command in an elevated PowerShell console to register the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer:
+    If you've already created a host key and want to generate a new key pair, use the following commands instead:
 
-```powershell
-Add-HgsAttestationHostKey -Name "YourComputerName" -Path "C:\temp\yourcomputername.cer"
-```
+    ```powershell
+    Remove-HgsClientHostKey
+    Set-HgsClientHostKey
+    Get-HgsClientHostKey -Path "$HOME\Desktop\$env:computername-key.cer"
+    ```
 
-Repeat Step 4B for every [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer that will attest with HGS.
+2. Share the certificate file with the HGS administrator.
+
+### Register the SQL Server computer with HGS
+
+> [!NOTE]
+> This below steps should be performed by the HGS administrator.
+
+Repeat the following steps for each [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer that will be attesting with HGS:
+
+1. Copy the certificate file, you obtained from the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator, to an HGS server.
+2. Run the following command in an elevated PowerShell console to register the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer:
+
+    ```powershell
+    Add-HgsAttestationHostKey -Name "YourComputerName" -Path "C:\temp\yourcomputername.cer"
+   ```
 
 ## Step 5: Confirm the host can attest successfully
+
+> [!NOTE]
+> This step should be performed by the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator.
 
 After you've registered the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer with HGS ([Step 4A](#step-4a-register-a-computer-in-tpm-mode) for TPM mode, [Step 4B](#step-4b-register-a-computer-in-host-key-mode) for host key mode), you should confirm it's able to successfully attest.
 

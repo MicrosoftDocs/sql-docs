@@ -200,7 +200,7 @@ Repeat the following steps for each [!INCLUDE [ssnoversion-md](../../../includes
 
 Repeat the following steps for each [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer that will be attesting with HGS:
 
-1. Copy the attestation files, you obtained from !INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator to the HGS server. 
+1. Copy the attestation files, you obtained from [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator to the HGS server. 
 2. On the HGS server, run the following commands in an elevated PowerShell console to register the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer:
 
     ```powershell

@@ -7789,8 +7789,9 @@
           - name: Develop applications with .NET Framework
             href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
       - name: Always Encrypted with secure enclaves
-        href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
         items:
+          - name: Configure Always Encrypted with secure enclaves
+            href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
           - name: Set up your environment to support enclaves and attestation
             items:
               - name: Set up SQL Server
@@ -7820,9 +7821,9 @@
               - name: Enable Always Encrypted with secure enclaves for existing encrypted columns
                 href: relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns.md
           - name: Run Transact-SQL statements using secure enclaves
-            items:
-              - name: Run Transact-SQL statements using secure enclaves
-                href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
+            href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
+          - name: Troubleshoot common issues with secure enclaves
+            href: relational-databases/security/encryption/always-encrypted-enclaves-troubleshooting.md
           - name: Create and use indexes on enclave-enabled columns
             href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
           - name: Develop applications using Always Encrypted with secure enclaves

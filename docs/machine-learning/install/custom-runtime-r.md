@@ -27,7 +27,7 @@ Before installing an R custom runtime, install the following:
 
 + Install the [Cumulative Update (CU) 3 or later](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) for SQL Server 2019.
 
-+ Install [R version 3.3 or later](https://cran.r-project.org/) for Windows on the server.
++ Install [R version 3.3 or later](https://cran.r-project.org/bin/windows/base/) for Windows on the server.
 
 ## Add SQL Server Language Extensions for Windows
 
@@ -64,19 +64,21 @@ Follow the steps below to install [SQL Server Language Extensions](../../languag
 
 ## Install R
 
-> [!NOTE]
-> For SQL Machine Learning Services, R is already installed in the **R_SERVICES** folder of your SQL Server instance. For example, "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES". If you want to keep using this path as your R_HOME, skip to the next step of installing Rcpp. Otherwise, if you want to use a different runtime of R, continue here to install it.
+Download and install the version of R you will use as the custom runtime. R version 3.3 or later are supported.
 
-Install [R (3.3 or higher)](https://cran.r-project.org/bin/windows/base/) and note the path where it's installed. This path is your **R_HOME**. For example, as shown here, R_HOME is "C:\Program Files\R\R-4.0.2"
+1. Download [R version 3.3 or later](https://cran.r-project.org/bin/windows/base/).
 
-![Install Custom R](../install/media/custom-r-installation.png)
+1. Run the R setup.
 
-> [!NOTE]
->In the following instructions, %R_HOME% is the path to your R installation and should be replaced with that value.
+1. Note the path where R is installed. This path is your **R_HOME**. For example, **R_HOME** below is `C:\Program Files\R\R-4.0.3`.
+
+    :::image type="content" source="media/r-setup-path.png" alt-text="R setup":::
+
+    In the following instructions, **%R_HOME%** is the path to your R installation and should be replaced with this path.
 
 ## Install Rcpp package
 
-+ Locate the R executable in %R_HOME%\bin. By default, it is in `C:\Program Files\R\R-4.0.2\bin`.
+1. Locate the R executable in %R_HOME%\bin. For example, `C:\Program Files\R\R-4.0.3\bin`. 
 
 + Start R from an *elevated* command prompt:
 

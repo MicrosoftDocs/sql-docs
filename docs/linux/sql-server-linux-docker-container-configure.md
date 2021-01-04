@@ -4,7 +4,7 @@ description: Understand the different ways to customize SQL Server Docker Contai
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 ms.date: 09/07/2020
 ms.topic: conceptual
 ms.prod: sql

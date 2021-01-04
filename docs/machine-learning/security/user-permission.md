@@ -7,7 +7,7 @@ ms.date: 10/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-ms.custom: seo-lt-2019, contperfq4
+ms.custom: seo-lt-2019, contperf-fy20q4
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Grant users permission to execute Python and R scripts with SQL Server Machine Learning Services

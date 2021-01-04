@@ -42,7 +42,7 @@ P.S.  there's no need to keep this large HTML comment indefinitely.
 
 ## 15.9.7,&nbsp; SSDT for VS 2017
 
-_Released:_ &nbsp; Dec 28, 2020  
+_Released:_ &nbsp; Jan 5, 2021  
 _Build Number:_ &nbsp; 14.0.16228.0  
 _SSDT for Visual Studio 2017._
 

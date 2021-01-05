@@ -7,5 +7,9 @@ groups:
   pivots:
   - id: platform-windows
     title: Windows
-  - id: platform-linux
-    title: Linux
+  - id: platform-linux-ubuntu
+    title: Ubuntu Linux
+  - id: platform-linux-rhel
+    title: Red Hat Enterprise Linux
+  - id: platform-linux-sles
+    title: SUSE Linux Enterprise Server

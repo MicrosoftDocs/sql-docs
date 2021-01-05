@@ -33,27 +33,24 @@ This tutorial consists of the following tasks:
 
 * Three VMs in an on-premises environment, running the cluster manager on a supported linux distribution.
 
-   > [NOTE!]
-   > The cluster manager requirements specify the the supported linux distribution. For an example of a supported distribution, see [HPE Serviceguard](https://h20195.www2.hpe.com/v2/gethtml.aspx?docname=c04154488).
-   >
-   > Check with the cluster manager vendor for information about support for public cloud environments. 
+   The cluster manager requirements specify the the supported linux distribution. For an example of a supported distribution, see [HPE Serviceguard](https://h20195.www2.hpe.com/v2/gethtml.aspx?docname=c04154488).
+
+   Check with the cluster manager vendor for information about support for public cloud environments. 
 
 * An appropriate cluster manager.
 
-   > [NOTE!]
-   > The instructions in this tutorial are validated against HPE Serviceguard for Linux. A trial edition is available for download from [HPE](https://www.hpe.com/us/en/resources/servers/serviceguard-linux-trial.html).
+   The instructions in this tutorial are validated against HPE Serviceguard for Linux. A trial edition is available for download from [HPE](https://www.hpe.com/us/en/resources/servers/serviceguard-linux-trial.html).
 
 * SQL Server database files are on a volume supported by the cluster manager.
 
-   > [NOTE!]
-   > Refer to the cluster manager documentation for information about storage requirements.
-   >
-   > * [HPE](http://[https:/support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us)
+   Refer to the cluster manager documentation for information about storage requirements.
+
+    * [HPE](http://[https:/support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us)
 
 * Ensure that you have a OpenJDK java runtime installed on the VMs,
 
-    > [NOTE!]
-    > IBM java sdk is not supported.
+> [NOTE!]
+> IBM java sdk is not supported.
 
 ## Install SQL Server
 

@@ -232,7 +232,7 @@ drop event session spin_lock_backoff on server
 By analyzing the output, we can see the call stacks for the most common code paths for the SOS_CACHESTORE spins. The script was run a couple of different times during the time when CPU utilization was high to check for consistency in the call stacks returned. Notice that the call stacks with the highest slot bucket count are common between the two outputs (35,668 and 8,506). These call stacks have a "slot count" that is two orders of magnitude greater than the next highest entry. This condition indicates a code path of interest.
 
 > [!NOTE]
-> It is not uncommon to see call stacks returned by the previous script. When the script is run for 1 minute we have observed that stacks with a slot count \>1000 are likely to be problematic and stacks with a slot count \>10,000 are likely to be problematic.
+> It is not uncommon to see call stacks returned by the previous script. When the script ran for 1 minute, we observed that call stacks with a slot count of > 1000 was problematic but the slot count of > 10,000 was more likely to be problematic since it has a higher slot count.
 
 > [!NOTE]
 > The formatting of the following output has been cleaned for readability purposes.

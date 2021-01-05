@@ -43,5 +43,5 @@ After replication components are installed, you must configure the server before
  [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)   
  [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md)   
  [Features Supported by the Editions of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) and
- [SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)
+ [Features Supported by the Editions of SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)
   

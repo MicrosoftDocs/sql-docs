@@ -49,8 +49,8 @@ This tutorial consists of the following tasks:
 
 * Ensure that you have a OpenJDK java runtime installed on the VMs,
 
-> [NOTE!]
-> IBM java sdk is not supported.
+   > [!NOTE]
+   > IBM java sdk is not supported.
 
 ## Install SQL Server
 

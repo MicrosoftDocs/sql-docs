@@ -65,13 +65,13 @@ On all the three VMs, please follow one of the below steps based on the Linux di
 
 ### RHEL
 
-* [Install SQL Server on RHEL](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-red-hat?view=sql-server-ver15#install)
-* [Install SQL Server tools on RHEL](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-red-hat?view=sql-server-ver15#tools)
+* [Install SQL Server on Red Hat](quickstart-install-connect-red-hat.md#install)
+* [Tools](quickstart-install-connect-red-hat.md#tools)
 
 ### SLES
 
-* [Install SQL Server on SLES](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-suse?view=sql-server-ver15#install)
-* [Install SQL Server tools](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-suse?view=sql-server-ver15#tools)
+* [Install SQL Server on SLES](quickstart-install-connect-suse.md#install)
+* [Tools](quickstart-install-connect-suse.md#tools)
 
 After you complete this step, you should have SQL Server service and tools installed on all three VMs that will participate in the availability group.
 

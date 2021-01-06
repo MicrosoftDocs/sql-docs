@@ -40,9 +40,6 @@ In addition, you can improve performance by enabling lock escalation at the part
 
 > [!TIP]
 > Partitions of a table or index can be placed on one filegroup, for example the `PRIMARY` filegroup, or on multiple filegroups. When using tiered storage, using multiple filegroups lets you assign specific partitions to specific storage tiers. All other partitioning benefits apply regardless of the number of filegroups used or partition placement on specific filegroups.
-
-> [!NOTE]
-> In Azure SQL Database only primary filegroups are supported.  
   
 ## Components and Concepts  
 The following terms are applicable to table and index partitioning.  
@@ -52,6 +49,9 @@ A database object that defines how the rows of a table or index are mapped to a 
   
 ### Partition scheme 
 A database object that maps the partitions of a partition function to a set of filegroups. The primary reason for placing your partitions on separate filegroups is to make sure that you can independently perform backup operations on partitions. This is because you can perform backups on individual filegroups.  
+
+> [!NOTE]
+> In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] only primary filegroups are supported.  
   
 ### Partitioning column  
 The column of a table or index that a partition function uses to partition the table or index. Computed columns that participate in a partition function must be explicitly marked PERSISTED. All data types that are valid for use as index columns can be used as a partitioning column, except **timestamp**. The **ntext**, **text**, **image**, **xml**, **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** data types cannot be specified. Also, Microsoft .NET Framework common language runtime (CLR) user-defined type and alias data type columns cannot be specified.  

@@ -46,7 +46,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 4.  Create or modify a table or index and specify the partition scheme as the storage location.  
  
 > [!NOTE]
-> In Azure SQL Database only primary filegroups are supported.  
+> In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] only primary filegroups are supported.  
   
  **In This Topic**  
   
@@ -93,7 +93,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Under **Rows**, click **Add**. In the new row, enter the filegroup name.  
   
     > [!WARNING]  
-    >  You must always have one extra filegroup in addition to the number of filegroups specified for the boundary values when you are creating partitions.  
+    >  When specifying multiple filegroups, you must always have one extra filegroup in addition to the number of filegroups specified for the boundary values when you are creating partitions.  
   
 4.  Continue adding rows until you have created all of the filegroups for the partitioned table.  
   
@@ -135,7 +135,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
      After completing this page, click **Next**.  
   
-6.  On the **Map Partitions** page, under **Range**, select either **Left boundary** or **Right boundary** to specify whether to include the highest or lowest bounding value within each filegroup you create. You must always enter one extra filegroup in addition to the number of filegroups specified for the boundary values when you are creating partitions.  
+6.  On the **Map Partitions** page, under **Range**, select either **Left boundary** or **Right boundary** to specify whether to include the highest or lowest bounding value within each filegroup you create. When specifying multiple filegroups, you must always enter one extra filegroup in addition to the number of filegroups specified for the boundary values when you are creating partitions.  
   
      In the **Select filegroups and specify boundary values** grid, under **Filegroup**, select the filegroup into which you want to partition your data. Under **Boundary**, enter the boundary value for each filegroup. If boundary value is left empty, the partition function maps the whole table or index into a single partition using the partition function name.  
   
@@ -344,9 +344,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
     ```  
 
 
-#### To create a partitioned table in Azure SQL Database
+#### To create a partitioned table in Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
-In Azure SQL Database, adding files and file groups is not supported, but table partitioning is supported by partitioning across only the PRIMARY filegroup. 
+In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], adding files and file groups is not supported, but table partitioning is supported by partitioning across only the PRIMARY filegroup.
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

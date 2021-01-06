@@ -36,7 +36,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  Any filegroup affected by ALTER PARTITION SCHEME must be online.  
 
 > [!NOTE]
-> In Azure SQL Database only primary filegroups are supported.  
+> In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] only primary filegroups are supported.  
   
 ###  <a name="Security"></a> Security  
   

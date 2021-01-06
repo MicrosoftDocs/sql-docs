@@ -2,7 +2,7 @@
 description: "Create Partitioned Tables and Indexes"
 title: "Create Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "1/5/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -44,6 +44,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Create a partition scheme that maps the partitions of a partitioned table or index to the new filegroups.  
   
 4.  Create or modify a table or index and specify the partition scheme as the storage location.  
+ 
+> [!NOTE]
+> In Azure SQL Database only primary filegroups are supported.  
   
  **In This Topic**  
   
@@ -257,7 +260,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
-#### To create a partitioned table  
+#### To create a partitioned table
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -339,6 +342,34 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
         ON myRangePS1 (col1) ;  
     GO  
     ```  
+
+
+#### To create a partitioned table in Azure SQL Database
+
+In Azure SQL Database, adding files and file groups is not supported, but table partitioning is supported by partitioning across only the PRIMARY filegroup. 
+  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+1.  On the Standard bar, click **New Query**.  
+  
+1.  Copy and paste the following example into the query window and click **Execute**. This example creates a partition function and a partition scheme. A new table is created with the partition scheme specified as the storage location. 
+
+    ```
+    -- Creates a partition function called myRangePF1 that will partition a table into four partitions  
+    CREATE PARTITION FUNCTION myRangePF1 (int)  
+        AS RANGE LEFT FOR VALUES (1, 100, 1000) ;  
+    GO  
+    -- Creates a partition scheme called myRangePS1 that applies myRangePF1 to the PRIMARY filegroup 
+    CREATE PARTITION SCHEME myRangePS1  
+        AS PARTITION myRangePF1  
+        ALL TO ('PRIMARY') ;  
+    GO  
+    -- Creates a partitioned table called PartitionTable that uses myRangePS1 to partition col1  
+    CREATE TABLE PartitionTable (col1 int PRIMARY KEY, col2 char(10))  
+        ON myRangePS1 (col1) ;  
+    GO
+    ```  
+
   
 #### To determine if a table is partitioned  
   

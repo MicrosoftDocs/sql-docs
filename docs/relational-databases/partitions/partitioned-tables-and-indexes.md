@@ -2,7 +2,7 @@
 description: "Partitioned Tables and Indexes"
 title: "Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/20/2016"
+ms.date: "1/5/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -40,6 +40,9 @@ In addition, you can improve performance by enabling lock escalation at the part
 
 > [!TIP]
 > Partitions of a table or index can be placed on one filegroup, for example the `PRIMARY` filegroup, or on multiple filegroups. When using tiered storage, using multiple filegroups lets you assign specific partitions to specific storage tiers. All other partitioning benefits apply regardless of the number of filegroups used or partition placement on specific filegroups.
+
+> [!NOTE]
+> In Azure SQL Database only primary filegroups are supported.  
   
 ## Components and Concepts  
 The following terms are applicable to table and index partitioning.  

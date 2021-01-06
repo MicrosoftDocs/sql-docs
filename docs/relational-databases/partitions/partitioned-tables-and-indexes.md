@@ -69,7 +69,7 @@ When partitioning a clustered index, the clustering key must contain the partiti
 When partitioning a unique nonclustered index, the index key must contain the partitioning column. When partitioning a nonunique, nonclustered index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adds the partitioning column by default as a nonkey (included) column of the index to make sure the index is aligned with the base table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not add the partitioning column to the index if it is already present in the index. 
 
 ### Non-aligned index  
-An index partitioned independently from its corresponding table. That is, the index has a different partition scheme or is placed on a separate filegroup from the base table. Designing an non-aligned partitioned index can be useful in the following cases:  
+An index partitioned independently from its corresponding table. That is, the index has a different partition scheme or is placed on a separate filegroup from the base table. Designing a non-aligned partitioned index can be useful in the following cases:  
 -   The base table has not been partitioned.  
 -   The index key is unique and it does not contain the partitioning column of the table.  
 -   You want the base table to participate in collocated joins with more tables using different join columns.  

@@ -260,7 +260,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
-#### To create a partitioned table
+#### To create a partitioned table  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

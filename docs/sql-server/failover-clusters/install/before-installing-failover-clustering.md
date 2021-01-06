@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "08/24/2016"
 ms.reviewer: ""
 ms.prod: sql
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "clusters [SQL Server], preinstallation checklist"

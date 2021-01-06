@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "10/28/2020"
+ms.date: "12/17/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,14 @@ ms.author: alexiva
 # What's New in SSMA for Access (AccessToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.
+
+## SSMA v8.16
+
+The v8.16 release of SSMA for Access contains the following changes:
+
+* Show SQL text for queries in the HTML conversion report
+* Remove support for legacy parser
+* Fix issue with objects not refreshing from database
 
 ## SSMA v8.15
 

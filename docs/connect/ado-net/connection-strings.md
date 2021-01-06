@@ -63,9 +63,9 @@ All connection strings share the same basic syntax described above. The set of r
 
 Typing mistakes can cause errors. For example, `Integrated Security=true` is valid, but `IntegratedSecurity=true` causes an error.
 
-Connection strings constructed manually at run time from unvalidated user input are vulnerable to string-injection attacks and jeopardize security at the data source. To address these problems, the [connection string builder](connection-string-builders.md) has created. This connection string builder exposes parameters as strongly typed properties, and make it possible to validate the connection string before it's sent to the data source.
+Connection strings constructed manually at run time from invalidated user input are vulnerable to string-injection attacks and jeopardize security at the data source. To address these problems, the <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> class has been created. This [connection string builder](connection-string-builders.md) class exposes parameters as strongly typed properties, and makes it possible to validate the connection string before it's sent to the data source.
 
-## In This Section
+## In this section
 
 [Connection String Builder](connection-string-builders.md)\
 Demonstrates how to use the `ConnectionStringBuilder` class to construct valid connection strings at run time.
@@ -78,3 +78,7 @@ Describes how to configure provider-specific connection strings for `SqlClient`.
 
 [Protecting Connection Information](protecting-connection-information.md)\
 Demonstrates techniques for protecting information used to connect to a data source.
+
+## See also
+
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

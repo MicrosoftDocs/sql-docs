@@ -1,6 +1,6 @@
 ---
 title: "Enable encrypted connections | Microsoft Docs"
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 ms.date: "08/29/2019"
 ms.prod: sql
 ms.prod_service: security

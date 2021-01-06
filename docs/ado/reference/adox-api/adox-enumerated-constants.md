@@ -33,5 +33,5 @@ To assist debugging, the ADOX enumerated constants list a value for each constan
 |[SortOrderEnum](./sortorderenum.md)|Specifies the sort sequence for an indexed column.|  
   
 ## See Also  
- [ADOX API Reference](./adox-object-model.md?view=sql-server-ver15)   
+ [ADOX API Reference](./adox-object-model.md)   
  [ADO Extensions for Data Definition Language and Security (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

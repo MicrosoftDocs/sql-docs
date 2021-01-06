@@ -209,7 +209,7 @@ SELECT
 |**date**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  
-|**datetime2**|2007-05-08 12:35:29. 1234567|  
+|**datetime2**|2007-05-08 12:35:29.1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
 
 First introduced in SQL Server 2008.

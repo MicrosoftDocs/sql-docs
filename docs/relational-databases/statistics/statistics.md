@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
 dev_langs: 
-    "TSQL"
+  - "TSQL"
 helpviewer_keywords: 
   - "statistical information [SQL Server], query optimization"
   - "query performance [SQL Server], statistics"

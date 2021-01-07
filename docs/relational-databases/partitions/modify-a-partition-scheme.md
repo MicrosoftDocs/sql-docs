@@ -2,7 +2,7 @@
 description: "Modify a Partition Scheme"
 title: "Modify a Partition Scheme | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "1/5/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -34,6 +34,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
  Any filegroup affected by ALTER PARTITION SCHEME must be online.  
+
+> [!NOTE]
+> In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] only primary filegroups are supported.  
   
 ###  <a name="Security"></a> Security  
   

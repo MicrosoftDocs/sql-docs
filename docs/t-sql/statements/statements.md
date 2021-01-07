@@ -1,6 +1,6 @@
 ---
-ile: Statements
-description: Use Transact-SQL statements
+title: Transact-SQL statements
+description: Transact-SQL statements
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
 ms.reviewer: ""

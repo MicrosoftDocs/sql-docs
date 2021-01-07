@@ -14,8 +14,9 @@ ms.technology: big-data-cluster
 # Configure a SQL Server Big Data Cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+Configuration management enables administrators to ensure their Big Data Cluster is always prepared for their workload needs. With this functionality, cluster administrators can alter or tune various parts of the Big Data Cluster at deployment time or post-deployment and get deeper insight into the configurations running in their BDC. 
 
-Big Data Clusters supports deployment time and post-deployment time settings configuration so that your BDC is always equipped for your workloads. Settings configurations allow you to enable SQL Agent, select your SQL Server license, define the default resources for Spark jobs, and much more. At deployment time, configurations can be configured through the deployment `bdc.json` file and post-deployment through azdata CLI.
+Configuration management allows an adminstrator to enable SQL Agent, define the baseline resources for their organization’s Spark jobs, or even see what settings are configurable at each scope. At deployment time, configurations can be configured through the deployment `bdc.json` file and post-deployment through azdata CLI.
 
 ## Configuration Scopes
 Big Data Clusters configuration has three scoping levels: `cluster`, `service`, and `resource`. The hierarchy of the settings follows in this order as well, from highest to lowest. BDC components will take the value of the setting defined at the lowest scope. If the setting is not defined at a given scope, it will inherit the value from its higher parent scope.

@@ -21,8 +21,9 @@ monikerRange: ">=sql-server-2016"
 ## Release notes and known upgrade issues  
  Before upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review:
 
+- [SQL Server 2019 Release Notes](../../sql-server/sql-server-version-15-release-notes.md)
 - [SQL Server 2017 Release Notes](../../sql-server/sql-server-2017-release-notes.md) 
-- [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) 
+- [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md)
 - [SQL Server Database Engine Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md) article.  
   
 ## Pre-upgrade planning checklist  

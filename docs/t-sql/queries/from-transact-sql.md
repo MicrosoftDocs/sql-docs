@@ -1,5 +1,5 @@
 ---
-title: FROM: JOIN, APPLY, PIVOT (T-SQL)
+title: FROM clause plus JOIN, APPLY, PIVOT (T-SQL)
 description: FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

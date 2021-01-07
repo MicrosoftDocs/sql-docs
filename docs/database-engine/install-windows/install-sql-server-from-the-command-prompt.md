@@ -83,7 +83,7 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 07/26/2019
+ms.date: 01/07/2020
 monikerRange: ">=sql-server-2016"
 ---
 
@@ -827,7 +827,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 
 
 ##  <a name="Feature"></a> Feature Parameters  
- To install specific features, use the /FEATURES parameter and specify the parent feature or feature values in the following table. For a list of features that are supported by the editions of SQL Server, see [Editions and Supported Features for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). 
+ To install specific features, use the /FEATURES parameter and specify the parent feature or feature values in the following table. For a list of features that are supported by the editions of SQL Server, see [Editions and Supported Features for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-components-of-sql-server-2016.md), [Editions and Supported Features for [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]](../../sql-server/editions-and-components-of-sql-server-2017.md), or [Editions and Supported Features for [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]](../../sql-server/editions-and-components-of-sql-server-version-15.md).
   
 |Parent feature parameter|Feature parameter|Description|  
 |:---|:---|:---|  
@@ -840,9 +840,9 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||PolyBaseCore | Starting with SQL Server 2019, pair with **PolyBase** to install Polybase technology that enables truly integrated querying across Oracle, Teradata, SQL Server and other relational and non-relational data using standard T-SQL statements. |
 || PolyBaseJava | Starting with SQL Server 2019, pair with **PolyBase** to install PolyBase Java Connector that enables truly integrated querying across HDFS data using standard T-SQL statements.
 ||AdvancedAnalytics |Installs [SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) or [SQL Server 2016 R Services (In-Database)](../../machine-learning/install/sql-r-services-windows-install.md).|  
-||SQL_INST_MR |Applies to [SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md). Pair with **AdvancedAnalytics** to install R Open and proprietary R packages.|  
-||SQL_INST_MPY|Applies to [SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md). Pair with **AdvancedAnalytics** to install Anaconda and proprietary Python packages.|  
-||SQL_INST_JAVA |Applies to [SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md). Pair with **AdvancedAnalytics** to install extensions that enable integration with Java using standard T-SQL statements.|  
+||SQL_INST_MR |Applies to [SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (2017 or later) and [SQL Server 2016 R Services (In-Database)](../../machine-learning/install/sql-r-services-windows-install.md). Pair with **AdvancedAnalytics** to install R Open and proprietary R packages.|  
+||SQL_INST_MPY|Applies to [SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (2017 or later). Pair with **AdvancedAnalytics** to install Anaconda and proprietary Python packages.|  
+||SQL_INST_JAVA |Applies to [SQL Server Java Language Extension](../../language-extensions/install/windows-java.md) (2019 and later). Pair with **AdvancedAnalytics** to install extensions that enable integration with Java using standard T-SQL statements.|  
 |AS||Installs all [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] components.|  
 |RS||Installs all [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components. Removed starting with SQL Server 2017. |  
 |RS_SHP||Installs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components for SharePoint. Removed starting with SQL Server 2017.|  

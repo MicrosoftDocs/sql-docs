@@ -1,8 +1,6 @@
 ---
-description: "sys.database_query_store_options (Transact-SQL)"
-title: "sys.database_query_store_options (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/27/2020"
+title: sys.database_query_store_options (Transact-SQL)
+description: sys.database_query_store_options (Transact-SQL)
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -18,12 +16,15 @@ dev_langs:
 helpviewer_keywords: 
   - "database_query_store_options catalog view"
   - "sys.database_query_store_options catalog view"
-ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: markingmyname
 ms.author: maghan
+ms.custom: ""
+ms.date: "05/27/2020"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # sys.database_query_store_options (Transact-SQL)
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Returns the Query Store options for this database.  

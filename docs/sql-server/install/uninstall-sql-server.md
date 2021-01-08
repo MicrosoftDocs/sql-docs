@@ -42,7 +42,7 @@ ms.author: chadam
   
 ## See Also  
  [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
- [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)   
- [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)   
+ [Upgrade to SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   

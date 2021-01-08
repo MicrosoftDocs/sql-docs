@@ -1,8 +1,6 @@
 ---
-description: "FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)"
-title: "FROM: JOIN, APPLY, PIVOT (T-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/01/2019"
+title: FROM clause plus JOIN, APPLY, PIVOT (T-SQL)
+description: FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -13,6 +11,8 @@ f1_keywords:
   - "FROM_TSQL"
   - "FROM"
   - "JOIN_TSQL"
+  - "OUTER_JOIN_TSQL"
+  - "INNER_JOIN_TSQL"
   - "CROSS_TSQL"
   - "CROSS_APPLY_TSQL"
   - "APPLY_TSQL"
@@ -34,8 +34,11 @@ helpviewer_keywords:
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
+ms.custom: ""
+ms.date: "06/01/2019"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -50,9 +53,9 @@ The FROM clause is usually required on the SELECT statement. The exception is wh
 
 This article also discusses the following keywords that can be used on the FROM clause:
 
-- JOIN
+- [JOIN](../../relational-databases/performance/joins.md)
 - APPLY
-- PIVOT
+- [PIVOT](from-using-pivot-and-unpivot.md)
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

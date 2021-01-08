@@ -2738,7 +2738,7 @@
         href: language-extensions/language-extensions-whats-new.md
     - name: Install
       items:
-      - name: Install Language Extensions on Windows
+      - name: Install Java Language Extension on Windows
         href: language-extensions/install/windows-java.md
     - name: Tutorials
       items:

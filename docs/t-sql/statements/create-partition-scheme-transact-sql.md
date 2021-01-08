@@ -154,9 +154,11 @@ Partition scheme 'myRangePS4' has been created successfully. 'test5fg' is marked
   
  If partition function `myRangePF4` is changed to add a partition, filegroup `test5fg` receives the newly created partition.  
 
-### E. Creating a partition scheme only on PRIMARY - only PRIMARY is supported for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+### E. Creating a partition scheme only on PRIMARY
 
- The following example creates a partition function to partition a table or index into four partitions. A partition scheme is then created that specifies that all partitions are created in the PRIMARY filegroup.  
+ In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], adding files and file groups is not supported, but table partitioning is supported by partitioning across only the PRIMARY filegroup. 
+
+The following example creates a partition function to partition a table or index into four partitions. A partition scheme is then created that specifies that all partitions are created in the PRIMARY filegroup.  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF1 (INT)  

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "DENY statement, XML schema collections"
   - "schema collections [SQL Server], permissions"
 ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DENY XML Schema Collection Permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "External, table create"
   - "PolyBase, external table"
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL TABLE (Transact-SQL)

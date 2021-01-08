@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "fn_virtualservernodes function"
   - "sys.fn_virtualservernodes function"
 ms.assetid: 257f3b8d-93c0-4444-87f1-ea211bd8cad0
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_virtualservernodes (Transact-SQL)

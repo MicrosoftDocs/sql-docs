@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.fn_virtualfilestats function"
   - "statistical information [SQL Server], I/O"
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_virtualfilestats (Transact-SQL)

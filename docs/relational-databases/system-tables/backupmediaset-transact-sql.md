@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "backup media [SQL Server], backupmediaset system table"
   - "backupmediaset system table"
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # backupmediaset (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

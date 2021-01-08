@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.fn_cdc_has_column_changed"
   - "fn_cdc_has_column_changed"
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_cdc_has_column_changed (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

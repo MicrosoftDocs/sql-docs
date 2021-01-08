@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "options [SQL Server], date"
   - "default languages"
 ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET LANGUAGE (Transact-SQL)

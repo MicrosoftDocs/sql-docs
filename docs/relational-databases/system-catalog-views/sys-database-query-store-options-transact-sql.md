@@ -1,8 +1,6 @@
 ---
 description: "sys.database_query_store_options (Transact-SQL)"
-title: "sys.database_query_store_options (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "1/6/2021"
+title: "sys.database_query_store_options (Transact-SQL)"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -16,10 +14,12 @@ f1_keywords:
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
-  - "database_query_store_options catalog view"
   - "sys.database_query_store_options catalog view" 
+  - "database_query_store_options catalog view"
 author: markingmyname
 ms.author: maghan
+ms.custom: ""
+ms.date: "1/6/2021"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_query_store_options (Transact-SQL)

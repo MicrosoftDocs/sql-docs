@@ -17,8 +17,7 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "database_query_store_options catalog view"
-  - "sys.database_query_store_options catalog view"
-ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
+  - "sys.database_query_store_options catalog view" 
 author: markingmyname
 ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -70,5 +69,3 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=s
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
  [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
-  
-  

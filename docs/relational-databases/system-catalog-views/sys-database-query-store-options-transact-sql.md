@@ -18,7 +18,7 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 ms.custom: ""
-ms.date: "05/27/2020"
+ms.date: "1/8/2021"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_query_store_options (Transact-SQL)

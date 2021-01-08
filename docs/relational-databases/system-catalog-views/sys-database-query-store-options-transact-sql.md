@@ -1,6 +1,6 @@
 ---
-description: "sys.database_query_store_options (Transact-SQL)"
 title: "sys.database_query_store_options (Transact-SQL)"
+description: "sys.database_query_store_options (Transact-SQL)"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -14,7 +14,6 @@ f1_keywords:
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
-  - "sys.database_query_store_options catalog view" 
   - "database_query_store_options catalog view"
 author: markingmyname
 ms.author: maghan

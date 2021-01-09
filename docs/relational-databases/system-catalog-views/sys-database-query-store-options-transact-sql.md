@@ -21,7 +21,9 @@ ms.custom: ""
 ms.date: "1/8/2021"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # sys.database_query_store_options (Transact-SQL)
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Returns the Query Store options for this database.  

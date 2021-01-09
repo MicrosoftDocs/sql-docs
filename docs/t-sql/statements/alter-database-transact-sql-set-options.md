@@ -2000,10 +2000,6 @@ You can't change the state of ALLOW_SNAPSHOT_ISOLATION if the database is OFFLIN
 
 If you set ALLOW_SNAPSHOT_ISOLATION in a READ_ONLY database, the setting will be kept if the database is later set to READ_WRITE.
 
-You can change the ALLOW_SNAPSHOT_ISOLATION settings for the master, model, msdb, and tempdb databases. The setting is kept every time the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is stopped and restarted if you change the setting for tempdb. If you change the setting for model, that setting becomes the default for any new databases that are created, except for tempdb.
-
-The option is ON, by default, for the master and msdb databases.
-
 The current setting of this option can be determined by examining the `snapshot_isolation_state` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }     

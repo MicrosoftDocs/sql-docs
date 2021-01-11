@@ -238,7 +238,7 @@ Repeat Step 4B for every [!INCLUDE [ssnoversion-md](../../../includes/ssnoversio
 
 After you've registered the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer with HGS ([Step 4A](#step-4a-register-a-computer-in-tpm-mode) for TPM mode, [Step 4B](#step-4b-register-a-computer-in-host-key-mode) for host key mode), you should confirm it's able to successfully attest.
 
-You can check the configuration of the HGS attestation client and perform an attestation attempt at any time with [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps).
+You can check the configuration of the HGS attestation client and perform an attestation attempt at any time with [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration).
 The output of the command will look similar to below:
 
 ```

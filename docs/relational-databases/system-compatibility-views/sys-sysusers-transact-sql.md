@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysusers system table"
   - "sys.sysusers compatibility view"
 ms.assetid: 5f0e6a8d-c983-44f6-97e9-aab5bff67d18
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sysusers (Transact-SQL)

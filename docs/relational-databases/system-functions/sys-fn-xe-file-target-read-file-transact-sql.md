@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "fn_xe_file_target_read_file function"
   - "sys.fn_xe_file_target_read_file function"
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_xe_file_target_read_file (Transact-SQL)

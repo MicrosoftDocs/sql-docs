@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysaltfiles system table"
   - "sys.sysaltfiles compatibility view"
 ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysaltfiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "remote service bindings [Service Broker], dropping"
   - "DROP REMOTE SERVICE BINDING statement"
 ms.assetid: 377789b4-bf94-488f-8c20-687d0bae447a
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

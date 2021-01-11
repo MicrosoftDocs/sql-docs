@@ -29,7 +29,7 @@ helpviewer_keywords:
   - "matching patterns [SQL Server]"
   - "NOT LIKE keyword"
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
-author: juliemsft
+author: julieMSFT
 ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

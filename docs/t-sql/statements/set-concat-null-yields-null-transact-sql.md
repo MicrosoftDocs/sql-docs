@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "concatenation [SQL Server]"
   - "SET CONCAT_NULL_YIELDS_NULL statement"
 ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)

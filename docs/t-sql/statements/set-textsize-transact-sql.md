@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "TEXTSIZE option"
   - "text size returned [SQL Server]"
 ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET TEXTSIZE (Transact-SQL)

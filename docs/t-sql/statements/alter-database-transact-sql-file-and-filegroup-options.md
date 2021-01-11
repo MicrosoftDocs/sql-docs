@@ -41,8 +41,8 @@ helpviewer_keywords:
   - "files [SQL Server], adding"
   - "databases [SQL Server], moving"
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # ALTER DATABASE (Transact-SQL) File and Filegroup Options

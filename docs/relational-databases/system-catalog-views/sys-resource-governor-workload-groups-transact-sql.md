@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.resource_governor_workload_groups catalog view"
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

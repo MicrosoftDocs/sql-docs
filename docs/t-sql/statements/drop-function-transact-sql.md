@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "dropping user-defined functions"
   - "deleting user-defined functions"
 ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP FUNCTION (Transact-SQL)

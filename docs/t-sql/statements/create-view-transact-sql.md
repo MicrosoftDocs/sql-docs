@@ -35,8 +35,8 @@ helpviewer_keywords:
   - "views [SQL Server], indexed views"
   - "maximum number of columns per view"
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

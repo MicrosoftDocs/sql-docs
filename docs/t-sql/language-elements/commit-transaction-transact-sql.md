@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "COMMIT TRANSACTION statement"
   - "rolling back transactions, COMMIT TRANSACTION"
 ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COMMIT TRANSACTION (Transact-SQL)

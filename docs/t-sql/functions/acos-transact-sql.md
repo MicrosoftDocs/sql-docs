@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ACOS function"
   - "arccosine"
 ms.assetid: 4ec6b46e-9438-4f0f-8b96-461edd84280a
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ACOS (Transact-SQL)

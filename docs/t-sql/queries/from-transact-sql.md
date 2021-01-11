@@ -196,12 +196,9 @@ FROM { <table_source> [ ,...n ] }
  WITH (\<table_hint> )  
  Specifies that the query optimizer use an optimization or locking strategy with this table and for this statement. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
- *rowset_function*  
-
+*rowset_function*  
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
-
-  
- Specifies one of the rowset functions, such as OPENROWSET, that returns an object that can be used instead of a table reference. For more information about a list of rowset functions, see [Rowset Functions &#40;Transact-SQL&#41;](../functions/opendatasource-transact-sql.md).  
+Specifies one of the rowset functions, such as OPENROWSET, that returns an object that can be used instead of a table reference. For more information about a list of rowset functions, see [Rowset Functions &#40;Transact-SQL&#41;](../functions/opendatasource-transact-sql.md).  
   
  Using the OPENROWSET and OPENQUERY functions to specify a remote object depends on the capabilities of the OLE DB provider that accesses the object.  
   

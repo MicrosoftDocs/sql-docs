@@ -19,6 +19,15 @@ manager: kenvh
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.7 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix character encoding of VARIANT columns in BCP NATIVE mode
+- Fix setting of SQL_ATTR_PARAMS_PROCESSED_PTR under specific conditions
+- Fix SQLDescribeParam in FMTONLY mode for statements containing comments
+- Fix an issue with federated authentication when using Okta
+- Fix excessive memory usage on multi-processor systems
+- Fix Azure AD authentication for some variants of Azure SQL DB
+
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.6 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Fix ADAL error when authenticating with a federated account (Windows)

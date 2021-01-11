@@ -44,6 +44,31 @@ mdadm --create --verbose /dev/md1 --level=raid10 --chunk=64K --raid-devices=2 /d
 mdadm --create --verbose /dev/md2 --level=raid0 --chunk=64K --raid-devices=2 /dev/sdi /dev/sdj
 ```
 
+#### Disk Partitioning and Configuration recommendations
+
+For SQL Server, it is recommended to use RAID configurations. The deployed filesystem stripe unit (sunit) and stripe width should match the RAID geometry. Here is an XFS filesystem based example:
+
+```bash
+# Creating a log volume, using 4 devices, in RAID 10 configuration with 64KB stripes
+mdadm --create --verbose /dev/md3 --level=raid10 --chunk=64K --raid-devices=4 /dev/sda /dev/sdb /dev/sdc /dev/sdd
+
+mkfs.xfs /dev/sda1 -f -L log 
+meta-data=/dev/sda1              isize=512    agcount=32, agsize=18287648 blks 
+         =                       sectsz=4096  attr=2, projid32bit=1 
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0 
+         =                       reflink=1 
+data     =                       bsize=4096   blocks=585204384, imaxpct=5 
+         =                       sunit=16     swidth=48 blks 
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1 
+log      =internal log           bsize=4096   blocks=285744, version=2 
+         =                       sectsz=4096  sunit=1 blks, lazy-count=1 
+realtime =none                   extsz=4096   blocks=0, rtextents=0 
+```
+
+The log array is a 6-drive RAID-10 with a 64k stripe. As you can see:
+   1. The "sunit=16 blks", 16*4096 blk size= 64k, matches the stripe size. 
+   2. The "swidth = 48 blks", swidth/sunit = 3, which is the number of data drives in the array, excluding parity drives. 
+
 #### File System Configuration recommendation
 
 SQL Server supports both EXT4 and XFS file systems to host the database, transaction logs, and additional files such as checkpoint files for in-memory OLTP in SQL Server. Microsoft recommends using XFS file system for hosting the SQL Server data and transaction log files.

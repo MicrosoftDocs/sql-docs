@@ -31,7 +31,7 @@ This article describes how to insert a [pandas](https://pandas.pydata.org/) data
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) for restoring the sample database to Azure SQL Managed Instance.
 ::: moniker-end
 
-* Azure Data Studio. To install, see [Azure Data Studio](../../azure-data-studio/what-is.md).
+* Azure Data Studio. To install, see [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md).
 
 * [Restore sample database](../../samples/adventureworks-install-configure.md) to get sample data used in this article.
 

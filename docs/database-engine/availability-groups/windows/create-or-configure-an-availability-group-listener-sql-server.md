@@ -304,7 +304,7 @@ Start-Clustergroup yourListenerGroupName
   
     -   **Using Windows PowerShell for failover clusters:**  
   
-        1.  Use [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) to create a network name and the IP address resources.  
+        1.  Use [Add-ClusterResource](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee460983(v=technet.10)) to create a network name and the IP address resources.  
   
         2.  Use [Start-ClusterResource](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461056(v=technet.10)) to start the network name resource.  
   
@@ -322,4 +322,4 @@ Start-Clustergroup yourListenerGroupName
 
 Now that you've created your listener, configure your application to [connect to the listener](listeners-client-connectivity-application-failover.md). You can also review various [availability group monitoring strategies](monitoring-of-availability-groups-sql-server.md) to ensure the health of your availability group.
 
-You can also [view the properties of a listener](view-availability-group-listener-properties-sql-server.md) or learn how to [remove the listener](remove-an-availability-group-listener-sql-server.md), if necessary. 
+You can also [view the properties of a listener](view-availability-group-listener-properties-sql-server.md) or learn how to [remove the listener](remove-an-availability-group-listener-sql-server.md), if necessary.

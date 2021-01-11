@@ -177,10 +177,10 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, c
   
  HASH indexes are can be used to further optimize the workload. They are particularly optimized for point lookups and row inserts. However, one must consider that they do not support range scans, ordered scans, or search on leading index key columns. Therefore, care needs to be taken when using these indexes. In addition, it is necessary to specify the bucket_count at create time. It should usually be set at between one and two times the number of index key values, but overestimating is usually not a problem.  
   
-For more information, see Books Online for more details about [index guidelines](/sql/relational-databases/indexes/guidelines-for-online-index-operations) and guidelines for [choosing the right bucket_count](https://sqlserver-help.com/tag/bucket_count/).  
+For more information, see Books Online for more details about [index guidelines](../indexes/guidelines-for-online-index-operations.md) and guidelines for [choosing the right bucket_count](https://sqlserver-help.com/tag/bucket_count/).  
 
 The Books Online provide more information about the following topics:
-- [Index guidelines](/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
+- [Index guidelines](./indexes-for-memory-optimized-tables.md) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
 
  The indexes on the migrated tables have been tuned for the demo sales order processing workload. The workload relies on inserts and point lookups in the tables Sales.SalesOrderHeader_inmem and Sales.SalesOrderDetail_inmem, and it also relies on point lookups on the primary key columns in the tables Production.Product_inmem and Sales.SpecialOffer_inmem.  
   

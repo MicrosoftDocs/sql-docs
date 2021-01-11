@@ -9,7 +9,7 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 

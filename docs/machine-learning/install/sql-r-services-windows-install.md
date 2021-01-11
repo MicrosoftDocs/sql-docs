@@ -8,7 +8,7 @@ ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 monikerRange: "=sql-server-2016"
 ---
 # Install SQL Server 2016 R Services

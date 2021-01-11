@@ -2,11 +2,13 @@
 title: Statistics
 description: The Query Optimizer uses statistics to create query plans that improve query performance. Learn about concepts and guidelines for using query optimization.
 ms.custom: ""
-ms.date: "11/23/2020"
+ms.date: "1/7/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
   - "statistical information [SQL Server], query optimization"
   - "query performance [SQL Server], statistics"
@@ -20,7 +22,6 @@ helpviewer_keywords:
   - "index statistics [SQL Server]"
   - "query optimizer [SQL Server], statistics"
   - "statistics [SQL Server]"
-ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -29,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Statistics
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  The Query Optimizer uses statistics to create query plans that improve query performance. For most queries, the Query Optimizer already generates the necessary statistics for a high quality query plan; in some cases, you need to create additional statistics or modify the query design for best results. This topic discusses statistics concepts and provides guidelines for using query optimization statistics effectively.  
+  The Query Optimizer uses statistics to create query plans that improve query performance. For most queries, the Query Optimizer already generates the necessary statistics for a high quality query plan; in some cases, you need to create additional statistics or modify the query design for best results. This article discusses statistics concepts and provides guidelines for using query optimization statistics effectively.  
   
 ##  <a name="DefinitionQOStatistics"></a> Components and Concepts  
 ### Statistics  
@@ -43,13 +44,13 @@ A **histogram** measures the frequency of occurrence for each distinct value in 
 > [!NOTE]
 > <a name="frequency"></a> Histograms in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are only built for a single column-the first column in the set of key columns of the statistics object.
   
-To create the histogram, the query optimizer sorts the column values, computes the number of values that match each distinct column value and then aggregates the column values into a maximum of 200 contiguous histogram steps. Each histogram step includes a range of column values followed by an upper bound column value. The range includes all possible column values between boundary values, excluding the boundary values themselves. The lowest of the sorted column values is the upper boundary value for the first histogram step.
+To create the histogram, the query optimizer sorts the column values, computes the number of values that match each distinct column value, and then aggregates the column values into a maximum of 200 contiguous histogram steps. Each histogram step includes a range of column values followed by an upper bound column value. The range includes all possible column values between boundary values, excluding the boundary values themselves. The lowest of the sorted column values is the upper boundary value for the first histogram step.
 
 In more detail, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates the **histogram** from the sorted set of column values in three steps:
 
 - **Histogram initialization**: In the first step, a sequence of values starting at the beginning of the sorted set is processed, and up to 200 values of *range_high_key*, *equal_rows*, *range_rows*, and *distinct_range_rows* are collected (*range_rows* and *distinct_range_rows* are always zero during this step). The first step ends either when all input has been exhausted, or when 200 values have been found. 
 - **Scan with bucket merge**: Each additional value from the leading column of the statistics key is processed in the second step, in sorted order; each successive value is either added to the last range or a new range at the end is created (this is possible because the input values are sorted). If a new range is created, then one pair of existing, neighboring ranges is collapsed into a single range. This pair of ranges is selected in order to minimize information loss. This method uses a *maximum difference* algorithm to minimize the number of steps in the histogram while maximizing the difference between the boundary values. The number of steps after collapsing ranges stays at 200 throughout this step.
-- **Histogram consolidation**: In the third step, more ranges may be collapsed if a significant amount of information is not lost. The number of histogram steps can be fewer than the number of distinct values, even for columns with fewer than 200 boundary points. Therefore, even if the column has more than 200 unique values, the histogram may have less than 200 steps. For a column consisting of only unique values, then the consolidated histogram will have a minimum of three steps.
+- **Histogram consolidation**: In the third step, more ranges may be collapsed if a significant amount of information is not lost. The number of histogram steps can be fewer than the number of distinct values, even for columns with fewer than 200 boundary points. Therefore, even if the column has more than 200 unique values, the histogram may have fewer than 200 steps. For a column consisting of only unique values, then the consolidated histogram will have a minimum of three steps.
 
 > [!NOTE]
 > If the histogram has been built using a sample rather than fullscan, then the values of *equal_rows*, *range_rows*, and *distinct_range_rows* and *average_range_rows* are estimated, and therefore they do not need to be whole integers.
@@ -80,10 +81,10 @@ The density vector contains one density for each prefix of columns in the statis
 |(CustomerId, ItemId, Price)|Rows with matching values for CustomerId, ItemId, and Price| 
 
 ### Filtered Statistics  
- Filtered statistics can improve query performance for queries that select from well-defined subsets of data. Filtered statistics use a filter predicate to select the subset of data that is included in the statistics. Well-designed filtered statistics can improve the query execution plan compared with full-table statistics. For more information about the filter predicate, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md). For more information about when to create filtered statistics, see the [When to Create Statistics](#CreateStatistics) section in this topic.  
+ Filtered statistics can improve query performance for queries that select from well-defined subsets of data. Filtered statistics use a filter predicate to select the subset of data that is included in the statistics. Well-designed filtered statistics can improve the query execution plan compared with full-table statistics. For more information about the filter predicate, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md). For more information about when to create filtered statistics, see the [When to Create Statistics](#CreateStatistics) section in this article.  
  
 ### Statistics Options  
- There are three options that you can set that affect when and how statistics are created and updated. These options are set at the database level only.  
+ There are three options that affect when and how statistics are created and updated. These options are configurable at the database level only.  
   
 #### <a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS Option  
  When the automatic create statistics option, [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) is ON, the Query Optimizer creates statistics on individual columns in the query predicate, as necessary, to improve cardinality estimates for the query plan. These single-column statistics are created on columns that do not already have a [histogram](#histogram) in an existing statistics object. The AUTO_CREATE_STATISTICS option does not determine whether statistics get created for indexes. This option also does not generate filtered statistics. It applies strictly to single-column statistics for the full table.  
@@ -108,7 +109,7 @@ ORDER BY s.name;
     * If the table cardinality was 500 or less at the time statistics were evaluated, update for every 500 modifications.
     * If the table cardinality was above 500 at the time statistics were evaluated, update for every 500 + 20 percent of modifications.
 
-* Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and under the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a decreasing, dynamic statistics update threshold that adjusts according to the number of rows in the table. This is calculated as the square root of the product of 1000 and the current table cardinality. For example if your table contains 2 million rows, then the calculation is sqrt(1000 * 2000000) = 44721.359. With this change, statistics on large tables will be updated more frequently. However, if a database has a compatibility level below 130, then the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] threshold applies. ?
+* Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and under the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a decreasing, dynamic statistics update threshold that adjusts according to the number of rows in the table. This is calculated as the square root of the product of 1000 and the current table cardinality. For example if your table contains 2 million rows, then the calculation is sqrt(1000 * 2000000) = 44721.359. With this change, statistics on large tables will be updated more frequently. However, if a database has a compatibility level below 130, then the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] threshold applies. 
 
 > [!IMPORTANT]
 > In [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later under [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 and lower, enable [trace flag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) so that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a decreasing, dynamic statistics update threshold.
@@ -134,9 +135,13 @@ The asynchronous statistics update option, [AUTO_UPDATE_STATISTICS_ASYNC](../../
 > [!NOTE]
 > To set the asynchronous statistics update option in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in the *Options* page of the *Database Properties* window, both *Auto Update Statistics* and *Auto Update Statistics Asynchronously* options need to be set to **True**.
   
-Statistics updates can be either synchronous (the default) or asynchronous. With synchronous statistics updates, queries always compile and execute with up-to-date statistics; When statistics are out-of-date, the Query Optimizer waits for updated statistics before compiling and executing the query. With asynchronous statistics updates, queries compile with existing statistics even if the existing statistics are out-of-date; The Query Optimizer could choose a suboptimal query plan if statistics are out-of-date when the query compiles. Queries that compile after the asynchronous updates have completed will benefit from using the updated statistics.  
-  
-Consider using synchronous statistics when you perform operations that change the distribution of data, such as truncating a table or performing a bulk update of a large percentage of the rows. If you do not update the statistics after completing the operation, using synchronous statistics will ensure statistics are up-to-date before executing queries on the changed data.  
+Statistics updates can be either synchronous (the default) or asynchronous. 
+
+* With synchronous statistics updates, queries always compile and execute with up-to-date statistics. When statistics are out-of-date, the Query Optimizer waits for updated statistics before compiling and executing the query. 
+
+* With asynchronous statistics updates, queries compile with existing statistics even if the existing statistics are out-of-date. The Query Optimizer could choose a suboptimal query plan if statistics are out-of-date when the query compiles. Statistics are typically updated soon thereafter. Queries that compile after the stats updates complete will benefit from using the updated statistics, as usual.   
+
+Consider using synchronous statistics when you perform operations that change the distribution of data, such as truncating a table or performing a bulk update of a large percentage of the rows. If you do not manually update the statistics after completing the operation, using synchronous statistics will ensure statistics are up-to-date before executing queries on the changed data.  
   
 Consider using asynchronous statistics to achieve more predictable query response times for the following scenarios:  
   
@@ -149,10 +154,13 @@ Consider using asynchronous statistics to achieve more predictable query respons
 
 Asynchronous statistics update is performed by a background request. When the request is ready to write updated statistics to the database, it attempts to acquire a schema modification lock on the statistics metadata object. If a different session is already holding a lock on the same object, asynchronous statistics update is blocked until the schema modification lock can be acquired. Similarly, sessions that need to acquire a schema stability lock on the statistics metadata object to compile a query may be blocked by the asynchronous statistics update background session, which is already holding or waiting to acquire the schema modification lock. Therefore, for workloads with very frequent query compilations and frequent statistics updates, using asynchronous statistics may increase the likelihood of concurrency issues due to lock blocking.
 
-In Azure SQL Database, you can avoid potential concurrency issues using asynchronous statistics update if you enable the ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). With this configuration enabled, the background request will wait to acquire the schema modification lock on a separate low priority queue, allowing other requests to continue compiling queries with existing statistics. Once no other session is holding a lock on the statistics metadata object, the background request will acquire its schema modification lock and update statistics. In the unlikely event that the background request cannot acquire the lock within a timeout period of several minutes, the asynchronous statistics update will be aborted, and the statistics will not be updated until another automatic statistics update is triggered, or until statistics are [updated manually](update-statistics.md).
+In Azure SQL Database and Azure SQL Managed Instance, you can avoid potential concurrency issues using asynchronous statistics update if you enable the ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). With this configuration enabled, the background request will wait to acquire the schema modification (Sch-M) lock on a separate low-priority queue, allowing other requests to continue compiling queries with existing statistics. Once no other session is holding a lock on the statistics metadata object, the background request will acquire its schema modification lock and update statistics. In the unlikely event that the background request cannot acquire the lock within a timeout period of several minutes, the asynchronous statistics update will be aborted, and the statistics will not be updated until another automatic statistics update is triggered, or until statistics are [updated manually](update-statistics.md).
+
+> [!Note]
+> The ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY database scoped configuration option is now available in Azure SQL Database and Azure SQL Managed Instance, and is planned to be included in SQL Server vNext. 
 
 #### INCREMENTAL  
- When INCREMENTAL option of CREATE STATISTICS is ON, the statistics created are per partition statistics. When OFF, the statistics tree is dropped and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] re-computes the statistics. The default is OFF. This setting overrides the database level INCREMENTAL property. For more information about creating incremental statistics, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md). For more information about creating per partition statistics automatically, see [Database Properties &#40;Options Page&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic) and [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). 
+ When INCREMENTAL option of CREATE STATISTICS is ON, the statistics created are per partition statistics. When OFF, the statistics tree is dropped and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recomputes the statistics. The default is OFF. This setting overrides the database level INCREMENTAL property. For more information about creating incremental statistics, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md). For more information about creating per partition statistics automatically, see [Database Properties &#40;Options Page&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic) and [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). 
   
  When new partitions are added to a large table, statistics should be updated to include the new partitions. However the time required to scan the entire table (FULLSCAN or SAMPLE option) might be quite long. Also, scanning the entire table isn't necessary because only the statistics on the new partitions might be needed. The incremental option creates and stores statistics on a per partition basis, and when updated, only refreshes statistics on those partitions that need new statistics  
   
@@ -196,7 +204,7 @@ If the columns are already in the same index, the multicolumn statistics object 
   
 When creating multicolumn statistics, the order of the columns in the statistics object definition affects the effectiveness of densities for making cardinality estimates. The statistics object stores densities for each prefix of key columns in the statistics object definition. For more information about densities, see [Density](#density) section in this page.  
   
-To create densities that are useful for cardinality estimates, the columns in the query predicate must match one of the prefixes of columns in the statistics object definition. For example, the following creates a multicolumn statistics object on the columns `LastName`, `MiddleName`, and `FirstName`.  
+To create densities that are useful for cardinality estimates, the columns in the query predicate must match one of the prefixes of columns in the statistics object definition. For example, the following example creates a multicolumn statistics object on the columns `LastName`, `MiddleName`, and `FirstName`.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -256,7 +264,7 @@ Only [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can create and up
  Because temporary statistics are stored in **tempdb**, a restart of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service causes all temporary statistics to disappear.  
     
 ## <a name="UpdateStatistics"></a> When to update statistics  
- The Query Optimizer determines when statistics might be out-of-date and then updates them when they are needed for a query plan. In some cases you can improve the query plan and therefore improve query performance by updating statistics more frequently than occur when [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) is on. You can update statistics with the UPDATE STATISTICS statement or the stored procedure sp_updatestats.  
+ The Query Optimizer determines when statistics might be out-of-date and then updates them when they are needed for a query plan. In some cases, you can improve the query plan and therefore improve query performance by updating statistics more frequently than occur when [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) is on. You can update statistics with the UPDATE STATISTICS statement or the stored procedure sp_updatestats.  
   
  Updating statistics ensures that queries compile with up-to-date statistics. However, updating statistics causes queries to recompile. We recommend not updating statistics too frequently because there is a performance tradeoff between improving query plans and the time it takes to recompile queries. The specific tradeoffs depend on your application.  
   
@@ -385,7 +393,7 @@ GO
 ```  
   
 ### Improving cardinality estimates with Plan Guides  
- For some applications, query design guidelines might not apply because you cannot change the query or using the RECOMPILE query hint might be cause too many recompiles. You can use plan guides to specify other hints, such as USE PLAN, to control the behavior of the query while investigating application changes with the application vendor. For more information about plan guides, see [Plan Guides](../../relational-databases/performance/plan-guides.md).  
+ For some applications, query design guidelines might not apply because you cannot change the query or the RECOMPILE query hint might cause too many recompiles. You can use plan guides to specify other hints, such as USE PLAN, to control the behavior of the query while investigating application changes with the application vendor. For more information about plan guides, see [Plan Guides](../../relational-databases/performance/plan-guides.md).  
   
   
 ## See Also  

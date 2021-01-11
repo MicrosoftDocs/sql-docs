@@ -46,7 +46,7 @@ manager: kfile
  [What's New in Analysis Services](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)   
  [What's New in Integration Services](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)   
  [What's New in Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md)   
- [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)   
- [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)   
+ [Upgrade to SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   

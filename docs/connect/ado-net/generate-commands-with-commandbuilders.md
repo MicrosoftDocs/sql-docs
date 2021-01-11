@@ -33,9 +33,9 @@ The <xref:System.Data.Common.DbCommandBuilder> must execute the `SelectCommand` 
 
 When associated with a `DataAdapter`, the <xref:System.Data.Common.DbCommandBuilder> automatically generates the `InsertCommand`, `UpdateCommand`, and `DeleteCommand` properties of the `DataAdapter` if they are null references. If a `Command` already exists for a property, the existing `Command` is used.
 
-Database views that are created by joining two or more tables together are not considered a single database table. In this instance, you cannot use the <xref:System.Data.Common.DbCommandBuilder> to automatically generate commands; you must specify your commands explicitly.
+Database views that are created by joining two or more tables together are not considered a single database table. In this instance, you cannot use the <xref:System.Data.Common.DbCommandBuilder> to automatically generate commands; you must specify your commands explicitly. For information about explicitly setting commands to resolve updates to a `DataSet` back to the data source, see [Update data sources with DataAdapters](update-data-sources-with-dataadapters.md).
 
-You might want to map output parameters back to the updated row of a `DataSet`. One common task would be retrieving the value of an automatically generated identity field or time stamp from the data source. The <xref:System.Data.Common.DbCommandBuilder> will not map output parameters to columns in an updated row by default. In this instance, you must specify your command explicitly.
+You might want to map output parameters back to the updated row of a `DataSet`. One common task would be retrieving the value of an automatically generated identity field or time stamp from the data source. The <xref:System.Data.Common.DbCommandBuilder> will not map output parameters to columns in an updated row by default. In this instance, you must specify your command explicitly. For an example of mapping an automatically generated identity field back to a column of an inserted row, see [Retrieve identity or autonumber values](retrieve-identity-or-autonumber-values.md).
 
 ## Rules for automatically generated commands
 
@@ -68,13 +68,13 @@ The automatic command generation logic generates INSERT, UPDATE, or DELETE state
 
 Automatic command generation logic may fail if column names or table names contain any special characters, such as spaces, periods, quotation marks, or other nonalphanumeric characters, even if delimited by brackets. Depending on the provider, setting the QuotePrefix and QuoteSuffix parameters may allow the generation logic to process spaces, but it cannot escape special characters. Fully qualified table names in the form of *catalog.schema.table* are supported.
 
-## Using the CommandBuilder to automatically generate an SQL statement
+## Use the CommandBuilder to automatically generate an SQL statement
 
 To automatically generate SQL statements for a `DataAdapter`, first set the `SelectCommand` property of the `DataAdapter`, then create a `CommandBuilder` object, and specify as an argument the `DataAdapter` for which the `CommandBuilder` will automatically generate SQL statements.
 
 [!code-csharp[SqlCommandBuilder_Create#1](~/../sqlclient/doc/samples/SqlCommandBuilder_Create.cs#1)]
 
-## Modifying the SelectCommand
+## Modify the SelectCommand
 
 If you modify the `CommandText` of the `SelectCommand` after the INSERT, UPDATE, or DELETE commands have been automatically generated, an exception may occur. If the modified `SelectCommand.CommandText` contains schema information that is inconsistent with the `SelectCommand.CommandText` used when the insert, update, or delete commands were automatically generated, future calls to the `DataAdapter.Update` method may attempt to access columns that no longer exist in the current table referenced by the `SelectCommand`, and an exception will be thrown.
 
@@ -94,3 +94,4 @@ The following example recreates the table in the dataset. The **RefreshSchema** 
 
 - [Commands and parameters](commands-parameters.md)
 - [Executing a command](execute-command.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

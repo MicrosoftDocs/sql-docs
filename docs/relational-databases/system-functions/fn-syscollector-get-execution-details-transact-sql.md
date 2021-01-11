@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "fn_syscollector_get_execution_details function"
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

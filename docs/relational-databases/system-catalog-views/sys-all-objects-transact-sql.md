@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.all_objects catalog view"
 ms.assetid: 547e4be4-a8e4-48ce-9d8d-37b169985081
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.all_objects (Transact-SQL)

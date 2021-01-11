@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "limiting rows returned"
   - "queries [SQL Server], stopping"
 ms.assetid: c6966fb7-6421-47ef-98f3-82351f2f6bdc
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ROWCOUNT (Transact-SQL)

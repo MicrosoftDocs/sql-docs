@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SOME | ANY keyword"
   - "single-column set of values [SQL Server]"
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # SOME | ANY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

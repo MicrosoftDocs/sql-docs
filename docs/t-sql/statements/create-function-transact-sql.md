@@ -39,8 +39,8 @@ helpviewer_keywords:
   - "TVF"
   - "functions [SQL Server], invoking"
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE FUNCTION (Transact-SQL)
 

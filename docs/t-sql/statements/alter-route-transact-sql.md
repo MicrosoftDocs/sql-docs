@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "removing routes"
   - "routes [Service Broker], modifying"
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # ALTER ROUTE (Transact-SQL)

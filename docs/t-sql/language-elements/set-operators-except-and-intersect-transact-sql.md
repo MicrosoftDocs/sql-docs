@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "comparing queries"
   - "INTERSECT operator"
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set Operators - EXCEPT and INTERSECT (Transact-SQL)

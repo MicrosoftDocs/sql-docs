@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL OS dynamic management objects [SQL Server]"
   - "dynamic management objects [SQL Server], SQL OS"
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server Operating System Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

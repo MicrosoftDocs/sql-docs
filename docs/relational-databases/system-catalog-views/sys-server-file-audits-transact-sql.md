@@ -34,7 +34,7 @@ ms.author: wiassaf
 |create_date|**datetime**|UTC date when the file audit was created.|  
 |modify_date|**datatime**|UTC date when the file audit was last modified.|  
 |principal_id|**int**|ID of the owner of the audit as registered on the server.|  
-|type|**char(2)**|Audit type:<br /><br /> 0 = NT Security event log<br /><br /> 1 = NT Application event log<br /><br /> 2 = File on file system|  
+|type|**char(2)**|Audit type:<br /><br /> SL = NT Security event log<br /><br /> AL = NT Application event log<br /><br /> FL = File on file system|  
 |type_desc|**nvarchar(60)**|Audit type description.|  
 |on_failure|**tinyint**|On Failure condition:<br /><br /> 0 = Continue<br /><br /> 1 = Shut down server instance<br /><br /> 2 = Fail operation|  
 |on_failure_desc|**nvarchar(60)**|On Failure to write an action entry:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  

@@ -84,7 +84,7 @@ If you don't enable Always Encrypted for a connection, the .NET Framework Data P
 You can enable or disable Always Encrypted when you create a new connection or you change an existing connection using the **Connect to Server** dialog. 
 
 To enable (disable) Always Encrypted:
-1. Open **Connect To Server** dialog (see [Connect to a SQL Server instance](../../../ssms/quickstarts/connect-query-sql-server.md#connect-to-a-sql-server-instance) for details).
+1. Open **Connect To Server** dialog (see [Connect to a SQL Server instance](../../../ssms/quickstarts/ssms-connect-query-sql-server.md#connect-to-a-sql-server-instance) for details).
 1. Click **Options >>**.
 1. If you're using SSMS 18 or newer:
     1. Select the **Always Encrypted** tab.

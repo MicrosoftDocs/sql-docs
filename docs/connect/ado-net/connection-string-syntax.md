@@ -117,7 +117,7 @@ The following table describes all cases.
 |Yes|Yes|Yes|No (default)|Encryption occurs only if there is a verifiable server certificate; otherwise, the connection attempt fails.|  
 |Yes|Yes|Yes|Yes|Encryption always occurs, but may use a self-signed server certificate.|  
 
-For more information, see [Using Encryption Without Validation](/sql/relational-databases/native-client/features/using-encryption-without-validation).
+For more information, see [Using Encryption Without Validation](../../relational-databases/native-client/features/using-encryption-without-validation.md).
 
 ## See also
 

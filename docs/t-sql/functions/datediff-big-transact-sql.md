@@ -90,7 +90,7 @@ For a return value out of range for **bigint** (-9,223,372,036,854,775,808 to 9,
   
 If *startdate* and *enddate* are both assigned only a time value, and the *datepart* is not a time *datepart*, `DATEDIFF_BIG` returns 0.
   
-`DATEDIFF_BIG` does not use a time zone offset component of *startdate* or *enddate* to calculate the return value.
+`DATEDIFF_BIG` does use a time zone offset component of *startdate* or *enddate* to calculate the return value.
   
 For a **smalldatetime** value used for *startdate* or *enddate*, `DATEDIFF_BIG` always sets seconds and milliseconds to 0 in the return value because [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) only has accuracy to the minute.
   

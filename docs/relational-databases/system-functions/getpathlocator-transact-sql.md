@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "GetPathLocator function"
 ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # GetPathLocator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

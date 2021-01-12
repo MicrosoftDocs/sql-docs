@@ -136,7 +136,7 @@ New APS SSIS destination adapter that supports SQL Server 2017 as deployment tar
 Release date - July 2018
 
 ### DBCC commands do not consume concurrency slots (behavior change)
-APS supports a subset of the T-SQL [DBCC commands](../t-sql/database-console-commands/dbcc-transact-sql.md) such as [DBCC DROPCLEANBUFFERS](../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md). Previously, these commands would consume a [concurrency slot](./workload-management.md?view=aps-pdw-2016-au7#concurrency-slots) reducing the number of user loads/queries that could be executed. The `DBCC` commands are now run in a local queue that do not consume a user concurrency slot improving overall query execution performance.
+APS supports a subset of the T-SQL [DBCC commands](../t-sql/database-console-commands/dbcc-transact-sql.md) such as [DBCC DROPCLEANBUFFERS](../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md). Previously, these commands would consume a [concurrency slot](./workload-management.md?view=aps-pdw-2016-au7&preserve-view=true&#concurrency-slots) reducing the number of user loads/queries that could be executed. The `DBCC` commands are now run in a local queue that do not consume a user concurrency slot improving overall query execution performance.
 
 ### Replaces some metadata calls with catalog objects
 Using catalog objects for metadata calls instead of using SMO has shown performance improvement in APS. Starting from CU7.1, some of these metadata calls now use catalog objects by default. This behavior can be turned off by [feature switch](appliance-feature-switch.md) if customers using metadata queries run into any issues.

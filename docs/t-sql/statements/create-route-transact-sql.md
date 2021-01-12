@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "activating routes"
   - "CREATE ROUTE statement"
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # CREATE ROUTE (Transact-SQL)

@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "sys.dm_os_spinlock_stats dynamic management view"
 author: "bluefooted"
 ms.author: "pamela"
-ms.reviewer: "maghan"
+ms.reviewer: "wiassaf"
 manager: amitban
 ---
 # sys.dm_os_spinlock_stats (Transact-SQL)

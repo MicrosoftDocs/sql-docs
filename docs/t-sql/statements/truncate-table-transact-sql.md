@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "deleting rows"
   - "dropping rows"
 ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRUNCATE TABLE (Transact-SQL)

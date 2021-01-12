@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "time [SQL Server], instance started"
   - "starting time"
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_sys_info (Transact-SQL)

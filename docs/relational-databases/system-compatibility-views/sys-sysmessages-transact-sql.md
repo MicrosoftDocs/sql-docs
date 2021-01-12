@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysmessages system table"
   - "sys.sysmessages compatibility view"
 ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysmessages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

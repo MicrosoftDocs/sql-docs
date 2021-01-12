@@ -42,7 +42,7 @@ Once you have created your Availability Group resource, create a clustered DTC r
 |Task|Reference|  
 |-----------------|----------|  
 |Enable network access securely for the clustered DTC resource.|[Enable Network Access Securely for MS DTC](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753620(v=ws.10))|
-|Stop and disable local DTC service.|[Configure How a Service Is Started](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
+|Stop and disable local DTC service.|[Configure How a Service Is Started](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755249(v=ws.11))|
 |Cycle the SQL Server service for each instance in the Availability Group.  Failover the Availability Group as needed.|[Perform a Planned Manual Failover of an Availability Group (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
 - If the server is Windows Server 2012 R2 the operating system must have [KB 3030373](https://support.microsoft.com/kb/3090973) applied.

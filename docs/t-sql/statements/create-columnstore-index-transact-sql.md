@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "CREATE COLUMNSTORE INDEX statement"
   - "CREATE INDEX statement"
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE COLUMNSTORE INDEX (Transact-SQL)

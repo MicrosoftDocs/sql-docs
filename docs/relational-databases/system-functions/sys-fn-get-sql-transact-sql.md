@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "valid SQL handles [SQL Server]"
   - "SQL handles"
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_get_sql (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

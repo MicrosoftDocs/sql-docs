@@ -56,4 +56,4 @@ To resolve this issue, use one of the following methods.
 
 ## More information
 
-For more information you can, see: [System Base Tables](/sql/relational-databases/system-tables/system-base-tables).
+For more information you can, see: [System Base Tables](../system-tables/system-base-tables.md).

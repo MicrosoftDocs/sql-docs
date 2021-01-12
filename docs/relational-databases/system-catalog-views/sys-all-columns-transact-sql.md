@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.all_columns catalog view"
 ms.assetid: 40e04fe9-0b64-4799-84c0-57f128b2bdc2
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.all_columns (Transact-SQL)

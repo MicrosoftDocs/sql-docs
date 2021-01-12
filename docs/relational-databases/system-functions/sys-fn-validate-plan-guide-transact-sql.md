@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "fn_validate_plan_guide function"
   - "sys.fn_validate_plan_guide function"
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

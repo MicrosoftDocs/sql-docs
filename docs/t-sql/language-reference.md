@@ -31,7 +31,7 @@ Some of the Microsoft tools that issue T-SQL commands are:
 - [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 - [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [sqlcmd](../tools/sqlcmd-utility.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md)
   
 ## Locate the Transact-SQL reference topics  
 To find T-SQL topics, use search at the top right of this page, or use the table of contents on the left side of the page. You can also type a T-SQL key word in the Management Studio Query Editor window, and press F1. 
@@ -77,4 +77,3 @@ Now that you understand how to find the T-SQL reference topics, you are ready to
 - Work through a short tutorial about how to write T-SQL, see [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md). 
 - View the [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
 
-  

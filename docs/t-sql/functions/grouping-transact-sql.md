@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "GROUPING function"
   - "CUBE operator"
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # GROUPING (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

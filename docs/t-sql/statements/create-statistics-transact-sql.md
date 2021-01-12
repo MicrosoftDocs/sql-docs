@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "creating statistics [SQL Server]"
   - "NORECOMPUTE clause"
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE STATISTICS (Transact-SQL)

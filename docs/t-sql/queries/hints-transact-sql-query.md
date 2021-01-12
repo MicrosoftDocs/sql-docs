@@ -55,7 +55,7 @@ helpviewer_keywords:
   - "QUERY_PLAN_PROFILE query hint"
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
-ms.author: vanto
+ms.author: pelopes
 ---
 # Hints (Transact-SQL) - Query
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -46,8 +46,8 @@ helpviewer_keywords:
   - "maximum number of bytes per row"
   - "data retention policy"
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE TABLE (Transact-SQL)
 

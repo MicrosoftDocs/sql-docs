@@ -145,6 +145,7 @@ Azure Data Studio runs on Windows, macOS, and Linux and is supported on the foll
 - macOS 10.14 Mojave
 - macOS 10.13 High Sierra
 - macOS 10.12 Sierra
+- macOS 11.1  Big Sur
 
 ### Linux
 

@@ -26,7 +26,7 @@ ms.author: "mathoma"
   
 ### To enable coordinated backups for a database published with transactional replication  
   
-1.  At the Publisher, use the `SELECT DATABASEPROPERTYEX(DB_NAME(),'IsSyncWithBackup)` [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../../t-sql/functions/databasepropertyex-transact-sql.md) function to return the **IsSyncWithBackup** property of the publication database. If the function returns **1**, coordinated backups are already enabled for the published database.  
+1.  At the Publisher, use the `SELECT DATABASEPROPERTYEX(DB_NAME(),'IsSyncWithBackup')` [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../../t-sql/functions/databasepropertyex-transact-sql.md) function to return the **IsSyncWithBackup** property of the publication database. If the function returns **1**, coordinated backups are already enabled for the published database.  
   
 2.  If the function in step 1 returns **0**, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) at the Publisher on the publication database. Specify a value of **sync with backup** for **\@optname**, and **true** for **\@value**.  
   
@@ -49,12 +49,12 @@ ms.author: "mathoma"
 This example returns the IsSyncWithBackup for the current database
   
 ``` sql
-SELECT DATABASEPROPERTYEX(DB_NAME(),'IsSyncWithBackup)`
+SELECT DATABASEPROPERTYEX(DB_NAME(),'IsSyncWithBackup')`
 ```
 
 ### A. Retrieving the IsSyncWithBackup for a specific database
 This example returns the IsSyncWithBackup for the database `NameOfDatabaseToCheck`
   
 ``` sql
-SELECT DATABASEPROPERTYEX('NameOfDatabaseToCheck','IsSyncWithBackup)`
+SELECT DATABASEPROPERTYEX('NameOfDatabaseToCheck','IsSyncWithBackup')`
 ```

@@ -306,14 +306,14 @@ sudo systemctl restart apache2
 ```
 To test your installation, see [Testing your installation](#testing-your-installation) at the end of this document.
 
-## Installing the drivers on Alpine 3.11
+## Installing the drivers on Alpine 3.11 and 3.12
 
 > [!NOTE]
-> The default version of PHP is 7.3. Alternate versions of PHP may be available from other repositories for Alpine. You can instead compile PHP from source.
+> The default version of PHP is 7.3. PHP 7.4 or above may be available from testing or edge repositories for Alpine. You can instead compile PHP from source.
 
 ### Step 1. Install PHP
 PHP packages for Alpine can be found in the `edge/community` repository. Please check [Enable Community Repository](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository) on their WIKI page. Add the following line to `/etc/apk/repositories`, replacing `<mirror>` with the URL of an Alpine repository mirror:
-```
+```bash
 http://<mirror>/alpine/edge/community
 ```
 Then run:

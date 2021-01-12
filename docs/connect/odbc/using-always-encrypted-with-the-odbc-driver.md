@@ -253,9 +253,9 @@ while (SQL_SUCCEEDED(SQLFetch(hstmt)))
 
 #### Money/SmallMoney encryption
 
-Starting with ODBC Driver 17 for SQL Server version 17.7 it is possible to use Always Encrypted 
+Starting with driver version 17.7 it is possible to use Always Encrypted 
 with MONEY and SMALLMONEY. However there are some additional steps to take.
-For binding MONEY/SMALLMONEY encryption supports the following c-types:
+When inserting into encrypted MONEY or SMALLMONEY columns, use one of the following C types:
 ```
 SQL_C_CHAR
 SQL_C_WCHAR
@@ -269,11 +269,7 @@ SQL_C_SBIGINT
 SQL_C_NUMERIC
 ```
 
-Supported SQL types are:
-```
-SQL_NUMERIC
-SQL_DOUBLE   (precision may be lost when using this type)
-```
+and a SQL type of either `SQL_NUMERIC` or `SQL_DOUBLE` (precision may be lost when using this type).
 
 ##### Binding the variable
 
@@ -290,7 +286,7 @@ SQLSetDescField(ipd, n, SQL_CA_SS_SERVER_TYPE, isSmallMoney ? (SQLPOINTER)SQL_SS
                                                               (SQLPOINTER)SQL_SS_TYPE_MONEY, SQL_IS_INTEGER);
                                                               
                                                               
-// If the variable is bound as SQL_NUMERIC, additional descriptor field have to be set
+// If the variable is bound as SQL_NUMERIC, additional descriptor fields have to be set
 // var is SQL_NUMERIC_STRUCT contaning the value to be inserted
 
 SQLHDESC   hdesc = NULL;

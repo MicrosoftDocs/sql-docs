@@ -924,9 +924,9 @@ Use the following practices to help maximize security and efficiency.
 
 Use the following practices to help maximize correctness:
 
-- Use **-V16** to log any [severity 16 level messages](~/relational-databases/errors-events/database-engine-error-severities.md#levels-of-severity).  Severity 16 messages indicates general errors that can be corrected by the user.
+- Use **-V16** to log any [severity 16 level messages](../relational-databases/errors-events/database-engine-error-severities.md#levels-of-severity).  Severity 16 messages indicates general errors that can be corrected by the user.
 
-- Check the exit code and DOS ERRORLEVEL variable after the process has exited.  **sqlcmd** will return 0 normally, otherwise it will set the ERRORLEVEL as configured by **-V**.  In other words, ERRORLEVEL shouldn't be expected to be the same value as the Error Number reported from SQL Server. The Error Number is a SQL Server-specific value corresponding to the system function [**@@ERROR**](~/t-sql/functions/error-transact-sql).  ERRORLEVEL is a SQLCMD-specific value to indicate why it (i.e. SQLCMD) terminated, and it's value is influenced by specifying **-b** command line argument.
+- Check the exit code and DOS ERRORLEVEL variable after the process has exited.  **sqlcmd** will return 0 normally, otherwise it will set the ERRORLEVEL as configured by **-V**.  In other words, ERRORLEVEL shouldn't be expected to be the same value as the Error Number reported from SQL Server. The Error Number is a SQL Server-specific value corresponding to the system function [**@@ERROR**](../t-sql/functions/error-transact-sql.md).  ERRORLEVEL is a SQLCMD-specific value to indicate why it (i.e. SQLCMD) terminated, and it's value is influenced by specifying **-b** command line argument.
 
 Using **-V16** in combination with checking the exit code and DOS ERRORLEVEL can help catch errors in automated environments, particularly quality gates before a production release.
 

@@ -53,7 +53,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | :------- | :------ |
 | AKV Interactive Authentication | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
 | Service Principal Authentication | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
-| Ability to insert into encrypted money and smallmoney columns |  |
+| Ability to insert into encrypted money and smallmoney columns | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 

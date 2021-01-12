@@ -914,7 +914,7 @@ Use the following practices to help maximize security and efficiency.
 
 - Use integrated security.  
 
-- Use **-X1** in automated environments.
+- Use **-X[1]** in automated environments.
 
 - Secure input and output files by using appropriate NTFS file system permissions.
 

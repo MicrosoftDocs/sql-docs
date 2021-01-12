@@ -34,7 +34,7 @@ ms.author: vanto
  The server computer must have a certificate provisioned. To provision the certificate on the server computer, you [import it into Windows](#single-server). The client machine must be set up to [trust the certificate's root authority](#about).  
   
 > [!IMPORTANT]
-> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], Secure Sockets Layer (SSL) has been discontinued. Use Transport Layer Security (TLS) instead.
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], Secure Sockets Layer (SSL) has been discontinued. Use Transport Layer Security (TLS) instead.
 
 ## Transport Layer Security (TLS)
 

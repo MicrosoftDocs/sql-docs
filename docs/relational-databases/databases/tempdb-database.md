@@ -207,7 +207,7 @@ Put the `tempdb` database on a fast I/O subsystem. Use disk striping if there ar
 Put the `tempdb` database on disks that differ from the disks that user databases use.
 
 ## Performance improvements in tempdb for SQL Server
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], `tempdb` performance is further optimized in the following ways:  
+Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], `tempdb` performance is further optimized in the following ways:  
   
 - Temporary tables and table variables are cached. Caching allows operations that drop and create the temporary objects to run very quickly. Caching also reduces page allocation and metadata contention.  
 - The allocation page latching protocol is improved to reduce the number of `UP` (update) latches that are used.  

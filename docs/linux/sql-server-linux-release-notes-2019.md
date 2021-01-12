@@ -265,7 +265,7 @@ The following sections describe known issues with the General Availability (GA) 
           sudo systemctl restart mssql-server
           ```
 
-- [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] databases on Windows that use In-memory OLTP cannot be restored on SQL Server 2019 (15.x) on Linux. To restore a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] database that uses in-memory OLTP, first upgrade the databases to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], SQL Server 2017, or SQL Server 2019 on Windows before moving them to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux via backup/restore or detach/attach.
+- [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] databases on Windows that use In-memory OLTP cannot be restored on SQL Server 2019 (15.x) on Linux. To restore a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] database that uses in-memory OLTP, first upgrade the databases to [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], SQL Server 2017, or SQL Server 2019 on Windows before moving them to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux via backup/restore or detach/attach.
 
 - User permission **ADMINISTER BULK OPERATIONS** is not supported on Linux at this time.
 

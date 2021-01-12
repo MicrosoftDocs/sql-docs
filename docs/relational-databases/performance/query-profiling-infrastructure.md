@@ -47,16 +47,16 @@ When running an extended event session that uses the *query_post_execution_showp
 
 ## <a name="lwp"></a> The lightweight query execution statistics profiling infrastructure
 
-Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a new *lightweight query execution statistics profiling infrastructure*, or **lightweight profiling** was introduced. 
+Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], a new *lightweight query execution statistics profiling infrastructure*, or **lightweight profiling** was introduced. 
 
 > [!NOTE]
 > Natively compiled stored procedures are not supported with lightweight profiling.  
 
 ### Lightweight query execution statistics profiling infrastructure v1
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]). 
   
-Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the performance overhead to collect information about execution plans was reduced with the introduction of lightweight profiling. Unlike standard profiling, lightweight profiling does not collect CPU runtime information. However, lightweight profiling still collects row count and I/O usage information.
+Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], the performance overhead to collect information about execution plans was reduced with the introduction of lightweight profiling. Unlike standard profiling, lightweight profiling does not collect CPU runtime information. However, lightweight profiling still collects row count and I/O usage information.
 
 A new ***query_thread_profile*** extended event was also introduced that leverages lightweight profiling. This extended event exposes per-operator execution statistics allowing more insight on the performance of each node and thread. A sample session using this extended event can be configured as in the below example:
 
@@ -84,11 +84,11 @@ When running an extended event session that uses the *query_thread_profile* even
 
 ### Lightweight query execution statistics profiling infrastructure v2
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 includes a revised version of lightweight profiling with minimal overhead. Lightweight profiling can also be enabled globally using [trace flag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) for the versions stated above in *Applies to*. A new DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) is introduced to return the query execution plan for in-flight requests.
+[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 includes a revised version of lightweight profiling with minimal overhead. Lightweight profiling can also be enabled globally using [trace flag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) for the versions stated above in *Applies to*. A new DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) is introduced to return the query execution plan for in-flight requests.
 
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, if lightweight profiling is not enabled globally then the new [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint) argument **QUERY_PLAN_PROFILE** can be used to enable lightweight profiling at the query level, for any session. When a query that contains this new hint finishes, a new ***query_plan_profile*** extended event is also output that provides an actual execution plan XML similar to the *query_post_execution_showplan* extended event. 
+Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, if lightweight profiling is not enabled globally then the new [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint) argument **QUERY_PLAN_PROFILE** can be used to enable lightweight profiling at the query level, for any session. When a query that contains this new hint finishes, a new ***query_plan_profile*** extended event is also output that provides an actual execution plan XML similar to the *query_post_execution_showplan* extended event. 
 
 > [!NOTE]
 > The *query_plan_profile* extended event also leverages lightweight profiling even if the query hint is not used. 
@@ -172,17 +172,17 @@ The following table summarizes the actions to enable either standard profiling o
 
 |Scope|Standard Profiling|Lightweight Profiling|
 |---------------|---------------|---------------|
-|Global|xEvent session with the `query_post_execution_showplan` XE; Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Trace Flag 7412; Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1|
+|Global|xEvent session with the `query_post_execution_showplan` XE; Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Trace Flag 7412; Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1|
 |Global|SQL Trace and SQL Server Profiler with the `Showplan XML` trace event; Starting with SQL Server 2000|xEvent session with the `query_thread_profile` XE; Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|
 |Global|-|xEvent session with the `query_post_execution_plan_profile` XE; Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
-|Session|Use `SET STATISTICS XML ON`; Starting with SQL Server 2000|Use the `QUERY_PLAN_PROFILE` query hint together with an xEvent session with the `query_plan_profile` XE; Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11|
+|Session|Use `SET STATISTICS XML ON`; Starting with SQL Server 2000|Use the `QUERY_PLAN_PROFILE` query hint together with an xEvent session with the `query_plan_profile` XE; Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11|
 |Session|Use `SET STATISTICS PROFILE ON`; Starting with SQL Server 2000|-|
 |Session|Click the [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md) button in SSMS; Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|-|
 
 ## Remarks
 
 > [!IMPORTANT]
-> Due to a possible random AV while executing a monitoring stored procedure that references [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md), ensure [KB 4078596](https://support.microsoft.com/help/4078596) is installed in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+> Due to a possible random AV while executing a monitoring stored procedure that references [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md), ensure [KB 4078596](https://support.microsoft.com/help/4078596) is installed in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
 Starting with lightweight profiling v2 and its low overhead, any server that is not already CPU bound can run lightweight profiling **continuously**, and allow database professionals to tap into any running execution at any time, for example using Activity Monitor or directly querying `sys.dm_exec_query_profiles`, and get the query plan with runtime statistics.
 

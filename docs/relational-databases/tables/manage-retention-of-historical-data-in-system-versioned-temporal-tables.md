@@ -64,7 +64,7 @@ You can configure a temporal history table for Stretch using either the Stretch 
 
 ### Using the Stretch Wizard to stretch the entire history table
 
-The easiest method for beginners is to use the Stretch Wizard to enable stretch for the entire database and then select the temporal history table within the Stretch wizard (this example assumes that you have configured the Department table as a system-versioned temporal table in an otherwise empty database). In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you cannot right-click the temporal history table itself and click Stretch.
+The easiest method for beginners is to use the Stretch Wizard to enable stretch for the entire database and then select the temporal history table within the Stretch wizard (this example assumes that you have configured the Department table as a system-versioned temporal table in an otherwise empty database). In [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], you cannot right-click the temporal history table itself and click Stretch.
 
 1. Right-click your database and point to **Tasks**, point to **Stretch**, and then click **Enable** to launch the wizard.
 2. In the **Select tables** window, select the checkbox for the temporal history table and click Next.

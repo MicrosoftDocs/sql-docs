@@ -80,10 +80,10 @@ There are several approaches to consider when you are planning to upgrade the [!
  For example, you may use this approach to upgrade:  
   
 -   An installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on an unsupported operating system.    
--   An x86 installation of SQL Server as [!INCLUDE[ss2016](../../includes/sssql15-md.md)] and later do not support x86 installations.   
+-   An x86 installation of SQL Server as [!INCLUDE[ss2016](../../includes/sssql16-md.md)] and later do not support x86 installations.   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to new hardware and/or a new version of the operating system.    
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in conjunction with server consolidation.   
--   SQL Server 2005 as [!INCLUDE[ss2016](../../includes/sssql15-md.md)] and later do not support the in-place upgrade of SQL Server 2005. For more information, see [Are you upgrading from SQL Server 2005](../../sql-server/end-of-support/sql-server-end-of-life-overview.md).
+-   SQL Server 2005 as [!INCLUDE[ss2016](../../includes/sssql16-md.md)] and later do not support the in-place upgrade of SQL Server 2005. For more information, see [Are you upgrading from SQL Server 2005](../../sql-server/end-of-support/sql-server-end-of-life-overview.md).
 
   
 The steps required for a new installation upgrade vary slightly depending upon whether you are using attached storage or SAN storage.  

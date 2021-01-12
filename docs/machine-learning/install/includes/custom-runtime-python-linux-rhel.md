@@ -20,14 +20,24 @@ sudo yum install mssql-server-extensibility
 
 ## Install Python 3.7 and pandas
 
-Follow the steps below to install Python 3.7, the libpython3.7 library, and the pandas package.:
+1. Run the commands below to install Python 3.7.
 
-```bash
-# Install python3.7 and the corresponding library:
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt-get update
-sudo apt-get install python3.7 python3-pip libpython3.7
+    ```bash
+    # Install python3.7 and the corresponding library:
+    yum install gcc openssl-devel bzip2-devel libffi-devel zlib-devel
+    
+    cd /usr/src
+    wget https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz
+    tar xzf Python-3.7.9.tgz
+    
+    cd Python-3.7.9
+    ./configure --enable-optimizations --prefix=/usr
+    make altinstall
+        ```
 
-# Install pandas to /usr/lib:
-sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
-```
+1. Run the command below to install the pandas package
+
+    ```bash
+    # Install pandas to /usr/lib:
+    sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
+    ```

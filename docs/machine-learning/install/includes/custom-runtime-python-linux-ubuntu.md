@@ -36,7 +36,7 @@ Run the commands below to install [SQL Server Language Extensions](../../languag
 
 ## Install Python 3.7 and pandas
 
-Follow the steps below to install Python 3.7, the libpython3.7 library, and the pandas package.:
+Follow the steps below to install Python 3.7 and the pandas package.
 
 ```bash
 # Install python3.7 and the corresponding library:

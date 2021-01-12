@@ -102,6 +102,3 @@ GO
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Delete a Stored Procedure](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)  
   
-  
-
-

@@ -634,5 +634,3 @@ Use KEEP_REPLICATION when setting up replication to work with log shipping. It p
  [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
   
-  
-

@@ -78,4 +78,3 @@ DROP ASSEMBLY Helloworld ;
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Getting Information About Assemblies](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   
-  

@@ -36,8 +36,8 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
   
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] is substantially different from more recent versions and is discussed lower in the topic at [SQL Server 2014](#bkmk_2014).**
   
-## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later  
- The following table describes the columns in `sys.dm_db_xtp_checkpoint_stats`, beginning with **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
+## [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later  
+ The following table describes the columns in `sys.dm_db_xtp_checkpoint_stats`, beginning with **[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]**.  
   
 |Column name|Type|Description|  
 |-----------------|----------|-----------------|  

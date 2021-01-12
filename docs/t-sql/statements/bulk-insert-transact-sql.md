@@ -136,7 +136,7 @@ Specifies the code page of the data in the data file. CODEPAGE is relevant only 
 |ACP|Columns of **char**, **varchar**, or **text** data type are converted from the [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows code page (ISO 1252) to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code page.|
 |OEM (default)|Columns of **char**, **varchar**, or **text** data type are converted from the system OEM code page to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code page.|
 |RAW|No conversion from one code page to another occurs; this is the fastest option.|
-|*code_page*|Specific code page number, for example, 850.<br /><br /> **&#42;&#42; Important &#42;&#42;** Versions prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] do not support code page 65001 (UTF-8 encoding).|
+|*code_page*|Specific code page number, for example, 850.<br /><br /> **&#42;&#42; Important &#42;&#42;** Versions prior to [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] do not support code page 65001 (UTF-8 encoding).|
 | &nbsp; | &nbsp; |
 
 DATAFILETYPE **=** { **'char'** \| **'native'** \| **'widechar'** \| **'widenative'** }

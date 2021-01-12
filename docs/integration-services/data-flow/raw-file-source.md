@@ -43,7 +43,7 @@ ms.author: chugu
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Raw File Custom Properties](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
@@ -61,5 +61,4 @@ ms.author: chugu
 ## See Also  
  [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
-  
   

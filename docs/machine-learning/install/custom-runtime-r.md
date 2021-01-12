@@ -5,22 +5,22 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/20/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Install an R custom runtime for SQL Server
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes how to install a custom runtime for running R scripts with SQL Server. The custom runtime for R can be used in the following scenarios:
+This article describes how to install a custom runtime for running R scripts with SQL Server. The custom runtime uses language extension technology built on an extensibility framework for executing external code. The custom runtime for R can be used in the following scenarios:
 
 + An installation of SQL Server with extensibility framework.
 
 + An installation of Machine Learning Services with SQL Server 2019. The language extension can be used with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) after completing some additional configuration steps.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > This article describes how to install a custom runtime for R on Windows. To install on Linux, see the [Install an R custom runtime for SQL Server on Linux](custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true)
@@ -31,7 +31,7 @@ Before installing an R custom runtime, install the following:
 
 + [SQL Server 2019 for Windows (Cumulative Update 3 or later)](../../database-engine/install-windows/install-sql-server.md).
 
-+ [SQL Server Language Extensions on Windows with the extensibility framework](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md).
++ [SQL Server Language Extensions on Windows with the extensibility framework](../../language-extensions/install/windows-java.md).
 
 + [R Version 3.3 or higher](https://cran.r-project.org/).
 
@@ -56,16 +56,16 @@ Language Extensions use the extensibility framework for executing external code.
 
     - **Machine Learning Services and Language Extensions**
 
-       Select **Machine Learning Services and Language Extensions**. There's no need to select R.
+        Select **Machine Learning Services and Language Extensions**. There's no need to select R.
 
-    ![SQL Server 2019 CU3 or later installation features](../install/media/sql-feature-selection.png)
+        :::image type="content" source="media/2019-setup-language-extensions.png" alt-text="SQL Server 2019 Language Extensions setup.":::
 
 1. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
 
     + Database Engine Services
     + Machine Learning Services and Language Extensions
 
-1. After setup is complete, if you're instructed to restart the computer, do so now. It's important to read the message from the Installation Wizard when you've finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. After setup is complete, if you're instructed to restart the computer, do so now. It's important to read the message from the Installation Wizard when you've finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ## Install R
 
@@ -176,7 +176,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md#supportedplatforms).
 
@@ -190,7 +190,7 @@ Before installing an R custom runtime, install the following:
 + [SQL Server 2019 for Linux (Cumulative Update 3 or later)](../../linux/sql-server-linux-setup.md).
 Before you install SQL Server on Linux, you must configure a Microsoft repository. For more information, see [configuring repositories](../../linux/sql-server-linux-change-repo.md).
 
-+ [SQL Server Language Extensions on Linux with the extensibility framework](../../linux/sql-server-linux-setup-language-extensions.md).
++ [SQL Server Language Extensions on Linux with the extensibility framework](../../linux/sql-server-linux-setup-language-extensions-java.md).
 
 + [R Version 3.3 or higher](https://cran.r-project.org/).
 

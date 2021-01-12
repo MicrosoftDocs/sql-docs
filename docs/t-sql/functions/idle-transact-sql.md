@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "status information [SQL Server], idle time"
   - "idle time [SQL Server]"
 ms.assetid: 8f49c62a-8da5-4afd-a5eb-4df8ef8be755
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # &#x40;&#x40;IDLE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

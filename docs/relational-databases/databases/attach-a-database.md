@@ -36,7 +36,7 @@ We recommend that you move databases by using the `ALTER DATABASE` planned reloc
 We don't recommend using detach and attach for Backup and Recovery. There are no transaction log backups, and it's possible to accidentally delete files.
   
 ###  <a name="Security"></a> Security  
-File access permissions are set during a number of database operations, including detaching or attaching a database. For information about file permissions that are set whenever a database is detached and attached, see [Securing Data and Log Files](https://technet.microsoft.com/library/ms189128.aspx) from [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online (Still a valid read!) 
+File access permissions are set during a number of database operations, including detaching or attaching a database. For information about file permissions that are set whenever a database is detached and attached, see [Securing Data and Log Files](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)) from [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online (Still a valid read!) 
   
 We recommend that you do not attach or restore databases from unknown or untrusted sources. Such databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a nonproduction server and also examine the code, such as stored procedures or other user-defined code, in the database. For more information about attaching databases and information about changes that are made to metadata when you attach a database, see [Database Detach and Attach (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
@@ -123,7 +123,7 @@ Requires `CREATE DATABASE`, `CREATE ANY DATABASE`, or `ALTER ANY DATABASE` permi
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Use the [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) statement with the `FOR ATTACH` clause.  
+3.  Use the [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) statement with the `FOR ATTACH` clause.  
   
      Copy and paste the following example into the query window and click **Execute**. This example attaches the files of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database and renames the database to `MyAdventureWorks`.  
   
@@ -151,8 +151,7 @@ EXEC sys.sp_cdc_vupgrade
 ``` 
  
 ## See Also  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) 
  <br>[Manage metadata when making a database available on another server](manage-metadata-when-making-a-database-available-on-another-server.md)  
  [Detach a Database](../../relational-databases/databases/detach-a-database.md)  
-  
   

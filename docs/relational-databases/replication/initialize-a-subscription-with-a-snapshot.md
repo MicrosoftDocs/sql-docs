@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Initialize a Subscription with a Snapshot for a New Publication
 

@@ -34,6 +34,5 @@ This topic describes how to remove a server group in Registered Servers in [!INC
 2.  In the **Delete Confirmation** dialog box, click **Yes**.  
   
 ## See Also  
- [Move a Registered Server or Registered Server Group &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md)  
-  
+ [Move a Registered Server or Registered Server Group &#40;SQL Server Management Studio&#41;](./move-a-registered-server-or-registered-server-group.md)  
   

@@ -4,7 +4,7 @@ description: Learn how the SQL Server Database Engine accesses runtime informati
 ms.custom: ""
 ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -78,7 +78,7 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> For more information on the performance overhead of query profiling, see the blog post [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/). 
+> For more information on the performance overhead of query profiling, see the blog post [Developers Choice: Query progress - anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere). 
 
 When running an extended event session that uses the *query_thread_profile* event, then the [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV is also populated using lightweight profiling, which enables live query statistics for all sessions, using [Activity Monitor](../../relational-databases/performance-monitor/activity-monitor.md) or directly querying the DMV.
 
@@ -206,4 +206,4 @@ For more information on the performance overhead of query profiling, see the blo
  [Trace flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [actual execution plan](../../relational-databases/performance/display-an-actual-execution-plan.md)    
- [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)      
+ [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)

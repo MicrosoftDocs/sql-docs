@@ -19,7 +19,7 @@ If you have a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] m
 
 2. Find the name of the dataset on the tab at the bottom of the table, and the field name you want. 
     
-    ![mobile-report-publisher-parameter-data-view](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-data-view.png)
+    ![Screenshot of the mobile report publisher parameter data view.](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-data-view.png)
     
 2.	The syntax of the URL depends on your data source. 
 
@@ -42,7 +42,7 @@ If you have a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] m
     
 3.	This URL will open the report on the server, automatically filtered to the parameter value you specified.
 
-    ![mobile-report-publisher-parameter-web-portal-view](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-web-portal-view.png)
+    ![Screenshot of the mobile report publisher parameter web portal view with an arrow pointing to the URL and a box around this text: ?TimeChartLoD.@category=Clothing.](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-web-portal-view.png)
 
 ### See also
 

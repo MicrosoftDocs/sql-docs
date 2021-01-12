@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.unjoindb.f1"
@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], removing"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Remove a Secondary Database from an Availability Group (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

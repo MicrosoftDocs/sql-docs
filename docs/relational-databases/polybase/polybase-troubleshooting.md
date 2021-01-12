@@ -14,7 +14,7 @@ ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
-monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016"
 ---
 # Monitor and troubleshoot PolyBase
 
@@ -255,7 +255,7 @@ Use DNS name to reroute connections to the active Name Node. In order to do this
 
 ## Error messages and possible solutions
 
-To troubleshoot external table errors, see Murshed Zaman's blog [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions").
+To troubleshoot external table errors, see Murshed Zaman's blog [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](/archive/blogs/sqlcat/polybase-setup-errors-and-possible-solutions "PolyBase setup errors and possible solutions").
 
 ## See also
 

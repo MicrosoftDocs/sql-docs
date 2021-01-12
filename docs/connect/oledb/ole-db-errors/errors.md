@@ -28,7 +28,7 @@ ms.author: v-daenge
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can return multiple errors. An application can retrieve server errors one at a time by calling [IMultipleResults::GetResult](/previous-versions/windows/desktop/ms721289(v=vs.85)) combined with ISQLErrorInfo and IErrorRecords.  
   
- The OLE DB Driver for SQL Server exposes the OLE DB record-enhanced **IErrorInfo**, the custom **ISQLErrorInfo**, and the provider-specific [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) error object interfaces.  
+ The OLE DB Driver for SQL Server exposes the OLE DB record-enhanced **IErrorInfo**, the custom **ISQLErrorInfo**, and the provider-specific [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md) error object interfaces.  
   
  For information about tracing errors, see [Data Access Tracing](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)). For information about enhancements to error tracing added in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], see [Accessing Diagnostic Information in the Extended Events Log](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   

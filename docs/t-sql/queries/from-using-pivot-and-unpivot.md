@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FROM - Using PIVOT and UNPIVOT
 

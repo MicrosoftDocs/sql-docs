@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a Database Schema
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +57,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 > [!NOTE]
-> A dialog box will not appear if you are creating a Schema using SSMS against an **Azure SQL Database** or an **Azure SQL Data Warehouse**. You will need to run the Create Schema Template T-SQL Statement that is generated.
+> A dialog box will not appear if you are creating a Schema using SSMS against an **Azure SQL Database** or an **Azure Synapse Analytics**. You will need to run the Create Schema Template T-SQL Statement that is generated.
   
 ### Additional Options  
  The **Schema- New** dialog box also offers options on two additional pages: **Permissions** and **Extended Properties**.  

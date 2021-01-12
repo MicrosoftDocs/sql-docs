@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Client Protocols - TCP IP Properties (Protocol Tab)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

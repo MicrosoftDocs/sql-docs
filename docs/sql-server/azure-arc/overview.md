@@ -5,7 +5,7 @@ description: Manage instances of SQL Server with Azure Arc enabled SQL Server
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 10/07/2020
+ms.date: 12/08/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
@@ -38,13 +38,14 @@ Azure Arc enabled SQL Server supports SQL Server 2012 or higher running on one o
 
 ### Required permissions
 
-To connect the SQL Server instances and the hosting to Azure Arc, you must have an account with privileges to perform the following actions:
-   * Microsoft.AzureData/*
+To connect the SQL Server instances and the hosting machine to Azure Arc, you must have an account with privileges to perform the following actions:
+   * Microsoft.AzureArcData/sqlServerInstances/read
+   * Microsoft.AzureArcData/sqlServerInstances/write
    * Microsoft.HybridCompute/machines/read
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read
 
-For optimal security, we recommend creating a custom role in Azure that has the minimal permissions listed. For information on how to create a custom role in Azure with these permissions, see [Custom roles overview](https://docs.microsoft.com/azure/active-directory/users-groups-roles/roles-custom-overview). To add role assignment, see [Add or remove role assignments using Azure portal](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal) or [Add or remove role assignments using Azure RBAC and Azure CLI](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-cli).
+For optimal security, we recommend creating a custom role in Azure that has the minimal permissions listed. For information on how to create a custom role in Azure with these permissions, see [Custom roles overview](/azure/active-directory/users-groups-roles/roles-custom-overview). To add role assignment, see [Add or remove role assignments using Azure portal](/azure/role-based-access-control/role-assignments-portal) or [Add or remove role assignments using Azure RBAC and Azure CLI](/azure/role-based-access-control/role-assignments-cli).
 
 ### Azure subscription and service limits
 
@@ -53,6 +54,10 @@ Before configuring your SQL server instances and machines with Azure Arc, review
 ### Networking configuration and resource providers
 
 Review [networking configuration, transport layer security and resource providers](/azure/azure-arc/servers/agent-overview#prerequisites) required for Connected machine agent.
+
+The resource provider `Microsoft.AzureArcData` is required to connect the SQL Server instances to Azure Arc. See the resource provider registration instructions in the [Prerequisites](connect.md#prerequisites) section.
+
+If you already have SQL Server instances connected to Azure Arc, follow these steps to migrate the existing **SQL Server - Azure Arc** resources to the new namespace.
 
 ### Supported Azure regions
 

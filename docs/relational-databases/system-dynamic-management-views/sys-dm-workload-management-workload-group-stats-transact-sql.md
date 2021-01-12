@@ -11,7 +11,7 @@ dev_langs:
   - "TSQL"
 author: ronortloff
 ms.author: rortloff
-monikerRange: "= azure-sqldw-latest||= sqlallproducts-allversions"
+monikerRange: "= azure-sqldw-latest"
 ---
 # sys.dm_workload_management_workload_groups_stats (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -35,4 +35,4 @@ Returns workload group statistics and the effective values of the workload group
 
 ## See also
 
- [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

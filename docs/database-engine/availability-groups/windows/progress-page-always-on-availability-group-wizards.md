@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.failoverwizard.progress.f1"
@@ -13,8 +13,8 @@ f1_keywords:
   - "sql13.swb.addreplicawizard.progress.f1"
   - "sql13.swb.newagwizard.progress.f1"
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Progress Page (Always On Availability Group Wizards)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -10,8 +10,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Server-Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

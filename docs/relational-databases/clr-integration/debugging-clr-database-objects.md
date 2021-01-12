@@ -41,7 +41,7 @@ Due to the above restrictions, we recommend that [!INCLUDE[tsql](../../includes/
 
 Debugging in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] follows a per-connection model. A debugger can detect and debug activities only to the client connection to which it is attached. Because the functionality of the debugger is not limited by the type of connection, both tabular data stream (TDS) and HTTP connections can be debugged. However, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow debugging existing connections. Debugging supports all common debugging features within routines executing on the server. The interaction between a debugger and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] happens through distributed Component Object Model (COM).  
   
-For more information and scenarios about debugging managed stored procedures, functions, triggers, user-defined types, and aggregates, see [SQL Server CLR Integration Database Debugging](https://go.microsoft.com/fwlink/?LinkId=120378) in the Visual Studio documentation.  
+For more information and scenarios about debugging managed stored procedures, functions, triggers, user-defined types, and aggregates, see [SQL Server CLR Integration Database Debugging](/previous-versions/ms165050(v=vs.100)) in the Visual Studio documentation.  
   
 The TCP/IP network protocol must be enabled on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in order to use Visual Studio for remote development, debugging, and development. For more information about enabling TCP/IP protocol on the server, see [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md).  
   
@@ -110,6 +110,6 @@ EXEC GetVersion
 
 ## Next steps
   
-For more information about debugging managed code using Visual Studio, see [Debugging Managed Code](https://go.microsoft.com/fwlink/?LinkId=120377) in the Visual Studio documentation.  
+For more information about debugging managed code using Visual Studio, see [Debugging Managed Code](/visualstudio/debugger/debugging-managed-code) in the Visual Studio documentation.  
 
 For more information, see [Common Language Runtime integration programming concepts](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

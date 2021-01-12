@@ -32,9 +32,9 @@ The search field will dynamically filter the list of subscriptions as youYou can
 For more information, see [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
 
 ## Use Windows PowerShell to list MySubscriptions  
- ![PowerShell related content](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
+ ![PowerShell related content](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
   
- The following PowerShell script will return the list of subscriptions and subscription properties for the current user. For more information, see [ReportingService2010.ListMySubscriptions Method](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listmysubscriptions.aspx).  
+ The following PowerShell script will return the list of subscriptions and subscription properties for the current user. For more information, see [ReportingService2010.ListMySubscriptions Method](/dotnet/api/reportservice2010.reportingservice2010.listmysubscriptions).  
   
 ```  
 #server -  all subscriptions of the current user at the given server or site  
@@ -51,6 +51,5 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ## See Also  
  [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [old_Create and Manage Subscriptions for Native Mode Report Servers](https://docs.microsoft.com/sql/reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers)  
-  
+ [old_Create and Manage Subscriptions for Native Mode Report Servers](./create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   

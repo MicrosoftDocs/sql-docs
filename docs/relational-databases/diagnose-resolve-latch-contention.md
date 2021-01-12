@@ -3,12 +3,12 @@ title: "Whitepaper: Diagnose & resolve latch contention"
 description: This article is an in-depth look at diagnosing and resolving latch contention in SQL Server. This article was originally published by the SQLCAT team at Microsoft."
 ms.date: 09/30/2020
 ms.prod: sql
-ms.reviewer: jroth
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: how-to
 author: bluefooted
 ms.author: pamela
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Diagnose and resolve latch contention on SQL Server
@@ -26,7 +26,7 @@ Latches are lightweight synchronization primitives that are used by the SQL Serv
 
 Contention on page latches is the most common scenario encountered on multi-CPU systems and so most of this article will focus on these.
 
-Latch contention occurs when multiple threads concurrently attempt to acquire incompatible latches to the same in-memory structure. As a latch is an internal control mechanism; the SQL engine automatically determines when to user them. Because the behavior of latches is deterministic, application decisions including schema design can affect this behavior. This article aims to provide the following information:
+Latch contention occurs when multiple threads concurrently attempt to acquire incompatible latches to the same in-memory structure. As a latch is an internal control mechanism; the SQL engine automatically determines when to use them. Because the behavior of latches is deterministic, application decisions including schema design can affect this behavior. This article aims to provide the following information:
 
 * Background information on how latches are used by SQL Server. 
 * Tools used to investigate latch contention. 

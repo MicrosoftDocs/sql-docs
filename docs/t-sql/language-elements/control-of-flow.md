@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "keywords [SQL Server], control-of-flow language"
   - "control-of-flow language [SQL Server], keywords listed"
 ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # Control-of-Flow
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

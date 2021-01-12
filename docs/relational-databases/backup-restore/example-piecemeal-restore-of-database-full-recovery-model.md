@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "piecemeal restores [SQL Server], full recovery model"
   - "restore sequences [SQL Server], piecemeal"
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Example: Piecemeal Restore of Database (Full Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

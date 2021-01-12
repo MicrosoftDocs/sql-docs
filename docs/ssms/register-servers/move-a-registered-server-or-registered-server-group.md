@@ -35,6 +35,6 @@ This topic describes how to organize the servers in Registered Servers by moving
 
 ## See Also
 
-[Register Servers](../../tools/sql-server-management-studio/register-servers.md)
+[Register Servers](./register-servers.md)
 
-[Create or Edit a Server Group &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)
+[Create or Edit a Server Group &#40;SQL Server Management Studio&#41;](./create-or-edit-a-server-group-sql-server-management-studio.md)

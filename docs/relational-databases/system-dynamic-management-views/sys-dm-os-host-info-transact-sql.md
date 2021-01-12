@@ -17,9 +17,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_host_info dynamic management view"
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]

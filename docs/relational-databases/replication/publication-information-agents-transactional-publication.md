@@ -13,7 +13,7 @@ f1_keywords:
 ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publication Information, Agents (Transactional Publication)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

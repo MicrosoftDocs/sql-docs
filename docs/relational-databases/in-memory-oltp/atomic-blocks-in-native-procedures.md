@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Atomic Blocks in Native Procedures
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -160,6 +160,5 @@ GO
 |XACT_ABORT|OFF<br /><br /> Uncaught exceptions cause the atomic block to roll back, but not cause the transaction to abort unless the error is transaction dooming.|  
   
 ## See Also  
- [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
+ [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   

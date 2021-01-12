@@ -70,8 +70,7 @@ ms.author: chugu
 15. Click **OK**.  
   
 ## See Also  
- [CDC Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
- [CDC Source Editor &#40;Columns Page&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
- [CDC Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
-  
+ [CDC Source Editor &#40;Connection Manager Page&#41;](./cdc-source.md)   
+ [CDC Source Editor &#40;Columns Page&#41;](./cdc-source.md)   
+ [CDC Source Editor &#40;Error Output Page&#41;](./cdc-source.md)  
   

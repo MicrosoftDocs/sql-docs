@@ -26,7 +26,7 @@ ms.author: maggies
 
 This tutorial introduces the tools used to configure a report server, manage report server content and operations, and create and publish paginated and mobile [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports. If you are already familiar with the tools, you can move on to other tutorials to learn skills for using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. For other tutorials, see [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).
 
-## <a name="bkmk_configuration_manager"></a> Reporting Services Configuration Manager (Native Mode)
+## <a name="bkmk_configuration_manager"></a> Report Server Configuration Manager (Native Mode)
 Use the Native mode configuration manager to complete the following:
 
 - Specify the service account.
@@ -38,15 +38,15 @@ Use the Native mode configuration manager to complete the following:
 
 **Installation:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is installed when you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode. For more information, see [Install Reporting Services Native Mode Report Server](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md).
 
-### To start the Reporting Services Configuration Manager
+### To start the Report Server Configuration Manager
 
-1. On the Windows start screen, type **reporting** and in the **Apps** search results, click **Reporting Services Configuration Manager**.
+1. On the Windows start screen, type **reporting** and in the **Apps** search results, click **Report Server Configuration Manager**.
 
-    ![reporting services configuration manager on start](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "reporting services configuration manager on start")
+    ![Report Server Configuration Manager on start](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Report Server Configuration Manager on start")
 
     **Or**
 
-    Click **Start**, then click **Programs**, then click [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], then click **Configuration Tools**, and then click **Reporting Services Configuration Manager**.
+    Click **Start**, then click **Programs**, then click [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], then click **Configuration Tools**, and then click **Report Server Configuration Manager**.
 
     The **Report Server Installation Instance Selection** dialog box appears so that you can select the report server instance you want to configure.
 
@@ -62,7 +62,7 @@ Use the Native mode configuration manager to complete the following:
 
     ![Reporting Services Configuration tool](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Reporting Services Configuration tool")
 
- **Next Steps:** [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) and [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+ **Next Steps:** [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) and [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
 ## Web Portal (Native Mode)
 
@@ -76,7 +76,7 @@ Before you can open the Web Portal, you must have sufficient permissions (initia
 
 1. Open your browser. For information on supported browsers and browser versions, see [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 
-2. In the address bar of the Web browser, type the Web Portal URL. By default, the URL is `https://<serverName>/reports`. You can use the Reporting Services Configuration tool to confirm the server name and URL. For more information about URLs used in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Configure Report Server URLs &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).
+2. In the address bar of the Web browser, type the Web Portal URL. By default, the URL is `https://<serverName>/reports`. You can use the Reporting Services Configuration tool to confirm the server name and URL. For more information about URLs used in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Configure Report Server URLs &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).
 
 3. The Web Portal opens in the browser window. The startup page is the Home folder. Depending on permissions, you might see additional folders, hyperlinks to reports, and resource files within the startup page. You might also see additional buttons and commands on the toolbar.
 

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_hadr_database_replica_states dynamic management view"
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

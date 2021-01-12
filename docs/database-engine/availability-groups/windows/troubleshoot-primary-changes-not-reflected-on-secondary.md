@@ -5,11 +5,11 @@ ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Determine why changes from primary replica are not reflected on secondary replica for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

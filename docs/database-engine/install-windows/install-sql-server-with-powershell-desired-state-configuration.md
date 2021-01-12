@@ -10,7 +10,7 @@ ms.technology: install
 ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 
 # Install SQL Server with PowerShell Desired State Configuration
@@ -39,7 +39,7 @@ In most cases, DSC is used to handle the prerequisite requirements. But for the 
 
 ## Install the SqlServerDsc DSC resource
 
-Download the [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC resource from the [PowerShell Gallery](https://www.powershellgallery.com/) by using the [Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1) cmdlet. 
+Download the [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC resource from the [PowerShell Gallery](https://www.powershellgallery.com/) by using the [Install-Module](/powershell/module/powershellget/Install-Module) cmdlet. 
 
 > [!NOTE]
 > Make sure PowerShell is running **As Administrator** to install the module.

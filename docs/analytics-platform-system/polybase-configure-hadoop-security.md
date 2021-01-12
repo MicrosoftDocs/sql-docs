@@ -1,6 +1,6 @@
 ---
 title: "Configure PolyBase Hadoop security"
-description: Explains how to configure PolyBase in Parallel Data Warehouse to connect to external Hadoop. 
+description: Provides a reference for various configuration settings that affect APS PolyBase connectivity to Hadoop. 
 author: mzaman1 
 ms.prod: sql
 ms.technology: data-warehouse

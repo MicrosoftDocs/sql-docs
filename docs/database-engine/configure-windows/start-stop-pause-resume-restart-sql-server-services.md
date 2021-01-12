@@ -337,7 +337,7 @@ For more information about the **SHUTDOWN** statement, see [SHUTDOWN &#40;Transa
   
 ##  <a name="ServiceController"></a> Using Service Controller Class
 
-You can use ServiceController class to control SQL server service or any other Windows service. For an example on how to do this, see [ServiceController Class](/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8).
+You can use ServiceController class to control SQL server service or any other Windows service. For an example on how to do this, see [ServiceController Class](/dotnet/api/system.serviceprocess.servicecontroller).
 
 ## Manage the SQL Server service on Linux
 

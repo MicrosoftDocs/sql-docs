@@ -27,7 +27,7 @@ The default is **false**, which means that **smalldatetime**, **datetime**, **da
 
 The PDO_SQLSRV driver returns date and time types as strings by default. To retrieve them as PHP DateTime objects, see [How to: Retrieve Date and Time Types as PHP Datetime Objects Using the PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
 
-## Example
+## Example 1
 The following example shows the syntax specifying to retrieve date and time types as strings.
 
 ```php
@@ -44,7 +44,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## Example
+## Example 2
 The following example shows that you can retrieve dates as strings by specifying UTF-8 when you retrieve the string, even when the connection was made with `"ReturnDatesAsStrings" => false`.
 
 ```php
@@ -81,7 +81,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## Example
+## Example 3
 The following example shows how to retrieve dates as strings by specifying UTF-8 and `"ReturnDatesAsStrings" => true` in the connection string.
 
 ```php
@@ -117,7 +117,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## Example
+## Example 4
 The following example shows how to retrieve the date as a PHP type. `'ReturnDatesAsStrings'=> false` is on by default.
 
 ```php
@@ -155,7 +155,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## Example
+## Example 5
 The ReturnDatesAsStrings option at the statement level overrides the corresponding connection option.
 
 ```php

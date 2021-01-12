@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: "= sql-server-2017"
 ---
 # SQL Server 2017 Release Notes
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -24,7 +24,7 @@ This article describes limitations and issues with SQL Server 2017. For related 
 - [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Spin up a Virtual Machine with SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 > [!NOTE]
-> SQL Server 2019 preview is now available. For more information, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
+> SQL Server 2019 preview is now available. For more information, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15&preserve-view=true).
 
 ## SQL Server 2017 - general availability release (October 2017)
 ### Database Engine
@@ -147,7 +147,7 @@ There are no release notes for SQL Server on Windows related to this release. Se
 ## More information
 - [SQL Server Reporting Services release notes](../reporting-services/release-notes-reporting-services.md).
 - [Known Issues for Machine Learning Services](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md)
-- [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
+- [SQL Server Update Center - links and information for all supported versions](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

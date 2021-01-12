@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Local audit for SQL Server usage and diagnostic data collection (CEIP)
 
@@ -327,7 +327,7 @@ DBAs will need to self-manage the clean-up of the files in the directory to avoi
 
 **Is there a client or tool that I can use to read this JSON output?**
 The output can be read with Notepad, Visual Studio, or any JSON reader of your choice.
-Alternatively, you can read the JSON file and analyze the data in an SQL Server instance as illustrated below. More details on how to read JSON file in SQL Server, please visit [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/).
+Alternatively, you can read the JSON file and analyze the data in an SQL Server instance as illustrated below. More details on how to read JSON file in SQL Server, please visit [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](/archive/blogs/sqlserverstorageengine/bulk-importing-json-files-into-sql-server).
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

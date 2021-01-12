@@ -45,5 +45,5 @@ ms.author: jroth
 |[UpdateRule](./updaterule-property-adox.md)|Indicates the action performed when a primary key is updated.|  
   
 ## See Also  
- [ADOX API Reference](./adox-object-model.md?view=sql-server-ver15)   
+ [ADOX API Reference](./adox-object-model.md)   
  [ADO Extensions for Data Definition Language and Security (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

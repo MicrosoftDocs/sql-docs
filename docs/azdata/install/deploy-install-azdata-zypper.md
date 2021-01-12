@@ -1,7 +1,7 @@
 ---
-title: Install azdata with zypper
+title: Install Azure Data CLI (azdata) with zypper
 titleSuffix: 
-description: Learn how to install the azdata tool with zypper.
+description: Learn how to install the Azure Data CLI (azdata) tool with zypper.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Install `azdata` with zypper
+# Install [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] with zypper
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 

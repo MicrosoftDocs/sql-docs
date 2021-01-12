@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC clusters"
   - "sys.dm_hadr_cluster_members catalog view"
 ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
-author: markingmyname
-ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

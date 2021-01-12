@@ -181,9 +181,9 @@ Notes:
 
 - The WSFC feature may not be available on all Windows Server editions. Make sure that your edition has this feature.
 
-- Make sure you have the proper permissions to setup WSFC in the active directory. If there are any issue, see [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx).
+- Make sure you have the proper permissions to setup WSFC in the active directory. If there are any issue, see [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10)).
 
-For more detailed information about WSFC, see [Failover Clusters](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx).
+For more detailed information about WSFC, see [Failover Clusters](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732488(v=ws.10)).
 
 ## SQL Server Always On Availability Group
 
@@ -391,5 +391,4 @@ In this white paper, we have seen how to set up and configure the Master Data Se
 
 Did this paper help you? Please give us your feedback by clicking **Comments** at the top of the article. 
 
-Your feedback will help us improve the quality of white papers we release. 
-
+Your feedback will help us improve the quality of white papers we release.

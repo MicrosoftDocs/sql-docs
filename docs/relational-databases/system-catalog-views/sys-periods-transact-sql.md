@@ -11,8 +11,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.periods (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

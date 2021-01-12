@@ -5,13 +5,13 @@ ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Use Always On Policies to View the Health of an Availability Group (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -12,9 +12,9 @@ helpviewer_keywords:
   - "compatibility levels [SQL Server], after upgrade"
   - "Database Engine [SQL Server], upgrading"
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Upgrade Database Engine
 

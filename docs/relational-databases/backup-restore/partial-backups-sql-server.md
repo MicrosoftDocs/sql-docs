@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "READ_WRITE_FILEGROUPS option"
   - "database backups [SQL Server], about backing up databases"
 ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Partial Backups (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

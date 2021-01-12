@@ -71,7 +71,7 @@ ms.author: chugu
 ## Related Tasks  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ For information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
  For more information about programmatically setting these properties, see <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
@@ -85,7 +85,7 @@ ms.author: chugu
 > [!IMPORTANT]  
 >  The FTP connection manager supports only anonymous authentication and basic authentication. It does not support Windows Authentication.  
   
- **Related Topics**: [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **Related Topics**: [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../connection-manager/ftp-connection-manager.md)  
   
  **StopOnFailure**  
  Indicate whether the FTP task terminates if an FTP operation fails.  
@@ -151,7 +151,7 @@ ms.author: chugu
  **RemotePath**  
  Select an existing FTP connection manager, or click \<**New connection...**> to create a connection manager.  
   
- **Related Topics:** [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **Related Topics:** [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../connection-manager/ftp-connection-manager.md)  
   
 ### IsLocalPathVariable Dynamic Options  
   
@@ -170,5 +170,4 @@ ms.author: chugu
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Control Flow](../../integration-services/control-flow/control-flow.md)  
-  
   

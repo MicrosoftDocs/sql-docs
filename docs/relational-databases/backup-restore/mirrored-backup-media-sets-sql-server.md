@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "media sets [SQL Server], mirrored backup media sets"
   - "backup media [SQL Server], mirrored media"
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Mirrored Backup Media Sets (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

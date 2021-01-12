@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpeer_conflictdetectionconfigureresponse"
 ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSpeer_conflictdetectionconfigresponse (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

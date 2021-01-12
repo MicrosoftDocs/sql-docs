@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---
 # Import native and character format data from earlier versions of SQL Server
@@ -75,7 +75,6 @@ ms.custom: "seo-lt-2019"
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [SQL Server Database Engine Backward Compatibility](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)   
  [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-  
   

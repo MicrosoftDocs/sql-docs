@@ -48,9 +48,8 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
  Removes an Extensible Key Management (EKM) key from an EKM device. For more information about Extensible Key Management, see [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 ## Remarks  
- If the key is open in the current session the statement will fail.  
   
- If the asymmetric key is mapped to an Extensible Key Management (EKM) key on an EKM device and the **REMOVE PROVIDER KEY** option is not specified, the key will be dropped from the database but not the device, and a warning will be issued.  
+If the asymmetric key is mapped to an Extensible Key Management (EKM) key on an EKM device and the **REMOVE PROVIDER KEY** option is not specified, the key will be dropped from the database but not the device, and a warning will be issued.  
   
 ## Permissions  
  Requires CONTROL permission on the symmetric key.  

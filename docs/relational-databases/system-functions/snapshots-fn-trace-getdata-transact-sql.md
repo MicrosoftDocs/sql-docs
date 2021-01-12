@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "snapshots.fn_trace_getdata function"
 ms.assetid: ac28ef48-f4f4-4bf2-ba22-d44e1be88172
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # snapshots.fn_trace_getdata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

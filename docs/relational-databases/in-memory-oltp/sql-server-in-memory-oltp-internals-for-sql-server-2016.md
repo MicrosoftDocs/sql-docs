@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: b14da361-a6b8-4d85-b196-7f2f13650f44
-author: "jodebrui"
-ms.author: "jodebrui"
+author: "kevin-farlee"
+ms.author: "kfarlee"
 ---
 # SQL Server In-Memory OLTP Internals for SQL Server 2016
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

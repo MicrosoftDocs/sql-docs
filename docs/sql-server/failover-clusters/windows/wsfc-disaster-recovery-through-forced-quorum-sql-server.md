@@ -5,15 +5,15 @@ ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # WSFC Disaster Recovery through Forced Quorum (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -114,9 +114,8 @@ ms.author: mathoma
   
 -   [View Events and Logs for a Failover Cluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog Failover Cluster Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog Failover Cluster Cmdlet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))  
   
 ## See Also  
  [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
-  
   

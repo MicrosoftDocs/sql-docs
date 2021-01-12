@@ -5,13 +5,13 @@ ms.custom: "seodec18"
 ms.date: "09/25/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords: 
 - "Availability Groups [SQL Server], domain independent"
 ms.assetid: 
-author: "MashaMSFT"
-ms.author: mathoma
+author: "cawrites"
+ms.author: chadam
 ---
 # Create a domain-independent availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

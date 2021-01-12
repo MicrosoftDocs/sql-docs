@@ -38,7 +38,7 @@ SSDT also makes this task simple by being aware of your target platform and auto
   
 3.  Notice that the following error shows up in the **Error List** pane:  SQL70015: 'Filegroup reference and partitioning scheme' is not supported in SQL Azure..  
   
-    SSDT automatically validates your script based on the target platform. In this case, since filegroup is not supported in SQL Azure, SSDT returns an error. For a list of non-supported Transact\-SQL statements in SQL Azure, see [Partially Supported Transact-SQL Statements (Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx).  
+    SSDT automatically validates your script based on the target platform. In this case, since filegroup is not supported in SQL Azure, SSDT returns an error. For a list of non-supported Transact\-SQL statements in SQL Azure, see [Partially Supported Transact-SQL Statements (Microsoft Azure SQL Database)](/previous-versions/azure/ee336267(v=azure.100)).  
   
 4.  Remove the `ON` clause. Notice that the error immediately disappears from the **Error List**.  
   
@@ -63,4 +63,3 @@ SSDT also makes this task simple by being aware of your target platform and auto
 **A project which specifies Microsoft SQL Server 2012 as the target platform may experience compatibility issues with SQL Server 2008**    If such project contains entities (for example, a Sequence object) that are introduced in Microsoft SQL Server 2012, the publishing operation will fail.  
   
 The deployment will fail if object predicates use **CONTAINS** or **FREETEXT** over a newly created full-text index and transactional scripts are used. If the option to include transactional scripts is enabled during deployment, then procedures and views are defined inside a transaction while a full-text index is defined outside of a transaction at the end of the deploy script. Because of this ordering in the script, procedures or views using CONTAINS or FREETEXT will not be resolved against the full-text index, resulting in a deployment error.  
-  

@@ -14,7 +14,7 @@ dev_langs:
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -234,7 +234,7 @@ REVOKE
   
 -   REFERENCES  
   
- For a definition of each type of permission, see [Permissions (Database Engine)](https://msdn.microsoft.com/library/ms191291.aspx).  
+ For a definition of each type of permission, see [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md).  
   
 ### Chart of Permissions  
  All permissions are graphically represented on this poster. This is the easiest way to see nested hierarchy of permissions. For example the **ALTER ON LOGIN** permission can be granted by itself, but it is also included if a login is granted the **CONTROL** permission on that login, or if a login is granted the **ALTER ANY LOGIN** permission.  
@@ -317,5 +317,3 @@ GRANT UPDATE ON OBJECT::dbo.StatusTable TO [Ted];
 GRANT UPDATE ON dbo.StatusTable TO [Ted];  
 ```  
   
-  
-

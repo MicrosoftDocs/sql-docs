@@ -5,7 +5,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.forcefailover.f1"
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], failover"
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Perform a Forced Manual Failover of an Always On Availability Group (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

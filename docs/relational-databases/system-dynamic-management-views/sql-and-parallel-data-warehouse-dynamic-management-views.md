@@ -11,7 +11,7 @@ dev_langs:
   - "TSQL"
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # SQL and Parallel Data Warehouse Dynamic Management Views
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

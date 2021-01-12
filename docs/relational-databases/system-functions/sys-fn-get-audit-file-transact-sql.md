@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "sys.fn_get_audit_file function"
   - "fn_get_audit_file function"
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-author: "rothja"
-ms.author: "jroth"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    

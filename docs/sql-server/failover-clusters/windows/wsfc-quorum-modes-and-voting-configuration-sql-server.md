@@ -5,15 +5,15 @@ ms.custom: "seo-lt-2019"
 ms.date: "10/03/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
   - "failover clustering [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # WSFC Quorum Modes and Voting Configuration (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

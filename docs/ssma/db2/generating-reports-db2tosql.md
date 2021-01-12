@@ -129,5 +129,4 @@ The command **refresh-from-database** has **report-errors-to** parameter, which 
 -   fail-script  
   
 ## See Also  
-[Executing the SSMA Console](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
-  
+[Executing the SSMA Console](./executing-the-ssma-console-db2tosql.md)  

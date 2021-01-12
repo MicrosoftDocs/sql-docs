@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "PathName FILESTREAM [SQL Server]"
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # PathName (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

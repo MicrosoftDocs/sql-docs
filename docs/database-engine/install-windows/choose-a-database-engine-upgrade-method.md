@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Choose a database engine upgrade method
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -32,7 +32,7 @@ There are several approaches to consider when you are planning to upgrade the [!
 >   - [Selecting a SQL Server option in Azure](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview).  
   
 ## Upgrade in-place  
- With this approach, the SQL Server setup program upgrades the existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation by replacing the existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bits with the new [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] bits and then upgrades each of the system and user databases.  The upgrade in-place  approach is easiest, requires some amount of downtime, takes longer to fallback if a fallback is necessary, and it is not supported for all scenarios. For more information on supported and unsupported upgrade in-place scenarios, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
+ With this approach, the SQL Server setup program upgrades the existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation by replacing the existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bits with the new [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] bits and then upgrades each of the system and user databases.  The upgrade in-place  approach is easiest, requires some amount of downtime, takes longer to fallback if a fallback is necessary, and it is not supported for all scenarios. For more information on supported and unsupported upgrade in-place scenarios, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md).  
   
  This approach is frequently used in the following scenarios:  
   

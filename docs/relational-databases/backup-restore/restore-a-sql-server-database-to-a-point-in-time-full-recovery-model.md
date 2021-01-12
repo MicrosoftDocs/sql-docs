@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "point in time recovery [SQL Server]"
   - "restoring databases [SQL Server], point in time"
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Restore a SQL Server Database to a Point in Time (Full Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

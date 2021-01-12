@@ -45,7 +45,7 @@ The management packs must be installed. See [Install the SCOM Management Packs &
   
 7.  Click **Install**.  
   
-    ![Click Install](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
+    ![Screenshot showing the Import Management Packs wizard on the Select Management Packs step with the Install option circled in red.](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
   
 8.  Once Complete, click **Close**.  
   
@@ -65,7 +65,7 @@ The management packs must be installed. See [Install the SCOM Management Packs &
   
 4.  Click **Install**.  
   
-    ![Click Install](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
+    ![Another screenshot of the Import Management Packs wizard on the Select Management Packs step with the Install option circled in red.](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
 5.  Click **Close**.  
   

@@ -76,7 +76,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
   
 If a result set contains multiple columns without names, the value of the last unnamed column will be assigned to the empty string ("") key.  
   
-## Example  
+## Associative array example  
 The following example retrieves each row of a result set as an associative **array**. The example assumes that the SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
@@ -115,7 +115,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## Example  
+## Indexed array xample  
 The following example retrieves each row of a result set as a numerically indexed array.  
   
 The example retrieves product information from the *Purchasing.PurchaseOrderDetail* table of the AdventureWorks database for products that have a specified date and a stocked quantity (*StockQty*) less than a specified value.  

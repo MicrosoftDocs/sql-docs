@@ -17,7 +17,7 @@ author: David-Engel
 ms.author: v-daenge
 ---
 # Setting Up the Visual FoxPro ODBC Driver
-For information about downloading and installing the Visual FoxPro ODBC driver, see [Visual FoxPro ODBC Driver](https://go.microsoft.com/fwlink/?LinkId=121318) on MSDN Downloads.  
+For information about downloading and installing the Visual FoxPro ODBC driver, see [Visual FoxPro ODBC Driver](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10)) on MSDN Downloads.  
   
  You use the Microsoft Visual FoxPro ODBC Driver Setup program to do the following:  
   

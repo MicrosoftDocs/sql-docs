@@ -58,9 +58,11 @@ Before performing these steps, you need to:
   
 #### Approve Microsoft updates in WSUS  
   
-1.  In the left pane, of the WSUS console, click **All Updates**.  
+1. Decline any Update Rollups that are not from **System Center**.
+
+2. In the left pane, of the WSUS console, click **All Updates**.  
   
-2.  In the **All Updates** pane, click the **Approval** drop-down menu, set **Approval** to **Any Except Declined**. Click the **Status** drop-down menu, set **Status** to **Any**. Click **Refresh**.  
+3.  In the **All Updates** pane, click the **Approval** drop-down menu, set **Approval** to **Any Except Declined**. Click the **Status** drop-down menu, set **Status** to **Any**. Click **Refresh**.  
   
     Right-click the **Title** column and select **File Status** to verify the file status after the download completes.  
   
@@ -68,19 +70,19 @@ Before performing these steps, you need to:
   
     ![Select all updates and change status to Any.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectAllUpdates.png "SQL_Server_PDW_WSUSSelectAllUpdates")  
   
-3.  Select all updates, and then click the **Approve** link in the right pane.  
+4.  Select all updates, and then click the **Approve** link in the right pane.  
   
     You can also right-click the selected updates, and then click **Approve**. You may be prompted to accept the "Microsoft Software License Terms". If so, click **I Accept** in the window to continue.  
   
     ![Select all updates that apply and click Approve.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
-4.  Select the appliance server group you created in [Configure Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
+5.  Select the appliance server group you created in [Configure Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
   
-5.  Click **Approved for Install**, and then click **OK**.  
+6.  Click **Approved for Install**, and then click **OK**.  
   
     ![Approve updates for your computer group.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprovalType.png "SQL_Server_PDW_WSUSSelectApprovalType")  
   
-6.  In the **Approval Progress** dialog box, when the approval process is complete, click **Close**.  
+7.  In the **Approval Progress** dialog box, when the approval process is complete, click **Close**.  
   
     ![Close window when updates are approved.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSCloseApprovalProgressWindow.png "SQL_Server_PDW_WSUSCloseApprovalProgressWindow")  
   

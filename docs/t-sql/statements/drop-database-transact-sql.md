@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "DROP DATABASE statement"
   - "database removal [SQL Server], DROP DATABASE statement"
 ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP DATABASE (Transact-SQL)
 
@@ -165,6 +165,6 @@ DROP DATABASE sales_snapshot0600;
 ## See Also
 
 - [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

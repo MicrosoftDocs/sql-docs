@@ -19,7 +19,7 @@ While the SQL Database Project extension for Azure Data Studio provides a graphi
 
 1. Install and configure [SQL Database Projects extension for Azure Data Studio](sql-database-project-extension.md).
 
-2. The following .NET Core dlls and the target file `Microsoft.Data.Tools.Schema.SqlTasts.targets` are required to build a SQL database project from the command line from all platforms supported by the Azure Data Studio extension for SQL Database Projects. These files are created by the extension during the first build completed in the Azure Data Studio interface and placed in the extension's folder under `BuildDirectory`.  For example, on Linux, these files are placed in `~\.azuredatastudio\extensions\microsoft.sql-database-projects-x.x.x\BuildDirectory\`.  Copy these 10 files to a new and accessible folder or note their location.  This location will be referred to as `DotNet Core build folder` in this document.
+2. The following .NET Core dlls and the target file `Microsoft.Data.Tools.Schema.SqlTasks.targets` are required to build a SQL database project from the command line from all platforms supported by the Azure Data Studio extension for SQL Database Projects. These files are created by the extension during the first build completed in the Azure Data Studio interface and placed in the extension's folder under `BuildDirectory`.  For example, on Linux, these files are placed in `~\.azuredatastudio\extensions\microsoft.sql-database-projects-x.x.x\BuildDirectory\`.  Copy these 10 files to a new and accessible folder or note their location.  This location will be referred to as `DotNet Core build folder` in this document.
 
     - Microsoft.Data.Tools.Schema.Sql.dll
     - Microsoft.Data.Tools.Schema.Tasks.Sql.dll

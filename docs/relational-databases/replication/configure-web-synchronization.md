@@ -81,7 +81,7 @@ ms.author: "mathoma"
   
  **To configure IIS for Web synchronization**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS for Web Synchronization](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS for Web Synchronization](./configure-iis-7-for-web-synchronization.md)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS 7 for Web Synchronization](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
@@ -154,7 +154,7 @@ ms.author: "mathoma"
   
 -   Each publication should use a separate virtual directory for IIS.  
   
--   The account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) runs is also the account that will connect to the Publisher and Distributor during synchronization. This account must be mapped to a SQL Login account on the Publisher and Distributor. For more information, see the "Setting Permissions for the SQL Server Replication Listener" section in the [Configure IIS for Web Synchronization](../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
+-   The account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) runs is also the account that will connect to the Publisher and Distributor during synchronization. This account must be mapped to a SQL Login account on the Publisher and Distributor. For more information, see the "Setting Permissions for the SQL Server Replication Listener" section in the [Configure IIS for Web Synchronization](./configure-iis-7-for-web-synchronization.md).  
   
 -   You can use FTP to deliver the snapshot from the Publisher to the computer that is running IIS. The snapshot is always delivered from the computer that is running IIS to the Subscriber by using HTTPS. For more information, see [Transfer Snapshots Through FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
@@ -171,5 +171,4 @@ ms.author: "mathoma"
   
 ## See Also  
  [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
-  
   

@@ -40,7 +40,7 @@ The following target versions are supported for SSMA.
 - SQL Server 2019 on Windows and Linux
 - Azure SQL Database
 - Azure SQL Managed Instance
-- Azure SQL Data Warehouse**
+- Azure Synapse Analytics**
 
 ** This target is supported only by SSMA for Oracle.
 

@@ -36,7 +36,7 @@ Windows Authentication should be used to connect to SQL Server whenever possible
   
 If Windows Authentication is not a practical option, see [How to: Connect Using SQL Server Authentication](how-to-connect-using-sql-server-authentication.md).  
   
-## Example  
+## SQLSRV example  
 Using the SQLSRV driver of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], the following example uses the Windows Authentication to connect to a local instance of SQL Server. After the connection has been established, the server is queried for the login of the user who is accessing the database.  
   
 The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the browser when the example is run from the browser.  
@@ -75,7 +75,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## Example  
+## PDO_SQLSRV example  
 The following example uses the PDO_SQLSRV driver to accomplish the same task as the previous sample.  
   
 ```  

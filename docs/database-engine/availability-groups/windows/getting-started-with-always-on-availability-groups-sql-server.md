@@ -5,14 +5,14 @@ ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: reference
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], deploying"
   - "Availability Groups [SQL Server], about"
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Getting Started with Always On Availability Groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

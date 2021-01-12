@@ -40,7 +40,6 @@ object.GetNextOrderValue()
 ## Remarks  
   
 ## See Also  
- [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)   
- [Configuring Client Network Protocols and Net-Libraries](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)   
+ [Configuring Client Network Protocols and Net-Libraries](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

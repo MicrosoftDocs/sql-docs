@@ -63,7 +63,7 @@ Returns a geometric object that represents the union of all points whose distanc
   
  A negative buffer removes all points enclosed in given distance of the boundary of the geometry.  
   
- The error between the theoretical and computed buffer is max(tolerance, extents * 1.E-7) where tolerance = distance \* .001. For more information on extents, see [geometry Data Type Method Reference](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ The error between the theoretical and computed buffer is max(tolerance, extents * 1.E-7) where tolerance = distance \* .001. For more information on extents, see [geometry Data Type Method Reference](./spatial-types-geometry-transact-sql.md).  
   
 ## Examples  
   
@@ -163,5 +163,3 @@ Returns a geometric object that represents the union of all points whose distanc
  [BufferWithTolerance &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
-  
-

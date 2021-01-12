@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "DROP ENDPOINT statement"
   - "dropping endpoints"
 ms.assetid: 6aca7412-66a5-4fa4-86b2-061512ff2080
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP ENDPOINT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

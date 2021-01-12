@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
 author: markingmyname
 ms.author: maghan
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 ms.date: 06/12/2020
 ---
 
@@ -25,6 +25,9 @@ Before enabling this option, it's important to consider the potential security i
 
 - Newly developed code shouldn't use the **xp_cmdshell** stored procedure and generally it should be left disabled.
 - Some legacy applications require **xp_cmdshell** to be enabled. If they can't be modified to avoid the use of this stored procedure, you can enable it as described below.
+
+> [!NOTE]  
+> If **xp_cmdshell** must be used, as a security best practice it is recommended to only enable it for the duration of the actual task that requires it.
 
 If you need to enable **xp_cmdshell**, you can use [Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) or run the **sp_configure** system stored procedure as shown in the following code example:  
   

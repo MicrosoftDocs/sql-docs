@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # In-Memory OLTP Garbage Collection
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,6 +40,5 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  After a user transaction commits, it identifies all queued items associated with the scheduler it ran on and then releases the memory. If the garbage collection queue on the scheduler is empty, it searches for any non-empty queue in the current NUMA node. If there is low transactional activity and there is memory pressure, the main garbage-collection thread can access garbage collect rows from any queue. If there is no transactional activity after (for example) deleting a large number of rows and there is no memory pressure, the deleted rows will not be garbage collected until the transactional activity resumes or there is memory pressure.  
   
 ## See Also  
- [Managing Memory for In-Memory OLTP](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)  
-  
+ [Managing Memory for In-Memory OLTP](/previous-versions/sql/sql-server-2016/dn465872(v=sql.130))  
   

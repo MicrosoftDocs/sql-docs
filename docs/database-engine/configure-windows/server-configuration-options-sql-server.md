@@ -1,11 +1,8 @@
 ---
-title: "Server Configuration Options (SQL Server) | Microsoft Docs"
+title: Server Configuration Options (SQL Server)
 description: Find out how to manage and optimize SQL Server resources. View available configuration options, possible settings, default values, and restart requirements.
-ms.custom: ""
-ms.date: "07/20/2020"
 ms.prod: sql
 ms.prod_service: high-availability
-ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
 keywords: 
@@ -27,10 +24,13 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], configuration options"
   - "server configuration [SQL Server]"
   - "administering SQL Server, configuration options"
-ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "07/20/2020"
 ---
+
 # Server Configuration Options (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

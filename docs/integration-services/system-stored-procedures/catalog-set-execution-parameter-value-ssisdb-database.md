@@ -108,7 +108,10 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*parameter_name*|DUMP_EVENT_CODE|  
 |*parameter_value*|One or more event codes|  
   
-## Example  
+## Examples  
+
+### A. Generate dump files for errors
+
  The following example specifies that the Integration Services server generates dump files when any error occurs during a package execution.  
   
 ```sql
@@ -116,7 +119,8 @@ exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_ERROR',1  
 ```  
   
-## Example  
+### B. Generate dump files for events
+
  The following example specifies that the Integration Services server generates dump files when events occur during a package execution, and specifies the event that causes the server to generate the files.  
   
 ```sql

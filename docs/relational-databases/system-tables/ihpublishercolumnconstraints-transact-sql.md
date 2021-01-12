@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHpublishercolumnconstraints system table"
 ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # IHpublishercolumnconstraints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

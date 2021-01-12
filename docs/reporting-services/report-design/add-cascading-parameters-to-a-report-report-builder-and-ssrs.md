@@ -116,7 +116,7 @@ ms.author: maggies
   
  Next, you will set the properties of the second parameter to use this dataset to populate its available values at run time.  
   
-## To set available values for a report parameter  
+## To set available values for the second parameter  
   
 1.  In the Report Data pane, in the Parameters folder, right-click the first parameter, and then click **Parameter Properties**.  
   

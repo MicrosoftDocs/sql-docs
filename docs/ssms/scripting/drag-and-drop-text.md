@@ -14,7 +14,7 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Drag and Drop Text
@@ -44,6 +44,5 @@ You can select text and then drag and drop it in another location. You can drag 
  Dragging text moves it; that is, the text is erased from the old location and moved to the new location. Pressing the CTRL key while dragging text copies it to the new location. Dragging an object from Object Explorer is an exception and does not delete the object name from Object Explorer.  
   
 ## See Also  
- [Navigate Code and Text](../../relational-databases/scripting/navigate-code-and-text.md)  
-  
+ [Navigate Code and Text](./navigate-code-and-text.md)  
   

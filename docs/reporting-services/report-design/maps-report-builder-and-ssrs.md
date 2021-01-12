@@ -176,7 +176,7 @@ ms.author: maggies
   
  To work with layers, select a map on the report design surface to display the Map pane. The Map pane displays the list of layers that are defined for the map. Use this pane to select a layer to change the options, to change the drawing order of layers, to add a layer or run the Map Layer wizard, to hide or show a layer, and to change the view center and zoom level for the map viewport. The following figure shows a viewport:  
   
- ![rsMapLayerZone](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![Screenshot of the Map Layers section that points out the Layer Toolbar, Layer visibility, Layer name, Type of spacial data source, Layer type, Adjust Zoom Level, and Adjust View Center options.](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
   
  For more information about map layers, see [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

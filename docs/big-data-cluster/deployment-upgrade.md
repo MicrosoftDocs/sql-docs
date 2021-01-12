@@ -52,16 +52,16 @@ This section explains how to upgrade a SQL Server BDC from a supported release (
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-1. Update `azdata`.
+1. Update [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
-   Follow the instructions for installing `azdata`. 
+   Follow the instructions for installing [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. 
    - [Windows installer](../azdata/install/deploy-install-azdata-installer.md)
    - [Linux with apt](../azdata/install/deploy-install-azdata-linux-package.md)
    - [Linux with yum](../azdata/install/deploy-install-azdata-yum.md)
    - [Linux with zypper](../azdata/install/deploy-install-azdata-zypper.md)
 
    >[!NOTE]
-   >If `azdata` was installed with `pip` you need to manually remove it before installing with the Windows installer or the Linux package manager.
+   >If [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] was installed with `pip` you need to manually remove it before installing with the Windows installer or the Linux package manager.
 
 1. Update the Big Data Cluster.
 
@@ -126,7 +126,7 @@ In-place upgrade from a CTP or release candidate build of SQL Server Big Data Cl
 
 ### Backup and delete the old cluster
 
-There is no in place upgrade for big data clusters deployed before SQL Server 2019 GDR1 release. The only way to upgrade to a new release is to manually remove and recreate the cluster. Each release has a unique version of `azdata` that is not compatible with the previous version. Also, if a newer container image is downloaded on cluster deployed with different older version, the latest image might not be compatible with the older images on the cluster. The newer image is pulled if you are using the `latest` image tag for in the deployment configuration file for the container settings. By default, each release has a specific image tag corresponding to the SQL Server release version. To upgrade to the latest release, use the following steps:
+There is no in place upgrade for big data clusters deployed before SQL Server 2019 GDR1 release. The only way to upgrade to a new release is to manually remove and recreate the cluster. Each release has a unique version of [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] that is not compatible with the previous version. Also, if a newer container image is downloaded on cluster deployed with different older version, the latest image might not be compatible with the older images on the cluster. The newer image is pulled if you are using the `latest` image tag for in the deployment configuration file for the container settings. By default, each release has a specific image tag corresponding to the SQL Server release version. To upgrade to the latest release, use the following steps:
 
 1. Before deleting the old cluster, back up the data on the SQL Server master instance and on HDFS. For the SQL Server master instance, you can use [SQL Server backup and restore](data-ingestion-restore-database.md). For HDFS, you [can copy out the data with `curl`](data-ingestion-curl.md).
 
@@ -137,18 +137,18 @@ There is no in place upgrade for big data clusters deployed before SQL Server 20
    ```
 
    > [!Important]
-   > Use the version of `azdata` that matches your cluster. Do not delete an older cluster with the newer version of `azdata`.
+   > Use the version of [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] that matches your cluster. Do not delete an older cluster with the newer version of [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
    > [!Note]
    > Issuing a `azdata bdc delete` command will result in all objects created within the namespace identified with the big data cluster name to be deleted, but not the namespace itself. Namespace can be reused for subsequent deployments as long as it is empty and no other applications were created within.
 
-1. Uninstall the old version of `azdata`.
+1. Uninstall the old version of [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
    ```powershell
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
-1. Install the latest version of `azdata`. The following commands install `azdata` from the latest release:
+1. Install the latest version of [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. The following commands install [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] from the latest release:
 
    **Windows:**
 
@@ -163,11 +163,11 @@ There is no in place upgrade for big data clusters deployed before SQL Server 20
    ```
 
    > [!IMPORTANT]
-   > For each release, the path to the `n-1` version of `azdata` changes. Even if you previously installed `azdata`, you must reinstall from the latest path before creating the new cluster.
+   > For each release, the path to the `n-1` version of [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] changes. Even if you previously installed [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], you must reinstall from the latest path before creating the new cluster.
 
 ### <a id="azdataversion"></a> Verify the azdata version
 
-Before deploying a new big data cluster, verify that you are using the latest version of `azdata` with the `--version` parameter:
+Before deploying a new big data cluster, verify that you are using the latest version of [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] with the `--version` parameter:
 
 ```bash
 azdata --version
@@ -175,7 +175,7 @@ azdata --version
 
 ### Install the new release
 
-After removing the previous big data cluster and installing the latest `azdata`, deploy the new big data cluster by using the current deployment instructions. For more information, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md). Then, restore any required databases or files.
+After removing the previous big data cluster and installing the latest [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], deploy the new big data cluster by using the current deployment instructions. For more information, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md). Then, restore any required databases or files.
 
 ## Next steps
 

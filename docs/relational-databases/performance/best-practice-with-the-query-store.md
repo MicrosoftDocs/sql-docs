@@ -2,7 +2,7 @@
 title: "Best practices with Query Store | Microsoft Docs"
 description: Learn best practices for using SQL Server Query Store with your workload, such as using the latest SQL Server Management Studio and Query Performance Insight.
 ms.custom: ""
-ms.date: "09/02/2020"
+ms.date: "12/23/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store, best practices"
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: pmasl
-ms.author: jrasnick
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Best practices with Query Store
 
@@ -22,13 +22,13 @@ This article outlines the best practices for using SQL Server Query Store with y
 
 ## <a name="SSMS"></a> Use the latest [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has a set of user interfaces designed for configuring Query Store and for consuming collected data about your workload. Download the latest version of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [here](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has a set of user interfaces designed for configuring Query Store and for consuming collected data about your workload. Download the latest version of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [here](../../ssms/download-sql-server-management-studio-ssms.md).
 
 For a quick description on how to use Query Store in troubleshooting scenarios, see [Query Store @Azure blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).
 
 ## <a name="Insight"></a> Use Query Performance Insight in Azure SQL Database
 
-If you run Query Store in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can use [Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) to analyze resource consumption over time. While you can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and [Azure Data Studio](../../azure-data-studio/what-is.md) to get detailed resource consumption for all your queries, such as CPU, memory, and I/O, Query Performance Insight gives you a quick and efficient way to determine their impact on overall DTU consumption for your database. For more information, see [Azure SQL Database Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
+If you run Query Store in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can use [Query Performance Insight](/azure/sql-database/sql-database-query-performance) to analyze resource consumption over time. While you can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to get detailed resource consumption for all your queries, such as CPU, memory, and I/O, Query Performance Insight gives you a quick and efficient way to determine their impact on overall DTU consumption for your database. For more information, see [Azure SQL Database Query Performance Insight](/azure/azure-sql/database/query-performance-insight-use).
 
 This section describes optimal configuration defaults that are designed to ensure reliable operation of the Query Store and dependent features. Default configuration is optimized for continuous data collection, that is minimal time spent in OFF/READ_ONLY states. For more information about all available Query Store options, see [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
@@ -118,7 +118,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
 ```
 
-**Size Based Cleanup Mode**: Specifies whether automatic data cleanup takes place when Query Store data size approaches the limit. Activate size-based cleanup to make sure that Query Store always runs in read-write mode and collects the latest data.
+**Size Based Cleanup Mode**: Specifies whether automatic data cleanup takes place when Query Store data size approaches the limit. Activate size-based cleanup to make sure that Query Store always runs in read-write mode and collects the latest data.  Note that there is no guarantee under heavy workloads that Query Store cleanup will consistently maintain the data size under the limit. It is possible for the automatic data cleanup to fall behind and to switch (temporarily) into read-only mode.
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
@@ -428,7 +428,7 @@ The global trace flags 7745 and 7752 can be used to improve availability of data
 > If you're using Query Store for just-in-time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], plan to install the performance scalability improvements in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) as soon as possible. Without these improvements, when the database is under heavy workloads, spinlock contention may occur and server performance may become slow. In particular, you may see heavy contention on the `QUERY_STORE_ASYNC_PERSIST` spinlock or `SPL_QUERY_STORE_STATS_COOKIE_CACHE` spinlock. After this improvement is applied, Query Store will no longer cause spinlock contention.
 
 > [!IMPORTANT]
-> If you're using Query Store for just-in-time workload insights in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), plan to install the performance scalability improvement in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU15 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 as soon as possible. Without this improvement, when the database is under heavy ad-hoc workloads, the Query Store may use a large amount of memory and server performance may become slow. After this improvement is applied, Query Store imposes internal limits to the amount of memory its various components can use, and can automatically change the operation mode to read-only until enough memory has been returned to the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Note that Query Store internal memory limits are not documented because they are subject to change.  
+> If you're using Query Store for just-in-time workload insights in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), plan to install the performance scalability improvement in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU15, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22, and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU8 as soon as possible. Without this improvement, when the database is under heavy ad-hoc workloads, the Query Store may use a large amount of memory and server performance may become slow. After this improvement is applied, Query Store imposes internal limits to the amount of memory its various components can use, and can automatically change the operation mode to read-only until enough memory has been returned to the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Note that Query Store internal memory limits are not documented because they are subject to change.  
 
 ## See also
 

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "resource pool [SQL Server], overview"
   - "resource pool [SQL Server]"
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Resource Governor Resource Pool
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

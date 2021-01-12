@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 13e260f9-a75f-430b-88a3-959ddcead8fe
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # SQL Full-text Filter Daemon Launcher (Log On Tab)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

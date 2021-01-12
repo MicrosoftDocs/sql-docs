@@ -8,9 +8,9 @@ ms.technology: install
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Plan and test the database engine upgrade plan
 
@@ -21,8 +21,9 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ## Release notes and known upgrade issues  
  Before upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review:
 
+- [SQL Server 2019 Release Notes](../../sql-server/sql-server-version-15-release-notes.md)
 - [SQL Server 2017 Release Notes](../../sql-server/sql-server-2017-release-notes.md) 
-- [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) 
+- [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md)
 - [SQL Server Database Engine Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md) article.  
   
 ## Pre-upgrade planning checklist  

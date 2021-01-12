@@ -60,7 +60,6 @@ ms.author: chugu
  For more information, see [Excel Destination](../../integration-services/data-flow/excel-destination.md).  
   
 ## See Also  
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
  [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)
-  
   

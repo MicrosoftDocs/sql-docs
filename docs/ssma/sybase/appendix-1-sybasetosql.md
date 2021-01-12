@@ -28,5 +28,4 @@ Quick view of the SSMA Console command line options:
 |8|-?|No|Not Applicable|Not Applicable|  
   
 ## See Also  
-[Executing the SSMA Console (Sybase)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
-  
+[Executing the SSMA Console (Sybase)](./executing-the-ssma-console-sybasetosql.md)  

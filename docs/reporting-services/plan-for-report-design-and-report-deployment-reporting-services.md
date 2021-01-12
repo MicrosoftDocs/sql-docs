@@ -49,7 +49,7 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
   
 -   **Web Portal:** Upload a report to a native mode report server from the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 -   **SharePoint:** Upload a report to a SharePoint site that is configured with a SharePoint mode report server.  
 
@@ -69,7 +69,7 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
   
  You can extract from the report server a read-only copy of the report definition file (.rdl). On a native mode report server, browse to the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select the report and click **Download**. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 In a SharePoint mode deployment, browse to the document library, select the report and click **Download a Copy**.  
 

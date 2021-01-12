@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords: 
   - "backup priority"
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "automated backup preference"
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Configure backups on secondary replicas of an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

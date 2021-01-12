@@ -14,7 +14,7 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Transact-SQL Debugger - Output Window
@@ -37,4 +37,4 @@ This window displays status messages for various features in [!INCLUDE[ssManStud
  Displays the output for the selected pane in **Output panelist**.  
   
 ## See Also  
- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)  
+ [Transact-SQL Debugger](./transact-sql-debugger.md)

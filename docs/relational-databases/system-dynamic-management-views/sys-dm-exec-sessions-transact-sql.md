@@ -18,9 +18,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_sessions dynamic management view"
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-author: markingmyname
-ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

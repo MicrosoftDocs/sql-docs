@@ -31,7 +31,7 @@ ms.custom: "seo-lt-2019"
  
  To discover what is preventing log truncation in a given case, use the **log_reuse_wait** and **log_reuse_wait_desc** columns of the **sys.database** catalog view. For more information, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). For descriptions of factors that can delay log truncation, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
-> **IMPORTANT!!**  
+> [!IMPORTANT]  
 >  If the database was in recovery when the 9002 error occurred, after resolving the problem, recover the database by using [ALTER DATABASE *database_name* SET ONLINE.](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
  Alternatives for responding to a full transaction log include:  
@@ -55,8 +55,8 @@ ms.custom: "seo-lt-2019"
   
  **To create a transaction log backup**  
   
-> **IMPORTANT**  
->  If the database is damaged, see [Tail-Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+> [!IMPORTANT]  
+> If the database is damaged, see [Tail-Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
 -   [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
@@ -68,7 +68,8 @@ ms.custom: "seo-lt-2019"
 ### Move the log file to a different disk  
  If you cannot free enough disk space on the drive that currently contains the log file, consider moving the file to another drive with sufficient space.  
   
-> **IMPORTANT!!** Log files should never be placed on compressed file systems.  
+> [!IMPORTANT]
+> Log files should never be placed on compressed file systems.  
   
  **Move a log file**  
   
@@ -85,7 +86,8 @@ ms.custom: "seo-lt-2019"
   
 -   Turn on autogrow by using the ALTER DATABASE statement to set a non-zero growth increment for the FILEGROWTH option.  
   
-> **NOTE** In either case, if the current size limit has been reached, increase the MAXSIZE value.  
+> [!NOTE]
+> In either case, if the current size limit has been reached, increase the MAXSIZE value.  
   
 ### Add a log file on a different disk  
  Add a new log file to the database on a different disk that has sufficient space by using ALTER DATABASE <database_name> ADD LOG FILE.  

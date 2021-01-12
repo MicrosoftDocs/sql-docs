@@ -1,7 +1,7 @@
 ---
 title: "Docker: Install containers for SQL Server on Linux"
 description: This quickstart shows how to use Docker to run the SQL Server 2017 and 2019 container images. You then create and query a database with sqlcmd.
-ms.custom: seo-lt-2019, contperfq1
+ms.custom: seo-lt-2019, contperf-fy21q1
 author: vin-yu 
 ms.author: vinsonyu
 ms.reviewer: vanto
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
 zone_pivot_groups: cs1-command-shell
 ---
 
@@ -27,11 +27,11 @@ zone_pivot_groups: cs1-command-shell
 In this quickstart, you use Docker to pull and run the SQL Server 2017 container image, [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server). Then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
-> If you want to run SQL Server 2019 containers, see the [SQL Server 2019 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-ver15).
+> If you want to run SQL Server 2019 containers, see the [SQL Server 2019 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true).
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 > [!NOTE]
 > Starting with SQL Server 2019 CU3, Ubuntu 18.04 is supported.
@@ -39,7 +39,7 @@ In this quickstart, you use Docker to pull and run the SQL Server 2017 container
 In this quickstart, you use Docker to pull and run the SQL Server 2019 container image, [mssql-server](https://hub.docker.com/r/microsoft/mssql-server). Then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
-> This quickstart creates SQL Server 2019 containers. If you prefer to create SQL Server 2017 containers, see the [SQL Server 2017 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-2017).
+> This quickstart creates SQL Server 2019 containers. If you prefer to create SQL Server 2017 containers, see the [SQL Server 2017 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-2017&preserve-view=true).
 
 ::: moniker-end
 
@@ -82,7 +82,7 @@ Before starting the following steps, make sure that you have selected your prefe
    ::: zone-end
 
    > [!TIP]
-   > If you want to run SQL Server 2019 containers, see the [SQL Server 2019 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019).
+   > If you want to run SQL Server 2019 containers, see the [SQL Server 2019 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true#pullandrun2019).
 
    The previous command pulls the latest SQL Server 2017 container image. If you want to pull a specific image, you add a colon and the tag name (for example, `mcr.microsoft.com/mssql/server:2017-GA-ubuntu`). To see all available images, see [the mssql-server Docker hub page](https://hub.docker.com/r/microsoft/mssql-server).
 
@@ -127,7 +127,7 @@ Before starting the following steps, make sure that you have selected your prefe
    > [!NOTE]
    > The password should follow the SQL Server default password policy, otherwise the container can not setup SQL server and will stop working. By default, the password must be at least 8 characters long and contain characters from three of the following four sets: Uppercase letters, Lowercase letters, Base 10 digits, and Symbols. You can examine the error log by executing the [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) command.
    >
-   > By default, this creates a container with the Developer edition of SQL Server 2017. The process for running production editions in containers is slightly different. For more information, see [Run production container images](sql-server-linux-configure-docker.md#production).
+   > By default, this creates a container with the Developer edition of SQL Server 2017. The process for running production editions in containers is slightly different. For more information, see [Run production container images](./sql-server-linux-docker-container-deployment.md#production).
 
    The following table provides a description of the parameters in the previous `docker run` example:
 
@@ -166,7 +166,7 @@ Before starting the following steps, make sure that you have selected your prefe
 
    ![Docker ps command output](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](sql-server-linux-configure-docker.md#troubleshooting).
+4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md).
 
 The `-h` (host name) parameter as discussed above, changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:
 
@@ -185,7 +185,7 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 <!--End of 2017 "Pull and run" section-->
 
 <!--This is the 2019 version of the "Pull and run" section-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a id="pullandrun2019"></a> Pull and run the 2019 container image
 
@@ -216,9 +216,9 @@ Before starting the following steps, make sure that you have selected your prefe
    ::: zone-end
 
    > [!TIP]
-   > This quickstart uses the SQL Server 2019 Docker image. If you want to run the SQL Server 2017 image, see the [SQL Server 2017 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017).
+   > This quickstart uses the SQL Server 2019 Docker image. If you want to run the SQL Server 2017 image, see the [SQL Server 2017 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-2017&preserve-view=true#pullandrun2017).
 
-   The previous command pulls the SQL Server 2019 container image based on Ubuntu. To instead use container images based on RedHat, see [Run RHEL-based container images](sql-server-linux-configure-docker.md#rhel). To see all available images, see [the mssql-server-linux Docker hub page](https://hub.docker.com/_/microsoft-mssql-server).
+   The previous command pulls the SQL Server 2019 container image based on Ubuntu. To instead use container images based on RedHat, see [Run RHEL-based container images](./sql-server-linux-docker-container-deployment.md#rhel). To see all available images, see [the mssql-server-linux Docker hub page](https://hub.docker.com/_/microsoft-mssql-server).
 
    ::: zone pivot="cs1-bash"
    For the bash commands in this article, `sudo` is used. On macOS, `sudo` might not be required. On Linux, if you do not want to use `sudo` to run Docker, you can configure a **docker** group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
@@ -495,9 +495,9 @@ The following steps use **sqlcmd** outside of your container to connect to SQL S
 
 Other common tools to connect to SQL Server include:
 
-- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-manage-ssms.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md)
 - [mssql-cli (Preview)](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)
 - [PowerShell Core](sql-server-linux-manage-powershell-core.md)
 

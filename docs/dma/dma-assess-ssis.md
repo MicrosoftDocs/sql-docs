@@ -50,12 +50,12 @@ The following step-by-step instructions help you perform your first assessment f
 1. (Optional) Enter a folder path that contains SSIS packages.
 1. (Optional) Enter package encryption password if applicable.
 1. Click **Connect** to the source SQL server.
-  ![Add source](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
+  ![Screenshot showing the Connect to a server pane with the Enter a folder path that contains SSIS packages option and Enter package encryption password if applicable option called out.](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
 
 ## Add sources to assess
 
 1. Select the SSIS package storage types to assess, and then select **Add**.
-![Add source](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
+![Screenshot showing the Add sources pane.](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
 1. Select **Add Sources** to open the connection flyout menu, if need assess multiple folders.
 1. Click **Start Assessment**.
   ![Start assessment](media/dma-assess-ssis/dma-assess-ssis-assess.png)

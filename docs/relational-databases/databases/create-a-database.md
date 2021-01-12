@@ -21,7 +21,7 @@ ms.author: "sstein"
   This topic describes how to create a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
 > [!NOTE]
-> To create a database in Azure SQL Database using T-SQL, see [Create database in Azure SQL Database](https://docs.microsoft.com/sql/t-sql/statements/create-database-azure-sql-database).
+> To create a database in Azure SQL Database using T-SQL, see [Create database in Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md).
   
  **In This Topic**  
   
@@ -128,12 +128,11 @@ LOG ON
 GO  
 ```  
   
- For more examples, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ For more examples, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
 ## See Also  
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
-  
   

@@ -56,7 +56,7 @@ HRESULT Abort(void);
  The batch was not canceled.  
   
  E_FAIL  
- A provider-specific error occurred; for detailed information, use the [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) interface.  
+ A provider-specific error occurred; for detailed information, use the [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md) interface.  
   
  E_UNEXPECTED  
  The call to the method was unexpected. For example, the object is in a zombie state because `ISSAbort::Abort` has already been called.  

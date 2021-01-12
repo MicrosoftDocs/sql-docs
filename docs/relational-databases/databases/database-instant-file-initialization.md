@@ -1,7 +1,7 @@
 ---
 title: Database Instant File Initialization
 description: Learn about instant file initialization and how to enable it on your SQL Server database.
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 ms.date: 07/24/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -119,4 +119,4 @@ A long autogrow of a database and/or transaction log file may cause query perfor
 
 
 ## See Also  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)

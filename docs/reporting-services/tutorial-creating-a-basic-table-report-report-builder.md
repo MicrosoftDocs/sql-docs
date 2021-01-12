@@ -170,7 +170,7 @@ After you create groups, you can add and format rows on which to display aggrega
   
     2.  The second row will repeat once for each line item in the sales order and display the product name, order quantity, and line total.  
   
-    3.  The third row will repeat once for each sales order to display subtotals per order.  
+    3.  The third row will repeat once for each sales order category to display subtotals per category.  
   
     4.  The fourth row will repeat once for each order date to display the subtotals per day.  
   

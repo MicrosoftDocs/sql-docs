@@ -45,15 +45,17 @@ ms.author: "mathoma"
   
 ## Examples  
   
-### A. Retrieving the IsSyncWithBackup for the current database
-This example returns the IsSyncWithBackup for the current database
+### A. Retrieve the `IsSyncWithBackup` value for the current database
+
+This example returns the `IsSyncWithBackup` value for the current database:
   
 ``` sql
 SELECT DATABASEPROPERTYEX(DB_NAME(),'IsSyncWithBackup')`
 ```
 
-### A. Retrieving the IsSyncWithBackup for a specific database
-This example returns the IsSyncWithBackup for the database `NameOfDatabaseToCheck`
+### B. Retrieve the `IsSyncWithBackup` value for a specific database
+
+This example returns the `IsSyncWithBackup` value for the database `NameOfDatabaseToCheck`:
   
 ``` sql
 SELECT DATABASEPROPERTYEX('NameOfDatabaseToCheck','IsSyncWithBackup')`

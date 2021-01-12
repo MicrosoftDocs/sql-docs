@@ -13,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "data collector [SQL Server], functions"
 ms.assetid: 8efe8bb4-face-4608-83f4-cc7c6e9faf31
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Data Collector Functions  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

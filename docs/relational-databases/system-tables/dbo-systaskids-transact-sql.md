@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "systaskids system table"
 ms.assetid: 45c56d89-4160-4d84-80bf-a7a05488792d
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # dbo.systaskids (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

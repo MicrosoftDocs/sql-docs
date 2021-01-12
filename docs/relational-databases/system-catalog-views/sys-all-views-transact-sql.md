@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.all_views catalog view"
 ms.assetid: d8829213-fce2-41c6-9ab2-aaab5836c941
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.all_views (Transact-SQL)

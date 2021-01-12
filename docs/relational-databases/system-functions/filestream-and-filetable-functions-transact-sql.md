@@ -13,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "FileTables [SQL Server], system functions"
 ms.assetid: 71f729df-d340-4cf9-9a6d-305fcb39b009
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Filestream and FileTable Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

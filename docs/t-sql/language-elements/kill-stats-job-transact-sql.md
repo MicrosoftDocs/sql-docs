@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "KILL STATS JOB statement"
   - "statistics update jobs [SQL Server]"
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # KILL STATS JOB (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

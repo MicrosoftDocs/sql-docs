@@ -164,5 +164,5 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
   
 ## See Also
 
-- [Invoke-PolicyEvaluation cmdlet](invoke-policyevaluation-cmdlet.md)
+- [Invoke-PolicyEvaluation cmdlet](/powershell/module/sqlserver/Invoke-PolicyEvaluation)
 - [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)

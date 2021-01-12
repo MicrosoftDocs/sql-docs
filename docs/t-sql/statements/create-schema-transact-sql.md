@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "schemas [SQL Server], creating"
   - "CREATE SCHEMA statement"
 ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE SCHEMA (Transact-SQL)

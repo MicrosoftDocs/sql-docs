@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "systargetservergroupmembers system table"
 ms.assetid: ee1b2ebd-03cb-4b91-a5d2-98d4d38f82ec
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # dbo.systargetservergroupmembers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

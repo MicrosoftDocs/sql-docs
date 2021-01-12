@@ -10,8 +10,8 @@ f1_keywords:
   - Alter_TSQL
 dev_langs: 
   - "TSQL"
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: ""
 ms.date: 04/17/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

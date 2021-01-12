@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "contracts [Service Broker], dropping"
   - "DROP CONTRACT statement"
 ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

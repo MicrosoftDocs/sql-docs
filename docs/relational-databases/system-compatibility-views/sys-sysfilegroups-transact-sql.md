@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysfilegroups system table"
   - "sys.sysfilegroups compatibility view"
 ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysfilegroups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

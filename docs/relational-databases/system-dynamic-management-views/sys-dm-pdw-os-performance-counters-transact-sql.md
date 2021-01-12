@@ -10,8 +10,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 0673a8f8-8bed-41eb-8959-a9e3e9e03a65
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">= aps-pdw-2016"
 ---
 # sys.dm_pdw_os_performance_counters (Transact-SQL)

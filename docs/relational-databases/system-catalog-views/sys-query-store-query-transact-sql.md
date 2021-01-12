@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "query_store_query catalog view"
   - "sys.query_store_query catalog view"
 ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_query (Transact-SQL)

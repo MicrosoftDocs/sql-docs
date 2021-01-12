@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "STATISTICS PROFILE option"
   - "statistical information [SQL Server], profiles"
 ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SET STATISTICS PROFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

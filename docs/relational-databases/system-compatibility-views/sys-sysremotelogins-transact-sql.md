@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysremotelogins system table"
   - "sys.sysremotelogins compatibility view"
 ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysremotelogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

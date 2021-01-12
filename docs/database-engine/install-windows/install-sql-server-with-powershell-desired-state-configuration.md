@@ -39,7 +39,7 @@ In most cases, DSC is used to handle the prerequisite requirements. But for the 
 
 ## Install the SqlServerDsc DSC resource
 
-Download the [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC resource from the [PowerShell Gallery](https://www.powershellgallery.com/) by using the [Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1&preserve-view=true) cmdlet. 
+Download the [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC resource from the [PowerShell Gallery](https://www.powershellgallery.com/) by using the [Install-Module](/powershell/module/powershellget/Install-Module) cmdlet. 
 
 > [!NOTE]
 > Make sure PowerShell is running **As Administrator** to install the module.

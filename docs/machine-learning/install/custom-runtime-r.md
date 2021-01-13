@@ -1,9 +1,9 @@
 ---
 title: Install R custom runtime
-description: Learn how to install an R custom runtime for SQL Server using Language Extensions. The R custom runtime can be used for machine learning.
+description: Learn how to install an R custom runtime for SQL Server using Language Extensions. The Python custom runtime can run machine learning scripts.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 12/29/2020
+ms.date: 1/13/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
@@ -15,52 +15,51 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes how to install a R custom runtime for running external R scripts with SQL Server. The custom runtime uses the [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md) and can be used for executing machine learning scripts.
+Learn how to install an R custom runtime for running external R scripts with SQL Server on:
 
-The R custom runtime allows you to use your own version of the R runtime with SQL Server, instead of the default runtime version installed with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
++ Windows
++ Ubuntu Linux
++ Red Hat Enterprise Linux (RHEL)
++ SUSE Linux Enterprise Server (SLES)
+
+The custom runtime can run machine learning scripts and uses the [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md).
+
+Use your own version of the R runtime with SQL Server, instead of the default runtime version installed with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
+
+::: zone pivot="platform-windows"
+[!INCLUDE [R custom runtime - Windows](includes/custom-runtime-r-windows.md)]
+::: zone-end
+
+::: zone pivot="platform-linux-ubuntu"
+[!INCLUDE [R custom runtime - Linux - Prerequisites](includes/custom-runtime-r-linux-prerequisites.md)]
+
+[!INCLUDE [R custom runtime - Linux - Ubuntu specific steps](includes/custom-runtime-r-linux-ubuntu.md)]
+
+[!INCLUDE [R custom runtime on Linux - Common steps](includes/custom-runtime-r-linux-common.md)]
+::: zone-end
+
+::: zone pivot="platform-linux-rhel"
+[!INCLUDE [R custom runtime - Linux - Prerequisites](includes/custom-runtime-r-linux-prerequisites.md)]
+
+[!INCLUDE [R custom runtime - Linux - RHEL specific steps](includes/custom-runtime-r-linux-rhel.md)]
+
+[!INCLUDE [R custom runtime on Linux - Common steps](includes/custom-runtime-r-linux-common.md)]
+::: zone-end
+
+::: zone pivot="platform-linux-sles"
+[!INCLUDE [R custom runtime - Linux - Prerequisites](includes/custom-runtime-r-linux-prerequisites.md)]
+
+[!INCLUDE [R custom runtime - Linux - SLES specific steps](includes/custom-runtime-r-linux-sles.md)]
+
+[!INCLUDE [R custom runtime on Linux - Common steps](includes/custom-runtime-r-linux-common.md)]
+::: zone-end
+
+
+
+
 
 ::: zone pivot="platform-windows"
 
-## Prerequisites
-
-Before installing an R custom runtime, install the following:
-
-+ Install the [Cumulative Update (CU) 3 or later](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) for SQL Server 2019.
-
-+ Install [R version 3.3 or later](https://cran.r-project.org/bin/windows/base/) for Windows on the server.
-
-## Add SQL Server Language Extensions for Windows
-
-> [!NOTE]
-> If you have [Machine Learning Services](../sql-server-machine-learning-services.md) installed on SQL Server 2019, Language Extensions is already installed and you can skip this step.
-
-Follow the steps below to install [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md), which is used for the Python custom runtime.
-
-1. Start the setup wizard for SQL Server 2019.
-  
-1. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
-
-1. On the **Feature Selection** page, select these options:
-  
-    + **Database Engine Services**
-  
-        To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a new or an existing instance.
-  
-    + **Machine Learning Services and Language Extensions**
-
-        Select **Machine Learning Services and Language Extensions**. Do not select R, as you will be installing the custom R runtime later.
-
-        :::image type="content" source="media/2019-setup-language-extensions.png" alt-text="SQL Server 2019 Language Extensions setup.":::
-
-1. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
-  
-    + Database Engine Services
-    + Machine Learning Services and Language Extensions
-
-1. After the setup is complete, restart the machine if you're asked to do so.
-
-> [!IMPORTANT]
-> If you install a new instance of SQL Server 2019 with Language Extensions, then install the [Cumulative Update (CU) 3 or later](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) before you continue to the next step.
 
 ## Install R
 

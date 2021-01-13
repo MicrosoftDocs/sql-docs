@@ -1,16 +1,16 @@
 ---
-title: " SQL Server Options page - Environment - Startup"
-description: "Options (Environment - Startup page)"
+title: SQL Server Options page - Query Execution
+description: Options (Query Execution)
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - VS.ToolsOptionsPages.Query_Execution.Sql_Server.General
 dev_langs: 
   - TSQL
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/13/2021
 ---
 

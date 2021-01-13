@@ -9,7 +9,7 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 
-monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+monikerRange: "=sql-server-2016||=sql-server-2017"
 ---
 
 # Install packages with R tools
@@ -21,7 +21,7 @@ This article describes how to use standard R tools to install new R packages to 
 In addition to standard R tools, you can install R packages using:
 
 + [RevoScaleR](install-r-packages-with-revoscaler.md)
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [T-SQL](install-r-packages-with-tsql.md) (CREATE EXTERNAL LIBRARY)
 ::: moniker-end
 
@@ -32,13 +32,13 @@ This includes R libraries installed with other Microsoft products.
 
 + The R package library is located in the Program Files folder of your SQL Server instance and, by default, installing in this folder requires administrator permissions. For more information, see [Package library location](../package-management/r-package-information.md#default-r-library-location).
 
-  ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2017"
   Non-administrators can install packages using RevoScaleR 9.0.1 and later, or using CREATE EXTERNAL LIBRARY. The **dbo_owner** user, or a user with CREATE EXTERNAL LIBRARY permission, can install R packages to the current database. For more information, see:
   + [Use RevoScaleR to install R packages](install-r-packages-with-revoscaler.md)
   + [Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages on SQL Server](install-r-packages-with-tsql.md)
   ::: moniker-end
 
-  ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2016"
   Non-administrators can install packages using RevoScaleR 9.0.1 and later. The **dbo_owner** user can install R packages to the current database. For more information, see, [Use RevoScaleR to install R packages](install-r-packages-with-revoscaler.md).
   ::: moniker-end
 
@@ -53,13 +53,13 @@ If the SQL Server has access to the Internet, then you can use standard package 
 
 1. Determine the location of the instance library (see [Get R package information](../package-management/r-package-information.md)) and navigate to the folder where the R tools are installed.
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    For example the default path for a SQL Server default instance is:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    For example the default path for a SQL Server default instance is:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
@@ -84,13 +84,13 @@ Once the zip file is on the SQL Server instance, you can install it using standa
 
 1. Determine the location of the instance library (see [Get R package information](../package-management/r-package-information.md)) and navigate to the folder where the R tools are installed. 
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    For example the default path for a SQL Server default instance is:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    For example the default path for a SQL Server default instance is:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`

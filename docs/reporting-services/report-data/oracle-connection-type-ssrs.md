@@ -150,7 +150,7 @@ For more information, see the following articles:
 
 You can also retrieve data from an Oracle database by using an OLE DB data source type. For more information, see [OLE DB Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-2017"
 
 ### Report Models
 

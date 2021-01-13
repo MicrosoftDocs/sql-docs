@@ -21,6 +21,6 @@ This section contains the following topics.
   
 -   [RDS API Reference](./rds-api/rds-api-reference.md)  
   
--   [ADO MD API Reference](./ado-md-api/ado-md-object-model.md?view=sql-server-ver15)  
+-   [ADO MD API Reference](./ado-md-api/ado-md-object-model.md)  
   
--   [ADOX API Reference](./adox-api/adox-object-model.md?view=sql-server-ver15)
+-   [ADOX API Reference](./adox-api/adox-object-model.md)

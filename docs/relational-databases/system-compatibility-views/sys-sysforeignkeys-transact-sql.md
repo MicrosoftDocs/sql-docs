@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysforeignkeys system table"
   - "sys.sysforeignkeys compatibility view"
 ms.assetid: 41544236-1c46-4501-be88-18c06963b6e8
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysforeignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # External Scripts Enabled server configuration option
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -25,9 +25,9 @@ Use the **external scripts enabled** option to enable the execution of scripts w
 
 You must enable the external script enabled option before you can execute an external script using the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedure. Use **sp_execute_external_script** to execute scripts written in a supported language such as R or Python. 
 
-+ For [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
++ For [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]
 
-    [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] includes support for the R language in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], and a set of R workstation tools and connectivity libraries.
+    [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] includes support for the R language in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], and a set of R workstation tools and connectivity libraries.
 
     Install the **R Services** feature during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup to enable the execution of R scripts.
 

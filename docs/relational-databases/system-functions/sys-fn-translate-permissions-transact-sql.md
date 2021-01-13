@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sys.fn_translate_permissions function"
   - "fn_translate_permissions function"
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

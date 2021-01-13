@@ -5,15 +5,15 @@ ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.removeaglistener.default.f1"
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], listeners"
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Remove an availability group listener (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

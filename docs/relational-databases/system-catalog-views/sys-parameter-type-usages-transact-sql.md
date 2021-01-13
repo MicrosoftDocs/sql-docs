@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.parameter_type_usages catalog view"
 ms.assetid: af0e167b-bffb-4525-84ec-3607f9268d3d
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.parameter_type_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

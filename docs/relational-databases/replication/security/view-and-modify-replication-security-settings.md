@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # View and Modify Replication Security Settings
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -99,7 +99,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
     -   Enter a new strong password in the **Password** and **Confirm Password** text boxes.  
   
     > [!NOTE]  
-    >  If the Publisher is an Oracle Publisher, the connection context is specified in the **Distributor Properties - \<Distributor>**dialog box. See below for the procedure to change the context.  
+    >  If the Publisher is an Oracle Publisher, the connection context is specified in the **Distributor Properties - \<Distributor>** dialog box. See below for the procedure to change the context.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -120,7 +120,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
     -   Enter a new strong password in the **Password** and **Confirm Password** text boxes.  
   
     > [!NOTE]  
-    >  If the Publisher is an Oracle Publisher, the connection context is specified in the **Distributor Properties - \<Distributor>**dialog box. Change the context using the next procedure.  
+    >  If the Publisher is an Oracle Publisher, the connection context is specified in the **Distributor Properties - \<Distributor>** dialog box. Change the context using the next procedure.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

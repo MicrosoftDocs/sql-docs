@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "DROP SYNONYM statement"
   - "dropping synonyms"
 ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP SYNONYM (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 
 ## Arguments
  *IF EXISTS*  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
  Conditionally drops the synonym only if it already exists.  
   

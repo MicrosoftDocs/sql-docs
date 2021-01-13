@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "current session application names"
   - "APP_NAME function"
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # APP_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

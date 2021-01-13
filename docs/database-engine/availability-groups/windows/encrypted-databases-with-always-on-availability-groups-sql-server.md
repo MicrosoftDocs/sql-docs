@@ -5,15 +5,15 @@ ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords: 
   - "Transparent Data Encryption, AlwaysOn Availability Groups"
   - "TDE, AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Add an encrypted database to an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -27,15 +27,13 @@ ms.author: mathoma
   
      To make a decrypted database eligible to add to an availability group using the wizard:  
   
-    1.  Create a log backup of the primary database.  
+    1.  Create a full database backup of the primary database. 
   
-    2.  Create a full database backup of the primary database.  
+    2.  Create a log backup of the primary database.  
   
     3.  Restore the database backup on the server instance that hosts the secondary replica.  
-  
-    4.  Create a new log backup from primary database.  
-  
-    5.  Restore this log backup on the secondary database.  
+    
+    4.  Restore the log backup on the secondary database.  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

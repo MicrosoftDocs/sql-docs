@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Configuring Storage Spaces with a NVDIMM-N write-back cache
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

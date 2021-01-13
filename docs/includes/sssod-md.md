@@ -5,4 +5,4 @@ ms.topic: include
 ms.date: 11/05/2020
 ms.author: nipejic
 ---
-Serverless SQL pool (preview)
+Serverless SQL pool

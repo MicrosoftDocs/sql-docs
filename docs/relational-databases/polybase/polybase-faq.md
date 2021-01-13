@@ -1,7 +1,7 @@
 ---
 title: "Frequently Asked Questions in PolyBase | Microsoft Docs"
-description: Compare PolyBase and linked servers and compare PolyBase in big data clusters and PolyBase in stand-alone instances. Find out what's new in PolyBase 2019.
-ms.date: 04/23/2019
+description: Compare PolyBase and linked servers and compare PolyBase in Big Data Clusters and PolyBase in stand-alone instances. Find out what's new in PolyBase 2019.
+ms.date: 12/02/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -44,19 +44,19 @@ PolyBase in [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] can now read dat
 > [!NOTE]
 > PolyBase can allow connection to external data sources using third party ODBC drivers. These drivers are not provided along with PolyBase and may not work as intended. For more information, visit our [guide](../../relational-databases/polybase/polybase-configure-odbc-generic.md) for PolyBase ODBC generic configuration.  
 
-## PolyBase in big data clusters vs. PolyBase in stand-alone instances
+## PolyBase in Big Data Clusters vs. PolyBase in stand-alone instances
 
 The following table highlights the PolyBase features available in [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] stand-alone install and [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] big data cluster:
 
-|Feature |Big data cluster|Stand alone instance|
+|Feature |Big Data Cluster|Stand alone instance|
 |--------------------------|--------------------------|---------|   
-|Create external data source for SQL Server, Oracle, Teradata, and Mongo DB |X|X |
+|Create external data source for SQL Server, Oracle, Teradata, and Mongo DB |X|X|
 |Create external data source using a compatible third-party ODBC Driver | | X|
 |Create external data source for HADOOP data source | X| X|
 |Create external data source for Azure Blob Storage | X| X|
 |Create external table on a SQL Server data pool | X| |
 |Create external table on a SQL Server storage pool | X| |
-|Scale-out query execution | X| X|
+|Scale-out query execution | X| X (Windows only) |
 
 > [!NOTE]
 >The table does not describe the functionality available in the latest [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] CTP. For the available features, please reference the release notes. For more information on connections using the ODBC generic connector visit our [How to guide for configuring ODBC generic types](polybase-configure-odbc-generic.md).

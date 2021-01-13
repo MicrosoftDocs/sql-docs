@@ -8,7 +8,7 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-2016"
 ---
 
 # Azure SQL Connection Type (SSRS)
@@ -147,11 +147,11 @@ For more information, see [ODBC Connection Type &#40;SSRS&#41;](../../reporting-
 
 For more information about platform and version support, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 
 ## Azure SQL Database and AAD
 
-You can use the Azure SQL database with Azure Active Directory (AAD) pass-through authentication.
+You can use the Azure SQL database with Azure Active Directory (AAD).
 
 This scenario is supported when you set up the following items properly:
 

@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 titleSuffix: SQL Server on Linux
-monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # Configure Replication with T-SQL
 

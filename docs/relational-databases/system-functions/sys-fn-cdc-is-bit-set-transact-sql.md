@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.fn_cdc_is_bit_set"
   - "fn_cdc_is_bit_set"
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_cdc_is_bit_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

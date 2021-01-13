@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 06/30/2020
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords: 
   - "failover modes [SQL Server]"
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], failover modes"
   - "Availability Groups [SQL Server], configuring"
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Change the failover mode for a replica within an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

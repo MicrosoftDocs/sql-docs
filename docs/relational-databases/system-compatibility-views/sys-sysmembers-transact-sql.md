@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysmembers system table"
   - "sys.sysmembers compatibility view"
 ms.assetid: ceb18341-f985-4849-ac83-21d67ab7b980
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysmembers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

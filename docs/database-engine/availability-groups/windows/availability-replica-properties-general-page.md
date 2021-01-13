@@ -5,13 +5,13 @@ ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: end-user-help
 f1_keywords: 
   - "sql13.swb.availabilityreplicaproperties.general.f1"
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Availability replica properties (General Page) for Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

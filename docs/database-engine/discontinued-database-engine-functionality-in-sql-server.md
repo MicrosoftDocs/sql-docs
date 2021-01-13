@@ -55,9 +55,9 @@ For current configuration options, see [ALTER DATABASE SCOPED CONFIGURATION (Tra
 >[!NOTE]
 >No features were discontinued in [!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)].
 
-## Discontinued features in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
+## Discontinued features in [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]
 
-- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] is a 64-bit application. 32-bit installation is discontinued, though some elements run as 32-bit components.  
+- [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] is a 64-bit application. 32-bit installation is discontinued, though some elements run as 32-bit components.  
 
 - Compatibility level 90 is discontinued. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 

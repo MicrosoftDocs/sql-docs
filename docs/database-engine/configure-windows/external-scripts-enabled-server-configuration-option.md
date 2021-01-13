@@ -25,9 +25,9 @@ Use the **external scripts enabled** option to enable the execution of scripts w
 
 You must enable the external script enabled option before you can execute an external script using the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedure. Use **sp_execute_external_script** to execute scripts written in a supported language such as R or Python. 
 
-+ For [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
++ For [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]
 
-    [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] includes support for the R language in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], and a set of R workstation tools and connectivity libraries.
+    [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] includes support for the R language in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], and a set of R workstation tools and connectivity libraries.
 
     Install the **R Services** feature during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup to enable the execution of R scripts.
 

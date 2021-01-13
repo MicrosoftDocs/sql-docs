@@ -34,7 +34,7 @@ ms.author: chadam
   
 ## <a name="Auto"></a> Automatic seeding
  
- SQL Server automatically creates the secondary replicas for every database in the group. Automatic seeding requires that the data and log file paths are the same on every SQL Server instance participating in the group. Available on [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] and later. See [Automatically initialize Always On Availability group](automatically-initialize-always-on-availability-group.md).
+ SQL Server automatically creates the secondary replicas for every database in the group. Automatic seeding requires that the data and log file paths are the same on every SQL Server instance participating in the group. Available on [!INCLUDE[sssql16-md.md](../../../includes/sssql16-md.md)] and later. See [Automatically initialize Always On Availability group](automatically-initialize-always-on-availability-group.md).
 
 ##  <a name="Full"></a> Full database and log backup 
  For each primary database, the **Full database and log backup** option performs several operations in one workflow: create a full and log backup of the primary database, create the corresponding secondary databases by restoring these backups on every server instance that is hosting a secondary replica, and join each secondary database to availability group.  

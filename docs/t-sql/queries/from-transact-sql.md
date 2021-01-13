@@ -225,7 +225,7 @@ Provides a rowset view over an XML document. For more information, see [OPENXML 
  Is an optional alias to replace a column name in the result set of the derived table. Include one column alias for each column in the select list, and enclose the complete list of column aliases in parentheses.  
   
  *table_or_view_name* FOR SYSTEM_TIME \<system_time>
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+gpplies to**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 Specifies that a specific version of data is returned from the specified temporal table and its linked system-versioned history table  
   
 ### Tablesample clause
@@ -366,19 +366,19 @@ ON (p.ProductID = v.ProductID);
  Specifies that the input table is narrowed from multiple columns in *column_list* into a single column called *pivot_column*. For more information about PIVOT and UNPIVOT, see [Using PIVOT and UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
 AS OF \<date_time>  
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 Returns a table with single record for each row containing the values that were actual (current) at the specified point in time in the past. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values in the row that was valid at the point in time specified by the *\<date_time>* parameter. The value for a row is deemed valid if the *system_start_time_column_name* value is less than or equal to the *\<date_time>* parameter value and the *system_end_time_column_name* value is greater than the *\<date_time>* parameter value.   
   
 FROM \<start_date_time> TO \<end_date_time>
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 Returns a table with the values for all record versions that were active within the specified time range, regardless of whether they started being active before the *\<start_date_time>* parameter value for the FROM argument or ceased being active after the *\<end_date_time>* parameter value for the TO argument. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values for all row versions that were active at any time during the time range specified. Rows that became active exactly on the lower boundary defined by the FROM endpoint are included and rows that became active exactly on the upper boundary defined by the TO endpoint are not included.  
   
 BETWEEN \<start_date_time> AND \<end_date_time>  
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 Same as above in the  **FROM \<start_date_time> TO \<end_date_time>** description, except it includes rows that became active on the upper boundary defined by the \<end_date_time> endpoint.  
   
 CONTAINED IN (\<start_date_time> , \<end_date_time>)  
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 Returns a table with the values for all record versions that were opened and closed within the specified time range defined by the two datetime values for the CONTAINED IN argument. Rows that became active exactly on the lower boundary or ceased being active exactly on the upper boundary are included.  
   
 ALL  
@@ -607,7 +607,7 @@ GO
   
 ### M. Using FOR SYSTEM_TIME  
   
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 The following example uses the FOR SYSTEM_TIME AS OF date_time_literal_or_variable argument to return table rows that were actual (current) as of January 1, 2014.  
   
 ```sql

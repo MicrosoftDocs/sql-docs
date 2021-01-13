@@ -239,7 +239,7 @@ Disables the buffer pool extension option. Disable the buffer pool extension opt
   
 **\<soft_numa>**  
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]).  
   
 ON  
 Enables automatic partitioning to split large NUMA hardware nodes into smaller NUMA nodes. Changing the running value requires a restart of the database engine.  

@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 |group_id|**int**|ID of the workload group. Is not nullable.|  
 |name|**sysname**|Name of the workload group. Is not nullable.|  
 |pool_id|**int**|ID of the resource pool. Is not nullable.|  
-|external_pool_id|**int**|**Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].<br /><br /> ID of the external resource pool. Is not nullable.|  
+|external_pool_id|**int**|**Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].<br /><br /> ID of the external resource pool. Is not nullable.|  
 |statistics_start_time|**datetime**|Time that statistics collection was reset for the workload group. Is not nullable.|  
 |total_request_count|**bigint**|Cumulative count of completed requests in the workload group. Is not nullable.|  
 |total_queued_request_count|**bigint**|Cumulative count of requests queued after the GROUP_MAX_REQUESTS limit was reached. Is not nullable.|  
@@ -59,7 +59,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 |group_max_requests|**int**|Current setting for the maximum number of concurrent requests. Is not nullable.|  
 |max_dop|**int**|Configured maximum degree of parallelism for the workload group. The default value, 0, uses global settings. Is not nullable.| 
 |effective_max_dop|**int**|**Applies to**: Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].<br /><br />Effective maximum degree of parallelism for the workload group. Is not nullable.| 
-|total_cpu_usage_preemptive_ms|**bigint**|**Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].<br /><br />Total CPU time used while in preemptive mode scheduling for the workload group, measured in ms. Is not nullable.<br /><br />To execute code that is outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for example, extended stored procedures and distributed queries), a thread has to execute outside the control of the non-preemptive scheduler. To do this, a worker switches to preemptive mode.| 
+|total_cpu_usage_preemptive_ms|**bigint**|**Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].<br /><br />Total CPU time used while in preemptive mode scheduling for the workload group, measured in ms. Is not nullable.<br /><br />To execute code that is outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for example, extended stored procedures and distributed queries), a thread has to execute outside the control of the non-preemptive scheduler. To do this, a worker switches to preemptive mode.| 
 |request_max_memory_grant_percent_numeric|**float**|**Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].<br /><br />Current setting for the maximum memory grant, as a percentage, for a single request. Is not nullable.| 
 |pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   

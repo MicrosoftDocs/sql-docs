@@ -42,7 +42,7 @@ Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../inc
 ## Example  
 In this example, the name of the column is misspelled (`Cityx` instead of `City`), causing an error, which is then reported.  
   
-```  
+```php
 <?php  
 $conn = new PDO( "sqlsrv:server=(local) ; Database = AdventureWorks ", "");  
 $query = "SELECT * FROM Person.Address where Cityx = 'Essen'";  
@@ -65,7 +65,8 @@ When an exception occurs, ODBC Driver may return more than one error to help use
 
 Starting with 5.9.0, the default behavior of PDO::errorInfo is to show additional ODBC errors, if they are available. For example:
 
-```
+```php
+<?php  
 try {
     $conn = new PDO("sqlsrv:server=$server;", $uid, $pwd);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -74,7 +75,8 @@ try {
 } catch (PDOException $e) {
     var_dump($e->errorInfo);
 }
-```
+?>  
+```  
 
 Running the above script should have thrown an exception, and the output is like this:
 
@@ -120,9 +122,9 @@ If necessary, the user may choose to add the following line to the php.ini file 
 pdo_sqlsrv.report_additional_errors = 0
 ```
 
-In addition, previously, all ODBC warnings are logged as errors. Beginning with 5.9.0, [error codes](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes?view=sql-server-ver15) with prefix "01" are logged as warnings.  
+## Warnings and errors
 
-In other words, if the user wants to log errors only, make sure the php.ini is updated as shown below:
+Beginning with 5.9.0, ODBC warnings will no longer be logged as errors. That is, [error codes](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes?view=sql-server-ver15) with prefix "01" are logged as warnings. In other words, if the user wants to log errors only, update the php.ini like this:
 
 ```
 [pdo_sqlsrv]  
@@ -130,7 +132,6 @@ pdo_sqlsrv.log_severity = 1
 ```
 
 In this case, the log file will not contain any warning message(s). Please check how [logging](https://docs.microsoft.com/sql/connect/php/logging-activity?view=sql-server-ver15#logging-activity-using-the-pdo_sqlsrv-driver) works for pdo_sqlsrv users.
-
 
 ## See Also  
 [PDO Class](../../connect/php/pdo-class.md)

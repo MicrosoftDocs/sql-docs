@@ -40,7 +40,7 @@ Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../inc
 ## Example  
 In this example, the SQL statement has an error, which is then reported.  
   
-```  
+```php
 <?php  
 $conn = new PDO( "sqlsrv:server=(local) ; Database = AdventureWorks", "", "");  
 $stmt = $conn->prepare('SELECT * FROM Person.Addressx');  
@@ -48,7 +48,7 @@ $stmt = $conn->prepare('SELECT * FROM Person.Addressx');
 $stmt->execute();  
 print_r ($stmt->errorInfo());  
 ?>  
-```  
+```
 
 ## Additional ODBC messages
 

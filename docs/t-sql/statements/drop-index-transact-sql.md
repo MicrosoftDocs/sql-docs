@@ -105,7 +105,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 
 ## Arguments
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](../../sql-server/what-s-new-in-sql-server-2016.md)).  
   
  Conditionally drops the index only if it already exists.  
   
@@ -395,4 +395,3 @@ GO
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
-  

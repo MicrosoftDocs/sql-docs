@@ -56,7 +56,7 @@ SSL/TLS certificates are widely used to secure access to SQL Server. With earlie
 
 2. Right-click **Protocols for** *&lt;instance Name&gt;*, and then select **Properties**.  
 
-3. Select a certifiocate from the  **Certificate** drop-down menu, and then select **Apply**.  
+3. Select a certificate from the  **Certificate** drop-down menu, and then select **Apply**.  
 
 4. Select **OK**. 
 ::: moniker-end

@@ -13,11 +13,11 @@ manager: v-mabarw
 ---
 
 # Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server
-The following instructions assume a clean environment and show how to install PHP 8.0, the Microsoft ODBC driver, the Apache web server, and the Microsoft Drivers for PHP for SQL Server on Ubuntu 16.04, 18.04, and 20.04, RedHat 7 and 8, Debian 9, and 10, Suse 12 and 15, Alpine 3.11 and 3.12, and macOS 11.0, 10.14, and 10.15. These instructions advise installing the drivers using PECL, but you can also download the prebuilt binaries from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page and install them following the instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md). For an explanation of extension loading and why we do not add the extensions to php.ini, see the section on [loading the drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
+The following instructions assume a clean environment and show how to install PHP 8.0, the Microsoft ODBC driver, the Apache web server, and the Microsoft Drivers for PHP for SQL Server on Ubuntu 16.04, 18.04, and 20.04, RedHat 7 and 8, Debian 9, and 10, Suse 12 and 15, Alpine 3.11 and 3.12, and macOS 10.14, 10.15, and 11.0. These instructions advise installing the drivers using PECL, but you can also download the prebuilt binaries from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page and install them following the instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md). For an explanation of extension loading and why we do not add the extensions to php.ini, see the section on [loading the drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
 The following instructions install PHP 8.0 by default using `pecl install`, if the PHP 8.0 packages are available. You may need to run `pecl channel-update pecl.php.net` first. Note that some supported Linux distros default to PHP 7.1 or earlier, which is not supported for the latest version of the PHP drivers for SQL Server -- please see the notes at the beginning of each section to install PHP 7.4 or 7.3 instead.
 
-Also included are instructions for installing the PHP FastCGI Process Manager, PHP-FPM, on Ubuntu. This is needed if using the nginx web server instead of Apache.
+Also included are instructions for installing the PHP FastCGI Process Manager, PHP-FPM, on Ubuntu. This is needed if you are using the nginx web server instead of Apache.
 
 While these instructions contain commands to install both SQLSRV and PDO_SQLSRV drivers, the drivers can be installed and function independently. Users comfortable with customizing their configuration can adjust these instructions to be specific to SQLSRV or PDO_SQLSRV. Both drivers have the same dependencies except where noted below.
 
@@ -51,8 +51,8 @@ Install the ODBC driver for Ubuntu by following the instructions on the [Install
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
-printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/7.4/mods-available/sqlsrv.ini
-printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.4/mods-available/pdo_sqlsrv.ini
+printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/8.0/mods-available/sqlsrv.ini
+printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/8.0/mods-available/pdo_sqlsrv.ini
 exit
 sudo phpenmod -v 8.0 sqlsrv pdo_sqlsrv
 ```
@@ -126,7 +126,7 @@ To configure nginx, you must edit the `/etc/nginx/sites-available/default` file.
 # Add index.php to the list if you are using PHP
 index index.html index.htm index.nginx-debian.html index.php;
 ```
-Next, uncomment or modify the section following `# pass PHP scripts to FastCGI server` as follows:
+Next, uncomment and modify the section following `# pass PHP scripts to FastCGI server` as follows:
 ```
 # pass PHP scripts to FastCGI server
 #

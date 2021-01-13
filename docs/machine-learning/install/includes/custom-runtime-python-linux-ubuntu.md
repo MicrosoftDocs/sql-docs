@@ -9,9 +9,9 @@ ms.author: davidph
 ## Install Language Extensions
 
 > [!NOTE]
-> If you have [Machine Learning Services](../sql-server-machine-learning-services.md) installed on SQL Server 2019, the **mssql-server-extensibility** package for Language Extensions is already installed and you can skip this step.
+> If you have [Machine Learning Services](../../sql-server-machine-learning-services.md) installed on SQL Server 2019, the **mssql-server-extensibility** package for Language Extensions is already installed and you can skip this step.
 
-Run the commands below to install [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md) on Ubuntu Linux, which is used for the Python custom runtime.
+Run the commands below to install [SQL Server Language Extensions](../../../language-extensions/language-extensions-overview.md) on Ubuntu Linux, which is used for the Python custom runtime.
 
 1. If possible, run this command to refresh the packages on the system prior to the installation.
 
@@ -36,14 +36,18 @@ Run the commands below to install [SQL Server Language Extensions](../../languag
 
 ## Install Python 3.7 and pandas
 
-Follow the steps below to install Python 3.7 and the pandas package.
+1. Run the commands below to install Python 3.7.
 
-```bash
-# Install python3.7 and the corresponding library:
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt-get update
-sudo apt-get install python3.7 python3-pip libpython3.7
+    ```bash
+    # Install python3.7 and the corresponding library:
+    sudo add-apt-repository ppa:deadsnakes/ppa
+    sudo apt-get update
+    sudo apt-get install python3.7 python3-pip libpython3.7
+    ```
 
-# Install pandas to /usr/lib:
-sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
-```
+1. Run the command below to install the pandas package
+
+    ```bash
+    # Install pandas to /usr/lib:
+    sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
+    ```

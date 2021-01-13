@@ -9,9 +9,9 @@ ms.author: davidph
 ## Install Language Extensions
 
 > [!NOTE]
-> If you have [Machine Learning Services](../sql-server-machine-learning-services.md) installed on SQL Server 2019, the **mssql-server-extensibility** package for Language Extensions is already installed and you can skip this step.
+> If you have [Machine Learning Services](../../sql-server-machine-learning-services.md) installed on SQL Server 2019, the **mssql-server-extensibility** package for Language Extensions is already installed and you can skip this step.
 
-Run the command below to install [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md) on SUSE Linux Enterprise Server (SLES), which is used for the Python custom runtime.
+Run the command below to install [SQL Server Language Extensions](../../../language-extensions/language-extensions-overview.md) on SUSE Linux Enterprise Server (SLES), which is used for the Python custom runtime.
 
 ```bash
 # Install as root or sudo

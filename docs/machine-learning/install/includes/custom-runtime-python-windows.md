@@ -10,7 +10,7 @@ ms.author: davidph
 
 Before installing a Python custom runtime, install the following:
 
-+ Install the [Cumulative Update (CU) 3 or later](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) for SQL Server 2019.
++ Install the [Cumulative Update (CU) 3 or later](../../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) for SQL Server 2019.
 
 + Install [Python 3.7](https://www.python.org/downloads/) on the server.
 
@@ -22,9 +22,9 @@ Before installing a Python custom runtime, install the following:
 ## Install Language Extensions
 
 > [!NOTE]
-> If you have [Machine Learning Services](../sql-server-machine-learning-services.md) installed on SQL Server 2019, Language Extensions is already installed and you can skip this step.
+> If you have [Machine Learning Services](../../sql-server-machine-learning-services.md) installed on SQL Server 2019, Language Extensions is already installed and you can skip this step.
 
-Follow the steps below to install [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md), which is used for the Python custom runtime.
+Follow the steps below to install [SQL Server Language Extensions](../../../language-extensions/language-extensions-overview.md), which is used for the Python custom runtime.
 
 1. Start the setup wizard for SQL Server 2019.
   
@@ -40,7 +40,7 @@ Follow the steps below to install [SQL Server Language Extensions](../../languag
 
         Select **Machine Learning Services and Language Extensions**. Do not select Python, as you will be installing the custom Python runtime later.
 
-        :::image type="content" source="media/2019-setup-language-extensions.png" alt-text="SQL Server 2019 Language Extensions setup.":::
+        :::image type="content" source="../media/2019-setup-language-extensions.png" alt-text="SQL Server 2019 Language Extensions setup.":::
 
 1. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
   
@@ -50,7 +50,7 @@ Follow the steps below to install [SQL Server Language Extensions](../../languag
 1. After the setup is complete, restart the machine if you're asked to do so.
 
 > [!IMPORTANT]
-> If you install a new instance of SQL Server 2019 with Language Extensions, then install the [Cumulative Update (CU) 3 or later](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) before you continue to the next step.
+> If you install a new instance of SQL Server 2019 with Language Extensions, then install the [Cumulative Update (CU) 3 or later](../../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) before you continue to the next step.
 
 ## Install pandas
 
@@ -69,7 +69,7 @@ Add or modify the system environment variable **PYTHONHOME**.
 1. Under **System variables**, select **New** to create **PYTHONHOME** to point to your Python 3.7 installation location. If PYTHONHOME already exists, select **Edit** to point it to the Python 3.7 installation location.
 1. Select **OK** to close all the windows.
 
-    :::image type="content" source="media/pythonhome-env-variable.png" alt-text="PYTHONHOME environment variable.":::
+    :::image type="content" source="../media/pythonhome-env-variable.png" alt-text="PYTHONHOME environment variable.":::
 
 ## Grant access to Python folder
 
@@ -95,7 +95,7 @@ Run the following **icacls** commands from a new *elevated* command prompt to gr
 
 Follow these steps to restart the SQL Server Launchpad service.
 
-1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+1. Open [SQL Server Configuration Manager](../../../relational-databases/sql-server-configuration-manager.md).
 
 1. Under **SQL Server Services**, right click on **SQL Server Launchpad (MSSQLSERVER)** and select **Restart**. If you using a named instance, the instance name will be shown instead of **(MSSQLSERVER)**.
 
@@ -107,7 +107,7 @@ Follow these steps to download and register the Python language extension, which
 
     Alternatively, you can use the debug version (**python-lang-extension-windows-debug.zip**) in a development or test environment. The debug version provides verbose logging information to investigate any errors, and is not recommended for production environments.
 
-1. Use [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the Python language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md). 
+1. Use [Azure Data Studio](../../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the Python language extension with [CREATE EXTERNAL LANGUAGE](../../../t-sql/statements/create-external-language-transact-sql.md). 
 
     Modify the path in this statement to reflect the location of the downloaded language extension zip file (**python-lang-extension-windows.zip**).
 

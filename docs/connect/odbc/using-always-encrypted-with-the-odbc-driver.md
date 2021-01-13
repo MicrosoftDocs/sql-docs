@@ -391,7 +391,7 @@ The driver supports authenticating to Azure Key Vault using the following creden
 
 - Managed Identity (17.5.2+) - either system or user-assigned; see [Managed Identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/) for more information.
 
-- Azure Key Vault Interactive - with this method, the credentials are authenticated through Azure Active Directory with Login ID.
+- Azure Key Vault Interactive (17.7+ Windows drivers) - with this method, the credentials are authenticated through Azure Active Directory with Login ID.
 
 To allow the driver to use CMKs stored in AKV for column encryption, use the following connection-string-only keywords:
 

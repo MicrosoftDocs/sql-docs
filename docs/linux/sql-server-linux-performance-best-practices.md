@@ -46,11 +46,11 @@ mdadm --create --verbose /dev/md2 --level=raid0 --chunk=64K --raid-devices=2 /de
 
 #### Disk Partitioning and Configuration recommendations
 
-For SQL Server, it is recommended to use RAID configurations. The deployed filesystem stripe unit (sunit) and stripe width should match the RAID geometry. Here is an XFS filesystem based example:
+For SQL Server, it is recommended to use RAID configurations. The deployed filesystem stripe unit (sunit) and stripe width should match the RAID geometry. Here is an XFS filesystem based example for a log volume. 
 
 ```bash
-# Creating a log volume, using 4 devices, in RAID 10 configuration with 64KB stripes
-mdadm --create --verbose /dev/md3 --level=raid10 --chunk=64K --raid-devices=4 /dev/sda /dev/sdb /dev/sdc /dev/sdd
+# Creating a log volume, using 6 devices, in RAID 10 configuration with 64KB stripes
+mdadm --create --verbose /dev/md3 --level=raid10 --chunk=64K --raid-devices=6 /dev/sda /dev/sdb /dev/sdc /dev/sdd /dev/sde /dev/sdf
 
 mkfs.xfs /dev/sda1 -f -L log 
 meta-data=/dev/sda1              isize=512    agcount=32, agsize=18287648 blks 
@@ -266,6 +266,110 @@ tuned-adm profile mssql
 
 Using the **mssql** ***Tuned*** profile configures the **transparent_hugepage** option.
 
+#### Network setting recommendations
+
+Like you have the storage, CPU and other recommendations, we also have recommendations for the Network and we have listed the important options below for your reference. We have tried explaining each of the setting with an example, but they are specific to the NIC you use. Please do contact your NIC vendor for detailed guidance and commands.
+
+1. Configuring network port buffer size: In the example below my NIC is named 'eth0' which is a Intel based NIC, for Intel based NIC the recommended buffer size is 4KB (4096). You can verify your pre-set maximums and then configure it using the sample commands shown below:
+
+ ```bash
+         #To check the pre-set maximums please run the command, example NIC name used here is:"eth0"
+         ethtool -g eth0
+         #command to set both the rx(recieve) and tx (transmit) buffer size to 4 KB. 
+         ethtool -G eth0 rx 4096 tx 4096
+         #command to check the value is properly configured is:
+         ethtool -g eth0
+  ```
+
+1. We recommend enabling "jumbo frames", here are the steps and recommended value for Intel based NIC, as mentioned earlier please do confirm with your NIC vendors for the specific NIC related guidance:
+
+```bash
+         # command to set jumbo frame to 9014 for a Intel NIC named eth0 is
+         ifconfig eth0 mtu 9014
+         # you can verify the setting using the command:
+         ip addr | grep 9014
+```
+-  Be sure to verify that the network switch(es) between the clients and the SQL server support Jumbo Frames. After the jumbo frames are enabled, ensure that you connect to SQL Server and change the network packet size to 8060 using sp_configure as shown below:
+
+```T-SQL
+         sp_configure 'network packet size' , '8060'
+         go
+         reconfigure with override
+         go
+```
+
+1. By default, we recommend setting the port for adaptive RX/TX IRQ coalescing, meaning interrupt delivery will be adjusted to improve latency when packet rate is low and improve throughput when packet rate is high. The example below is for the NIC named 'eth0' which is a intel based NIC:
+
+```bash
+         #command to set the port for adaptive RX/TX IRQ coalescing
+         echtool -C eth0 adaptive-rx on
+         echtool -C eth0 adaptive-tx on
+         #confirm the setting using the command:
+         ethtool -c eth0
+```
+-   If you are looking for a predictable behaviour for high performance environments, like environment where you would run benchmarks for those we disable the adaptive RX/TX IRQ coalescing and then set specifically the RX/TX interrupt coalescing. Please see the example commands to disable the RX/TX IRQ coalescing and then specifically set the values:
+
+```bash
+         #commands to disable adaptive RX/TX IRQ coalescing
+         echtool -C eth0 adaptive-rx off
+         echtool -C eth0 adaptive-tx off
+         #confirm the setting using the command:
+         ethtool -c eth0
+         #Let us set the rx-usecs parameter which specify how many microseconds after at least 1 packet is received before generating an interrupt, and the [irq] parameters are the corresponding delays in updating the #status when the interrupt is disabled. For Intel bases NICs below are good values to start with:
+         ethtool -C eth0 rx-usecs 100 tx-frames-irq 512
+         #confirm the setting using the command:
+         ethtool -c eth0
+```
+1. We also recommend RSS (Receive-Side Scaling) enabled and by default you need to combine the rx and tx side of RSS queues. The example command is shown below for Intel NICs.
+
+```bash
+         #command to get pre-set maximums
+         ethtool -l eth0 
+         #note the pre-set "Combined" maximum value. let's consider for this example, it is 8.
+         #command to combine the queues with the value reported in the pre-set "Combined" maximum value:
+         ethtool -L eth0 combined 8
+         #you can verify the setting using the command below
+         ethtool -l eth0
+```
+
+1. Working with NIC port IRQ affinity. To acheive expected performance by tweaking the IRQ affinity you must consider some important parameters like Linux handling of the server topology, NIC driver stack, default settings, and irqbalance setting. Optimization of the NIC port IRQ affinities settings are done with the knowledge of server topology, disabling the irqbalance and using the NIC vendor specific settings. Please find below an example for Mellanox specific command to help explain the configuration. Please note the commands will change based on the NIC you use, so please contact your NIC vendor for further guidance:
+
+```bash
+         #disable irqbalance or get a snapshot of the IRQ settings and force the daemon to exit
+         systemctl disable irqbalance.service
+         #or
+         irqbalance --oneshot
+
+         #download the Mellanox mlnx_tuning_scripts tarball, https://www.mellanox.com/sites/default/files/downloads/tools/mlnx_tuning_scripts.tar.gz and extract it
+         tar -xvf mlnx_tuning_scripts.tar.gz
+         # be sure, common_irq_affinity.sh is executable. if not, 
+         # chmod +x common_irq_affinity.sh       
+
+         #display IRQ affinity for Mellanox NIC port; e.g eth0
+         ./show_irq_affinity.sh eth0
+
+         #optimize for best throughput performance
+         ./mlnx_tune -p HIGH_THROUGHPUT
+
+         #set hardware affinity to the NUMA node hosting physically the NIC and its port
+         ./set_irq_affinity_bynode.sh `\cat /sys/class/net/eth0/device/numa_node` eth0
+
+         #verify IRQ affinity
+         ./show_irq_affinity.sh eth0
+
+         #add IRQ coalescing optimizations
+         ethtool -C eth0 adaptive-rx off
+         ethtool -C eth0 adaptive-tx off
+         ethtool -C eth0  rx-usecs 750 tx-frames-irq 2048
+
+         #verify the settings
+         ethtool -c eth0
+```
+1. Post the above changes are done, please verify the speed of the NIC, to ensure it matches your expectation using the command:
+
+```bash
+         ethtool eth0 | grep -i Speed
+```
 #### Additional advanced Kernel/OS configuration
 
 1. For best storage IO performance, the use of Linux multiqueue scheduling for block devices is recommended. This enables the block layer performance to scale well with fast solid-state drives (SSDs) and multi-core systems. Check the documentation if it is enabled by default in your Linux distributions. In most other cases, booting the kernel with **scsi_mod.use_blk_mq=y** enables it, though documentation of the Linux distribution in use may have additional guidance on it. This is consistent to the upstream Linux kernel.

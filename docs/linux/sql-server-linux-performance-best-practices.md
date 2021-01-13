@@ -46,7 +46,7 @@ mdadm --create --verbose /dev/md2 --level=raid0 --chunk=64K --raid-devices=2 /de
 
 #### Disk Partitioning and Configuration recommendations
 
-For SQL Server, it is recommended to use RAID configurations. The deployed filesystem stripe unit (sunit) and stripe width should match the RAID geometry. Here is an XFS filesystem based example for a log volume. 
+For SQL Server, it is recommended to use RAID configurations. The deployed filesystem stripe unit (sunit) and stripe width should match the RAID geometry. Here is an XFS filesystem-based example for a log volume. 
 
 ```bash
 # Creating a log volume, using 6 devices, in RAID 10 configuration with 64KB stripes
@@ -268,9 +268,9 @@ Using the **mssql** ***Tuned*** profile configures the **transparent_hugepage** 
 
 #### Network setting recommendations
 
-Like you have the storage, CPU and other recommendations, we also have recommendations for the Network and we have listed the important options below for your reference. We have tried explaining each of the setting with an example, but they are specific to the NIC you use. Please do contact your NIC vendor for detailed guidance and commands.
+Like there are storage and CPU recommendations, there are Network specific recommendations as well listed below for reference. Not all settings mentioned below are available across different NICs, please refer and consult with NIC vendors for guidance for each of these options and please test and configure this on developement environments before you set them on production environemts. The options mentioned below are explained with examples, the commands used are specific to NIC type and vendor. 
 
-1. Configuring network port buffer size: In the example below my NIC is named 'eth0' which is a Intel based NIC, for Intel based NIC the recommended buffer size is 4KB (4096). You can verify your pre-set maximums and then configure it using the sample commands shown below:
+1. Configuring network port buffer size: In the example below the NIC is named 'eth0' which is an Intel-based NIC, for Intel based NIC the recommended buffer size is 4KB (4096). You can verify your pre-set maximums and then configure it using the sample commands shown below:
 
  ```bash
          #To check the pre-set maximums please run the command, example NIC name used here is:"eth0"
@@ -281,7 +281,7 @@ Like you have the storage, CPU and other recommendations, we also have recommend
          ethtool -g eth0
   ```
 
-1. We recommend enabling "jumbo frames", here are the steps and recommended value for Intel based NIC, as mentioned earlier please do confirm with your NIC vendors for the specific NIC related guidance:
+2. You can also enable jumbo frames, before you enable jumbo frames please verify that all the network switch(es), routers and anything else essential in the network packet path between the clients and the SQL server support Jumbo Frames, only then you enabling jumbo frames can improve performance. After the jumbo frames are enabled, ensure that you connect to SQL Server and change the network packet size to 8060 using sp_configure as shown below:
 
 ```bash
          # command to set jumbo frame to 9014 for a Intel NIC named eth0 is
@@ -289,8 +289,6 @@ Like you have the storage, CPU and other recommendations, we also have recommend
          # you can verify the setting using the command:
          ip addr | grep 9014
 ```
--  Be sure to verify that the network switch(es) between the clients and the SQL server support Jumbo Frames. After the jumbo frames are enabled, ensure that you connect to SQL Server and change the network packet size to 8060 using sp_configure as shown below:
-
 ```T-SQL
          sp_configure 'network packet size' , '8060'
          go
@@ -298,7 +296,7 @@ Like you have the storage, CPU and other recommendations, we also have recommend
          go
 ```
 
-1. By default, we recommend setting the port for adaptive RX/TX IRQ coalescing, meaning interrupt delivery will be adjusted to improve latency when packet rate is low and improve throughput when packet rate is high. The example below is for the NIC named 'eth0' which is a intel based NIC:
+3. By default, we recommend setting the port for adaptive RX/TX IRQ coalescing, meaning interrupt delivery will be adjusted to improve latency when packet rate is low and improve throughput when packet rate is high. Please note this setting might not be available across all the different network infrastructure, so please do review the existing network infrastructure and confirm this is supported. The example below is for the NIC named 'eth0' which is an intel-based NIC:
 
 ```bash
          #command to set the port for adaptive RX/TX IRQ coalescing
@@ -307,7 +305,8 @@ Like you have the storage, CPU and other recommendations, we also have recommend
          #confirm the setting using the command:
          ethtool -c eth0
 ```
--   If you are looking for a predictable behaviour for high performance environments, like environment where you would run benchmarks for those we disable the adaptive RX/TX IRQ coalescing and then set specifically the RX/TX interrupt coalescing. Please see the example commands to disable the RX/TX IRQ coalescing and then specifically set the values:
+> [!NOTE]
+> For a predictable behavior for high-performance environments, like environment where you would run benchmarks for those we disable the adaptive RX/TX IRQ coalescing and then set specifically the RX/TX interrupt coalescing. Please see the example commands to disable the RX/TX IRQ coalescing and then specifically set the values:
 
 ```bash
          #commands to disable adaptive RX/TX IRQ coalescing
@@ -320,7 +319,7 @@ Like you have the storage, CPU and other recommendations, we also have recommend
          #confirm the setting using the command:
          ethtool -c eth0
 ```
-1. We also recommend RSS (Receive-Side Scaling) enabled and by default you need to combine the rx and tx side of RSS queues. The example command is shown below for Intel NICs.
+4. We also recommend RSS (Receive-Side Scaling) enabled and by default you need to combine the rx and tx side of RSS queues. There have been specific scenarios where when working with Microsoft support, disabling the RSS has improved the performance as well. Please do test this setting in your test environments before you set them on production environments. The example command shown below is for Intel NICs.
 
 ```bash
          #command to get pre-set maximums
@@ -332,7 +331,7 @@ Like you have the storage, CPU and other recommendations, we also have recommend
          ethtool -l eth0
 ```
 
-1. Working with NIC port IRQ affinity. To acheive expected performance by tweaking the IRQ affinity you must consider some important parameters like Linux handling of the server topology, NIC driver stack, default settings, and irqbalance setting. Optimization of the NIC port IRQ affinities settings are done with the knowledge of server topology, disabling the irqbalance and using the NIC vendor specific settings. Please find below an example for Mellanox specific command to help explain the configuration. Please note the commands will change based on the NIC you use, so please contact your NIC vendor for further guidance:
+5. Working with NIC port IRQ affinity. To achieve expected performance by tweaking the IRQ affinity please consider few important parameters like Linux handling of the server topology, NIC driver stack, default settings, and irqbalance setting. Optimizations of the NIC port IRQ affinities settings are done with the knowledge of server topology, disabling the irqbalance and using the NIC vendor-specific settings. Please find below an example for Mellanox specific network infra, to help explain the configuration. Please note the commands will change based on your environment, so please contact your NIC vendor for further guidance:
 
 ```bash
          #disable irqbalance or get a snapshot of the IRQ settings and force the daemon to exit

@@ -27,7 +27,7 @@ ms.author: pelopes
   
  **sys.dm_db_rda_migration_status** is scoped to the current database context. Make sure you're in the database context of the Stretch-enable tables for which you want to see migration status.  
   
- In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the output of **sys.dm_db_rda_migration_status** is limited to 200 rows.  
+ In [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], the output of **sys.dm_db_rda_migration_status** is limited to 200 rows.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

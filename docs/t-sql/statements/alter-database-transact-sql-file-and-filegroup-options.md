@@ -139,7 +139,7 @@ Removes the logical file description from an instance of [!INCLUDE[ssNoVersion](
 Is the logical name used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when referencing the file.
 
 > [!WARNING]
-> Removing a database file that has `FILE_SNAPSHOT` backups associated with it will succeed, but any associated snapshots will not be deleted to avoid invalidating the backups referring to the database file. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later).
+> Removing a database file that has `FILE_SNAPSHOT` backups associated with it will succeed, but any associated snapshots will not be deleted to avoid invalidating the backups referring to the database file. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later).
 
 MODIFY FILE
 Specifies the file that should be modified. Only one \<filespec> property can be changed at a time. NAME must always be specified in the \<filespec> to identify the file to be modified. If SIZE is specified, the new size must be larger than the current file size.
@@ -258,7 +258,7 @@ If FILEGROWTH is not specified, the default values are:
 
 |Version|Default values|
 |-------------|--------------------|
-|Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Data 64 MB. Log files 64 MB.|
+|Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]|Data 64 MB. Log files 64 MB.|
 |Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 1 MB. Log files 10%.|
 |Prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 10%. Log files 10%.|
 
@@ -311,13 +311,13 @@ NAME = *new_filegroup_name*
 Changes the filegroup name to the *new_filegroup_name*.
 
 AUTOGROW_SINGLE_FILE
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later)
 
 When a file in the filegroup meets the autogrow threshold, only that file grows. This is the default.
 
 AUTOGROW_ALL_FILES
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later)
 
 When a file in the filegroup meets the autogrow threshold, all files in the filegroup grow.
 

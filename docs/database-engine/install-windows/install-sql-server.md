@@ -28,14 +28,14 @@ For other deployment scenarios, see:
 - [Docker containers](../../linux/sql-server-linux-docker-container-deployment.md)
 - [Kubernetes - Big Data Clusters](../../big-data-cluster/deploy-get-started.md)
 
-Beginning with [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] is only available as a 64-bit application. Here are important details about how to get SQL Server and how to install it.
+Beginning with [!INCLUDE[sssql15](../../includes/sssql16-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] is only available as a 64-bit application. Here are important details about how to get SQL Server and how to install it.
 
 ## Getting started
   
 * **Editions and features**: Review the supported features for the different editions and versions of SQL Server to determine which best suits your business needs. 
     - [[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)]](~/sql-server/editions-and-components-of-sql-server-version-15.md).  
     - [[!INCLUDE[ss2017](../../includes/sssqlv14-md.md)]](~/sql-server/editions-and-components-of-sql-server-2017.md).  
-    - [[!INCLUDE[ss2016](../../includes/sssql15-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md).  
+    - [[!INCLUDE[ss2016](../../includes/sssql16-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md).  
     - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://docs.microsoft.com/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014)
 
 *  **Requirements**: Review hardware and software installation requirements for [SQL Server 2016 & 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) or [SQL Server on Linux](../../linux/sql-server-linux-setup.md), as well as system configuration checks, and security considerations in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md) 

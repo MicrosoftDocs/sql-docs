@@ -57,7 +57,7 @@ ON ALL SERVER
 
 ## Arguments
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
  Conditionally drops the trigger only if it already exists.  
   
@@ -101,7 +101,7 @@ ON ALL SERVER
 ## Examples  
   
 ### A. Dropping a DML trigger  
- The following example drops the `employee_insupd` trigger in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. (Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] you can use the DROP TRIGGER IF EXISTS syntax.)  
+ The following example drops the `employee_insupd` trigger in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. (Beginning with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] you can use the DROP TRIGGER IF EXISTS syntax.)  
   
 ```sql  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  

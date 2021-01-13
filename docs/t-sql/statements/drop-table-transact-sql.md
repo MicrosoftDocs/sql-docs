@@ -71,7 +71,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  Azure SQL Database supports the three-part name format database_name.[schema_name].object_name when the database_name is the current database or the database_name is tempdb and the object_name starts with #. Azure SQL Database does not support four-part names.  
   
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Conditionally drops the table only if it already exists.  
   
@@ -117,7 +117,7 @@ DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;
 ```  
   
 ### C. Dropping a temporary table  
- The following example creates a temporary table, tests for its existence, drops it, and tests again for its existence. This example does not use the **IF EXISTS** syntax which is available beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+ The following example creates a temporary table, tests for its existence, drops it, and tests again for its existence. This example does not use the **IF EXISTS** syntax which is available beginning with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].  
   
 ```sql  
 CREATE TABLE #temptable (col1 INT);  
@@ -136,7 +136,7 @@ SELECT * FROM #temptable;
   
 ### D. Dropping a table using IF EXISTS  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  The following example creates a table named T1. Then the second statement drops the table. The third statement performs no action because the table is already deleted, however it does not cause an error.  
   

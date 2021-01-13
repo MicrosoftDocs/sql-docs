@@ -2,7 +2,7 @@
 title: "Best practices with Query Store | Microsoft Docs"
 description: Learn best practices for using SQL Server Query Store with your workload, such as using the latest SQL Server Management Studio and Query Performance Insight.
 ms.custom: ""
-ms.date: "12/23/2020"
+ms.date: "1/7/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -429,6 +429,16 @@ The global trace flags 7745 and 7752 can be used to improve availability of data
 
 > [!IMPORTANT]
 > If you're using Query Store for just-in-time workload insights in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), plan to install the performance scalability improvement in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU15, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22, and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU8 as soon as possible. Without this improvement, when the database is under heavy ad-hoc workloads, the Query Store may use a large amount of memory and server performance may become slow. After this improvement is applied, Query Store imposes internal limits to the amount of memory its various components can use, and can automatically change the operation mode to read-only until enough memory has been returned to the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Note that Query Store internal memory limits are not documented because they are subject to change.  
+
+
+## <a name="geosyncreplicas"></a> Using Query Store in Azure SQL Database active geo-replication
+
+Query Store on a secondary active geo-replica of Azure SQL Database will be a read-only copy of the activity on the primary replica. 
+
+Avoid mismatched tiers of Azure SQL Databases participating in geo-replication. A secondary database should be at or near the same compute size of the primary database, and in the same service tier of the primary database. Look for the HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO wait type in [sys.dm_db_wait_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database) which indicates transaction log rate throttling on the primary replica due to secondary lag.
+
+For more on estimating and configuring the size of the secondary Azure SQL database of active geo-replication, see [Configuring secondary database](/azure/azure-sql/database/active-geo-replication-overview#configuring-secondary-database).
+
 
 ## See also
 

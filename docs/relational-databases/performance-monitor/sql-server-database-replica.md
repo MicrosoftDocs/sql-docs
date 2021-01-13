@@ -2,7 +2,7 @@
 title: "SQL Server, Database Replica | Microsoft Docs"
 description: Learn about the SQLServer:Database Replica performance object, which contains performance counters about secondary databases of an Always On availability group.
 ms.custom: ""
-ms.date: "08/24/2016"
+ms.date: "01/13/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -36,7 +36,7 @@ ms.author: wiassaf
 |**Redo Bytes Remaining**|The amount of log, in kilobytes, remaining to be redone to finish the reverting phase.|Secondary replica|  
 |**Redone Bytes/sec**|Amount of log records redone on the secondary database in the last second.|Secondary replica|  
 |**Total Log requiring undo**|Total kilobytes of log that must be undone.|Secondary replica|  
-|**Transaction Delay**|Delay in waiting for unterminated commit acknowledgment for all the current transactions, in milliseconds. Divide by *Mirrored Write Transaction/sec* to get *Avg Transaction Delay*. For more information, see [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](/archive/blogs/saponsqlserver/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii)|Primary replica|  
+|**Transaction Delay**|Total delay in waiting for unterminated commit acknowledgment for all the current transactions, in milliseconds. Divide by *Mirrored Write Transaction/sec* to get *Avg Transaction Delay*. For more information, see [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](/archive/blogs/saponsqlserver/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii)|Primary replica|  
   
 ## See Also
   

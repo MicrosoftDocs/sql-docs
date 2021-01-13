@@ -83,14 +83,14 @@ The following versions of PHP are supported with the listed version of the Micro
 |5.4|       |                |                |                |                |       |        |5.4.32  |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-1. Versions 7.2.1 and later are supported on Windows, while versions 7.2.0 and later are supported on Linux and macOS.
+<sup>1</sup> Versions 7.2.1 and later are supported on Windows, while versions 7.2.0 and later are supported on Linux and macOS.
 
 ## Supported Operating Systems
 
 The following Windows operating system versions are supported with the listed version of the Microsoft PHP Drivers:
 
 |Driver version&nbsp;&#8594;<br />&#8595; Operating system|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Windows Server 2019                 |Yes|Yes|Yes|   |   |   |   |   |
 |Windows Server 2016                 |Yes|Yes|Yes|Yes|Yes|Yes|   |   |
 |Windows Server 2012 R2              |Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
@@ -108,7 +108,7 @@ The following Windows operating system versions are supported with the listed ve
 The following Linux and macOS operating system versions (64-bit only) are supported with the listed version of the Microsoft PHP Drivers:
 
 |Driver version&nbsp;&#8594;<br />&#8595; Operating system|5.9|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
-|--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Ubuntu 20.10 (64-bit)               |Yes|   |   |   |   |   |   |   |
 |Ubuntu 20.04 (64-bit)               |Yes|Yes|   |   |   |   |   |   |
 |Ubuntu 19.10 (64-bit)               |   |Yes|   |   |   |   |   |   |

@@ -24,7 +24,7 @@ ms.author: wiassaf
 # sys.filetables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Returns a row for each FileTable in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information about FileTables, see [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).    
+  Returns a row for each FileTable in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For more information about FileTables, see [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).    
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

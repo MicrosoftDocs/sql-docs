@@ -37,7 +37,7 @@ This article gives you some tips and tricks for using [!INCLUDE[ssManStudioFull]
 To test out the steps provided in this article, you need [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], access to a SQL server, and an AdventureWorks database. 
 
 * Install [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
-* Install [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+* Install [[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Download an [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). To learn how to restore a database in SSMS, see [Restoring a database](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md). 
 
 ## Comment/uncomment your T-SQL code

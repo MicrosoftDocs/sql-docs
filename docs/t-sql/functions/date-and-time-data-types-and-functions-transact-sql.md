@@ -67,7 +67,7 @@ The following tables list the [!INCLUDE[tsql](../../includes/tsql-md.md)] date a
 
 #### Higher-Precision System Date and Time Functions
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] derives the date and time values through use of the GetSystemTimeAsFileTime() Windows API. The accuracy depends on the computer hardware and version of Windows on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running. This API has a precision fixed at 100 nanoseconds. Use the GetSystemTimeAdjustment() Windows API to determine the accuracy.
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] derives the date and time values through use of the GetSystemTimeAsFileTime() Windows API. The accuracy depends on the computer hardware and version of Windows on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running. This API has a precision fixed at 100 nanoseconds. Use the GetSystemTimeAdjustment() Windows API to determine the accuracy.
 
 |Function|Syntax|Return value|Return data type|Determinism|
 |---|---|---|---|---|

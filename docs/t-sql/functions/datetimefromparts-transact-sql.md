@@ -63,7 +63,7 @@ An integer expression that specifies milliseconds.
 ## Remarks  
 `DATETIMEFROMPARTS` returns a fully initialized **datetime** value. `DATETIMEFROMPARTS` will raise an error if at least one required argument has an invalid value. `DATETIMEFROMPARTS` returns null if at least one required argument has a null value.
   
-This function supports remoting to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servers and above. It will not support remoting to servers that have a version below [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+This function supports remoting to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] servers and above. It will not support remoting to servers that have a version below [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
   
 ## Examples  
   

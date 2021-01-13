@@ -68,7 +68,7 @@ An integer expression that specifies the precision of the **datetime2** value th
 
 The *fractions* argument depends on the *precision* argument. For example, for a *precision* value of 7, each fraction represents 100 nanoseconds; for a *precision* of 3, each fraction represents a millisecond. For a *precision* value of zero, the value of *fractions* must also be zero; otherwise, `DATETIME2FROMPARTS` will raise an error.
   
-This function supports remoting to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servers and above. It will not support remoting to servers that have a version below [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+This function supports remoting to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] servers and above. It will not support remoting to servers that have a version below [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
   
 ## Examples  
   

@@ -193,17 +193,17 @@ The default directories in the following table are user-configurable during [!IN
 
 Use this page to set the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security mode and to add Windows users or groups as administrators of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-### Considerations for running [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+### Considerations for running [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]
 
 In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the BUILTIN\Administrators group was provisioned as a login in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and members of the local Administrators group could log in by using their Administrator credentials. However, using elevated permissions isn't a best practice.
 
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the BUILTIN\Administrators group isn't provisioned as a login. Make sure you create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for each administrative user, and add that login to the **sysadmin** fixed server role during the installation of a new instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Do the same for Windows accounts that run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent jobs, including replication agent jobs.  
+In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the BUILTIN\Administrators group isn't provisioned as a login. Make sure you create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for each administrative user, and add that login to the **sysadmin** fixed server role during the installation of a new instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Do the same for Windows accounts that run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent jobs, including replication agent jobs.  
   
 ### Options
 
 **Security Mode**: Select **Windows Authentication** or **Mixed Mode Authentication** for your installation.  
   
-**Windows Principal Provisioning**: In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the Windows BUILTIN\Administrators local group was placed into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** server role, effectively granting Windows administrators access to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the BUILTIN\Administrators group isn't provisioned in the **sysadmin** server role. Instead, you should explicitly provision [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrators for new installations during Setup.  
+**Windows Principal Provisioning**: In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the Windows BUILTIN\Administrators local group was placed into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** server role, effectively granting Windows administrators access to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the BUILTIN\Administrators group isn't provisioned in the **sysadmin** server role. Instead, you should explicitly provision [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrators for new installations during Setup.  
   
 > [!IMPORTANT]  
 > You must explicitly provision [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrators for new installations during Setup. Setup won't allow you to continue until you complete this step.
@@ -448,7 +448,7 @@ If this page is skipped during setup, the default **max server memory** value us
 
 ## Database Engine Configuration - FILESTREAM page
 
-Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. FILESTREAM integrates the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] with an NTFS file system by storing **varbinary(max)** binary large object (BLOB) data as files in the file system. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can insert, update, query, search, and back up FILESTREAM data. Microsoft Win32 file-system interfaces provide streaming access to the data. 
+Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. FILESTREAM integrates the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] with an NTFS file system by storing **varbinary(max)** binary large object (BLOB) data as files in the file system. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can insert, update, query, search, and back up FILESTREAM data. Microsoft Win32 file-system interfaces provide streaming access to the data. 
   
 ### UI element list
   

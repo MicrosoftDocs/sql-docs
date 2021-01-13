@@ -32,7 +32,7 @@ ms.author: wiassaf
 # CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Creates a function in the current database that maps the rows of a table or index into partitions based on the values of a specified column. Using CREATE PARTITION FUNCTION is the first step in creating a partitioned table or index. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a table or index can have a maximum of 15,000 partitions.  
+  Creates a function in the current database that maps the rows of a table or index into partitions based on the values of a specified column. Using CREATE PARTITION FUNCTION is the first step in creating a partitioned table or index. In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], a table or index can have a maximum of 15,000 partitions.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

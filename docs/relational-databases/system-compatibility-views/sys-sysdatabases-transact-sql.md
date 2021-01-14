@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.sysdatabases compatibility view"
   - "sysdatabases system table"
 ms.assetid: 60a93880-62f1-4eda-a886-f046706ba90c
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sysdatabases (Transact-SQL)

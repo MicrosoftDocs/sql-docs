@@ -99,7 +99,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
     -   Enter a new strong password in the **Password** and **Confirm Password** text boxes.  
   
     > [!NOTE]  
-    >  If the Publisher is an Oracle Publisher, the connection context is specified in the **Distributor Properties - \<Distributor>**dialog box. See below for the procedure to change the context.  
+    >  If the Publisher is an Oracle Publisher, the connection context is specified in the **Distributor Properties - \<Distributor>** dialog box. See below for the procedure to change the context.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -120,7 +120,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
     -   Enter a new strong password in the **Password** and **Confirm Password** text boxes.  
   
     > [!NOTE]  
-    >  If the Publisher is an Oracle Publisher, the connection context is specified in the **Distributor Properties - \<Distributor>**dialog box. Change the context using the next procedure.  
+    >  If the Publisher is an Oracle Publisher, the connection context is specified in the **Distributor Properties - \<Distributor>** dialog box. Change the context using the next procedure.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

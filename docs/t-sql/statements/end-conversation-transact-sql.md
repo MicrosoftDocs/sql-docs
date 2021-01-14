@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "conversations [Service Broker], ending"
   - "ending conversations [SQL Server]"
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # END CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

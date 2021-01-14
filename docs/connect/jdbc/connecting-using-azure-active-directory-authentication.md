@@ -2,7 +2,7 @@
 title: "Connecting using Azure Active Directory authentication"
 description: "Learn how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "09/23/2020"
+ms.date: "01/04/2020"
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
@@ -82,7 +82,7 @@ public class AAD_MSI {
         ds.setDatabaseName("demo"); // Replace with your database name
         ds.setAuthentication("ActiveDirectoryMSI");
         // Optional
-        ds.setMsiClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned Managed Identity to be used
+        ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned Managed Identity to be used
 
         try (Connection connection = ds.getConnection(); 
                 Statement stmt = connection.createStatement();

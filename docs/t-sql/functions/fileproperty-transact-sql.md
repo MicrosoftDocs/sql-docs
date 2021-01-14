@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "FILEPROPERTY function"
   - "file names [SQL Server], FILEPROPERTY"
 ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # FILEPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_xtp_index_stats dynamic management view"
 ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_index_stats (Transact-SQL)
@@ -33,7 +33,7 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|ID of the object to which this index belongs.|  
-|xtp_object_id|**bigint**|Internal ID corresponding to the current version of the object.<br /><br /> Note: Applies to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
+|xtp_object_id|**bigint**|Internal ID corresponding to the current version of the object.<br /><br /> Note: Applies to [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].|  
 |index_id|**bigint**|ID of the index. The index_id is unique only within the object.|  
 |scans_started|**bigint**|Number of In-Memory OLTP index scans performed. Every select, insert, update, or delete requires an index scan.|  
 |scans_retries|**bigint**|Number of index scans that needed to be retried,|  

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "adding files"
   - "ALTER ASSEMBLY statement"
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

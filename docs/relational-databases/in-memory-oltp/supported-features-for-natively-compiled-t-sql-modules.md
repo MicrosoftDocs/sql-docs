@@ -36,20 +36,20 @@ SELECT clause:
 -   Columns and  name aliases (using either AS or = syntax).  
 
 -   Scalar subqueries
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], scalar subqueries are now supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], scalar subqueries are now supported in natively compiled modules.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the DISTINCT operator is supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], the DISTINCT operator is supported in natively compiled modules.
 
         - DISTINCT aggregates are not supported.  
 
 -   UNION and UNION ALL
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], UNION and UNION ALL operators are now supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], UNION and UNION ALL operators are now supported in natively compiled modules.
 
 -   Variable assignments  
 
@@ -60,12 +60,12 @@ FROM clause:
 -   FROM \<natively compiled inline TVF>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN and INNER JOIN.
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], JOINS are now supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], JOINS are now supported in natively compiled modules.
 
 -   Subqueries `[AS] table_alias`. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], Subqueries are now supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], Subqueries are now supported in natively compiled modules.
 
 WHERE clause:  
 
@@ -73,8 +73,8 @@ WHERE clause:
 
 -   AND, BETWEEN  
 -   OR, NOT, IN, EXISTS
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], OR/NOT/IN/EXISTS operators are now supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], OR/NOT/IN/EXISTS operators are now supported in natively compiled modules.
 
 
 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) clause:

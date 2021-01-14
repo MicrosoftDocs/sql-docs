@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.sysobjects compatibility view"
   - "sysobjects system table"
 ms.assetid: 44fdc387-67b0-4139-8bf5-ed26cf640cd1
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sysobjects (Transact-SQL)

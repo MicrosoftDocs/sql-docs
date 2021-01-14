@@ -39,7 +39,7 @@ This topic describes how to save trace results to a database table by using [!IN
   
 6.  In the **Table** list, type or select the table name for the trace results. Click **OK.**  
   
-7.  In the **Trace Properties** dialog box, select the **Set maximum rows (in thousands)**check box to specify the maximum number of rows to save.  
+7.  In the **Trace Properties** dialog box, select the **Set maximum rows (in thousands)** check box to specify the maximum number of rows to save.  
   
 ## See Also  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

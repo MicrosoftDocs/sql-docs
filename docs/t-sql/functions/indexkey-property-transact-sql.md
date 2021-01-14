@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "displaying index keys"
   - "keys [SQL Server], index"
 ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # INDEXKEY_PROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

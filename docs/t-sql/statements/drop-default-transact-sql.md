@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "DROP DEFAULT statement"
   - "defaults [SQL Server], removing"
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 
 ## Arguments
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Conditionally drops the default only if it already exists.  
   
@@ -73,7 +73,7 @@ IF EXISTS (SELECT name FROM sys.objects
 GO  
 ```  
   
- Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] you can use the following syntax.  
+ Beginning with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] you can use the following syntax.  
   
 ```sql  
 DROP DEFAULT IF EXISTS datedflt;  

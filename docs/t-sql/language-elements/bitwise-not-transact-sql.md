@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "bitwise NOT (~)"
   - "~ (bitwise NOT)"
 ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ~ (Bitwise NOT) (Transact-SQL)

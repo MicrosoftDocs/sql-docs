@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "default nullability"
   - "database nullability [SQL Server]"
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # GETANSINULL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

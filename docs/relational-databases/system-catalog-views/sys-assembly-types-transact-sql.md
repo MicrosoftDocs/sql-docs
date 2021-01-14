@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.assembly_types catalog view"
 ms.assetid: 35f0384f-7a6d-41b1-9461-f1406d68f317
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.assembly_types (Transact-SQL)

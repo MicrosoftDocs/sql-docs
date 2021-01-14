@@ -47,7 +47,7 @@ Following properties are available on the **Advanced Editor**.
 - **escapeChar:** The special character used to escape a column delimiter in the content of input file. You cannot specify both escapeChar and quoteChar for a table. Only one character is allowed. No default value.
 - **quoteChar:** The character used to quote a string value. The column and row delimiters inside the quote characters would be treated as part of the string value. This property is applicable to both input and output datasets. You cannot specify both escapeChar and quoteChar for a table. Only one character is allowed. No default value.
 - **nullValue:** One or more characters used to represent a null value. The **default** value is \N.
-- **encodingName:** Specify the encoding name. See [Encoding.EncodingName](/dotnet/api/system.text.encoding?view=netframework-4.8) Property.
+- **encodingName:** Specify the encoding name. See [Encoding.EncodingName](/dotnet/api/system.text.encoding) Property.
 - **skipLineCount:**  Indicates the number of non-empty rows to skip when reading data from input files. If both skipLineCount and firstRowAsHeader are specified, the lines are skipped first and then the header information is read from the input file.
 - **treatEmptyAsNull:** Specifies whether to treat null or empty string as a null value when reading data from an input file. The **default** value is True.
 

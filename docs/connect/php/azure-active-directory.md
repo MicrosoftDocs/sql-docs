@@ -27,7 +27,7 @@ To use Azure AD, use the **Authentication** or **AccessToken** keywords (they ar
 ||`SqlPassword`|Directly authenticate to a SQL Server instance (which may be an Azure instance) using a username and password. The username and password must be passed into the connection string using the **UID** and **PWD** keywords. |
 ||`ActiveDirectoryPassword`|Authenticate with an Azure Active Directory identity using a username and password. The username and password must be passed into the connection string using the **UID** and **PWD** keywords. |
 ||`ActiveDirectoryMsi`|Authenticate using either a system-assigned managed identity or a user-assigned managed identity (requires ODBC Driver version 17.3.1.1 or above). For an overview and tutorials, refer to [What is managed identities for Azure resources?](/azure/active-directory/managed-identities-azure-resources/overview).|
-||`ActiveDirectorySPA`|Authenticate using service principal objects (requires ODBC Driver version 17.7 or above). For more details and examples, refer to [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals).|
+||`ActiveDirectoryServicePrincipal`|Authenticate using service principal objects (requires ODBC Driver version 17.7 or above). For more details and examples, refer to [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals).|
 
 The **Authentication** keyword affects the connection security settings. If it is set in the connection string, then by default the **Encrypt** keyword is set to true, which means the client will request encryption. Moreover, the server certificate will be validated irrespective of the encryption setting unless **TrustServerCertificate** is set to true (**false** by default). This feature is distinguished from the old, less secure login method, in which the server certificate is validated only when encryption is specifically requested in the connection string.
 
@@ -247,7 +247,7 @@ $adSPClientSecret = 'myClientSecret';
 
 $conn = false;
 $connectionInfo = array("Database"=>$adDatabase, 
-                        "Authentication"=>"ActiveDirectorySPA",
+                        "Authentication"=>"ActiveDirectoryServicePrincipal",
                         "UID"=>$adSPClientId,
                         "PWD"=>$adSPClientSecret);
 
@@ -274,7 +274,7 @@ $adSPClientSecret = 'myClientSecret';
 
 $conn = false;
 try {
-    $connectionInfo = "Database = $adDatabase; Authentication = ActiveDirectorySPA;";
+    $connectionInfo = "Database = $adDatabase; Authentication = ActiveDirectoryServicePrincipal;";
     $conn = new PDO("sqlsrv:server = $adServer; $connectionInfo", $adSPClientId, $adSPClientSecret);
 } catch (PDOException $e) {
     echo "Could not connect using Azure AD Service Principal.\n";

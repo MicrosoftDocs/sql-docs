@@ -60,7 +60,100 @@ Download and install the version of R you will use as the custom runtime. R vers
 
     :::image type="content" source="../media/r-setup-path.png" alt-text="R setup":::
 
-    In the following instructions, **%R_HOME%** is the path to your R installation and should be replaced with this path.
+## Update system environment variables
+
+Follow the steps below to add or modify the **R_HOME** and modify the **PATH** system environment variables.
+
+1. In the Windows search box, search for **Edit the system environment variables** and open it.
+
+1. Under **Advanced**, select **Environment Variables**.
+
+1. Create or modify the **R_HOME** system environment variable.
+
+    In **System variables**, select **New** to create the **R_HOME** system environment variable. If you already have an **R_HOME** system environment variable, select **Edit** to modify it instead.
+
+    Under **Variable name** type `R_HOME` under. Under **Variable value** type the path for your R installation. For example, `C:\Program Files\R\R-4.0.3`.
+
+    :::image type="content" source="../media/r_home_environment_variable.png" alt-text="R_HOME environment variable":::
+
+    Click **OK**.
+
+1. 
+
+1. Add or modify **R_HOME** as a system environment variable.
+    + In the Windows search box, type "environment" and select **Edit the system environment variables**.
+    + In the **Advanced** tab, select **Environment Variables**.
+
+    + Under **System variables**, select **New** to create R_HOME.
+    To modify, select **Edit** to change it. Modify its value to point to the custom R installation path.
+
+    ![Create R_HOME system environment variable.](../install/media/sys-env-r-home.png)
+
+2. Update the **PATH** environment variable.
+    Append the path to **R.dll** to the system **PATH** environment variable. Select **PATH** then **Edit** and add `%R_HOME%\bin\x64` to the list of paths.
+
+    ![Append to PATH system environment variable.](../install/media/sys-env-path-r.png)
+
+3. Select **OK** to close remaining windows.
+
+    As an alternative, to set these environment variables from an *elevated* command prompt, run the following commands. Make sure to use the custom R installation path.
+
+```CMD
+setx /m R_HOME "path\to\installation\of\R"
+setx /m PATH "path\to\installation\of\R\bin\x64;%PATH%"
+```
+
+
+    In the following instructions, **%R_HOME%** is the environment variable with the value to the path of your R installation and should be replaced with this path.
+
+
+## Install Rcpp package
+
+Follow these steps to install the **Rcpp** package.
+
+1. Locate the R executable in %R_HOME%\bin. For example, `C:\Program Files\R\R-4.0.3\bin`.
+
+1. Start R from an *elevated* command prompt:
+
+    ```CMD
+    %R_HOME%\bin\R.exe
+    ```
+
+1. In this *elevated* R prompt (%R_HOME%\bin\R.exe), run the following script to install the Rcpp package in the %R_HOME%\library folder.
+
+    ```R
+    install.packages("Rcpp", lib="%R_HOME%/library");
+    ```
+
+## Update the system environment variables
+
+1. Add or modify **R_HOME** as a system environment variable.
+    + In the Windows search box, type "environment" and select **Edit the system environment variables**.
+    + In the **Advanced** tab, select **Environment Variables**.
+
+    + Under **System variables**, select **New** to create R_HOME.
+    To modify, select **Edit** to change it. Modify its value to point to the custom R installation path.
+
+    ![Create R_HOME system environment variable.](../install/media/sys-env-r-home.png)
+
+2. Update the **PATH** environment variable.
+    Append the path to **R.dll** to the system **PATH** environment variable. Select **PATH** then **Edit** and add `%R_HOME%\bin\x64` to the list of paths.
+
+    ![Append to PATH system environment variable.](../install/media/sys-env-path-r.png)
+
+3. Select **OK** to close remaining windows.
+
+    As an alternative, to set these environment variables from an *elevated* command prompt, run the following commands. Make sure to use the custom R installation path.
+
+```CMD
+setx /m R_HOME "path\to\installation\of\R"
+setx /m PATH "path\to\installation\of\R\bin\x64;%PATH%"
+```
+
+
+
+
+
 
 
 

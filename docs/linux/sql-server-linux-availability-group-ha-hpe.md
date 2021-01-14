@@ -33,19 +33,15 @@ This tutorial consists of the following tasks:
 
 * Three VMs in an on-premises environment, running HPE Serviceguard on a supported Linux distribution.
 
-   For an example of a supported distribution, see [HPE Serviceguard](https://h20195.www2.hpe.com/v2/gethtml.aspx?docname=c04154488).
+   For an example of a supported distribution, see [HPE Serviceguard for Linux](https://h20195.www2.hpe.com/v2/gethtml.aspx?docname=c04154488).
 
    Check with the HPE for information about support for public cloud environments.
 
    The instructions in this tutorial are validated against HPE Serviceguard for Linux. A trial edition is available for download from [HPE](https://www.hpe.com/us/en/resources/servers/serviceguard-linux-trial.html).
 
-* SQL Server database files on logical volum mount (LVM) for all three virtual machines. See 
+* SQL Server database files on logical volume mount (LVM) for all three virtual machines. See [Quick start guide for Serviceguard Linux (HPE)](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us)
 
-   Refer to the cluster manager documentation for information about storage requirements.
-
-    * [HPE](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us)
-
-* Ensure that you have a OpenJDK java runtime installed on the VMs,
+* Ensure that you have a OpenJDK java runtime installed on the VMs.
 
    > [!NOTE]
    > IBM java sdk is not supported.
@@ -74,9 +70,9 @@ After you complete this step, you should have SQL Server service and tools insta
 
 At this point, you need to install the cluster manager. The way you install the cluster manager, depends on the cluster manager that you are using.
 
-### Install the HPE Serviceguard on the VMs
+### Install HPE Serviceguard on the VMs
 
-In this step, we will be installing the HPE Serviceguard for Linux on all three nodes. Two of those nodes will be setup and configured as Serviceguard Cluster Nodes. Third node will be setup and configured as Serviceguard Quorum Server and Microsoft SQL Server On Linux Configuration Only Replica. We will be installing Serviceguard using the `cminstaller` method. Specific instructions are available in the links below
+In this step, we will be installing HPE Serviceguard for Linux on all three nodes. Two of those nodes will be setup and configured as Serviceguard Cluster Nodes. Third node will be setup and configured as Serviceguard Quorum Server and Microsoft SQL Server On Linux Configuration Only Replica. We will be installing Serviceguard using the `cminstaller` method. Specific instructions are available in the links below
 
 Serviceguard cluster and Serviceguard Quorum server
 
@@ -119,19 +115,12 @@ For more details, see [Two synchronous replicas and a configuration only replica
 To create the availability group, follow these steps:
 
 1. [Enable Always On availability groups and restart mssql-server](#enable-always-on-availability-groups-and-restart-mssql-server) on all the VMs including the Configuration only replica.
-
 2. [Enable an `AlwaysOn_health` event session - (Optional)](#enable-an-alwayson_health-event-session---optional)
-
 3. [Create a certificate on the primary VM](#create-a-certificate-on-the-primary-vm)
-
 4. [Create the certificate on secondary servers](#create-the-certificate-on-secondary-servers)
-
 5. [Create the database mirroring endpoints on the replicas](#create-the-database-mirroring-endpoints-on-the-replicas)
-
 6. [Create availability group](#create-availability-group)
-
-7. [join the secondary replicas](#join-the-secondary-replicas)
-
+7. [Join the secondary replicas](#join-the-secondary-replicas)
 8. [Add a database to the availability group created above](#add-a-database-to-the-availability-group-created-above)
 
 ### Enable Always On availability groups and restart mssql-server
@@ -204,7 +193,7 @@ DECRYPTION BY PASSWORD = '<Private_Key_Password>' );
 On the primary and the secondary replica run the below commands to create the database mirroring endpoints:
 
 ```tsql
-CREATE ENDPOINT [Hadr_endpoint] AS TCP (LISTENER_PORT = 5022)
+CREATE ENDPOINT [hadr_endpoint] AS TCP (LISTENER_PORT = 5022)
     FOR DATABASE_MIRRORING 
         (
         ROLE = WITNESS,
@@ -212,23 +201,23 @@ CREATE ENDPOINT [Hadr_endpoint] AS TCP (LISTENER_PORT = 5022)
         ENCRYPTION = REQUIRED ALGORITHM AES
         );
 
-ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
+ALTER ENDPOINT [hadr_endpoint] STATE = STARTED;
 ```
 
 > [!NOTE]
 > 5022 is the standard port used for the database mirroring endpoint, but you can change it to any available port.
 
-On the Configuration-only replica create the database mirroring endpoint using the below command, note for the value for the Role here is set to `WITNESS` which is what it needs to be for the configuration-only replica.
+On the configuration-only replica create the database mirroring endpoint using the below command, note for the value for the Role here is set to `WITNESS` which is what it needs to be for the configuration-only replica.
 
 ```tsql
-CREATE ENDPOINT [Hadr_endpoint] AS TCP (LISTENER_PORT = 5022)
+CREATE ENDPOINT [hadr_endpoint] AS TCP (LISTENER_PORT = 5022)
     FOR DATABASE_MIRRORING (
         ROLE = WITNESS,
         AUTHENTICATION = CERTIFICATE dbm_certificate,
         ENCRYPTION = REQUIRED ALGORITHM AES
         );
 
-ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
+ALTER ENDPOINT [hadr_endpoint] STATE = STARTED;
 ```
 
 ### Create availability group
@@ -296,25 +285,21 @@ GO
 
 After successfully completing the previous steps, you can see an **ag1** availability group created and the three VMs are added as replica with one primary replica, one secondary replica, and 1 configuration-only replica. **ag1** contains one database.
 
-## Complete any steps required by your cluster manager
+## Deploy the SQL Server availability group workload (HPE Cluster Manager)
 
-After the availability group has been created, you may have to complete additional steps to enroll the availability group in the cluster manager high availability solution.
+In HPE Serviceguard, you need to deploy the SQL Server workload on availability group through Serviceguard cluster manager UI.
 
-For example, in HPE Serviceguard, you need to deploy the SQL Server workload on availability group through Serviceguard cluster manager UI.
+Deploy the availability group workload and enable high availability (HA), disaster recovery (DR) via Serviceguard cluster using the [Serviceguard manager graphical user interface](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Protect_your_alwayson_availability_group).
 
-Deploy the availability group workload and enable high availability (HA), disaster recovery (DR) via Serviceguard cluster using the [Serviceguard manager Graphical User Interface](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Protect_your_alwayson_availability_group)
-
-## Perform  automatic failover and join the node back to cluster
+## Perform automatic failover and join the node back to cluster
 
 For the automatic failover test, you can go ahead and bring down the primary replica (power off) this will replicate the sudden unavailability of the primary node. The expected behavior is:
 
 1. The cluster manager promotes one of the secondary replicas in the availability group to primary.
 2. The failed primary replica automatically joins the cluster after it is back up. The cluster manager promotes it to secondary replica.
 
-The exact procedure depends on the cluster manger. For example: [HPE Safeguard](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Test_the_setup_preparedness)
+[HPE Safeguard](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Test_the_setup_preparedness)
 
 ## Next steps
 
-To create an environment which also has a disaster recovery option available, see the cluster manager documentation. 
-
-For HPE Safeguard, see [Achieving disaster recovery protection using Serviceguard for Linux](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Achieve_DR_using_SGLX)
+[Achieving disaster recovery protection using Serviceguard for Linux](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Achieve_DR_using_SGLX)

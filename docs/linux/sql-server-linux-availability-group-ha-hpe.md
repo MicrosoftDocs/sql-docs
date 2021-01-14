@@ -1,7 +1,7 @@
 ---
-title: "Deploy availability group with third-party cluster - SQL Server on Linux"
+title: "Deploy availability group with HPE Serviceguard - SQL Server on Linux"
 description:  
-ms.date: 01/04/2020
+ms.date: 01/15/2021
 ms.prod: sql
 ms.technology: linux
 ms.topic: tutorial
@@ -10,42 +10,40 @@ ms.author: amitkh
 ms.reviewer: vanto
 ---
 
-# Tutorial - Setup a three node Always On availability group with third-party cluster manager 
+# Tutorial - Setup a three node Always On availability group with HPE Serviceguard for Linux 
 
-This tutorial explains how to configure SQL Server Always On availability group with a third-party cluster manager for on Linux running on an on-premises Virtual Machines (VMs).
+This tutorial explains how to configure SQL Server Always On availability group with HPE Serviceguard for Linux running on on-premises Virtual Machines (VMs).
 
-An example of a third-party cluster manager is HPE Serviceguard cluster. Please refer [HPE Serviceguard Clusters](https://h20195.www2.hpe.com/v2/GetPDF.aspx/c04154488.pdf) for an overview of the HPE Serviceguard clusters.
+Refer to [HPE Serviceguard Clusters](https://h20195.www2.hpe.com/v2/GetPDF.aspx/c04154488.pdf) for an overview of the HPE Serviceguard clusters.
 
 > [!NOTE]
-> Microsoft supports data movement, the availability group, and the SQL Server components. Support for the cluster and quorum management will be supported by cluster manager provider.
+> Microsoft supports data movement, the availability group, and the SQL Server components. Contact HPE for support related to the cluster and quorum management.
 
 This tutorial consists of the following tasks:
 
 > [!div class="checklist"]
 > * Install SQL Server on all the three VMs that will be part of the availability group
-> * Install the cluster manager on the VMs
-> * Create the cluster
+> * Install HPE Serviceguard on the VMs
+> * Create the HPE Serviceguard cluster
 > * Create the availability group and add a sample database to the availability group
-> * Deploy the SQL Server availability group through the cluster manager tools
+> * Deploy the SQL Server workload on the availability group through Serviceguard cluster manager
 > * Perform an automatic failover and join the node back to cluster
 
 ## Prerequisites
 
-* Three VMs in an on-premises environment, running the cluster manager on a supported linux distribution.
+* Three VMs in an on-premises environment, running HPE Serviceguard on a supported Linux distribution.
 
-   The cluster manager requirements specify the the supported linux distribution. For an example of a supported distribution, see [HPE Serviceguard](https://h20195.www2.hpe.com/v2/gethtml.aspx?docname=c04154488).
+   For an example of a supported distribution, see [HPE Serviceguard](https://h20195.www2.hpe.com/v2/gethtml.aspx?docname=c04154488).
 
-   Check with the cluster manager vendor for information about support for public cloud environments. 
-
-* An appropriate cluster manager.
+   Check with the HPE for information about support for public cloud environments.
 
    The instructions in this tutorial are validated against HPE Serviceguard for Linux. A trial edition is available for download from [HPE](https://www.hpe.com/us/en/resources/servers/serviceguard-linux-trial.html).
 
-* SQL Server database files are on a volume supported by the cluster manager.
+* SQL Server database files on logical volum mount (LVM) for all three virtual machines. See 
 
    Refer to the cluster manager documentation for information about storage requirements.
 
-    * [HPE](http://[https:/support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us)
+    * [HPE](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us)
 
 * Ensure that you have a OpenJDK java runtime installed on the VMs,
 

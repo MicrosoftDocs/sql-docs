@@ -30,7 +30,7 @@ ms.author: maghan
   
 ||  
 |-|  
-|**Note**: This stored procedure is deprecated in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. It is no longer needed, and cannot be used, starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
+|**Note**: This stored procedure is deprecated in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. It is no longer needed, and cannot be used, starting [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].|  
   
 ## Syntax  
   

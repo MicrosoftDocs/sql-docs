@@ -36,7 +36,7 @@ ms.author: chadam
 |-----|-----|--------|
 |[!INCLUDE[ssqlv15](../../includes/sssqlv15-md.md)]| 150| 15| 
 |[!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]| 140| 14| 
-|[!INCLUDE[ssqlv13](../../includes/sssql15-md.md)]| 130| 13 | 
+|[!INCLUDE[ssqlv13](../../includes/sssql16-md.md)]| 130| 13 | 
 |[!INCLUDE[ssqlv12](../../includes/sssql14-md.md)]  | 120|12 | 
 |[!INCLUDE[sssql11](../../includes/sssql11-md.md)] | 110|11 | 
   

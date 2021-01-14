@@ -2,7 +2,7 @@
 title: "Best practices with Query Store | Microsoft Docs"
 description: Learn best practices for using SQL Server Query Store with your workload, such as using the latest SQL Server Management Studio and Query Performance Insight.
 ms.custom: ""
-ms.date: "12/23/2020"
+ms.date: "1/7/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -67,7 +67,7 @@ The default parameters are good enough to start, but you should monitor how Quer
 
 While Query Store collects queries, execution plans, and statistics, its size in the database grows until this limit is reached. When that happens, Query Store automatically changes the operation mode to read-only and stops collecting new data, which means that your performance analysis is no longer accurate.
 
-The default value in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] is 100 MB. This size might not be sufficient if your workload generates a large number of different queries and plans or if you want to keep query history for a longer period of time. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the default value is 1 GB. Keep track of current space usage and increase the **Max Size (MB)** value to prevent Query Store from transitioning to read-only mode.
+The default value in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] is 100 MB. This size might not be sufficient if your workload generates a large number of different queries and plans or if you want to keep query history for a longer period of time. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the default value is 1 GB. Keep track of current space usage and increase the **Max Size (MB)** value to prevent Query Store from transitioning to read-only mode.
 
 > [!IMPORTANT]
 > The **Max Size (MB)** limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the **Data Flush Interval (Minutes)** option. If Query Store has breached the maximum size limit between storage size checks, it transitions to read-only mode. If **Size Based Cleanup Mode** is enabled, the cleanup mechanism to enforce the maximum size limit is also triggered.
@@ -127,7 +127,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 
 **Query Store Capture Mode**: Specifies the query capture policy for Query Store.
 
-- **All**: Captures all queries. This option is the default in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+- **All**: Captures all queries. This option is the default in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 - **Auto**: Infrequent queries and queries with insignificant compile and execution duration are ignored. Thresholds for execution count, compile, and runtime duration are internally determined. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], this is the default option.
 - **None**: Query Store stops capturing new queries.
 - **Custom**: Allows additional control and the capability to fine-tune the data collection policy. The new custom settings define what happens during the internal capture policy time threshold. This is a time boundary during which the configurable conditions are evaluated and, if any are true, the query is eligible to be captured by Query Store.
@@ -144,7 +144,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
 
 ### Examples
 
-The following example sets QUERY_CAPTURE_MODE to AUTO and sets other recommended options in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]:
+The following example sets QUERY_CAPTURE_MODE to AUTO and sets other recommended options in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]:
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
@@ -219,7 +219,7 @@ It takes some time until Query Store collects the data set that accurately repre
 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version|Execution metric|Statistic function|
 |----------------------|----------------------|------------------------|
-|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|CPU time, Duration, Execution count, Logical reads, Logical writes, Memory consumption, Physical reads, CLR time, Degree of parallelism (DOP), and Row count|Average, Maximum, Minimum, Standard Deviation, Total|
+|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]|CPU time, Duration, Execution count, Logical reads, Logical writes, Memory consumption, Physical reads, CLR time, Degree of parallelism (DOP), and Row count|Average, Maximum, Minimum, Standard Deviation, Total|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|CPU time, Duration, Execution count, Logical reads, Logical writes, Memory consumption, Physical reads, CLR time, Degree of parallelism, Row count, Log memory, TempDB memory, and Wait times|Average, Maximum, Minimum, Standard Deviation, Total|
 
 The following graphic shows how to locate Query Store views:
@@ -326,7 +326,7 @@ FROM sys.database_query_store_options;
 
 If the problem persists, it indicates that corruption of Query Store data is persisted on the disk.
 
-Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], Query Store can be recovered by executing the **sp_query_store_consistency_check** stored procedure within the affected database. Query Store must be disabled before you attempt the recovery operation. For [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you need to clear the data from Query Store as shown.
+Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], Query Store can be recovered by executing the **sp_query_store_consistency_check** stored procedure within the affected database. Query Store must be disabled before you attempt the recovery operation. For [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], you need to clear the data from Query Store as shown.
 
 If the recovery was unsuccessful, you can try clearing Query Store before you set the read-write mode.
 
@@ -352,7 +352,7 @@ Keep the most relevant data in Query Store. The following table describes typica
 
 |Query Store Capture Mode|Scenario|
 |------------------------|--------------|
-|**All**|Analyze your workload thoroughly in terms of all queries' shapes and their execution frequencies and other statistics.<br /><br /> Identify new queries in your workload.<br /><br /> Detect if ad-hoc queries are used to identify opportunities for user or auto parameterization.<br /><br />Note: This is the default capture mode in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
+|**All**|Analyze your workload thoroughly in terms of all queries' shapes and their execution frequencies and other statistics.<br /><br /> Identify new queries in your workload.<br /><br /> Detect if ad-hoc queries are used to identify opportunities for user or auto parameterization.<br /><br />Note: This is the default capture mode in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
 |**Auto**|Focus your attention on relevant and actionable queries. An example is those queries that execute regularly or that have significant resource consumption.<br /><br />Note: Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], this is the default capture mode.|
 |**None**|You've already captured the query set that you want to monitor in runtime and you want to eliminate the distractions that other queries might introduce.<br /><br /> None is suitable for testing and benchmarking environments.<br /><br /> None is also appropriate for software vendors who ship Query Store configuration configured to monitor their application workload.<br /><br /> None should be used with caution because you might miss the opportunity to track and optimize important new queries. Avoid using None unless you have a specific scenario that requires it.|
 |**Custom**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a Custom capture mode under the `ALTER DATABASE SET QUERY_STORE` command. When enabled, additional Query Store configurations are available under a new Query Store capture policy setting to fine-tune data collection in a specific server.<br /><br />The new custom settings define what happens during the internal capture policy time threshold. This is a time boundary during which the configurable conditions are evaluated and, if any are true, the query is eligible to be captured by Query Store. For more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|
@@ -425,10 +425,20 @@ The global trace flags 7745 and 7752 can be used to improve availability of data
 > Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], this behavior is controlled by the engine, and trace flag 7752 has no effect.
 
 > [!IMPORTANT]
-> If you're using Query Store for just-in-time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], plan to install the performance scalability improvements in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) as soon as possible. Without these improvements, when the database is under heavy workloads, spinlock contention may occur and server performance may become slow. In particular, you may see heavy contention on the `QUERY_STORE_ASYNC_PERSIST` spinlock or `SPL_QUERY_STORE_STATS_COOKIE_CACHE` spinlock. After this improvement is applied, Query Store will no longer cause spinlock contention.
+> If you're using Query Store for just-in-time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], plan to install the performance scalability improvements in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) as soon as possible. Without these improvements, when the database is under heavy workloads, spinlock contention may occur and server performance may become slow. In particular, you may see heavy contention on the `QUERY_STORE_ASYNC_PERSIST` spinlock or `SPL_QUERY_STORE_STATS_COOKIE_CACHE` spinlock. After this improvement is applied, Query Store will no longer cause spinlock contention.
 
 > [!IMPORTANT]
-> If you're using Query Store for just-in-time workload insights in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), plan to install the performance scalability improvement in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU15, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22, and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU8 as soon as possible. Without this improvement, when the database is under heavy ad-hoc workloads, the Query Store may use a large amount of memory and server performance may become slow. After this improvement is applied, Query Store imposes internal limits to the amount of memory its various components can use, and can automatically change the operation mode to read-only until enough memory has been returned to the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Note that Query Store internal memory limits are not documented because they are subject to change.  
+> If you're using Query Store for just-in-time workload insights in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), plan to install the performance scalability improvement in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU15, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22, and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU8 as soon as possible. Without this improvement, when the database is under heavy ad-hoc workloads, the Query Store may use a large amount of memory and server performance may become slow. After this improvement is applied, Query Store imposes internal limits to the amount of memory its various components can use, and can automatically change the operation mode to read-only until enough memory has been returned to the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Note that Query Store internal memory limits are not documented because they are subject to change.  
+
+
+## <a name="geosyncreplicas"></a> Using Query Store in Azure SQL Database active geo-replication
+
+Query Store on a secondary active geo-replica of Azure SQL Database will be a read-only copy of the activity on the primary replica. 
+
+Avoid mismatched tiers of Azure SQL Databases participating in geo-replication. A secondary database should be at or near the same compute size of the primary database, and in the same service tier of the primary database. Look for the HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO wait type in [sys.dm_db_wait_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database) which indicates transaction log rate throttling on the primary replica due to secondary lag.
+
+For more on estimating and configuring the size of the secondary Azure SQL database of active geo-replication, see [Configuring secondary database](/azure/azure-sql/database/active-geo-replication-overview#configuring-secondary-database).
+
 
 ## See also
 

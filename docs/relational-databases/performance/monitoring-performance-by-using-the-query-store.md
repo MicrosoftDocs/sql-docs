@@ -25,7 +25,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store featur
 For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Operating the Query Store in Azure SQL Database](best-practice-with-the-query-store.md#Insight).
 
 > [!IMPORTANT]
-> If you are using Query Store for just in time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible.
+> If you are using Query Store for just in time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible.
 
 ## <a name="Enabling"></a> Enabling the Query Store
 

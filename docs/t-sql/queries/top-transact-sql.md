@@ -26,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # TOP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Limits the rows returned in a query result set to a specified number of rows or percentage of rows in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. When you use TOP with the ORDER BY clause, the result set is limited to the first *N* number of ordered rows. Otherwise, TOP returns the first *N* number of rows in an undefined order. Use this clause to specify the number of rows returned from a SELECT statement. Or, use TOP to specify the rows affected by an INSERT, UPDATE, MERGE, or DELETE statement.  
+Limits the rows returned in a query result set to a specified number of rows or percentage of rows in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. When you use TOP with the ORDER BY clause, the result set is limited to the first *N* number of ordered rows. Otherwise, TOP returns the first *N* number of rows in an undefined order. Use this clause to specify the number of rows returned from a SELECT statement. Or, use TOP to specify the rows affected by an INSERT, UPDATE, MERGE, or DELETE statement.  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

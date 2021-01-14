@@ -19,7 +19,7 @@ ms.author: maghan
 # Configure the user options Server Configuration Option
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  This topic describes how to configure the **user options** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **user options** option specifies global defaults for all users. A list of default query processing options is established for the duration of a user's work session. The **user options** option allows you to change the default values of the SET options (if the server's default settings are not appropriate).  
+  This topic describes how to configure the **user options** server configuration option in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **user options** option specifies global defaults for all users. A list of default query processing options is established for the duration of a user's work session. The **user options** option allows you to change the default values of the SET options (if the server's default settings are not appropriate).  
   
  A user can override these defaults by using the SET statement. You can configure **user options** dynamically for new logins. After you change the setting of **user options**, new login sessions use the new setting; current login sessions are not affected.  
   

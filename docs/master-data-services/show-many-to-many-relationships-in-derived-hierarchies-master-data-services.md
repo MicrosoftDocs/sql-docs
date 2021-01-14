@@ -25,7 +25,7 @@ ms.author: lle
   
  In the above example, there is an M2M relationship between the **Employee** and **TrainingClass** entities, provided by the mapping entity **ClassRegistration**. An employee may be registered as a student in multiple classes, and each class may contain multiple students.  
   
- Previously, Derived Hierarchies could not model M2M relationships. Beginning with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], you can now create a Derived Hierarchy that displays, for example, students by class, or invert the relationship and show classes grouped by student.  
+ Previously, Derived Hierarchies could not model M2M relationships. Beginning with [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)], you can now create a Derived Hierarchy that displays, for example, students by class, or invert the relationship and show classes grouped by student.  
   
  First, go to the Derived Hierarchy management page and create a new Derived Hierarchy:  
   
@@ -37,7 +37,7 @@ ms.author: lle
   
  In the above screenshot, note that the **Employee** entity appears under **Current Levels** in the middle as the only level. The Derived Hierarchy **Preview** on the right simply shows a list of all members of the **Employee** entity. The **Available Levels** section on the left shows what levels may be added on top of the current top level (**Employee**). Most of these are domain-based attributes (DBAs) on the **Employee** entity, including the **Department** DBA.  
   
- Beginning with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], there is a new type of level that models M2M relationships, for example: **Class (mapped via ClassRegistration.Student)**. The level name is more verbose than the others to reflect the extra information needed to unambiguously describe the mapping relationship. Drag and drop this level to the **Employee** level in the **Current Levels** section:  
+ Beginning with [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)], there is a new type of level that models M2M relationships, for example: **Class (mapped via ClassRegistration.Student)**. The level name is more verbose than the others to reflect the extra information needed to unambiguously describe the mapping relationship. Drag and drop this level to the **Employee** level in the **Current Levels** section:  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   

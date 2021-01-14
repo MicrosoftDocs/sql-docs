@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 # PERCENT_RANK (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  Calculates the relative rank of a row within a group of rows in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Use PERCENT_RANK to evaluate the relative standing of a value within a query result set or partition. PERCENT_RANK is similar to the CUME_DIST function.  
+  Calculates the relative rank of a row within a group of rows in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Use PERCENT_RANK to evaluate the relative standing of a value within a query result set or partition. PERCENT_RANK is similar to the CUME_DIST function.  
   
 ## Syntax  
   

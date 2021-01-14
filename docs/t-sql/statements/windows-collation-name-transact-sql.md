@@ -128,7 +128,7 @@ To list the Windows collations supported by your instance of [!INCLUDE[ssNoVersi
 SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 ```
 
-The following table lists all Windows collations supported in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+The following table lists all Windows collations supported in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
 
 |Windows locale|Collation Version 100|Collation Version 90|
 |--------------------|---------------------------|--------------------------|

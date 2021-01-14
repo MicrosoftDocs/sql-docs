@@ -129,7 +129,7 @@ Use `DATENAME` in the following clauses:
 + SELECT \<list>
 + WHERE
   
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], DATENAME implicitly casts string literals as a **datetime2** type. In other words, `DATENAME` does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
+In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], DATENAME implicitly casts string literals as a **datetime2** type. In other words, `DATENAME` does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
   
 ## Examples  
 This example returns the date parts for the specified date. Substitute a *datepart* value from the table for the `datepart` argument in the SELECT statement:

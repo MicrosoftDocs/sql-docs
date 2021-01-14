@@ -36,7 +36,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  Checks the current identity value for the specified table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and, if it's needed, changes the identity value. You can also use DBCC CHECKIDENT to manually set a new current identity value for the identity column.  
+  Checks the current identity value for the specified table in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and, if it's needed, changes the identity value. You can also use DBCC CHECKIDENT to manually set a new current identity value for the identity column.  
   
  ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -213,7 +213,7 @@ GO
 ### E. Import from an external table created with PolyBase  
  Import data from Hadoop or Azure Storage into SQL Server for persistent storage. Use `SELECT INTO` to import data referenced by an external table for persistent storage in SQL Server. Create a relational table on-the-fly and then create a column-store index on top of the table in a second step.  
   
- **Applies to:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to:** [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  

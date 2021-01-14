@@ -20,7 +20,7 @@ ms.author: "sstein"
 # Attach a Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This topic describes how to attach a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You can use this feature to copy, move, or upgrade a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+This topic describes how to attach a database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You can use this feature to copy, move, or upgrade a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   
@@ -140,7 +140,7 @@ Requires `CREATE DATABASE`, `CREATE ANY DATABASE`, or `ALTER ANY DATABASE` permi
 ##  <a name="FollowUp"></a> Follow Up: After Upgrading a SQL Server Database  
 After you upgrade a database by using the attach method, the database becomes available immediately and is automatically upgraded. If the database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **Full-Text Upgrade Option** server property. If the upgrade option is set to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending the amount of data being indexed, importing can take several hours, and rebuilding can take up to ten times longer. Note also that when the upgrade option is set to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt.  
   
-If the compatibility level of a user database is 100 or higher before upgrade, it remains the same after upgrade. If the compatibility level is 90 before upgrade, in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+If the compatibility level of a user database is 100 or higher before upgrade, it remains the same after upgrade. If the compatibility level is 90 before upgrade, in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]
 > If you are attaching a database from an instance running [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or below which had Change Data Capture (CDC) enabled, you will also need to execute the command below to upgrade the Change Data Capture (CDC) metadata.

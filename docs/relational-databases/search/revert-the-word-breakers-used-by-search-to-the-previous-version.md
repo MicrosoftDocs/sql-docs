@@ -15,7 +15,7 @@ ms.custom: "seo-lt-2019"
 ---
 # Revert word breakers used by Search to previous version (SQL Server Search)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installs and enables a version of the word breakers and stemmers for all languages supported by Full-Text Search with the exception of Korean. This article describes how to switch from this version of these components to the previous version, or to switch back from the previous version to the new version.  
+  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] installs and enables a version of the word breakers and stemmers for all languages supported by Full-Text Search with the exception of Korean. This article describes how to switch from this version of these components to the previous version, or to switch back from the previous version to the new version.  
   
  This article does not discuss the following languages:  
   
@@ -36,7 +36,7 @@ ms.custom: "seo-lt-2019"
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
 |NaturalLanguage6.dll|NaturalLanguage6.dll|34|Obtain and install a previous version of NaturalLanguage6.dll, overwriting the current version of the file.|No action required.<br /><br /> The registry keys and values have not changed for this release.|  
 |(Other file name)|NaturalLanguage6.dll|5|Obtain and install a previous version of NaturalLanguage6.dll, overwriting the current version of the file.|Change a set of registry entries to specify the previous version of the components.|  
-|(Other file name)|(Other file name)|6|No action required.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] setup copies both the current and the previous versions of the components to the Binn folder.|Change a set of registry entries to specify the previous version of the components.|  
+|(Other file name)|(Other file name)|6|No action required.<br /><br /> [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] setup copies both the current and the previous versions of the components to the Binn folder.|Change a set of registry entries to specify the previous version of the components.|  
   
 > [!WARNING]  
 >  If you replace the current version of the file NaturalLanguage6.dll with a different version, then the behavior of all the languages that use this file is affected.  
@@ -96,9 +96,9 @@ ms.custom: "seo-lt-2019"
   
 1.  Navigate to the Binn folder described above.  
   
-2.  Back up the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of NaturalLanguage6.dll to another location.  
+2.  Back up the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] version of NaturalLanguage6.dll to another location.  
   
-3.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] into the Binn folder of the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance.  
+3.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] into the Binn folder of the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance.  
   
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
@@ -107,9 +107,9 @@ ms.custom: "seo-lt-2019"
 
 ###  <a name="nl6nl6restore"></a> To restore the current components  
   
-1.  Navigate to the location where you backed up the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of NaturalLanguage6.dll.  
+1.  Navigate to the location where you backed up the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] version of NaturalLanguage6.dll.  
   
-2.  Copy the current version of NaturalLanguage6.dll from the backup location into the Binn folder of the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance.  
+2.  Copy the current version of NaturalLanguage6.dll from the backup location into the Binn folder of the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance.  
   
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
@@ -142,9 +142,9 @@ ms.custom: "seo-lt-2019"
   
 2.  Do not remove the files for the current version of the components from the Binn folder.  
   
-3.  Back up the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of NaturalLanguage6.dll to another location.  
+3.  Back up the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] version of NaturalLanguage6.dll to another location.  
   
-4.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] into the Binn folder of the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance.  
+4.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] into the Binn folder of the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance.  
   
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
@@ -171,9 +171,9 @@ ms.custom: "seo-lt-2019"
   
 ###  <a name="newnl6restore"></a> To restore the current components  
   
-1.  Navigate to the location where you backed up the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of NaturalLanguage6.dll.  
+1.  Navigate to the location where you backed up the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] version of NaturalLanguage6.dll.  
   
-2.  Copy the current version of NaturalLanguage6.dll from the backup location into the Binn folder of the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance.  
+2.  Copy the current version of NaturalLanguage6.dll from the backup location into the Binn folder of the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance.  
   
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
@@ -249,7 +249,7 @@ ms.custom: "seo-lt-2019"
 |Current file name|MsWb7.dll|MsWb7.dll|  
   
 ##  <a name="newnew"></a> Languages for which neither the previous nor the current file name is NaturalLanguage6.dll  
- For the languages in the following table, the file names of the previous word breakers and stemmers are different from the file names of the new versions. Neither the previous nor the current file name is NaturalLanguage6.dll. You do not have to replace any files, because [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] setup copies both the current and the previous versions of the components to the Binn folder. However you have to change a set of registry entries to specify the previous or current version of the components.  
+ For the languages in the following table, the file names of the previous word breakers and stemmers are different from the file names of the new versions. Neither the previous nor the current file name is NaturalLanguage6.dll. You do not have to replace any files, because [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] setup copies both the current and the previous versions of the components to the Binn folder. However you have to change a set of registry entries to specify the previous or current version of the components.  
   
  **List of affected languages**  
   

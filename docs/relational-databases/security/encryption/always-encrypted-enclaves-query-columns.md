@@ -81,7 +81,7 @@ Make sure you run your statements from a query window that uses a connection tha
 1. In the **Connect to Server** dialog, specify your server name, select an authentication method, and specify your credentials.
 2. Click **Options >>** and select the **Always Encrypted** tab.
 3. Select the **Enable Always Encrypted (column encryption)** checkbox and specify your enclave attestation URL. For example, `https://hgs.bastion.local/Attestation` or `https://contososqlattestation.uks.attest.azure.net/attest/SgxEnclave`.
-
+ 
     ![Connect to server with attestation using SSMS](./media/always-encrypted-enclaves/column-encryption-setting.png)
 
 4. Select **Connect**.

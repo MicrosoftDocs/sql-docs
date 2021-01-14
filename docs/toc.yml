@@ -9945,7 +9945,7 @@
       - name: SQL Server 2017
         href: linux/sql-server-linux-editions-and-components-2017.md
     - name: FAQ
-      href: linux/sql-server-linux-faq.md
+      href: linux/sql-server-linux-faq.yml
   - name: Quickstarts
     items:
     - name: Install & Connect - Red Hat

@@ -8685,9 +8685,6 @@
             href: ssms/scripting/generate-and-publish-scripts-wizard.md
           - name: Objects Supported by the Generate Scripts Wizard
             href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
-        - name: Query & Text Editors
-          href: ./ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15
-          items:
           - name: XML Editor
             href: ssms/scripting/xml-editor-sql-server-management-studio.md
           - name: Color Coding in Query Editors
@@ -9107,8 +9104,6 @@
         items:
         - name: Query & Text Editors
           href: /previous-versions/sql/sql-server-2012/ms173477(v=sql.110)?redirectedfrom=MSDN
-        - name: Database Engine Query Editor
-          href: ./ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
         - name: XML Editor
           href: ssms/scripting/xml-editor-sql-server-management-studio.md
         - name: Configure Editors
@@ -9227,6 +9222,8 @@
           href: ssms/menu-help/options-environment-fonts-and-colors-page.md
         - name: Options (Environment - Help - General Page)
           href: ssms/menu-help/options-environment-help-general-page.md
+        - name: Options (Query Execution options - Help - General Page)
+          href: ssms/menu-help/options-query-execution.md
         - name: External Tools
           href: ssms/menu-help/external-tools.md
         - name: Customize (Commands Page)

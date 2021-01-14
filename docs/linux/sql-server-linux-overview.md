@@ -82,7 +82,7 @@ Then look at what's new:
 - [What's new for SQL Server 2019 on Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)
 
 > [!TIP]
-> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).
+> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 

@@ -383,4 +383,4 @@ To get started, see the following quickstarts:
 - [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [Run & Connect - Cloud](quickstart-install-connect-clouds.md)
 
-For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).
+For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).

@@ -40,7 +40,7 @@ The following table lists the release history for [!INCLUDE[ssSQL17](../includes
 
 | Release               | Version       | Release date |
 |-----------------------|---------------|--------------|
-| [CU22-GDR](#CU22)         | 14.0.3370.1  | 2021-01-13   |
+| [CU22-GDR](#CU22)         | 14.0.3370.1  | 2021-01-12 |
 | [CU22](#CU22)         | 14.0.3356.20  | 2020-09-10   |
 | [CU21](#CU21)         | 14.0.3335.7   | 2020-07-01   |
 | [CU20](#CU20)         | 14.0.3294.2   | 2020-04-10   |

@@ -94,7 +94,7 @@ sudo firewall-cmd --reload 
 
 Follow the instructions below to configure and create the HPE Serviceguard cluster. In this step we will also be configuring the quorum server.
 
-1. [Configure the Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_QS). Please refer to the "Configure_QS" section.
+1. [Configure the Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_QS). Refer to the **Configure_QS** section.
 2. [Configure and create Serviceguard cluster on the other two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_and_create_cluster). Please refer to the "Configure_and_create_Cluster" section.
 2. [Configure and create Serviceguard cluster on the other two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_and_create_cluster). Refer to the **Configure_and_create_Cluster** section.
 ## Create the availability group and add a sample database

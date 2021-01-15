@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "External, file format"
   - "PolyBase, external file format"
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL FILE FORMAT (Transact-SQL)

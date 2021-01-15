@@ -179,7 +179,7 @@ dta -d AdventureWorks2012 ...
 [Columnstore index recommendations in Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later.|  
 
   
  **-fk** _keep_existing_option_  
@@ -218,7 +218,7 @@ dta -d AdventureWorks2012 ...
  [Tuning Database Using Workload from Query Store](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) for more information.
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later.|  
      
  **-if** _workload_file_  
  Specifies the path and name of the workload file to use as input for tuning. The file must be in one of these formats: .trc (SQL Server Profiler trace file), .sql (SQL file), or .log ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace file). Either one workload file or one workload table must be specified.  
@@ -277,7 +277,7 @@ dta -iq -I 48
 In this case, DTA will use Query Store as the source of workload and only consider queries that have executed with the past 48 hours.  
   ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later.|  
 
 
   

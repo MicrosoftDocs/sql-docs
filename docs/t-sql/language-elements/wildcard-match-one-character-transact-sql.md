@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "wildcard characters [SQL Server]"
   - "_ (wildcard - match one character)"
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # _ (Wildcard - Match One Character) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

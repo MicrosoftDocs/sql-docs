@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.syscomments compatibility view"
   - "syscomments system table"
 ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.syscomments (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

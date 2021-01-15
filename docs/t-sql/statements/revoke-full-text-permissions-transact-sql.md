@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "full-text catalogs [SQL Server], permissions"
   - "full-text stoplist [SQL Server], permissions"
 ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # REVOKE Full-Text Permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

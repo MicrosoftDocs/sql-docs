@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "syspermissions system table"
   - "sys.syspermissions compatibility view"
 ms.assetid: ba9a9a88-55d2-41a7-b09b-342e8b9a54c5
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.syspermissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

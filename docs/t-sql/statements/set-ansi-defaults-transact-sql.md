@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ANSI_DEFAULTS option"
   - "SET ANSI_DEFAULTS statement"
 ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ANSI_DEFAULTS (Transact-SQL)

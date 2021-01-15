@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "fn_all_changes_<capture_instance>"
   - "sys.fn_all_changes_<capture_instance>"
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

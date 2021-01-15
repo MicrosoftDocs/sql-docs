@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "line continuation character"
   - "reverse solidus"
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # Backslash (Line Continuation) (Transact-SQL)
 

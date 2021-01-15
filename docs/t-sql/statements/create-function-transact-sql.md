@@ -39,8 +39,8 @@ helpviewer_keywords:
   - "TVF"
   - "functions [SQL Server], invoking"
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE FUNCTION (Transact-SQL)
 
@@ -265,12 +265,12 @@ RETURNS return_data_type
 ## Arguments
 
 *OR ALTER*
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Conditionally alters the function only if it already exists.
 
 > [!NOTE]
-> Optional [OR ALTER] syntax for CLR is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU1.
+> Optional [OR ALTER] syntax for CLR is available starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU1.
 
 *schema_name*
 Is the name of the schema to which the user-defined function belongs.

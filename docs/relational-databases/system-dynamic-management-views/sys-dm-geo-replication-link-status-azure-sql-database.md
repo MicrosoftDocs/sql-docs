@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "sys.dm_geo_replication_link_status dynamic management view"
 
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "= azuresqldb-current"
 ms.custom: seo-dt-2019
 ---

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ALTER BROKER PRIORITY statement"
   - "ssbdiagnose"
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

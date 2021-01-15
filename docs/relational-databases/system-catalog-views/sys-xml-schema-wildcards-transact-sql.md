@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_wildcards catalog view"
 ms.assetid: 7cedfe9a-e99e-4777-8a28-98674b6e5cff
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.xml_schema_wildcards (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -105,7 +105,7 @@ After the degree of index fragmentation is known, use the following table to det
 |**computed fragmentation in percent** value|Applies to version|Corrective statement|
 |-----------------------------------------------|--------------------------|--------------------------|
 |> = 20%|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|ALTER INDEX REBUILD|
-|> = 20%|Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|ALTER INDEX REORGANIZE|
+|> = 20%|Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]|ALTER INDEX REORGANIZE|
 
 ### To check the fragmentation of a rowstore index using [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
@@ -229,7 +229,7 @@ Rebuilding an index drops and re-creates the index. Depending on the type of ind
 - For  [columnstore indexes](columnstore-indexes-overview.md), rebuilding removes fragmentation, moves all rows into the columnstore, and reclaims disk space by physically deleting rows that have been logically deleted from the table. 
   
   > [!TIP]
-  > Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], rebuilding the columnstore index is usually not needed since `REORGANIZE` performs the essentials of a rebuild in the background as an online operation. 
+  > Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], rebuilding the columnstore index is usually not needed since `REORGANIZE` performs the essentials of a rebuild in the background as an online operation. 
   
   For syntax examples, see [Examples: ColumnStore rebuild](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
 
@@ -378,7 +378,7 @@ Rebuilding a partition after loading date ensures all data is stored in the colu
 
 ## Considerations specific to reorganizing a columnstore index
 
-When reorganizing a columnstore index, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] compresses each CLOSED delta rowgroup into the columnstore as a compressed rowgroup. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the `REORGANIZE` command performs the following additional defragmentation optimizations online:
+When reorganizing a columnstore index, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] compresses each CLOSED delta rowgroup into the columnstore as a compressed rowgroup. Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the `REORGANIZE` command performs the following additional defragmentation optimizations online:
 
 - Physically removes rows from a rowgroup when 10% or more of the rows have been logically deleted. The deleted bytes are reclaimed on the physical media. For example, if a compressed row group of 1 million rows has 100K rows deleted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will remove the deleted rows and recompress the rowgroup with 900k rows. It saves on the storage by removing deleted rows.
 

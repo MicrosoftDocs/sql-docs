@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_types catalog view"
 ms.assetid: 441ba49d-f778-4fa1-98c4-ced375a01a34
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.xml_schema_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

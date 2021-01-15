@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_memory_cache_entries dynamic management view"
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_os_memory_cache_entries (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

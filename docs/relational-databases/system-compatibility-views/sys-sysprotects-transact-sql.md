@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.sysprotects compatibility view"
   - "sysprotects system table"
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysprotects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

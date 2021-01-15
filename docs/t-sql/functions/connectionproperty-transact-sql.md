@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CONNECTIONPROPERTY statement"
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # CONNECTIONPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "index creation [SQL Server], XML indexes"
   - "XML indexes [SQL Server], creating"
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "08/10/2017"

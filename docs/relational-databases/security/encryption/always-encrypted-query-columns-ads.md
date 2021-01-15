@@ -2,7 +2,7 @@
 description: "Query columns using Always Encrypted with Azure Data Studio"
 title: "Query columns using Always Encrypted with Azure Data Studio | Microsoft Docs"
 ms.custom: ""
-ms.date: 5/19/2020
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -79,6 +79,7 @@ In addition to the above permissions, to decrypt any query results or to encrypt
 For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ## Enabling and disabling Always Encrypted for a database connection   
+
 When you connect to a database in Azure Data Studio, you can either enable or disable Always Encrypted for the database connection. By default, Always Encrypted is disabled. 
 
 Enabling Always Encrypted for a database connection instructs the [Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md), used by Azure Data Studio, to attempt to transparently:   
@@ -94,10 +95,11 @@ You can enable or disable Always Encrypted when you connect to a database. For g
 To enable (disable) Always Encrypted:
 1. In the **Connection** dialog, click **Advanced...**.
 2. To enable Always Encrypted for the connection, set the **Always Encrypted** field to **Enabled**. To disable Always Encrypted, either leave the value of the **Always Encrypted** field blank or set it to **Disabled**.
-3. If you're using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can specify an enclave protocol and enclave attestation url. If your SQL Server instance doesn't use a secure enclave, make sure you leave the **Attestation Protocol** and **Enclave Attestation URL** fields blank. For more information, see [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
-4. Click **OK** to close **Advanced Properties**.
+3. Click **OK** to close **Advanced Properties**.
 
 ![Short video showing the steps to enable Always Encrypted for the connection.](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
+
+To run statements that leverage a server-side secure enclave when you're using [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), you need to specify an enclave attestation protocol and an enclave attestation URL, in addition to enabling Always Encrypted for the connection. For detailed information, see [Prerequisites for running T-SQL statements using enclaves in Azure Data Studio](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-t-sql-statements-using-enclaves-in-azure-data-studio).
 
 > [!TIP]
 > To toggle between Always Encrypted being enabled and disabled for an existing query window, click **Disconnect** and then click **Connnect** and complete the above steps to reconnect to your database with the desired values of the **Always Encrypted** field. 

@@ -2,7 +2,7 @@
 title: "Configure the enclave type for Always Encrypted Server Configuration Option | Microsoft Docs"
 description: Find out how to enable or disable a secure enclave for Always Encrypted. Learn how to confirm whether an enclave has been correctly initialized.
 ms.custom: ""
-ms.date: "09/24/2018"
+ms.date: "01/15/2021"
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""
@@ -16,7 +16,7 @@ monikerRange: ">= sql-server-ver15"
 
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-This article describes how to enable or disable a secure enclave for Always Encrypted with secure enclaves. For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+This article describes how to enable or disable a secure enclave for Always Encrypted with secure enclaves. For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) and [Configure the secure enclave in SQL Server](../../relational-databases/security/encryption/always-encrypted-enclaves-configure-enclave-type.md).
 
 The **column encryption enclave type** Server Configuration Option controls the type of a secure enclave used for Always Encrypted. The option can be set to one of the following values:  
   

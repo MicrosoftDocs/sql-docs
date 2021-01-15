@@ -17,7 +17,8 @@ This tutorial explains how to configure SQL Server Always On availability group 
 Refer to [HPE Serviceguard Clusters](https://h20195.www2.hpe.com/v2/GetPDF.aspx/c04154488.pdf) for an overview of the HPE Serviceguard clusters.
 
 > [!NOTE]
-> Microsoft supports data movement, the availability group, and the SQL Server components. Contact HPE for support related to the documentation HPE Serviceguard cluster and quorum management.
+> Microsoft supports data movement, the availability group, and the SQL Server components. Contact HPE for support related to the documentation of HPE Serviceguard cluster and quorum management.
+
 This tutorial consists of the following tasks:
 
 > [!div class="checklist"]
@@ -46,10 +47,6 @@ This tutorial consists of the following tasks:
    > IBM java sdk is not supported.
 
 ## Install SQL Server
-
-Install SQL Server on all the three VMs that are going to be part of the Availability Group (AG).
-
-### SLES & support SQL OS link
 
 On all the three VMs, please follow one of the below steps based on the Linux distribution that you choose for this tutorial, to install SQL Server and tools.
 
@@ -80,8 +77,8 @@ To install Serviceguard, use the `cminstaller` method. Specific instructions are
 Serviceguard cluster and Serviceguard Quorum server
 
 * [Install Serviceguard for Linux on two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Install_serviceguard_using_cminstaller). Refer to the section **Install_serviceguard_using_cminstaller**.
-* [Install Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Install_QS_from_the_ISO). Please refer to the section "Install_QS_from_the_ISO".
 * [Install Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Install_QS_from_the_ISO). Refer to the section **Install_QS_from_the_ISO**.
+
 After you complete the installation of the HPE Serviceguard cluster, you can enable cluster management portal on TCP port 5522 on the primary replica node. The steps below add a rule to the firewall to allow 5522, the command below is for a RHEL distribution, you need to run similar commands for other distributions:
 
 ```console
@@ -95,8 +92,8 @@ sudo firewall-cmd --reload 
 Follow the instructions below to configure and create the HPE Serviceguard cluster. In this step we will also be configuring the quorum server.
 
 1. [Configure the Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_QS). Refer to the **Configure_QS** section.
-2. [Configure and create Serviceguard cluster on the other two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_and_create_cluster). Please refer to the "Configure_and_create_Cluster" section.
 2. [Configure and create Serviceguard cluster on the other two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_and_create_cluster). Refer to the **Configure_and_create_Cluster** section.
+
 ## Create the availability group and add a sample database
 
 In this step, create an availability group with two (or more) synchronous replicas and a configuration only replica, which provides data protection and may also provide high availability. The following diagram represents this architecture:
@@ -295,8 +292,8 @@ For the automatic failover test, you can go ahead and bring down the primary rep
 1. The cluster manager promotes one of the secondary replicas in the availability group to primary.
 2. The failed primary replica automatically joins the cluster after it is back up. The cluster manager promotes it to secondary replica.
 
-For HPE Servicguard, refer to the section [**Testing the setup for failover readiness**](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Test_the_setup_preparedness)
+For HPE Serviceguard, refer to the section [**Testing the setup for failover readiness**](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Test_the_setup_preparedness)
 
 ## Next steps
 
-Learn more about Always On [Always On Availability Groups on Linux](sql-server-linux-availability-group-overview.md).
+Learn more about Always On [Availability Groups on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-availability-group-overview?view=sql-server-ver15)

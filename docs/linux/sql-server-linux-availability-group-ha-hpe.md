@@ -250,7 +250,7 @@ CREATE AVAILABILITY GROUP [ag1]
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 ```
 
-### join the secondary replicas
+### Join the Secondary replicas
 
 Run the commands below on all the secondary replicas. These commands join the secondary replicas to the "ag1" availability group with the primary replica, and provide create database access to the ag1 availability group.
 

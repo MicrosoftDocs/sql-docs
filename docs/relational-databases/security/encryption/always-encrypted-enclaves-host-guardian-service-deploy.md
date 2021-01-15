@@ -2,7 +2,7 @@
 title: "Deploy Host Guardian Service"
 description: "Deploy the Host Guardian Service for Always Encrypted with Secure Enclaves."
 ms.custom: ""
-ms.date: "12/09/2020"
+ms.date: "01/15/2021"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security

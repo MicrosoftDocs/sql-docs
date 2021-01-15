@@ -2,7 +2,7 @@
 title: "Configure and use Always Encrypted with secure enclaves| Microsoft Docs"
 description: Learn how to configure and use Always Encrypted with secure enclaves in SQL Server and Azure SQL Database, which enables richer functionality on sensitive data.
 ms.custom: ""
-ms.date: 12/09/2020
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"

@@ -2,7 +2,7 @@
 title: "Always Encrypted with .NET Framework Data Provider"
 description: Learn how to develop .NET applications using the Always Encrypted feature for SQL Server. 
 ms.custom: seo-lt-2019
-ms.date: "10/31/2019"
+ms.date: "01/15/2021"
 ms.prod: sql
 ms.prod_service: "security, sql-database"
 ms.reviewer: vanto
@@ -71,7 +71,7 @@ To configure your application:
 
     For detailed instructions for how to edit your application configuration, see [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md).
 
-4. Set the `Enclave Attestation URL` keyword in your database connection srting to an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
+4. Set the `Enclave Attestation URL` keyword in your database connection string to an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
    1. If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
    2. If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
 
@@ -309,7 +309,7 @@ You do not need to make any application code changes to use these providers but 
 
 ### Using Azure Key Vault provider
 
-Azure Key Vault is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The .NET Framework Data Provider for SQL Server does not include a built-in column master key store provider for Azure Key Vault, but it is available as a Nuget package, that you can easily integrate with your application. For details, see [Always Encrypted - Protect sensitive data in SQL Database with data encryption and store your encryption keys in the Azure Key Vault](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
+Azure Key Vault is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The .NET Framework Data Provider for SQL Server does not include a built-in column master key store provider for Azure Key Vault, but it is available as a NuGet package, that you can easily integrate with your application. For details, see [Always Encrypted - Protect sensitive data in SQL Database with data encryption and store your encryption keys in the Azure Key Vault](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
 
 ### Implementing a custom column master key store provider
 

@@ -2,7 +2,7 @@
 title: "Configure the secure enclave in SQL Server"
 description: "Configure the secure enclave for Always Encrypted with secure enclaves in SQL Server."
 ms.custom: ""
-ms.date: 12/09/2020
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"

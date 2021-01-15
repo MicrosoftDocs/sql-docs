@@ -2,7 +2,7 @@
 title: "Troubleshoot common issues for Always Encrypted with secure enclaves"
 description: "Troubleshoot common issues for Always Encrypted with secure enclaves"
 ms.custom: ""
-ms.date: 12/09/2020
+ms.date: 01/15/2021
 ms.reviewer: vanto
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -2,7 +2,7 @@
 description: "Provision enclave-enabled keys"
 title: "Provision enclave-enabled keys | Microsoft Docs"
 ms.custom: ""
-ms.date: 12/09/2020
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.prod_service: "database-engine, sql-database"

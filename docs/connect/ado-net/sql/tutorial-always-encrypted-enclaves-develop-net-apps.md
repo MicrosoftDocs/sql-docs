@@ -2,7 +2,7 @@
 description: "Tutorial: Develop a .NET application using Always Encrypted with secure enclaves"
 title: "Tutorial: Develop a .NET application using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
-ms.date: 12/09/2020
+ms.date: 01/15/2021
 ms.reviewer: v-kaywon
 ms.prod: sql
 ms.prod_service: connectivity

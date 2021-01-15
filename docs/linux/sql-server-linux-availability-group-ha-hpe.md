@@ -296,4 +296,4 @@ For HPE Serviceguard, refer to the section [**Testing the setup for failover rea
 
 ## Next steps
 
-Learn more about Always On [Availability Groups on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-availability-group-overview?view=sql-server-ver15)
+Learn more about Always On [Availability Groups on Linux](sql-server-linux-availability-group-overview.md).

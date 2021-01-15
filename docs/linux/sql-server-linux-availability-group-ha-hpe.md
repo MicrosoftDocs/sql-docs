@@ -17,7 +17,7 @@ This tutorial explains how to configure SQL Server Always On availability group 
 Refer to [HPE Serviceguard Clusters](https://h20195.www2.hpe.com/v2/GetPDF.aspx/c04154488.pdf) for an overview of the HPE Serviceguard clusters.
 
 > [!NOTE]
-> Microsoft supports data movement, the availability group, and the SQL Server components. Contact HPE for support related to the cluster and quorum management.
+> Microsoft supports data movement, the availability group, and the SQL Server components. Please contact HPE for support related to the documentation related to the HPE Serviceguard, the HPE Serviceguard cluster and quorum management.
 
 This tutorial consists of the following tasks:
 
@@ -80,8 +80,8 @@ To install Serviceguard, use the `cminstaller` method. Specific instructions are
 
 Serviceguard cluster and Serviceguard Quorum server
 
-* [Install Serviceguard for Linux on two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Install_serviceguard_using_cminstaller)
-* [Install Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Install_QS_from_the_ISO)
+* [Install Serviceguard for Linux on two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Install_serviceguard_using_cminstaller). Please refer to the section "Install_serviceguard_using_cminstaller".
+* [Install Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Install_QS_from_the_ISO). Please refer to the section "Install_QS_from_the_ISO".
 
 After you complete the installation of the HPE Serviceguard cluster, you can enable cluster management portal on TCP port 5522 on the primary replica node. The steps below add a rule to the firewall to allow 5522, the command below is for a RHEL distribution, you need to run similar commands for other distributions:
 
@@ -93,14 +93,14 @@ sudo firewall-cmd --reload 
 
 ## Create HPE Serviceguard cluster
 
-Follow the instructions for HPE Serviceguard to configure the quorum server and then create the cluster.
+Follow the instructions below to configure and create the HPE Serviceguard cluster. In this step we will also be configuring the quorum server.
 
-1. [Configure the Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_QS)
-2. [Configure and create Serviceguard cluster on the other two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_and_create_cluster)
+1. [Configure the Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_QS). Please refer to the "Configure_QS" section.
+2. [Configure and create Serviceguard cluster on the other two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_and_create_cluster). Please refer to the "Configure_and_create_Cluster" section.
 
 ## Create the availability group and add a sample database
 
-In this step, create an availability group with two (or more) synchronous replicas and a configuration only replica provides data protection and may also provide high availability. The following diagram represents this architecture:
+In this step, create an availability group with two (or more) synchronous replicas and a configuration only replica which provides data protection and may also provide high availability. The following diagram represents this architecture:
 
 :::image type="content" source="media/sql-server-linux-availability-group-ha/2-configuration-only.png" alt-text="Primary replica synchronizes user data and configuration data with the secondary replica. The primary replica only synchronizes configuation data with the configuration only replica. The configuration only replica does not have user data replicas.":::
 
@@ -108,7 +108,7 @@ In this step, create an availability group with two (or more) synchronous replic
 
 2. Synchronous replication of availability group configuration metadata. It does not include user data.
 
-For more details, see [Two synchronous replicas and a configuration only replica](sql-server-linux-availability-group-ha.md) for more details on the above architecture.
+For more details, please refer [Two synchronous replicas and a configuration only replica](sql-server-linux-availability-group-ha.md).
 
 To create the availability group, follow these steps:
 
@@ -157,7 +157,7 @@ WITH PRIVATE KEY
 
 At this point, the primary SQL Server replica has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all servers that will host availability replicas. Use the mssql user, or give permission to the mssql user to access these files.
 
-For example, on the source server, the following command copies the files to the target machine. Replace the '<node2>` values with the name of the host running the secondary SQL Server instance. Copy the certificate on the configuration only replica as well and run the below commands on that node as well.
+For example, on the source server, the following command copies the files to the target machine. Replace the 'node2' values with the name of the host running the secondary SQL Server instance. Copy the certificate on the configuration only replica as well and run the below commands on that node as well.
 
 ```console
 cd /var/opt/mssql/data
@@ -285,9 +285,9 @@ After successfully completing the previous steps, you can see an **ag1** availab
 
 ## Deploy the SQL Server availability group workload (HPE Cluster Manager)
 
-In HPE Serviceguard, you need to deploy the SQL Server workload on availability group through Serviceguard cluster manager UI.
-
-Deploy the availability group workload and enable high availability (HA), disaster recovery (DR) via Serviceguard cluster using the [Serviceguard manager graphical user interface](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Protect_your_alwayson_availability_group).
+In HPE Serviceguard, deploy the SQL Server workload on availability group through Serviceguard cluster manager UI.
+   
+Deploy the availability group workload and enable high availability (HA), disaster recovery (DR) via Serviceguard cluster using the [Serviceguard manager graphical user interface](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Protect_your_alwayson_availability_group). Please refer to the section "Protecting Microsoft SQL Server on Linux for Always on AvailabilityGroups".
 
 ## Perform automatic failover and join the node back to cluster
 
@@ -296,8 +296,8 @@ For the automatic failover test, you can go ahead and bring down the primary rep
 1. The cluster manager promotes one of the secondary replicas in the availability group to primary.
 2. The failed primary replica automatically joins the cluster after it is back up. The cluster manager promotes it to secondary replica.
 
-[HPE Safeguard](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Test_the_setup_preparedness)
+For HPE Servicguard please refer to the section ["Testing the setup for failover readiness"](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Test_the_setup_preparedness)
 
 ## Next steps
 
-[Achieving disaster recovery protection using Serviceguard for Linux](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Achieve_DR_using_SGLX)
+Learn more about Always On [Availability Groups on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-availability-group-overview?view=sql-server-ver15)

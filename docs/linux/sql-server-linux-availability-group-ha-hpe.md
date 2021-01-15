@@ -66,20 +66,24 @@ On all the three VMs, please follow one of the below steps based on the Linux di
 
 After you complete this step, you should have SQL Server service and tools installed on all three VMs that will participate in the availability group.
 
-## Install the cluster manager
+## Install HPE Serviceguard on the VMs
 
-At this point, you need to install the cluster manager. The way you install the cluster manager, depends on the cluster manager that you are using.
+In this step, install HPE Serviceguard for Linux on all three VMs. The following table describes the role each server plays in the cluster.
 
-### Install HPE Serviceguard on the VMs
+|Number of VMs | HPE Servicguard role | Microsoft SQL Server availability group replica role|
+|--------------|-----------------|------------|
+|1 | HPE Serviceguard cluster nodes | Primary replica |
+|1 or more | HPE Serviceguard cluster node | Secondary replica |
+|1 | HPE Serviceguard quorum server | Configuration only replica |
 
-In this step, we will be installing HPE Serviceguard for Linux on all three nodes. Two of those nodes will be setup and configured as Serviceguard Cluster Nodes. Third node will be setup and configured as Serviceguard Quorum Server and Microsoft SQL Server On Linux Configuration Only Replica. We will be installing Serviceguard using the `cminstaller` method. Specific instructions are available in the links below
+To install Serviceguard, use the `cminstaller` method. Specific instructions are available in the links below:
 
 Serviceguard cluster and Serviceguard Quorum server
 
 * [Install Serviceguard for Linux on two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Install_serviceguard_using_cminstaller)
-* [Install Serviceguard Quorum Server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Install_QS_from_the_ISO)
+* [Install Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Install_QS_from_the_ISO)
 
-After you complete the installation of the HPE Serviceguard cluster, you can enable cluster management portal on 5522 port on the primary server, below steps add a rule to the firewall to allow 5522, the command below is for a RHEL distribution, you need to run similar commands for other distributions:
+After you complete the installation of the HPE Serviceguard cluster, you can enable cluster management portal on TCP port 5522 on the primary replica node. The steps below add a rule to the firewall to allow 5522, the command below is for a RHEL distribution, you need to run similar commands for other distributions:
 
 ```console
 sudo firewall-cmd --zone=public --add-port=5522/tcp --permanent
@@ -87,13 +91,9 @@ sudo firewall-cmd --zone=public --add-port=5522/tcp --permanent
 sudo firewall-cmd --reload 
 ```
 
-## Create the cluster
+## Create HPE Serviceguard cluster
 
-After the installation of the cluster manager, create the cluster.
-
-### Create HPE Serviceguard cluster
-
-If you are using HPE Serviceguard, configure the quorum server and then create the cluster.
+Follow the instructions for HPE Serviceguard to configure the quorum server and then create the cluster.
 
 1. [Configure the Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_QS)
 2. [Configure and create Serviceguard cluster on the other two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_and_create_cluster)

@@ -286,7 +286,7 @@ After successfully completing the previous steps, you can see an **ag1** availab
 
 In HPE Serviceguard, deploy the SQL Server workload on availability group through Serviceguard cluster manager UI.
    
-Deploy the availability group workload and enable high availability (HA), disaster recovery (DR) via Serviceguard cluster using the [Serviceguard manager graphical user interface](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Protect_your_alwayson_availability_group). Please refer to the section "Protecting Microsoft SQL Server on Linux for Always on AvailabilityGroups".
+Deploy the availability group workload and enable high availability (HA), disaster recovery (DR) via Serviceguard cluster using the [Serviceguard manager graphical user interface](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Protect_your_alwayson_availability_group). Refer to the section **Protecting Microsoft SQL Server on Linux for Always On availability groups**.
 
 ## Perform automatic failover and join the node back to cluster
 

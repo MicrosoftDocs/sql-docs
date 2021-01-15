@@ -99,7 +99,7 @@ Follow the instructions below to configure and create the HPE Serviceguard clust
 2. [Configure and create Serviceguard cluster on the other two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_and_create_cluster). Refer to the **Configure_and_create_Cluster** section.
 ## Create the availability group and add a sample database
 
-In this step, create an availability group with two (or more) synchronous replicas and a configuration only replica which provides data protection and may also provide high availability. The following diagram represents this architecture:
+In this step, create an availability group with two (or more) synchronous replicas and a configuration only replica, which provides data protection and may also provide high availability. The following diagram represents this architecture:
 
 :::image type="content" source="media/sql-server-linux-availability-group-ha/2-configuration-only.png" alt-text="Primary replica synchronizes user data and configuration data with the secondary replica. The primary replica only synchronizes configuation data with the configuration only replica. The configuration only replica does not have user data replicas.":::
 

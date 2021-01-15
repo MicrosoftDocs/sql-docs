@@ -96,7 +96,7 @@ Follow the instructions below to configure and create the HPE Serviceguard clust
 
 1. [Configure the Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_QS). Please refer to the "Configure_QS" section.
 2. [Configure and create Serviceguard cluster on the other two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_and_create_cluster). Please refer to the "Configure_and_create_Cluster" section.
-
+2. [Configure and create Serviceguard cluster on the other two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_and_create_cluster). Refer to the **Configure_and_create_Cluster** section.
 ## Create the availability group and add a sample database
 
 In this step, create an availability group with two (or more) synchronous replicas and a configuration only replica which provides data protection and may also provide high availability. The following diagram represents this architecture:

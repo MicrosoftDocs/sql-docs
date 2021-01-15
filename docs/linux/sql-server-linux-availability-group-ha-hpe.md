@@ -81,7 +81,7 @@ Serviceguard cluster and Serviceguard Quorum server
 
 * [Install Serviceguard for Linux on two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Install_serviceguard_using_cminstaller). Please refer to the section "Install_serviceguard_using_cminstaller".
 * [Install Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Install_QS_from_the_ISO). Please refer to the section "Install_QS_from_the_ISO".
-
+* [Install Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Install_QS_from_the_ISO). Refer to the section **Install_QS_from_the_ISO**.
 After you complete the installation of the HPE Serviceguard cluster, you can enable cluster management portal on TCP port 5522 on the primary replica node. The steps below add a rule to the firewall to allow 5522, the command below is for a RHEL distribution, you need to run similar commands for other distributions:
 
 ```console

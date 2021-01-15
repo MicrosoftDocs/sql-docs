@@ -1990,6 +1990,8 @@
         href: relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md
       - name: Work with
         href: relational-databases/track-changes/work-with-change-data-sql-server.md
+      - name: Interoperability
+        href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
     - name: Change tracking
       href: relational-databases/track-changes/about-change-tracking-sql-server.md
       items:
@@ -1999,8 +2001,6 @@
         href: relational-databases/track-changes/manage-change-tracking-sql-server.md
       - name: Work with
         href: relational-databases/track-changes/work-with-change-tracking-sql-server.md
-      - name: Interoperability
-        href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
   - name: Triggers
     items:
     - name: Logon Triggers

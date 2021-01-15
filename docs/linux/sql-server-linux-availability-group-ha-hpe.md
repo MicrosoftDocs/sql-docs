@@ -107,7 +107,7 @@ In this step, create an availability group with two (or more) synchronous replic
 
 2. Synchronous replication of availability group configuration metadata. It does not include user data.
 
-For more details, please refer [Two synchronous replicas and a configuration only replica](sql-server-linux-availability-group-ha.md).
+For more details, refer to [Two synchronous replicas and a configuration only replica](sql-server-linux-availability-group-ha.md).
 
 To create the availability group, follow these steps:
 

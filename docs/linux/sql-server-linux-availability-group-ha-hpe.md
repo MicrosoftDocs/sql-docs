@@ -17,7 +17,7 @@ This tutorial explains how to configure SQL Server Always On availability group 
 Refer to [HPE Serviceguard Clusters](https://h20195.www2.hpe.com/v2/GetPDF.aspx/c04154488.pdf) for an overview of the HPE Serviceguard clusters.
 
 > [!NOTE]
-> Microsoft supports data movement, the availability group, and the SQL Server components. Please contact HPE for support related to the documentation related to the HPE Serviceguard, the HPE Serviceguard cluster and quorum management.
+> Microsoft supports data movement, the availability group, and the SQL Server components. Contact HPE for support related to the documentation HPE Serviceguard cluster and quorum management.
 
 This tutorial consists of the following tasks:
 

@@ -10,8 +10,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">= aps-pdw-2016"
 ---
 # sys.dm_pdw_node_status (Transact-SQL)

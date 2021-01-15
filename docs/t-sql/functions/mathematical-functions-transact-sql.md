@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "mathematical functions [SQL Server]"
   - "functions [SQL Server], mathematical"
 ms.assetid: 46495a2e-81d0-4677-9d72-9db083cd1023
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # Mathematical Functions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

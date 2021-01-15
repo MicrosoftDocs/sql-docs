@@ -41811,27 +41811,27 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "sql/advanced-analytics/tutorials/quickstart-r-verify.md",
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-verify.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-script",
       "redirect_document_id": false
     },
     {
-      "source_path": "sql/advanced-analytics/tutorials/quickstart-r-run-using-tsql.md",
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-run-using-tsql.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-script",
       "redirect_document_id": true
     },
     {
-      "source_path": "sql/advanced-analytics/tutorials/quickstart-r-inputs-and-outputs.md",
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-inputs-and-outputs.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-create-script",
       "redirect_document_id": false
     },
     {
-      "source_path": "sql/advanced-analytics/tutorials/quickstart-r-create-predictive-model.md",
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-create-predictive-model.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-train-score-model",
       "redirect_document_id": true
     },
     {
-      "source_path": "sql/advanced-analytics/tutorials/quickstart-r-predict-from-model.md",
+      "source_path": "docs/advanced-analytics/tutorials/quickstart-r-predict-from-model.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/quickstart-r-train-score-model",
       "redirect_document_id": false
     },

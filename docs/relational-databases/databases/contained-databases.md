@@ -122,15 +122,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ##  <a name="Limitations"></a> Limitations  
  Partially contained databases do not allow the following features.  
   
--   Partially contained databases cannot use replication, change data capture, or change tracking.  
+-   Replication, change data capture, or change tracking.  
   
 -   Numbered procedures  
   
 -   Schema-bound objects that depend on built-in functions with collation changes  
   
--   Binding change resulting from collation changes, including references to objects, columns, symbols, or types.  
-  
--   Replication, change data capture, and change tracking.  
+-   Binding change resulting from collation changes, including references to objects, columns, symbols, or types.
   
 > [!WARNING]  
 >  Temporary stored procedures are currently permitted. Because temporary stored procedures breach containment, they are not expected to be supported in future versions of contained database.  

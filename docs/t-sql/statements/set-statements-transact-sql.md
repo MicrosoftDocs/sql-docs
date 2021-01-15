@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "statistical information [SQL Server], SET statements"
   - "locking [SQL Server], SET statements"
 ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "= azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 # SET Statements (Transact-SQL)

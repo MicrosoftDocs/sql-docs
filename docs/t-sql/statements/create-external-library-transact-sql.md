@@ -35,7 +35,7 @@ Uploads R, Python, or Java package files to a database from the specified byte s
 Uploads R or Python package files to a database from the specified byte stream or file path. This statement serves as a generic mechanism for the database administrator to upload artifacts needed. 
 
 > [!NOTE]
-> In Azure SQL Managed Instance, you can use **sqlmlutils** to install a library. For details, see [Install Python packages with sqlmlutils](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current) and [Install new R packages with sqlmlutils](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current).
+> In Azure SQL Managed Instance, you can use **sqlmlutils** to install a library. For details, see [Install Python packages with sqlmlutils](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current&preserve-view=true) and [Install new R packages with sqlmlutils](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current&preserve-view=true).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"

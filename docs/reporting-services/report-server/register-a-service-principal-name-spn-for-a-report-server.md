@@ -62,7 +62,7 @@ Setspn -s http/<computer-name>.<domain-name> <domain-user-account>
   
 6.  Open the **RsReportServer.config** file and locate the `<AuthenticationTypes>` section.  
   
-7.  Add `<RSWindowsNegotiate/>` as the first entry in this section to enable Kerberos.  
+7.  Add `<RSWindowsNegotiate />` as the first entry in this section to enable Kerberos.  
   
 ## See Also  
  [Configure a Service Account &#40;Report Server Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   

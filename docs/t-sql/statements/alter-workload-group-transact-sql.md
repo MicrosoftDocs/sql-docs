@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER WORKLOAD GROUP statement"
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # ALTER WORKLOAD GROUP (Transact-SQL)

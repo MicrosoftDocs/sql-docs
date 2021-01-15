@@ -82,7 +82,7 @@ Examples of connection strings enabling enclave computations for a database conn
 - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] :
   
    ```
-   Driver=ODBC Driver 17 for SQL Server;Server=myServer.database.windows.net;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Encrypt=yes;ColumnEncryption=SGX-AAS,https://myAttestationProvider.uks.attest.azure.net/attest/SgxEnclave?api-version=2018-09-01-preview
+   Driver=ODBC Driver 17 for SQL Server;Server=myServer.database.windows.net;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Encrypt=yes;ColumnEncryption=SGX-AAS,https://myAttestationProvider.uks.attest.azure.net/attest/SgxEnclave
    ```
 
 If the server and attestation service are configured correctly, as well as enclave-enabled CMKs and CEKs for the desired columns, you should now be able to execute queries which use the enclave such as in-place encryption and rich computations, in addition to the existing functionality provided by Always Encrypted. See [Configure Always Encrypted with secure enclaves](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) for more information.

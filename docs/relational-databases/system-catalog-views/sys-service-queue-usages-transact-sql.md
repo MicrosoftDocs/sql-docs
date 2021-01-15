@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.service_queue_usages catalog view"
 ms.assetid: d58dcdaf-f82d-43d9-941b-f520581442bf
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.service_queue_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

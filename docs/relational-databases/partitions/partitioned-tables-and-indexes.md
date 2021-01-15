@@ -2,7 +2,7 @@
 description: "Partitioned Tables and Indexes"
 title: "Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/20/2016"
+ms.date: "1/5/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports table and index partitioning. The data of partitioned tables and indexes is divided into units that may optionally be spread across more than one filegroup in a database. The data is partitioned horizontally, so that groups of rows are mapped into individual partitions. All partitions of a single index or table must reside in the same database. The table or index is treated as a single logical entity when queries or updates are performed on the data. Prior to [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, partitioned tables and indexes were not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports table and index partitioning. The data of partitioned tables and indexes is divided into units that may optionally be spread across more than one filegroup in a database. The data is partitioned horizontally, so that groups of rows are mapped into individual partitions. All partitions of a single index or table must reside in the same database. The table or index is treated as a single logical entity when queries or updates are performed on the data. Prior to [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1, partitioned tables and indexes were not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports up to 15,000 partitions by default. In versions earlier than [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the number of partitions was limited to 1,000 by default. On x86-based systems, creating a table or index with more than 1,000 partitions is possible, but is not supported.  
@@ -49,6 +49,9 @@ A database object that defines how the rows of a table or index are mapped to a 
   
 ### Partition scheme 
 A database object that maps the partitions of a partition function to a set of filegroups. The primary reason for placing your partitions on separate filegroups is to make sure that you can independently perform backup operations on partitions. This is because you can perform backups on individual filegroups.  
+
+> [!NOTE]
+> In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] only primary filegroups are supported.  
   
 ### Partitioning column  
 The column of a table or index that a partition function uses to partition the table or index. Computed columns that participate in a partition function must be explicitly marked PERSISTED. All data types that are valid for use as index columns can be used as a partitioning column, except **timestamp**. The **ntext**, **text**, **image**, **xml**, **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** data types cannot be specified. Also, Microsoft .NET Framework common language runtime (CLR) user-defined type and alias data type columns cannot be specified.  
@@ -66,7 +69,7 @@ When partitioning a clustered index, the clustering key must contain the partiti
 When partitioning a unique nonclustered index, the index key must contain the partitioning column. When partitioning a nonunique, nonclustered index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adds the partitioning column by default as a nonkey (included) column of the index to make sure the index is aligned with the base table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not add the partitioning column to the index if it is already present in the index. 
 
 ### Non-aligned index  
-An index partitioned independently from its corresponding table. That is, the index has a different partition scheme or is placed on a separate filegroup from the base table. Designing an non-aligned partitioned index can be useful in the following cases:  
+An index partitioned independently from its corresponding table. That is, the index has a different partition scheme or is placed on a separate filegroup from the base table. Designing a non-aligned partitioned index can be useful in the following cases:  
 -   The base table has not been partitioned.  
 -   The index key is unique and it does not contain the partitioning column of the table.  
 -   You want the base table to participate in collocated joins with more tables using different join columns.  

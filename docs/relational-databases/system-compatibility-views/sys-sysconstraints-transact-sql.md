@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.sysconstraints compatibility view"
   - "sysconstraints system table"
 ms.assetid: f2b2e2ad-ba24-48a1-913c-8ee4e0895dc4
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysconstraints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -13,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER TABLE statement"
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

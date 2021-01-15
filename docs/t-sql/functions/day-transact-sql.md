@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "functions [SQL Server], date and time"
   - "dateparts [SQL Server], day"
 ms.assetid: 2f4410ea-fd3e-4d69-ac4b-3b0091a084bc
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DAY (Transact-SQL)

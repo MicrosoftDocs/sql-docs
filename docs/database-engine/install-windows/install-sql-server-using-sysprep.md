@@ -100,7 +100,8 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
     |-|-|  
     |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication<br /><br /> Full-Text Features<br /><br /> Data Quality Services<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in Native mode<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Redistributable Features<br /><br /> Shared Features|  
   
-     A description for each component group appears in the right pane when you highlight the feature name. You can select any combination of check boxes. For more information, see [Editions and supported features of SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md). 
+     A description for each component group appears in the right pane when you highlight the feature name. You can select any combination of check boxes. For more information, see  [Features Supported by the Editions of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) and
+     [SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)
   
      The prerequisites for the selected features are displayed on the right-hand pane. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup will install the prerequisite that are not already installed during the installation step described later in this procedure. 
   

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "log_shipping_monitor_secondary system table"
 ms.assetid: afbe1bb7-89a7-4020-9408-0af64a043c2e
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

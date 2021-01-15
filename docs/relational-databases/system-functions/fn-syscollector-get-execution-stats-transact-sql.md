@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "fn_syscollector_get_execution_stats function"
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # fn_syscollector_get_execution_stats (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

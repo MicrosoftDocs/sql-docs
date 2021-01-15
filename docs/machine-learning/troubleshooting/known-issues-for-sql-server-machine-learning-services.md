@@ -7,7 +7,7 @@ ms.date: 10/13/2020
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Known issues in SQL Server Machine Learning Services

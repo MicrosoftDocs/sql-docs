@@ -61,7 +61,7 @@ In this step, you'll create and test an index on an encrypted column. You'll be 
    1. Start a new instance of SSMS.
    1. In the **Connect to Server** dialog, specify your server name, select an   authentication method, and specify your credentials.
    1. Click **Options >>** and select the **Always Encrypted** tab.
-   1. Select the **Enable Always Encrypted (column encryption)** checkbox and specify your enclave attestation URL (for example, `http://hgs.bastion.local/Attestation` or `https://MyAttestationProvider.us.attest.azure.net/attest/SgxEnclave?api-version=2018-09-01-preview`).
+   1. Select the **Enable Always Encrypted (column encryption)** checkbox and specify your enclave attestation URL (for example, `http://hgs.bastion.local/Attestation` or `https://MyAttestationProvider.us.attest.azure.net/attest/SgxEnclave`).
    1. Select **Connect**.
    1. If prompted to enable parameterization for Always Encrypted queries, click **Enable**.
 1. If you weren't prompted to enable Parameterization for Always Encrypted, verify it's enabled.

@@ -11,8 +11,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 166426e1-555d-4ce4-bae3-248dcac56883
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # System Trace Functions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

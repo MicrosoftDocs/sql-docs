@@ -40,6 +40,35 @@ GeneMi , 2019/03/22.
 P.S.  there's no need to keep this large HTML comment indefinitely.
 -->
 
+## 15.9.7,&nbsp; SSDT for VS 2017
+
+_Released:_ &nbsp; Jan 5, 2021  
+_Build Number:_ &nbsp; 14.0.16228.0  
+_SSDT for Visual Studio 2017._
+
+### What's New?
+
+| New Item | Details |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Make creating SSISDB optional in IR Creation Wizard. |
+| Integration Services (SSIS) | Fixed an issue that Azure Subscription ComboBox items are duplicated in IR Creation Wizard and Azure-Enabled Project Wizard when different subscriptions have the same name. |
+| Integration Services (SSIS) | Fixed an issue that sometimes Connect button cannot be enabled in IR Creation Wizard. |
+| Integration Services (SSIS) | Fixed an issue that Azure Subscription ComboBox items are duplicated in IR Creation Wizard and Azure-Enabled Project Wizard when different subscriptions have the same name. |
+| Integration Services (SSIS) | Fixed an issue that auto-generated code under bufferwrapper.cs of script component adds extra double-quotes when current locale is Germany. |
+| Integration Services (SSIS) | Fixed an issue that download WSDL button is not displayed when target server version is SQL Server 2012, 2014, 2016. |
+| Integration Services (SSIS) | Fixed an issue that building large projects may fail due to out of memory exception. |
+| Integration Services (SSIS) | Fixed an issue that the package is not downgraded to current target server version of the project when it is saved as copy to file system or MSDB in package deployment model. |
+| Integration Services (SSIS) | Fixed an issue that Dimension Processing Destination doesn't work due to "No such interface" error. |
+| Integration Services (SSIS) | Fixed some issues related to accessibility and high-DPI. |
+
+### Known issues
+
+| Known issue | Details |
+| :---------- | :------ |
+| SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue applies only to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog isn't affected. |
+| &nbsp; | &nbsp; |
+
+
 ## 15.9.6,&nbsp; SSDT for VS 2017
 
 _Released:_ &nbsp; Aug 31, 2020  

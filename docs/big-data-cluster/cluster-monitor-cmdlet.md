@@ -16,11 +16,11 @@ ms.technology: big-data-cluster
 
 ## Use azdata
 
-You can also use [azdata](deploy-install-azdata.md) commands to view both endpoints and the cluster status.
+You can also use [azdata](../azdata/install/deploy-install-azdata.md) commands to view both endpoints and the cluster status.
 
 ### Service endpoints
 
-1. Log in to the big data cluster with [azdata login](reference-azdata.md). Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
+1. Log in to the big data cluster with [azdata login](../azdata/reference/reference-azdata.md). Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -34,7 +34,7 @@ You can also use [azdata](deploy-install-azdata.md) commands to view both endpoi
    azdata login --endpoint https://<control_domain_name>:30080 --auth ad
    ```
 
-1. Run [`azdata bdc endpoint list`](reference-azdata-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
+1. Run [`azdata bdc endpoint list`](../azdata/reference/reference-azdata-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -60,7 +60,7 @@ You can also use [azdata](deploy-install-azdata.md) commands to view both endpoi
 
 ### View cluster status
 
-You can view the status of the cluster with the [`azdata bdc status show`](reference-azdata-bdc-status.md) command.
+You can view the status of the cluster with the [`azdata bdc status show`](../azdata/reference/reference-azdata-bdc-status.md) command.
 
 ```bash
 azdata bdc status show
@@ -145,7 +145,7 @@ The following shows sample output from this command:
 
 ### View specific resource status
 
-You can view the status of a specific resource within the cluster with the [azdata bdc status show](reference-azdata-bdc-status.md) command. When you use this command you can filter using `--resource` parameter. Few examples of inputs for `--resource` parameter are:
+You can view the status of a specific resource within the cluster with the [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md) command. When you use this command you can filter using `--resource` parameter. Few examples of inputs for `--resource` parameter are:
 
 - master
 - control
@@ -237,7 +237,7 @@ Here is a sample output:
 
 ### View controller status
 
-You can view the controller status with the [`azdata bdc control status show`](reference-azdata-bdc-control-status.md) command. It provides similar links to the monitoring dashboards related to the controller components of the big data cluster.
+You can view the controller status with the [`azdata bdc control status show`](../azdata/reference/reference-azdata-bdc-control-status.md) command. It provides similar links to the monitoring dashboards related to the controller components of the big data cluster.
 
 
 ## Next steps

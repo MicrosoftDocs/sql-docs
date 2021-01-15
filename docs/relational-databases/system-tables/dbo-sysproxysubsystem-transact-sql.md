@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysproxysubsystem system table"
 ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # dbo.sysproxysubsystem (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

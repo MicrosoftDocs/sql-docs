@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "comparing expressions"
   - "comparison operators [SQL Server]"
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # Comparison Operators (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

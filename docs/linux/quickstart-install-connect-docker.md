@@ -1,7 +1,7 @@
 ---
 title: "Docker: Install containers for SQL Server on Linux"
 description: This quickstart shows how to use Docker to run the SQL Server 2017 and 2019 container images. You then create and query a database with sqlcmd.
-ms.custom: seo-lt-2019, contperfq1
+ms.custom: seo-lt-2019, contperf-fy21q1
 author: vin-yu 
 ms.author: vinsonyu
 ms.reviewer: vanto
@@ -497,7 +497,7 @@ Other common tools to connect to SQL Server include:
 
 - [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-manage-ssms.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md)
 - [mssql-cli (Preview)](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)
 - [PowerShell Core](sql-server-linux-manage-powershell-core.md)
 

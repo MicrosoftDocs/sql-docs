@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "!> (not greater than)"
   - "not greater than operator (!>)"
 ms.assetid: 71a413ed-64f1-4ab9-9c52-c5959a77d00f
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # !&gt; (Not Greater Than) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

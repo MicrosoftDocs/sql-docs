@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysdbmaintplan_jobs system table"
 ms.assetid: bc65cd70-6ef2-4c17-be11-877ecf4efe50
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # sysdbmaintplan_jobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

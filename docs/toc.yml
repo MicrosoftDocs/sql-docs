@@ -9224,6 +9224,9 @@
           href: ssms/menu-help/options-environment-help-general-page.md
         - name: Options (Query Execution options - Help - General Page)
           href: ssms/menu-help/options-query-execution.md
+        - name: Options (Azure Service - Help - General Page)
+          href: ssms/menu-help/options-azure-services.md
+
         - name: External Tools
           href: ssms/menu-help/external-tools.md
         - name: Customize (Commands Page)

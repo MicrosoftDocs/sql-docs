@@ -295,7 +295,7 @@ For the automatic failover test, you can go ahead and bring down the primary rep
 1. The cluster manager promotes one of the secondary replicas in the availability group to primary.
 2. The failed primary replica automatically joins the cluster after it is back up. The cluster manager promotes it to secondary replica.
 
-For HPE Servicguard please refer to the section ["Testing the setup for failover readiness"](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Test_the_setup_preparedness)
+For HPE Servicguard, refer to the section [**Testing the setup for failover readiness**](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Test_the_setup_preparedness)
 
 ## Next steps
 

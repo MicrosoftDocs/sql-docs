@@ -2,7 +2,7 @@
 title: "Query columns using Always Encrypted with SQL Server Management Studio | Microsoft Docs"
 description: Learn how to query columns in Always Encrypted using SQL Server Management Studio. Retrieve ciphertext or text values stored in encrypted columns.
 ms.custom: ""
-ms.date: 10/31/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -89,11 +89,12 @@ To enable (disable) Always Encrypted:
 1. If you're using SSMS 18 or newer:
     1. Select the **Always Encrypted** tab.
     1. To enable Always Encrypted, select **Enable Always Encrypted (column encryption)**. To disable Always Encrypted, make sure **Enable Always Encrypted (column encryption)** isn't selected.
-    1. If you're using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can specify an enclave attestation url. If your SQL Server instance doesn't use a secure enclave, make sure you leave the **Enclave Attestation URL** textbox blank. For more information, see [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
 1. If you are using SSMS 17 or older:
     1. Select the **Additional Properties** tab.
     1. To enable Always Encrypted, type `Column Encryption Setting = Enabled`. To disable Always Encrypted, specify `Column Encryption Setting = Disabled` or remove the setting of **Column Encryption Setting** from the **Additional Properties** tab (its default value is **Disabled**).   
  1. Click **Connect**.
+
+To run statements that leverage a server-side secure enclave when you're using [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), you need to specify an enclave attestation URL, in addition to enabling Always Encrypted for the connection. For detailed information, see  [Prerequisites for running T-SQL statements using enclaves in SSMS](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-t-sql-statements-using-enclaves-in-ssms).
 
 > [!TIP]
 > To toggle between Always Encrypted being enabled and disabled for an existing Query Editor window:   

@@ -57,7 +57,7 @@ The **sys.server_resource_stats** view has different definitions depending on th
  The data returned by **sys.server_resource_stats** are expressed as the total used in either bytes or megabytes (stated in column names) other than avg_cpu, which is expressed as a percentage of the maximum allowed limits for the service tier/performance level that you are running.  
  
 ## Examples  
-The following example returns the average CPU usage over the last one seven days.  
+The following example returns the average CPU usage over the last seven days.  
   
 ```sql  
 DECLARE @s datetime;  

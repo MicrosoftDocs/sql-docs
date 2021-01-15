@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 10/19/2020
+ms.date: 01/13/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -57,16 +57,17 @@ For a complete list, see [Which tools are required?](deploy-big-data-tools.md#wh
 
 The following table lists the release history for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-| Release <sup>1</sup> | BDC Version    | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup>| Release date |
-|------------------|----------------|-----------------|--------------|
-| [CU8](#cu8)      | 15.0.4073.23   | 20.2.2          | 2020-10-19   |
-| [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
-| [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
-| [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020-03-31   |
-| [CU3](#cu3)      | 15.0.4023.6    | 15.0.4023       | 2020-03-12   |
-| [CU2](#cu2)      | 15.0.4013.40   | 15.0.4013       | 2020-02-13   |
-| [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 2020-01-07   |
-| [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
+| Release <sup>1</sup> | BDC Version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
+|--|--|--|--|
+| [CU8-GDR](#cu8-gdr) | 15.0.4083.2  | 20.2.6    | 2021-01-12 |
+| [CU8](#cu8)     | 15.0.4073.23 | 20.2.2    | 2020-10-19 |
+| [CU6](#cu6)     | 15.0.4053.23 | 20.0.1    | 2020-08-04 |
+| [CU5](#cu5)     | 15.0.4043.16 | 20.0.0    | 2020-06-22 |
+| [CU4](#cu4)     | 15.0.4033.1  | 15.0.4033 | 2020-03-31 |
+| [CU3](#cu3)     | 15.0.4023.6  | 15.0.4023 | 2020-03-12 |
+| [CU2](#cu2)     | 15.0.4013.40 | 15.0.4013 | 2020-02-13 |
+| [CU1](#cu1)     | 15.0.4003.23 | 15.0.4003 | 2020-01-07 |
+| [GDR1](#rtm)    | 15.0.2070.34 | 15.0.2070 | 2019-11-04 |
 
 <sup>1</sup> CU7 is not available for BDC.
 
@@ -75,6 +76,14 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 ## How to install updates
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a id="cu8-gdr"></a> CU8-GDR(January 2021)
+
+Cumulative Update 8 GDR (CU8-GDR) release for SQL Server 2019.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4083.2 |[2019-CU8-GDR1-ubuntu-16.04]<br/><br/>[2019-CU8-GDR1-ubuntu-18.04]
 
 ## <a id="cu8"></a> CU8 (September 2020)
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "product support [ODBC]"
 ms.assetid: 585c41c6-5c5a-437e-a4b4-e32a346b478d

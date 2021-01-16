@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLStatistics function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: bb48c22f-1fd5-47b4-8eaa-ff69cd431cf9

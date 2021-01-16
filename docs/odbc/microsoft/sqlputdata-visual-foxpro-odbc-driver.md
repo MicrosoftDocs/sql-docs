@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLPutData function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 8c79e9ba-afa0-4e20-9c53-371cc42b4a97

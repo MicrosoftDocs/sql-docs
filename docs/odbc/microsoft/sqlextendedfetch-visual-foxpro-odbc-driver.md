@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLExtendedFetch function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: b28af112-fb47-4143-b11e-3b743b2ae1b8

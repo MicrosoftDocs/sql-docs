@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLSetCursorName function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 2ac5a8b5-f084-405b-b0d7-546284dfa111

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLPrepare function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 0c4cb5a4-9729-4b2e-a0c6-52027b92e8fc

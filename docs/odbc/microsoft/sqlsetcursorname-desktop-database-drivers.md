@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLSetCursorName function [ODBC], Desktop Database Drivers"
 ms.assetid: 9bd7c87b-d99d-4e23-b2db-868d3b461c94

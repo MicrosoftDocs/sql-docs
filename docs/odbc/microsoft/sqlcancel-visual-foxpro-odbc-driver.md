@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLCancel function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 4f7baa1d-37ef-4051-ae13-7dc38033af16

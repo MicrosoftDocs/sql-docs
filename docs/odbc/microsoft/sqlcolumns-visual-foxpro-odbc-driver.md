@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLColumns function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: b588a875-0153-43a0-9b76-f89e728cfa65

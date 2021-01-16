@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLNumResultCols function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: a83d826c-6908-4115-b6e6-4d0615ff1738

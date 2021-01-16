@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "connecting to data source [ODBC], ODBC driver for Oracle"
   - "ODBC driver for Oracle [ODBC], connecting to data sources"

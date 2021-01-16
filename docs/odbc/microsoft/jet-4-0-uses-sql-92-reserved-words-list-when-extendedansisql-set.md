@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "extendedANSISQL [ODBC], reserved words"
 ms.assetid: 7645187e-7777-4c07-9686-0a80d5c5834d

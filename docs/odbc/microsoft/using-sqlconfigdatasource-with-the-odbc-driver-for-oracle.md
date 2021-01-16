@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLConfigDataSource function [ODBC], ODBC driver for Oracle"
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289

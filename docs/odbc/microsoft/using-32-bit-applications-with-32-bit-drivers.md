@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ODBC drivers [ODBC], 32-bit applications"
   - "32-bit applications with 32-bit drivers [ODBC]"

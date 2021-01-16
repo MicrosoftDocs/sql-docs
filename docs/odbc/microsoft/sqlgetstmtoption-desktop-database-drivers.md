@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLGetStmtOption function [ODBC], Desktop Database Drivers"
 ms.assetid: f9ed31af-2fa9-4a0c-9639-08b63199b092

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLSpecialColumns function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: b72a978d-6a60-475a-b7d9-c424d77bbe30

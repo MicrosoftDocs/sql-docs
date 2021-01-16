@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLAllocEnv function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: a21c3782-273f-40b3-b239-47beaf8df462

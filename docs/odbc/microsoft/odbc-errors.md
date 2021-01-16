@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "errors (ODBC desktop database drivers)"
 ms.assetid: 33542afe-4dc7-4db8-b625-fec51a4718d3

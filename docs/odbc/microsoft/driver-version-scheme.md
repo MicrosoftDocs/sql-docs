@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ODBC driver for Oracle [ODBC], versions"
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f

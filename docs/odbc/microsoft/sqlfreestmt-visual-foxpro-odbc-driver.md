@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLFreeStmt function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: a5320226-a6fc-4999-9b3b-2fdee6bdf7eb

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLSetPos function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: ec8e5a9d-7aac-4e7f-a75f-cf670c036f33

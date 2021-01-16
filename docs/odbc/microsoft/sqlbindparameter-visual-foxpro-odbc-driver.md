@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLBindParameter function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 8a69fda2-8903-451a-b030-851bf05aa074

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Jet-based ODBC drivers [ODBC], SQL-92 compliance"
   - "desktop database drivers [ODBC], SQL-92 compliance"

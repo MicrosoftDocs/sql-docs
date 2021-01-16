@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLSetScrollOptions function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 693e6e28-a845-41b1-9622-5058b0d87229

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLParamOptions function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 7f94a6e2-9c34-405c-b2b0-304d94269715

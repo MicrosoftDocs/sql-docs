@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLDescribeCol function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: a8d06507-8376-42b5-b09f-338a77cea131

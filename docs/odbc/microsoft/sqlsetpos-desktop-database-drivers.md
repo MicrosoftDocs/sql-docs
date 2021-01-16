@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLSetPos function [ODBC], Desktop Database Drivers"
 ms.assetid: 8ef027ec-8512-48fe-8fe2-2ff7cd81e331

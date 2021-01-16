@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLMoreResults function [ODBC], Desktop Database Drivers"
 ms.assetid: 676da17b-daea-487f-b2d8-e579db6547cc

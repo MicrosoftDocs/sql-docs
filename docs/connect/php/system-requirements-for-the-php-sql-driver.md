@@ -66,7 +66,7 @@ On supported versions of Linux and macOS, the appropriate drivers can be install
 
 **Microsoft Drivers 5.9 for PHP for SQL Server:**
 
-On Windows, the following versions of the driver are included:
+On Windows, the following driver files are provided:
 
 |Driver file|PHP version|Thread safe?|Use with PHP .dll|
 |---------------|:---------------:|:----------------:|---------------------|
@@ -83,7 +83,7 @@ On Windows, the following versions of the driver are included:
 |64-bit php_sqlsrv_80_nts.dll<br />64-bit php_pdo_sqlsrv_80_nts.dll|8.0|no |64-bit php8.dll|
 |64-bit php_sqlsrv_80_ts.dll <br />64-bit php_pdo_sqlsrv_80_ts.dll |8.0|yes|64-bit php8ts.dll|
 
-On Linux, the following versions of the driver are included:
+On Linux, the following driver files are provided:
 
 |Driver file|PHP version|Thread safe?|
 |---------------|:---------------:|:----------------:|

@@ -52,14 +52,14 @@ print_r ($stmt->errorInfo());
 
 ## Additional ODBC messages
 
-When an exception occurs, ODBC Driver may return more than one error to help users diagnose. Yet, PDOStatement::errorInfo always shows only the first error. As a response to this [bug report](https://bugs.php.net/bug.php?id=78196), [PDO::errorInfo](https://www.php.net/manual/en/pdo.errorinfo.php) and [PDOStatement::errorInfo](https://www.php.net/manual/en/pdostatement.errorinfo.php) have been updated to indicate that drivers should display *at least* the following three fields:
+When an exception occurs, the ODBC Driver may return more than one error to help diagnose problems. However, PDOStatement::errorInfo always shows only the first error. As a response to this [bug report](https://bugs.php.net/bug.php?id=78196), [PDO::errorInfo](https://www.php.net/manual/en/pdo.errorinfo.php) and [PDOStatement::errorInfo](https://www.php.net/manual/en/pdostatement.errorinfo.php) have been updated to indicate that drivers should display *at least* the following three fields:
 ```
 0	SQLSTATE error code (a five characters alphanumeric identifier defined in the ANSI SQL standard).
 1	Driver specific error code.
 2	Driver specific error message.
 ```
 
-Starting with 5.9.0, the default behavior of PDOStatement::errorInfo is to show additional ODBC errors, if they are available. Please refer to [PDO::errorInfo](../../connect/php/pdo-errorinfo.md) for more details.
+Starting with 5.9.0, the default behavior of PDOStatement::errorInfo is to show additional ODBC errors, if they are available. See [PDO::errorInfo](../../connect/php/pdo-errorinfo.md) for more details.
   
 ## See Also  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)

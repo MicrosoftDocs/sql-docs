@@ -62,7 +62,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | Set query timeout without using LOCK TIMEOUT, which saves an extra trip to the server. | &nbsp; |
 | &nbsp; | &nbsp; |
 
-<sup>1</sup> This release requires ODBC Driver 17.4.2 or above. Otherwise, a warning about failing to set an attribute may be suppressed when using an older ODBC driver.
+<sup>1</sup> This release requires ODBC Driver 17.4.2 or above. Otherwise, a warning about failing to set an attribute will occur. This warning may be suppressed when using an older ODBC driver. If using SQLSRV, check [How to: Configure Error and Warning Handling Using the SQLSRV Driver](https://docs.microsoft.com/sql/connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver). If using PDO_SQLSRV, warnings are by default suppressed but can be logged. Check [Logging Activity](https://docs.microsoft.com/sql/connect/php/logging-activity) for details.
 
 ## 5.8.1
 

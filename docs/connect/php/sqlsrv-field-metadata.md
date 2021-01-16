@@ -253,7 +253,7 @@ As shown in [sensitivity classification](/sql/relational-databases/system-catalo
 40 for CRITICAL
 ```
 
-Hence, if instead of `RANK=NONE` the user defines `RANK=CRITICAL` when classifying the column BirthDate, the classification metadata will be
+Hence, if instead of `RANK=NONE`, the user defines `RANK=CRITICAL` when classifying the column BirthDate, the classification metadata will be:
 
 ```
   array(7) {

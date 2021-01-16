@@ -15,9 +15,9 @@ manager: v-mabarw
 # Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server
 The following instructions assume a clean environment and show how to install PHP 8.0, the Microsoft ODBC driver, the Apache web server, and the Microsoft Drivers for PHP for SQL Server on Ubuntu 16.04, 18.04, and 20.04, RedHat 7 and 8, Debian 9 and 10, Suse 12 and 15, Alpine 3.11 and 3.12, and macOS 10.14, 10.15, and 11.0. These instructions advise installing the drivers using PECL, but you can also download the prebuilt binaries from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page and install them following the instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md). For an explanation of extension loading and why we do not add the extensions to php.ini, see the section on [loading the drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
-The following instructions install PHP 8.0 by default using `pecl install`, if the PHP 8.0 packages are available. You may need to run `pecl channel-update pecl.php.net` first. Note that some supported Linux distros default to PHP 7.1 or earlier, which is not supported for the latest version of the PHP drivers for SQL Server -- please see the notes at the beginning of each section to install PHP 7.4 or 7.3 instead.
+The following instructions install PHP 8.0 by default using `pecl install`, if the PHP 8.0 packages are available. You may need to run `pecl channel-update pecl.php.net` first. Some supported Linux distros default to PHP 7.1 or earlier, which is not supported for the latest version of the PHP drivers for SQL Server. See the notes at the beginning of each section to install PHP 7.4 or 7.3 instead.
 
-Also included are instructions for installing the PHP FastCGI Process Manager, PHP-FPM, on Ubuntu. This is needed if you are using the nginx web server instead of Apache.
+Also included are instructions for installing the PHP FastCGI Process Manager, PHP-FPM, on Ubuntu. This is needed if you're using the nginx web server instead of Apache.
 
 While these instructions contain commands to install both SQLSRV and PDO_SQLSRV drivers, the drivers can be installed and function independently. Users comfortable with customizing their configuration can adjust these instructions to be specific to SQLSRV or PDO_SQLSRV. Both drivers have the same dependencies except where noted below.
 
@@ -262,7 +262,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 ## Installing the drivers on Suse 12 and 15
 
 > [!NOTE]
-> In the following instructions, replace `<SuseVersion>` with your version of Suse - if you are using Suse Enterprise Linux 15, it will be SLE_15_SP1 or SLE_15_SP2. For Suse 12, use SLE_12_SP4 (or above if applicable). Not all versions of PHP are available for all versions of Suse Linux - please refer to `http://download.opensuse.org/repositories/devel:/languages:/php` to see which versions of Suse have the default version PHP available, or check `http://download.opensuse.org/repositories/devel:/languages:/php:/` to see which other versions of PHP are available for which versions of Suse.
+> In the following instructions, replace `<SuseVersion>` with your version of Suse. If you are using Suse Enterprise Linux 15, it will be SLE_15_SP1 or SLE_15_SP2. For Suse 12, use SLE_12_SP4 (or above if applicable). Not all versions of PHP are available for all versions of Suse Linux. Refer to `http://download.opensuse.org/repositories/devel:/languages:/php` to see which versions of Suse have the default version of PHP available, or check `http://download.opensuse.org/repositories/devel:/languages:/php:/` to see which other versions of PHP are available for which versions of Suse.
 
 > [!NOTE]
 > Packages for PHP 7.4 or above are not available for Suse 12 and Package for PHP 8.0 is not yet available for Suse 15.
@@ -312,7 +312,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 > The default version of PHP is 7.3. PHP 7.4 or above may be available from testing or edge repositories for Alpine. You can instead compile PHP from source.
 
 ### Step 1. Install PHP
-PHP packages for Alpine can be found in the `edge/community` repository. Please check [Enable Community Repository](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository) on their WIKI page. Add the following line to `/etc/apk/repositories`, replacing `<mirror>` with the URL of an Alpine repository mirror:
+PHP packages for Alpine can be found in the `edge/community` repository. Check [Enable Community Repository](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository) on their WIKI page. Add the following line to `/etc/apk/repositories`, replacing `<mirror>` with the URL of an Alpine repository mirror:
 ```bash
 http://<mirror>/alpine/edge/community
 ```

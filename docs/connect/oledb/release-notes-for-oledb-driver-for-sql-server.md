@@ -4,7 +4,7 @@ description: "This release notes article describes the changes in each release o
 ms.date: "12/01/2020"
 ms.prod: sql
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie

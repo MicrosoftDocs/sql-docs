@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "azure active directory, authentication, access token"
 author: "David-Engel"

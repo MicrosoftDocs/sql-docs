@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "connecting to the server, Windows Authentication"
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e

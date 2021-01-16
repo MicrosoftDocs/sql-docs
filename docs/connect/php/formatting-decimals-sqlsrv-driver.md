@@ -6,7 +6,7 @@ ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "formatting, decimal types, money values"
 author: David-Engel

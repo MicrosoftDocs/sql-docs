@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "loading the driver"
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec

@@ -4,7 +4,7 @@ description: "Download the Microsoft OLE DB Driver for SQL Server to develop nat
 ms.date: "12/01/2020"
 ms.prod: sql
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
 ---

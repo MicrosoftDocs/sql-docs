@@ -64,7 +64,9 @@ CREATE INDEX PartNum
  ON SO_LINES (PartNum)  
 ```  
   
- Note that when two CREATE INDEX statements are performed, the first statement will always create a primary index with the same name as the table and the second statement will always create a non-unique index with the same name as the column. These indexes will be named this way even if different names are entered in the CREATE INDEX statements and even if the index is labeled UNIQUE in the second CREATE INDEX statement.  
+> [!NOTE]
+> When two CREATE INDEX statements are performed, the first statement will always create a primary index with the same name as the table and the second statement will always create a non-unique index with the same name as the column. 
+> Indexes will be named this way even if different names are entered in the CREATE INDEX statements. Even if the index is labeled UNIQUE in the second CREATE INDEX statement.  
   
-> [!NOTE]  
->  When you use the Paradox driver without implementing the Borland Database Engine, only read and append statements are allowed.
+> [!NOTE]
+> When you use the Paradox driver without implementing the Borland Database Engine, only read and append statements are allowed.

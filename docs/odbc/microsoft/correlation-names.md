@@ -16,7 +16,7 @@ author: David-Engel
 ms.author: v-daenge
 ---
 # Correlation Names
-Correlation names are fully supported, including within the table list. For example, in the following string, E1 is the correlation name for the table named Emp:  
+Correlation names are fully supported, including within the list. For example, in the following string, E1 is the correlation name for the table named Emp:  
   
 ```  
 SELECT * FROM Emp E1   

@@ -63,7 +63,7 @@ For information about Full-text indexes, see [Populate Full-Text Indexes](../rel
  <sup>1</sup> Rowstore has been the traditional way to store relational table data. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], rowstore refers to table where the underlying data storage format is a heap, a B-tree ([clustered index](#Clustered)), or a memory-optimized table.
 
 ### Index Design Tasks  
- The follow tasks make up our recommended strategy for designing indexes:  
+ The following tasks make up our recommended strategy for designing indexes:  
   
 1.  Understand the characteristics of the database itself. 
     * For example, is it an online transaction processing (OLTP) database with frequent data modifications that must sustain a high throughput. Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], memory-optimized tables and indexes are especially appropriate for this scenario, by providing a latch-free design. For more information, see [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md), or [Nonclustered Index for Memory-Optimized Tables Design Guidelines](#inmem_nonclustered_index) and [Hash Index for Memory-Optimized Tables Design Guidelines](#hash_index) in this guide.

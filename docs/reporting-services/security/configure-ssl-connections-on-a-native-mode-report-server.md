@@ -21,7 +21,7 @@ ms.author: maggies
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode uses the HTTP SSL (Secure Sockets Layer) service to establish encrypted connections to a report server. Transport Layer Security (TLS) was previously known as Secure Sockets Layer (SSL). If you have certificate (.cer) file installed in a local certificate store on the report server computer, you can bind the certificate to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL reservation to support report server connections through an encrypted channel.  
   
 > [!TIP]  
->  If you are using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode, see SharePoint documentation for more information. For example [How to enable TLS on a SharePoint 2010 web application](https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application).  
+>  If you are using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode, see SharePoint documentation for more information. For example [How to enable TLS on a SharePoint 2010 web application](/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application).  
   
  Because Internet Information Services (IIS) also uses HTTP SSL, there are significant interoperability issues that you must account for if you run IIS and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on the same computer. Be sure to review the Interoperability Issues with IIS section for guidance on how to address these issues.  
   
@@ -30,7 +30,7 @@ ms.author: maggies
   
  For testing purposes, you can generate a certificate locally. If you use the **MakeCert** utility and the sample command as a template, be sure to specify your server name as the host and remove all line breaks before running the command. If you run the command in a DOS window, you might need to increase the buffer size of the window to accommodate the entire command.  
   
- If you are running IIS and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] together on the same computer, you can use the IIS Manager console application to get the certificate installed on your computer. IIS Manager includes options for creating and packaging a certificate request (.crt) file for subsequent processing by a trusted certificate authority. The certificate authority that you are using will generate a certificate (.cer) file and send it back to you. You can use IIS Management console to install the certificate file in the local store. For more information, see [Using SSL to Encrypt Confidential Data](https://go.microsoft.com/fwlink/?LinkId=71123) on Technet.  
+ If you are running IIS and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] together on the same computer, you can use the IIS Manager console application to get the certificate installed on your computer. IIS Manager includes options for creating and packaging a certificate request (.crt) file for subsequent processing by a trusted certificate authority. The certificate authority that you are using will generate a certificate (.cer) file and send it back to you. You can use IIS Management console to install the certificate file in the local store. For more information, see [Using SSL to Encrypt Confidential Data](/previous-versions/windows/it-pro/windows-server-2003/cc738495(v=ws.10)) on Technet.  
   
 ## Interoperability issues with IIS  
  The presence of IIS on the same computer as [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will significantly affect TLS connections to a report server:  
@@ -89,5 +89,4 @@ ms.author: maggies
  [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Configure Report Server URLs  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
-  
   

@@ -73,7 +73,7 @@ During the TLS handshake, the server sends its public key certificate to the cli
   
 - The Common Name (CN) in the Subject or a DNS name in the Subject Alternate Name (SAN) of the certificate exactly matches the **serverName** value specified in the connection string or, if specified, the **hostNameInCertificate** property value.  
   
-- A DNS name can include wild-card characters. But the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] does not support wild-card matching. That is, abc.com will not match \*.com but \*.com will match \*.com.  
+- A DNS name can include wild-card characters. Prior version 7.2, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] does not support wild-card matching. That is, abc.com will not match \*.com but \*.com will match \*.com. With version 7.2 and up, standard certificate wild-card matching is supported.  
   
 ## See also
 

@@ -6,7 +6,7 @@ ms.date: "08/20/2015"
 ms.service: sql-database 
 ms.reviewer: ""
 ms.prod_service: sql-database
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 

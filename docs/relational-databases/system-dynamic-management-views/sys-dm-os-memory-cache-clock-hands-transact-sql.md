@@ -6,7 +6,7 @@ ms.date: "12/21/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_os_memory_cache_clock_hands_TSQL"
   - "dm_os_memory_cache_clock_hands"

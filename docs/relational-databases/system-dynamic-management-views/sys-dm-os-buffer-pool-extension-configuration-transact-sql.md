@@ -6,7 +6,7 @@ ms.date: "09/09/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_os_buffer_pool_extension_configuration"
   - "sys.dm_os_buffer_pool_extension_configuration_TSQL"

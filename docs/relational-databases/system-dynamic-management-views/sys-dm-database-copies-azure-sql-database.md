@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_database_copies_TSQL"
   - "sys.dm_database_copies"

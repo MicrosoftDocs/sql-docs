@@ -5,7 +5,7 @@ ms.date: 03/25/2019
 ms.reviewer: ""
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 ms.custom: ""
 ms.author: mibar
 author: barmichal

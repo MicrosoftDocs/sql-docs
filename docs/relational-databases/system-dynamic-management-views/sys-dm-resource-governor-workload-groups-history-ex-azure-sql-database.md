@@ -6,7 +6,7 @@ ms.date: "05/22/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_resource_governor_workload_groups_history_ex_TSQL"
   - "sys.dm_resource_governor_workload_groups_history_ex"

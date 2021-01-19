@@ -7,7 +7,7 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.custom: ""
 ms.technology: in-memory-oltp
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_db_xtp_checkpoint_files"
   - "sys.dm_db_xtp_checkpoint_files_TSQL"

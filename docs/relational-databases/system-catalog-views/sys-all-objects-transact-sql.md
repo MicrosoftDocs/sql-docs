@@ -6,7 +6,7 @@ ms.date: "05/20/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.all_objects"
   - "all_objects_TSQL"

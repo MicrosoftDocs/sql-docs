@@ -6,7 +6,7 @@ ms.date: "09/03/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_os_volume_stats_TSQL"
   - "dm_os_volume_stats"

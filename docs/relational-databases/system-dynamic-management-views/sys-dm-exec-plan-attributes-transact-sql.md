@@ -6,7 +6,7 @@ ms.date: "10/20/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_exec_plan_attributes_TSQL"
   - "dm_exec_plan_attributes_TSQL"

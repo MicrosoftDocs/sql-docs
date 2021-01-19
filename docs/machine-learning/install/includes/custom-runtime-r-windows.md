@@ -78,7 +78,13 @@ Follow the steps below to add or modify the **R_HOME** and modify the **PATH** s
 
     Click **OK**.
 
-1. 
+1. Modify the **PATH** system environment variable.
+
+    Select **PATH** and click **Edit**.
+
+    Select **New** and add `%R_HOME%\bin\x64`.
+
+    :::image type="content" source="../media/r_path_environment_variable.png" alt-text="R_HOME environment variable":::
 
 1. Add or modify **R_HOME** as a system environment variable.
     + In the Windows search box, type "environment" and select **Edit the system environment variables**.

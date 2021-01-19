@@ -2,7 +2,7 @@
 description: "Using Always Encrypted with secure enclaves with the JDBC Driver"
 title: "Using Always Encrypted with secure enclaves with the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/02/2020"
+ms.date: "01/15/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -17,7 +17,7 @@ ms.author: v-reye
 
 This page provides information on how to develop Java applications using [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) and the Microsoft JDBC Driver 8.2 (or higher) for SQL Server.
 
-Secure enclaves is an addition to the existing [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature. The purpose of secure enclaves is to address limitations when working with Always Encrypted data. Previously, users could only perform equality comparisons on Always Encrypted data, and had to retrieve and decrypt the data in order to perform other operations. Secure enclaves address this limitation by allowing computations on plaintext data inside a secure enclave on the server side. A secure enclave is a protected region of memory within the SQL Server process, and acts as a trusted execution environment for processing sensitive data inside the SQL Server engine. A secure enclave appears as a black box to the rest of the SQL Server and other processes on the hosting machine. There is no way to view any data or code inside the enclave from the outside, even with a debugger.
+Secure enclaves is an addition to the existing [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature. The purpose of secure enclaves is to address limitations when working with Always Encrypted data. Previously, users could only perform equality comparisons on Always Encrypted data, and had to retrieve and decrypt the data in order to perform other operations. Secure enclaves address this limitation by allowing computations on plaintext data inside a secure enclave on the server side. A secure enclave is a protected region of memory within the SQL Server process, and acts as a trusted execution environment for processing sensitive data inside the SQL Server engine. A secure enclave appears as a black box to the rest of the SQL Server and other processes on the hosting machine. There's no way to view any data or code inside the enclave from the outside, even with a debugger.
 
 ## Prerequisites
 - Make sure Microsoft JDBC Driver 8.2 (or higher) for SQL Server is installed on your development machine.
@@ -29,17 +29,25 @@ Secure enclaves is an addition to the existing [Always Encrypted](../../relation
 > The policy files can be downloaded from  [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
 
 ## Setting up secure enclaves
-Follow this [tutorial](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) to get started with secure enclaves. For more in-depth information, refer to [Always encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Follow [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) or [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started) to get started with secure enclaves. For more in-depth information, refer to [Always encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ## Connection String properties
-**enclaveAttestationUrl:** the endpoint URL of the attestation service.
 
-**enclaveAttestationProtocol:** the protocol of the attestation service. Currently, the only supported value is **HGS**(Host Guardian Service).
+To enable enclave computations for a database connection, you need to set the following connection string keywords, in addition to enabling Always Encrypted.
 
-Users must enable **columnEncryptionSetting** and correctly set **both** of the above connection string properties in order to enable Always Encrypted with secure enclaves from the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
+- **enclaveAttestationProtocol** - specifies an attestation protocol. 
+  - If you're using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), the value of this keywords should be `HGS`.
+  - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, the value of this keywords should be `AAS`.
+
+- **enclaveAttestationUrl:** - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
+  - If you're using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
+  - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
+
+Users must enable **columnEncryptionSetting** and correctly set **both** of the above connection string properties to enable Always Encrypted with secure enclaves from the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 
 ## Working with secure enclaves
-When the enclave connection properties are set properly, the feature will work transparently. The driver will determine whether the query requires the use of a secure enclave automatically. The following are examples of queries which trigger enclave computations. You can find the database and table setup at [getting started with always encrypted enclaves](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md).
+When the enclave connection properties are set properly, the feature will work transparently. The driver will determine whether the query requires the use of a secure enclave automatically. The following are examples of queries that trigger enclave computations. You can find the database and table setup in [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) or [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started).
+
 
 Rich queries will trigger enclave computations:
 ```java

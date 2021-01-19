@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "backup media [SQL Server], sysopentapes system table"
   - "sysopentapes system table"
 ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # sysopentapes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

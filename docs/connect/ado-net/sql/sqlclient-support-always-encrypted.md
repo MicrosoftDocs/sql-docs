@@ -23,6 +23,7 @@ Always Encrypted allows client applications to encrypt sensitive data and never 
 ## Prerequisites
 
 - Configure Always Encrypted in your database. This involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted).
+- If you are using Always Encrypted with secure enclaves, see [Develop applications using Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md) for additional prerequisites.
 - Ensure the required .NET platform is installed on your development machine. With [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md), the Always Encrypted feature is supported for both .NET Framework and .NET Core. Make sure [.NET Framework 4.6](/dotnet/framework/) or higher, or [.NET Core 2.1](/dotnet/core/) or higher is configured as the target .NET platform version in your development environment. Starting from Microsoft.Data.SqlClient version 2.1.0, the Always Encrypted feature is also supported for [.NET Standard 2.0](/dotnet/standard/net-standard). To use Always Encrypted with secure enclaves, [.NET Standard 2.1](/dotnet/standard/net-standard) is required. If you're using Visual Studio, refer to [Framework targeting overview](/visualstudio/ide/visual-studio-multi-targeting-overview).
 
 The following table summarizes the required .NET platforms to use Always Encrypted with **Microsoft.Data.SqlClient**.
@@ -70,18 +71,20 @@ Enabling Always Encrypted isn't sufficient for encryption or decryption to succe
 
 Beginning with Microsoft.Data.SqlClient version 1.1.0, the driver supports [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
-To enable the use of the enclave when connecting to [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] or later, you need to configure your application to enable enclave computations and enclave attestation.
+For general information on developing applications using enclaves, see [Develop applications using Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md).
 
-For general information on the client driver role in enclave computations and enclave attestation, see [Develop applications using Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md).
+To enable enclave computations for a database connection, you need to set the following connection string keywords, in addition to enabling Always Encrypted (as explained in the previous section):
 
-To configure your application:
+- `Attestation Protocol` - specifies an attestation protocol. 
+  - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), the value of this keywords should be `HGS`.
+  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, the value of this keywords should be `AAS`.
 
-1. Ensure your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance has been configured with an enclave type (see [Configure the enclave type for Always Encrypted Server Configuration Option](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)). [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] supports the VBS enclave type and [Host Guardian Service](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs) for attestation.
-2. Enable enclave computations for a connection from your application to the database by setting the `Enclave Attestation URL` keyword in the connection string to an attestation endpoint. The value of the keyword should be set to the attestation endpoint of the HGS server configured in your environment.
-3. Provide the attestation protocol to be used by setting the `Attestation Protocol` keyword in the connection string. The value of this keyword should be set to "HGS".
+- `Enclave Attestation URL` - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
+
+  - If you're using [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](../../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
+  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
 
 For a step-by-step tutorial, see [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md).
-
 
 ## Retrieving and modifying data in encrypted columns
 

@@ -15,7 +15,7 @@ ms.author: v-jizho2
 
 # Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with Secure Enclaves
 
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 [!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -28,7 +28,7 @@ This example demonstrates use of Azure Key Vault Provider when accessing encrypt
 >
 > - To use Always Encrypted with secure enclaves on Linux and macOS, **Microsoft.Data.SqlClient** version 2.1.0 or higher is required.
 
-## See Also
+## See also
 
 - [Example demonstrating use of Azure Key Vault provider with Always Encrypted](azure-key-vault-example.md)
 - [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md)

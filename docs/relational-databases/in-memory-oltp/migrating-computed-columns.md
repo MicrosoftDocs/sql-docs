@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: MightyPen
 ms.author: genemi
-monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=sql-server-2016"
 ---
 # Migrating Computed Columns
 

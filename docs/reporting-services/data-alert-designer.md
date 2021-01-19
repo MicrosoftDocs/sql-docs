@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "creating, alerts"
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 
 # Data Alert Designer

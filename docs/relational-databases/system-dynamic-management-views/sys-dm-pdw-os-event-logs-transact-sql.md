@@ -10,9 +10,9 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: a0daa8cf-72e2-4349-8be1-d3cc0f9b1e02
-author: markingmyname
-ms.author: maghan
-monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">= aps-pdw-2016"
 ---
 # sys.dm_pdw_os_event_logs (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

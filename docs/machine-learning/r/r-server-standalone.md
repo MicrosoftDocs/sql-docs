@@ -9,7 +9,7 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # What are standalone Machine Learning Server or R Server in SQL Server?
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -54,7 +54,7 @@ Start with setup, attach the binaries to your favorite development tool, and wri
 Install either one of these versions:
 
 + [SQL Server 2017 Machine Learning Server (standalone)](../install/sql-machine-learning-standalone-windows-install.md)
-+ [SQL Server 2016 R Server (Standalone) - R only](../install/sql-machine-learning-standalone-windows-install.md?view=sql-server-2016)
++ [SQL Server 2016 R Server (Standalone) - R only](../install/sql-machine-learning-standalone-windows-install.md?view=sql-server-2016&preserve-view=true)
 
 ### Step 2: Configure a development tool
 

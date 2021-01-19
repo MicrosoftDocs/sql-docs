@@ -13,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "change data capture [SQL Server], functions"
 ms.assetid: e5270557-aca3-44ab-8715-daccd498b88d
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Change Data Capture Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

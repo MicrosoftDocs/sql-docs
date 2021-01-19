@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "last-opened cursor"
   - "asynchronous cursors [SQL Server]"
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # &#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

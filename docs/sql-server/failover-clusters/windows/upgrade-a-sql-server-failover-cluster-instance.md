@@ -5,7 +5,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "11/21/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading failover cluster instances"

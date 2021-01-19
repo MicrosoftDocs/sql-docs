@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "dropping XML schema collections"
   - "DROP XML SCHEMA COLLECTION statement"
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

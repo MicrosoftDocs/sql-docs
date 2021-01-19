@@ -11,7 +11,7 @@ ms.assetid: 32c3bd1a-9f7c-4a01-a271-5868871b8bd5
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Jobs Node (SQL Server Agent F1 Help)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

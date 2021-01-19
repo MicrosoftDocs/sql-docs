@@ -1,7 +1,7 @@
 ---
 title: "Database Files and Filegroups | Microsoft Docs"
 description: "Learn about database files and how to create filegroups in SQL Server for allocation and administrative purposes. View examples, rules, and recommendations."
-ms.custom: "contperfq4"
+ms.custom: "contperf-fy20q4"
 ms.date: "05/29/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"

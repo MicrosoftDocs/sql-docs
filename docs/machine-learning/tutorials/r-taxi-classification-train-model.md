@@ -10,7 +10,7 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current"
 ---
 
 # R tutorial: Train and save model
@@ -97,7 +97,7 @@ Because the stored procedure already includes a definition of the input data, yo
 
 3. When the statement has completed, open the table *nyc_taxi_models*. Processing of the data and fitting the model might take a while.
 
-   You can see that one new row has been added, which contains the serialized model in the column _model_ and the model name **TrainLog_model** in the column _name_.
+   You can see that one new row has been added, which contains the serialized model in the column _model_ and the model name **RTrainLogit_model** in the column _name_.
 
    ```text
    model                        name

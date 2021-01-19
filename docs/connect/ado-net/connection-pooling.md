@@ -19,11 +19,12 @@ ms.reviewer: v-chmalh
 
 Connecting to a data source can be time consuming. To minimize the cost of opening connections, ADO.NET uses an optimization technique called *connection pooling*, which minimizes the cost of repeatedly opening and closing connections.
 
-## In This Section  
+## In this section  
 
-[SQL Server Connection Pooling (ADO.NET)](sql-server-connection-pooling.md)
+[SQL Server Connection Pooling (ADO.NET)](sql-server-connection-pooling.md)  
 Provides an overview of connection pooling and describes how connection pooling works in SQL Server.
 
 ## See also
 
-- [Retrieving and Modifying Data in ADO.NET](retrieving-modifying-data.md)
+- [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

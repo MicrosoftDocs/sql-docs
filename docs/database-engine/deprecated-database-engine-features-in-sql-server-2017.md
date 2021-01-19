@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # Deprecated Database Engine Features in SQL Server 2017
 
@@ -40,7 +40,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ```
 
 > [!NOTE]
-> This list is identical to the [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] list. There are no new deprecated or discontinued Database Engine features announced for [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)].
+> This list is identical to the [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] list. There are no new deprecated or discontinued Database Engine features announced for [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)].
 
 ## Features deprecated in the next version of SQL Server
 

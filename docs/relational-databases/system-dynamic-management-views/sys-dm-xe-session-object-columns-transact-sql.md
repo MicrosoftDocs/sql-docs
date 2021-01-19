@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "xe"
   - "sys.dm_xe_session_object_columns dynamic management view"
 ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_xe_session_object_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "deleting cursor references"
   - "removing cursor references"
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # DEALLOCATE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

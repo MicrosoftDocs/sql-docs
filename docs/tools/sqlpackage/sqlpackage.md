@@ -84,8 +84,9 @@ Commands that return the following exit codes:
 
 
 ## Parameters
-Some parameters are shared between the SqlPackage actions.  Below is a table summarizing the parameters, for more information click into the specific action pages.
-| Parameter | Short Form | [Extract](sqlpackage-extract.md#parameters-for-the-extract-action) | [Publish](sqlpackage-publish.md#parameters-for-the-publish-action) | [Export](sqlpackage-export.md#parameters-for-the-export-action) | [Import](sqlpackage-import.md#parameters-for-the-import-action) | [DeployReport](sqlpackage-deploy-drift-report.md#deployreport-action-parameters) | [DriftReport](sqlpackage-deploy-drift-report.md#driftreport-action-parameters) | [Script](sqlpackage-script.md#parameters-for-the-script-action) |
+Some parameters are shared between the SqlPackage actions. Below is a table summarizing the parameters, for more information click into the specific action pages.
+
+| Parameter | Short Form | Extract | Publish | Export | [Import](sqlpackage-import.md#parameters-for-the-import-action) | [DeployReport](sqlpackage-deploy-drift-report.md#deployreport-action-parameters) | [DriftReport](sqlpackage-deploy-drift-report.md#driftreport-action-parameters) | [Script](sqlpackage-script.md#parameters-for-the-script-action) |
 |---|---|---|---|---|---|---|---|---|
 |**/AccessToken:**|**/at**| x | x | x | x | x | x | x |
 |**/ClientId:**|**/cid**| | x | | | | | |

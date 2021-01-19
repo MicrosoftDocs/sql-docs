@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "8645 (Database Engine error)"
 ms.assetid: 63d6d6d7-3850-4061-8e96-b1fa665e3180

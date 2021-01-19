@@ -16446,6 +16446,8 @@
           href: t-sql/statements/add-sensitivity-classification-transact-sql.md
         - name: BULK INSERT
           href: t-sql/statements/bulk-insert-transact-sql.md
+        - name: COPY
+          href: t-sql/statements/copy-into-transact-sql.md
         - name: DELETE
           href: t-sql/statements/delete-transact-sql.md
         - name: DISABLE TRIGGER

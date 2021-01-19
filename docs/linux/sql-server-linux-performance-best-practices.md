@@ -4,7 +4,7 @@ description: This article provides performance best practices and guidelines for
 author: tejasaks 
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 12/11/2020
+ms.date: 01/19/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -268,9 +268,9 @@ Using the **mssql** ***Tuned*** profile configures the **transparent_hugepage** 
 
 #### Network setting recommendations
 
-Like there are storage and CPU recommendations, there are Network specific recommendations as well listed below for reference. Not all settings mentioned below are available across different NICs, please refer and consult with NIC vendors for guidance for each of these options and please test and configure this on developement environments before applying them on production environments. The options mentioned below are explained with examples, the commands used are specific to NIC type and vendor. 
+Like there are storage and CPU recommendations, there are Network specific recommendations as well listed below for reference. Not all settings mentioned below are available across different NICs. Refer and consult with NIC vendors for guidance for each of these options. Test and configure this on developement environments before applying them on production environments. The options mentioned below are explained with examples, and the commands used are specific to NIC type and vendor. 
 
-1. Configuring network port buffer size: In the example below the NIC is named 'eth0' which is an Intel-based NIC, for Intel based NIC the recommended buffer size is 4KB (4096). Please verify the pre-set maximums and then configure it using the sample commands shown below:
+1. Configuring network port buffer size: In the example below, the NIC is named 'eth0', which is an Intel-based NIC. For Intel based NIC, the recommended buffer size is 4KB (4096). Verify the pre-set maximums and then configure it using the sample commands shown below:
 
  ```bash
          #To check the pre-set maximums please run the command, example NIC name used here is:"eth0"
@@ -281,7 +281,7 @@ Like there are storage and CPU recommendations, there are Network specific recom
          ethtool -g eth0
   ```
 
-2. Enable jumbo frames, before enabling jumbo frames please verify that all the network switch(es), routers and anything else essential in the network packet path between the clients and the SQL server support Jumbo Frames, only then enabling it can improve performance. After the jumbo frames are enabled, connect to SQL Server and change the network packet size to 8060 using sp_configure as shown below:
+2. Enable jumbo frames: Before enabling jumbo frames, verify that all the network switch(es), routers, and anything else essential in the network packet path between the clients and the SQL server support Jumbo Frames. Only then, enabling jumbo frames can improve performance. After jumbo frames are enabled, connect to SQL Server and change the network packet size to 8060 using `sp_configure` as shown below:
 
 ```bash
          #command to set jumbo frame to 9014 for a Intel NIC named eth0 is
@@ -289,14 +289,15 @@ Like there are storage and CPU recommendations, there are Network specific recom
          #verify the setting using the command:
          ip addr | grep 9014
 ```
-```T-SQL
+
+```sql
          sp_configure 'network packet size' , '8060'
          go
          reconfigure with override
          go
 ```
 
-3. By default, we recommend setting the port for adaptive RX/TX IRQ coalescing, meaning interrupt delivery will be adjusted to improve latency when packet rate is low and improve throughput when packet rate is high. Please note this setting might not be available across all the different network infrastructure, so please do review the existing network infrastructure and confirm this is supported. The example below is for the NIC named 'eth0' which is an intel-based NIC:
+3. By default, we recommend setting the port for adaptive RX/TX IRQ coalescing, meaning interrupt delivery will be adjusted to improve latency when packet rate is low and improve throughput when packet rate is high. Note that this setting might not be available across all the different network infrastructure, so review the existing network infrastructure and confirm that this is supported. The example below is for the NIC named 'eth0', which is an intel-based NIC:
 
 ```bash
          #command to set the port for adaptive RX/TX IRQ coalescing
@@ -305,8 +306,9 @@ Like there are storage and CPU recommendations, there are Network specific recom
          #confirm the setting using the command:
          ethtool -c eth0
 ```
+
 > [!NOTE]
-> For a predictable behavior for high-performance environments, like environments for benchmarking for those disable the adaptive RX/TX IRQ coalescing and then set specifically the RX/TX interrupt coalescing. Please see the example commands to disable the RX/TX IRQ coalescing and then specifically set the values:
+> For a predictable behavior for high-performance environments, like environments for benchmarking, disable the adaptive RX/TX IRQ coalescing and then set specifically the RX/TX interrupt coalescing. See the example commands to disable the RX/TX IRQ coalescing and then specifically set the values:
 
 ```bash
          #commands to disable adaptive RX/TX IRQ coalescing
@@ -319,7 +321,8 @@ Like there are storage and CPU recommendations, there are Network specific recom
          #confirm the setting using the command:
          ethtool -c eth0
 ```
-4. We also recommend RSS (Receive-Side Scaling) enabled and by default combining the rx and tx side of RSS queues. There have been specific scenarios where when working with Microsoft support, disabling the RSS has improved the performance as well. Please do test this setting in test environments before applying it on production environments. The example command shown below is for Intel NICs.
+
+4. We also recommend RSS (Receive-Side Scaling) enabled and by default, combining the rx and tx side of RSS queues. There have been specific scenarios where when working with Microsoft Support, disabling RSS has improved the performance as well. Test this setting in test environments before applying it on production environments. The example command shown below is for Intel NICs.
 
 ```bash
          #command to get pre-set maximums
@@ -331,7 +334,7 @@ Like there are storage and CPU recommendations, there are Network specific recom
          ethtool -l eth0
 ```
 
-5. Working with NIC port IRQ affinity. To achieve expected performance by tweaking the IRQ affinity please consider few important parameters like Linux handling of the server topology, NIC driver stack, default settings, and irqbalance setting. Optimizations of the NIC port IRQ affinities settings are done with the knowledge of server topology, disabling the irqbalance and using the NIC vendor-specific settings. Please find below an example for Mellanox specific network infra, to help explain the configuration. Please note the commands will change based on the environment, so please contact NIC vendor for further guidance:
+5. Working with NIC port IRQ affinity. To achieve expected performance by tweaking the IRQ affinity, consider few important parameters like Linux handling of the server topology, NIC driver stack, default settings, and irqbalance setting. Optimizations of the NIC port IRQ affinities settings are done with the knowledge of server topology, disabling the irqbalance, and using the NIC vendor-specific settings. Below is an example of Mellanox specific network infrastructure to help explain the configuration. Note that the commands will change based on the environment. Contact the NIC vendor for further guidance:
 
 ```bash
          #disable irqbalance or get a snapshot of the IRQ settings and force the daemon to exit
@@ -364,11 +367,13 @@ Like there are storage and CPU recommendations, there are Network specific recom
          #verify the settings
          ethtool -c eth0
 ```
-1. Post the above changes are done, please verify the speed of the NIC, to ensure it matches the expectation using the command:
+
+6. After the above changes are done, verify the speed of the NIC to ensure it matches the expectation using the following command:
 
 ```bash
          ethtool eth0 | grep -i Speed
 ```
+
 #### Additional advanced Kernel/OS configuration
 
 1. For best storage IO performance, the use of Linux multiqueue scheduling for block devices is recommended. This enables the block layer performance to scale well with fast solid-state drives (SSDs) and multi-core systems. Check the documentation if it is enabled by default in your Linux distributions. In most other cases, booting the kernel with **scsi_mod.use_blk_mq=y** enables it, though documentation of the Linux distribution in use may have additional guidance on it. This is consistent to the upstream Linux kernel.

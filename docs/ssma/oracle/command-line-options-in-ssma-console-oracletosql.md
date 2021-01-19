@@ -6,7 +6,7 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Command Line Options, Help Option"
   - "Command Line Options, SecurePassword Help Option"

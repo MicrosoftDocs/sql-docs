@@ -6,7 +6,7 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Customizing order"
 ms.assetid: 9d273ee3-2438-45cc-b4d1-8d3b549904b4

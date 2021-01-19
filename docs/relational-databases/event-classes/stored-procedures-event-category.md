@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Stored Procedures event category [SQL Server]"
   - "SQL Server event classes, Stored Procedures event category"

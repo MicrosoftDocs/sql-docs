@@ -6,7 +6,7 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Test Case Wizard"
 ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb

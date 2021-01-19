@@ -6,7 +6,7 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Conversion Results"
 ms.assetid: e021182d-31da-443d-b110-937f5db27272

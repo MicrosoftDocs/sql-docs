@@ -6,7 +6,7 @@ ms.custom: ""
 ms.date: 07/07/2020
 ms.reviewer: ""
 ms.technology: ssma
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Managing Passwords in Oracle, Exporting or Importing Encrypted Password"
   - "Managing passwords in Oracle, Securing Password"

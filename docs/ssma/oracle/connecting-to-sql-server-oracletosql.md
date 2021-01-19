@@ -6,7 +6,7 @@ ms.custom: ""
 ms.date: "11/16/2020"
 ms.reviewer: ""
 ms.technology: ssma
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Connecting to SQL Server,Synchronizing SQL Server Metadata"
 ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f

@@ -6,7 +6,7 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Customizing Project Settings"
 ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b

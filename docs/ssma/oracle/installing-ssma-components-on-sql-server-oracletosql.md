@@ -6,7 +6,7 @@ ms.custom: ""
 ms.date: "11/16/2020"
 ms.reviewer: ""
 ms.technology: ssma
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Installing the extension pack"
   - "SQL Server Database Objects"

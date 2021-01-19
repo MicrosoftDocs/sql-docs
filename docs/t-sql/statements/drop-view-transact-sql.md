@@ -2,7 +2,7 @@
 description: "DROP VIEW (Transact-SQL)"
 title: "DROP VIEW (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/11/2018"
+ms.date: "01/19/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -35,11 +35,17 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```syntaxsql
--- Syntax for SQL Server, Azure SQL Database, and Azure Synapse Analytics
+-- Syntax for SQL Server and Azure SQL Database
   
 DROP VIEW [ IF EXISTS ] [ schema_name . ] view_name [ ...,n ] [ ; ]  
 ```  
+
+```syntaxsql
+-- Syntax for Azure Synapse Analytics
   
+DROP VIEW [ IF EXISTS ] [ schema_name . ] view_name [ ; ]  
+```  
+
 ```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   

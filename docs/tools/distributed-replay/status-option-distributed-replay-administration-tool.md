@@ -55,5 +55,5 @@ dreplay status -m localhost -f 60
   
 ## See Also  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Transact-SQL Debugger](../../ssms/scripting/transact-sql-debugger.md?view=sql-server-ver15)  
+ [Transact-SQL Debugger](../../ssms/scripting/transact-sql-debugger.md)  
   

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "syscacheobjects system table"
   - "sys.syscacheobjects compatibility view"
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.syscacheobjects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

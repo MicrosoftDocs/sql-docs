@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.availability_replicas catalog view"
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

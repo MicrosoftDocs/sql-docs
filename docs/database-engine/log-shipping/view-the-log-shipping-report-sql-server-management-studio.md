@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: log-shipping
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing log shipping reports"

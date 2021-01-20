@@ -5,7 +5,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.newagwizard.f1"
@@ -99,7 +99,7 @@ In most cases, you can use the New Availability Group Wizard to complete all of 
   
     -   **Automatic seeding**  
   
-         SQL Server automatically creates the secondary replicas for every database in the group. Automatic seeding requires that the data and log file paths are the same on every SQL Server instance participating in the group. Available on [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] and later. See [Automatically initialize Always On Availability group](automatically-initialize-always-on-availability-group.md).
+         SQL Server automatically creates the secondary replicas for every database in the group. Automatic seeding requires that the data and log file paths are the same on every SQL Server instance participating in the group. Available on [!INCLUDE[sssql16-md.md](../../../includes/sssql16-md.md)] and later. See [Automatically initialize Always On Availability group](automatically-initialize-always-on-availability-group.md).
     
     -   **Full database and log backup**  
   

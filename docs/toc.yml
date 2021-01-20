@@ -1990,6 +1990,8 @@
         href: relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md
       - name: Work with
         href: relational-databases/track-changes/work-with-change-data-sql-server.md
+      - name: Interoperability
+        href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
     - name: Change tracking
       href: relational-databases/track-changes/about-change-tracking-sql-server.md
       items:
@@ -1999,8 +2001,6 @@
         href: relational-databases/track-changes/manage-change-tracking-sql-server.md
       - name: Work with
         href: relational-databases/track-changes/work-with-change-tracking-sql-server.md
-      - name: Interoperability
-        href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
   - name: Triggers
     items:
     - name: Logon Triggers
@@ -2299,7 +2299,7 @@
   items:
   - name: Code a client program > 
     displayName: ADO, ADO.NET, connect, C#, C++, Java, Node.js, ODBC, OLE DB, PHP, Python, Ruby
-    href: connect/index.md
+    href: ./connect/homepage-sql-connection-programming.md
   - name: Data tier applications
     href: relational-databases/data-tier-applications/data-tier-applications.md
     items:
@@ -2738,7 +2738,7 @@
         href: language-extensions/language-extensions-whats-new.md
     - name: Install
       items:
-      - name: Install Language Extensions on Windows
+      - name: Install Java Language Extension on Windows
         href: language-extensions/install/windows-java.md
     - name: Tutorials
       items:
@@ -4854,7 +4854,7 @@
   - name: Migration documentation
     href: sql-server/migrate/index.yml
   - name: SQL Server Integration Services (SSIS) > 
-    href: integration-services/index.md
+    href: ./integration-services/sql-server-integration-services.md
   - name: Bulk Copy Utility (bcp)
     href: tools/bcp-utility.md
   - name: Azure Migration Services >
@@ -5344,7 +5344,7 @@
         - name: Filter published data
           href: relational-databases/replication/merge/filter-published-data-for-merge-replication.md
         - name: View conflict information
-          href: relational-databases/replication/view-conflict-information-for-merge-publications.md
+          href: ./relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md
         - name: Conflict resolution
           items:
           - name: Choose a resolver
@@ -7066,7 +7066,7 @@
   - name: Joins
     href: relational-databases/performance/joins.md
   - name: Scripting
-    href: relational-databases/scripting/database-engine-scripting.md
+    href: ./ssms/scripting/database-engine-scripting.md
   - name: Subqueries
     href: relational-databases/performance/subqueries.md
   - name: Data virtualization (Polybase)
@@ -7122,7 +7122,7 @@
         - name: Virtualize data
           href: relational-databases/polybase/data-virtualization.md
         - name: Virtualize CSV file
-          href: relational-databases/polybase/data-virtualization-csv.md
+          href: ./big-data-cluster/data-virtualization-csv.md
       - name: Troubleshoot
         items:
         - name: Monitor & troubleshoot
@@ -7144,7 +7144,7 @@
       - name: Stack Overflow >>
         href: https://stackoverflow.com/questions/tagged/sql-server
       - name: Microsoft Q & A >>
-        href: https://docs.microsoft.com/answers/products/sql-server
+        href: /answers/products/sql-server
       - name: Submit feedback >>
         href: https://feedback.azure.com/forums/908035-sql-server
       - name: Reddit >>
@@ -7249,11 +7249,11 @@
     href: machine-learning/
   - name: Analytics Platform System > 
     displayName: APS, PDW, Parallel Data Warehouse
-    href: analytics-platform-system/index.md
+    href: ./analytics-platform-system/home-analytics-platform-system-aps-pdw.md
   - name: SQL Server Analysis Services (SSAS) > 
-    href: https://docs.microsoft.com/analysis-services/analysis-services-overview
+    href: /analysis-services/analysis-services-overview
   - name: SQL Server Reporting Services (SSRS) > 
-    href: reporting-services/index.md
+    href: ./reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
   - name: Master Data Services
     displayName: MDS
     href: master-data-services/master-data-services-overview-mds.md
@@ -7789,11 +7789,12 @@
           - name: Develop applications with .NET Framework
             href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
       - name: Always Encrypted with secure enclaves
-        href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
         items:
+          - name: Configure Always Encrypted with secure enclaves
+            href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
           - name: Set up your environment to support enclaves and attestation
             items:
-              - name: Set up VBS enclaves with Host Guardian Service attestation 
+              - name: Set up SQL Server
                 items:
                   - name: Plan for Host Guardian Service attestation
                     href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
@@ -7801,6 +7802,8 @@
                     href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md
                   - name: Register computer with Host Guardian Service
                     href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-register.md
+                  - name: Configure the secure enclave in SQL Server
+                    href: relational-databases/security/encryption/always-encrypted-enclaves-configure-enclave-type.md
           - name: Manage keys for Always Encrypted with secure enclaves
             items:
               - name: Manage enclave-enabled keys
@@ -7817,12 +7820,10 @@
                 href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
               - name: Enable Always Encrypted with secure enclaves for existing encrypted columns
                 href: relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns.md
-          - name: Query columns using Always Encrypted with secure enclaves
-            items:
-              - name: Query columns using Always Encrypted with secure enclaves
-                href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
-              - name: Query columns using Always Encrypted with secure enclaves with SSMS
-                href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md
+          - name: Run Transact-SQL statements using secure enclaves
+            href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
+          - name: Troubleshoot common issues with secure enclaves
+            href: relational-databases/security/encryption/always-encrypted-enclaves-troubleshooting.md
           - name: Create and use indexes on enclave-enabled columns
             href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
           - name: Develop applications using Always Encrypted with secure enclaves
@@ -7968,8 +7969,10 @@
         href: /azure/sql-database/sql-database-always-encrypted-azure-key-vault
     - name: Always Encrypted with secure enclaves
       items:
-      - name: Getting started with Always Encrypted with secure enclaves using SSMS
+      - name: Getting started with Always Encrypted with secure enclaves in SQL Server
         href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
+      - name: Getting started with Always Encrypted with secure enclaves in Azure SQL Database >
+        href: /azure/azure-sql/database/always-encrypted-enclaves-getting-started
       - name: Create and use indexes on Always Encrypted with secure enclaves columns
         href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
       - name: Develop a .NET Framework application using Always Encrypted with secure enclaves
@@ -8510,8 +8513,14 @@
         href: ssms/sql-server-management-studio-ssms.md
     - name: Quickstarts
       items:
-      - name: Connect & query SQL Server
-        href: ssms/quickstarts/connect-query-sql-server.md
+      - name: Connect and query SQL Server
+        href: ssms/quickstarts/ssms-connect-query-sql-server.md
+      - name: Connect & query SQL Server on Azure VM
+        href: ssms/quickstarts/ssms-connect-query-sql-server-azure-vm.md
+      - name: Connect and query Azure SQL Database
+        href: ssms/quickstarts/ssms-connect-query-azure-sql.md
+      - name: Connect and query a dedicated SQL pool in Azure Synapse Analytics
+        href: ssms/quickstarts/ssms-connect-query-azure-synapse-analytics.md
     - name: Tutorials
       items:
       - name: SSMS Configuration
@@ -8679,9 +8688,6 @@
             href: ssms/scripting/generate-and-publish-scripts-wizard.md
           - name: Objects Supported by the Generate Scripts Wizard
             href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
-        - name: Query & Text Editors
-          href: https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15
-          items:
           - name: XML Editor
             href: ssms/scripting/xml-editor-sql-server-management-studio.md
           - name: Color Coding in Query Editors
@@ -9101,8 +9107,6 @@
         items:
         - name: Query & Text Editors
           href: /previous-versions/sql/sql-server-2012/ms173477(v=sql.110)?redirectedfrom=MSDN
-        - name: Database Engine Query Editor
-          href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
         - name: XML Editor
           href: ssms/scripting/xml-editor-sql-server-management-studio.md
         - name: Configure Editors
@@ -9178,7 +9182,7 @@
         - name: Connect to Any SQL Server Component from SQL Server Management Studio
           href: ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md
         - name: Connection Properties Dialog Box
-          href: ssms/f1-help/connection-properties-dialog-box.md
+          href: ./ssms/f1-help/connect-to-server-connection-properties-page-database-engine.md
         - name: Connect to Server - Database Engine
           href: ssms/f1-help/connect-to-server-database-engine.md
         - name: Connect to Server - Properties Page - Database Engine
@@ -9186,31 +9190,31 @@
         - name: Connect to Server - Login - Database Engine
           href: ssms/f1-help/connect-to-server-login-page-database-engine.md
         - name: Login - Connect to SSAS Server
-          href: ssms/f1-help/connect-to-server-login-page-analysis-services.md
+          href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
         - name: Connect to SSAS
-          href: ssms/f1-help/connect-to-server-analysis-services.md
+          href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
         - name: Connect to SSAS Server (Connection Properties Page)
-          href: ssms/f1-help/connect-to-server-connection-properties-page-analysis-services.md
+          href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
         - name: Login - Connect to SSRS Server
-          href: ssms/f1-help/connect-to-server-login-page-reporting-services.md
+          href: ./reporting-services/tools/connect-to-a-report-server-in-management-studio.md
         - name: Connect to SSRS Server
-          href: ssms/f1-help/connect-to-server-reporting-services.md
+          href: ./reporting-services/tools/connect-to-a-report-server-in-management-studio.md
         - name: Connect to SSRS Server (Connection Properties Page)
-          href: ssms/f1-help/connect-to-server-connection-properties-page-reporting-services.md
+          href: ./reporting-services/tools/connect-to-a-report-server-in-management-studio.md
         - name: Browse for Servers (Local Servers)
-          href: ssms/f1-help/browse-for-servers-local-servers.md
+          href: ./tools/configuration-manager/sql-server-browser-service.md
         - name: Connect to Server (Additional Connection Parameters)
-          href: ssms/f1-help/connect-to-server-additional-connection-parameters-page.md
+          href: ./relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
         - name: Browse for Servers (Network Servers)
-          href: ssms/f1-help/browse-for-servers-network-servers.md
+          href: ./tools/configuration-manager/sql-server-browser-service.md
         - name: Password Expired
-          href: ssms/f1-help/password-expired.md
+          href: ./relational-databases/security/choose-an-authentication-mode.md
         - name: Connect to SSIS Server
-          href: ssms/f1-help/connect-to-server-integration-services.md
+          href: ./integration-services/service/integration-services-service-ssis-service.md
         - name: Connect to SSIS Server (Login Page)
-          href: ssms/f1-help/connect-to-server-login-page-integration-services.md
+          href: ./integration-services/service/integration-services-service-ssis-service.md
         - name: Connect to SSIS Server (Connection Properties Page)
-          href: ssms/f1-help/connect-to-server-connection-properties-page-integration-services.md
+          href: ./integration-services/service/integration-services-service-ssis-service.md
       - name: Menu help
         items:
         - name: SQL Server Management Studio Menu Help
@@ -9221,6 +9225,11 @@
           href: ssms/menu-help/options-environment-fonts-and-colors-page.md
         - name: Options (Environment - Help - General Page)
           href: ssms/menu-help/options-environment-help-general-page.md
+        - name: Options (Query Execution options - Help - General Page)
+          href: ssms/menu-help/options-query-execution.md
+        - name: Options (Azure Service - Help - General Page)
+          href: ssms/menu-help/options-azure-services.md
+
         - name: External Tools
           href: ssms/menu-help/external-tools.md
         - name: Customize (Commands Page)
@@ -9991,6 +10000,8 @@
       href: linux/sql-server-linux-deploy-pacemaker-cluster.md
     - name: Create & configure availability groups
       href: linux/sql-server-linux-create-availability-group.md
+    - name: Create with HA with HPE Serviceguard
+      href: linux/sql-server-availability-group-ha-hpe.md
     - name: Deploy on Kubernetes
       href: linux/tutorial-sql-server-containers-kubernetes.md
     - name: Configure replication
@@ -10049,7 +10060,7 @@
       - name: Connectivity libraries
         href: linux/sql-server-linux-develop-connectivity-libraries.md
       - name: Use Visual Studio Code
-        href: linux/sql-server-linux-develop-use-vscode.md
+        href: ./tools/visual-studio-code/sql-server-develop-use-vscode.md
       - name: Use SSDT
         href: linux/sql-server-linux-develop-use-ssdt.md
     - name: Manage
@@ -10186,7 +10197,7 @@
     - name: Stack Overflow >>
       href: https://stackoverflow.com/questions/tagged/sql-server  # Note: this S.O. https address occurs multiple times in this toc/toc.yml file. Is okay if beneficial.
     - name: Microsoft Q & A >>
-      href: https://docs.microsoft.com/answers/products/sql-server
+      href: /answers/products/sql-server
     - name: Submit feedback >>
       href: https://feedback.azure.com/forums/908035-sql-server
     - name: Reddit >>
@@ -10222,7 +10233,7 @@
     - name: Educational resources 
       href: sql-server/educational-sql-resources.yml
     - name: Microsoft Learn >>
-      href: https://docs.microsoft.com/learn/
+      href: /learn/
     - name: SQL on Channel 9 >>
       href: https://channel9.msdn.com/Search
   - name: Help
@@ -10230,7 +10241,7 @@
     - name: Get help
       href: sql-server/sql-server-get-help.md
     - name: Microsoft Q & A >>
-      href: https://docs.microsoft.com/answers/products/sql-server
+      href: /answers/products/sql-server
     - name: DBA Stack Exchange >>
       href: https://dba.stackexchange.com/questions/tagged/sql-server
     - name: Stack Overflow >>
@@ -10244,11 +10255,11 @@
     - name: SQL Server >>
       href: https://blogs.technet.microsoft.com/dataplatforminsider/
     - name: Database Engine >>
-      href: https://blogs.msdn.microsoft.com/sqlserverstorageengine/
+      href: /archive/blogs/sqlserverstorageengine/
     - name: Security >>
-      href: https://blogs.msdn.microsoft.com/sqlsecurity/
+      href: /archive/blogs/sqlsecurity/
     - name: Data Tools >>
-      href: https://blogs.msdn.microsoft.com/ssdt/
+      href: /archive/blogs/ssdt/
   - name: Feedback
     items: 
     - name: SQL Docs >> 
@@ -10415,6 +10426,8 @@
           href: relational-databases/errors-events/mssqlserver-1462-database-engine-error.md
         - name: 1505
           href: relational-databases/errors-events/mssqlserver-1505-database-engine-error.md
+        - name: 1785
+          href: relational-databases/errors-events/mssqlserver-1785-database-engine-error.md
         - name: 1793
           href: relational-databases/errors-events/mssqlserver-1793-database-engine-error.md
         - name: 1803
@@ -10535,6 +10548,10 @@
           href: relational-databases/errors-events/mssqlserver-3961-database-engine-error.md
         - name: 3859
           href: relational-databases/errors-events/mssqlserver-3859-database-engine-error.md
+        - name: 3988
+          href: relational-databases/errors-events/mssqlserver-3988-database-engine-error.md
+        - name: 3989
+          href: relational-databases/errors-events/mssqlserver-3989-database-engine-error.md
         - name: 4064
           href: relational-databases/errors-events/mssqlserver-4064-database-engine-error.md
         - name: 4104
@@ -10581,6 +10598,10 @@
           href: relational-databases/errors-events/mssqlserver-5515-database-engine-error.md
         - name: 5554
           href: relational-databases/errors-events/mssqlserver-5554-database-engine-error.md
+        - name: 6522
+          href: relational-databases/errors-events/mssqlserver-6522-database-engine-error.md
+        - name: 6602
+          href: relational-databases/errors-events/mssqlserver-6602-database-engine-error.md
         - name: 7105
           href: relational-databases/errors-events/mssqlserver-7105-database-engine-error.md
         - name: 7308
@@ -10791,6 +10812,8 @@
           href: relational-databases/errors-events/mssqlserver-14420-database-engine-error.md
         - name: 14421
           href: relational-databases/errors-events/mssqlserver-14421-database-engine-error.md
+        - name: 15401
+          href: relational-databases/errors-events/mssqlserver-15401-database-engine-error.md
         - name: 15404
           href: relational-databases/errors-events/mssqlserver-15404-database-engine-error.md
         - name: 15517
@@ -10855,6 +10878,8 @@
           href: relational-databases/errors-events/mssqlserver-17884-database-engine-error.md
         - name: 17887
           href: relational-databases/errors-events/mssqlserver-17887-database-engine-error.md
+        - name: 17890
+          href: relational-databases/errors-events/mssqlserver-17890-database-engine-error.md
         - name: 17892
           href: relational-databases/errors-events/mssqlserver-17892-database-engine-error.md
         - name: 18264
@@ -10863,6 +10888,10 @@
           href: relational-databases/errors-events/mssqlserver-18452-database-engine-error.md
         - name: 18456
           href: relational-databases/errors-events/mssqlserver-18456-database-engine-error.md
+        - name: 18482
+          href: relational-databases/errors-events/mssqlserver-18482-database-engine-error.md
+        - name: 18483
+          href: relational-databases/errors-events/mssqlserver-18483-database-engine-error.md
         - name: 18752
           href: relational-databases/errors-events/mssqlserver-18752-database-engine-error.md
       - name: Errors 20,000 to 34,000
@@ -16417,6 +16446,8 @@
           href: t-sql/statements/add-sensitivity-classification-transact-sql.md
         - name: BULK INSERT
           href: t-sql/statements/bulk-insert-transact-sql.md
+        - name: COPY
+          href: t-sql/statements/copy-into-transact-sql.md
         - name: DELETE
           href: t-sql/statements/delete-transact-sql.md
         - name: DISABLE TRIGGER

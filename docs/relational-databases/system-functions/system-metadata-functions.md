@@ -11,8 +11,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: a6fb85b2-b010-4ca9-b65f-4402917076ea
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # System Metadata Functions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -28,7 +28,7 @@ The Microsoft SqlClient Data Provider for SQL Server has <xref:Microsoft.Data.Sq
 |`ExecuteNonQuery`|Executes a command that does not return any rows.|  
 |`ExecuteXMLReader`|Returns an <xref:System.Xml.XmlReader>. Available for a `SqlCommand` object only.|
 
- Each strongly typed command object also supports a <xref:System.Data.CommandType> enumeration that specifies how a command string is interpreted, as described in the following table.
+Each strongly typed command object also supports a <xref:System.Data.CommandType> enumeration that specifies how a command string is interpreted, as described in the following table.
 
 |CommandType|Description|
 |-----------------|-----------------|  
@@ -45,12 +45,14 @@ The following code example demonstrates how to create a <xref:Microsoft.Data.Sql
 
 [!code-csharp[DataWorks SqlClient.StoredProcedure#1](~/../sqlclient/doc/samples/SqlCommand_StoredProcedure.cs#1)]
 
-### Troubleshooting Commands
+### Troubleshooting commands
 
 [!INCLUDE[appliesto-netfx-xxxx-xxxx-md](../../includes/appliesto-netfx-xxxx-xxxx-md.md)]
 
-The Microsoft SqlClient Data Provider for SQL Server adds **performance counters** to enable you to detect intermittent problems related to failed command executions.
+The Microsoft SqlClient Data Provider for SQL Server adds **performance counters** to enable you to detect intermittent problems related to failed command executions. For more information, see [Performance counters in SqlClient](performance-counters.md).
 
 ## See also
 
 - [Commands and parameters](commands-parameters.md)
+- [DataAdapters and DataReaders](dataadapters-datareaders.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

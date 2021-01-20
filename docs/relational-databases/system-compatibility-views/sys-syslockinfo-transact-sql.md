@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "syslockinfo system table"
   - "sys.syslockinfo compatibility view"
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.syslockinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 06/30/2020
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords: 
   - "failover modes [SQL Server]"

@@ -138,4 +138,4 @@ The SystemConfigurationCheck_Report.htm is located at %programfiles%\\[!INCLUDE[
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   
 ## See also  
- [Install SQL Server 2017](../../database-engine/install-windows/install-sql-server.md)
+ [Install SQL Server 2019](../../database-engine/install-windows/install-sql-server.md)

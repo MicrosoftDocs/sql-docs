@@ -43,6 +43,5 @@ Your system must have the following installed to use this tutorial:
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. To install [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
   
 ## See Also  
-[Tutorial: SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)  
-  
+[Tutorial: SQL Server Management Studio](../ssms/quickstarts/ssms-connect-query-sql-server.md)  
   

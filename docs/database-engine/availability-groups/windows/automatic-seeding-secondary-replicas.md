@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "11/27/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords: 
 - "Automatic seeding [SQL Server], secondary replica"

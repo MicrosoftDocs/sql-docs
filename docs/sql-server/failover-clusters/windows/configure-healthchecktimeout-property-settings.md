@@ -5,7 +5,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "03/09/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: cawrites

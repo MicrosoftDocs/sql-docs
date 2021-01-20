@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.parameter_xml_schema_collection_usages catalog view"
 ms.assetid: bffb91a3-492c-4375-bd2a-db8fc1a3ace4
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.parameter_xml_schema_collection_usages (Transact-SQL)

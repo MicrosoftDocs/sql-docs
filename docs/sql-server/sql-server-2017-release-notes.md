@@ -24,7 +24,7 @@ This article describes limitations and issues with SQL Server 2017. For related 
 - [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Spin up a Virtual Machine with SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 > [!NOTE]
-> SQL Server 2019 preview is now available. For more information, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
+> SQL Server 2019 preview is now available. For more information, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15&preserve-view=true).
 
 ## SQL Server 2017 - general availability release (October 2017)
 ### Database Engine
@@ -79,7 +79,7 @@ There are no release notes for SQL Server on Windows related to this release. Se
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 CTP 2.1 (May  2017)
 ### Documentation (CTP 2.1)
-- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is noted with **Applies To**. 
+- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql16-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is noted with **Applies To**. 
 - **Issue and customer impact:** No offline content is available for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
 
 ### SQL Server Reporting Services (CTP 2.1)
@@ -125,7 +125,7 @@ There are no release notes for SQL Server on Windows related to this release. Se
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 CTP 2.0 (April  2017)
 ### Documentation (CTP 2.0)
-- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is noted with **Applies To**. 
+- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql16-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is noted with **Applies To**. 
 - **Issue and customer impact:** No offline content is available for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
 
 ### Always On availability groups

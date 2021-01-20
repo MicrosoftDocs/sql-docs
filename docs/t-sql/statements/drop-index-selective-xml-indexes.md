@@ -13,8 +13,8 @@ f1_keywords:
 dev_langs: 
   - "TSQL"
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP INDEX (Selective XML Indexes)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

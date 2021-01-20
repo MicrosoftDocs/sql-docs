@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "connections [SQL Server], simultaneous"
   - "number of simultaneous user connections"
 ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # &#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -28,7 +28,7 @@ This example demonstrates use of Azure Key Vault Provider when accessing encrypt
 >
 > - To use Always Encrypted feature on Linux and macOS, **Microsoft.Data.SqlClient** version 2.1.0 or higher is required.
 
-## See Also
+## See also
 
 - [Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with Secure Enclaves](azure-key-vault-enclave-example.md)
 - [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md)

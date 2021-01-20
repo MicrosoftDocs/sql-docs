@@ -171,7 +171,7 @@ Creates one or more table partitions. These partitions are horizontal table slic
 
 ### Ordered Clustered columnstore index option 
 
-Clustered columnstore index (CCI) is the default for creating tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  Data in CCI is not sorted before being compressed into columnstore segments.  When creating a CCI with ORDER, data is sorted before being added to index segments and query performance can be improved. See [Performance Tuning with Ordered Clustered Columnstore Index](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest) for details.  
+Clustered columnstore index (CCI) is the default for creating tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  Data in CCI is not sorted before being compressed into columnstore segments.  When creating a CCI with ORDER, data is sorted before being added to index segments and query performance can be improved. See [Performance Tuning with Ordered Clustered Columnstore Index](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest&preserve-view=true) for details.  
 
 An ordered CCI can be created on columns of any data types supported in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] except for string columns.  
 
@@ -325,7 +325,7 @@ A columnstore table is a table stored in column-by-column order. The columnstore
 To change a rowstore table to a columnstore table, drop all existing indexes on the table and create a clustered columnstore index. For an example, see [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md).
 
 For more information, see these articles:
-- [Columnstore indexes versioned feature summary](/sql/relational-databases/indexes/columnstore-indexes-what-s-new)
+- [Columnstore indexes versioned feature summary](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)
 - [Indexing tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Columnstore Indexes Guide](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 
@@ -595,4 +595,4 @@ WITH
 [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
-[sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md?view=azure-sqldw-latest) 
+[sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) 

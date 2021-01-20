@@ -56,7 +56,7 @@ ms.custom: "seo-lt-2019"
      TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }  
   
      *target_recovery_time*  
-     Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], the default value is 1 minute. When greater than 0 (the default for older versions), specifies the upper-bound on the recovery time for the specified database in the event of a crash.  
+     Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)], the default value is 1 minute. When greater than 0 (the default for older versions), specifies the upper-bound on the recovery time for the specified database in the event of a crash.  
   
      SECONDS  
      Indicates that *target_recovery_time* is expressed as the number of seconds.  

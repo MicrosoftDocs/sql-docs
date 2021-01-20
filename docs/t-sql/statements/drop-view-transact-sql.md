@@ -2,7 +2,7 @@
 description: "DROP VIEW (Transact-SQL)"
 title: "DROP VIEW (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/11/2018"
+ms.date: "01/19/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "views [SQL Server], removing"
   - "removing views"
 ms.assetid: 03cea355-e39c-46e1-b7db-8832038669dd
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP VIEW (Transact-SQL)
@@ -35,11 +35,17 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```syntaxsql
--- Syntax for SQL Server, Azure SQL Database, and Azure Synapse Analytics
+-- Syntax for SQL Server and Azure SQL Database
   
 DROP VIEW [ IF EXISTS ] [ schema_name . ] view_name [ ...,n ] [ ; ]  
 ```  
+
+```syntaxsql
+-- Syntax for Azure Synapse Analytics
   
+DROP VIEW [ IF EXISTS ] [ schema_name . ] view_name [ ; ]  
+```  
+
 ```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
@@ -50,7 +56,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
 
 ## Arguments
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).|  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).|  
   
  Conditionally drops the view only if it already exists.  
   

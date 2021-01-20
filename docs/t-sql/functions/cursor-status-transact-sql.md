@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "CURSOR_STATUS function"
   - "cursors [SQL Server], status information"
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # CURSOR_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -4,7 +4,7 @@ description: Explore how SQL Server can be deployed on Docker containers and lea
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 ms.date: 09/07/2020
 ms.topic: conceptual
 ms.prod: sql
@@ -427,7 +427,7 @@ This updates the SQL Server image for any new containers you create, but it does
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-- Get started with SQL Server 2019 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md?view=sql-server-ver15)
+- Get started with SQL Server 2019 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md)
 
 ::: moniker-end
 

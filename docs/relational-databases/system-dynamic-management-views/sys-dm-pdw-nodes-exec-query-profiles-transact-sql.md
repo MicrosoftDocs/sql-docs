@@ -63,11 +63,11 @@ The counters returned are per operator per thread. The results are dynamic and d
 |segment_read_count|**int**|Number of segment read-aheads so far.|  
 |segment_skip_count|**int**|Number of segments skipped so far.| 
 |actual_read_row_count|**bigint**|Number of rows read by an operator before the residual predicate was applied.| 
-|estimated_read_row_count|**bigint**|**Applies to:** Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Number of rows estimated to be read by an operator before the residual predicate was applied.|  
+|estimated_read_row_count|**bigint**|**Applies to:** Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1. <br/>Number of rows estimated to be read by an operator before the residual predicate was applied.|  
   
 ## Remarks
 
-The same remarks in [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15) apply.  
+The same remarks in [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md) apply.  
 
 ## Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  

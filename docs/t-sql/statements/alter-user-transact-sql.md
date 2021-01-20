@@ -42,13 +42,13 @@ Renames a database user or changes its default schema.
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -116,7 +116,7 @@ NAME = newUserName
 > This option may only be specified in a contained database and only for contained users.
 
  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Suppresses cryptographic metadata checks on the server in bulk copy operations. This enables the user to bulk copy encrypted data between tables or databases, without decrypting the data. The default is OFF.
 
@@ -228,10 +228,10 @@ GO
         **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -311,7 +311,7 @@ ALTER USER userName
 > This option is available only for contained users.
 
  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Suppresses cryptographic metadata checks on the server in bulk copy operations. This enables the user to bulk copy encrypted data between tables or databases, without decrypting the data. The default is OFF.
 
@@ -417,13 +417,13 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Managed Instance \*_**
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -693,10 +693,10 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -822,13 +822,13 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_**

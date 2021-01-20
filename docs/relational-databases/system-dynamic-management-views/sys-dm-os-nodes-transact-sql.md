@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_nodes dynamic management view"
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_nodes (Transact-SQL)
@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 An internal component named the SQLOS creates node structures that mimic hardware processor locality. These structures can be changed by using [soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) to create custom node layouts.  
 
 > [!NOTE]
-> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will automatically use soft-NUMA for certain hardware configurations. For more information, see [Automatic Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will automatically use soft-NUMA for certain hardware configurations. For more information, see [Automatic Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
   
 The following table provides information about these nodes.  
   

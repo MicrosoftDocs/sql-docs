@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.server_event_session_events catalog view"
   - "xe"
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

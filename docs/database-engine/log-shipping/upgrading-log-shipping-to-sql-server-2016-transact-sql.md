@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "02/01/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: log-shipping
 ms.topic: conceptual
 helpviewer_keywords: 
   - "log shipping [SQL Server], upgrading"

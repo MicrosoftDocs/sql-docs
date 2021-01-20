@@ -42,4 +42,4 @@ Perform a full database backup before you try to backup the transaction log for 
 
 ## More information
 
-For more information you can, see: [Back Up and Restore of SQL Server Databases](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases).
+For more information you can, see: [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md).

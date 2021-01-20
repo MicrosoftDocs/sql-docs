@@ -217,6 +217,7 @@ items:
         href: big-data-cluster/app-run.md
       - name: Monitor apps
         href: big-data-cluster/app-monitor.md
+
     - name: Big Data/Machine Learning
       items:
       - name: Use Machine Learning Services (Python, R)
@@ -313,7 +314,7 @@ items:
               href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 5 - Predictions
               href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-      - name: How-to guides
+      - name: Machine learning how-to guides
         items:
         - name: Package management
           items:
@@ -333,6 +334,99 @@ items:
               href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: Tips for using R packages
               href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+
+      - name: More how-to guides
+        items:
+# Items commented-out are articles being investigated to see if they work in BDC
+#       - name: Connect
+#         items:
+#         - name: Loopback connection
+#           href: ../machine-learning/connect/loopback-connection.md
+#         - name: Connect to OLAP from R
+#           items:
+#           - name: Use data from OLAP cubes in R
+#             href: ../machine-learning/r/using-data-from-olap-cubes-in-r.md
+#           - name: How to create MDX queries using olapR
+#             href: ../machine-learning/r/how-to-create-mdx-queries-using-olapr.md
+        - name: Data exploration and modeling
+          items:
+          - name: Python
+            items:
+            - name: Plot Histogram in Python
+              href: machine-learning/data-exploration/python-plot-histogram?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: Import data into pandas dataframe
+              href: machine-learning/data-exploration/python-dataframe-pandas?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: Insert dataframe into SQL
+              href: machine-learning/data-exploration/python-dataframe-sql-server?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+        - name: Data type conversions
+          items:
+          - name: Python to SQL
+            href: machine-learning/python/python-libraries-and-data-types?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+          - name: R to SQL
+            href: machine-learning/r/r-libraries-and-data-types?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+        - name: Deploy
+          items:
+          - name: Operationalize using stored procedures
+            href: machine-learning/r/operationalizing-your-r-code?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+#         - name: Create SSIS and SSRS workflows with R
+#           href: machine-learning/r/creating-workflows-that-use-r-in-sql-server?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+          - name: Convert R code for SQL Server
+            href: machine-learning/r/converting-r-code-for-use-in-sql-server?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+          - name: Create a stored procedure using sqlrutils
+            href: machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+        - name: Predictions
+          items:
+          - name: Native scoring with PREDICT T-SQL
+            href: machine-learning/predictions/native-scoring-predict-transact-sql?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+        - name: Package management
+          items:
+          - name: Install new Python packages
+            items:
+            - name: Get Python package information
+              href: machine-learning/package-management/python-package-information?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: Install with sqlmlutils
+              href: machine-learning/package-management/install-additional-python-packages-on-sql-server?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+          - name: Install new R packages
+            items:
+            - name: Get R package information
+              href: machine-learning/package-management/r-package-information?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: Install with sqlmlutils
+              href: machine-learning/package-management/install-additional-r-packages-on-sql-server?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: Create a miniCRAN repo
+              href: machine-learning/package-management/create-a-local-package-repository-using-minicran?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: Tips for using R packages
+              href: machine-learning/package-management/tips-for-using-r-packages?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+        - name: Administration
+          items:
+          - name: Monitor
+            items:
+            - name: Monitor using SSMS reports
+              href: machine-learning/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: Monitor using DMVs
+              href: machine-learning/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: Extended events
+              items:
+              - name: Monitor using extended events
+                href: machine-learning/administration/extended-events?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+              - name: Monitor PREDICT T-SQL
+                href: machine-learning/administration/extended-events-predict-tsql?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+#         - name: Resource governor
+#           items:
+#           - name: Use resource governor
+#             href: machine-learning/administration/resource-governor?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+#           - name: Create a resource pool
+#             href: machine-learning/administration/create-external-resource-pool?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+        - name: Security
+          items:
+          - name: Give users permission
+            href: machine-learning/security/user-permission?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+#         - name: Configure Launchpad
+#           href: machine-learning/security/sql-server-launchpad-service-account?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+#         - name: Configure firewall
+#           href: machine-learning/security/firewall-configuration?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+#         - name: Create a login for SQLRUserGroup
+#           href: machine-learning/security/create-a-login-for-sqlrusergroup?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+
       - name: Data wrangling using PROSE Code Accelerator
         href: big-data-cluster/use-prose-for-big-data-automation.md
       - name: Spark machine learning models with MLeap

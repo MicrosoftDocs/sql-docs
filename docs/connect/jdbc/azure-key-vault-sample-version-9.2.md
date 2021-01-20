@@ -68,16 +68,6 @@ public class AKV {
                 Statement statement = connection.createStatement()) {
             statement.execute("DBCC FREEPROCCACHE");
 
-            System.out.println("Create SQLServerColumnEncryptionAzureKeyVaultProvider with 'authenticationCallback' and 'executorService(null)'");
-            /* Constructor added in 6.0.0 driver version and removed in 6.2.2 driver, now added back in 7.0.0 driver
-             * [Supports SQLServerKeyVaultAuthenticationCallback in 7.0 for backwards compatibility]
-             * This constructor is marked @deprecated since it no longer uses 'ExecutorService' parameter passed. */
-            @SuppressWarnings("deprecation")
-            SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider1 = new SQLServerColumnEncryptionAzureKeyVaultProvider(
-                    tryAuthenticationCallback(), null);
-            setupKeyStoreProviders(akvProvider1.getName(), akvProvider1);
-            testAKV(akvProvider1.getName(), akvProvider1, connection, statement);
-
             statement.execute("DBCC FREEPROCCACHE");    
             System.out.println("Create SQLServerColumnEncryptionAzureKeyVaultProvider with 'authenticationCallback'");
             /* Constructor added in 7.0.0 driver version [Supports SQLServerKeyVaultAuthenticationCallback in 7.0 for backwards compatibility]

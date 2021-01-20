@@ -2,7 +2,7 @@
 title: "Using Always Encrypted with the JDBC driver"
 description: "Learn how to use Always Encrypted in your Java application with the JDBC driver for SQL Server to encrypt sensitive data on the server."
 ms.custom: ""
-ms.date: "12/10/2020"
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

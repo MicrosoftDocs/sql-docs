@@ -12,7 +12,7 @@ ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: David-Engel
 ms.author: v-daenge
 ---
-# System requirements for the Java Database Connectivity (JDBC) driver
+# System requirements for the JDBC driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   To access data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] by using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], you must have the following components installed on your computer:

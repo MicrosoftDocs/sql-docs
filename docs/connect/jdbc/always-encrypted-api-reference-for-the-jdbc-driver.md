@@ -2,7 +2,7 @@
 description: "Always Encrypted API reference for the JDBC driver"
 title: "Always Encrypted API reference for the JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2019"
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -197,4 +197,3 @@ Public enum  SQLServerStatementColumnEncryptionSetting
  ## See also  
  [Using Always Encrypted with the JDBC driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
   
-

@@ -2,7 +2,7 @@
 description: "System requirements for the JDBC driver"
 title: "System requirements for the JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2020"
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

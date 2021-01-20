@@ -2,7 +2,7 @@
 title: "Bulk copy API for batch insert in JDBC"
 description: "Microsoft JDBC Driver for SQL Server supports using Bulk Copy for batch inserts against Azure Synapse Analytics for faster loading of data into the database."
 ms.custom: ""
-ms.date: "12/14/2020"
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

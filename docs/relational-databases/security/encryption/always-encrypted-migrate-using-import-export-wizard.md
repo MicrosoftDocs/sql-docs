@@ -8,8 +8,6 @@ ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
-  - "SQL13.SWB.COLUMNMASTERKEY.PAGE.F1"
-  - "SQL13.SWB.COLUMNENCRYPTIONKEY.PAGE.F1"
   - "SQL13.SWB.COLUMNMASTERKEY.ROTATION.F1"
 helpviewer_keywords: 
   - "Always Encrypted, configure with SSMS"

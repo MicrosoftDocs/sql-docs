@@ -348,7 +348,7 @@ For advice on how to optimize performance for [!INCLUDE[ssNoVersion](../../inclu
 ## See also
 
 - [SQL Server 2008 / 2008 R2 lifecycle page](https://support.microsoft.com/lifecycle/search?alpha=sql%20server%202008)
-- [SQL Server 2008 / 2008 R2 end of support page](https://aka.ms/sqleos)
+- [SQL Server 2008 / 2008 R2 end of support page](./sql-server-end-of-life-overview.md?WT.mc_id=akamseos)
 - [Extended Security Updates frequently asked questions (FAQ)](https://aka.ms/sqleosfaq)
 - [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
 - [Manage Windows updates by using Azure Automation](/azure/automation/update-management/overview)
@@ -357,4 +357,3 @@ For advice on how to optimize performance for [!INCLUDE[ssNoVersion](../../inclu
 - [Azure migrate: lift-and-shift options to move your current SQL Server 2008 / 2008 R2 into an Azure VM](https://azure.microsoft.com/services/azure-migrate/)
 - [Cloud adoption framework for SQL migration](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
 - [ESU-related scripts on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-server-extended-security-updates/scripts)
-

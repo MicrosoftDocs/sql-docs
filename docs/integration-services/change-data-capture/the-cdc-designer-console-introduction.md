@@ -37,9 +37,11 @@ ms.author: chugu
   
 ### Source Oracle Database
   
--   Oracle Database 10g Release 2
--   Oracle Database 11g Release 1 and Release 2
--   Oracle Database 12c in classic installation. (Multitenant installation is not supported.)  
+- Oracle Database 10g Release 2
+- Oracle Database 11g Release 1 and Release 2
+- Oracle Database 12c in classic installation (Multitenant installation is not supported.)  
+- Oracle Database 18c in classic installation (Multitenant installation is not supported.)
+- Oracle Database 19c in classic installation (Multitenant installation is not supported.)
 
 ### Target SQL Server Database
   
@@ -58,6 +60,6 @@ ms.author: chugu
  Double-click the CDC Designer Console installation kit and follow the directions in the installation wizard.  
   
 ## Uninstalling the CDC Designer Console  
- Uninstall the CDC Designer Console by using Control Panel, Programs and Features.  
+ Uninstall the CDC Designer Console by using Control Panel, Programs, and Features.  
   
   

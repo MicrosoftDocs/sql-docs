@@ -84,7 +84,7 @@ ms.author: maggies
   
  ![New List added from Toolbox, selected](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "New List added from Toolbox, selected")  
   
- For more information, see [Create Invoices and Forms with Lists].  
+ For more information, see [Create Invoices and Forms with Lists](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 ##  <a name="PreparingData"></a> Preparing Data  
  A table, matrix, and list data regions display data from a dataset. You can prepare the data in the query that retrieves the data for the dataset or by setting properties in the table, matrix, or list.  

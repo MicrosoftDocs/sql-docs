@@ -115,11 +115,11 @@ If you're installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md
 **Specify Administrators**: You must specify at least one server administrator for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The users or groups that you specify become members of the server administrator role of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance you're installing. These members must have Windows domain user accounts in the same domain as the computer on which you're installing the software.  
   
 > [!NOTE]  
-> User Account Control (UAC) is a Windows security feature that requires an administrator to specifically approve administrative actions or applications before they're allowed to run. Because UAC is on by default, you'll be prompted to allow specific operations that require elevated privileges. You can configure UAC to change the default behavior or you can customize UAC for specific programs. For more information about UAC and UAC configuration, see the [User Account Control step-by-step guide](https://go.microsoft.com/fwlink/?linkid=196350) and [User Account Control (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
+> User Account Control (UAC) is a Windows security feature that requires an administrator to specifically approve administrative actions or applications before they're allowed to run. Because UAC is on by default, you'll be prompted to allow specific operations that require elevated privileges. You can configure UAC to change the default behavior or you can customize UAC for specific programs. For more information about UAC and UAC configuration, see the [User Account Control step-by-step guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc709691(v=ws.10)) and [User Account Control (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
   
 ### See also
   
-* [Configure service accounts &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services)
+* [Configure service accounts &#40;Analysis Services&#41;](/analysis-services/instances/configure-service-accounts-analysis-services)
 * [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
 ## Analysis Services Configuration - Data Directories page
@@ -187,7 +187,7 @@ The default directories in the following table are user-configurable during [!IN
 #### See also
 
 * For more information about directories, file locations, and instance ID naming, see [File locations for default and named instances of SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md)  
-* [Share and NTFS permissions on a file server](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
+* [Share and NTFS permissions on a file server](/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
 
 ## <a name="serverconfig"></a> Database Engine Configuration - Server Configuration page
 
@@ -406,7 +406,7 @@ The following recommendations apply to the SMB file server:
 ### See also
 
 * [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
-* [Share and NTFS permissions on a file server](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)  
+* [Share and NTFS permissions on a file server](/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)  
 
 <!--
 The MaxDOP setting applies only to SQL Server 2019 and later.

@@ -28,7 +28,7 @@ Consider using the following Linux OS configuration settings to experience the b
 
 The storage subsystem hosting data, transaction logs, and other associated files (such as checkpoint files for in-memory OLTP) should be capable of managing both average and peak workload gracefully. Normally, in on-premise environments, the storage vendor support appropriate hardware RAID configuration with striping across multiple disks to ensure appropriate IOPS, throughput, and redundancy. Though, this can differ across different storage vendors and different storage offerings with varying architectures.
 
-For SQL Server on Linux deployed on Azure Virtual Machines, consider using software RAID to ensure appropriate IOPS and throughput requirements are achieved. Refer to following article when configuring SQL Server on Azure virtual machines for similar storage considerations: [Storage configuration for SQL Server VMs](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/storage-configuration)
+For SQL Server on Linux deployed on Azure Virtual Machines, consider using software RAID to ensure appropriate IOPS and throughput requirements are achieved. Refer to following article when configuring SQL Server on Azure virtual machines for similar storage considerations: [Storage configuration for SQL Server VMs](/azure/azure-sql/virtual-machines/windows/storage-configuration)
 
 The following is an example of how to create software raid in Linux on Azure Virtual Machines. An example is provided below, but you should use the appropriate number of data disks for the required throughput and IOPS for volumes based on the data, transaction log, and tempdb IO requirements. In this example, eight data disks were attached to the Azure Virtual Machine; 4 to host data files, 2 for transaction logs, and 2 for tempdb workload.
 
@@ -190,7 +190,8 @@ The following table provides recommendations for disk settings:
 
 **Description:**
 
-- **vm.swappiness**: This parameter controls relative weight given to swapping out runtime memory by limiting the kernel to swap out SQL Server process memory pages.
+- **vm.swappiness**: This parameter controls relative weight given to swapping out runtime process memory as compared to filesystem cache. The default value for this parameter is 60, which indicates swapping runtime process memory pages as compared to removing filesystem cache pages at ratio of 60:140. Setting the value 1 indicates strong preference for keeping runtime process memory in physical memory at expense of filesystem cache. Since SQL Server uses buffer pool as a data page cache and strongly prefers to write through to physical hardware bypassing filesystem cache for reliable recovery, aggressive swappiness configuration can be beneficial for high performing and dedicated SQL Server.
+You can find additional information at [Documentation for /proc/sys/vm/ - #swappiness](https://www.kernel.org/doc/html/latest/admin-guide/sysctl/vm.html#swappiness)
 
 - **vm.dirty_\***: SQL Server file write accesses are uncached, satisfying its data integrity requirements. These parameters allow efficient asynchronous write performance and lower the storage IO impact of Linux caching writes by allowing large enough caching while throttling flushing.
 

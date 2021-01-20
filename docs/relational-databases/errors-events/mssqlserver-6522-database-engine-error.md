@@ -199,7 +199,7 @@ Assume that the MyDateTime data type occupies 9 bytes in storage.
 ## References
 
 - For more information about the assembly version, see [Visual Studio 2005 Retired documentation](https://www.microsoft.com/download/details.aspx?id=55984).
-- For more information about how to update an assembly, see [ALTER ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/alter-assembly-transact-sql).
-- For more information about how to drop an assembly, see [DROP ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/drop-assembly-transact-sql).
-- For more information about how to register an assembly in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, see [CREATE ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/create-assembly-transact-sql).
-- For more information about the Bcp.exe utility, see [https://msdn2.microsoft.com/library/ms162802.aspx](/sql/tools/bcp-utility).
+- For more information about how to update an assembly, see [ALTER ASSEMBLY (Transact-SQL)](../../t-sql/statements/alter-assembly-transact-sql.md).
+- For more information about how to drop an assembly, see [DROP ASSEMBLY (Transact-SQL)](../../t-sql/statements/drop-assembly-transact-sql.md).
+- For more information about how to register an assembly in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, see [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md).
+- For more information about the Bcp.exe utility, see [https://msdn2.microsoft.com/library/ms162802.aspx](../../tools/bcp-utility.md).

@@ -41,7 +41,7 @@ SSMS 18.8 is the latest general availability (GA) release of SSMS. If you need a
 |----------|---------|
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.25.1. |
 | Analysis Services | Added support for Power BI Premium Gen2 workspaces. |
-| Auditing | Added support for EXTERNAL_MONITOR and "operator audit".  See the configuration [documentation](https://docs.microsoft.com/azure/azure-sql/managed-instance/auditing-configure) for more information. |
+| Auditing | Added support for EXTERNAL_MONITOR and "operator audit".  See the configuration [documentation](/azure/azure-sql/managed-instance/auditing-configure) for more information. |
 | Integration Services | Improved IR Creation Wizard such that creating SSISDB is optional when creating SSIS IR |
 
 #### Bug fixes in 18.8
@@ -137,7 +137,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 | Generate Scripts Wizard | The wizard fails when attempting to enumerate database objects on SQL Server 2014 and older. See [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587). | Use SSMS 18.6 to select objects in the generate scripts wizard for SQL 2014 and older. |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 | Integration Services | Remote connections to Integration services may fail with "The specified service does not exist as an installed service." on newer Operating system. | Identify the Integration services-related registry location under Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID and within these hives, rename the registry key named 'LocalService' to 'LocalService_A' for the specific version of Integration services that we are trying to connect |
-| Object Explorer | Releases of SSMS before 18.7 have a breaking change in object explorer due to the engine's changes related to [Azure Synapse Analytics serverless SQL pool](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | To continue utilizing object explorer in SSMS with Azure Synapse Analytics serverless SQL pool, you need to use SSMS 18.7 or later. |
+| Object Explorer | Releases of SSMS before 18.7 have a breaking change in object explorer due to the engine's changes related to [Azure Synapse Analytics serverless SQL pool](/azure/synapse-analytics/sql/on-demand-workspace-overview). | To continue utilizing object explorer in SSMS with Azure Synapse Analytics serverless SQL pool, you need to use SSMS 18.7 or later. |
 
 ### 18.7
 

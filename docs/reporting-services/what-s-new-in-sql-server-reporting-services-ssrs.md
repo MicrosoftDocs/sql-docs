@@ -18,7 +18,7 @@ ms.date: 12/05/2019
 
 Learn about what's new in the different versions of SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. This article covers the major feature areas and is updated as new items are released.
 
-For information about Power BI Report Server, see [What is Power BI Report Server?](https://docs.microsoft.com/power-bi/report-server/get-started).
+For information about Power BI Report Server, see [What is Power BI Report Server?](/power-bi/report-server/get-started).
 
 ::: moniker range=">=sql-server-ver15"
 
@@ -76,7 +76,7 @@ For more information, see [Add comments to a report in a report server](https://
 
 ### DAX queries in reporting tools
 
-In the latest releases of Report Builder and SQL Server Data Tools, you can create native DAX queries against the SQL Server Analysis Services tabular data models. You can drag and drop fields in the query designers. See the [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+In the latest releases of Report Builder and SQL Server Data Tools, you can create native DAX queries against the SQL Server Analysis Services tabular data models. You can drag and drop fields in the query designers. See the [Reporting Services blog](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools).
 
 ### REST API support
 
@@ -86,10 +86,10 @@ To enable development of modern applications and customization, SQL Server Repor
 
 In Report Builder and SQL Server Data Tools, you can now create native DAX queries against supported SQL Server Analysis Services tabular data models. You can use the query designer in both tools to drag and drop the fields you want. The DAX query is then generated for you.
 
-Read more on the [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+Read more on the [Reporting Services blog](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools).
 
 * Download [SQL Server Report Builder](https://go.microsoft.com/fwlink/?LinkId=734968).
-* Download [SQL Server Data Tools - Release Candidate](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
+* Download [SQL Server Data Tools - Release Candidate](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 > [!NOTE]
 > You can only use the query designer for DAX with SSAS tabular data sources built in SQL Server 2016+.
@@ -118,7 +118,7 @@ For more information about the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes
 
 You can customize the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] with your organization's logo and colors by using a branding pack.  
 
-For more information about custom branding, see [Branding the web portal](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)
+For more information about custom branding, see [Branding the web portal](./branding-the-web-portal.md)
 
 #### Key performance indicators (KPI) in the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -126,7 +126,7 @@ You create KPIs directly in the [!INCLUDE[ssRSWebPortal-Non-Markdown](../include
 
 ![Screenshot showing KPIS in the SQL Server Reporting Services portal.](../reporting-services/media/ssrs-webportal-kpi.png)
 
-For more information, see [Working with KPIs in the web portal](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
+For more information, see [Working with KPIs in the web portal](./working-with-kpis-in-reporting-services.md)
 
 ### Mobile Reports
 
@@ -187,7 +187,7 @@ For more information on browser support, see [Browser Support for Reporting Serv
 2. Select the dashboard you want to pin the item to.
 3. Select how frequently you want the tile updated in the dashboard.
 
-![note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") The refresh is managed by  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions and after the item is pinned, you can edit the subscription and configure a different  refresh schedule.
+![note](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") The refresh is managed by  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions and after the item is pinned, you can edit the subscription and configure a different  refresh schedule.
 
 ![Screenshot showing the Pin to Power BI Dashboard dialog box.](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
@@ -222,7 +222,7 @@ For more information, see [Enable and Disable Client-Side Printing for Reporting
 
 ### SQL Server Data Tools (SSDT)
 
-The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Report Server Project Wizard and Report Server Project. For information about downloading SSDT, see [SQL Server Data Tools for Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
+The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Report Server Project Wizard and Report Server Project. For information about downloading SSDT, see [SQL Server Data Tools for Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md).  
 
 ### Report Builder improvements
 
@@ -240,11 +240,11 @@ The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent
 
 - [Windows 8.1 DPI Scaling Enhancements](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
 
-- [High DPI and Windows 8.1](https://technet.microsoft.com/library/dn528848.aspx)  
+- [High DPI and Windows 8.1](/previous-versions/windows/it-pro/windows-8.1-and-8/dn528848(v=win.10))  
 
 ## Next steps
 
-[What's New in Analysis Services](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
+[What's New in Analysis Services](/analysis-services/what-s-new-in-sql-server-analysis-services?viewFallbackFrom=sql-server-ver15)  
 [Backward Compatibility](reporting-services-backward-compatibility.md)  
 [Reporting Services Features supported by the Editions of SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 [Upgrade and Migrate Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  

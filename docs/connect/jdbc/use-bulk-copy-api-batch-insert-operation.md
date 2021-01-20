@@ -99,7 +99,7 @@ This is an example that demonstrates the use case for a batch insert operation o
             System.out.println("Finished. Time taken : " + (end - start) + " milliseconds.");
         }
 
-        try (Connection con = DriverManager.getConnection(connectionUrl + ";useBulkCopyForBatchInsert=true"); // connects to an Azure Data Warehouse, with useBulkCopyForBatchInsert connection property set to true.
+        try (Connection con = DriverManager.getConnection(connectionUrl + ";useBulkCopyForBatchInsert=true"); // connects to Azure Synapse Analytics, with useBulkCopyForBatchInsert connection property set to true.
                 Statement stmt = con.createStatement();
                 PreparedStatement pstmt = con.prepareStatement("insert into " + tableNameBulkCopyAPI + " values (?, ?)");) {
 

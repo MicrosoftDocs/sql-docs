@@ -320,7 +320,7 @@ The user who runs the program sees the following dialog boxes:
 
 - A dialog box that asks for a Multi-Factor Authentication verification code, which the system has sent to a mobile phone.
 
-For information about how to configure Azure AD to require Multi-Factor Authentication, see [Getting started with Azure AD Multi-Factor Authentication in the cloud](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-getstarted).
+For information about how to configure Azure AD to require Multi-Factor Authentication, see [Getting started with Azure AD Multi-Factor Authentication in the cloud](/azure/active-directory/authentication/howto-mfa-getstarted).
 
 For screenshots of these dialog boxes, see [Configure multi-factor authentication for SQL Server Management Studio and Azure AD](https://docs.microsoft.com/azure/azure-sql/database/authentication-mfa-ssms-configure).
 

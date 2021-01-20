@@ -30,9 +30,10 @@ Possible values are:
     * **ActiveDirectoryPassword**
         * Supported since driver version **v6.0**, `authentication=ActiveDirectoryPassword` can be used to connect to an Azure SQL Database/Data Warehouse using an Azure AD user name and password.
     * **ActiveDirectoryInteractive**
-        * Supported starting driver version **v9.2**, `authentication=ActiveDirectoryInteractive` can be used to connect to an Azure SQL Database/Data Warehouse using an interactive authentication flow.
+        * Supported since driver version **v9.2**, `authentication=ActiveDirectoryInteractive` can be used to connect to an Azure SQL Database/Synapse Analytics using an interactive authentication flow (multi-factor authentication).
     * **ActiveDirectoryServicePrincipal**
-        * Supported starting driver version **v9.2**, `authentication=ActiveDirectoryServicePrincipal` can be used to connect to an Azure SQL Database/Data Warehouse using the client ID and secret of a service principal identity.
+        * Supported since driver version **v9.2**, `authentication=ActiveDirectoryServicePrincipal` can be used to connect to an Azure SQL Database/Synapse Analytics using the client ID and secret of a service principal identity.
+
     * **SqlPassword**
         * Use `authentication=SqlPassword` to connect to a SQL Server using userName/user and password properties.
     * **NotSpecified**
@@ -53,11 +54,12 @@ For **ActiveDirectoryMSI** authentication, the below components must be installe
 For other authentication modes, the below components must be installed on the client machine:
 * Java 7 or above
 * Microsoft JDBC Driver 6.0 (or higher) for SQL Server
-* If you're using the access token-based authentication mode, you need [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies to run the examples from this article. For more information, see the **Connecting using access token** section.
-* If you're using the **ActiveDirectoryPassword** authentication mode, you need [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies. For more information, see the **Connecting using ActiveDirectoryPassword authentication mode** section.
-* If you're using the **ActiveDirectoryIntegrated** mode, you need [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies. For more information, see the **Connecting using ActiveDirectoryIntegrated authentication Mode** section.
-* If you're using the **ActiveDirectoryInteractive** mode, you need [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies. For more information, see the **Connecting using ActiveDirectoryInteractive authentication Mode** section.
-* If you're using the **ActiveDirectoryServicePrincipal** mode, you need [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies. For more information, see the **Connecting using ActiveDirectoryServicePrincipal authentication Mode** section.
+* If you're using the access token-based authentication mode, you need [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies to run the examples from this article. For more information, see the [Connecting using access token](#connecting-using-access-token) section.
+* If you're using the **ActiveDirectoryPassword** authentication mode, you need [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies. For more information, see the [Connecting using ActiveDirectoryPassword authentication mode](#connecting-using-activedirectorypassword-authentication-mode) section.
+* If you're using the **ActiveDirectoryIntegrated** mode, you need [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies. For more information, see the [Connecting using ActiveDirectoryIntegrated authentication mode](#connecting-using-activedirectoryintegrated-authentication-mode) section.
+* If you're using the **ActiveDirectoryInteractive** mode, you need [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies. For more information, see the [Connecting using ActiveDirectoryInteractive authentication mode](#connecting-using-activedirectoryinteractive-authentication-mode) section.
+* If you're using the **ActiveDirectoryServicePrincipal** mode, you need [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies. For more information, see the [Connecting using ActiveDirectoryServicePrincipal authentication mode]()#connecting-using-activedirectoryserviceprincipal-authentication-mode section.
+
 
 ## Connecting using ActiveDirectoryMSI authentication mode
 The following example shows how to use `authentication=ActiveDirectoryMSI` mode. Run this example from inside an Azure Resource, e,g an Azure Virtual Machine, App Service, or a Function App that is federated with Azure Active Directory.
@@ -312,17 +314,11 @@ public class AADInteractive {
     }
 }
 ```
-The user who runs the program sees the following dialog boxes:
-
-- A dialog box that displays an Azure AD user name and asks for the user's password.<br><br>If the user's domain is federated with Azure AD, this dialog box doesn't appear, because no password is needed.<br><br>If the Azure AD policy imposes Multi-Factor Authentication on the user, the next two dialog boxes are displayed.
-
-- The first time a user goes through Multi-Factor Authentication, the system displays a dialog box that asks for a mobile phone number to send text messages to. Each message provides the verification code that the user must enter in the next dialog box.
-
-- A dialog box that asks for a Multi-Factor Authentication verification code, which the system has sent to a mobile phone.
+When running the program, a browser will be displayed to authenticate the user. Exactly what the user sees depends on how their Azure AD has been configured. It may or may not include multi-factor authentication prompts for things like a username, a password, a PIN, or second device authentication via a phone, for example. If multiple interactive authentication requests are done in the same program, subsequent requests may not even prompt the user if the authentication library can re-use a previously cached authentication token.
 
 For information about how to configure Azure AD to require Multi-Factor Authentication, see [Getting started with Azure AD Multi-Factor Authentication in the cloud](/azure/active-directory/authentication/howto-mfa-getstarted).
 
-For screenshots of these dialog boxes, see [Configure multi-factor authentication for SQL Server Management Studio and Azure AD](https://docs.microsoft.com/azure/azure-sql/database/authentication-mfa-ssms-configure).
+For screenshots of these dialog boxes, see [Configure multi-factor authentication for SQL Server Management Studio and Azure AD](/azure/azure-sql/database/authentication-mfa-ssms-configure).
 
 If user authentication is completed successfully, you should see the following message in the browser:
 ```
@@ -334,7 +330,7 @@ You have successfully logged on as: <your user name>
 ```
 
 > [!NOTE]  
-> A contained user database must exist and a contained database user representing the specified Azure AD user or one of the groups, the specified Azure AD user belongs to, must exist in the database, and must have the CONNECT permission (except for Azure Active Directory server admin or group)
+> A contained user database must exist and a contained database user representing the specified Azure AD user or one of the groups the specified Azure AD user belongs to, must exist in the database and must have the CONNECT permission (except for an Azure Active Directory server admin or group)
 
 ## Connecting using ActiveDirectoryServicePrincipal authentication mode
 The following example shows how to use `authentication=ActiveDirectoryServicePrincipal` mode.
@@ -384,13 +380,13 @@ public class AADServicePrincipal {
     }
 }
 ```
-If connection is established, you should see the following message as output:
+If a connection is established, you should see the following message as output:
 ```
 You have successfully logged on as: <your user name>
 ```
 
 > [!NOTE]  
-> A contained user database must exist and a contained database user representing the specified Azure AD user or one of the groups, the specified Azure AD user belongs to, must exist in the database, and must have the CONNECT permission (except for Azure Active Directory server admin or group)
+> A contained user database must exist and a contained database user representing the specified Azure AD user or one of the groups the specified Azure AD user belongs to, must exist in the database and must have the CONNECT permission (except for an Azure Active Directory server admin or group)
 
 ## Connecting using access token
 Applications/services can retrieve an access token from the Azure Active Directory and use that to connect to Azure SQL Database/Data Warehouse.

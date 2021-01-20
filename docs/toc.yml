@@ -1,3 +1,4 @@
+items:
 - name: SQL Server
   href: sql-server/index.yml
 
@@ -242,7 +243,6 @@
             href: machine-learning/tutorials/quickstart-r-functions.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Train and score a model
             href: machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-
       - name: Machine learning tutorials
         items:
         - name: Python
@@ -279,7 +279,6 @@
               href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 5 - Predictions
               href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-
         - name: R
           items:
           - name: Ski rental (decision tree)
@@ -340,6 +339,7 @@
         href: big-data-cluster/sparklyr-from-RStudio.md
       - name: Integrate Spark with SQL Server
         href: big-data-cluster/spark-mssql-connector.md
+
     - name: Manage
       items:
       - name: Connect

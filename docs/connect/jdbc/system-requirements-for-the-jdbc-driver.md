@@ -59,7 +59,7 @@ ms.author: v-daenge
 |mssql-jdbc-9.2.0.jre15.jar|4.3|15|Requires a Java Runtime Environment (JRE) 15.0. Using JRE 13.0 or lower throws an exception.<br /><br /> New Features in 9.2 include: JDK 15 support, support for authentication to Azure Key Vault using Managed Identity, extended support for bulk copy for Azure Synapse Analytics, Azure SQL DNS caching, support for backwards compatibility for streaming LOB objects, and client certificate authentication for loopback scenarios. |
 
 
-  The JDBC Driver 9.2 is also available on the Maven Central Repository and can be added to a Maven project by adding the following code in the POM.XML:  
+  The JDBC Driver 9.2 is also available on the Maven Central Repository and can be added to a Maven project by adding the following code in the `pom.xml` file:  
   
  ```xml
 <dependency>

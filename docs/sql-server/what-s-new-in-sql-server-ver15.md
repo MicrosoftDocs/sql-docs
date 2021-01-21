@@ -20,7 +20,7 @@ This article summarizes the new features and enhancements for [!INCLUDE[sql-serv
 
 For more information and known issues, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release notes](sql-server-version-15-release-notes.md).
 
-For the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], use the [latest tools](https://aka.ms/getazuredatastudio).
+For the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], use the [latest tools](../azure-data-studio/download-azure-data-studio.md).
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] for [!INCLUDE[sql-server](../includes/ssnoversion-md.md)]. It also provides additional capability and improvements for the SQL Server database engine, SQL Server Analysis Services, SQL Server Machine Learning Services, SQL Server on Linux, and SQL Server Master Data Services.
 
@@ -70,7 +70,7 @@ With [Intelligent Query Processing](../relational-databases/performance/intellig
 | &nbsp; | &nbsp; |
 
 ### Intelligent performance
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on Intelligent Database innovations in previous releases to ensure that [it just runs faster](https://docs.microsoft.com/archive/blogs/bobsql/). These improvements help overcome known resource bottlenecks and provide options for configuring your database server to provide predictable performance across all your workloads.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on Intelligent Database innovations in previous releases to ensure that [it just runs faster](/archive/blogs/bobsql/). These improvements help overcome known resource bottlenecks and provide options for configuring your database server to provide predictable performance across all your workloads.
 
 |New feature or update | Details |
 |:---|:---|
@@ -124,10 +124,10 @@ Support businesses across different countries and regions, where the requirement
 |New feature or update | Details |
 |:---|:---|
 |New Java language SDK | Simplifies the development of Java programs that can be run from SQL Server. See [Microsoft Extensibility SDK for Java for SQL Server](../language-extensions/how-to/extensibility-sdk-java-sql-server.md). |
-|Java language SDK is open source |The [Microsoft Extensibility SDK for Java for Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) is now open source and [available on GitHub](https://github.com/microsoft/sql-server-language-extensions).|
+|Java language SDK is open source |The [Microsoft Extensibility SDK for Java for Microsoft SQL Server](../language-extensions/how-to/extensibility-sdk-java-sql-server.md) is now open source and [available on GitHub](https://github.com/microsoft/sql-server-language-extensions).|
 |Support for Java data types|See [Java data types](../language-extensions/how-to/java-to-sql-data-types.md).|
 |New default Java Runtime | SQL Server now includes Azul Systems Zulu Embedded for Java support throughout the product. See [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/). |
-|SQL Server Language Extensions| Execute external code with the extensibility framework. See [SQL Server Language Extensions](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
+|SQL Server Language Extensions| Execute external code with the extensibility framework. See [SQL Server Language Extensions](../language-extensions/language-extensions-overview.md).
 |Register external languages|A new Data Definition Language (DDL), `CREATE EXTERNAL LANGUAGE`, registers external languages, such as Java, in SQL Server. See [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
 | &nbsp; | &nbsp; |
 
@@ -207,7 +207,7 @@ The easiest way to get started working with [!INCLUDE[ssNoVersion](../includes/s
 |New feature or update | Details |
 |:---|:---|
 | Microsoft Container Registry | The [Microsoft Container Registry](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) now replaces Docker Hub for new official Microsoft container images, including [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
-| Non-root containers | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces the ability to create safer containers by starting the [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] process as a non-root user by default. See [build and run SQL Server containers as a non-root user](../linux/sql-server-linux-configure-docker.md#buildnonrootcontainer). |
+| Non-root containers | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces the ability to create safer containers by starting the [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] process as a non-root user by default. See [build and run SQL Server containers as a non-root user](../linux/sql-server-linux-docker-container-deployment.md). |
 | Red Hat certified container images | Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], you can run SQL Server containers on Red Hat Enterprise Linux. |
 | PolyBase and Machine Learning support| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces new ways to work with SQL Server Containers such as Machine Learning Services and PolyBase. Check out some examples in the [SQL Server in container GitHub repository](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples). |
 | &nbsp; | &nbsp; |

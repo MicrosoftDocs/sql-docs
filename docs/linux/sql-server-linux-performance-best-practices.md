@@ -44,7 +44,7 @@ mdadm --create --verbose /dev/md1 --level=raid10 --chunk=64K --raid-devices=2 /d
 mdadm --create --verbose /dev/md2 --level=raid0 --chunk=64K --raid-devices=2 /dev/sdi /dev/sdj
 ```
 
-#### Disk Partitioning and Configuration recommendations
+#### Disk partitioning and configuration recommendations
 
 For SQL Server, it is recommended to use RAID configurations. The deployed filesystem stripe unit (sunit) and stripe width should match the RAID geometry. Here is an XFS filesystem-based example for a log volume. 
 
@@ -268,7 +268,7 @@ Using the **mssql** ***Tuned*** profile configures the **transparent_hugepage** 
 
 #### Network setting recommendations
 
-Like there are storage and CPU recommendations, there are Network specific recommendations as well listed below for reference. Not all settings mentioned below are available across different NICs. Refer and consult with NIC vendors for guidance for each of these options. Test and configure this on developement environments before applying them on production environments. The options mentioned below are explained with examples, and the commands used are specific to NIC type and vendor. 
+Like there are storage and CPU recommendations, there are Network specific recommendations as well listed below for reference. Not all settings mentioned below are available across different NICs. Refer and consult with NIC vendors for guidance for each of these options. Test and configure this on development environments before applying them on production environments. The options mentioned below are explained with examples, and the commands used are specific to NIC type and vendor. 
 
 1. Configuring network port buffer size: In the example below, the NIC is named 'eth0', which is an Intel-based NIC. For Intel based NIC, the recommended buffer size is 4KB (4096). Verify the pre-set maximums and then configure it using the sample commands shown below:
 

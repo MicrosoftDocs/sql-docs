@@ -43,7 +43,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 
 ## Arguments
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](../../sql-server/what-s-new-in-sql-server-2016.md)).  
   
  Conditionally drops the assembly only if it already exists.  
   
@@ -77,5 +77,3 @@ DROP ASSEMBLY Helloworld ;
  [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Getting Information About Assemblies](../../relational-databases/clr-integration/assemblies-getting-information.md)  
-  
-  

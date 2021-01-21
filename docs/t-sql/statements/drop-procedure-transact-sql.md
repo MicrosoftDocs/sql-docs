@@ -52,7 +52,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 
 ## Arguments
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](../../sql-server/what-s-new-in-sql-server-2016.md)).  
   
  Conditionally drops the procedure only if it already exists.  
   
@@ -101,7 +101,3 @@ GO
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Delete a Stored Procedure](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)  
-  
-  
-
-

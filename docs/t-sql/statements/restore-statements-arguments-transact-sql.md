@@ -252,7 +252,7 @@ CREDENTIAL
  Used only when restoring a backup from the Microsoft Azure Blob storage service.  
   
 > [!NOTE]  
->  With [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until  [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], you can only restore from a single device when restoring from URL. In order to restore from multiple devices when restoring from URL you must use [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)) and you must use Shared Access Signature (SAS) tokens. For more information, see [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) and [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).  
+>  With [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until  [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], you can only restore from a single device when restoring from URL. In order to restore from multiple devices when restoring from URL you must use [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](../../sql-server/what-s-new-in-sql-server-2016.md)) and you must use Shared Access Signature (SAS) tokens. For more information, see [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) and [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).  
   
  REPLACE  
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -633,6 +633,3 @@ Use KEEP_REPLICATION when setting up replication to work with log shipping. It p
  [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
-  
-  
-

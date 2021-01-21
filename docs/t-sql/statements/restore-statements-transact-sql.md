@@ -372,7 +372,7 @@ Full-text data is restored together with other database data during a complete r
 The RESTORE statement also can be used to perform restores to alternate locations, differential restores, file and filegroup restores, and differential file and filegroup restores of full-text data. In addition, RESTORE can restore full-text files only, as well as with database data.
 
 > [!NOTE]
-> Full-text catalogs imported from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] are still treated as database files. For these, the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] procedure for backing up full-text catalogs remains applicable, except that pausing and resuming during the backup operation are no longer necessary. For more information, see [Backing Up and Restoring Full-Text Catalogs](https://go.microsoft.com/fwlink/?LinkId=107381).
+> Full-text catalogs imported from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] are still treated as database files. For these, the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] procedure for backing up full-text catalogs remains applicable, except that pausing and resuming during the backup operation are no longer necessary. For more information, see [Backing Up and Restoring Full-Text Catalogs](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md).
 
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -756,7 +756,7 @@ For other supported RESTORE commands, see:
 - [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
 
 > [!IMPORTANT]
-> To restore from SQL Managed Instance automatic backups, see [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups).
+> To restore from SQL Managed Instance automatic backups, see [SQL Database Restore](/azure/sql-database/sql-database-recovery-using-backups).
 
 ## Syntax
 
@@ -779,7 +779,7 @@ FROM URL
 Specifies one or more backup devices placed on URLs that will be used for the restore operation. The URL format is used for restoring backups from the Microsoft Azure storage service.
 
 > [!IMPORTANT]
-> In order to restore from multiple devices when restoring from URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).
+> In order to restore from multiple devices when restoring from URL, you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).
 
 *n*
 Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list.

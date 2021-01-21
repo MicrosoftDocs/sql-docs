@@ -24,7 +24,7 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
-# Monitor Memory Usage
+# Monitor memory usage
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodically to confirm that memory usage is within typical ranges. 
 
@@ -101,7 +101,7 @@ process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
 
-### Determining Current SQL Server Memory Utilization   
+### Determining current SQL Server memory utilization   
  The following query returns information about current SQL Server memory utilization.  
 ```  
 SELECT
@@ -111,7 +111,7 @@ sqlserver_start_time,
 FROM sys.dm_os_sys_info;
 ```   
 
-### Determining Page Life Expectancy
+### Determining page life expectancy
  The following query uses **sys.dm_os_performance_counters** to observe the SQL Server instance's current **page life expectancy** value at the overall buffer manager level, and at each NUMA node level.
 ```
 SELECT
@@ -120,7 +120,7 @@ FROM sys.dm_os_performance_counters
 WHERE counter_name = 'Page life expectancy';
 ```
 
-## See Also
+## See also
 - [sys.dm_os_sys_memory (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-sys-memory-transact-sql.md)
 - [sys.dm_os_process_memory (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md)
 - [sys.dm_os_sys_info (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)

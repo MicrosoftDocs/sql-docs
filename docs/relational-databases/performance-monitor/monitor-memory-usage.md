@@ -76,10 +76,10 @@ This counter indicates the amount of memory that a process has requested for its
 This counter indicates the number of pages in the buffer pool with database content. Does not include other nonbuffer pool memory within the SQL Server process. Query this counter using the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view.
 
 -   **SQL Server: Buffer Manager: Buffer Cache Hit Ratio**  
- This counter is specific to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A ratio of 90 or higher is desirable. A value greater than 90 indicates that more than 90 percent of all requests for data were satisfied from the data cache in memory without having to read from disk. Find more information on the SQL Server Buffer Manager, see the [SQL Server Buffer Manager Object](sql-server-buffer-manager-object.md). Query this counter using the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view.  
+This counter is specific to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A ratio of 90 or higher is desirable. A value greater than 90 indicates that more than 90 percent of all requests for data were satisfied from the data cache in memory without having to read from disk. Find more information on the SQL Server Buffer Manager, see the [SQL Server Buffer Manager Object](sql-server-buffer-manager-object.md). Query this counter using the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view.  
  
 -   **SQL Server: Buffer Manager: Page life expectancy**  
- This counter measures amount of time in seconds that the oldest page stays in the buffer pool. For systems that use a NUMA architecture, this is the average across the all NUMA nodes. Each NUMA node has its own node of the buffer pool. A higher, growing value is best. A sudden dip indicates a significant churn of data in and out of the buffer pool, indicating the workload could not fully benefit from data already in memory. On servers with more than one NUMA node, view each buffer pool node's page life expectancy using **SQL Server: Buffer Node: Page life expectancy**. Query this counter using the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view.
+This counter measures amount of time in seconds that the oldest page stays in the buffer pool. For systems that use a NUMA architecture, this is the average across the all NUMA nodes. A higher, growing value is best. A sudden dip indicates a significant churn of data in and out of the buffer pool, indicating the workload could not fully benefit from data already in memory. Each NUMA node has its own node of the buffer pool. On servers with more than one NUMA node, view each buffer pool node's page life expectancy using **SQL Server: Buffer Node: Page life expectancy**. Query this counter using the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view.
 
   
 ## Examples 
@@ -118,12 +118,7 @@ FROM sys.dm_os_sys_info;
 SELECT
 CASE instance_name WHEN '' THEN 'Overall' ELSE instance_name END AS NUMA_Node, cntr_value AS PLE_s
 FROM sys.dm_os_performance_counters    
-<<<<<<< HEAD
 WHERE counter_name = 'Page life expectancy';
-=======
-WHERE counter_name = 'Page life expectancy'
-
->>>>>>> 8c49973b80ca481d63dffaaaaf2265bbace5949b
 ```
 
 ## See Also

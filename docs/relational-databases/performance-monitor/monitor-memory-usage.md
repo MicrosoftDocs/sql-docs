@@ -31,7 +31,7 @@ ms.author: wiassaf
 
 ## Configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] max memory
 
-A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance may over time consume all the Windows operating system memory allowed by [the **max server memory** option](../../database-engine/configure-windows/server-memory-server-configuration-options.md). 
+By default, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance may over time consume most of the available Windows operating system memory in the server. Once the memory is acquired, it will not be released unless memory pressure is detected. This is by design and does not indicate a memory leak in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. Use [the **max server memory** option](../../database-engine/configure-windows/server-memory-server-configuration-options.md) to limit the amount of memory that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is allowed to acquire for most of its uses. For more information, see the [Memory Management Architecture Guide](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-with-).
 
 In SQL Server on Linux, [set the memory limit](../../linux/sql-server-linux-performance-best-practices.md#advanced-configuration) with the mssql-conf tool and the [memory.memorylimitmb setting](../../linux/sql-server-linux-configure-mssql-conf.md#memorylimit).  
 
@@ -56,7 +56,7 @@ This counter indicates the rate of Page Faults for a given user process. Monitor
 
  To monitor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory usage, use the following [SQL Server object counters](use-sql-server-objects.md). Many SQL Server object counters can be queried via the dynamic management views [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) or [sys.dm_os_process_memory](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md).
 
- By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manages its memory requirements dynamically, based on available system resources. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] needs more memory, it queries the operating system to determine whether free physical memory is available and uses the available memory. If there is low free memory for the OS, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will release memory back to the operating system until the low memory condition is alleviated, or until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reaches the **minservermemory** limit. However, you can override the option to dynamically use memory by using the **minservermemory**, and **maxservermemory** server configuration options. For more information, see [Server Memory Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
+ By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manages its memory requirements dynamically, based on available system resources. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] needs more memory, it queries the operating system to determine whether free physical memory is available and uses the available memory. If there is low free memory for the OS, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will release memory back to the operating system until the low memory condition is alleviated, or until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reaches the **min server memory** limit. However, you can override the option to dynamically use memory by using the **min server memory**, and **max server memory** server configuration options. For more information, see [Server Memory Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
  To monitor the amount of memory that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses, examine the following performance counters:  
   
@@ -64,13 +64,13 @@ This counter indicates the rate of Page Faults for a given user process. Monitor
 This counter indicates the amount of the operating system's memory the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory manager currently has committed to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This number is expected to grow as required by actual activity, and will grow following SQL Server startup. Query this counter using the [sys.dm_os_sys_info](../system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) dynamic management view, observing the **committed_kb** column.
 
 -   **SQL Server: Memory Manager: Target Server Memory (KB)**  
-This counter indicates an ideal amount of memory [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] could consume, based on recent workload. Compare to **Total Server Memory** after a period of typical operation to determine whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has a desired amount of memory allocated. After typical operation, **Total Server Memory** and **Target Server Memory** should be similar. If **Total Server Memory** is significantly lower than **Target Server Memory**, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance may be experiencing memory pressure. During a period after [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started, **Total Server Memory** is expected to be lower than **Target Server Memory**, as **Total Server Memory** grows. Query this counter using the [sys.dm_os_sys_info](../system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) dynamic management view, observing the **committed_target_kb** column.
+This counter indicates an ideal amount of memory [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] could consume, based on recent workload. Compare to **Total Server Memory** after a period of typical operation to determine whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has a desired amount of memory allocated. After typical operation, **Total Server Memory** and **Target Server Memory** should be similar. If **Total Server Memory** is significantly lower than **Target Server Memory**, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance may be experiencing memory pressure. During a period after [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started, **Total Server Memory** is expected to be lower than **Target Server Memory**, as **Total Server Memory** grows. Query this counter using the [sys.dm_os_sys_info](../system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) dynamic management view, observing the **committed_target_kb** column. For more information and best practices configuring memory, see the [Server memory configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md#manually).
 
 -   **Process: Working Set**  
-This counter indicates the amount of memory that is in use by a process currently, according to the operating system. Observe the sqlservr.exe instance of this counter. Query this counter using the [sys.dm_os_process_memory](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md) dynamic management view, observing the **physical_memory_in_use_kb** column.
+This counter indicates the amount of physical memory that is in use by a process currently, according to the operating system. Observe the sqlservr.exe instance of this counter. Query this counter using the [sys.dm_os_process_memory](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md) dynamic management view, observing the **physical_memory_in_use_kb** column.
 
 -   **Process: Private Bytes**  
-This counter indicates the amount of memory that has been requested for use by a process currently, according to the operating system. Observe the sqlservr.exe instance of this counter. Because this counter includes all memory allocations requested by sqlservr.exe, including those not limited by [the **max server memory** option](../../database-engine/configure-windows/server-memory-server-configuration-options.md), this counter can report values larger than [the **max server memory** option](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
+This counter indicates the amount of memory that a process has requested for its own use to the operating system. Observe the sqlservr.exe instance of this counter. Because this counter includes all memory allocations requested by sqlservr.exe, including those not limited by [the **max server memory** option](../../database-engine/configure-windows/server-memory-server-configuration-options.md), this counter can report values larger than [the **max server memory** option](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
 
 -   **SQL Server: Buffer Manager: Database Pages**  
 This counter indicates the number of pages in the buffer pool with database content. Does not include other nonbuffer pool memory within the SQL Server process. Query this counter using the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view.
@@ -79,7 +79,7 @@ This counter indicates the number of pages in the buffer pool with database cont
  This counter is specific to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A ratio of 90 or higher is desirable. A value greater than 90 indicates that more than 90 percent of all requests for data were satisfied from the data cache in memory without having to read from disk. Find more information on the SQL Server Buffer Manager, see the [SQL Server Buffer Manager Object](sql-server-buffer-manager-object.md). Query this counter using the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view.  
  
 -   **SQL Server: Buffer Manager: Page life expectancy**  
- This counter measures amount of time in seconds that pages stay in cache, on average across the buffer pool. Each NUMA node has its own node of the buffer pool. A higher, growing value is best. A sudden dip indicates a significant churn of data in and out of the buffer pool, indicating the workload could not fully benefit from data already in memory. On servers with more than one NUMA node, view each buffer pool node's page life expectancy using **SQL Server: Buffer Node: Page life expectancy**. Query this counter using the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view.
+ This counter measures amount of time in seconds that the oldest page stays in the buffer pool. For systems that use a NUMA architecture, this is the average across the all NUMA nodes. Each NUMA node has its own node of the buffer pool. A higher, growing value is best. A sudden dip indicates a significant churn of data in and out of the buffer pool, indicating the workload could not fully benefit from data already in memory. On servers with more than one NUMA node, view each buffer pool node's page life expectancy using **SQL Server: Buffer Node: Page life expectancy**. Query this counter using the [sys.dm_os_performance_counters](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) dynamic management view.
 
   
 ## Examples 
@@ -113,12 +113,12 @@ FROM sys.dm_os_sys_info;
 ```   
 
 ### Determining Page Life Expectancy
- The following query uses **sys.dm_os_performance_counters** to observe the SQL Server instance's current **page life expectancy** value.
+ The following query uses **sys.dm_os_performance_counters** to observe the SQL Server instance's current **page life expectancy** value at the overall buffer manager level, and at each NUMA node level.
 ```
 SELECT
-case when object_name like '%Buffer Manager%' and counter_name = 'Page life expectancy' then cntr_value end AS PLE_s
+CASE instance_name WHEN '' THEN 'Overall' ELSE instance_name END AS NUMA_Node, cntr_value AS PLE_s
 FROM sys.dm_os_performance_counters    
-WHERE case when object_name like '%Buffer Manager%' and counter_name = 'Page life expectancy' then cntr_value end is not null;
+WHERE counter_name = 'Page life expectancy';
 ```
 
 ## See Also
@@ -128,3 +128,5 @@ WHERE case when object_name like '%Buffer Manager%' and counter_name = 'Page lif
 - [sys.dm_os_performance_counters (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)
 - [SQL Server, Memory Manager Object](sql-server-memory-manager-object.md)
 - [SQL Server, Buffer Manager Object](sql-server-buffer-manager-object.md)   
+- [Server memory configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)
+- [Memory Management Architecture Guide](../../relational-databases/memory-management-architecture-guide.md)

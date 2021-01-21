@@ -88,11 +88,13 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 2. Register the Microsoft SQL Server Ubuntu repository:
    
    For Ubuntu 16.04:
+   
    ```bash
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
    
    For Ubuntu 18.04:
+   
    ```bash
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2017.list)"
    ```
@@ -101,11 +103,13 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
    > If you want to install SQL Server 2019 , you must instead register the SQL Server 2019 repository. Use the following command for SQL Server 2019 installations:
    >
    > For Ubuntu 16.04:
+   >
    > ```bash
    > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
    > ```
    >
    > For Ubuntu 18.04:
+   >
    > ```bash
    > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
    > ```
@@ -160,11 +164,13 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 2. Register the Microsoft SQL Server Ubuntu repository for SQL Server 2019:
    
    For Ubuntu 16.04:
+   
    ```bash
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
    ```
    
    For Ubuntu 18.04:
+   
    ```bash
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
    ```
@@ -212,11 +218,13 @@ Use the following steps to install the **mssql-tools** on Ubuntu.
 1. Register the Microsoft Ubuntu repository.
    
    For Ubuntu 16.04:
+   
    ```bash
    curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
    For Ubuntu 18.04:
+   
    ```bash
    curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
@@ -230,10 +238,11 @@ Use the following steps to install the **mssql-tools** on Ubuntu.
 
    > [!Note] 
    > To update to the latest version of **mssql-tools** run the following commands:
-   >    ```bash
-   >   sudo apt-get update 
-   >   sudo apt-get install mssql-tools 
-   >   ```
+   >
+   > ```bash
+   > sudo apt-get update 
+   > sudo apt-get install mssql-tools 
+   > ```
 
 1. **Optional**: Add `/opt/mssql-tools/bin/` to your **PATH** environment variable in a bash shell.
 

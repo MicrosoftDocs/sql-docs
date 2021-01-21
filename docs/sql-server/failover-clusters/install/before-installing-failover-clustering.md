@@ -46,7 +46,7 @@ ms.author: chadam
   
     -   .NET Framework 4: Setup installs .NET Framework 4 on a clustered operating system. To reduce installation time, you may consider installing .NET Framework 4 before you run Setup.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup support files. You can install these files by running SqlSupport.msi located on your [!INCLUDE[ssCurrent](../../../includes/ssnoversion-md.md)] installation media.  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup support files. You can install these files by running SqlSupport.msi located on your [!INCLUDE[noversion](../../../includes/ssnoversion-md.md)] installation media.  
   
 -   Verify that antivirus software is not installed on your WSFC cluster. For more information, see the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base article, [Antivirus software may cause problems with cluster services](/troubleshoot/windows-server/high-availability/not-cluster-aware-antivirus-software-cause-issue).  
   

@@ -11,7 +11,7 @@ f1_keywords:
   - "devlang-tsql"
 helpviewer_keywords: 
   - "Transact-SQL"
-: MikeRayMSFT
+author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -63,7 +63,7 @@ In some cases, the topic is used by a product or service, but all of the argumen
 
 ## Get help from Microsoft Q & A
 
-For online help, see the [Microsoft Q & A Transact-SQL Forum](/answers/topics/sql-server-transact-sql.html).  
+For online help, see the [Microsoft Q & A Transact-SQL Forum](/answers/topics/sql-server-transact-sql.html).
 
 ## See other language references
 
@@ -72,11 +72,10 @@ The SQL docs include these other language references:
 - [XQuery Language Reference](../xquery/xquery-language-reference-sql-server.md)
 - [Integration Services Language Reference](../integration-services/integration-services-language-reference.md)
 - [Replication Language Reference](../relational-databases/replication/replication-language-reference.md)
-- [Analysis Services Language Reference](../mdx/multidimensional-expressions-mdx-reference.md)  
+- [Analysis Services Language Reference](../mdx/multidimensional-expressions-mdx-reference.md)
 
 ## Next steps
 Now that you understand how to find the T-SQL reference topics, you're ready to:
 
-- Work through a short tutorial about how to write T-SQL, see [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md). 
-- View the [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
-
+- Work through a short tutorial about how to write T-SQL, see [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md).
+- View the [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).

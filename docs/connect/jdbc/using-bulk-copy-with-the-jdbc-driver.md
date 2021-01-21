@@ -2,7 +2,7 @@
 title: "Using bulk copy with the JDBC driver"
 description: "The SQLServerBulkCopy class allows you to write data load solutions in Java that offer significant performance advantages over the standard JDBC APIs."
 ms.custom: ""
-ms.date: "08/24/2020"
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

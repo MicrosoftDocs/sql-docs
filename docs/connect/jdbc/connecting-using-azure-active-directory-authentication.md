@@ -24,12 +24,12 @@ Connection properties to support Azure Active Directory authentication in the Mi
 *	**authentication**:  Use this property to indicate which SQL authentication method to use for the connection. 
 Possible values are: 
     * **ActiveDirectoryMSI**
-        * Supported since driver version **v7.2**, `authentication=ActiveDirectoryMSI` can be used to connect to an Azure SQL Database/Data Warehouse from inside of an Azure Resource with "Identity" support enabled. Optionally, **msiClientId** can also be specified in the Connection/DataSource properties along with this authentication mode, which must contain the Client ID of a Managed Identity to be used to acquire the **accessToken** for establishing the connection.
+        * Supported since driver version **v7.2**, `authentication=ActiveDirectoryMSI` can be used to connect to an Azure SQL Database/Synapse Analytics from inside of an Azure Resource with "Identity" support enabled. Optionally, **msiClientId** can also be specified in the Connection/DataSource properties along with this authentication mode, which must contain the Client ID of a Managed Identity to be used to acquire the **accessToken** for establishing the connection.
     * **ActiveDirectoryIntegrated**
         * Supported since driver version **v6.0**, `authentication=ActiveDirectoryIntegrated` can be used to connect to an Azure SQL Database/Synapse Analytics using integrated authentication. To use this authentication mode, you need to federate the on-premise Active Directory Federation Services (ADFS) with Azure Active Directory in the cloud. Once it is set up, you can connect by either adding the native library 'mssql-jdbc_auth-\<version>-\<arch>.dll' to the application class path on Windows OS, or setting up a Kerberos ticket for cross-platform authentication support. You will be able to access Azure SQL Database/Azure Synapse Analytics without being prompted for credentials when you're logged in to a domain joined machine.
 
     * **ActiveDirectoryPassword**
-        * Supported since driver version **v6.0**, `authentication=ActiveDirectoryPassword` can be used to connect to an Azure SQL Database/Data Warehouse using an Azure AD user name and password.
+        * Supported since driver version **v6.0**, `authentication=ActiveDirectoryPassword` can be used to connect to an Azure SQL Database/Synapse Analytics using an Azure AD user name and password.
     * **ActiveDirectoryInteractive**
         * Supported since driver version **v9.2**, `authentication=ActiveDirectoryInteractive` can be used to connect to an Azure SQL Database/Synapse Analytics using an interactive authentication flow (multi-factor authentication).
     * **ActiveDirectoryServicePrincipal**
@@ -390,12 +390,12 @@ You have successfully logged on as: <your user name>
 > A contained user database must exist and a contained database user representing the specified Azure AD user or one of the groups the specified Azure AD user belongs to, must exist in the database and must have the CONNECT permission (except for an Azure Active Directory server admin or group)
 
 ## Connecting using access token
-Applications/services can retrieve an access token from the Azure Active Directory and use that to connect to Azure SQL Database/Data Warehouse.
+Applications/services can retrieve an access token from the Azure Active Directory and use that to connect to Azure SQL Database/Synapse Analytics.
 
 > [!NOTE] 
 > **accessToken** can only be set using the Properties parameter of the getConnection() method in the DriverManager class. It can't be used in the connection string.
 
-The example below contains a simple Java application that connects to Azure SQL Database/Data Warehouse using access token-based authentication. Before building and running the example, perform the following steps:
+The example below contains a simple Java application that connects to Azure SQL Database/Synapse Analytics using access token-based authentication. Before building and running the example, perform the following steps:
 1.	Create an application account in Azure Active Directory for your service.
 	1. Sign in to the Azure portal.
 	2. Click on Azure Active Directory in the left-hand navigation.

@@ -352,17 +352,15 @@ public class BulkCopyMultiple {
   
  By default, a bulk copy operation is performed as an isolated operation. The bulk copy operation occurs in a non-transacted way, with no opportunity for rolling it back. If you need to roll back all or part of the bulk copy when an error occurs, you can use a `SQLServerBulkCopy`-managed transaction or perform the bulk copy operation within an existing transaction.  
 
-## Extended Bulk Copy for Azure Data Warehouse
+## Extended Bulk Copy
 
-Driver version v8.4.1 adds a new connection property, `sendTemporalDataTypesAsStringForBulkCopy`. This boolean property is `true` by default.
+Driver version 9.2.0 adds support for the `sendTemporalDataTypesAsStringForBulkCopy` connection property for all supported SQL Servers. Previously this was supported for Azure Synapse Analytics only. This boolean property is `true` by default.
 
 This connection property, when set to `false`, will send **DATE**, **DATETIME**, **DATIMETIME2**, **DATETIMEOFFSET**, **SMALLDATETIME**, and **TIME** datatypes as their respective types instead of sending them as String.
 
-Sending the temporal datatypes as their respective types allows the user to send data into those columns for Azure Synapse Analytics, which was not possible before due to the driver converting the data into String. Sending String data into temporal columns works for SQL Server because SQL Server would perform implicit conversion for us, but it is not the same with Azure Synapse Analytics.
-
 Additionally, even without setting this connection string to 'false', from **v8.4.1** and onward, **MONEY** and **SMALLMONEY** datatypes will be sent as **MONEY** / **SMALLMONEY** datatypes instead of **DECIMAL**, which also allows those datatypes to be bulk copied into Azure Synapse Analytics.
 
-### Extended Bulk Copy for Azure Data Warehouse limitations
+### Extended Bulk Copy limitations
 
 There are currently two limitations:
 

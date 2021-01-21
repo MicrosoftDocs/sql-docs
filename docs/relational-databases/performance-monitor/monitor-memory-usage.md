@@ -118,7 +118,8 @@ FROM sys.dm_os_sys_info;
 SELECT
 case when object_name like '%Buffer Manager%' and counter_name = 'Page life expectancy' then cntr_value end AS PLE_s
 FROM sys.dm_os_performance_counters    
-WHERE case when object_name like '%Buffer Manager%' and counter_name = 'Page life expectancy' then cntr_value end is not null;
+WHERE counter_name = 'Page life expectancy'
+
 ```
 
 ## See Also

@@ -1,6 +1,6 @@
 ---
 title: "Bulk copy API for batch insert in JDBC"
-description: "Microsoft JDBC Driver for SQL Server supports using Bulk Copy for batch inserts against Azure Synapse Analytics for faster loading of data into the database."
+description: "Microsoft JDBC Driver for SQL Server supports using Bulk Copy for batch inserts for faster loading of data into the database."
 ms.custom: ""
 ms.date: "01/29/2021"
 ms.prod: sql
@@ -99,7 +99,7 @@ This is an example that demonstrates the use case for a batch insert operation o
             System.out.println("Finished. Time taken : " + (end - start) + " milliseconds.");
         }
 
-        try (Connection con = DriverManager.getConnection(connectionUrl + ";useBulkCopyForBatchInsert=true"); // connects to Azure Synapse Analytics, with useBulkCopyForBatchInsert connection property set to true.
+        try (Connection con = DriverManager.getConnection(connectionUrl + ";useBulkCopyForBatchInsert=true");
                 Statement stmt = con.createStatement();
                 PreparedStatement pstmt = con.prepareStatement("insert into " + tableNameBulkCopyAPI + " values (?, ?)");) {
 

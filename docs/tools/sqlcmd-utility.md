@@ -414,7 +414,7 @@ We recommend that you use a strong password.
  If **-b** is specified together with this option, **sqlcmd** exits on error. **-b** is described later in this article.  
   
  **-t** _query_timeout_  
- Specifies the number of seconds before a command (or SQL statement) times out. This option sets the **sqlcmd** scripting variable SQLCMDSTATTIMEOUT. If a *time_out* value is not specified, the command does not time out. The *query**time_out* must be a number between 1 and 65534. If the value supplied is not numeric or does not fall into that range, **sqlcmd** generates an error message.  
+ Specifies the number of seconds before a command (or SQL statement) times out. This option sets the **sqlcmd** scripting variable SQLCMDSTATTIMEOUT. If a *time_out* value is not specified, the command does not time out. The *query* *time_out* must be a number between 1 and 65534. If the value supplied is not numeric or does not fall into that range, **sqlcmd** generates an error message.  
   
 > [!NOTE]  
 >  The actual time out value may vary from the specified *time_out* value by several seconds.  

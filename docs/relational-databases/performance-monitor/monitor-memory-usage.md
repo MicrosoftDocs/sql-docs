@@ -118,7 +118,12 @@ FROM sys.dm_os_sys_info;
 SELECT
 CASE instance_name WHEN '' THEN 'Overall' ELSE instance_name END AS NUMA_Node, cntr_value AS PLE_s
 FROM sys.dm_os_performance_counters    
+<<<<<<< HEAD
 WHERE counter_name = 'Page life expectancy';
+=======
+WHERE counter_name = 'Page life expectancy'
+
+>>>>>>> 8c49973b80ca481d63dffaaaaf2265bbace5949b
 ```
 
 ## See Also

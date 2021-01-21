@@ -35,7 +35,7 @@ Some of the Microsoft tools that issue T-SQL commands are:
 
 ## Locate the Transact-SQL reference topics  
 To find T-SQL topics, use search at the top right of this page, or use the table of contents on the left side of the page. You can also type a T-SQL key word in the Management Studio Query Editor window, and press F1.
-  
+
 ## Find system views
 To find the system tables, views, functions, and procedures, see these links, which are in the [Using relational databases](../relational-databases/databases/databases.md) section of the SQL documentation.
 
@@ -48,24 +48,27 @@ To find the system tables, views, functions, and procedures, see these links, wh
 - [System tables](../relational-databases/system-tables/system-tables-transact-sql.md)
 
 ## "Applies to" references  
- The T-SQL reference topics encompass multiple versions of SQL Server, starting with 2008, and the other Azure SQL services. Near the top of each topic is a section that indicates which products and services support subject of the topic. 
 
-For example, this topic applies to all versions, and has the following label. 
-  
- [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]   
+The T-SQL reference topics encompass multiple versions of SQL Server, starting with 2008, and the other Azure SQL services. Near the top of each topic is a section that indicates which products and services support subject of the topic. 
+
+For example, this topic applies to all versions, and has the following label.
+
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Another example, the following label indicates a topic that applies only to Azure Synapse Analytics and Parallel Data Warehouse.
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/applies-to-version/asa-pdw.md)]
 
-In some cases, the topic is used by a product or service, but all of the arguments are not supported. In this case, other **Applies to** sections are inserted into the appropriate argument descriptions in the body of the topic.  
- 
-## Get help from Microsoft Q & A  
+In some cases, the topic is used by a product or service, but all of the arguments are not supported. In this case, other **Applies to** sections are inserted into the appropriate argument descriptions in the body of the topic.
+
+## Get help from Microsoft Q & A
+
 For online help, see the [Microsoft Q & A Transact-SQL Forum](/answers/topics/sql-server-transact-sql.html).  
- 
+
 ## See other language references
+
 The SQL docs include these other language references:
-  
+
 - [XQuery Language Reference](../xquery/xquery-language-reference-sql-server.md)
 - [Integration Services Language Reference](../integration-services/integration-services-language-reference.md)
 - [Replication Language Reference](../relational-databases/replication/replication-language-reference.md)

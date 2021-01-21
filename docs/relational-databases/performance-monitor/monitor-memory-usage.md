@@ -1,8 +1,8 @@
 ---
-title: "Monitor Memory Usage | Microsoft Docs"
+title: "Monitor Memory Usage"
 description: "Monitor a SQL Server instance to confirm that memory usage is within typical ranges. Use the Memory: Available Bytes and Memory: Pages/sec counters."
 ms.custom: ""
-ms.date: "12/08/2020"
+ms.date: "01/20/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "page faults [SQL Server]"
   - "monitoring performance [SQL Server], memory usage"
   - "server performance [SQL Server], memory"
-ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---

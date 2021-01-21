@@ -20,8 +20,8 @@ ms.date: 1/22/2020
 January 22, 2020 &nbsp; / &nbsp; version: 1.25.2
 
 | Change | Details |
-| :----- | :------ |
-| Fix bug #13899 Scrolling to the appropriate cross-reference links in Notebooks | [#13899](https://github.com/microsoft/azuredatastudio/issues/13899) |
+| ------ | ------- |
+| Fix bug [#13899](https://github.com/microsoft/azuredatastudio/issues/13899)| Scrolling to the appropriate cross-reference links in Notebooks |
 
 ## December 2020
 

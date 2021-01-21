@@ -39,7 +39,7 @@ The default big data cluster deployment used here consists of a SQL Master insta
 
 The script uses Azure CLI to automate the creation of an ARO cluster. Before running the script, you must log in to your Azure account with Azure CLI at least once. Run the following command from a command prompt.
 
-```terminal
+```azurecli
 az login
 ```
 
@@ -53,7 +53,7 @@ az login
 
 1. Run the script using:
 
-```terminal
+```console
 python deploy-sql-big-data-aro.py
 ```
 
@@ -77,7 +77,7 @@ If you are testing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdatacluste
 
 Run the following Azure CLI command to remove the big data cluster and the ARO service in Azure (replace `<resource group name>` with the **Azure resource group** you specified in the deployment script):
 
-```terminal
+```azurecli
 az group delete -n <resource group name>
 ```
 

@@ -48,7 +48,7 @@ landingContent:
       - text: Connect & query with Azure Data Studio
         url: ../azure-data-studio/quickstart-sql-server.md
       - text: Connect & query with SSMS
-        url: ../ssms/quickstarts/connect-query-sql-server.md
+        url: ../ssms/quickstarts/ssms-connect-query-sql-server.md
       - text: Writing Transact-SQL (T-SQL)
         url: ../t-sql/tutorial-writing-transact-sql-statements.md
       - text: Extended events 

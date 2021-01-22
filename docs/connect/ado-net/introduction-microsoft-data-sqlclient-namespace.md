@@ -37,7 +37,7 @@ Microsoft.Data.SqlClient v2.1 extends support for Always Encrypted on the follow
 
 ### Azure Active Directory Device Code Flow authentication
 Microsoft.Data.SqlClient v2.1 provides support for "Device Code Flow" authentication with MSAL.NET.
-Reference documentation: [OAuth2.0 Device Authorization Grant flow](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-device-code)
+Reference documentation: [OAuth2.0 Device Authorization Grant flow](/azure/active-directory/develop/v2-oauth2-device-code)
 
 Connection string example:
 
@@ -54,7 +54,7 @@ public class ActiveDirectoryAuthenticationProvider
 ```
 
 ### Azure Active Directory Managed Identity authentication
-Microsoft.Data.SqlClient v2.1 introduces support for Azure Active Directory authentication using [managed identities](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).
+Microsoft.Data.SqlClient v2.1 introduces support for Azure Active Directory authentication using [managed identities](/azure/active-directory/managed-identities-azure-resources/overview).
 
 The following authentication mode keywords are supported:
 - Active Directory Managed Identity

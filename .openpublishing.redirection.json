@@ -59114,6 +59114,11 @@
       "source_path": "docs/ssms/quickstarts/connect-query-sql-server.md",
       "redirect_url": "/sql/ssms/quickstarts/ssms-connect-query-sql-server",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md",
+      "redirect_url": "/sql/relational-databases/security/encryption/always-encrypted-enclaves-query-columns",
+      "redirect_document_id": true
     }
   ]
 }

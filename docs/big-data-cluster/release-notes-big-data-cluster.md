@@ -83,7 +83,7 @@ Cumulative Update 8 GDR (CU8-GDR) release for SQL Server 2019.
 
 |Package version | Image tag |
 |-----|-----|
-|15.0.4083.2 |[2019-CU8-GDR1-ubuntu-16.04]<br/><br/>[2019-CU8-GDR1-ubuntu-18.04]
+|15.0.4083.2 |[2019-CU8-GDR2-ubuntu-16.04]|
 
 ## <a id="cu8"></a> CU8 (September 2020)
 

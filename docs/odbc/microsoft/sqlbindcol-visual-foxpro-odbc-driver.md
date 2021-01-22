@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLBindCol function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 984d6605-39ba-4d33-ac94-22625bfa6107

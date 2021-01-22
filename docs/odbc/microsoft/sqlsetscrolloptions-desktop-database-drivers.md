@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetScrollOptions function [ODBC], Desktop Database Drivers"
 ms.assetid: 51d643ed-015b-4639-969a-9491d9875aca

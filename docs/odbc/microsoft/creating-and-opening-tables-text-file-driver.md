@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "text file driver [ODBC], creating and opening tables"
 ms.assetid: e6a07dda-a665-4f5b-a8d6-9ff479700513

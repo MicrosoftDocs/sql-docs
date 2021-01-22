@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "error messages (ODBC driver for oracle)"
 ms.assetid: f8d2a8f2-0316-42c4-bc34-5367661634ae

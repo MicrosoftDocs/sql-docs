@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "alter table [ODBC]"
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364

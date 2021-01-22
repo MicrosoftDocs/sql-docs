@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLExecDirect function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 5004060f-8510-4018-87a4-d41789e69d3e

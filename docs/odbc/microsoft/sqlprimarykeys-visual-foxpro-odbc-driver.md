@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLPrimaryKeys function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 8dbe2903-efdc-45e0-a079-9e357c5fd81b

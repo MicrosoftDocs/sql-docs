@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLNumParams function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 4fe4eec8-6a65-4b1f-aac3-25b14fe4ea94

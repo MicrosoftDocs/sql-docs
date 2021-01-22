@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Excel driver [ODBC], SQLColAttributes"
   - "SQLColAttribute function [ODBC], Excel Driver"

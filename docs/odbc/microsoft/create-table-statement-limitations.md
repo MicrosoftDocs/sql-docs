@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "CREATE TABLE statement limitations [ODBC]"
   - "ODBC SQL grammar, CREATE TABLE statement limitations"

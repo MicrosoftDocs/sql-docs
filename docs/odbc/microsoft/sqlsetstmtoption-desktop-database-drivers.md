@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetStmtOption function [ODBC], Desktop Database Drivers"
 ms.assetid: 98db9631-eb9b-4962-abe4-96f495133a5d

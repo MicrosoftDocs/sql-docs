@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "text file driver [ODBC], schema"
 ms.assetid: 27f1b65e-e04d-457f-bd49-02deb3873613

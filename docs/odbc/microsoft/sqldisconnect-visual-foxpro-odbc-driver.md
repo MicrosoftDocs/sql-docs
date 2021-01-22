@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLDisconnect function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 78ae1695-b53e-48ff-be49-ecff1f599e61

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connecting to data source [ODBC], Visual FoxPro"
   - "Visual FoxPro data source [ODBC], connecting"

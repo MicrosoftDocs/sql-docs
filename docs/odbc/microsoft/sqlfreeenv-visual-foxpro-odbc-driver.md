@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLFreeEnv function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 83011775-e31d-4663-b68b-999113a20d5b

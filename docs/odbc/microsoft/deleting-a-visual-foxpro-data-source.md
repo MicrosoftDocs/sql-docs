@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "removing data sources [ODBC], Visual FoxPro"
   - "Visual FoxPro data source [ODBC], deleting"

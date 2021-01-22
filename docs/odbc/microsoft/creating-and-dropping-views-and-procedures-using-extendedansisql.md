@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "extendedANSISQL [ODBC], views and procedures"
 ms.assetid: 3e67627e-dbf2-4f38-b8bb-956c7dec9ad6

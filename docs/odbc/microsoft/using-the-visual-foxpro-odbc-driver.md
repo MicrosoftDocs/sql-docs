@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver"
   - "FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver"

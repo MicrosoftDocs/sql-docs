@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSpecialColumns function [ODBC], Desktop Database Drivers"
 ms.assetid: 3de66fdf-053b-4354-979d-e76a5a5e975f

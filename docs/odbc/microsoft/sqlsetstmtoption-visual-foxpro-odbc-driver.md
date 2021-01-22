@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetStmtOption function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 76b813e3-c7dc-4bb2-a710-d2aa9dcfdc36

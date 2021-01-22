@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetData function [ODBC], Desktop Database Drivers"
 ms.assetid: c9d9a32d-5dc2-4189-9bfb-2b008bc3d6a3

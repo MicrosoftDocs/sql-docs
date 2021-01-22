@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC SQL grammar, DROP TABLE statement limitations"
   - "DROP TABLE statement limitations [ODBC]"

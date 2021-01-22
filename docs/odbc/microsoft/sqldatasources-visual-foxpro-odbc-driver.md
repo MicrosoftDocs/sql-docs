@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLDataSources function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 033f8d37-b2dd-4a4e-b93a-70c25b25b72e

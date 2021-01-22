@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLAllocStmt function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: ba973025-18c8-481b-a383-6ed935237894

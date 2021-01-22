@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "retrieving data, UTF-8 encoded data"
   - "converting data types"

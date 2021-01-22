@@ -6,7 +6,7 @@ ms.date: "08/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords:
   - "requirements"
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9

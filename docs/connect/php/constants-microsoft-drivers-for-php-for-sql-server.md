@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "constants"
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "errors and warnings"
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d

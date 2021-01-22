@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords:
   - "date and time types, retrieving as strings"
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connection pooling support"
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94

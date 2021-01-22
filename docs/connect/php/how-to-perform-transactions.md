@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transaction support"
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7

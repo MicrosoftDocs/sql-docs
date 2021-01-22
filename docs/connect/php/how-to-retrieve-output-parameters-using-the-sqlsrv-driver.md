@@ -6,7 +6,7 @@ ms.date: "04/11/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedure support"
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd

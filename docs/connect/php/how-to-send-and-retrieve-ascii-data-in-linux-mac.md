@@ -6,7 +6,7 @@ ms.date: "01/16/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "retrieving data, ASCII data"
   - "sending data"

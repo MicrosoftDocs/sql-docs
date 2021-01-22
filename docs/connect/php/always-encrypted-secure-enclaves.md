@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 ms.reviewer: ""
 ms.author: v-daenge
 author: David-Engel

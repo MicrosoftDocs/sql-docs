@@ -884,15 +884,16 @@ Designates that the current database in use should be altered.
 The plan cache is also flushed when several queries are executed against a database that has default options. Then, the database is dropped.
 
 - Some `ALTER DATABASE` statements require exclusive lock on a database to be executed. This is why they might fail when another active proces is holding a lock on the database. Error that is reported in a case like this is `Msg 5061, Level 16, State 1, Line 38` with message `ALTER DATABASE failed because a lock could not be placed on database '<database name>'. Try again later`. This is typically a transient failure and to resolve it, once all locks on the database are released, retry the ALTER DATABASE statement that failed. System view `sys.dm_tran_locks` holds information on active locks. To check if there are shared or exclusive locks on a database use following query.
-```sql
+  
+    ```sql
     SELECT
-	    resource_type, resource_database_id, request_mode, request_type, request_status, request_session_id 
+        resource_type, resource_database_id, request_mode, request_type, request_status, request_session_id 
     FROM 
-	    sys.dm_tran_locks
+        sys.dm_tran_locks
     WHERE
-	    resource_database_id = DB_ID('testdb')
-```
-
+        resource_database_id = DB_ID('test_db')
+    ```
+  
 ## Viewing Database Information
 
 You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups.

@@ -316,8 +316,9 @@ items:
               href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
       - name: Machine learning how-to guides
         items:
-# Items commented-out are articles being investigated to see if they work in BDC
-        - name: Connect
+# Items marked with comments (like this one) are articles that are being investigated to see if they work in BDC
+# When I get an answer, I'll either remove the comment marks or the lines themselves
+#       - name: Connect
 #         items:
 #         - name: Loopback connection
 #           href: ../machine-learning/connect/loopback-connection.md
@@ -389,7 +390,7 @@ items:
                 href: machine-learning/administration/extended-events.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
               - name: Monitor PREDICT T-SQL
                 href: machine-learning/administration/extended-events-predict-tsql.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Resource governor
+#         - name: Resource governor
 #           items:
 #           - name: Use resource governor
 #             href: machine-learning/administration/resource-governor.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true

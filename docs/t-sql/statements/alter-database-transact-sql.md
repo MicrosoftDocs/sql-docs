@@ -885,13 +885,13 @@ The plan cache is also flushed when several queries are executed against a datab
 
 - Some `ALTER DATABASE` statements require exclusive lock on a database to be executed. This is why they might fail when another active proces is holding a lock on the database. Error that is reported in a case like this is `Msg 5061, Level 16, State 1, Line 38` with message `ALTER DATABASE failed because a lock could not be placed on database '<database name>'. Try again later`. This is typically a transient failure and to resolve it, once all locks on the database are released, retry the ALTER DATABASE statement that failed. System view `sys.dm_tran_locks` holds information on active locks. To check if there are shared or exclusive locks on a database use following query.
     ```sql
-SELECT
-	resource_type, resource_database_id, request_mode, request_type, request_status, request_session_id 
-FROM 
-	sys.dm_tran_locks
-WHERE
-	resource_database_id = DB_ID('testdb')
-```
+    SELECT
+	    resource_type, resource_database_id, request_mode, request_type, request_status, request_session_id 
+    FROM 
+	    sys.dm_tran_locks
+    WHERE
+	    resource_database_id = DB_ID('testdb')
+    ```
 
 ## Viewing Database Information
 

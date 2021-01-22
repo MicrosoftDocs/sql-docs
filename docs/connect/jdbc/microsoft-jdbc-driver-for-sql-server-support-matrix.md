@@ -56,7 +56,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
   
 |Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
 |---|---|---|---|---|---|---|---|---|---|---|---|
-|9.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+|9.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
 |8.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
 |8.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
 |7.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |

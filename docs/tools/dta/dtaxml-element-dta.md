@@ -56,7 +56,7 @@ The root element of a Database Engine Tuning Advisor XML input or output file, *
 |**Child elements**|[DTAInput Element &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)<br /><br /> **DTAOutput** Element (see [Database Engine Tuning Advisor XML schema](https://schemas.microsoft.com/sqlserver/) for information)|  
   
 ## Remarks  
- For more information about XML namespaces, see [Namespaces in an XML Document](../../dotnet/standard/data/xml/managing-namespaces-in-an-xml-document.md). 
+ For more information about XML namespaces, see [Namespaces in an XML Document](/dotnet/standard/data/xml/managing-namespaces-in-an-xml-document.md). 
   
 ## Example  
  For examples of typical **DTAXML** elements, see [XML Input File Samples &#40;DTA&#41;](../../tools/dta/xml-input-file-samples-dta.md).  

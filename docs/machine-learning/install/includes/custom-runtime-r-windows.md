@@ -86,31 +86,11 @@ Follow the steps below to add or modify the **R_HOME** and modify the **PATH** s
 
     :::image type="content" source="../media/r_path_environment_variable.png" alt-text="R_HOME environment variable":::
 
-1. Add or modify **R_HOME** as a system environment variable.
-    + In the Windows search box, type "environment" and select **Edit the system environment variables**.
-    + In the **Advanced** tab, select **Environment Variables**.
-
-    + Under **System variables**, select **New** to create R_HOME.
-    To modify, select **Edit** to change it. Modify its value to point to the custom R installation path.
-
-    ![Create R_HOME system environment variable.](../install/media/sys-env-r-home.png)
-
-2. Update the **PATH** environment variable.
-    Append the path to **R.dll** to the system **PATH** environment variable. Select **PATH** then **Edit** and add `%R_HOME%\bin\x64` to the list of paths.
-
-    ![Append to PATH system environment variable.](../install/media/sys-env-path-r.png)
-
-3. Select **OK** to close remaining windows.
-
-    As an alternative, to set these environment variables from an *elevated* command prompt, run the following commands. Make sure to use the custom R installation path.
-
-```CMD
-setx /m R_HOME "path\to\installation\of\R"
-setx /m PATH "path\to\installation\of\R\bin\x64;%PATH%"
-```
 
 
-    In the following instructions, **%R_HOME%** is the environment variable with the value to the path of your R installation and should be replaced with this path.
+
+
+
 
 
 ## Install Rcpp package

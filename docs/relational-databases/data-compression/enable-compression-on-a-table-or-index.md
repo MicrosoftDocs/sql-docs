@@ -50,7 +50,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 -   System tables cannot be enabled for compression.  
   
--   If the table is a heap, the rebuild operation for ONLINE mode will be single threaded. Use OFFLINE mode for a multi-threaded heap rebuild operation. For complete information on performing an ONLINE rebuild, see [Perform Index Operations Online](../indexes/perform-index-operations-online.md).
+-   If the table is a heap, the rebuild operation for ONLINE mode will be single threaded. Use OFFLINE mode for a multi-threaded heap rebuild operation. Rebuild operations are OFFLINE unless you specify the ONLINE option. For complete information on performing an ONLINE rebuild, see [Perform Index Operations Online](../indexes/perform-index-operations-online.md).
   
 -   You cannot change the compression setting of a single partition if the table has nonaligned indexes.  
   

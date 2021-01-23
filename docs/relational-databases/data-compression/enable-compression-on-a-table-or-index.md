@@ -1,8 +1,8 @@
 ---
-title: "Enable Compression on a Table or Index | Microsoft Docs"
+title: "Enable Compression on a Table or Index"
 description: Learn how to enable compression on a table or index in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "01/22/2021"
 ms.prod: sql  
 ms.reviewer: ""
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -20,7 +20,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "data compression wizard"
   - "compression [SQL Server], enable"
-ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016"
@@ -29,7 +28,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  This topic describes how to enable compression on a table or index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  This topic describes how to enable [data compression](../../relational-databases/data-compression/data-compression.md) on a table or index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -51,7 +50,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 -   System tables cannot be enabled for compression.  
   
--   If the table is a heap, the rebuild operation for ONLINE mode will be single threaded. Use OFFLINE mode for a multi-threaded heap rebuild operation. For a more information about data compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+-   If the table is a heap, the rebuild operation for ONLINE mode will be single threaded. Use OFFLINE mode for a multi-threaded heap rebuild operation. For complete information on performing an ONLINE rebuild, see [Perform Index Operations Online](../indexes/perform-index-operations-online.md).
   
 -   You cannot change the compression setting of a single partition if the table has nonaligned indexes.  
   

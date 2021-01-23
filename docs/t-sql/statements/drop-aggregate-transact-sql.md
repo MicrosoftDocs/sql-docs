@@ -41,7 +41,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
 
 ## Arguments
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](../../troubleshoot/sql/general/determine-version-edition-update-level.md)).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level.md)).  
   
  Conditionally drops the aggregate only if it already exists.  
   

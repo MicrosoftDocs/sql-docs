@@ -276,7 +276,25 @@ Specifies to create an index on the table. This can be a clustered index, or a n
  
    >[!NOTE]
   > A user creating a table with a column that uses a user-defined type needs the REFERENCES permission on the user-defined type.
-  > If this table must be created in TempDB, then either the REFERENCES permission needs to be granted explicitly each time **before** the table is created, or this data type and REFERENCES permissions need to be added to the Model database. If this is done, then this data type and permissions will be available in TempDB permanently. Otherwise, the user-defined data type and permissions will disappear when SQL Server is restarted. For more information, see [CREATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql?view=sql-server-2017#permissions-1)
+  > If this table must be created in TempDB, then either the REFERENCES permission needs to be granted explicitly each time **before** the table is created, or this data type and REFERENCES permissions need to be added to the Model database. If this is done, then this data type and permissions will be available in TempDB permanently. Otherwise, the user-defined data type and permissions will disappear when SQL Server is restarted. For more information, see [CREATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql?view=sql-server-2017#permissions-1)  
+  > If you do not explicitly grant REFERENCES permissions, a user who is not a sysadmin will receive an error similar to the following when either using or creating this data type:  
+Msg 15247, Level 16, State 4, Server <Server name>, Line 1  
+User does not have permission to perform this action.  
+	
+  > If you do not want every new database to retain the definition and permissions for this user- defined data type, you can use a startup stored procedure to create and assign the appropriate permissions only in tempdb database.   
+  > For example:  
+  ``` 
+USE master
+go
+CREATE PROCEDURE setup_udt_in_tempdb
+AS
+EXEC ( 'USE tempdb;
+CREATE TYPE dbo.udt_money FROM varchar(11) NOT NULL;
+GRANT REFERENCES ON TYPE::dbo.udt_money TO public;')
+go
+EXEC sp_procoption 'setup_udt_in_tempdb' , 'startup' , 'on'
+go
+  ``` 
   
 ## Examples  
   
@@ -336,5 +354,7 @@ GO
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
+ [sp_procoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)  
+ 
   
   

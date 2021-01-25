@@ -36,13 +36,13 @@ ms.author: chadam
   
 -   Review [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] [Release Notes](/previous-versions/sql/sql-server-15/dn169381(v=sql.15))  
   
--   Install prerequisite software. Before running Setup to install or upgrade to [!INCLUDE[ssCurrent](../../../includes/ssnoversion-md.md)], install the following prerequisites to reduce installation time. You can install prerequisite software on each failover cluster node and then restart nodes once before running Setup.  
+-   Install prerequisite software. Before running Setup to install or upgrade to [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], install the following prerequisites to reduce installation time. You can install prerequisite software on each failover cluster node and then restart nodes once before running Setup.  
   
-    -   Windows PowerShell is no longer installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup. Windows PowerShell is a prerequisite for installing [!INCLUDE[ssCurrent](../../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] components and [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. If Windows PowerShell is not present on your computer, you can enable it by following the instructions on the [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) page.  
+    -   Windows PowerShell is no longer installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup. Windows PowerShell is a prerequisite for installing [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] components and [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. If Windows PowerShell is not present on your computer, you can enable it by following the instructions on the [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) page.  
   
     -   .NET Framework 3.5 SP1 is no longer installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup, but may be required while installing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on older Windows operating systems. For more information, see [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][Release Notes](/previous-versions/sql/sql-server-15/dn169381(v=sql.15)).  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update package:** To avoid computer restart due to .NET Framework 4 installation during setup, [!INCLUDE[ssCurrent](../../../includes/ssnoversion-md.md)] setup requires a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] update to be installed on the computer.  If you are installing [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] on Windows 7 SP1 or [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 this update is included. If you are installing on an older Windows operating system, download it from [Microsoft Update for .NET Framework 4.0 on Windows Vista and Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update package:** To avoid computer restart due to .NET Framework 4 installation during setup, [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] setup requires a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] update to be installed on the computer.  If you are installing [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] on Windows 7 SP1 or [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 this update is included. If you are installing on an older Windows operating system, download it from [Microsoft Update for .NET Framework 4.0 on Windows Vista and Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
     -   .NET Framework 4: Setup installs .NET Framework 4 on a clustered operating system. To reduce installation time, you may consider installing .NET Framework 4 before you run Setup.  
   
@@ -131,7 +131,7 @@ ms.author: chadam
   
 -   To create a failover cluster, you must be a local administrator with permissions to log on as a service, and to act as part of the operating system on all nodes of the failover cluster instance.  
   
--   On [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], service SIDs are generated automatically for use with [!INCLUDE[ssCurrent](../../../includes/ssnoversion-md.md)] services. For [!INCLUDE[ssCurrent](../../../includes/ssnoversion-md.md)] failover cluster instances upgraded from previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], existing domain groups and ACL configurations will be preserved.  
+-   On [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], service SIDs are generated automatically for use with [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] services. For [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] failover cluster instances upgraded from previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], existing domain groups and ACL configurations will be preserved.  
   
 -   Domain groups must be within the same domain as the machine accounts. For example, if the machine where [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will be installed is in the SQLSVR domain which is a child of MYDOMAIN, you must specify a group in the SQLSVR domain. The SQLSVR domain may contain user accounts from MYDOMAIN.  
   
@@ -185,10 +185,10 @@ ms.author: chadam
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64-bit) x64*|Yes|Yes|Yes**|Yes**|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32-bit)|Yes|Yes|||  
-|[!INCLUDE[ssCurrent](../../../includes/ssnoversion-md.md)] -bit) Developer (64|Yes|Yes|Yes**|Yes**|  
-|[!INCLUDE[ssCurrent](../../../includes/ssnoversion-md.md)] Developer (32-bit)|Yes|Yes|||  
-|[!INCLUDE[ssCurrent](../../../includes/ssnoversion-md.md)] Standard (64-bit)|Yes|Yes|Yes|Yes|  
-|[!INCLUDE[ssCurrent](../../../includes/ssnoversion-md.md)] Standard (32-bit)|Yes|Yes|||  
+|[!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] -bit) Developer (64|Yes|Yes|Yes**|Yes**|  
+|[!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] Developer (32-bit)|Yes|Yes|||  
+|[!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] Standard (64-bit)|Yes|Yes|Yes|Yes|  
+|[!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] Standard (32-bit)|Yes|Yes|||  
   
  *[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clusters are not supported in WOW mode. That includes upgrades from previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clusters that were originally installed in WOW. For those the only upgrade option is to install the new version side by side and migrate.  
   

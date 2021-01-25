@@ -1,6 +1,6 @@
 ---
 description: "DROP DATABASE (Transact-SQL)"
-title: "DROP DATABASE (Transact-SQL) | Microsoft Docs"
+title: "DROP DATABASE (Transact-SQL)"
 ms.custom: ""
 ms.date: "02/21/2019"
 ms.prod: sql
@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "databases [SQL Server], dropping"
   - "DROP DATABASE statement"
   - "database removal [SQL Server], DROP DATABASE statement"
-ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

@@ -1,6 +1,6 @@
 ---
 description: "RESTORE Statements - Arguments (Transact-SQL)"
-title: "RESTORE Arguments (Transact-SQL) | Microsoft Docs"
+title: "RESTORE Arguments (Transact-SQL)"
 ms.custom: ""
 ms.date: "08/08/2018"
 ms.prod: sql
@@ -13,7 +13,6 @@ dev_langs:
 helpviewer_keywords: 
   - "RESTORE statement, arguments"
   - "RESTORE statement"
-ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
 ---

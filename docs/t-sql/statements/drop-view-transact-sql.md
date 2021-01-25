@@ -1,6 +1,6 @@
 ---
 description: "DROP VIEW (Transact-SQL)"
-title: "DROP VIEW (Transact-SQL) | Microsoft Docs"
+title: "DROP VIEW (Transact-SQL)"
 ms.custom: ""
 ms.date: "01/19/2021"
 ms.prod: sql
@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "indexed views [SQL Server], removing"
   - "views [SQL Server], removing"
   - "removing views"
-ms.assetid: 03cea355-e39c-46e1-b7db-8832038669dd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

@@ -86,26 +86,19 @@ Follow the steps below to add or modify the **R_HOME** and modify the **PATH** s
 
     :::image type="content" source="../media/r_path_environment_variable.png" alt-text="R_HOME environment variable":::
 
-
-
-
-
-
-
-
 ## Install Rcpp package
 
 Follow these steps to install the **Rcpp** package.
 
-1. Locate the R executable in %R_HOME%\bin. For example, `C:\Program Files\R\R-4.0.3\bin`.
+1. Start an *elevated* command prompt (run as Administrator).
 
-1. Start R from an *elevated* command prompt:
+1. Start R from the command prompt:
 
     ```CMD
-    %R_HOME%\bin\R.exe
+    "%R_HOME%\bin\R.exe"
     ```
 
-1. In this *elevated* R prompt (%R_HOME%\bin\R.exe), run the following script to install the Rcpp package in the %R_HOME%\library folder.
+1. Run the following script to install the Rcpp package in the %R_HOME%\library folder.
 
     ```R
     install.packages("Rcpp", lib="%R_HOME%/library");

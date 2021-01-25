@@ -54,9 +54,8 @@ The **DiagnosticInformation** element contains all elements that report the diag
 |**Child elements**|[Banner Element &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/banner-element-ssbdiagnose.md)<br /><br /> [Issue Element &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/issue-element-ssbdiagnose.md)|  
   
 ## Remarks  
- For more information about XML namespaces, see [Namespaces in an XML Document](https://go.microsoft.com/fwlink/?LinkId=7341) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN Library.  
+ For more information about XML namespaces, see [Namespaces in an XML Document](/previous-versions/dotnet/netframework-1.1/c1a6xs06(v=vs.71)) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN Library.  
   
 ## See Also  
  [ssbdiagnose Utility &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
-  
   

@@ -34,8 +34,6 @@ If the default number of cores is configured at both service and resource scope,
 For specific information about configuration, see the appropriate articles:
 
 How to: 
-<!-- - [Configure master instance of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](configure-sql-server-master-instance.md)
-- [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md) -->
 
 - [Configure Big Data Clusters at deplyoment time](configure-bdc-deployment.md)
 - [Configure Big Data Clusters post-deployment](configure-bdc-postdeployment.md)

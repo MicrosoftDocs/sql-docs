@@ -32,10 +32,10 @@ You can configure the following settings at the SQL service scope.
 |`mssql.language`|`lcid = <language_identifier>` |
 
 ## Spark service-scope settings
-Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
+Visit the [Apache Spark & Apache Hadoop configuration article](reference-config-spark-hadoop.md) to see all supported and unsupported settings.
 
 ## HDFS service-scope settings
-Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
+Visit the [Apache Spark & Apache Hadoop configuration article](reference-config-spark-hadoop.md) to see all supported and unsupported settings.
 
 ## Gateway service-scope settings
 No gateway service-scope settings configurable. Configure settings at the gateway resource-scope.
@@ -78,7 +78,7 @@ The storage pool consists of SQL, Spark, and HDFS components.
 
 
 ### Available Apache Spark and Hadoop configurations
-Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
+Visit the [Apache Spark & Apache Hadoop configuration article](reference-config-spark-hadoop.md) to see all supported and unsupported settings.
 
 ## Data Pool resource-scope settings
 |Property|Options|
@@ -115,19 +115,19 @@ Visit the (Apache Spark & Apache Hadoop configuration article) to see all suppor
 |`mssql.traceflag`|`traceflag<#> = <####>` |
 
 ## Spark Pool resource-scope settings
-Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
+Visit the [Apache Spark & Apache Hadoop configuration article](reference-config-spark-hadoop.md) to see all supported and unsupported settings.
 
 ## Gateway resource-scope settings
-Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
+Visit the [Apache Spark & Apache Hadoop configuration article](reference-config-spark-hadoop.md) to see all supported and unsupported settings.
 
 ## Sparkhead resource-scope settings
-Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
+Visit the [Apache Spark & Apache Hadoop configuration article](reference-config-spark-hadoop.md) to see all supported and unsupported settings.
 
 ## Zookeeper resource-scope settings
-Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
+Visit the [Apache Spark & Apache Hadoop configuration article](reference-config-spark-hadoop.md) to see all supported and unsupported settings.
 
 ## Namenode resource-scope settings
-Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
+Visit the [Apache Spark & Apache Hadoop configuration article](reference-config-spark-hadoop.md) to see all supported and unsupported settings.
 
 ## App Proxy resource-scope settings
 None available

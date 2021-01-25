@@ -31,7 +31,7 @@ Rules (sometimes referred to as checks) are defined in JSON formatted files. The
 
 Microsoft's shipped ruleset is available on GitHub. You can visit the [samples repository](https://aka.ms/sql-assessment-api) for more details.
 
-## SQL Assessment cmdlets and SMO extension
+## SQL Assessment cmdlets and associated extensions
 
 The SQL Assessment API is part of:
 

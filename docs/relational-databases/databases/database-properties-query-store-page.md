@@ -19,7 +19,7 @@ ms.author: "sstein"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level.md)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+|**Applies to**: [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
 ## Options  
  Operation Mode  

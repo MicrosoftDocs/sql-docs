@@ -19,7 +19,7 @@ ms.author: "sstein"
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+|[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
 ## Options  
  Operation Mode  

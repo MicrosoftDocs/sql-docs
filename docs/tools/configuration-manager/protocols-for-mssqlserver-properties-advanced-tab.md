@@ -23,7 +23,7 @@ Use the **Advanced** tab on the **Protocols for MSSQLSERVER Properties** dialog 
 > - [Windows Extended Protection \<extendedProtection\>](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
 > - [Extended Protection for Authentication Overview](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
 
-For more information about how to configure other [!INCLUDEssNoVersion] services, see [Manage the Database Engine Services](../../database-engine/configure-windows/manage-the-database-engine-services.md). For a complete description of Extended Protection, see [Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).
+For more information about how to configure other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, see [Manage the Database Engine Services](../../database-engine/configure-windows/manage-the-database-engine-services.md). For a complete description of Extended Protection, see [Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).
 
 **Extended Protection** is fully supported by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Support for **Extended Protection** for other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client providers is not currently supported.
 

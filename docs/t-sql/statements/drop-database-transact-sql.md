@@ -51,7 +51,7 @@ DROP DATABASE database_name [;]
 
 ## Arguments
 
-*IF EXISTS*
+ *IF EXISTS*  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level)).
 
 Conditionally drops the database only if it already exists.

@@ -85,7 +85,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## Permissions  
  Users with the `ALTER ANY DATABASE AUDIT` permission can create database audit specifications and bind them to any audit.  
   
- After a database audit specification is created, it can be viewed by principals with the `CONTROL SERVER`, `ALTER ANY DATABASE AUDIT` permissions, or the `sysadmin` account.  
+ After a database audit specification is created, it can be viewed by users with the `CONTROL SERVER` permission, or the `sysadmin` account.  
   
 ## Examples
 

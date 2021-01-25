@@ -21,7 +21,7 @@ This Release Notes document describes known issues that you should read about be
 For information about how to get started and install SQL Server 2012, see the SQL Server 2012 Readme. The Readme document is available on the installation media and from the [Readme](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) download page. You can also find more information in [SQL Server Books Online](/previous-versions/sql/sql-server-2012/ms130214(v=sql.110)) and on the [SQL Server Forums](https://go.microsoft.com/fwlink/?LinkId=213599).  
   
 ## <a name="Install"></a>1.0 Before You Install  
-Before installing [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consider the following information.  
+Before installing [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)], consider the following information.  
   
 ### 1.1 Rules Documentation for SQL Server 2012 Setup  
 **Issue:** SQL Server Setup validates your computer configuration before the Setup operation completes. The various rules that are run during the SQL Server Setup operation are captured using the System Configuration Checker (SCC) report. The documentation about these setup rules is no longer available on the MSDN library.  

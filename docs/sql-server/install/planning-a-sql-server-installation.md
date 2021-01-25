@@ -61,7 +61,7 @@ ms.author: chadam
  This section of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup documentation explains how to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are part of the Microsoft BI platform.  
   
  [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
- The section provides an overview of upgrading instances of previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ The section provides an overview of upgrading from a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Uninstall SQL Server](../../sql-server/install/uninstall-sql-server.md)  
  Refer this section to uninstall an existing instance of [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] completely, and prepare the system so that you can reinstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

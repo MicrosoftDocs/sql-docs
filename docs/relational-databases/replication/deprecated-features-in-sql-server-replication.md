@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Deprecated Features in SQL Server Replication
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  This topic describes the deprecated Replication features that are still available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
+  This topic describes the deprecated Replication features that are still available in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
   
 ## Items Deprecated in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
   

@@ -162,7 +162,7 @@ Look for Launchpad in the `Binn` folder for the instance. For example, in a defa
 
 ### 9. Remote compute contexts are blocked by a firewall in SQL Server instances that are running on Azure virtual machines
 
-If you have installed [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on an Azure virtual machine, you might not be able to use compute contexts that require the use of the virtual machine's workspace. The reason is that, by default, the firewall on Azure virtual machines includes a rule that blocks network access for local R user accounts.
+If you have installed [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] on an Azure virtual machine, you might not be able to use compute contexts that require the use of the virtual machine's workspace. The reason is that, by default, the firewall on Azure virtual machines includes a rule that blocks network access for local R user accounts.
 
 As a workaround, on the Azure VM, open **Windows Firewall with Advanced Security**, select **Outbound Rules**, and disable the following rule: **Block network access for R local user accounts in SQL Server instance MSSQLSERVER**. You can also leave the rule enabled, but change the security property to **Allow if secure**.
 
@@ -728,7 +728,7 @@ Using a command prompt in administrator mode, run the following command, replaci
 
 ## Revolution R Enterprise and Microsoft R Open
 
-This section lists issues specific to R connectivity, development, and performance tools that are provided by Revolution Analytics. These tools were provided in earlier pre-release versions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+This section lists issues specific to R connectivity, development, and performance tools that are provided by Revolution Analytics. These tools were provided in earlier pre-release versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
 
 In general, we recommend that you uninstall these previous versions and install the latest version of SQL Server or Microsoft R Server.
 

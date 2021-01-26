@@ -36,7 +36,7 @@ ms.author: jaszymas
   
 ##  <a name="SSMSProcedure"></a> To create a database protected by transparent data encryption  
 
-The following procedures show you have to create a database protected by TDE using SQL Server Management Studio and by using Transact-SQL.
+The following procedures show you how to create a database protected by TDE using SQL Server Management Studio and by using Transact-SQL.
   
 ###  <a name="SSMSCreate"></a> Using SQL Server Management Studio  
   
@@ -132,7 +132,7 @@ The following procedures show you have to create a database protected by TDE usi
   
 ##  <a name="TsqlProcedure"></a> To move a database protected by transparent data encryption 
 
-The following procedures show you have to move a database protected by TDE using SQL Server Management Studio and by using Transact-SQL.
+The following procedures show you how to move a database protected by TDE using SQL Server Management Studio and by using Transact-SQL.
   
 ###  <a name="SSMSMove"></a> Using SQL Server Management Studio  
   

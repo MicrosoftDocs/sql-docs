@@ -1,6 +1,6 @@
 ---
 description: "RESTORE Statements - Arguments (Transact-SQL)"
-title: "RESTORE Arguments (Transact-SQL) | Microsoft Docs"
+title: "RESTORE Arguments (Transact-SQL)"
 ms.custom: ""
 ms.date: "08/08/2018"
 ms.prod: sql
@@ -13,7 +13,6 @@ dev_langs:
 helpviewer_keywords: 
   - "RESTORE statement, arguments"
   - "RESTORE statement"
-ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
 ---
@@ -252,7 +251,7 @@ CREDENTIAL
  Used only when restoring a backup from the Microsoft Azure Blob storage service.  
   
 > [!NOTE]  
->  With [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until  [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], you can only restore from a single device when restoring from URL. In order to restore from multiple devices when restoring from URL you must use [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](../../sql-server/what-s-new-in-sql-server-2016.md)) and you must use Shared Access Signature (SAS) tokens. For more information, see [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) and [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).  
+>  With [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until  [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], you can only restore from a single device when restoring from URL. In order to restore from multiple devices when restoring from URL you must use [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] or later, and you must use Shared Access Signature (SAS) tokens. For more information, see [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) and [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).  
   
  REPLACE  
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  

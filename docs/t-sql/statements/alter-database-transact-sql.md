@@ -163,7 +163,7 @@ For more information about the Windows and SQL collation names, see [COLLATE](~/
 **\<delayed_durability_option> ::=**   
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.
 
-For more information see [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md) and [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md).
+For more information, see [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md) and [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md).
 
 **\<file_and_filegroup_options>::=**   
 For more information, see [ALTER DATABASE File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
@@ -477,7 +477,7 @@ Specifies the maximum size of the database. The maximum size must comply with th
 |1024 GB|N/A|√|√|√|√ (D)|
 |From 1024 GB up to 4096 GB in increments of 256 GB*|N/A|N/A|N/A|N/A|√|
 
-\* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size. P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For additional details regarding resource limitations for the DTU model, see [DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits).
+\* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size. P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For more details regarding resource limitations for the DTU model, see [DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits).
 
 The MAXSIZE value for the DTU model, if specified, has to be a valid value shown in the table above for the service tier specified.
 
@@ -573,7 +573,7 @@ The MAXSIZE value for the DTU model, if specified, has to be a valid value shown
 |:----- | -------: | -------: | -------: | -------: | -------: |
 |Max data size (GB)|1280|1536|2048|4096|4096|
 
-If no `MAXSIZE`value is set when using the vCore model, the default is 32 GB. For additional details regarding resource limitations for vCore model, see [vCore resource limits](/azure/sql-database/sql-database-dtu-resource-limits).
+If no `MAXSIZE`value is set when using the vCore model, the default is 32 GB. For more details regarding resource limitations for vCore model, see [vCore resource limits](/azure/sql-database/sql-database-dtu-resource-limits).
 
 The following rules apply to MAXSIZE and EDITION arguments:
 
@@ -867,26 +867,33 @@ Designates that the current database in use should be altered.
 
 ## Remarks
 
-To remove a database, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
-To decrease the size of a database, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
+- To remove a database, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 
-The `ALTER DATABASE` statement must run in auto-commit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.
+- To decrease the size of a database, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
-Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.
+- The `ALTER DATABASE` statement must run in auto-commit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.
 
+- The plan cache for the Managed Instance is cleared by setting one of the following options.
+    - COLLATE
+    - MODIFY FILEGROUP DEFAULT
+    - MODIFY FILEGROUP READ_ONLY
+    - MODIFY FILEGROUP READ_WRITE
+    - MODIFY NAME
+
+    Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.
 The plan cache is also flushed when several queries are executed against a database that has default options. Then, the database is dropped.
 
-Some `ALTER DATABASE` statements require exclusive lock on a database to be executed. This is why they might fail when another active proces is holding a lock on the database. Error that is reported in a case like this is `Msg 5061, Level 16, State 1, Line 38` with message `ALTER DATABASE failed because a lock could not be placed on database '<database name>'. Try again later`. This is typically a transient failure and to resolve it, once all locks on the database are released, retry the ALTER DATABASE statement that failed. System view `sys.dm_tran_locks` holds information on active locks. To check if there are shared or exclusive locks on a database use following query.
-
-```sql
-SELECT
-	resource_type, resource_database_id, request_mode, request_type, request_status, request_session_id 
-FROM 
-	sys.dm_tran_locks
-WHERE
-	resource_database_id = DB_ID('testdb')
-```
-
+- Some `ALTER DATABASE` statements require exclusive lock on a database to be executed. This is why they might fail when another active process is holding a lock on the database. Error that is reported in a case like this is `Msg 5061, Level 16, State 1, Line 38` with message `ALTER DATABASE failed because a lock could not be placed on database '<database name>'. Try again later`. This is typically a transient failure and to resolve it, once all locks on the database are released, retry the ALTER DATABASE statement that failed. System view `sys.dm_tran_locks` holds information on active locks. To check if there are shared or exclusive locks on a database use following query.
+  
+    ```sql
+    SELECT
+        resource_type, resource_database_id, request_mode, request_type, request_status, request_session_id 
+    FROM 
+        sys.dm_tran_locks
+    WHERE
+        resource_database_id = DB_ID('testdb')
+    ```
+  
 ## Viewing Database Information
 
 You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups.
@@ -1324,7 +1331,7 @@ FROM sys.databases;
 
 ### F. Enable auto-create and auto-update stats for a database
 
-Use the following statement to enable create and update statistics automatically and asynchronously for database, CustomerSales. This creates and updates single-column statistics as necessary to create high quality query plans.
+Use the following statement to enable create and update statistics automatically and asynchronously for database, CustomerSales. This creates and updates single-column statistics as necessary to create high-quality query plans.
 
 ```sql
 ALTER DATABASE CustomerSales

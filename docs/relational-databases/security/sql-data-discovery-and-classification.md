@@ -24,7 +24,7 @@ Discovering and classifying your most sensitive data (business, financial, healt
 > Data Discovery & Classification is **supported for SQL Server 2012 and later, and can be used with [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) or later**. For Azure SQL Database, see [Azure SQL Database Data Discovery & Classification](/azure/sql-database/sql-database-data-discovery-and-classification/).
 
 ## <a id="subheading-1"></a>Overview
-Data Discovery & Classification introduces a set of advanced services, forming a new SQL Information Protection paradigm aimed at protecting the data, not just the database:
+Data Discovery & Classification introduces a set of services, forming a new SQL Information Protection paradigm aimed at protecting the data, not just the database:
 
 * **Discovery & recommendations** - The classification engine scans your database and identifies columns containing potentially sensitive data. It then provides you an easy way to review and apply the appropriate classification recommendations, as well as to manually classify columns.
 * **Labeling** - Sensitivity classification labels can be persistently tagged on columns.

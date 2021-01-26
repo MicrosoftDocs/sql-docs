@@ -57,7 +57,7 @@ The steps in this section all run within an Azure Data Studio notebook.
 
    ![Validation](media/notebooks-parameterization/install-validation-papermill.png)
 
-## Setup a Parameterized Notebook
+## Set up a Parameterized Notebook
 
 1. Verify the **Kernel** is set to *Python3*.
 
@@ -83,17 +83,17 @@ The steps in this section all run within an Azure Data Studio notebook.
    print("Addition: " + str(addition))
    print("Multiplication: " + str(multiply))
    ```
-    
+
    Cells in Example Input Notebook:
    ![Additional Input Notebook Cells](media/notebooks-parameterization/test-cells.png)
 
 4. Save notebook as **Input.ipynb**.
-
-    ![](media/notebooks-parameterization/save-notebook.png)
+   ![Save Notebook](media/notebooks-parameterization/save-notebook.png)
 
 ## How to Execute Papermill Notebook
 
 Papermill can be executed two ways:
+
  1. Command Line Interface (CLI)
  2. Python API
 
@@ -112,9 +112,8 @@ To execute a notebook using the CLI, enter the papermill command in the terminal
 
    This will execute the Input Notebook with new values for parameters **x** and **y**.
 
-2. After Execution view new Output Parameterizatied Notebook.
-
-   You will note that there is a new cell labeled **# Injected-Parameters** containing the new parameter values passed in via CLI.
+2. After Execution view new Output Parameterized Notebook.
+   You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in via CLI.
 
    ![Output Notebook](media/notebooks-parameterization/output-notebook.png)
 
@@ -140,9 +139,9 @@ To execute a notebook using the CLI, enter the papermill command in the terminal
 
    ![Papermill Python API Execution](media/notebooks-parameterization/python-api-execute.png)
 
-3. After Execution view new Output Parameterizatied Notebook.
+3. After Execution view new Output Parameterization Notebook.
 
-   You will note that there is a new cell labeled **# Injected-Parameters** containing the new parameter values passed in via CLI.
+   You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in via CLI.
 
    ![Output Notebook](media/notebooks-parameterization/output-notebook.png)
 

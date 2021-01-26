@@ -249,7 +249,7 @@ GO
 RESTORE LOG AdventureWorks2012  
    FROM AdventureWorks2012_log  
    WITH FILE = 1,  
-   WITH NORECOVERY;  
+   NORECOVERY;  
 GO  
 RESTORE DATABASE AdventureWorks2012  
    WITH RECOVERY;  
@@ -272,12 +272,12 @@ GO
 RESTORE LOG AdventureWorks2012  
    FROM AdventureWorks2012_log  
    WITH FILE = 2,  
-   WITH NORECOVERY;  
+   NORECOVERY;  
 GO  
 RESTORE LOG AdventureWorks2012  
    FROM AdventureWorks2012_log  
    WITH FILE = 3,  
-   WITH NORECOVERY;  
+   NORECOVERY;  
 GO  
 RESTORE DATABASE AdventureWorks2012  
    WITH RECOVERY;  

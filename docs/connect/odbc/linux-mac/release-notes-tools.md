@@ -22,7 +22,6 @@ This article lists and describes what's new in the versioned releases of the [!I
 
 | Feature added | Details |
 | :------------ | :------ |
-| BCP Bugfix | Fixed build issue in x86 version. |
 | Sqlcmd Bugfix | Fixed input redirection bug and empty lines leading to repeated execution. |
 | Sqlcmd Bugfix | Fixed mistaken error reporting for r, p, X and k options under certain formatting. |
 | Sqlcmd -z/-Z "Password" Option | Now supported. |

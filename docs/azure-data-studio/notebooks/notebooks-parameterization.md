@@ -8,7 +8,7 @@ author: vasubhog
 ms.author: vasubhog
 ms.reviewer: mikeray, alayu, maghan
 ms.custom: ""
-ms.date: 01/11/2021
+ms.date: 01/25/2021
 ---
 
 # Create a Parameterized Notebook
@@ -34,7 +34,7 @@ The steps in this section all run within an Azure Data Studio notebook.
 
    ![Yes](media/notebooks-kqlmagic/install-python-yes.png)
 
-3. Install Kqlmagic:
+3. Install Papermill:
 
    ```python
    !pip install papermill --no-cache-dir --upgrade
@@ -48,7 +48,7 @@ The steps in this section all run within an Azure Data Studio notebook.
 
    ![List](media/notebooks-parameterization/install-list-papermill.png)
 
-5. You can test if papermill is loaded properly by browsing the help documentation or by checking for the version.
+5. You can test if papermill is loaded properly by checking the version of papermill.
 
    ```python
    import papermill
@@ -83,7 +83,8 @@ The steps in this section all run within an Azure Data Studio notebook.
    print("Addition: " + str(addition))
    print("Multiplication: " + str(multiply))
    ```
-
+    
+   Cells in Example Input Notebook:
    ![Additional Input Notebook Cells](media/notebooks-parameterization/test-cells.png)
 
 4. Save notebook as **Input.ipynb**.

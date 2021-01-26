@@ -22,7 +22,6 @@ helpviewer_keywords:
   - "TRUNCATE TABLE statement"
   - "deleting rows"
   - "dropping rows"
-ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -69,7 +68,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  Is the name of the table to truncate or from which all rows are removed. *table_name* must be a literal. *table_name* cannot be the **OBJECT_ID()** function or a variable.  
   
  WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )    
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](../../sql-server/what-s-new-in-sql-server-2016.md))
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level))
   
  Specifies the partitions to truncate or from which all rows are removed. If the table is not partitioned, the `WITH PARTITIONS` argument will generate an error. If the `WITH PARTITIONS` clause is not provided, the entire table will be truncated.  
   
@@ -156,7 +155,7 @@ GO
   
 ### B. Truncate Table Partitions  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](../../sql-server/what-s-new-in-sql-server-2016.md))
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level))
   
  The following example truncates specified partitions of a partitioned table. The `WITH (PARTITIONS (2, 4, 6 TO 8))` syntax causes partition numbers 2, 4, 6, 7, and 8 to be truncated.  
   

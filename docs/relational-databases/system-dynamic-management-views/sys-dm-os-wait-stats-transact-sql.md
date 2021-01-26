@@ -1,8 +1,8 @@
 ---
 description: "sys.dm_os_wait_stats (Transact-SQL)"
-title: "sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_os_wait_stats (Transact-SQL)"
 ms.custom: ""
-ms.date: "08/19/2020"
+ms.date: "01/25/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -17,7 +17,6 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_os_wait_stats dynamic management view"
-ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -45,7 +44,7 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW 
 On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the `Server admin` or an `Azure Active Directory admin` account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
 
 ##  <a name="WaitTypes"></a> Types of Waits  
- **Resource waits** occur when a worker requests access to a resource that is not available because the resource is being used by some other worker or is not yet available. Examples of resource waits are locks, latches, network and disk I/O waits. Lock and latch waits are waits on synchronization objects  
+ **Resource waits** occur when a worker requests access to a resource that is not available because the resource is being used by some other worker or is not yet available. Examples of resource waits are locks, latches, network, and disk I/O waits. Lock and latch waits are waits on synchronization objects  
   
 **Queue waits** occur when a worker is idle, waiting for work to be assigned. Queue waits are most typically seen with system background tasks such as the deadlock monitor and deleted record cleanup tasks. These tasks will wait for work requests to be placed into a work queue. Queue waits may also periodically become active even if no new packets have been put on the queue.  
   
@@ -291,7 +290,7 @@ This command resets all counters to 0.
 |HADR_AR_UNLOAD_COMPLETED |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_ARCONTROLLER_NOTIFICATIONS_SUBSCRIBER_LIST |The publisher for an availability replica event (such as a state change or configuration change) is waiting for exclusive read/write access to the list of event subscribers. Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_BACKUP_BULK_LOCK |The Always On primary database received a backup request from a secondary database and is waiting for the background thread to finish processing the request on acquiring or releasing the BulkOp lock. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|HADR_BACKUP_QUEUE |The backup background thread of the Always On primary database is waiting for a new work request from the secondary database. (typically, this occurs when the primary database is holding the BulkOp log and is waiting for the secondary database to indicate that the primary database can release the lock). <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|HADR_BACKUP_QUEUE |The backup background thread of the Always On primary database is waiting for a new work request from the secondary database. (Typically, this occurs when the primary database is holding the BulkOp log and is waiting for the secondary database to indicate that the primary database can release the lock). <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_CLUSAPI_CALL |A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] thread is waiting to switch from non-preemptive mode (scheduled by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) to preemptive mode (scheduled by the operating system) in order to invoke Windows Server Failover Clustering APIs. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_COMPRESSED_CACHE_SYNC |Waiting for access to the cache of compressed log blocks that is used to avoid redundant compression of the log blocks sent to multiple secondary databases. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_CONNECTIVITY_INFO |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
@@ -327,7 +326,7 @@ This command resets all counters to 0.
 |HADR_PARTNER_SYNC |Concurrency control wait on the partner list. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_READ_ALL_NETWORKS |Waiting to get read or write access to the list of WSFC networks. Internal use only. Note: The engine keeps a list of WSFC networks that is used in dynamic management views (such as sys.dm_hadr_cluster_networks) or to validate Always On Transact-SQL statements that reference WSFC network information. This list is updated upon engine startup, WSFC related notifications, and internal Always On restart (for example, losing and regaining of WSFC quorum). Tasks will usually be blocked when an update in that list is in progress. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |Waiting for the secondary database to connect to the primary database before running recovery. This is an expected wait, which can lengthen if the connection to the primary is slow to establish. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|HADR_RECOVERY_WAIT_FOR_UNDO |Database recovery is waiting for the secondary database to finish the reverting and initializing phase to bring it back to the common log point with the primary database. This is an expected wait after failovers.Undo progress can be tracked through the Windows System Monitor (perfmon.exe) and dynamic management views. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|HADR_RECOVERY_WAIT_FOR_UNDO |Database recovery is waiting for the secondary database to finish the reverting and initializing phase to bring it back to the common log point with the primary database. This is an expected wait after failovers. Undo progress can be tracked through the Windows System Monitor (perfmon.exe) and dynamic management views. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_REPLICAINFO_SYNC |Waiting for concurrency control to update the current replica state. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_SEEDING_CANCELLATION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |HADR_SEEDING_FILE_LIST |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
@@ -488,11 +487,11 @@ This command resets all counters to 0.
 |PAGEIOLATCH_SH |Occurs when a task is waiting on a latch for a buffer that is in an I/O request. The latch request is in Shared mode. Long waits may indicate problems with the disk subsystem.| 
 |PAGEIOLATCH_UP |Occurs when a task is waiting on a latch for a buffer that is in an I/O request. The latch request is in Update mode. Long waits may indicate problems with the disk subsystem.| 
 |PAGELATCH_DT |Occurs when a task is waiting on a latch for a buffer that is not in an I/O request. The latch request is in Destroy mode.| 
-|PAGELATCH_EX |Occurs when a task is waiting on a latch for a buffer that is not in an I/O request. The latch request is in Exclusive mode.| 
+|PAGELATCH_EX |Occurs when a task is waiting on a latch for a buffer that is not in an I/O request. The latch request is in Exclusive mode. </br> A common scenario that leads to this latch is the "last-page insert" buffer latch contention. To understand and resolve this, use [Resolve last-page insert PAGELATCH_EX contention](/troubleshoot/sql/performance/resolve-pagelatch-ex-contention) and [Diagnose and resolve last-page-insert latch contention on SQL Server](../diagnose-resolve-latch-contention.md#last-pagetrailing-page-insert-contention). Another scenario is [Latch contention on small tables with a non-clustered index and random inserts (queue table)](../diagnose-resolve-latch-contention.md#latch-contention-on-small-tables-with-a-non-clustered-index-and-random-inserts-queue-table).| 
 |PAGELATCH_KP |Occurs when a task is waiting on a latch for a buffer that is not in an I/O request. The latch request is in Keep mode.| 
 |PAGELATCH_NL |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
 |PAGELATCH_SH |Occurs when a task is waiting on a latch for a buffer that is not in an I/O request. The latch request is in Shared mode.| 
-|PAGELATCH_UP |Occurs when a task is waiting on a latch for a buffer that is not in an I/O request. The latch request is in Update mode.| 
+|PAGELATCH_UP |Occurs when a task is waiting on a latch for a buffer that is not in an I/O request. The latch request is in Update mode. Commonly this wait type may be observed when a system page (buffer) like PFS, GAM, SGAM is latched. For troubleshooting a common scenario refer to [Reduce Allocation Contention in SQL Server tempdb database](/troubleshoot/sql/performance/recommendations-reduce-allocation-contention).| 
 |PARALLEL_BACKUP_QUEUE |Occurs when serializing output produced by RESTORE HEADERONLY, RESTORE FILELISTONLY, or RESTORE LABELONLY.| 
 |PARALLEL_REDO_DRAIN_WORKER |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |PARALLEL_REDO_FLOW_CONTROL |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 

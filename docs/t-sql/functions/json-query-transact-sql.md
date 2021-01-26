@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "JSON_QUERY"
   - "JSON_QUERY_TSQL"

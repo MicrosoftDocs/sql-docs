@@ -1,6 +1,6 @@
 ---
 description: "DROP SYNONYM (Transact-SQL)"
-title: "DROP SYNONYM (Transact-SQL) | Microsoft Docs"
+title: "DROP SYNONYM (Transact-SQL)"
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "removing synonyms"
   - "DROP SYNONYM statement"
   - "dropping synonyms"
-ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -40,7 +39,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 
 ## Arguments
  *IF EXISTS*  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](../../sql-server/what-s-new-in-sql-server-2016.md))
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level)).
   
  Conditionally drops the synonym only if it already exists.  
   

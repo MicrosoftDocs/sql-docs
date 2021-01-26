@@ -1,6 +1,6 @@
 ---
 description: "DROP VIEW (Transact-SQL)"
-title: "DROP VIEW (Transact-SQL) | Microsoft Docs"
+title: "DROP VIEW (Transact-SQL)"
 ms.custom: ""
 ms.date: "01/19/2021"
 ms.prod: sql
@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "indexed views [SQL Server], removing"
   - "views [SQL Server], removing"
   - "removing views"
-ms.assetid: 03cea355-e39c-46e1-b7db-8832038669dd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -56,7 +55,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
 
 ## Arguments
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](../../sql-server/what-s-new-in-sql-server-2016.md), [!INCLUDE[sssds](../../includes/sssds-md.md)]).|  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
  Conditionally drops the view only if it already exists.  
   

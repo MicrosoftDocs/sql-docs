@@ -35,7 +35,7 @@ GeneMi.  2019/04/03.
 
 | New item | Details |
 | :------- | :------ |
-| New distributions supported. | Ubuntu 20.10, macOS Big Sur |
+| New distributions supported. | Ubuntu 20.10, macOS Big Sur, Oracle Linux 7 |
 | Service Principal Authentication | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | Ability to insert into encrypted money and smallmoney columns | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |

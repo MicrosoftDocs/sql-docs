@@ -201,7 +201,7 @@ For more info about the Import Flat File Wizard, see [Import Flat File to SQL Wi
 
 `BULK INSERT` is a Transact-SQL command that you can run from SQL Server Management Studio. The following example loads the data from the `Data.csv` comma-delimited file into an existing database table.
 
-As described previously in the [Prerequisite](#prereq) section, you have to export your Excel data as text before you can use BULK INSERT to import it. BULK INSERT can't read Excel files directly. With the BULK INSERT command, you can import a CSV file that is stored locally or in Azure Blob storage.
+As described previously in the [Prerequisite](#prereq) section, you have to export your Excel data as text before you can use BULK INSERT to import it. BULK INSERT can't read Excel files directly. With the BULK INSERT command, you can import a CSV file that is stored locally or in Azure Blob Storage.
 
 ```sql
 USE ImportFromExcel;
@@ -226,7 +226,7 @@ BCP is a program that you run from the command prompt. The following example loa
 As described previously in the [Prerequisite](#prereq) section, you have to export your Excel data as text before you can use BCP to import it. BCP can't read Excel files directly. Use to import into SQL Server or SQL Database from a test (CSV) file saved to local storage.
 
 > [!IMPORTANT]
-> For a text (CSV) file stored in Azure Blob storage, use BULK INSERT or OPENROWSET. For an examples, see [Example](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
+> For a text (CSV) file stored in Azure Blob Storage, use BULK INSERT or OPENROWSET. For an examples, see [Example](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
 ```console
 bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,

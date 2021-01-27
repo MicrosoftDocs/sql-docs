@@ -13,7 +13,7 @@ ms.date: 12/11/2020
 ---
 
 # SqlPackage Extract parameters and properties
-The SqlPackage.exe Extract action creates a schema of a connected database in a DACPAC package (.dacpac file). By default, data is not included in the .dacpac file. To include data, utilize the [Export action](sqlpackage-export.md) or use the Extract properties *ExtractAllTableData*/*TableData*. 
+The SqlPackage.exe Extract action creates a schema of a connected database in a DACPAC file (.dacpac). By default, data is not included in the .dacpac file. To include data, utilize the [Export action](sqlpackage-export.md) or use the Extract properties *ExtractAllTableData*/*TableData*. 
 
 ## Command-line syntax
 

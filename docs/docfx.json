@@ -277,7 +277,7 @@
           },
             "sensitive-language-wl": {
               "exclude": [
-                "./big-data-cluster/reference-config-spark-hadoop.md"
+                "big-data-cluster/reference-config-spark-hadoop.md"
               ]
             },
               "sensitive-language-bl": {

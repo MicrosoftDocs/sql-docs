@@ -19,9 +19,9 @@ ms.author: chadam
 This quickstart helps you understand how to write backups to and restore from the Azure Blob Storage Service.  The article explains how to create an Azure Blob Container, write a backup to the blob service, and then perform a restore.
 
 > [!NOTE]
-> SQL Server 2012 SP1 CU2 introduced support for back up to Azure Blob storage. SQL Server 2014 and prior does not support the Shared Access Signature (SAS) that is described in this quickstart article.
+> SQL Server 2012 SP1 CU2 introduced support for back up to Azure Blob Storage. SQL Server 2014 and prior does not support the Shared Access Signature (SAS) that is described in this quickstart article.
 >
-> For SQL Server 2014 and prior, use [Tutorial: SQL Server 2014 Backup and Restore to Microsoft Azure Blob storage](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url).
+> For SQL Server 2014 and prior, use [Tutorial: SQL Server 2014 Backup and Restore to Microsoft Azure Blob Storage](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url).
 >
   
 ## Prerequisites
@@ -124,7 +124,7 @@ Use the GUI in SQL Server Management Studio to create the credential by followin
 
 
 ## Back up database
-In this step, back up the database `SQLTestDB` to your Azure Blob storage account using either the GUI within SQL Server Management Studio, or Transact-SQL (T-SQL). 
+In this step, back up the database `SQLTestDB` to your Azure Blob Storage account using either the GUI within SQL Server Management Studio, or Transact-SQL (T-SQL). 
 
 # [SSMS](#tab/SSMS)
 
@@ -223,7 +223,7 @@ In this step, restore the database using either the GUI in SQL Server Management
 
 # [Transact-SQL](#tab/tsql)
 
-To restore your on-premises database from Azure Blob storage, modify the following Transact-SQL command to use your own storage account and then run it within a new query window.
+To restore your on-premises database from Azure Blob Storage, modify the following Transact-SQL command to use your own storage account and then run it within a new query window.
 
 ```sql
 USE [master]

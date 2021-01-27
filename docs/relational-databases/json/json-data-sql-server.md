@@ -278,7 +278,7 @@ You can format information that's stored in files as standard JSON or line-delim
   
 -   If your JSON documents are stored in local files, on shared network drives, or in Azure Files locations that can be accessed by SQL Server, you can use bulk import to load your JSON data into SQL Server.
   
--   If your line-delimited JSON files are stored in Azure Blob storage or the Hadoop file system, you can use PolyBase to load JSON text, parse it in Transact-SQL code, and load it into tables.  
+-   If your line-delimited JSON files are stored in Azure Blob Storage or the Hadoop file system, you can use PolyBase to load JSON text, parse it in Transact-SQL code, and load it into tables.  
 
 ### Import JSON data into SQL Server tables
 

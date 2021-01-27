@@ -1,6 +1,6 @@
 ---
 title: "Restoring From Backups Stored in Microsoft Azure | Microsoft Docs"
-description: Understand considerations for restoring a SQL Server database using a backup stored in Azure Blob storage. 
+description: Understand considerations for restoring a SQL Server database using a backup stored in Azure Blob Storage. 
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
@@ -29,7 +29,7 @@ ms.author: chadam
   
 ### Using SQL Server Management Studio  
   
--   The restore task is used to restore a database using the SQL Server Management Studio. The backup media page now includes the **URL** option to show backup files stored in the Azure Blob storage service. You also must provide the SQL Credential that is used to authenticate to the storage account. The **Backup sets to restore** grid is then populated with the available backups in the Azure Blob storage. For more information, see [Restoring from Azure storage Using SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
+-   The restore task is used to restore a database using the SQL Server Management Studio. The backup media page now includes the **URL** option to show backup files stored in the Azure Blob Storage service. You also must provide the SQL Credential that is used to authenticate to the storage account. The **Backup sets to restore** grid is then populated with the available backups in the Azure Blob Storage. For more information, see [Restoring from Azure storage Using SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
   
 ### Optimizing Restores  
  To reduce restore write time, Add **perform volume maintenance tasks** user right to the SQL Server user account. For more information, see [Database File Initialization](/previous-versions/sql/sql-server-2008-r2/ms175935(v=sql.105)). If restore is still slow with instant file initialization turned on, look at the size of the log file on the instance where the database was backed up. If the log is very large in size (multiple GBs), it would be expected that restore would be slow. During restore the log file must be zeroed which takes a significant amount of time.  

@@ -25,7 +25,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 # CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Creates an external table and then exports, in parallel, the results of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to Hadoop or Azure Blob storage.
+  Creates an external table and then exports, in parallel, the results of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to Hadoop or Azure Blob Storage.
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -64,7 +64,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 The external files are written to *hdfs_folder* and named *QueryID_date_time_ID.format*, where *ID* is an incremental identifier and *format* is the exported data format. An example is QID776_20160130_182739_0.orc.
 
  **DATA_SOURCE = *external_data_source_name***
- specifies the name of the external data source object that contains the location where the external data is stored or will be stored. The location is either a Hadoop cluster or an Azure Blob storage. To create an external data source, use [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).
+ specifies the name of the external data source object that contains the location where the external data is stored or will be stored. The location is either a Hadoop cluster or an Azure Blob Storage. To create an external data source, use [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
  **FILE_FORMAT = *external_file_format_name***
  specifies the name of the external file format object that contains the format for the external data file. To create an external file format, use [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).

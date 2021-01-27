@@ -1,6 +1,6 @@
 ---
 title: "SQL Server managed backup to Microsoft Azure | Microsoft Docs"
-description: SQL Server Managed Backup to Microsoft Azure manages and automates SQL Server backups to Microsoft Azure Blob storage. 
+description: SQL Server Managed Backup to Microsoft Azure manages and automates SQL Server backups to Microsoft Azure Blob Storage. 
 ms.custom: ""
 ms.date: "10/18/2016"
 ms.prod: sql
@@ -15,7 +15,7 @@ ms.author: chadam
 # SQL Server managed backup to Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] manages and automates SQL Server backups to Microsoft Azure Blob storage. You can choose to allow SQL Server to determine the backup schedule based on the transaction workload of your database. Or you can use advanced options to define a schedule. The retention settings determine how long the backups are stored in Azure Blob storage. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] supports point in time restore for the retention time period specified.  
+  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] manages and automates SQL Server backups to Microsoft Azure Blob Storage. You can choose to allow SQL Server to determine the backup schedule based on the transaction workload of your database. Or you can use advanced options to define a schedule. The retention settings determine how long the backups are stored in Azure Blob Storage. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] supports point in time restore for the retention time period specified.  
   
  Beginning with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], the procedures and underlying behavior of [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] has changed. For more information, see [Migrate SQL Server 2014 managed backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
   
@@ -27,7 +27,7 @@ ms.author: chadam
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] can be configured at the database level or at the SQL Server instance level. When configuring at the instance level, any new databases are also backed up automatically. Settings at the database level can be used to override instance level defaults on an individual case.  
   
- You can also encrypt the backups for additional security, and you can set up a custom schedule to control when the backups are taken. For more details on the benefits of using Microsoft Azure Blob storage for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+ You can also encrypt the backups for additional security, and you can set up a custom schedule to control when the backups are taken. For more details on the benefits of using Microsoft Azure Blob Storage for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
 ##  <a name="Prereqs"></a> Prerequisites  
  Microsoft Azure Storage is used by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] to store the backup files. The following prerequisites are required:  

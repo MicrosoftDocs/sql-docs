@@ -28,7 +28,7 @@ To enable the use of PolyBase in the sample database, make sure it is installed,
 EXECUTE [Application].[Configuration_ApplyPolyBase]
 ```
 
-This will create an external table `dbo.CityPopulationStatistics` that references a public data set that contains population data for cities in the United States, hosted in Azure blob storage. You are encouraged to review the code in the stored procedure to understand the configuration process. If you want to host your own data in Azure blob storage and keep it secure from general public access, you will need to undertake additional configuration steps. The following query returns the data from that external data set:
+This will create an external table `dbo.CityPopulationStatistics` that references a public data set that contains population data for cities in the United States, hosted in Azure Blob Storage. You are encouraged to review the code in the stored procedure to understand the configuration process. If you want to host your own data in Azure Blob Storage and keep it secure from general public access, you will need to undertake additional configuration steps. The following query returns the data from that external data set:
 
 ```sql
 SELECT

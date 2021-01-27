@@ -99,16 +99,16 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 > [!NOTE]
 > This restriction does not apply to the **bcp** utility because the client reads the file independently of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## Bulk importing from Azure Blob storage
+## Bulk importing from Azure Blob Storage
 
-When importing from Azure Blob storage and the data is not public (anonymous access), create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on a SAS key which is encrypted with a [MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md), and then create an [external database source](../../t-sql/statements/create-external-data-source-transact-sql.md) for use in your BULK INSERT command.
+When importing from Azure Blob Storage and the data is not public (anonymous access), create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on a SAS key which is encrypted with a [MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md), and then create an [external database source](../../t-sql/statements/create-external-data-source-transact-sql.md) for use in your BULK INSERT command.
 
 > [!NOTE]
 > Do not use explicit transaction, or you receive a 4861 error.
 
 ### Using BULK INSERT
 
-The following example shows how to use the BULK INSERT command to load data from a csv file in an Azure Blob storage location on which you have created a SAS key. The Azure Blob storage location is configured as an external data source. This requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
+The following example shows how to use the BULK INSERT command to load data from a csv file in an Azure Blob Storage location on which you have created a SAS key. The Azure Blob Storage location is configured as an external data source. This requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
 
 ```sql
 --> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -139,7 +139,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 
 ### Using OPENROWSET
 
-The following example shows how to use the OPENROWSET command to load data from a csv file in an Azure Blob storage location on which you have created a SAS key. The Azure Blob storage location is configured as an external data source. This requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
+The following example shows how to use the OPENROWSET command to load data from a csv file in an Azure Blob Storage location on which you have created a SAS key. The Azure Blob Storage location is configured as an external data source. This requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
 
 ```sql
 --> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

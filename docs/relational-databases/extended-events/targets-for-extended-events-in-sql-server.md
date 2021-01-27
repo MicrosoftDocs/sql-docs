@@ -148,7 +148,7 @@ The **event_file** target writes event session output from buffer to a disk file
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
 
 > [!NOTE]
-> Azure SQL Database only supports storing `xel` files on Azure blob storage. 
+> Azure SQL Database only supports storing `xel` files on Azure Blob Storage. 
 >
 > For an **event_file** code example particular to SQL Database (and to SQL Managed Instance), see [Event File target code for extended events in SQL Database](/azure/sql-database/sql-database-xevent-code-event-file).
 

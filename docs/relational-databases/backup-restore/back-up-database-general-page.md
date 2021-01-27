@@ -85,7 +85,7 @@ ms.author: chadam
 |-|-|  
 |**Disk**|Backs up to disk. This may be a system file or a disk-based logical backup device created for the database. The currently selected disks appear in the **Back up to** list. You can select up to 64 disk devices for your backup operation.|  
 |**Tape**|Backs up to tape. This may be a local tape drive or a tape-based logical backup device created for the database. The currently selected tapes appear in the **Back up to** list. The maximum number is 64. If there are no tape devices attached to the server, this option is deactivated. The tapes you select are listed in the **Back up to** list.<br /><br /> Note: Support for tape backup devices will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.|  
-|**URL**|Backs up to Microsoft Azure Blob storage.|  
+|**URL**|Backs up to Microsoft Azure Blob Storage.|  
   
  The next set of options displayed depends on the type of destination selected. If you select Disk or Tape, the following options are displayed.  
   

@@ -44,7 +44,7 @@ Evaluates a list of conditions and returns one of multiple possible result expre
 ## Syntax  
   
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database  
+-- Syntax for SQL Server, Azure SQL Database and Azure Synapse Analytics
   
 --Simple CASE expression:   
 CASE input_expression   
@@ -60,7 +60,7 @@ END
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 CASE  
      WHEN when_expression THEN result_expression [ ...n ]   

@@ -1,8 +1,8 @@
 ---
 description: "Hints (Transact-SQL) - Query"
-title: "Query Hints (Transact-SQL) | Microsoft Docs"
+title: "Query Hints (Transact-SQL)"
 ms.custom: ""
-ms.date: "08/27/2020"
+ms.date: "01/26/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -53,9 +53,10 @@ helpviewer_keywords:
   - "EXTERNALPUSHDOWN query hint"
   - "USE HINT query hint"
   - "QUERY_PLAN_PROFILE query hint"
-ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: pelopes
+ms.reviewer: wiassaf
+
 ---
 # Hints (Transact-SQL) - Query
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -413,7 +414,10 @@ Is the table hint to apply to the table or view that corresponds to *exposed_obj
 You can specify INDEX, FORCESCAN, and FORCESEEK table hints as query hints for a query that doesn't have any existing table hints. You can also use them to replace existing INDEX, FORCESCAN, or FORCESEEK hints in the query, respectively. 
 
 Table hints other than INDEX, FORCESCAN, and FORCESEEK are disallowed as query hints unless the query already has a WITH clause specifying the table hint. In this case, a matching hint must also be specified as a query hint. Specify the matching hint as a query hint by using TABLE HINT in the OPTION clause. This specification preserves the query's semantics. For example, if the query contains the table hint NOLOCK, the OPTION clause in the **\@hints** parameter of the plan guide must also contain the NOLOCK hint. See Example K. 
-  
+
+## Specifying Table Hints with Query Store Hints
+ You can enforce hints on queries identified through Query Store without making code changes, using the [Query Store Hints (Preview)](../../relational-databases/performance/query-store-hints.md) feature. See Example N for using the [sys.sp_query_store_set_hints](../system-stored-procedures/sp-query-store-set-hints-transact-sql.md) stored procedure to apply a hint to a query.
+
 ## Examples  
   
 ### A. Using MERGE JOIN  
@@ -649,9 +653,41 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
 ```
 
+### N. Using Query Store Hints 
+
+The [Query Store Hints (Preview)](../../relational-databases/performance/query-store-hints.md) feature in Azure SQL Database provides an easy-to-use method for shaping query plans without changing application code.
+
+First, identify the query that has already been executed in the Query Store catalog views, for example:
+
+```sql
+SELECT q.query_id, qt.query_sql_text
+FROM sys.query_store_query_text qt 
+INNER JOIN sys.query_store_query q ON 
+    qt.query_text_id = q.query_text_id 
+WHERE query_sql_text like N'%ORDER BY ListingPrice DESC%'  
+  AND query_sql_text not like N'%query_store%';
+GO
+```
+
+ Then apply the desired hint to query_id. The following example applies the hint to force the [legacy cardinality estimator](../performance/cardinality-estimation-sql-server.md) to query_id 39, identified in Query Store:
+  
+```sql
+EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(USE HINT(''FORCE_LEGACY_CARDINALITY_ESTIMATION''))';
+```  
+
+ The following example applies multiple query hints to query_id 39, including RECOMPILE, MAXDOP 1, and the SQL 2014 query optimizer behavior:
+
+```sql
+EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(RECOMPILE, MAXDOP 1, USE HINT(''QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_120''))';
+```
+
+
+
+
 ## See Also  
 [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
 [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
 [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
 [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)       
 [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)      
+[Query Store Hints](../../relational-databases/performance/query-store-hints.md)   

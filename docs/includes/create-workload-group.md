@@ -106,7 +106,7 @@ Workload group can specify an external resource pool. You can define a workload 
 
 ## Remarks
 
-When `REQUEST_MEMORY_GRANT_PERCENT` is used, index creation is allowed to use more workspace memory than what is initially granted for improved performance. This special handling is supported by Resource Governor in [!INCLUDE[ssCurrent](sscurrent-md.md)]. However, the initial grant and any additional memory grant are limited by resource pool and workload group settings.
+When `REQUEST_MEMORY_GRANT_PERCENT` is used, index creation is allowed to use more workspace memory than what is initially granted for improved performance. This special handling is supported by Resource Governor in [!INCLUDE[ssCurrent](ssnoversion-md.md)]. However, the initial grant and any additional memory grant are limited by resource pool and workload group settings.
 
 The `MAX_DOP` limit is set per [task](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It is not a per [request](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks which are assigned to a [scheduler](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). For more information, see the [Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md).
 

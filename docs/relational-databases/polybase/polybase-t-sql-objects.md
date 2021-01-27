@@ -1,6 +1,6 @@
 ---
 title: "PolyBase Transact-SQL reference | Microsoft Docs"
-description: To use PolyBase, create external tables for your external data in Hadoop, Azure blob storage, Azure Data Lake Store, SQL Server, Oracle, Teradata, and MongoDB.
+description: To use PolyBase, create external tables for your external data in Hadoop, Azure Blob Storage, Azure Data Lake Store, SQL Server, Oracle, Teradata, and MongoDB.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -114,7 +114,7 @@ WITH (LOCATION='/Demo/',
 CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
 ```  
 
-## Create external tables for Azure blob storage  
+## Create external tables for Azure Blob Storage  
 Applies to: SQL Server (starting with 2016), Azure Synapse Analytics, Parallel Data Warehouse
 
 **1. Create Database Scoped Credential**  
@@ -125,7 +125,7 @@ Applies to: SQL Server (starting with 2016), Azure Synapse Analytics, Parallel D
   
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
   
--- Create a database scoped credential  for Azure blob storage.  
+-- Create a database scoped credential  for Azure Blob Storage.  
 -- IDENTITY: any string (this is not used for authentication to Azure storage).  
 -- SECRET: your Azure storage account key.  
   

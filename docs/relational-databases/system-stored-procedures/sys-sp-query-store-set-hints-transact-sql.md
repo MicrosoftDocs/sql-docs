@@ -48,7 +48,7 @@ Hints are specified in a valid T-SQL string format N'OPTION (..)'.
 * If a Query Store Hint already exists for a specific query_id, the last value provided will override previously specified values for the associated query. 
 * If a query_id doesn't exist, an error will be raised. 
 
-To remove hints associated with a query_id, use the system stored procedure [sp_query_store_clear_hints](sp-query-store-clear-hints.md). 
+To remove hints associated with a query_id, use the system stored procedure [sys.sp_query_store_clear_hints](sys-sp-query-store-clear-hints-transact-sql.md). 
 
 ### Supported Query Hints (Preview)
 

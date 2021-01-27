@@ -33,7 +33,7 @@ monikerRange: "=azuresqldb-current"
   
 ```sql
 sp_query_store_clear_hints
-    @query_id int;
+    @query_id bigint;
 ```  
 
 ## Return Values  

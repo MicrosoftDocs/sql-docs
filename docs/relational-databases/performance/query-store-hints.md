@@ -128,7 +128,7 @@ WHERE query_id = 39;
 - [Best practices with Query Store](best-practice-with-the-query-store.md)
 - [Monitor performance by using Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [sys.query_store_query_hints (Transact-SQL)](../system-catalog-views/sys-query-store-query-hints-transact-sql.md)   
-- [sys.sp_query_store_set_hints (Transact-SQL)](sys-sp-query-store-set-hints-transact-sql.md)   
-- [sys.sp_query_store_clear_hints (Transact-SQL)](sys-sp-query-store-clear-hints-transact-sql.md)   
+- [sys.sp_query_store_set_hints (Transact-SQL)](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md)   
+- [sys.sp_query_store_clear_hints (Transact-SQL)](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md)   
 
 

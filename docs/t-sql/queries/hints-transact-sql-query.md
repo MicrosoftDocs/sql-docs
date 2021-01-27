@@ -5,7 +5,6 @@ ms.custom: ""
 ms.date: "01/26/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
@@ -416,7 +415,7 @@ You can specify INDEX, FORCESCAN, and FORCESEEK table hints as query hints for a
 Table hints other than INDEX, FORCESCAN, and FORCESEEK are disallowed as query hints unless the query already has a WITH clause specifying the table hint. In this case, a matching hint must also be specified as a query hint. Specify the matching hint as a query hint by using TABLE HINT in the OPTION clause. This specification preserves the query's semantics. For example, if the query contains the table hint NOLOCK, the OPTION clause in the **\@hints** parameter of the plan guide must also contain the NOLOCK hint. See Example K. 
 
 ## Specifying Table Hints with Query Store Hints
- You can enforce hints on queries identified through Query Store without making code changes, using the [Query Store Hints (Preview)](../../relational-databases/performance/query-store-hints.md) feature. See Example N for using the [sys.sp_query_store_set_hints](../system-stored-procedures/sp-query-store-set-hints-transact-sql.md) stored procedure to apply a hint to a query.
+ You can enforce hints on queries identified through Query Store without making code changes, using the [Query Store Hints (Preview)](../../relational-databases/performance/query-store-hints.md) feature. See Example N for using the [sys.sp_query_store_set_hints](../../relational-databases/system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md) stored procedure to apply a hint to a query.
 
 ## Examples  
   
@@ -669,7 +668,7 @@ WHERE query_sql_text like N'%ORDER BY ListingPrice DESC%'
 GO
 ```
 
- Then apply the desired hint to query_id. The following example applies the hint to force the [legacy cardinality estimator](../performance/cardinality-estimation-sql-server.md) to query_id 39, identified in Query Store:
+ Then apply the desired hint to query_id. The following example applies the hint to force the [legacy cardinality estimator](../../relational-databases/performance/cardinality-estimation-sql-server.md) to query_id 39, identified in Query Store:
   
 ```sql
 EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(USE HINT(''FORCE_LEGACY_CARDINALITY_ESTIMATION''))';

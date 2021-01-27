@@ -18,13 +18,13 @@ ms.date: 11/4/2020
   
 - [Version](#version): Returns the build number of the SqlPackage application.  Added in version 18.6.
 
-- [Extract](sqlpackage-extract.md): Creates a database snapshot (.dacpac) file from a live SQL Server or Azure SQL Database.  
+- [Extract](sqlpackage-extract.md): Creates a data-tier application (.dacpac) file containing the schema or schema and user data from a connected SQL database.  
   
 - [Publish](sqlpackage-publish.md): Incrementally updates a database schema to match the schema of a source .dacpac file. If the database does not exist on the server, the publish operation creates it. Otherwise, an existing database is updated.  
   
-- [Export](sqlpackage-export.md): Exports a live database - including database schema and user data - from SQL Server or Azure SQL Database to a BACPAC package (.bacpac file).  
+- [Export](sqlpackage-export.md): Exports a connected SQL database - including database schema and user data - to a BACPAC file (.bacpac).  
   
-- [Import](sqlpackage-import.md): Imports the schema and table data from a BACPAC package into a new user database in an instance of SQL Server or Azure SQL Database.  
+- [Import](sqlpackage-import.md): Imports the schema and table data from a BACPAC file into a new user database.  
   
 - [DeployReport](sqlpackage-deploy-drift-report.md): Creates an XML report of the changes that would be made by a publish action.  
   

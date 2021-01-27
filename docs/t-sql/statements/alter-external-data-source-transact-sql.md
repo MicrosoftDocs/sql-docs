@@ -23,7 +23,7 @@ ms.author: wiassaf
 # ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
-  Modifies an external data source used to create an external table. The external data source can be Hadoop or Azure blob storage (WASBS) for SQL SERVER and Azure blob storage (WASBS) or Azure Data Lake storage (ABFSS/ADL) for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. 
+  Modifies an external data source used to create an external table. The external data source can be Hadoop or Azure Blob Storage (WASBS) for SQL SERVER and Azure Blob Storage (WASBS) or Azure Data Lake storage (ABFSS/ADL) for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. 
 
 ## Syntax  
 
@@ -38,14 +38,14 @@ ALTER EXTERNAL DATA SOURCE data_source_name SET
     }  
     [;]  
 
--- Modify an external data source pointing to Azure Blob storage
+-- Modify an external data source pointing to Azure Blob Storage
 -- Applies to: SQL Server (starting with 2017)
 ALTER EXTERNAL DATA SOURCE data_source_name
     SET
         LOCATION = 'https://storage_account_name.blob.core.windows.net'
         [, CREDENTIAL = credential_name ] 
 
--- Modify an external data source pointing to Azure Blob storage or Azure Data Lake storage
+-- Modify an external data source pointing to Azure Blob Storage or Azure Data Lake storage
 -- Applies to: Azure Synapse Analytics
 ALTER EXTERNAL DATA SOURCE data_source_name
     SET
@@ -68,7 +68,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
 TYPE = [HADOOP | BLOB_STORAGE]   
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-For bulk operations only, `LOCATION` must be valid the URL to Azure Blob storage. Do not put **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL.
+For bulk operations only, `LOCATION` must be valid the URL to Azure Blob Storage. Do not put **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL.
 The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1).
 
   

@@ -87,7 +87,7 @@ Is the name of the table or view schema. *schema_name* is optional if the defaul
 Is the name of the table or view to bulk import data into. Only views in which all columns refer to the same base table can be used. For more information about the restrictions for loading data into views, see [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).
 
 **'** _data_file_ **'**
-Is the full path of the data file that contains data to import into the specified table or view. BULK INSERT can import data from a disk or Azure Blob storage (including network, floppy disk, hard disk, and so on).
+Is the full path of the data file that contains data to import into the specified table or view. BULK INSERT can import data from a disk or Azure Blob Storage (including network, floppy disk, hard disk, and so on).
 
 *data_file* must specify a valid path from the server on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. If *data_file* is a remote file, specify the Universal Naming Convention (UNC) name. A UNC name has the form \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*. For example:
 
@@ -97,14 +97,14 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 ```
 
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 and Azure SQL Database.
-Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1, the data_file can be in Azure blob storage. In that case, you need to specify **data_source_name** option. For an example, see [Importing data from a file in Azure blob storage](#f-importing-data-from-a-file-in-azure-blob-storage).
+Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1, the data_file can be in Azure Blob Storage. In that case, you need to specify **data_source_name** option. For an example, see [Importing data from a file in Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 > [!IMPORTANT]
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
 **'** _data_source_name_ **'**
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 and Azure SQL Database.
-Is a named external data source pointing to the Azure Blob storage location of the file that will be imported. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). For an example, see [Importing data from a file in Azure blob storage](#f-importing-data-from-a-file-in-azure-blob-storage).
+Is a named external data source pointing to the Azure Blob Storage location of the file that will be imported. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). For an example, see [Importing data from a file in Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 BATCHSIZE **=**_batch_size_
 Specifies the number of rows in a batch. Each batch is copied to the server as one transaction. If this fails, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] commits or rolls back the transaction for every batch. By default, all data in the specified data file is one batch. For information about performance considerations, see "Remarks," later in this topic.
@@ -161,7 +161,7 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the `erro
 
 'errorfile_data_source_name'
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-Is a named external data source pointing to the Azure Blob storage location of the error file that will contain errors found during the import. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+Is a named external data source pointing to the Azure Blob Storage location of the error file that will contain errors found during the import. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 FIRSTROW **=** _first_row_
 Specifies the number of the first row to load. The default is the first row in the specified data file. FIRSTROW is 1-based.
@@ -176,7 +176,7 @@ If FIRE_TRIGGERS is not specified, no insert triggers execute.
 
 FORMATFILE_DATA_SOURCE **=** 'data_source_name'
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.
-Is a named external data source pointing to the Azure Blob storage location of the format file that will define the schema of imported data. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+Is a named external data source pointing to the Azure Blob Storage location of the format file that will define the schema of imported data. The external data source must be created using the `TYPE = BLOB_STORAGE` option added in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 KEEPIDENTITY
 Specifies that identity value or values in the imported data file are to be used for the identity column. If KEEPIDENTITY is not specified, the identity values for this column are verified but not imported and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically assigns unique values based on the seed and increment values specified during table creation. If the data file does not contain values for the identity column in the table or view, use a format file to specify that the identity column in the table or view is to be skipped when importing data; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically assigns unique values for the column. For more information, see [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).
@@ -357,7 +357,7 @@ To resolve this error, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 
 For more information about this and other security considerations for using BULK INSERT, see [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
-When importing from Azure Blob storage and the data is not public (anonymous access), create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on a SAS key which is encrypted with a [MASTER KEY](create-master-key-transact-sql.md), and then create an then create an [external database source](../../t-sql/statements/create-external-data-source-transact-sql.md) for use in your BULK INSERT command. For an example, see [Importing data from a file in Azure blob storage](#f-importing-data-from-a-file-in-azure-blob-storage).
+When importing from Azure Blob Storage and the data is not public (anonymous access), create a [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) based on a SAS key which is encrypted with a [MASTER KEY](create-master-key-transact-sql.md), and then create an then create an [external database source](../../t-sql/statements/create-external-data-source-transact-sql.md) for use in your BULK INSERT command. For an example, see [Importing data from a file in Azure blob storage](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 ### Permissions
 
@@ -468,7 +468,7 @@ WITH (FORMAT = 'CSV'
 
 ### F. Importing data from a file in Azure blob storage
 
-The following example shows how to load data from a csv file in an Azure Blob storage location on which you have created a SAS key. The Azure Blob storage location is configured as an external data source. This requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
+The following example shows how to load data from a csv file in an Azure Blob Storage location on which you have created a SAS key. The Azure Blob Storage location is configured as an external data source. This requires a database scoped credential using a shared access signature that is encrypted using a master key in the user database.
 
 ```sql
 --> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

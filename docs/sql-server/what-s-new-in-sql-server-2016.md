@@ -36,7 +36,7 @@ This page provides summary information and links to more detailed SQL Server 201
 - New **Query Store** stores query texts, execution plans, and performance metrics within the database, allowing easy monitoring and troubleshooting of performance issues. A dashboard shows which queries consumed the most time, memory or CPU resources.
 - **Temporal tables** are history tables which record all data changes, complete with the date and time they occurred.
 - New built-in **JSON support** in SQL Server supports JSON imports, exports, parsing and storing.
-- New **PolyBase** query engine integrates SQL Server with external data in Hadoop or Azure Blob storage. You can import and export data as well as executing queries.
+- New **PolyBase** query engine integrates SQL Server with external data in Hadoop or Azure Blob Storage. You can import and export data as well as executing queries.
 - The new **Stretch Database** feature lets you dynamically, securely archive data from a local SQL Server database to an Azure SQL database in the cloud. SQL Server automatically queries both local and remote data in the linked databases. 
 - **In-memory OLTP:** 
     - Now supports FOREIGN KEY, UNIQUE and CHECK constraints, and native compiled stored procedures OR, NOT, SELECT DISTINCT, OUTER JOIN, and subqueries in SELECT.

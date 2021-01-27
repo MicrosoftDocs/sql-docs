@@ -40,11 +40,11 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  Specifies the name of the database scoped credential that is being altered.  
   
  IDENTITY **='***identity_name***'**  
- Specifies the name of the account to be used when connecting outside the server. To import a file from Azure Blob storage, the identity name must be `SHARED ACCESS SIGNATURE`.  For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1).  
+ Specifies the name of the account to be used when connecting outside the server. To import a file from Azure Blob Storage, the identity name must be `SHARED ACCESS SIGNATURE`.  For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1).  
     
   
  SECRET **='***secret***'**  
- Specifies the secret required for outgoing authentication. *secret* is required to import a file from Azure Blob storage. *secret* may be optional for other purposes.   
+ Specifies the secret required for outgoing authentication. *secret* is required to import a file from Azure Blob Storage. *secret* may be optional for other purposes.   
 > [!WARNING]
 >  The SAS key value might begin with a '?' (question mark). When you use the SAS key, you must remove the leading '?'. Otherwise your efforts might be blocked.    
   

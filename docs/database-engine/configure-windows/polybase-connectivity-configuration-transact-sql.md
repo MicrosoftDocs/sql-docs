@@ -1,6 +1,6 @@
 ---
 title: "PolyBase Connectivity Configuration (Transact-SQL) | Microsoft Docs"
-description: Find out how to use sp_configure to display or change global configuration settings for PolyBase Hadoop and Azure Blob storage connectivity.
+description: Find out how to use sp_configure to display or change global configuration settings for PolyBase Hadoop and Azure Blob Storage connectivity.
 ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql
@@ -18,7 +18,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017"
 # PolyBase Connectivity Configuration (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
 
-  Displays or changes global configuration settings for PolyBase Hadoop and Azure blob storage connectivity.
+  Displays or changes global configuration settings for PolyBase Hadoop and Azure Blob Storage connectivity.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ RECONFIGURE
  Is the new configuration setting. *value* is **int**, with a default of NULL. The maximum value depends on the individual option.  
   
  **'hadoop connectivity'**  
- Specifies the type of Hadoop data source for all connections from PolyBase to Hadoop clusters or Azure blob storage (WASB). This setting is required in order to create an external data source for an external table. For more information, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md),  
+ Specifies the type of Hadoop data source for all connections from PolyBase to Hadoop clusters or Azure Blob Storage (WASB). This setting is required in order to create an external data source for an external table. For more information, see [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md),  
   
  These are the Hadoop connectivity settings and their corresponding supported Hadoop data sources. Only one setting can be in effect at a time. Options 1, 4, and 7 allow multiple types of external data sources to be created and used across all sessions on the server.  
   
@@ -55,7 +55,7 @@ RECONFIGURE
   
 -   Option 1: Hortonworks HDP 1.3 on Windows Server  
   
--   Option 1: Azure blob storage (WASB[S])  
+-   Option 1: Azure Blob Storage (WASB[S])  
   
 -   Option 2: Hortonworks HDP 1.3 on Linux  
   
@@ -63,7 +63,7 @@ RECONFIGURE
   
 -   Option 4: Hortonworks HDP 2.0 on Windows Server  
   
--   Option 4: Azure blob storage (WASB[S])  
+-   Option 4: Azure Blob Storage (WASB[S])  
   
 -   Option 5: Hortonworks HDP 2.0 on Linux  
   
@@ -73,7 +73,7 @@ RECONFIGURE
   
 -   Option 7: Hortonworks 2.1, 2.2, and 2.3 on Windows Server  
   
--   Option 7: Azure blob storage (WASB[S])  
+-   Option 7: Azure Blob Storage (WASB[S])  
   
  **RECONFIGURE**  
  Updates the run value (run_value) to match the configuration value (config_value). See [Result Sets](#ResultSets) for definitions of run_value and config_value. The new configuration value that is set by sp_configure does not become effective until the run value is set by the RECONFIGURE statement.  
@@ -124,10 +124,10 @@ EXEC sp_configure @configname='hadoop connectivity';
 ```  
   
 ### C. Set Hadoop connectivity  
- This example sets PolyBase to option 7. This option allows PolyBase to create and use external tables on Hortonworks 2.1, 2.2, and 2.3 on Linux and Windows Server, and Azure blob storage. For example, SQL could have 30 external tables with 7 of them referencing data on Hortonworks 2.1 on Linux, 4 on Hortonworks 2.2 on Linux, 7 on Hortonworks 2.3 on Linux, and the other 12 referencing Azure blob storage.  
+ This example sets PolyBase to option 7. This option allows PolyBase to create and use external tables on Hortonworks 2.1, 2.2, and 2.3 on Linux and Windows Server, and Azure Blob Storage. For example, SQL could have 30 external tables with 7 of them referencing data on Hortonworks 2.1 on Linux, 4 on Hortonworks 2.2 on Linux, 7 on Hortonworks 2.3 on Linux, and the other 12 referencing Azure Blob Storage.  
   
 ```  
---Configure external tables to reference data on Hortonworks 2.1, 2.2, and 2.3 on Linux, and Azure blob storage  
+--Configure external tables to reference data on Hortonworks 2.1, 2.2, and 2.3 on Linux, and Azure Blob Storage  
   
 sp_configure @configname = 'hadoop connectivity', @configvalue = 7;  
 GO  

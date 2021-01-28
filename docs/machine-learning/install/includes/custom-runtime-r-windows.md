@@ -18,7 +18,7 @@ Before installing an R custom runtime, install the following:
 ## Install Language Extensions
 
 > [!NOTE]
-> If you have [Machine Learning Services](../../sql-server-machine-learning-services.md) installed on SQL Server 2019, Language Extensions is already installed and you can skip this step.
+> If you have [Machine Learning Services](../../../sql-server-machine-learning-services.md) installed on SQL Server 2019, Language Extensions is already installed and you can skip this step.
 
 Follow the steps below to install [SQL Server Language Extensions](../../../language-extensions/language-extensions-overview.md), which is used for the Python custom runtime.
 
@@ -74,7 +74,7 @@ Follow the steps below to add or modify the **R_HOME** and modify the **PATH** s
 
     Under **Variable name** type `R_HOME` under. Under **Variable value** type the path for your R installation. For example, `C:\Program Files\R\R-4.0.3`.
 
-    :::image type="content" source="../media/r_home_environment_variable.png" alt-text="R_HOME environment variable":::
+    :::image type="content" source="../../media/r_home_environment_variable.png" alt-text="R_HOME environment variable":::
 
     Click **OK**.
 
@@ -84,7 +84,7 @@ Follow the steps below to add or modify the **R_HOME** and modify the **PATH** s
 
     Select **New** and add `%R_HOME%\bin\x64`.
 
-    :::image type="content" source="../media/r_path_environment_variable.png" alt-text="R_HOME environment variable":::
+    :::image type="content" source="../media/r_path_environment_variable.png" alt-text="PATH environment variable":::
 
 ## Install Rcpp package
 
@@ -113,12 +113,12 @@ Follow these steps to install the **Rcpp** package.
     + Under **System variables**, select **New** to create R_HOME.
     To modify, select **Edit** to change it. Modify its value to point to the custom R installation path.
 
-    ![Create R_HOME system environment variable.](../install/media/sys-env-r-home.png)
+    ![Create R_HOME system environment variable.](../../install/media/sys-env-r-home.png)
 
 2. Update the **PATH** environment variable.
     Append the path to **R.dll** to the system **PATH** environment variable. Select **PATH** then **Edit** and add `%R_HOME%\bin\x64` to the list of paths.
 
-    ![Append to PATH system environment variable.](../install/media/sys-env-path-r.png)
+    ![Append to PATH system environment variable.](../../install/media/sys-env-path-r.png)
 
 3. Select **OK** to close remaining windows.
 

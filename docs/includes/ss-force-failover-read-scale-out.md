@@ -21,7 +21,8 @@ Use this method when the primary replica isn't available and can't be immediatel
 
 When the previous primary replica recovers, it will also assume the primary role. In the process of coming online and assuming the primary role, it will have updated the configuration information of the Availability Group.  To avoid having each replica being in a different state, we must drop and re-add the original primary and its database(es).  Failure to do this can lead to data loss.
 
->[!NOTE]If the original primary replica is brought back online, the recommended procedure would be:
+>[!NOTE]
+>If the original primary replica is brought back online, the recommended procedure would be:
 
 ```SQL
 

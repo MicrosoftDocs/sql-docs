@@ -56,7 +56,7 @@ None available
 ## Storage Pool resource-scope settings
 The storage pool consists of SQL, Spark, and HDFS components.
 
-### Avaiable SQL configurations
+### Available SQL configurations
 |Property|Options|
 | --- | --- |
 |`mssql.degreeOfParallelism`| |
@@ -120,7 +120,7 @@ Visit the [Apache Spark & Apache Hadoop configuration article](reference-config-
 ## Gateway resource-scope settings
 Visit the [Apache Spark & Apache Hadoop configuration article](reference-config-spark-hadoop.md) to see all supported and unsupported settings.
 
-## Sparkhead resource-scope settings
+## `Sparkhead` resource-scope settings
 Visit the [Apache Spark & Apache Hadoop configuration article](reference-config-spark-hadoop.md) to see all supported and unsupported settings.
 
 ## Zookeeper resource-scope settings

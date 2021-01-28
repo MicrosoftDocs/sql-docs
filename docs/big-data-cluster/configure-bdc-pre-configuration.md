@@ -24,11 +24,12 @@ In BDC releases CU8 and earlier, you can configure BDC settings at deployment ti
 ## Configuration Scopes
 Big Data Clusters configuration pre-CU9 has two scoping levels: `service`, and `resource`. The hierarchy of the settings follows in this order as well, from highest to lowest. BDC components will take the value of the setting defined at the lowest scope. If the setting is not defined at a given scope, it will inherit the value from its higher parent scope.
 
-For example, you may want to define the default number of cores the Spark driver will use in the Storage Pool and Sparkhead `resources`. You can do this in two ways: 
-    1) Specify a default cores value at the `Spark` service scope 
-    2) Specify a default cores value at the `storage-0` and `sparkhead` resource scope
+For example, you may want to define the default number of cores the Spark driver will use in the storage pool and `Sparkhead` resources. You can do this in two ways:
 
-In the first scenario, all lower-scoped resources of the Spark service (Storage Pool and Sparkhead) will *inherit* the default number of cores from the Spark service default value.
+* Specify a default cores value at the `Spark` service scope 
+* Specify a default cores value at the `storage-0` and `sparkhead` resource scope
+
+In the first scenario, all lower-scoped resources of the Spark service (storage pool and `Sparkhead`) will *inherit* the default number of cores from the Spark service default value.
 
 In the second scenario, each resource will use the value defined at its respective scope.
 
@@ -103,3 +104,7 @@ The following sections list properties that you **can't** modify in a cluster:
 - [Unsupported `spark` configurations](reference-config-spark-hadoop.md#unsupported-spark-configurations)
 - [Unsupported `hdfs` configurations](reference-config-spark-hadoop.md#unsupported-hdfs-configurations)
 - [Unsupported `gateway` configurations](reference-config-spark-hadoop.md#unsupported-gateway-configurations)
+
+## Next steps
+
+[Configure a SQL Server Big Data Cluster](configure-bdc-overview.md)

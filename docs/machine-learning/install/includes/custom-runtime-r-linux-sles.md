@@ -11,20 +11,21 @@ ms.author: davidph
 > [!NOTE]
 > If you have [Machine Learning Services](../../sql-server-machine-learning-services.md) installed on SQL Server 2019, the **mssql-server-extensibility** package for Language Extensions is already installed and you can skip this step.
 
-Run the command below to install [SQL Server Language Extensions](../../../language-extensions/language-extensions-overview.md) on SUSE Linux Enterprise Server (SLES), which is used for the Python custom runtime.
+Run the command below to install [SQL Server Language Extensions](../../../language-extensions/language-extensions-overview.md) on SUSE Linux Enterprise Server (SLES), which is used for the R custom runtime.
 
 ```bash
 # Install as root or sudo
 sudo zypper install mssql-server-extensibility
 ```
 
-## Install Python 3.7 and pandas
+## Install R
 
-1. Install Python 3.7.
+1. If you have [Machine Learning Services](../../sql-server-machine-learning-services.md) installed, R is already installed in `/opt/microsoft/ropen/3.5.2/lib64/R`. If you want to keep using this path as your R_HOME, you can skip this step.
 
-1. Run the command below to install the pandas package
+    If you want to use a different runtime of R, you first need to remove `microsoft-r-open-mro` before continuing to install a new version.
 
     ```bash
-    # Install pandas to /usr/lib:
-    sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
+    sudo zypper remove microsoft-r-open-mro-3.5.2
     ```
+
+1. Install [R (3.3 or later)](https://www.r-project.org/) for SUSE Linux Enterprise Server (SLES). By default, R is installed in **/usr/lib/R**. This path is your **R_HOME**. If you install R in a different location, take note of that path as your **R_HOME**.

@@ -57,7 +57,7 @@ Next, make sure `libpython3.7m.so.1.0` can be loaded.
 
 ### Grant access to Python folder
 
-Set the `datadirectories` option in the extensibility section of /var/opt/mssql/mssql.conf file to the custom python installation.
+Set the `datadirectories` option in the extensibility section of `/var/opt/mssql/mssql.conf` file to the custom python installation.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/installation/of/python3.7

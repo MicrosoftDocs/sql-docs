@@ -133,7 +133,7 @@ For example, if the user assigns `NONE` and `LOW` to BirthDate and SSN respectiv
 
 ```
 {"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":0},"rank":0}
-{"0":{"Label":{"name":"Highly Confidential - GDPR","id":""},"Information Type":{"name":"Credentials","id":""},"rank":10},"rank":10}
+{"0":{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""},"rank":10},"rank":10}
 ```
 
 As shown in [sensitivity classification](/sql/relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql), the numerical values of the ranks are:

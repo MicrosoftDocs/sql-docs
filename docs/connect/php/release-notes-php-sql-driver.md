@@ -57,7 +57,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | Extended PDO errorinfo to include additional odbc messages if available. | &nbsp; |
 | Support for Data Classification with rank info. | Requires SQL Server 2019 and ODBC Driver 17.4.2 or above. |
 | Added Azure Active Directory Service Principal authentication support. | Requires ODBC Driver 17.7 or above. |
-| Improved performance when handling decimal numbers as inputs or outputs and removed unncessary conversions for numeric values. | &nbsp; |
+| Improved performance when handling decimal numbers as inputs or outputs and removed unnecessary conversions for numeric values. | &nbsp; |
 | Improved performance when fetching numbers using client buffers. | &nbsp; |
 | Set query timeout without using LOCK TIMEOUT, which saves an extra trip to the server. | &nbsp; |
 | &nbsp; | &nbsp; |

@@ -6,90 +6,101 @@ ms.topic: include
 author: dphansen
 ms.author: davidph
 ---
-## Custom installation of Python
+## Install Rcpp package
+
+In the following instructions, ${R_HOME} is the path to your R installation. 
+
++ Locate the R binary in ${R_HOME}/bin. By default, it is in **/usr/lib/R/bin**.
+
++ Start R
+
+  ```bash
+  sudo ${R_HOME}/bin/R
+  ```
+
++ In this *elevated* R prompt (${R_HOME}/bin/R), run the following script to install the **Rcpp** package in the ${R_HOME}/library folder.
+
+  ```R
+  install.packages("Rcpp", lib = "${R_HOME}/library");
+  ```
+
+## Using a custom installation of R
 
 > [!NOTE]
-> If you have installed Python 3.7 in the default location of `/usr/lib/python3.7`, you can skip this section and move on to the [Register language extension](#register-language-extension-linux) section.
+>If you have installed R in the default location of **/usr/lib/R**, you can skip this section.
 
-If you built your own version of Python 3.7, use the following commands to let SQL Server know your custom installation.
+### Update the environment variables
 
-### Add environment variable
-
-First, edit the **mssql-launchpadd** service to add the **PYTHONHOME** environment variable to the file `/etc/systemd/system/mssql-launchpadd.service.d/override.conf`
-
-1. Open the file with systemctl
+1. Edit the mssql-launchpadd service to add the R_HOME environment variable to the file `/etc/systemd/system/mssql-launchpadd.service.d/override.conf`
 
     ```bash
     sudo systemctl edit mssql-launchpadd
     ```
 
-1. Insert the following text in the `/etc/systemd/system/mssql-launchpadd.service.d/override.conf` file that opens. Set value of **PYTHONHOME** to the custom Python installation path.
+    + Insert the following text in the `/etc/systemd/system/mssql-launchpadd.service.d/override.conf` file that opens. Set value of R_HOME to the custom R installation path.
 
-    ```
+    ```text
     [Service]
-    Environment="PYTHONHOME=/path/to/installation/of/python3.7"
+    Environment="R_HOME=/path/to/installation/of/R"
     ```
 
-1. Save the file and close the editor.
+    + Save and close.
 
-Next, make sure `libpython3.7m.so.1.0` can be loaded.
+2. Make sure **libR.so** can be loaded.
 
-1. Create a custom-python.conf file in `/etc/ld.so.conf.d`.
+    + Create a custom-r.conf file in **/etc/ld.so.conf.d**.
 
     ```bash
-    sudo vi /etc/ld.so.conf.d/custom-python.conf
+    sudo vi /etc/ld.so.conf.d/custom-r.conf
     ```
 
-1. In the file that opens, add the path to **libpython3.7m.so.1.0** from the custom Python installation.
+    + In the file that opens, add path to **libR.so** from the custom R installation.
 
+    ```vi editor
+    /path/to/installation/of/R/lib
     ```
-    /path/to/installation/of/python3.7/lib
-    ```
 
-1. Save the new file and close the editor.
+    + Save and close the new file.
 
-1. Run `ldconfig` and verify `libpython3.7m.so.1.0` can be loaded by running the following commands and checking that all the dependent libraries can be found.
+    + Run `ldconfig` and verify **libR.so** can be loaded by running the following command and checking that all dependent libraries can be found.
 
     ```bash
     sudo ldconfig
-    ldd /path/to/installation/of/python3.7/lib/libpython3.7m.so.1.0
+    ldd /path/to/installation/of/R/lib/libR.so
     ```
 
-### Grant access to Python folder
+### Grant access to the custom R installation folder
 
-Set the `datadirectories` option in the extensibility section of /var/opt/mssql/mssql.conf file to the custom python installation.
+Set the `datadirectories` option in the extensibility section of /var/opt/mssql/mssql.conf file to the custom R installation.
 
 ```bash
-sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/installation/of/python3.7
+sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/installation/of/R
 ```
 
-### Restart mssql-launchpadd
+### Restart mssql-launchpadd service
+
+> [!NOTE]
+>If you have installed R in the default location of **/usr/lib/R**, you can skip this step.
 
 ```bash
 sudo systemctl restart mssql-launchpadd
 ```
 
-<a name="register-language-extension-linux"></a>
+## Download R language extension
 
-## Register language extension
+Download the [zip file containing the R language extension for Linux](https://github.com/microsoft/sql-server-language-extensions/releases). Recommended to use the release version in production. Use the debug version in development or test since it provides verbose logging information to investigate any errors.
 
-Follow these steps to download and register the Python language extension, which is used for the Python custom runtime.
+## Register external language
 
-1. Download the **python-lang-extension-linux.zip** file from the [SQL Server Language Extensions GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases).
+Register this R language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) for each database you want to use it in. Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) to connect to SQL Server and run the following T-SQL command. 
+Modify the path in this statement to reflect the location of the downloaded language extension zip file (r-lang-extension.zip).
 
-    Alternatively, you can use the debug version (**python-lang-extension-linux-debug.zip**) in a development or test environment. The debug version provides verbose logging information to investigate any errors, and is not recommended for production environments.
 
-1. Use [Azure Data Studio](../../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the Python language extension with [CREATE EXTERNAL LANGUAGE](../../../t-sql/statements/create-external-language-transact-sql.md). 
+> [!NOTE]
+>**R** is a reserved word. Use a different name for the external language, for example, "myR".
 
-    Modify the path in this statement to reflect the location of the downloaded language extension zip file (**python-lang-extension-linux.zip**).
-
-    ```sql
-    CREATE EXTERNAL LANGUAGE [myPython]
-    FROM (CONTENT = N'/path/to/python-lang-extension-linux.zip', FILE_NAME = 'libPythonExtension.so.1.0');
-    GO
-    ```
-
-    Execute the statement for each database you want to use the Python language extension in.
-
-    > [!NOTE]
-    > **Python** is a reserved word and can't be used as the name for a new external language name. Use a different name instead. For example, the statement above uses **myPython**.
+```sql
+CREATE EXTERNAL LANGUAGE [myR]
+FROM (CONTENT = N'/path/to/R-lang-extension.zip', FILE_NAME = 'libRExtension.so.1.0');
+GO
+```

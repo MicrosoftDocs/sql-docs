@@ -1,7 +1,7 @@
 ---
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 01/14/2021
+ms.date: 01/28/2021
 ms.topic: include
 author: dphansen
 ms.author: davidph
@@ -11,33 +11,21 @@ ms.author: davidph
 > [!NOTE]
 > If you have [Machine Learning Services](../../sql-server-machine-learning-services.md) installed on SQL Server 2019, the **mssql-server-extensibility** package for Language Extensions is already installed and you can skip this step.
 
-Run the command below to install [SQL Server Language Extensions](../../../language-extensions/language-extensions-overview.md) on Red Hat Enterprise Linux (RHEL), which is used for the Python custom runtime.
+Run the command below to install [SQL Server Language Extensions](../../../language-extensions/language-extensions-overview.md) on Red Hat Enterprise Linux (RHEL), which is used for the R custom runtime.
 
 ```bash
 # Install as root or sudo
 sudo yum install mssql-server-extensibility
 ```
 
-## Install Python 3.7 and pandas
+## Install R
 
-1. Run the commands below to install Python 3.7.
+1. If you have [Machine Learning Services](../../sql-server-machine-learning-services.md) installed, R is already installed in `/opt/microsoft/ropen/3.5.2/lib64/R`. If you want to keep using this path as your R_HOME, you can skip this step.
 
-    ```bash
-    # Install python3.7 and the corresponding library:
-    yum install gcc openssl-devel bzip2-devel libffi-devel zlib-devel
-    
-    cd /usr/src
-    wget https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz
-    tar xzf Python-3.7.9.tgz
-    
-    cd Python-3.7.9
-    ./configure --enable-optimizations --prefix=/usr
-    make altinstall
-    ```
-
-1. Run the command below to install the pandas package
+    If you want to use a different runtime of R, you first need to remove `microsoft-r-open-mro` before continuing to install a new version.
 
     ```bash
-    # Install pandas to /usr/lib:
-    sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
+    sudo yum erase microsoft-r-open-mro-3.5.2
     ```
+
+1. Install [R (3.3 or later)](https://www.r-project.org/) for Red Hat Enterprise Linux (RHEL). By default, R is installed in **/usr/lib/R**. This path is your **R_HOME**. If you install R in a different location, take note of that path as your **R_HOME**.

@@ -31,11 +31,11 @@ In the second scenario, each resource will use the value defined at its respecti
 
 If the default number of cores is configured at both service and resource scope, then the resource-scoped value will override the service-scoped value since this is the lowest **user configured** scope for the given setting.
 
+
+## Next steps
+ 
 For specific information about configuration, see the appropriate articles:
 
-How to: 
-
-- [Configure Big Data Clusters at deplyoment time](configure-bdc-deployment.md)
 - [Configure Big Data Clusters post-deployment](configure-bdc-postdeployment.md)
 - [Configure Big Data Clusters - CU8 release and earlier](configure-bdc-pre-configuration.md)
 

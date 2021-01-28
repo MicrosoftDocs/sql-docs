@@ -23,8 +23,8 @@ Cluster, service, and resource scoped settings for Big Data Clusters can be conf
 
 ## Step by Step: Configure BDC to meet your Spark workload requirements
 
-### **View the current configurations of the Big Data Cluster Spark service**
-The following example shows how to view the user configured settings of the Spark service. You can view all possible configurable settings, system-managed and all configurable settings, and pending settings through optional parameters. Visit the [azdata reference](https://docs.microsoft.com/en-us/sql/azdata/reference/reference-azdata-bdc-spark-settings?view=sql-server-ver15) for more information.
+### View the current configurations of the Big Data Cluster Spark service
+The following example shows how to view the user configured settings of the Spark service. You can view all possible configurable settings, system-managed and all configurable settings, and pending settings through optional parameters. Visit [azdata bdc spark statement](../azdata/reference/reference-azdata-bdc-spark-statement.md) for more information.
 
 ```bash
 azdata bdc spark settings show

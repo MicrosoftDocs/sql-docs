@@ -51,7 +51,7 @@ None available
 <!-- |`mssql.collation`|`x = <language_identifier>` | -->
 
 > [!NOTE]
-> Changing the default collation for an instance of SQL Server is a complex operation. In addition to changing the `mssql.collation` setting, you may need to re-create your user databases and all objects in them. For instructions on how to do so, see [here](https://docs.microsoft.com/en-us/sql/relational-databases/collations/set-or-change-the-server-collation?view=sql-server-linux-ver15#changing-the-server-collation-in-sql-server)
+> Changing the default collation for an instance of SQL Server is a complex operation. In addition to changing the `mssql.collation` setting, you may need to re-create your user databases and all objects in them. For instructions on how to do so, see [Set or Change the Server Collation](../relational-databases/collations/set-or-change-the-server-collation.md#changing-the-server-collation-in-sql-server)
 
 ## Storage Pool resource-scope settings
 The storage pool consists of SQL, Spark, and HDFS components.

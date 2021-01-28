@@ -8,7 +8,7 @@ ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: "include file"
 ---
-Each availability group has only one primary replica. The primary replica allows reads and writes. To change which replica is primary, you can fail over. In an availability group for high availability, the cluster manager automates the failover process. In an availability group with cluster type NONE, the failover process is manual. 
+Each availability group has only one primary replica. The primary replica allows reads and writes. To change which replica is primary, you can fail over. In an availability group for high availability, the cluster manager automates the failover process. In an availability group with cluster type NONE, the failover process is manual.
 
 There are two ways to fail over the primary replica in an availability group with cluster type NONE:
 
@@ -16,19 +16,51 @@ There are two ways to fail over the primary replica in an availability group wit
 - Manual failover without data loss
 
 ### Forced manual failover with data loss
-
-Use this method when the primary replica isn't available and can't be recovered. 
+<!-- 
+Use this method when the primary replica isn't available and can't be immediately recovered.
 
 To force failover with data loss, connect to the SQL Server instance that hosts the target secondary replica and then run the following command:
 
 ```SQL
 ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
-```
+``` -->
 
-When the previous primary replica recovers, it will also assume the primary role. To ensure that the previous primary replica transitions into a secondary role run the following command on the previous primary replica.
+When the previous primary replica recovers, it will also assume the primary role. In the process of coming online and assuming the primary role, it will have updated the configuration information of the Availability Group.  To avoid having each replica being in a different state, we must drop and re-add the original primary and its database(es).  Failure to do this can lead to data loss.
+<!-- To ensure that the previous primary replica transitions into a secondary role run the following command on the previous primary replica.
 
 ```SQL
+
 ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
+``` -->
+
+>[!NOTE]If the original primary replica is brought back online, the recommended procedure would be:
+
+```SQL
+
+-- step 1 – On the secondary replica (N2 in this case) execute the following to initiate force failover
+ALTER AVAILABILITY GROUP [AGRScale] FORCE_FAILOVER_ALLOW_DATA_LOSS;
+
+-- Assume that the original primary replica (N1) recovers from hardware issues
+-- step 2 
+-- Make appropriate changes such that application doesn’t make modification to AG DB on this replica
+-- On the original primary (N1) execute the following to set the AG offline. This will help prevent accidental changes / write occurring to this replica
+alter availability group [AGRScale] offline
+
+-- step 3 -- on the new primary replica (N2), remove the original primary replica
+ALTER AVAILABILITY GROUP [AGRScale]
+REMOVE REPLICA ON N'N1';
+
+-- step 4 -- drop the availability group on the original primary replica (N1)
+DROP AVAILABILITY GROUP [AGRScale];
+
+-- step 5 – drop the AG database on original primary replica (N1). Please make sure to take backup of this database if it has un-synched changes
+USE [master]
+GO
+DROP DATABASE [AGDBRScale]
+GO
+
+-- step 6 -- add the original primary replica back to Availability group
+
 ```
 
 ### Manual failover without data loss

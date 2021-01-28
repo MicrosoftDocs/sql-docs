@@ -16,22 +16,10 @@ There are two ways to fail over the primary replica in an availability group wit
 - Manual failover without data loss
 
 ### Forced manual failover with data loss
-<!-- 
+
 Use this method when the primary replica isn't available and can't be immediately recovered.
 
-To force failover with data loss, connect to the SQL Server instance that hosts the target secondary replica and then run the following command:
-
-```SQL
-ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
-``` -->
-
 When the previous primary replica recovers, it will also assume the primary role. In the process of coming online and assuming the primary role, it will have updated the configuration information of the Availability Group.  To avoid having each replica being in a different state, we must drop and re-add the original primary and its database(es).  Failure to do this can lead to data loss.
-<!-- To ensure that the previous primary replica transitions into a secondary role run the following command on the previous primary replica.
-
-```SQL
-
-ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
-``` -->
 
 >[!NOTE]If the original primary replica is brought back online, the recommended procedure would be:
 
@@ -65,8 +53,8 @@ GO
 
 ### Manual failover without data loss
 
-Use this method when the primary replica is available, but you need to temporarily or permanently change the configuration and change the SQL Server instance that hosts the primary replica. 
-To avoid potential data loss, before you issue the manual failover, ensure that the target secondary replica is up to date. 
+Use this method when the primary replica is available, but you need to temporarily or permanently change the configuration and change the SQL Server instance that hosts the primary replica.
+To avoid potential data loss, before you issue the manual failover, ensure that the target secondary replica is up to date.
 
 To manually fail over without data loss:
 
@@ -78,7 +66,7 @@ To manually fail over without data loss:
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
-1. To identify that active transactions are committed to the primary replica and at least one synchronous secondary replica, run the following query: 
+1. To identify that active transactions are committed to the primary replica and at least one synchronous secondary replica, run the following query:
 
    ```SQL
    SELECT ag.name, 
@@ -102,20 +90,21 @@ To manually fail over without data loss:
         SET (REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 1);
    ```
 
-   This setting ensures that every active transaction is committed to the primary replica and at least one synchronous secondary replica. 
+   This setting ensures that every active transaction is committed to the primary replica and at least one synchronous secondary replica.
    >[!NOTE]
    >This setting is not specific to failover and should be set based on the requirements of the environment.
-   
+
 1. Offline the primary replica in preparation for role changes.
+
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] OFFLINE
    ```
 
-1. Promote the target secondary replica to primary. 
+1. Promote the target secondary replica to primary.
 
    ```SQL
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
-   ``` 
+   ```
 
 1. Update the role of the old primary to `SECONDARY`, run the following command on the SQL Server instance that hosts the old primary replica:
 
@@ -124,12 +113,12 @@ To manually fail over without data loss:
         SET (ROLE = SECONDARY); 
    ```
 
-   > [!NOTE] 
+   > [!NOTE]
    > To delete an availability group, use [DROP AVAILABILITY GROUP](../t-sql/statements/drop-availability-group-transact-sql.md). For an availability group that's created with cluster type NONE or EXTERNAL, execute the command on all replicas that are part of the availability group.
 
-1. Resume data movement, run the following command for every database in the availability group on the SQL Server instance that hosts the primary replica: 
+1. Resume data movement, run the following command for every database in the availability group on the SQL Server instance that hosts the primary replica:
 
-   ```sql
+   ```SQL
    ALTER DATABASE [db1]
         SET HADR RESUME
    ```

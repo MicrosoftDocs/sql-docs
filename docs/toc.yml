@@ -166,12 +166,20 @@
     items:
     - name: Configure
       items:
-      - name: Cluster
-        href: big-data-cluster/configure-cluster.md
+      - name: Overview
+        href: big-data-cluster/configure-bdc-overview.md
+      - name: Upgrade to configuration management enabled cluster
+        href: big-data-cluster/bdc-upgrade-configuration.md
+      - name: Post-deployment
+        href: big-data-cluster/configure-bdc-postdeployment.md
       - name: SQL Server master instance
         href: big-data-cluster/configure-sql-server-master-instance.md
       - name: Configure Apache Spark & Apache Hadoop
         href: big-data-cluster/configure-spark-hdfs.md
+      - name: Configure - pre CU9
+        href: big-data-cluster/configure-bdc-pre-configuration.md
+      - name: Reference - configuration properties
+        href: big-data-cluster/reference-config-bdc-overview.md
     - name: Data virtualization
       items:
       - name: Relational data

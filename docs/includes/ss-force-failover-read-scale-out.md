@@ -24,33 +24,45 @@ When the previous primary replica recovers, it will also assume the primary role
 >[!NOTE]
 >If the original primary replica is brought back online, the recommended procedure would be:
 
-```SQL
+1. On the secondary replica (N2 in this case) execute the following to initiate force failover
 
--- step 1 – On the secondary replica (N2 in this case) execute the following to initiate force failover
-ALTER AVAILABILITY GROUP [AGRScale] FORCE_FAILOVER_ALLOW_DATA_LOSS;
+    ```SQL
+    ALTER AVAILABILITY GROUP [AGRScale] FORCE_FAILOVER_ALLOW_DATA_LOSS;
+    ```
 
--- Assume that the original primary replica (N1) recovers from hardware issues
--- step 2 
--- Make appropriate changes such that application doesn’t make modification to AG DB on this replica
--- On the original primary (N1) execute the following to set the AG offline. This will help prevent accidental changes / write occurring to this replica
-alter availability group [AGRScale] offline
+    Assume that the original primary replica (N1) recovers from hardware issues
 
--- step 3 -- on the new primary replica (N2), remove the original primary replica
-ALTER AVAILABILITY GROUP [AGRScale]
-REMOVE REPLICA ON N'N1';
+     Make appropriate changes such that application doesn’t make modification to AG DB on this replica.
 
--- step 4 -- drop the availability group on the original primary replica (N1)
-DROP AVAILABILITY GROUP [AGRScale];
+1. On the original primary (N1) execute the following to set the AG offline.  This will help prevent accidental changes / write occurring to this replica.
 
--- step 5 – drop the AG database on original primary replica (N1). Please make sure to take backup of this database if it has un-synched changes
-USE [master]
-GO
-DROP DATABASE [AGDBRScale]
-GO
+    ```SQL
+    ALTER AVAILABILITY GROUP [AGRScale] OFFLINE;
+    ```
 
--- step 6 -- add the original primary replica back to Availability group
+1. On the new primary replica (N2), remove the original primary replica
 
-```
+    ```SQL
+    ALTER AVAILABILITY GROUP [AGRScale]
+    REMOVE REPLICA ON N'N1';
+    ```
+
+1. Drop the availability group on the original primary replica (N1)
+
+    ```SQL
+    DROP AVAILABILITY GROUP [AGRScale];
+    ```
+
+1. Drop the AG database on original primary replica (N1). Please make sure to take backup of this database if it has un-synched changes
+
+    ```SQL
+    USE [master]
+    GO
+    DROP DATABASE [AGDBRScale]
+    GO
+    ```
+
+1. Add the original primary replica back to Availability group
 
 ### Manual failover without data loss
 

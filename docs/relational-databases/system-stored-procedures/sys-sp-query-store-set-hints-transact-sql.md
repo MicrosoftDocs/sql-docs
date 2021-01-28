@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current"
 # sp_query_store_set_hints (Transact-SQL)
 [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
 
- Creates or updates [Query Store Hints](../performance/query-store-hints.md).
+ Creates or updates [Query Store hints](../performance/query-store-hints.md).
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ To remove hints associated with a query_id, use the system stored procedure [sys
 
 ### Supported Query Hints (Preview)
 
-These [query hints](../../t-sql/queries/hints-transact-sql-query.md) are supported as Query Store Hints:
+These [query hints](../../t-sql/queries/hints-transact-sql-query.md) are supported as Query Store hints:
 
 ```
 { HASH | ORDER } GROUP   
@@ -126,9 +126,9 @@ The following example applies multiple query hints to query_id 39, including REC
 EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(RECOMPILE, MAXDOP 1, USE HINT(''QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_120''))';
 ```
 
-### View Query Store Hints
+### View Query Store hints
 
-The following example returns existing Query Store Hints:
+The following example returns existing Query Store hints:
 
 ```sql
 SELECT query_hint_id, query_id, query_hint_text, last_query_hint_failure_reason, last_query_hint_failure_reason_desc, query_hint_failure_count, source, source_desc, comment 

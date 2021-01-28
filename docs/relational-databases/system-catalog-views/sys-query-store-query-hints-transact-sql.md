@@ -44,9 +44,9 @@ monikerRange: "=azuresqldb-current"
 
 ## Examples
 
-### View Query Store Hints
+### View Query Store hints
 
-The following example returns existing Query Store Hints for query_id 39:
+The following example returns existing Query Store hints for query_id 39:
 
 ```sql
 SELECT query_hint_id, query_id, query_hint_text, last_query_hint_failure_reason, last_query_hint_failure_reason_desc, query_hint_failure_count, source, source_desc, comment 

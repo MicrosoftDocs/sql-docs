@@ -26,11 +26,11 @@ Ideally the Query Optimizer selects an optimal execution plan for a query. When 
 
 The Query Store Hints feature provides an easy-to-use method for shaping query plans without changing application code. This public preview feature is available in Azure SQL Database – including in Azure SQL single databases, elastic pools, managed instances, and Hyperscale databases.  
 
-## When to use Query Store Hints
+## When to use Query Store hints
 
 As the name suggests, this feature extends and depends on [Query Store](monitoring-performance-by-using-the-query-store.md). Query Store enables the capturing of queries, execution plans, and associated runtime statistics. Introduced in SQL Server 2016 and on-by-default in Azure SQL Database, Query Store greatly simplifies the overall performance tuning customer experience.  
 
-Examples where Query Store Hints can help with query-level performance issues:
+Examples where Query Store hints can help with query-level performance issues:
 *    Recompile a query on each execution.
 *    Cap the memory grant size for a bulk insert operation.
 *    Limit the maximum degree of parallelism for a statistics update operation.
@@ -38,14 +38,14 @@ Examples where Query Store Hints can help with query-level performance issues:
 *    Use compatibility level 110 for a specific query while keeping everything else in the database at compatibility level 150.
 *    Disable optimizer row goal for a SELECT TOP query.
 
-To use Query Store Hints, do the following:
+To use Query Store hints, do the following:
 1.    Identify the Query Store query_id of the query statement you wish to modify. You can do this various ways: 
     1. Querying the [Query Store catalog views](../system-catalog-views/query-store-catalog-views-transact-sql.md).
     1. Using SQL Server Management Studio built-in Query Store reports.
     1. Using Azure portal Query Performance Insight for Azure SQL Database.
 1.    Execute sp_query_store_set_hints with the query_id and query hint string you wish to apply to the query.  This string can contain one or more query hints. For complete information, see [sys.sp_query_store_set_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md).
 
-Once created, Query Store Hints are persisted and survive restarts and failovers.  Query Store Hints override hard-coded statement level hints and existing plan guide hints. 
+Once created, Query Store hints are persisted and survive restarts and failovers. Query Store hints override hard-coded statement level hints and existing plan guide hints. 
 
 If a query hint contradicts what is possible for query optimization, the hint will not block query execution and the hint will not be applied. In the cases where a hint would cause a query to fail, the hint is ignored and failure the latest details can be viewed in [sys.query_store_query_hints](../system-catalog-views/sys-query-store-query-hints-transact-sql.md).
 

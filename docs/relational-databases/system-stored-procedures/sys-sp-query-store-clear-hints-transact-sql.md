@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current"
 # sp_query_store_clear_hints (Transact-SQL)
 [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
 
-  Removes [Query Store Hints](../performance/query-store-hints.md).
+  Removes [Query Store hints](../performance/query-store-hints.md).
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,9 +56,9 @@ sp_query_store_clear_hints
 EXEC sys.sp_query_store_clear_hints @query_id = 39;
 ```  
 
-### View Query Store Hints
+### View Query Store hints
 
-The following example returns existing Query Store Hints:
+The following example returns existing Query Store hints:
 
 ```sql
 SELECT query_hint_id, query_id, query_hint_text, last_query_hint_failure_reason, last_query_hint_failure_reason_desc, query_hint_failure_count, source, source_desc, comment 

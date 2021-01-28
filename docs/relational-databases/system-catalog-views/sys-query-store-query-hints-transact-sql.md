@@ -2,7 +2,7 @@
 description: "sys.query_store_query_hints (Transact-SQL)"
 title: "sys.query_store_query_hints (Transact-SQL)"
 ms.custom: ""
-ms.date: "01/25/2021"
+ms.date: "01/28/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -37,7 +37,6 @@ monikerRange: "=azuresqldb-current"
 |**query_hint_failure_count**|bigint|Number of times that the query hint application has failed since the query hint was created or last modified.  |
 |**source**|int|Source of Query Store hint: user or system.|
 |**source_desc**|nvarchar(128)|Description of source of Query Store hint: user or system.|
-|**comment**|nvarchar(MAX)|Optional comments used with the Query Store hint.|
 
 ## Permissions  
  Requires the **VIEW DATABASE STATE** permission.  
@@ -49,7 +48,7 @@ monikerRange: "=azuresqldb-current"
 The following example returns existing Query Store hints for query_id 39:
 
 ```sql
-SELECT query_hint_id, query_id, query_hint_text, last_query_hint_failure_reason, last_query_hint_failure_reason_desc, query_hint_failure_count, source, source_desc, comment 
+SELECT query_hint_id, query_id, query_hint_text, last_query_hint_failure_reason, last_query_hint_failure_reason_desc, query_hint_failure_count, source, source_desc 
 FROM sys.query_store_query_hints 
 WHERE query_id = 39;
 ```

@@ -2,7 +2,7 @@
 title: "Query Store Hints (Preview)"
 description: Learn about the SQL Server Hints feature to shape query plans without changing application code.
 ms.custom: ""
-ms.date: "1/7/2021"
+ms.date: "1/28/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -28,7 +28,7 @@ The Query Store Hints feature provides an easy-to-use method for shaping query p
 
 ## When to use Query Store hints
 
-As the name suggests, this feature extends and depends on [Query Store](monitoring-performance-by-using-the-query-store.md). Query Store enables the capturing of queries, execution plans, and associated runtime statistics. Introduced in SQL Server 2016 and on-by-default in Azure SQL Database, Query Store greatly simplifies the overall performance tuning customer experience.  
+As the name suggests, this feature extends and depends on the [Query Store](monitoring-performance-by-using-the-query-store.md). Query Store enables the capturing of queries, execution plans, and associated runtime statistics. Introduced in SQL Server 2016 and on-by-default in Azure SQL Database, Query Store greatly simplifies the overall performance tuning customer experience.  
 
 Examples where Query Store hints can help with query-level performance issues:
 *    Recompile a query on each execution.
@@ -40,9 +40,9 @@ Examples where Query Store hints can help with query-level performance issues:
 
 To use Query Store hints, do the following:
 1.    Identify the Query Store query_id of the query statement you wish to modify. You can do this various ways: 
-    1. Querying the [Query Store catalog views](../system-catalog-views/query-store-catalog-views-transact-sql.md).
-    1. Using SQL Server Management Studio built-in Query Store reports.
-    1. Using Azure portal Query Performance Insight for Azure SQL Database.
+    1.1. Querying the [Query Store catalog views](../system-catalog-views/query-store-catalog-views-transact-sql.md).
+    1.1. Using SQL Server Management Studio built-in Query Store reports.
+    1.1. Using Azure portal Query Performance Insight for Azure SQL Database.
 1.    Execute sp_query_store_set_hints with the query_id and query hint string you wish to apply to the query.  This string can contain one or more query hints. For complete information, see [sys.sp_query_store_set_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md).
 
 Once created, Query Store hints are persisted and survive restarts and failovers. Query Store hints override hard-coded statement level hints and existing plan guide hints. 
@@ -64,8 +64,8 @@ Hints are specified in a valid string format N'OPTION (..)'.
 > [!Note]
 > For a complete list of hints that are supported, see [sys.sp_query_store_set_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md).
 
-* If no Query Store Hint exists for a specific query_id, a new Query Store Hint will be created. 
-* If a Query Store Hint already exists for a specific query_id, the last value provided will override previously specified values for the associated query. 
+* If no Query Store hint exists for a specific query_id, a new Query Store hint will be created. 
+* If a Query Store hint already exists for a specific query_id, the last value provided will override previously specified values for the associated query. 
 * If a query_id doesn't exist, an error will be raised. 
 
 To remove hints associated with a query_id, use [sys.sp_query_store_clear_hints](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md):
@@ -84,6 +84,9 @@ When hints are applied, the following will be surfaced in the StmtSimple element
 |QueryStoreStatementHintText|Actual Query Store hint(s) applied to the query|
 |QueryStoreStatementHintId|Unique identifier of a query hint|
 |QueryStoreStatementHintSource|Source of Query Store hint (ex: "User")|
+
+> [!Note]
+> During the Query Store Hints public preview, these XML elements will be available only via the output of the T-SQL commands [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) and [SET SHOWPLAN XML](../../t-sql/statements/set-showplan-xml-transact-sql.md).
 
 
 ## Examples  
@@ -114,10 +117,10 @@ EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(USE HIN
 EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(RECOMPILE, MAXDOP 1, USE HINT(''QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_120''))';
 ```
 
- Review the Query Store Hint in place for query_id 39:
+ Review the Query Store hint in place for query_id 39:
 
 ```sql
-SELECT query_hint_id, query_id, query_hint_text, last_query_hint_failure_reason, last_query_hint_failure_reason_desc, query_hint_failure_count, source, source_desc, comment 
+SELECT query_hint_id, query_id, query_hint_text, last_query_hint_failure_reason, last_query_hint_failure_reason_desc, query_hint_failure_count, source, source_desc 
 FROM sys.query_store_query_hints 
 WHERE query_id = 39;
 ```
@@ -130,5 +133,3 @@ WHERE query_id = 39;
 - [sys.query_store_query_hints (Transact-SQL)](../system-catalog-views/sys-query-store-query-hints-transact-sql.md)   
 - [sys.sp_query_store_set_hints (Transact-SQL)](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md)   
 - [sys.sp_query_store_clear_hints (Transact-SQL)](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md)   
-
-

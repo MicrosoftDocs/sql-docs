@@ -2,7 +2,7 @@
 description: "sp_query_store_clear_hints (Transact-SQL)"
 title: "sp_query_store_clear_hints (Transact-SQL)"
 ms.custom: ""
-ms.date: "01/26/2021"
+ms.date: "01/28/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -61,7 +61,7 @@ EXEC sys.sp_query_store_clear_hints @query_id = 39;
 The following example returns existing Query Store hints:
 
 ```sql
-SELECT query_hint_id, query_id, query_hint_text, last_query_hint_failure_reason, last_query_hint_failure_reason_desc, query_hint_failure_count, source, source_desc, comment 
+SELECT query_hint_id, query_id, query_hint_text, last_query_hint_failure_reason, last_query_hint_failure_reason_desc, query_hint_failure_count, source, source_desc 
 FROM sys.query_store_query_hints 
 WHERE query_id = 39;
 ```

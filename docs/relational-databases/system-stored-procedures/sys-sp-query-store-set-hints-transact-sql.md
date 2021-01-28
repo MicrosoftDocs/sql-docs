@@ -2,7 +2,7 @@
 description: "sys.sp_query_store_set_hints (Transact-SQL)"
 title: "sys.sp_query_store_set_hints (Transact-SQL)"
 ms.custom: ""
-ms.date: "01/26/2021"
+ms.date: "01/28/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -44,13 +44,13 @@ sp_query_store_set_hints
 
 Hints are specified in a valid T-SQL string format N'OPTION (..)'. 
 
-* If no Query Store Hint exists for a specific query_id, a new Query Store Hint will be created. 
-* If a Query Store Hint already exists for a specific query_id, the last value provided will override previously specified values for the associated query. 
+* If no Query Store hint exists for a specific query_id, a new Query Store hint will be created. 
+* If a Query Store hint already exists for a specific query_id, the last value provided will override previously specified values for the associated query. 
 * If a query_id doesn't exist, an error will be raised. 
 
 To remove hints associated with a query_id, use the system stored procedure [sys.sp_query_store_clear_hints](sys-sp-query-store-clear-hints-transact-sql.md). 
 
-### Supported Query Hints (Preview)
+### Supported query hints (Preview)
 
 These [query hints](../../t-sql/queries/hints-transact-sql-query.md) are supported as Query Store hints:
 
@@ -131,7 +131,7 @@ EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(RECOMPI
 The following example returns existing Query Store hints:
 
 ```sql
-SELECT query_hint_id, query_id, query_hint_text, last_query_hint_failure_reason, last_query_hint_failure_reason_desc, query_hint_failure_count, source, source_desc, comment 
+SELECT query_hint_id, query_id, query_hint_text, last_query_hint_failure_reason, last_query_hint_failure_reason_desc, query_hint_failure_count, source, source_desc 
 FROM sys.query_store_query_hints 
 WHERE query_id = 39;
 ```

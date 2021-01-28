@@ -186,7 +186,7 @@ The following items describe the prerequisite installation behavior during SQL S
   
     -   If you install SQL Server 2012 on a computer with the Windows 7 SP1 or Windows Server 2008 R2 SP1 operating system, this update is already installed on the computer.  
   
--   Windows PowerShell 2.0 is a prerequisite for installing SQL Server 2012 Database Engine components and SQL Server Management Studio, but Windows PowerShell is no longer installed by SQL Server Setup. If PowerShell 2.0 is not present on your computer, you can enable it by following the instructions on the [Windows Management Framework](https://support.microsoft.com/kb/968929) page. How you get Windows PowerShell 2.0 depends on which operating system you are running:  
+-   Windows PowerShell 2.0 is a prerequisite for installing SQL Server 2012 Database Engine components and SQL Server Management Studio, but Windows PowerShell is no longer installed by SQL Server Setup. If PowerShell 2.0 is not present on your computer, you can enable it by following the instructions on the [Windows Management Framework](https://mskb.pkisolutions.com/kb/968929) page. How you get Windows PowerShell 2.0 depends on which operating system you are running:  
   
     -   Windows Server 2008 - Windows PowerShell 1.0 is a feature and can be added. Windows PowerShell 2.0 versions are downloaded and installed (effectively as an OS Patch).  
   

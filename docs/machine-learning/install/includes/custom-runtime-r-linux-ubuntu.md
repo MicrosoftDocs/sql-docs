@@ -20,13 +20,6 @@ Run the commands below to install [SQL Server Language Extensions](../../../lang
     sudo apt-get update
     ```
 
-1. Ubuntu might not have the https apt transport option. To install it, run this command.
-
-    ```bash
-    # Install as root or sudo
-    apt-get install apt-transport-https
-    ```
-
 1. Install **mssql-server-extensibility** with this command.
 
     ```bash
@@ -34,20 +27,34 @@ Run the commands below to install [SQL Server Language Extensions](../../../lang
     sudo apt-get install mssql-server-extensibility
     ```
 
-## Install Python 3.7 and pandas
+## Install R
 
-1. Run the commands below to install Python 3.7.
+> [!NOTE]
+> For SQL Machine Learning Services, R is already installed in `/opt/microsoft/ropen/3.5.2/lib64/R`. If you want to keep using this path as your R_HOME, skip to the next step.
 
-    ```bash
-    # Install python3.7 and the corresponding library:
-    sudo add-apt-repository ppa:deadsnakes/ppa
-    sudo apt-get update
-    sudo apt-get install python3.7 python3-pip libpython3.7
-    ```
+If you want to use a different runtime of R, you first need to remove `microsoft-r-open-mro` before continuing to install a new version. Example for Ubuntu:
 
-1. Run the command below to install the pandas package
+```bash
+sudo apt remove microsoft-r-open-mro-3.5.2
+```
 
-    ```bash
-    # Install pandas to /usr/lib:
-    sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
+Follow the [instructions](https://cran.r-project.org/bin/linux/) to complete the installation of R (3.3 or later) for your respective linux platform. By default, R is installed in **/usr/lib/R**. This path is your **R_HOME**. If you install R in a different location, take note of that path as your R_HOME.
+
+Example instructions for Ubuntu. Change the repository URL below for your version of R.
+
+```bash
+export DEBIAN_FRONTEND=noninteractive
+sudo apt-get update
+sudo apt-get --no-install-recommends -y install curl zip unzip apt-transport-https libstdc++6
+
+# Add R CRAN repository. This repository works for R 4.0.x.
+#
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu xenial-cran40/'
+sudo apt-get update
+
+# Install R runtime.
+#
+sudo apt-get -y install r-base-core
+```
     ```

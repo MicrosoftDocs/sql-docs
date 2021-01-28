@@ -37,9 +37,9 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 |step_index|`int`|The request this worker is performing.|See *step_index* in  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |dms_step_index|`int`|Step in the DMS plan that this worker is executing.|See [sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
 |compute_node_id|`int`|The node the worker is running on.|See [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|type|`nvarchar(60)`|The type of external work.|'File Split'|  
+|type|`nvarchar(60)`|The type of external work.|'File Split' (for Hadoop)<br/><br/>'ODBC Data Split' (for other external data sources) |  
 |work_id|`int`|ID of the actual split.|Greater than or equal to 0.|  
-|input_name|`nvarchar(4000)`|Name of the input to be read|File name when using Hadoop.|  
+|input_name|`nvarchar(4000)`|Name of the input to be read|File name (with path) when using Hadoop or Windows Azure Storage Blob (WASB). For other external data sources, it will show external data source `URI:port/DatabaseName.TableName`|  
 |read_location|`bigint`|Offset or read location.|Offset of the file to read.|  
 |bytes_processed|`bigint`|Total bytes allocated for processing data by this worker. This may not necessarily represent the total data being returned by the query |Greater than or equal to 0.|  
 |length|`bigint`|Length of the split or HDFS block in case of Hadoop|User-definable. The default is 64M|  
@@ -47,7 +47,9 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 |start_time|`datetime`|Beginning of the work||  
 |end_time|`datetime`|End of the work||  
 |total_elapsed_time|`int`|Total time in milliseconds||
-|compute_pool_id|`int`|Unique identifier for the pool.|
+|compute_pool_id|`int`|Unique identifier for the pool where the worker is running. Only applies to SQL Server Big Data Cluster. See [sys.dm_exec_compute_pools (Transact-SQL)](sys-dm-exec-compute-pools.md).|Returns `0` for [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] on Windows and Linux.|
+|read_command|`nvarchar(4000)`|The query that is sent to the external data source. Introduced in [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)].|Text representing the query. For Hadoop and WASB return `NULL`.|
+
 
 ## See Also  
  [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   

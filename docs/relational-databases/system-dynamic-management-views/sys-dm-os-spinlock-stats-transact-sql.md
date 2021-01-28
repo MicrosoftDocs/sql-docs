@@ -1,8 +1,8 @@
 ---
 description: "sys.dm_os_spinlock_stats (Transact-SQL)"
-title: "sys.dm_os_spinlock_stats (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_os_spinlock_stats (Transact-SQL)"
 ms.custom: ""
-ms.date: "06/03/2019"
+ms.date: "01/27/2021"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -227,7 +227,7 @@ GO
 |MEM_MGR|Internal use only.|
 |MGR_CACHE|Internal use only.|
 |MIGRATION_BUF_LIST|Internal use only.|
-|MUTEX|Protects the cache entries related to security tokens and access checks. Used for versions below [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. If the entries in TokenAndPermUserStore cache store grows continuously, you might notice large spins for this spinlock. Evaluate using [Trace Flags](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql) 4610 and 4618 to limit entries. Additional references: [blog](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494), [article](https://support.microsoft.com/en-us/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) and [documentation](https://docs.microsoft.com/en-US/sql/database-engine/configure-windows/access-check-cache-server-configuration-options).|
+|MUTEX|Protects the cache entries related to security tokens and access checks. Used for versions below [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. If the entries in TokenAndPermUserStore cache store grows continuously, you might notice large spins for this spinlock. Evaluate using [Trace Flags](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql) 4610 and 4618 to limit entries. Additional references: [blog](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494), [article](https://support.microsoft.com/en-us/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) and [documentation](https://docs.microsoft.com/en-US/sql/database-engine/configure-windows/access-check-cache-server-configuration-options).|
 |NETCONN_ADDRESS|Internal use only.|
 |ONDEMAND_TASK|Internal use only.|
 |ONE_PROC_SIM_NODE_CONTEXT|Internal use only.|

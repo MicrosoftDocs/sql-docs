@@ -58,23 +58,7 @@ Use your own version of the R runtime with SQL Server, instead of the default ru
 
 
 
-::: zone pivot="platform-linux"
 
-You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md#supportedplatforms).
-
-> [!NOTE]
-> This article describes how to install a custom runtime for R on Linux. To install on Windows, see the [Install an R custom for SQL Server on Windows](custom-runtime-r.md?view=sql-server-ver15&preserve-view=true)
-
-## Pre-install checklist
-
-Before installing an R custom runtime, install the following:
-
-+ [SQL Server 2019 for Linux (Cumulative Update 3 or later)](../../linux/sql-server-linux-setup.md).
-Before you install SQL Server on Linux, you must configure a Microsoft repository. For more information, see [configuring repositories](../../linux/sql-server-linux-change-repo.md).
-
-+ [SQL Server Language Extensions on Linux with the extensibility framework](../../linux/sql-server-linux-setup-language-extensions-java.md).
-
-+ [R Version 3.3 or higher](https://cran.r-project.org/).
 
 ## Add SQL Server Language Extensions for Linux
 

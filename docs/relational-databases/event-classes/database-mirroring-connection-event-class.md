@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
 author: "stevestein"
 ms.author: "sstein"

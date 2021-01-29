@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "7933 (Database Engine error)"
 ms.assetid: 722bd2c6-0fb9-4838-954a-439744c6ac4b

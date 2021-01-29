@@ -6,7 +6,7 @@ ms.date: "03/20/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Audit Add Login to Server Role event class"
 ms.assetid: 7a8ed1c3-a98f-4f93-a6ba-e3901d941db9

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP SERVER ROLE"
   - "DROP_SERVER_ROLE_TSQL"

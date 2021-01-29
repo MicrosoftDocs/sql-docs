@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Missing Join Predicate event class"
 ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479

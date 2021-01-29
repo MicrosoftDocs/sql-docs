@@ -6,7 +6,7 @@ ms.date: "01/07/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_server_services"
   - "sys.dm_server_services"

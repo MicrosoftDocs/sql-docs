@@ -3,7 +3,7 @@ title: xml (Transact-SQL)
 description: xml (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "XML_TSQL"
   - "xml_TSQL"

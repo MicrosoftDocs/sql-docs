@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLPoolConnect function [ODBC]"
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962

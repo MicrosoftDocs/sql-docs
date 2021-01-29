@@ -6,7 +6,7 @@ ms.date: 01/28/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: machine-learning
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE EXTERNAL LIBRARY"
   - "CREATE_EXTERNAL_LIBRARY_TSQL"

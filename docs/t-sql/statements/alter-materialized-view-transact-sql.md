@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: jrasnick
 ms.technology: data-warehouse
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_VIEW_TSQL"
   - "ALTER VIEW"

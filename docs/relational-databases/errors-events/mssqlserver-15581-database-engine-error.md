@@ -6,7 +6,7 @@ ms.date: 09/03/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha, VenCher
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "15581 (Database Engine error)"
 ms.assetid: 

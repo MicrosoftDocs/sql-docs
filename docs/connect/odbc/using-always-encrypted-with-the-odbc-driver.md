@@ -287,7 +287,7 @@ SQLSetDescField(ipd, n, SQL_CA_SS_SERVER_TYPE, isSmallMoney ? (SQLPOINTER)SQL_SS
                                                               
                                                               
 // If the variable is bound as SQL_NUMERIC, additional descriptor fields have to be set
-// var is SQL_NUMERIC_STRUCT contaning the value to be inserted
+// var is SQL_NUMERIC_STRUCT containing the value to be inserted
 
 SQLHDESC   hdesc = NULL;
 SQLGetStmtAttr(hStmt, SQL_ATTR_APP_PARAM_DESC, &hdesc, 0, NULL);

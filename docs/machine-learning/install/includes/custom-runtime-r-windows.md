@@ -104,74 +104,27 @@ Follow these steps to install the **Rcpp** package.
     install.packages("Rcpp", lib="%R_HOME%/library");
     ```
 
-## Update the system environment variables
+## Grant access to R folder
 
-1. Add or modify **R_HOME** as a system environment variable.
-    + In the Windows search box, type "environment" and select **Edit the system environment variables**.
-    + In the **Advanced** tab, select **Environment Variables**.
+> [!NOTE]
+> If you have installed R in the default location of **C:\Program Files\R\R-version**, you can skip this step.
 
-    + Under **System variables**, select **New** to create R_HOME.
-    To modify, select **Edit** to change it. Modify its value to point to the custom R installation path.
+Run the following **icacls** commands from a new *elevated* command prompt to grant **READ & EXECUTE** access to the **SQL Server Launchpad Service user name** and SID **S-1-15-2-1** (**ALL APPLICATION PACKAGES**). The launchpad service user name is of the form `NT Service\MSSQLLAUNCHPAD$INSTANCENAME` where `INSTANCENAME` is the instance name of your SQL Server.
 
-    ![Create R_HOME system environment variable.](../install/media/sys-env-r-home.png)
-
-2. Update the **PATH** environment variable.
-    Append the path to **R.dll** to the system **PATH** environment variable. Select **PATH** then **Edit** and add `%R_HOME%\bin\x64` to the list of paths.
-
-    ![Append to PATH system environment variable.](../install/media/sys-env-path-r.png)
-
-3. Select **OK** to close remaining windows.
-
-    As an alternative, to set these environment variables from an *elevated* command prompt, run the following commands. Make sure to use the custom R installation path.
-
-```CMD
-setx /m R_HOME "path\to\installation\of\R"
-setx /m PATH "path\to\installation\of\R\bin\x64;%PATH%"
-```
-
-
-
-
-
-
-
-
-
-## Install pandas
-
-Install the [pandas](https://pandas.pydata.org/) package for Python from an *elevated* command prompt:
-
-```bash
-python.exe -m pip install pandas
-```
-
-## Add environment variable
-
-Add or modify the system environment variable **PYTHONHOME**.
-
-1. In the Windows search box, type *environment* and select **Edit the system environment variables**.
-1. In the **Advanced** tab, select **Environment Variables**.
-1. Under **System variables**, select **New** to create **PYTHONHOME** to point to your Python 3.7 installation location. If PYTHONHOME already exists, select **Edit** to point it to the Python 3.7 installation location.
-1. Select **OK** to close all the windows.
-
-    :::image type="content" source="../media/pythonhome-env-variable.png" alt-text="PYTHONHOME environment variable.":::
-
-## Grant access to Python folder
-
-Run the following **icacls** commands from a new *elevated* command prompt to grant **READ & EXECUTE** access to **PYTHONHOME** to **SQL Server Launchpad Service** and SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**).
+The commands will recursively grant access to all files and folders under the given directory path.
 
 1. Give permissions to **SQL Server Launchpad Service user name**.
 
     ```cmd
-    icacls "%PYTHONHOME%" /grant "NT Service\MSSQLLAUNCHPAD":(OI)(CI)RX /T
+    icacls "%R_HOME%" /grant "NT Service\MSSQLLAUNCHPAD":(OI)(CI)RX /T
     ```
 
-    For named instance, the command will be `icacls "%PYTHONHOME%" /grant "NT Service\MSSQLLAUNCHPAD$SQL01":(OI)(CI)RX /T` for an instance called **SQL01**.
+    For named instance, the command will be `icacls "%R_HOME%" /grant "NT Service\MSSQLLAUNCHPAD$SQL01":(OI)(CI)RX /T` for an instance called **SQL01**.
 
 2. Give permissions to **SID S-1-15-2-1**.
 
     ```cmd
-    icacls "%PYTHONHOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
+    icacls "%R_HOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
 
     The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to **ALL APPLICATION PACKAGES** on an English version of Windows. Alternatively, you can use `icacls "%R_HOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
@@ -186,23 +139,23 @@ Follow these steps to restart the SQL Server Launchpad service.
 
 ## Register language extension
 
-Follow these steps to download and register the Python language extension, which is used for the Python custom runtime.
+Follow these steps to download and register the R language extension, which is used for the R custom runtime.
 
-1. Download the **python-lang-extension-windows.zip** file from the [SQL Server Language Extensions GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases).
+1. Download the **R-lang-extension-windows-release.zip** file from the [SQL Server Language Extensions GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases).
 
-    Alternatively, you can use the debug version (**python-lang-extension-windows-debug.zip**) in a development or test environment. The debug version provides verbose logging information to investigate any errors, and is not recommended for production environments.
+    Alternatively, you can use the debug version (**R-lang-extension-windows-debug.zip**) in a development or test environment. The debug version provides verbose logging information to investigate any errors, and is not recommended for production environments.
 
-1. Use [Azure Data Studio](../../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the Python language extension with [CREATE EXTERNAL LANGUAGE](../../../t-sql/statements/create-external-language-transact-sql.md). 
+1. Use [Azure Data Studio](../../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the R language extension with [CREATE EXTERNAL LANGUAGE](../../../t-sql/statements/create-external-language-transact-sql.md).
 
-    Modify the path in this statement to reflect the location of the downloaded language extension zip file (**python-lang-extension-windows.zip**).
+    Modify the path in this statement to reflect the location of the downloaded language extension zip file (**R-lang-extension-windows-release.zip**).
 
     ```sql
-    CREATE EXTERNAL LANGUAGE [myPython]
-    FROM (CONTENT = N'/path/to/python-lang-extension-windows.zip', FILE_NAME = 'pythonextension.dll');
+    CREATE EXTERNAL LANGUAGE [myR]
+    FROM (CONTENT = N'/path/to/R-lang-extension-windows-release.zip', FILE_NAME = 'libRExtension.dll');
     GO
     ```
 
-    Execute the statement for each database you want to use the Python language extension in.
+    Execute the statement for each database you want to use the R language extension in.
 
     > [!NOTE]
-    > **Python** is a reserved word and can't be used as the name for a new external language name. Use a different name instead. For example, the statement above uses **myPython**.
+    > **R** is a reserved word and can't be used as the name for a new external language name. Use a different name instead. For example, the statement above uses **myR**.

@@ -65,8 +65,11 @@ python.exe -m pip install pandas
 Add or modify the system environment variable **PYTHONHOME**.
 
 1. In the Windows search box, type *environment* and select **Edit the system environment variables**.
+
 1. In the **Advanced** tab, select **Environment Variables**.
+
 1. Under **System variables**, select **New** to create **PYTHONHOME** to point to your Python 3.7 installation location. If PYTHONHOME already exists, select **Edit** to point it to the Python 3.7 installation location.
+
 1. Select **OK** to close all the windows.
 
     :::image type="content" source="../media/pythonhome-env-variable.png" alt-text="PYTHONHOME environment variable.":::
@@ -89,7 +92,7 @@ Run the following **icacls** commands from a new *elevated* command prompt to gr
     icacls "%PYTHONHOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
 
-    The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to **ALL APPLICATION PACKAGES** on an English version of Windows. Alternatively, you can use `icacls "%R_HOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
+    The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to **ALL APPLICATION PACKAGES** on an English version of Windows. Alternatively, you can use `icacls "%PYTHONHOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
 
 ## Restart SQL Server Launchpad
 
@@ -103,17 +106,17 @@ Follow these steps to restart the SQL Server Launchpad service.
 
 Follow these steps to download and register the Python language extension, which is used for the Python custom runtime.
 
-1. Download the **python-lang-extension-windows.zip** file from the [SQL Server Language Extensions GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases).
+1. Download the **python-lang-extension-windows-release.zip** file from the [SQL Server Language Extensions GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases).
 
     Alternatively, you can use the debug version (**python-lang-extension-windows-debug.zip**) in a development or test environment. The debug version provides verbose logging information to investigate any errors, and is not recommended for production environments.
 
-1. Use [Azure Data Studio](../../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the Python language extension with [CREATE EXTERNAL LANGUAGE](../../../t-sql/statements/create-external-language-transact-sql.md). 
+1. Use [Azure Data Studio](../../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the Python language extension with [CREATE EXTERNAL LANGUAGE](../../../t-sql/statements/create-external-language-transact-sql.md).
 
-    Modify the path in this statement to reflect the location of the downloaded language extension zip file (**python-lang-extension-windows.zip**).
+    Modify the path in this statement to reflect the location of the downloaded language extension zip file (**python-lang-extension-windows-release.zip**).
 
     ```sql
     CREATE EXTERNAL LANGUAGE [myPython]
-    FROM (CONTENT = N'/path/to/python-lang-extension-windows.zip', FILE_NAME = 'pythonextension.dll');
+    FROM (CONTENT = N'/path/to/python-lang-extension-windows-release.zip', FILE_NAME = 'pythonextension.dll');
     GO
     ```
 

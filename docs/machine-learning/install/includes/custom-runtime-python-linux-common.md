@@ -65,6 +65,8 @@ sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/instal
 
 ### Restart mssql-launchpadd
 
+Run the following command to restart **mssql-launchpadd**.
+
 ```bash
 sudo systemctl restart mssql-launchpadd
 ```
@@ -75,17 +77,17 @@ sudo systemctl restart mssql-launchpadd
 
 Follow these steps to download and register the Python language extension, which is used for the Python custom runtime.
 
-1. Download the **python-lang-extension-linux.zip** file from the [SQL Server Language Extensions GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases).
+1. Download the **python-lang-extension-linux-release.zip** file from the [SQL Server Language Extensions GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases).
 
     Alternatively, you can use the debug version (**python-lang-extension-linux-debug.zip**) in a development or test environment. The debug version provides verbose logging information to investigate any errors, and is not recommended for production environments.
 
 1. Use [Azure Data Studio](../../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the Python language extension with [CREATE EXTERNAL LANGUAGE](../../../t-sql/statements/create-external-language-transact-sql.md). 
 
-    Modify the path in this statement to reflect the location of the downloaded language extension zip file (**python-lang-extension-linux.zip**).
+    Modify the path in this statement to reflect the location of the downloaded language extension zip file (**python-lang-extension-linux-release.zip**).
 
     ```sql
     CREATE EXTERNAL LANGUAGE [myPython]
-    FROM (CONTENT = N'/path/to/python-lang-extension-linux.zip', FILE_NAME = 'libPythonExtension.so.1.0');
+    FROM (CONTENT = N'/path/to/python-lang-extension-linux-release.zip', FILE_NAME = 'libPythonExtension.so.1.0');
     GO
     ```
 

@@ -115,7 +115,9 @@ Follow these steps to download and register the Python language extension, which
 
     ```sql
     CREATE EXTERNAL LANGUAGE [myPython]
-    FROM (CONTENT = N'/path/to/python-lang-extension-windows-release.zip', FILE_NAME = 'pythonextension.dll', ENVIRONMENT_VARIABLES = N'{"PYTHONHOME": "C:\\Program Files\\Python3.7"}');
+    FROM (CONTENT = N'/path/to/python-lang-extension-windows-release.zip', 
+        FILE_NAME = 'pythonextension.dll', 
+        ENVIRONMENT_VARIABLES = N'{"PYTHONHOME": "C:\\Program Files\\Python3.7"}');
     GO
     ```
 

@@ -11,9 +11,7 @@ ms.author: davidph
 
 Before installing an R custom runtime, install the following:
 
-+ Install the [Cumulative Update (CU) 3 or later](../../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) for SQL Server 2019.
-
-+ Install [R version 3.3 or later](https://www.r-project.org/) for Windows on the server.
++ [Cumulative Update (CU) 3 or later](../../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) for SQL Server 2019.
 
 ## Install Language Extensions
 

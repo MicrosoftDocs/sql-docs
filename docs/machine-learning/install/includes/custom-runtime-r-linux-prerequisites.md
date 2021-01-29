@@ -16,5 +16,3 @@ Before installing a R custom runtime, install the following:
     1. Configure the repositories for Cumulative Updates. For more information, see [Configure repositories for installing and upgrading SQL Server on Linux](../../../linux/sql-server-linux-change-repo.md).
 
     1. Update the **mssql-server** package to the latest Cumulative Update. For more information, see [the Update or Upgrade SQL Server section in the installation guidance for SQL Server on Linux](../../../linux/sql-server-linux-setup.md#upgrade).
-
-+ Install [R Version 3.3 or higher](https://www.r-project.org/) for Linux on the server.

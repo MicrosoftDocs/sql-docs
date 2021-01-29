@@ -111,11 +111,11 @@ Follow these steps to download and register the Python language extension, which
 
 1. Use [Azure Data Studio](../../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the Python language extension with [CREATE EXTERNAL LANGUAGE](../../../t-sql/statements/create-external-language-transact-sql.md).
 
-    Modify the path in this statement to reflect the location of the downloaded language extension zip file (**python-lang-extension-windows-release.zip**).
+    Modify the path in this statement to reflect the location of the downloaded language extension zip file (**python-lang-extension-windows-release.zip**) and the location your Python installation (`C:\\Program Files\\Python3.7`).
 
     ```sql
     CREATE EXTERNAL LANGUAGE [myPython]
-    FROM (CONTENT = N'/path/to/python-lang-extension-windows-release.zip', FILE_NAME = 'pythonextension.dll');
+    FROM (CONTENT = N'/path/to/python-lang-extension-windows-release.zip', FILE_NAME = 'pythonextension.dll', ENVIRONMENT_VARIABLES = N'{"PYTHONHOME": "C:\\Program Files\\Python3.7"}');
     GO
     ```
 

@@ -158,12 +158,12 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 |Isolation level|Transact SQL access|File system access|  
 |---------------------|-------------------------|------------------------|  
-|Read uncommitted|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Unsupported|  
-|Read committed|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
-|Repeatable read|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Unsupported|  
-|Serializable|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Unsupported|  
-|Read committed snapshot|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
-|Snapshot|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|Read uncommitted|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|Unsupported|  
+|Read committed|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
+|Repeatable read|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|Unsupported|  
+|Serializable|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|Unsupported|  
+|Read committed snapshot|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
+|Snapshot|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
   
 ## Examples  
  The following example sets the `TRANSACTION ISOLATION LEVEL` for the session. For each [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that follows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] holds all of the shared locks until the end of the transaction.  

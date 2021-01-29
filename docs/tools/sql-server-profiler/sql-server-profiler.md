@@ -41,7 +41,7 @@ You can start the Profiler in a number of ways from within [!INCLUDE[ssManStudio
 
 ## Capture and replay trace data
 
-The following table shows the features we recommend using in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to capture and replay your trace data.
+The following table shows the features we recommend using in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] to capture and replay your trace data.
 
 ||||
 |-|-|-|

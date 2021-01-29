@@ -70,9 +70,9 @@ If [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] encounters a lo
  
 The following diagram shows this process of checking permission when replaying traces:
 
-![SQL Server Profiler replay trace permissions](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif"SQL Server Profiler replay trace permissions")
+![SQL Server Profiler replay trace permissions.](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif)
 
-## See Also
+## See also
 - [SQL Server Profiler Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)
 - [Replay Traces](../../tools/sql-server-profiler/replay-traces.md)
 - [Create a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)

@@ -23,9 +23,11 @@ By default, running [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)
 > Users who have the SHOWPLAN, the ALTER TRACE, or the VIEW SERVER STATE permission can view queries that are captured in Showplan output. These queries may contain sensitive information such as passwords. Therefore, we recommend that you only grant these permissions to users who are authorized to view sensitive information, such as members of the db_owner fixed database role, or members of the sysadmin fixed server role. Additionally, we recommend that you only save Showplan files or trace files that contain Showplan-related events to a location that uses the NTFS file system, and that you restrict access to users who are authorized to view sensitive information.
 
 > [!NOTE]
-> When you try to connect to a Azure SQL Database from SQL Server Profiler, an incorrect message appears:
+> When you try to connect to an Azure SQL Database from SQL Server Profiler, an incorrect message appears:
 >
->    `The server you are trying to connect to does not support tracing. For Example, if you are trying to connect to Azure SQL DB or Azure SQL Managed Instance, This is expected.`
+>    `The server you are trying to connect to does not support tracing. For example, if you are trying to connect to Azure SQL DB or Azure SQL Managed Instance, This is expected.`
+>
+> The message explains that Azure SQL DB and Azure SQL Managed Instance do not support SQL Server Profiler.  Tracing is done through XEvents only.
 
 
 ## Permissions Used to Replay Traces  

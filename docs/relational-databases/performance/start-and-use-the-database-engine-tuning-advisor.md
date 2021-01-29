@@ -22,14 +22,14 @@ ms.author: wiassaf
 ---
 # Start and Use the Database Engine Tuning Advisor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  This topic describes how to start and use Database Engine Tuning Advisor in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For information about how to view and work with the results after you tune a database, see [View and Work with the Output from the Database Engine Tuning Advisor](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
+  This topic describes how to start and use Database Engine Tuning Advisor in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For information about how to view and work with the results after you tune a database, see [View and Work with the Output from the Database Engine Tuning Advisor](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Initialize the Database Engine Tuning Advisor  
  On first use, a user who is member of the **sysadmin** fixed server role must initialize the Database Engine Tuning Advisor. This is because several system tables must be created in the **msdb** database to support tuning operations. Initialization also enables users that are members of the **db_owner** fixed database role to tune workloads on tables in databases that they own.  
   
  A user that has system administrator permissions must perform either of the following actions:  
   
--   Use the Database Engine Tuning Advisor graphical user interface to connect to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Start the Database Engine Tuning Advisor](#Start) later in this topic.  
+-   Use the Database Engine Tuning Advisor graphical user interface to connect to an instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For more information, see [Start the Database Engine Tuning Advisor](#Start) later in this topic.  
   
 -   Use the **dta** utility to tune the first workload. For more information, see [Use the dta Utility](#dta) later in this topic.  
   

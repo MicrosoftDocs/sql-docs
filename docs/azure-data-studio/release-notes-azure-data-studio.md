@@ -8,12 +8,20 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 12/9/2020
+ms.date: 1/22/2020
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](./download-azure-data-studio.md)**
+
+## December 2020 (hotfix)
+
+January 22, 2020 &nbsp; / &nbsp; version: 1.25.2
+
+| Change | Details |
+| ------ | ------- |
+| Fix bug [#13899](https://github.com/microsoft/azuredatastudio/issues/13899)| Scrolling to the appropriate cross-reference links in Notebooks |
 
 ## December 2020
 

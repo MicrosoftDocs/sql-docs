@@ -2,7 +2,7 @@
 description: "CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server"
 title: "CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: 08/26/2020
+ms.date: 01/28/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: machine-learning
@@ -92,8 +92,7 @@ WITH ( LANGUAGE = 'R' )
 
 <file_spec> ::=  
 {  
-    (CONTENT = { <client_library_specifier> | <library_bits> }  
-    [, PLATFORM = WINDOWS ])  
+    (CONTENT = { <client_library_specifier> | <library_bits> })  
 }  
 
 <client_library_specifier> :: = 
@@ -165,6 +164,8 @@ The file can be specified in the form of a local path, or network path.
 
 When attempting to access the file specified in **<client_library_specifier>**, SQL Server impersonates the security context of the current Windows login. If **<client_library_specifier>** specifies a network location (UNC path), the impersonation of the current login is not carried forward to the network location because of delegation limitations. In this case, access is made using the security context of the SQL Server service account. For more information, see [Credentials (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
 
+::: moniker-end
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Optionally, an OS platform for the file can be specified. Only one file artifact or content is permitted for each OS platform for a specific language or runtime.
 ::: moniker-end
 
@@ -173,13 +174,6 @@ Optionally, an OS platform for the file can be specified. Only one file artifact
 Specifies the content of the package as a hex literal, similar to assemblies. 
 
 This option is useful if you need to create a library or alter an existing library (and have the required permissions to do so), but the file system on the server is restricted and you cannot copy the library files to a location that the server can access.
-
-::: moniker range="=sql-server-2017"
-**PLATFORM = WINDOWS**
-
-Specifies the platform for the content of the library. The value defaults to the host platform on which SQL Server is running. Therefore, the user doesn't have to specify the value. It is required in case where multiple platforms are supported, or the user needs to specify a different platform.
-In SQL Server 2017, Windows is the only supported platform.
-::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 **PLATFORM**
@@ -205,8 +199,6 @@ Specifies the language of the package. The value can be `R` or `Python` in Azure
 
 Specifies the language of the package. The value can be `R`, `Python`, or the name of an external language (see [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)).
 ::: moniker-end
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Remarks
 

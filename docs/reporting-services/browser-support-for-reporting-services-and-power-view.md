@@ -1,7 +1,7 @@
 ---
 title: "Browser Support for Reporting Services and Power View | Microsoft Docs"
 description: Learn about what browser versions are supported for managing and viewing SQL Server Reporting Services, the ReportViewer Controls and Power View.
-ms.date: 07/02/2017
+ms.date: 01/28/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -91,8 +91,8 @@ The following is the current list of browsers supported for the web portal.
 
 |**Browser type**|**Supports**|**Browser default**|**Server default**|
 |----------------------|------------------|-------------------------|------------------------|
-|**Microsoft Edge** (+)|Negotiate, Kerberos, NTLM, Basic|Negotiate|Yes. The default authentication settings work with Edge.|
-|**Microsoft Internet Explorer**|Negotiate, Kerberos, NTLM, Basic|Negotiate|Yes. The default authentication settings work with Internet Explorer.|
+|**Microsoft Edge** (+)|Negotiate, NTLM, Basic|Negotiate|Yes. The default authentication settings work with Edge.|
+|**Microsoft Internet Explorer**|Negotiate, NTLM, Basic|Negotiate|Yes. The default authentication settings work with Internet Explorer.|
 |**Google Chrome**(+)|Negotiate, NTLM, Basic|Negotiate|Yes. The default authentication settings work with Chrome.|
 |**Mozilla Firefox**(+)|NTLM, Basic|NTLM|Yes. The default authentication settings work with Firefox.|
 |**Apple Safari**(+)|NTLM, Basic|Basic|Yes. The default authentication settings work with Safari.|

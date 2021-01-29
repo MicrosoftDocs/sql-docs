@@ -6,7 +6,7 @@ ms.date: 10/30/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_DATABASE_TSQL"
   - "ALTER DATABASE"

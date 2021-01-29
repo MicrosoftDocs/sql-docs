@@ -4,7 +4,7 @@ title: "ALTER ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.date: "04/12/2017"
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_ASYMMETRIC_KEY_TSQL"
   - "ALTER ASYMMETRIC KEY"

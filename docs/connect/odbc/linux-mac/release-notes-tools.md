@@ -18,6 +18,15 @@ manager: kenvh
 
 This article lists and describes what's new in the versioned releases of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] SQL Server Tools on Linux and macOS.
 
+## 17.7.1.1, January 2021
+
+| Feature added | Details |
+| :------------ | :------ |
+| Sqlcmd Bugfix | Fixed input redirection bug and empty lines leading to repeated execution. |
+| Sqlcmd Bugfix | Fixed mistaken error reporting for r, p, X and k options under certain formatting. |
+| Sqlcmd -z/-Z "Password" Option | Now supported. |
+| &nbsp; | &nbsp; |
+
 ## 17.6.1.1, July 2020
 
 | Feature added | Details |

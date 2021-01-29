@@ -2,10 +2,10 @@
 title: "Release notes for mssql-tools on Linux and macOS"
 description: "Learn what's new and changed in released versions of the Microsoft SQL Server Tools."
 ms.custom: ""
-ms.date: "07/13/2020"
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer:
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-zhangw

@@ -22,8 +22,9 @@ For other scenarios, see the [Database Migration Guide](https://datamigration.mi
 To migrate your Oracle database to SQL Server, you need:
 
 - To verify your source environment is supported.
+- To install [SQL Server](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019?filetype=EXE).
 - To download [SQL Server Migration Assistant (SSMA) for Oracle](https://www.microsoft.com/en-us/download/details.aspx?id=54258).
-- A target [SQL Server VM](../../virtual-machines/windows/sql-vm-create-portal-quickstart.md).
+
 
 ## Pre-migration
 
@@ -52,7 +53,7 @@ To use the MAP Toolkit to perform an inventory scan, follow these steps:
 
 1. Select **Collect inventory data** to open the **Inventory and Assessment Wizard**. 
 
-   :::image type="content" source="media/oracle-to-sql-server/collect-inventory-data.png" alt-text="Create an inventory database":::
+   :::image type="content" source="media/oracle-to-sql-server/collect-inventory-data.png" alt-text="Collect inventory data":::
 
 1. In the **Inventory and Assessment Wizard**, choose **Oracle** and then select **Next**. 
 

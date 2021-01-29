@@ -49,7 +49,7 @@ Follow the steps below to install [SQL Server Language Extensions](../../../lang
 
 The Python language extension used for the custom Python runtime currently supports Python 3.7 only. If you would like to use a different version of Python, follow the instruction in the [Python Language Extension GitHub repo](https://github.com/microsoft/sql-server-language-extensions/tree/master/language-extensions/python) to modify and rebuild the extension.
 
-1. Download [Python 3.7](https://www.python.org/downloads/) for Windows and run the Setup on the server.
+1. Download [Python 3.7](https://www.python.org/downloads/windows/) for Windows and run the Setup on the server.
 
 1. Click **Add Python 3.7 to PATH** and then click **Customize installation**.
 

@@ -116,7 +116,7 @@ NAME = newUserName
 > This option may only be specified in a contained database and only for contained users.
 
  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Suppresses cryptographic metadata checks on the server in bulk copy operations. This enables the user to bulk copy encrypted data between tables or databases, without decrypting the data. The default is OFF.
 
@@ -311,7 +311,7 @@ ALTER USER userName
 > This option is available only for contained users.
 
  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Suppresses cryptographic metadata checks on the server in bulk copy operations. This enables the user to bulk copy encrypted data between tables or databases, without decrypting the data. The default is OFF.
 

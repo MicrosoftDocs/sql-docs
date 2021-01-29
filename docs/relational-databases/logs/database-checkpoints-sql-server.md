@@ -101,7 +101,7 @@ In the event of a system crash, indirect checkpoints provide potentially faster,
 However, an online transactional workload on a database configured for indirect checkpoints can experience performance degradation. This is because the background writer used by indirect checkpoint sometimes increases the total write load for a server instance.  
  
 > [!IMPORTANT]
-> Indirect checkpoint is the default behavior for new databases created in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], including the Model and TempDB databases.          
+> Indirect checkpoint is the default behavior for new databases created in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], including the Model and TempDB databases.          
 > Databases that were upgraded in-place, or restored from a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], will use the previous automatic checkpoint behavior unless explicitly altered to use indirect checkpoint.       
 
 ### <a name="ctp23"></a> Improved indirect checkpoint scalability

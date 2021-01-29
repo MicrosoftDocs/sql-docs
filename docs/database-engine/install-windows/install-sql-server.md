@@ -28,7 +28,7 @@ For other deployment scenarios, see:
 - [Docker containers](../../linux/sql-server-linux-docker-container-deployment.md)
 - [Kubernetes - Big Data Clusters](../../big-data-cluster/deploy-get-started.md)
 
-Beginning with [!INCLUDE[sssql15](../../includes/sssql16-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] is only available as a 64-bit application. Here are important details about how to get SQL Server and how to install it.
+Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] is only available as a 64-bit application. Here are important details about how to get SQL Server and how to install it.
 
 ## Getting started
   

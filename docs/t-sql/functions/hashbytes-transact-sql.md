@@ -42,7 +42,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## Arguments
 
 `<algorithm>`  
-Identifies the hashing algorithm to be used to hash the input. This is a required argument with no default. The single quotation marks are required. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], all algorithms other than SHA2_256, and SHA2_512 are deprecated.  
+Identifies the hashing algorithm to be used to hash the input. This is a required argument with no default. The single quotation marks are required. Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], all algorithms other than SHA2_256, and SHA2_512 are deprecated.  
   
 `@input`  
 Specifies a variable containing the data to be hashed. `@input` is **varchar**, **nvarchar**, or **varbinary**.  
@@ -62,7 +62,7 @@ Specifies an expression that evaluates to a character or binary string to be has
 ## Remarks  
 Consider using `CHECKSUM` or `BINARY_CHECKSUM` as alternatives to compute a hash value.
 
-The MD2, MD4, MD5, SHA, and SHA1 algorithms are deprecated starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Use SHA2_256 or SHA2_512 instead. Older algorithms will continue working, but they will raise a deprecation event.
+The MD2, MD4, MD5, SHA, and SHA1 algorithms are deprecated starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Use SHA2_256 or SHA2_512 instead. Older algorithms will continue working, but they will raise a deprecation event.
 
 ## Examples  
 ### Return the hash of a variable  

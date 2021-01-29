@@ -111,7 +111,7 @@ CREATE SYMMETRIC KEY key_name
  \<algorithm>  
 Specify the encrypting algorithm.   
 > [!WARNING]  
-> Beginning with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], all algorithms other than AES_128, AES_192, and AES_256 are deprecated. To use older algorithms (not recommended), you must set the database to database compatibility level 120 or lower.  
+> Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], all algorithms other than AES_128, AES_192, and AES_256 are deprecated. To use older algorithms (not recommended), you must set the database to database compatibility level 120 or lower.  
   
 ## Remarks  
  When a symmetric key is created, the symmetric key must be encrypted by using at least one of the following: certificate, password, symmetric key, asymmetric key, or PROVIDER. The key can have more than one encryption of each type. In other words, a single symmetric key can be encrypted by using multiple certificates, passwords, symmetric keys, and asymmetric keys at the same time.  

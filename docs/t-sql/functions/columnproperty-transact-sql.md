@@ -51,7 +51,7 @@ For the *id* argument, the *property* argument specifies the information type th
 |**AllowsNull**|Allows null values.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
 |**ColumnId**|Column ID value corresponding to **sys.columns.column_id**.|Column ID<br /><br /> **Note:** When querying multiple columns, gaps may appear in the sequence of Column ID values.|  
 |**FullTextTypeColumn**|The TYPE COLUMN in the table holding the document type information of the *column*.|ID of the full-text TYPE COLUMN for the column name expression passed as the second parameter of this function.|  
-|**GeneratedAlwaysType**|Is column value system-generated. Corresponds to **sys.columns.generated_always_type**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later.<br /><br /> 0: Not generated always<br /><br /> 1: Generated always at row start<br /><br /> 2: Generated always at row end|  
+|**GeneratedAlwaysType**|Is column value system-generated. Corresponds to **sys.columns.generated_always_type**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.<br /><br /> 0: Not generated always<br /><br /> 1: Generated always at row start<br /><br /> 2: Generated always at row end|  
 |**IsColumnSet**|Column is a column set. For more information, see [Use Column Sets](../../relational-databases/tables/use-column-sets.md).|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
 |**IsComputed**|Column is a computed column.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
 |**IsCursorType**|Procedure parameter is of type CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  

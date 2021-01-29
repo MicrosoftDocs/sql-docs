@@ -17,7 +17,7 @@ ms.author: chadam
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] manages and automates SQL Server backups to Microsoft Azure Blob storage. You can choose to allow SQL Server to determine the backup schedule based on the transaction workload of your database. Or you can use advanced options to define a schedule. The retention settings determine how long the backups are stored in Azure Blob storage. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] supports point in time restore for the retention time period specified.  
   
- Beginning with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], the procedures and underlying behavior of [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] has changed. For more information, see [Migrate SQL Server 2014 managed backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
+ Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the procedures and underlying behavior of [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] has changed. For more information, see [Migrate SQL Server 2014 managed backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is recommended for SQL Server instances running on Microsoft Azure virtual machines.  

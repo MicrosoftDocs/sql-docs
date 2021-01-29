@@ -2,7 +2,7 @@
 title: "Using Always Encrypted with the ODBC Driver"
 description: "Learn how to develop ODBC applications using Always Encrypted and the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
-ms.date: 01/29/2029
+ms.date: 01/29/2021
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual

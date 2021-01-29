@@ -6,7 +6,7 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Configuration Options and Modes"
 ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db

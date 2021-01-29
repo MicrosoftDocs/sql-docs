@@ -6,7 +6,7 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Type Mapping Inheritance"
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a

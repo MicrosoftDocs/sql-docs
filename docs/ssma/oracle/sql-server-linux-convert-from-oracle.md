@@ -5,7 +5,7 @@ author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
 ms.date: 10/02/2017
-ms.topic: reference
+ms.topic: conceptual
 ms.prod: sql
 ms.custom: ""
 ms.technology: ssma

@@ -6,7 +6,7 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Oracle SSMA Console"
   - "Script File Commands, Script Generation Commands,Manageability Commands"

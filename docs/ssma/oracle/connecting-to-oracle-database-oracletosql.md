@@ -8,7 +8,7 @@ ms.custom: ""
 ms.date: "06/04/2020"
 ms.reviewer: ""
 ms.technology: ssma
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Refreshing Oracle Metadata"
 ms.assetid: e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6

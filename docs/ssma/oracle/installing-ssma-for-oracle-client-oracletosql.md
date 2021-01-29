@@ -6,7 +6,7 @@ ms.custom: ""
 ms.date: "07/14/2020"
 ms.reviewer: ""
 ms.technology: ssma
-ms.topic: reference
+ms.topic: conceptual
 ms.assetid: d5d4903d-e296-4bbf-8780-63674c4d62d5
 author: "nahk-ivanov"
 ms.author: "alexiva"

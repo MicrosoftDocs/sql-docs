@@ -6,7 +6,7 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.technology: ssma
-ms.topic: reference
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Analyzing Conversion Problems"
 ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357

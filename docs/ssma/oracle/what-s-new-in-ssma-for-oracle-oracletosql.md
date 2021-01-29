@@ -8,7 +8,7 @@ ms.custom: ""
 ms.date: "12/17/2020"
 ms.reviewer: ""
 ms.technology: ssma
-ms.topic: reference
+ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
 ---

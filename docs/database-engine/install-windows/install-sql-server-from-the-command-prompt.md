@@ -827,7 +827,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 
 
 ##  <a name="Feature"></a> Feature Parameters  
- To install specific features, use the /FEATURES parameter and specify the parent feature or feature values in the following table. For a list of features that are supported by the editions of SQL Server, see [Editions and Supported Features for [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]](../../sql-server/editions-and-components-of-sql-server-2016.md), [Editions and Supported Features for [!INCLUDE[ssSQLv14](../../includes/sssql17-md.md)]](../../sql-server/editions-and-components-of-sql-server-2017.md), or [Editions and Supported Features for [!INCLUDE[ssSQLv15](../../includes/sssql19-md.md)]](../../sql-server/editions-and-components-of-sql-server-version-15.md).
+ To install specific features, use the /FEATURES parameter and specify the parent feature or feature values in the following table. For a list of features that are supported by the editions of SQL Server, see [Editions and Supported Features for [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]](../../sql-server/editions-and-components-of-sql-server-2016.md), [Editions and Supported Features for [!INCLUDE[sssql17](../../includes/sssql17-md.md)]](../../sql-server/editions-and-components-of-sql-server-2017.md), or [Editions and Supported Features for [!INCLUDE[sssql19](../../includes/sssql19-md.md)]](../../sql-server/editions-and-components-of-sql-server-version-15.md).
   
 |Parent feature parameter|Feature parameter|Description|  
 |:---|:---|:---|  

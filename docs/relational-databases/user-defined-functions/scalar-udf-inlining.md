@@ -20,7 +20,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-ver15"
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article introduces Scalar UDF Inlining, a feature under the [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md) suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQLv15](../../includes/sssql19-md.md)]).
+This article introduces Scalar UDF Inlining, a feature under the [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md) suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql19](../../includes/sssql19-md.md)]).
 
 ## T-SQL scalar User-Defined Functions
 User-Defined Functions (UDFs) that are implemented in [!INCLUDE[tsql](../../includes/tsql-md.md)] and return a single data value are referred to as T-SQL Scalar User-Defined Functions. T-SQL UDFs are an elegant way to achieve code reuse and modularity across [!INCLUDE[tsql](../../includes/tsql-md.md)] queries. Some computations (such as complex business rules) are easier to express in imperative UDF form. UDFs help in building up complex logic without requiring expertise in writing complex SQL queries. For more information about UDFs, see [Create User-defined Functions (Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).

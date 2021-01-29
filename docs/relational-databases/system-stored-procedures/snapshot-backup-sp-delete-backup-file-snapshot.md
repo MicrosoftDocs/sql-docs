@@ -7,7 +7,7 @@ ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.custom: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 5afe5530-a404-4fa5-af3c-bc7c3ca43ce6

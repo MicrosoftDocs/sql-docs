@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.service: sql-data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545

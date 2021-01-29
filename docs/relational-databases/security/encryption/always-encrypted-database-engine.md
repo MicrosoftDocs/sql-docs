@@ -28,7 +28,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  Always Encrypted provides confidential computing capabilities by enabling the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] to process some queries on encrypted data, while preserving the confidentiality of the data and providing the above security benefits. In [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)], [!INCLUDE[sssSQLv14](../../../includes/sssql17-md.md)] and in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], Always Encrypted supports equality comparison via deterministic encryption. See [Selecting Deterministic or Randomized Encryption](#selecting--deterministic-or-randomized-encryption). 
 
   > [!NOTE] 
-  > In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], secure enclaves substantially extend confidential computing capabilities of Always Encrypted with pattern matching, other comparison operators and in-place encryption. See [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
+  > In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], secure enclaves substantially extend confidential computing capabilities of Always Encrypted with pattern matching, other comparison operators and in-place encryption. See [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
 
  Always Encrypted makes encryption transparent to applications. An Always Encrypted-enabled driver installed on the client computer achieves this by automatically encrypting and decrypting sensitive data in the client application. The driver encrypts the data in sensitive columns before passing the data to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)], and automatically rewrites queries so that the semantics to the application are preserved. Similarly, the driver transparently decrypts data, stored in encrypted database columns, contained in query results.  
   
@@ -109,7 +109,7 @@ For details on Always Encrypted cryptographic algorithms, see [Always Encrypted 
 |Encrypting existing data in selected database columns|Yes|Yes|No|
 
 > [!NOTE]
-> [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), introduced in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], does support encrypting existing data using Transact-SQL. It also eliminates the need to move the data outside of the data for cryptographic operations.
+> [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), introduced in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], does support encrypting existing data using Transact-SQL. It also eliminates the need to move the data outside of the data for cryptographic operations.
 
 > [!NOTE]
 > Make sure you run key provisioning or data encryption tools in a secure environment, on a computer that is different from the computer hosting your database. Otherwise, sensitive data or the keys could leak to the server environment, which would reduce the benefits of the using Always Encrypted.  
@@ -142,7 +142,7 @@ Use the [Always Encrypted Wizard](../../../relational-databases/security/encrypt
   
 -   Queries on columns encrypted by using randomized encryption can't perform operations on any of those columns. Indexing columns encrypted using randomized encryption isn't supported.  
  > [!NOTE] 
- > [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), introduced in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], addresses the above limitation by enabling pattern matching, comparison operators and indexing on columns using randomized encryption.
+ > [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), introduced in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], addresses the above limitation by enabling pattern matching, comparison operators and indexing on columns using randomized encryption.
 
 -   A column encryption key can have up to two different encrypted values, each encrypted with a different column master key. This facilitates column master key rotation.  
   

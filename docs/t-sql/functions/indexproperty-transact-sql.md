@@ -66,7 +66,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsStatistics**|*index_or_statistics_name* is statistics created by the CREATE STATISTICS statement or by the AUTO_CREATE_STATISTICS option of ALTER DATABASE.|1 = True<br /><br /> 0 = False or XML index.|  
 |**IsUnique**|Index is unique.|1 = True<br /><br /> 0 = False or XML index.|  
 |**IsColumnstore**|Index is an xVelocity memory optimized columnstore index.|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> 1 = True<br /><br /> 0 = False| 
-|**IsOptimizedForSequentialKey**|Index has optimization for last-page inserts enabled.|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later. <br><br>1 = True<br><br>0 = False| 
+|**IsOptimizedForSequentialKey**|Index has optimization for last-page inserts enabled.|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later. <br><br>1 = True<br><br>0 = False| 
   
 ## Return Types  
  **int**  

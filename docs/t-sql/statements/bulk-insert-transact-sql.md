@@ -126,7 +126,7 @@ CODEPAGE **=** { **'**ACP**'** \| **'**OEM**'** \| **'**RAW**'** \| **'**_code_p
 Specifies the code page of the data in the data file. CODEPAGE is relevant only if the data contains **char**, **varchar**, or **text** columns with character values greater than **127** or less than **32**. For an example, see [Specifying a code page](#d-specifying-a-code-page).
 
 > [!IMPORTANT]
-> CODEPAGE is not a supported option on Linux for [!INCLUDE[ssSQLv14_md](../../includes/sssql17-md.md)]. For [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)], only the **'RAW'** option is allowed for CODEPAGE.
+> CODEPAGE is not a supported option on Linux for [!INCLUDE[ssSQLv14_md](../../includes/sssql17-md.md)]. For [!INCLUDE[ssSQLv15_md](../../includes/sssql19-md.md)], only the **'RAW'** option is allowed for CODEPAGE.
 
 > [!NOTE]
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you specify a collation name for each column in a [format file](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).

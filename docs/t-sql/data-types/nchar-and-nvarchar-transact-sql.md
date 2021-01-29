@@ -47,7 +47,7 @@ Objects that use **nchar** or **nvarchar** are assigned the default collation of
   
 SET ANSI_PADDING is always ON for **nchar** and **nvarchar**. SET ANSI_PADDING OFF does not apply to the **nchar** or **nvarchar** data types.
   
-Prefix a Unicode character string constants with the letter N to signal UCS-2 or UTF-16 input, depending on whether an SC collation is used or not. Without the N prefix, the string is converted to the default code page of the database that may not recognize certain characters. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], when a UTF-8 enabled collation is used, the default code page is capable of storing UNICODE UTF-8 character set. 
+Prefix a Unicode character string constants with the letter N to signal UCS-2 or UTF-16 input, depending on whether an SC collation is used or not. Without the N prefix, the string is converted to the default code page of the database that may not recognize certain characters. Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], when a UTF-8 enabled collation is used, the default code page is capable of storing UNICODE UTF-8 character set. 
  
 > [!NOTE]  
 > When prefixing a string constant with the letter N, the implicit conversion will result in a UCS-2 or UTF-16 string if the constant to convert does not exceed the max length for the nvarchar string data type (4,000). Otherwise, the implicit conversion will result in a large-value nvarchar(max).

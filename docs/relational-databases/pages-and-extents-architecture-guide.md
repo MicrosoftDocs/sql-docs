@@ -99,7 +99,7 @@ Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the `sys.dm_db_dat
 > [!IMPORTANT]
 > The `sys.dm_db_database_page_allocations` system function is not documented and is subject to change. Compatibility is not guaranteed. 
 
-Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the [sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) system function is available and returns information about a page in a database. The function returns one row that contains the header information from the page, including the object_id, index_id, and partition_id. This function replaces the need to use `DBCC PAGE` in most cases.
+Starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], the [sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) system function is available and returns information about a page in a database. The function returns one row that contains the header information from the page, including the object_id, index_id, and partition_id. This function replaces the need to use `DBCC PAGE` in most cases.
 
 ## Managing Extent Allocations and Free Space 
 

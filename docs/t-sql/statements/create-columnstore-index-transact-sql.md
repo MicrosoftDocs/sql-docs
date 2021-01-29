@@ -116,7 +116,7 @@ Some of the options are not available in all database engine versions. The follo
 |---|---|---|
 | COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] |
 | DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | 
-| ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssql17-md.md)] |
+| ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssql19-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssql17-md.md)] |
 | WHERE clause | N/A | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] |
 
 All options are available in Azure SQL Database.

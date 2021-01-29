@@ -222,7 +222,7 @@ To encrypt a database encryption key with an asymmetric key, the asymmetric key 
 
 To enable TDE on a database, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must do an encryption scan. The scan reads each page from the data files into the buffer pool and then writes the encrypted pages back out to disk.
 
-To give you more control over the encryption scan, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] introduces TDE scan, which has a suspend and resume syntax. You can pause the scan while the workload on the system is heavy or during business-critical hours and then resume the scan later.
+To give you more control over the encryption scan, [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] introduces TDE scan, which has a suspend and resume syntax. You can pause the scan while the workload on the system is heavy or during business-critical hours and then resume the scan later.
 
 Use the following syntax to pause the TDE encryption scan:
 

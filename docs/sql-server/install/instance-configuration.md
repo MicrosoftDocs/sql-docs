@@ -416,7 +416,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ## <a name="maxdop"><a/> Database Engine Configuration - MaxDOP page
 
-**Max degree of parallelism (MaxDOP)** determines the maximum number of processors that a single statement can use. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces the ability to configure this option during installation. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] also automatically detects the recommended MaxDOP setting for the server based on the number of cores.  
+**Max degree of parallelism (MaxDOP)** determines the maximum number of processors that a single statement can use. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduces the ability to configure this option during installation. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] also automatically detects the recommended MaxDOP setting for the server based on the number of cores.  
 
 If this page is skipped during setup, the default MaxDOP value is the recommended value displayed in this page instead of the default [!INCLUDE[ssde_md](../../includes/ssde_md.md)] value for previous versions (0). You can also manually configure this setting on this page, and you can modify this setting after installation. 
 

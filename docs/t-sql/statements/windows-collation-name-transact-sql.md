@@ -74,7 +74,7 @@ Omitting this option specifies width-insensitive, **WS** specifies width-sensiti
 - Omitting this option specifies variation selector-insensitive, **VSS** specifies variation selector-sensitive.
 
 **UTF8**  
-- **Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]   
 
 - Specifies UTF-8 encoding to be used for eligible data types. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 

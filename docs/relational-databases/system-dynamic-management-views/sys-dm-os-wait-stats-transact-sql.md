@@ -929,7 +929,7 @@ This command resets all counters to 0.
 |VIA_ACCEPT |Occurs when a Virtual Interface Adapter (VIA) provider connection is completed during startup.| 
 |VIEW_DEFINITION_MUTEX |Occurs during synchronization on access to cached view definitions.| 
 |WAIT_FOR_RESULTS |Occurs when waiting for a query notification to be triggered.| 
-|WAIT_ON_SYNC_STATISTICS_REFRESH |Occurs when waiting for synchronous statistics update to complete before query compilation and execution can resume.<br /><br /> **Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|WAIT_ON_SYNC_STATISTICS_REFRESH |Occurs when waiting for synchronous statistics update to complete before query compilation and execution can resume.<br /><br /> **Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |WAIT_XLOGREAD_SIGNAL |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssql17-md.md)] and later.| 

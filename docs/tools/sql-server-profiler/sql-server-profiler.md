@@ -28,11 +28,9 @@ ms.date: 05/01/2020
 > [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] for Analysis Services workloads are supported.
 
 > [!NOTE]
-> When you try to connect to a Azure SQL Database from SQL server profiler, it incorrectly throws a misleading error message as follows:
+> When you try to connect to a Azure SQL Database from SQL Server Profiler, an incorrect message appears:
 >
-> - In order to run a trace against SQL Server, you must be a member of sysadmin fixed server role or have the ALTER TRACE permission.
->
-> The message should have explained that Azure SQL Database is not supported by SQL Server profiler.
+>    `The server you are trying to connect to does not support tracing. For Example, if you are trying to connect to Azure SQL DB or Azure SQL Managed Instance, This is expected.`
 
 ## Where is the Profiler?
 

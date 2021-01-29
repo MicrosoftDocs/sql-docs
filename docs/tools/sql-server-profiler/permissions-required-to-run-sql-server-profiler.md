@@ -10,7 +10,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 01/28/2021
+ms.date: 03/14/2017
 ---
 
 # Permissions Required to Run SQL Server Profiler
@@ -22,18 +22,25 @@ By default, running [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)
 > [!IMPORTANT]
 > Users who have the SHOWPLAN, the ALTER TRACE, or the VIEW SERVER STATE permission can view queries that are captured in Showplan output. These queries may contain sensitive information such as passwords. Therefore, we recommend that you only grant these permissions to users who are authorized to view sensitive information, such as members of the db_owner fixed database role, or members of the sysadmin fixed server role. Additionally, we recommend that you only save Showplan files or trace files that contain Showplan-related events to a location that uses the NTFS file system, and that you restrict access to users who are authorized to view sensitive information.
 
-> [!NOTE]
-> When you try to connect to an Azure SQL Database from SQL Server Profiler, an incorrect message appears:
->
->    `The server you are trying to connect to does not support tracing. For example, if you are trying to connect to Azure SQL DB or Azure SQL Managed Instance, This is expected.`
->
-> The message explains that Azure SQL DB and Azure SQL Managed Instance do not support SQL Server Profiler.  Tracing is done through XEvents only.
+> [!IMPORTANT]
+> SQL Trace and [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] are deprecated. The *Microsoft.SqlServer.Management.Trace* namespace that contains the Microsoft SQL Server Trace and Replay objects are also deprecated.
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
+> Use Extended Events instead. For more information on [Extended Events](../../relational-databases/extended-events/extended-events.md), see [Quick Start: Extended events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) and [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 
+> [!NOTE]
+> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] for Analysis Services workloads are supported.
+
+> [!NOTE]
+> When you try to connect to a Azure SQL Database from SQL server profiler, it incorrectly throws a misleading error message as follows:
+>
+> - In order to run a trace against SQL Server, you must be a member of sysadmin fixed server role or have the ALTER TRACE permission.
+>
+> The message should have explained that Azure SQL Database is not supported by SQL Server profiler.
 
 ## Permissions Used to Replay Traces  
 Replaying traces also requires that the user who is replaying the trace have the ALTER TRACE permission.  
 
-However, during replay, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] uses the EXECUTE AS command if an Audit Login event is encountered in the trace that is being replayed. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] uses the EXECUTE AS command to impersonate the user who is associated with the login event.
+However, during replay, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] uses the EXECUTE AS command if an Audit Login event is encountered in the trace that is being replayed. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] uses the EXECUTE AS command to impersonate the user who is associated with the login event.  
 
 If [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] encounters a login event in a trace that is being replayed, the following permission checks are performed:
 
@@ -46,9 +53,9 @@ If [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] encounters a lo
 4. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attempts to authenticate User2, and depending on the results, one of the following occurs:
 
     1. If User2 cannot be authenticated, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] returns an error, and continues replaying the trace as User1.
-
+  
     2. If User2 is successfully authenticated, replaying the trace as User2 continues.
-
+  
 5. Permissions for User2 are checked on the target database, and depending on the results, one of the following occurs:
   
     1. If User2 has permissions on the target database, impersonation has succeeded, and the trace is replayed as User2.
@@ -57,10 +64,10 @@ If [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] encounters a lo
 
 6. Existence of a Guest user is checked on the target database, and depending on the results, one of the following occurs:
  
-    1. If a Guest account exists, the trace is replayed as the Guest account.
-
+    1.  If a Guest account exists, the trace is replayed as the Guest account.
+  
     2.  If no Guest account exists on the target database, an error is returned and the trace is replayed as User1.
-
+ 
 The following diagram shows this process of checking permission when replaying traces:
 
 ![SQL Server Profiler replay trace permissions](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif"SQL Server Profiler replay trace permissions")

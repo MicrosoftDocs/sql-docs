@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "1904 (Database Engine error)"
 ms.assetid: 2a35d57d-74e2-45a2-8f67-3f2e51d69712

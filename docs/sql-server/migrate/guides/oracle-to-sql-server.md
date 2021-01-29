@@ -8,10 +8,10 @@ ms.devlang:
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 08/25/2020
+ms.date: 01/29/2021
 ---
 
-# Migrate Oracle to SQL Server
+# Migration guide: Migrate Oracle to SQL Server
 
 This guide teaches you to migrate your Oracle databases to SQL Server using SQL Server Migration Assistant for Oracle. 
 

@@ -8,7 +8,7 @@ ms.devlang:
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 08/25/2020
+ms.date: 01/29/2021
 ---
 
 # Migration guide: MySQL to SQL Server

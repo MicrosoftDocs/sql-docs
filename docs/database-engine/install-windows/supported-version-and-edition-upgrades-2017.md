@@ -101,7 +101,7 @@ monikerRange: ">=sql-server-2016"
 |[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Business Intelligence|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/> |  
 |[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Evaluation|[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Evaluation <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Web <br/> <br/> [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Developer|
 |[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] release candidate* |[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise |  
-|[!INCLUDE[sssqlv14_md](../../includes/sssql17-md.md)] Developer |[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise | 
+|[!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] Developer |[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Enterprise | 
 
  \* Microsoft support to upgrade from release candidate software is specifically for customers who participated in the Technology Adoption Program (TAP). 
 

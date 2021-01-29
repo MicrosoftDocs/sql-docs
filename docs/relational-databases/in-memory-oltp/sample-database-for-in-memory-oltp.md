@@ -142,8 +142,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   *Computed columns* - The computed columns SalesOrderNumber and TotalDue are omitted, as [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] does not support computed columns in memory-optimized tables. The new view Sales.vSalesOrderHeader_extended_inmem reflects the columns SalesOrderNumber and TotalDue. Therefore, you can use this view if these columns are needed.  
 
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssql17-md.md)] CTP 1.1.  
-Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssql17-md.md)] CTP 1.1, computed columns are supported in memory-optimized tables and indexes.
+    - **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.  
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, computed columns are supported in memory-optimized tables and indexes.
 
   
 -   *Foreign key constraints* are supported for memory-optimized tables in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], but only if the referenced tables are also memory-optimized. Foreign keys that reference tables that are also migrated to memory-optimized are kept in the migrated tables, while other foreign keys are omitted.  In addition, SalesOrderHeader_inmem is a hot table in the example workload, and foreign keys constraints require additional processing for all DML operations, as it requires lookups in all the other tables referenced in these constraints. Therefore, the assumption is that the app ensures referential integrity for the Sales.SalesOrderHeader_inmem table, and referential integrity is not validated when rows are inserted.  

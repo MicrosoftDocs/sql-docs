@@ -32,7 +32,7 @@ Tables are database objects that contain all the data in a database. In tables, 
 
 ### Partitioned Tables
 
-Partitioned tables are tables whose data is horizontally divided into units which may be spread across more than one filegroup in a database. Partitioning makes large tables or indexes more manageable by letting you access or manage subsets of data quickly and efficiently, while maintaining the integrity of the overall collection. By default, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports up to 15,000 partitions. For more information, see [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
+Partitioned tables are tables whose data is horizontally divided into units which may be spread across more than one filegroup in a database. Partitioning makes large tables or indexes more manageable by letting you access or manage subsets of data quickly and efficiently, while maintaining the integrity of the overall collection. By default, [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] supports up to 15,000 partitions. For more information, see [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
 
 ### Temporary Tables
 

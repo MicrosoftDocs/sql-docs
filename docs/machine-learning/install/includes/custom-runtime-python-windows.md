@@ -55,7 +55,7 @@ The Python language extension used for the custom Python runtime currently suppo
 
     :::image type="content" source="../media/python-install-add-to-path.png" alt-text="Python 3.7 installation - Add Python 3.7 to PATH":::
 
-1. Under **Optional Features** leave the defaults and click **Next**.
+1. Under **Optional Features**, leave the defaults and click **Next**.
 
 1. Click **Install for all users** and take note of the installation location.
 

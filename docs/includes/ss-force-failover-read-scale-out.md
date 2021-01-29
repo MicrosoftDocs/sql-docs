@@ -129,3 +129,5 @@ To force a manual failover with data loss from primary replica N1 to secondary r
     DROP DATABASE [AGDBRScale]
     GO
     ```
+    
+ 1. (Optional) If desired, you can now add N1 back as a new secondary replica to the availability group AGRScale.

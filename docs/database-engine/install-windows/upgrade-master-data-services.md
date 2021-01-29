@@ -35,7 +35,7 @@ monikerRange: ">=sql-server-2016"
   
 ##  <a name="fileLocation"></a> File Location  
   
--   In [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)], by default, the files are installed at *drive*:\Program Files\Microsoft SQL Server\140\Master Data Services.  
+-   In [!INCLUDE[ss2017](../../includes/sssql17-md.md)], by default, the files are installed at *drive*:\Program Files\Microsoft SQL Server\140\Master Data Services.  
 
 -   In [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], by default, the files are installed at *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services.  
   
@@ -103,27 +103,27 @@ monikerRange: ">=sql-server-2016"
     3.  Click **Apply**.  
   
 ##  <a name="engine"></a> Upgrade with Database Engine Upgrade  
- In this scenario you will upgrade both the database engine and [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] application from an earlier version to either [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] or [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  
+ In this scenario you will upgrade both the database engine and [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] application from an earlier version to either [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] or [!INCLUDE[ssSQL16](../../includes/sssql17-md.md)].  
   
  **To upgrade with Database Engine upgrade**  
   
 1.  **For [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] only**: Open **Control Panel** > **Programs and Features** and uninstall Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
-2.  Upgrade the database engine to [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] or [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]. For more information, see [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+2.  Upgrade the database engine to [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] or [!INCLUDE[ssSQL16](../../includes/sssql17-md.md)]. For more information, see [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
 3.  Complete all the steps in [Upgrade without Database Engine Upgrade](#noengine) .  
   
 ##  <a name="twocomputer"></a> Upgrade in Two-Computer Scenario  
- In this scenario you upgrade a system in which SQL Server is installed on two computers: one with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] or [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)], and the other with an earlier version of [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)].  
+ In this scenario you upgrade a system in which SQL Server is installed on two computers: one with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] or [!INCLUDE[ssSQL16](../../includes/sssql17-md.md)], and the other with an earlier version of [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)].  
   
- If an earlier version of [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] is installed, you continue to use the earlier version to host your MDS database on one computer. However, you must upgrade the schema of the MDS database, and then use the [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] or [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] web application respectively to access the MDS database. The MDS database can no longer be accessed by the earlier version web application.  
+ If an earlier version of [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] is installed, you continue to use the earlier version to host your MDS database on one computer. However, you must upgrade the schema of the MDS database, and then use the [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] or [!INCLUDE[ssSQL16](../../includes/sssql17-md.md)] web application respectively to access the MDS database. The MDS database can no longer be accessed by the earlier version web application.  
   
  **To upgrade in two-computer scenario**  
   
 -   Complete all the steps in [Upgrade without Database Engine Upgrade](#noengine).  
   
 ##  <a name="restore"></a> Upgrade with Restoring a Database from Backup  
- In this scenario, either [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] or [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] is installed along with an earlier version on the same computer or two different computers. A database was backed up on a version earlier than the [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] or [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] release, prior to upgrade, and the database has to be restored.  
+ In this scenario, either [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] or [!INCLUDE[ssSQL16](../../includes/sssql17-md.md)] is installed along with an earlier version on the same computer or two different computers. A database was backed up on a version earlier than the [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] or [!INCLUDE[ssSQL16](../../includes/sssql17-md.md)] release, prior to upgrade, and the database has to be restored.  
   
  **To upgrade with restoring a database from backup**  
   
@@ -146,7 +146,7 @@ monikerRange: ">=sql-server-2016"
 ## Troubleshooting  
  **Issue:** When you open the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] web application, a "client version is not compatible with the database version" error message is displayed.  
   
- **Solution:** This issue occurs when a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Master Data Manager web application tries to access a database that has been upgraded to  or [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services. You must use a  or [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] web application instead.  
+ **Solution:** This issue occurs when a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Master Data Manager web application tries to access a database that has been upgraded to  or [!INCLUDE[ssSQL16](../../includes/sssql17-md.md)] Master Data Services. You must use a  or [!INCLUDE[ssSQL16](../../includes/sssql17-md.md)] web application instead.  
   
  This issue may also occur if you did not stop and restart the **MDS Application Pool** in IIS when upgrading the MDS database schema. Restart the **MDS Application Pool** to correct the issue.  
   

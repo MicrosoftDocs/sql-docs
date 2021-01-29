@@ -426,7 +426,7 @@ You can determine this option's status by examining the `is_auto_update_stats_as
 For more information that describes when to use synchronous or asynchronous statistics updates, see the "Statistics options" section in [Statistics](../../relational-databases/statistics/statistics.md#statistics-options).
 
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)])
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)])
 
 Enables or disables `FORCE_LAST_GOOD_PLAN` [Automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md) option.
 
@@ -1733,7 +1733,7 @@ You can determine this option's status by examining the `is_auto_update_stats_as
 For more information that describes when to use synchronous or asynchronous statistics updates, see the "Statistics options" section in [Statistics](../../relational-databases/statistics/statistics.md#statistics-options).
 
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**     
-**Applies to**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+**Applies to**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
 Controls automatic options for [Automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).
 
@@ -2604,7 +2604,7 @@ You can determine this option's status by examining the is_auto_update_stats_asy
 For more information that describes when to use synchronous or asynchronous statistics updates, see the section "Using the database-wide statistics options" in [Statistics](../../relational-databases/statistics/statistics.md).
 
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**     
-**Applies to**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+**Applies to**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
 Enables or disables `FORCE_LAST_GOOD_PLAN` [Automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md) option.
 

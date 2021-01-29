@@ -53,7 +53,7 @@ monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016"
 For current configuration options, see [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 >[!NOTE]
->No features were discontinued in [!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)].
+>No features were discontinued in [!INCLUDE[ssSQLv14](../includes/sssql17-md.md)].
 
 ## Discontinued features in [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]
 

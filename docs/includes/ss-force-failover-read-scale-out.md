@@ -121,7 +121,7 @@ To force a manual failover with data loss from primary replica N1 to secondary r
     ```SQL
     DROP AVAILABILITY GROUP [AGRScale];
     ```
-1. Drop the availabilty group database on original primary replica (N1): 
+1. Drop the availability group database on original primary replica (N1): 
 
     ```SQL
     USE [master]

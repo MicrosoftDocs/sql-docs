@@ -1,23 +1,24 @@
 ---
-description: "Azure Key Vault sample 7.0, 8.0"
-title: "Azure Key Vault sample 7.0, 8.0 | Microsoft Docs"
+description: "This JDBC code example demonstrates how to use Azure Key Vault as your key store provider when using Always Encrypted."
+title: "Azure Key Vault sample"
 ms.custom: ""
 ms.date: "01/29/2021"
+
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daenge
+author: lilgreenbird
+ms.author: v-susanh
 ---
-# Azure Key Vault sample 7.0, 8.0
+# Azure Key Vault sample
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 ## Sample application using Azure Key Vault feature
 
-This application is runnable using JDBC Driver 7.0, 8.0, Azure-Keyvault (version 1.0.0), Adal4j (version 1.6.0), and their dependencies. The underlying dependencies can be resolved by adding these libraries to the Project Object Model (POM) file of the project. For more information on feature dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+This application is runnable using JDBC Driver 9.2 and above, Azure-Security-Keyvault (version 4.2.1), Azure-Identity (version 1.1.3), and their dependencies. The underlying dependencies can be resolved by adding these libraries to the Project Object Model (POM) file of the project. For more information on feature dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ```java
 import java.net.URISyntaxException;
@@ -33,9 +34,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-import com.microsoft.aad.adal4j.AuthenticationContext;
-import com.microsoft.aad.adal4j.AuthenticationResult;
-import com.microsoft.aad.adal4j.ClientCredential;
+import com.microsoft.aad.msal4j.IAuthenticationResult;
+import com.microsoft.aad.msal4j.PublicClientApplication;
+import com.microsoft.aad.msal4j.UserNamePasswordParameters;
+
 import com.microsoft.sqlserver.jdbc.SQLServerColumnEncryptionAzureKeyVaultProvider;
 import com.microsoft.sqlserver.jdbc.SQLServerColumnEncryptionKeyStoreProvider;
 import com.microsoft.sqlserver.jdbc.SQLServerConnection;
@@ -66,22 +68,13 @@ public class AKV {
                 Statement statement = connection.createStatement()) {
             statement.execute("DBCC FREEPROCCACHE");
 
-            System.out.println("Create SQLServerColumnEncryptionAzureKeyVaultProvider with 'authenticationCallback' and 'executorService(null)'");
-            /* Constructor added in 6.0.0 driver version and removed in 6.2.2 driver, now added back in 7.0.0 driver
-             * [Supports SQLServerKeyVaultAuthenticationCallback in 7.0 for backwards compatibility]
-             * This constructor is marked @deprecated since it no longer uses 'ExecutorService' parameter passed. */
-            @SuppressWarnings("deprecation")
-            SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider1 = new SQLServerColumnEncryptionAzureKeyVaultProvider(
-                    tryAuthenticationCallback(), null);
-            setupKeyStoreProviders(akvProvider1.getName(), akvProvider1);
-            testAKV(akvProvider1.getName(), akvProvider1, connection, statement);
-
-            statement.execute("DBCC FREEPROCCACHE");
+            statement.execute("DBCC FREEPROCCACHE");    
             System.out.println("Create SQLServerColumnEncryptionAzureKeyVaultProvider with 'authenticationCallback'");
             /* Constructor added in 7.0.0 driver version [Supports SQLServerKeyVaultAuthenticationCallback in 7.0 for backwards compatibility]
              * This constructor is recommended to replace the above deprecated constructor */
             SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider2 = new SQLServerColumnEncryptionAzureKeyVaultProvider(
                     tryAuthenticationCallback());
+	    setupKeyStoreProviders(akvProvider2.getName(), akvProvider2);
             testAKV(akvProvider2.getName(), akvProvider2, connection, statement);
 
             statement.execute("DBCC FREEPROCCACHE");
@@ -89,7 +82,21 @@ public class AKV {
             /* Constructor added in 6.2.2 driver version [Continued Support] */
             SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider3 = new SQLServerColumnEncryptionAzureKeyVaultProvider(
                     applicationClientID, applicationKey);
+	    setupKeyStoreProviders(akvProvider3.getName(), akvProvider3);
             testAKV(akvProvider3.getName(), akvProvider3, connection, statement);
+	
+	    statement.execute("DBCC FREEPROCCACHE");
+            System.out.println("Create SQLServerColumnEncryptionAzureKeyVaultProvider with 'token credential'");
+	    /* see Azure Identity client library for Java 
+	     * https://docs.microsoft.com/java/api/overview/azure/identity-readme?view=azure-java-stable */
+	    ClientSecretCredential tokenCredential = new ClientSecretCredentialBuilder().tenantId(tenantID)
+                .clientId(applicationClientID).clientSecret(applicationKey).build();
+	    /* Constructor added in 9.2.0 driver version */
+            SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider4 = new SQLServerColumnEncryptionAzureKeyVaultProvider(
+                    tokenCredential);
+	    setupKeyStoreProviders(akvProvider4.getName(), akvProvider4);
+            testAKV(akvProvider4.getName(), akvProvider4, connection, statement);
+	    
             System.exit(0);
         }
     }
@@ -99,23 +106,17 @@ public class AKV {
         SQLServerKeyVaultAuthenticationCallback authenticationCallback = new SQLServerKeyVaultAuthenticationCallback() {
 
             @Override
-            public String getAccessToken(String authority, String resource,
-                    String scope) {
-                AuthenticationResult result = null;
-                try {
-                    ExecutorService service = Executors.newFixedThreadPool(1);
-                    AuthenticationContext context = new AuthenticationContext(
-                            authority, false, service);
-                    ClientCredential cred = new ClientCredential(
-                            applicationClientID, applicationKey);
-                    Future<AuthenticationResult> future = context
-                            .acquireToken(resource, cred, null);
-                    result = future.get();
-                    service.shutdown();
+            public String getAccessToken(String authority, String resource, String scope) {
+                try {                                                                                                              IClientCredential credential = ClientCredentialFactory.createFromSecret(applicationKey);
+                    ConfidentialClientApplication confidentialClientApplication = ConfidentialClientApplication
+                            .builder(applicationClientID, credential).authority(authority).build();
+                    Set<String> scopes = new HashSet<>();
+                    scopes.add(scope);
+                    return confidentialClientApplication.acquireToken(ClientCredentialParameters.builder(scopes).build()).get().accessToken();
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    fail(TestResource.getResource("R_unexpectedException") + e.getMessage());
                 }
-                return result.getAccessToken();
+                return null;
             }
         };
 
@@ -150,6 +151,8 @@ public class AKV {
     private static void setupKeyStoreProviders(String CUSTOM_AKV_PROVIDER_NAME,
             SQLServerColumnEncryptionKeyStoreProvider akvProvider)
             throws SQLServerException {
+	/* unregister all previously registered providers if any */
+	SQLServerConnection.unregisterColumnEncryptionKeyStoreProviders();
         Map<String, SQLServerColumnEncryptionKeyStoreProvider> map1 = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
         map1.put(CUSTOM_AKV_PROVIDER_NAME, akvProvider);
         SQLServerConnection.registerColumnEncryptionKeyStoreProviders(map1);
@@ -240,6 +243,6 @@ public class AKV {
 
 ## See also
 
-[Azure Key vault sample version 9.2](../../connect/jdbc/azure-key-vault-sample-version-9.2.md)  
+[Azure Key vault sample version 7.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
 [Azure Key vault sample version 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
-[Azure Key vault sample version 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)  
+[Azure Key vault sample version 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md) 

@@ -10,14 +10,7 @@ ms.author: davidph
 
 Before installing a Python custom runtime, install the following:
 
-+ Install the [Cumulative Update (CU) 3 or later](../../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) for SQL Server 2019.
-
-+ Install [Python 3.7](https://www.python.org/downloads/) on the server.
-
-    The Python language extension used for the custom Python runtime currently supports Python 3.7 only. If you would like to use a different version of Python, follow the instruction in the [Python Language Extension GitHub repo](https://github.com/microsoft/sql-server-language-extensions/tree/master/language-extensions/python) to modify and rebuild the extension.
-
-    > [!IMPORTANT]
-    > During the installation of Python, check **Add Python 3.7 to PATH**.
++ [Cumulative Update (CU) 3 or later](../../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) for SQL Server 2019.
 
 ## Install Language Extensions
 
@@ -52,47 +45,53 @@ Follow the steps below to install [SQL Server Language Extensions](../../../lang
 > [!IMPORTANT]
 > If you install a new instance of SQL Server 2019 with Language Extensions, then install the [Cumulative Update (CU) 3 or later](../../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) before you continue to the next step.
 
+## Install Python
+
+The Python language extension used for the custom Python runtime currently supports Python 3.7 only. If you would like to use a different version of Python, follow the instruction in the [Python Language Extension GitHub repo](https://github.com/microsoft/sql-server-language-extensions/tree/master/language-extensions/python) to modify and rebuild the extension.
+
+1. Download [Python 3.7](https://www.python.org/downloads/) for Windows and run the Setup on the server.
+
+1. Click **Add Python 3.7 to PATH** and then click **Customize installation**.
+
+    :::image type="content" source="../media/python-install-add-to-path.png" alt-text="Python 3.7 installation - Add Python 3.7 to PATH":::
+
+1. Under **Optional Features** leave the defaults and click **Next**.
+
+1. Click **Install for all users** and take note of the installation location.
+
+    :::image type="content" source="../media/python-install-for-all-users.png" alt-text="Python 3.7 installation - Install for all users":::
+
+1. Click **Install**.
+
 ## Install pandas
 
-Install the [pandas](https://pandas.pydata.org/) package for Python from an *elevated* command prompt:
+Install the [pandas](https://pandas.pydata.org/) package for Python from an *elevated* command prompt (Run as Administrator):
 
 ```bash
 python.exe -m pip install pandas
 ```
 
-## Add environment variable
-
-Add or modify the system environment variable **PYTHONHOME**.
-
-1. In the Windows search box, type *environment* and select **Edit the system environment variables**.
-
-1. In the **Advanced** tab, select **Environment Variables**.
-
-1. Under **System variables**, select **New** to create **PYTHONHOME** to point to your Python 3.7 installation location. If PYTHONHOME already exists, select **Edit** to point it to the Python 3.7 installation location.
-
-1. Select **OK** to close all the windows.
-
-    :::image type="content" source="../media/pythonhome-env-variable.png" alt-text="PYTHONHOME environment variable.":::
-
 ## Grant access to Python folder
 
-Run the following **icacls** commands from a new *elevated* command prompt to grant **READ & EXECUTE** access to **PYTHONHOME** to **SQL Server Launchpad Service** and SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**).
+Run the following **icacls** commands from a new *elevated* command prompt to grant **READ & EXECUTE** access to the Python installation location to **SQL Server Launchpad Service** and SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**).
+
+The examples below use the Python installation location as `C:\Program Files\Python37`. If your location is different, change it in the command.
 
 1. Give permissions to **SQL Server Launchpad Service user name**.
 
     ```cmd
-    icacls "%PYTHONHOME%" /grant "NT Service\MSSQLLAUNCHPAD":(OI)(CI)RX /T
+    icacls "C:\Program Files\Python37" /grant "NT Service\MSSQLLAUNCHPAD":(OI)(CI)RX /T
     ```
 
-    For named instance, the command will be `icacls "%PYTHONHOME%" /grant "NT Service\MSSQLLAUNCHPAD$SQL01":(OI)(CI)RX /T` for an instance called **SQL01**.
+    For named instance, the command will be `icacls "C:\Program Files\Python37" /grant "NT Service\MSSQLLAUNCHPAD$SQL01":(OI)(CI)RX /T` for an instance called **SQL01**.
 
 2. Give permissions to **SID S-1-15-2-1**.
 
     ```cmd
-    icacls "%PYTHONHOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
+    icacls "C:\Program Files\Python37" /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
 
-    The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to **ALL APPLICATION PACKAGES** on an English version of Windows. Alternatively, you can use `icacls "%PYTHONHOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
+    The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to **ALL APPLICATION PACKAGES** on an English version of Windows. Alternatively, you can use `icacls "C:\Program Files\Python37" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
 
 ## Restart SQL Server Launchpad
 

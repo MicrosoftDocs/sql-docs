@@ -2,7 +2,7 @@
 title: "System Requirements (ODBC Driver for SQL Server)"
 description: "This lists the system requirements for the ODBC Driver for SQL Server on Linux and macOS operating systems."
 ms.custom: ""
-ms.date: "08/06/2020"
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -34,12 +34,13 @@ Versions 17, 13.1, and 13 of the Linux and macOS drivers are supported on the x6
 |-------------------------------|----|----|----|----|----|----|----|----|----|---|
 |Apple OS X 10.11 (El Capitan)  |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Apple macOS 10.12 (Sierra)     |    |    |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-|Apple macOS 10.13 (High Sierra)|Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
+|Apple macOS 10.13 (High Sierra)|    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Apple macOS 10.14 (Mojave)     |Yes |Yes |Yes |Yes |Yes |    |    |    |    |   |
 |Apple macOS 10.15 (Catalina)   |Yes |Yes |Yes |    |    |    |    |    |    |   |
 |Apple macOS 11.0 (Big Sur)     |Yes |    |    |    |    |    |    |    |    |   |
 |Alpine Linux 3.11              |Yes |Yes |Yes |    |    |    |    |    |    |   |
-|Debian Linux 8                 |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
+|Alpine Linux 3.12              |Yes |    |    |    |    |    |    |    |    |   |
+|Debian Linux 8                 |    |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Debian Linux 9                 |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |Debian Linux 10                |Yes |Yes |Yes |Yes |    |    |    |    |    |   |
 |Oracle Linux 7                 |Yes |    |    |    |    |    |    |    |    |   |

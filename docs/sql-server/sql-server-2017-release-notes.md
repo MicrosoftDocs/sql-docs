@@ -79,7 +79,7 @@ There are no release notes for SQL Server on Windows related to this release. Se
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 CTP 2.1 (May  2017)
 ### Documentation (CTP 2.1)
-- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is noted with **Applies To**. 
+- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql16-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is noted with **Applies To**. 
 - **Issue and customer impact:** No offline content is available for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
 
 ### SQL Server Reporting Services (CTP 2.1)
@@ -125,7 +125,7 @@ There are no release notes for SQL Server on Windows related to this release. Se
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 CTP 2.0 (April  2017)
 ### Documentation (CTP 2.0)
-- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is noted with **Applies To**. 
+- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql16-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is noted with **Applies To**. 
 - **Issue and customer impact:** No offline content is available for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
 
 ### Always On availability groups

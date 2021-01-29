@@ -75,4 +75,4 @@ GO
 
 ### See also
 
-[Cascading Referential Integrity](/sql/relational-databases/tables/primary-and-foreign-key-constraints#referential-integrity)
+[Cascading Referential Integrity](../tables/primary-and-foreign-key-constraints.md#referential-integrity)

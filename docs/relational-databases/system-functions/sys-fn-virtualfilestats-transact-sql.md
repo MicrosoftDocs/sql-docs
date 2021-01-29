@@ -50,7 +50,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|Database ID.|  
 |**FileId**|**smallint**|File ID.|  
-|**TimeStamp**|**bigint**|Database timestamp at which the data was taken. **int** in versions before [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
+|**TimeStamp**|**bigint**|Database timestamp at which the data was taken. **int** in versions before [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)]. |  
 |**NumberReads**|**bigint**|Number of reads issued on the file.|  
 |**BytesRead**|**bigint**|Number of bytes read issued on the file.|  
 |**IoStallReadMS**|**bigint**|Total amount of time, in milliseconds, that users waited for the read I/Os to complete on the file.|  

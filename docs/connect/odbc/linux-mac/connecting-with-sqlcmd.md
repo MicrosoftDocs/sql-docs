@@ -2,7 +2,7 @@
 title: "Connecting with sqlcmd"
 description: "Learn how to use the sqlcmd utility with the Microsoft ODBC Driver for SQL Server on Linux and macOS."
 ms.custom: ""
-ms.date: 06/22/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -119,6 +119,10 @@ Specify the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.
   
 - -Y *fixed_length_type_display_width* Set the `sqlcmd` scripting variable `SQLCMDMAXVARTYPEWIDTH`.
 
+- -z *password* Change password.  
+  
+- -Z *password* Change password and exit.  
+
 
 ## Available Commands
 
@@ -189,10 +193,6 @@ Run `sqlcmd` and use `c.sql` as input file:
 ```console
     sqlcmd -S<...> -P<..> -U<..> -I c.sql  
 ```
-
-- -z *password* Change password.  
-  
-- -Z *password* Change password and exit.  
 
 ## Unavailable Commands
 

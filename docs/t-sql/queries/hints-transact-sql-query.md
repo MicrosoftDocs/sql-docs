@@ -212,12 +212,12 @@ IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX
 Prevents the query from using a nonclustered memory optimized columnstore index. If the query contains the query hint to avoid the use of the columnstore index, and an index hint to use a columnstore index, the hints are in conflict and the query returns an error.  
   
 MAX_GRANT_PERCENT = <numeric_value>     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 
 The maximum memory grant size in PERCENT of configured memory limit. The query is guaranteed not to exceed this limit. The actual limit can be lower if the Resource Governor setting is lower than the value specified by this hint. Valid values are between 0.0 and 100.0.  
   
 MIN_GRANT_PERCENT = <numeric_value>        
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 
 The minimum memory grant size in PERCENT of configured memory limit. The query is guaranteed to get `MAX(required memory, min grant)` because at least required memory is needed to start a query. Valid values are between 0.0 and 100.0.  
  
@@ -239,7 +239,7 @@ Because of this error, all effects of the statement are rolled back. If the stat
 For more information, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).     
   
 NO_PERFORMANCE_SPOOL    
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
   
 Prevents a spool operator from being added to query plans (except for the plans when spool is required to guarantee valid update semantics). The spool operator may reduce performance in some scenarios. For example, the spool uses tempdb, and tempdb contention can occur if there are many concurrent queries running with the spool operations.  
   
@@ -291,7 +291,7 @@ Forces the Query Optimizer to try a plan that works for the maximum potential ro
 If such a plan isn't possible, the Query Optimizer returns an error instead of deferring error detection to query execution. Rows may contain variable-length columns; the [!INCLUDE[ssDE](../../includes/ssde-md.md)] allows for rows to be defined that have a maximum potential size beyond the ability of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to process them. Generally, despite the maximum potential size, an application stores rows that have actual sizes within the limits that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] can process. If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] comes across a row that is too long, an execution error is returned.  
  
 <a name="use_hint"></a> USE HINT ( **'**_hint\_name_**'** )    
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
  
 Provides one or more additional hints to the query processor. The additional hints are specified by a hint name **inside single quotation marks**.   
 
@@ -354,7 +354,7 @@ The following hint names are supported:
     
 *  'QUERY_PLAN_PROFILE'      
  Enables lightweight profiling for the query. When a query that contains this new hint finishes, a new Extended Event, query_plan_profile, is fired. This extended event exposes execution statistics and actual execution plan XML similar to the query_post_execution_showplan extended event but only for queries that contains the new hint.    
-   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
+   **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
 
    > [!NOTE]
    > If you enable collecting the query_post_execution_showplan extended event, this will add standard profiling infrastructure to every query that is running on the server and therefore may affect overall server performance.      

@@ -66,7 +66,7 @@ The new BCP supports Azure AD authentication, including Multi-Factor Authenticat
 
 Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 
-This component requires both [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) and [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql).
+This component requires both [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) and [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
 
 To check the BCP version execute `bcp /v` command and confirm that 15.0.2000.5 or higher is in use.
 
@@ -170,7 +170,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
 |OEM|Default code page used by the client. This is the default code page used if **-C** is not specified.|  
 |RAW|No conversion from one code page to another occurs. This is the fastest option because no conversion occurs.|  
-|*code_page*|Specific code page number; for example, 850.<br /><br /> Versions prior to version 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) do not support code page 65001 (UTF-8 encoding). Versions beginning with 13 can import UTF-8 encoding to earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|*code_page*|Specific code page number; for example, 850.<br /><br /> Versions prior to version 13 ([!INCLUDE[ssSQL15](../includes/sssql16-md.md)]) do not support code page 65001 (UTF-8 encoding). Versions beginning with 13 can import UTF-8 encoding to earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |||
   
  **-d** _**database\_name**_<a name="d"></a>   
@@ -257,7 +257,7 @@ Specifies that identity value or values in the imported data file are to be used
 
    The Azure AD Interactive authentication for Azure SQL Database and Azure Synapse Analytics, allows you to use an interactive method supporting multi-factor authentication. For more information, see [Active Directory Interactive Authentication](../ssdt/azure-active-directory.md#active-directory-interactive-authentication).
 
-   Azure AD interactive requires **bcp** [version 15.0.1000.34](#download-the-latest-version-of-bcp-utility) or later as well as [ODBC version 17.2 or later](https://aka.ms/downloadmsodbcsql).  
+   Azure AD interactive requires **bcp** [version 15.0.1000.34](#download-the-latest-version-of-bcp-utility) or later as well as [ODBC version 17.2 or later](../connect/odbc/download-odbc-driver-for-sql-server.md).  
 
    To enable interactive authentication, provide -G option with user name (-U) only, without a password.
 
@@ -427,7 +427,7 @@ Performs the bulk-copy operation using the native (database) data types of the d
   
  **120** = [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
   
- **130** = [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
+ **130** = [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]  
   
  For example, to generate data for types not supported by [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], but were introduced in later versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use the -V80 option.  
   

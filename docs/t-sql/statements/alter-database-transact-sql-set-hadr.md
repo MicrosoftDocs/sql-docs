@@ -63,7 +63,7 @@ ALTER DATABASE database_name
   
 -   The database must already have been added to the availability group on the primary replica.  
   
--   The primary replica must be active. For information about how troubleshoot an inactive primary replica, see [Troubleshooting Always On Availability Groups Configuration (SQL Server)](https://go.microsoft.com/fwlink/?LinkId=225834).  
+-   The primary replica must be active. For information about how troubleshoot an inactive primary replica, see [Troubleshooting Always On Availability Groups Configuration (SQL Server)](/previous-versions/sql/sql-server-2012/ff878308(v=sql.110)).  
   
 -   The primary replica must be online, and the secondary replica must be connected to the primary replica.  
   
@@ -143,5 +143,4 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
  [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
-  
   

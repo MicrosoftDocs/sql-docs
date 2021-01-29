@@ -33,7 +33,7 @@ monikerRange: ">=sql-server-2016"
   
 -   **Current environment:** Research your current environment to understand the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components that are being used and the clients that connect to your environment.  
   
-    -   **Client providers:** While upgrading does not require you to update the provider for each of your clients, you may choose to do so. If you are upgrading from [!INCLUDE[sql14](../../includes/sssql14-md.md)] or older, the following [!INCLUDE[sql15](../../includes/sssql15-md.md)] features either require an updated provider for each client or an updated provider to provide additional functionality:  
+    -   **Client providers:** While upgrading does not require you to update the provider for each of your clients, you may choose to do so. If you are upgrading from [!INCLUDE[sql14](../../includes/sssql14-md.md)] or older, the following [!INCLUDE[sql15](../../includes/sssql16-md.md)] features either require an updated provider for each client or an updated provider to provide additional functionality:  
   
        -   [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   

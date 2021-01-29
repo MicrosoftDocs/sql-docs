@@ -33,7 +33,7 @@ Use this DMV to see the list of all supported hints under the USE HINT notation.
 
 See [Query Hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint) for descriptions of each hint.
 
-Introduced in [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1.
+Introduced in [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1.
   
 ## See Also  
     

@@ -47,7 +47,7 @@ The following list outlines general steps that will help in troubleshooting memo
   
     -   **min memory per query**  
   
-    Notice unusual settings. Correct them as necessary. Account for increased memory requirements for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Default settings are listed in "Setting Server Configuration Options" in SQL Server Books Online.  
+    Notice unusual settings. Correct them as necessary. Account for increased memory requirements for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Default settings are listed in "Setting Server Configuration Options" in SQL Server Books Online.  
   
 4.  Observe DBCC MEMORYSTATUS output and the way it changes when you see these error messages.  
   

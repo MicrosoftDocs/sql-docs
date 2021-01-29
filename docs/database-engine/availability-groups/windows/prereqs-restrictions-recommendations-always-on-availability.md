@@ -29,7 +29,7 @@ ms.author: chadam
 >  Before you deploy [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], we strongly recommend that you read every section of this topic.  
     
 ##  <a name="DotNetHotfixes"></a> .NET Hotfixes that Support Availability Groups  
- Depending on the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] components and features you will use with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], you may need to install additional .NET hotfixes identified in the following table. The hotfixes can be installed in any order.  
+ Depending on the [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] components and features you will use with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], you may need to install additional .NET hotfixes identified in the following table. The hotfixes can be installed in any order.  
   
 |Dependent Feature|Hotfix|Link|  
 |-----------------------|------------|----------|  

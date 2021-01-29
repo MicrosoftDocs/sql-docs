@@ -222,7 +222,7 @@ This section covers how to script out [extended events](../../relational-databas
 
 The best way to get acquainted with SSMS is through hands-on practice. These *tutorial* and *how-to* articles help you with various features available within SSMS. These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
 
-* [Connect to and query an instance](../quickstarts/connect-query-sql-server.md)
+* [Connect to and query an instance](../quickstarts/ssms-connect-query-sql-server.md)
 * [Using Templates in SSMS](../template/templates-ssms.md)
 * [SSMS Configuration](ssms-configuration.md)
 * [Additional Tips and Tricks for using SSMS](ssms-tricks.md)

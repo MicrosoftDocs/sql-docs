@@ -313,7 +313,7 @@ Rows that are inserted into a heap as the result of an insert action in a MERGE 
   
 Unlike the `BULK INSERT` statement, which holds a less restrictive Bulk Update (BU) lock, `INSERT INTO … SELECT` with the `TABLOCK` hint holds an exclusive (X) lock on the table. This means that you cannot insert rows using multiple insert operations executing simultaneously. 
 
-However, starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and database compatibility level 130, a single `INSERT INTO … SELECT` statement can be executed in parallel when inserting into heaps or clustered columnstore indexes (CCI). Parallel inserts are possible when using the `TABLOCK` hint.  
+However, starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and database compatibility level 130, a single `INSERT INTO … SELECT` statement can be executed in parallel when inserting into heaps or clustered columnstore indexes (CCI). Parallel inserts are possible when using the `TABLOCK` hint.  
 
 Parallelism for the statement above has the following requirements, which are similar to the requirements for minimal logging:  
 -   The target table is an empty or non-empty heap.  
@@ -779,7 +779,7 @@ GO
 #### P. Inserting into an external table created using PolyBase  
  Export data from SQL Server to Hadoop or Azure Storage. First, create an external table that points to the destination file or directory. Then, use INSERT INTO to export data from a local SQL Server table to an external data source. The INSERT INTO statement creates the destination file or directory if it does not exist and the results of the SELECT statement are exported to the specified location in the specified file format.  For more information, see [Get started with PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
-**Applies to**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ```sql
 -- Create an external table.   

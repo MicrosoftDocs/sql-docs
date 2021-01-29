@@ -49,7 +49,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**online_scheduler_mask**|**bigint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Internal use only. Not nullable.|  
 |**processor_group**|**smallint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Internal use only. Not nullable.|  
 |**foreign_committed_kb**|**bigint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Specifies the amount of committed memory, in KB, from other memory nodes. Not nullable.|  
-|**target_kb** |**bigint** |**Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Specifies the memory goal for the memory node, in KB. |   
+|**target_kb** |**bigint** |**Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Specifies the memory goal for the memory node, in KB. |   
 |**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions

@@ -45,7 +45,7 @@ go
 alter master key drop encryption by service master key
 ```
 
-The service master key is used to encrypt the certificate that is used by the database master key. Any attempt to use the TDE-enabled database requires access to the database master key in the master database. A master key that is not encrypted by the service master key must be opened by using the [OPEN MASTER KEY (Transact-SQL)](/sql/t-sql/statements/open-master-key-transact-sql) statement together with a password on each session that requires access to the master key. Because this command cannot be run on system sessions, recovery cannot be completed on TDE-enabled databases.
+The service master key is used to encrypt the certificate that is used by the database master key. Any attempt to use the TDE-enabled database requires access to the database master key in the master database. A master key that is not encrypted by the service master key must be opened by using the [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) statement together with a password on each session that requires access to the master key. Because this command cannot be run on system sessions, recovery cannot be completed on TDE-enabled databases.
 
 ## User action
 

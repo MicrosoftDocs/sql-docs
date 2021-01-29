@@ -2,7 +2,7 @@
 title: "Best practices with Query Store"
 description: Learn best practices for using SQL Server Query Store with your workload, such as using the latest SQL Server Management Studio and Query Performance Insight.
 ms.custom: ""
-ms.date: "1/7/2021"
+ms.date: "1/29/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: performance
@@ -266,6 +266,9 @@ If you run your workload on [!INCLUDE[ssSDS](../../includes/sssds-md.md)], sign 
 - In some cases, you might enforce statistic recompilation if you see that the difference between the estimated and the actual number of rows in the execution plan is significant.
 - Rewrite problematic queries, for example, to take advantage of query parameterization or to implement more optimal logic.
 
+> [!TIP]
+> In Azure SQL Database, consider the [Query Store Hints (Preview)] feature for forcing query hints on queries without code changes. For more information and examples, see [Query Store Hints (Preview)](query-store-hints.md).
+
 ## <a name="Verify"></a> Verify that Query Store collects query data continuously
 
 Query Store can silently change the operation mode. Regularly monitor the state of Query Store to ensure that Query Store is operating, and to take action to avoid failures due to preventable causes. Execute the following query to determine the operation mode and view the most relevant parameters:
@@ -406,6 +409,9 @@ WHERE is_forced_plan = 1;
 ```
 
 For a full list of reasons, see [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). You can also use the **query_store_plan_forcing_failed** XEvent to track and troubleshoot plan forcing failures.
+
+> [!TIP]
+> In Azure SQL Database, consider the [Query Store Hints (Preview)] feature for forcing query hints on queries without code changes. For more information and examples, see [Query Store Hints (Preview)](query-store-hints.md).
 
 ## <a name="Renaming"></a> Avoid renaming databases for queries with forced plans
 

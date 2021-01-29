@@ -40,6 +40,7 @@ sp_query_store_clear_hints
  0 (success) or 1 (failure)  
   
 ## Remarks  
+ Query Store hints are created by [sys.sp_query_store_set_hints (Transact-SQL)](sys-sp-query-store-set-hints-transact-sql.md).
 
 ### Supported Query Hints
   

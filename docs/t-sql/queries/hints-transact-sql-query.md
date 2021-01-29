@@ -652,7 +652,7 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
 ```
 
-### N. Using Query Store hints 
+### N. Using Query Store hints (Preview)
 
 The [Query Store Hints (Preview)](../../relational-databases/performance/query-store-hints.md) feature in Azure SQL Database provides an easy-to-use method for shaping query plans without changing application code.
 
@@ -668,16 +668,22 @@ WHERE query_sql_text like N'%ORDER BY ListingPrice DESC%'
 GO
 ```
 
- Then apply the desired hint to query_id. The following example applies the hint to force the [legacy cardinality estimator](../../relational-databases/performance/cardinality-estimation-sql-server.md) to query_id 39, identified in Query Store:
+ The following example applies the hint to force the [legacy cardinality estimator](../../relational-databases/performance/cardinality-estimation-sql-server.md) to query_id 39, identified in Query Store:
   
 ```sql
 EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(USE HINT(''FORCE_LEGACY_CARDINALITY_ESTIMATION''))';
 ```  
 
- The following example applies multiple query hints to query_id 39, including RECOMPILE, MAXDOP 1, and the SQL 2014 query optimizer behavior:
+ The following example applies the hint to enforce a maximum memory grant size in PERCENT of configured memory limit to query_id 39, identified in Query Store:
 
 ```sql
-EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(RECOMPILE, MAXDOP 1, USE HINT(''QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_120''))';
+EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(MAX_GRANT_PERCENT=10)';
+```
+
+ The following example applies multiple query hints to query_id 39, including RECOMPILE, MAXDOP 1, and the SQL 2012 query optimizer behavior:
+
+```sql
+EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(RECOMPILE, MAXDOP 1, USE HINT(''QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_110''))';
 ```
 
 

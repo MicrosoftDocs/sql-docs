@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current"
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**query_hint_id**|**bigint**|Unique identifier of a query hint.|  
+|**query_hint_id**|bigint|Unique identifier of a query hint.|  
 |**query_id**|bigint|Unique identifier of a query in the Query Store. Foreign key to [sys.query_store_query](sys-query-store-query-transact-sql.md).query_id.)|
 |**query_hint_text**|nvarchar(MAX)|Hint definition in form of  N'OPTION (…) |
 |**last_query_hint_failure_reason**|int|Error code returned when if applying hints failed. Will include the message_id of the error message.|
@@ -37,6 +37,9 @@ monikerRange: "=azuresqldb-current"
 |**query_hint_failure_count**|bigint|Number of times that the query hint application has failed since the query hint was created or last modified.  |
 |**source**|int|Source of Query Store hint: user or system.|
 |**source_desc**|nvarchar(128)|Description of source of Query Store hint: user or system.|
+
+## Remarks
+ Query Store hints are created by [sys.sp_query_store_set_hints (Transact-SQL)](sys-sp-query-store-set-hints-transact-sql.md) and removed by [sys.sp_query_store_clear_hints](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md).
 
 ## Permissions  
  Requires the **VIEW DATABASE STATE** permission.  

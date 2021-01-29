@@ -48,6 +48,8 @@ Hints are specified in a valid T-SQL string format N'OPTION (..)'.
 * If a Query Store hint already exists for a specific query_id, the last value provided will override previously specified values for the associated query. 
 * If a query_id doesn't exist, an error will be raised. 
 
+In the cases where a hint would cause a query to fail, the hint is ignored and the latest failure details can be viewed in [sys.query_store_query_hints](../system-catalog-views/sys-query-store-query-hints-transact-sql.md).
+
 To remove hints associated with a query_id, use the system stored procedure [sys.sp_query_store_clear_hints](sys-sp-query-store-clear-hints-transact-sql.md). 
 
 ### Supported query hints (Preview)
@@ -75,14 +77,11 @@ These [query hints](../../t-sql/queries/hints-transact-sql-query.md) are support
   | USE HINT   ( '<hint_name>' [ , ...n ] )
 ```
 
-The following query hints are unsupported in Public Preview:
+The following query hints are currently unsupported:
 *    OPTIMIZE FOR(@var = val)
 *    MAXRECURSION
-
-The following query hints are unsupported:
 *    USE PLAN (instead, consider Query Store's original plan forcing capability, [sp_query_store_force_plan](sp-query-store-force-plan-transact-sql.md)).
 *    DISABLE_DEFERRED_COMPILATION_TV
-*    FORCE_DEFERRED_COMPILATION_TV
 *    DISABLE_TSQL_SCALAR_UDF_INLINING
   
 ## Permissions  
@@ -120,10 +119,10 @@ EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(USE HIN
 
 ### Apply multiple hints
 
-The following example applies multiple query hints to query_id 39, including RECOMPILE, MAXDOP 1, and the SQL 2014 query optimizer behavior:
+The following example applies multiple query hints to query_id 39, including RECOMPILE, MAXDOP 1, and the SQL 2012 query optimizer behavior:
 
 ```sql
-EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(RECOMPILE, MAXDOP 1, USE HINT(''QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_120''))';
+EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(RECOMPILE, MAXDOP 1, USE HINT(''QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_110''))';
 ```
 
 ### View Query Store hints

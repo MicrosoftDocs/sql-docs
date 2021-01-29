@@ -779,7 +779,7 @@ GO
 #### P. Inserting into an external table created using PolyBase  
  Export data from SQL Server to Hadoop or Azure Storage. First, create an external table that points to the destination file or directory. Then, use INSERT INTO to export data from a local SQL Server table to an external data source. The INSERT INTO statement creates the destination file or directory if it does not exist and the results of the SELECT statement are exported to the specified location in the specified file format.  For more information, see [Get started with PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
-**Applies to**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ```sql
 -- Create an external table.   

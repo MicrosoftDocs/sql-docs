@@ -52,7 +52,7 @@ manager: erikre
   
 -   The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configuration tools are one of the SQL Server shared features and all shared features upgrade at the same time. If during an upgrade process you select other SQL Server instances or features that require a shared feature upgrade, then the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configuration tool will also be upgraded. You may have issues if the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configuration tool is upgraded but your [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] instance is not. For more information about SQL Server shared features, see [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
--   The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint Add-in (**spPowerPivot.msi**) installs side by side with previous versions. For example the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] add-in installs to the folder `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`.  
+-   The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint Add-in (**spPowerPivot.msi**) installs side by side with previous versions. For example the add-in installs to the folder `c:\Program Files\Microsoft SQL Server\nnn\Tools\PowerPivotTools`. See [File locations](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md#shared-files-for-all-instances-of-) for information about SQL Server installation files.
   
 ##  <a name="bkmk_prereq"></a> Prerequisites  
  **Permissions**  

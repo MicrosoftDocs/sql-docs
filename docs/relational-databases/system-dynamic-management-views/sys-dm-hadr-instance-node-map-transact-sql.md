@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC"
   - "sys.sys.dm_hadr_instance_node_map dynamic management view"
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "fn_trace_gettable function"
   - "sys.fn_trace_gettable function"
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -68,9 +68,9 @@ The article demonstrates how to follow the below steps:
 
 ## Troubleshoot connectivity issues
 
-You can experience connection problems with Azure Synapse Analytics. For more information on troubleshooting connection problems, visit [Troubleshooting connectivity issues](https://docs.microsoft.com/azure/azure-sql/database/troubleshoot-common-errors-issues).
+You can experience connection problems with Azure Synapse Analytics. For more information on troubleshooting connection problems, visit [Troubleshooting connectivity issues](/azure/azure-sql/database/troubleshoot-common-errors-issues).
 
-You can prevent, troubleshoot, diagnose, and mitigate connection and transient errors that you encounter when interacting with Azure SQL Database or Azure SQL Managed Instance. For more information, visit [Troubleshoot transient connection errors](https://docs.microsoft.com/azure/azure-sql/database/troubleshoot-common-connectivity-issues).
+You can prevent, troubleshoot, diagnose, and mitigate connection and transient errors that you encounter when interacting with Azure SQL Database or Azure SQL Managed Instance. For more information, visit [Troubleshoot transient connection errors](/azure/azure-sql/database/troubleshoot-common-connectivity-issues).
 
 ## Create a database
 

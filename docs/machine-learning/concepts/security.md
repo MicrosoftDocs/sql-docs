@@ -8,7 +8,7 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 
-ms.custom: contperfq1, seo-lt-2019
+ms.custom: contperf-fy21q1, seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Security architecture for the extensibility framework in SQL Server Machine Learning Services

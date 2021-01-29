@@ -14,7 +14,7 @@ ms.author: chugu
 
 [SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) extension is available in **Azure DevOps** Marketplace.
 
-If you do not have an **Azure DevOps** organization, firstly sign up for [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops), then add **SSIS DevOps Tools** extension following [the steps](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops#add-an-extension).
+If you do not have an **Azure DevOps** organization, firstly sign up for [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops&preserve-view=true), then add **SSIS DevOps Tools** extension following [the steps](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops&preserve-view=true#add-an-extension).
 
 **SSIS DevOps Tools** includes **SSIS Build** task, **SSIS Deploy** release task, and **SSIS Catalog Configuration task**..
 
@@ -52,13 +52,13 @@ Name of the project configuration to be used for build. If not supplied, it defa
 
 #### Output path
 
-Path of a separate folder to save build results, which can be published as build artifact via [publish build artifacts task](/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops).
+Path of a separate folder to save build results, which can be published as build artifact via [publish build artifacts task](/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops&preserve-view=true).
 
 ### Limitations and known issues
 
 - SSIS Build task relies on Visual Studio and SSIS designer, which is mandatory on build agents. Thus, to run SSIS Build task in the pipeline, you must choose **vs2017-win2016** for Microsoft-hosted agents, or install Visual Studio and SSIS designer (either VS2017 + SSDT2017, or VS2019 + SSIS Projects extension) on self-hosted agents.
 
-- To build SSIS projects using any out-of-box components (including SSIS Azure feature pack, and other third-party components), those out-of-box components must be installed on the machine where the pipeline agent is running.  For Microsoft-hosted agent, user can add a [PowerShell Script task](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) or [Command Line Script task](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) to download and install the components before SSIS Build task  is executed. Below is the sample PowerShell script to install Azure Feature Pack: 
+- To build SSIS projects using any out-of-box components (including SSIS Azure feature pack, and other third-party components), those out-of-box components must be installed on the machine where the pipeline agent is running.  For Microsoft-hosted agent, user can add a [PowerShell Script task](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops&preserve-view=true) or [Command Line Script task](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops&preserve-view=true) to download and install the components before SSIS Build task  is executed. Below is the sample PowerShell script to install Azure Feature Pack: 
 
 ```powershell
 wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
@@ -166,7 +166,7 @@ Refer to details on how to [define configuration JSON](#define-configuration-jso
 
 Path of the SSIS catalog configuration JSON file. This property is only visible when selecting "File path" as configuration file source.
 
-To use [pipeline variables](/azure/devops/pipelines/process/variables) in configuration JSON file, you need to add a [File Transform task](/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) before this task to substitute configuration values with pipeline variables. For more information, see [JSON variable substitution](/azure/devops/pipelines/tasks/transforms-variable-substitution?tabs=Classic&view=azure-devops#json-variable-substitution).
+To use [pipeline variables](/azure/devops/pipelines/process/variables) in configuration JSON file, you need to add a [File Transform task](/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops&preserve-view=true) before this task to substitute configuration values with pipeline variables. For more information, see [JSON variable substitution](/azure/devops/pipelines/tasks/transforms-variable-substitution?tabs=Classic&view=azure-devops&preserve-view=true#json-variable-substitution).
 
 #### Inline configuration JSON
 

@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "activation stored procedures [Service Broker]"
   - "queues [Service Broker], creating"
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE QUEUE (Transact-SQL)
 

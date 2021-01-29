@@ -162,7 +162,7 @@ Enables this feature.
  When **False**, correlation statistics are not maintained.  
  
  **Delayed Durability**  
- Enables this feature.  
+ Enables this feature. For more information, see [Control Transaction Durability](../logs/control-transaction-durability.md).
  
  **Is Read Committed Snapshot On**  
  Enables this feature.  

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "names [SQL Server], shared drives"
   - "sys.fn_serversharedrives function"
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_servershareddrives (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

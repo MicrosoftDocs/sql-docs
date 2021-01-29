@@ -13,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "FileTables [SQL Server], catalog views"
 ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Filestream and FileTable Catalog Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

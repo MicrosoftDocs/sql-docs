@@ -52,7 +52,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
  **120** = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
- **130** = [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+ **130** = [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

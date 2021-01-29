@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "current lock time-out setting"
   - "locking [SQL Server], time-outs"
 ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # &#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

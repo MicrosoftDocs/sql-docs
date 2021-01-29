@@ -62,7 +62,7 @@ _401 AzureKeyVaultNoServerIdentity - The server identity is not correctly config
 
 Use the following cmdlet or command to ensure that an identity has been assigned to the logical SQL Server instance:
 
-- Azure PowerShell: [Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
+- Azure PowerShell: [Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer) 
 
 - Azure CLI: [az-sql-server-show](/cli/azure/sql/server#az-sql-server-show)
 
@@ -70,7 +70,7 @@ Use the following cmdlet or command to ensure that an identity has been assigned
 
 Use the following cmdlet or command to configure an Azure AD identity (an AppId) for the logical SQL Server instance:
 
-- Azure PowerShell: [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) with the `-AssignIdentity` option.
+- Azure PowerShell: [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver) with the `-AssignIdentity` option.
 
 - Azure CLI: [az sql server update](/cli/azure/sql/server#az-sql-server-update) with the `--assign_identity` option.
 
@@ -97,7 +97,7 @@ To identify the key URI and the key vault:
 
 1. Use the following cmdlet or command to get the key URI of a specific logical SQL Server instance:
 
-    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey)
 
     - Azure CLI: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key#az-sql-server-tde-key-show) 
 

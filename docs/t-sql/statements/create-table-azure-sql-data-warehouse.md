@@ -325,7 +325,7 @@ A columnstore table is a table stored in column-by-column order. The columnstore
 To change a rowstore table to a columnstore table, drop all existing indexes on the table and create a clustered columnstore index. For an example, see [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md).
 
 For more information, see these articles:
-- [Columnstore indexes versioned feature summary](/sql/relational-databases/indexes/columnstore-indexes-what-s-new)
+- [Columnstore indexes versioned feature summary](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)
 - [Indexing tables in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Columnstore Indexes Guide](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 

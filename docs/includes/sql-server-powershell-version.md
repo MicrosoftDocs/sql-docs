@@ -7,7 +7,7 @@ ms.author: maghan
 
 
 > [!NOTE]
-> There are two SQL Server PowerShell modules; [SqlServer](https://docs.microsoft.com/powershell/module/sqlserver) and [SQLPS](https://docs.microsoft.com/powershell/module/sqlps).
+> There are two SQL Server PowerShell modules; [SqlServer](/powershell/module/sqlserver) and [SQLPS](/powershell/module/sqlps).
 >
 > The **SqlServer** module is the current PowerShell module to use.
 >

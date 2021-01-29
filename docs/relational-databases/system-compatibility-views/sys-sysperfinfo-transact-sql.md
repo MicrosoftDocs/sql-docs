@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.sysperfinfo compatibility view"
   - "sysperfinfo system table"
 ms.assetid: e22a81cd-27de-4690-9443-6aad6393bd3c
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysperfinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

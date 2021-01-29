@@ -2,7 +2,7 @@
 description: "sqlsrv_field_metadata"
 title: "sqlsrv_field_metadata | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/31/2020"
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -230,6 +230,76 @@ As you can see in the JSON representation below, the data classification metadat
 {"Name":"FirstName","Type":-9,"Size":50,"Precision":null,"Scale":null,"Nullable":1,"Data Classification":[]}
 {"Name":"LastName","Type":-9,"Size":50,"Precision":null,"Scale":null,"Nullable":1,"Data Classification":[]}
 {"Name":"BirthDate","Type":91,"Size":null,"Precision":10,"Scale":0,"Nullable":1,"Data Classification":[{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""}}]}
+```
+
+## Sensitivity Rank using a predefined set of values
+
+Beginning with 5.9.0, PHP drivers added classification rank retrieval when using ODBC Driver 17.4.2 or above. The user may define rank when using [ADD SENSITIVITY CLASSIFICATION](/sql/t-sql/statements/add-sensitivity-classification-transact-sql) to classify any data column. 
+
+For example, if the user assigns `NONE` and `LOW` to BirthDate and SSN respectively, the JSON representation is shown as follows:
+
+```
+{"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":0},"rank":0}
+{"0":{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""},"rank":10},"rank":10}
+```
+
+As shown in [sensitivity classification](/sql/relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql), the numerical values of the ranks are:
+
+```
+0 for NONE
+10 for LOW
+20 for MEDIUM
+30 for HIGH
+40 for CRITICAL
+```
+
+Hence, if instead of `RANK=NONE`, the user defines `RANK=CRITICAL` when classifying the column BirthDate, the classification metadata will be:
+
+```
+  array(7) {
+    ["Name"]=>
+    string(9) "BirthDate"
+    ["Type"]=>
+    int(91)
+    ["Size"]=>
+    NULL
+    ["Precision"]=>
+    int(10)
+    ["Scale"]=>
+    int(0)
+    ["Nullable"]=>
+    int(1)
+    ["Data Classification"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["Label"]=>
+        array(2) {
+          ["name"]=>
+          string(26) "Confidential Personal Data"
+          ["id"]=>
+          string(0) ""
+        }
+        ["Information Type"]=>
+        array(2) {
+          ["name"]=>
+          string(9) "Birthdays"
+          ["id"]=>
+          string(0) ""
+        }
+        ["rank"]=>
+        int(40)
+      }
+      ["rank"]=>
+      int(40)
+    }
+  }
+```
+
+The updated JSON representation is shown below:
+
+```
+{"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":40},"rank":40}
 ```
 
 ## See Also  

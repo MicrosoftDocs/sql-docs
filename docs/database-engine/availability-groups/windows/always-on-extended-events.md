@@ -369,4 +369,4 @@ GO
 ```  
   
 ## Next steps  
- [View event session data](https://msdn.microsoft.com/library/hh710068(v=sql.110).aspx)   
+ [View event session data](/previous-versions/sql/sql-server-2012/hh710068(v=sql.110))

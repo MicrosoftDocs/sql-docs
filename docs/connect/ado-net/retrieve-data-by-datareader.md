@@ -36,9 +36,9 @@ The following example iterates through a **DataReader** object and returns two c
 
 [!code-csharp[DataWorks SqlClient.HasRows#1](~/../sqlclient/doc/samples/SqlDataReader_HasRows.cs#1)]
 
-## Closing the DataReader  
+## Close the DataReader  
 
-Always call the **Close** method when you have finished using the **DataReader** object.
+Always call the `Close()` method when you have finished using the `DataReader` object.
 
 > [!NOTE]
 > If your **Command** contains output parameters or return values, those values are not available until the **DataReader** is closed.  
@@ -65,4 +65,5 @@ While a **DataReader** is open, you can retrieve schema information about the cu
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Commands and parameters](commands-parameters.md)
+- [Retrieving database schema information](retrieving-database-schema-information.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

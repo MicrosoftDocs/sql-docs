@@ -1,11 +1,6 @@
 ---
-<<<<<<< HEAD
 description: "Azure Key Vault sample 7.0, 8.0"
 title: "Azure Key Vault sample 7.0, 8.0 | Microsoft Docs"
-=======
-description: "Azure Key Vault sample 7.0"
-title: "Azure Key Vault sample 7.0 | Microsoft Docs"
->>>>>>> 2e8c6be6ec99230dc991b9ee40711912ec06b600
 ms.custom: ""
 ms.date: "01/29/2021"
 ms.prod: sql

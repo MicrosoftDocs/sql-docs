@@ -128,4 +128,4 @@ End Function
 ```  
   
 ## See Also  
- [Knowledge Base article 117500](https://go.microsoft.com/fwlink/?LinkId=117500)
+ [Knowledge Base article 117500](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/185125)

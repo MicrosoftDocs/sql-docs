@@ -178,7 +178,7 @@ For more information, see [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/la
   
 You can use the compound assignment operator anywhere you have an assignment with an expression on the right-hand side of the operator, including variables, and a SET in an UPDATE, SELECT, and RECEIVE statement.  
   
-Don't use a variable in a SELECT statement to concatenate values (that is, to compute aggregate values). Unexpected query results may occur. Because, all expressions in the SELECT list (including assignments) aren't necessarily run exactly once for each output row. For more information, see [this KB article](https://support.microsoft.com/kb/287515).  
+Don't use a variable in a SELECT statement to concatenate values (that is, to compute aggregate values). Unexpected query results may occur. Because, all expressions in the SELECT list (including assignments) aren't necessarily run exactly once for each output row. For more information, see [this KB article](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/287515).  
   
 ## Permissions  
 Requires membership in the public role. All users can use SET **@**_local_variable_.  

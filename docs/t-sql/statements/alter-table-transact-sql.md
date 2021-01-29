@@ -1093,7 +1093,7 @@ To run the DDL statement for an online index rebuild, all active blocking transa
 
 ## Compatibility Support
 
-The ALTER TABLE statement supports only two-part (schema.object) table names. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], specifying a table name using the following formats fails at compile time with error 117.
+The ALTER TABLE statement supports only two-part (schema.object) table names. In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], specifying a table name using the following formats fails at compile time with error 117.
 
 - server.database.schema.table
 - .database.schema.table

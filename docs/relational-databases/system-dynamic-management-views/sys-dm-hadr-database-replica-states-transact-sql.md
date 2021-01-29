@@ -6,7 +6,7 @@ ms.date: "06/26/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_hadr_database_states_TSQL"
   - "sys.dm_hadr_database_states"

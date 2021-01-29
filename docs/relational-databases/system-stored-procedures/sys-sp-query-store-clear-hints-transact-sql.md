@@ -42,8 +42,6 @@ sp_query_store_clear_hints
 ## Remarks  
  Query Store hints are created by [sys.sp_query_store_set_hints (Transact-SQL)](sys-sp-query-store-set-hints-transact-sql.md).
 
-### Supported Query Hints
-  
 ## Permissions  
  Requires the **ALTER** permission on the database.
   

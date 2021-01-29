@@ -39,7 +39,7 @@ monikerRange: "=azuresqldb-current"
 |**source_desc**|nvarchar(128)|Description of source of Query Store hint: user or system.|
 
 ## Remarks
- Query Store hints are created by [sys.sp_query_store_set_hints (Transact-SQL)](sys-sp-query-store-set-hints-transact-sql.md) and removed by [sys.sp_query_store_clear_hints](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md).
+ Query Store hints are created by [sys.sp_query_store_set_hints (Transact-SQL)](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md) and removed by [sys.sp_query_store_clear_hints](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md).
 
 ## Permissions  
  Requires the **VIEW DATABASE STATE** permission.  

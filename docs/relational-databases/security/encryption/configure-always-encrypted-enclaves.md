@@ -40,9 +40,9 @@ For details, see the following articles:
 ### Set up the secure enclave and attestation in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]
 
 For details, see the following articles:
-- [Plan for Intel SGX enclaves and attestation in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-plan)
-- [Enable Intel SGX for your Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-enable-sgx)
-- [Configure Azure Attestation for your Azure SQL Database logical server](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-configure-attestation)
+- [Plan for Intel SGX enclaves and attestation in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-plan)
+- [Enable Intel SGX for your Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx)
+- [Configure Azure Attestation for your Azure SQL Database logical server](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation)
 
 ## Manage keys for Always Encrypted with secure enclaves
 See the following articles for details:

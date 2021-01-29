@@ -56,7 +56,7 @@ A few properties can only be changed by using the Launchpad's configuration file
 
 You must be an administrator on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to make changes to this file. If you edit the file, we recommend that you make a backup copy before saving changes.
 
-The following table lists the advanced settings for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], with the permissible values.
+The following table lists the advanced settings for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], with the permissible values.
 
 |**Setting name**|**Type**|**Description**|
 |----|----|----|

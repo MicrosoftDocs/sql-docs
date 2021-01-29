@@ -69,7 +69,7 @@ Omitting this option specifies kanatype-insensitive, **KS** specifies kanatype-s
 Omitting this option specifies width-insensitive, **WS** specifies width-sensitive.
 
 *VariationSelectorSensitivity*  
-- **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql17-md.md)] 
+- **Applies to**: Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 
 
 - Omitting this option specifies variation selector-insensitive, **VSS** specifies variation selector-sensitive.
 

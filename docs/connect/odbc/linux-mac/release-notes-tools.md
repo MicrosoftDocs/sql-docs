@@ -18,7 +18,7 @@ manager: kenvh
 
 This article lists and describes what's new in the versioned releases of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] SQL Server Tools on Linux and macOS.
 
-## 17.7.1.1, January 2020
+## 17.7.1.1, January 2021
 
 | Feature added | Details |
 | :------------ | :------ |

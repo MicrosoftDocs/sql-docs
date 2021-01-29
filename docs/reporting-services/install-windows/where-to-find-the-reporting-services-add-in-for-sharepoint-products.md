@@ -60,6 +60,6 @@ In the SQL Server 2016 release, the add-in can be installed as part of the SQL S
 ## Next steps
 
 [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[You are not able to browse SharePoint pages in non-default zone after uninstalling Reporting Services add-in](https://support.microsoft.com/kb/2009212)  
+[You are not able to browse SharePoint pages in non-default zone after uninstalling Reporting Services add-in](https://web.archive.org/web/20131006010947/http://support.microsoft.com:80/kb/2009212)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

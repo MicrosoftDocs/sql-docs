@@ -149,7 +149,7 @@ Follow these steps to download and register the R language extension, which is u
 
     ```sql
     CREATE EXTERNAL LANGUAGE [myR]
-    FROM (CONTENT = N'/path/to/R-lang-extension-windows-release.zip', FILE_NAME = 'libRExtension.dll');
+    FROM (CONTENT = N'C:\path\to\R-lang-extension-windows-release.zip', FILE_NAME = 'libRExtension.dll');
     GO
     ```
 

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "GetFileNamespacePath function"
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # GetFileNamespacePath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

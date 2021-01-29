@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "receiving messages"
   - "retrieving messages"
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # RECEIVE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

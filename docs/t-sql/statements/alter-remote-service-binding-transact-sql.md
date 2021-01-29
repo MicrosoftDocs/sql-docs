@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ALTER REMOTE SERVICE BINDING statement"
   - "modifying remote service bindings"
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

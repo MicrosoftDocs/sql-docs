@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DROP RESOURCE POOL"
 ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

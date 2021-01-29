@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.column_type_usages catalog view"
 ms.assetid: 1ead375e-f662-4837-903f-8947496c51e4
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.column_type_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,7 +1,7 @@
 ---
 title: CASE (Transact-SQL)
 description: "Transact-SQL reference for the CASE expression. CASE evaluates a list of conditions to return specific results."
-ms.date: "06/28/2017"
+ms.date: "01/26/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "comparing expressions"
   - "searched CASE expression"
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -44,7 +44,7 @@ Evaluates a list of conditions and returns one of multiple possible result expre
 ## Syntax  
   
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database  
+-- Syntax for SQL Server, Azure SQL Database and Azure Synapse Analytics
   
 --Simple CASE expression:   
 CASE input_expression   
@@ -60,7 +60,7 @@ END
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 CASE  
      WHEN when_expression THEN result_expression [ ...n ]   

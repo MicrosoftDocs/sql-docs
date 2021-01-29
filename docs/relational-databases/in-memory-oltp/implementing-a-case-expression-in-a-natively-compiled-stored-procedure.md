@@ -40,7 +40,7 @@ EXEC dbo.usp_SOHOnlineOrderResult
 GO  
 ``` 
 
-**Applies to:** [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] and SQL Server starting [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
+**Applies to:** [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] and SQL Server starting [!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)]
 
   CASE expressions are *not* supported in natively compiled T-SQL modules. The following sample shows a way to implement the functionality of a CASE expression in a natively compiled stored procedure.  
   

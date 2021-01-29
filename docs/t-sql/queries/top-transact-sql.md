@@ -74,7 +74,7 @@ Use TOP (or OFFSET and FETCH) instead of SET ROWCOUNT to limit the number of row
 -   As a part of a SELECT statement, the query optimizer can consider the value of *expression* in the TOP or FETCH clauses during query optimization. Because you use SET ROWCOUNT outside of a statement that runs a query, its value can't be considered in a query plan.  
   
 ## Compatibility Support  
-For backward compatibility, the parentheses are optional in SELECT statements. We recommend that you always use parentheses for TOP in SELECT statements. Doing so provides consistency with its required use in INSERT, UPDATE, MERGE, and DELETE statements. 
+For backward compatibility, the parentheses are optional in SELECT statements if the expression is an integer constant. We recommend that you always use parentheses for TOP in SELECT statements. Doing so provides consistency with its required use in INSERT, UPDATE, MERGE, and DELETE statements. 
   
 ## Interoperability  
 The TOP expression doesn't affect statements that might run because of a trigger. The **inserted** and **deleted** tables in the triggers return only the rows that are truly affected by the INSERT, UPDATE, MERGE, or DELETE statements. For example, if an INSERT TRIGGER fires as the result of an INSERT statement that used a TOP clause.  

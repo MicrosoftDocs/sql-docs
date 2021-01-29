@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.fn_get_audit_file function"
   - "fn_get_audit_file function"
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # sys.fn_get_audit_file (Transact-SQL)
@@ -123,8 +123,9 @@ fn_get_audit_file ( file_pattern,
 
   
 ## Remarks  
- If the *file_pattern* argument passed to **fn_get_audit_file** references a path or file that does not exist, or if the file is not an audit file, the **MSG_INVALID_AUDIT_FILE** error message is returned.  
-  
+- If the *file_pattern* argument passed to **fn_get_audit_file** references a path or file that does not exist, or if the file is not an audit file, the **MSG_INVALID_AUDIT_FILE** error message is returned.  
+- **fn_get_audit_file** cannot be used when the audit is created with the **APPLICATION_LOG**, **SECURITY_LOG**, or **EXTERNAL_MONITOR** options.
+
 ## Permissions
 
 - **SQL Server**: Requires the **CONTROL SERVER** permission.  

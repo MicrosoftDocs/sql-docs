@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.conversation_groups catalog view"
 ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.conversation_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

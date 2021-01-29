@@ -159,7 +159,7 @@ OBJECTPROPERTYEX ( id , property )
 |UserDataAccess|Function, View|Indicates the object accesses user data, user tables, in the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Read<br /><br /> 0 = None<br /><br /> Base data type: **int**|  
 |TableHasColumnSet|Table|Table has a column set.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> For more information, see [Use Column Sets](../../relational-databases/tables/use-column-sets.md).|  
 |Cardinality|Table (system or user-defined), view, or index|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> The number of rows in the specified object.|  
-|TableTemporalType|Table|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.<br /><br /> Specifies the type of table.<br /><br /> 0 = non-temporal table<br /><br /> 1 = history table for system-versioned table<br /><br /> 2 = system-versioned temporal table|  
+|TableTemporalType|Table|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later.<br /><br /> Specifies the type of table.<br /><br /> 0 = non-temporal table<br /><br /> 1 = history table for system-versioned table<br /><br /> 2 = system-versioned temporal table|  
   
 ## Return Types  
  **sql_variant**  

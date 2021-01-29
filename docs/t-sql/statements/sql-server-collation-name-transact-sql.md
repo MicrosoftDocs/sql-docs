@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL collations"
   - "names [SQL Server], collations"
 ms.assetid: 56483d24-add7-483d-9b96-c6fda460ddbc
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Collation Name (Transact-SQL)

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "CONTINUE keyword"
   - "WHILE keyword"
 ms.assetid: 0f1def4e-b0ca-4175-ad58-7c8c9153dab7
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # CONTINUE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

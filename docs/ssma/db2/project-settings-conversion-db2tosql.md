@@ -65,7 +65,7 @@ This setting specifies how DB2 schemas are mapped to SQL Server schemas. Two opt
   
 1.  **Schema to database:** In this mode DB2 schema 'sch1' will be mapped by default to 'dbo' SQL Server schema in SQL Server database 'sch1'.  
   
-2.  **Schema to schema:**In this mode DB2 schema 'sch1' will be mapped by default to 'sch1' SQL Server schema in default SQL Server database provided in the connection dialog.  
+2.  **Schema to schema:** In this mode DB2 schema 'sch1' will be mapped by default to 'sch1' SQL Server schema in default SQL Server database provided in the connection dialog.  
   
 When you select a conversion mode in the **Mode** box, SSMA applies the following setting:  
   

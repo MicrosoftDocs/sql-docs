@@ -46,7 +46,7 @@ HRESULT GetSensitivityClassification(
 
   
 ## Remarks  
-The OLE DB Driver for SQL Server allocates a block of memory to hold the SENSITIVITYCLASSIFICATION structure and the data referenced by this structure. When the consumer no longer requires access to the classification data, it must deallocate this memory by calling the [IMalloc::Free](https://docs.microsoft.com/windows/win32/api/objidl/nf-objidl-imalloc-free) method.  
+The OLE DB Driver for SQL Server allocates a block of memory to hold the SENSITIVITYCLASSIFICATION structure and the data referenced by this structure. When the consumer no longer requires access to the classification data, it must deallocate this memory by calling the [IMalloc::Free](/windows/win32/api/objidl/nf-objidl-imalloc-free) method.  
   
  The SENSITIVITYCLASSIFICATION structure is defined as follows:
   
@@ -147,4 +147,3 @@ typedef struct tagSENSITIVITYPROPERTY
 ## See Also  
  [ISSDataClassification](../../oledb/ole-db-interfaces/issdataclassification-ole-db.md)  
  [Rowsets](../ole-db-rowsets/rowsets.md)  
-  

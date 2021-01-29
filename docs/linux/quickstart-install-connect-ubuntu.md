@@ -17,7 +17,7 @@ ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-In this quickstart, you install SQL Server 2017 on Ubuntu 18.04. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2017 on Ubuntu 16.04/18.04. You then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
 > This tutorial requires user input and an internet connection. If you are interested in the unattended or offline installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md). For a list of supported platforms, see our [Release notes](sql-server-linux-release-notes.md).
@@ -27,7 +27,7 @@ In this quickstart, you install SQL Server 2017 on Ubuntu 18.04. You then connec
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-In this quickstart, you install SQL Server 2019 on Ubuntu 18.04. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2019 on Ubuntu 16.04/18.04. You then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
 > This tutorial requires user input and an internet connection. If you are interested in the unattended or offline installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md). For a list of supported platforms, see our [Release notes](sql-server-linux-release-notes-2019.md).
@@ -86,13 +86,29 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
    ```
 
 2. Register the Microsoft SQL Server Ubuntu repository:
-
+   
+   For Ubuntu 16.04:
+   
+   ```bash
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
+   ```
+   
+   For Ubuntu 18.04:
+   
    ```bash
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2017.list)"
    ```
 
    > [!TIP]
    > If you want to install SQL Server 2019 , you must instead register the SQL Server 2019 repository. Use the following command for SQL Server 2019 installations:
+   >
+   > For Ubuntu 16.04:
+   >
+   > ```bash
+   > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+   > ```
+   >
+   > For Ubuntu 18.04:
    >
    > ```bash
    > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
@@ -146,7 +162,15 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
    ```
 
 2. Register the Microsoft SQL Server Ubuntu repository for SQL Server 2019:
-
+   
+   For Ubuntu 16.04:
+   
+   ```bash
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+   ```
+   
+   For Ubuntu 18.04:
+   
    ```bash
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
    ```
@@ -192,7 +216,15 @@ Use the following steps to install the **mssql-tools** on Ubuntu.
    ```
 
 1. Register the Microsoft Ubuntu repository.
+   
+   For Ubuntu 16.04:
+   
+   ```bash
+   curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+   ```
 
+   For Ubuntu 18.04:
+   
    ```bash
    curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
@@ -206,10 +238,11 @@ Use the following steps to install the **mssql-tools** on Ubuntu.
 
    > [!Note] 
    > To update to the latest version of **mssql-tools** run the following commands:
-   >    ```bash
-   >   sudo apt-get update 
-   >   sudo apt-get install mssql-tools 
-   >   ```
+   >
+   > ```bash
+   > sudo apt-get update 
+   > sudo apt-get install mssql-tools 
+   > ```
 
 1. **Optional**: Add `/opt/mssql-tools/bin/` to your **PATH** environment variable in a bash shell.
 

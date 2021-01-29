@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_objects_disabled_on_compatibility_level_change catalog view"
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Spatial Data - sys.dm_db_objects_disabled_on_compatibility_level_change

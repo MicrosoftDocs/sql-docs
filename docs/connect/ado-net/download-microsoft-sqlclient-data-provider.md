@@ -1,7 +1,7 @@
 ---
 title: "Download Microsoft SqlClient Data Provider for SQL Server"
 description: "Download page for ADO.NET and Microsoft SqlClient Data Provider for SQL Server."
-ms.date: "11/19/2020"
+ms.date: "01/04/2020"
 dev_langs:
   - "csharp"
   - "vb"
@@ -20,6 +20,7 @@ ms.reviewer: v-jizho2
 The Microsoft.Data.SqlClient package is available on NuGet.org. Refer to the dependencies section from the links below to download the dependencies.
 
 ## Download stable versions of Microsoft SqlClient Data Provider for SQL Server
+ * [2.1.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/2.1.1)
  * [2.1.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/2.1.0)
  * [2.0.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient/2.0.1)
  * [2.0.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient/2.0.0)

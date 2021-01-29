@@ -31,3 +31,4 @@ The following code example inserts a new value in the database using a <xref:Mic
 
 - [Commands and parameters](commands-parameters.md)
 - [Executing a command](execute-command.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

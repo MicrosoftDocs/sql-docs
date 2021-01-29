@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.sysprocesses compatibility view"
   - "sysprocesses system table"
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysprocesses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

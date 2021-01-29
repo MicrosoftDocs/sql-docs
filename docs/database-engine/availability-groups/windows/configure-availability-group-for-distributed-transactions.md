@@ -25,9 +25,9 @@ ms.author: chadam
 In order to guarantee distributed transactions, the availability group must be configured to register databases as distributed transaction resource managers.  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 and later provides full support for distributed transactions in availability groups. In [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] versions prior to Service Pack 2, cross-database distributed transactions (i.e. transaction using databases on the same SQL Server instance) involving a database in an availability group are not supported. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] does not have this limitation. 
+>[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] Service Pack 2 and later provides full support for distributed transactions in availability groups. In [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] versions prior to Service Pack 2, cross-database distributed transactions (i.e. transaction using databases on the same SQL Server instance) involving a database in an availability group are not supported. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] does not have this limitation. 
 >
->In [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] the configuration steps are the same as in [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
+>In [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] the configuration steps are the same as in [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
 
 In a distributed transaction, client applications work with Microsoft Distributed Transaction Coordinator (MS DTC or DTC) to guarantee transactional consistency across multiple data sources. DTC is a service available on supported Windows Server-based operating systems. For a distributed transaction, DTC is the *transaction coordinator*. Normally, a SQL Server instance is the *resource manager*. When a database is in an availability group, each database needs to be its own resource manager. 
 
@@ -39,7 +39,7 @@ DTC is not involved in availability group processing unless a database is also a
 
 Before you configure an availability group to support distributed transactions, you must meet the following prerequisites:
 
-* All instances of [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] that participate in the distributed transaction must be  [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] or later.
+* All instances of [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] that participate in the distributed transaction must be  [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] or later.
 
 * Availability groups must be running on Windows Server 2016 or Windows Server 2012 R2. For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973).  
 
@@ -49,7 +49,7 @@ Configure an availability group to support distributed transactions. Set the ava
 
 
 
-You can create an availability group for distributed transactions on  [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] or later. To create an availability group for distributed transactions, include `DTC_SUPPORT = PER_DB` in the availability group definition. The following script creates an availability group for distributed transactions. 
+You can create an availability group for distributed transactions on  [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] or later. To create an availability group for distributed transactions, include `DTC_SUPPORT = PER_DB` in the availability group definition. The following script creates an availability group for distributed transactions. 
 
 ```sql
 CREATE AVAILABILITY GROUP MyAG
@@ -85,7 +85,7 @@ ALTER AVAILABILITY GROUP MyaAG
 ```
 
 >[!NOTE]
->Starting with [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 you can alter an availability group for distributed transactions. For [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] versions before Service Pack 2, you need to drop, and recreate the availability group with the `DTC_SUPPORT = PER_DB` setting. 
+>Starting with [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] Service Pack 2 you can alter an availability group for distributed transactions. For [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] versions before Service Pack 2, you need to drop, and recreate the availability group with the `DTC_SUPPORT = PER_DB` setting. 
 
 To disable distributed transactions, use the following Transact-SQL command:
 

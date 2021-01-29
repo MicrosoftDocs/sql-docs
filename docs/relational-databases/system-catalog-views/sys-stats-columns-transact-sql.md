@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.stats_columns catalog view"
 ms.assetid: 93414d07-97e9-4501-8577-f35b8d68fbe9
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.stats_columns (Transact-SQL)

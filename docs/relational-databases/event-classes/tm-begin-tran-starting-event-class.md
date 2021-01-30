@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "TM: Begin Tran Starting event class"
 ms.assetid: 34a35b0e-7bd1-480d-8cc8-00614adae84e

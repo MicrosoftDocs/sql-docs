@@ -37,7 +37,7 @@ A relational database can achieve anything a graph database can. However, a grap
 -    Your application has complex many-to-many relationships; as application evolves, new relationships are added.
 -    You need to analyze interconnected data and relationships.
 
-## Graph features introduced in [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## Graph features introduced in [!INCLUDE[sssql17](../../includes/sssql17-md.md)] 
 We are starting to add graph extensions to SQL Server, to make storing and querying graph data easier. Following features are introduced in the first release. 
 
 

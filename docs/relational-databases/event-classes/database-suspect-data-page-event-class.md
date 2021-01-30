@@ -6,7 +6,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "event notifications [SQL Server], database mirroring"
   - "suspect_pages system table"

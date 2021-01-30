@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SP:CacheMiss event class"
 ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae

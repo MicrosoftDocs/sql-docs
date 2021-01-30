@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: in-memory-oltp
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_db_xtp_checkpoint_stats"
   - "dm_db_xtp_checkpoint_stats_TSQL"
@@ -36,8 +36,8 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
   
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] is substantially different from more recent versions and is discussed lower in the topic at [SQL Server 2014](#bkmk_2014).**
   
-## [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later  
- The following table describes the columns in `sys.dm_db_xtp_checkpoint_stats`, beginning with **[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]**.  
+## [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later  
+ The following table describes the columns in `sys.dm_db_xtp_checkpoint_stats`, beginning with **[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]**.  
   
 |Column name|Type|Description|  
 |-----------------|----------|-----------------|  

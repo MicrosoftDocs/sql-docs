@@ -6,7 +6,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "event classes [SQL Server], Full Text event category"
   - "Full Text event category [SQL Server]"

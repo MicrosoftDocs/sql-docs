@@ -5,7 +5,7 @@ titleSuffix: Azure SQL Database
 ms.date: "07/28/2016"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 

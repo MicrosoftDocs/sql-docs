@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 ms.assetid: 9b5c94d6-612c-4e0f-976d-ac6ba55da3ac
 author: WilliamDAssafMSFT
 ms.author: wiassaf

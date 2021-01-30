@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "TM: Rollback Tran Starting event class"
 ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c

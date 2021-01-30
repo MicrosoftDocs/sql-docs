@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "OPEN MASTER KEY DECRYPTION BY PASSWORD"
   - "OPEN_MASTER_KEY_DECRYPTION_BY_PASSWORD_TSQL"

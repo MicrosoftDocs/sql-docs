@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "CursorImplicitConversion event class"
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad

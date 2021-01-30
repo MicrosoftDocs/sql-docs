@@ -3,7 +3,7 @@ description: "ADD SENSITIVITY CLASSIFICATION (Transact-SQL)"
 title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 author: DavidTrigano
 ms.author: datrigan
 ms.reviewer: vanto

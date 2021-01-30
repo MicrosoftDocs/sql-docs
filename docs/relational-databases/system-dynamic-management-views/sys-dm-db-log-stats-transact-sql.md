@@ -6,7 +6,7 @@ ms.date: "05/17/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_db_log_stats_TSQL"
   - "sys.dm_db_log_stats"

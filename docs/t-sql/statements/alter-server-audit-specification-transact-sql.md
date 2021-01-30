@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER SERVER AUDIT SPECIFICATION"
   - "ALTER_SERVER_AUDIT_SPECIFICATION_TSQL"

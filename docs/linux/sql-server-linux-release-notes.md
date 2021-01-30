@@ -16,7 +16,7 @@ ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 The following release notes apply to [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] running on Linux. This article is broken into sections for each release. The GA release has detailed supportability and known issues listed. Each cumulative update (CU) or general distribution release (GDR) has a link to a support article describing the CU changes as well as links to the Linux package downloads.
 
 > [!TIP]
-> These release notes are specifically for [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] releases. For more information about the new [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], see [Release notes for SQL Server 2019 preview on Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true).
+> These release notes are specifically for [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] releases. For more information about the new [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], see [Release notes for SQL Server 2019 preview on Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true).
 
 ## Supported platforms
 
@@ -598,7 +598,7 @@ The following sections describe known issues with the General Availability (GA) 
          sudo systemctl restart mssql-server
          ```
 
-- [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] databases on Windows that use In-memory OLTP can't be restored on [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] on Linux. To restore a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] database that uses in-memory OLTP, first upgrade the databases to [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] or [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] on Windows before moving them to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux via backup/restore or detach/attach.
+- [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] databases on Windows that use In-memory OLTP can't be restored on [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] on Linux. To restore a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] database that uses in-memory OLTP, first upgrade the databases to [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] or [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] on Windows before moving them to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux via backup/restore or detach/attach.
 
 - User permission **ADMINISTER BULK OPERATIONS** is not supported on Linux at this time.
 

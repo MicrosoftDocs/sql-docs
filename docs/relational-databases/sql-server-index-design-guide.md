@@ -745,7 +745,7 @@ For more information about rowgroup statuses, see [sys.dm_db_column_store_row_gr
 > Having too many small rowgroups decreases the columnstore index quality. A reorganize operation will merge smaller rowgroups, following an internal threshold policy that determines how to remove deleted rows and combine the compressed rowgroups. After a merge, the index quality should be improved. 
 
 > [!NOTE]
-> Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges COMPRESSED rowgroups from where a large number of rows has been deleted.      
+> Starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges COMPRESSED rowgroups from where a large number of rows has been deleted.      
 
 Each column has some of its values in each rowgroup. These values are called **column segments**. Each rowgroup contains one column segment for every column in the table. Each column has one column segment in each rowgroup.
 
@@ -794,15 +794,15 @@ Each partition can have more than one delta rowgroups. When the columnstore inde
 #### You can combine columnstore and rowstore indexes on the same table
 A nonclustered index contains a copy of part or all of the rows and columns in the underlying table. The index is defined as one or more columns of the table, and has an optional condition that filters the rows. 
 
-Starting with [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], you can create an updatable **nonclustered columnstore index on a rowstore table**. The columnstore index stores a copy of the data so you do need extra storage. However, the data in the columnstore index will compress to a smaller size than the rowstore table requires.  By doing this, you can run analytics on the columnstore index and transactions on the rowstore index at the same time. The column store is updated when data changes in the rowstore table, so both indexes are working against the same data.  
+Starting with [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], you can create an updatable **nonclustered columnstore index on a rowstore table**. The columnstore index stores a copy of the data so you do need extra storage. However, the data in the columnstore index will compress to a smaller size than the rowstore table requires.  By doing this, you can run analytics on the columnstore index and transactions on the rowstore index at the same time. The column store is updated when data changes in the rowstore table, so both indexes are working against the same data.  
   
-Starting with [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], you can have **one or more nonclustered rowstore indexes on a columnstore index**. By doing this, you can perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Since an non-unique value will fail to insert into the rowstore table, SQL Server cannot insert the value into the columnstore.  
+Starting with [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], you can have **one or more nonclustered rowstore indexes on a columnstore index**. By doing this, you can perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Since an non-unique value will fail to insert into the rowstore table, SQL Server cannot insert the value into the columnstore.  
  
 ### Performance considerations 
 
 -   The nonclustered columnstore index definition supports using a filtered condition. To minimize the performance impact of adding a columnstore index on an OLTP table, use a filtered condition to create a nonclustered columnstore index on only the cold data of your operational workload. 
   
--   An in-memory table can have one columnstore index. You can create it when the table is created or add it later with [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md). Before [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], only a disk-based table could have a columnstore index. 
+-   An in-memory table can have one columnstore index. You can create it when the table is created or add it later with [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md). Before [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], only a disk-based table could have a columnstore index. 
 
 For more information, refer to [Columnstore indexes - Query performance](../relational-databases/indexes/columnstore-indexes-query-performance.md).
 

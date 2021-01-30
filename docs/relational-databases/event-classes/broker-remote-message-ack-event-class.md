@@ -6,7 +6,7 @@ ms.date: "05/24/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Broker:Remote Message Ack event class"
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc

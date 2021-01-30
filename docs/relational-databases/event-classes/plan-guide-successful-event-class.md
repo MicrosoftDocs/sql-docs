@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Plan Guide Successful event class"
 ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a

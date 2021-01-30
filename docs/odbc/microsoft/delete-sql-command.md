@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "DELETE [ODBC]"
 ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7

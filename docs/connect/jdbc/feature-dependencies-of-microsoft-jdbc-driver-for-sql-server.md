@@ -2,7 +2,7 @@
 title: "Feature dependencies of the Microsoft JDBC Driver"
 description: "Learn about the dependencies that the Microsoft JDBC Driver for SQL Server has and how to meet them."
 ms.custom: ""
-ms.date: "8/24/2020"
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -21,8 +21,7 @@ This article lists libraries that the Microsoft JDBC Driver for SQL Server depen
 ## Compile time
 
  - `com.microsoft.azure:azure-keyvault` : Azure Key Vault Provider for Always Encrypted Azure Key Vault feature. (optional)
- - `com.microsoft.azure:adal4j` : Azure Active Directory Library for Java for Azure Active Directory Authentication feature and Azure Key Vault feature. (optional)
- - `com.microsoft.rest:client-runtime` : Azure Active Directory Library for Java for Azure Active Directory Authentication feature and Azure Key Vault feature. (optional)
+ - `com.microsoft.azure:azure-identity` : Azure Active Directory Library for Java for Azure Active Directory Authentication feature and Azure Key Vault feature. (optional)
  - `org.antlr:antlr4-runtime`: ANTLR 4 Runtime for useFmtOnly feature. (optional)
  - `org.osgi:org.osgi.core`: OSGi Core library for OSGi Framework support.
  - `org.osgi:org.osgi.compendium`: OSGi Compendium library for OSGi Framework support.
@@ -39,7 +38,7 @@ Specific projects that require either of the preceding features need to explicit
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.4.1.jre11</version>
+    <version>9.2.0.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -62,7 +61,7 @@ Specific projects that require either of the preceding features need to explicit
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.4.1.jre11</version>
+    <version>9.2.0.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -89,6 +88,7 @@ Specific projects that require either of the preceding features need to explicit
 
 ### Working with the Azure Key Vault provider:
 
+- JDBC driver version 9.2.0 - Dependency versions: Azure-keyvault(version 4.2.1), and Azure-identity(version 1.1.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 8.4.1 - Dependency versions: Azure-Keyvault (version 1.2.4), Adal4j (version 1.6.5), Client-Runtime-for-AutoRest (1.7.4), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
 - JDBC driver version 8.2.2 - Dependency versions: Azure-Keyvault (version 1.2.2), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.7.0), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
 - JDBC driver version 7.4.1 - Dependency versions: Azure-Keyvault (version 1.2.1), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.6.10), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
@@ -105,6 +105,7 @@ Specific projects that require either of the preceding features need to explicit
 
 ### Working with Azure Active Directory authentication:
 
+- JDBC driver version 9.2.0 - Dependency versions: Azure-identity(version 1.1.3), and their dependencies.
 - JDBC Driver version 8.4.1 - Dependency versions: Adal4j (version 1.6.5), Client-Runtime-for-AutoRest (1.7.4), and their dependencies.
 - JDBC Driver version 8.2.2 - Dependency versions: Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.7.0), and their dependencies. In this version of the driver, 'sqljdbc_auth.dll' has been renamed to 'mssql-jdbc_auth-\<version>-\<arch>.dll'.
 - JDBC Driver version 7.4.1 - Dependency versions: Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.6.10), and their dependencies

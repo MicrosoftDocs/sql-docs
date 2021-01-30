@@ -4,7 +4,7 @@ title: "ALTER DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.date: "04/16/2018"
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_DATABASE_ENCRYPTION_KEY_TSQL"
   - "ALTER DATABASE ENCRYPTION"

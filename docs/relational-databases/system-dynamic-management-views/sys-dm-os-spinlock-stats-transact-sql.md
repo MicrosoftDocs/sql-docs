@@ -9,7 +9,7 @@ ms.service: ""
 ms.suite: "sql"
 ms.technology: "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_os_spinlock_stats_TSQL"
   - "dm_os_spinlock_stats_TSQL"

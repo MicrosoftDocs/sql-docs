@@ -124,11 +124,11 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
   
 3.  On the **Database Server** page, specify the SQL Server instance. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] adds support for SQL Server Managed Instance. Set the value of **SQL Server Instance** to the host of the managed instance. For example, `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssql19-md.md)] adds support for SQL Server Managed Instance. Set the value of **SQL Server Instance** to the host of the managed instance. For example, `xxxxxx.xxxxxx.database.windows.net`.
 
 4. Select the **Authentication type** and then click **Test Connection** to confirm that you can connect to the database using the credentials for the authentication type you selected. Click **Next**.
 
-    >For [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], to connect to the managed instance, use one of the following authentication types:
+    >For [!INCLUDE[sqlv15](../includes/sssql19-md.md)], to connect to the managed instance, use one of the following authentication types:
     >
     >- Azure Active Directory Integrated Authentication: **Current User – Active Directory Integrated**
     >- SQL Server Authentication: **SQL Server Account**.

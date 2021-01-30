@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "OLEDB DataRead event class"
 ms.assetid: fb6869ba-3199-4e32-a650-60a5dda2571e

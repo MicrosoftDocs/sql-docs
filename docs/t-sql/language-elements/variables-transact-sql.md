@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f

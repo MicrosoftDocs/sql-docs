@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "RPC Output Parameter event class"
 ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02

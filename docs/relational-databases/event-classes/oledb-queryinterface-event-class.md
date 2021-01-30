@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "OLEDB QueryInterface event class"
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d

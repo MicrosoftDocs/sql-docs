@@ -191,7 +191,7 @@ ALTER AUTHORIZATION ON
 |ENDPOINT|The principal must be a login.|    
   
 ## <a name="AlterDB"></a> ALTER AUTHORIZATION for databases  
-**APPLIES TO**: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**APPLIES TO**: [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 ### For SQL Server:  
 **Requirements for the new owner:**   
 The new owner principal must be one of the following:  

@@ -216,7 +216,7 @@ See [DSN and Connection String Keywords and Attributes](../dsn-connection-string
 
 In a DSN, only the DRIVER entry is required, but to connect to a remote server, `sqlcmd` or `bcp` needs a value in the SERVER element. If the SERVER element is empty or not present in the DSN, `sqlcmd` and `bcp` will attempt to connect to the default instance on the local system.
 
-When using bcp on Windows systems, [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] and earlier require the SQL Native Client 11 driver (sqlncli11.dll) while [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and higher require the Microsoft ODBC Driver 17 for SQL Server driver (msodbcsql17.dll).  
+When using bcp on Windows systems, [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] and earlier require the SQL Native Client 11 driver (sqlncli11.dll) while [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] and higher require the Microsoft ODBC Driver 17 for SQL Server driver (msodbcsql17.dll).  
 
 If the same option is specified in both the DSN and the `sqlcmd` or `bcp` command line, the command line option overrides the value used in the DSN. For example, if the DSN has a DATABASE entry and the `sqlcmd` command line includes **-d**, the value passed to **-d** is used. If **Trusted_Connection=yes** is specified in the DSN, Kerberos authentication is used and user name (**-U**) and password (**-P**), if provided, are ignored.
 

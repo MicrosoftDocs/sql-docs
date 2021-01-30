@@ -31,7 +31,7 @@ The following table highlights the differences between PolyBase and linked serve
 
 ## What's new in PolyBase 2019? 
 
-PolyBase in [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] can now read data from a larger variety of data sources. The data from these external data sources can be store as external tables on your SQL Server. PolyBase also supports pushdown computation to these external data sources, excluding ODBC generic types.
+PolyBase in [!INCLUDE[sssql19](../../includes/sssql19-md.md)] can now read data from a larger variety of data sources. The data from these external data sources can be store as external tables on your SQL Server. PolyBase also supports pushdown computation to these external data sources, excluding ODBC generic types.
 
 ### Compatible Data Sources
 
@@ -46,7 +46,7 @@ PolyBase in [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] can now read dat
 
 ## PolyBase in Big Data Clusters vs. PolyBase in stand-alone instances
 
-The following table highlights the PolyBase features available in [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] stand-alone install and [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] big data cluster:
+The following table highlights the PolyBase features available in [!INCLUDE[sssql19](../../includes/sssql19-md.md)] stand-alone install and [!INCLUDE[sssql19](../../includes/sssql19-md.md)] big data cluster:
 
 |Feature |Big Data Cluster|Stand alone instance|
 |--------------------------|--------------------------|---------|   
@@ -59,4 +59,4 @@ The following table highlights the PolyBase features available in [!INCLUDE[sssq
 |Scale-out query execution | X| X (Windows only) |
 
 > [!NOTE]
->The table does not describe the functionality available in the latest [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] CTP. For the available features, please reference the release notes. For more information on connections using the ODBC generic connector visit our [How to guide for configuring ODBC generic types](polybase-configure-odbc-generic.md).
+>The table does not describe the functionality available in the latest [!INCLUDE[sssql19](../../includes/sssql19-md.md)] CTP. For the available features, please reference the release notes. For more information on connections using the ODBC generic connector visit our [How to guide for configuring ODBC generic types](polybase-configure-odbc-generic.md).

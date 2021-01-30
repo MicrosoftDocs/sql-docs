@@ -315,7 +315,7 @@ _SSDT for Visual Studio 2017._
 
 **SSIS:**
 
-1. Add support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+1. Add support for [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
 2. Remove support for SQL Server 2012.
 
 ### Known issues:

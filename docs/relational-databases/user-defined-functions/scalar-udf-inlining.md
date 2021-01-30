@@ -20,7 +20,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-ver15"
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article introduces Scalar UDF Inlining, a feature under the [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md) suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]).
+This article introduces Scalar UDF Inlining, a feature under the [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md) suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql19](../../includes/sssql19-md.md)]).
 
 ## T-SQL scalar User-Defined Functions
 User-Defined Functions (UDFs) that are implemented in [!INCLUDE[tsql](../../includes/tsql-md.md)] and return a single data value are referred to as T-SQL Scalar User-Defined Functions. T-SQL UDFs are an elegant way to achieve code reuse and modularity across [!INCLUDE[tsql](../../includes/tsql-md.md)] queries. Some computations (such as complex business rules) are easier to express in imperative UDF form. UDFs help in building up complex logic without requiring expertise in writing complex SQL queries. For more information about UDFs, see [Create User-defined Functions (Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).
@@ -168,13 +168,13 @@ Depending upon the complexity of the logic in the UDF, the resulting query plan 
 
 <sup>3</sup> Intrinsic functions whose results depend upon the current system time are time-dependent. An intrinsic function that may update some internal global state is an example of a function with side effects. Such functions return different results each time they are called, based on the internal state.
 
-<sup>4</sup> Restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2
+<sup>4</sup> Restriction added in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU2
 
-<sup>5</sup> Restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4
+<sup>5</sup> Restriction added in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU4
 
-<sup>6</sup> Restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5
+<sup>6</sup> Restriction added in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU5
 
-<sup>7</sup> Restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6
+<sup>7</sup> Restriction added in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU6
 
 > [!NOTE]
 > For information on the latest T-SQL Scalar UDF Inlining fixes and changes to inlining eligibility scenarios, see the Knowledge Base article: [FIX: Scalar UDF Inlining issues in SQL Server 2019](https://support.microsoft.com/help/4538581).
@@ -279,7 +279,7 @@ As described in this article, scalar UDF inlining transforms a query with scalar
 1. Views that reference inline scalar UDFs cannot be indexed. If you need to create an index on such views, disable inlining for the referenced UDFs.
 1. There might be some differences in the behavior of [Dynamic Data masking](../security/dynamic-data-masking.md) with UDF inlining. 
 In certain situations (depending upon the logic in the UDF), inlining might be more conservative w.r.t masking output columns. In scenarios where the columns referenced in a UDF are not output columns, they will not be masked. 
-1. If a UDF references built-in functions such as `SCOPE_IDENTITY()`, `@@ROWCOUNT`, or `@@ERROR`, the value returned by the built-in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2, inlining is blocked if the UDF references certain intrinsic functions (for example `@@ROWCOUNT`).
+1. If a UDF references built-in functions such as `SCOPE_IDENTITY()`, `@@ROWCOUNT`, or `@@ERROR`, the value returned by the built-in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF. Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU2, inlining is blocked if the UDF references certain intrinsic functions (for example `@@ROWCOUNT`).
 
 ## See Also
 [Create User-defined Functions (Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   

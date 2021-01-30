@@ -370,7 +370,7 @@ If you pass a single word that does not begin with `@` and that's not enclosed i
  Possible execute options. The RESULT SETS options cannot be specified in an INSERT...EXEC statement.  
  
 AT DATA_SOURCE data_source_name 
-**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+**Applies to**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] and later
   
  Specifies that *command_string* is executed against *data_source_name* and results, if any, are returned to the client. *data_source_name* must refer to an existing EXTERNAL DATA SOURCE definition in the database. Only data sources that point to SQL Server are supported. Additionally, for SQL Server big data cluster data sources that point to compute pool, data pool or storage pool are supported. Data sources are defined by using [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md).  
   
@@ -740,7 +740,7 @@ WITH RESULT SETS
   
  The following example passes a command string to an external data source pointing to a SQL Server instance. 
   
-**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+**Applies to**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] and later
   
 ```sql    
 EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE my_sql_server;  
@@ -751,7 +751,7 @@ GO
 
  The following example passes a command string to an external data source pointing to a compute pool in SQL Server Big Data Cluster. The example creates a data source `SqlComputePool` against a compute pool in SQL Server Big Data Cluster and executes a `SELECT` statement against the data source. 
   
-**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+**Applies to**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] and later
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlComputePool 
@@ -763,7 +763,7 @@ GO
 ### Q. Using EXECUTE with AT DATA_SOURCE data_source_name to query data pool in SQL Server Big Data Cluster 
  The following example passes a command string to an external data source pointing to compute pool in SQL Server big data cluster. The example creates a data source `SqlDataPool` against a data pool in SQL Server big data cluster and executes a `SELECT` statement against the data source. 
   
-**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+**Applies to**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] and later
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlDataPool 
@@ -776,7 +776,7 @@ GO
 
  The following example passes a command string to an external data source pointing to compute pool in SQL Server Big Data Cluster. The example creates a data source `SqlStoragePool` against a data pool in SQL Server Big Data Cluster and executes a `SELECT` statement against the data source. 
   
-**Applies to**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] and later
+**Applies to**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] and later
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlStoragePool

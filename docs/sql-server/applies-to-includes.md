@@ -30,8 +30,8 @@ SQL Content writers frequently need to include the name of the product and versi
 | SQL 2014 | sssql14-md.md | `[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]` | SQL Server 2014 (12.x) |
 | SQL 2016 | sssql16-md.md | `[!INCLUDE[sssql15-md](../includes/sssql16-md.md)]` | SQL Server 2016 (13.x) |
 | SQL 2017 | sssql17-md.md | `[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]` | SQL Server 2017 (14.x) |
-| SQL 2017 | sssqlv14-md.md | `[!INCLUDE[sssqlv14](../includes/sssqlv14-md.md)]` | SQL Server 2017 (14.x) |
-| SQL vNext | sssqlv15-md.md | `[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]` | SQL Server vNext |
+| SQL 2017 | sssql17-md.md | `[!INCLUDE[sssql14](../includes/sssql17-md.md)]` | SQL Server 2017 (14.x) |
+| SQL vNext | sssql19-md.md | `[!INCLUDE[sssql19-md](../includes/sssql19-md.md)]` | SQL Server vNext |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |  
 
 ## SQL Server Applies-to (non-version-specific)

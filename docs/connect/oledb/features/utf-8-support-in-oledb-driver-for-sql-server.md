@@ -6,7 +6,7 @@ ms.date: "05/25/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 ms.reviewer: v-kaywon
 ms.author: v-daenge
 author: David-Engel

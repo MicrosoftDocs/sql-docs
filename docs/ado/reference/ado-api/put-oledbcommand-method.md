@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "put_OLEDBCommand method [ADO]"
 ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d

@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Audit Add Member to DB Role event class"
 ms.assetid: a5ac46b6-765b-4424-b6c7-4d5a1b898d65

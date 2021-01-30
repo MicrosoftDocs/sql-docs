@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_AUTHORIZATION_TSQL"
   - "ALTER AUTHORIZATION"
@@ -191,7 +191,7 @@ ALTER AUTHORIZATION ON
 |ENDPOINT|The principal must be a login.|    
   
 ## <a name="AlterDB"></a> ALTER AUTHORIZATION for databases  
-**APPLIES TO**: [!INCLUDE[ssSQL15](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**APPLIES TO**: [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 ### For SQL Server:  
 **Requirements for the new owner:**   
 The new owner principal must be one of the following:  

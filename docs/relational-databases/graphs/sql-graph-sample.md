@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-This sample provides a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script to create a graph database with nodes and edges and then use the new MATCH clause to match some patterns and traverse through the graph. This sample script will work on both Azure SQL Database and [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+This sample provides a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script to create a graph database with nodes and edges and then use the new MATCH clause to match some patterns and traverse through the graph. This sample script will work on both Azure SQL Database and [!INCLUDE[sssql17](../../includes/sssql17-md.md)]  
 
 ## Sample Schema
 

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Cell object [ADO MD], members"
 ms.assetid: c45d795b-3272-4df4-a54c-7cd4fcb187fd

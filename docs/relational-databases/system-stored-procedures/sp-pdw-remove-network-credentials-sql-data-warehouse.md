@@ -7,7 +7,7 @@ ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.service: sql-data-warehouse
 ms.subservice: design
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3

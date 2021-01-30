@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "XQuery Static Type event class"
 ms.assetid: 30df7ba9-1e5f-432b-b90b-4310ef0473c0

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "enumerated constants [ADOX]"
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186

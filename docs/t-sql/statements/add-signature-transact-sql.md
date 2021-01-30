@@ -3,7 +3,7 @@ description: "ADD SIGNATURE (Transact-SQL)"
 title: ADD SIGNATURE (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ADD SIGNATURE"
   - "ADD_SIGNATURE_TSQL"

@@ -55,6 +55,8 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
   
 ## Remarks  
  This function acts like a constructor for a fully initialized **smalldatetime** value. If the arguments are not valid, then an error is thrown. If required arguments are null, then null is returned.  
+ 
+ This function is capable of being remoted to [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] servers and above. It is not remoted to servers that have a version below [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)].  
   
 ## Examples  
   

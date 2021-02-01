@@ -67,7 +67,7 @@ The counters returned are per operator per thread. The results are dynamic and d
 |segment_read_count|**int**|Number of segment read-aheads so far.|  
 |segment_skip_count|**int**|Number of segments skipped so far.| 
 |actual_read_row_count|**bigint**|Number of rows read by an operator before the residual predicate was applied.| 
-|estimated_read_row_count|**bigint**|**Applies to:** Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Number of rows estimated to be read by an operator before the residual predicate was applied.|  
+|estimated_read_row_count|**bigint**|**Applies to:** Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1. <br/>Number of rows estimated to be read by an operator before the residual predicate was applied.|  
   
 ## General Remarks  
  If the query plan node does not have any I/O, all the I/O-related counters are set to NULL.  
@@ -78,7 +78,7 @@ The counters returned are per operator per thread. The results are dynamic and d
   
 -   If there is a parallel scan, this DMV reports counters for each of the parallel threads working on the scan.
  
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the *standard query execution statistics profiling infrastructure* exists side-by-side with a *lightweight query execution statistics profiling infrastructure*. `SET STATISTICS XML ON` and `SET STATISTICS PROFILE ON` always use the *standard query execution statistics profiling infrastructure*. For `sys.dm_exec_query_profiles` to be populated, one of the query profiling infrastructures must be enabled. For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).    
+Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1, the *standard query execution statistics profiling infrastructure* exists side-by-side with a *lightweight query execution statistics profiling infrastructure*. `SET STATISTICS XML ON` and `SET STATISTICS PROFILE ON` always use the *standard query execution statistics profiling infrastructure*. For `sys.dm_exec_query_profiles` to be populated, one of the query profiling infrastructures must be enabled. For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
 > The query under investigation has to start **after** the query profiling infrastructure has been enabled, enabling it after the query started will not produce results in `sys.dm_exec_query_profiles`. For more information on how to enable the query profiling infrastructures, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).

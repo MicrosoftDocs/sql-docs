@@ -22,7 +22,7 @@ ms.date: 03/01/2017
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This topic describes how to  disconnect Object Explorer from a server at any time in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Disconnecting Object Explorer does not disconnect other [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] components such as SQL Editor.  
+This topic describes how to  disconnect Object Explorer from a server at any time in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Disconnecting Object Explorer does not disconnect other [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] components such as SQL Editor.  
 
 ## <a name="SSMSProcedure"></a>
 

@@ -197,7 +197,7 @@ FOR DATABASE_MIRRORING (
  Optionally, you can use the ALGORITHM argument to specify the form of encryption used by the endpoint, as follows:  
   
  **AES**  
- Specifies that the endpoint must use the AES algorithm. This is the default in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later.  
+ Specifies that the endpoint must use the AES algorithm. This is the default in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.  
   
  RC4  
  Specifies that the endpoint must use the RC4 algorithm. This is the default through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  

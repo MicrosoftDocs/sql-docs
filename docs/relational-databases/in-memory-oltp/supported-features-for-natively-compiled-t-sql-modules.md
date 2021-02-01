@@ -28,8 +28,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 The following query constructs are supported:  
 
 CASE expression: CASE can be used in any statement or clause that allows a valid expression.
-   - **Applies to:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-    Beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], CASE statements are now supported for natively compiled T-SQL modules.
+   - **Applies to:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)].  
+    Beginning with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], CASE statements are now supported for natively compiled T-SQL modules.
 
 SELECT clause:  
 
@@ -170,8 +170,8 @@ The following DML statements are supported.
 -   Bitwise operators ~, &, |, and ^  
 
 -   APPLY operator
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the APPLY operator is supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].  
+      Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the APPLY operator is supported in natively compiled modules.
 
 ##  <a name="bfncsp"></a> Built-in Functions in Natively Compiled Modules  
  The following functions are supported in constraints on memory-optimized tables and in natively compiled T-SQL modules.  
@@ -181,8 +181,8 @@ The following DML statements are supported.
 -   Date functions: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME, and YEAR.  
 
 -   String functions: LEN, LTRIM, RTRIM, and SUBSTRING.  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the following built-in functions are also supported: TRIM, TRANSLATE, and CONCAT_WS.  
+    - **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].  
+      Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the following built-in functions are also supported: TRIM, TRANSLATE, and CONCAT_WS.  
 
 -   Identity functions: SCOPE_IDENTITY  
 
@@ -191,8 +191,8 @@ The following DML statements are supported.
 -   Uniqueidentifier functions: NEWID and NEWSEQUENTIALID  
 
 -   JSON functions  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the JSON functions are supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].  
+      Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the JSON functions are supported in natively compiled modules.
 
 -   Error functions: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, and ERROR_STATE  
 

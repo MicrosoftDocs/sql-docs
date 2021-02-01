@@ -35,8 +35,8 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||
   
  For more information, see [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
-##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later  
- The following table describes the columns for `sys.dm_db_xtp_checkpoint_files`, beginning with **[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]**.  
+##  <a name="bkmk_2016"></a> [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later  
+ The following table describes the columns for `sys.dm_db_xtp_checkpoint_files`, beginning with **[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]**.  
   
 |Column name|Type|Description|  
 |-----------------|----------|-----------------|  

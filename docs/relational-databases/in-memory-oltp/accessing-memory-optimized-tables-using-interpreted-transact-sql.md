@@ -19,7 +19,7 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||
   
 Interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] refers to [!INCLUDE[tsql](../../includes/tsql-md.md)] batches or stored procedures other than a natively compiled stored procedure. Interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] access to memory-optimized tables is referred to as interop access.  
 
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], queries in interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] can scan memory-optimized tables in parallel, instead of just in serial mode.
+Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], queries in interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] can scan memory-optimized tables in parallel, instead of just in serial mode.
 
 Memory-optimized tables can also be accessed using a natively compiled stored procedure. Natively compiled stored procedures are recommended for performance-critical OLTP operations.  
   

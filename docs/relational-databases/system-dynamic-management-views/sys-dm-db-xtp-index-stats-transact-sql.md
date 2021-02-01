@@ -33,7 +33,7 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|ID of the object to which this index belongs.|  
-|xtp_object_id|**bigint**|Internal ID corresponding to the current version of the object.<br /><br /> Note: Applies to [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].|  
+|xtp_object_id|**bigint**|Internal ID corresponding to the current version of the object.<br /><br /> Note: Applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].|  
 |index_id|**bigint**|ID of the index. The index_id is unique only within the object.|  
 |scans_started|**bigint**|Number of In-Memory OLTP index scans performed. Every select, insert, update, or delete requires an index scan.|  
 |scans_retries|**bigint**|Number of index scans that needed to be retried,|  

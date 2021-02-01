@@ -31,11 +31,11 @@ ms.author: chadam
 
    * **EXTERNAL**
       
-      Use when the availability group is hosted on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is managed by an external cluster technology for high availability and disaster recovery, for example Pacemaker on Linux. Applies to [!INCLUDE[sssqlv14](../../../includes/sssqlv14-md.md)] and later.
+      Use when the availability group is hosted on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is managed by an external cluster technology for high availability and disaster recovery, for example Pacemaker on Linux. Applies to [!INCLUDE[sssql14](../../../includes/sssql17-md.md)] and later.
 
    * **NONE**
       
-      Use when the availability group is hosted on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is not managed by a cluster technology for read scale and load balancing. Applies to [!INCLUDE[sssqlv14](../../../includes/sssqlv14-md.md)] and later. 
+      Use when the availability group is hosted on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is not managed by a cluster technology for read scale and load balancing. Applies to [!INCLUDE[sssql14](../../../includes/sssql17-md.md)] and later. 
  
    **Database level health detection**
    Check this box to enable database level health detection (DB_FAILOVER) option for the availability group. The database health detection notices when a database is no longer in the online status, when something goes wrong and will trigger the automatic failover of the availability group. See 

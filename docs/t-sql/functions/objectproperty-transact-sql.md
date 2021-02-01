@@ -153,7 +153,7 @@ OBJECTPROPERTY ( id , property )
 |TableUpdateTrigger|Table|Table has an UPDATE trigger.<br /><br /> > 1 = ID of first trigger with the specified type.|  
 |TableUpdateTriggerCount|Table|The table has the specified number of UPDATE triggers.<br /><br /> > 0 = The number of UPDATE triggers.|  
 |TableHasColumnSet|Table|Table has a column set.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> For more information, see [Use Column Sets](../../relational-databases/tables/use-column-sets.md).|  
-|TableTemporalType|Table|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] and later.<br /><br /> Specifies the type of table.<br /><br /> 0 = non-temporal table<br /><br /> 1 = history table for system-versioned table<br /><br /> 2 = system-versioned temporal table|  
+|TableTemporalType|Table|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.<br /><br /> Specifies the type of table.<br /><br /> 0 = non-temporal table<br /><br /> 1 = history table for system-versioned table<br /><br /> 2 = system-versioned temporal table|  
   
 ## Return Types  
  **int**  

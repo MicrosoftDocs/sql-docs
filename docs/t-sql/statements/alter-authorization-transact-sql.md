@@ -115,6 +115,7 @@ database_name
  | [ schema_name. ] object_name
 }
 ```
+
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -132,7 +133,7 @@ database_name
 |AVAILABILITY GROUP |**APPLIES TO**: SQL Server 2012 and later.|
 |CERTIFICATE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |CONTRACT|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
-|DATABASE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information,see [ALTER AUTHORIZATION FOR databases](#AlterDB) section below.|
+|DATABASE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. For more information,see [ALTER AUTHORIZATION for databases](#alter-authorization-for-databases).|
 |ENDPOINT|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|
 |FULLTEXT CATALOG|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |FULLTEXT STOPLIST|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
@@ -148,10 +149,10 @@ database_name
 |TYPE|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |XML SCHEMA COLLECTION|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 
- *entity_name-
+*entity_name*
  Is the name of the entity.
 
- *principal_name- | SCHEMA OWNER
+ *principal_name* | SCHEMA OWNER
  Name of the security principal that will own the entity. Database objects must be owned by a database principal; a database user or role. Server objects (such as databases) must be owned by a server principal (a login). Specify **SCHEMA OWNER** as the *principal_name- to indicate that the object should be owned by the principal that owns the schema of the object.
 
 ## Remarks
@@ -193,7 +194,7 @@ The following table lists special cases, exceptions, and conditions that apply t
 |CERTIFICATE or ASYMMETRIC KEY|Cannot transfer ownership of these entities to a role or group.|
 |ENDPOINT|The principal must be a login.|
 
-## <a name="AlterDB"></a> ALTER AUTHORIZATION for databases
+## ALTER AUTHORIZATION for databases
 
 ### For SQL Server
 

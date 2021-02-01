@@ -540,7 +540,7 @@ The following table compares the behavior of some string functions and string op
 ## <a name="GB18030"></a> GB18030 support    
 GB18030 is a separate standard that's used in the People's Republic of China for encoding Chinese characters. In GB18030, characters can be 1, 2, or 4 bytes in length. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides support for GB18030-encoded characters by recognizing them when they enter the server from a client-side application and converting and storing them natively as Unicode characters. After they're stored in the server, they're treated as Unicode characters in any subsequent operations. 
 
-You can use any Chinese collation, preferably the latest 100 version. All \_100 level collations support linguistic sorting with GB18030 characters. If the data includes supplementary characters (surrogate pairs), you can use the SC collations that are available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to improve searching and sorting.    
+You can use any Chinese collation, preferably the latest 100 version. All \_100 level collations support linguistic sorting with GB18030 characters. If the data includes supplementary characters (surrogate pairs), you can use the SC collations that are available in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] to improve searching and sorting.    
 
 > [!NOTE]
 > Ensure that your client tools, such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], use the Dengxian font to correctly display strings that contain GB18030-encoded characters.

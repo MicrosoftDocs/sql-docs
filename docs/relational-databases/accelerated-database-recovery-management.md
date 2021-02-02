@@ -119,7 +119,7 @@ PVS is considered large if it's significantly larger than baseline or if it is c
 
 Use the sample query below as a troubleshooting aid:
 
-```tsql
+```sql
 SELECT pvss.persistent_version_store_size_kb / 1024. / 1024 AS persistent_version_store_size_gb,
        pvss.online_index_version_store_size_kb / 1024. / 1024 AS online_index_version_store_size_gb,
        pvss.current_aborted_transaction_count,

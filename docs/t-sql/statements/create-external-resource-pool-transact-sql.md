@@ -6,7 +6,7 @@ ms.date: "08/06/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: machine-learning-services
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE EXTERNAL RESOURCE POOL"
   - "CREATE EXTERNAL_RESOURCE_POOL_TSQL"

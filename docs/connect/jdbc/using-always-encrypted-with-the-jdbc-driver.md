@@ -2,7 +2,7 @@
 title: "Using Always Encrypted with the JDBC driver"
 description: "Learn how to use Always Encrypted in your Java application with the JDBC driver for SQL Server to encrypt sensitive data on the server."
 ms.custom: ""
-ms.date: "08/24/2020"
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -121,9 +121,9 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >
 >  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
->  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+>  [microsoft-authentication-library-for-java libraries](https://github.com/AzureAD/microsoft-authentication-library-for-java)
 >
-> For an example of how to include these dependencies in a Maven project, see [Download ADAL4J And AKV Dependencies with Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
+> For an example of how to include these dependencies in a Maven project, see [Download MSAL4J And AKV Dependencies with Apache Maven](https://github.com/microsoft/mssql-jdbc/wiki/Download-MSAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
 ### Using Azure Key Vault authentication with Managed Identities
 

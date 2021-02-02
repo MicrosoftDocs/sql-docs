@@ -24,7 +24,7 @@ For information on how to run queries using secure enclaves, see [Run Transact-S
 To run statements using a secure enclave, you need to enable Always Encrypted and specify an attestation URL for the database connection, as explained [Prerequisites for running statements using secure enclaves](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves). However, your connection will fail if you specify an attestation URL but your database in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] or your target [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance doesn't support secure enclaves, or is incorrectly configured.
 
 - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], check that your database uses the [DC-series](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series) hardware configuration. For more information, see [Enable Intel SGX for your Azure SQL database](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx).
-- If you're using [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], check secure enclave is correctly configured for your instance. For more information, see [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md).
+- If you're using [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], check secure enclave is correctly configured for your instance. For more information, see [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md).
 
 ## Attestation errors when using Microsoft Azure Attestation
 
@@ -56,7 +56,7 @@ Errors can occur at various steps of the above workflow due to misconfigurations
 ## Attestation errors when using Host Guardian Service
 
 > [!NOTE]
-> This section applies only to [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
+> This section applies only to [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
 
 Before a client driver submits a T-SQL statement to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] for execution, the driver triggers the following enclave attestation workflow using Host Guardian Service (HGS).
 

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "03/20/2018"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 apitype: "COM"
 f1_keywords: 
   - "NextRecordset"

@@ -6,7 +6,7 @@ ms.date: "12/04/2015"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "RPC:Completed event class"
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba

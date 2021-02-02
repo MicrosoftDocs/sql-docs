@@ -24,7 +24,7 @@ ms.date: 03/01/2017
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This topic describes how to organize the servers in Registered Servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by creating server groups, and placing the servers in the server groups. You can create server groups in Registered Servers at any time, or you can create server groups when you register servers.  
+This topic describes how to organize the servers in Registered Servers in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by creating server groups, and placing the servers in the server groups. You can create server groups in Registered Servers at any time, or you can create server groups when you register servers.  
 
 ## <a name="SSMSProcedure"></a>
 

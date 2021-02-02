@@ -6,6 +6,8 @@
   href: ast-install.md
 - name: Getting Started
   href: ast-getting-started.md
+- name: Generating Reports
+  href: ast-reports.md
 - name: IBM Netezza
   href: netezza/toc.yml
 - name: SQL Server

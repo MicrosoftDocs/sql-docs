@@ -42,78 +42,78 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ```syntaxsql
 -- Syntax for SQL Server
 ALTER AUTHORIZATION
-ON [ <class_type>:: ] entity_name
-TO { principal_name | SCHEMA OWNER }
-[;]
+    ON [ <class_type>:: ] entity_name
+    TO { principal_name | SCHEMA OWNER }
+    [;]
 
 <class_type> ::=
- {
-  OBJECT | ASSEMBLY | ASYMMETRIC KEY | AVAILABILITY GROUP | CERTIFICATE
-| CONTRACT | TYPE | DATABASE | ENDPOINT | FULLTEXT CATALOG
-| FULLTEXT STOPLIST | MESSAGE TYPE | REMOTE SERVICE BINDING
-| ROLE | ROUTE | SCHEMA | SEARCH PROPERTY LIST | SERVER ROLE
-| SERVICE | SYMMETRIC KEY | XML SCHEMA COLLECTION
- }
+     {
+      OBJECT | ASSEMBLY | ASYMMETRIC KEY | AVAILABILITY GROUP | CERTIFICATE
+    | CONTRACT | TYPE | DATABASE | ENDPOINT | FULLTEXT CATALOG
+    | FULLTEXT STOPLIST | MESSAGE TYPE | REMOTE SERVICE BINDING
+    | ROLE | ROUTE | SCHEMA | SEARCH PROPERTY LIST | SERVER ROLE
+    | SERVICE | SYMMETRIC KEY | XML SCHEMA COLLECTION
+     }
 ```
 
 ```syntaxsql
 -- Syntax for SQL Database
 
 ALTER AUTHORIZATION
-ON [ <class_type>:: ] entity_name
-TO { principal_name | SCHEMA OWNER }
-[;]
+    ON [ <class_type>:: ] entity_name
+    TO { principal_name | SCHEMA OWNER }
+    [;]
 
 <class_type> ::=
- {
-OBJECT | ASSEMBLY | ASYMMETRIC KEY | CERTIFICATE
- | TYPE | DATABASE | FULLTEXT CATALOG
- | FULLTEXT STOPLIST
- | ROLE | SCHEMA | SEARCH PROPERTY LIST
- | SYMMETRIC KEY | XML SCHEMA COLLECTION
- }
+     {
+    OBJECT | ASSEMBLY | ASYMMETRIC KEY | CERTIFICATE
+     | TYPE | DATABASE | FULLTEXT CATALOG
+     | FULLTEXT STOPLIST
+     | ROLE | SCHEMA | SEARCH PROPERTY LIST
+     | SYMMETRIC KEY | XML SCHEMA COLLECTION
+     }
 ```
 
 ```syntaxsql
 -- Syntax for Azure Synapse Analytics
 
 ALTER AUTHORIZATION ON
- [ <class_type> :: ] <entity_name>
- TO { principal_name | SCHEMA OWNER }
-[;]
+     [ <class_type> :: ] <entity_name>
+     TO { principal_name | SCHEMA OWNER }
+    [;]
 
-<class_type> ::= {
-SCHEMA
- | OBJECT
-}
+    <class_type> ::= {
+    SCHEMA
+     | OBJECT
+    }
 
-<entity_name> ::=
-{
-schema_name
- | [ schema_name. ] object_name
-}
+    <entity_name> ::=
+    {
+    schema_name
+     | [ schema_name. ] object_name
+    }
 ```
 
 ```syntaxsql
 -- Syntax for Parallel Data Warehouse
 
 ALTER AUTHORIZATION ON
- [ <class_type> :: ] <entity_name>
- TO { principal_name | SCHEMA OWNER }
-[;]
+     [ <class_type> :: ] <entity_name>
+     TO { principal_name | SCHEMA OWNER }
+    [;]
 
 <class_type> ::= {
-DATABASE
- | SCHEMA
- | OBJECT
-}
+    DATABASE
+     | SCHEMA
+     | OBJECT
+    }
 
 <entity_name> ::=
-{
-database_name
- | schema_name
- | [ schema_name. ] object_name
-}
+    {
+    database_name
+     | schema_name
+     | [ schema_name. ] object_name
+    }
 ```
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
@@ -150,10 +150,10 @@ database_name
 |XML SCHEMA COLLECTION|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 
 *entity_name*
- Is the name of the entity.
+   Is the name of the entity.
 
- *principal_name* | SCHEMA OWNER
- Name of the security principal that will own the entity. Database objects must be owned by a database principal; a database user or role. Server objects (such as databases) must be owned by a server principal (a login). Specify **SCHEMA OWNER** as the *principal_name- to indicate that the object should be owned by the principal that owns the schema of the object.
+*principal_name* | SCHEMA OWNER
+   Name of the security principal that will own the entity. Database objects must be owned by a database principal; a database user or role. Server objects (such as databases) must be owned by a server principal (a login). Specify **SCHEMA OWNER** as the *principal_name- to indicate that the object should be owned by the principal that owns the schema of the object.
 
 ## Remarks
 
@@ -262,21 +262,21 @@ Instead of using Azure AD users as individual owners of the database, use an Azu
 
 1. Login to SQL Server as Azure AD admin, and change the owner of the database to a disabled SQL Server authentication login. For example, from the user database execute:
 
-  ```sql
-  ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;
-  ```
+   ```sql
+   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;
+   ```
 
 1. Create an Azure AD group that should own the database and add it as a user to the user database. For example:
 
-  ```sql
-  CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;
-  ```
+   ```sql
+   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;
+   ```
 
 1. In the user database add the user representing the Azure AD group, to the **db_owner** fixed database role. For example:
 
-  ```sql
-  ALTER ROLE db_owner ADD MEMBER mydbogroup;
-  ```
+   ```sql
+   ALTER ROLE db_owner ADD MEMBER mydbogroup;
+   ```
 
 Now the `mydbogroup` members can centrally manage the database as members of the **db_owner** role.
 
@@ -361,6 +361,7 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
 ```
 
 ### F. Changing the owner of a database
+
  **APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
 
  The following example change the owner of the `Parts` database to the login `MichikoOsada`.
@@ -370,14 +371,14 @@ ALTER AUTHORIZATION ON DATABASE::Parts TO MichikoOsada;
 ```
 
 ### G. Changing the owner of a SQL Database to an Azure AD User
+
 In the following example, an Azure Active Directory administrator for SQL Server in an organization with an active directory named `cqclinic.onmicrosoft.com`, can change the current ownership of a database `targetDB` and make an AAD user  `richel@cqclinic.onmicorsoft.com` the new database owner using the following command:
 
 ```sql
 ALTER AUTHORIZATION ON database::targetDB TO [rachel@cqclinic.onmicrosoft.com];
 ```
 
- Note that for Azure AD users the brackets around the user name must be used.
-
+Azure AD requires brackets `[]` around the user name.
 
 ## See Also
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)

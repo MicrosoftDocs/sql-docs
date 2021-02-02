@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Audit Database Scope GDR event class"
 ms.assetid: 1641a38a-ef24-46ce-b2f4-bf732858c771

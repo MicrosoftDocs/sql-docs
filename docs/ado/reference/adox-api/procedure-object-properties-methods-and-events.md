@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Procedure object [ADOX], members"
 ms.assetid: 522f6447-ba9e-45f5-a185-37b312e126d4

@@ -169,7 +169,7 @@ Offline environment updates can be applied by [installing the latest version](#d
 
 ## Supported SQL offerings
 
-- This version of Azure Data Studio works with all [supported versions of SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-MD.md)]](https://support.microsoft.com/lifecycle?C2=1044) and provides support for working with the latest cloud features in Azure SQL Database and Azure Synapse Analytics. Azure Data Studio also provides preview support for Azure SQL Managed Instance.
+- This version of Azure Data Studio works with all [supported versions of [!INCLUDE [sssql14-md](../includes/sssql14-md.md)] - [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) and provides support for working with the latest cloud features in Azure SQL Database and Azure Synapse Analytics. Azure Data Studio also provides preview support for Azure SQL Managed Instance.
 
 ## Move user settings
 

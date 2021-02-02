@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "RPC:Starting event class"
 ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8

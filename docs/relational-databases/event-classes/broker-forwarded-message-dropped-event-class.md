@@ -6,7 +6,7 @@ ms.date: "05/24/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Broker:Forwarded Message Dropped event class"
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8

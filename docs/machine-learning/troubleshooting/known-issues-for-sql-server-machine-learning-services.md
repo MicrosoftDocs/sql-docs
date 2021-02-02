@@ -93,7 +93,7 @@ SQL Server 2016 requires that the R libraries on the client exactly match the R 
 
 The version of R that is installed with SQL Server R Services is updated whenever a SQL Server service release is installed. To ensure that you always have the most up-to-date versions of R components, be sure to install all service packs.
 
-To ensure compatibility with Microsoft R Client 9.0.0, install the updates that are described in this [support article](https://support.microsoft.com/kb/3210262).
+To ensure compatibility with Microsoft R Client 9.0.0, install the updates that are described in this [support article](https://web.archive.org/web/20190415073655/https://support.microsoft.com/en-us/help/3210262/fix-version-of-r-client-is-incompatible-with-the-microsoft-r-server-ve).
 
 To avoid problems with R packages, you can also upgrade the version of the R libraries that are installed on the server, by changing your servicing agreement to use the Modern Lifecycle Support policy, as described in [the next section](#bkmk_sqlbindr). When you do so, the version of R that's installed with SQL Server is updated on the same schedule used for updates of machine Learning Server (formerly Microsoft R Server).
 
@@ -121,7 +121,7 @@ This issue is fixed in the release version. Also, this limitation does not apply
 
 **Applies to:** SQL Server 2017 with Python
 
-### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when you connect to an older version of SQL Server R Services from a client by using [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when you connect to an older version of SQL Server R Services from a client by using [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]
 
 When you run R code in a SQL Server 2016 compute context, you might see the following error:
 
@@ -129,7 +129,7 @@ When you run R code in a SQL Server 2016 compute context, you might see the foll
 
 This message is displayed if either of the following two statements is true,
 
-+ You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
++ You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
 + You installed Microsoft R Server by using the [separate Windows installer](/machine-learning-server/install/r-server-install-windows).
 
 To ensure that the server and client use the same version you might need to use _binding_, supported for Microsoft R Server 9.0 and later releases, to upgrade the R components in SQL Server 2016 instances. To determine if support for upgrades is available for your version of R Services, see [Upgrade an instance of R Services using SqlBindR.exe](../install/upgrade-r-and-python.md).
@@ -384,7 +384,7 @@ For more information, see [R libraries and data types](../r/r-libraries-and-data
 
 Passing unicode data in varchar columns from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to R/Python can result in string corruption. This is due to the encoding for these unicode string in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collations   may not match with the default UTF-8 encoding used in R/Python. 
 
-To send any non-ASCII string data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to R/Python, use UTF-8 encoding (available in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) or use nvarchar type for the same.
+To send any non-ASCII string data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to R/Python, use UTF-8 encoding (available in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) or use nvarchar type for the same.
 
 ### 13. Only one value of type `raw` can be returned from `sp_execute_external_script`
 

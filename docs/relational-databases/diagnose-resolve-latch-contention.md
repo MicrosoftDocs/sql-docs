@@ -53,7 +53,7 @@ Latches are acquired in one of five different modes, which relate to level of ac
 
 * **KP** -- Keep latch, ensures that the referenced structure cannot be destroyed. Used when a thread wants to look at a buffer structure. Because the KP latch is compatible with all latches except for the destroy (DT) latch, the KP latch is considered to be "lightweight", meaning that the impact on performance when using it is minimal. Since the KP latch is incompatible with the DT latch, it will prevent any other thread from destroying the referenced structure. For example, a KP latch will prevent the structure it references from being destroyed by the lazywriter process. For more information about how the lazywriter process is used with SQL Server buffer page management, see [Writing Pages](./writing-pages.md).
 
-* **SH** -- Shared latch, required to read a page structure. 
+* **SH** -- Shared latch, required to read the referenced structure (e.g. read a data page). Multiple threads can simultaneously access a resource for reading under a shared latch.
 * **UP** -- Update latch, is compatible with SH (Shared latch) and KP, but no others and therefore will not allow an EX latch to write to the referenced structure. 
 * **EX** -- Exclusive latch, blocks other threads from writing to or reading from the referenced structure. One example of use would be to modify contents of a page for torn page protection. 
 * **DT** -- Destroy latch, must be acquired before destroying contents of referenced structure. For example, a DT latch must be acquired by the lazywriter process to free up a clean page before adding it to the list of free buffers available for use by other threads.

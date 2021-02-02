@@ -6,7 +6,7 @@ ms.date: "06/10/2016"
 ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 ms.assetid: 48519fd9-c7c2-434b-848d-ccbf41133fdd
 author: WilliamDAssafMSFT
 ms.author: wiassaf

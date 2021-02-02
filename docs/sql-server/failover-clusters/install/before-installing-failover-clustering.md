@@ -38,7 +38,7 @@ ms.author: chadam
   
 -   Install prerequisite software. Before running Setup to install or upgrade to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], install the following prerequisites to reduce installation time. You can install prerequisite software on each failover cluster node and then restart nodes once before running Setup.  
   
-    -   Windows PowerShell is no longer installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup. Windows PowerShell is a prerequisite for installing [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] components and [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. If Windows PowerShell is not present on your computer, you can enable it by following the instructions on the [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) page.  
+    -   Windows PowerShell is no longer installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup. Windows PowerShell is a prerequisite for installing [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] components and [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. If Windows PowerShell is not present on your computer, you can enable it by following the instructions on the [Windows Management Framework](/powershell/scripting/windows-powershell/wmf/overview) page.  
   
     -   .NET Framework 3.5 SP1 is no longer installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup, but may be required while installing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on older Windows operating systems. For more information, see [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Release Notes](/previous-versions/sql/sql-server-15/dn169381(v=sql.15)).  
   
@@ -139,7 +139,7 @@ ms.author: chadam
   
 -   Review content in [Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
--   To enable Kerberos authentication with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [How to use Kerberos authentication in SQL Server](https://support.microsoft.com/kb/319723) in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base.  
+-   To enable Kerberos authentication with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [How to use Kerberos authentication in SQL Server](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/319723) in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base.  
 
 -   SQL Server failover cluster instance (FCI) requires the cluster nodes to be domain joined. The following configurations are **not supported**: 
     *	SQL FCI on workgroup clusters. 

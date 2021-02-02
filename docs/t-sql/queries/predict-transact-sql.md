@@ -8,7 +8,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: machine-learning
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "PREDICT"
   - "PREDICT_TSQL"

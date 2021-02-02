@@ -45,7 +45,7 @@ The `__$command_id` column was column was introduced in a cumulative update in v
 ## Captured Column Data Types  
  Captured columns included in this table have the same data type and value as their corresponding source columns with the following exceptions:  
   
--   **Timestamp** columns are defined as **binary(8)**.  
+-   **Rowversion** columns are defined as **binary(8)**.  
   
 -   **Identity** columns are defined as either **int** or **bigint**.  
   

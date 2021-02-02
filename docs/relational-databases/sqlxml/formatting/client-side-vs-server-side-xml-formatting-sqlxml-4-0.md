@@ -39,10 +39,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  You can execute this template in application code and an error is returned, because client-side XML formatting does not support formatting of multiple rowsets. If you specify the queries in two separate **\<sql:query>** blocks, you will get the desired results.  
   
-## timestamp Maps Differently in Client- vs. Server-side Formatting  
- In server-side XML formatting, the database column of **timestamp** type maps to the i8 XDR type (when the XMLDATA option is specified in the query).  
+## rowversion Maps Differently in Client- vs. Server-side Formatting  
+ In server-side XML formatting, the database column of **rowversion** type maps to the i8 XDR type (when the XMLDATA option is specified in the query).  
   
- In client-side XML formatting, the database column of **timestamp** type maps to either the **uri** or the **bin.base64** XDR type (depending on whether the binary base64 option is specified in the query). The **bin.base64** XDR type is useful if you use the updategram and bulkload features, because this type is converted to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **timestamp** type. This way, the insert, update, or delete operation succeeds.  
+ In client-side XML formatting, the database column of **rowversion** type maps to either the **uri** or the **bin.base64** XDR type (depending on whether the binary base64 option is specified in the query). The **bin.base64** XDR type is useful if you use the updategram and bulkload features, because this type is converted to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **rowversion** type. This way, the insert, update, or delete operation succeeds.  
   
 ## Deep VARIANTs Are Used in Server-side Formatting  
  In server-side XML formatting, the deep types of a VARIANT type are used. If you use client-side XML formatting, the variants are converted to Unicode string, and the subtypes of VARIANT are not used.  

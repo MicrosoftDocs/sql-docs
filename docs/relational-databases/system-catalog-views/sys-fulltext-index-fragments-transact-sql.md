@@ -36,7 +36,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |table_id|**int**|Object ID of the table that contains the full-text index fragment.|  
 |fragment_object_id|**int**|Object ID of the internal table associated with the fragment.|  
 |fragment_id|**int**|Logical ID of the full-text index fragment. This is unique across all fragments for this table.|  
-|timestamp|**timestamp**|Timestamp associated with the fragment creation. The timestamps of more recent fragments are larger than the timestamps of older fragments.|  
+|timestamp|**rowversion**|Rowversion associated with the fragment creation. The rowversion of more recent fragments are larger than the rowversions of older fragments.|  
 |data_size|**int**|Logical size of the fragment in bytes.|  
 |row_count|**int**|Number of individual rows in the fragment.|  
 |status|**int**|Status of the fragment, one of:<br /><br /> 0 = Newly created and not yet used<br /><br /> 1 = Being used for insert during fulltext index population or merge<br /><br /> 4 = Closed. Ready for query<br /><br /> 6 = Being used for merge input and ready for query<br /><br /> 8 = Marked for deletion. Will not be used for query and merge source.<br /><br /> A status of 4 or 6 means that the fragment is part of the logical full-text index and can be queried; that is, it is a *queryable* fragment.|  

@@ -34,7 +34,7 @@ ms.author: mikeray
   
 -   System-defined constraints are enforced if the INSERT statement sets the **name**, **path_locator**, **parent_path_locator**, or file attributes.  
   
--   Updates can be made to the FILESTREAM data in the **file_stream** column without affecting any of the other columns, including the timestamps.  
+-   Updates can be made to the FILESTREAM data in the **file_stream** column without affecting any of the other columns, including the rowversions.  
   
 ##  <a name="BasicsDelete"></a> DELETE Operations on FileTables  
  The following considerations apply to **DELETE** operations on FileTables:  

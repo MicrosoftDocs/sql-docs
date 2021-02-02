@@ -130,7 +130,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 -   If the publication is in a peer-to-peer topology, the system must be quiesced before making schema changes. For more information, see [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
--   Adding a timestamp column to a table and mapping the timestamp to binary(8) causes the article to be reinitialized for all active subscriptions.  
+-   Adding a rowversion column to a table and mapping the rowversion to binary(8) causes the article to be reinitialized for all active subscriptions.  
   
 ### Merge Replication  
   

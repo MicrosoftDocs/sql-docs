@@ -86,7 +86,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  Is the name of the identity column at the Publisher. *identity_col* is **sysname**, with a default of NULL.  
   
 `[ @ts_col = ] 'timestamp_col'`
- Is the name of the **timestamp** column at the Publisher. *timestamp_col* is **sysname**, with a default of NULL.  
+ Is the name of the **rowversion** column at the Publisher. *timestamp_col* is **sysname**, with a default of NULL.  
   
 `[ @filter_clause = ] 'filter_clause'`
  Is a restriction (WHERE) clause that defines a horizontal filter. When entering the restriction clause, omit the keyword WHERE. *filter_clause*is **nvarchar(4000)**, with a default of NULL.  

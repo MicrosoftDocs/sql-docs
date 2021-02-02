@@ -49,6 +49,7 @@ The following table lists the SQL Server data type (the data type being retrieve
 |nvarchar(MAX)|Stream<sup>2</sup>|8-bit character<sup>1</sup>|  
 |ntext<sup>6</sup>|Stream<sup>2</sup>|8-bit character<sup>1</sup>|  
 |real|Float|8-bit character<sup>1</sup>|  
+|rowversion|String|8-bit character<sup>1</sup>|  
 |smalldatetime|Datetime|8-bit character<sup>1</sup>|  
 |smallint|Integer|8-bit character<sup>1</sup>|  
 |smallmoney|String|8-bit character<sup>1</sup>|  

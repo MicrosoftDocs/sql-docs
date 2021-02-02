@@ -77,7 +77,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**decimal**|41*|  
 |**numeric**|41*|  
 |**uniqueidentifier**|37|  
-|**timestamp**|17|  
+|**rowversion**|17|  
+|**timestamp**|17|
 |**varchar(max)**|0|  
 |**varbinary(max)**|0|  
 |**nvarchar(max)**|0|  
@@ -111,6 +112,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**decimal**|*|  
 |**numeric**|*|  
 |**uniqueidentifier**|16|  
+|**rowversion**|8|  
 |**timestamp**|8|  
   
  \*For more information about the **decimal** and **numeric** data types, see [decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  

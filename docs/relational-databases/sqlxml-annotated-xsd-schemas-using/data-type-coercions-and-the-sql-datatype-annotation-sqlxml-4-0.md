@@ -68,13 +68,14 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**nvarchar**|**string**|  
 |**numeric**|**decimal**|  
 |**real**|**float**|  
+|**rowversion**|**hexBinary**|  
 |**smalldatetime**|**dateTime**|  
 |**smallint**|**short**|  
 |**smallmoney**|**decimal**|  
 |**sql_variant**|**string**|  
 |**sysname**|**string**|  
 |**text**|**string**|  
-|**timestamp**|**dateTime**|  
+|**timestamp**|**hexBinary**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
 |**varchar**|**string**|  

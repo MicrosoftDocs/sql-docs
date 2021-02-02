@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |*Attribute*|Specifies|  
 |-----------------|---------------|  
 |SQL_ATTR_CURSOR_TYPE|Cursor type of forward-only, static, dynamic, or keyset-driven|  
-|SQL_ATTR_CONCURRENCY|Concurrency control option of read-only, locking, optimistic using timestamps, or optimistic using values|  
+|SQL_ATTR_CONCURRENCY|Concurrency control option of read-only, locking, optimistic using rowversions, or optimistic using values|  
 |SQL_ATTR_ROW_ARRAY_SIZE|Number of rows retrieved in each fetch|  
 |SQL_ATTR_CURSOR_SENSITIVITY|Cursor that does or does not show updates to cursor rows made by other connections|  
 |SQL_ATTR_CURSOR_SCROLLABLE|Cursor that can be scrolled forward and backward|  

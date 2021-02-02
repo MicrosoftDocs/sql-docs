@@ -202,7 +202,7 @@ As a workaround, **CAST** the column or value to a supported type in [!INCLUDE[t
   
 + **cursor**  
   
-+ **timestamp**  
++ **rowversion**  
   
 + **datetime2**, **datetimeoffset**, **time**  
   

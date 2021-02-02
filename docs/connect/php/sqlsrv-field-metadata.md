@@ -67,6 +67,7 @@ The following table gives more information on the keys for each sub-array (see t
 |numeric|SQL_NUMERIC (2)|1/38|0/precision value||  
 |nvarchar|SQL_WVARCHAR (-9)|||0 < *n* < 4000 <sup>1</sup>|  
 |real|SQL_REAL (7)|4/4|||  
+|rowversion|SQL_BINARY (-2)|||8 bytes|  
 |smalldatetime|SQL_TYPE_TIMESTAMP (93)|16/16|0/0||  
 |smallint|SQL_SMALLINT (5)|||2 bytes|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  

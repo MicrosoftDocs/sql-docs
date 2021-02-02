@@ -73,7 +73,7 @@ ms.author: "mathoma"
   
 -   Updates at the Subscriber are propagated to the Publisher even if a subscription is expired or is inactive. Ensure that any such subscriptions are either dropped or reinitialized.  
   
--   If **TIMESTAMP** or **IDENTITY** columns are used, and they are replicated as their base data types, values in these columns should not be updated at the Subscriber.  
+-   If **ROWVERSION** or **IDENTITY** columns are used, and they are replicated as their base data types, values in these columns should not be updated at the Subscriber.  
   
 -   Subscribers cannot update or insert **text**, **ntext** or **image** values because it is not possible to read from the inserted or deleted tables inside the replication change-tracking triggers. Similarly, Subscribers cannot update or insert **text** or **image** values using **WRITETEXT** or **UPDATETEXT** because the data is overwritten by the Publisher. Instead, you could partition the **text** and **image** columns into a separate table and modify the two tables within a transaction.  
   

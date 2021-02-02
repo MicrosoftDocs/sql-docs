@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |SQL_NONSCROLLABLE and SQL_INSENSITIVE|Default result set (forward-only, read-only)|  
 |SQL_NONSCROLLABLE and SQL_UNSPECIFIED|Default result set (forward-only, read-only)|  
   
- Version-based optimistic concurrency requires a **timestamp** column in the underlying table. If version-based optimistic concurrency control is requested on a table that does not have a **timestamp** column, the server uses values-based optimistic concurrency.  
+ Version-based optimistic concurrency requires a **rowversion** column in the underlying table. If version-based optimistic concurrency control is requested on a table that does not have a **rowversion** column, the server uses values-based optimistic concurrency.  
   
 ## Scrollability  
  When SQL_ATTR_CURSOR_SCROLLABLE is set to SQL_SCROLLABLE, the cursor supports all the different values for the *FetchOrientation* parameter of [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). When SQL_ATTR_CURSOR_SCROLLABLE is set to SQL_NONSCROLLABLE, the cursor only supports a *FetchOrientation* value of SQL_FETCH_NEXT.  

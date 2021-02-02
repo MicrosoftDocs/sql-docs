@@ -76,7 +76,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x01**|Generates the object creation (CREATE TABLE, CREATE PROCEDURE, and so on).|  
 ||**0x02**|Generates the stored procedures that propagate changes for the article, if defined.|  
 ||**0x04**|Identity columns are scripted using the IDENTITY property.|  
-||**0x08**|Replicate **timestamp** columns. If not set, **timestamp** columns are replicated as **binary**.|  
+||**0x08**|Replicate **rowversion** columns. If not set, **rowversion** columns are replicated as **binary**.|  
 ||**0x10**|Generates a corresponding clustered index.|  
 ||**0x20**|Converts user-defined data types (UDT) to base data types at the Subscriber. This option cannot be used when there is a CHECK or DEFAULT constraint on a UDT column, if a UDT column is part of the primary key, or if a computed column references a UDT column. Not supported for Oracle Publishers.|  
 ||**0x40**|Generates corresponding nonclustered indexes.|  

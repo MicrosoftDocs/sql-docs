@@ -42,7 +42,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |retry_hints|**int**|Type of retry needed for the batch:<br /><br /> 0 = No retry<br /><br /> 1 = Multi thread retry<br /><br /> 2 = Single thread retry<br /><br /> 3 = Single and multi thread retry<br /><br /> 5 = Multi thread final retry<br /><br /> 6 = Single thread final retry<br /><br /> 7 = Single and multi thread final retry|  
 |retry_hints_description|**nvarchar(120)**|Description for the type of retry needed:<br /><br /> NO RETRY<br /><br /> MULTI THREAD RETRY<br /><br /> SINGLE THREAD RETRY<br /><br /> SINGLE AND MULTI THREAD RETRY<br /><br /> MULTI THREAD FINAL RETRY<br /><br /> SINGLE THREAD FINAL RETRY<br /><br /> SINGLE AND MULTI THREAD FINAL RETRY|  
 |doc_failed|**bigint**|Number of documents that failed in the batch|  
-|batch_timestamp|**timestamp**|The timestamp value obtained when the batch was created|  
+|batch_timestamp|**rowversion**|The rowversion value obtained when the batch was created|  
   
 ## Permissions  
 

@@ -27,7 +27,7 @@ ms.author: v-daenge
   
 -   If DBPROP_COL_AUTOINCREMENT is VARIANT_TRUE, DBPROP_COL_NULLABLE must be VARIANT_FALSE.  
   
--   If the column is defined by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **timestamp** data type, DBPROP_COL_NULLABLE must be VARIANT_FALSE.  
+-   If the column is defined by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **rowversion** data type, DBPROP_COL_NULLABLE must be VARIANT_FALSE.  
   
 -   For any other column definition, DBPROP_COL_NULLABLE must be VARIANT_TRUE.  
   

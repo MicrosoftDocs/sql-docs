@@ -26,7 +26,7 @@ ms.author: "jroth"
  Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extends the functionality of table-valued functions by allowing you to define a table-valued function in any managed language. Data is returned from a table-valued function through an **IEnumerable** or **IEnumerator** object.  
   
 > [!NOTE]  
->  For table-valued functions, the columns of the return table type cannot include timestamp columns or non-Unicode string data type columns (such as **char**, **varchar**, and **text**). The NOT NULL constraint is not supported.  
+>  For table-valued functions, the columns of the return table type cannot include rowversion columns or non-Unicode string data type columns (such as **char**, **varchar**, and **text**). The NOT NULL constraint is not supported.  
   
  For more information on CLR Table-Valued functions, check out MSSQLTips' [Introduction to SQL Server CLR table valued functions!](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   

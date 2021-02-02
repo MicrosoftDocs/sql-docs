@@ -124,6 +124,7 @@ ms.author: "mathoma"
 |**nvarchar(1-4000)**|VARCHAR(1-4000)|  
 |**nvarchar(max)**|VARCHAR(0)*|  
 |**real**|REAL|  
+|**rowversion**|CHAR(8) FOR BIT DATA|  
 |**smalldatetime**|TIMESTAMP|  
 |**smallint**|SMALLINT|  
 |**smallmoney**|DECIMAL(10,4)|  

@@ -60,7 +60,7 @@ The following table shows the changes in data types and values when data from [!
 
 Of the categories of data types supported by the [SQL Server type system](../../t-sql/data-types/data-types-transact-sql.md), the following types are likely to pose problems when passed to R code:
 
-+ Data types listed in the **Other** section of the SQL type system article: **cursor**, **timestamp**, **hierarchyid**, **uniqueidentifier**, **sql_variant**, **xml**, **table**
++ Data types listed in the **Other** section of the SQL type system article: **cursor**, **rowversion**, **hierarchyid**, **uniqueidentifier**, **sql_variant**, **xml**, **table**
 + All spatial types
 + **image**
 

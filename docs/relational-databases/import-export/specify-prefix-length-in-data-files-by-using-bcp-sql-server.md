@@ -72,6 +72,7 @@ ms.custom: "seo-lt-2019"
 |**smallmoney**|0|1|0|1|  
 |**bit**|0|1|0|1|  
 |**uniqueidentifier**|1|1|0|1|  
+|**rowversion**|1|1|1|1|  
 |**timestamp**|1|1|1|1|  
 |**varchar(max)**|8|8|8|8|  
 |**varbinary(max)**|8|8|8|8|  

@@ -103,6 +103,7 @@ ms.custom: "seo-lt-2019"
 |**bit**|SQLBIT|  
 |**uniqueidentifier**|SQLUNIQUEID|  
 |**sql_variant**|SQLVARIANT|  
+|**rowversion**|SQLBINARY|  
 |**timestamp**|SQLBINARY|  
 |UDT (a user-defined data type)|SQLUDT|  
   

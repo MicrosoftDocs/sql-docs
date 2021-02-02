@@ -34,7 +34,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 A full-text index supports the following types of population:
 -   **Full** population
 -   Automatic or manual population based on **change tracking**
--   Incremental population based on a **timestamp**
+-   Incremental population based on a **rowversion**
   
 ## Full population  
  During a full population, index entries are built for all the rows of a table or indexed view. A full population of a full-text index, builds index entries for all the rows of the base table or indexed view.  
@@ -76,7 +76,7 @@ ALTER FULLTEXT INDEX ON Production.Document
  Optionally, you can use change tracking to maintain a full-text index after its initial full population. There is a small overhead associated with change tracking because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains a table in which it tracks changes to the base table since the last population. When you use change tracking, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains a record of the rows in the base table or indexed view that have been modified by updates, deletes, or inserts. Data changes made through WRITETEXT and UPDATETEXT are not reflected in the full-text index, and are not picked up with change tracking.  
   
 > [!NOTE]  
->  For tables containing a **timestamp** column, you can use incremental population instead of change tracking.  
+>  For tables containing a **rowversion** column, you can use incremental population instead of change tracking.  
   
  When you enable change tracking during index creation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fully populates the new full-text index immediately after it is created. Thereafter, changes are tracked and propagated to the full-text index.
 
@@ -148,17 +148,17 @@ There are two types of change tracking:
 -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING OFF  
    
   
-## Incremental population based on a timestamp  
+## Incremental population based on a rowversion  
  An incremental population is an alternative mechanism for manually populating a full-text index. If a table experiences a high volume of inserts, using incremental population can be more efficient that using manual population.
  
  You can run an incremental population for a full-text index that has CHANGE_TRACKING set to MANUAL or OFF. 
   
- The requirement for incremental population is that the indexed table must have a column of the **timestamp** data type. If a **timestamp** column does not exist, incremental population cannot be performed.   
+ The requirement for incremental population is that the indexed table must have a column of the **rowversion** data type. If a **rowversion** column does not exist, incremental population cannot be performed.   
 
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the **timestamp** column to identify rows that have changed since the last population. The incremental population then updates the full-text index for rows added, deleted, or modified after the last population, or while the last population was in progress. At the end of a population, the Full-Text Engine records a new **timestamp** value. This value is the largest **timestamp** value that SQL Gatherer has found. This value will be used when the next incremental population starts.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the **rowversion** column to identify rows that have changed since the last population. The incremental population then updates the full-text index for rows added, deleted, or modified after the last population, or while the last population was in progress. At the end of a population, the Full-Text Engine records a new **rowversion** value. This value is the largest **rowversion** value that SQL Gatherer has found. This value will be used when the next incremental population starts.  
  
 In some cases, the request for an incremental population results in a full population.
--   A request for incremental population on a table without a **timestamp** column results in a full population operation.
+-   A request for incremental population on a table without a **rowversion** column results in a full population operation.
 -   If the first population on a full-text index is an incremental population, it indexes all rows, making it equivalent to a full population. 
 -   If any metadata that affects the full-text index for the table has changed since the last population, incremental population requests are implemented as full populations. This includes metadata changes caused by altering any column, index, or full-text index definitions. 
 
@@ -177,7 +177,7 @@ In some cases, the request for an incremental population results in a full popul
     Right-click the table on which the full-text index is defined, select **Full-Text index**, and on the **Full-Text index** context menu, click **Properties**. This opens the **Full-text index Properties** dialog box.  
 
     > [!IMPORTANT]  
-    >  If the base table or view does not contain a column of the **timestamp** data type, incremental population is not possible.
+    >  If the base table or view does not contain a column of the **rowversion** data type, incremental population is not possible.
       
 1.  In the **Select a page** pane, select **Schedules**.  
   

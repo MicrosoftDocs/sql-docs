@@ -64,7 +64,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**varbinary**|No|No effect.|  
 |**image**|No|No effect.|  
 |**cursor**|No|No effect.|  
-|**timestamp** / **rowversion**|Yes|Uses the integer data representation by using 8 bytes. There is a timestamp counter that is maintained for each database, and its value starts from 0. This can be compressed like any other integer value.|  
+|**timestamp** / **rowversion**|Yes|Uses the integer data representation by using 8 bytes. There is a rowversion counter that is maintained for each database, and its value starts from 0. This can be compressed like any other integer value.|  
 |**sql_variant**|No|No effect.|  
 |**uniqueidentifier**|No|No effect.|  
 |**table**|No|No effect.|  

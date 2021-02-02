@@ -120,6 +120,7 @@ ms.author: "mathoma"
 |**nvarchar(1001-4000)**|NCLOB|  
 |**nvarchar(max)**|NCLOB|  
 |**real**|REAL|  
+|**rowversion**|RAW(8)|  
 |**smalldatetime**|DATE|  
 |**smallint**|NUMBER(5,0)|  
 |**smallmoney**|NUMBER(10,4)|  

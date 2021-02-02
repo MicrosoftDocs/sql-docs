@@ -62,15 +62,15 @@ da.Fill(datTable);
   
 -   Provide custom **InsertCommand**, **UpdateCommand** and **DeleteCommand** objects for a **SqlDataAdapter** object.  
   
--   Use the command builder (**System.Data.SqlClient.SqlCommandBuilder**) to create automatically the INSERT, UPDATE, and DELETE commands for you. In order to have conflict detection, add a **timestamp** column (alias **rowversion**) to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table that contains the UDT. The **timestamp** data type allows you to version-stamp the rows in a table, and is guaranteed to be unique within a database. When a value in the table is changed, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically updates the eight-byte binary number for the row affected by the change.  
+-   Use the command builder (**System.Data.SqlClient.SqlCommandBuilder**) to create automatically the INSERT, UPDATE, and DELETE commands for you. In order to have conflict detection, add a **rowversion** column to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table that contains the UDT. The **rowversion** data type allows you to version-stamp the rows in a table, and is guaranteed to be unique within a database. When a value in the table is changed, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically updates the eight-byte binary number for the row affected by the change.  
   
- Note that the **SqlCommandBuilder** does not consider the UDT for conflict detection unless there is a **timestamp** column in the underlying table. UDTs may or may not be comparable, so they are not included in the WHERE clause when the "compare original values" option is used to generate a command.  
+ Note that the **SqlCommandBuilder** does not consider the UDT for conflict detection unless there is a **rowversion** column in the underlying table. UDTs may or may not be comparable, so they are not included in the WHERE clause when the "compare original values" option is used to generate a command.  
   
 ### Example  
- The following example requires the creation of a second table containing the **Point** UDT column as well as a **timestamp** column. Both tables are used to illustrate how to create custom command objects to update data, and how to update using a **timestamp** column. Run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to create the second table and populate it with sample data.  
+ The following example requires the creation of a second table containing the **Point** UDT column as well as a **rowversion** column. Both tables are used to illustrate how to create custom command objects to update data, and how to update using a **rowversion** column. Run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to create the second table and populate it with sample data.  
   
 ```  
-CREATE TABLE dbo.Points_ts (id int PRIMARY KEY, p Point, ts timestamp);  
+CREATE TABLE dbo.Points_ts (id int PRIMARY KEY, p Point, ts rowversion);  
   
 INSERT INTO dbo.Points_ts (id, p) VALUES (1, CONVERT(Point, '1,3'));  
 INSERT INTO dbo.Points_ts (id, p) VALUES (2, CONVERT(Point, '2,4'));  
@@ -80,9 +80,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  The following ADO.NET example has two methods:  
   
--   **UserProvidedCommands**, which demonstrates how to supply **InsertCommand**, **UpdateCommand**, and **DeleteCommand** objects for updating the **Point** UDT in the **Points** table (which does not contain a **timestamp** column).  
+-   **UserProvidedCommands**, which demonstrates how to supply **InsertCommand**, **UpdateCommand**, and **DeleteCommand** objects for updating the **Point** UDT in the **Points** table (which does not contain a **rowversion** column).  
   
--   **CommandBuilder**, which demonstrates how to use a **SqlCommandBuilder** in the **Points_ts** table that contains the **timestamp** column.  
+-   **CommandBuilder**, which demonstrates how to use a **SqlCommandBuilder** in the **Points_ts** table that contains the **rowversion** column.  
   
 ```vb  
 Imports System  

@@ -63,7 +63,7 @@ To maximize the performance of your full-text indexes, implement the following b
   
 -   Before you perform a full population on a large multi-CPU computer, we recommend that you temporarily limit the size of the buffer pool by setting the **max server memory** value to leave enough memory for the fdhost.exe process and operating system use. For more information, see "Estimating the Memory Requirements of the Filter Daemon Host Process (fdhost.exe)," later in this topic.
 
--   If you use incremental population based on a timestamp column, build a secondary index on the **timestamp** column to improve the performance of incremental population.  
+-   If you use incremental population based on a rowversion column, build a secondary index on the **rowversion** column to improve the performance of incremental population.  
   
 ##  <a name="full"></a> Troubleshoot the performance of full populations  
 ### Review the full-text crawl logs

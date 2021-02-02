@@ -39,7 +39,7 @@ Before you can create a full-text index, you have to have a full-text catalog. T
 The process of creating and maintaining a full-text index is called a *population* (also known as a *crawl*). There are three types of full-text index population:
 -   Full population
 -   Population based on change tracking
--   Incremental population based on a timestamp.
+-   Incremental population based on a rowversion.
 
 For more info, see [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md).
 

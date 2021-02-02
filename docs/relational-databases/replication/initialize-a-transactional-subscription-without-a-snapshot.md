@@ -61,7 +61,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 -   Indexed-views at the restored database have to be converted to tables if they are published as log-based indexed-view-to-table articles  
   
--   Subscribed timestamp columns at the restored database must be converted to **binary(8)** columns: copy the content of the tables containing timestamp columns to new tables with matching schemas except having **binary(8)** columns in place of the timestamp columns, drop the original tables, and rename the new tables with the same names as the original tables.  
+-   Subscribed rowversion columns at the restored database must be converted to **binary(8)** columns: copy the content of the tables containing rowversion columns to new tables with matching schemas except having **binary(8)** columns in place of the rowversion columns, drop the original tables, and rename the new tables with the same names as the original tables.  
   
 ## Initializing a subscription with an alternative method  
  It is possible to initialize a subscription using any method that allows you to copy the publication database schema and data to the Subscriber, such as [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. When you use an alternative method to initialize the Subscriber, replication support objects are copied to the Subscriber.  

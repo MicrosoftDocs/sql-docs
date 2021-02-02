@@ -41,7 +41,7 @@ ms.reviewer: mikeray
 |**status**|**int**|Status of this Population. Note: some of the states are transient. One of the following:<br /><br /> 3 = Starting<br /><br /> 5 = Processing normally<br /><br /> 7 = Has stopped processing<br /><br /> 11 = Population aborted|  
 |**status_description**|**nvarchar(120)**|Description of status of the population.|  
 |**start_time**|**datetime**|Time that the population started.|  
-|**incremental_timestamp**|**timestamp**|Represents the starting timestamp for a full population. For all other population types this value is the last committed checkpoint representing the progress of the populations.|  
+|**incremental_timestamp**|**rowversion**|Represents the starting rowversion for a full population. For all other population types this value is the last committed checkpoint representing the progress of the populations.|  
   
 ## General Remarks  
  For more information, see [Manage and Monitor Semantic Search](../../relational-databases/search/manage-and-monitor-semantic-search.md).  

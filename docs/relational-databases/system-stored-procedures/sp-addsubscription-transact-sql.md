@@ -301,7 +301,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 -   Have an article configured to use parameterized statements.  
   
- In addition, if a publication has the *allow_queued_tran* option set to true (which enables queuing of changes at the Subscriber until they can be applied at the Publisher), the timestamp column in an article is scripted out as **timestamp**, and changes on that column are sent to the Subscriber. The Subscriber generates and updates the timestamp column value. For an ODBC or OLE DB Subscriber, sp_addsubscription fails if an attempt is made to subscribe to a publication that has *allow_queued_tran* set to true and articles with timestamp columns in it.  
+ In addition, if a publication has the *allow_queued_tran* option set to true (which enables queuing of changes at the Subscriber until they can be applied at the Publisher), the rowversion column in an article is scripted out as **rowversion**, and changes on that column are sent to the Subscriber. The Subscriber generates and updates the rowversion column value. For an ODBC or OLE DB Subscriber, sp_addsubscription fails if an attempt is made to subscribe to a publication that has *allow_queued_tran* set to true and articles with rowversion columns in it.  
   
  If a subscription does not use a DTS package, it cannot subscribe to a publication that is set to *allow_transformable_subscriptions*. If the table from the publication needs to be replicated to both a DTS subscription and non-DTS subscription, two separate publications have to be created: one for each type of subscription.  
   

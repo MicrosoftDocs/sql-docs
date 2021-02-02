@@ -44,7 +44,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
  Is the name of a rule created by the CREATE RULE statement. *rule* is **nvarchar(776)**, with no default.  
   
 `[ @objname = ] 'object_name'`
- Is the table and column, or the alias data type to which the rule is to be bound. A rule cannot be bound to a **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, CLR user-defined type, or **timestamp**column. A rule cannot be bound to a computed column.  
+ Is the table and column, or the alias data type to which the rule is to be bound. A rule cannot be bound to a **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, CLR user-defined type, or **rowversion** column. A rule cannot be bound to a computed column.  
   
  *object_name* is **nvarchar(776)** with no default. If *object_name* is a one-part name, it is resolved as an alias data type. If it is a two- or three-part name, it is first resolved as a table and column; if this resolution fails, it is resolved as an alias data type. By default, existing columns of the alias data type inherit *rule* unless a rule has been bound directly to the column.  
   

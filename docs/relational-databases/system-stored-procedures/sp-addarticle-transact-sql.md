@@ -180,7 +180,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x01**|Generates the object creation script (CREATE TABLE, CREATE PROCEDURE, and so on). This value is the default for stored procedure articles.|  
 |**0x02**|Generates the stored procedures that propagate changes for the article, if defined.|  
 |**0x04**|Identity columns are scripted using the IDENTITY property.|  
-|**0x08**|Replicate **timestamp** columns. If not set, **timestamp** columns are replicated as **binary**.|  
+|**0x08**|Replicate **rowversion** columns. If not set, **rowversion** columns are replicated as **binary**.|  
 |**0x10**|Generates a corresponding clustered index. Even if this option is not set, indexes related to primary keys and unique constraints are generated if they are already defined on a published table.|  
 |**0x20**|Converts user-defined data types (UDT) to base data types at the Subscriber. This option cannot be used when there is a CHECK or DEFAULT constraint on a UDT column, if a UDT column is part of the primary key, or if a computed column references a UDT column. *Not supported for Oracle Publishers*.|  
 |**0x40**|Generates corresponding nonclustered indexes. Even if this option is not set, indexes related to primary keys and unique constraints are generated if they are already defined on a published table.|  
@@ -347,7 +347,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 -   Automatic identity range management is not supported. You must specify a value of manual for *identityrangemanagementoption*.  
   
--   If a **timestamp** column exists in the table, you must include 0x08 in *schema_option* to replicate the column as **timestamp**.  
+-   If a **rowversion** column exists in the table, you must include 0x08 in *schema_option* to replicate the column as **rowversion**.  
   
 -   A value of **SQL** cannot be specified for *ins_cmd*, *upd_cmd*, and *del_cmd*.  
   

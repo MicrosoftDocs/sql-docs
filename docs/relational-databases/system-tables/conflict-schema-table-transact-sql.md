@@ -38,7 +38,7 @@ ms.author: maghan
 |__$reason_text|**nvarchar (720)**|Resolution for the conflict. Can be one of the following values:<br /><br /> Resolved (1)<br /><br /> Unresolved (2)<br /><br /> Unknown (0)|  
 |__$update_bitmap|**varbinary(** *n* **)**. Size varies depending upon content.|Bitmap that indicates which columns were updated in the case of an update-update conflict.|  
 |__$inserted_date|**datetime**|Date and time that the conflicting row was inserted into this table.|  
-|__$row_id|**timestamp**|Row version that is associated with the row that caused the conflict.|  
+|__$row_id|**rowversion**|Row version that is associated with the row that caused the conflict.|  
 |__$change_id|**binary (8)**|For a local row, this value is equal to the __$row_id of the incoming row that conflicted with the local row. This value is NULL for an incoming row.|  
 |\<base table column names>|\<base table column types>|The conflict table contains one column for each column in the base table.|  
   

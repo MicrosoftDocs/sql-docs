@@ -118,7 +118,7 @@ ms.author: "mathoma"
   
 -   Row and column filters.  
   
--   Timestamp columns.  
+-   Rowversion columns.  
   
 -   Non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publishers and Subscribers.  
   

@@ -39,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Each statistics object is created on a list of one or more table columns and includes a *histogram* displaying the distribution of values in the first column. Statistics objects on multiple columns also store statistical information about the correlation of values among the columns. These correlation statistics, or *densities*, are derived from the number of distinct rows of column values. 
 
 #### <a name="histogram"></a> Histogram  
-A **histogram** measures the frequency of occurrence for each distinct value in a data set. The query optimizer computes a histogram on the column values in the first key column of the statistics object, selecting the column values by statistically sampling the rows or by performing a full scan of all rows in the table or view. If the histogram is created from a sampled set of rows, the stored totals for number of rows and number of distinct values are estimates and do not need to be whole integers.
+A **histogram** measures the frequency of occurrence for each distinct value in a data set. The Query Optimizer computes a histogram on the column values in the first key column of the statistics object, selecting the column values by statistically sampling the rows or by performing a full scan of all rows in the table or view. If the histogram is created from a sampled set of rows, the stored totals for number of rows and number of distinct values are estimates and do not need to be whole integers.
 
 > [!NOTE]
 > <a name="frequency"></a> Histograms in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are only built for a single column-the first column in the set of key columns of the statistics object.
@@ -64,10 +64,10 @@ For each histogram step above:
   
 -   Solid area left of *range_high_key* represents the range of column values and the average number of times each column value occurs (*average_range_rows*). The *average_range_rows* for the first histogram step is always 0.  
   
--   Dotted lines represent the sampled values used to estimate total number of distinct values in the range (*distinct_range_rows*) and total number of values in the range (*range_rows*). The query optimizer uses *range_rows* and *distinct_range_rows* to compute *average_range_rows* and does not store the sampled values.   
+-   Dotted lines represent the sampled values used to estimate total number of distinct values in the range (*distinct_range_rows*) and total number of values in the range (*range_rows*). The Query Optimizer uses *range_rows* and *distinct_range_rows* to compute *average_range_rows* and does not store the sampled values.   
   
 #### <a name="density"></a>Density Vector  
-**Density** is information about the number of duplicates in a given column or combination of columns and it is calculated as 1/(number of distinct values). The query optimizer uses densities to enhance cardinality estimates for queries that return multiple columns from the same table or indexed view. As density decreases, selectivity of a value increases. For example, in a table representing cars, many cars have the same manufacturer, but each car has a unique vehicle identification number (VIN). An index on the VIN is more selective than an index on the manufacturer, because VIN has lower density than manufacturer. 
+**Density** is information about the number of duplicates in a given column or combination of columns and it is calculated as 1/(number of distinct values). The Query Optimizer uses densities to enhance cardinality estimates for queries that return multiple columns from the same table or indexed view. As density decreases, selectivity of a value increases. For example, in a table representing cars, many cars have the same manufacturer, but each car has a unique vehicle identification number (VIN). An index on the VIN is more selective than an index on the manufacturer, because VIN has lower density than manufacturer. 
 
 > [!NOTE]
 > Frequency is information about the occurrence of each distinct value in the first key column of the statistics object, and is calculated as row count * density. A maximum frequency of 1 can be found in columns with unique values.
@@ -103,27 +103,30 @@ ORDER BY s.name;
 ```  
   
 #### AUTO_UPDATE_STATISTICS Option  
- When the automatic update statistics option, [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) is ON, the Query Optimizer determines when statistics might be out-of-date and then updates them when they are used by a query. Statistics become out-of-date after insert, update, delete, or merge operations change the data distribution in the table or indexed view. The Query Optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.  
+ When the automatic update statistics option, [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) is ON, the Query Optimizer determines when statistics might be out-of-date and then updates them when they are used by a query. This action is also known as statistics recompilation. Statistics become out-of-date after modifications from insert, update, delete, or merge operations change the data distribution in the table or indexed view. The Query Optimizer determines when statistics might be out-of-date by counting the number of row modifications since the last statistics update and comparing the number of row modifications to a threshold. The threshold is based on the table cardinality, which can be defined as the number of rows in the table or indexed view.  
   
-- Up to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a threshold based on the percentage of rows modified (updated, inserted, or deleted). This is dependent on the table cardinality, which can be defined as the number of rows in the table. 
-  -  For permanent tables, the thresholds are:
-     -  If the table cardinality was 500 or less at the time statistics were evaluated, update for every 500 modifications.
-     -  If the table cardinality was above 500 at the time statistics were evaluated, update for every 500 modifications + 20 percent of rows modifified. For example if your table contains 2 million rows, then the calculation is 500 + (0.2 * 2,000,000) = 400,500.
-  -  For temporary tables, the thresholds are:
-     -  If the table cardinality was 6 or less at the time statistics were evaluated, update for every 6 modifications.
-     -  If the table cardinality was 500 or less at the time statistics were evaluated, update for every 500 modifications.
-     -  If the table cardinality was above 500 at the time statistics were evaluated, update for every 500 modifications + 20 percent of rows modifified. For example if your table contains 2 million rows, then the calculation is 500 + (0.2 * 2,000,000) = 400,500.
+- Up to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] uses a recompilation threshold based on the number of rows in the table or indexed view at the time statistics were evaluated. The threshold is different whether a table is temporary or permanent.
 
-* Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and under the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also uses a decreasing, dynamic statistics update threshold that adjusts according to the number of rows in the table after a certain threshold. 
-  -  For permanent tables, the thresholds are:
-     -  If the table cardinality was 500 or less at the time statistics were evaluated, update for every 500 modifications.
-     -  If the table cardinality was above 500 and less than 25,000 at the time statistics were evaluated, update for every 500 modifications + 20 percent of rows modifified. For example if your table contains 2 million rows, then the calculation is 500 + (0.2 * 2,000,000) = 400,500.
-     -  If the table cardinality was above 25,000 at the time statistics were evaluated, update based on the calculated square root of the product of 1000 and the current table cardinality. For example if your table contains 2 million rows, then the calculation is SQRT(1,000 * 2,000,000) = 44,721.359. With this change, statistics on large tables will be updated more frequently. However, if a database has a compatibility level below 130, then the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] threshold applies.
-  -  For temporary tables, the thresholds are:
-     -  If the table cardinality was 6 or less at the time statistics were evaluated, update for every 6 modifications.
-     -  If the table cardinality was 500 or less at the time statistics were evaluated, update for every 500 modifications.
-     -  If the table cardinality was above 500 and less than 25,000 at the time statistics were evaluated, update for every 500 modifications + 20 percent of rows modifified. For example if your table contains 2 million rows, then the calculation is 500 + (0.2 * 2,000,000) = 400,500.
-     -  If the table cardinality was above 25,000 at the time statistics were evaluated, update based on the calculated square root of the product of 1000 and the current table cardinality. For example if your table contains 2 million rows, then the calculation is SQRT(1,000 * 2,000,000) = 44,721.359. With this change, statistics on large tables will be updated more frequently. However, if a database has a compatibility level below 130, then the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] threshold applies.
+  |Table type|Table cardinality (*n*)|Recompilation threshold (# modifications)|
+  |-----------|-----------|-----------|
+  |Temporary|*n* < 6|6|
+  |Temporary|6 <= *n* <= 500|500|
+  |Permanent|*n* <= 500|500|
+  |Temporary or permanent|*n* > 500|500 + (0.20 * *n*)|
+  
+  For example if your table contains 20 thousand rows, then the calculation is `500 + (0.2 * 20,000) = 4,500` and the statistics will be updated every 4,500 modifications.
+
+- Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and under the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] also uses a decreasing, dynamic statistics recompilation threshold that adjusts according to the table cardinality at the time statistics were evaluated. With this change, statistics on large tables will be updated more frequently. However, if a database has a compatibility level below 130, then the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] thresholds apply.
+
+  |Table type|Table cardinality (*n*)|Recompilation threshold (# modifications)|
+  |-----------|-----------|-----------|
+  |Temporary|*n* < 6|6|
+  |Temporary|6 <= *n* <= 500|500|
+  |Permanent|*n* <= 500|500|
+  |Temporary or permanent|500 <= *n* <= 25,000|500 + (0.20 * *n*)|
+  |Temporary or permanent|*n* > 25,000|SQRT(1,000 * *n*)|
+
+  For example if your table contains 2 million rows, then the calculation is `SQRT(1,000 * 2,000,000) = 44,721` and the statistics will be updated every 44,721 modifications.
 
 > [!IMPORTANT]
 > In [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later under [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 and lower, enable [trace flag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) so that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a decreasing, dynamic statistics update threshold.

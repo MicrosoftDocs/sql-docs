@@ -1,0 +1,14 @@
+- name: Azure Synapse Translate (AST)
+  href: ast-overview.md
+- name: What's new
+  href: ast-whatsnew.md
+- name: Install AST
+  href: ast-install.md
+- name: Getting Started
+  href: ast-getting-started.md
+- name: IBM Netezza
+  href: netezza/toc.yml
+- name: SQL Server
+  href: sqlserver/toc.yml
+- name: Teradata
+  href: teradata/toc.yml

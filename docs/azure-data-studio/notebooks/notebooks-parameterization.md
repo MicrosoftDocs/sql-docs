@@ -48,7 +48,7 @@ The steps in this section all run within an Azure Data Studio notebook.
    !{sys.executable} -m pip list
    ```
 
-   ![List](media/notebooks-parameterization/install-list-papermill.png)
+   :::image type="content" source="media/notebooks-parameterization/install-list-papermill.png" alt-text="List":::
 
 5. You can test if papermill is loaded properly by checking the version of papermill.
 
@@ -57,9 +57,9 @@ The steps in this section all run within an Azure Data Studio notebook.
    papermill
    ```
 
-   ![Validation](media/notebooks-parameterization/install-validation-papermill.png)
+   :::image type="content" source="media/notebooks-parameterization/install-validation-papermill.png" alt-text="Validation":::
 
-## Set up a Parameterized Notebook
+## Set up a parameterized notebook
 
 1. Verify the **Kernel** is set to *Python3*.
 
@@ -72,7 +72,7 @@ The steps in this section all run within an Azure Data Studio notebook.
    y = 5.0
    ```
 
-   ![Parameter Cell Notebook](media/notebooks-parameterization/make-parameter-cell.png)
+   :::image type="content" source="media/notebooks-parameterization/make-parameter-cell.png" alt-text="Parameter Cell Notebook":::
 
 3. Add other cells to test different parameters.
 
@@ -87,19 +87,19 @@ The steps in this section all run within an Azure Data Studio notebook.
    ```
 
    Cells in Example Input Notebook:
-   ![Additional Input Notebook Cells](media/notebooks-parameterization/test-cells.png)
+   :::image type="content" source="media/notebooks-parameterization/test-cells.png" alt-text="Additional Input Notebook Cells":::
 
 4. Save notebook as **Input.ipynb**.
-   ![Save Notebook](media/notebooks-parameterization/save-notebook.png)
+   :::image type="content" source="media/notebooks-parameterization/save-notebook.png" alt-text="Save Notebook":::
 
-## How to Execute Papermill Notebook
+## How to execute Papermill notebook
 
 Papermill can be executed two ways:
 
- 1. Command Line Interface (CLI)
- 2. Python API
+- Command Line Interface (CLI)
+- Python API
 
-### Parameterized CLI Execution
+### Parameterized CLI execution
 
 To execute a notebook using the CLI, enter the papermill command in the terminal with the input notebook, location for output notebook, and options.
 
@@ -117,9 +117,9 @@ To execute a notebook using the CLI, enter the papermill command in the terminal
 2. After Execution view new Output Parameterized Notebook.
    You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in via CLI.
 
-   ![Output Notebook](media/notebooks-parameterization/output-notebook.png)
+   :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Output Notebook":::
 
-### Parameterize Python API Execution
+### Parameterized Python API execution
 
 > [!Note]
    > Papermill Python API Documentation can be found [here](https://papermill.readthedocs.io/en/latest/usage-execute.html#execute-via-the-python-api).
@@ -145,7 +145,7 @@ To execute a notebook using the CLI, enter the papermill command in the terminal
 
    You can note that there's a new cell labeled **# Injected-Parameters** containing the new parameter values passed in via CLI.
 
-   ![Output Notebook](media/notebooks-parameterization/output-notebook.png)
+   :::image type="content" source="media/notebooks-parameterization/output-notebook.png" alt-text="Output Notebook":::
 
 ## Next steps
 

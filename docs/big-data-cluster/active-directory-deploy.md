@@ -49,8 +49,10 @@ AD integration requires the following parameters. Add these parameters to the `c
 
 - `security.activeDirectory.realm` **Optional parameter**: In the majority of cases, the realm equals domain name. For cases where they are not the same, use this parameter to define name of realm (e.g. `CONTOSO.LOCAL`). The value of provided for this parameter should be fully-qualified.
 
-  > [!IMPORTANT]
-  > At this time, BDC does not support a configuration where the Active Directory domain name is different than the Active Directory domain's **NETBIOS** name.
+- `security.activeDirectory.netbiosDomainName` **Optional parameter**: This is the NETBIOS name of the AD domain. In majority of the cases, this will be the first label of the AD domain name. For cases where it differs, use this parameter to define the NETBIOS domain name. This value should not contain any dots. Usually this name is used to qualify the user accounts in the domain. E.g. CONTOSO\user where CONTOSO is the NETBIOS domain name.
+
+  > [!NOTE]
+  > Support for a configuration where the Active Directory domain name is different than the Active Directory domain's **NETBIOS** name using the *security.activeDirectory.netbiosDomainName* was enabled starting with SQL Server 2019 CU9.
 
 - `security.activeDirectory.domainDnsName`: Name of your DNS domain that will be used for the cluster (e.g. `contoso.local`).
 

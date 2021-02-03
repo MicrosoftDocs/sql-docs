@@ -39,7 +39,7 @@ In the following cases, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
   - There are no statistics on the columns involved on either side of the operators.
   - The distribution of values in the statistics is not uniform, but the query seeks a highly selective value set. This situation can be especially true if the operator is anything other than the equality (=) operator.
   - The predicate uses the not equal to (!=) comparison operator or the `NOT` logical operator.
-- Queries that use any of the SQL Server built-in functions or a scalar-valued, user-defined function whose argument is not a constant value.
+- Queries that use any of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] built-in functions or a scalar-valued, user-defined function whose argument is not a constant value.
 - Queries that involve joining columns through arithmetic or string concatenation operators.
 - Queries that compare variables whose values are not known when the query is compiled and optimized.
 
@@ -64,15 +64,15 @@ Subsequent updates started with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)
 -  **Simple Containment** becomes **Base Containment:** Users might query for data that does not exist. For example, for an equality join between two tables, we use the base tables histograms to estimate the join selectivity, and then factor in the predicates selectivity.
 
 ## Use Query Store to assess the CE version  
- Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], the query store is a handy tool for examining the performance of your queries. Once Query Store is enabled, it will begin to track query performance over time, even if execution plans change. Monitor Query Store for high-cost or regressed query performance. For more information, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md). 
+ Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], the Query Store is a handy tool for examining the performance of your queries. Once Query Store is enabled, it will begin to track query performance over time, even if execution plans change. Monitor Query Store for high-cost or regressed query performance. For more information, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md). 
 
-If preparing for an upgrade to SQL Server or promoting a database compatibility level in any SQL Server platform, consider [Upgrading Databases by using the Query Tuning Assistant](upgrade-dbcompat-using-qta.md), which can help compare query performance in two different compatibility levels.
+If preparing for an upgrade to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or promoting a database compatibility level in any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] platform, consider [Upgrading Databases by using the Query Tuning Assistant](upgrade-dbcompat-using-qta.md), which can help compare query performance in two different compatibility levels.
 
 > [!IMPORTANT] 
 > Ensure the Query Store is correctly configured for your database and workload. For more information, see [Best practices with Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md). 
 
 ## Use extended events to assess the CE version  
-In SQL Server, another option for tracking the cardinality estimation process is to use the extended event named **query_optimizer_estimate_cardinality**. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] code sample runs on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It writes a .xel file to `C:\Temp\` (although you can change the path). When you open the .xel file in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], its detailed information is displayed in a user friendly manner.  
+Another option for tracking the cardinality estimation process is to use the extended event named **query_optimizer_estimate_cardinality**. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] code sample runs on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It writes a .xel file to `C:\Temp\` (although you can change the path). When you open the .xel file in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], its detailed information is displayed in a user friendly manner.  
   
 ```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -102,9 +102,6 @@ GO
 ```  
   
 For information about extended events as tailored for [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Extended events in SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr).  
-
-> [!NOTE]
-> Database scoped extended event sessions are not available in Azure SQL Database.
   
 ## Steps to assess the CE version  
   
@@ -116,7 +113,7 @@ Next are steps you can use to assess whether any of your most important queries 
   
     1.  Open [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)].  
   
-    2.  Run the T-SQL to ensure that your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database is set to the highest available compatibility level.  
+    2.  Run the [!INCLUDE[tsql](../../includes/tsql-md.md)] to ensure that your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database is set to the highest available compatibility level.  
   
     3.  Ensure that your database has its `LEGACY_CARDINALITY_ESTIMATION` configuration turned OFF.  
   
@@ -150,7 +147,7 @@ Next are steps you can use to assess whether any of your most important queries 
   
 10. Run: `SET STATISTICS XML OFF;`  
   
-11. Run the T-SQL to decrease the compatibility level of your database by one level (such as from 130 down to 120).  
+11. Run the [!INCLUDE[tsql](../../includes/tsql-md.md)] to decrease the compatibility level of your database by one level (such as from 130 down to 120).  
   
 12. Rerun all the non-preliminary steps.  
   
@@ -191,7 +188,7 @@ Suppose that with CE 120 or above, a less efficient query plan is generated for 
  You can ensure your database is at a particular level by using the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code for [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 > [!IMPORTANT]
-> The database engine version numbers for SQL Server and Azure SQL Database are not comparable with each other, and rather are internal build numbers for these separate products. The database engine for Azure SQL Database is based on the same code base as the SQL Server database engine. Most importantly, the database engine in Azure SQL Database always has the newest SQL database engine bits. Version 12 of Azure SQL Database is newer than version 15 of SQL Server.
+> The database engine version numbers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] are not comparable with each other, and rather are internal build numbers for these separate products. The database engine for Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is based on the same code base as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine. Most importantly, the database engine in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] always has the newest SQL database engine bits. Version 12 of [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is newer than version 15 of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 > As of **November 2019**, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the default compatibility level is 150 for newly created databases. [!INCLUDE[msCoName](../../includes/msconame-md.md)] does not update Database Compatibility Level for existing databases. It is up to customers to do at their own discretion.        
 
 ```sql  
@@ -269,13 +266,13 @@ EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(USE HIN
 ### How to force a particular query plan  
  For the finest control, you could *force* the system to use the plan that was generated with CE 70 during your testing. After you *pin* your preferred plan, you can set your whole database to use the latest compatibility level and CE. The option is elaborated next.  
  
-The query store gives you different ways that you can force the system to use a particular query plan:  
+The Query Store gives you different ways that you can force the system to use a particular query plan:  
   
 - Execute **sp_query_store_force_plan**.  
   
 - In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], expand your **Query Store** node, right-click **Top Resource Consuming Nodes**, and then click **View Top Resource Consuming Nodes**. The display shows buttons labeled **Force Plan** and **Unforce Plan**.  
   
-For more information about the query store, see [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
+For more information about the Query Store, see [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
 ## Examples of CE improvements  
   

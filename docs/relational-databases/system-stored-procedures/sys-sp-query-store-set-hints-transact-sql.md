@@ -31,7 +31,7 @@ monikerRange: "=azuresqldb-current"
   
 ## Syntax  
   
-```sql
+```syntaxsql
 sp_query_store_set_hints
     @query_id bigint,
     @query_hints nvarchar(max) [;]  

@@ -31,7 +31,7 @@ monikerRange: "=azuresqldb-current"
   
 ## Syntax  
   
-```sql
+```syntaxsql
 sp_query_store_clear_hints
     @query_id bigint;
 ```  

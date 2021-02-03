@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 1/22/2020
+ms.date: 1/22/2021
 ---
 
 # Release notes for Azure Data Studio

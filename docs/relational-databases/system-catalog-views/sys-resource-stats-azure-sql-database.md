@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "09/13/2018"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - resource_stats
   - sys.resource_stats

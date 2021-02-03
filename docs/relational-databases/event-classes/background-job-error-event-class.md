@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Background Job Error event class"
 ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197

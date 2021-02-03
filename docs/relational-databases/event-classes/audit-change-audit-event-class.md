@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Audit Change Audit event class"
 ms.assetid: 8cfacc82-cee8-4199-a69e-acedecfc0b3b

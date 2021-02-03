@@ -83,7 +83,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
  Purge the query plan cache from each Compute node and from the Control node.  
 
 > [!NOTE]
-> Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], the `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` to clear the procedure (plan) cache for the database in scope.
+> Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` to clear the procedure (plan) cache for the database in scope.
 
 ## Remarks  
 Use DBCC FREEPROCCACHE to clear the plan cache carefully. Clearing the procedure (plan) cache causes all plans to be evicted, and incoming query executions will compile a new plan, instead of reusing any previously cached plan. 

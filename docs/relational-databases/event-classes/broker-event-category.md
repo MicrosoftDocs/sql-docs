@@ -6,7 +6,7 @@ ms.date: "05/24/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQL Server event classes, Broker event category"
   - "Broker event category [SQL Server]"

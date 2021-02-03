@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP PROCEDURE"
   - "DROP_PROCEDURE_TSQL"
@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # DROP PROCEDURE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Removes one or more stored procedures or procedure groups from the current database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Removes one or more stored procedures or procedure groups from the current database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 
 ## Arguments
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level)).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level)).  
   
  Conditionally drops the procedure only if it already exists.  
   
@@ -87,7 +87,7 @@ GO
 DROP PROCEDURE dbo.uspGetSalesbyMonth, dbo.uspUpdateSalesQuotes, dbo.uspGetSalesByYear;  
 ```  
   
- The following example removes the `dbo.uspMyProc` stored procedure if it exists but does not cause an error if the procedure does not exist. This syntax is new in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].  
+ The following example removes the `dbo.uspMyProc` stored procedure if it exists but does not cause an error if the procedure does not exist. This syntax is new in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].  
   
 ```sql  
 DROP PROCEDURE IF EXISTS dbo.uspMyProc;  

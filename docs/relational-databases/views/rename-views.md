@@ -18,7 +18,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 ---
 # Rename Views
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
-  You can rename a view in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  You can rename a view in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!WARNING]  
 >  If you rename a view, code and applications that depend on the view may fail. These include other views, queries, stored procedures, user-defined functions, and client applications. Note that these failures will cascade.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: machine-learning-services
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP EXTERNAL RESOURCE POOL"
   - "DROP_EXTERNAL_RESOURCE_POOL_TSQL"

@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "32040 (Database Engine error)"
 ms.assetid: 709219b1-f8b2-4696-8923-dd2e91492eb8

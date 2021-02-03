@@ -66,7 +66,7 @@ The JDBC approximate numeric types are **REAL**, **DOUBLE**, and **FLOAT**.
 The JDBC **TIMESTAMP** type maps to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** and **smalldatetime** types. The **datetime** type is stored in two 4-byte integers. The **smalldatetime** type holds the same information (date and time), but with less accuracy, in two 2-byte small integers.  
   
 > [!NOTE]  
-> The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **rowversion** type is a fixed-length binary-string type. It does not map to any of the JDBC time types: **DATE**, **TIME**, or **TIMESTAMP**.  
+> The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp** is a deprecated syntax representing a **rowversion**, which is a fixed-length binary-string type. It does not map to any of the JDBC time types: **DATE**, **TIME**, or **TIMESTAMP**.  
   
 ## Custom type mapping
 

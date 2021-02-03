@@ -87,7 +87,7 @@ Follow these steps to download and register the Python language extension, which
 
     ```sql
     CREATE EXTERNAL LANGUAGE [myPython]
-    FROM (CONTENT = N'/path/to/python-lang-extension-linux-release.zip', FILE_NAME = 'libPythonExtension.so.1.0');
+    FROM (CONTENT = N'/path/to/python-lang-extension-linux-release.zip', FILE_NAME = 'libPythonExtension.so.1.1');
     GO
     ```
 

@@ -4,7 +4,7 @@ title: "sys.firewall_rules (Azure SQL Database) | Microsoft Docs"
 ms.date: "03/26/2019"
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.firewall_rules"
   - "firewall_rules"

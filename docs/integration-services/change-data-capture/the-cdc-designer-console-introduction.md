@@ -45,7 +45,7 @@ ms.author: chugu
 
 ### Target SQL Server Database
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] edition with support for SQL Server CDC  
+-   [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] edition with support for SQL Server CDC  
   
 ## Software Prerequisites  
  You have to use the 32-bit or 64-bit version of the Oracle client software according to the version of the Oracle CDC Designer console installed.  

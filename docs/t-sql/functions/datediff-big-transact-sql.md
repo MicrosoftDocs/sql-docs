@@ -4,7 +4,7 @@ description: "DATEDIFF_BIG (Transact-SQL)"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DATEDIFF_BIG"
   - "DATEDIFF_BIG_TSQL"

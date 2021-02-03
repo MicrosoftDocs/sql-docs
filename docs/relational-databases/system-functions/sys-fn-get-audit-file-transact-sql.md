@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "fn_get_audit_file_TSQL"
   - "sys.fn_get_audit_file_TSQL"
@@ -123,8 +123,9 @@ fn_get_audit_file ( file_pattern,
 
   
 ## Remarks  
- If the *file_pattern* argument passed to **fn_get_audit_file** references a path or file that does not exist, or if the file is not an audit file, the **MSG_INVALID_AUDIT_FILE** error message is returned.  
-  
+- If the *file_pattern* argument passed to **fn_get_audit_file** references a path or file that does not exist, or if the file is not an audit file, the **MSG_INVALID_AUDIT_FILE** error message is returned.  
+- **fn_get_audit_file** cannot be used when the audit is created with the **APPLICATION_LOG**, **SECURITY_LOG**, or **EXTERNAL_MONITOR** options.
+
 ## Permissions
 
 - **SQL Server**: Requires the **CONTROL SERVER** permission.  

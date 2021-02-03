@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Unprepare SQL event class"
 ms.assetid: cfcbdd9d-d83b-46ae-9caa-d1833b5913f4

@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Bitmap Warning event class"
 ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4

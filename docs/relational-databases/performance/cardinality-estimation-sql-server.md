@@ -232,6 +232,7 @@ GO
 ```  
  
 ### Modify query to use hint
+
  Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1, modify the query to use the [Query Hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
  ```sql  
@@ -242,6 +243,7 @@ OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
 
 ### Set a Query Store Hint
+
  Queries can be forced to use the legacy cardinality estimator *without modifying the query*, using the [Query Store hints](query-store-hints.md) (Preview) feature. 
 
 1. Identify the query in the [sys.query_store_query_text](../system-catalog-views/sys-query-store-query-text-transact-sql.md) and [sys.query_store_query](../system-catalog-views/sys-query-store-query-transact-sql.md) Query Store catalog views. For example, search for an executed query by text fragment:

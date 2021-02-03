@@ -6,7 +6,7 @@ ms.date: "08/09/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_clr_loaded_assemblies"
   - "sys.dm_clr_loaded_assemblies_TSQL"

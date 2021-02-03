@@ -17,7 +17,7 @@ ms.date: 1/22/2020
 
 ## December 2020 (hotfix)
 
-January 22, 2020 &nbsp; / &nbsp; version: 1.25.2
+January 22, 2021 &nbsp; / &nbsp; version: 1.25.2
 
 | Change | Details |
 | ------ | ------- |

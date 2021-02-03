@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.sp_xtp_checkpoint_force_garbage_collection_TSQL"
   - "sys.sp_xtp_checkpoint_force_garbage_collection"

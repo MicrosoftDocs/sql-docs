@@ -4,7 +4,7 @@ title: "sys.server_resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2018"
 ms.service: sql-database
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "resource_stats"
   - "sys.resource_stats"

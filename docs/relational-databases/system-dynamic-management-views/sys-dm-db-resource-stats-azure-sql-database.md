@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "02/27/2020"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_db_resource_stats"
   - "sys.dm_db_resource_stats_TSQL"

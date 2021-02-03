@@ -2,7 +2,7 @@
 title: "Driver feature support matrix"
 description: "Learn which popular features are supported in drivers for SQL Server and where to find information about them."
 ms.custom: ""
-ms.date: 12/03/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -56,9 +56,9 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Azure Active Directory Access Token authentication](/azure/active-directory/develop/access-tokens) | [Yes](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [Yes](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md#connecting-using-access-token) | [Yes](oledb/features/using-azure-active-directory.md) |
 | [Azure Active Directory Password authentication](/azure/sql-database/sql-database-aad-authentication) |  [Yes](odbc/using-azure-active-directory.md) | [Yes](odbc/using-azure-active-directory.md) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) | [Yes](oledb/features/using-azure-active-directory.md) |
 | [Azure Active Directory Integrated authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](odbc/using-azure-active-directory.md) | [Yes](odbc/using-azure-active-directory.md) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) | [Yes](oledb/features/using-azure-active-directory.md) |
-| [Azure Active Directory Interactive (MFA) authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](odbc/using-azure-active-directory.md) | | | [Yes](oledb/features/using-azure-active-directory.md) |
+| [Azure Active Directory Interactive (MFA) authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](odbc/using-azure-active-directory.md) | | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) | [Yes](oledb/features/using-azure-active-directory.md) |
 | [Azure Active Directory Managed Identity authentication](/azure/active-directory/managed-identities-azure-resources/overview) | [Yes](odbc/using-azure-active-directory.md) | [Yes](odbc/using-azure-active-directory.md) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) | [Yes](oledb/features/using-azure-active-directory.md) |
-| [Azure Active Directory Service Principal authentication](/azure/active-directory/develop/app-objects-and-service-principals) | | | | [Yes](oledb/features/using-azure-active-directory.md) |
+| [Azure Active Directory Service Principal authentication](/azure/active-directory/develop/app-objects-and-service-principals) | [Yes](odbc/using-azure-active-directory.md) | [Yes](odbc/using-azure-active-directory.md) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) | [Yes](oledb/features/using-azure-active-directory.md) |
 | [Windows-Integrated authentication](/windows-server/security/windows-authentication/windows-authentication-overview) | Yes | [Yes](odbc/linux-mac/using-integrated-authentication.md) | [Yes](jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) | Yes |
 | [Bulk Copy](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Yes](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Yes](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Yes](jdbc/using-bulk-copy-with-the-jdbc-driver.md) | [Yes](oledb/features/performing-bulk-copy-operations.md) |
 | [Data Discovery and Classification metadata](../relational-databases/security/sql-data-discovery-and-classification.md) | [Yes](odbc/data-classification.md) | [Yes](odbc/data-classification.md) | [Yes](jdbc/data-discovery-classification-sample.md) | |

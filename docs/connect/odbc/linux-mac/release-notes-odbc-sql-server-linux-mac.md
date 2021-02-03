@@ -2,7 +2,7 @@
 title: "Release Notes ODBC Driver for SQL Server on Linux and macOS"
 description: "Learn what's new and changed in released versions of the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "05/06/2020"
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: "v-jizho2"
@@ -31,6 +31,15 @@ Thank you.
 GeneMi.  2019/04/03.
 -->
 
+## 17.7, January 2021
+
+| New item | Details |
+| :------- | :------ |
+| New distributions supported. | Ubuntu 20.10, macOS Big Sur (11.0), Oracle Linux 7 |
+| Service Principal Authentication | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| Ability to insert into encrypted money and smallmoney columns | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## 17.6, July 2020
 

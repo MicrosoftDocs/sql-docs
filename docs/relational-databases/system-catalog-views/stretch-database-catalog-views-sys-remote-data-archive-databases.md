@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.technology: stored-procedures
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.remote_data_archive_databases"
   - "sys.remote_data_archive_databases_TSQL"

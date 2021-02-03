@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "4186 (Database Engine error)"
 ms.assetid: 1ae88554-f291-45bc-a186-6f41d9cd0fca

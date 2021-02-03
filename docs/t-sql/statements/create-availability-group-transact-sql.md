@@ -258,7 +258,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
 - Requires the data mirroring endpoint of the CONFIGURATION_ONLY replica to be type `WITNESS`.
 - Can not be altered.
 - Is not valid when `CLUSTER_TYPE = WSFC`.
-- The options 'Failover_mode' and 'seeding_mode' are not supported when 'availability_mode' is set to 'configuration_only' for a replica. A sample shown [here](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-availability-group-configure-ha?view=sql-server-ver15)
+- The options 'Failover_mode' and 'seeding_mode' are not supported when 'availability_mode' is set to 'configuration_only' for a replica. A sample is shown [here](../../linux/sql-server-linux-availability-group-configure-ha.md).
 
    For more information, see [Configuration only replica](../../linux/sql-server-linux-availability-group-ha.md).
   

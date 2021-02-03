@@ -182,7 +182,7 @@ Suppose that with CE 120 or above, a less efficient query plan is generated for 
 
 3. You could use `LEGACY_CARDINALITY_ESTIMATION` query hint, to have a single query use the older CE, while retaining other improvements in the query optimizer.  
 
-4. You could enforce the `LEGACY_CARDINALITY_ESTIMATION` via the Query Store Hint feature, to have a single query use the older CE without changing the query.
+4. You could enforce the `LEGACY_CARDINALITY_ESTIMATION` via the Query Store hint feature, to have a single query use the older CE without changing the query.
 
 5. Force a different plan with Query Store.
 
@@ -242,7 +242,7 @@ WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
 
-### Set a Query Store Hint
+### Set a Query Store hint
 
  Queries can be forced to use the legacy cardinality estimator *without modifying the query*, using the [Query Store hints](query-store-hints.md) (Preview) feature. 
 
@@ -257,7 +257,7 @@ WHERE query_sql_text like N'%ORDER BY ListingPrice DESC%'
   AND query_sql_text not like N'%query_store%';
 ```
 
-2. The following example applies a Query Store Hint to force the legacy cardinality estimator on query_id 39, without modifying the query:  
+2. The following example applies a Query Store hint to force the legacy cardinality estimator on query_id 39, without modifying the query:  
 
 ```sql
 EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(USE HINT(''FORCE_LEGACY_CARDINALITY_ESTIMATION''))';

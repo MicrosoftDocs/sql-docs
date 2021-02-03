@@ -6592,7 +6592,7 @@
         href: relational-databases/performance/query-store-usage-scenarios.md
       - name: How Query Store Collects Data
         href: relational-databases/performance/how-query-store-collects-data.md
-      - name: Query Store Hints
+      - name: Query Store hints
         href: relational-databases/performance/query-store-hints.md
     - name: Server Performance & Activity Monitoring
       href: relational-databases/performance/server-performance-and-activity-monitoring.md

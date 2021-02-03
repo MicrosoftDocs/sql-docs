@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "change_tracking_tables_TSQL"
   - "sys.change_tracking_tables"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "change tracking [SQL Server], sys.change_tracking_tables"
   - "sys.change_tracking_tables"
 ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change Tracking Catalog Views - sys.change_tracking_tables

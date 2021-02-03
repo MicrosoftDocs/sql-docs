@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "GO"
   - "GO_TSQL"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ending batches [SQL Server]"
   - "GO command"
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # SQL Server Utilities Statements - GO
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

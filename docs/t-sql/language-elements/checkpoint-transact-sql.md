@@ -6,7 +6,7 @@ ms.date: "07/27/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CHECKPOINT_TSQL"
   - "CHECKPOINT"
@@ -25,7 +25,7 @@ helpviewer_keywords:
   - "manual checkpoints [SQL Server]"
   - "pages [SQL Server], checkpoints"
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
-author: juliemsft
+author: julieMSFT
 ms.author: jrasnick
 ---
 # CHECKPOINT (Transact-SQL)

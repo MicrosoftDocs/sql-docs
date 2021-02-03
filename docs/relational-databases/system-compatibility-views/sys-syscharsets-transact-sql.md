@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.syscharsets"
   - "syscharsets"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "syscharsets system table"
   - "sys.syscharsets compatibility view"
 ms.assetid: f16d987c-bd19-4668-9ef7-785b8fb9ff5b
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.syscharsets (Transact-SQL)

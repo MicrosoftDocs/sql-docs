@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "View object [ADOX], members"
 ms.assetid: 02b5ba88-cacd-4a68-881b-974824ea4a04

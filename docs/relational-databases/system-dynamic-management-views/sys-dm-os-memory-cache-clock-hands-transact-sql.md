@@ -6,7 +6,7 @@ ms.date: "12/21/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_os_memory_cache_clock_hands_TSQL"
   - "dm_os_memory_cache_clock_hands"
@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_memory_cache_clock_hands dynamic management view"
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

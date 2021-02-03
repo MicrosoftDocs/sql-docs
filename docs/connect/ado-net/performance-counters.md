@@ -75,6 +75,6 @@ The following console application shows how to retrieve performance counter valu
 ## See also
 
 - [Connecting to a data source](connecting-to-data-source.md)
-- [Runtime profiling](/dotnet/framework/debug-trace-profile/runtime-profiling.md)
+- [Runtime profiling](/dotnet/framework/debug-trace-profile/runtime-profiling)
 - [Introduction to monitoring performance thresholds](/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

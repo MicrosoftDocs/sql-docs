@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.availability_groups_TSQL"
   - "availability_groups_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.availability_groups catalog view"
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.availability_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

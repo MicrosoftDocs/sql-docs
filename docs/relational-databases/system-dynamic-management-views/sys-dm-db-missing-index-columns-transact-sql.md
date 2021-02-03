@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_db_missing_index_columns_TSQL"
   - "sys.dm_db_missing_index_columns_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.dm_db_missing_index_columns dynamic management function"
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_columns dynamic management function"
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_missing_index_columns (Transact-SQL)

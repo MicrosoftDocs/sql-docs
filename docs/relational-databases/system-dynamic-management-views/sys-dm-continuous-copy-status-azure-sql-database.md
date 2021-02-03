@@ -5,7 +5,7 @@ titleSuffix: Azure SQL Database
 ms.date: "03/03/2017"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_continuous_copy_status_TSQL"
   - "dm_continuous_copy_status_TSQL"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "dm_continuous_copy_status"
   - "sys.dm_continuous_copy_status"
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "= azuresqldb-current"
 ms.custom: seo-dt-2019
 ---

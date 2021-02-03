@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "COMMIT"
   - "COMMIT TRANSACTION"
@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "COMMIT TRANSACTION statement"
   - "rolling back transactions, COMMIT TRANSACTION"
 ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COMMIT TRANSACTION (Transact-SQL)

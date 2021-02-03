@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.database_mirroring_endpoints_TSQL"
   - "database_mirroring_endpoints"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], catalog views"
   - "sys.database_mirroring_endpoints catalog view"
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

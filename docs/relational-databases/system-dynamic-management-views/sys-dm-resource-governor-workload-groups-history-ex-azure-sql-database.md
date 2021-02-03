@@ -2,11 +2,11 @@
 description: "sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)"
 title: "sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/22/2019"
+ms.date: "01/05/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_resource_governor_workload_groups_history_ex_TSQL"
   - "sys.dm_resource_governor_workload_groups_history_ex"
@@ -23,7 +23,7 @@ ms.author: josack
 # sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Returns snapshot at 20 seconds interval for last 32 minutes (128 secs in total) of resource pools stats for an Azure SQL Database.
+Each row represents a periodic snapshot of workload group statistics in Azure SQL Database. A snapshot is taken when the database engine starts, and every few seconds thereafter. The interval between the current and the previous snapshot may vary, and is provided in the `duration_ms` column. The latest available snapshots are returned, up to 128 snapshots for each workload group.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

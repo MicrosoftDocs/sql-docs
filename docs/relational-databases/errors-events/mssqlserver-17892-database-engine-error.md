@@ -6,7 +6,7 @@ ms.date: 08/20/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "17892 (Database Engine error)"
 ms.assetid: 
@@ -30,7 +30,7 @@ ms.author: ramakoni
 
 ## Explanation
 
-Error 17892 is raised when a logon trigger code cannot execute successfully. [Logon Triggers](/sql/relational-databases/triggers/logon-triggers) fire stored procedures in response to a LOGON event. This event is raised when a user session is established with an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. An error message like the following is reported to the user:
+Error 17892 is raised when a logon trigger code cannot execute successfully. [Logon Triggers](../triggers/logon-triggers.md) fire stored procedures in response to a LOGON event. This event is raised when a user session is established with an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. An error message like the following is reported to the user:
 
 > Msg 17892, Level 14, State 1, Server \<Server Name>, Line 1  
 Logon failed for login \<Login Name> due to trigger execution.
@@ -59,7 +59,7 @@ You can use one of the resolutions below depending on the scenario you are in.
 - **Scenario 2**: You do not have any current session that is open under admin privileges, but Dedicated Administrator Connection (DAC) is enabled on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
     In this case, you can use the DAC connection to take the same steps as discussed in Case 1 since DAC connections are not affected by Login triggers. For more information on DAC connection, see:
-    [Diagnostic Connection for Database Administrators](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators).
+    [Diagnostic Connection for Database Administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).
 
     To check whether DAC is enabled on your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can check [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log for a message that is similar to the following:
 
@@ -75,7 +75,7 @@ You can use one of the resolutions below depending on the scenario you are in.
         > [!NOTE]
         > The above procedure requires a *SA* or an equivalent administrator account.
   
-         For more information about these and other startup options, see: [Database Engine Service Startup Options](/sql/database-engine/configure-windows/database-engine-service-startup-options).
+         For more information about these and other startup options, see: [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).
 
 ## More information
 

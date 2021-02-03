@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FETCH"
   - "FETCH_TSQL"
@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "SCROLL option"
   - "row fetching [SQL Server]"
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # FETCH (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

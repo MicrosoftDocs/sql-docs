@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SP:CacheHit event class"
 ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f

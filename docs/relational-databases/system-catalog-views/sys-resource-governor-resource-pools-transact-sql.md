@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.resource_governor_resource_pools"
   - "resource_governor_resource_pools"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.resource_governor_resource_pools catalog view"
 ms.assetid: 56793e9c-aa90-452e-88c6-d9b799239888
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

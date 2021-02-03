@@ -6,7 +6,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_xe_map_values"
   - "dm_xe_map_values"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sys.dm_xe_map_values dynamic management view"
   - "xe"
 ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

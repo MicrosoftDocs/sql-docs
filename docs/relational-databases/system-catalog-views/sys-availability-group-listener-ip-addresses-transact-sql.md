@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "availability_group_listener_ip_addresses"
   - "sys.availability_group_listener_ip_addresses"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], listeners"
   - "sys.availability_group_listener_ip_addresses catalog view"
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.availability_group_listener_ip_addresses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

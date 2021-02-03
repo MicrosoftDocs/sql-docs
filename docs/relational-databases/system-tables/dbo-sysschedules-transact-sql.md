@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dbo.sysschedules_TSQL"
   - "sysschedules"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysschedules system table"
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # dbo.sysschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

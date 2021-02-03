@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "backupfile"
   - "backupfile_TSQL"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "file backups [SQL Server], backupfile system table"
   - "backupfile system table"
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # backupfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

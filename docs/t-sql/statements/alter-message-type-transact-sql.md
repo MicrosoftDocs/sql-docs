@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_MESSAGE_TYPE_TSQL"
   - "ALTER MESSAGE TYPE"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "modifying message types"
   - "message types [Service Broker], modifying"
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

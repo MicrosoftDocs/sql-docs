@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "KILL_TSQL"
   - "KILL"
@@ -32,8 +32,8 @@ helpviewer_keywords:
   - "KILL statement"
   - "terminating process"
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # KILL (Transact-SQL)

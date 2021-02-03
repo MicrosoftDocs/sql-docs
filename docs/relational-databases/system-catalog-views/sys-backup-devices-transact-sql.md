@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "backup_devices_TSQL"
   - "backup_devices"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "backup devices [SQL Server], viewing information"
   - "sys.backup_devices catalog view"
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.backup_devices (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

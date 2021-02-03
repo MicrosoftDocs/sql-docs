@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLGetConnectOption"
 apilocation: 
@@ -56,7 +56,7 @@ SQLRETURN SQLGetConnectAttr(
  If *ValuePtr* is NULL, *StringLengthPtr* will still return the total number of bytes (excluding the null-termination character for character data) available to return in the buffer pointed to by *ValuePtr*.  
   
  *BufferLength*  
- [Input] If *Attribute* is an ODBC-defined attribute and *ValuePtr* points to a character string or a binary buffer, this argument should be the length of \**ValuePtr*. If *Attribute* is an ODBC-defined attribute and \**ValuePtr* is an integer, *BufferLength* is ignored. If the value in *\*ValuePtr* is a Unicode string (when calling **SQLGetConnectAttrW**), the *BufferLength* argument must be an even number.  
+ [Input] If *Attribute* is an ODBC-defined attribute and *ValuePtr* points to a character string or a binary buffer, this argument should be the length of \**ValuePtr*. If *Attribute* is an ODBC-defined attribute and *\*ValuePtr* is an integer, *BufferLength* is ignored. If the value in *\*ValuePtr* is a Unicode string (when calling **SQLGetConnectAttrW**), the *BufferLength* argument must be an even number.  
   
  If *Attribute* is a driver-defined attribute, the application indicates the nature of the attribute to the Driver Manager by setting the *BufferLength* argument. *BufferLength* can have the following values:  
   
@@ -69,7 +69,7 @@ SQLRETURN SQLGetConnectAttr(
 -   If *\*ValuePtr* contains a fixed-length data type, *BufferLength* is either SQL_IS_INTEGER or SQL_IS_UINTEGER, as appropriate.  
   
  *StringLengthPtr*  
- [Output] A pointer to a buffer in which to return the total number of bytes (excluding the null-termination character) available to return in \**ValuePtr*. If \**ValuePtr* is a null pointer, no length is returned. If the attribute value is a character string and the number of bytes available to return is greater than *BufferLength* minus the length of the null-termination character, the data in *\*ValuePtr* is truncated to *BufferLength* minus the length of the null-termination character and is null-terminated by the driver.  
+ [Output] A pointer to a buffer in which to return the total number of bytes (excluding the null-termination character) available to return in \**ValuePtr*. If the attribute value is a character string and the number of bytes available to return is greater than *BufferLength* minus the length of the null-termination character, the data in *\*ValuePtr* is truncated to *BufferLength* minus the length of the null-termination character and is null-terminated by the driver.  
   
 ## Returns  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR, or SQL_INVALID_HANDLE.  
@@ -80,7 +80,7 @@ SQLRETURN SQLGetConnectAttr(
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|General warning|Driver-specific informational message. (Function returns SQL_SUCCESS_WITH_INFO.)|  
-|01004|String data, right truncated|The data returned in \**ValuePtr* was truncated to be *BufferLength* minus the length of a null-termination character. The length of the untruncated string value is returned in **StringLengthPtr*. (Function returns SQL_SUCCESS_WITH_INFO.)|  
+|01004|String data, right truncated|The data returned in \**ValuePtr* was truncated to be *BufferLength* minus the length of a null-termination character. The length of the untruncated string value is returned in *\*StringLengthPtr*. (Function returns SQL_SUCCESS_WITH_INFO.)|  
 |08003|Connection not open|(DM) An *Attribute* value that required an open connection was specified.|  
 |08S01|Communication link failure|The communication link between the driver and the data source to which the driver was connected failed before the function completed processing.|  
 |HY000|General error|An error occurred for which there was no specific SQLSTATE and for which no implementation-specific SQLSTATE was defined. The error message returned from the diagnostic data structure by the argument *MessageText* in **SQLGetDiagField** describes the error and its cause.|  

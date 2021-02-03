@@ -36,13 +36,16 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
 - **Generate certificate** (/CN should match your SQL Server host fully qualified domain name)
 
 > [!NOTE]
-> For this example we use a Self-Signed Certificate, this should not be used for production scenarios. You should use CA certificates. 
+> For this example we use a Self-Signed Certificate, this should not be used for production scenarios. You should use CA certificates.<br>
+> Ensure that the folder/s you save your certs and Private keys are accessible by the mssql user/group and has permission set to 700 (drwx-----). You can create folders manually with permission set to 700 (drwx------) and owned by mssql user/group or set the permission to 755(drwxr-xr-x) and owned by other user but still accessible to mssql user group. Example, you could create a folder called 'sslcert' under the path '/var/opt/mssql/' and then save the certificate and the private key with permissions on the files set to 600 as show below. 
 
 ```bash
 openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
 sudo chown mssql:mssql mssql.pem mssql.key 
-sudo chmod 600 mssql.pem mssql.key   
-sudo mv mssql.pem /etc/ssl/certs/ 
+sudo chmod 600 mssql.pem mssql.key 
+# in this case we are saving the certificate to the certs folder under /etc/ssl/ which has the following permission 755(drwxr-xr-x)
+sudo mv mssql.pem /etc/ssl/certs/ drwxr-xr-x 
+# in this case we are saving the private key to the private folder under /etc/ssl/ with permissions set to 755(drwxr-xr-x)
 sudo mv mssql.key /etc/ssl/private/ 
 ```
 

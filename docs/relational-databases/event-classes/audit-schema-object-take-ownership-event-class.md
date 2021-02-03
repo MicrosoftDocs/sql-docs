@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Audit Schema Object Take Ownership event class"
 ms.assetid: 66f39d9b-9ec2-48a7-8a9e-1b42931299c9

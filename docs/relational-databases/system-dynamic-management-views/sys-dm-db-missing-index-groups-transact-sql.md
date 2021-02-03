@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_db_missing_index_groups"
   - "sys.dm_db_missing_index_groups_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.dm_db_missing_index_groups dynamic management view"
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_groups dynamic management view"
 ms.assetid: 9cc00acd-d83d-49f8-be72-5b2aebed246b
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_missing_index_groups (Transact-SQL)

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysarticleupdates_TSQL"
   - "sysarticleupdates"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysarticleupdates system table"
 ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # sysarticleupdates (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

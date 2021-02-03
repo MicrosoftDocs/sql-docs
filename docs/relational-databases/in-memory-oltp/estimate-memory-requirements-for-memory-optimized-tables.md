@@ -24,7 +24,7 @@ If you are contemplating migrating from disk-based tables to memory-optimized ta
   
 ## Basic Guidance for Estimating Memory Requirements
 
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], there is no limit on the size of memory-optimized tables, though the tables do need to fit in memory.  In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] the supported data size is 256GB for SCHEMA_AND_DATA tables.
+Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], there is no limit on the size of memory-optimized tables, though the tables do need to fit in memory.  In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] the supported data size is 256GB for SCHEMA_AND_DATA tables.
 
 The size of a memory-optimized table corresponds to the size of data plus some overhead for row headers. When migrating a disk-based table to memory-optimized, the size of the memory-optimized table will roughly correspond to the size of the clustered index or heap of the original disk-based table.
 

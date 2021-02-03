@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "compatibility [SQL Server], system tables"
   - "user IDs [SQL Server]"
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # System Compatibility Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

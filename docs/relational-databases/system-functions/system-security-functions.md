@@ -7,12 +7,12 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: fa2c95df-1211-4330-adc6-9657e1a113e8
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # System Security Functions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

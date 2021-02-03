@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 12/11/2020
+ms.date: 1/22/2021
 ---
 
 # Download and install Azure Data Studio
@@ -21,9 +21,9 @@ Azure Data Studio offers a modern editor experience with IntelliSense, code snip
 
 | Platform | Download | Release date | Version |
 |----------|----------|--------------|---------|
-| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2150927)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2150928)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2151312) | December 11, 2020 | 1.25.1 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2151311) | December 11, 2020 | 1.25.1 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2151506)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2151407)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2151508) | December 11, 2020 | 1.25.1 |
+| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2150927)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2150928)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2151312) | January 22, 2021 | 1.25.2 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2151311) | January 22, 2021 | 1.25.2 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2151506)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2151407)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2151508) | January 22, 2021 | 1.25.2 |
 
 **For details about the latest release, see the [release notes](./release-notes-azure-data-studio.md).**
 
@@ -145,6 +145,7 @@ Azure Data Studio runs on Windows, macOS, and Linux and is supported on the foll
 - macOS 10.14 Mojave
 - macOS 10.13 High Sierra
 - macOS 10.12 Sierra
+- macOS 11.1  Big Sur
 
 ### Linux
 
@@ -168,7 +169,7 @@ Offline environment updates can be applied by [installing the latest version](#d
 
 ## Supported SQL offerings
 
-- This version of Azure Data Studio works with all [supported versions of SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-MD.md)]](https://support.microsoft.com/lifecycle?C2=1044) and provides support for working with the latest cloud features in Azure SQL Database and Azure Synapse Analytics. Azure Data Studio also provides preview support for Azure SQL Managed Instance.
+- This version of Azure Data Studio works with all [supported versions of [!INCLUDE [sssql14-md](../includes/sssql14-md.md)] - [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) and provides support for working with the latest cloud features in Azure SQL Database and Azure Synapse Analytics. Azure Data Studio also provides preview support for Azure SQL Managed Instance.
 
 ## Move user settings
 

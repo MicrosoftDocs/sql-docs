@@ -151,7 +151,7 @@ For more information about platform and version support, see [Data Sources Suppo
 
 ## Azure SQL Database and AAD
 
-You can use the Azure SQL database with Azure Active Directory (AAD) pass-through authentication.
+You can use the Azure SQL database with Azure Active Directory (AAD).
 
 This scenario is supported when you set up the following items properly:
 

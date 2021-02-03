@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP ROUTE"
   - "DROP_ROUTE_TSQL"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "routes [Service Broker], removing"
   - "removing routes"
 ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

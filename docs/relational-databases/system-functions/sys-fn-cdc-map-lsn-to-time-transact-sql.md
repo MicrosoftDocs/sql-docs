@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_cdc_map_lsn_to_time_TSQL"
   - "sys.fn_cdc_map_lsn_to_time"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.fn_cdc_map_lsn_to_time"
   - "fn_cdc_map_lsn_to_time"
 ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_cdc_map_lsn_to_time (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

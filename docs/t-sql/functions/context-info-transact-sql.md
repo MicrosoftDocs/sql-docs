@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CONTEXT_INFO_TSQL"
   - "CONTEXT_INFO"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "MARS [SQL Server]"
   - "session context information [SQL Server]"
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # CONTEXT_INFO  (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

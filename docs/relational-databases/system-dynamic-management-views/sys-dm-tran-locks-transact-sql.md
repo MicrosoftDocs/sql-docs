@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_tran_locks"
   - "sys.dm_tran_locks"
@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_tran_locks dynamic management view"
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Returns information about currently active lock manager resources in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Each row represents a currently active request to the lock manager for a lock that has been granted or is waiting to be granted.  
+  Returns information about currently active lock manager resources in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Each row represents a currently active request to the lock manager for a lock that has been granted or is waiting to be granted.  
   
  The columns in the result set are divided into two main groups: resource and request. The resource group describes the resource on which the lock request is being made, and the request group describes the lock request.  
   

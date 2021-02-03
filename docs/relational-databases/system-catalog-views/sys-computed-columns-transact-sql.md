@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.computed_columns_TSQL"
   - "sys.computed_columns"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.computed_columns catalog view"
 ms.assetid: c962c619-e18f-4315-9251-8d9862462299
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.computed_columns (Transact-SQL)

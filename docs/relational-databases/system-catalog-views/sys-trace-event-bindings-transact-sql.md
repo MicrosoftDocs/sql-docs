@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.trace_event_bindings_TSQL"
   - "trace_event_bindings"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.trace_event_bindings catalog view"
 ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.trace_event_bindings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

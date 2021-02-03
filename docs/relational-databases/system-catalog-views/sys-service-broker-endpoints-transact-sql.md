@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.service_broker_endpoints_TSQL"
   - "service_broker_endpoints"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.service_broker_endpoints catalog view"
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

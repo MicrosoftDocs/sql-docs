@@ -71,7 +71,7 @@ In a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated rep
 |#MAX|Maximum of all Y values in the series.|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|First of all Y values in the series.|All|`=First(Fields!MyDataField.Value)`|  
   
- To format the keyword, enclose a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] format string in parentheses. For example, to specify the value of the data point in a ToolTip as a number with two decimal places, include the format string "N2" in braces, such as "#VALY{N2}" for the **ToolTip** property on the series. For more information about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] format strings, see [Formatting Types](https://go.microsoft.com/fwlink/?LinkId=112024) on MSDN. For more information about formatting numbers in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
+ To format the keyword, enclose a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] format string in parentheses. For example, to specify the value of the data point in a ToolTip as a number with two decimal places, include the format string "N2" in braces, such as "#VALY{N2}" for the **ToolTip** property on the series. For more information about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] format strings, see [Formatting Types](/previous-versions/) on MSDN. For more information about formatting numbers in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
  For more information about adding keywords to a chart, see [Show ToolTips on a Series &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md), [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
@@ -98,5 +98,4 @@ In a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated rep
  [Tutorial: Add a Pie Chart to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

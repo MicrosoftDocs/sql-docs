@@ -99,7 +99,7 @@ The internal pool represents the resources consumed by the [!INCLUDE[ssNoVersion
   
 **Default Pool**  
   
-The default pool is the first predefined user pool. Prior to any configuration the default pool only contains the default group. The default pool cannot be created or dropped but it can be altered. The default pool can contain user-defined groups in addition to the default group. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] there is a default resource pool for routine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operations, and a default external resource pool for external processes, such as executing R scripts.  
+The default pool is the first predefined user pool. Prior to any configuration the default pool only contains the default group. The default pool cannot be created or dropped but it can be altered. The default pool can contain user-defined groups in addition to the default group. Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] there is a default resource pool for routine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operations, and a default external resource pool for external processes, such as executing R scripts.  
   
 > [!NOTE]  
 >  The default group is alterable but it cannot be moved out of the default pool.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_FUNCTION_TSQL"
   - "ALTER FUNCTION"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "modifying functions"
   - "functions [SQL Server], modifying"
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER FUNCTION (Transact-SQL)

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_QUEUE_TSQL"
   - "ALTER QUEUE"
@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "unavailable queues [SQL Server]"
   - "activation stored procedures [Service Broker]"
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -101,12 +101,12 @@ WITH
  Specifies whether or not the queue activates the stored procedure. When STATUS = ON, the queue starts the stored procedure specified with PROCEDURE_NAME when the number of procedures currently running is less than MAX_QUEUE_READERS and when messages arrive on the queue faster than the stored procedures receive messages. When STATUS = OFF, the queue does not activate the stored procedure.  
   
  REBUILD [ WITH \<queue_rebuild_options> ]  
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.  
   
  Rebuilds all indexes on the queue internal table. Use this capability when you are experiencing fragmentation problems due to high load. MAXDOP is the only supported queue rebuild option. REBUILD is always an offline operation.  
   
  REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.  
   
  Reorganize all indexes on the queue internal table.   
 Unlike REORGANIZE on user tables, REORGANIZE on a queue is always performed as an offline operation because page level locks are explicitly disabled on queues.  
@@ -115,7 +115,7 @@ Unlike REORGANIZE on user tables, REORGANIZE on a queue is always performed as a
 >  For general guidance  regarding index fragmentation, when fragmentation is between 5% and 30%, reorganize the index. When fragmentation is above 30%, rebuild the index. However, these numbers are only for general guidance as a starting point for your environment. To determine the amount of index  fragmentation, use [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) - see example G in that article for examples.  
   
  MOVE TO { *file_group* | "default" }  
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.  
   
  Moves the queue internal table (with its indexes) to a user-specified filegroup.  The new filegroup  must not be read-only.  
   
@@ -220,7 +220,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
 ### G. Rebuilding queue indexes  
   
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.  
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.  
   
  The following example rebuilds queue indexes'  
   
@@ -230,7 +230,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
   
 ### H. Reorganizing queue indexes  
   
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.  
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.  
   
  The following example reorganizes queue indexes  
   
@@ -240,7 +240,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
   
 ### I: Moving queue internal table to another filegroup  
   
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.  
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.  
   
 ```sql  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   

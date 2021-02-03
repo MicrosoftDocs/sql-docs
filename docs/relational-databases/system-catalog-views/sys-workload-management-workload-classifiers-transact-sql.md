@@ -7,7 +7,7 @@ ms.prod: sql
 ms.technology: system-objects
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: "jrasnick"
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 author: "ronortloff"

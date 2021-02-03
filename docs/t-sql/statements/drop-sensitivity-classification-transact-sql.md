@@ -5,7 +5,7 @@ ms.date: 03/25/2019
 ms.reviewer: ""
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 ms.custom: ""
 ms.author: giladm
 author: giladmit
@@ -88,4 +88,4 @@ DROP SENSITIVITY CLASSIFICATION FROM
 
 [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
 
-[Getting started with SQL Information Protection](https://aka.ms/sqlip)
+[Getting started with SQL Information Protection](/azure/azure-sql/database/data-discovery-and-classification-overview)

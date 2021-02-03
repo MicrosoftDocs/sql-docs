@@ -5,10 +5,10 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "= azuresqldb-current"
 ---
 # sys.database_event_sessions (Azure SQL Database)

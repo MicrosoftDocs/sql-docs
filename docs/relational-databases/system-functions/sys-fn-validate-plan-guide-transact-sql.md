@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_validate_plan_guide"
   - "sys.fn_validate_plan_guide_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "fn_validate_plan_guide function"
   - "sys.fn_validate_plan_guide function"
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

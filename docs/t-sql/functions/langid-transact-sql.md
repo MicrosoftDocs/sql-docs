@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@LANGID"
   - "@@LANGID_TSQL"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ID for language in use"
   - "local language IDs [SQL Server]"
 ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # &#x40;&#x40;LANGID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

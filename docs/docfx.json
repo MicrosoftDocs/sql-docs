@@ -199,6 +199,7 @@
         "dma/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
         "dmx/**/*.md": ">= sql-server-2016",
         "integration-services/**/*.md": ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current",
+        "language-extensions/**/*.md": ">= sql-server-ver15 || >= sql-server-linux-ver15",
         "linux/**/*.md": ">= sql-server-2017 || >= sql-server-linux-2017",
         "machine-learning/**/*.md": ">= sql-server-2016",
         "master-data-services/**/*.md": ">= sql-server-2016",
@@ -220,6 +221,10 @@
         "tools/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017",
         "t-sql/**/*.md": "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017",
         "xquery/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017"
+      },
+      
+      "zone_pivot_group_filename": {
+        "machine-learning/**/*.md": "machine-learning/machine-learning-zone-pivot-groups.json"
       }
     },
 
@@ -236,6 +241,50 @@
     "xref":[
       "mref/System.Reflection.Assembly.Load.yml",
       "mref/System.Web.UI.WebControls.WebParts.IWebPartRow.yml"
-    ]
+    ],
+
+    "rules": {
+        "sensitive-language-ma": {
+          "exclude": [
+            "linux/sql-server-linux-availability-group-cluster-sles.md",
+            "linux/sql-server-linux-create-availability-group.md",
+            "linux/sql-server-linux-ha-basics.md",
+            "relational-databases/errors-events/database-engine-events-and-errors.md",
+            "relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md",
+            "relational-databases/maintenance-plans/create-a-maintenance-plan.md",
+            "relational-databases/maintenance-plans/maintenance-plan-servers.md",
+            "relational-databases/maintenance-plans/maintenance-plans.md",
+            "relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md",
+            "relational-databases/system-stored-procedures/sp-help-job-transact-sql.md",
+            "relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md",
+            "relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md",
+            "relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md",
+            "relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md",
+            "relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md",
+            "relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md",
+            "relational-databases/system-tables/dbo-sysschedules-transact-sql.md",
+            "relational-databases/system-tables/dbo-systargetservers-transact-sql.md",
+            "sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md",
+            "ssms/agent/**/*.md"
+          ]
+        },
+          "sensitive-language-sl": {
+            "exclude": [
+              "linux/sql-server-linux-availability-group-cluster-sles.md",
+              "linux/sql-server-linux-create-availability-group.md",
+              "linux/sql-server-linux-ha-basics.md"
+            ]
+          },
+            "sensitive-language-wl": {
+              "exclude": [
+                "big-data-cluster/reference-config-spark-hadoop.md"
+              ]
+            },
+              "sensitive-language-bl": {
+                "exclude": [
+                ]
+              }
+    }
+
   }
 }

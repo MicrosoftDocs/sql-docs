@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Hierarchies collection [ADO MD], members"
 ms.assetid: 326dc32a-30e5-4f91-85ab-84663db41279

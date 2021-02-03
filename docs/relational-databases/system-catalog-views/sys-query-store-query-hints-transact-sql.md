@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current"
 # sys.query_store_query_hints (Transact-SQL)
 [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
 
- Contains query hints from the [Query Store Hints (Preview)](../../relational-databases/performance/query-store-hints.md) feature.
+ Contains query hints from the [Query Store hints (Preview)](../../relational-databases/performance/query-store-hints.md) feature.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -57,7 +57,7 @@ WHERE query_id = 39;
 ```
   
 ## See Also  
-- [Query Store Hints](../../relational-databases/performance/query-store-hints.md)  
+- [Query Store hints](../../relational-databases/performance/query-store-hints.md)  
 - [sys.sp_query_store_set_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md)   
 - [sys.sp_query_store_clear_hints](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md) 
 - [sys.query_store_query &#40;Transact-SQL&#41;](sys-query-store-query-transact-sql.md)  

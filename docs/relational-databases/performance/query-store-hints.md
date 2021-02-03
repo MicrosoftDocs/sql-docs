@@ -1,5 +1,5 @@
 ---
-title: "Query Store Hints (Preview)"
+title: "Query Store hints (Preview)"
 description: Learn about the SQL Server Hints feature to shape query plans without changing application code.
 ms.custom: ""
 ms.date: "1/28/2021"
@@ -15,10 +15,10 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Query Store Hints (Preview)
+# Query Store hints (Preview)
 [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
 
-This article outlines the Query Store Hints feature of the [Query Store](monitoring-performance-by-using-the-query-store.md). The Query Store Hints feature provides an easy-to-use method for shaping query plans without changing application code. 
+This article outlines the Query Store hints feature of the [Query Store](monitoring-performance-by-using-the-query-store.md). The Query Store hints feature provides an easy-to-use method for shaping query plans without changing application code. 
 
 ## Overview
 
@@ -50,7 +50,7 @@ Once created, Query Store hints are persisted and survive restarts and failovers
 
 If a query hint contradicts what is possible for query optimization, the hint will not block query execution and the hint will not be applied. In the cases where a hint would cause a query to fail, the hint is ignored and the latest failure details can be viewed in [sys.query_store_query_hints](../system-catalog-views/sys-query-store-query-hints-transact-sql.md).
 
-## Query Store Hints system stored procedures
+## Query Store hints system stored procedures
 
 To create or update hints, use sys.sp_query_store_set_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md):
 
@@ -87,7 +87,7 @@ When hints are applied, the following will be surfaced in the StmtSimple element
 |QueryStoreStatementHintSource|Source of Query Store hint (ex: "User")|
 
 > [!Note]
-> During the Query Store Hints public preview, these XML elements will be available only via the output of the T-SQL commands [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) and [SET SHOWPLAN XML](../../t-sql/statements/set-showplan-xml-transact-sql.md).
+> During the Query Store hints public preview, these XML elements will be available only via the output of the T-SQL commands [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) and [SET SHOWPLAN XML](../../t-sql/statements/set-showplan-xml-transact-sql.md).
 
 
 ## Examples  

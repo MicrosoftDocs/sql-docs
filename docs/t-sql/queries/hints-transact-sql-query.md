@@ -415,7 +415,7 @@ You can specify INDEX, FORCESCAN, and FORCESEEK table hints as query hints for a
 Table hints other than INDEX, FORCESCAN, and FORCESEEK are disallowed as query hints unless the query already has a WITH clause specifying the table hint. In this case, a matching hint must also be specified as a query hint. Specify the matching hint as a query hint by using TABLE HINT in the OPTION clause. This specification preserves the query's semantics. For example, if the query contains the table hint NOLOCK, the OPTION clause in the **\@hints** parameter of the plan guide must also contain the NOLOCK hint. See Example K. 
 
 ## Specifying hints with Query Store hints
- You can enforce hints on queries identified through Query Store without making code changes, using the [Query Store Hints (Preview)](../../relational-databases/performance/query-store-hints.md) feature. See Example N for using the [sys.sp_query_store_set_hints](../../relational-databases/system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md) stored procedure to apply a hint to a query.
+ You can enforce hints on queries identified through Query Store without making code changes, using the [Query Store hints (Preview)](../../relational-databases/performance/query-store-hints.md) feature. See Example N for using the [sys.sp_query_store_set_hints](../../relational-databases/system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md) stored procedure to apply a hint to a query.
 
 ## Examples  
   
@@ -654,7 +654,7 @@ OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
 
 ### N. Using Query Store hints (Preview)
 
-The [Query Store Hints (Preview)](../../relational-databases/performance/query-store-hints.md) feature in Azure SQL Database provides an easy-to-use method for shaping query plans without changing application code.
+The [Query Store hints (Preview)](../../relational-databases/performance/query-store-hints.md) feature in Azure SQL Database provides an easy-to-use method for shaping query plans without changing application code.
 
 First, identify the query that has already been executed in the Query Store catalog views, for example:
 
@@ -695,4 +695,4 @@ EXEC sys.sp_query_store_set_hints @query_id= 39, @query_hints = N'OPTION(RECOMPI
 [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
 [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)       
 [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)      
-[Query Store Hints](../../relational-databases/performance/query-store-hints.md)   
+[Query Store hints](../../relational-databases/performance/query-store-hints.md)   

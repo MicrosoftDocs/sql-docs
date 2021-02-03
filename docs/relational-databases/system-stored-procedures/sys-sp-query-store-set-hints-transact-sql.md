@@ -136,7 +136,7 @@ WHERE query_id = 39;
 ```
 
 ## See Also  
-- [Query Store Hints](../performance/query-store-hints.md)  
+- [Query Store hints](../performance/query-store-hints.md)  
 - [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md)  
 - [sp_query_store_clear_hints (Transact-SQL)](sys-sp-query-store-clear-hints-transact-sql.md)   
 - [sys.query_store_query_hints (Transact-SQL)](../system-catalog-views/sys-query-store-query-hints-transact-sql.md)   

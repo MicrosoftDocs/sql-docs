@@ -267,7 +267,7 @@ If you run your workload on [!INCLUDE[ssSDS](../../includes/sssds-md.md)], sign 
 - Rewrite problematic queries, for example, to take advantage of query parameterization or to implement more optimal logic.
 
 > [!TIP]
-> In Azure SQL Database, consider the [Query Store Hints (Preview)] feature for forcing query hints on queries without code changes. For more information and examples, see [Query Store Hints (Preview)](query-store-hints.md).
+> In Azure SQL Database, consider the [Query Store hints (Preview)] feature for forcing query hints on queries without code changes. For more information and examples, see [Query Store hints (Preview)](query-store-hints.md).
 
 ## <a name="Verify"></a> Verify that Query Store collects query data continuously
 
@@ -411,7 +411,7 @@ WHERE is_forced_plan = 1;
 For a full list of reasons, see [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). You can also use the **query_store_plan_forcing_failed** XEvent to track and troubleshoot plan forcing failures.
 
 > [!TIP]
-> In Azure SQL Database, consider the [Query Store Hints (Preview)] feature for forcing query hints on queries without code changes. For more information and examples, see [Query Store Hints (Preview)](query-store-hints.md).
+> In Azure SQL Database, consider the [Query Store hints (Preview)] feature for forcing query hints on queries without code changes. For more information and examples, see [Query Store hints (Preview)](query-store-hints.md).
 
 ## <a name="Renaming"></a> Avoid renaming databases for queries with forced plans
 

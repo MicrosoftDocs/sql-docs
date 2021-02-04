@@ -101,7 +101,7 @@ $connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Auth
 $database = Get-SqlDatabase -ConnectionString $connStr
 
 # Create a SqlColumnMasterKeySettings object for your column master key. 
-$cmkSettings = New-SqlAzureKeyVaultColumnMasterKeySettings -KeyURL $akvKey.ID
+$cmkSettings = New-SqlAzureKeyVaultColumnMasterKeySettings -KeyURL $akvKey.Key.Kid
 
 # Create column master key metadata in the database.
 $cmkName = "CMK1"

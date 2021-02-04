@@ -54,7 +54,7 @@ Download and install the version of R you will use as the custom runtime. R vers
 
 1. Run the R setup.
 
-1. Note the path where R is installed. This path is your **R_HOME**. For example, **R_HOME** below is `C:\Program Files\R\R-4.0.3`.
+1. Note the path where R is installed. For example, in this article it is `C:\Program Files\R\R-4.0.3`.
 
     :::image type="content" source="../media/r-setup-path.png" alt-text="R setup":::
 
@@ -70,7 +70,7 @@ Follow these steps to modify the **PATH** system environment variables.
 
     Select **PATH** and click **Edit**.
 
-    Select **New** and add `C:\Program Files\R\R-4.0.3\bin\x64` (change this to your R installation path).
+    Select **New** and add the path to the `\bin\x64` folder in your R installation path. For example, `C:\Program Files\R\R-4.0.3\bin\x64`.
 
 ## Install Rcpp package
 
@@ -78,13 +78,13 @@ Follow these steps to install the **Rcpp** package.
 
 1. Start an *elevated* command prompt (run as Administrator).
 
-1. Start R from the command prompt (change the path to to your R installation):
+1. Start R from the command prompt. Run `\bin\R.exe` in the folder in your R installation path. For example, `C:\Program Files\R\R-4.0.3\bin\R.exe`.
 
     ```CMD
     "C:\Program Files\R\R-4.0.3\bin\R.exe"
     ```
 
-1. Run the following script to install the Rcpp package in the `C:\Program Files\R\R-4.0.3\library` folder (change this to to your R installation).
+1. Run the following script to install the Rcpp package in the `\library` folder in your R installation path. For example, `C:\Program Files\R\R-4.0.3\library`.
 
     ```R
     install.packages("Rcpp", lib="C:\Program Files\R\R-4.0.3\library");
@@ -99,7 +99,7 @@ Run the following **icacls** commands from a new *elevated* command prompt to gr
 
 The commands will recursively grant access to all files and folders under the given directory path.
 
-1. Give permissions to **SQL Server Launchpad Service user name** (change the path to to your R installation).
+1. Give permissions to **SQL Server Launchpad Service user name** to your R installation path. For example, `C:\Program Files\R\R-4.0.3`.
 
     ```cmd
     icacls "C:\Program Files\R\R-4.0.3" /grant "NT Service\MSSQLLAUNCHPAD":(OI)(CI)RX /T
@@ -107,7 +107,7 @@ The commands will recursively grant access to all files and folders under the gi
 
     For named instance, the command will be `icacls "C:\Program Files\R\R-4.0.3" /grant "NT Service\MSSQLLAUNCHPAD$SQL01":(OI)(CI)RX /T` for an instance called **SQL01**.
 
-2. Give permissions to **SID S-1-15-2-1**.
+2. Give permissions to **SID S-1-15-2-1** to your R installation path. For example, `C:\Program Files\R\R-4.0.3`.
 
     ```cmd
     icacls "C:\Program Files\R\R-4.0.3" /grant *S-1-15-2-1:(OI)(CI)RX /T

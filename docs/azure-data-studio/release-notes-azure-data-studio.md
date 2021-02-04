@@ -15,7 +15,7 @@ ms.date: 1/22/2021
 
 **[Download and install the latest release!](./download-azure-data-studio.md)**
 
-## December 2020 (hotfix)
+## January 2021 (hotfix)
 
 January 22, 2021 &nbsp; / &nbsp; version: 1.25.2
 

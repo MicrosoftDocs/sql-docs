@@ -1,7 +1,7 @@
 ---
 description: "Role definitions - predefined roles"
 title: "Role definitions - predefined roles | Microsoft Docs"
-ms.date: 06/10/2020
+ms.date: 02/04/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: security
@@ -17,6 +17,9 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Role definitions - predefined roles
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installs with predefined roles that you can use to grant access to report server operations. Each predefined role describes a collection of related tasks. You can assign groups and user accounts to predefined roles to provide immediate access to report server operations.  
   
 ## How to use predefined roles  
@@ -54,22 +57,24 @@ ms.author: maggies
   
 |Task|Description|  
 |----------|-----------------|  
+|Comment on reports|Create, view, edit, and delete comments on reports.| 
 |Consume reports|Reads report definitions.|  
 |Create linked reports|Create linked reports that are based on a non-linked report.|  
 |Manage all subscriptions|View, modify, and delete any subscription for reports and linked reports, regardless of who owns the subscription. This task supports the creation of data-driven subscriptions. It also supports the editing and execution of [scheduled refresh for Power BI (.pbix) files in Power BI Report Server](/power-bi/report-server/configure-scheduled-refresh).|  
+|Manage comments|Delete other users' comments on reports.| 
 |Manage data sources|Create and delete shared data source items, view, and modify data source properties and content.|  
-|Manage folders|Create, view, and delete folders, and view and modify folder properties.|  
-|Manage models|Create, view, and delete models, and view and modify model properties.|  
+|Manage folders|Create, view, and delete folders, and view and modify folder properties.| 
 |Manage individual subscriptions|Create, view, modify, and delete user-owned subscriptions to reports and linked reports. This task also supports the editing and execution of [scheduled refresh for Power BI (.pbix) files in Power BI Report Server](/power-bi/report-server/configure-scheduled-refresh).|  
+|Manage models|Create, view, and delete models, and view and modify model properties.|  
 |Manage report history|Create, view, and delete report history, view report history properties, and view, and modify settings that determine snapshot history limits and how caching works.|  
 |Manage reports|Add and delete reports, modify report parameters, view and modify report properties, view and modify data sources that provide content to the report, view and modify report definitions, and set security policies at the report level.|  
 |Manage resources|Create, modify, and delete resources, and view and modify resource properties.|  
-|Set security policies for items|Define security policies for reports, linked reports, folders, resources, and data sources. For more information, see [Securable Items](../../reporting-services/security/securable-items.md).|  
+|Set security for individual items|Define security policies for reports, linked reports, folders, resources, and data sources. For more information, see [Securable Items](../../reporting-services/security/securable-items.md).|  
 |View data sources|View shared data source items in the folder hierarchy.|  
-|View reports|Run reports and view report properties.|  
-|View models|View models in the folder hierarchy, use models as data sources for a report, and run queries against the model to retrieve data.|  
-|View resources|View resources and resource properties.|  
 |View folders|View folder contents and navigate through the folder hierarchy.|  
+|View models|View models in the folder hierarchy, use models as data sources for a report, and run queries against the model to retrieve data.|  
+|View reports|Run reports and view report properties.|  
+|View resources|View resources and resource properties.|  
   
 ### Customizing the content manager role  
  This role is intended for trusted users who have overall responsibility for managing and maintaining report server content. You can remove tasks from this definition, but doing so may introduce ambiguity into what can be managed. For example, removing the "View reports" task from this role definition would prevent a **Content Manager** from viewing report contents and therefore be unable to verify changes to parameter and credential settings.  
@@ -92,10 +97,11 @@ ms.author: maggies
 |Task|Description|  
 |----------|-----------------|  
 |Create linked reports|Create linked reports and publish them to a report server folder.|  
+|Manage comments|Delete other users' comments on reports.| 
 |Manage data sources|Create and delete shared data source items, view and modify data source properties and content.|  
 |Manage folders|Create, view, and delete folders; view and modify folder properties.|  
-|Manage reports|Add and delete reports, modify report parameters, view and modify report properties, view and modify data sources that provide content to the report, view, and modify report definitions.|  
 |Manage models|Create, view, and delete report models; view and modify report model properties.|  
+|Manage reports|Add and delete reports, modify report parameters, view and modify report properties, view and modify data sources that provide content to the report, view, and modify report definitions.|  
 |Manage resources|Create, modify, and delete resources; view and modify resource properties.|  
   
 ### Customizing the publisher role  
@@ -113,12 +119,13 @@ ms.author: maggies
   
 |Task|Description|  
 |----------|-----------------|  
+|Comment on reports|Create, view, edit, and delete comments on reports.| 
+|Manage individual subscriptions|Create, view, modify, and delete user-owned subscriptions to reports and linked reports, and create schedules in support of those subscriptions.| 
+|View folders|View folder contents and navigate the folder hierarchy.| 
+|View models|View models in the folder hierarchy, use models as data sources for a report, and run queries against the model to retrieve data.| 
 |View reports|Run a report and view report properties.|  
 |View resources|View resources and resource properties.|  
-|View folders|View folder contents and navigate the folder hierarchy.|  
-|View models|View models in the folder hierarchy, use models as data sources for a report, and run queries against the model to retrieve data.|  
-|Manage individual subscriptions|Create, view, modify, and delete user-owned subscriptions to reports and linked reports, and create schedules in support of those subscriptions.|  
-  
+   
 ### Customizing the browser role  
  You can modify the **Browser** role to suit your needs. For example, you can remove the "Manage individual subscriptions" task if you do not want to support subscriptions, or you can remove the "View resources" task if you do not want users to see collateral documentation or other items that might be uploaded to the report server.  
   
@@ -132,12 +139,13 @@ ms.author: maggies
   
 |Task|Description|  
 |----------|-----------------|  
+|Comment on reports|Create, view, edit, and delete comments on reports.| 
 |Consume reports|Reads report definitions.|  
-|View reports|Run a report and view report properties.|  
-|View resources|View resources and resource properties.|  
+|Manage individual subscriptions|Create, view, modify, and delete user-owned subscriptions to reports and linked reports, and create schedules in support of those subscriptions.|  
 |View folders|View folder contents and navigate the folder hierarchy.|  
 |View models|View models in the folder hierarchy, use models as data sources for a report, and run queries against the model to retrieve data.|  
-|Manage individual subscriptions|Create, view, modify, and delete user-owned subscriptions to reports and linked reports, and create schedules in support of those subscriptions.|  
+|View reports|Run a report and view report properties.|  
+|View resources|View resources and resource properties.|  
   
 ### Customizing the Report Builder role  
  You can modify the **Report Builder** role to suit your needs. The recommendations are generally the same as for the **Browser** role: remove the "Manage individual subscriptions" task if you do not want to support subscriptions, remove the "View resources" task if you do not want users to see resources, and keep "View reports" task and the "View folders" tasks to support viewing and folder navigation.  
@@ -154,21 +162,24 @@ ms.author: maggies
   
 |Task|Description|  
 |----------|-----------------|  
+|Comment on reports|Create, view, edit, and delete comments on reports.| 
 |Create linked reports|Create linked reports that are based on reports that are stored in the user's My Reports folder.|  
-|Manage folders|Create, view, and delete folders, and view and modify folder properties.|  
+|Manage comments|Delete other users' comments on reports.| 
 |Manage data sources|Create and delete shared data source items, view, and modify data source properties and content.|  
+|Manage folders|Create, view, and delete folders, and view and modify folder properties.|  
 |Manage individual subscriptions|Create, view, modify, and delete subscriptions for reports and linked reports.|  
+|Manage report history|Create, view, and delete report history, view report history properties, and view, and modify settings that determine snapshot history limits and how caching works.|  
 |Manage reports|Add and delete reports, modify report parameters, view, and modify report properties, view and modify data sources that provide content to the report, view and modify report definitions, and set security policies at the report level.|  
 |Manage resources|Create, modify, and delete resources, and view. and modify resource properties.|  
-|View reports|Run reports that are stored in the user's My Reports folder and view report properties.|  
 |View data sources|View shared data source items in the folder hierarchy.|  
-|View resources|View resources and resource properties.|  
 |View folders|View folder contents.|  
+|View reports|Run reports that are stored in the user's My Reports folder and view report properties.|  
+|View resources|View resources and resource properties.|  
   
 ### Customizing the My Reports role  
  You can modify this role to suit your needs. However, it is recommended that you keep the "Manage reports" task and the "Manage folders" task to enable basic content management. In addition, this role should support all view-based tasks so that users can see folder contents and run the reports that they manage.  
   
- Although the "Set security policies for items" task is not part of the role definition by default, you can add this task to the **My Reports** role so that users can customize security settings for subfolders and reports.  
+ Although the "Set security for individual items" task is not part of the role definition by default, you can add this task to the **My Reports** role so that users can customize security settings for subfolders and reports.  
   
 ##  <a name="bkmk_systemadministrator"></a> System administrator role  
  The **System Administrator** role is a predefined role that includes tasks that are useful for a report server administrator who has overall responsibility for a report server, but not necessarily for the content within it.  
@@ -185,9 +196,9 @@ ms.author: maggies
 |Execute report definitions|Start execution for report definition without publishing it to a report server.|  
 |Manage jobs|View and cancel jobs that are running. For more information, see [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md).|  
 |Manage report server properties|View and modify properties that apply to the report server and to items that the report server manages.<br /><br /> This task supports renaming the web portal, enabling My Reports, and setting report history defaults.|  
+|Manage report server security|View and modify system-wide role assignments|  
 |Manage roles|Create, view, and modify, and delete role definitions.<br /><br /> Members of the **System Administrator** role can use the Site Settings page to manage roles.|  
 |Manage shared schedules|Create, view, modify, and delete shared schedules that are used to run or refresh reports.|  
-|Manage report server security|View and modify system-wide role assignments|  
   
  The **System Administrator** role is used in default security.  
   

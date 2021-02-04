@@ -27,8 +27,8 @@ ms.author: wiassaf
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-[!IMPORTANT]
-This dynamic management view is currently not supported by the SQL Server EKM Connector. The SQL Server product team is aware of this issue and will address this in the future.
+> [!IMPORTANT]
+> This dynamic management view is currently not supported by the SQL Server EKM Connector. The SQL Server product team is aware of this issue and will address this in the future.
 
 ## Syntax  
   

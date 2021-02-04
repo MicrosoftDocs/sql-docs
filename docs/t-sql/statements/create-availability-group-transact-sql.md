@@ -257,7 +257,8 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
 - Can be hosted on any edition of SQL Server, including Express Edition.
 - Requires the data mirroring endpoint of the CONFIGURATION_ONLY replica to be type `WITNESS`.
 - Can not be altered.
-- Is not valid when `CLUSTER_TYPE = WSFC`. 
+- Is not valid when `CLUSTER_TYPE = WSFC`.
+- The options `failover_mode` and `seeding_mode` are not supported when `availability_mode` is set to `configuration_only` for a replica. A sample is shown [here](../../linux/sql-server-linux-availability-group-configure-ha.md).
 
    For more information, see [Configuration only replica](../../linux/sql-server-linux-availability-group-ha.md).
   

@@ -237,7 +237,7 @@ Specifies the graph match pattern. For more information about the arguments for 
 >|-----------------|---------------|-----------------|-----------|  
 >|**WHEN MATCHED**| All distribution types |All distribution types||  
 >|**NOT MATCHED BY TARGET**|HASH |All distribution types|Use UPDATE/DELETE FROM…JOIN to synchronize two tables. |
->|**NOT MATCHED BY SOURCE**|All distribution types|All distribution types|Use UPDATE/DELETE FROM…JOIN to synchronize two tables.||  
+>|**NOT MATCHED BY SOURCE**|All distribution types|All distribution types|||  
 
 At least one of the three MATCHED clauses must be specified, but they can be specified in any order. A variable can't be updated more than once in the same MATCHED clause.  
   

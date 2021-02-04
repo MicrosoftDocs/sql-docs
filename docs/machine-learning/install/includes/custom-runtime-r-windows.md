@@ -18,7 +18,7 @@ Before installing an R custom runtime, install the following:
 > [!NOTE]
 > If you have [Machine Learning Services](../../sql-server-machine-learning-services.md) installed on SQL Server 2019, Language Extensions is already installed and you can skip this step.
 
-Follow the steps below to install [SQL Server Language Extensions](../../../language-extensions/language-extensions-overview.md), which is used for the Python custom runtime.
+Follow the steps below to install [SQL Server Language Extensions](../../../language-extensions/language-extensions-overview.md), which is used for the R custom runtime.
 
 1. Start the setup wizard for SQL Server 2019.
   
@@ -32,7 +32,7 @@ Follow the steps below to install [SQL Server Language Extensions](../../../lang
   
     + **Machine Learning Services and Language Extensions**
 
-        Select **Machine Learning Services and Language Extensions**. Do not select Python, as you will be installing the custom Python runtime later.
+        Select **Machine Learning Services and Language Extensions**. Do not select R, as you will be installing the custom R runtime later.
 
         :::image type="content" source="../media/2019-setup-language-extensions.png" alt-text="SQL Server 2019 Language Extensions setup.":::
 
@@ -58,31 +58,19 @@ Download and install the version of R you will use as the custom runtime. R vers
 
     :::image type="content" source="../media/r-setup-path.png" alt-text="R setup":::
 
-## Update system environment variables
+## Update system environment variable
 
-Follow the steps below to add or modify the **R_HOME** and modify the **PATH** system environment variables.
+Follow these steps to modify the **PATH** system environment variables.
 
 1. In the Windows search box, search for **Edit the system environment variables** and open it.
 
 1. Under **Advanced**, select **Environment Variables**.
 
-1. Create or modify the **R_HOME** system environment variable.
-
-    In **System variables**, select **New** to create the **R_HOME** system environment variable. If you already have an **R_HOME** system environment variable, select **Edit** to modify it instead.
-
-    Under **Variable name** type `R_HOME` under. Under **Variable value** type the path for your R installation. For example, `C:\Program Files\R\R-4.0.3`.
-
-    :::image type="content" source="../media/r_home_environment_variable.png" alt-text="R_HOME environment variable":::
-
-    Click **OK**.
-
 1. Modify the **PATH** system environment variable.
 
     Select **PATH** and click **Edit**.
 
-    Select **New** and add `%R_HOME%\bin\x64`.
-
-    :::image type="content" source="../media/r_path_environment_variable.png" alt-text="PATH environment variable":::
+    Select **New** and add `C:\Program Files\R\R-4.0.3\bin\x64` (change this to your R installation path).
 
 ## Install Rcpp package
 
@@ -90,42 +78,42 @@ Follow these steps to install the **Rcpp** package.
 
 1. Start an *elevated* command prompt (run as Administrator).
 
-1. Start R from the command prompt:
+1. Start R from the command prompt (change the path to to your R installation):
 
     ```CMD
-    "%R_HOME%\bin\R.exe"
+    "C:\Program Files\R\R-4.0.3\bin\R.exe"
     ```
 
-1. Run the following script to install the Rcpp package in the %R_HOME%\library folder.
+1. Run the following script to install the Rcpp package in the `C:\Program Files\R\R-4.0.3\library` folder (change this to to your R installation).
 
     ```R
-    install.packages("Rcpp", lib="%R_HOME%/library");
+    install.packages("Rcpp", lib="C:\Program Files\R\R-4.0.3\library");
     ```
 
 ## Grant access to R folder
 
 > [!NOTE]
-> If you have installed R in the default location of **C:\Program Files\R\R-version**, you can skip this step.
+> If you have installed R in the default location of `C:\Program Files\R\R-version` (for example, `C:\Program Files\R\R-4.0.3`), you can skip this step.
 
 Run the following **icacls** commands from a new *elevated* command prompt to grant **READ & EXECUTE** access to the **SQL Server Launchpad Service user name** and SID **S-1-15-2-1** (**ALL APPLICATION PACKAGES**). The launchpad service user name is of the form `NT Service\MSSQLLAUNCHPAD$INSTANCENAME` where `INSTANCENAME` is the instance name of your SQL Server.
 
 The commands will recursively grant access to all files and folders under the given directory path.
 
-1. Give permissions to **SQL Server Launchpad Service user name**.
+1. Give permissions to **SQL Server Launchpad Service user name** (change the path to to your R installation).
 
     ```cmd
-    icacls "%R_HOME%" /grant "NT Service\MSSQLLAUNCHPAD":(OI)(CI)RX /T
+    icacls "C:\Program Files\R\R-4.0.3" /grant "NT Service\MSSQLLAUNCHPAD":(OI)(CI)RX /T
     ```
 
-    For named instance, the command will be `icacls "%R_HOME%" /grant "NT Service\MSSQLLAUNCHPAD$SQL01":(OI)(CI)RX /T` for an instance called **SQL01**.
+    For named instance, the command will be `icacls "C:\Program Files\R\R-4.0.3" /grant "NT Service\MSSQLLAUNCHPAD$SQL01":(OI)(CI)RX /T` for an instance called **SQL01**.
 
 2. Give permissions to **SID S-1-15-2-1**.
 
     ```cmd
-    icacls "%R_HOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
+    icacls "C:\Program Files\R\R-4.0.3" /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
 
-    The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to **ALL APPLICATION PACKAGES** on an English version of Windows. Alternatively, you can use `icacls "%R_HOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
+    The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to **ALL APPLICATION PACKAGES** on an English version of Windows. Alternatively, you can use `icacls "C:\Program Files\R\R-4.0.3" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
 
 ## Restart SQL Server Launchpad
 
@@ -145,11 +133,13 @@ Follow these steps to download and register the R language extension, which is u
 
 1. Use [Azure Data Studio](../../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the R language extension with [CREATE EXTERNAL LANGUAGE](../../../t-sql/statements/create-external-language-transact-sql.md).
 
-    Modify the path in this statement to reflect the location of the downloaded language extension zip file (**R-lang-extension-windows-release.zip**).
+    Modify the path in this statement to reflect the location of the downloaded language extension zip file (**R-lang-extension-windows-release.zip**) and the location your R installation (`C:\\Program Files\\R\\R-4.0.3`).
 
     ```sql
     CREATE EXTERNAL LANGUAGE [myR]
-    FROM (CONTENT = N'C:\path\to\R-lang-extension-windows-release.zip', FILE_NAME = 'libRExtension.dll');
+    FROM (CONTENT = N'C:\path\to\R-lang-extension-windows-release.zip', 
+        FILE_NAME = 'libRExtension.dll',
+        ENVIRONMENT_VARIABLES = N'{"R_HOME": "C:\\Program Files\\R\\R-4.0.3"}'););
     GO
     ```
 

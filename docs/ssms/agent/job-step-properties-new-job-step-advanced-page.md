@@ -46,7 +46,7 @@ Sets the file to use for output from the job step. This option is available only
 Browse to the file to use for output from the job step.  
   
 **View**  
-In [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], this button is disabled for viewing output files. Instead, use Notepad to view job step output files.  
+In [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], this button is disabled for viewing output files. Instead, use Notepad to view job step output files.  
   
 **Append output to existing file**  
 Append output to the existing contents of the file. Otherwise, the previous file contents are overwritten each time the job step runs.  
@@ -74,7 +74,7 @@ Sets the file to use for output from the job step.
 Browse to the file to use for output from the job step.  
   
 **View**  
-In [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], this button is disabled for viewing output files. Instead, use Notepad to view job step output files.  
+In [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], this button is disabled for viewing output files. Instead, use Notepad to view job step output files.  
   
 **Append output to existing file**  
 Appends the job step output to the previous file contents each time it runs.  
@@ -99,7 +99,7 @@ Sets the file to use for output from the job step.
 Browse to the file to use for output from the job step.  
   
 **View**  
-In [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], this button is disabled for viewing output files. Instead, use Notepad to view job step output files.  
+In [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], this button is disabled for viewing output files. Instead, use Notepad to view job step output files.  
   
 **Append output to existing file**  
 Appends the job step output to the previous file contents each time it runs.  
@@ -131,7 +131,7 @@ Sets the file to use for output from the job step. This option is available only
 Browse to the file to use for output from the job step.  
   
 **View**  
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], this button is disabled for viewing output files. Instead, use Notepad to view job step output files.  
+In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], this button is disabled for viewing output files. Instead, use Notepad to view job step output files.  
   
 **Append output to existing file**  
 Append output to the existing contents of the file. Otherwise, the previous file contents are overwritten each time the job step runs.  

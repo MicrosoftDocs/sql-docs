@@ -8,7 +8,7 @@ ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 06/10/2020
+ms.date: 02/05/2021
 ms.author: datrigan
 author: DavidTrigano
 ---

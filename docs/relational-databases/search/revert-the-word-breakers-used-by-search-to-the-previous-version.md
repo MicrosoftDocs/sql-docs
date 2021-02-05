@@ -57,40 +57,40 @@ ms.custom: "seo-lt-2019"
   
 |Language|Abbreviation<br />used in the<br />registry|LCID|  
 |--------------|---------------------------------------|----------|  
-|Bengali|ben|1093|  
-|Bulgarian|bgr|1026|  
-|Catalan|cat|1027|  
-|Spanish|esn|3082|  
-|French|fra|1036|  
-|Gujarati|guj|1095|  
-|Hebrew|heb|1037|  
-|Hindi|hin|1081|  
-|Croatian|hrv|1050|  
-|Indonesian|ind|1057|  
-|Icelandic|isl|1039|  
-|Italian|ita|1040|  
-|Kannada|kan|1099|  
-|Lithuanian|lth|1063|  
-|Latvian|lvi|1062|  
-|Malayalam|mal|1100|  
-|Marathi|mar|1102|  
-|Malay|msl|1086|  
-|Neutral|Neutral|0000|  
-|Norwegial Bokmaal|nor|1044|  
-|Punjabi|pan|1094|  
-|Portuguese (Brazil)|ptb|1046|  
-|Portuguese|ptg|2070|  
-|Romanian|rom|1048|  
-|Slovak|sky|1051|  
-|Slovenian|slv|1060|  
-|Serbian - Cyrillic|srb|3098|  
-|Serbian - Latin|srl|2074|  
-|Swedish|sve|1053|  
-|Tamil|tam|1097|  
-|Telugu|tel|1098|  
-|Ukrainian|ukr|1058|  
-|Urdu|urd|1056|  
-|Vietnamese|vit|1066|  
+|Bengali|`ben`|1093|  
+|Bulgarian|`bgr`|1026|  
+|Catalan|`cat`|1027|  
+|Spanish|`esn`|3082|  
+|French|`fra`|1036|  
+|Gujarati|`guj`|1095|  
+|Hebrew|`heb`|1037|  
+|Hindi|`hin`|1081|  
+|Croatian|`hrv`|1050|  
+|Indonesian|`ind`|1057|  
+|Icelandic|`isl`|1039|  
+|Italian|`ita`|1040|  
+|Kannada|`kan`|1099|  
+|Lithuanian|`lth`|1063|  
+|Latvian|`lvi`|1062|  
+|Malayalam|`mal`|1100|  
+|Marathi|`mar`|1102|  
+|Malay|`msl`|1086|  
+|Neutral|`Neutral`|0000|  
+|Norwegial Bokmaal|`nor`|1044|  
+|Punjabi|`pan`|1094|  
+|Portuguese (Brazil)|`ptb`|1046|  
+|Portuguese|`ptg`|2070|  
+|Romanian|`rom`|1048|  
+|Slovak|`sky`|1051|  
+|Slovenian|`slv`|1060|  
+|Serbian - Cyrillic|`srb`|3098|  
+|Serbian - Latin|`srl`|2074|  
+|Swedish|`sve`|1053|  
+|Tamil|`tam`|1097|  
+|Telugu|`tel`|1098|  
+|Ukrainian|`ukr`|1058|  
+|Urdu|`urd`|1056|  
+|Vietnamese|`vit`|1066|  
   
  The preceding table is sorted alphabetically on the Abbreviation column.  
   

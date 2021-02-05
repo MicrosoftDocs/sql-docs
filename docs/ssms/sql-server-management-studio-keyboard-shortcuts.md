@@ -133,7 +133,7 @@ SQL Server Management Studio (SSMS) offers keyboard shortcuts. By default, it us
 |Moves the cursor one character to the right and extends the column selection|SHIFT+ALT+RIGHT ARROW|
 |Select text up line by line starting from the cursor|SHIFT+UP ARROW|
 |Move up the cursor one line, extending the selection|SHIFT+ALT+ UP ARROW|
-|Extend selection up one page|SHIFT+ PAGE UP|S
+|Extend selection up one page|SHIFT+ PAGE UP|
 |Extend selection down one page|SHIFT+ PAGE DOWN|
 |Select the entire current document|CTRL+A|
 |Select the word containing the cursor, or the closest word|CTRL+W|
@@ -266,40 +266,6 @@ All shortcuts aren't implemented in all types of code editors.
 |Removes all outlining information in the document|CTRL+M, CTRL+P|
 |Removes the outlining information for the currently selected region|CTRL+M, CTRL+U|
 
-## Transact-SQL Debugger Keyboard Shortcuts
-
-| Action | Shortcut |
-|--------|----------|
-|Start or continue debugging|ALT+F5|
-|Stop debugging|SHIFT+F5|
-|Step into|F11|
-|Step over|F10|
-|Step out|SHIFT+F11|
-|Step into specific statement|SHIFT+ALT+F11|
-|Set next statement|Ctrl+3 0|
-|Show next statement|ALT+NUM|
-|Implement the **Run To Cursor** command|CTRL+F10|
-|Display the **QuickWatch** dialog box|CTRL+ALT+Q<br /><br /> or<br /><br /> SHIFT+F9|
-|Toggle breakpoint|F9|
-|Enable breakpoint|CTRL+F9|
-|Delete the breakpoint. Only available in the **Breakpoints** window|ALT+F9, D|
-|Open the **Edit breakpoint labels** dialog. Only available in the **Breakpoints** window|ALT+F9, L|
-|Delete all breakpoints|CTRL+SHIFT+F9|
-|Display the **Breakpoints** window|CTRL+ALT+B|
-|Break all|CTRL+ALT+BREAK|
-|Break at function|CTRL+B|
-|Display the **Watch 1** window|CTRL+ALT+W, 1|
-|Display the **Watch 2** window|CTRL+ALT+W, 2|
-|Display the **Watch 3** window|CTRL+ALT+W, 3|
-|Display the **Watch 4** window|CTRL+ALT+W, 4|
-|Display the **Autos** window|CTRL+ALT+V, A|
-|Display the **Locals** window|CTRL+ALT+V, L|
-|Display the **Immediate** window|CTRL+ALT+I|
-|Display the **Call Stack** window|CTRL+ALT+C|
-|Display the **Threads** window|CTRL+ALT+H|
-|Display the **Parallel Stacks** window.|CTRL+SHIFT+D, S|
-|Display the **Parallel Tasks** window|CTRL_SHIFT+D, K|
-
 ## Microsoft IntelliSense Keyboard Shortcuts
 
 | Action | Shortcut |
@@ -375,17 +341,17 @@ All shortcuts aren't implemented in all types of code editors.
 
 | Action | Shortcut |
 |--------|----------|
-|Cut (delete the currently selected item and place it to the Clipboard)|CTRL+X<br /><br /> or<br /><br /> SHIFTRLT+DELETE|
+|Cut (delete the currently selected item and place it to the Clipboard)|CTRL+X|
 |Cuts all of the selected lines, or the current line if nothing is selected.|CTRL+L<br /><br /> or<br /><br /> CTRL+SHIFT+L|
 |Copy to the Clipboard|CTRL+C<br /><br /> or<br /><br /> CTRL+INSERT|
 |Paste from the Clipboard at the insertion point|CTRL+V<br /><br /> or<br /><br /> SHIFT+INSERT|
-|Pastes an item from the Clipboard Ring at the insertion point and automatically selects the pasted item|CTRL+SHIFT+V<br /><br /> or<br /><br /> CTRL+enseSHIFT+INSERT|
+|Pastes an item from the Clipboard Ring at the insertion point and automatically selects the pasted item|CTRL+SHIFT+V|
 
 ## Activity Monitor Keyboard Shortcuts
 
 | Action | Shortcut |
 |--------|----------|
-|Launches Activity Monitor|CTRLl+ALT+A|
+|Launches Activity Monitor|CTRL+ALT+A|
 |Closes Activity Monitor|CTRL+F4|
 |Refresh|F5|
 |Filter the monitor display|CTRL+SHIFT+F|

@@ -80,6 +80,7 @@ On the Linux host machine, use the following commands to install adutil-preview.
 1. Run the following command to install adutil-preview. `ACCEPT_EULA=Y` accepts the preview EULA for adutil. The EULA is placed at the path '/usr/share/adutil/'.
 
     ```bash
+    sudo apt-get update
     sudo ACCEPT_EULA=Y apt-get install -y adutil-preview
     ```
 

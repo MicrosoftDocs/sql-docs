@@ -26,14 +26,14 @@ ms.author: "maghan"
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] offers users two keyboard schemes. By default, it uses the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] scheme, with keyboard shortcuts based on [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] also offers a keyboard scheme similar to the standard scheme from [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. To change the keyboard scheme or add additional keyboard shortcuts, on the **Tools** menu, click **Options**. Select the desired keyboard scheme on the **Environment**, **Keyboard** page.  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] offers users two keyboard schemes. By default, it uses the [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] scheme, with keyboard shortcuts based on [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] also offers a keyboard scheme similar to the standard scheme from [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. To change the keyboard scheme or add additional keyboard shortcuts, on the **Tools** menu, click **Options**. Select the desired keyboard scheme on the **Environment**, **Keyboard** page.  
   
 > [!NOTE]  
 >  To show only the headings, click **Collapse All** at the top of this page.  
   
 ## Menu Activation Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Move to the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] menu bar|ALT|ALT|  
 |Activate the menu for a tool component|ALT+HYPHEN|ALT+HYPHEN|  
@@ -49,7 +49,7 @@ ms.author: "maghan"
   
 ## Windows Management and Toolbar Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Close the current MDI child window|CTRL+F4|CTRL+F4|  
 |Close a menu or dialog box, cancels an operation in progress, or focuses on the current document window|ESC|ESC|  
@@ -92,7 +92,7 @@ ms.author: "maghan"
   
 ## Cursor Movement Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Move the cursor left|LEFT ARROW|LEFT ARROW|  
 |Move the cursor right|RIGHT ARROW|RIGHT ARROW|  
@@ -114,7 +114,7 @@ ms.author: "maghan"
   
 ## Text Selection Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Select text from the cursor to the beginning of the document|CTRL+SHIFT+ HOME|CTRL+SHIFT+ HOME|  
 |Select text from the cursor to the end of the document|CTRL+SHIFT+END|CTRL+SHIFT+END|  
@@ -152,7 +152,7 @@ ms.author: "maghan"
   
 ## Bookmark Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Set or remove a bookmark at the current line|CTRL+K, CTRL+K|CTRL+K, CTRL+K|  
 |Next bookmark|CTRL+K, CTRL+N|CTRL+K, CTRL+N|  
@@ -163,7 +163,7 @@ ms.author: "maghan"
   
 ## Tree Control Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Collapse tree nodes|- (on the numeric keypad)|- (on the numeric keypad)|  
 |Expand all tree nodes|*  (on the numeric keypad)|* (on the numeric keypad)|  
@@ -173,7 +173,7 @@ ms.author: "maghan"
 ## Code Editor Keyboard Shortcuts  
  All shortcuts are not implemented in all types of code editors.  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Toggle the full-screen display|SHIFT+ALT+ENTER|SHIFT+ALT+ENTER|  
 |Scroll text up one line|CTRL+UP ARROW|CTRL+UP ARROW|  
@@ -228,7 +228,7 @@ ms.author: "maghan"
   
 ## Text Manipulation in Code Editor Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Insert a new line|ENTER or SHIFT+ENTER|ENTER or SHIFT+ENTER|  
 |Swap the characters on either side of the cursor (Does not apply to the SQL Editor.)|CTRL+T|CTRL+T|  
@@ -265,7 +265,7 @@ ms.author: "maghan"
   
 ## Transact-SQL Debugger Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Start or continue debugging|ALT+F5|ALT+F5|  
 |Stop debugging|SHIFT+F5|SHIFT+F5|  
@@ -299,7 +299,7 @@ ms.author: "maghan"
   
 ## Microsoft IntelliSense Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |List members|CTRL+J|CTRL+SPACE<br /><br /> or<br /><br /> CTRL+J|  
 |Complete word|CTRL+SPACE<br /><br /> or<br /><br /> ALT+RIGHT ARROW|ALT+RIGHT ARROW|  
@@ -317,7 +317,7 @@ ms.author: "maghan"
   
 ## Document Window and Browser Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Toggle full-screen mode|SHIFT+ALT+ENTER|SHIFT+ALT+ENTER|  
 |Move to the next pane of a split pane view of a document|F6|F6|  
@@ -329,7 +329,7 @@ ms.author: "maghan"
   
 ## Solution Explorer Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Display Solution Explorer|CTRL+ALT+L|CTRL+ALT+L|  
 |Display the **New File** dialog box to create a new file|CTRL+N|CTRL+N|  
@@ -339,7 +339,7 @@ ms.author: "maghan"
   
 ## Help and Books Online Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Help|F1<br /><br /> or<br /><br /> SHIFT+F1|F1|  
 |Display SQL Server Books Online|CTRL+F1|No equivalent|  
@@ -355,7 +355,7 @@ ms.author: "maghan"
   
 ## Search Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Display the **Find** dialog box|CTRL+F|CTRL+F|  
 |Displays the **In Files** tab of the **Find** dialog box.|||  
@@ -377,7 +377,7 @@ ms.author: "maghan"
   
 ## Cut and Paste Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Cut (delete the currently selected item and place it to the Clipboard)|CTRL+X<br /><br /> or<br /><br /> SHIFTRLT+DELETE|CTRL+X<br /><br /> or<br /><br /> SHIFT+DELETE|  
 |Cuts all of the selected lines, or the current line if nothing is selected.|CTRL+L<br /><br /> or<br /><br /> CTRL+SHIFT+L|No equivalent|  
@@ -387,7 +387,7 @@ ms.author: "maghan"
   
 ## Log Viewer Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Refresh|No equivalent|F5|  
 |Move between the **Select logs** pane and the **Log file summary** pane|No equivalent|F6|  
@@ -399,7 +399,7 @@ ms.author: "maghan"
   
 ## Activity Monitor Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Launches Activity Monitor|CTRLl+ALT+A|CTRLl+ALT+A|  
 |Closes Activity Monitor|CTRL+F4|CTRL+F4|  
@@ -415,14 +415,14 @@ ms.author: "maghan"
   
 ## Replication Monitor Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Refresh|F5|F5|  
 |Open a detail window from a grid|ENTER|ENTER|  
   
 ## Replication Conflict Viewer Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Define filter|F6|F6|  
 |Apply filter|F7|F7|  
@@ -430,7 +430,7 @@ ms.author: "maghan"
   
 ## Query Designer Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Cancels or stops the currently running query|CTRL+T|CTRL+T|  
 |Displays the diagram pane of the **Query Designer**|CTRL+1|CTRL+1|  
@@ -443,7 +443,7 @@ ms.author: "maghan"
   
 ## Designer Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Move the selected control down in increments of 8 on the design surface|DOWN ARROW|No equivalent|  
 |Move the selected control left in increments of 8 on the design surface|LEFT ARROW|No equivalent|  

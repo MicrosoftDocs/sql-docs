@@ -34,19 +34,19 @@ ms.author: chadam
   
 ##  <a name="BestPractices"></a> Best Practices  
   
--   Review [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [Release Notes](/previous-versions/sql/sql-server-15/dn169381(v=sql.15))  
+-   Review [[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] release notes](../../sql-server-version-15-release-notes.md).
   
--   Install prerequisite software. Before running Setup to install or upgrade to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], install the following prerequisites to reduce installation time. You can install prerequisite software on each failover cluster node and then restart nodes once before running Setup.  
+-   Install prerequisite software. Before running Setup to install or upgrade, install the following prerequisites to reduce installation time. You can install prerequisite software on each failover cluster node and then restart nodes once before running Setup.  
   
-    -   Windows PowerShell is no longer installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup. Windows PowerShell is a prerequisite for installing [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] components and [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. If Windows PowerShell is not present on your computer, you can enable it by following the instructions on the [Windows Management Framework](/powershell/scripting/windows-powershell/wmf/overview) page.  
+    -   Windows PowerShell is no longer installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup. Windows PowerShell is a prerequisite for installing [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] components and [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. If Windows PowerShell is not present on your computer, you can enable it by following the instructions on the [Windows Management Framework](/powershell/scripting/windows-powershell/wmf/overview) page.  
   
-    -   .NET Framework 3.5 SP1 is no longer installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup, but may be required while installing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on older Windows operating systems. For more information, see [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Release Notes](/previous-versions/sql/sql-server-15/dn169381(v=sql.15)).  
+    -   .NET Framework 3.5 SP1 is no longer installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup, but may be required while installing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on older Windows operating systems. For more information, see [SQL Server 2019: Hardware and software requirements](../../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md).  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update package:** To avoid computer restart due to .NET Framework 4 installation during setup, [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] setup requires a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] update to be installed on the computer.  If you are installing [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] on Windows 7 SP1 or [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 this update is included. If you are installing on an older Windows operating system, download it from [Microsoft Update for .NET Framework 4.0 on Windows Vista and Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update package:** To avoid computer restart due to .NET Framework 4 installation during setup, [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] setup requires a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] update to be installed on the computer.  If you are installing [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] on Windows 7 SP1 or [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 this update is included. If you are installing on an older Windows operating system, download it from [Microsoft Update for .NET Framework 4.0 on Windows Vista and Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
     -   .NET Framework 4: Setup installs .NET Framework 4 on a clustered operating system. To reduce installation time, you may consider installing .NET Framework 4 before you run Setup.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup support files. You can install these files by running SqlSupport.msi located on your [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] installation media.  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup support files. You can install these files by running SqlSupport.msi located on your installation media.  
   
 -   Verify that antivirus software is not installed on your WSFC cluster. For more information, see the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base article, [Antivirus software may cause problems with cluster services](/troubleshoot/windows-server/high-availability/not-cluster-aware-antivirus-software-cause-issue).  
   
@@ -131,7 +131,7 @@ ms.author: chadam
   
 -   To create a failover cluster, you must be a local administrator with permissions to log on as a service, and to act as part of the operating system on all nodes of the failover cluster instance.  
   
--   On [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], service SIDs are generated automatically for use with [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] services. For [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] failover cluster instances upgraded from previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], existing domain groups and ACL configurations will be preserved.  
+-   On [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], service SIDs are generated automatically for use with [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] services. For [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] failover cluster instances upgraded from previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], existing domain groups and ACL configurations will be preserved.  
   
 -   Domain groups must be within the same domain as the machine accounts. For example, if the machine where [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will be installed is in the SQLSVR domain which is a child of MYDOMAIN, you must specify a group in the SQLSVR domain. The SQLSVR domain may contain user accounts from MYDOMAIN.  
   
@@ -181,18 +181,19 @@ ms.author: chadam
 ##  <a name="OS_Support"></a> Verify Your Operating System  
  Make sure that your operating system is installed properly and is designed to support failover clustering. The following table is a list of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] editions and the operating systems that support them.  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] edition|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] edition|Windows Server 2019 Datacenter|Windows Server 2019 Standard|Windows Server 2016 Datacenter|Windows Server 2016 Standard |  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64-bit) x64*|Yes|Yes|Yes**|Yes**|  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64-bit) x64*|Yes|Yes|Yes|Yes|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32-bit)|Yes|Yes|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -bit) Developer (64|Yes|Yes|Yes**|Yes**|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32-bit)|Yes|Yes|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64-bit)|Yes|Yes|Yes|Yes|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32-bit)|Yes|Yes|||  
-  
+|[!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] Enterprise |Yes|Yes|Yes|Yes|
+|[!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] Standard |Yes|Yes|Yes|Yes|
+|[!INCLUDE[sssql17-md](../../../includes/sssql17-md.md)] Enterprise |Yes|Yes|Yes|Yes|
+|[!INCLUDE[sssql17-md](../../../includes/sssql17-md.md)] Standard |Yes|Yes|Yes|Yes|
+|[!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] Enterprise |Yes|Yes|Yes|Yes|
+|[!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] Standard |Yes|Yes|Yes|Yes|
+
  *[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clusters are not supported in WOW mode. That includes upgrades from previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clusters that were originally installed in WOW. For those the only upgrade option is to install the new version side by side and migrate.  
-  
- **Supported for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover clustering.  
+
   
 ##  <a name="MultiSubnet"></a> Additional Considerations for Multi-Subnet Configurations  
  The sections below describe the requirements to keep in mind when installing a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster. A multi-subnet configuration involves clustering across multiple subnets, therefore involves using multiple IP addresses and changes to IP address resource dependencies.  

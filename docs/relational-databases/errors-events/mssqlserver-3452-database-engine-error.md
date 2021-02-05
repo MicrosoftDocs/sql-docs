@@ -28,7 +28,7 @@ ms.author: mathoma
 |Message Text|Recovery of database '%.*ls' (%d) detected possible identity value inconsistency in table ID %d. Run DBCC CHECKIDENT ('%.\*ls').|  
   
 ## Explanation  
-During the upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the process to recover the identity values in the database found an inconsistency in the metadata.  
+During the upgrade to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the process to recover the identity values in the database found an inconsistency in the metadata.  
   
 ## User Action  
 Run DBCC CHECKIDENT.  

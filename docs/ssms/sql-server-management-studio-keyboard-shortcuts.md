@@ -40,15 +40,15 @@ SQL Server Management Studio (SSMS) offers keyboard shortcuts. By default, it us
 |--------|----------|
 | Move to the SQL Server Management Studio menu bar | ALT |
 | Activate the menu for a tool component|ALT+HYPHEN |
-| Display the context menu|SHIFT+F10|SHIFT+F10|  
+| Display the context menu|SHIFT+F10|
 | Display the **New File** dialog box to create a file | CTRL+N |
-| Display the **New Project** dialog box to create a new project|CTRL+SHIFT+N|CTRL+SHIFT+N|  
-| Display the **Open File** dialog box to open an existing file|CTRL+O<br /><br /> or<br /><br /> CTRL+SHIFT+G|CTRL+O|  
-| Display the **Open Project** dialog box to open an existing project|CTRL+SHIFT+O| 
+| Display the **New Project** dialog box to create a new project|CTRL+SHIFT+N|
+| Display the **Open File** dialog box to open an existing file|CTRL+O<br /><br /> or<br /><br /> CTRL+SHIFT+G|
+| Display the **Open Project** dialog box to open an existing project|CTRL+SHIFT+O|
 | Display the **Add New Item** dialog box to add a new file to the current project|CTRL+SHIFT+A|
 | Display the **Add Existing Item** dialog box to add an existing file to the current project|SHIFT+ALT+A|
-| Display the Query Designer|CTRL+SHIFT+Q|  
-| Close a menu or dialog box, canceling the action|ESC|  
+| Display the Query Designer|CTRL+SHIFT+Q|
+| Close a menu or dialog box, canceling the action|ESC|
 
 ## Windows Management and Toolbar Keyboard Shortcuts  
 
@@ -56,8 +56,8 @@ SQL Server Management Studio (SSMS) offers keyboard shortcuts. By default, it us
 |--------|----------|
 |Close the current MDI child window|CTRL+F4|
 |Close a menu or dialog box, cancels an operation in progress, or focuses on the current document window|ESC|
-|Print|CTRL+P|CTRL+P|  
-|Exit|ALT+F4|ALT+F4|  
+|Print|CTRL+P|
+|Exit|ALT+F4|
 |Toggle full screen mode|SHIFT+ALT+ENTER|
 |Close the current tool window|SHIFT+ESC|
 |Cycle through the next MDI child windows|CTRL+F6|
@@ -219,15 +219,15 @@ All shortcuts aren't implemented in all types of code editors.
 |Run the **sp_help** system stored procedure|ALT+F1|
 |Run the **sp_who** system stored procedure|CTRL+1|
 |Run the **sp_lock** system stored procedure|CTRL+2|
-|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+3|CTRL+3|
-|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+4|CTRL+4|
-|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+5|CTRL+5|
-|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+6|CTRL+6|
-|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+7|CTRL+7|
-|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+7|CTRL+7|
-|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+8|CTRL+8|
-|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+9|CTRL+9|
-|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+0|CTRL+0|
+|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+3|
+|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+4|
+|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+5|
+|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+6|
+|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+7|
+|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+7|
+|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+8|
+|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+9|
+|Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+0|
 
 ## Text Manipulation in Code Editor Keyboard Shortcuts
 
@@ -304,7 +304,7 @@ All shortcuts aren't implemented in all types of code editors.
 
 | Action | Shortcut |
 |--------|----------|
-|List members|CTRL+J|CTRL+SPACE<br /><br /> or<br /><br /> CTRL+J|
+|List members|CTRL+J|
 |Complete word|CTRL+SPACE<br /><br /> or<br /><br /> ALT+RIGHT ARROW|
 |Display quick information|CTRL+K, CTRL+I|
 |Display parameter information|CTRL+SHIFT+SPACE|

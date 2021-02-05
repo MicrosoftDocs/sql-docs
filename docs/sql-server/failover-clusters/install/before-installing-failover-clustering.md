@@ -34,7 +34,7 @@ ms.author: chadam
   
 ##  <a name="BestPractices"></a> Best Practices  
   
--   Review [[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] release notes](../../sql-server-version-15-release-notes.md).
+-   Review [[!INCLUDE[SQL Server 2019](../../../includes/sssql19-md.md)] release notes](../../sql-server-version-15-release-notes.md).
   
 -   Install prerequisite software. Before running Setup to install or upgrade, install the following prerequisites to reduce installation time. You can install prerequisite software on each failover cluster node and then restart nodes once before running Setup.  
   

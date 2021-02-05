@@ -16,7 +16,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] installs a new version (version 14.0.4999.1038) of the word breaker and stemmer for the English language, replacing the previous version of these components. For information about the changed behavior of the new components, see [Behavior Changes to Full-Text Search](./full-text-search.md). This topic describes how to switch from the new version of these components to the previous version, or to switch back from the previous version to the new version. For cluster installations, these changes should be made on all the primary and passive nodes.  
+  Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], setup installs a new version of the word breaker and stemmer for the English language, replacing the previous version of these components. For information about the changed behavior of the new components, see [Behavior Changes to Full-Text Search](./full-text-search.md). This topic describes how to switch from the new version of these components to the previous version, or to switch back from the previous version to the new version. For cluster installations, these changes should be made on all the primary and passive nodes.  
   
  Some previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] used different word breakers represented by different CLSIDs for US English (LCID 1033) and UK English (LCID 2057). In this release, both LCIDs use the same components with the same CLSIDs, as shown in the following table:  
   

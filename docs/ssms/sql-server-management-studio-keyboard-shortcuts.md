@@ -112,7 +112,7 @@ SQL Server Management Studio (SSMS) offers keyboard shortcuts. By default, it us
 |Returns the cursor to the last item.|SHIFT+F8|
 |Moves the cursor to the top of the document|CTRL+PAGE UP|
 |Moves to the previous tab in the document|CTRL+PAGE UP|
-|Moves the cursor to the bottom of the document|
+|Moves the cursor to the bottom of the document|CTRL+PAGE DOWN|
 |Moves to the next tab in the document|CTRL+PAGE DOWN|
 
 ## Text Selection Keyboard Shortcuts

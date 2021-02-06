@@ -123,7 +123,7 @@ sqlsrv_close($conn);
 
 ## Sensitivity Data Classification Metadata
 
-A new option `DataClassification` is introduced in version 5.8.0 for users to access the [sensitivity data classification metadata](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql#subheading-4) in Microsoft SQL Server 2019 using `sqlsrv_field_metadata`, which requires Microsoft ODBC Driver 17.4.2 or above.
+A new option `DataClassification` is introduced in version 5.8.0 for users to access the [sensitivity data classification metadata](../../relational-databases/security/sql-data-discovery-and-classification.md) in Microsoft SQL Server 2019 using `sqlsrv_field_metadata`, which requires Microsoft ODBC Driver 17.4.2 or above. 
 
 By default, the option `DataClassification` is `false`, but when set to `true`, the array returned by `sqlsrv_field_metadata` will be populated with the sensitivity data classification metadata, if it exists. 
 

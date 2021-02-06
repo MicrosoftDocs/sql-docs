@@ -3,7 +3,7 @@ title: Offline install without internet access
 description: Offline install SQL Server Machine Learning Services with Python and R on computers isolated behind a network firewall.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/01/2020
+ms.date: 02/05/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
@@ -208,6 +208,9 @@ An initial offline installation of SQL Server R Services requires the same confi
 + [Verify installation](sql-r-services-windows-install.md#verify-installation)
 + [Additional configuration as needed](sql-r-services-windows-install.md#bkmk_FollowUp)
 ::: moniker-end
+
+> [!CAUTION]
+> Adding Machine Learning Services to an existing installation of SQL Server will install the feature at the version level of the installation media, which may be behind the version level other features of SQL Server. This may result in unexpected behavior or errors. Always follow up installing the Machine Learning Services feature by bringing the new feature up to the same version level. Install service packs (SPs), cumulative updates (CUs), and/or general distribution releases (GDRs) as needed. To determine the version of Machine Learning Services, see [Determine the version, edition, and update level of SQL Server and its components](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#machine-learning-services).
 
 ## Next steps
 

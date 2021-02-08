@@ -203,14 +203,14 @@ To input provisioning information and make changes to the recommendations, updat
     - **Region** - The region in which to provision databases. Make sure your subscription supports the select region.
     - **Server Name** - The Azure SQL Database server to which you want the databases deployed. If you enter a server name that doesn't exist, it will be created.
     - **Admin Username** - The server admin username. Make sure your login name meets the following requirements:
-Your login name must not contain a SQL Identifier or a typical system name (like admin, administrator, sa, root, dbmanager, loginmanager, etc.) or a built-in database user or role (like dbo, guest, public, etc.)
-Your login name must not include non-alphanumeric characters (including whitespaces, Unicode characters)
-Your login name must not start with numbers or symbols
+      - Your login name must not contain a SQL Identifier or a typical system name (like admin, administrator, sa, root, dbmanager, loginmanager, etc.) or a built-in database user or role (like dbo, guest, public, etc.).
+      - Your login name must not include non-alphanumeric characters (including whitespaces, Unicode characters).
+      - Your login name must not start with numbers or symbols.
 
-    - **Admin Password** - The server admin password. Your password must be at least 8 characters in length.
-Your password must be no more than 128 characters in length.
-Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.).
-Your password cannot contain all or part of the login name. (Part of a login name is defined as three or more consecutive alphanumeric characters.)
+    - **Admin Password** - The server admin password. 
+      - Your password must be at least 8 characters in length and no more than 128 characters in length.
+      - Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.).
+      - Your password cannot contain all or part of the login name. (Part of a login name is defined as three or more consecutive alphanumeric characters.)
 
 2. Review recommendations for each database, and modify the pricing tier, compute level, and max data size as needed. Be sure to deselect any databases that you do not currently want to provision.
 
@@ -228,14 +228,14 @@ Your password cannot contain all or part of the login name. (Part of a login nam
     - **Region** - The region in which to provision databases. Make sure your subscription supports the select region.
     - **Instance Name** – The instance of Azure SQL Managed Instance to which you want to migrate the databases. The instance name can contain only lowercase letters, numbers, and ‘-‘, but it can’t begin or end with ‘-‘ or have more than 63 characters.
     - **Instance Admin Username** – The instance admin username. Make sure your login name meets the following requirements:
-Your login name must not contain a SQL Identifier or a typical system name (like admin, administrator, sa, root, dbmanager, loginmanager, etc.) or a built-in database user or role (like dbo, guest, public, etc.)
-Your login name must not include non-alphanumeric characters (including whitespaces, Unicode characters)
-Your login name must not start with numbers or symbols
+      - Your login name must not contain a SQL Identifier or a typical system name (like admin, administrator, sa, root, dbmanager, loginmanager, etc.) or a built-in database user or role (like dbo, guest, public, etc.).
+      - Your login name must not include non-alphanumeric characters (including whitespaces, Unicode characters).
+      - Your login name must not start with numbers or symbols.
 
-    - **Instance Admin Password** - The instance admin password. Your password must be at least 16 characters in length.
-Your password must be no more than 128 characters in length.
-Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.).
-Your password cannot contain all or part of the login name. (Part of a login name is defined as three or more consecutive alphanumeric characters.)
+    - **Instance Admin Password** - The instance admin password. 
+      - Your password must be at least 16 characters in length and no more than 128 characters in length.
+      - Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.).
+      - Your password cannot contain all or part of the login name. (Part of a login name is defined as three or more consecutive alphanumeric characters.)
 
     - **Vnet Name** – The VNet name under which the managed instance should be provisioned. Enter an existing VNet name.
     - **Subnet Name** – The Subnet name under which the managed instance should be provisioned. Enter an existing Subnet name.

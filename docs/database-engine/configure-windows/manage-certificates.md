@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "requesting encrypted connections"
   - "installing certificates"
   - "security [SQL Server], encryption"
-ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
@@ -24,6 +23,8 @@ ms.date: "01/12/2021"
 ---
 
 # Certificate Management (SQL Server Configuration Manager)
+
+[!INCLUDE [sql-windows-only](../../includes/applies-to-version/sql-windows-only.md)]
 
 This topic describes how to deploy and manage certificates across your SQL Server Always On Failover Cluster or Availability Group topology.
 
@@ -39,7 +40,7 @@ SSL/TLS certificates are widely used to secure access to SQL Server. With earlie
 
 ##  <a name="provision-single-server-cert"></a> To install a certificate for a single SQL Server instance  
 
-::: moniker range="sql-server-ver15"
+::: moniker range=">=sql-server-ver15"
 1. In SQL Server Configuration Manager, in the console pane, expand **SQL Server Network Configuration**.  
 
 2. Right-click **Protocols for** *&lt;instance Name&gt;*, and then select **Properties**.  
@@ -51,17 +52,7 @@ SSL/TLS certificates are widely used to secure access to SQL Server. With earlie
 5. Select **Next** to validate the certificate. If there are no errors, select **Next** to import the certificate to the local instance.  
 ::: moniker-end
 
-::: moniker range="sql-server-2017"
-1. In SQL Server Configuration Manager, in the console pane, expand **SQL Server Network Configuration**.  
-
-2. Right-click **Protocols for** *&lt;instance Name&gt;*, and then select **Properties**.  
-
-3. Select a certificate from the  **Certificate** drop-down menu, and then select **Apply**.  
-
-4. Select **OK**. 
-::: moniker-end
-
-::: moniker range="sql-server-2016"
+::: moniker range="<= sql-server-2017"
 1. In SQL Server Configuration Manager, in the console pane, expand **SQL Server Network Configuration**.  
 
 2. Right-click **Protocols for** *&lt;instance Name&gt;*, and then select **Properties**.  

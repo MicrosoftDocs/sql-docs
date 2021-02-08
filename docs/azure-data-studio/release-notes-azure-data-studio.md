@@ -8,16 +8,16 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 1/22/2020
+ms.date: 1/22/2021
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](./download-azure-data-studio.md)**
 
-## December 2020 (hotfix)
+## January 2021 (hotfix)
 
-January 22, 2020 &nbsp; / &nbsp; version: 1.25.2
+January 22, 2021 &nbsp; / &nbsp; version: 1.25.2
 
 | Change | Details |
 | ------ | ------- |

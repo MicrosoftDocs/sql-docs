@@ -19,9 +19,6 @@ ms.author: chugu
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-
   Displays the instances of package execution in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog. Packages that are executed with the Execute Package task run in the same instance of execution as the parent package.  
   
 |Column name|Data type|Description|  

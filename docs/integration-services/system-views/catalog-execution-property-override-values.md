@@ -16,9 +16,6 @@ ms.author: chugu
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-
   Displays the property override values that were set during execution of the package.  
   
 |Column name|Data type|Description|  

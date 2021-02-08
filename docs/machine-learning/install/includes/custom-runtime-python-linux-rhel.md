@@ -1,7 +1,7 @@
 ---
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 01/14/2021
+ms.date: 02/08/2021
 ms.topic: include
 author: dphansen
 ms.author: davidph

@@ -3,7 +3,7 @@ title: Install Python custom runtime
 description: Learn how to install a Python custom runtime for SQL Server using Language Extensions. The Python custom runtime can run machine learning scripts.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 01/14/2021
+ms.date: 02/08/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph

@@ -39,7 +39,7 @@ SSL/TLS certificates are widely used to secure access to SQL Server. With earlie
 
 ##  <a name="provision-single-server-cert"></a> To install a certificate for a single SQL Server instance  
 
-::: moniker range=">=sql-server-ver15"
+::: moniker range="sql-server-ver15"
 1. In SQL Server Configuration Manager, in the console pane, expand **SQL Server Network Configuration**.  
 
 2. Right-click **Protocols for** *&lt;instance Name&gt;*, and then select **Properties**.  
@@ -51,7 +51,17 @@ SSL/TLS certificates are widely used to secure access to SQL Server. With earlie
 5. Select **Next** to validate the certificate. If there are no errors, select **Next** to import the certificate to the local instance.  
 ::: moniker-end
 
-::: moniker range="<= sql-server-2017"
+::: moniker range="sql-server-2017"
+1. In SQL Server Configuration Manager, in the console pane, expand **SQL Server Network Configuration**.  
+
+2. Right-click **Protocols for** *&lt;instance Name&gt;*, and then select **Properties**.  
+
+3. Select a certificate from the  **Certificate** drop-down menu, and then select **Apply**.  
+
+4. Select **OK**. 
+::: moniker-end
+
+::: moniker range="sql-server-2016"
 1. In SQL Server Configuration Manager, in the console pane, expand **SQL Server Network Configuration**.  
 
 2. Right-click **Protocols for** *&lt;instance Name&gt;*, and then select **Properties**.  

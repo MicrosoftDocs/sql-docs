@@ -57,6 +57,7 @@ Here are the steps to show how to create the required artifacts:
      resources:
      - pods
      - nodes/stats
+     - nodes/proxy
      verbs:
      - get
    ---

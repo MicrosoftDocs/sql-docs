@@ -30,9 +30,9 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 
 This article describes how to delete Microsoft SQL Server Agent alerts using SQL Server Management Studio or Transact-SQL.
 
-## <a name="BeforeYouBegin"></a>Before You Begin
+## <a name="BeforeYouBegin"></a>Before you begin
 
-### <a name="Restrictions"></a>Limitations and Restrictions
+### <a name="Restrictions"></a>Limitations and restrictions
 
 Removing an alert also removes any notifications associated with the alert.
 

@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio Keyboard Shortcuts
-description: SQL Server Management Studio Keyboard Shortcuts
+title: SQL Server Management Studio keyboard shortcuts
+description: SQL Server Management Studio keyboard shortcuts
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 02/04/2021
+ms.date: 02/08/2021
 ---
 
-# SQL Server Management Studio Keyboard Shortcuts
+# SQL Server Management Studio keyboard shortcuts
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
@@ -34,7 +34,7 @@ SQL Server Management Studio (SSMS) offers keyboard shortcuts. By default, it us
 > [!NOTE]
 > To show only the headings, select **Collapse All** at the top of this page.
 
-## Menu Activation Keyboard Shortcuts
+## Menu Activation keyboard shortcuts
 
 | Action | Shortcut |
 |--------|----------|
@@ -50,7 +50,7 @@ SQL Server Management Studio (SSMS) offers keyboard shortcuts. By default, it us
 | Display the Query Designer|CTRL+SHIFT+Q|
 | Close a menu or dialog box, canceling the action|ESC|
 
-## Windows Management and Toolbar Keyboard Shortcuts  
+## Windows Management and Toolbar keyboard shortcuts  
 
 | Action | Shortcut |
 |--------|----------|
@@ -93,7 +93,7 @@ SQL Server Management Studio (SSMS) offers keyboard shortcuts. By default, it us
 |Display the previous page in the viewing history. Available only in the Web browser window|ALT+LEFT ARROW|
 |Display the next page in the viewing history. Available only in the Web browser window|ALT+RIGHT ARROW|
 
-## Cursor Movement Keyboard Shortcuts
+## Cursor Movement keyboard shortcuts
 
 | Action | Shortcut |
 |--------|----------|
@@ -115,7 +115,7 @@ SQL Server Management Studio (SSMS) offers keyboard shortcuts. By default, it us
 |Moves the cursor to the bottom of the document|CTRL+PAGE DOWN|
 |Moves to the next tab in the document|CTRL+PAGE DOWN|
 
-## Text Selection Keyboard Shortcuts
+## Text Selection keyboard shortcuts
 
 | Action | Shortcut |
 |--------|----------|
@@ -152,7 +152,7 @@ SQL Server Management Studio (SSMS) offers keyboard shortcuts. By default, it us
 |Moves the cursor to the first line in view, extending the selection|CTRL+SHIFT+PAGE UP|
 |Moves the cursor to the last line in view, extending the selection|CTRL+SHIFT+PAGE DOWN|
 
-## Bookmark Keyboard Shortcuts
+## Bookmark keyboard shortcuts
 
 | Action | Shortcut |
 |--------|----------|
@@ -163,7 +163,7 @@ SQL Server Management Studio (SSMS) offers keyboard shortcuts. By default, it us
 |If the current bookmark is in a folder, moves to the next bookmark in the folder. Bookmarks outside the folder are skipped.<br /><br /> If the bookmark isn't in a folder, moves to the next bookmark at the same level.<br /><br /> If the Bookmarks window contains folder, bookmarks in folders are skipped.|CTRL+SHIFT+K, CTRL+SHIFT+P|
 |Clear bookmarks|CTRL+K, CTRL+L|
 
-## Tree Control Keyboard Shortcuts
+## Tree Control keyboard shortcuts
 
 | Action | Shortcut |
 |--------|----------|
@@ -172,7 +172,7 @@ SQL Server Management Studio (SSMS) offers keyboard shortcuts. By default, it us
 |Scroll up the tree control in the window|CTRL+UP ARROW|
 |Scroll the tree control down in the window|CTRL+DOWN ARROW|
 
-## Code Editor Keyboard Shortcuts
+## Code Editor keyboard shortcuts
 
 All shortcuts aren't implemented in all types of code editors.
  
@@ -229,7 +229,7 @@ All shortcuts aren't implemented in all types of code editors.
 |Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+9|
 |Run the stored procedure configured for this shortcut in the **Tools**, **Options**, **Keyboard**, **Query Shortcuts** dialog|CTRL+0|
 
-## Text Manipulation in Code Editor Keyboard Shortcuts
+## Text Manipulation in Code Editor keyboard shortcuts
 
 | Action | Shortcut |
 |--------|----------|
@@ -266,7 +266,7 @@ All shortcuts aren't implemented in all types of code editors.
 |Removes all outlining information in the document|CTRL+M, CTRL+P|
 |Removes the outlining information for the currently selected region|CTRL+M, CTRL+U|
 
-## Microsoft IntelliSense Keyboard Shortcuts
+## Microsoft IntelliSense keyboard shortcuts
 
 | Action | Shortcut |
 |--------|----------|
@@ -284,7 +284,7 @@ All shortcuts aren't implemented in all types of code editors.
 |Changes the IntelliSense filter level from the **Common** tab to the **All** tab.|ALT+PLUS SIGN (+)|
 |Changes the IntelliSense filter level from the **All** tab to the **Common** tab.|ALT+PERIOD (.)|
 
-## Document Window and Browser Keyboard Shortcuts
+## Document Window and Browser keyboard shortcuts
 
 | Action | Shortcut |
 |--------|----------|
@@ -296,7 +296,7 @@ All shortcuts aren't implemented in all types of code editors.
 |Forward, display the next page in the viewing history|ALT+RIGHTARROW|
 |Closes a menu or dialog box, cancels an operation in progress, or places focus in the current window|ESC|
 
-## Solution Explorer Keyboard Shortcuts
+## Solution Explorer keyboard shortcuts
 
 | Action | Shortcut |
 |--------|----------|
@@ -306,7 +306,7 @@ All shortcuts aren't implemented in all types of code editors.
 |Display the **Open File** dialog box to open an existing file|CTRL+O|
 |Change the name of the selected object|F2|
 
-## Help and Books Online Keyboard Shortcuts
+## Help and Books Online keyboard shortcuts
 
 | Action | Shortcut |
 |--------|----------|
@@ -316,7 +316,7 @@ All shortcuts aren't implemented in all types of code editors.
 |Display the SQL Server Resource Center Web page|CTRL+ALT+F2|
 |Display help for the current editor window|SHIFT+F1|
 
-## Search Keyboard Shortcuts
+## Search keyboard shortcuts
 
 | Action | Shortcut |
 |--------|----------|
@@ -337,7 +337,7 @@ All shortcuts aren't implemented in all types of code editors.
 |Selects or clears the **Wildcard** option in **Find and Replace**|ALT+F3, P|
 |Place the caret in the Find/Command box of the Standard toolbar|CTRL+/|
 
-## Cut and Paste Keyboard Shortcuts
+## Cut and Paste keyboard shortcuts
 
 | Action | Shortcut |
 |--------|----------|
@@ -347,7 +347,7 @@ All shortcuts aren't implemented in all types of code editors.
 |Paste from the Clipboard at the insertion point|CTRL+V<br /><br /> or<br /><br /> SHIFT+INSERT|
 |Pastes an item from the Clipboard Ring at the insertion point and automatically selects the pasted item|CTRL+SHIFT+V|
 
-## Activity Monitor Keyboard Shortcuts
+## Activity Monitor keyboard shortcuts
 
 | Action | Shortcut |
 |--------|----------|
@@ -363,14 +363,14 @@ All shortcuts aren't implemented in all types of code editors.
 |Drop down for filtering in grid|ALT+DOWN|
 |Scroll up or down Activity Monitor|CTRL+ALT+UP/DOWN|
 
-## Replication Monitor Keyboard Shortcuts
+## Replication Monitor keyboard shortcuts
 
 | Action | Shortcut |
 |--------|----------|
 |Refresh|F5|
 |Open a detail window from a grid|ENTER|
 
-## Replication Conflict Viewer Keyboard Shortcuts
+## Replication Conflict Viewer keyboard shortcuts
 
 | Action | Shortcut |
 |--------|----------|
@@ -378,7 +378,7 @@ All shortcuts aren't implemented in all types of code editors.
 |Apply filter|F7|
 |Show all columns|F8|
 
-## Query Designer Keyboard Shortcuts
+## Query Designer keyboard shortcuts
 
 | Action | Shortcut |
 |--------|----------|
@@ -391,7 +391,7 @@ All shortcuts aren't implemented in all types of code editors.
 |When in the results pane, moves focus to the tool strip docked at the bottom of the designer|CTRL+G|
 |Enables JOIN mode in the **Query Designer**|CTRL+SHIFT+J|
 
-## Designer Keyboard Shortcuts
+## Designer keyboard shortcuts
 
 | Action | Shortcut |
 |--------|----------|

@@ -149,4 +149,4 @@ Select this option to include output from the job step in the job history.
   
 ## See Also
 
-- [Manage Job Steps](../../ssms/agent/manage-Job Steps.md)
+- [Manage Job Steps](manage-job-steps.md)

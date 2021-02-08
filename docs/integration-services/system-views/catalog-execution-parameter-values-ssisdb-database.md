@@ -16,9 +16,6 @@ ms.author: chugu
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-
   Displays the actual parameter values that are used by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages during an instance of execution.  
   
 |Column name|Data type|Description|  

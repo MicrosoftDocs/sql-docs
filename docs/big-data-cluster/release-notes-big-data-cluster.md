@@ -196,6 +196,30 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 ## Known issues
 
+### Partial loss of logs collected in ElasticSearch upon rollback
+
+- **Affected releases**: Existing clusters when a failed upgrade to CU9 results in a rollback or user issues a downgrade to an older release.
+
+- **Issue and customer impact**: The software version used for Elastic Search was upgraded with CU9 and the new version is not backwards compatible with previous logs format/metadata. If ElasticSearch component upgrades successfully, but a later rollback is triggered, the logs collected between the ElasticSearch upgrade and the rollback will be permanently lost. If you issue a downgrade to older version of BDC (not recommended), logs stored in Elasticsearch will be lost. Note that if the user will upgrade back to CU9, the data will be restored.
+
+- **Workaround**: If needed, you can troubleshoot using logs collected using `azdata bdc debug copy-logs` command.
+
+### Missing pods and container metrics
+
+- **Affected releases**: Existing and new clusters upon upgrade to CU9
+
+- **Issue and customer impact**: As a result of upgrading the version of Telegraf used for the BDC monitoring components in CU9, when upgrading the cluster to CU9 release, you will notice that pods and container metrics are not being collected. This is because an additional resource is required in the definition of the cluster role used for Telegraf as result of the software upgrade. If the user deploying the cluster or performing the upgrade does not have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod & node metrics will not be collected.
+
+- **Workaround**: You can ask an administrator to create or update the role and the corresponding service account (either before or after the deployment/upgrade), and BDC will use them. [This article](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) describes how to create the required artifacts.
+
+### Issuing `azdata bdc copy-logs` does not result in logs being copied
+
+- **Affected releases**: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version *20.0.0*
+
+- **Issue and customer impact**: Implementation of *copy-logs* command is assuming `kubectl` client tool version 1.15 or higher is installed on the client machine from which the command is issued. If `kubectl` version 1.14 is used, the *azdata bdc debug copy-logs* command will complete with no failures, but logs are not copied. When run with *--debug* flag, you can see this error in the output: *source ‘.’ is invalid*.
+
+- **Workaround**: Install `kubectl` version 1.15 or higher  tool on the same client machine and re-issue the `azdata bdc copy-logs` command. See instructions [here](deploy-big-data-tools.md) how to install `kubectl`.
+
 ### MSDTC capabilities can not be enabled for SQL Server master instance running within BDC
 
 - **Affected releases**: All big data cluster deployment configurations, irrespective of the release.

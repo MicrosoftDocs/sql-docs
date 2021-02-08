@@ -8,7 +8,7 @@ ms.author: davidph
 ---
 ## Prerequisites
 
-Before installing a Python custom runtime, install the following:
+Before installing a Python custom runtime, install:
 
 + If you use an existing SQL Server instance, install [Cumulative Update (CU) 3 or later](../../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) for SQL Server 2019.
 
@@ -51,17 +51,17 @@ The Python language extension used for the custom Python runtime currently suppo
 
 1. Download [Python 3.7](https://www.python.org/downloads/windows/) for Windows and run the Setup on the server.
 
-1. Click **Add Python 3.7 to PATH** and then click **Customize installation**.
+1. Select **Add Python 3.7 to PATH** and then select **Customize installation**.
 
     :::image type="content" source="../media/python-install-add-to-path.png" alt-text="Python 3.7 installation - Add Python 3.7 to PATH":::
 
-1. Under **Optional Features**, leave the defaults and click **Next**.
+1. Under **Optional Features**, leave the defaults and select **Next**.
 
-1. Click **Install for all users** and take note of the installation location.
+1. Select **Install for all users** and take note of the installation location.
 
     :::image type="content" source="../media/python-install-for-all-users.png" alt-text="Python 3.7 installation - Install for all users":::
 
-1. Click **Install**.
+1. Select **Install**.
 
 ## Install pandas
 
@@ -99,7 +99,7 @@ Follow these steps to restart the SQL Server Launchpad service.
 
 1. Open [SQL Server Configuration Manager](../../../relational-databases/sql-server-configuration-manager.md).
 
-1. Under **SQL Server Services**, right click on **SQL Server Launchpad (MSSQLSERVER)** and select **Restart**. If you using a named instance, the instance name will be shown instead of **(MSSQLSERVER)**.
+1. Under **SQL Server Services**, right click on **SQL Server Launchpad (MSSQLSERVER)** and select **Restart**. If you are using a named instance, the instance name will be shown instead of **(MSSQLSERVER)**.
 
 ## Register language extension
 

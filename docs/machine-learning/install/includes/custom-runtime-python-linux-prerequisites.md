@@ -8,7 +8,7 @@ ms.author: davidph
 ---
 ## Prerequisites
 
-Before installing a Python custom runtime, install the following:
+Before installing a Python custom runtime, install:
 
 + Install SQL Server 2019 for Linux. You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Installation guidance for SQL Server on Linux](../../../linux/sql-server-linux-setup.md).
 

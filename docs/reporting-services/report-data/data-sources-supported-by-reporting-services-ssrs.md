@@ -199,7 +199,7 @@ This data source has been deprecated. Use the SQL Server data source type to con
   
  Unnamed parameters that are position-dependent are supported. Named parameters are not supported by this extension. To use named parameters, use the [Oracle](#OracleClient) data processing extension.  
   
- For more information about configuring Oracle as a data source, see [How to use Reporting Services to configure and to access an Oracle data source](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/834305). For more information about additional permissions configuration, see [How to add permissions for the NETWORK SERVICE security principal](https://support.microsoft.com/kb/870668) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ For more information about configuring Oracle as a data source, see [How to use Reporting Services to configure and to access an Oracle data source](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/834305). For more information about additional permissions configuration, see [How to add permissions for the NETWORK SERVICE security principal](https://mskb.pkisolutions.com/kb/870668) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
  [Return to Data sources table](#DataSourcesTable)  
   
@@ -236,7 +236,7 @@ To install the Oracle Client tools you can do the following.
 2.	Download ODAC 12c Release 4 (12.1.0.2.4) for Windows (64bit for server, 32bit for tools)
 3.	Install the Data Provider for .NET 4
   
- Named parameters are supported by this extension. For Oracle version 11g or later, multivalue parameters are supported. For unnamed parameters that are position-dependent, use the OLE DB data processing extension with the data provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle. For more information about configuring Oracle as a data source, see [How to use Reporting Services to configure and to access an Oracle data source](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/834305). For more information about additional permissions configuration, see [How to add permissions for the NETWORK SERVICE security principal](https://support.microsoft.com/kb/870668) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ Named parameters are supported by this extension. For Oracle version 11g or later, multivalue parameters are supported. For unnamed parameters that are position-dependent, use the OLE DB data processing extension with the data provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle. For more information about configuring Oracle as a data source, see [How to use Reporting Services to configure and to access an Oracle data source](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/834305). For more information about additional permissions configuration, see [How to add permissions for the NETWORK SERVICE security principal](https://mskb.pkisolutions.com/kb/870668) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
  You can retrieve data from stored procedures with multiple input parameters, but the stored procedure must return only one output cursor. For more information, see [Returning results with Oracle REF CURSORs](/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) in "Retrieve data using a DataReader."
   

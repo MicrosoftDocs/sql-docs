@@ -198,7 +198,7 @@ The following table lists ports and services that [!INCLUDE[ssNoVersion](../../i
  For more information about port 135, see the following references:  
   
 -   [Service overview and network port requirements for the Windows Server system](https://support.microsoft.com/kb/832017)   
--   [Troubleshooting RPC Endpoint Mapper errors using the Windows Server 2003 Support Tools from the product CD](https://support.microsoft.com/kb/839880)  
+-   [Troubleshooting RPC Endpoint Mapper errors using the Windows Server 2003 Support Tools from the product CD](https://mskb.pkisolutions.com/kb/839880)  
 -   [Remote procedure call (RPC)](/previous-versions/ms950395(v=msdn.10))    
 -   [How to configure RPC dynamic port allocation to work with firewalls](https://support.microsoft.com/kb/154596/)  
   

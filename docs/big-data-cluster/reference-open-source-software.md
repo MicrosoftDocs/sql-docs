@@ -28,7 +28,7 @@ The table below shows the open-source projects in use as of [!INCLUDE [sssql19-m
 | [Elasticsearch](https://www.elastic.co/) | 7.0.1 | 7.9.1 |
 | [Fluent Bit](https://docs.fluentbit.io/manual/about/what-is-fluent-bit) | 1.1.1 | 1.6.3 |
 | [Grafana](https://grafana.com/) | 6.3.6 | 7.3.1 |
-| Hadoop <br/>- [HDFS DataNode](concept-storage-pool.md)<br/>[HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) |3.1.3+|3.3.0|
+| Hadoop <br/>[HDFS DataNode](concept-storage-pool.md)<br/>[HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) |3.1.3+|3.3.0|
 | [Hive (Metastore)](https://hive.apache.org/) |2.3.7|2.3.7<br/>3.0.0 (standalone)<br/>3.1.2 (hive)|
 | [Kafka](https://kafka.apache.org/) |2.6|2.6.0|
 | [Kibana](https://www.elastic.co/kibana) | 7.0.1 | 7.9.1 |

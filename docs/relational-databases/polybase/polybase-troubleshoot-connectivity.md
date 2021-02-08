@@ -28,7 +28,7 @@ This article serves as a guide to walk through the debugging process of such iss
 
 ## Prerequisites
 
-1. [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] RTM CU6 / [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU3 / [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] or higher with PolyBase installed
+1. [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] RTM CU6 / [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU3 / [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] or higher with PolyBase installed
 1. A Hadoop cluster (Cloudera or Hortonworks) secured with Kerberos (Active Directory or MIT)
 
 ## Introduction
@@ -66,7 +66,7 @@ These files are located under:
 
 `\[System Drive\]:{install path}\{MSSQL##.INSTANCENAME}\MSSQL\Binn\PolyBase\Hadoop\conf`
 
-For example, the default for [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
+For example, the default for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
 
 Update **core-site.xml**, add the three properties below. Set the values according to the environment:
 

@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "7913 (Database Engine error)"
 ms.assetid: 9d8ad456-b1a2-4f79-a252-657fbec9ad9b

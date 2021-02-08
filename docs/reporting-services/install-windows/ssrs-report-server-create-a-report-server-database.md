@@ -74,7 +74,7 @@ The **Report Server Installation Options** page has only one option for SharePoi
 - SQL Server 2017  
 ::: moniker-end
 
-- [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
+- [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]  
   
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   

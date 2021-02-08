@@ -4,7 +4,7 @@ description: "CREATE XML INDEX (Transact-SQL)"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE_XML_INDEX_TSQL"
   - "XML INDEX"

@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SP:CacheRemove event class"
 ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17

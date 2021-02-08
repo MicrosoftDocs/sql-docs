@@ -26,7 +26,7 @@ You can install Distributed Replay in one of three ways:
 -   [Install Distributed Replay Using a Configuration File](#bkmk_configuration_file)  
   
 ##  <a name="bkmk_wizard"></a> Install Distributed Replay from the Installation Wizard  
- Install the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay features with the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Installation Wizard. When planning where to install the features, consider the following:  
+ Install the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay features with the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Installation Wizard. When planning where to install the features, consider the following:  
   
 -   You can install the administration tool on the same computer as the Distributed Replay controller, or on different computers.  
   
@@ -41,7 +41,7 @@ You can install Distributed Replay in one of three ways:
 -   After installation, the controller service, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay controller, must be running before you start the Distributed Replay client service on the clients.  
   
 > [!NOTE]  
->  To remove or change the Distributed Replay features, use the Windows **Programs and Features** window in **Control Panel**. Select [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in the **Uninstall or change a program** window, and then click **Remove** to open the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Installation Wizard. On the **Select Features** page, check the Distributed Replay features you want to remove.  
+>  To remove or change the Distributed Replay features, use the Windows **Programs and Features** window in **Control Panel**. Select [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] in the **Uninstall or change a program** window, and then click **Remove** to open the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Installation Wizard. On the **Select Features** page, check the Distributed Replay features you want to remove.  
   
  **Prerequisites:**  
   
@@ -74,7 +74,7 @@ You can install Distributed Replay in one of three ways:
   
 #### To install Distributed Replay features  
   
-1.  To start the installation of any of the Distributed Replay features, start the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Installation Wizard.  
+1.  To start the installation of any of the Distributed Replay features, start the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Installation Wizard.  
   
 2.  The **Setup Support Rules** page identifies issues that might occur when installing the SQL Server Setup support files. You must correct any Setup support failures before continuing with Setup.  
   
@@ -82,7 +82,7 @@ You can install Distributed Replay in one of three ways:
   
 4.  On the **License Terms** page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-5.  On the **Setup Support Files** page, click **Install** to install or update the Setup Support files for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+5.  On the **Setup Support Files** page, click **Install** to install or update the Setup Support files for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 6.  On the **Setup Role** page, select **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Feature Installation**, and then click **Next** to continue to the **Feature Selection** page.  
   

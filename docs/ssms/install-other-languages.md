@@ -48,4 +48,4 @@ The following directions differ depending on your version of Windows. The follow
 
 ## Next steps
 
-- [Tutorial: SQL Server Management Studio](./quickstarts/connect-query-sql-server.md)
+- [Tutorial: SQL Server Management Studio](./quickstarts/ssms-connect-query-sql-server.md)

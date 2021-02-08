@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "CHANGE_TRACKING_CURRENT_VERSION_TSQL"
   - "CHANGE_TRACKING_CURRENT_VERSION"

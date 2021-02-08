@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "06/05/2017"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_operation_status_TSQL"
   - "dm_operation_status"

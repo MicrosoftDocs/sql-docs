@@ -25,7 +25,7 @@ ms.author: wiassaf
 :::row:::
     :::column:::
 
-        [sys.dm_hadr_ag_threads](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-ag-threads.md)
+        [sys.dm_hadr_ag_threads](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-ag-threads-transact-sql.md)
 
         [sys.dm_hadr_auto_page_repair](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)
 
@@ -49,7 +49,7 @@ ms.author: wiassaf
 
         [sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)
 
-        [sys.dm_hadr_db_threads](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-db-threads.md)
+        [sys.dm_hadr_db_threads](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-db-threads-transact-sql.md)
 
         [sys.dm_hadr_instance_node_map](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-instance-node-map-transact-sql.md)
 

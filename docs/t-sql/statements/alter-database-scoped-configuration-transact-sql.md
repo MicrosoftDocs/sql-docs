@@ -413,7 +413,7 @@ EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS **=** { **ON** | OFF}
 
 **APPLIES TO**: Azure SQL Database only
 
-Allows you to control whether execution statistics for scalar user-defined functions appear in the [sys.dm_exec_function_stats](../../relational-databases/system-catalog-views/sys-dm-exec-function-stats-transact-sql.md) system view. For some workloads, collecting function execution statistics may cause a noticeable performance overhead. This can be avoided by setting the `EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS` database-scoped configuration to `OFF`.
+Allows you to control whether execution statistics for scalar user-defined functions appear in the [sys.dm_exec_function_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-function-stats-transact-sql.md) system view. For some workloads, collecting function execution statistics may cause a noticeable performance overhead. This can be avoided by setting the `EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS` database-scoped configuration to `OFF`.
 
 ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
 

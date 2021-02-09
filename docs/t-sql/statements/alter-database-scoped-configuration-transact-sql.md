@@ -3,7 +3,7 @@ title: "ALTER DATABASE SCOPED CONFIGURATION"
 description: Enable several database configuration settings at the individual database level.
 titleSuffix: SQL Server (Transact-SQL)
 ms.custom: "seo-lt-2019"
-ms.date: 09/15/2020
+ms.date: 02/08/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -96,6 +96,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
     | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
     | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
+    | EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS = { ON | OFF }
     | ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY = { ON | OFF }
 }
 ```
@@ -407,6 +408,12 @@ Sets Transact-SQL and query processing behaviors to be compatible with the speci
 |**AUTO**| Default.  Its value is automatically updated by the Synapse Analytics engine.  The current value is 20.|
 |**10**| Exercises the Transact-SQL and query processing behaviors before the introduction of compatibility level support.|
 |**20**| 1st compatibility level that includes gated Transact-SQL and query processing behaviors. |
+
+EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS **=** { **ON** | OFF}
+
+**APPLIES TO**: Azure SQL Database only
+
+Allows you to control whether execution statistics for scalar user-defined functions appear in the [sys.dm_exec_function_stats](../../relational-databases/system-catalog-views/sys-dm-exec-function-stats-transact-sql.md) system view. For some workloads, collecting function execution statistics may cause a noticeable performance overhead. This can be avoided by setting the `EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS` database-scoped configuration to `OFF`.
 
 ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
 

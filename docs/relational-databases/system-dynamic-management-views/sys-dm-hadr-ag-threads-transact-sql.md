@@ -26,7 +26,7 @@ monikerRange:
 ---
 # sys.dm_hadr_ag_threads (Transact-SQL)
 
-The HADR thread telemetry DMVs (**sys.dm_hadr_ag_threads** and [sys.dm_hadr_db_threads](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-db-threads.md)) allow users to quickly gain insight into thread usage by availability group and by high availability database. Understanding this thread usage is an important benchmark for tuning availability groups.
+The HADR thread telemetry DMVs (**sys.dm_hadr_ag_threads** and [sys.dm_hadr_db_threads](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-db-threads-transact-sql.md)) allow users to quickly gain insight into thread usage by availability group and by high availability database. Understanding this thread usage is an important benchmark for tuning availability groups.
 
 This DMV reports on thread usage at the availability group level.
 

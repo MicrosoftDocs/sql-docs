@@ -12243,7 +12243,7 @@ items:
       - name: sys.dm_hadr_ag_threads
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-ag-threads-transact-sql.md
       - name: sys.dm_hadr_db_threads
-        href: relational-databases/system-dynamic-management-views/sys-dm_hadr_db_threads-transact-sql.md
+        href: relational-databases/system-dynamic-management-views/sys-dm-hadr-db-threads-transact-sql.md
       - name: sys.dm_hadr_cluster
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md
       - name: sys.dm_hadr_cluster_members

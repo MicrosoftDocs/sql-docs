@@ -88,8 +88,8 @@ This command resets all counters to 0.
 |ASSEMBLY_FILTER_HASHTABLE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |ASSEMBLY_LOAD |Occurs during exclusive access to assembly loading.| 
 |ASYNC_DISKPOOL_LOCK |Occurs when there is an attempt to synchronize parallel threads that are performing tasks such as creating or initializing a file.| 
-|ASYNC_IO_COMPLETION |Occurs when a task is waiting for I/Os to finish.| 
-|ASYNC_NETWORK_IO |Occurs on network writes when the task is blocked behind the network. Verify that the client is processing data from the server.| 
+|ASYNC_IO_COMPLETION |Occurs when a task is waiting for asynchronouse non-data I/Os to finish. Examples include I/O involved in warm standby logshipping, database mirroring, some bulk import related operations| 
+|ASYNC_NETWORK_IO |Occurs on network writes when the task is blocked waiting for the client application to acknowledge it has processed all the data sent to it. Verify that the client is processing data from the server or, less commonly-occurring, that network is performing as expected. Reasons for client not consuming data fast enough include application design issues like writing results to a file while the results arrive, waiting for user input, an artificial wait introduced. Also the client system may be experiencing slow response due to issues like low virtual/physical memory, 100% CPU consumption, etc. Network delays can also lead to this wait.|
 |ASYNC_OP_COMPLETION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |ASYNC_OP_CONTEXT_READ |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |ASYNC_OP_CONTEXT_WRITE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 

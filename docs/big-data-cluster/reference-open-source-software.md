@@ -30,7 +30,6 @@ The table below shows the open-source projects in use as of [!INCLUDE [sssql19-m
 | [Grafana](https://grafana.com/) | 6.3.6 | 7.3.1 |
 | Hadoop <br/>[HDFS DataNode](concept-storage-pool.md)<br/>[HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) |3.1.3+|3.3.0|
 | [Hive (Metastore)](https://hive.apache.org/) |2.3.7|2.3.7<br/>3.0.0 (standalone)<br/>3.1.2 (hive)|
-| [Kafka](https://kafka.apache.org/) |2.6|2.6.0|
 | [Kibana](https://www.elastic.co/kibana) | 7.0.1 | 7.9.1 |
 | [Knox](https://knox.apache.org/) |1.2.0|1.4.0|
 | [Livy](https://livy.apache.org/) |0.6.0|0.7.0|
@@ -38,7 +37,7 @@ The table below shows the open-source projects in use as of [!INCLUDE [sssql19-m
 | [Openresty (Nginx)](https://openresty.org/) | 1.15.8 | 1.17.8.2 |
 | [Spark](configure-spark-hdfs.md) |2.4.6+|3.0.1|
 | [Telegraf](https://docs.influxdata.com/telegraf/) | 1.10.3 | 1.16.1 |
-| [ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) |3.5.8|3.6.2
+| [ZooKeeper](https://cwiki.apache.org/confluence/display/zookeeper) |3.5.8|3.6.2
 
 ## Next steps
 

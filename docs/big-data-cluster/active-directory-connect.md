@@ -52,7 +52,7 @@ From Azure Data Studio:
 
 ### Connect to controller with AD authentication from Linux/Mac
 
-There are two options for connecting to the controller endpoint using `azdata` and AD authentication. You can use the *--endpoint/-e* parameter:
+There are two options for connecting to the controller endpoint using [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] and AD authentication. You can use the *--endpoint/-e* parameter:
 
 ```bash
 kinit <username>@<domain name>

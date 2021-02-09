@@ -6,7 +6,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: stored-procedures
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_db_rda_migration_status"
   - "sys.dm_db_rda_migration_status_TSQL"
@@ -27,7 +27,7 @@ ms.author: pelopes
   
  **sys.dm_db_rda_migration_status** is scoped to the current database context. Make sure you're in the database context of the Stretch-enable tables for which you want to see migration status.  
   
- In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the output of **sys.dm_db_rda_migration_status** is limited to 200 rows.  
+ In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the output of **sys.dm_db_rda_migration_status** is limited to 200 rows.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

@@ -14,7 +14,7 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
 # SQL Server Agent
@@ -22,9 +22,9 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> On [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+> On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is a Microsoft Windows service that executes scheduled administrative tasks, which are called *jobs* in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is a Microsoft Windows service that executes scheduled administrative tasks, which are called *jobs* in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
 
 ## <a name="Benefits"></a>Benefits of SQL Server Agent 
 
@@ -33,7 +33,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can run a job on a schedule, in response to a specific event, or on demand. For example, if you want to back up all the company servers every weekday after hours, you can automate this task. Schedule the backup to run after 22:00 Monday through Friday; if the backup encounters a problem, SQL Server Agent can record the event and notify you.  
   
 > [!NOTE]  
-> By default, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is disabled when [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is installed unless the user explicitly chooses to autostart the service.  
+> By default, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is disabled when [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] is installed unless the user explicitly chooses to autostart the service.  
   
 ## <a name="Components"></a>SQL Server Agent Components  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent uses the following components to define the tasks to be performed, when to perform the tasks, and how to report the success or failure of the tasks.  
@@ -172,4 +172,3 @@ Use the following tasks to get started with [!INCLUDE[ssNoVersion](../../include
   
 ## See Also  
 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)  
-  

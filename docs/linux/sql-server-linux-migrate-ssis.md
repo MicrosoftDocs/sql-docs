@@ -88,7 +88,7 @@ For more info about SSIS on Linux, see the following blog posts:
 
 ## More info about SSIS
 
-Microsoft SQL Server Integration Services (SSIS) is a platform for building high-performance data integration solutions, including extraction, transformation, and loading (ETL) packages for data warehousing. For more info about SSIS, see [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services).
+Microsoft SQL Server Integration Services (SSIS) is a platform for building high-performance data integration solutions, including extraction, transformation, and loading (ETL) packages for data warehousing. For more info about SSIS, see [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
 SSIS includes the following features:
 - Graphical tools and wizards for building and debugging packages on Windows

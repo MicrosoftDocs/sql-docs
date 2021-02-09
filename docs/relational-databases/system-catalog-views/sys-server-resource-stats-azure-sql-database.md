@@ -4,7 +4,7 @@ title: "sys.server_resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2018"
 ms.service: sql-database
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "resource_stats"
   - "sys.resource_stats"
@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: "=azuresqldb-current||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -57,18 +57,17 @@ The **sys.server_resource_stats** view has different definitions depending on th
  The data returned by **sys.server_resource_stats** are expressed as the total used in either bytes or megabytes (stated in column names) other than avg_cpu, which is expressed as a percentage of the maximum allowed limits for the service tier/performance level that you are running.  
  
 ## Examples  
- The following example returns all databases that are averaging at least 80% of compute utilization over the last one week.  
+The following example returns the average CPU usage over the last seven days.  
   
 ```sql  
 DECLARE @s datetime;  
 DECLARE @e datetime;  
 SET @s= DateAdd(d,-7,GetUTCDate());  
 SET @e= GETUTCDATE();  
-SELECT resource_name, AVG(avg_cpu_percent) AS Average_Compute_Utilization   
+SELECT AVG(avg_cpu_percent) AS Average_Compute_Utilization   
 FROM sys.server_resource_stats   
 WHERE start_time BETWEEN @s AND @e  
-GROUP BY resource_name  
-HAVING AVG(avg_cpu_percent) >= 80  
+GO;
 ```  
     
 ## See Also  

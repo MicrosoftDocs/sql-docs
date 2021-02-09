@@ -91,7 +91,7 @@ Following are some general recommendations when you are working with transaction
   
       |Version|Default values|  
       |-------------|--------------------|  
-      |Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Data 64 MB. Log files 64 MB.|  
+      |Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]|Data 64 MB. Log files 64 MB.|  
       |Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 1 MB. Log files 10%.|  
       |Prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 10%. Log files 10%.|  
 

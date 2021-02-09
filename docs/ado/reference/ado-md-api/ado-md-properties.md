@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ADO MD, properties"
   - "properties [ADO MD]"
@@ -46,7 +46,7 @@ ms.author: jroth
 |[Value](./value-property-ado-md.md)|Indicates the value of the current cell.|  
   
 ## See Also  
- [ADO MD API Reference](./ado-md-object-model.md?view=sql-server-ver15)   
+ [ADO MD API Reference](./ado-md-object-model.md)   
  [ADO MD Code Examples](./ado-md-code-examples.md)   
  [ADO MD Collections](./ado-md-collections.md)   
  [ADO MD Enumerated Constants](./ado-md-enumerated-constants.md)   

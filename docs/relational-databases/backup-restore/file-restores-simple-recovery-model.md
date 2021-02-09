@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "file restores [SQL Server], simple recovery model"
   - "file restores [SQL Server], Transact-SQL restore sequence"
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
-author: mashamsft
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # File Restores (Simple Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.author: mathoma
   
      In an *offline file restore*, the database is offline while damaged files or filegroups are restored. At the end of the restore sequence, the database comes online.  
   
-     All editions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] support offline file restore.  
+     All editions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] support offline file restore.  
   
 -   Online file restore  
   

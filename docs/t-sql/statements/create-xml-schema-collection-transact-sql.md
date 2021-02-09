@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE XML SCHEMA COLLECTION"
   - "CREATE_XML_SCHEMA_COLLECTION_TSQL"
@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "multiple schema namespaces"
   - "XML schema collections [SQL Server], creating"
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

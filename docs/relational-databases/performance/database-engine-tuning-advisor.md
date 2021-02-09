@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dta.general.f1"
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Engine Tuning Advisor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ The Database Engine Tuning Advisor is designed to handle the following types of 
  The command prompt version of Database Engine Tuning Advisor. The **dta** utility is designed to allow you to use Database Engine Tuning Advisor functionality in applications and scripts.  
   
  **workload**  
- A Transact-SQL script file, trace file, or trace table that contains a representative workload for the databases you want to tune. Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], you can specify the plan cache as the workload.  Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can [specify the Query Store as the workload](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md). 
+ A Transact-SQL script file, trace file, or trace table that contains a representative workload for the databases you want to tune. Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], you can specify the plan cache as the workload.  Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can [specify the Query Store as the workload](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md). 
   
  **XML input file**  
  A XML-formatted file that Database Engine Tuning Advisor can use to tune workloads. The XML input file supports advanced tuning options that are not available in either the GUI or **dta** utility.  

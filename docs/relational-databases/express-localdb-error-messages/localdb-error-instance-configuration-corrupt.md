@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: fdf2b601-4d5d-4789-9bf8-93d884a16350
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

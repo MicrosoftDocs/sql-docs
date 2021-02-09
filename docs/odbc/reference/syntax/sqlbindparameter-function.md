@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLBindParameter"
 apilocation: 
@@ -125,7 +125,7 @@ SQLRETURN SQLBindParameter(
  If *ParameterNumber* in the call to **SQLBindParameter** is greater than the value of SQL_DESC_COUNT, **SQLSetDescField** is called to increase the value of SQL_DESC_COUNT to *ParameterNumber*.  
   
 ## InputOutputType Argument  
- The *InputOutputType* argument specifies the type of the parameter. This argument sets the SQL_DESC_PARAMETER_TYPE field of the IPD. All parameters in SQL statements that do not call procedures, such as **INSERT** statements, are *input**parameters*. Parameters in procedure calls can be input, input/output, or output parameters. (An application calls **SQLProcedureColumns** to determine the type of a parameter in a procedure call; parameters whose type cannot be determined are assumed to be input parameters.)  
+ The *InputOutputType* argument specifies the type of the parameter. This argument sets the SQL_DESC_PARAMETER_TYPE field of the IPD. All parameters in SQL statements that do not call procedures, such as **INSERT** statements, are *input* *parameters*. Parameters in procedure calls can be input, input/output, or output parameters. (An application calls **SQLProcedureColumns** to determine the type of a parameter in a procedure call; parameters whose type cannot be determined are assumed to be input parameters.)  
   
  The *InputOutputType* argument is one of the following values:  
   
@@ -492,7 +492,10 @@ SQLRETURN SQLBindParameter(
 |----------------------------------|-------------------------------|  
 |SQLSetParam(      StatementHandle,      ParameterNumber,      ValueType,      ParameterType,      LengthPrecision,      ParameterScale,      ParameterValuePtr,      StrLen_or_IndPtr);|SQLBindParameter(      StatementHandle,      ParameterNumber,      SQL_PARAM_INPUT_OUTPUT,      ValueType,      ParameterType,      *ColumnSize*,      *DecimalDigits*,      ParameterValuePtr,      SQL_SETPARAM_VALUE_MAX,      StrLen_or_IndPtr);|  
   
-## Code Example  
+## Examples  
+
+### A. Use SQLBindParameter Function
+
  In the following example, an application prepares an SQL statement to insert data into the ORDERS table. For each parameter in the statement, the application calls **SQLBindParameter** to specify the ODBC C data type and the SQL data type of the parameter, and to bind a buffer to each parameter. For each row of data, the application assigns data values to each parameter and calls **SQLExecute** to execute the statement.  
   
  The following sample assumes that you have an ODBC data source on your computer called Northwind that is associated with the Northwind database.  
@@ -544,7 +547,7 @@ int main() {
 }  
 ```  
   
-## Code Example
+### B. Execute a stored procedure using a named parameter
 
  In the following example, an application executes a SQL Server stored procedure using a named parameter.  
   

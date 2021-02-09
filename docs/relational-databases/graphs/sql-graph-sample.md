@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 
 author: shkale-msft
 ms.author: shkale
-monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Create a graph database and run some pattern matching queries using T-SQL
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-This sample provides a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script to create a graph database with nodes and edges and then use the new MATCH clause to match some patterns and traverse through the graph. This sample script will work on both Azure SQL Database and [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+This sample provides a [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script to create a graph database with nodes and edges and then use the new MATCH clause to match some patterns and traverse through the graph. This sample script will work on both Azure SQL Database and [!INCLUDE[sssql17](../../includes/sssql17-md.md)]  
 
 ## Sample Schema
 
 This sample creates a graph schema, as showed in Figure 1, for a hypothetical social network that has People, Restaurant and City nodes. These nodes are connected to each other using Friends, Likes, LivesIn and LocatedIn edges.
 
-![person-cities-restaurants-tables](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Sql graph database sample")  
+![Diagram showing a sample schema with restaurant, city, person nodes and LivesIn, LocatedIn, Likes edges.](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Sql graph database sample")  
 Figure 1: Sample schema with restaurant, city, person nodes and LivesIn, LocatedIn, Likes edges.
 
 ## Sample Script

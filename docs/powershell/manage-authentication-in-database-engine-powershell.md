@@ -61,10 +61,10 @@ function sqldrive
 }  
   
 ## Use the sqldrive function to create a SQLAuth virtual drive.  
-sqldrive SQLAuth  
+sqldrive SQLAuth
   
-## CD to the virtual drive, which invokes the supplied authentication credentials.  
-cd SQLAuth  
+## Set-Location to the virtual drive, which invokes the supplied authentication credentials.  
+sl SQLAuth:
 ```
 
 ## SQL Server Authentication Using Invoke-Sqlcmd
@@ -88,5 +88,5 @@ Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyCompu
 
 - [SQL Server PowerShell](sql-server-powershell.md)
 - [SQL Server PowerShell Provider](sql-server-powershell-provider.md)
-- [Invoke-Sqlcmd cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/invoke-sqlcmd)
+- [Invoke-Sqlcmd cmdlet](/powershell/module/sqlserver/invoke-sqlcmd)
 - [Use PowerShell with Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md)

@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DECOMPRESS"
   - "DECOMPRESS_TSQL"
 helpviewer_keywords: 
   - "DECOMPRESS function"
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # DECOMPRESS (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

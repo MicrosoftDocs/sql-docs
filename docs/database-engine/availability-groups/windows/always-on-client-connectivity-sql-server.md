@@ -5,15 +5,15 @@ ms.custom: "seodec18"
 ms.date: "07/28/2020"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], listeners"
   - "Availability Groups [SQL Server], prerequisites and restrictions"
   - "Availability Groups [SQL Server], client connectivity"
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Driver and client connectivity support for availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -62,6 +62,6 @@ ms.author: mathoma
  [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))   
  [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)   
  [A long time delay occurs when you reconnect an IPSec connection from a computer that is running Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7, or Windows Server 2008 R2](https://support.microsoft.com/kb/980915)   
- [The Cluster service takes about 30 seconds to fail over IPv6 IP addresses in Windows Server 2008 R2](https://support.microsoft.com/kb/2578113)   
+ [The Cluster service takes about 30 seconds to fail over IPv6 IP addresses in Windows Server 2008 R2](https://support.microsoft.com/en-us/topic/the-cluster-service-takes-about-30-seconds-to-fail-over-ipv6-ip-addresses-in-windows-server-2008-09a35200-9816-b8eb-fa14-2746894ac0d1)   
  [Slow failover operation if no router exists between the cluster and an application server](https://support.microsoft.com/kb/2582281)  
   

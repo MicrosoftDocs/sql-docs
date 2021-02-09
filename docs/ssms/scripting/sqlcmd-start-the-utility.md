@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sqlcmd - Start the Utility
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,6 +47,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     >  Entered [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are stored in a buffer. They are executed as a batch when the GO command is encountered.  
   
 ## See Also  
- [Run Transact-SQL Script Files Using sqlcmd](../../relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)  
-  
+ [Run Transact-SQL Script Files Using sqlcmd](./sqlcmd-run-transact-sql-script-files.md)  
   

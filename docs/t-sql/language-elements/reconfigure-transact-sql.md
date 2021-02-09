@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "RECONFIGURE"
   - "RECONFIGURE_TSQL"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "RECONFIGURE"
   - "RECONFIGURE, WITH OVERRIDE statement"
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # RECONFIGURE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,8 +33,7 @@ ms.author: jroth
     
 ## Syntax    
     
-```    
-    
+```syntaxsql
 RECONFIGURE [ WITH OVERRIDE ]    
 ```    
     
@@ -62,7 +61,7 @@ RECONFIGURE [ WITH OVERRIDE ]
 ## Examples    
  The following example sets the upper limit for the `recovery interval` configuration option to `75` minutes and uses `RECONFIGURE WITH OVERRIDE` to install it. Recovery intervals greater than 60 minutes are not recommended and disallowed by default. However, because the `WITH OVERRIDE` option is specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not check whether the value specified (`75`) is a valid value for the `recovery interval` configuration option.    
     
-```    
+```sql    
 EXEC sp_configure 'recovery interval', 75    
 RECONFIGURE WITH OVERRIDE;    
 GO    

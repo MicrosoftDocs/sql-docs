@@ -124,7 +124,7 @@ This sections summarizes the basic steps and technologies involved when you inte
 
 The second time a user pins an item, the steps 1-4 are skipped and instead the App id and URLS are retrieved from the ReportServer database and the flow continues with step 5.
 
-![ssRS-pin-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
+![Diagram showing what happens when a user pins a report item to a dashboard.](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
 
  **When a subscription fires to refresh a dashboard tile:**
 
@@ -138,7 +138,7 @@ The second time a user pins an item, the steps 1-4 are skipped and instead the A
 
 5. If the token is not valid, and error is returned and logged with the report server.  No status or other information is sent to the dashboard.
 
-![ssRS-subscription-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
+![Diagram showing what happens when a subscription fires to refresh a dashboard tile.](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 

@@ -6,7 +6,7 @@ ms.date: "03/03/2017"
 ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "database_usage"
   - "database_usage_TSQL"
@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 # sys.database_usage (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

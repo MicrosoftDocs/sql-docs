@@ -5,11 +5,11 @@ ms.custom: "seodec18"
 ms.date: "10/24/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid:
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Use read-scale with Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +24,7 @@ The client applications that run analytics or reporting workloads can directly c
 
 ## Read-scale availability groups without cluster
 
-In [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] and earlier, all availability groups required a cluster. The cluster provided business continuity for high availability and disaster recovery (HADR). In addition, secondary replicas were configured for read operations. If high availability wasn't the goal, considerable operational overhead was expended to configure and operate a cluster. SQL Server 2017 introduces read-scale availability groups without a cluster. 
+In [!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] and earlier, all availability groups required a cluster. The cluster provided business continuity for high availability and disaster recovery (HADR). In addition, secondary replicas were configured for read operations. If high availability wasn't the goal, considerable operational overhead was expended to configure and operate a cluster. SQL Server 2017 introduces read-scale availability groups without a cluster. 
 
 If your business requirement is to conserve resources for mission-critical workloads that run on the primary replica, you can use read-only routing or directly connect to readable secondary replicas. You don't need to depend on integration with any clustering technology. These new capabilities are available for SQL Server 2017 running on both Windows and Linux platforms.
 

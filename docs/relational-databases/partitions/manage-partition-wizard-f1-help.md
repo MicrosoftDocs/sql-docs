@@ -71,7 +71,7 @@ ms.author: jrasnick
 ### Sliding Window Scenario  
  To manage your partitions in a sliding-window scenario, select **Manage partitioned data in a sliding window scenario**.  
   
-## UI element list  
+### UI element list  
  **Create a staging table for partition switching**  
  Creates a staging table for the data you are switching in or switching out of the existing partitioned table.  
   
@@ -89,7 +89,7 @@ ms.author: jrasnick
 ##  <a name="SwitchIn"></a> Select Partition Switching-In Options Page  
  Use the **Select Partition Switching-In options** page to select the staging table you are switching into the partitioned table.  
   
-## UI element list  
+### UI element list  
  **Show All Partitions**  
  Select to show all partitions, including the partitions currently in the partitioned table.  
   
@@ -104,7 +104,7 @@ ms.author: jrasnick
 ##  <a name="SwitchOut"></a> Select Partition Switching-Out Options Page  
  Use the **Select Partition Switching-Out options** page to select the partition and the staging table to hold the partitioned data that you are switching out of the partitioned table.  
   
-## UI element list  
+### UI element list  
  **Partition grid**  
  Displays the partition name, **Left boundary**, **Right boundary**, **Filegroup**, and **Row count** of the partitions you selected.  
   
@@ -126,7 +126,7 @@ ms.author: jrasnick
   
  You can also create the same indexes in the staging table that exist in the source partition. The staging table automatically contains a constraint based on the elements of the source partition. This constraint is typically generated from the boundary value of the source partition.  
   
-## UI element list  
+### UI element list  
  **Staging table name**  
  Create a name for the staging table or accept the default name displayed in the edit box.  
   
@@ -254,7 +254,7 @@ ms.author: jrasnick
 ##  <a name="Summary"></a> Summary Page  
  Use the **Summary** page to review the options that you have selected on the previous pages.  
   
-## UI element list  
+### UI element list  
  **Review your selections**  
  Displays the selections you have made for each page of the wizard. Click a node to expand and view your previously selected options.  
   

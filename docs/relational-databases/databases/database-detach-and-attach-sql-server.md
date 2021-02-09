@@ -129,7 +129,7 @@ When you attach a database onto another server instance, to provide a consistent
   
 **To attach a database**  
   
--   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
+-   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)  
   
 -   [Attach a Database](../../relational-databases/databases/attach-a-database.md)  
   
@@ -151,5 +151,4 @@ When you attach a database onto another server instance, to provide a consistent
   
 ## See Also  
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)  
-  
   

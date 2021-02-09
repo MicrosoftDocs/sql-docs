@@ -6,14 +6,14 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "dynamic management views [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Always On Availability Groups Dynamic Management Views - Functions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

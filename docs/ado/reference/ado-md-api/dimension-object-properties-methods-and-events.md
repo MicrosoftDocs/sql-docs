@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Dimension object [ADO MD], members"
 ms.assetid: e491439f-8eff-4bf6-a808-8dba243af8c3

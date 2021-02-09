@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "09/01/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "stretch cluster"
@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "multi-site failover cluster"
   - "failover clustering [SQL Server]"
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # SQL Server Multi-Subnet Clustering (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -23,7 +23,7 @@ ms.author: mathoma
   
    
 ##  <a name="VisualElement"></a> SQL Server Multi-Subnet Failover Cluster (Two-Nodes, Two-Subnets)  
- The following illustration represents a two node, two subnet failover cluster instance (FCI) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ The following illustration represents a two node, two subnet failover cluster instance (FCI) in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
   
  ![Multi-Subnet Architecture with MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "Multi-Subnet Architecture with MultiSubnetFailover")  
   
@@ -61,7 +61,7 @@ ms.author: mathoma
 ##  <a name="DNS"></a> Client Recovery Latency During Failover  
  A multi-subnet FCI by default enables the RegisterAllProvidersIP cluster resource for its network name. In a multi-subnet configuration, both the online and offline IP addresses of the network name will be registered at the DNS server. The client application then retrieves all registered IP addresses from the DNS server and attempts to connect to the addresses either in order or in parallel. This means that client recovery time in multi-subnet failovers no longer depend on DNS update latencies. By default, the client tries the IP addresses in order. When the client uses the new optional **MultiSubnetFailover=True** parameter in its connection string, it will instead try the IP addresses simultaneously and connects to the first server that responds. This can help minimize the client recovery latency when failovers occur. For more information, see [Always On Client Connectivity (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) and [Create or Configure an Availability Group Listener (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
- With legacy client libraries or third party data providers, you cannot use the **MultiSubnetFailover** parameter in your connection string. To help ensure that your client application works optimally with multi-subnet FCI in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], try to adjust the connection timeout in the client connection string by 21 seconds for each additional IP address. This ensures that the client's reconnection attempt does not timeout before it is able to cycle through all IP addresses in your multi-subnet FCI.  
+ With legacy client libraries or third party data providers, you cannot use the **MultiSubnetFailover** parameter in your connection string. To help ensure that your client application works optimally with multi-subnet FCI in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], try to adjust the connection timeout in the client connection string by 21 seconds for each additional IP address. This ensures that the client's reconnection attempt does not timeout before it is able to cycle through all IP addresses in your multi-subnet FCI.  
   
  The default client connection time-out period for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio and **sqlcmd** is 15 seconds.  
  

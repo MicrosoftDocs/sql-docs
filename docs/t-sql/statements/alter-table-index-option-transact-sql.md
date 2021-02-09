@@ -7,14 +7,14 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "index_option"
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER TABLE index_option (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -131,7 +131,7 @@ ms.author: maghan
 
  OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
 
-**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.
+**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later.
 
 Specifies whether or not to optimize for last-page insert contention. The default is OFF. See the [Sequential Keys](./create-index-transact-sql.md#sequential-keys) section of the CREATE INDEX page for more information.
  

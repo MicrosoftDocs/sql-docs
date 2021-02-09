@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dbo.systargetservergroups"
   - "systargetservergroups"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "systargetservergroups system table"
 ms.assetid: df1195b1-62c3-4b94-8b2e-a646dcaf281b
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # dbo.systargetservergroups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 05/22/2019
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "external_languages"
   - "external_languages_TSQL"
@@ -19,7 +19,7 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15"
 ---
 
 # sys.external_languages (Transact-SQL)

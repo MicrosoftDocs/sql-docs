@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: "jrasnick"
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "WORKLOAD CLASSIFIER"
   - "WORKLOAD_CLASSIFIER_TSQL"
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "DROP WORKLOAD CLASSIFIER statement"
 author: ronortloff
 ms.author: rortloff
-monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest"
 ---
 # DROP WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -34,6 +34,7 @@ Drops an existing user-defined workload management classifier.  If requests are 
 ```syntaxsql
 DROP WORKLOAD CLASSIFIER classifier_name;
 ```
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 

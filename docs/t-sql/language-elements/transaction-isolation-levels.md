@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "isolation levels [SQL Server], metadata access"
   - "hints [SQL Server], locking"
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # Transaction Isolation Levels
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "fn_cdc_is_bit_set"
   - "sys.fn_cdc_is_bit_set_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.fn_cdc_is_bit_set"
   - "fn_cdc_is_bit_set"
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_cdc_is_bit_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

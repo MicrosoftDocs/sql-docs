@@ -7,13 +7,13 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "MSSQL_ENG021331 error"
 ms.assetid: 9acd75d9-fda1-44cd-ba17-20295ad53ea0
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG021331
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

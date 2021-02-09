@@ -14,12 +14,12 @@ helpviewer_keywords:
   - "backing up databases [SQL Server], full differential backups"
   - "backups [SQL Server], creating"
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Create a Differential Database Backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Create a differential database backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Create a differential database backup in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Sections in this topic**  
   

@@ -3,12 +3,12 @@ title: "Whitepaper: Diagnose & resolve spinlock contention"
 description: This article is an in-depth look at diagnosing and resolving spinlock contention in SQL Server. This article was originally published by the SQLCAT team at Microsoft."
 ms.date: 09/30/2020
 ms.prod: sql
-ms.reviewer: jroth
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: how-to
 author: bluefooted
 ms.author: pamela
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Diagnose and resolve spinlock contention on SQL Server
@@ -132,7 +132,7 @@ The general technical process for diagnosing SQL Server Spinlock contention is:
 
 2. **Step 2**: Capture statistics from *sys.dm\_ os_spinlock_stats* to find the spinlock type experiencing the most contention.
 
-3. **Step 3**: Obtain debug symbols for sqlservr.exe (sqlservr.pdb) and place the symbols in the same directory as the SQL Server service .exe file (sqlservr.exe) for the instance of SQL Server.\ In order to see the call stacks for the back off events, you must have symbols for the particular version of SQL Server that you are running. Symbols for SQL Server are available on the Microsoft Symbol Server. For more information about how to download symbols from the Microsoft Symbol Server, see [Debugging with symbols](https://docs.microsoft.com/windows/win32/dxtecharts/debugging-with-symbols).
+3. **Step 3**: Obtain debug symbols for sqlservr.exe (sqlservr.pdb) and place the symbols in the same directory as the SQL Server service .exe file (sqlservr.exe) for the instance of SQL Server.\ In order to see the call stacks for the back off events, you must have symbols for the particular version of SQL Server that you are running. Symbols for SQL Server are available on the Microsoft Symbol Server. For more information about how to download symbols from the Microsoft Symbol Server, see [Debugging with symbols](/windows/win32/dxtecharts/debugging-with-symbols).
 
 4. **Step 4**: Use SQL Server Extended Events to trace the back off events for the spinlock types of interest.
 
@@ -232,7 +232,7 @@ drop event session spin_lock_backoff on server
 By analyzing the output, we can see the call stacks for the most common code paths for the SOS_CACHESTORE spins. The script was run a couple of different times during the time when CPU utilization was high to check for consistency in the call stacks returned. Notice that the call stacks with the highest slot bucket count are common between the two outputs (35,668 and 8,506). These call stacks have a "slot count" that is two orders of magnitude greater than the next highest entry. This condition indicates a code path of interest.
 
 > [!NOTE]
-> It is not uncommon to see call stacks returned by the previous script. When the script is run for 1 minute we have observed that stacks with a slot count \>1000 are likely to be problematic and stacks with a slot count \>10,000 are likely to be problematic.
+> It is not uncommon to see call stacks returned by the previous script. When the script ran for 1 minute, we observed that call stacks with a slot count of > 1000 was problematic but the slot count of > 10,000 was more likely to be problematic since it has a higher slot count.
 
 > [!NOTE]
 > The formatting of the following output has been cleaned for readability purposes.

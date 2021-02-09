@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "assemblies [CLR integration], catalog views"
   - "CLR assembly catalog views"
 ms.assetid: b2e71480-92b2-4610-a4ff-dafb121087d9
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CLR Assembly Catalog Views (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

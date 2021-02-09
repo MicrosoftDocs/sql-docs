@@ -22,7 +22,7 @@ To migrate DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
   
 -   Project settings.  
   
-When you open a project, it is disconnected from DB2 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. That lets you work offline. For information about reconnecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Connecting to SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
+When you open a project, it is disconnected from DB2 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. That lets you work offline. For information about reconnecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Connecting to SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md).  
   
 ## Reviewing Default Project Settings  
 SSMA contains several settings for converting and loading database objects, migrating data, and synchronizing SSMA with DB2 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The default settings are appropriate for many users. However, before you create a new SSMA project, you should review the settings. If you want to, you can change the default settings that will be used for all your new projects.  
@@ -115,4 +115,4 @@ The next step in the migration process is to [Connecting to DB2 Database](./conn
 ## See Also  
 [Migrating DB2 Databases to SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
 [Connecting to DB2 Database &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
-[Connecting to SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
+[Connecting to SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md)  

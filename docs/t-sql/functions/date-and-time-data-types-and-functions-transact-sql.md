@@ -8,7 +8,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "functions [SQL Server], date and time"
   - "time [SQL Server], functions"
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
-author: markingmyname
-ms.author: maghan
-monikerRange: "= azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions" 
+author: cawrites
+ms.author: chadam
+monikerRange: "= azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017" 
 ---
 # Date and Time Data Types and Functions (Transact-SQL)
 

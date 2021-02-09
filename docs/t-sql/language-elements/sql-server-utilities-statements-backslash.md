@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "\\_TSQL"
   - "\\"
@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "line continuation character"
   - "reverse solidus"
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # Backslash (Line Continuation) (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql  
 <first section of string> \  
 <continued section of string>  
 ```  
@@ -63,10 +63,9 @@ This command returns the first and continued sections of the string as one strin
 
 The following example uses a backslash and a carriage return to split a character string into two lines.  
   
-```  
+```sql  
 SELECT 'abc\  
 def' AS [ColumnResult];  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -81,10 +80,9 @@ def' AS [ColumnResult];
 
 The following example uses a backslash and a carriage return to split a binary string into two lines.  
 
-```  
+```sql  
 SELECT 0xabc\
 def AS [ColumnResult];  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

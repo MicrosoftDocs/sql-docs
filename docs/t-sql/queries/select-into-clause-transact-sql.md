@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "INTO_TSQL"
   - "INSERT_INTO_TSQL"
@@ -29,7 +29,7 @@ helpviewer_keywords:
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - INTO Clause (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ SELECT...INTO creates a new table in the default filegroup and inserts the resul
  *filegroup*    
  Specifies the name of the filegroup in which new table will be created. The filegroup specified should exist on the database else the SQL Server engine throws an error.   
  
- **Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later.
+ **Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later.
   
 ## Data Types  
  The FILESTREAM attribute does not transfer to the new table. FILESTREAM BLOBs are copied and stored in the new table as **varbinary(max)** BLOBs. Without the FILESTREAM attribute, the **varbinary(max)** data type has a limitation of 2 GB. If a FILESTREAM BLOB exceeds this value, error 7119 is raised and the statement is stopped.  
@@ -213,7 +213,7 @@ GO
 ### E. Import from an external table created with PolyBase  
  Import data from Hadoop or Azure Storage into SQL Server for persistent storage. Use `SELECT INTO` to import data referenced by an external table for persistent storage in SQL Server. Create a relational table on-the-fly and then create a column-store index on top of the table in a second step.  
   
- **Applies to:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to:** [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
@@ -227,10 +227,10 @@ INTO Fast_Customers from Insured_Customers INNER JOIN
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
 ORDER BY YearlyIncome;  
 ```  
-### F. Creating a new table as a copy of another table and loading it a specified filegroup
+### F. Copying the data from one table to another and create the new table on a specified filegroup
 The following example demonstrates creating a new table as a copy of another table and loading it into a specified filegroup different from the default filegroup of the user.
 
- **Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later.
+ **Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later.
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

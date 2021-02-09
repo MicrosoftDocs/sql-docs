@@ -134,7 +134,7 @@ You can get more details in the logs in %temp%\\DEA. If the problem persists, co
 
 - Verify that the Distributed Replay controller service is running on the controller machine. To verify, use the Distributed Replay Management Tools (run the command `dreplay.exe status -f 1`).
 - If the replay is started remotely:
-  - Confirm that the computer running DEA can successfully ping the controller. Confirm that firewall settings allow connections per the instructions on the **Configure Replay Environment** page. For more information, see the article [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md?view=sql-server-2017).
+  - Confirm that the computer running DEA can successfully ping the controller. Confirm that firewall settings allow connections per the instructions on the **Configure Replay Environment** page. For more information, see the article [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md).
   - Make sure that DCOM Remote Launch and Remote Activation are allowed for the user of the Distributed Replay controller.
   - Make sure that DCOM Remote Access user rights are allowed for the user of the Distributed Replay controller.
 

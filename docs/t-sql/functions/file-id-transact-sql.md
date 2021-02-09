@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FILE_ID"
   - "FILE_ID_TSQL"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], files"
   - "file names [SQL Server], FILE_ID"
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # FILE_ID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

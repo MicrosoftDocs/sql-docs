@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.database_mirroring_witnesses"
   - "sys.database_mirroring_witnesses_TSQL"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sys.database_mirroring_witnesses catalog view"
   - "witness [SQL Server], sys.database_mirroring_witnesses catalog view"
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

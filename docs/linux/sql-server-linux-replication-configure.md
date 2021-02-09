@@ -11,13 +11,13 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: linux
 titleSuffix: SQL Server on Linux
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Configure SQL Server Replication on Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduces SQL Server Replication for instances of SQL Server on Linux.
+[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] introduces SQL Server Replication for instances of SQL Server on Linux.
 
 For detailed information about replication, see [SQL Server replication documentation](../relational-databases/replication/sql-server-replication.md).
 

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: markingmyname
 ms.author: maghan
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 ---
 # View or Change Server Properties (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

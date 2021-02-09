@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "INSERT_TSQL"
   - "INSERT"
@@ -30,9 +30,9 @@ helpviewer_keywords:
   - "data manipulation language [SQL Server], INSERT statement"
   - "inserting data"
 ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -313,7 +313,7 @@ Rows that are inserted into a heap as the result of an insert action in a MERGE 
   
 Unlike the `BULK INSERT` statement, which holds a less restrictive Bulk Update (BU) lock, `INSERT INTO … SELECT` with the `TABLOCK` hint holds an exclusive (X) lock on the table. This means that you cannot insert rows using multiple insert operations executing simultaneously. 
 
-However, starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and database compatibility level 130, a single `INSERT INTO … SELECT` statement can be executed in parallel when inserting into heaps or clustered columnstore indexes (CCI). Parallel inserts are possible when using the `TABLOCK` hint.  
+However, starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and database compatibility level 130, a single `INSERT INTO … SELECT` statement can be executed in parallel when inserting into heaps or clustered columnstore indexes (CCI). Parallel inserts are possible when using the `TABLOCK` hint.  
 
 Parallelism for the statement above has the following requirements, which are similar to the requirements for minimal logging:  
 -   The target table is an empty or non-empty heap.  
@@ -715,7 +715,7 @@ GO
 ```  
   
 ###  <a name="RemoteTables"></a> Inserting Rows into a Remote Table  
- Examples in this section demonstrate how to insert rows into a remote target table by using a [linked server](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../../t-sql/functions/rowset-functions-transact-sql.md) to reference the remote table.  
+ Examples in this section demonstrate how to insert rows into a remote target table by using a [linked server](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../functions/opendatasource-transact-sql.md) to reference the remote table.  
   
 #### M. Inserting data into a remote table by using a linked server  
  The following example inserts rows into a remote table. The example begins by creating a link to the remote data source by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). The linked server name, `MyLinkServer`, is then specified as part of the four-part object name in the form *server.catalog.schema.object*.  
@@ -777,9 +777,9 @@ GO
 ```  
   
 #### P. Inserting into an external table created using PolyBase  
- Export data from SQL Server to Hadoop or Azure Storage. First, create an external table that points to the destination file or directory. Then, use INSERT INTO to export data from a local SQL Server table to an external data source. The INSERT INTO statement creates the destination file or directory if it does not exist and the results of the SELECT statement are exported to the specified location in the specified file format.  For more information, see [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
+ Export data from SQL Server to Hadoop or Azure Storage. First, create an external table that points to the destination file or directory. Then, use INSERT INTO to export data from a local SQL Server table to an external data source. The INSERT INTO statement creates the destination file or directory if it does not exist and the results of the SELECT statement are exported to the specified location in the specified file format.  For more information, see [Get started with PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
-**Applies to**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ```sql
 -- Create an external table.   
@@ -1026,7 +1026,3 @@ OPTION ( LABEL = 'Add French Prospects', HASH JOIN);
  [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)   
  [Use the inserted and deleted Tables](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)  
   
-  
-
-
-

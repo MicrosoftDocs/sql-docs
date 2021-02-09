@@ -3,12 +3,12 @@ title: Known issues for Python and R
 description: This article describes known problems or limitations with the Python and R components that are provided in SQL Server Machine Learning Services and SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/15/2020
+ms.date: 10/13/2020
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
-ms.custom: contperfq4
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+ms.custom: contperf-fy20q4
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Known issues in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -93,7 +93,7 @@ SQL Server 2016 requires that the R libraries on the client exactly match the R 
 
 The version of R that is installed with SQL Server R Services is updated whenever a SQL Server service release is installed. To ensure that you always have the most up-to-date versions of R components, be sure to install all service packs.
 
-To ensure compatibility with Microsoft R Client 9.0.0, install the updates that are described in this [support article](https://support.microsoft.com/kb/3210262).
+To ensure compatibility with Microsoft R Client 9.0.0, install the updates that are described in this [support article](https://web.archive.org/web/20190415073655/https://support.microsoft.com/en-us/help/3210262/fix-version-of-r-client-is-incompatible-with-the-microsoft-r-server-ve).
 
 To avoid problems with R packages, you can also upgrade the version of the R libraries that are installed on the server, by changing your servicing agreement to use the Modern Lifecycle Support policy, as described in [the next section](#bkmk_sqlbindr). When you do so, the version of R that's installed with SQL Server is updated on the same schedule used for updates of machine Learning Server (formerly Microsoft R Server).
 
@@ -121,7 +121,7 @@ This issue is fixed in the release version. Also, this limitation does not apply
 
 **Applies to:** SQL Server 2017 with Python
 
-### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when you connect to an older version of SQL Server R Services from a client by using [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when you connect to an older version of SQL Server R Services from a client by using [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]
 
 When you run R code in a SQL Server 2016 compute context, you might see the following error:
 
@@ -129,8 +129,8 @@ When you run R code in a SQL Server 2016 compute context, you might see the foll
 
 This message is displayed if either of the following two statements is true,
 
-+ You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-+ You installed Microsoft R Server by using the [separate Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
++ You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
++ You installed Microsoft R Server by using the [separate Windows installer](/machine-learning-server/install/r-server-install-windows).
 
 To ensure that the server and client use the same version you might need to use _binding_, supported for Microsoft R Server 9.0 and later releases, to upgrade the R components in SQL Server 2016 instances. To determine if support for upgrades is available for your version of R Services, see [Upgrade an instance of R Services using SqlBindR.exe](../install/upgrade-r-and-python.md).
 
@@ -162,7 +162,7 @@ Look for Launchpad in the `Binn` folder for the instance. For example, in a defa
 
 ### 9. Remote compute contexts are blocked by a firewall in SQL Server instances that are running on Azure virtual machines
 
-If you have installed [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on an Azure virtual machine, you might not be able to use compute contexts that require the use of the virtual machine's workspace. The reason is that, by default, the firewall on Azure virtual machines includes a rule that blocks network access for local R user accounts.
+If you have installed [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] on an Azure virtual machine, you might not be able to use compute contexts that require the use of the virtual machine's workspace. The reason is that, by default, the firewall on Azure virtual machines includes a rule that blocks network access for local R user accounts.
 
 As a workaround, on the Azure VM, open **Windows Firewall with Advanced Security**, select **Outbound Rules**, and disable the following rule: **Block network access for R local user accounts in SQL Server instance MSSQLSERVER**. You can also leave the rule enabled, but change the security property to **Allow if secure**.
 
@@ -248,7 +248,7 @@ You can perform one of the following workarounds:
 
 ### 15. Installation or upgrade error on FIPS enabled servers
 
-If you install SQL Server 2019 with the feature **Machine Learning Services and Language Extensions** or upgrade the SQL Server instance on a [Federal Information Processing Standard (FIPS)](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) enabled server, you will receive the following error:
+If you install SQL Server 2019 with the feature **Machine Learning Services and Language Extensions** or upgrade the SQL Server instance on a [Federal Information Processing Standard (FIPS)](/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) enabled server, you will receive the following error:
 
 > *An error occurred while installing extensibility feature with error message: AppContainer Creation Failed with error message NONE, state This implementation is not part of the Windows Platform FIPS validated cryptographic algorithms.*
 
@@ -262,7 +262,7 @@ Disable FIPS before the installation of SQL Server 2019 with the feature **Machi
 
 This section contains known issues that are specific to running R on SQL Server, as well as some issues that are related to the R libraries and tools published by Microsoft, including RevoScaleR.
 
-For additional known issues that might affect R solutions, see the [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-known-issues) site.
+For additional known issues that might affect R solutions, see the [Machine Learning Server](/machine-learning-server/resources-known-issues) site.
 
 ### 1. Access denied warning when executing R scripts on SQL Server in a non default location
 
@@ -282,7 +282,7 @@ When you pass a model using a serialized format to a remote SQL Server instance,
 
 > *Error in memDecompress(data, type = decompress) internal error -3 in memDecompress(2).*
 
-This error is raised if you saved the model using a recent version of the serialization function, [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel), but the SQL Server instance where you deserialize the model has an older version of the RevoScaleR APIs, from SQL Server 2017 CU2 or earlier.
+This error is raised if you saved the model using a recent version of the serialization function, [rxSerializeModel](/machine-learning-server/r-reference/revoscaler/rxserializemodel), but the SQL Server instance where you deserialize the model has an older version of the RevoScaleR APIs, from SQL Server 2017 CU2 or earlier.
 
 As a workaround, you can upgrade the SQL Server 2017 instance to CU3 or later.
 
@@ -294,7 +294,7 @@ In other words, use the same version of RevoScaleR for both serialization and de
 
 If you create a model using a decision tree or decision forest method and specify the learning rate, you might see inconsistent results when using `sp_rxpredict` or the SQL `PREDICT` function, as compared to using `rxPredict`.
 
-The cause is an error in the API that processes serialized models, and is limited to the `learningRate` parameter: for example, in [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees), or
+The cause is an error in the API that processes serialized models, and is limited to the `learningRate` parameter: for example, in [rxBTrees](/machine-learning-server/r-reference/revoscaler/rxbtrees), or
 
 This issue is addressed in an upcoming service release.
 
@@ -384,13 +384,13 @@ For more information, see [R libraries and data types](../r/r-libraries-and-data
 
 Passing unicode data in varchar columns from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to R/Python can result in string corruption. This is due to the encoding for these unicode string in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collations   may not match with the default UTF-8 encoding used in R/Python. 
 
-To send any non-ASCII string data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to R/Python, use UTF-8 encoding (available in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) or use nvarchar type for the same.
+To send any non-ASCII string data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to R/Python, use UTF-8 encoding (available in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) or use nvarchar type for the same.
 
 ### 13. Only one value of type `raw` can be returned from `sp_execute_external_script`
 
 When a binary data type (the R **raw** data type) is returned from R, the value must be sent in the output data frame.
 
-With data types other than **raw**, you can return parameter values along with the results of the stored procedure by adding the OUTPUT keyword. For more information, see [Parameters](https://docs.microsoft.com/sql/relational-databases/stored-procedures/parameters).
+With data types other than **raw**, you can return parameter values along with the results of the stored procedure by adding the OUTPUT keyword. For more information, see [Parameters](../../relational-databases/stored-procedures/parameters.md).
 
 If you want to use multiple output sets that include values of type **raw**, one possible workaround is to do multiple calls of the stored procedure, or to send the result sets back to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using ODBC.
 
@@ -538,7 +538,7 @@ Executing an R script with `sp_execute_external_script` allows money, numeric, d
 
 ## Python script execution issues
 
-This section contains known issues that are specific to running Python on SQL Server, as well as issues that are related to the Python packages published by Microsoft, including [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
+This section contains known issues that are specific to running Python on SQL Server, as well as issues that are related to the Python packages published by Microsoft, including [revoscalepy](/r-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](/r-server/python-reference/microsoftml/microsoftml-package).
 
 ### 1. Call to pretrained model fails if path to model is too long
 
@@ -548,12 +548,12 @@ There are several potential workarounds:
 
 + When you install the pretrained models, choose a custom location.
 + If possible, install the SQL Server instance under a custom installation path with a shorter path, such as C:\SQL\MSSQL14.MSSQLSERVER.
-+ Use the Windows utility [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) to create a hard link that maps the model file to a shorter path.
++ Use the Windows utility [Fsutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc788097(v=ws.11)) to create a hard link that maps the model file to a shorter path.
 + Update to the latest service release.
 
 ### 2. Error when saving serialized model to SQL Server
 
-When you pass a model to a remote SQL Server instance, and try to read the binary model using the `rx_unserialize` function in [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), you might get the error: 
+When you pass a model to a remote SQL Server instance, and try to read the binary model using the `rx_unserialize` function in [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), you might get the error: 
 
 > *NameError: name 'rx_unserialize_model' is not defined*
 
@@ -597,7 +597,7 @@ Beginning with SQL Server 2017 CU2, the following message might appear even if P
 
 This issue has been fixed in SQL Server 2017 Cumulative Update 3 (CU3). 
 
-### 5. Numeric, decimal and money data types not supported
+### 5. Numeric, decimal, and money data types not supported
 
 Beginning with SQL Server 2017 Cumulative Update 12 (CU12), numeric, decimal and money data types in WITH RESULT SETS are unsupported when using Python with `sp_execute_external_script`. The following messages might appear:
 
@@ -712,7 +712,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 ### 9. Cannot install **tensorflow** package using **sqlmlutils**
 
-The [sqlmlutils package](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) is used to install Python packages in SQL Server 2019. However, the package **tensorflow** cannot be installed using sqlmlutils. The tensorflow package depends on a newer version of numpy than the version installed in SQL Server. However, numpy is a preinstalled system package that sqlmlutils cannot update when trying to install tensorflow.
+The [sqlmlutils package](../package-management/install-additional-python-packages-on-sql-server.md) is used to install Python packages in SQL Server 2019. You need to download, install, and update the [Microsoft Visual C++ 2015-2019 Redistributable (x64)](https://visualstudio.microsoft.com/downloads/). However, the package **tensorflow** cannot be installed using sqlmlutils. The tensorflow package depends on a newer version of numpy than the version installed in SQL Server. However, numpy is a preinstalled system package that sqlmlutils cannot update when trying to install tensorflow.
 
 **Workaround**
 
@@ -728,7 +728,7 @@ Using a command prompt in administrator mode, run the following command, replaci
 
 ## Revolution R Enterprise and Microsoft R Open
 
-This section lists issues specific to R connectivity, development, and performance tools that are provided by Revolution Analytics. These tools were provided in earlier pre-release versions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+This section lists issues specific to R connectivity, development, and performance tools that are provided by Revolution Analytics. These tools were provided in earlier pre-release versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
 
 In general, we recommend that you uninstall these previous versions and install the latest version of SQL Server or Microsoft R Server.
 

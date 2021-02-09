@@ -11,11 +11,11 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# What are compute pools SQL Server Big Data Clusters?
+# What are compute pools in a SQL Server big data cluster?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes the role of *SQL Server compute pools* in SQL Server Big Data Clusters. Compute pools provide scale-out computational resources for a Big Data Cluster. They are used to offload computational work, or intermediate result sets, from the SQL Server master instance. The following sections describe the architecture, functionality and usage scenarios of a compute pool.
+This article describes the role of *SQL Server compute pools* in a SQL Server big data cluster. Compute pools provide scale-out computational resources for a SQL Server big data cluster. They are used to offload computational work, or intermediate result sets, from the SQL Server master instance. The following sections describe the architecture, functionality and usage scenarios of a compute pool.
 
 You can also watch this 5-minute video for an introduction into compute pools:
 
@@ -29,19 +29,19 @@ A compute pool is made of one or more compute pods running in Kubernetes. The au
 
 ## Scale-out groups
 
-A compute pool can act as a PolyBase scale-out group for distributed queries over different external data sources such as SQL Server, Oracle, MongoDB, Teradata and HDFS. By using compute pods in Kubernetes, Big Data Clusters can automate creating and configuring compute pods for PolyBase scale-out groups.
+A compute pool can act as a PolyBase scale-out group for distributed queries over different external data sources such as SQL Server, Oracle, MongoDB, Teradata and HDFS. By using compute pods in Kubernetes, a SQL Server big data cluster can automate creating and configuring compute pods for PolyBase scale-out groups.
 
 ## Compute pool scenarios
 
 Scenarios where the compute pool is used include:
 
-- When queries submitted to the master instance use one or more tables located in the [Storage Pool](concept-storage-pool.md).
+- When queries submitted to the master instance use one or more tables located in the [storage pool](concept-storage-pool.md).
 
-- When queries submitted to the master instance use one or more tables with round-robin distribution located in the [Data Pool](concept-data-pool.md).
+- When queries submitted to the master instance use one or more tables with round-robin distribution located in the [data pool](concept-data-pool.md).
 
 - When queries submitted to the master instance use **partitioned** tables with external data sources of SQL Server, Oracle, MongoDB, and Teradata. For this scenario, the query hint OPTION (FORCE SCALEOUTEXECUTION) must be enabled.
 
-- When queries submitted to the master instance use one or more tables located in [HDFS Tiering](hdfs-tiering.md).
+- When queries submitted to the master instance use one or more tables located in [HDFS tiering](hdfs-tiering.md).
 
 Scenarios where the compute pool is **not** used include:
 

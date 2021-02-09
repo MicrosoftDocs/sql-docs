@@ -115,7 +115,7 @@ mode](manage-user-access.md).
 
 Below table show the authorization model for application management:
 
-|   Authorized roles   |   azdata command   |
+|   Authorized roles   |   [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] command   |
 |----------------------|--------------------|
 |   appOwner           | azdata app create  |
 |   appOwner           | azdata app update  |
@@ -130,7 +130,7 @@ Below table show the authorization model for application management:
   >The value passed through the subdomain setting is not a new AD domain but only a DNS domain used by the BDC cluster internally.
 
   >[!IMPORTANT]
-  >You need to install or upgrade latest version of **azdata CLI** as of SQL Server 2019 CU5 release to leverage these new capabilities and deploy multiple big data clusters in the same domain.
+  >You need to install or upgrade latest version of **[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]** as of SQL Server 2019 CU5 release to leverage these new capabilities and deploy multiple big data clusters in the same domain.
 
   See [Concept: deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](active-directory-deployment-background.md) for more details regarding deploying multiple big data clusters in the same Active Directory domain.
 
@@ -147,7 +147,7 @@ If you have not already initialized the deployment configuration file, you can r
 azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 ```
 
-To set the above parameters in the `control.json` file, use the following `azdata` commands. The commands replace the config and provide your own values before deployment.
+To set the above parameters in the `control.json` file, use the following [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] commands. The commands replace the config and provide your own values before deployment.
 
 > [!IMPORTANT]
 > In the SQL Server 2019 CU2 release, the structure of the security configuration section in the deployment profile changed sightly and all the Active Directory related settings are in the new `activeDirectory` in the json tree under `security` in the `control.json` file.
@@ -209,7 +209,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoin
 You can find an example script here for [deploying a SQL Server big data cluster on single node Kubernetes cluster (kubeadm) with AD integration](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm-ad).
 
 > [!Note]
-> There might be scenarios where you can't accommodate the newly introduced `subdomain` parameter. For example, you must deploy an a pre-CU5 release and you already upgraded **azdata CLI**. This is highly unlikely, but if you need to revert to the pre-CU5 behavior, you can set `useSubdomain` parameter to `false` in the active directory section of `control.json`.  Here is the command to do so:
+> There might be scenarios where you can't accommodate the newly introduced `subdomain` parameter. For example, you must deploy an a pre-CU5 release and you already upgraded **[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]**. This is highly unlikely, but if you need to revert to the pre-CU5 behavior, you can set `useSubdomain` parameter to `false` in the active directory section of `control.json`.  Here is the command to do so:
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.useSubdomain=false"
@@ -217,7 +217,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.act
 
 You should now have set all the required parameters for a deployment of BDC with Active Directory integration.
 
-You can now deploy the BDC cluster integrated with Active Directory using the `azdata` command and the kubeadm-prod deployment profile. For full documentation of how to deploy [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], please visit the [How to deploy SQL Server Big Data Clusters on Kubernetes](deployment-guidance.md).
+You can now deploy the BDC cluster integrated with Active Directory using the [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] command and the kubeadm-prod deployment profile. For full documentation of how to deploy [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], please visit the [How to deploy SQL Server Big Data Clusters on Kubernetes](deployment-guidance.md).
 
 ## Verify reverse DNS entry for domain controller
 

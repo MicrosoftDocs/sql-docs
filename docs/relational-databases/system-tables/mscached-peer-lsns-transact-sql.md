@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MScached_peer_lsns_TSQL"
   - "MScached_peer_lsns"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MScached_peer_lsns system table"
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MScached_peer_lsns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

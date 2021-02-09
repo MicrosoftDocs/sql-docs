@@ -23,7 +23,7 @@ ms.date: 03/01/2017
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This topic describes how to save and export registered server information in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]and distribute it to other employees or servers. You can use this export feature to present a consistent user interface on multiple computers.  
+This topic describes how to save and export registered server information in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]and distribute it to other employees or servers. You can use this export feature to present a consistent user interface on multiple computers.  
   
  Exporting and then importing Registered Server files lets you easily configure several computers with the same servers in Registered Servers. This is useful when managing a large number of servers from computers in several locations, or when you want to configure a less experienced user with basic connection settings.  
   
@@ -56,7 +56,6 @@ This topic describes how to save and export registered server information in [!I
     >  Although the export files are encrypted, if user names and SQL Server Authentication passwords are included in the file, access to the file should be carefully controlled. User names and passwords are therefore excluded from the export file by default.  
   
 ## See Also  
- [Import Registered Server Information &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)   
- [Create a New Registered Server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)  
-  
+ [Import Registered Server Information &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)   
+ [Create a New Registered Server &#40;SQL Server Management Studio&#41;](./create-a-new-registered-server-sql-server-management-studio.md)  
   

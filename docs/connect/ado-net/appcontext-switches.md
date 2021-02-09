@@ -89,4 +89,4 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking", fa
 
 ## See also
 
-[AppContext Class](/dotnet/api/system.appcontext?view=netcore-3.1)
+[AppContext Class](/dotnet/api/system.appcontext?view=netcore-3.1&preserve-view=true)

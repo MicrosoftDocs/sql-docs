@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "01/18/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
@@ -14,12 +14,12 @@ helpviewer_keywords:
   - "quorum [SQL Server]"
   - "failover clustering [SQL Server], Always On Availability Groups"
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Windows Server Failover Clustering with SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  A *Windows Server Failover Cluster* (WSFC) is a group of independent servers that work together to increase the availability of applications and services. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] takes advantage of WSFC services and capabilities to support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster Instances.  
+  A *Windows Server Failover Cluster* (WSFC) is a group of independent servers that work together to increase the availability of applications and services. [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] takes advantage of WSFC services and capabilities to support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster Instances.  
   
    
 ##  <a name="TermsAndDefs"></a> Terms and Definitions  
@@ -71,7 +71,7 @@ ms.author: mathoma
  For more information, see: [Failover Clustering Overview - Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11))  
   
 ##  <a name="AlwaysOnWsfcTech"></a> SQL Server Always On Technologies and WSFC  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *Always On* is a high availability and disaster recovery solution that takes advantage of WSFC. The Always On features provide integrated, flexible solutions that increase application availability, provide better returns on hardware investments, and simplify high availability deployment and management.  
+ [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] *Always On* is a high availability and disaster recovery solution that takes advantage of WSFC. The Always On features provide integrated, flexible solutions that increase application availability, provide better returns on hardware investments, and simplify high availability deployment and management.  
   
  Both [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and Always On Failover Cluster Instances use WSFC as a platform technology, registering components as WSFC cluster resources.  Related resources are combined into a *role*, which can be made dependent upon other WSFC cluster resources. The WSFC can then sense and signal the need to restart the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance or automatically fail it over to a different server node in the WSFC.  
   

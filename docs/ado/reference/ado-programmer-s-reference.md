@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ADO, reference"
 ms.assetid: 6dc27c85-84e1-472a-b057-d1854b8c98a3
@@ -21,6 +21,6 @@ This section contains the following topics.
   
 -   [RDS API Reference](./rds-api/rds-api-reference.md)  
   
--   [ADO MD API Reference](./ado-md-api/ado-md-object-model.md?view=sql-server-ver15)  
+-   [ADO MD API Reference](./ado-md-api/ado-md-object-model.md)  
   
--   [ADOX API Reference](./adox-api/adox-object-model.md?view=sql-server-ver15)
+-   [ADOX API Reference](./adox-api/adox-object-model.md)

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -94,6 +94,12 @@ SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
+
+## Permissions  
+The visibility of the metadata in information schema views is limited to securables that a user either owns or on which the user has been granted some permission. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+
+> [!NOTE]  
+> Information schema views are defined server-wide and therefore cannot be denied within the context of a user database. To REVOKE or DENY access (SELECT), the master database must be used. By default the public role has SELECT-permission to all information schema views but the content is limited with metadata visibility rules.
 
 ## See Also
 

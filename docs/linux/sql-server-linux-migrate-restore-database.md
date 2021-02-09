@@ -31,7 +31,7 @@ The following prerequisites are required to complete this tutorial:
 
 * Windows machine with the following:
   * [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) installed.
-  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) installed.
+  * [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) installed.
   * Target database to migrate.
 
 * Linux machine with the following installed:
@@ -72,7 +72,7 @@ To restore the database, you must first transfer the backup file from the Window
 
 1. Install a Bash shell on your Windows machine that supports the **scp** (secure copy) and **ssh** (remote login) commands. Two examples include:
 
-   * The [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) (Windows 10)
+   * The [Windows Subsystem for Linux](/windows/wsl/about) (Windows 10)
    * The Git Bash Shell ([https://git-scm.com/downloads](https://git-scm.com/downloads))
 
 1. Open a Bash session on Windows.

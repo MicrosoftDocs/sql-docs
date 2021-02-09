@@ -1,5 +1,5 @@
 ---
-title: "Row-Level Security | Microsoft Docs"
+title: "Row-Level Security"
 description: Learn how Row-Level Security uses group membership or execution context to control access to rows in a database table in SQL Server.
 ms.custom: ""
 ms.date: "09/01/2020"
@@ -14,10 +14,9 @@ helpviewer_keywords:
   - "security [SQL Server], predicate based access control"
   - "row level security described"
   - "predicate based security"
-ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Row-Level Security
@@ -34,7 +33,7 @@ The access restriction logic is located in the database tier rather than away fr
   
 Implement RLS by using the [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement, and predicates created as [inline table-valued functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   
 > [!NOTE]
 > Azure Synapse supports filter predicates only. Block predicates aren't currently supported in Azure Synapse.
@@ -297,8 +296,8 @@ This short example creates three users and an external table with six rows. It t
 
 ### Prerequisites
 
-1. You must have a SQL pool. See [Create a Synapse SQL pool](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
-1. The server hosting your SQL pool must be registered with AAD and you must have an Azure storage account with Storage Blog Contributor permissions. Follow the steps [here](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
+1. You must have a dedicated SQL pool. See [Create a dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
+1. The server hosting your dedicated SQL pool must be registered with AAD and you must have an Azure storage account with Storage Blog Data Contributor permissions. Follow the steps [here](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
 1. Create a file system for your Azure Storage account. Use Storage Explorer to view your storage account. Right click on containers and select *Create file system*.  
 
 Once you have the prerequisites in place, create three user accounts that will demonstrate different access capabilities.
@@ -312,7 +311,7 @@ GO
 CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
---run in master and your SQL pool database
+--run in master and your dedicated SQL pool database
 CREATE USER Manager FOR LOGIN Manager;  
 CREATE USER Sales1  FOR LOGIN Sales1;  
 CREATE USER Sales2  FOR LOGIN Sales2 ;

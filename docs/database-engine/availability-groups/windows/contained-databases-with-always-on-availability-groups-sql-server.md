@@ -5,19 +5,19 @@ ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], interoperability"
   - "contained database, AlwaysOnAvailabilityGroups"
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Use contained databases with Always On availability groups 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  This topic contains information about the using a contained database with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  This topic contains information about the using a contained database with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   

@@ -6,13 +6,13 @@ ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: end-user-help
 f1_keywords: 
   - "sql13.swb.availabilitygroupproperties.general.f1"
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Availability Group Properties: New Availability Group (General Page)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

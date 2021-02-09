@@ -5,7 +5,7 @@ titleSuffix: Azure SQL Database
 ms.date: "07/28/2016"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -17,7 +17,7 @@ ms.assetid: 3d4c2585-00de-46b5-8eee-0efb71cb3aea
 author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 # Firewall Rules Stored Procedures (Azure SQL Database)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]

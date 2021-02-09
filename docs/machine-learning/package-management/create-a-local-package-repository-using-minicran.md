@@ -8,9 +8,9 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
+
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Create a local R package repository using miniCRAN
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -107,7 +107,7 @@ pdb[, c("Package", "Version", "License")]
 
 After you have a local repository with the packages you need, move the package repository to the SQL Server computer. The following procedure describes how to install the packages using R tools.
 
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 > [!NOTE]
 > The recommended method for installing packages is using **sqlmlutils**. See [Install new R packages with sqlmlutils](install-additional-r-packages-on-sql-server.md).
 ::: moniker-end
@@ -120,21 +120,21 @@ After you have a local repository with the packages you need, move the package r
 
 2. Open an R tool associated with the instance (for example, you could use Rgui.exe). Right-click and select **Run as administrator** to allow the tool to make updates to your system.
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    - For example, the default file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
-   ::: moniker range"=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    - For example, the file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
-   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">sql-server-2017"
    - For example, the file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
 3. Get the path for the instance library, and add it to the list of library paths.
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    For example,
 
    ```R
@@ -143,7 +143,7 @@ After you have a local repository with the packages you need, move the package r
 
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    For example,
 
    ```R
@@ -152,7 +152,7 @@ After you have a local repository with the packages you need, move the package r
 
    ::: moniker-end
 
-   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">sql-server-2017"
    For example,
 
    ```R

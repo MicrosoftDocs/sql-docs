@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "instances of SQL Server, uninstalling"
   - "uninstalling SQL Server"
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # Uninstall an Existing Instance of SQL Server (Setup)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

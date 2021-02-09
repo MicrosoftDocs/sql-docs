@@ -79,7 +79,6 @@ WHERE ProductModelID=7
  The query returns all the <`Location`> element children of the <`root`> element.  
   
 ## See Also  
- [Functions on Nodes](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [Functions on Nodes](./xquery-functions-against-the-xml-data-type.md)   
  [namespace-uri Function &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
-  
   

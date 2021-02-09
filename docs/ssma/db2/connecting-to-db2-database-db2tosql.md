@@ -96,7 +96,7 @@ Metadata about the DB2 database is not automatically refreshed. The metadata in 
 
 ## Next Step
 
-- The next step in the migration process is to [Connecting to SQL Server](./connecting-to-sql-server-db2etosql.md).
+- The next step in the migration process is to [Connecting to SQL Server](./connecting-to-sql-server-db2tosql.md).
 
 ## See Also
 

@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 5ba27432-7a29-4420-b73d-def621c0b3ac
 author: ronortloff
 ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016"
 ---
 # sys.pdw_health_component_groups (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -23,6 +23,6 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |group_name|**nvarchar(255)**|Logical group name for the components and devices.|NOT NULL|  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

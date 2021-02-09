@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP EVENT NOTIFICATION"
   - "DROP_EVENT_NOTIFICATION_TSQL"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "DROP EVENT NOTIFICATION statement"
   - "removing event notifications"
 ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

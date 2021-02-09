@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP DATABASE SCOPED CREDENTIAL"
   - "DROP_DATABASE_SCOPED_CREDENTIAL_TSQL"
@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
 author: VanMSFT
 ms.author: vanto
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 # DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]

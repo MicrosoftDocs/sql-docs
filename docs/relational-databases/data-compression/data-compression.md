@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "data compression [Database Engine]"
   - "compressed tables [SQL Server]"
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data Compression
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

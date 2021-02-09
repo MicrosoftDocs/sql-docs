@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.configurations_TSQL"
   - "configurations"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.configurations catalog view"
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,10 +59,10 @@ If the value equals the change for the configuration option you made but the **v
 
 There are  configuration options where the value and value_in_use may not be the same and this is expected behavior. For example:
 
-"max server memory (MB)" - The default configured value of 0 will show up as value_in_use = 2147483647
-"min server memory (MB)" - The default configured value of 0 may show up as value_in_use = 8 (32bit) or 16 (64bit). 
+"max server memory (MB)" - The default configured value of 0 shows up as **value_in_use** = 2147483647<br>
 
-In some cases, the **value_in_use** will be 0. In this situation, the "true" **value_in_use** is 8(32bit) or 16(64bit)
+"min server memory (MB)" - The default configured value of 0 may show up as **value_in_use** = 8 (32bit) or 16 (64bit). In some cases, the **value_in_use** is 0. In this situation, the "true" **value_in_use** is 8 (32bit) or 16 (64bit).
+
 
 The **is_dynamic** column can be used to determine if the configuration option requires a restart. is_dynamic=1 means that when the RECONFIGURE(T-SQL) commnad is executed, the new value will take effect "immediately" (in some cases the server engine may not evaluate the new value immediately but will do so in the normal course of its execution). is_dynamic=0 means the the changed configuration value will not take effect until the server is restarted even though the RECONFIGURE(T-SQL) command was executed.
 

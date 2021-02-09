@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_sequence_get_range"
   - "sp_sequence_get_range_TSQL"
@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_sequence_get_range (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

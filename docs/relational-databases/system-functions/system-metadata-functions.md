@@ -7,12 +7,12 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: a6fb85b2-b010-4ca9-b65f-4402917076ea
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # System Metadata Functions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

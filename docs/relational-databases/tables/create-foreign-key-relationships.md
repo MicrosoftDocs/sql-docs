@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Foreign Key Relationships
 
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-This article describes how to create foreign key relationships in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You create a relationship between two tables when you want to associate rows of one table with rows of another.
+This article describes how to create foreign key relationships in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You create a relationship between two tables when you want to associate rows of one table with rows of another.
 
 ## Permissions
 
@@ -36,7 +36,7 @@ Creating a foreign key in an existing table requires [ALTER](../../t-sql/stateme
 - FOREIGN KEY constraints can reference another column in the same table, and is referred to as a self-reference.
 - A FOREIGN KEY constraint specified at the column level can list only one reference column. This column must have the same data type as the column on which the constraint is defined.
 - A FOREIGN KEY constraint specified at the table level must have the same number of reference columns as the number of columns in the constraint column list. The data type of each reference column must also be the same as the corresponding column in the column list.
-- The [!INCLUDE[ssDE](../../includes/ssde-md.md)] doesn't have a predefined limit on the number of FOREIGN KEY constraints a table can contain that reference other tables. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] also doesn't limit the number of FOREIGN KEY constraints owned by other tables that reference a specific table. However, the actual number of FOREIGN KEY constraints used is limited by the hardware configuration, and by the design of the database and application. A table can reference a maximum of 253 other tables and columns as foreign keys (outgoing references). [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later increases the limit for the number of other tables and columns that can reference columns in a single table (incoming references), from 253 to 10,000. (Requires at least 130 compatibility level.) The increase has the following restrictions:
+- The [!INCLUDE[ssDE](../../includes/ssde-md.md)] doesn't have a predefined limit on the number of FOREIGN KEY constraints a table can contain that reference other tables. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] also doesn't limit the number of FOREIGN KEY constraints owned by other tables that reference a specific table. However, the actual number of FOREIGN KEY constraints used is limited by the hardware configuration, and by the design of the database and application. A table can reference a maximum of 253 other tables and columns as foreign keys (outgoing references). [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later increases the limit for the number of other tables and columns that can reference columns in a single table (incoming references), from 253 to 10,000. (Requires at least 130 compatibility level.) The increase has the following restrictions:
 
   - Greater than 253 foreign key references are supported for DELETE and UPDATE DML operations. MERGE operations aren't supported.
   - A table with a foreign key reference to itself is still limited to 253 foreign key references.

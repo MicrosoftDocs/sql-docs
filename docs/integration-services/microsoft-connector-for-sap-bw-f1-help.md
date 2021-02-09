@@ -31,7 +31,7 @@ ms.author: chugu
   
 ### SAP BW Connection Manager F1 Help  
   
--   [SAP BW Connection Manager Editor](../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
+-   [SAP BW Connection Manager Editor](./connection-manager/sap-bw-connection-manager.md)  
   
 ### SAP BW Source F1 Help  
   
@@ -79,5 +79,4 @@ ms.author: chugu
   
 ## See Also  
  [Microsoft Connector for SAP BW Components](../integration-services/microsoft-connector-for-sap-bw-components.md)  
-  
   

@@ -9,7 +9,7 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # SQL Server Launchpad service configuration
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,16 +22,16 @@ For more information, see the Launchpad sections in [Extensibility architecture 
 
 By default, SQL Server Launchpad is configured to run under **NT Service\MSSQLLaunchpad**, which is provisioned with all necessary permissions to run external scripts. Removing permissions from this account can result in Launchpad failing to start or to access the SQL Server instance where external scripts should be run.
 
-If you modify the service account, be sure to use the [Local Security Policy console](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings).
+If you modify the service account, be sure to use the [Local Security Policy console](/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings).
 
 Permissions required for this account are listed in the following table.
 
 | Group policy setting | Constant name |
 |----------------------|---------------|
-| [Adjust memory quotas for a process](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) | SeIncreaseQuotaPrivilege | 
-| [Bypass traverse checking](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) | SeChangeNotifyPrivilege | 
-| [Log on as a service](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) | SeServiceLogonRight | 
-| [Replace a process-level token](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) | SeAssignPrimaryTokenPrivilege | 
+| [Adjust memory quotas for a process](/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) | SeIncreaseQuotaPrivilege | 
+| [Bypass traverse checking](/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) | SeChangeNotifyPrivilege | 
+| [Log on as a service](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) | SeServiceLogonRight | 
+| [Replace a process-level token](/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) | SeAssignPrimaryTokenPrivilege | 
 
 For more information about permissions required to run SQL Server services, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
@@ -56,7 +56,7 @@ A few properties can only be changed by using the Launchpad's configuration file
 
 You must be an administrator on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to make changes to this file. If you edit the file, we recommend that you make a backup copy before saving changes.
 
-The following table lists the advanced settings for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], with the permissible values.
+The following table lists the advanced settings for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], with the permissible values.
 
 |**Setting name**|**Type**|**Description**|
 |----|----|----|

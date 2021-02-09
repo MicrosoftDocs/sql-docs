@@ -6,7 +6,7 @@ ms.date: "08/04/2017"
 ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_set_database_firewall_rule"
   - "sp_set_database_firewall_rule_TSQL"
@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
 author: VanMSFT
 ms.author: vanto
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ms.custom: seo-dt-2019
 ---
 # sp_set_database_firewall_rule (Azure SQL Database)

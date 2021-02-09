@@ -36,11 +36,11 @@ If you are having difficulty connecting to your Linux SQL Server, there are a fe
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > One exception to this technique relates to Azure VMs. For Azure VMs, [find the public IP for the VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
+   > One exception to this technique relates to Azure VMs. For Azure VMs, [find the public IP for the VM in the Azure portal](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
 
 - If applicable, check that you have opened the SQL Server port (default 1433) on the firewall.
 
-- For Azure VMs, check that you have a [network security group rule for the default SQL Server port](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
+- For Azure VMs, check that you have a [network security group rule for the default SQL Server port](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
 
 - Verify that the user name and password do not contain any typos or extra spaces or incorrect casing.
 
@@ -84,7 +84,7 @@ You can stop or restart the SQL Server service as needed using the following com
    ```
 
 > [!TIP]
-> For more troubleshooting tips for Docker, see [Troubleshooting SQL Server Docker containers](sql-server-linux-configure-docker.md#troubleshooting).
+> For more troubleshooting tips for Docker, see [Troubleshooting SQL Server Docker containers](./sql-server-linux-docker-container-troubleshooting.md).
 
 ## Access the log files
    
@@ -104,7 +104,7 @@ If you prefer, you can also convert the files to UTF-8 to read them with 'more' 
    ```
 ## Extended events
 
-Extended events can be queried via a SQL command.  More information about extended events can be found [here](https://technet.microsoft.com/library/bb630282.aspx):
+Extended events can be queried via a SQL command.  More information about extended events can be found [here](../relational-databases/extended-events/extended-events.md):
 
 ## Crash dumps 
 
@@ -192,7 +192,7 @@ There are many factors that affect performance, including database design, hardw
 
 - [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [System dynamic management views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [Performance Dashboard in SQL Server Management Studio](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
+- [Performance Dashboard in SQL Server Management Studio](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in)
 
 ## Common issues
 

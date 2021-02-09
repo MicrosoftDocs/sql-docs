@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE_EVENT_NOTIFICATION_TSQL"
   - "NOTIFICATION_TSQL"
@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "events [SQL Server], notifications"
   - "event notifications [SQL Server], creating"
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

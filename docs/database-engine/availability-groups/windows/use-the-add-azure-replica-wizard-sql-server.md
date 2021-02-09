@@ -5,13 +5,13 @@ ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.addreplicawizard.azurereplica.f1"
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Configure Azure VM as a secondary replica in an availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.author: mathoma
   
 1.  First, download a management certificate for your Azure subscription. Click **Download** to open the sign-in page.  
   
-2.  Sign in to Microsoft Azure with your Microsoft account or your organizational account. Your Microsoft or organizational account is in the format of an email address, such as  HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. For more information about Azure credentials, see [Microsoft Account for Organizations FAQ](/previous-versions/jj592903(v=msdn.10)) and [Troubleshooting sign-in problems with your organizational account](https://support.microsoft.com/kb/2756852).  
+2.  Sign in to Microsoft Azure with your Microsoft account or your organizational account. Your Microsoft or organizational account is in the format of an email address, such as  HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. For more information about Azure credentials, see [Microsoft Account for Organizations FAQ](/previous-versions/jj592903(v=msdn.10)) and [Troubleshooting sign-in problems with your organizational account](http://web.archive.org/web/20121016005434/http://support.microsoft.com:80/kb/2756852).  
   
 3.  Next, connect to your subscription by clicking **Connect**. Once you are connected, the drop-down lists are populated with your Azure parameters, such as **Virtual Network** and **Virtual Network Subnet**.  
   

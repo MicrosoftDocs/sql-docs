@@ -12,7 +12,7 @@ helpviewer_keywords:
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15"
 ---
 # Manage accelerated database recovery
 
@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 ## Enabling and controlling ADR
 
-ADR is off by default in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], and can be controlled using DDL syntax:
+ADR is off by default in [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], and can be controlled using DDL syntax:
 ```sql
 ALTER DATABASE [DB] SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 [(PERSISTENT_VERSION_STORE_FILEGROUP = { filegroup name }) ];

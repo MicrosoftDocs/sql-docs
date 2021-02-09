@@ -3,12 +3,12 @@ title: "Whitepaper: Diagnose & resolve latch contention"
 description: This article is an in-depth look at diagnosing and resolving latch contention in SQL Server. This article was originally published by the SQLCAT team at Microsoft."
 ms.date: 09/30/2020
 ms.prod: sql
-ms.reviewer: jroth
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: how-to
 author: bluefooted
 ms.author: pamela
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Diagnose and resolve latch contention on SQL Server
@@ -26,7 +26,7 @@ Latches are lightweight synchronization primitives that are used by the SQL Serv
 
 Contention on page latches is the most common scenario encountered on multi-CPU systems and so most of this article will focus on these.
 
-Latch contention occurs when multiple threads concurrently attempt to acquire incompatible latches to the same in-memory structure. As a latch is an internal control mechanism; the SQL engine automatically determines when to user them. Because the behavior of latches is deterministic, application decisions including schema design can affect this behavior. This article aims to provide the following information:
+Latch contention occurs when multiple threads concurrently attempt to acquire incompatible latches to the same in-memory structure. As a latch is an internal control mechanism; the SQL engine automatically determines when to use them. Because the behavior of latches is deterministic, application decisions including schema design can affect this behavior. This article aims to provide the following information:
 
 * Background information on how latches are used by SQL Server. 
 * Tools used to investigate latch contention. 
@@ -53,7 +53,7 @@ Latches are acquired in one of five different modes, which relate to level of ac
 
 * **KP** -- Keep latch, ensures that the referenced structure cannot be destroyed. Used when a thread wants to look at a buffer structure. Because the KP latch is compatible with all latches except for the destroy (DT) latch, the KP latch is considered to be "lightweight", meaning that the impact on performance when using it is minimal. Since the KP latch is incompatible with the DT latch, it will prevent any other thread from destroying the referenced structure. For example, a KP latch will prevent the structure it references from being destroyed by the lazywriter process. For more information about how the lazywriter process is used with SQL Server buffer page management, see [Writing Pages](./writing-pages.md).
 
-* **SH** -- Shared latch, required to read a page structure. 
+* **SH** -- Shared latch, required to read the referenced structure (e.g. read a data page). Multiple threads can simultaneously access a resource for reading under a shared latch.
 * **UP** -- Update latch, is compatible with SH (Shared latch) and KP, but no others and therefore will not allow an EX latch to write to the referenced structure. 
 * **EX** -- Exclusive latch, blocks other threads from writing to or reading from the referenced structure. One example of use would be to modify contents of a page for torn page protection. 
 * **DT** -- Destroy latch, must be acquired before destroying contents of referenced structure. For example, a DT latch must be acquired by the lazywriter process to free up a clean page before adding it to the list of free buffers available for use by other threads.

@@ -3,7 +3,7 @@ description: "ADD SIGNATURE (Transact-SQL)"
 title: ADD SIGNATURE (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ADD SIGNATURE"
   - "ADD_SIGNATURE_TSQL"
@@ -24,7 +24,7 @@ ms.date: 06/10/2020
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Adds a digital signature to a stored procedure, function, assembly, or trigger. Also adds a countersignature to a stored procedure, function, assembly, or trigger.
+Adds a digital signature to a stored procedure, function, assembly, or DML-trigger. Also adds a countersignature to a stored procedure, function, assembly, or DML-trigger.
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -78,7 +78,7 @@ The module being signed or countersigned and the certificate or asymmetric key u
 > [!CAUTION]
 > Module signing should only be used to grant permissions, never to deny or revoke permissions.  
   
- Inline table-valued functions cannot be signed.  
+ Ddata definition language (DDL) triggers and Inline table-valued functions cannot be signed.  
   
  Information about signatures is visible in the sys.crypt_properties catalog view.  
   

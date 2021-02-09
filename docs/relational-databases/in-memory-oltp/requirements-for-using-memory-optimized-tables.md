@@ -19,7 +19,7 @@ ms.author: maghan
   
  In addition to the [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), the following are requirements to use In-Memory OLTP:  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 (or later), any edition. For [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM (pre-SP1) you need Enterprise, Developer, or Evaluation edition.
+-   [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 (or later), any edition. For [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] RTM (pre-SP1) you need Enterprise, Developer, or Evaluation edition.
     
     > [!NOTE]
     > In-Memory OLTP requires the 64-bit version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -40,12 +40,12 @@ ms.author: maghan
   
 ## Important Notes on using [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   
--   Starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], there is no limit on the size of memory-optimized tables, other than available memory. 
+-   Starting [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], there is no limit on the size of memory-optimized tables, other than available memory. 
 
 -   In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], the total in-memory size of all durable tables in a database should not exceed 250 GB. For more information, see [Estimate Memory Requirements for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).  
 
 > [!NOTE]
-> Starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, Standard and Express Editions support In-Memory OLTP, but they impose quotas on the amount of memory you can use for memory-optimized tables in a given database. In Standard edition this is 32GB per database; in Express edition this is 352MB per database. 
+> Starting [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1, Standard and Express Editions support In-Memory OLTP, but they impose quotas on the amount of memory you can use for memory-optimized tables in a given database. In Standard edition this is 32GB per database; in Express edition this is 352MB per database. 
   
 -   If you create one or more databases with memory-optimized tables, you should enable Instant File Initialization (IFI) by granting the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account the *SE_MANAGE_VOLUME_NAME* user right. Without IFI, memory-optimized storage files (data and delta files) will be initialized upon creation, which can have negative impact on the performance of your workload. For more information about IFI, including how to enable it, see [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md).
   

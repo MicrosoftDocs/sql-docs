@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Associate File Extensions to a Code Editor
 
@@ -52,6 +52,5 @@ Associating file extensions to a specific code editor allows you to open a file 
 4.  In the **Editor** box, click the code editor that you wish to use to open this file type, click **Add**, and then click **OK**.  
   
 ## See Also  
- [Ssms Utility](../../tools/sql-server-management-studio/ssms-utility.md)  
-  
+ [Ssms Utility](../ssms-utility.md)  
   

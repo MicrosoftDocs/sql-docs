@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysprotects"
   - "sys.sysprotects_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.sysprotects compatibility view"
   - "sysprotects system table"
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysprotects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

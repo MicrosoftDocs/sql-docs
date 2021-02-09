@@ -1,5 +1,5 @@
 ---
-description: "Deprecated database engine features in [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]"
+description: "Deprecated database engine features in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]"
 title: "Deprecated database engine features in SQL Server 2019 | Microsoft Docs"
 titleSuffix: "SQL Server 2019"
 ms.custom: "seo-lt-2019"
@@ -14,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: 
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-ver15"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 
-# Deprecated database engine features in [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
+# Deprecated database engine features in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 
 [!INCLUDE[sqlserver2019](../includes/applies-to-version/sqlserver2019.md)]
 

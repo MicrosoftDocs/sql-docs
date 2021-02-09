@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "management tools, upgrading"
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
-author: "stevestein"
-ms.author: "sstein"
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: "cawrites"
+ms.author: "chadam"
+monikerRange: ">=sql-server-2016"
 ---
 # Upgrade SQL Server Management Tools
 

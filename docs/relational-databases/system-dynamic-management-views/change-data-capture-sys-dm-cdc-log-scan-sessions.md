@@ -6,7 +6,7 @@ ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_cdc_log_scan_sessions"
   - "dm_cdc_log_scan_sessions_TSQL"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "change data capture [SQL Server], log scan reporting"
   - "sys.dm_cdc_log_scan_sessions dynamic management view"
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Change Data Capture - sys.dm_cdc_log_scan_sessions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

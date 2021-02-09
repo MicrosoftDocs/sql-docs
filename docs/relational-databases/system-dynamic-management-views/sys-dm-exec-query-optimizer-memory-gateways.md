@@ -5,9 +5,9 @@ ms.custom: seo-dt-2019
 ms.date: "04/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.technology: performance
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords:
   - "dm_exec_query_optimizer_memory_gateways_TSQL"
   - "dm_exec_query_optimizer_memory_gateways"
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "sys.dm_exec_query_optimizer_memory_gateways dynamic management view"
 author: "josack"
 ms.author: "josack"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 

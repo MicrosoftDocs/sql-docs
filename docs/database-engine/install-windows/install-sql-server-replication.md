@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "replication [SQL Server], installing"
   - "command prompt [SQL Server replication]"
 ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server replication
 
@@ -42,5 +42,6 @@ After replication components are installed, you must configure the server before
 ## See also  
  [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)   
  [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md)   
- [Features Supported by the Editions of SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md)  
+ [Features Supported by the Editions of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) and
+ [Features Supported by the Editions of SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)
   

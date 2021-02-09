@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "enumerated constants [ADO MD]"
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
@@ -24,7 +24,7 @@ To assist debugging, the ADO MD enumerated constants list a value for each const
 -   [MemberTypeEnum](./membertypeenum.md)  
   
 ## See Also  
- [ADO MD API Reference](./ado-md-object-model.md?view=sql-server-ver15)   
+ [ADO MD API Reference](./ado-md-object-model.md)   
  [ADO MD Code Examples](./ado-md-code-examples.md)   
  [ADO MD Collections](./ado-md-collections.md)   
  [ADO MD Methods](./ado-md-methods.md)   

@@ -13,7 +13,7 @@ f1_keywords:
 ms.assetid: a70656cb-21c9-4489-be77-ccd396747e3b
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Subscriber Types
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Options  
  Select each Subscriber type that this publication must support.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]  
  The publication can use all features.  
   
  [!INCLUDE[ssEW](../../includes/ssew-md.md)]  

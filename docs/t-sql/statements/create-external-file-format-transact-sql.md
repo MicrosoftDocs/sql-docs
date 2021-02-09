@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE EXTERNAL FILE FORMAT"
   - "CREATE_EXTERNAL_FILE_FORMAT"
@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "External, file format"
   - "PolyBase, external file format"
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ The following file formats are supported:
   
 - Delimited Text  
   
-- Hive RCFile  
+- Hive RCFile  - Does not apply to Azure Synapse Analytics.
   
 - Hive ORC
   
@@ -63,7 +63,7 @@ WITH (
 {  
     FIELD_TERMINATOR = field_terminator  
     | STRING_DELIMITER = string_delimiter 
-    | First_Row = integer -- ONLY AVAILABLE SQL DW
+    | First_Row = integer -- ONLY AVAILABLE FOR AZURE SYNAPSE ANALYTICS
     | DATE_FORMAT = datetime_format  
     | USE_TYPE_DEFAULT = { TRUE | FALSE } 
     | Encoding = {'UTF8' | 'UTF16'} 
@@ -81,6 +81,9 @@ WITH (
     }  
     [ , DATA_COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec' ]);
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ### [ORC](#tab/orc)
 ```syntaxsql  
 --Create an external file format for ORC file.  
@@ -92,6 +95,9 @@ WITH (
       | 'org.apache.hadoop.io.compress.DefaultCodec'      }  
     ]);  
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ### [Parquet](#tab/parquet)
 ```syntaxsql
 --Create an external file format for PARQUET files.  
@@ -115,6 +121,9 @@ WITH (
       | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
     ]);  
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ---
   
 ## Arguments  
@@ -402,7 +411,7 @@ WITH (
     DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
 );  
 ```  
-### E. Create a Delimited Text File Skipping Header Row (Azure SQL DW Only)
+### E. Create a Delimited Text File Skipping Header Row (Azure Synapse Analytics Only)
  This example creates an external file format for CSV file with a single header row. 
   
 ```sql  

@@ -226,7 +226,7 @@ WHERE PointValue = '3,4';
 ```  
   
 ### Updating Limitations  
- You cannot update multiple properties at once using [!INCLUDE[tsql](../../includes/tsql-md.md)]. For example, the following UPDATE statement fails with an error because you cannot use the same column name twice in one UDATE statement.  
+ You cannot update multiple properties at once using [!INCLUDE[tsql](../../includes/tsql-md.md)]. For example, the following UPDATE statement fails with an error because you cannot use the same column name twice in one UPDATE statement.  
   
 ```sql  
 UPDATE dbo.Points  

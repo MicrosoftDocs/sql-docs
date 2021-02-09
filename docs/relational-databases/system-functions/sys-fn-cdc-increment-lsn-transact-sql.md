@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "fn_cdc_increment_lsn_TSQL"
   - "sys.fn_cdc_increment_lsn_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "fn_cdc_increment_lsn"
   - "sys.fn_cdc_increment_lsn"
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -13,7 +13,7 @@ ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 # Common errors for transparent data encryption with customer-managed keys in Azure Key Vault
 
@@ -22,7 +22,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 This article describes how to identify and resolve Azure Key Vault key access issues that caused a database configured to use [transparent data encryption (TDE) with customer-managed keys in Azure Key Vault](/azure/sql-database/transparent-data-encryption-byok-azure-sql) to become inaccessible.
 
 ## Introduction
-When TDE is configured to use a customer-managed key in Azure Key Vault, continuous access to this TDE Protector is required for the database to stay online.  If the logical SQL server loses access to the customer-managed TDE protector in Azure Key Vault, a database will start denying all connections with the appropriate error message and change it's state to *Inaccessible* in the Azure portal.
+When TDE is configured to use a customer-managed key in Azure Key Vault, continuous access to this TDE Protector is required for the database to stay online.  If the logical SQL server loses access to the customer-managed TDE protector in Azure Key Vault, a database will start denying all connections with the appropriate error message and change its state to *Inaccessible* in the Azure portal.
 
 For the first 8 hours, if the underlying Azure key vault key access issue is resolved, the database will auto-heal and come online automatically. This means that for all intermittent and temporary network outage scenarios, no user action is required, and the database will come online automatically. In most cases, user action is required to resolve the underlying key vault key access issue. 
 
@@ -62,17 +62,17 @@ _401 AzureKeyVaultNoServerIdentity - The server identity is not correctly config
 
 Use the following cmdlet or command to ensure that an identity has been assigned to the logical SQL Server instance:
 
-- Azure PowerShell: [Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
+- Azure PowerShell: [Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer) 
 
-- Azure CLI: [az-sql-server-show](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+- Azure CLI: [az-sql-server-show](/cli/azure/sql/server#az-sql-server-show)
 
 **Mitigation**
 
 Use the following cmdlet or command to configure an Azure AD identity (an AppId) for the logical SQL Server instance:
 
-- Azure PowerShell: [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) with the `-AssignIdentity` option.
+- Azure PowerShell: [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver) with the `-AssignIdentity` option.
 
-- Azure CLI: [az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) with the `--assign_identity` option.
+- Azure CLI: [az sql server update](/cli/azure/sql/server#az-sql-server-update) with the `--assign_identity` option.
 
 In the Azure portal, go to the key vault, and then go to **Access policies**. Complete these steps: 
 
@@ -97,9 +97,9 @@ To identify the key URI and the key vault:
 
 1. Use the following cmdlet or command to get the key URI of a specific logical SQL Server instance:
 
-    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey)
 
-    - Azure CLI: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+    - Azure CLI: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key#az-sql-server-tde-key-show) 
 
 1. Use the key URI to identify the key vault:
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.sysmessages"
   - "sysmessages"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysmessages system table"
   - "sys.sysmessages compatibility view"
 ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysmessages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

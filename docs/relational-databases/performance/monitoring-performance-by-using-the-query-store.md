@@ -12,9 +12,9 @@ helpviewer_keywords:
   - "Query Store"
   - "Query Store, described"
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-author: julieMSFT
-ms.author: jrasnick
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # Monitoring performance by using the Query Store
 
@@ -25,11 +25,11 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store featur
 For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Operating the Query Store in Azure SQL Database](best-practice-with-the-query-store.md#Insight).
 
 > [!IMPORTANT]
-> If you are using Query Store for just in time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible.
+> If you are using Query Store for just in time workload insights in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible.
 
 ## <a name="Enabling"></a> Enabling the Query Store
 
- Query Store is not enabled by default for new SQL Server and Azure Synapse Analytics (SQL DW) databases, and is enabled by default for new Azure SQL Database databases.
+ Query Store is not enabled by default for new SQL Server and Azure Synapse Analytics databases, and is enabled by default for new Azure SQL Database databases.
 
 ### Use the Query Store Page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
@@ -227,7 +227,7 @@ Stored procedures configure the Query Store.
 :::row-end:::
 :::row:::
     :::column:::
-        [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
+        [sp_query_store_remove_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
     :::column-end:::
     :::column:::
         [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)
@@ -235,11 +235,13 @@ Stored procedures configure the Query Store.
 :::row-end:::
 :::row:::
     :::column:::
-        sp_query_store_consistency_check &#40;Transct-SQL&#41;
+        sp_query_store_consistency_check &#40;Transact-SQL&#41;<sup>1</sup>
     :::column-end:::
     :::column:::
     :::column-end:::
 :::row-end:::
+
+<sup>1</sup> In extreme scenarios Query Store can enter an ERROR state because of internal errors. Starting with SQL Server 2017 (14.x), if this happens, Query Store can be recovered by executing the sp_query_store_consistency_check stored procedure in the affected database. See [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) for more details described in the actual_state_desc column description.
 
 ## <a name="Scenarios"></a> Key Usage Scenarios
 
@@ -637,7 +639,7 @@ When using **sp_query_store_force_plan** you can only force plans that were reco
 
 #### <a name="ctp23"><a/> Plan forcing support for fast forward and static cursors
 
-Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and Azure SQL Database (all deployment models), Query Store supports the ability to force query execution plans for fast forward and static [!INCLUDE[tsql](../../includes/tsql-md.md)] and API cursors. Forcing is supported via `sp_query_store_force_plan` or through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Store reports.
+Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and Azure SQL Database (all deployment models), Query Store supports the ability to force query execution plans for fast forward and static [!INCLUDE[tsql](../../includes/tsql-md.md)] and API cursors. Forcing is supported via `sp_query_store_force_plan` or through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Store reports.
 
 ### Remove plan forcing for a query
 

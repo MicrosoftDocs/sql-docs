@@ -30,7 +30,7 @@ ms.author: jaszymas
    
  The following image compares the traditional service-manage key hierarchy with the Azure Key Vault system.  
   
- ![ekm-key-hierarchy-traditional](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-traditional.png "ekm-key-hierarchy-traditional")  
+ ![Diagram that compares the traditional service-manage key hierarchy with the Azure Key Vault system.](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-traditional.png "ekm-key-hierarchy-traditional")  
   
    
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector serves as a bridge between [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and Azure Key Vault, so [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can leverage the scalability, high performance, and highly availability of the Azure Key Vault service. The following image represents how the key hierarchy works in the EKM provider architecture with Azure Key Vault and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector.  

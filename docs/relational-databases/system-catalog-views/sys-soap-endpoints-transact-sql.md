@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "soap_endpoints_TSQL"
   - "sys.soap_endpoints"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.soap_endpoints catalog view"
 ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.soap_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

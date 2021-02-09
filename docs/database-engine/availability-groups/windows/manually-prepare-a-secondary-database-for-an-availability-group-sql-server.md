@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: "07/25/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.preparedbs.f1"
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Prepare a secondary database for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -174,7 +174,7 @@ This topic describes how to prepare a database for an Always On availability gro
         > [!IMPORTANT]  
         >  If the path names of the primary and secondary databases differ, you cannot add a file. This is because on receiving the log for the add file operation, the server instance of the secondary replica attempts to place the new file in the same path as used by the primary database.  
   
-         For example, the following command restores a backup of a primary database that resides in the data directory of the default instance of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. The restore database operation must move the database to the data directory of a remote instance of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] named  (*Always On1*), which hosts the secondary replica on another cluster node. There, the data and log files are restored to the *C:\Program Files\Microsoft SQL Server\MSSQL13.Always On1\MSSQL\DATA* directory . The restore operation uses WITH NORECOVERY, to leave the secondary database in the restoring database.  
+         For example, the following command restores a backup of a primary database that resides in the data directory of the default instance of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. The restore database operation must move the database to the data directory of a remote instance of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] named  (*Always On1*), which hosts the secondary replica on another cluster node. There, the data and log files are restored to the *C:\Program Files\Microsoft SQL Server\MSSQL13.Always On1\MSSQL\DATA* directory . The restore operation uses WITH NORECOVERY, to leave the secondary database in the restoring database.  
   
         ```  
         RESTORE DATABASE MyDB1  

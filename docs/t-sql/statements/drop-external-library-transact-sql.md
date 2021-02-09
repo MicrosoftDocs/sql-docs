@@ -6,7 +6,7 @@ ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: machine-learning
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP EXTERNAL LIBRARY"
   - "DROP_EXTERNAL_LIBRARY_TSQL"
@@ -17,14 +17,14 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Deletes an existing package library. Package libraries are used by supported external runtimes, such as R, Python, or Java.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 > [!NOTE]
 > In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows and Linux platforms are supported in SQL Server 2019 and later.
 ::: moniker-end
@@ -73,7 +73,7 @@ A number of packages, referred to as *system packages*, are pre-installed in a S
 
 ## Examples
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 Add the custom R package, `customPackage`, to a database:
 
 ```sql

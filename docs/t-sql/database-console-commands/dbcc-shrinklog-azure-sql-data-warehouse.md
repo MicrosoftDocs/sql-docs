@@ -11,7 +11,7 @@ dev_langs:
   - "TSQL"
 author: pmasl
 ms.author: umajay
-monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016"
 ---
 
 # DBCC SHRINKLOG (Parallel Data Warehouse)
@@ -36,7 +36,7 @@ DBCC SHRINKLOG
 SIZE = { *target_size* [ MB \| **GB** \| TB ]  } \| **DEFAULT**.  
 *target_size* is the desired size for the transaction log, across all the Compute nodes, after DBCC SHRINKLOG completes. It is an integer greater than 0.  
 The log size is measured in megabytes (MB), gigabytes (GB), or terabytes (TB). It is the combined size of the transaction log on all of the Compute nodes.  
-By default, DBCC SHRINKLOG reduces the transaction log to the log size stored in the metadata for the database. The log size in the metadata is determined by the LOG_SIZE parameter in [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) or [ALTER DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md). DBCC SHRINKLOG reduces the transaction log size to the default size when `SIZE=DEFAULT` is specified, or when the `SIZE` clause is omitted.
+By default, DBCC SHRINKLOG reduces the transaction log to the log size stored in the metadata for the database. The log size in the metadata is determined by the LOG_SIZE parameter in [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../statements/create-database-transact-sql.md) or [ALTER DATABASE &#40;Azure Synapse Analytics&#41;](../statements/alter-database-transact-sql.md). DBCC SHRINKLOG reduces the transaction log size to the default size when `SIZE=DEFAULT` is specified, or when the `SIZE` clause is omitted.
   
 WITH NO_INFOMSGS  
 Informational messages are not displayed in the DBCC SHRINKLOG results.  

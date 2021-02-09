@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.database_mirroring"
   - "database_mirroring"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.database_mirroring catalog view"
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.database_mirroring (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

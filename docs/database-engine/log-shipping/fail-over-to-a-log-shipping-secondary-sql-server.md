@@ -5,7 +5,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: log-shipping
 ms.topic: conceptual
 helpviewer_keywords: 
   - "primary databases [SQL Server]"
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "log shipping [SQL Server], failover"
   - "failover [SQL Server], log shipping"
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Fail Over to a Log Shipping Secondary (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

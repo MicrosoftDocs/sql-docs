@@ -5,7 +5,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "clusters [SQL Server], virtual servers"
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "virtual servers [SQL Server], failover clustering"
   - "failover clustering [SQL Server], virtual servers"
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Rename a SQL Server Failover Cluster Instance
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -7,9 +7,9 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server using a configuration file
 
@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup provides the ability to generate a configuration file based upon the system default and run-time inputs. You can use the configuration file to deploy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] throughout the enterprise with the same configuration. You can also standardize manual installations throughout the enterprise, by creating a batch file that launches Setup.exe. 
  
-This article is maintained for SQL Server versions 2016 and later. For older versions of SQL Server, see [Install SQL Server 2014 Using a Configuration File](/previous-versions/sql/2014/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014).
+This article is maintained for SQL Server versions 2016 and later. For older versions of SQL Server, see [Install SQL Server 2014 Using a Configuration File](/previous-versions/sql/2014/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014&preserve-view=true).
  
 Setup supports the use of the configuration file only through the command prompt. The processing order of the parameters while using the configuration file is outlined below:  
   

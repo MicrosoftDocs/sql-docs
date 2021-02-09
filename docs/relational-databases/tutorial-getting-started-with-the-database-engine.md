@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: "rothja"
 ms.author: "jroth"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tutorial: Getting Started with the Database Engine
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -43,6 +43,5 @@ Your system must have the following installed to use this tutorial:
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. To install [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
   
 ## See Also  
-[Tutorial: SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)  
-  
+[Tutorial: SQL Server Management Studio](../ssms/quickstarts/ssms-connect-query-sql-server.md)  
   

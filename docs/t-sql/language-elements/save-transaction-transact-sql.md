@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SAVE"
   - "SAVE_TSQL"
@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "marked transactions [SQL Server], SAVE TRANSACTION statement"
   - "duplicate savepoints"
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,6 @@ ms.author: jroth
  ## Syntax  
   
 ```syntaxsql
-  
 SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }  
 [ ; ]  
 ```  
@@ -67,7 +66,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
 ## Examples  
  The following example shows how to use a transaction savepoint to roll back only the modifications made by a stored procedure if an active transaction is started before the stored procedure is executed.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  

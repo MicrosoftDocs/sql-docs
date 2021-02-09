@@ -21,7 +21,7 @@ ms.author: "sstein"
   The **master** database records all the system-level information for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system. This includes instance-wide metadata such as logon accounts, endpoints, linked servers, and system configuration settings. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], system objects are no longer stored in the **master** database; instead, they are stored in the [Resource database](../../relational-databases/databases/resource-database.md). Also, **master** is the database that records the existence of all other databases and the location of those database files and records the initialization information for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Therefore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot start if the **master** database is unavailable.  
 
 > [!IMPORTANT]
-> For Azure SQL Database single databases and elastic pools, only master database and tempdb database apply. For more information, see [What is an Azure SQL Database server](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). For a discussion of tempdb in the context of Azure SQL Database, see [tempdb database in Azure SQL Database](tempdb-database.md#tempdb-database-in-sql-database). For Azure SQL Managed Instance, all system databases apply. For more information on Managed Instances in Azure SQL Database, see [What is a Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
+> For Azure SQL Database single databases and elastic pools, only master database and tempdb database apply. For more information, see [What is an Azure SQL Database server](/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). For a discussion of tempdb in the context of Azure SQL Database, see [tempdb database in Azure SQL Database](tempdb-database.md#tempdb-database-in-sql-database). For Azure SQL Managed Instance, all system databases apply. For more information on Managed Instances in Azure SQL Database, see [What is a Managed Instance](/azure/sql-database/sql-database-managed-instance)
   
 ## Physical Properties of master
 
@@ -128,4 +128,4 @@ When you work with the **master** database, consider the following recommendatio
 - [System Databases](../../relational-databases/databases/system-databases.md)  
 - [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
 - [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-- [Move Database Files](../../relational-databases/databases/move-database-files.md)  
+- [Move Database Files](../../relational-databases/databases/move-database-files.md)

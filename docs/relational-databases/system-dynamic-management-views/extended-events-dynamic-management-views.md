@@ -6,15 +6,15 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "extended events [SQL Server], dynamic management objects"
   - "dynamic management objects (SQL Server)"
 ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Extended Events Dynamic Management Views
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

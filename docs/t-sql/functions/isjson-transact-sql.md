@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ISJSON"
   - "ISJSON_TSQL"
@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: c836f3d3-3e17-44ae-92bf-f341918896c3
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: jroth
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
+ms.reviewer: chadam
+monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
 ---
 # ISJSON (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

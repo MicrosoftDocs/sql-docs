@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "filter_TSQL"
   - "sp_check_for_sync_trigger"
@@ -58,7 +58,9 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
   
  **sp_check_for_sync_trigger** is used to coordinate between replication and user-defined triggers. This stored procedure determines if it is being called within the context of a replication trigger. For example, you can call the procedure **sp_check_for_sync_trigger** in the body of a user-defined trigger. If **sp_check_for_sync_trigger** returns **0**, the user-defined trigger continues processing. If **sp_check_for_sync_trigger** returns **1**, the user-defined trigger exits. This ensures that the user-defined trigger does not fire when the replication trigger updates the table.  
   
-## Example  
+## Examples
+
+### A. Add code to a trigger on a Subscriber table
  The following example shows code that could be used in a trigger on a Subscriber table.  
   
 ```  
@@ -69,7 +71,7 @@ IF @retcode = 1
 RETURN  
 ```  
   
-## Example  
+### B. Add code to a trigger on a Publisher table
  The code can also be added to a trigger on a table at the Publisher; the code is similar, but the call to **sp_check_for_sync_trigger** includes an additional parameter.  
   
 ```  

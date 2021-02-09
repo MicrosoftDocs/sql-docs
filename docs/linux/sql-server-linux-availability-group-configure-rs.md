@@ -76,6 +76,6 @@ There are two ways to connect to read-only secondary replicas. Applications can 
 
 ## Next steps
 
-* [Configure a distributed Availability Group](../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)
+* [Configure a distributed Availability Group](../database-engine/availability-groups/windows/distributed-availability-groups.md)
 * [Learn more about availability groups](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 * [Perform a forced manual failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)

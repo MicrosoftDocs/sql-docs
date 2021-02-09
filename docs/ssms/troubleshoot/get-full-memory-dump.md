@@ -22,7 +22,7 @@ In this article, you learn how to capture diagnostic information to troubleshoot
 
 To capture diagnostic information to troubleshoot, follow the steps below.
 
-1. Download [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
+1. Download [ProcDump](/sysinternals/downloads/procdump).
 
 2. Unzip the download into a folder.
 
@@ -56,7 +56,7 @@ You can also get the Full Memory Dump of SSMS when it throws an OutOfMemoryExcep
 
 To capture diagnostic information to troubleshoot an OutOfMemoryException from SSMS, Follow the steps below.
 
-1. Download [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
+1. Download [ProcDump](/sysinternals/downloads/procdump).
 
 2. Unzip the download into a folder.
 

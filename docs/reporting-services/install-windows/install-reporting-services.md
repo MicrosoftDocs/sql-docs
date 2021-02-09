@@ -1,14 +1,14 @@
 ---
 description: "Install SQL Server Reporting Services"
 title: "Install SQL Server Reporting Services | Microsoft Docs"
-ms.date: 05/01/2020
+ms.date: 12/11/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-2016"
 ---
 # Install SQL Server Reporting Services
 
@@ -16,12 +16,12 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 
 SQL Server Reporting Services installation involves server components for storing report items, rendering reports, and processing of subscription and other report services. 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 Download [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) from the Microsoft Download Center.
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Download [SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252) from the Microsoft Download Center.
 
 ::: moniker-end
@@ -122,7 +122,7 @@ You need to open up the TCP port that you have configured for your Web Service U
 
 For information on how to install SQL Server Reporting Services native mode, see [Install Reporting Services native mode report server](install-reporting-services-native-mode-report-server.md). 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 For information on how to install SQL Server 2016 Reporting Services (and earlier) in SharePoint integration mode, see [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md).
 
@@ -132,6 +132,6 @@ For information on how to install SQL Server 2016 Reporting Services (and earlie
 
 With your report server installed, begin to create reports and deploy those to your report server. For information on how to start with Report Builder, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
 
-To create reports using SQL Server Data Tools, [download SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).
+To create reports using SQL Server Data Tools, [download SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_add_jobschedule"
   - "sp_add_jobschedule_TSQL"
@@ -97,6 +97,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |Value|Description (unit)|  
 |-----------|--------------------------|  
 |**0x1**|At the specified time|  
+|**0x2**|Seconds|  
 |**0x4**|Minutes|  
 |**0x8**|Hours|  
   

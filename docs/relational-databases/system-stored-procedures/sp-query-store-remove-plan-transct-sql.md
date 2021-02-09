@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "SYS.SP_QUERY_STORE_REMOVE_PLAN_TSQL"
   - "SP_QUERY_STORE_REMOVE_PLAN_TSQL"
@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 88734726-135b-4b61-9f3f-f568c1fbece6
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_remove_plan (Transct-SQL)
 

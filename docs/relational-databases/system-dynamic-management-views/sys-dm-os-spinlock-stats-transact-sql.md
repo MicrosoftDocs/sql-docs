@@ -9,7 +9,7 @@ ms.service: ""
 ms.suite: "sql"
 ms.technology: "database-engine"
 ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_os_spinlock_stats_TSQL"
   - "dm_os_spinlock_stats_TSQL"
@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "sys.dm_os_spinlock_stats dynamic management view"
 author: "bluefooted"
 ms.author: "pamela"
-ms.reviewer: "maghan"
+ms.reviewer: "wiassaf"
 manager: amitban
 ---
 # sys.dm_os_spinlock_stats (Transact-SQL)
@@ -43,7 +43,7 @@ Returns information about all spinlock waits organized by type.
 
 ## Permissions  
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.    
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the `Server admin` or an `Azure Active Directory admin` account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.    
   
 ## Remarks  
  

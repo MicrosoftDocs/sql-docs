@@ -1,8 +1,8 @@
 ---
-title: "Enable Compression on a Table or Index | Microsoft Docs"
+title: "Enable Compression on a Table or Index"
 description: Learn how to enable compression on a table or index in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "01/22/2021"
 ms.prod: sql  
 ms.reviewer: ""
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -20,18 +20,17 @@ f1_keywords:
 helpviewer_keywords: 
   - "data compression wizard"
   - "compression [SQL Server], enable"
-ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016"
 ---
 # Enable Compression on a Table or Index
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  This topic describes how to enable compression on a table or index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+This article describes how to enable [data compression](../../relational-databases/data-compression/data-compression.md) on a table or index in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
- **In This Topic**  
+ **In this article**  
   
 -   **Before you begin:**  
   
@@ -51,7 +50,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 -   System tables cannot be enabled for compression.  
   
--   If the table is a heap, the rebuild operation for ONLINE mode will be single threaded. Use OFFLINE mode for a multi-threaded heap rebuild operation. For a more information about data compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+-   If the table is a heap, the rebuild operation for ONLINE mode will be single threaded. Use OFFLINE mode for a multi-threaded heap rebuild operation. Rebuild operations are OFFLINE unless you specify the ONLINE option. For complete information on performing an ONLINE rebuild, see [Perform Index Operations Online](../indexes/perform-index-operations-online.md).
   
 -   You cannot change the compression setting of a single partition if the table has nonaligned indexes.  
   
@@ -70,9 +69,9 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 3.  Right-click the table or index to compress, point to **Storage** and select **Manage Compression...**.  
   
-4.  In the Data Compression Wizard, on the **Welcome to the Data Compression Wizard** page, click **Next**.  
+4.  In the Data Compression Wizard, on the **Welcome to the Data Compression Wizard** page, select **Next**.  
   
-5.  On the **Select Compression Type** page, select the compression type to apply to each partition in the table or index you want to compress. When finished, click **Next**.  
+5.  On the **Select Compression Type** page, select the compression type to apply to each partition in the table or index you want to compress. When finished, select **Next**.  
   
      The following options are available on the **Select Compression Type** page:  
   
@@ -95,17 +94,17 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
      Displays the current space this partition occupies in megabytes (MB). This column is read-only.  
   
      **Requested Compressed Space**  
-     After you click **Calculate**, this column displays the estimated size of each partition after compression by using the setting specified in the **Compression Type** column. This column is read-only.  
+     After you select **Calculate**, this column displays the estimated size of each partition after compression by using the setting specified in the **Compression Type** column. This column is read-only.  
   
      **Calculate**  
-     Click to estimate the size of each partition after compression by using the setting specified in the **Compression Type** column.  
+     Select to estimate the size of each partition after compression by using the setting specified in the **Compression Type** column.  
   
 6.  In the **Select an Output Option** page, specify how you want to complete your compression. Select **Create Script** to create a SQL script based the previous pages in the wizard. Select **Run immediately** to create the new partitioned table after completing all remaining pages in the wizard. Select **Schedule** to create the new partitioned table at a predetermined time in the future.  
   
      If you select **Create script**, the following options are available under **Script options**:  
   
      **Script to file**  
-     Generates the script as a .sql file. Enter a file name and location in the **File name** box or click **Browse** to open the **Script File Location** dialog box. From **Save As**, select **Unicode text** or **ANSI text**.  
+     Generates the script as a .sql file. Enter a file name and location in the **File name** box or select **Browse** to open the **Script File Location** dialog box. From **Save As**, select **Unicode text** or **ANSI text**.  
   
      **Script to Clipboard**  
      Saves the script to the Clipboard.  
@@ -113,7 +112,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
      **Script to New Query Window**  
      Generates the script to a new Query Editor window. This is the default selection.  
   
-     If you select **Schedule**, click **Change schedule**.  
+     If you select **Schedule**, select **Change schedule**.  
   
     1.  In the **New Job Schedule** dialog box, in the **Name** box, enter the job schedule's name.  
   
@@ -123,9 +122,9 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
         -   **Start whenever the CPUs become idle**  
   
-        -   **Recurring**. Select this option if your new partitioned table updates with new information on a regular basis.  
+        -   **Recurring**. Select this option if your new partitioned table updates with new information regularly.  
   
-        -   **One time**. This is the default selection.  
+        -   **One time**. This option is the default selection.  
   
     3.  Select or clear the **Enabled** check box to enable or disable the schedule.  
   
@@ -139,15 +138,15 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
             -   If you select **Monthly**, select either **Day** or **The**.  
   
-                -   If you select **Day**, enter both the date of the month you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the 15th day of the month every other month, select **Day** and enter "15" in the first box and "2" in the second box. Please note that the largest number allowed in the second box is "99".  
+                -   If you select **Day**, enter both the date of the month you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the 15th day of the month every other month, select **Day** and enter "15" in the first box and "2" in the second box. Note that the largest number allowed in the second box is "99".  
   
-                -   If you select **The**, select the specific day of the week within the month that you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the last weekday of the month every other month, select **Day**, select **last** from the first list and **weekday** from the second list, and then enter "2" in the last box. You can also select **first**, **second**, **third**, or **fourth**, as well as specific weekdays (for example: Sunday or Wednesday) from the first two lists. Please note that the largest number allowed in the last box is "99".  
+                -   If you select **The**, select the specific day of the week within the month that you want the job schedule to run and how often the job schedule repeats in months. For example, if you want the job schedule to run on the last weekday of the month every other month, select **Day**, select **last** from the first list and **weekday** from the second list, and then enter "2" in the last box. You can also select **first**, **second**, **third**, or **fourth**, as well as specific weekdays (for example: Sunday or Wednesday) from the first two lists. Note that the largest number allowed in the last box is "99".  
   
         2.  Under **Daily frequency**, specify how often the job schedule repeats on the day the job schedule runs:  
   
             -   If you select **Occurs once at**, enter the specific time of day when the job schedule should run in the **Occurs once at** box. Enter the hour, minute, and second of the day, as well as AM or PM.  
   
-            -   If you select **Occurs every**, specify how often the job schedule runs during the day chosen under **Frequency**. For example, if you want the job schedule to repeat every 2 hours during the day that the job schedule is run, select **Occurs every**, enter "2" in the first box, and then select **hour(s)** from the list. From this list you can also select **minute(s)** and **second(s)**. Please note that the largest number allowed in the first box is "100".  
+            -   If you select **Occurs every**, specify how often the job schedule runs during the day chosen under **Frequency**. For example, if you want the job schedule to repeat every 2 hours during the day that the job schedule is run, select **Occurs every**, enter "2" in the first box, and then select **hour(s)** from the list. From this list you can also select **minute(s)** and **second(s)**. Note that the largest number allowed in the first box is "100".  
   
                  In the **Starting at** box, enter the time that the job schedule should start running. In the **Ending at** box, enter the time that the job schedule should stop repeating. Enter the hour, minute, and second of the day, as well as AM or PM.  
   
@@ -157,11 +156,11 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
     6.  Under **Summary**, in **Description**, verify that all job schedule settings are correct.  
   
-    7.  Click **OK**.  
+    7.  Select **OK**.  
   
-     After completing this page, click **Next**.  
+     After completing this page, select **Next**.  
   
-7.  On the **Review Summary** page, under **Review your selections**, expand all available options to verify that all compression settings are correct. If everything is as expected, click **Finish**.  
+7.  On the **Review Summary** page, under **Review your selections**, expand all available options to verify that all compression settings are correct. If everything is as expected, select **Finish**.  
   
 8.  On the **Compression Wizard Progress** page, monitor status information about the actions of the Create Partition Wizard. Depending on the options that you selected in the wizard, the progress page might contain one or more actions. The top box displays the overall status of the wizard and the number of status, error, and warning messages that the wizard has received.  
   
@@ -194,7 +193,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
      **Send Report as Email**  
      Copies the results of the wizard's progress report into an email message.  
   
-     When complete, click **Close**.  
+     When complete, select **Close**.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
 
@@ -206,9 +205,9 @@ In SQL Server, run `sp_estimate_data_compression_savings` and then enable compre
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  On the Standard bar, click **New Query**.  
+2.  On the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. The example first executes the stored procedure `sp_estimate_data_compression_savings` to return the estimated size of the object if it were to use the ROW compression setting. The example then enables ROW compression on all partitions in the specified table.  
+3.  Copy and paste the following example into the query window and select **Execute**. The example first executes the stored procedure `sp_estimate_data_compression_savings` to return the estimated size of the object if it were to use the ROW compression setting. The example then enables ROW compression on all partitions in the specified table.  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -224,9 +223,9 @@ In SQL Server, run `sp_estimate_data_compression_savings` and then enable compre
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  On the Standard bar, click **New Query**.  
+2.  On the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. The example first queries the `sys.indexes` catalog view to return the name and `index_id` for each index on the `Production.TransactionHistory` table. It then executes the stored procedure `sp_estimate_data_compression_savings` to return the estimated size of the specified index ID if it were to use the PAGE compression setting. Finally, the example rebuilds index ID 2 (`IX_TransactionHistory_ProductID`), specifying PAGE compression.  
+3.  Copy and paste the following example into the query window and select **Execute**. The example first queries the `sys.indexes` catalog view to return the name and `index_id` for each index on the `Production.TransactionHistory` table. It then executes the stored procedure `sp_estimate_data_compression_savings` to return the estimated size of the specified index ID if it were to use the PAGE compression setting. Finally, the example rebuilds index ID 2 (`IX_TransactionHistory_ProductID`), specifying PAGE compression.  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -248,15 +247,15 @@ In SQL Server, run `sp_estimate_data_compression_savings` and then enable compre
     
 ### On Azure SQL Database
 
-Azure SQL Database does not support `sp_estimate_data_compression`. The following scripts enable compression without estimating the compression amount. 
+Azure SQL Database does not support the `sp_estimate_data_compression_savings` stored procedure. The following scripts enable compression without estimating the compression amount. 
 
 #### To enable compression on a table  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  On the Standard bar, click **New Query**.  
+2.  On the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. The example enables ROW compression on all partitions in the specified table.  
+3.  Copy and paste the following example into the query window and select **Execute**. The example enables ROW compression on all partitions in the specified table.  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -271,9 +270,9 @@ Azure SQL Database does not support `sp_estimate_data_compression`. The followin
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  On the Standard bar, click **New Query**.  
+2.  On the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. The example first queries the `sys.indexes` catalog view to return the name and `index_id` for each index on the `Production.TransactionHistory` table. Finally, the example rebuilds index ID 2 (`IX_TransactionHistory_ProductID`), specifying PAGE compression.  
+3.  Copy and paste the following example into the query window and select **Execute**. The example first queries the `sys.indexes` catalog view to return the name and `index_id` for each index on the `Production.TransactionHistory` table. Finally, the example rebuilds index ID 2 (`IX_TransactionHistory_ProductID`), specifying PAGE compression.  
   
     ```sql  
     USE AdventureWorks2012;   

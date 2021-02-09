@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "uniqueidentifier"
   - "uniqueidentifier_TSQL"
@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # uniqueidentifier (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ The **uniqueidentifier** type is considered a character type for the purposes of
 
 These tools and features do not support the `uniqueidentifier` data type:
 - PolyBase
-- [dwloader loading tool](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader) for Parallel Data Warehouse
+- [dwloader loading tool](../../analytics-platform-system/dwloader.md) for Parallel Data Warehouse
 
 ## Examples  
 The following example converts a `uniqueidentifier` value to a `char` data type.
@@ -80,5 +80,4 @@ String                                       TruncatedValue
 [NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
-  
   

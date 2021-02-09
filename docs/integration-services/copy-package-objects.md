@@ -64,6 +64,5 @@ ms.author: chugu
  [Control Flow](../integration-services/control-flow/control-flow.md)   
  [Data Flow](../integration-services/data-flow/data-flow.md)   
  [Integration Services &#40;SSIS&#41; Connections](../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Copy Project Items](https://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
-  
+ [Copy Project Items](./integration-services-ssis-projects-and-solutions.md)  
   

@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Deploy SQL Server Big Data Clusters in AD mode on Azure Kubernetes Services (AKS)
 
-SQL Server Big Data Clusters support [Active Directory (AD) deployment mode](deploy-active-directory.md) for **Identity and Access Management (IAM)**. IAM for **Azure Kubernetes Service (AKS)** has been challenging because industry-standard protocols such as OAuth 2.0 and OpenID Connect which is widely supported by Microsoft identity platform is not supported by SQL Server.  
+SQL Server Big Data Clusters support [Active Directory (AD) deployment mode](./active-directory-prerequisites.md) for **Identity and Access Management (IAM)**. IAM for **Azure Kubernetes Service (AKS)** has been challenging because industry-standard protocols such as OAuth 2.0 and OpenID Connect which is widely supported by Microsoft identity platform is not supported by SQL Server.  
 
 This article explains how to deploy a big data cluster (BDC) in AD mode while deploying in [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes). 
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "data types [ODBC], pseudo-type identifiers"
   - "pseudo-type identifiers [ODBC], about pseudo-type identifiers"

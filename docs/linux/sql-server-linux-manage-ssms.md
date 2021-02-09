@@ -137,6 +137,6 @@ When a pane is expanded, Activity Monitor queries the instance for information. 
 ## See also
 - [What is SSMS?](../ssms/sql-server-management-studio-ssms.md)
 - [Export and Import a database with SSMS](sql-server-linux-migrate-ssms.md)
-- [Tutorial: SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)
+- [Tutorial: SQL Server Management Studio](../ssms/quickstarts/ssms-connect-query-sql-server.md)
 - [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Server Performance and Activity Monitoring](../relational-databases/performance/server-performance-and-activity-monitoring.md)

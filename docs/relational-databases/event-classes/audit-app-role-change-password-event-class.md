@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Audit App Role Change Password event class"
 ms.assetid: 28a76c12-e997-48bb-bb0e-9624237a188e

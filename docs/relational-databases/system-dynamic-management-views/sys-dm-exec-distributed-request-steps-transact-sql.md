@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "SYS.DM_EXEC_DISTRIBUTED_REQUEST_STEPS_TSQL"
   - "DM_EXEC_DISTRIBUTED_REQUEST_STEPS_TSQL"

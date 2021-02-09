@@ -24,7 +24,7 @@ manager: amitban
 # Add persisted log buffer to a database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This topic describes how to add a persisted log buffer to a database in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+This topic describes how to add a persisted log buffer to a database in [!INCLUDE[sqlv15](../../includes/sssql19-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## Permissions
 

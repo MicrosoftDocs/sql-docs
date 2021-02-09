@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Log File Auto Shrink event class"
 ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124

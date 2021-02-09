@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQL:StmtStarting event class"
 ms.assetid: ae97386c-9dbf-456d-bcbc-391931775fa3

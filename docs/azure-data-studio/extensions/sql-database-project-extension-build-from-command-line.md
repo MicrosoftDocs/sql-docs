@@ -13,7 +13,7 @@ ms.date: 08/07/2020
 
 # Build a database project from command line
 
-While the SQL Database Project extension for Azure Data Studio provides a graphical user interface to [build a database project](sql-database-project-extension-build.md), a command line build experience is also available for Windows, macOS, and Linux environments. This article outlines the prerequisites and syntax needed to build a SQL project to dacpac from the command line.
+While the SQL Database Project extension (preview) for Azure Data Studio provides a graphical user interface to [build a database project](sql-database-project-extension-build.md), a command line build experience is also available for Windows, macOS, and Linux environments. This article outlines the prerequisites and syntax needed to build a SQL project to dacpac from the command line.
 
 ## Prerequisites
 

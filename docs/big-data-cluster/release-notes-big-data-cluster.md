@@ -59,7 +59,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release <sup>1</sup> | BDC Version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
-| [CU9](#cu9) | 15.0.xxxx.x  | 20.2.x    | 2021-02-10 |
+| [CU9](#cu9) | 15.0.4102.18  | 20.3.0    | 2021-02-10 |
 | [CU8-GDR](#cu8-gdr) | 15.0.4083.2  | 20.2.6    | 2021-01-12 |
 | [CU8](#cu8)     | 15.0.4073.23 | 20.2.2    | 2020-10-19 |
 | [CU6](#cu6)     | 15.0.4053.23 | 20.0.1    | 2020-08-04 |
@@ -84,7 +84,7 @@ Cumulative Update 9 (CU9) release for SQL Server 2019.
 
 |Package version | Image tag |
 |-----|-----|
-|15.0.xxxx.x |[2019-CU9-ubuntu-16.04]|
+|15.0.4105.2 |[2019-CU9-ubuntu-16.04]|
 
 SQL Server 2019 CU9 for SQL Server Big Data Clusters, includes important capabilities:
 

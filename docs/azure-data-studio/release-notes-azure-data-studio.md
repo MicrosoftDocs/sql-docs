@@ -8,14 +8,22 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 1/22/2021
+ms.date: 2/10/2021
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](./download-azure-data-studio.md)**
 
-## January 2021 (hotfix)
+## December 2021 (hotfix)
+
+February 10, 2021 &nbsp; / &nbsp; version: 1.25.3
+
+| Change | Details |
+| ------ | ------- |
+| Upgrade Electron to incorporate important bug fixes|  |
+
+## December 2021 (hotfix)
 
 January 22, 2021 &nbsp; / &nbsp; version: 1.25.2
 

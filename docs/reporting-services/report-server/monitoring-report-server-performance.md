@@ -54,7 +54,6 @@ ms.author: maggies
   
 -   Validate changes that were made to the system configuration have the desired effect on performance.  
 
-::: moniker range=">=sql-server-2017"
   
 ## Reporting Services performance objects  
 SQL Server 2016 Reporting Services includes the following performance objects:  
@@ -90,8 +89,6 @@ SQL Server 2016 Reporting Services includes the following performance objects:
   
  [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
  Describes the HTTP-related and memory-related performance counters in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
-
-::: moniker-end
   
 ## See also  
  [Configure Available Memory for Report Server Applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   

@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Showplan XML For Query Compile event class"
 ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5

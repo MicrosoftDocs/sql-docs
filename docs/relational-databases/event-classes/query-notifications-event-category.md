@@ -6,7 +6,7 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "event classes [SQL Server], Query Notifications event category"
 ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49

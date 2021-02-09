@@ -52,7 +52,7 @@ The utility uses ODBC to execute Transact-SQL batches.
 **[![Download sqlcmd for x64](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2142258)**
 <br>**[![Download sqlcmd for x86](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
-The command line tools are General Availability (GA), however they are being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+The command line tools are General Availability (GA), however they are being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
 
 **Version Information**
 
@@ -66,7 +66,7 @@ The new BCP supports Azure AD authentication, including Multi-Factor Authenticat
 **System Requirements**
 Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008 - 2019.
 
-This component requires both [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) and [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
+This component requires both [Windows Installer 4.5](https://windows-installer.soft32.com/) and [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
  
 To check the SQLCMD version execute `sqlcmd -?` command and confirm that 15.0.2000.5 version or higher is in use.
 

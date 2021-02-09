@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "CursorClose event class"
 ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e

@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Deadlock Chain event class"
 ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc

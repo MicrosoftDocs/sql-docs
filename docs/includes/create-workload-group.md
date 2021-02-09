@@ -41,7 +41,7 @@ IMPORTANCE is local to the resource pool; workload groups of different importanc
 REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
 Specifies the maximum amount of memory that a single request can take from the pool. *value* is a percentage relative to the resource pool size specified by MAX_MEMORY_PERCENT.
 
-*value* is an integer up to [!INCLUDE[ssSQL17](sssql17-md.md)] and a float starting with [!INCLUDE[sql-server-2019](sssqlv15-md.md)] and in Azure SQL Managed Instance. Default value is 25. The allowed range for *value* is from 1 through 100.
+*value* is an integer up to [!INCLUDE[ssSQL17](sssql17-md.md)] and a float starting with [!INCLUDE[sql-server-2019](sssql19-md.md)] and in Azure SQL Managed Instance. Default value is 25. The allowed range for *value* is from 1 through 100.
 
 > [!IMPORTANT]  
 > The amount specified only refers to query execution grant memory.
@@ -64,7 +64,7 @@ Specifies the maximum amount of CPU time, in seconds, that a request can use. *v
 > [!NOTE]
 > By default, Resource Governor will not prevent a request from continuing if the maximum time is exceeded. However, an event will be generated. For more information, see [CPU Threshold Exceeded Event Class](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).
 > [!IMPORTANT]
-> Starting with [!INCLUDE[ssSQL15](sssql16-md.md)] SP2 and [!INCLUDE[ssSQL17](sssql17-md.md)] CU3, and using [trace flag 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor will abort a request when the maximum time is exceeded.
+> Starting with [!INCLUDE[sssql16-md](sssql16-md.md)] SP2 and [!INCLUDE[ssSQL17](sssql17-md.md)] CU3, and using [trace flag 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor will abort a request when the maximum time is exceeded.
 
 REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value*</br>
 Specifies the maximum time, in seconds, that a query can wait for a memory grant (work buffer memory) to become available. *value* must be 0 or a positive integer. The default setting for *value*, 0, uses an internal calculation based on query cost to determine the maximum time.
@@ -97,7 +97,7 @@ Associates the workload group with the user-defined resource pool identified by 
 > Predefined workload groups and resource pools all use lower case names, such as "default". This should be taken into account for servers that use case-sensitive collation. Servers with case-insensitive collation, such as SQL_Latin1_General_CP1_CI_AS, will treat "default" and "Default" as the same.
 
 EXTERNAL external_pool_name | "default"</br>
-**Applies to**: [!INCLUDE[ssNoVersion](ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](sssql16-md.md)]).
+**Applies to**: [!INCLUDE[ssNoVersion](ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](sssql16-md.md)]).
 
 Workload group can specify an external resource pool. You can define a workload group and associate with two pools:
 

@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: 09/07/2018
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER CREDENTIAL"
   - "ALTER_CREDENTIAL_TSQL"

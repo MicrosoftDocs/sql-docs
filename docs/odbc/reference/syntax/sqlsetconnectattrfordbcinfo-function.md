@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLSetConnectAttrForDbcInfo function [ODBC]"
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005

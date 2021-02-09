@@ -51,7 +51,7 @@ You can configure a linked server by using [!INCLUDE[ssManStudioFull](../../incl
   
 An *OLE DB provider* is a DLL that manages and interacts with a specific data source. An *OLE DB data source* identifies the specific database that can be accessed through OLE DB. Although data sources queried through linked server definitions are ordinarily databases, OLE DB providers exist for a variety of files and file formats. These include text files, spreadsheet data, and the results of full-text content searches.  
   
-Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the [Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID: MSOLEDBSQL) is the default OLE DB provider. 
+Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the [Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID: MSOLEDBSQL) is the default OLE DB provider. 
 In earlier versions, the [SQL Server Native Client OLE DB provider (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID: SQLNCLI11) was the default OLE DB provider.
   
 > [!NOTE]  

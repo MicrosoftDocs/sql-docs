@@ -61,7 +61,7 @@ Microsoft JDBC Driver 9.2 for SQL Server is now compatible with Java Development
 ### Updated Azure Key Vault library to use modern Azure Key Vault library
 | Library changes for Azure Key Vault | Details |
 | :------------------- | :------ |
-| Microsoft JDBC Driver 9.2 migrated from the previous-generation Azure Key Vault library and ADAL libraries to the more modern Azure Key Vault and MSAL equivalents. | &nbsp; |
+| Microsoft JDBC Driver 9.2 migrated from the previous-generation Azure Key Vault library and ADAL libraries to the more modern Azure Key Vault and Azure Identity equivalents. | **DEPENDENCY CHANGE** Make sure you update your application dependencies if you take advantage of Azure Active Directory authentication or Azure Key Vault. See the dependency requirements when [working with the Azure Key Vault provider](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-the-azure-key-vault-provider) or [Azure Active Directory authentication](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-azure-active-directory-authentication) |
 | &nbsp; | &nbsp; |
 
 ### Enabled useBulkCopyForBatchInsert for non-Azure Synapse Analytics servers
@@ -75,15 +75,15 @@ Microsoft JDBC Driver 9.2 for SQL Server is now compatible with Java Development
 
 ## <a id="84"></a> 8.4
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 8.4 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2153622)**  
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 8.4 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2153521)**  
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 8.4 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2137600)**  
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 8.4 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2137502)**  
 
 Version number: 8.4.1  
 Released: August 27, 2020
 
 If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
-For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40a)  
-For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40a)  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40a)  
 
 ### Compliance
 

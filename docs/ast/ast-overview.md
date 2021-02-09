@@ -6,7 +6,7 @@ ms.date: "02/02/2021"
 ms.prod: sql
 ms.prod_service: "sql"
 ms.reviewer: ""
-ms.technology: sql
+ms.technology: ssma
 ms.topic: conceptual
 keywords: ""
 helpviewer_keywords: 

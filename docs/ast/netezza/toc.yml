@@ -1,2 +1,2 @@
-- name: Converting Netezza scripts
+# - name: Converting Netezza scripts
 #   href: ast-netezza-conversion.md

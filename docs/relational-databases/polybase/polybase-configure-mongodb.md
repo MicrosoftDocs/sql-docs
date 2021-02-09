@@ -36,29 +36,32 @@ The following Transact-SQL commands are used in this section:
 
 1. Create a database scoped credential for accessing the MongoDB source.
 
-    ```sql
-    /* Specify credentials to external data source.
-    *  IDENTITY: user name for external source.
-    *  SECRET: password for external source.
-    */
+   The following script creates a database scoped credential. Before you run the script update it for your environment:
 
-    CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
+    - Replace `<credential_name>` with a name for the credential.
+    - Replace `<username>` with the user name for the external source.
+    - Replace `<password>` with the appropriate password. 
+
+    ```sql
+    CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = '<username>', Secret = '<password>';
     ```
 
-   > [!IMPORTANT] 
+   > [!IMPORTANT]
    > The MongoDB ODBC Connector for PolyBase supports only basic authentication, not Kerberos authentication.
 
-1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+1. Create an external data source.
+
+    The following script creates the external data source. For reference, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Before you run the script update it for your environment:
+
+    - Update the location. Set the `<server>` and `<port>` for your environment.
+    - Replace `<credential_name>` with the name of the credential you created in the previous step.
+    - Optionally you can specify `PUSHDOWN = ON` or `PUSHDOWN = OFF` if you want to specify pushdown computation to the external source.
 
     ```sql
-    /* LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
-    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-    *  CREDENTIAL: the database scoped credential, created above.
-    */
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH (LOCATION = 'mongodb://<server>[:<port>]',
+    WITH (LOCATION = '<mongodb://<server>[:<port>]>',
     -- PUSHDOWN = ON | OFF,
-    CREDENTIAL = credential_name);
+    CREDENTIAL = <credential_name>);
     ```
 
 1. **Optional:** Create statistics on an external table.
@@ -70,7 +73,7 @@ The following Transact-SQL commands are used in this section:
     ```
 
 >[!IMPORTANT]
->Once you have created an external data source, you can use the [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) command to create a queryable table over that source.
+>Once you have created an external data source, you can use the [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) command to create a query-able table over that source.
 >
 >For an example, see [Create an external table for MongoDB](../../t-sql/statements/create-external-table-transact-sql.md#k-create-an-external-table-for-mongodb).
 

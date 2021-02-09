@@ -123,8 +123,8 @@ ORDER BY s.name;
   |Temporary|*n* < 6|6|
   |Temporary|6 <= *n* <= 500|500|
   |Permanent|*n* <= 500|500|
-  |Temporary or permanent|500 <= *n* <= 25,000|500 + (0.20 * *n*)|
-  |Temporary or permanent|*n* > 25,000|SQRT(1,000 * *n*)|
+  |Temporary or permanent|500 <= *n* <= 19,682|500 + (0.20 * *n*)|
+  |Temporary or permanent|*n* > 19,682|SQRT(1,000 * *n*)|
 
   For example if your table contains 2 million rows, then the calculation is `SQRT(1,000 * 2,000,000) = 44,721` and the statistics will be updated every 44,721 modifications.
 

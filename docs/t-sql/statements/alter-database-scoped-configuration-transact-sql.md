@@ -31,7 +31,7 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-
 
 This command enables several database configuration settings at the **individual database** level. 
 
-Following settings are supported in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] and in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as indicated by the **APPLIES TO** line for each setting in the [Arguments](#arguments) section: 
+Following settings are supported in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] and in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as indicated by the **APPLIES TO** line for each setting in the [Arguments](#arguments) section: 
 
 - Clear procedure cache.
 - Set the MAXDOP parameter to an arbitrary value (1,2, ...) for the primary database based on what works best for that particular database and set a different value (such as 0) for all secondary database used (such as for reporting queries).
@@ -59,8 +59,8 @@ This setting is only available in Azure Synapse Analytics.
 
 ## Syntax
 
-```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
+```sql
+-- Syntax for SQL Server, Azure SQL Database and Azure SQL Managed Instance
 
 ALTER DATABASE SCOPED CONFIGURATION
 {
@@ -102,7 +102,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 ```
 
 > [!IMPORTANT]
-> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], some option names have changed:      
+> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], some option names have changed:      
 > -  `DISABLE_INTERLEAVED_EXECUTION_TVF` changed to `INTERLEAVED_EXECUTION_TVF`
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` changed to `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` changed to `BATCH_MODE_ADAPTIVE_JOINS`
@@ -134,17 +134,17 @@ Clears the procedure (plan) cache for the database, and can be executed both on 
 
 Specify a query plan handle to clear a single query plan from the plan cache.
 
-**APPLIES TO**: Specifying a query plan handle is available in Azure SQL Database and SQL Server 2019 or higher.
+**APPLIES TO**: Specifying a query plan handle is available in starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 MAXDOP **=** {\<value> | PRIMARY }
 **\<value>**
 
 Specifies the default **max degree of parallelism (MAXDOP)** setting that should be used for statements. 0 is the default value and indicates that the server configuration will be used instead. The MAXDOP at the database scope overrides (unless it is set to 0) the **max degree of parallelism** set at the server level by sp_configure. Query hints can still override the database scoped MAXDOP in order to tune specific queries that need different setting. All these settings are limited by the MAXDOP set for the [Workload Group](create-workload-group-transact-sql.md).
 
-You can use the MAXDOP option to limit the number of processors to use in parallel plan execution. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  considers parallel execution plans for queries, index data definition language (DDL) operations, parallel insert, online alter column, parallel stats collection, and static and keyset-driven cursor population.
+You can use the MAXDOP option to limit the number of processors to use in parallel plan execution. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers parallel execution plans for queries, index data definition language (DDL) operations, parallel insert, online alter column, parallel stats collection, and static and keyset-driven cursor population.
 
 > [!NOTE]
-> The **max degree of parallelism (MAXDOP)** limit is set per [task](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It is not a per [request](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks which are assigned to a [scheduler](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). For more information, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md). 
+> The **max degree of parallelism (MAXDOP)** limit is set per [task](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It is not a per [request](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks which are assigned to a [scheduler](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). For more information, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).
 
 To set this option at the instance level, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 

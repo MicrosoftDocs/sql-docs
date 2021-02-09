@@ -81,8 +81,6 @@ items:
       items:
       - name: Deployment guidance
         href: big-data-cluster/deployment-guidance.md
-      - name: Deployed resources
-        href: big-data-cluster/concept-architecture-pods.md
       - name: Upgrade to a new release
         href: big-data-cluster/deployment-upgrade.md
       - name: Customize deployments
@@ -476,6 +474,12 @@ items:
         href: big-data-cluster/cluster-troubleshooter-notebooks.md
   - name: Reference
     items:
+    - name: Deployment
+      items:
+      - name: Open-source software
+        href: big-data-cluster/reference-open-source-software.md
+      - name: Deployed resources
+        href: big-data-cluster/concept-architecture-pods.md
     - name: BDC partners
       href: sql-server/partner-big-data-cluster.md
     - name: Deployment reference

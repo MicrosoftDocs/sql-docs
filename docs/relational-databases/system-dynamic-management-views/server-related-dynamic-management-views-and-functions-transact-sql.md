@@ -6,7 +6,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925

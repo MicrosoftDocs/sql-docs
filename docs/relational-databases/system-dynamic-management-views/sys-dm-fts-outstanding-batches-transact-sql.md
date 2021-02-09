@@ -6,7 +6,7 @@ ms.date: "03/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_fts_outstanding_batches"
   - "dm_fts_outstanding_batches_TSQL"

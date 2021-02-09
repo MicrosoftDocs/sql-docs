@@ -43,7 +43,7 @@ To avoid this, create an alias in all the nodes of the clustered instance or all
   
 ## See Also  
  [Server Network Configuration](../../database-engine/configure-windows/server-network-configuration.md)   
- [Description of SQL Virtual Server client connections](https://support.microsoft.com/kb/273673)   
+ [Description of SQL Virtual Server client connections](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/273673)   
  [How to assign a static port to a SQL Server named instance - and avoid a common pitfall](https://deep.data.blog/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall/)  
   
   

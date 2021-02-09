@@ -6,7 +6,7 @@ ms.date: "05/24/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Broker:Corrupted Message event class"
 ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7

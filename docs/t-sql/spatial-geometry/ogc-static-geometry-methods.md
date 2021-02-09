@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -19,7 +19,7 @@ ms.author: mlandzic
 # OGC Static Geometry Methods
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports the static geometry methods of the Open Geospatial Consortium (OGC).  
+  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] supports the static geometry methods of the Open Geospatial Consortium (OGC).  
   
  For more information on Open Geospatial Consortium (OGC) specifications, see the following Open Geospatial Consortium Specifications:  
   

@@ -4,9 +4,9 @@ description: Learn how to use Azure Synapse Translate to migrate data warehouses
 ms.custom: ""
 ms.date: "02/02/2021"
 ms.prod: sql
-ms.prod_service: "ast"
+ms.prod_service: "sql"
 ms.reviewer: ""
-ms.technology: ast
+ms.technology: sql
 ms.topic: conceptual
 keywords: ""
 helpviewer_keywords: 

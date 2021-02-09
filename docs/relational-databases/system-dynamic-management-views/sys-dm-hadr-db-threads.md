@@ -26,25 +26,25 @@ monikerRange:
 ---
 # sys.dm_hadr_db_threads
 
-The HADR thread telemetry DMVs ( [sys.dm_hadr_ag_threads](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-ag-threads.md) and **sys.dm_hadr_db_threads** allow users to quickly gain insight into thread usage by Availability Group and by high availability database. Understanding this thread usage is an important benchmark for tuning Availability Groups.
+The HADR thread telemetry DMVs ( [sys.dm_hadr_ag_threads](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-ag-threads.md) and **sys.dm_hadr_db_threads** allow users to quickly gain insight into thread usage by Availability Group and by high availability database. Understanding this thread usage is an important benchmark for tuning availability groups.
 
-This DMV reports on thread usage at the Availability Group database level.
+This DMV reports on thread usage at the availability group database level.
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**group_id**|**uniqueidentifier**|Unique identifier of the availability group.|
-|**ag_db_id**|**uniqueidentifier**|Unique identifier of the database within the AG|
-|**name**|**nvarchar(128)**|Name of the database|
-|**num_capture_threads**|**int**|Number of threads used for capturing changes for this database|
-|**num_redo_threads**|**int**|Number of threads used for redo for this database|
-|**num_parallel_redo_threads**|**int**|Number of threads used for parallel redo for this database|
+|**group_id**|**uniqueidentifier**|Identifier of the availability group to which the database belongs.|
+|**ag_db_id**|**uniqueidentifier**|Identifier of the database within the availability group. This identifier is identical on every replica to which this database is joined.|
+|**name**|**nvarchar(128)**|Name of the database.|
+|**num_capture_threads**|**int**|Number of log capture threads for this database.|
+|**num_redo_threads**|**int**|Number of redo threads for this database.|
+|**num_parallel_redo_threads**|**int**|Number of parallel redo threads for this database.|
 
 ## Permissions  
+
  Requires VIEW SERVER STATE permission on the server.  
   
-## Examples  
-  
-## See Also  
+## See Also
+
  [Always On Availability Groups Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Always On Availability Groups Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Monitor Availability Groups &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   

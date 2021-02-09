@@ -21,35 +21,31 @@ helpviewer_keywords:
   - "sys.dm_hadr_ag_threads catalog view"
 ms.assetid: 
 author: kfarlee
-ms.author:
+ms.author: kfarlee
 monikerRange:
 ---
 # sys.dm_hadr_ag_threads
 
+The Hadr thread telemetry DMVs ( **sys.dm_hadr_ag_threads** and [sys.dm_hadr_db_threads](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-db-threads.md) allow users to quickly gain insight into thread usage by availability group and by high availability database. Understanding this thread usage is an important benchmark for tuning availability groups.
 
-
-The Hadr thread telemetry DMVs ( **sys.dm_hadr_ag_threads** and [sys.dm_hadr_db_threads](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-db-threads.md) allow users to quickly gain insight into thread usage by Availability Group and by high availability database. Understanding this thread usage is an important benchmark for tuning Availability Groups.
-
-This DMV reports on thread usage at the Availability Group level.
-
+This DMV reports on thread usage at the availability group level.
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**group_id**|**uniqueidentifier**|Unique identifier of the availability group.|
-|**name**|**nvarchar(128)**|Name of the availability group|
-|**num_databases**|**int**|Number of databases in the AG|
-|**num_capture_threads**|**int**|Number of threads used for capturing changes for this Availability Group|
-|**num_redo_threads**|**int**|Number of threads used for redo for this Availability Group|
-|**num_parallel_redo_threads**|**int**|Number of threads used for parallel redo for this Availability Group|
-|**num_hadr_threads**|**int**|Total number of hadr threads for this Availability Group|
-
+|**group_id**|**uniqueidentifier**|Identifier of the availability group.|
+|**name**|**nvarchar(128)**|Name of the availability group.|
+|**num_databases**|**int**|Number of databases in the availability group.|
+|**num_capture_threads**|**int**|Number of log capture threads used by all databases in this availability group.|
+|**num_redo_threads**|**int**|Number of redo threads used by all databases in this availability group.|
+|**num_parallel_redo_threads**|**int**|Number of parallel redo threads used by all databases in this availability group.|
+|**num_hadr_threads**|**int**|Number of all always on threads used by all databases in this availability group.|
 
 ## Permissions  
+
  Requires VIEW SERVER STATE permission on the server.  
   
-## Examples  
-  
 ## See Also  
+
  [Always On Availability Groups Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Always On Availability Groups Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Monitor Availability Groups &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   

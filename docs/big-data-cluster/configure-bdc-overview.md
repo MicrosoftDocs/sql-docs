@@ -33,11 +33,11 @@ In the second scenario, each resource will use the value defined at its respecti
 
 If the default number of cores is configured at both service and resource scope, then the resource-scoped value will override the service-scoped value since this is the lowest **user configured** scope for the given setting.
 
-
 ## Next steps
- 
+
 For specific information about configuration, see the appropriate articles:
 
+- [Customize Big Data Clusters deployment](deployment-custom-configuration.md)
 - [Configure Big Data Clusters post-deployment](configure-bdc-postdeployment.md)
 - [Configure Big Data Clusters - CU8 release and earlier](configure-bdc-pre-configuration.md)
 
@@ -45,3 +45,4 @@ Reference:
 - [SQL Server Big Data Clusters configuration properties](reference-config-bdc-overview.md)
 - [Apache Spark & Apache Hadoop (HDFS) configuration properties](reference-config-spark-hadoop.md)
 - [SQL Server Master Instance Configuration Properties - Pre CU9 Release](reference-config-master-instance.md)
+- [azdata CLI](../azdata/reference/reference-azdata.md)

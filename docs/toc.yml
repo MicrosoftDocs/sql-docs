@@ -175,7 +175,7 @@ items:
         href: big-data-cluster/configure-sql-server-master-instance.md
       - name: Configure Apache Spark & Apache Hadoop
         href: big-data-cluster/configure-spark-hdfs.md
-      - name: Configuration overview - (pre CU9)
+      - name: Overview - (pre CU9)
         href: big-data-cluster/configure-bdc-pre-configuration.md
     - name: Data virtualization
       items:
@@ -488,9 +488,9 @@ items:
         href: big-data-cluster/reference-deployment-config.md
     - name: Configuration
       items:
-      - name: Reference - configuration overview
+      - name: Overview
         href: big-data-cluster/reference-config-bdc-overview.md
-      - name: Master instance (pre-CU9)
+      - name: Master instance (pre CU9)
         href: big-data-cluster/reference-config-master-instance.md
       - name: Apache Spark & Apache Hadoop
         href: big-data-cluster/reference-config-spark-hadoop.md

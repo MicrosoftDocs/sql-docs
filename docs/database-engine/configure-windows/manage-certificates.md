@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "requesting encrypted connections"
   - "installing certificates"
   - "security [SQL Server], encryption"
-ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
@@ -24,6 +23,8 @@ ms.date: "01/12/2021"
 ---
 
 # Certificate Management (SQL Server Configuration Manager)
+
+[!INCLUDE [sql-windows-only](../../includes/applies-to-version/sql-windows-only.md)]
 
 This topic describes how to deploy and manage certificates across your SQL Server Always On Failover Cluster or Availability Group topology.
 

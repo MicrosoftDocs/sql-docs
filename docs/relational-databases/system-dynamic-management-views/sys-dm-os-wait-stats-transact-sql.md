@@ -1,7 +1,7 @@
 ---
 description: "sys.dm_os_wait_stats (Transact-SQL)"
 title: "sys.dm_os_wait_stats (Transact-SQL)"
-ms.custom: ""
+ms.custom: "contperf-fy21q3"
 ms.date: "01/27/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -797,7 +797,7 @@ This command resets all counters to 0.
 |RESMGR_THROTTLED |Occurs when a new request comes in and is throttled based on the GROUP_MAX_REQUESTS setting.| 
 |RESOURCE_GOVERNOR_IDLE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |RESOURCE_QUEUE |Occurs during synchronization of various internal resource queues.| 
-|RESOURCE_SEMAPHORE |Occurs when a query memory request cannot be granted immediately due to other concurrent queries. High waits and wait times may indicate excessive number of concurrent queries, or excessive memory request amounts.| 
+|RESOURCE_SEMAPHORE |Occurs when a query memory request during query execution cannot be granted immediately due to other concurrent queries. High waits and wait times may indicate excessive number of concurrent queries, or excessive memory request amounts. Excessive waits of this type may raise SQL [error 8645](../errors-events/mssqlserver-8645-database-engine-error.md), "A time out occurred while waiting for memory resources to execute the query. Rerun the query."<br /><br /> For detailed information and troubleshooting ideas on memory grant waits, refer to this [blog post](https://techcommunity.microsoft.com/t5/sql-server-support/memory-grants-the-mysterious-sql-server-memory-consumer-with/ba-p/333994)| 
 |RESOURCE_SEMAPHORE_MUTEX |Occurs while a query waits for its request for a thread reservation to be fulfilled. It also occurs when synchronizing query compile and memory grant requests.| 
 |RESOURCE_SEMAPHORE_QUERY_COMPILE |Occurs when the number of concurrent query compilations reaches a throttling limit. High waits and wait times may indicate excessive compilations, recompiles, or uncacheable plans.| 
 |RESOURCE_SEMAPHORE_SMALL_QUERY |Occurs when memory request by a small query cannot be granted immediately due to other concurrent queries. Wait time should not exceed more than a few seconds, because the server transfers the request to the main query memory pool if it fails to grant the requested memory within a few seconds. High waits may indicate an excessive number of concurrent small queries while the main memory pool is blocked by waiting queries. <br /><br /> **Applies to**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |  

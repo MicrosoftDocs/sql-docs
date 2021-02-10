@@ -93,7 +93,7 @@ SQL Server 2019 CU9 for SQL Server Big Data Clusters, includes important capabil
    Clusters using `mssql-conf` for SQL Server master instance configurations require additional steps after upgrading to CU9. Follow the instructions [here](bdc-upgrade-configuration.md).
 
 - Improved experience for encryption at rest.
-- Ability to install Python packages at Spark job submission time. 
+- Ability to dynamically install Python Spark packages using virtual environments.
 - Upgraded software versions for most of our OSS components (Grafana, Kibana, FluentBit, etc.) to ensure BDC images are up to date with the latest enhancements and fixes. See [Open-source software reference](reference-open-source-software.md).
 - Other miscellaneous improvements and bug fixes.
 
@@ -248,7 +248,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 ### HA SQL Server Database Encryption key encryptor rotation
 
-- **Affected releases**: All big data cluster HA deployments irrespective of the release.
+- **Affected releases**: All version up to CU8. Resolved for CU9.
 
 - **Issue and customer impact**: With SQL Server deployed with HA, the certificate rotation for the encrypted database fails. When the following command is executed on the master pool, an error message will appear:
     ```

@@ -151,19 +151,19 @@
         "azdata/**/*.md": "swells"
       },
 
-      "ms.author":{
+      "ms.author": {
         "azdata/**/*.md": "seanw"
       },
 
-      "ms.reviewer":{
+      "ms.reviewer": {
         "azdata/**/*.md": "mikeray"
 
       },
-      "ms.date":{
+      "ms.date": {
         "azdata/**/*.md": "02/09/2021"
       },
 
-      "ms.topic":{
+      "ms.topic": {
         "azdata/**/*.md": "reference"
       },
 

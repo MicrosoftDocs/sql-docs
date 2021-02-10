@@ -2,7 +2,7 @@
 description: "sys.dm_os_spinlock_stats (Transact-SQL)"
 title: "sys.dm_os_spinlock_stats (Transact-SQL)"
 ms.custom: ""
-ms.date: "01/27/2021"
+ms.date: "02/10/2021"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -288,7 +288,7 @@ GO
 |SBS_TRANSPORT|Internal use only.|
 |SBS_UCS_DISPATCH|Internal use only.|
 |SECURITY|Internal use only.|
-|SECURITY_CACHE|Protects the cache entries related to security tokens and access checks. Used for versions [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and higher. If the entries in TokenAndPermUserStore cache store grows continuously, you might notice large spins for this spinlock. Evaluate using [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 and 4618 to limit entries. Additional references: [blog](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494), [article](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) and [documentation](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md). Notice the change in spinlock name after you apply [updates for SQL 2017 and SQL 2016](https://support.microsoft.com/topic/kb3195888-fix-high-cpu-usage-causes-performance-issues-in-sql-server-2016-and-2017-9514b80d-938f-e179-3131-74e6c757c4d5).|
+|SECURITY_CACHE|Protects the cache entries related to security tokens and access checks. Used for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and higher. If the entries in TokenAndPermUserStore cache store grows continuously, you might notice large spins for this spinlock. Evaluate using [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 and 4618 to limit entries. Additional references: [blog](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494), [article](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) and [documentation](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md). Notice the change in spinlock name after you apply [updates for SQL 2017 and SQL 2016](https://support.microsoft.com/topic/kb3195888-fix-high-cpu-usage-causes-performance-issues-in-sql-server-2016-and-2017-9514b80d-938f-e179-3131-74e6c757c4d5).|
 |SECURITY_FEDAUTH_AAD_BECWSCONNS|Internal use only.|
 |SEMANTIC_TICACHE|Internal use only.|
 |SEQUENCED_OBJECT|Internal use only.|
@@ -414,5 +414,4 @@ GO
  [Diagnosing and Resolving Spinlock Contention on SQL Server](../diagnose-resolve-spinlock-contention.md)
   
   
-
 

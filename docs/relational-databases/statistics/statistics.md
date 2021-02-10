@@ -123,10 +123,9 @@ ORDER BY s.name;
   |Temporary|*n* < 6|6|
   |Temporary|6 <= *n* <= 500|500|
   |Permanent|*n* <= 500|500|
-  |Temporary or permanent|500 <= *n* <= 25,000|500 + (0.20 * *n*)|
-  |Temporary or permanent|*n* > 25,000|SQRT(1,000 * *n*)|
+  |Temporary or permanent|*n* >= 500|MIN ( 500 + (0.20 * *n*), SQRT(1,000 * *n*) ) |
 
-  For example if your table contains 2 million rows, then the calculation is `SQRT(1,000 * 2,000,000) = 44,721` and the statistics will be updated every 44,721 modifications.
+  For example if your table contains 2 million rows, then the calculation is the minimum of `500 + (0.20 * 2,000,000) = 400,500` and `SQRT(1,000 * 2,000,000) = 44,721`. This means the statistics will be updated every 44,721 modifications.
 
 > [!IMPORTANT]
 > In [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later under [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 and lower, enable [trace flag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) so that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a decreasing, dynamic statistics update threshold.

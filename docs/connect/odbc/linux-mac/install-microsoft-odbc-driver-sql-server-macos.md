@@ -41,7 +41,7 @@ The following sections provide instructions for installing previous versions of 
 Use the following commands to install the Microsoft ODBC driver 13.1 for SQL Server on OS X 10.11 (El Capitan) and macOS 10.12 (Sierra):
 
 ```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 brew install msodbcsql@13.1.9.2 mssql-tools@14.0.6.0

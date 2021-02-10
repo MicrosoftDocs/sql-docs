@@ -75,7 +75,7 @@ On SQL Database Basic, S0, and S1 service objectives, and for databases in elast
 ## Examples  
  The following example returns information about the top ten functions identified by average elapsed time.  
   
-```  
+```sql  
 SELECT TOP 10 d.object_id, d.database_id, OBJECT_NAME(object_id, database_id) 'function name',   
     d.cached_time, d.last_execution_time, d.total_elapsed_time,  
     d.total_elapsed_time/d.execution_count AS [avg_elapsed_time],  

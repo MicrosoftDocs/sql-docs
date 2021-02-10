@@ -125,7 +125,7 @@ GO
 |DIGEST_CACHE|Internal use only.|
 |DINPBUF|Internal use only.|
 |DIRECTLOGCONSUMER|Internal use only.|
-|DP_LIST|Controls access to the list of dirty pages for a database that has indirect checkpoint turned on. See [this article](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510) for more information.|
+|DP_LIST|Controls access to the list of dirty pages for a database that has indirect checkpoint turned on. Apply fixes from [article 4497928](https://support.microsoft.com/kb/4497928), [article 4040276](https://support.microsoft.com/kb/4040276) or use [Trace Flag 3468](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). See [this article](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510) for more information.|
 |DROP|Internal use only.|
 |DROP_TEMPO|Internal use only.|
 |DROPPED_ALLOC_UNIT|Internal use only.|

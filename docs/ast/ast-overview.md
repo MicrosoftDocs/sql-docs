@@ -52,5 +52,3 @@ AST supported source and target versions are:
 - Azure Synapse SQL
 
 ## See also
-# [Azure Synapse Translate: Configuration Settings](../ast/ast-configuration.md)
-# [Azure Synapse Translate: Best Practices](../ast/ast-bestpractices.md)

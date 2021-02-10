@@ -304,9 +304,9 @@ On internet-connected devices, cumulative updates are typically applied through 
 
 Disconnected servers require extra steps. For more information, see [Install on computers with no internet access > Apply cumulative updates](sql-ml-component-install-without-internet-access.md#apply-cu).
 
-1. Start with a baseline instance already installed: SQL Server initial release
+1. Start with a baseline instance already installed: SQL Server initial release.
 
-2. Go to the cumulative update list: [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+2. Go to the cumulative update list: [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
 
 3. Select the latest cumulative update. An executable is downloaded and extracted automatically.
 

@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Crawl Started event class"
 ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6

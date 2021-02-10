@@ -9,7 +9,7 @@ ms.reviewer: vanto
 ms.suite: "sql"
 ms.technology: system-objects
 ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_enclave_send_keys"
   - "sp_enclave_send_keys_TSQL"

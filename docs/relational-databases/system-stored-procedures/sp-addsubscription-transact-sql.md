@@ -7,7 +7,7 @@ ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.custom: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_addsubscription"
   - "sp_addsubscription_TSQL"

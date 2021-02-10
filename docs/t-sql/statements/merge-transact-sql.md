@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "MERGE"
   - "MERGE_TSQL"
@@ -232,14 +232,16 @@ Specifies the graph match pattern. For more information about the arguments for 
 >[!NOTE]
 > In Azure Synapse Analytics, the MERGE command (preview) has following differences compared to SQL server and Azure SQL database.  
 > - A MERGE update is implemented as a delete and insert pair. The affected row count for a MERGE update includes the deleted and inserted rows. 
-> - During the preview, the MERGE command does not work with tables with UNIQUE constraints or with identity columns.  
+
+> - During the preview, MERGE…WHEN NOT MATCHED INSERT is not supported for tables with IDENTITY columns.  
+
 > - The support for tables with different distribution types is described in this table:
 
 >|MERGE CLAUSE in Azure Synapse Analytics|Supported TARGE distribution table| Supported SOURCE distribution table|Comment|  
 >|-----------------|---------------|-----------------|-----------|  
->|**WHEN MATCHED**| HASH, ROUND_ROBIN, REPLICATE |All distribution types||  
+>|**WHEN MATCHED**| All distribution types |All distribution types||  
 >|**NOT MATCHED BY TARGET**|HASH |All distribution types|Use UPDATE/DELETE FROM…JOIN to synchronize two tables. |
->|**NOT MATCHED BY SOURCE**|All distribution types|All distribution types|Use UPDATE/DELETE FROM…JOIN to synchronize two tables.||  
+>|**NOT MATCHED BY SOURCE**|All distribution types|All distribution types|||  
 
 At least one of the three MATCHED clauses must be specified, but they can be specified in any order. A variable can't be updated more than once in the same MATCHED clause.  
   

@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "2515 (Database Engine error)"
 ms.assetid: af93aa29-70c9-4923-90af-aafadb20c1c6

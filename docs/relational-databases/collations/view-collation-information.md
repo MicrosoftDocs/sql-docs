@@ -66,7 +66,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
     EXECUTE sp_helpsort;  
     ```  
   
- **To view all collations supported by [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**  
+ **To view all collations supported by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]**  
   
 1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and on the toolbar, click **New Query**.  
   

@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ADO, glossary"
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5

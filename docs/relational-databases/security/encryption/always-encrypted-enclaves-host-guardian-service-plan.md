@@ -115,7 +115,7 @@ The computer(s) running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion
 
 These requirements include:
 
-- [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] or later
+- [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] or later
 - Windows 10 Enterprise version 1809 or later; or Windows Server 2019 Datacenter edition. Other editions of Windows 10 and Windows Server don't support attestation with HGS.
 - CPU support for virtualization technologies:
   - Intel VT-x with Extended Page Tables.

@@ -2,7 +2,7 @@
 title: "Connection Options"
 description: "This topic lists the options that are permitted in the associative array of sqlsrv_connect in the SQLSRV driver or the keywords that are permitted in the data source name the PDO_SQLSRV driver."
 ms.custom: ""
-ms.date: 12/12/2019
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -25,7 +25,7 @@ This topic lists the options that are permitted in the associative array (when u
 |APP|String|Specifies the application name used in tracing.|Not set.|  
 |ApplicationIntent|String|Declares the application workload type when connecting to a server. Possible values are **ReadOnly** and **ReadWrite**.<br /><br />For more information about [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] support for [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], see [Support for High Availability, Disaster Recovery](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|ReadWrite|
 |AttachDBFileName|String|Specifies which database file the server should attach.|Not set.|
-|Authentication|One of the following strings:<br /><br />**SqlPassword**<br /><br />**ActiveDirectoryPassword**<br /><br />**ActiveDirectoryMsi**|Specifies the authentication mode.<br /><br />For more information, refer to [Connect Using Azure Active Directory Authentication](azure-active-directory.md)|Not set.|
+|Authentication|One of the following strings:<br /><br />**SqlPassword**<br /><br />**ActiveDirectoryPassword**<br /><br />**ActiveDirectoryMsi**<br /><br />**ActiveDirectoryServicePrincipal**|Specifies the authentication mode.<br /><br />For more information, refer to [Connect Using Azure Active Directory Authentication](azure-active-directory.md)|Not set.|
 |CharacterSet<br /><br />(not supported in the PDO_SQLSRV driver)|String|Specifies the character set used to send data to the server.<br /><br />Possible values are SQLSRV_ENC_CHAR and UTF-8. For more information, see [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
 |ColumnEncryption|One of the following strings:<br /><br />**Enabled**<br /><br />**Disabled**<br /><br />A string identifying the attestation protocol and URL for attesting the enclave|Specifies whether the Always Encrypted feature is enabled or not. If an attestation protocol and URL are specified, Always Encrypted with Secure Enclaves is enabled, provided the other requirements are met as described [here](always-encrypted-secure-enclaves.md).|Disabled|  
 |ConnectionPooling|1 or **true** for connection pooling on.<br /><br />0 or **false** for connection pooling off.|Specifies whether the connection is assigned from a connection pool (1 or **true**) or not (0 or **false**).<sup>1</sup>|**true** (1)|  

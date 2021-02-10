@@ -207,7 +207,7 @@ Put the `tempdb` database on a fast I/O subsystem. Use disk striping if there ar
 Put the `tempdb` database on disks that differ from the disks that user databases use.
 
 ## Performance improvements in tempdb for SQL Server
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], `tempdb` performance is further optimized in the following ways:  
+Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], `tempdb` performance is further optimized in the following ways:  
   
 - Temporary tables and table variables are cached. Caching allows operations that drop and create the temporary objects to run very quickly. Caching also reduces page allocation and metadata contention.  
 - The allocation page latching protocol is improved to reduce the number of `UP` (update) latches that are used.  
@@ -220,9 +220,9 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], `tempdb` perfor
 For more information on performance improvements in `tempdb`, see the blog article [TEMPDB - Files and Trace Flags and Updates, Oh My!](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my).
 
 ## Memory-optimized tempdb metadata
-Metadata contention in `tempdb` has historically been a bottleneck to scalability for many workloads running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a new feature that's part of the [in-memory database](../in-memory-database.md) feature family: memory-optimized tempdb metadata. 
+Metadata contention in `tempdb` has historically been a bottleneck to scalability for many workloads running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduces a new feature that's part of the [in-memory database](../in-memory-database.md) feature family: memory-optimized tempdb metadata. 
 
-This feature effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the system tables involved in managing temporary table metadata can be moved into latch-free, non-durable, memory-optimized tables.
+This feature effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the system tables involved in managing temporary table metadata can be moved into latch-free, non-durable, memory-optimized tables.
 
 Watch this seven-minute video for an overview of how and when to use memory-optimized tempdb metadata:
 

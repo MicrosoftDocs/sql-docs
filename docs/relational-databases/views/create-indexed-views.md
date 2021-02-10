@@ -33,8 +33,9 @@ The following steps are required to create an indexed view and are critical to t
 1. Verify the SET options are correct for all existing tables that will be referenced in the view.
 2. Verify that the SET options for the session are set correctly before you create any tables and the view.
 3. Verify that the view definition is deterministic.
-4. Create the view by using the `WITH SCHEMABINDING` option.
-5. Create the unique clustered index on the view.
+4. Verify that the base table has the same owner as the view.
+5. Create the view by using the `WITH SCHEMABINDING` option.
+6. Create the unique clustered index on the view.
 
 > [!IMPORTANT]
 > When executing DML<sup>1</sup> on a table referenced by a large number of indexed views, or fewer but very complex indexed views, those referenced indexed views will have to be updated as well. As a result, DML query performance can degrade significantly, or in some cases, a query plan cannot even be produced.
@@ -150,7 +151,10 @@ Indexes on tables and views can be disabled. When a clustered index on a table i
 
 #### <a name="Permissions"></a> Permissions
 
-Requires **CREATE VIEW** permission in the database and **ALTER** permission on the schema in which the view is being created.
+Requires **CREATE VIEW** permission in the database and **ALTER** permission on the schema in which the view is being created. If the base table resides within a different schema, the **REFERENCES** permission on the table is required as a minimum.
+
+    > [!NOTE]  
+    > For the creation of the index on top of the view, the base table must have the same owner as the view. This is also called ownership-chain. This is usually the case when table and view reside within the same schema, but it is possible that individual objects have different owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
 
 ## <a name="TsqlProcedure"></a> Using Transact-SQL
 

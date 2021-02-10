@@ -92,7 +92,7 @@ The delay values determine the wait time between heartbeats from the cluster ser
 To list all current cluster values, on any node in the target cluster open an elevated PowerShell terminal. Run the following command:
 
 ```PowerShell
- Get-Cluster | fl \
+ Get-Cluster | fl *
 ``` 
 
 To update any of these values, run the following command in an elevated PowerShell terminal:

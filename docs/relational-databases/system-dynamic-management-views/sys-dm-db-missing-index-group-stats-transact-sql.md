@@ -1,8 +1,8 @@
 ---
 description: "sys.dm_db_missing_index_group_stats (Transact-SQL)"
-title: "sys.dm_db_missing_index_group_stats (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_db_missing_index_group_stats (Transact-SQL)"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "02/09/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -52,6 +52,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   >[!NOTE]
   >The result set for this DMV is limited to 600 rows. Each row contains one missing index. If you have more than 600 missing indexes, you should address the existing missing indexes so you can then view the newer ones.
+
+ One missing index group may have several queries that needed the same index. For more information about individual queries that needed a specific index in this DMV, see [sys.dm_db_missing_index_group_stats_query](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md).
   
 ## Permissions  
  To query this dynamic management view, users must be granted the VIEW SERVER STATE permission or any permission that implies the VIEW SERVER STATE permission.  
@@ -87,6 +89,7 @@ WHERE migs.group_handle = 24;
  [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
  [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_group_stats_query &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   

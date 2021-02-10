@@ -2,7 +2,7 @@
 description: "sys.dm_os_wait_stats (Transact-SQL)"
 title: "sys.dm_os_wait_stats (Transact-SQL)"
 ms.custom: ""
-ms.date: "01/27/2021"
+ms.date: "02/10/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -88,8 +88,8 @@ This command resets all counters to 0.
 |ASSEMBLY_FILTER_HASHTABLE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |ASSEMBLY_LOAD |Occurs during exclusive access to assembly loading.| 
 |ASYNC_DISKPOOL_LOCK |Occurs when there is an attempt to synchronize parallel threads that are performing tasks such as creating or initializing a file.| 
-|ASYNC_IO_COMPLETION |Occurs when a task is waiting for asynchronouse non-data I/Os to finish. Examples include I/O involved in warm standby logshipping, database mirroring, some bulk import related operations| 
-|ASYNC_NETWORK_IO |Occurs on network writes when the task is blocked waiting for the client application to acknowledge it has processed all the data sent to it. Verify that the client is processing data from the server or, less commonly-occurring, that network is performing as expected. Reasons for client not consuming data fast enough include application design issues like writing results to a file while the results arrive, waiting for user input, an artificial wait introduced. Also the client system may be experiencing slow response due to issues like low virtual/physical memory, 100% CPU consumption, etc. Network delays can also lead to this wait.|
+|ASYNC_IO_COMPLETION |Occurs when a task is waiting for asynchronous non-data I/Os to finish. Examples include I/O involved in warm standby log shipping, database mirroring, some bulk import related operations.| 
+|ASYNC_NETWORK_IO |Occurs on network writes when the task is blocked waiting for the client application to acknowledge it has processed all the data sent to it. Verify that the client is processing data from the server or, less commonly-occurring, that network is performing as expected. Reasons the client cannot consume data fast enough include:  application design issues like writing results to a file while the results arrive, waiting for user input, or an artificial wait introduced. Also the client system may be experiencing slow response due to issues like low virtual/physical memory, 100% CPU consumption, etc. Network delays can also lead to this wait.|
 |ASYNC_OP_COMPLETION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |ASYNC_OP_CONTEXT_READ |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |ASYNC_OP_CONTEXT_WRITE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
@@ -863,7 +863,7 @@ This command resets all counters to 0.
 |SOS_PHYS_PAGE_CACHE |Accounts for the time a thread waits to acquire the mutex it must acquire before it allocates physical pages or before it returns those pages to the operating system. Waits on this type only appear if the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses AWE memory. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |SOS_PROCESS_AFFINITY_MUTEX |Occurs during synchronizing of access to process affinity settings.| 
 |SOS_RESERVEDMEMBLOCKLIST |Occurs during internal synchronization in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager. <br /><br /> **Applies to**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |  
-|SOS_SCHEDULER_YIELD |Occurs when a task voluntarily yields the scheduler for other tasks to execute. During this wait, the task is waiting in a runnable queue for its quantum to be renewed, i.e. to be scheduled to run on the CPU again. Prolonged waits on this wait type most frequently indicate opportunities to optimize queries that perform index or table scans. Focus on plan regression, missing index, stats updates, query re-writes. Optimizing runtimes reduces the need for tasks to be yielding multiple times. If query times for such CPU-consuming tasks are acceptable, then this wait type is expected and can be ignored. | 
+|SOS_SCHEDULER_YIELD |Occurs when a task voluntarily yields the scheduler for other tasks to execute. During this wait, the task is waiting in a runnable queue for its quantum to be renewed, i.e. waiting to be scheduled to run on the CPU again. Prolonged waits on this wait type most frequently indicate opportunities to optimize queries that perform index or table scans. Focus on plan regression, missing index, stats updates, query re-writes. Optimizing runtimes reduces the need for tasks to be yielding multiple times. If query times for such CPU-consuming tasks are acceptable, then this wait type is expected and can be ignored. | 
 |SOS_SMALL_PAGE_ALLOC |Occurs during the allocation and freeing of memory that is managed by some memory objects.| 
 |SOS_STACKSTORE_INIT_MUTEX |Occurs during synchronization of internal store initialization.| 
 |SOS_SYNC_TASK_ENQUEUE_EVENT |Occurs when a task is started in a synchronous manner. Most tasks in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are started in an asynchronous manner, in which control returns to the starter immediately after the task request has been placed on the work queue.| 

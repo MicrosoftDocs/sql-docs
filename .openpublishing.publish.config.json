@@ -21,9 +21,7 @@
       "build_output_subfolder": "sql",
       "locale": "en-us",
       "monikers": [],
-      "moniker_ranges": [
-        "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017"
-      ],
+      "moniker_ranges": [],
       "xref_query_tags": [
         "/uwp/api",
         "/dotnet"

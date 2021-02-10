@@ -274,7 +274,7 @@ Use the following steps to verify that all components used to launch external sc
 
 ### Existing installation
 
-If you have added Machine Learning Services to an existing SQL Server instance and have previously applied a Cumulative Update (CU), the versions of your database engine and the Machine Learning Services feature might be different.
+If you have added Machine Learning Services to an existing SQL Server instance and have previously applied a Cumulative Update (CU), the versions of your database engine and the Machine Learning Services feature might be different. This may result in unexpected behavior or errors. 
 
 Follow these steps to bring the Machine Learning Services to the same version as your database engine.
 

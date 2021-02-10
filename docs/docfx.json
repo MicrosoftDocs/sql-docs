@@ -146,27 +146,6 @@
         "mdx/**/*.md": "kfollis",
         "reporting-services/**/*.md": "kfollis"
       },
-      
-      "author": {
-        "azdata/**/*.md": "swells"
-      },
-
-      "ms.author": {
-        "azdata/**/*.md": "seanw"
-      },
-
-      "ms.reviewer": {
-        "azdata/**/*.md": "mikeray"
-
-      },
-
-      "ms.date": {
-        "azdata/**/*.md": "02/09/2021"
-      },
-
-      "ms.topic": {
-        "azdata/**/*.md": "reference"
-      },
 
       "titleSuffix": {
         "machine-learning/**/*.md": "SQL Server Machine Learning Services",
@@ -192,7 +171,11 @@
         "ssms/agent/**/*.md": "SQL Server Agent",
         "ssms/visual-db-tools/**/*.md": "Visual Database Tools",
         "tools/ssbdiagnose/**/*.md": "ssbdiagnose",
-        "data-quality-services/**/*.md": "Data Quality Services (DQS)"
+        "data-quality-services/**/*.md": "Data Quality Services (DQS)",
+        "azdata/**/*.md": "Azure Data CLI (azdata)"
+
+
+
       },
 
       "breadcrumb_path": {

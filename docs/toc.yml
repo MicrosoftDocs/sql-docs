@@ -12252,6 +12252,10 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql.md
       - name: sys.dm_hadr_availability_replica_states
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md
+      - name: sys.dm_hadr_ag_threads
+        href: relational-databases/system-dynamic-management-views/sys-dm-hadr-ag-threads-transact-sql.md
+      - name: sys.dm_hadr_db_threads
+        href: relational-databases/system-dynamic-management-views/sys-dm-hadr-db-threads-transact-sql.md
       - name: sys.dm_hadr_cluster
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md
       - name: sys.dm_hadr_cluster_members
@@ -12268,6 +12272,9 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md
       - name: sys.dm_tcp_listener_states
         href: relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md
+
+
+
     - name: Big Data Clusters
       items:
       - name: sys.dm_cluster_endpoints

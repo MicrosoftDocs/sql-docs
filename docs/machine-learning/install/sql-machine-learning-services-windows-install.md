@@ -208,9 +208,6 @@ This step requires a server restart. If you are about to enable script execution
 
 When the installation is complete, restart the database engine.
 
-> [!CAUTION]
-> Adding Machine Learning Services to an existing installation of SQL Server will install the feature at the version level of the installation media, which may be behind the version level other features of SQL Server. This may result in unexpected behavior or errors. Always follow up installing the Machine Learning Services feature by bringing the new feature up to the same version level. Install service packs (SPs), cumulative updates (CUs), and/or general distribution releases (GDRs) as needed. To determine the version of Machine Learning Services, see [Determine the version, edition, and update level of SQL Server and its components](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#machine-learning-services).
-
 Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
 
 You can restart the service using the right-click **Restart** command for the instance in SSMS, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
@@ -273,6 +270,10 @@ Use the following steps to verify that all components used to launch external sc
 <!-- There are no updates yet available for 2019, and there's no 2019 update list site. When updates become available, add 2019 information to this section. -->
 
 <a name="apply-cu"></a>
+
+## Add Machine Learning Services to an existing installation
+
+ If you have added Machine Learning Services to an existing installation of SQL Server, the feature is installed at the version level of the installation media. This may be behind the version level other features of SQL Server, and may result in unexpected behavior or errors. Always follow up installing the Machine Learning Services feature by bringing the new feature up to the same version level.
 
 ## Apply updates
 

@@ -74,7 +74,8 @@ SQL Server 2016 Reporting Services includes the following performance objects:
  
 |Performance object|Notes|  
 |------------------------|-----------|  
-|**.NET CLR Data** and **.NET CLR Memory**|The web portal uses [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] performance counters. For more information, see [Improving .NET Application Performance and Scalability](https://www.microsoft.com/download/details.aspx?id=11711).|  
+|**.NET CLR Data** and **.NET CLR Memory**|The web portal uses [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] performance counters. For more information, download [Improving .NET Application Performance and Scalability](https://www.microsoft.com/download/details.aspx?id=11711).|  
+
 |**Process**|Add the **Elapsed Time** and **ID Process** performance counters for a ReportingServicesService instance to track process uptime by process ID.|  
   
 ## SharePoint events  

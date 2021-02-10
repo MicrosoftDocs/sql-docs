@@ -1,6 +1,6 @@
 ---
 description: "sys.dm_db_missing_index_details (Transact-SQL)"
-title: "sys.dm_db_missing_index_details (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_db_missing_index_details (Transact-SQL)"
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
@@ -18,7 +18,6 @@ dev_langs:
 helpviewer_keywords: 
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_details dynamic management view"
   - "sys.dm_db_missing_index_details dynamic management view"
-ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -66,5 +65,5 @@ On SQL Database Basic, S0, and S1 service objectives, and for databases in elast
  [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
  [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
  [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
-  
+ [sys.dm_db_missing_index_group_stats_query &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md)     
   

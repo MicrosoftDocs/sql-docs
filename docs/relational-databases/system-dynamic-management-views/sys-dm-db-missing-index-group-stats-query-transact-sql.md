@@ -31,13 +31,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver15||>=sql-server-linux-ver15
     
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**group_handle**|**int**|Identifies a group of missing indexes. This identifier is unique across the server.<br /><br /> The other columns provide information about all queries for which the index in the group is considered missing.<br /><br /> An index group contains only one index.|  
-|**query_hash**|**Binary(8)**|Binary hash value calculated on the query and used to identify queries with similar logic. You can use the query hash to determine the aggregate resource usage for queries that differ only by literal values.|  
+|**group_handle**|**int**|Identifies a group of missing indexes. This identifier is unique across the server.<br /><br /> The other columns provide information about all queries for which the index in the group is considered missing.<br /><br /> An index group contains only one index.<BR><BR>Can be joined to **index_group_handle** in [sys.dm_db_missing_index_groups](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md).|  
+|**query_hash**|**binary(8)**|Binary hash value calculated on the query and used to identify queries with similar logic. You can use the query hash to determine the aggregate resource usage for queries that differ only by literal values.|  
 |**query_plan_hash**|**binary(8)**|Binary hash value calculated on the query execution plan and used to identify similar query execution plans. You can use query plan hash to find the cumulative cost of queries with similar execution plans.<br /><br /> Will always be 0x000 when a natively compiled stored procedure queries a memory-optimized table.|  
-|**last_sql_handle**| |SQL handle of the last compiled statement that needed this index.|
-|**last_statement_start_offset**| |Beginning of the offset of the last compiled statement that needed this index in its SQL batch.|
-|**last_statement_end_offset**| |End of the offset of the last compiled statement that needed this index in its SQL batch.|
-|**last_statement_sql_handle**| |SQL handle of the last compiled statement that needed this index.<BR>If Query Store was not enabled when the query was compiled, returns 0.|
+|**last_sql_handle**|**varbinary(64)**|SQL handle of the last compiled statement that needed this index.|
+|**last_statement_start_offset**|**int**|Beginning of the offset of the last compiled statement that needed this index in its SQL batch.|
+|**last_statement_end_offset**|**int**|End of the offset of the last compiled statement that needed this index in its SQL batch.|
+|**last_statement_sql_handle**|**varbinary(64)**|SQL handle of the last compiled statement that needed this index.<BR>If Query Store was not enabled when the query was compiled, returns 0.|
 | **\<inherited columns\>** | | Remaining columns are inherited from [sys.dm_db_missing_index_group_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md). |
   
 ## Remarks  
@@ -55,7 +55,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-ver15||>=sql-server-linux-ver15
  The following examples illustrate how to use the **sys.dm_db_missing_index_group_stats_query** dynamic management view.  
   
   
-### A. Find the latest query text for the top 10 highest anticipated improvement for user queries 
+### A. Find the latest query text for the top 10 highest anticipated improvements for user queries 
  The following query returns the last recorded query text for the 10 missing indexes that would produce the highest anticipated cumulative improvement, in descending order.  
 
 ```sql
@@ -72,8 +72,8 @@ SELECT TOP 10
             ) / 2 + 1
     ),
     misq.*
-FROM sys.dm_db_missing_index_group_stats_query misq
-CROSS APPLY sys.dm_exec_sql_text(last_sql_handle) sql_text
+FROM sys.dm_db_missing_index_group_stats_query AS misq
+CROSS APPLY sys.dm_exec_sql_text(last_sql_handle) AS sql_text
 ORDER BY avg_total_user_cost * avg_user_impact * (user_seeks + user_scans) DESC; 
 ```
   

@@ -159,6 +159,7 @@
         "azdata/**/*.md": "mikeray"
 
       },
+
       "ms.date": {
         "azdata/**/*.md": "02/09/2021"
       },
@@ -191,11 +192,7 @@
         "ssms/agent/**/*.md": "SQL Server Agent",
         "ssms/visual-db-tools/**/*.md": "Visual Database Tools",
         "tools/ssbdiagnose/**/*.md": "ssbdiagnose",
-        "data-quality-services/**/*.md": "Data Quality Services (DQS)",
-        "azdata/**/*.md": "Azure Data CLI (azdata)"
-
-
-
+        "data-quality-services/**/*.md": "Data Quality Services (DQS)"
       },
 
       "breadcrumb_path": {

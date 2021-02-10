@@ -119,6 +119,8 @@ The lease mechanism is controlled by a single value specific to each AG in a WSF
 
    Depending on the AG's configuration there may be additional resources for listeners, shared disks, file shares, etc., these resources do not require any additional configuration. 
 
+> [!NOTE]  
+>  The new value of property 'LeaseTimeout' will take effect after the resource is taken offline and brought online again.
    
 ### Health Check Values 
 

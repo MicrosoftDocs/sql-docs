@@ -124,7 +124,7 @@ tools:
       url: /azure/developer/python/
     # Card
     - title: Azure Database Migration Service
-      imageSrc: ./media/index/net-logo.svg
+      imageSrc: https://docs.microsoft.com/media/logos/logo_java.svg
       url: /dotnet/azure/
     # Card
     - title: Database Migration Assistant (DMA)
@@ -142,11 +142,11 @@ additionalContent:
         # Card
         - title: Capita
           summary: A dedicated cloud for U.S. government agencies and their partners.
-          url: azure-government/index.yml
+          url: /azure-government/
         # Card
         - title: Willis Towers Watson
           summary: A dedicated cloud that adheres to German data-handling regulations.
-          url: germany/index.yml
+          url: /germany/
         # Card
         - title: Innovative Systems
           summary: A dedicated cloud located in China and operated by 21Vianet.

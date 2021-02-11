@@ -1,140 +1,202 @@
 ### YamlMime:Hub
-title: Microsoft SQL documentation
-summary: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud."
+title: Azure Database Migration Guides
+summary: "Step-by-step guidance for modernizing your data assets. "
 brand: sql
 metadata:
-   title: Microsoft SQL documentation | Microsoft Docs
-   description: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud."
+   title: Azure Database Migration Guides | Microsoft Docs
+   description: "Step-by-step guidance for modernizing your data assets."
    ms.topic: hub-page
 
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
-highlightedContent:
-  items:
-   - title: Try SQL Server 2019
-     itemType: download
-     url: https://www.microsoft.com/evalcenter/evaluate-sql-server-2019
-   - title: Get an Azure VM with SQL Server
-     itemType: overview
-     url: https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm
-   - title: SQL tools
-     itemType: overview
-     url: tools/overview-sql-tools.md
-   - title: Educational SQL resources 
-     itemType: learn
-     url: sql-server/educational-sql-resources.yml
-
-productDirectory:
-  items:
-  - title: SQL Server on Windows
-    imageSrc: media/index/windows.svg
-    links:
-      - url: sql-server/index.yml
-        text: On-premises
-      - url: /azure/azure-sql/virtual-machines/windows/
-        text: On an Azure VM
-      - url: /previous-versions/sql/
-        text: Previous Versions (SQL 2005-2012)  
-  - title: SQL on Azure 
-    imageSrc: media/index/azure.svg
-    links:
-      - url: /azure/azure-sql/database/
-        text: Azure SQL Database
-      - url: /azure/azure-sql/managed-instance/
-        text: Azure SQL Managed Instance      
-      - url: /azure/azure-sql-edge/overview
-        text: Azure SQL Edge       
-      - url: /azure/synapse-analytics/overview-what-is/
-        text: Azure Synapse Analytics
-  - title: SQL Server on Linux
-    imageSrc: media/index/linux.svg
-    links:
-      - url: linux/sql-server-linux-overview.md
-        text: On-premises
-      - url: /azure/azure-sql/virtual-machines/linux/
-        text: On an Azure VM
-
 
 conceptualContent:
   items:
-    - title: Getting started 
+    - title: "SQL Server to"
       links:
-        - text: Connect & query (Azure Data Studio)
+        - text: SQL Server (newer version)
           url: azure-data-studio/quickstart-sql-server.md
-          itemType: quickstart
-        - text: Connect & query (SSMS)
-          url: ssms/quickstarts/ssms-connect-query-sql-server.md
-          itemType: quickstart
-        - text: Writing Transact-SQL
+          itemType: architecture
+        - text: Azure SQL Database
+          url: ssms/tutorials/connect-query-sql-server.md
+          itemType: concept
+        - text: Azure SQL Managed Instance
           url: t-sql/tutorial-writing-transact-sql-statements.md
-          itemType: quickstart
-        - text: SQL Server Docker container
+          itemType: deploy
+        - text: SQL Server on Azure VMs
           url: linux/quickstart-install-connect-docker.md
-          itemType: quickstart
-        - text: SQL Docs navigation tips
-          url: sql-server/sql-docs-navigation-guide.md
-          itemType: get-started
-    - title: What's new
+          itemType: download
+    - title: "Oracle to"
       links:
-        - text: SQL Server 2019
-          url: ./sql-server/what-s-new-in-sql-server-ver15.md
+        - text: SQL Server 
+          url: azure-data-studio/quickstart-sql-server.md
+          itemType: get-started
+        - text: Azure SQL Database
+          url: ssms/tutorials/connect-query-sql-server.md
+          itemType: how-to-guide
+        - text: Azure SQL Managed Instance
+          url: t-sql/tutorial-writing-transact-sql-statements.md
+          itemType: video
+        - text: SQL Server on Azure VMs
+          url: linux/quickstart-install-connect-docker.md
           itemType: whats-new
-        - text: SQL Server Big Data Cluster
-          url: ./big-data-cluster/big-data-cluster-overview.md
-          itemType: whats-new
-        - text: Azure Data Studio
-          url: azure-data-studio/release-notes-azure-data-studio.md
-          itemType: whats-new
-        - text: Azure Database Migration Service
-          url: /azure/dms/dms-overview
-          itemType: whats-new
-        - text: SQL Server Machine Learning Services
-          url: machine-learning/index.yml
-          itemType: whats-new
-        - text: SQL Server enabled Azure Arc (preview)
-          url: sql-server/azure-arc/overview.md
-          itemType: whats-new
-    - title: Install 
+    - title: "DB2 to"
       links:
         - text: SQL Server
-          url: database-engine/install-windows/install-sql-server.md
-          itemType: deploy
-        - text: SQL Server Management Studio (SSMS)
-          url: ssms/download-sql-server-management-studio-ssms.md
-          itemType: deploy
-        - text: Azure Data Studio
-          url: ./azure-data-studio/download-azure-data-studio.md
-          itemType: deploy
-        - text: Analysis Services (SSAS)
-          url: /analysis-services/instances/install-windows/install-analysis-services/
-          itemType: deploy
-        - text: Integration Services (SSIS)
-          url: integration-services/install-windows/install-integration-services.md
-          itemType: deploy
-        - text: Reporting Services (SSRS)
-          url: reporting-services/install-windows/install-reporting-services.md
-          itemType: deploy
-    - title: Migrate
+          url: azure-data-studio/quickstart-sql-server.md
+          itemType: quickstart
+        - text: Azure SQL Database
+          url: ssms/tutorials/connect-query-sql-server.md
+          itemType: quickstart
+        - text: Azure SQL Managed Instance
+          url: t-sql/tutorial-writing-transact-sql-statements.md
+          itemType: quickstart
+        - text: SQL Server on Azure VMs
+          url: linux/quickstart-install-connect-docker.md
+          itemType: quickstart
+    - title: "MySQL to"
       links:
-        - text: Data Migration Guide 
-          url: https://datamigration.microsoft.com/
-          itemType: overview
-        - text: Database Compatibility Certification 
-          url: ./database-engine/install-windows/compatibility-certification.md
-          itemType: overview
-        - text: Azure Database Migration Service (DMS)
-          url: /azure/dms/dms-overview
-          itemType: overview
-        - text: Database Migration Assistant (DMA)
-          url: dma/dma-overview.md
-          itemType: overview
-        - text: Database Experimentation Assistant (DEA)
-          url: dea/database-experimentation-assistant-overview.md
-          itemType: overview
-        - text: SQL Server Migration Assistant (SSMA)
-          url: ssma/sql-server-migration-assistant.md
-          itemType: overview
-      footerLink:
-        text: See more
-        url: sql-server/migrate/index.yml
+        - text: SQL Server
+          url: azure-data-studio/quickstart-sql-server.md
+          itemType: quickstart
+        - text: Azure SQL Database
+          url: ssms/tutorials/connect-query-sql-server.md
+          itemType: quickstart
+        - text: Azure SQL Managed Instance
+          url: t-sql/tutorial-writing-transact-sql-statements.md
+          itemType: quickstart
+        - text: SQL Server on Azure VMs
+          url: linux/quickstart-install-connect-docker.md
+          itemType: quickstart
+    - title: "PostgreSQL to"
+      links:
+        - text: Azure Database for PostgreSQL
+          url: azure-data-studio/quickstart-sql-server.md
+          itemType: quickstart
+    - title: "MongoDB to"
+      links:
+        - text: Azure CosmosDB
+          url: azure-data-studio/quickstart-sql-server.md
+          itemType: quickstart
+    - title: "Cassandra to"
+      links:
+        - text: Azure CosmosDB
+          url: azure-data-studio/quickstart-sql-server.md
+          itemType: quickstart
+    - title: "MariaDB to"
+      links:
+        - text: Azure Database for MariaDB
+          url: azure-data-studio/quickstart-sql-server.md
+          itemType: quickstart
+    - title: "Access to"
+      links:
+        - text: SQL Server 
+          url: azure-data-studio/quickstart-sql-server.md
+          itemType: quickstart
+        - text: Azure SQL Database
+          url: ssms/tutorials/connect-query-sql-server.md
+          itemType: quickstart
+        - text: Azure SQL Managed Instance
+          url: t-sql/tutorial-writing-transact-sql-statements.md
+          itemType: quickstart
+        - text: SQL Server on Azure VMs
+          url: linux/quickstart-install-connect-docker.md
+          itemType: quickstart
+    - title: "SAP ASE to"
+      links:
+        - text: SQL Server (newer version)
+          url: azure-data-studio/quickstart-sql-server.md
+          itemType: quickstart
+        - text: Azure SQL Database
+          url: ssms/tutorials/connect-query-sql-server.md
+          itemType: quickstart
+        - text: Azure SQL Managed Instance
+          url: t-sql/tutorial-writing-transact-sql-statements.md
+          itemType: quickstart
+        - text: SQL Server on Azure VMs
+          url: linux/quickstart-install-connect-docker.md
+          itemType: quickstart
+    - title: "Microsoft Azure Table Storage to"
+      links:
+        - text: Azure CosmosDB
+          url: azure-data-studio/quickstart-sql-server.md
+          itemType: quickstart
 
+
+tools:
+  title: Languages and tools
+  items:
+    # Card
+    - title: Azure Migrate
+      imageSrc: https://docs.microsoft.com/media/logos/logo_python.svg
+      url: /azure/developer/python/
+    # Card
+    - title: Azure Database Migration Service
+      imageSrc: ./media/index/net-logo.svg
+      url: /dotnet/azure/
+    # Card
+    - title: Database Migration Assistant (DMA)
+      imageSrc: https://docs.microsoft.com/media/logos/logo_js.svg
+      url: /azure/developer/javascript/
+    # Card
+    - title: SQL Server Migration Assistant
+      imageSrc: https://docs.microsoft.com/media/logos/logo_java.svg
+      url: /azure/developer/java/
+
+additionalContent: 
+  sections:
+    - items:
+      - title: Case studies
+        links: 
+          - text: Capita
+            url: https://docs.microsoft.com/power-bi/report-server/get-started
+          - text: Willis Towers Watson
+            url: https://docs.microsoft.com/power-bi/service-get-started
+          - text: Innovative Systems
+            url: reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+          - text: Geekwire
+            url: https://docs.microsoft.com/analysis-services/analysis-services-overview
+          - text: Fotoable
+            url: https://docs.microsoft.com/azure/analysis-services/
+          - text: Vipps
+            url: https://docs.microsoft.com/azure/analysis-services/
+
+      - title: idk
+        links: 
+          - text: what else
+            url: https://docs.microsoft.com/power-bi/report-server/get-started
+          - text: to put here
+            url: https://docs.microsoft.com/power-bi/service-get-started
+          - text: but idk what
+            url: reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+          - text: and i don't think i can have just a single card
+            url: https://docs.microsoft.com/analysis-services/analysis-services-overview
+          - text: in this thing because when i get rid of this card
+            url: https://docs.microsoft.com/azure/analysis-services/
+          - text: the entire thing seems to break
+            url: https://docs.microsoft.com/azure/analysis-services/
+
+additionalContent:
+  sections:
+    - title: Case studies
+      items:
+        # Card
+        - title: Capita
+          summary: A dedicated cloud for U.S. government agencies and their partners.
+          url: azure-government/index.yml
+        # Card
+        - title: Willis Towers Watson
+          summary: A dedicated cloud that adheres to German data-handling regulations.
+          url: germany/index.yml
+        # Card
+        - title: Innovative Systems
+          summary: A dedicated cloud located in China and operated by 21Vianet.
+          url: /azure/china/
+        # Card
+        - title: Geekwire
+          summary: A dedicated cloud located in China and operated by 21Vianet.
+          url: /azure/china/
+        # Card
+        - title: Vipps
+          summary: A dedicated cloud located in China and operated by 21Vianet.
+          url: /azure/china/

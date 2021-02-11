@@ -65,9 +65,10 @@ On the Linux host machine, use the following commands to install adutil-preview.
 
 ### Ubuntu
 
-1. Register the Microsoft Ubuntu repository.
+1. Import the public repository GPG keys and then register the Microsoft Ubuntu repository.
 
     ```bash
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     sudo curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
     ```
 

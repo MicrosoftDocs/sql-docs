@@ -89,7 +89,7 @@ GO
 ## Examples  
  The following code enables compression in the `AdventureWorks2012` database, confirms the state, and then compresses decimal and numeric columns in the `Sales.SalesOrderDetail` table.  
   
-```  
+```sql  
 USE master ;  
 GO  
   

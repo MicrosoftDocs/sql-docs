@@ -33,7 +33,7 @@ ms.author: maggies
   
 1. Open RSReportServer.config in a text editor.  
   
-     To find the config file, see [File Location](../report-server/rsreportserver-config-configuration-file.md#bkmk_file_location) in the "RsReportServer.config Configuration File" article.
+     To find the config file, see the [File Location](../report-server/rsreportserver-config-configuration-file.md#bkmk_file_location) section in the "RsReportServer.config Configuration File" article.
   
 2. Find \<**Authentication**>.  
   

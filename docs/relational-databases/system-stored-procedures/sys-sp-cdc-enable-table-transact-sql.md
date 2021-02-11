@@ -103,8 +103,10 @@ sys.sp_cdc_enable_table
 > [!IMPORTANT]  
 >  SWITCH PARTITION is a metadata operation, but it causes data changes. The data changes that are associated with this operation are not captured in the change data capture change tables. Consider a table that has three partitions, and changes are made to this table. The capture process will track user insert, update, and delete operations that are executed against the table. However, if a partition is switched out to another table (for example, to perform a bulk delete), the rows that were moved as part of this operation will not be captured as deleted rows in the change table. Similarly, if a new partition that has prepopulated rows is added to the table, these rows will not be reflected in the change table. This can cause data inconsistency when the changes are consumed by an application and applied to a destination.  
  
->Note 
->Before executing a split or merge operation on CDC enabled table ensure that the partition in question does not have any pending replicated commands. You should also ensure that no DML operations are executed on the partition during the split and merge operations. If there are transactions which the log reader or CDC capture job has not processed, or if DML operations are performed on a partition of a CDC enabled table while a split or merge operation is executed (involving the same partition), it could lead to a processing error (error 608 - No catalog entry found for partition ID ) with log reader agent or CDC capture job. In order to correct the error, it might require a disabling CDC on that table (in case of CDC).
+> [!NOTE] 
+> Before executing a split or merge operation on a CDC-enabled table, ensure the partition in question does not have any pending replicated commands, and no DML operations are executed during the split or merge operations. Unprocessed transactions, and DML operations, could lead to processing error `Error 608: No catalog entry found for partitionID` with the log reader agent or CDC capture job. It may be necessary to disable CDC on the table to proceed with the split or merge operation. 
+
+
 
 ## Return Code Values  
  **0** (success) or **1** (failure)  

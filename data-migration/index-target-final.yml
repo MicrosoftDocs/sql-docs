@@ -23,7 +23,7 @@ conceptualContent:
         - text: "From MySQL"
           url: https://review.docs.microsoft.com/en-us/sql/sql-server/migrate/guides/mysql-to-sql-server?view=sql-server-2016&branch=pr-en-us-18413
           itemType: deploy
-        - text: "From DB2 (live)"
+        - text: "From DB2"
           url: /sql/sql-server/migrate/guides/db2-to-sql-server
           itemType: download
         - text: "From Access"
@@ -43,10 +43,10 @@ conceptualContent:
         - text: "From DB2"
           url: /azure/azure-sql/migration-guides/database/db2-to-sql-database-guide
           itemType: whats-new
-        - text: "From MySQL (pre-stage, needs images)"
+        - text: "From MySQL"
           url: https://review.docs.microsoft.com/en-us/sql/migration-guides/mysql-to-sql-database?branch=migration-guides&view=sql-server-ver15
           itemType: download
-        - text: "From SAP SE (not reviewed)"
+        - text: "From SAP SE"
           url: https://review.docs.microsoft.com/en-us/sql/migration-guides/sap-ase-to-sql-database?view=sql-server-ver15&branch=migration-guides
           itemType: download
     - title: "To Azure SQL Managed Instance"
@@ -54,7 +54,7 @@ conceptualContent:
         - text: "From SQL Server"
           url: /azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-overview
           itemType: architecture
-        - text: "From Oracle (staged, pending review + images)"
+        - text: "From Oracle"
           url: https://review.docs.microsoft.com/en-us/azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide?branch=pr-en-us-143697          
           itemType: deploy
         - text: "From DB2"
@@ -65,13 +65,13 @@ conceptualContent:
         - text: "From SQL Server"
           url: /azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide
           itemType: architecture
-        - text: "From Oracle (staged, pending review + images)"
+        - text: "From Oracle"
           url: https://review.docs.microsoft.com/en-us/azure/azure-sql/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide?branch=pr-en-us-143697
           itemType: concept
         - text: "From Access"
           url: t-sql/tutorial-writing-transact-sql-statements.md
           itemType: deploy
-        - text: "From DB2 (live)"
+        - text: "From DB2"
           url: /azure/azure-sql/migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide
           itemType: download
         - text: "From MySQL"

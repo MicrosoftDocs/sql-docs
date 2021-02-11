@@ -90,9 +90,8 @@ The feature set introduces the __BDC KMS controller service__ to provide system-
 
 The following list contains the administration capabilities for Encryption at Rest
 
-* [Key Management](encryption-at-rest-key-management.md) features are performed using azdata.
 * [SQL Server TDE](encryption-at-rest-sql-server-tde.md) management is performed using standard T-SQL commands.
-* [HDFS Encryption Zones](encryption-at-rest-hdfs-encryption-zones.md) management is performed using azdata commands.
+* [HDFS Encryption Zones](encryption-at-rest-hdfs-encryption-zones.md) and HDFS key management is performed using azdata commands.
 * The following administration features are performed using [Operational Notebooks](cluster-manage-notebooks.md):
     - HDFS key backup and recover
     - HDFS key deletion

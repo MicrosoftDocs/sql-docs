@@ -1,3 +1,7 @@
+<!-- This feature is still in private preview feature for SQL Managed instance based on the feedback Azure page https://feedback.azure.com/forums/915676-sql-managed-instance/suggestions/35698078-enable-polybase-on-sql-managed-instance 
+
+Please remove Azure Sql Managed Instance from the document scope --> 
+
 ---
 description: "CREATE EXTERNAL FILE FORMAT (Transact-SQL)"
 title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs"

@@ -92,7 +92,7 @@ SQL Server 2019 CU9 for SQL Server Big Data Clusters, includes important capabil
 
    Clusters using `mssql-conf` for SQL Server master instance configurations require additional steps after upgrading to CU9. Follow the instructions [here](bdc-upgrade-configuration.md).
 
-- Improved experience for encryption at rest.
+- Improved [azdata](../includes/azure-data-cli-azdata.md) experience for encryption at rest.
 - Ability to dynamically install Python Spark packages using virtual environments.
 - Upgraded software versions for most of our OSS components (Grafana, Kibana, FluentBit, etc.) to ensure BDC images are up to date with the latest enhancements and fixes. See [Open-source software reference](reference-open-source-software.md).
 - Other miscellaneous improvements and bug fixes.
@@ -257,7 +257,13 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
     CERTIFICATE <NewCertificateName>
     ```
     There is no impact, the command fails and the target database encryption is preserved using the previous certificate.
-    
+
+### Enabling HDFS Encryption Zones support on CU8
+
+- **Affected releases**: This scenario surfaces when upgrading specifically to CU8 release from CU6 or previous. This won't happen on new deployments of CU8+ or when upgrading directly to CU9.
+
+- **Issue and customer impact**: HDFS Encryption Zones support is not enabled by default in this scenario and need to be configured using the steps provided in the [configuration guide](encryption-at-rest-concepts-and-configuration.md).
+
 ### Empty Livy jobs before you apply cumulative updates
 
 - **Affected releases**: All version up to CU6. Resolved for CU8.

@@ -5,7 +5,7 @@ description: Identify open-source software and version used in SQL Server Big Da
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 2/08/2021
+ms.date: 02/11/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster

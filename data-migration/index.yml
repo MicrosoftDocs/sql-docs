@@ -15,104 +15,104 @@ conceptualContent:
     - title: "To SQL Server"
       links:
         - text: "From SQL Server (upgrade)"
-          url: /sql/azure-data-studio/quickstart-sql-server
+          url: azure-data-studio/quickstart-sql-server.md
           itemType: architecture
         - text: "From Oracle"
-          url: /sql/ssms/tutorials/connect-query-sql-server
+          url: ssms/tutorials/connect-query-sql-server.md
           itemType: concept
         - text: "From Access"
-          url: /sql/t-sql/tutorial-writing-transact-sql-statements
+          url: t-sql/tutorial-writing-transact-sql-statements.md
           itemType: deploy
         - text: "From DB2"
-          url: /sql/linux/quickstart-install-connect-docker
+          url: linux/quickstart-install-connect-docker.md
           itemType: download
         - text: "From MySQL"
-          url: /sql/linux/quickstart-install-connect-docker
+          url: linux/quickstart-install-connect-docker.md
           itemType: download
         - text: "From SAP ASE"
-          url: /sql/linux/quickstart-install-connect-docker
+          url: linux/quickstart-install-connect-docker.md
           itemType: download
     - title: "To Azure SQL Database"
       links:
         - text: "From SQL Server"
-          url: /sql/azure-data-studio/quickstart-sql-server
+          url: azure-data-studio/quickstart-sql-server.md
           itemType: get-started
         - text: "From Oracle"
-          url: /sql/ssms/tutorials/connect-query-sql-server
+          url: ssms/tutorials/connect-query-sql-server.md
           itemType: how-to-guide
         - text: "From Access"
-          url: /sql/t-sql/tutorial-writing-transact-sql-statements
+          url: t-sql/tutorial-writing-transact-sql-statements.md
           itemType: video
         - text: "From DB2"
-          url: /sql/linux/quickstart-install-connect-docker
+          url: linux/quickstart-install-connect-docker.md
           itemType: whats-new
         - text: "From MySQL"
-          url: /sql/linux/quickstart-install-connect-docker
+          url: linux/quickstart-install-connect-docker.md
           itemType: download
     - title: "To Azure SQL Managed Instance"
       links:
         - text: "From SQL Server (upgrade)"
-          url: /sql/azure-data-studio/quickstart-sql-server
+          url: azure-data-studio/quickstart-sql-server.md
           itemType: architecture
         - text: "From Oracle"
-          url: /sql/ssms/tutorials/connect-query-sql-server
+          url: ssms/tutorials/connect-query-sql-server.md
           itemType: concept
         - text: "From Access"
-          url: /sql/t-sql/tutorial-writing-transact-sql-statements
+          url: t-sql/tutorial-writing-transact-sql-statements.md
           itemType: deploy
         - text: "From DB2"
-          url: /sql/linux/quickstart-install-connect-docker
+          url: linux/quickstart-install-connect-docker.md
           itemType: download
         - text: "From MySQL"
-          url: /sql/linux/quickstart-install-connect-docker
+          url: linux/quickstart-install-connect-docker.md
           itemType: download
     - title: "To SQL Server on Azure VM"
       links:
         - text: "From SQL Server (upgrade)"
-          url: /sql/azure-data-studio/quickstart-sql-server
+          url: azure-data-studio/quickstart-sql-server.md
           itemType: architecture
         - text: "From Oracle"
-          url: /sql/ssms/tutorials/connect-query-sql-server
+          url: ssms/tutorials/connect-query-sql-server.md
           itemType: concept
         - text: "From Access"
-          url: /sql/t-sql/tutorial-writing-transact-sql-statements
+          url: t-sql/tutorial-writing-transact-sql-statements.md
           itemType: deploy
         - text: "From DB2"
-          url: /sql/linux/quickstart-install-connect-docker
+          url: linux/quickstart-install-connect-docker.md
           itemType: download
         - text: "From MySQL"
-          url: /sql/linux/quickstart-install-connect-docker
+          url: linux/quickstart-install-connect-docker.md
           itemType: download
         - text: "From MySQL"
-          url: /sql/linux/quickstart-install-connect-docker
+          url: linux/quickstart-install-connect-docker.md
           itemType: download
     - title: "To Azure Database for PostgreSQL"
       links:
         - text: "From Oracle"
-          url: /sql/azure-data-studio/quickstart-sql-server
+          url: azure-data-studio/quickstart-sql-server.md
           itemType: quickstart
         - text: "From PostgreSQL"
-          url: /sql/azure-data-studio/quickstart-sql-server
+          url: azure-data-studio/quickstart-sql-server.md
           itemType: quickstart
         - text: "From MySQL"
-          url: /sql/linux/quickstart-install-connect-docker
+          url: linux/quickstart-install-connect-docker.md
           itemType: download
 
     - title: "To Azure CosmosDB"
       links:
         - text: "From MongoDB"
-          url: /sql/azure-data-studio/quickstart-sql-server
+          url: azure-data-studio/quickstart-sql-server.md
           itemType: quickstart
         - text: "From Cassandra"
-          url: /sql/azure-data-studio/quickstart-sql-server
+          url: azure-data-studio/quickstart-sql-server.md
           itemType: quickstart
         - text: "From Maria"
-          url: /sql/azure-data-studio/quickstart-sql-server
+          url: azure-data-studio/quickstart-sql-server.md
           itemType: quickstart
     - title: "Azure Database for MariaDB"
       links:
         - text:  MariaDB
-          url: /sql/azure-data-studio/quickstart-sql-server
+          url: azure-data-studio/quickstart-sql-server.md
           itemType: quickstart
 
 tools:
@@ -124,7 +124,7 @@ tools:
       url: /azure/developer/python/
     # Card
     - title: Azure Database Migration Service
-      imageSrc: https://docs.microsoft.com/media/logos/logo_java.svg
+      imageSrc: ./media/index/net-logo.svg
       url: /dotnet/azure/
     # Card
     - title: Database Migration Assistant (DMA)
@@ -135,6 +135,39 @@ tools:
       imageSrc: https://docs.microsoft.com/media/logos/logo_java.svg
       url: /azure/developer/java/
 
+additionalContent: 
+  sections:
+    - items:
+      - title: Case studies
+        links: 
+          - text: Capita
+            url: https://docs.microsoft.com/power-bi/report-server/get-started
+          - text: Willis Towers Watson
+            url: https://docs.microsoft.com/power-bi/service-get-started
+          - text: Innovative Systems
+            url: reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+          - text: Geekwire
+            url: https://docs.microsoft.com/analysis-services/analysis-services-overview
+          - text: Fotoable
+            url: https://docs.microsoft.com/azure/analysis-services/
+          - text: Vipps
+            url: https://docs.microsoft.com/azure/analysis-services/
+
+      - title: idk
+        links: 
+          - text: what else
+            url: https://docs.microsoft.com/power-bi/report-server/get-started
+          - text: to put here
+            url: https://docs.microsoft.com/power-bi/service-get-started
+          - text: but idk what
+            url: reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+          - text: and i don't think i can have just a single card
+            url: https://docs.microsoft.com/analysis-services/analysis-services-overview
+          - text: in this thing because when i get rid of this card
+            url: https://docs.microsoft.com/azure/analysis-services/
+          - text: the entire thing seems to break
+            url: https://docs.microsoft.com/azure/analysis-services/
+
 additionalContent:
   sections:
     - title: Case studies
@@ -142,11 +175,11 @@ additionalContent:
         # Card
         - title: Capita
           summary: A dedicated cloud for U.S. government agencies and their partners.
-          url: /azure-government/
+          url: azure-government/index.yml
         # Card
         - title: Willis Towers Watson
           summary: A dedicated cloud that adheres to German data-handling regulations.
-          url: /germany/
+          url: germany/index.yml
         # Card
         - title: Innovative Systems
           summary: A dedicated cloud located in China and operated by 21Vianet.

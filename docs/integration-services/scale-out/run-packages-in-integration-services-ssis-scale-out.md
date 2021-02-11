@@ -6,8 +6,8 @@ ms.date: "12/13/2017"
 ms.prod: sql
 ms.technology: integration-services
 ms.topic: conceptual
-author: "haoqian"
-ms.author: "haoqian"
+author: HaoQian-MS
+ms.author: haoqian
 ms.reviewer: maghan
 f1_keywords: 
   - "sql13.ssis.ssms.ispackageexecuteinscaleout.f1"

@@ -5,7 +5,7 @@ description: A description of the pods typically deployed in a SQL Server Big Da
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 02/28/2021
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

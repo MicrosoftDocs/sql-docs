@@ -5,7 +5,7 @@ description: Big Data Clusters Post-Deployment Configuration Overview
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: rahul.ajmera
-ms.date: 08/04/2020
+ms.date: 02/11/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster

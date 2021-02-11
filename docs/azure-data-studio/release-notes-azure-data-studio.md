@@ -8,20 +8,21 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 1/22/2021
+ms.date: 2/10/2021
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](./download-azure-data-studio.md)**
 
-## January 2021 (hotfix)
+## December 2020 (hotfix)
 
-January 22, 2021 &nbsp; / &nbsp; version: 1.25.2
+February 10, 2021 &nbsp; / &nbsp; version: 1.25.3
 
 | Change | Details |
 | ------ | ------- |
-| Fix bug [#13899](https://github.com/microsoft/azuredatastudio/issues/13899)| Scrolling to the appropriate cross-reference links in Notebooks |
+| Fix bug [#13899](https://github.com/microsoft/azuredatastudio/issues/13899) | Scrolling to the appropriate cross-reference links in Notebooks |
+| Upgrade Electron to incorporate important bug fixes| N/A |
 
 ## December 2020
 

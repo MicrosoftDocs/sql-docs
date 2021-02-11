@@ -5,7 +5,7 @@ description: Upgrade to a Configuration Management Enabled Big Data Cluster
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: rahul.ajmera
-ms.date: 2/01/2021
+ms.date: 02/11/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster

@@ -81,8 +81,6 @@ items:
       items:
       - name: Deployment guidance
         href: big-data-cluster/deployment-guidance.md
-      - name: Deployed resources
-        href: big-data-cluster/concept-architecture-pods.md
       - name: Upgrade to a new release
         href: big-data-cluster/deployment-upgrade.md
       - name: Customize deployments
@@ -167,12 +165,14 @@ items:
     items:
     - name: Configure
       items:
-      - name: Cluster
-        href: big-data-cluster/configure-cluster.md
-      - name: SQL Server master instance
-        href: big-data-cluster/configure-sql-server-master-instance.md
-      - name: Configure Apache Spark & Apache Hadoop
-        href: big-data-cluster/configure-spark-hdfs.md
+      - name: Overview
+        href: big-data-cluster/configure-bdc-overview.md
+      - name: Upgrade to configuration management enabled cluster (CU9+)
+        href: big-data-cluster/bdc-upgrade-configuration.md
+      - name: Post-deployment configuration
+        href: big-data-cluster/configure-bdc-postdeployment.md
+      - name: Overview - (pre CU9)
+        href: big-data-cluster/configure-bdc-pre-configuration.md
     - name: Data virtualization
       items:
       - name: Relational data
@@ -470,6 +470,12 @@ items:
         href: big-data-cluster/cluster-troubleshooter-notebooks.md
   - name: Reference
     items:
+    - name: Deployment
+      items:
+      - name: Open-source software
+        href: big-data-cluster/reference-open-source-software.md
+      - name: Deployed resources
+        href: big-data-cluster/concept-architecture-pods.md
     - name: BDC partners
       href: sql-server/partner-big-data-cluster.md
     - name: Deployment reference
@@ -478,7 +484,9 @@ items:
         href: big-data-cluster/reference-deployment-config.md
     - name: Configuration
       items:
-      - name: Master instance
+      - name: Overview
+        href: big-data-cluster/reference-config-bdc-overview.md
+      - name: Master instance (pre CU9)
         href: big-data-cluster/reference-config-master-instance.md
       - name: Apache Spark & Apache Hadoop
         href: big-data-cluster/reference-config-spark-hadoop.md
@@ -522,10 +530,16 @@ items:
           href: azdata/reference/reference-azdata-bdc-gateway-status.md
         - name: bdc hdfs
           href: azdata/reference/reference-azdata-bdc-hdfs.md
+        - name: bdc hdfs encryption zone
+          href: azdata/reference/reference-azdata-bdc-hdfs-encryption-zone.md
+        - name: bdc hdfs key
+          href: azdata/reference/reference-azdata-bdc-hdfs-key.md
         - name: bdc hdfs mount
           href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
         - name: bdc hdfs status
           href: azdata/reference/reference-azdata-bdc-hdfs-status.md
+        - name: bdc settings
+          href: azdata/reference/reference-azdata-bdc-settings.md
         - name: bdc spark
           href: azdata/reference/reference-azdata-bdc-spark.md        
         - name: bdc spark batch
@@ -12240,6 +12254,10 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql.md
       - name: sys.dm_hadr_availability_replica_states
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md
+      - name: sys.dm_hadr_ag_threads
+        href: relational-databases/system-dynamic-management-views/sys-dm-hadr-ag-threads-transact-sql.md
+      - name: sys.dm_hadr_db_threads
+        href: relational-databases/system-dynamic-management-views/sys-dm-hadr-db-threads-transact-sql.md
       - name: sys.dm_hadr_cluster
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md
       - name: sys.dm_hadr_cluster_members
@@ -12256,6 +12274,9 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md
       - name: sys.dm_tcp_listener_states
         href: relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md
+
+
+
     - name: Big Data Clusters
       items:
       - name: sys.dm_cluster_endpoints

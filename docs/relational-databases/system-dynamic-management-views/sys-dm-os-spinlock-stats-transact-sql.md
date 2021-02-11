@@ -1,8 +1,8 @@
 ---
 description: "sys.dm_os_spinlock_stats (Transact-SQL)"
-title: "sys.dm_os_spinlock_stats (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_os_spinlock_stats (Transact-SQL)"
 ms.custom: ""
-ms.date: "06/03/2019"
+ms.date: "02/10/2021"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -43,7 +43,7 @@ Returns information about all spinlock waits organized by type.
 
 ## Permissions  
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the `Server admin` or an `Azure Active Directory admin` account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.    
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.    
   
 ## Remarks  
  
@@ -63,7 +63,10 @@ GO
   
 ## Spinlocks  
  A spinlock is a lightweight synchronization object used to serialize access to data structures which are typically held for a short period of time. When a thread attempts to access a resource protected by a spinlock which is being held by another thread, the thread will execute a loop, or "spin" and try accessing the resource again, rather than immediately yielding the scheduler as with a latch or other resource wait. The thread will continue spinning until the resource is available, or the loop completes, at which point the thread will yield the scheduler and go back into the runnable queue. This practice helps reduce excessive thread context switching, but when contention for a spinlock is high, significant CPU utilization may be observed.
-   
+
+> [!NOTE]  
+>  If you have a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed on Intel Skylake processors please review [this article](https://support.microsoft.com/topic/kb4538688-fix-severe-spinlock-contention-occurs-in-sql-server-2019-43faea65-fdcb-6835-f7fe-93abdb235837) to apply the required update and enable the trace flag 8101.
+
  The following table contains brief descriptions of some of the most common spinlock types.  
   
 |Spinlock type|Description|  
@@ -224,6 +227,7 @@ GO
 |MEM_MGR|Internal use only.|
 |MGR_CACHE|Internal use only.|
 |MIGRATION_BUF_LIST|Internal use only.|
+|MUTEX|Protects the cache entries related to security tokens and access checks. Used for versions below [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. If the entries in TokenAndPermUserStore cache store grows continuously, you might notice large spins for this spinlock. Evaluate using [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 and 4618 to limit entries. Additional references: [blog](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494), [article](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) and [documentation](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md).|
 |NETCONN_ADDRESS|Internal use only.|
 |ONDEMAND_TASK|Internal use only.|
 |ONE_PROC_SIM_NODE_CONTEXT|Internal use only.|
@@ -284,7 +288,7 @@ GO
 |SBS_TRANSPORT|Internal use only.|
 |SBS_UCS_DISPATCH|Internal use only.|
 |SECURITY|Internal use only.|
-|SECURITY_CACHE|Internal use only.|
+|SECURITY_CACHE|Protects the cache entries related to security tokens and access checks. Used for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and higher. If the entries in TokenAndPermUserStore cache store grows continuously, you might notice large spins for this spinlock. Evaluate using [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 and 4618 to limit entries. Additional references: [blog](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494), [article](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) and [documentation](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md). Notice the change in spinlock name after you apply [updates for SQL 2017 and SQL 2016](https://support.microsoft.com/topic/kb3195888-fix-high-cpu-usage-causes-performance-issues-in-sql-server-2016-and-2017-9514b80d-938f-e179-3131-74e6c757c4d5).|
 |SECURITY_FEDAUTH_AAD_BECWSCONNS|Internal use only.|
 |SEMANTIC_TICACHE|Internal use only.|
 |SEQUENCED_OBJECT|Internal use only.|
@@ -410,5 +414,4 @@ GO
  [Diagnosing and Resolving Spinlock Contention on SQL Server](../diagnose-resolve-spinlock-contention.md)
   
   
-
 

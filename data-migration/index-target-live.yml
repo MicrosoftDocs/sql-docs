@@ -1,0 +1,119 @@
+### YamlMime:Hub
+title: Azure Database Migration Guides
+summary: "Step-by-step guidance for modernizing your data assets. "
+brand: sql
+metadata:
+   title: Azure Database Migration Guides | Microsoft Docs
+   description: "Step-by-step guidance for modernizing your data assets."
+   ms.topic: hub-page
+
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+
+conceptualContent:
+  items:
+    - title: "To SQL Server"
+      links:
+        - text: "From SQL Server (live, not guide) "
+          url: /sql/database-engine/install-windows/upgrade-sql-server
+          itemType: architecture
+        - text: "From DB2"
+          url: /sql/sql-server/migrate/guides/db2-to-sql-server
+          itemType: download
+    - title: "To Azure SQL Database"
+      links:
+        - text: "From SQL Server"
+          url: /azure/azure-sql/migration-guides/database/sql-server-to-sql-database-overview
+          itemType: get-started
+        - text: "From DB2"
+          url: /azure/azure-sql/migration-guides/database/db2-to-sql-database-guide
+          itemType: whats-new
+    - title: "To Azure SQL Managed Instance"
+      links:
+        - text: "From SQL Server"
+          url: /azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-overview
+          itemType: architecture
+        - text: "From DB2"
+          url: /azure/azure-sql/migration-guides/managed-instance/db2-to-managed-instance-guide
+          itemType: download
+    - title: "To SQL Server on Azure VM"
+      links:
+        - text: "From SQL Server"
+          url: /azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide
+          itemType: architecture
+        - text: "From DB2"
+          url: /azure/azure-sql/migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide
+          itemType: download
+    - title: "To Azure Database"
+      links:
+        - text: "From MySQL"
+          url: /azure/mysql/concepts-migrate-import-export
+          itemType: download
+        - text: "From Oracle (live?)"
+          url: /azure/dms/tutorial-oracle-azure-postgresql-online
+          itemType: quickstart
+        - text: "From PostgreSQL (live?)"
+          url: /azure/postgresql/howto-migrate-using-dump-and-restore
+          itemType: quickstart
+        - text: "From MySQL (live?)"
+          url: /azure/mysql/concepts-migrate-import-export
+          itemType: quickstart
+        - text: "From MariaDB (live?)"
+          url: /azure/mariadb/howto-migrate-dump-restore
+          itemType: download
+    - title: "To Azure CosmosDB"
+      links:
+        - text: "From MongoDB"
+          url: /azure/dms/tutorial-mongodb-cosmos-db?toc=/azure/cosmos-db/toc.json&bc=/azure/cosmos-db/breadcrumb/toc.json
+          itemType: quickstart
+        - text: "From Cassandra"
+          url: /azure/cosmos-db/cassandra-import-data
+          itemType: quickstart
+        - text: "From Table Storage"
+          url: /azure/cosmos-db/table-import
+          itemType: quickstart
+
+tools:
+  title: Migration tools
+  items:
+    # Card
+    - title: Azure Migrate
+      imageSrc: https://docs.microsoft.com/media/logos/logo_python.svg
+      url: /azure/developer/python/
+    # Card
+    - title: Azure Database Migration Service
+      imageSrc: ./media/index/net-logo.svg
+      url: /dotnet/azure/
+    # Card
+    - title: Database Migration Assistant (DMA)
+      imageSrc: https://docs.microsoft.com/media/logos/logo_js.svg
+      url: /azure/developer/javascript/
+    # Card
+    - title: SQL Server Migration Assistant
+      imageSrc: https://docs.microsoft.com/media/logos/logo_java.svg
+      url: /azure/developer/java/
+
+additionalContent:
+  sections:
+    - title: Case studies
+      items:
+        # Card
+        - title: Capita
+          summary: A dedicated cloud for U.S. government agencies and their partners.
+          url: azure-government/index.yml
+        # Card
+        - title: Willis Towers Watson
+          summary: A dedicated cloud that adheres to German data-handling regulations.
+          url: germany/index.yml
+        # Card
+        - title: Innovative Systems
+          summary: A dedicated cloud located in China and operated by 21Vianet.
+          url: /azure/china/
+        # Card
+        - title: Geekwire
+          summary: A dedicated cloud located in China and operated by 21Vianet.
+          url: /azure/china/
+        # Card
+        - title: Vipps
+          summary: A dedicated cloud located in China and operated by 21Vianet.
+          url: /azure/china/

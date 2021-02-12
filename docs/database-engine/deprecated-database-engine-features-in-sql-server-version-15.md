@@ -3,7 +3,7 @@ description: "Deprecated database engine features in [!INCLUDE[sssql19-md](../in
 title: "Deprecated database engine features in SQL Server 2019 | Microsoft Docs"
 titleSuffix: "SQL Server 2019"
 ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
+ms.date: "02/12/2021"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -17,11 +17,28 @@ ms.author: mikeray
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 
-# Deprecated database engine features in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
+# Deprecated database engine features in SQL Server 2019 (15.x)
 
 [!INCLUDE[sqlserver2019](../includes/applies-to-version/sqlserver2019.md)]
 
-SQL Server 2019 does not deprecate any features.
+The list of features deprecated in [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] is identical to the list of features deprecated in [[!INCLUDE [sssql17-md](../includes/sssql17-md.md)]](deprecated-database-engine-features-in-sql-server-2017.md) and [[!INCLUDE [sssql16-md](../includes/sssql16-md.md)]](deprecated-database-engine-features-in-sql-server-2016.md).
+
+No additional features are deprecated in [sssql19-md](../includes/sssql19-md.md)]
+
+When a feature is marked deprecated, it means:\
+
+- The feature is in maintenance mode only. No new changes will be done, including those related to inter-operability with new features.
+- We strive not to remove a deprecated feature from future releases to make upgrades easier. However, under rare situations, we may choose to permanently remove the feature from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if it limits future innovations.
+- For new development work, we do not recommend using deprecated features.      
+
+You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object performance counter and trace events. For more information, see [Use SQL Server Objects](../relational-databases/performance-monitor/use-sql-server-objects.md).  
+
+The values of these counters are also available by executing the following statement:  
+
+```sql
+SELECT * FROM sys.dm_os_performance_counters
+WHERE object_name = 'SQLServer:Deprecated Features';
+```
 
 ### See Also
 

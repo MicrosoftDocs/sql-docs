@@ -92,7 +92,7 @@ SQL Server 2019 CU9 for SQL Server Big Data Clusters, includes important capabil
 
    Clusters using `mssql-conf` for SQL Server master instance configurations require additional steps after upgrading to CU9. Follow the instructions [here](bdc-upgrade-configuration.md).
 
-- Improved [azdata](../includes/azure-data-cli-azdata.md) experience for encryption at rest.
+- Improved [!INCLUDE[azdata](../includes/azure-data-cli-azdata.md)] experience for encryption at rest.
 - Ability to dynamically install Python Spark packages using virtual environments.
 - Upgraded software versions for most of our OSS components (Grafana, Kibana, FluentBit, etc.) to ensure BDC images are up to date with the latest enhancements and fixes. See [Open-source software reference](reference-open-source-software.md).
 - Other miscellaneous improvements and bug fixes.

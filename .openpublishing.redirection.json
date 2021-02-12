@@ -41186,6 +41186,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/big-data-cluster/configure-cluster.md",
+      "redirect_url": "/sql/big-data-cluster/configure-bdc-overview",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/relational-databases/polybase/data-virtualization-csv.md",
       "redirect_url": "/sql/big-data-cluster/data-virtualization-csv",
       "redirect_document_id": true

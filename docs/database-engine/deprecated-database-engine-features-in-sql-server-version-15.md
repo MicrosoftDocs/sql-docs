@@ -23,9 +23,9 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 
 The list of features deprecated in [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] is identical to the list of features deprecated in [[!INCLUDE [sssql17-md](../includes/sssql17-md.md)]](deprecated-database-engine-features-in-sql-server-2017.md) and [[!INCLUDE [sssql16-md](../includes/sssql16-md.md)]](deprecated-database-engine-features-in-sql-server-2016.md).
 
-No additional features are deprecated in [sssql19-md](../includes/sssql19-md.md)]
+No additional features are deprecated in [!INCLUDE [sssql19-md](../includes/sssql19-md.md)].
 
-When a feature is marked deprecated, it means:\
+When a feature is marked deprecated, it means:
 
 - The feature is in maintenance mode only. No new changes will be done, including those related to inter-operability with new features.
 - We strive not to remove a deprecated feature from future releases to make upgrades easier. However, under rare situations, we may choose to permanently remove the feature from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if it limits future innovations.

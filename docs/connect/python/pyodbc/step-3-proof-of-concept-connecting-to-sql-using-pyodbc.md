@@ -61,16 +61,12 @@ In this example, you see how to run an [INSERT](../../../t-sql/statements/insert
   
 ```python
 #Sample insert query
-cursor.execute("""
+count = cursor.execute("""
 INSERT INTO SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate) 
 VALUES (?,?,?,?,?)""",
 'SQL Server Express New 20', 'SQLEXPRESS New 20', 0, 0, CURRENT_TIMESTAMP) 
 cnxn.commit()
-row = cursor.fetchone()
-
-while row: 
-    print('Inserted Product key is ' + str(row[0]))
-    row = cursor.fetchone()
+print(count)
 ```  
 
 ## Azure Active Directory and the connection string

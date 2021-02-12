@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/13/2021
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -59,6 +59,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release <sup>1</sup> | BDC Version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
+| [CU9](#cu9) |  15.0.4102.2 | 20.3.0    | 2021-02-11 |
 | [CU8-GDR](#cu8-gdr) | 15.0.4083.2  | 20.2.6    | 2021-01-12 |
 | [CU8](#cu8)     | 15.0.4073.23 | 20.2.2    | 2020-10-19 |
 | [CU6](#cu6)     | 15.0.4053.23 | 20.0.1    | 2020-08-04 |
@@ -76,6 +77,25 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 ## How to install updates
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a id="cu9"></a> CU9 (February 2021)
+
+Cumulative Update 9 (CU9) release for SQL Server 2019.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4102.2|[2019-CU9-ubuntu-16.04]|
+
+SQL Server 2019 CU9 for SQL Server Big Data Clusters, includes important capabilities:
+
+- Support to configure BDC post deployment and provide increased visibility of system settings.
+
+   Clusters using `mssql-conf` for SQL Server master instance configurations require additional steps after upgrading to CU9. Follow the instructions [here](bdc-upgrade-configuration.md).
+
+- Improved experience for encryption at rest.
+- Ability to install Python packages at Spark job submission time. 
+- Upgraded software versions for most of our OSS components (Grafana, Kibana, FluentBit, etc.) to ensure BDC images are up to date with the latest enhancements and fixes. See [Open-source software reference](reference-open-source-software.md).
+- Other miscellaneous improvements and bug fixes.
 
 ## <a id="cu8-gdr"></a> CU8-GDR(January 2021)
 

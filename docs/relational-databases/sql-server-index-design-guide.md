@@ -41,7 +41,7 @@ This guide covers the following types of indexes:
 -   Hash
 -   Memory-Optimized Nonclustered
 
-For information about XML indexes, see [XML Indexes Overview](../relational-databases/xml/xml-indexes-sql-server.md).
+For information about XML indexes, see [XML Indexes Overview](../relational-databases/xml/xml-indexes-sql-server.md) and [Selective XML Indexes (SXI)](../relational-databases/xml/selective-xml-indexes-sxi.md).
 
 For information about Spatial indexes, see [Spatial Indexes Overview](../relational-databases/spatial/spatial-indexes-overview.md).
 

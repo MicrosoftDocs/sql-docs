@@ -23,7 +23,7 @@ Note that there is a default encryption zone mounted at __```/securelake```__ re
 
 - [SQL Server Big Data Cluster CU8+](release-notes-big-data-cluster.md) with [Active Directory](active-directory-prerequisites.md) Integration.
 - User with administrative privileges.
-- [azdata](../includes/azure-data-cli-azdata.md) configured and logged into the cluster in AD mode.
+- [!INCLUDE[azdata](../includes/azure-data-cli-azdata.md)] configured and logged into the cluster in AD mode.
 
 ## Create an encryption zone using the provided system managed key
 

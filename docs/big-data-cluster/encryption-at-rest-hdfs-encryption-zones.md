@@ -101,6 +101,6 @@ Note that there is a default encryption zone mounted at __```/securelake```__ re
 
 ## Next steps
 
-Use azdata with Big Data Clusters, see [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+Use azdata with Big Data Clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
 
 Use azdata with [Azure Arc enabled data services](/azure/azure-arc/data/)

@@ -22,8 +22,9 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 [!INCLUDE[sqlserver2019](../includes/applies-to-version/sqlserver2019.md)]
 
 [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] does not deprecate any features beyond those deprecated in prior releases:
+
 - [[!INCLUDE [sssql17-md](../includes/sssql17-md.md)]](deprecated-database-engine-features-in-sql-server-2017.md)
-- [[!INCLUDE [sssql16-md](../includes/sssql16-md.md)]](deprecated-database-engine-features-in-sql-server-2016.md).
+- [[!INCLUDE [sssql16-md](../includes/sssql16-md.md)]](deprecated-database-engine-features-in-sql-server-2016.md)
 
 ## Deprecation pollicy
 

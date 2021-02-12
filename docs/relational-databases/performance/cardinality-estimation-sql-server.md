@@ -2,7 +2,7 @@
 title: "Cardinality Estimation (SQL Server)"
 description: The SQL Server Query Optimizer selects query plans that have the lowest estimated processing cost, which it determines based on rows processed and a cost model.
 ms.custom: ""
-ms.date: "01/26/2021"
+ms.date: "02/11/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -72,7 +72,7 @@ If preparing for an upgrade to [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 > Ensure the Query Store is correctly configured for your database and workload. For more information, see [Best practices with Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md). 
 
 ## Use extended events to assess the CE version  
-Another option for tracking the cardinality estimation process is to use the extended event named **query_optimizer_estimate_cardinality**. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] code sample runs on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It writes a .xel file to `C:\Temp\` (although you can change the path). When you open the .xel file in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], its detailed information is displayed in a user friendly manner.  
+Another option for tracking the cardinality estimation process is to use the extended event named **query_optimizer_estimate_cardinality**. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] code sample runs on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It writes a .xel file to `C:\Temp\` (although you can change the path). When you open the .xel file in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], its detailed information is displayed in a user friendly manner. 
   
 ```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -100,7 +100,10 @@ ON SERVER
 STATE = START;  --STOP;  
 GO  
 ```  
-  
+
+> [!Note]  
+> The event 'sqlserver.query_optimizer_estimate_cardinality' is not available for Azure SQL Database.
+
 For information about extended events as tailored for [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Extended events in SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr).  
   
 ## Steps to assess the CE version  
@@ -298,7 +301,7 @@ Starting with CE 120, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 SELECT Model, Purchase_Price  
 FROM dbo.Hardware  
 WHERE Model = 'Xbox' AND  
-      ModelVariant = 'One';  
+      ModelVariant = 'Series X';  
 ```  
   
 ### Example C. CE no longer assumes any correlation between filtered predicates from different tables 

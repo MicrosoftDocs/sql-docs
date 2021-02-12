@@ -1,8 +1,8 @@
 ---
 description: "sys.dm_exec_plan_attributes (Transact-SQL)"
-title: "sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_exec_plan_attributes (Transact-SQL)"
 ms.custom: ""
-ms.date: "10/20/2017"
+ms.date: "02/12/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -16,7 +16,6 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_exec_plan_attributes dynamic management function"
-ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
@@ -29,7 +28,7 @@ ms.author: wiassaf
 >  Some of the information returned through this function maps to the [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) backward compatibility view.
 
 ## Syntax  
-```  
+```syntaxsql
 sys.dm_exec_plan_attributes ( plan_handle )  
 ```  
   
@@ -72,6 +71,7 @@ From the above table, **attribute** can have the following values:
 |removed_cursors|**int**|Number of cursors that have been removed because of memory pressure on the cached plan.|  
 |sql_handle|**varbinary**(64)|The SQL handle for the batch.|  
 |merge_action_type|**smallint**|The type of trigger execution plan used as the result of a MERGE statement.<br /><br /> 0 indicates a non-trigger plan, a trigger plan that does not execute as the result of a MERGE statement, or a trigger plan that executes as the result of a MERGE statement that only specifies a DELETE action.<br /><br /> 1 indicates an INSERT trigger plan that runs as the result of a MERGE statement.<br /><br /> 2 indicates an UPDATE trigger plan that runs as the result of a MERGE statement.<br /><br /> 3 indicates a DELETE trigger plan that runs as the result of a MERGE statement containing a corresponding INSERT or UPDATE action.<br /><br /> For nested triggers run by cascading actions, this value is the action of the MERGE statement that caused the cascade.|  
+|optional_spid|**smallint**|The connection session_id (spid) becomes part of the cache key in order to reduce the number of re-compiles. This prevents recompilations for a single session's re-use of a plan involving non-dynamically bound temp tables.|
   
 ## Permissions  
 
@@ -142,7 +142,7 @@ On SQL Database Basic, S0, and S1 service objectives, and for databases in elast
 SELECT plan_handle, refcounts, usecounts, size_in_bytes, cacheobjtype, objtype   
 FROM sys.dm_exec_cached_plans;  
 GO  
-SELECT attribute, value, is_cache_key  
+SELECT attribute, [value], is_cache_key  
 FROM sys.dm_exec_plan_attributes(<plan_handle>);  
 GO  
 ```  

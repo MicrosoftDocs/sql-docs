@@ -21,9 +21,11 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 
 [!INCLUDE[sqlserver2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The list of features deprecated in [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] is identical to the list of features deprecated in [[!INCLUDE [sssql17-md](../includes/sssql17-md.md)]](deprecated-database-engine-features-in-sql-server-2017.md) and [[!INCLUDE [sssql16-md](../includes/sssql16-md.md)]](deprecated-database-engine-features-in-sql-server-2016.md).
+[!INCLUDE [sssql19-md](../includes/sssql19-md.md)] does not deprecate any features beyond those deprecated in prior releases:
+- [[!INCLUDE [sssql17-md](../includes/sssql17-md.md)]](deprecated-database-engine-features-in-sql-server-2017.md)
+- [[!INCLUDE [sssql16-md](../includes/sssql16-md.md)]](deprecated-database-engine-features-in-sql-server-2016.md).
 
-No additional features are deprecated in [!INCLUDE [sssql19-md](../includes/sssql19-md.md)].
+## Deprecation pollicy
 
 When a feature is marked deprecated, it means:
 
@@ -33,6 +35,8 @@ When a feature is marked deprecated, it means:
 
 You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object performance counter and trace events. For more information, see [Use SQL Server Objects](../relational-databases/performance-monitor/use-sql-server-objects.md).  
 
+## Query deprecated features
+
 The values of these counters are also available by executing the following statement:  
 
 ```sql
@@ -40,7 +44,7 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name = 'SQLServer:Deprecated Features';
 ```
 
-### See Also
+### See also
 
 - [Breaking changes to database engine features in SQL Server 2019](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md)
 - [Discontinued database engine functionality in SQL Server](../database-engine/discontinued-database-engine-functionality-in-sql-server.md)

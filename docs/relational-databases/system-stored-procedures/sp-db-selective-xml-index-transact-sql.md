@@ -38,11 +38,11 @@ ms.author: maghan
   
 ## Arguments  
 `[ @ dbname = ] 'dbname'`
- The name of the database to enable or disable Selective XML Index on. If *db_name* is NULL, the current database is assumed. `@dbname` is **sysname**.
+ The name of the database to enable or disable Selective XML Index on. If *dbname* is NULL, the current database is assumed. *@dbname* is **sysname**.
 
 
 `[ @selective_xml_index = ] 'selective_xml_index'`
- Determines whether to enable or disable the index. Allowed values: 'on', 'off', 'true', 'false'. If another value except 'on', 'true', 'off', or 'false' is passed, an error will be raised. `@selective_xml_index` is **varchar(6)**.
+ Determines whether to enable or disable the index. Allowed values: 'on', 'off', 'true', 'false'. If another value except 'on', 'true', 'off', or 'false' is passed, an error will be raised. *@selective_xml_index* is **varchar(6)**.
 
   
 ## Return Code Values  
@@ -55,8 +55,8 @@ ms.author: maghan
   
 ```sql
 EXECUTE sys.sp_db_selective_xml_index  
-    @db_name = NULL  
-  , @action = N'on';  
+    @dbname = NULL  
+  , @selective_xml_index = N'on';  
 GO  
 ```  
   
@@ -64,8 +64,8 @@ GO
   
 ```sql
 EXECUTE sys.sp_db_selective_xml_index  
-    @db_name = N'AdventureWorks2012'  
-  , @action = N'true';  
+    @dbname = N'AdventureWorks2012'  
+  , @selective_xml_index = N'true';  
 GO  
 ```  
   
@@ -74,8 +74,8 @@ GO
   
 ```sql
 EXECUTE sys.sp_db_selective_xml_index  
-    @db_name = NULL  
-  , @action = N'off';  
+    @dbname = NULL  
+  , @selective_xml_index = N'off';  
 GO  
 ```  
   
@@ -83,8 +83,8 @@ GO
   
 ```sql
 EXECUTE sys.sp_db_selective_xml_index  
-    @db_name = N'AdventureWorks2012'  
-  , @action = N'false';  
+    @dbname = N'AdventureWorks2012'  
+  , @selective_xml_index = N'false';  
 GO  
 ```  
   

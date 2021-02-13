@@ -6171,6 +6171,8 @@ items:
         href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
   - name: SQL Server Migration Assistant (SSMA)
     href: ssma/toc.yml
+  - name: Azure Synapse Translate (AST)
+    href: ast/toc.yml
 - name: Manage, monitor, & tune
   items:
   - name: Manage

@@ -22,9 +22,9 @@ ms.author: maghan
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Enables and disables Selective XML Index functionality on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. If called without any parameters, the stored procedure returns 1 if the Selective XML Index is enabled on a particular database.  
-  
+
 > [!NOTE]  
->  In order to disable the Selective XML Index using this stored procedure, the database must be put in simple recovery mode by using the [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) command.  
+> Starting with [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)], the Selective XML Index functionality cannot be disabled. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)], in order to disable the Selective XML Index feature using this stored procedure, the database must be put in the SIMPLE recovery model by using the [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) command.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -60,7 +60,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Compatibility levels|sp_dbcmptlevel|ALTER DATABASE ... SET COMPATIBILITY_LEVEL. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
 |Compatibility levels|Database compatibility level 110 and 120.|Plan to upgrade the database and application for a future release. However, we will continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Database compatibility level 110<br /><br /> Database compatibility level 120||  
 |XML|Inline XDR Schema Generation|The XMLDATA directive to the FOR XML option is deprecated. Use XSD generation in the case of RAW and AUTO modes. There is no replacement for the XMLDATA directive in EXPLICT mode.|XMLDATA|181|  
-|XML|sys.sp_db_selective_xml_index|ALTER INDEX … DISABLE<BR><BR>For more information, see [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md).|sys.sp_db_selective_xml_index|
+|XML|sys.sp_db_selective_xml_index|ALTER INDEX … DISABLE<BR><BR>For more information, see [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md).|[sys.sp_db_selective_xml_index](../relational-databases/system-stored-procedures/sp-db-selective-xml-index-transact-sql.md)|
 |Backup and restore|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE or LOG TO TAPE|235|  
 |Backup and restore|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
 |Backup and restore|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
@@ -169,4 +169,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 ## See Also  
  [Discontinued Database Engine Functionality in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)     
- [Deprecated Database Engine Features in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)
+ [Deprecated Database Engine Features in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)  

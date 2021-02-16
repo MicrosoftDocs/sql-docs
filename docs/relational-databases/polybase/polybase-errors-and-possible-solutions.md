@@ -5,6 +5,9 @@ ms.date: 02/09/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
+dev_langs: 
+-  "TSQL"
+-  "XML"
 f1_keywords: 
    - "PolyBase, monitoring"
    - "PolyBase, performance monitoring"
@@ -99,6 +102,7 @@ Kerberos is not enabled in Hadoop Cluster, but Kerberos security is enabled in c
 **Possible Solution:**  
 Comment out the Kerberos security information from the above mentioned files.
 
+For more information on troubleshooting PolyBase and Kerberos, see [Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md).
 
 ### Internal query processor error
 
@@ -157,6 +161,7 @@ sudo -u hdfs hadoop fs -chown pdw_user /user/pdw_user
 
 After this make sure that pdw_user has read, write, and execute permissions on the /user/pdw_user directory. Make sure the /tmp directory has 777 permissions.
 
+For more information on troubleshooting PolyBase and Kerberos, see [Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md).
 
 ### Java memory error due to UTF-8
 
@@ -235,6 +240,7 @@ The value for the "hadoop.security.authentication" property says kerberos in the
 **Possible Solution:**  
 Coresite.xml's "hadoop.security.authentication" property should be KERBEROS (all upper case) as the value. 
 
+For more information on troubleshooting PolyBase and Kerberos, see [Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md).
 
 ### Mapred-site.xml missing needed values
 

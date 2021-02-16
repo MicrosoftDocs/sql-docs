@@ -1,10 +1,13 @@
 ---
 title: "Monitor and troubleshoot PolyBase"
 description: To troubleshoot PolyBase, use these views and DMVs. View PolyBase query plan, monitor nodes in a PolyBase group, and set up Hadoop name node high availability.
-ms.date: 02/09/2021
+ms.date: 02/16/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
+dev_langs: 
+-  "TSQL"
+-  "XML"
 f1_keywords: 
    - "PolyBase, monitoring"
    - "PolyBase, performance monitoring"
@@ -267,9 +270,13 @@ PolyBase engine service log files:
 - <INSTANCENAME>_<SERVERNAME>_DWEngine_movement.log 
 - <INSTANCENAME>_<SERVERNAME>_DWEngine_server.log 
 
+PolyBase Java log files:
+- <SERVERNAME> Dms polybase.log
+- <SERVERNAME>_DWEngine_polybase.log
+
 ## Error messages and possible solutions
 
-For more details, see [PolyBase Errors and Possible Solutions](polybase-errors-and-possible-solutions.md).
+For common troubleshooting scenarios, see [PolyBase Errors and Possible Solutions](polybase-errors-and-possible-solutions.md).
 
 ## See also
 

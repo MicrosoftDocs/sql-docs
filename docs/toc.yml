@@ -448,6 +448,8 @@ items:
         href: big-data-cluster/spark-hive-tools-vscode.md
       - name: Use extended Spark History Server
         href: big-data-cluster/spark-history-server.md
+      - name: Manage libraries
+        href: big-data-cluster/spark-install-packages.md
     - name: Troubleshoot
       items:
       - name: Troubleshoot Kubernetes

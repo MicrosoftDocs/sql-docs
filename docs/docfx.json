@@ -202,7 +202,7 @@
         "dmx/**/*.md": ">= sql-server-2016",
         "integration-services/**/*.md": ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current",
         "language-extensions/**/*.md": ">= sql-server-ver15 || >= sql-server-linux-ver15",
-        "linux/**/*.md": ">= sql-server-2017 || >= sql-server-linux-2017",
+        "linux/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017",
         "machine-learning/**/*.md": ">= sql-server-2016",
         "master-data-services/**/*.md": ">= sql-server-2016",
         "mdx/**/*.md": ">= sql-server-2016",

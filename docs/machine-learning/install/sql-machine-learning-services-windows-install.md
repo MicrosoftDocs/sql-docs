@@ -349,6 +349,7 @@ On the database, you might need the following configuration updates:
 Now that you have everything working, you might also want to optimize the server to support machine learning or install a pre-trained machine learning model.
 
 ::: moniker range="=sql-server-2017"
+
 ### Add more worker accounts
 
 If you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](../administration/scale-concurrent-execution-external-scripts.md).

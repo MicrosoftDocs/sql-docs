@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This guide covers installing packages and submitting jobs to a SQL Server 2019 Big Data Cluster using Spark.
+This article provides guidance on how to import and install packages for a Spark session through session and notebook configurations.
 
 ## Built-in Tools
 Spark and Hadoop base packages
@@ -33,7 +33,7 @@ Maven packages can be installed onto your Spark cluster using notebook cell conf
 ```
 
 ## Install Python Packages at PySpark Job-Submission time
-1. Provide a conda requirements file of libraries to install in HDFS and which python to use.
+1. Specify the path to a requirements.txt file in HDFS to use as a reference for packages to install.
 ```
 %%configure -f \
 {"conf": {
@@ -45,7 +45,7 @@ Maven packages can be installed onto your Spark cluster using notebook cell conf
 "files": ["hdfs://nmnode-0/tmp/requirements.txt"]
 }
 ```
-2. Create conda virtualenv without a requirements file and dynamically add packages during the Spark session.
+2. Create a conda virtualenv without a requirements file and dynamically add packages during the Spark session.
 ```
 %%configure -f \
 {"conf": {

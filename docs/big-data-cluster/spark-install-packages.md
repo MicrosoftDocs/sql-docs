@@ -11,20 +11,20 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Spark Library Management
+# Spark library management
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article provides guidance on how to import and install packages for a Spark session through session and notebook configurations.
 
-## Built-in Tools
+## Built-in tools
 Spark and Hadoop base packages
 Python 3.7 and Python 2.7
 Pandas, Sklearn, Numpy, and other data processing packages.
 R and MRO packages
 Sparklyr
 
-## Install Packages from a Maven Repository onto the Spark Cluster at Runtime
+## Install packages from a Maven repository onto the Spark cluster at runtime
 Maven packages can be installed onto your Spark cluster using notebook cell configuration at the start of your spark session. Before starting a spark session in Azure Data Studio, run the following code:
 
 ```
@@ -32,7 +32,7 @@ Maven packages can be installed onto your Spark cluster using notebook cell conf
 {"conf": {"spark.jars.packages": "com.microsoft.azure:azure-eventhubs-spark_2.11:2.3.1"}}
 ```
 
-## Install Python Packages at PySpark Job-Submission time
+## Install Python packages at PySpark job-submission time
 1. Specify the path to a requirements.txt file in HDFS to use as a reference for packages to install.
 ```
 %%configure -f \
@@ -74,3 +74,7 @@ Import jar at runtime through Azure Data Studio notebook cell configuration.
 %%configure -f
 {"conf": {"spark.jars": "/jar/mycodeJar.jar"}}
 ```
+
+## Next steps
+
+For more information on SQL Server big data cluster and related scenarios, See [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

@@ -81,8 +81,6 @@ items:
       items:
       - name: Deployment guidance
         href: big-data-cluster/deployment-guidance.md
-      - name: Deployed resources
-        href: big-data-cluster/concept-architecture-pods.md
       - name: Upgrade to a new release
         href: big-data-cluster/deployment-upgrade.md
       - name: Customize deployments
@@ -167,12 +165,14 @@ items:
     items:
     - name: Configure
       items:
-      - name: Cluster
-        href: big-data-cluster/configure-cluster.md
-      - name: SQL Server master instance
-        href: big-data-cluster/configure-sql-server-master-instance.md
-      - name: Configure Apache Spark & Apache Hadoop
-        href: big-data-cluster/configure-spark-hdfs.md
+      - name: Overview
+        href: big-data-cluster/configure-bdc-overview.md
+      - name: Upgrade to configuration management enabled cluster (CU9+)
+        href: big-data-cluster/bdc-upgrade-configuration.md
+      - name: Post-deployment configuration
+        href: big-data-cluster/configure-bdc-postdeployment.md
+      - name: Overview - (pre CU9)
+        href: big-data-cluster/configure-bdc-pre-configuration.md
     - name: Data virtualization
       items:
       - name: Relational data
@@ -470,6 +470,12 @@ items:
         href: big-data-cluster/cluster-troubleshooter-notebooks.md
   - name: Reference
     items:
+    - name: Deployment
+      items:
+      - name: Open-source software
+        href: big-data-cluster/reference-open-source-software.md
+      - name: Deployed resources
+        href: big-data-cluster/concept-architecture-pods.md
     - name: BDC partners
       href: sql-server/partner-big-data-cluster.md
     - name: Deployment reference
@@ -478,7 +484,9 @@ items:
         href: big-data-cluster/reference-deployment-config.md
     - name: Configuration
       items:
-      - name: Master instance
+      - name: Overview
+        href: big-data-cluster/reference-config-bdc-overview.md
+      - name: Master instance (pre CU9)
         href: big-data-cluster/reference-config-master-instance.md
       - name: Apache Spark & Apache Hadoop
         href: big-data-cluster/reference-config-spark-hadoop.md
@@ -522,10 +530,16 @@ items:
           href: azdata/reference/reference-azdata-bdc-gateway-status.md
         - name: bdc hdfs
           href: azdata/reference/reference-azdata-bdc-hdfs.md
+        - name: bdc hdfs encryption zone
+          href: azdata/reference/reference-azdata-bdc-hdfs-encryption-zone.md
+        - name: bdc hdfs key
+          href: azdata/reference/reference-azdata-bdc-hdfs-key.md
         - name: bdc hdfs mount
           href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
         - name: bdc hdfs status
           href: azdata/reference/reference-azdata-bdc-hdfs-status.md
+        - name: bdc settings
+          href: azdata/reference/reference-azdata-bdc-settings.md
         - name: bdc spark
           href: azdata/reference/reference-azdata-bdc-spark.md        
         - name: bdc spark batch
@@ -12523,6 +12537,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md
       - name: sys.dm_db_missing_index_group_stats
         href: relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md
+      - name: sys.dm_db_missing_index_group_stats_query
+        href: relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md        
     - name: I/O
       href: relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md
       items:

@@ -270,9 +270,14 @@ PolyBase engine service log files:
 - <INSTANCENAME>_<SERVERNAME>_DWEngine_movement.log 
 - <INSTANCENAME>_<SERVERNAME>_DWEngine_server.log 
 
-PolyBase Java log files:
+In Windows, PolyBase Java log files:
 - <SERVERNAME> Dms polybase.log
 - <SERVERNAME>_DWEngine_polybase.log
+ 
+In Linux, PolyBase Java log files:
+- /var/opt/mssql-extensibility/hdfs_bridge/log/hdfs_bridge_pdw.log
+- /var/opt/mssql-extensibility/hdfs_bridge/log/hdfs_bridge_dms.log
+
 
 ## Error messages and possible solutions
 

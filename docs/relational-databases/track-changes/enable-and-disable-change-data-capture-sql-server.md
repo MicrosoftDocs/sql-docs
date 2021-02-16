@@ -1,5 +1,5 @@
 ---
-description: "Enable and Disable Change Data Capture (SQL Server)"
+description: "Enable and Disable Change Data Capture"
 title: "Enable and Disable Change Data Capture"
 ms.custom: seo-dt-2019
 ms.date: "01/02/2019"

@@ -38,6 +38,8 @@ ms.author: chadam
 -   Using the `WITH COMPRESSION` option during backup can minimize your storage costs and storage transaction costs. It can also decrease the time taken to complete the backup process.  
 
 - Set `MAXTRANSFERSIZE` and `BLOCKSIZE` arguments as recommended at [SQL Server Backup to URL](./sql-server-backup-to-url.md).
+
+- SQL Server is agnostic to the type of storage redundancy used. Backup to Page blobs and block blobs is supported for every storage redundancy (LRS\ZRS\GRS\RA-GRS\RA-GZRS\etc.).
   
 ## Handling Large Files  
   
@@ -154,7 +156,19 @@ The credential exists but the login account that is used to run the backup comma
   
 Verify the storage account name and key values. The information stored in the credential must match the property values of the Azure storage account you are using in the backup and restore operations.  
   
-  
+
+**400 (Bad Request) errors**
+
+Using SQL Server 2012 you may encounter an error performing a backup similar to the following:
+
+```
+Backup to URL received an exception from the remote endpoint. Exception Message: 
+The remote server returned an error: (400) Bad Request..
+```
+
+This is caused by the TLS version supported by the Azure Storage Account. Changing the supported TLS version or using the workaround listed in [KB4017023](https://support.microsoft.com/en-us/topic/kb4017023-sql-server-2012-2014-or-2016-backup-to-microsoft-azure-blob-storage-service-url-isn-t-compatible-for-tls-1-2-e9ef6124-fc05-8128-86bc-f4f4f5ff2b78).
+
+
 ## Proxy Errors  
  If you are using Proxy Servers to access the internet, you may see the following issues:  
   

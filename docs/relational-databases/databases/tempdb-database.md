@@ -62,6 +62,9 @@ The number of secondary data files depends on the number of (logical) processors
 
 > [!NOTE]
 > The default value for the number of data files is based on the general guidelines in [KB 2154845](https://support.microsoft.com/kb/2154845/).  
+
+> [!NOTE]
+> To check current size and growth parameters for `tempdb`, query view `tempdb.sys.database_files`.
   
 ### Moving the tempdb data and log files in SQL Server
 

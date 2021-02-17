@@ -26,7 +26,7 @@ Once all dependencies are installed, but **Run all cells** fails, each notebook 
 This section contains a set of notebooks useful for installing and uninstalling command-line tools and packages needed to manage SQL Server Big Data Clusters.
 
 |Name |Description |
-|---|---|---|---|
+|---|---|
 |SOP010 - Upgrade a big data cluster|Use this notebook to upgrade a Big Data Cluster using azdata. |
 |SOP012 - Install unixodbc for Mac|Use this notebook when getting errors while using brew install the odbc for SQL Server.|
 |SOP036 - Install kubectl command-line interface|Use this notebook to install kubectl command-line interface regardless your OS.|
@@ -44,13 +44,24 @@ This section contains a set of notebooks useful for installing and uninstalling 
 |SOP064 - Uninstall azdata CLI (using package manager)|Use this notebook to uninstall azdata CLI (using package manager).|
 |SOP069 - Install ODBC for SQL Server|Use this notebook to install ODBC driver since some subcommands in azdata require the SQL Server ODBC driver.|
 
+## Encryption at Rest utilities on Big Data Cluster (BDC)
+
+This section contains a set of notebooks useful for managing Encryption at Rest features on BDC.
+
+|Name |Description |
+|---|---|
+|SOP0124 - List Keys for Encryption at Rest|Use this notebook list all HDFS keys.|
+|SOP0128 - Enable HDFS Encryption zones in Big Data Clusters|Use this notebook to enable HDFS Encryption Zones when upgrading to CU8 from CU6 or previous. Not required on new deployments of CU8+ or when upgrading to CU9.|
+|SOP0125 - Delete Key For Encryption at Rest|Use this notebook to delete HDFS encryption zone keys. __Caution!__|
+|SOP0126 - Backup Keys For Encryption at Rest|Use this notebook to backup HDFS encryption zone keys.|
+|SOP0127 - Restore Keys For Encryption at Rest|Use this notebook to restore HDFS encryption zone keys.|
 
 ## Managing Certificates on Big Data Clusters (BDC)
 
 A set of notebooks to run a notebook for managing Certificates on Big Data Clusters.
 
 |Name |Description |
-|---|---|---|---|
+|---|---|
 |CER001 - Generate a Root CA certificate|Generate a Root CA certificate. Consider using one Root CA certificate for all non-production clusters in each environment, as this technique reduces the number of Root CA certificates that need to be uploaded to clients connecting to these clusters. |
 |CER002 - Download existing Root CA certificate|Use this notebook to download a generated Root CA certificate from a cluster.|
 |CER003 - Upload existing Root CA certificate|CER003 - Upload existing Root CA certificate.|

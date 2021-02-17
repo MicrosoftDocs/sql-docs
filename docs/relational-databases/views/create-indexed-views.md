@@ -153,8 +153,8 @@ Indexes on tables and views can be disabled. When a clustered index on a table i
 
 To create the view, a user needs to hold the **CREATE VIEW** permission in the database and **ALTER** permission on the schema in which the view is being created. If the base table resides within a different schema, the **REFERENCES** permission on the table is required as a minimum. If the User creating the Index differs from the Users who created the View, for the Index creation alone the **ALTER**-permission on the View is required (covered by ALTER on the schema).
 
-    > [!NOTE]  
-    > Indexes can only be created on views which have the same owner as the referenced table or tables. This is also called an intact **ownership-chain** between the view and the table(s). Typically, when table and view reside within the same schema, the same schema-owner applies to all objects within the schema. But it is possible that individual objects have different explicit owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
+> [!NOTE]  
+> Indexes can only be created on views which have the same owner as the referenced table or tables. This is also called an intact **ownership-chain** between the view and the table(s). Typically, when table and view reside within the same schema, the same schema-owner applies to all objects within the schema. Therefore its possible to create a view and not be the owner of the view. On the other hand is also possible that individual objects within a schema have different explicit owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
 
 
 ## <a name="TsqlProcedure"></a> Using Transact-SQL

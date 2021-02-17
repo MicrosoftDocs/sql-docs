@@ -8,12 +8,26 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 2/10/2021
+ms.date: 2/18/2021
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](./download-azure-data-studio.md)**
+
+## February 2021
+
+February 18, 2021 &nbsp; / &nbsp; version: 1.26.0
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| New Notebook features | Improved Jupyter server start-up time by 50% on Windows  <br/> Added support to edit Jupyter Books through right-click <br/> Added [URI notebook parameterization support](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-parameterization?view=sql-server-ver15) |
+| New Azure Arc features | Multiple data controllers now supported <br/> New connection dialog options like kube config file <br/> Postgres dashboard enhancements  |
+| Extension(s) update | [Kusto (KQL)](extensions/kusto-extension.md)</br>[SQL Database Projects](extensions/sql-database-project-extension.md)</br>[Profiler](extensions/sql-server-profiler-extension)</br>[Machine Learning](extensions/machine-learning-extension.md)</br>[Schema Compare](extensions/schema-compare-extension.md)</br> [Dacpac](https://docs.microsoft.com/sql/azure-data-studio/extensions/sql-server-dacpac-extension?view=sql-server-ver15) |
+| Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22February+2021+Release%22+is%3Aclosed). |
+---
 
 ## December 2020 (hotfix)
 

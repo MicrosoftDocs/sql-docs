@@ -62,117 +62,120 @@ On SQL Database Basic, S0, and S1 service objectives, and for databases in elast
 
 ## Types
 
+### OBJECTSTORE
+
+### CACHESTORE
+
+
+
 The following table lists the Memory Clerk types.
 
-OBJECTSTORE
-
-CACHESTORE
 
 
 
 |Type  |Description  |
 |---------|---------|
-|CACHESTORE_BROKERDSH     |        |
-|CACHESTORE_BROKERKEK     |        |
-|CACHESTORE_BROKERREADONLY     |        |
-|CACHESTORE_BROKERRSB     |        |
-|CACHESTORE_BROKERTBLACS     |        |
-|CACHESTORE_BROKERTO     |        |
-|CACHESTORE_BROKERUSERCERTLOOKUP     |        |
-|CACHESTORE_COLUMNSTOREOBJECTPOOL     |        |
-|CACHESTORE_CONVPRI     |        |
-|CACHESTORE_EVENTS     |        |
-|CACHESTORE_FULLTEXTSTOPLIST     |        |
-|CACHESTORE_NOTIF     |        |
-|CACHESTORE_OBJCP     |        |
-|CACHESTORE_PHDR     |        |
-|CACHESTORE_QDSRUNTIMESTATS     |        |
-|CACHESTORE_SEARCHPROPERTYLIST     |        |
-|CACHESTORE_SEHOBTCOLUMNATTRIBUTE     |        |
-|CACHESTORE_SQLCP     |        |
-|CACHESTORE_STACKFRAMES     |        |
-|CACHESTORE_SYSTEMROWSET     |        |
-|CACHESTORE_TEMPTABLES     |        |
-|CACHESTORE_VIEWDEFINITIONS     |        |
-|CACHESTORE_XML_SELECTIVE_DG     |        |
-|CACHESTORE_XMLDBATTRIBUTE     |        |
-|CACHESTORE_XMLDBELEMENT     |        |
-|CACHESTORE_XMLDBTYPE     |        |
-|CACHESTORE_XPROC     |        |
-|MEMORYCLERK_BACKUP     |        |
-|MEMORYCLERK_BHF     |        |
-|MEMORYCLERK_BITMAP     |        |
-|MEMORYCLERK_CSILOBCOMPRESSION     |        |
-|MEMORYCLERK_DRTLHEAP     |     <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
-|MEMORYCLERK_EXPOOL     |     <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
-|MEMORYCLERK_EXTERNAL_EXTRACTORS     |     <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
-|MEMORYCLERK_FILETABLE     |        |
-|MEMORYCLERK_FSAGENT     |        |
-|MEMORYCLERK_FSCHUNKER     |        |
-|MEMORYCLERK_FULLTEXT     |        |
-|MEMORYCLERK_FULLTEXT_SHMEM     |        |
-|MEMORYCLERK_HADR     |        |
-|MEMORYCLERK_HOST     |        |
-|MEMORYCLERK_LANGSVC     |        |
-|MEMORYCLERK_LWC     |        |
-|MEMORYCLERK_POLYBASE     |        |
-|MEMORYCLERK_QSRANGEPREFETCH     |        |
-|MEMORYCLERK_QUERYDISKSTORE     |        |
-|MEMORYCLERK_QUERYDISKSTORE_HASHMAP     |        |
-|MEMORYCLERK_QUERYDISKSTORE_STATS     |        |
-|MEMORYCLERK_QUERYPROFILE     |     <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
-|MEMORYCLERK_RTLHEAP     |     <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
-|MEMORYCLERK_SECURITYAPI     |     <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
-|MEMORYCLERK_SERIALIZATION     |        |
-|MEMORYCLERK_SLOG     |     <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
-|MEMORYCLERK_SNI     |        |
-|MEMORYCLERK_SOSMEMMANAGER     |        |
-|MEMORYCLERK_SOSNODE     |        |
-|MEMORYCLERK_SOSOS     |        |
-|MEMORYCLERK_SPATIAL     |        |
-|MEMORYCLERK_SQLBUFFERPOOL     |        |
-|MEMORYCLERK_SQLCLR     |        |
-|MEMORYCLERK_SQLCLRASSEMBLY     |        |
-|MEMORYCLERK_SQLCONNECTIONPOOL     |        |
-|MEMORYCLERK_SQLEXTENSIBILITY     |    <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
-|MEMORYCLERK_SQLGENERAL     |        |
-|MEMORYCLERK_SQLHTTP     |        |
-|MEMORYCLERK_SQLLOGPOOL     |        |
-|MEMORYCLERK_SQLOPTIMIZER     |        |
-|MEMORYCLERK_SQLQERESERVATIONS     |        |
-|MEMORYCLERK_SQLQUERYCOMPILE     |        |
-|MEMORYCLERK_SQLQUERYEXEC     |        |
-|MEMORYCLERK_SQLQUERYPLAN     |        |
-|MEMORYCLERK_SQLSERVICEBROKER     |        |
-|MEMORYCLERK_SQLSERVICEBROKERTRANSPORT     |        |
-|MEMORYCLERK_SQLSLO_OPERATIONS     |        |
-|MEMORYCLERK_SQLSOAP     |        |
-|MEMORYCLERK_SQLSOAPSESSIONSTORE     |        |
-|MEMORYCLERK_SQLSTORENG     |        |
-|MEMORYCLERK_SQLTRACE     |        |
-|MEMORYCLERK_SQLUTILITIES     |        |
-|MEMORYCLERK_SQLXML     |        |
-|MEMORYCLERK_SQLXP     |        |
-|MEMORYCLERK_SVL     |   <br /><br />**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and later     |
-|MEMORYCLERK_TEST     |      <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later  |
-|MEMORYCLERK_UNITTEST     |     <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
-|MEMORYCLERK_WRITEPAGERECORDER     |      <br /><br />**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and later  |
-|MEMORYCLERK_XE     |        |
-|MEMORYCLERK_XE_BUFFER     |        |
-|MEMORYCLERK_XLOG_SERVER     |     <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later |
-|MEMORYCLERK_XTP     |        |
-|OBJECTSTORE_LBSS     |        |
-|OBJECTSTORE_LOCK_MANAGER     |        |
-|OBJECTSTORE_SECAUDIT_EVENT_BUFFER     |        |
-|OBJECTSTORE_SERVICE_BROKER     |        |
-|OBJECTSTORE_SNI_PACKET     |        |
-|OBJECTSTORE_XACT_CACHE     |        |
-|USERSTORE_DBMETADATA     |        |
-|USERSTORE_OBJPERM     |        |
-|USERSTORE_QDSSTMT     |        |
-|USERSTORE_SCHEMAMGR     |        |
-|USERSTORE_SXC     |        |
-|USERSTORE_TOKENPERM     |        |
+|CACHESTORE_BROKERDSH     |     To be documented in the future   |
+|CACHESTORE_BROKERKEK     |     To be documented in the future   |
+|CACHESTORE_BROKERREADONLY     |   To be documented in the future     |
+|CACHESTORE_BROKERRSB     |   To be documented in the future     |
+|CACHESTORE_BROKERTBLACS     |     To be documented in the future   |
+|CACHESTORE_BROKERTO     |     To be documented in the future   |
+|CACHESTORE_BROKERUSERCERTLOOKUP     |     To be documented in the future   |
+|CACHESTORE_COLUMNSTOREOBJECTPOOL     |     To be documented in the future   |
+|CACHESTORE_CONVPRI     |     To be documented in the future   |
+|CACHESTORE_EVENTS     |     To be documented in the future   |
+|CACHESTORE_FULLTEXTSTOPLIST     |    To be documented in the future    |
+|CACHESTORE_NOTIF     |    To be documented in the future    |
+|CACHESTORE_OBJCP     |    To be documented in the future    |
+|CACHESTORE_PHDR     |    To be documented in the future    |
+|CACHESTORE_QDSRUNTIMESTATS     |     To be documented in the future   |
+|CACHESTORE_SEARCHPROPERTYLIST     |     To be documented in the future   |
+|CACHESTORE_SEHOBTCOLUMNATTRIBUTE     |    To be documented in the future    |
+|CACHESTORE_SQLCP     |    To be documented in the future    |
+|CACHESTORE_STACKFRAMES     |     To be documented in the future   |
+|CACHESTORE_SYSTEMROWSET     |    To be documented in the future    |
+|CACHESTORE_TEMPTABLES     |     To be documented in the future   |
+|CACHESTORE_VIEWDEFINITIONS     |     To be documented in the future   |
+|CACHESTORE_XML_SELECTIVE_DG     |     To be documented in the future   |
+|CACHESTORE_XMLDBATTRIBUTE     |     To be documented in the future   |
+|CACHESTORE_XMLDBELEMENT     |     To be documented in the future   |
+|CACHESTORE_XMLDBTYPE     |     To be documented in the future   |
+|CACHESTORE_XPROC     |     To be documented in the future   |
+|MEMORYCLERK_BACKUP     |     To be documented in the future   |
+|MEMORYCLERK_BHF     |     To be documented in the future   |
+|MEMORYCLERK_BITMAP     |      To be documented in the future  |
+|MEMORYCLERK_CSILOBCOMPRESSION     |      To be documented in the future  |
+|MEMORYCLERK_DRTLHEAP     |     To be documented in the future <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
+|MEMORYCLERK_EXPOOL     |     To be documented in the future <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
+|MEMORYCLERK_EXTERNAL_EXTRACTORS     |     To be documented in the future <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
+|MEMORYCLERK_FILETABLE     |   To be documented in the future     |
+|MEMORYCLERK_FSAGENT     |    To be documented in the future    |
+|MEMORYCLERK_FSCHUNKER     |     To be documented in the future   |
+|MEMORYCLERK_FULLTEXT     |     To be documented in the future   |
+|MEMORYCLERK_FULLTEXT_SHMEM     |     To be documented in the future   |
+|MEMORYCLERK_HADR     |     To be documented in the future   |
+|MEMORYCLERK_HOST     |     To be documented in the future   |
+|MEMORYCLERK_LANGSVC     |     To be documented in the future   |
+|MEMORYCLERK_LWC     |     To be documented in the future   |
+|MEMORYCLERK_POLYBASE     |     To be documented in the future   |
+|MEMORYCLERK_QSRANGEPREFETCH     |     To be documented in the future   |
+|MEMORYCLERK_QUERYDISKSTORE     |     To be documented in the future   |
+|MEMORYCLERK_QUERYDISKSTORE_HASHMAP     |     To be documented in the future   |
+|MEMORYCLERK_QUERYDISKSTORE_STATS     |     To be documented in the future   |
+|MEMORYCLERK_QUERYPROFILE     |    To be documented in the future <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
+|MEMORYCLERK_RTLHEAP     |    To be documented in the future <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
+|MEMORYCLERK_SECURITYAPI     |    To be documented in the future <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
+|MEMORYCLERK_SERIALIZATION     |     To be documented in the future   |
+|MEMORYCLERK_SLOG     |    To be documented in the future <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
+|MEMORYCLERK_SNI     |     To be documented in the future   |
+|MEMORYCLERK_SOSMEMMANAGER     |     To be documented in the future   |
+|MEMORYCLERK_SOSNODE     |    To be documented in the future    |
+|MEMORYCLERK_SOSOS     |     To be documented in the future   |
+|MEMORYCLERK_SPATIAL     |     To be documented in the future   |
+|MEMORYCLERK_SQLBUFFERPOOL     |    To be documented in the future    |
+|MEMORYCLERK_SQLCLR     |    To be documented in the future    |
+|MEMORYCLERK_SQLCLRASSEMBLY     |     To be documented in the future   |
+|MEMORYCLERK_SQLCONNECTIONPOOL     |     To be documented in the future   |
+|MEMORYCLERK_SQLEXTENSIBILITY     |    To be documented in the future <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
+|MEMORYCLERK_SQLGENERAL     |   To be documented in the future     |
+|MEMORYCLERK_SQLHTTP     |   To be documented in the future     |
+|MEMORYCLERK_SQLLOGPOOL     |     To be documented in the future   |
+|MEMORYCLERK_SQLOPTIMIZER     |     To be documented in the future   |
+|MEMORYCLERK_SQLQERESERVATIONS     |     To be documented in the future   |
+|MEMORYCLERK_SQLQUERYCOMPILE     |    To be documented in the future    |
+|MEMORYCLERK_SQLQUERYEXEC     |    To be documented in the future    |
+|MEMORYCLERK_SQLQUERYPLAN     |    To be documented in the future    |
+|MEMORYCLERK_SQLSERVICEBROKER     |     To be documented in the future   |
+|MEMORYCLERK_SQLSERVICEBROKERTRANSPORT     |     To be documented in the future   |
+|MEMORYCLERK_SQLSLO_OPERATIONS     |     To be documented in the future   |
+|MEMORYCLERK_SQLSOAP     |     To be documented in the future   |
+|MEMORYCLERK_SQLSOAPSESSIONSTORE     |     To be documented in the future   |
+|MEMORYCLERK_SQLSTORENG     |   To be documented in the future     |
+|MEMORYCLERK_SQLTRACE     |     To be documented in the future   |
+|MEMORYCLERK_SQLUTILITIES     |    To be documented in the future    |
+|MEMORYCLERK_SQLXML     |     To be documented in the future   |
+|MEMORYCLERK_SQLXP     |    To be documented in the future    |
+|MEMORYCLERK_SVL     |  To be documented in the future <br /><br />**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and later     |
+|MEMORYCLERK_TEST     |    To be documented in the future  <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later  |
+|MEMORYCLERK_UNITTEST     |    To be documented in the future <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
+|MEMORYCLERK_WRITEPAGERECORDER     |    To be documented in the future  <br /><br />**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and later  |
+|MEMORYCLERK_XE     |    To be documented in the future    |
+|MEMORYCLERK_XE_BUFFER     |     To be documented in the future   |
+|MEMORYCLERK_XLOG_SERVER     |    To be documented in the future <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later |
+|MEMORYCLERK_XTP     |    To be documented in the future    |
+|OBJECTSTORE_LBSS     |    To be documented in the future    |
+|OBJECTSTORE_LOCK_MANAGER     |     To be documented in the future   |
+|OBJECTSTORE_SECAUDIT_EVENT_BUFFER     |     To be documented in the future   |
+|OBJECTSTORE_SERVICE_BROKER     |    To be documented in the future    |
+|OBJECTSTORE_SNI_PACKET     |    To be documented in the future    |
+|OBJECTSTORE_XACT_CACHE     |     To be documented in the future   |
+|USERSTORE_DBMETADATA     |    To be documented in the future    |
+|USERSTORE_OBJPERM     |    To be documented in the future    |
+|USERSTORE_QDSSTMT     |    To be documented in the future    |
+|USERSTORE_SCHEMAMGR     |    To be documented in the future    |
+|USERSTORE_SXC     |    To be documented in the future    |
+|USERSTORE_TOKENPERM     |    To be documented in the future    |
 
 ## See Also  
 

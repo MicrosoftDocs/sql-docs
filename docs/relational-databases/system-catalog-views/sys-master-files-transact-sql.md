@@ -63,6 +63,9 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
   
 > [!NOTE]  
 >  When you drop or rebuild large indexes, or drop or truncate large tables, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits. Deferred drop operations do not release allocated space immediately. Therefore, the values returned by sys.master_files immediately after dropping or truncating a large object may not reflect the actual disk space available.  
+
+> [!NOTE]  
+>  For tempdb, view sys.master_files shows initial tempdb size. The values are used as a template for tempdb creation at startup of SQL Server. So, when tempdb grows it is not reflected in the view. To get current size of tempdb files, query `tempdb.sys.database_files`.
   
 ## Permissions  
  The minimum permissions that are required to see the corresponding row are CREATE DATABASE, ALTER ANY DATABASE, or VIEW ANY DEFINITION.  

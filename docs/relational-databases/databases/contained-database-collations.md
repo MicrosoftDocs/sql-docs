@@ -130,7 +130,7 @@ END;
 |Goto Labels|Instance Collation|CATALOG_DEFAULT|  
 |Cursor Names|Instance Collation|CATALOG_DEFAULT|  
   
- If we temp table example previously described, we can see that this collation behavior eliminates the need for an explicit **COLLATE** clause in most temp table uses. In a contained database, this code now runs without error, even if the database and instance collations differ:  
+ In the temp table example previously described, we can see that this collation behavior eliminates the need for an explicit **COLLATE** clause in most temp table uses. In a contained database, this code now runs without error, even if the database and instance collations differ:  
   
 ```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  

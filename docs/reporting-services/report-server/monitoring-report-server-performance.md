@@ -1,7 +1,7 @@
 ---
 title: "Monitoring Report Server Performance | Microsoft Docs"
 description: Learn how to monitor report server performance to evaluate server activity, watch trends, diagnose bottlenecks, and gather data about system configuration.
-ms.date: 02/09/2021
+ms.date: 02/12/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server
@@ -75,17 +75,16 @@ SQL Server 2016 Reporting Services includes the following performance objects:
 |Performance object|Notes|  
 |------------------------|-----------|  
 |**.NET CLR Data** and **.NET CLR Memory**|The web portal uses [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] performance counters. For more information, download [Improving .NET Application Performance and Scalability](https://www.microsoft.com/download/details.aspx?id=11711).|  
-
 |**Process**|Add the **Elapsed Time** and **ID Process** performance counters for a ReportingServicesService instance to track process uptime by process ID.|  
   
 ## SharePoint events  
  In addition to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] performance objects, you might also want to configure SharePoint events if you are running a report server in SharePoint integrated mode and have configured your reporting environment to use a SharePoint product. In this section, use the Events for a Report Server in SharePoint Integrated Mode to review diagnostic events that might provide useful information if your reporting environment is integrated with SharePoint.  
   
 ## In this section  
- [Performance Counters for the MSRS 2011 Web Service and MSRS 2011 Windows Service Performance Objects &#40;Native Mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
+ [Performance Counters for the MSRS 2016 Web Service and MSRS 2016 Windows Service Performance Objects &#40;Native Mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
  Describes the performance counters used by the Report Server Web service.  
   
- [Performance Counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
+ [Performance Counters for the MSRS 2016 Web Service SharePoint Mode and MSRS 2016 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  Describes the performance counters used by the Report Server Windows service.  
   
  [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  

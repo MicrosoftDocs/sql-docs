@@ -1,7 +1,7 @@
 ---
 description: "Configure Basic Authentication on the Report Server"
 title: "Configure Basic Authentication on the Report Server | Microsoft Docs"
-ms.date: 08/26/2016
+ms.date: 02/10/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: security
@@ -31,15 +31,17 @@ ms.author: maggies
   
 ### To configure a report server to use Basic authentication  
   
-1.  Open RSReportServer.config in a text editor.  
+1. Open RSReportServer.config in a text editor.  
   
-     The file is located at *\<drive>:*\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer.  
+     To find the config file, see the [File Location](../report-server/rsreportserver-config-configuration-file.md#bkmk_file_location) section in the "RsReportServer.config Configuration File" article.
   
-2.  Find \<**Authentication**>.  
+2. Find \<**Authentication**>.  
   
-3.  Copy one of the following XML structures that best fits your needs. The first XML structure provides placeholders for specifying all of the elements, which are described in the next section:  
-  
-    ```  
+3. Copy one of the following XML structures that best fits your needs. The first XML structure provides placeholders for specifying all of the elements, which are described in the next section:  
+
+    [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
+
+    ```xml
     <Authentication>  
           <AuthenticationTypes>  
                  <RSWindowsBasic>  
@@ -52,27 +54,40 @@ ms.author: maggies
     </Authentication>  
     ```  
   
-     If you are using default values, you can copy the minimum element structure:  
+    If you are using default values, you can copy the minimum element structure:  
   
-    ```  
+    ```xml
           <AuthenticationTypes>  
                  <RSWindowsBasic/>  
           </AuthenticationTypes>  
     ```  
-  
-4.  Paste it over the existing entries for \<**Authentication**>.  
+
+    [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
+
+    ```xml
+      <Authentication>
+          <AuthenticationTypes>
+                      <RSWindowsBasic/>
+          </AuthenticationTypes>
+          <EnableAuthPersistence>true</EnableAuthPersistence>
+      <RSWindowsExtendedProtectionLevel>Off</RSWindowsExtendedProtectionLevel>
+      <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>
+      </Authentication>
+    ```
+
+4. Paste it over the existing entries for \<**Authentication**>.  
   
      If you are using multiple authentication types, add just the **RSWindowsBasic** element but do not delete the entries for **RSWindowsNegotiate**, **RSWindowsNTLM**, or **RSWindowsKerberos**.  
   
      Note that you cannot use **Custom** with other authentication types.  
   
-5.  Replace empty values for \<**Realm**> or \<**DefaultDomain**> with values that are valid for your environment.  
+5. Replace empty values for \<**Realm**> or \<**DefaultDomain**> with values that are valid for your environment.  
   
-6.  Save the file.  
+6. Save the file.  
   
-7.  If you configured a scale-out deployment, repeat these steps for other report servers in the deployment.  
+7. If you configured a scale-out deployment, repeat these steps for other report servers in the deployment.  
   
-8.  Restart the report server to clear any sessions that are currently open.  
+8. Restart the report server to clear any sessions that are currently open.  
   
 ## RSWindowsBasic Reference  
  The following elements can be specified when configuring Basic authentication.  

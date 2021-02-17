@@ -39,7 +39,7 @@ To use this tutorial, you need an Azure storage account, SQL Server Management S
 - Assign the user account to the role of [db_backupoperator](./security/authentication-access/database-level-roles.md) and grant [alter any credential](../t-sql/statements/alter-credential-transact-sql.md) permissions. 
 
 > [!IMPORTANT]
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support [Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-introduction.md), ensure that [hierarchical namespace](/azure/storage/blobs/data-lake-storage-namespace.md) is not enabled on the storage account used for this tutorial.
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support [Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-introduction), ensure that [hierarchical namespace](/azure/storage/blobs/data-lake-storage-namespace) is not enabled on the storage account used for this tutorial.
 
 ## 1 - Create stored access policy and shared access storage
 

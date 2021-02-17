@@ -25,7 +25,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   This topic describes performance counters for the **MSRS 2016 Web Service SharePoint Mode** and **MSRS 2016 Windows Service SharePoint Mode** performance objects that are part of a SQL Server 2016 Reporting Services SharePoint mode deployment.  
   
 > [!NOTE]  
->  This performance objects monitor events on the local report server. If you are running a report server in a scale-out deployment, the counts apply to the current server and not the scale-out deployment as a whole.  
+>  These performance objects monitor events on the local report server. If you are running a report server in a scale-out deployment, the counts apply to the current server and not the scale-out deployment as a whole.  
   
  The performance objects are available in the Windows Performance Monitor (**Perfmon.exe**). For more information, see the Windows documentation. [Runtime Profiling](/dotnet/framework/debug-trace-profile/runtime-profiling) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   

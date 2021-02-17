@@ -112,11 +112,7 @@ We recommend the *user installer* because it doesn't require administrator privi
    **Ubuntu:**
 
    ```bash
-   sudo apt-get install libxss1
-
-   sudo apt-get install libgconf-2-4
-
-   sudo apt-get install libunwind8
+   sudo apt-get install libxss1 libgconf-2-4 libunwind8
    ```
 
 ## Download Insiders build of Azure Data Studio

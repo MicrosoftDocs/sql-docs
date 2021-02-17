@@ -1,12 +1,12 @@
 ---
-title: azdata bdc settings reference
+title: azdata bdc spark settings reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc settings commands.
+description: Reference article for azdata bdc spark settings commands.
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# azdata bdc settings
+# azdata bdc spark settings
 
 Applies to [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
@@ -111,4 +111,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
-For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).
+For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](../install/deploy-install-azdata.md).

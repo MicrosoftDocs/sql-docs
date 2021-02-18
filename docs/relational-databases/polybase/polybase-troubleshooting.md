@@ -1,16 +1,18 @@
 ---
-title: "Monitor and troubleshoot PolyBase | Microsoft Docs"
+title: "Monitor and troubleshoot PolyBase"
 description: To troubleshoot PolyBase, use these views and DMVs. View PolyBase query plan, monitor nodes in a PolyBase group, and set up Hadoop name node high availability.
-ms.date: 04/23/2019
+ms.date: 02/17/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
+dev_langs: 
+-  "TSQL"
+-  "XML"
 f1_keywords: 
    - "PolyBase, monitoring"
    - "PolyBase, performance monitoring"
 helpviewer_keywords: 
    - "PolyBase, troubleshooting"
-ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
@@ -165,7 +167,7 @@ Monitor and troubleshoot PolyBase queries using the following DMVs.
    ORDER BY total_elapsed_time DESC;  
    ```  
 
-## To view the  PolyBase query plan (To be changed) 
+## To view the PolyBase query plan (To be changed) 
 
 1. In SSMS, enable **Include Actual Execution Plan** (Ctrl + M) and run the query.
 
@@ -253,10 +255,35 @@ PolyBase does not interface with Name Node HA services like Zookeeper or Knox to
 Work Around:
 Use DNS name to reroute connections to the active Name Node. In order to do this, you will need to ensure that the External Data Source is using a DNS name to communicate with the Name Node. When Name Node Failover occurs, you will need to change the IP address associated with the DNS name used in the External Data Source definition. This will reroute all new connections to the correct Name Node. Existing connections will fail when failover occurs. To automate this process, a "heartbeat" can ping the active Name Node. If the heart beat fails, one can assume a failover has occurred and automatically switch to the secondaries IP address.
 
+## Log file locations
+
+In Windows servers, the logs are located in the installation directory path, by default: c:\Program Files\Microsoft SQL Server\MSSQLnn.InstanceName\MSSQL\Log\Polybase\.
+
+In Linux servers, the logs are located by default in /var/opt/mssql/log/polybase.
+
+PolyBase data movement log files:  
+- <INSTANCENAME>_<SERVERNAME>_Dms_errors.log 
+- <INSTANCENAME>_<SERVERNAME>_Dms_movement.log 
+
+PolyBase engine service log files:  
+- <INSTANCENAME>_<SERVERNAME>_DWEngine_errors.log 
+- <INSTANCENAME>_<SERVERNAME>_DWEngine_movement.log 
+- <INSTANCENAME>_<SERVERNAME>_DWEngine_server.log 
+
+In Windows, PolyBase Java log files:
+- <SERVERNAME> Dms polybase.log
+- <SERVERNAME>_DWEngine_polybase.log
+ 
+In Linux, PolyBase Java log files:
+- /var/opt/mssql-extensibility/hdfs_bridge/log/hdfs_bridge_pdw.log
+- /var/opt/mssql-extensibility/hdfs_bridge/log/hdfs_bridge_dms.log
+
+
 ## Error messages and possible solutions
 
-To troubleshoot external table errors, see Murshed Zaman's blog [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](/archive/blogs/sqlcat/polybase-setup-errors-and-possible-solutions "PolyBase setup errors and possible solutions").
+For common troubleshooting scenarios, see [PolyBase Errors and Possible Solutions](polybase-errors-and-possible-solutions.md).
 
 ## See also
 
-[Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)
+[Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)   
+[PolyBase errors and possible solutions](polybase-errors-and-possible-solutions.md)   

@@ -2,7 +2,7 @@
 description: "Hierarchical Data (SQL Server)"
 title: "Hierarchical Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/04/2019"
+ms.date: "02/04/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

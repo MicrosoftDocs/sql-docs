@@ -278,7 +278,7 @@ If you have added Machine Learning Services to an existing SQL Server instance a
 
 Follow these steps to bring the Machine Learning Services to the same version as your database engine.
 
-1. Determine the Cumulative Update (CU) you have for the database engine. Run this T-SQL statment:
+1. Determine the Cumulative Update (CU) you have for the database engine. Run this T-SQL statement:
 
    ```sql
    SELECT @@VERSION

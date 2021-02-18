@@ -7205,6 +7205,8 @@ items:
           href: relational-databases/polybase/polybase-troubleshoot-connectivity.md
         - name: PolyBase FAQ
           href: relational-databases/polybase/polybase-faq.md
+        - name: PolyBase errors and possible solutions
+          href: relational-databases/polybase/polybase-errors-and-possible-solutions.md
     - name: Reference
       items:
       - name: T-SQL reference

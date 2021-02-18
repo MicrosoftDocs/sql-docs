@@ -87,12 +87,12 @@ The following table lists the Memory Clerk types.
 |CACHESTORE_EVENTS     |     To be documented in the future   |
 |CACHESTORE_FULLTEXTSTOPLIST     |    To be documented in the future    |
 |CACHESTORE_NOTIF     |    To be documented in the future    |
-|CACHESTORE_OBJCP     |    To be documented in the future    |
-|CACHESTORE_PHDR     |    To be documented in the future    |
+|CACHESTORE_OBJCP     |    This store is used for Object Plans: stored procedures, functions, triggers.   |
+|CACHESTORE_PHDR     |    CACHESTORE_PHDR is used for temporary memory caching during parsing and for algebrizer trees during compilation of a query. Once query is parsed, the memory should be released. Some examples include: many statements in one batch - a user can batch thousands of statement (insert or updates) into one batch, a T-SQL batch that contains a very large dynamically-generated query, very large number of values in IN clause.      |
 |CACHESTORE_QDSRUNTIMESTATS     |     To be documented in the future   |
 |CACHESTORE_SEARCHPROPERTYLIST     |     To be documented in the future   |
 |CACHESTORE_SEHOBTCOLUMNATTRIBUTE     |    To be documented in the future    |
-|CACHESTORE_SQLCP     |    To be documented in the future    |
+|CACHESTORE_SQLCP     |    CACHESTORE_SQLCP cachestore is used for Adhoc queries, prepared statements, and server side cursors. Ad-hoc queries are commonly language-event T-SQL statements submitted to the server without explicit parameterization. Prepared statements also use this cachestore - they are submitted by the application using API calls like [SQLPrepare()](https://docs.microsoft.com/sql/odbc/reference/syntax/sqlprepare-function)/ [SQLExecute](https://docs.microsoft.com/sql/odbc/reference/syntax/sqlexecute-function) (ODBC) or [SqlCommand.Prepare](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlcommand.prepare)/[SqlCommand.ExecuteNonQuery](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlcommand.executenonquery) (ADO.NET) and will appear on the server as [sp_prepare](../system-stored-procedures/sp-prepare-transact-sql.md)/[sp_execute](../system-stored-procedures/sp-execute-transact-sql.md) or [sp_prepexec](../system-stored-procedures/sp-prepexec-transact-sql.md) system procedure executions. Also, server-side cursors would consume from this cachestore ([sp_cursoropen](../system-stored-procedures/sp-cursoropen-transact-sql.md), [sp_cursorfetch](../system-stored-procedures/sp-cursorfetch-transact-sql.md), [sp_cursorclose](../system-stored-procedures/sp-cursorclose-transact-sql.md)).    |
 |CACHESTORE_STACKFRAMES     |     To be documented in the future   |
 |CACHESTORE_SYSTEMROWSET     |    To be documented in the future    |
 |CACHESTORE_TEMPTABLES     |     To be documented in the future   |
@@ -112,7 +112,7 @@ The following table lists the Memory Clerk types.
 |MEMORYCLERK_FILETABLE     |   To be documented in the future     |
 |MEMORYCLERK_FSAGENT     |    To be documented in the future    |
 |MEMORYCLERK_FSCHUNKER     |     To be documented in the future   |
-|MEMORYCLERK_FULLTEXT     |     To be documented in the future   |
+|MEMORYCLERK_FULLTEXT     |     Memory clerk used for allocations by Full-Text engine structures   |
 |MEMORYCLERK_FULLTEXT_SHMEM     |     To be documented in the future   |
 |MEMORYCLERK_HADR     |     To be documented in the future   |
 |MEMORYCLERK_HOST     |     To be documented in the future   |
@@ -136,12 +136,12 @@ The following table lists the Memory Clerk types.
 |MEMORYCLERK_SQLBUFFERPOOL     |    To be documented in the future    |
 |MEMORYCLERK_SQLCLR     |    To be documented in the future    |
 |MEMORYCLERK_SQLCLRASSEMBLY     |     To be documented in the future   |
-|MEMORYCLERK_SQLCONNECTIONPOOL     |     To be documented in the future   |
+|MEMORYCLERK_SQLCONNECTIONPOOL     |     This memory clerk caches information on the server that the client application may need the server to keep track of. One example is an applications that creates prepare handles via  [sp_prepexecrpc](../system-stored-procedures/sp-prepexecrpc-transact-sql.md). The application should properly unprepare (close) those handles after execution.  |
 |MEMORYCLERK_SQLEXTENSIBILITY     |    To be documented in the future <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
-|MEMORYCLERK_SQLGENERAL     |   To be documented in the future     |
+|MEMORYCLERK_SQLGENERAL     |   This memory clerk could be used by multiple consumers inside SQL engine. Examples include replication memory, internal debugging/diagnostics, some SQL Server startup functionality, some SQL parser functionality, building system indexes, initialize global memory objects, Create OLEDB connection inside the server and Linked Server queries, Server side Profiler tracing, creating showplan data, some security functionality, compilation of computed columns, memory for Parallelism structures, memory for some XML functionality     |
 |MEMORYCLERK_SQLHTTP     |   To be documented in the future     |
 |MEMORYCLERK_SQLLOGPOOL     |     To be documented in the future   |
-|MEMORYCLERK_SQLOPTIMIZER     |     To be documented in the future   |
+|MEMORYCLERK_SQLOPTIMIZER     |     This memory clerk is used by query optimizer memory allocations during different phases of compiling a query. Some uses include query optimization, index statistics manager, view definitions compilation, histogram generation.   |
 |MEMORYCLERK_SQLQERESERVATIONS     |     To be documented in the future   |
 |MEMORYCLERK_SQLQUERYCOMPILE     |    To be documented in the future    |
 |MEMORYCLERK_SQLQUERYEXEC     |    To be documented in the future    |
@@ -153,7 +153,7 @@ The following table lists the Memory Clerk types.
 |MEMORYCLERK_SQLSOAPSESSIONSTORE     |     To be documented in the future   |
 |MEMORYCLERK_SQLSTORENG     |   To be documented in the future     |
 |MEMORYCLERK_SQLTRACE     |     To be documented in the future   |
-|MEMORYCLERK_SQLUTILITIES     |    To be documented in the future    |
+|MEMORYCLERK_SQLUTILITIES     |    This memory clerk can be used by multiple allocators inside SQL Server. Examples include Backup and Restore, Log Shipping, Database Mirroring, DBCC commands, BCP code on the server side, some query parallelism work, Log Scan buffers    |
 |MEMORYCLERK_SQLXML     |     To be documented in the future   |
 |MEMORYCLERK_SQLXP     |    To be documented in the future    |
 |MEMORYCLERK_SVL     |  To be documented in the future <br /><br />**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and later     |
@@ -164,7 +164,7 @@ The following table lists the Memory Clerk types.
 |MEMORYCLERK_XE_BUFFER     |     To be documented in the future   |
 |MEMORYCLERK_XLOG_SERVER     |    To be documented in the future <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later |
 |MEMORYCLERK_XTP     |    To be documented in the future    |
-|OBJECTSTORE_LBSS     |    To be documented in the future    |
+|OBJECTSTORE_LBSS     |    OBJECTSTORE_LBSS is used to store temporary LOBs - variables, parameters, intermediate results of expressions. An example that uses this store is [table-valued parameters](../../connect/ado-net/sql/table-valued-parameters.md) (TVP) . See the [KB article 4468102](https://support.microsoft.com/topic/kb4468102-fix-excessive-memory-usage-when-you-trace-rpc-events-that-involve-table-valued-parameters-in-sql-server-2016-and-2017-c68aa214-26f1-98de-6b4d-c7dcad82dbd4) and  [KB article 4051359](https://support.microsoft.com/topic/kb4051359-fix-sql-server-runs-out-of-memory-when-table-valued-parameters-are-captured-in-extended-events-sessions-in-sql-server-2016-even-if-collecting-statement-or-data-stream-isn-t-enabled-a3639efa-0618-82a8-f6b1-8cdcba29ce6d) for more information on fixes in this space.     |
 |OBJECTSTORE_LOCK_MANAGER     |     To be documented in the future   |
 |OBJECTSTORE_SECAUDIT_EVENT_BUFFER     |     To be documented in the future   |
 |OBJECTSTORE_SERVICE_BROKER     |    To be documented in the future    |
@@ -174,7 +174,7 @@ The following table lists the Memory Clerk types.
 |USERSTORE_OBJPERM     |    To be documented in the future    |
 |USERSTORE_QDSSTMT     |    To be documented in the future    |
 |USERSTORE_SCHEMAMGR     |    To be documented in the future    |
-|USERSTORE_SXC     |    To be documented in the future    |
+|USERSTORE_SXC     |    This user store is used for allocations to store all [RPC](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/619c43b6-9495-4a58-9e49-a4950db245b3) parameters.     |
 |USERSTORE_TOKENPERM     |    To be documented in the future    |
 
 ## See Also  

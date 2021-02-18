@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_os_performance_counters"
   - "sys.dm_os_performance_counters_TSQL"
@@ -56,7 +56,7 @@ Performance counters where the `cntr_type` column value is 272696576, 1073874176
 ## Permission
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the `Server admin` or an `Azure Active Directory admin` account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
  
 ## Examples  
  The following example returns all performance counters that display snapshot counter values.  

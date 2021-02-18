@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Crawl Aborted event class"
 ms.assetid: eead8ea6-5051-4689-ab30-4dfbfda01fb9

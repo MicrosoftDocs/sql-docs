@@ -57,7 +57,7 @@ You can use the `.bak` file to restore your sample database to your SQL Server i
 
 # [SQL Server Management Studio (SSMS)](#tab/ssms)
 
-If you're not familiar using SQL Server Management Studio (SSMS), you can see [connect & query](../ssms/quickstarts/connect-query-sql-server.md) to get started. 
+If you're not familiar using SQL Server Management Studio (SSMS), you can see [connect & query](../ssms/quickstarts/ssms-connect-query-sql-server.md) to get started. 
 
 To restore your database in SQL Server Management Studio, follow these steps:
 
@@ -202,5 +202,5 @@ Once you've restored your sample database, using the following tutorials to get 
 
 
 [Tutorials for SQL Server database engine](../relational-databases/database-engine-tutorials.md)   
-[Connect and query with SQL Server Management Studio (SSMS)](../ssms/quickstarts/connect-query-sql-server.md)   
-[Connect and query with Azure Data Studio](../ssms/quickstarts/connect-query-sql-server.md)
+[Connect and query with SQL Server Management Studio (SSMS)](../ssms/quickstarts/ssms-connect-query-sql-server.md)   
+[Connect and query with Azure Data Studio](../ssms/quickstarts/ssms-connect-query-sql-server.md)

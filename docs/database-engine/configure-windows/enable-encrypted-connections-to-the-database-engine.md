@@ -34,7 +34,7 @@ ms.author: vanto
  The server computer must have a certificate provisioned. To provision the certificate on the server computer, you [import it into Windows](#single-server). The client machine must be set up to [trust the certificate's root authority](#about).  
   
 > [!IMPORTANT]
-> Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], Secure Sockets Layer (SSL) has been discontinued. Use Transport Layer Security (TLS) instead.
+> Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], Secure Sockets Layer (SSL) has been discontinued. Use Transport Layer Security (TLS) instead.
 
 ## Transport Layer Security (TLS)
 
@@ -86,7 +86,7 @@ For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to load a TLS cert
 
 - The **Subject** property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer. When using the host name, the DNS suffix must be specified in the certificate. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  is running on a failover cluster, the common name must match the host name or FQDN of the virtual server and the certificates must be provisioned on all nodes in the failover cluster.
 
-- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and the [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) support wildcard certificates. SNAC has since been deprecated and replaced with the [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) and [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Other clients might not support wildcard certificates. For more information, see the client documentation and [KB 258858](https://support.microsoft.com/kb/258858).       
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and the [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) support wildcard certificates. SNAC has since been deprecated and replaced with the [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) and [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Other clients might not support wildcard certificates.      
   Wildcard certificate cannot be selected by using the SQL Server Configuration Manager. To use a wildcard certificate, you must edit the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` registry key, and enter the thumbprint of the certificate, without spaces, to the **Certificate** value.  
 
   > [!WARNING]  
@@ -94,9 +94,9 @@ For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to load a TLS cert
 
 ## <a name="single-server"></a>Install on single server
 
-With [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], certificate management is integrated into the SQL Server Configuration Manager. SQL Server Configuration Manager for [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] can be used with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Refer to [Certificate Management (SQL Server Configuration Manager)](../../database-engine/configure-windows/manage-certificates.md) to add a certificate on a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
+With [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], certificate management is integrated into the SQL Server Configuration Manager. SQL Server Configuration Manager for [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] can be used with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Refer to [Certificate Management (SQL Server Configuration Manager)](../../database-engine/configure-windows/manage-certificates.md) to add a certificate on a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
-If using [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], and SQL Server Configuration Manager for [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] is not available, follow these steps:
+If using [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], and SQL Server Configuration Manager for [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] is not available, follow these steps:
 
 1. On the **Start** menu, click **Run**, and in the **Open** box, type **MMC** and click **OK**.  
   
@@ -124,9 +124,9 @@ If using [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssS
   
 ## Install across multiple servers
 
-With [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], certificate management is integrated into the SQL Server Configuration Manager. SQL Server Configuration Manager for [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] can be used with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Refer to [Certificate Management (SQL Server Configuration Manager)](../../database-engine/configure-windows/manage-certificates.md) to add a certificate in a Failover Cluster configuration or in an Availability Group configuration.
+With [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], certificate management is integrated into the SQL Server Configuration Manager. SQL Server Configuration Manager for [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] can be used with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Refer to [Certificate Management (SQL Server Configuration Manager)](../../database-engine/configure-windows/manage-certificates.md) to add a certificate in a Failover Cluster configuration or in an Availability Group configuration.
 
-If using [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], and SQL Server Configuration Manager for [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] is not available, follow the steps in section [To provision (install) a certificate on a single server](#single-server) for every server.
+If using [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], and SQL Server Configuration Manager for [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] is not available, follow the steps in section [To provision (install) a certificate on a single server](#single-server) for every server.
 
 ## Export server certificate  
   

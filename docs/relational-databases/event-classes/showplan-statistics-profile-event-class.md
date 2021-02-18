@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Showplan Statistics Profile event class"
 ms.assetid: fa9e1330-a217-491c-ad7c-2c1c4015d1bb

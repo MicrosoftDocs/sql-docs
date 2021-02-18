@@ -19,7 +19,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Recompile a Stored Procedure
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  This topic describes how to recompile a stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. There are three ways to do this: **WITH RECOMPILE** option in the procedure definition or when the procedure is called, the **RECOMPILE** query hint on individual statements, or by using the **sp_recompile** system stored procedure. This topic describes using the WITH RECOMPILE option when creating a procedure definition and executing an existing procedure. It also describes using the sp_recompile system stored procedure to recompile an existing procedure.  
+  This topic describes how to recompile a stored procedure in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. There are three ways to do this: **WITH RECOMPILE** option in the procedure definition or when the procedure is called, the **RECOMPILE** query hint on individual statements, or by using the **sp_recompile** system stored procedure. This topic describes using the WITH RECOMPILE option when creating a procedure definition and executing an existing procedure. It also describes using the sp_recompile system stored procedure to recompile an existing procedure.  
   
  **In This Topic**  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: "jrasnick"
 ms.technology: data-warehouse
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE VIEW"
   - "VIEW_TSQL"

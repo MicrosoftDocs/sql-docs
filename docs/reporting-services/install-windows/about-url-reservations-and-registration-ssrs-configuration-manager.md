@@ -25,7 +25,7 @@ ms.author: maggies
  Both Setup and the tool will also assign permissions on the URL to the Report Server service, check for duplicate instances, and add the URL reservation to HTTP.SYS. Never create or modify a Reporting Services URL reservation directly using HttpCfg.exe or other tool. If you skip a step or set an invalid value, you will encounter problems that might be difficult to diagnose or fix.  
   
 > [!NOTE]  
-> HTTP.SYS is an operating system component that listens for network requests and routes them to a request queue. In this release of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], HTTP.SYS establishes and maintains the request queue for the Report Server Web service and the web portal. Internet Information Services (IIS) is no longer used to host or access [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications. For more information about HTTP.SYS functionality, see [HTTP Server API](https://go.microsoft.com/fwlink/?LinkId=92652).  
+> HTTP.SYS is an operating system component that listens for network requests and routes them to a request queue. In this release of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], HTTP.SYS establishes and maintains the request queue for the Report Server Web service and the web portal. Internet Information Services (IIS) is no longer used to host or access [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications. For more information about HTTP.SYS functionality, see [HTTP Server API](/windows/win32/http/http-api-start-page).  
   
 ##  <a name="ReportingServicesURLs"></a> URLs in Reporting Services  
  In a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation, you can access the following tools, applications, and items through URLs:  
@@ -42,7 +42,7 @@ ms.author: maggies
 > This article does not describe URL access to specific reports that are stored on the report server. For more information about URL access to these items, see [Access Report Server Items Using URL Access](../../reporting-services/access-report-server-items-using-url-access.md).  
   
 ##  <a name="URLreservation"></a> URL reservation and registration  
- A URL reservation defines the URLs that can be used to access a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will reserve one or more URLs for the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] in HTTP.SYS, and then register them when the service starts. By appending parameters to the URL, you can open reports through the Web service. Reservations and registration are provided by HTTP.SYS. For more information, see [Namespace Reservations, Registration, and Routing](https://go.microsoft.com/fwlink/?LinkId=92653).  
+ A URL reservation defines the URLs that can be used to access a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will reserve one or more URLs for the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] in HTTP.SYS, and then register them when the service starts. By appending parameters to the URL, you can open reports through the Web service. Reservations and registration are provided by HTTP.SYS. For more information, see [Namespace Reservations, Registration, and Routing](/windows/win32/http/namespace-reservations-registrations-and-routing).  
   
  *URL reservation* is a process by which a URL endpoint to a Web application is created and stored in HTTP.SYS. HTTP.SYS is the common repository of all URL reservations that are defined on a computer and defines a set of common rules that guarantee unique URL reservations.  
   
@@ -103,4 +103,3 @@ ms.author: maggies
  [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [URL Reservation Syntax  &#40;Report Server Configuration Manager Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
 
-  

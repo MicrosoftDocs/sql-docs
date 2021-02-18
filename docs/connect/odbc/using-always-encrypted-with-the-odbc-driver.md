@@ -2,7 +2,7 @@
 title: "Using Always Encrypted with the ODBC Driver"
 description: "Learn how to develop ODBC applications using Always Encrypted and the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
-ms.date: 09/01/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -20,15 +20,17 @@ author: v-chojas
 
 ### Introduction
 
-This article provides information on how to develop ODBC applications using [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) or [Always Encrypted with Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) and the [ODBC Driver for SQL Server](microsoft-odbc-driver-for-sql-server.md).
+This article provides information on how to develop ODBC applications using [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) or [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) and the [ODBC Driver for SQL Server](microsoft-odbc-driver-for-sql-server.md).
 
 Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the ODBC Driver for SQL Server, achieves this by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. Always Encrypted *with secure enclaves* extends this feature to enable richer functionality on sensitive data while keeping the data confidential.
 
-For more information, see [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) and [Always Encrypted with Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+For more information, see [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) and [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ### Prerequisites
 
 Configure Always Encrypted in your database. This involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you do not already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). In particular, your database should contain the metadata definitions for a Column Master Key (CMK), a Column Encryption Key (CEK), and a table containing one or more columns encrypted using that CEK.
+
+If you are using Always Encrypted with secure enclaves, see [Develop applications using Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md) for additional prerequisites.
 
 ### Enabling Always Encrypted in an ODBC Application
 
@@ -55,13 +57,33 @@ Note that enabling Always Encrypted is not sufficient for encryption or decrypti
 ### Enabling Always Encrypted with Secure Enclaves
 
 > [!NOTE]
-> On Linux and macOS, OpenSSL version 1.0.1 or later is required to use Always Encrypted with Secure Enclaves.
+> On Linux and macOS, OpenSSL version 1.0.1 or later is required to use Always Encrypted with secure enclaves.
 
-Beginning with version 17.4, the driver supports Always Encrypted with Secure Enclaves. To enable use of the enclave when connecting to SQL Server 2019 or later, set the `ColumnEncryption` DSN, connection string, or connection attribute to the name of the enclave type and attestation protocol, and associated attestation data, separated by a comma. In version 17.4, only the [Virtualization Based Security](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) enclave type and [Host Guardian Service](/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) attestation protocol, denoted by `VBS-HGS`, is supported; to use it, specify the URL of the attestation server, for example:
+Beginning with version 17.4, the driver supports Always Encrypted with Secure Enclaves. To enable the use of the enclave when connecting to a database, set the `ColumnEncryption` DSN key, connection string keyword or connection attribute to the following value: `<attestation protocol>\<attestation URL>`, where:
 
-```
-Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
-```
+- `<attestation protocol>` - specifies a protocol used for enclave attestation.
+  - If you're using [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), `<attestation protocol>` should be `VBS-HGS`.
+  - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, `<attestation protocol>` should be `SGX-AAS`.
+
+- `<attestation URL>` - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
+
+  - If you're using [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
+  - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation).
+
+
+Examples of connection strings enabling enclave computations for a database connection:
+
+- [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)]:
+  
+   ```
+   Driver=ODBC Driver 17 for SQL Server;Server=myServer.myDomain;Database=myDataBase;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://myHGSServer.myDomain/Attestation
+   ```
+
+- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] :
+  
+   ```
+   Driver=ODBC Driver 17 for SQL Server;Server=myServer.database.windows.net;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Encrypt=yes;ColumnEncryption=SGX-AAS,https://myAttestationProvider.uks.attest.azure.net/attest/SgxEnclave
+   ```
 
 If the server and attestation service are configured correctly, as well as enclave-enabled CMKs and CEKs for the desired columns, you should now be able to execute queries which use the enclave such as in-place encryption and rich computations, in addition to the existing functionality provided by Always Encrypted. See [Configure Always Encrypted with secure enclaves](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) for more information.
 
@@ -251,6 +273,52 @@ while (SQL_SUCCEEDED(SQLFetch(hstmt)))
 }
 ```
 
+#### Money/SmallMoney encryption
+
+Starting with driver version 17.7 it is possible to use Always Encrypted 
+with MONEY and SMALLMONEY. However there are some additional steps to take.
+When inserting into encrypted MONEY or SMALLMONEY columns, use one of the following C types:
+```
+SQL_C_CHAR
+SQL_C_WCHAR
+SQL_C_SHORT
+SQL_C_LONG
+SQL_C_FLOAT
+SQL_C_DOUBLE
+SQL_C_BIT
+SQL_C_TINYINT
+SQL_C_SBIGINT
+SQL_C_NUMERIC
+```
+
+and a SQL type of either `SQL_NUMERIC` or `SQL_DOUBLE` (precision may be lost when using this type).
+
+##### Binding the variable
+
+Whenever binding a MONEY/SMALLMONEY variable in an encrypted column the following
+descriptor field(s) must be set:
+
+```
+// n is the descriptor record of the MONEY/SMALLMONEY parameter
+// the type is assumed to be SMALLMONEY if isSmallMoney is true and MONEY otherwise
+
+SQLHANDLE ipd = 0;
+SQLGetStmtAttr(hStmt, SQL_ATTR_IMP_PARAM_DESC, (SQLPOINTER)&ipd, SQL_IS_POINTER, NULL);
+SQLSetDescField(ipd, n, SQL_CA_SS_SERVER_TYPE, isSmallMoney ? (SQLPOINTER)SQL_SS_TYPE_SMALLMONEY :
+                                                              (SQLPOINTER)SQL_SS_TYPE_MONEY, SQL_IS_INTEGER);
+                                                              
+                                                              
+// If the variable is bound as SQL_NUMERIC, additional descriptor fields have to be set
+// var is SQL_NUMERIC_STRUCT containing the value to be inserted
+
+SQLHDESC   hdesc = NULL;
+SQLGetStmtAttr(hStmt, SQL_ATTR_APP_PARAM_DESC, &hdesc, 0, NULL);
+SQLSetDescField(hdesc, n, SQL_DESC_PRECISION, (SQLPOINTER)(var.precision), 0);
+SQLSetDescField(hdesc, n, SQL_DESC_SCALE, (SQLPOINTER)(var.scale), 0);
+SQLSetDescField(hdesc, n, SQL_DESC_DATA_PTR, &var, 0);
+```
+
+
 #### Avoiding Common Problems when Querying Encrypted Columns
 
 This section describes common categories of errors when querying encrypted columns from ODBC applications and a few guidelines on how to avoid them.
@@ -391,6 +459,8 @@ The driver supports authenticating to Azure Key Vault using the following creden
 
 - Managed Identity (17.5.2+) - either system or user-assigned; see [Managed Identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/) for more information.
 
+- Azure Key Vault Interactive (17.7+ Windows drivers) - with this method, the credentials are authenticated through Azure Active Directory with Login ID.
+
 To allow the driver to use CMKs stored in AKV for column encryption, use the following connection-string-only keywords:
 
 |Credential Type|<code>KeyStoreAuthentication</code>|<code>KeyStorePrincipalId</code>|<code>KeyStoreSecret</code>|
@@ -398,6 +468,7 @@ To allow the driver to use CMKs stored in AKV for column encryption, use the fol
 |Username/password| `KeyVaultPassword`|User Principal Name|Password|
 |Client ID/secret| `KeyVaultClientSecret`|Client ID|Secret|
 |Managed Identity|`KeyVaultManagedIdentity`|Object ID (optional, for user-assigned only)|(not specified)|
+|AKV Interactive|`KeyVaultInteractive`|(not set)|(not set)|
 
 #### Example Connection Strings
 
@@ -427,10 +498,16 @@ DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>
 ```
 
+**AKV Interactive**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultInteractive;UID=<userID>;PWD=<password>
+```
+
 No other ODBC application changes are required to use AKV for CMK storage.
 
 > [!NOTE]
-> The driver contains a list of AKV endpoints which it trusts. Starting with driver version 17.5.2, this list is configurable: set the `AKVTrustedEndpoints` property in the driver or DSN's ODBCINST.INI or ODBC.INI registry key (Windows) or `odbcinst.ini` or `odbc.ini` file section (Linux/macOS) to a semicolon-delimited list. Setting it in the DSN takes precedence over a setting in the driver. If the value begins with a semicolon, it extends the default list; otherwise, it replaces the default list. The default list (as of 17.5) is `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`.
+> The driver contains a list of AKV endpoints which it trusts. Starting with driver version 17.5.2, this list is configurable: set the `AKVTrustedEndpoints` property in the driver or DSN's ODBCINST.INI or ODBC.INI registry key (Windows) or `odbcinst.ini` or `odbc.ini` file section (Linux/macOS) to a semicolon-delimited list. Setting it in the DSN takes precedence over a setting in the driver. If the value begins with a semicolon, it extends the default list; otherwise, it replaces the default list. The default list (as of 17.5) is `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`. Starting with 17.7, the list also includes `managedhsm.azure.net;managedhsm.azure.cn;managedhsm.usgovcloudapi.net;managedhsm.microsoftazure.de`.
 
 
 ### Using the Windows Certificate Store Provider
@@ -613,8 +690,8 @@ See [Migrate Sensitive Data Protected by Always Encrypted](../../relational-data
 
 |Name|Description|  
 |----------|-----------------|  
-|`ColumnEncryption`|Accepted values are `Enabled`/`Disabled`.<br>`Enabled` -- enables Always Encrypted functionality for the connection.<br>`Disabled` -- disable Always Encrypted functionality for the connection.<br>*type*,*data* -- (version 17.4 and later) enables Always Encrypted with secure enclave and attestation protocol *type*, and associated attestation data *data*. <br><br>The default is `Disabled`.|
-|`KeyStoreAuthentication` | Valid Values: `KeyVaultPassword`, `KeyVaultClientSecret` |
+|`ColumnEncryption`|Accepted values are `Enabled`/`Disabled`.<br>`Enabled` -- enables Always Encrypted functionality for the connection.<br>`Disabled` -- disable Always Encrypted functionality for the connection.<br>*attestation protocol*,*attestation URL* -- (version 17.4 and later) enables Always Encrypted with secure enclave using the specified attestation protocol and the attestation URL. <br><br>The default is `Disabled`.|
+|`KeyStoreAuthentication` | Valid Values: `KeyVaultPassword`, `KeyVaultClientSecret`, `KeyVaultInteractive` |
 |`KeyStorePrincipalId` | When `KeyStoreAuthentication` = `KeyVaultPassword`, set this value to a valid Azure Active Directory User Principal Name. <br>When `KeyStoreAuthetication` = `KeyVaultClientSecret` set this value to a valid Azure Active Directory Application Client ID |
 |`KeyStoreSecret` | When `KeyStoreAuthentication` = `KeyVaultPassword` set this value to the password for the corresponding user name. <br>When `KeyStoreAuthentication` = `KeyVaultClientSecret` set this value to the Application Secret associated with a valid Azure Active Directory Application Client ID |
 
@@ -623,7 +700,7 @@ See [Migrate Sensitive Data Protected by Always Encrypted](../../relational-data
 
 |Name|Type|Description|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|Pre-connect|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Disable Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Enable Always Encrypted<br> pointer to *type*,*data* string -- (version 17.4 and later) enable with secure enclave|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|Pre-connect|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Disable Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Enable Always Encrypted<br> pointer to *attestation protocol*,*attestation URL* string -- (version 17.4 and later) enable with secure enclave|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Post-connect|[Set] Attempt to load CEKeystoreProvider<br>[Get] Return a CEKeystoreProvider name|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|Post-connect|[Set] Write data to CEKeystoreProvider<br>[Get] Read data from CEKeystoreProvider|
 |`SQL_COPT_SS_CEKCACHETTL`|Post-connect|[Set] Set the CEK cache TTL<br>[Get] Get the current CEK cache TTL|
@@ -655,9 +732,9 @@ When encountering difficulties in using Always Encrypted, start by checking the 
 
 - The CMK which encrypts the CEK has accessible metadata on the server and is also accessible from the client.
 
-- `ColumnEncryption` is enabled in the DSN, connection string, or connection attribute, and if using the Secure Enclave, has the correct format.
+- `ColumnEncryption` is enabled in the DSN, connection string, or connection attribute, and if using the secure enclave, has the correct format.
 
-Additionally, when using the Secure Enclave, attestation failures identify the step in the attestation process where the failure occurred, according to the following table:
+Additionally, when using the secure enclave, attestation failures identify the step in the attestation process where the failure occurred, according to the following table:
 
 |Step|Description|
 |----|-----------|

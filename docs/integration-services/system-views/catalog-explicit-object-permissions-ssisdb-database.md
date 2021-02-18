@@ -16,10 +16,7 @@ ms.author: chugu
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-
-  Displays only the permissions that have been explicitly assigned to the user.  
+ Displays only the permissions that have been explicitly assigned to the user.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_query_store_reset_exec_stats_TSQL"
   - "sys.sp_query_store_reset_exec_stats_TSQL"

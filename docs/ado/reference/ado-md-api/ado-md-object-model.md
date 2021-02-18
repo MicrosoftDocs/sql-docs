@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ADO MD, object model"
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a

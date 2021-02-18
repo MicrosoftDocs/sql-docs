@@ -33,7 +33,7 @@ The following example shows the syntax specifying to retrieve date and time type
 ```php
 <?php
 $serverName = "MyServer";
-$connectionInfo = array("Database"=>"AdventureWorks", 'ReturnDatesAsStrings '=> true);
+$connectionInfo = array("Database"=>"AdventureWorks", 'ReturnDatesAsStrings'=> true);
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 if ($conn === false) {
    echo "Could not connect.\n";

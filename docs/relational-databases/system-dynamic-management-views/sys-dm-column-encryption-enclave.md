@@ -6,7 +6,7 @@ ms.date: "10/11/2019"
 ms.prod: sql
 ms.reviewer: "vanto"
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 author: jaszymas
 ms.author: jaszymas
 monikerRange: ">= sql-server-ver15"

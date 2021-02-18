@@ -67,7 +67,7 @@ The connection pooler satisfies requests for connections by reallocating connect
 > [!NOTE]
 > Do not call `Close` or `Dispose` on a `Connection`, a `DataReader`, or any other managed object in the `Finalize` method of your class. In a finalizer, only release unmanaged resources that your class owns directly. If your class does not own any unmanaged resources, do not include a `Finalize` method in your class definition. For more information, see [Garbage Collection](/dotnet/standard/garbage-collection/index).
 
-For more info about the events associated with opening and closing connections, see [Audit Login Event Class](/sql/relational-databases/event-classes/audit-login-event-class) and [Audit Logout Event Class](/sql/relational-databases/event-classes/audit-logout-event-class) in the SQL Server documentation.
+For more info about the events associated with opening and closing connections, see [Audit Login Event Class](../../relational-databases/event-classes/audit-login-event-class.md) and [Audit Logout Event Class](../../relational-databases/event-classes/audit-logout-event-class.md) in the SQL Server documentation.
 
 ## Remove connections
 

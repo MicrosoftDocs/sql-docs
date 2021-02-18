@@ -30,20 +30,22 @@ The steps in this section all run within an Azure Data Studio notebook.
 
    ![New Notebook](media/notebooks-kqlmagic/install-new-notebook.png)
 
-2. When asked, select **Yes** to upgrade the Python packages.
+2. You may be prompted to upgrade your Python packages when your packages need updating.
 
    ![Yes](media/notebooks-kqlmagic/install-python-yes.png)
 
 3. Install Kqlmagic:
 
    ```python
-   !pip install Kqlmagic --no-cache-dir --upgrade
+   import sys
+   !{sys.executable} -m pip install Kqlmagic --no-cache-dir --upgrade
    ```
 
    Verify it's installed:
 
    ```python
-   !pip list
+   import sys
+   !{sys.executable} -m pip list
    ```
 
    ![List](media/notebooks-kqlmagic/install-list.png)

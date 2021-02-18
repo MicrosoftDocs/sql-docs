@@ -13,7 +13,7 @@ ms.date: 12/11/2020
 ---
 
 # SqlPackage Export parameters and properties
-The SqlPackage.exe Export action exports a live database from SQL Server or Azure SQL to a BACPAC package (.bacpac file). By default, data for all tables will be included in the .bacpac file. Optionally, you can specify only a subset of tables for which to export data. Validation for the Export action ensures Azure SQL Database compatibility for the complete targeted database even if a subset of tables is specified for the export. 
+The SqlPackage.exe Export action exports a connected database to a BACPAC file (.bacpac). By default, data for all tables will be included in the .bacpac file. Optionally, you can specify only a subset of tables for which to export data. Validation for the Export action ensures Azure SQL Database compatibility for the complete targeted database even if a subset of tables is specified for the export. 
 
 ## Command-line syntax
 
@@ -56,8 +56,8 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|LongRunningCommandTimeout=(INT32)| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
 |**/p:**|Storage=({File&#124;Memory} 'File')|Specifies the type of backing storage for the schema model used during extraction.|
 |**/p:**|TableData=(STRING)|Indicates the table from which data will be extracted. Specify the table name with or without the brackets surrounding the name parts in the following format: schema_name.table_identifier. This option may be specified multiple times.|
-|**/p:**|TempDirectoryForTableData=(STRING)|Specifies the temporary directory used to buffer table data before being written to the package file.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|Specifies what the target engine version is expected to be. This affects whether to allow objects supported by Azure SQL Database servers with V12 capabilities, such as memory-optimized tables, in the generated bacpac.|
+|**/p:**|TempDirectoryForTableData=(STRING)|Specifies the temporary directory used to buffer table data before being written to the package file.|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Specifies whether the supported full-text document types for Microsoft Azure SQL Database v12 should be verified.|
 
 ## Next Steps

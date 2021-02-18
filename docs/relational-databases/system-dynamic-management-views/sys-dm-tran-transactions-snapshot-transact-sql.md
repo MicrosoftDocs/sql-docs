@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_tran_transactions_snapshot"
   - "dm_tran_transactions_snapshot"
@@ -64,7 +64,7 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the `Server admin` or an `Azure Active Directory admin` account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
   
 ## Remarks  
  When a snapshot transaction starts, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] records all of the transactions that are active at that time. **sys.dm_tran_transactions_snapshot** reports this information for all currently active snapshot transactions.  

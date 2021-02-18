@@ -6,7 +6,7 @@ ms.date: "08/18/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_os_memory_brokers"
   - "dm_os_memory_brokers_TSQL"
@@ -48,7 +48,7 @@ ms.author: wiassaf
 ## Permissions  
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the `Server admin` or an `Azure Active Directory admin` account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
   
 ## See Also  
 

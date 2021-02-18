@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQL grammar [ODBC], about SQL grammar"
 ms.assetid: 0ee36f09-59e7-4b94-88ca-7ebc0952a3be

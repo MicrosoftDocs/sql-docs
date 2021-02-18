@@ -8894,6 +8894,8 @@ items:
         href: ssms/configure-login-auditing-sql-server-management-studio.md
       - name: Enable copying from find and replace window
         href: ssms/troubleshoot/enable-copying-find-replace-window.md
+      - name: Enable tabs to move
+        href: ssms/troubleshoot/workaround-move-tabs.md
       - name: Troubleshoot
         items:
         - name: Get full memory dump 

@@ -1,7 +1,7 @@
 ---
-title: "Performance counters MSRS 2016 SharePoint Mode performance objects | Microsoft Docs"
+title: "Performance Counters MSRS 2016 SharePoint Mode, Performance Objects | Microsoft Docs"
 description: Learn about performance counters for the MSRS 2016 Web Service SharePoint Mode and MSRS 2016 Windows Service SharePoint Mode performance objects.
-ms.date: 02/12/2021
+ms.date: 02/17/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server
@@ -21,11 +21,11 @@ ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 
 ---
-# Performance Counters MSRS 2016 SharePoint Mode Performance Objects
-  This topic describes performance counters for the **MSRS 2016 Web Service SharePoint Mode** and **MSRS 2016 Windows Service SharePoint Mode** performance objects that are part of a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint mode deployment.  
+# Performance Counters MSRS 2016 SharePoint Mode, Performance Objects
+  This topic describes performance counters for the **MSRS 2016 Web Service SharePoint Mode** and **MSRS 2016 Windows Service SharePoint Mode** performance objects that are part of a SQL Server 2016 Reporting Services SharePoint mode deployment.  
   
 > [!NOTE]  
->  This performance objects monitor events on the local report server. If you are running a report server in a scale-out deployment, the counts apply to the current server and not the scale-out deployment as a whole.  
+>  These performance objects monitor events on the local report server. If you are running a report server in a scale-out deployment, the counts apply to the current server and not the scale-out deployment as a whole.  
   
  The performance objects are available in the Windows Performance Monitor (**Perfmon.exe**). For more information, see the Windows documentation. [Runtime Profiling](/dotnet/framework/debug-trace-profile/runtime-profiling) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   

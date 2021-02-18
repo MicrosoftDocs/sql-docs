@@ -64,8 +64,17 @@ On SQL Database Basic, S0, and S1 service objectives, and for databases in elast
 
 ### OBJECTSTORE
 
-### CACHESTORE
+### CACHESTORE and USERSTORE
 
+Both CACHESTORE and USERSTORE are actual caches. Conceptually there are two major controls in SQLOS caches - life time control and visibility control. Life time control provides life time management of an entry.  Visibility control manages visibility of an entry. It is important to understand that entry in a cache can exists but might not be visible. For example if cache is marked for single use only, entry won't be visible after it is given a way. In addition entry might be marked as dirty. It will continue exist, live, in the cache but won't be visible to any look up.
+
+
+Life time of entries is controlled by store's mechanism themselves. In case of Cache Store the lifetime is fully controlled by SQLOS's caching framework. In case of User Store entrees' lifetime is only partially controlled by a store. Since user implements its own storage user's mechanism also participate in lifetime control. For both stores entrees' visibility is controlled by the caching framework.
+
+
+Lifetime of an entry is managed by embedded reference count in Clock Entry Info. Once this count goes to zero, an entry will be destroyed. In case of User Store only Clock Entry Info but not the actual data will be destroyed.
+
+For more information https://docs.microsoft.com/en-us/archive/blogs/slavao/sqlos-caching
 
 
 The following table lists the Memory Clerk types.

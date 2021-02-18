@@ -33,7 +33,7 @@ The following table highlights the differences between PolyBase and linked serve
 
 PolyBase in [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] can now read data from a larger variety of data sources. The data from these external data sources can be store as external tables on your SQL Server. PolyBase also supports pushdown computation to these external data sources, excluding ODBC generic types.
 
-### Compatible Data Sources
+**Compatible Data Sources**
 
 - SQL Server
 - Oracle

@@ -321,7 +321,7 @@
     - name: Finding additional information
       href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
     - name: Frequently asked questions (FAQ)
-      href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md
+      href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.yml
     - name: Feature dependencies
       href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
   - name: API reference
@@ -2956,7 +2956,7 @@
     - name: Known issues
       href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
     - name: Frequently asked questions (FAQ)
-      href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md
+      href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.yml
   - name: Windows
     items:
     - name: Microsoft ODBC Driver for SQL Server on Windows

@@ -7130,7 +7130,7 @@
         - name: Kerberos connectivity
           href: relational-databases/polybase/polybase-troubleshoot-connectivity.md
         - name: PolyBase FAQ
-          href: relational-databases/polybase/polybase-faq.md
+          href: relational-databases/polybase/polybase-faq.yml
     - name: Reference
       items:
       - name: T-SQL reference
@@ -11419,7 +11419,7 @@
     href: relational-databases/system-catalog-views/catalog-views-transact-sql.md
     items:
     - name: Querying the SQL Server System Catalog FAQ
-      href: relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md
+      href: relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml
     - name: Schemas - sys.schemas
       href: relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md
     - name: Messages (for errors) - sys.messages

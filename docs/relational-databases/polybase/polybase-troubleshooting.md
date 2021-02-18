@@ -1,7 +1,7 @@
 ---
 title: "Monitor and troubleshoot PolyBase"
 description: To troubleshoot PolyBase, use these views and DMVs. View PolyBase query plan, monitor nodes in a PolyBase group, and set up Hadoop name node high availability.
-ms.date: 02/16/2021
+ms.date: 02/17/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -285,4 +285,5 @@ For common troubleshooting scenarios, see [PolyBase Errors and Possible Solution
 
 ## See also
 
-[Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)
+[Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)   
+[PolyBase errors and possible solutions](polybase-errors-and-possible-solutions.md)   

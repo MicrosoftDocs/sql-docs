@@ -1,7 +1,7 @@
 ---
 title: "PolyBase errors and possible solutions"
 description: PolyBase reference for errors and suggested solutions.
-ms.date: 02/09/2021
+ms.date: 02/17/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -357,4 +357,4 @@ Open the files in a different text editor (other than notepad) and look for thes
 
 [Monitor and troubleshoot PolyBase](polybase-troubleshooting.md)  
 [Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)  
-[Blog: PolyBase setup errors and possible solutions/](/archive/blogs/sqlcat/polybase-setup-errors-and-possible-solutions).
+

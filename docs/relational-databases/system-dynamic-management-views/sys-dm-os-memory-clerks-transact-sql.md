@@ -74,7 +74,7 @@ Life time of entries is controlled by store's mechanism themselves. In case of C
 
 Lifetime of an entry is managed by embedded reference count in Clock Entry Info. Once this count goes to zero, an entry will be destroyed. In case of User Store only Clock Entry Info but not the actual data will be destroyed.
 
-For more information https://docs.microsoft.com/en-us/archive/blogs/slavao/sqlos-caching
+For more information https://docs.microsoft.com/archive/blogs/slavao/sqlos-caching
 
 
 The following table lists the Memory Clerk types.

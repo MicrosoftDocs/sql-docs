@@ -20,7 +20,7 @@ ms.date: 03/14/2017
 By default, running [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] requires the same user permissions as the Transact-SQL stored procedures that are used to create traces. To run [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], users must be granted the ALTER TRACE permission. For more information, see [GRANT Server Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md).
 
 > [!IMPORTANT]
-> Query Plans and Query Text, captured by SQL Trace as well as by other means (DMVs, DMFs, Extended Events) can contain sensitive information. Therefore, the permissions ALTER TRACE, SHOWPLAN and the covering permission VIEW SERVER STATE should be granted to only those who need these to fulfill their job functions, based on the principle of least privilege.
+> Query Plans and Query Text, captured by SQL Trace as well as by other means, i.e. Dynamic Management Views and Functions (DMVs, DMFs), Extended Events, can contain sensitive information. Therefore, the permissions ALTER TRACE, SHOWPLAN and the covering permission VIEW SERVER STATE should be granted to only those who need these to fulfill their job functions, based on the principle of least privilege.
 Additionally, we recommend that you only save Showplan files or trace files that contain Showplan-related events to a location that uses the NTFS file system and restrict access to users who are authorized to view potentially sensitive information.
 
 > [!IMPORTANT]

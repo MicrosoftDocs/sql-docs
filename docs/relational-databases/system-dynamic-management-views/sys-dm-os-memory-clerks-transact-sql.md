@@ -1,8 +1,8 @@
 ---
 description: "sys.dm_os_memory_clerks (Transact-SQL)"
-title: "sys.dm_os_memory_clerks (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_os_memory_clerks (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/13/2017"
+ms.date: "02/18/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -17,7 +17,6 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_os_memory_clerks dynamic management view"
-ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -66,21 +65,15 @@ On SQL Database Basic, S0, and S1 service objectives, and for databases in elast
 
 ### CACHESTORE and USERSTORE
 
-Both CACHESTORE and USERSTORE are actual caches. Conceptually there are two major controls in SQLOS caches - life time control and visibility control. Life time control provides life time management of an entry.  Visibility control manages visibility of an entry. It is important to understand that entry in a cache can exists but might not be visible. For example if cache is marked for single use only, entry won't be visible after it is given a way. In addition entry might be marked as dirty. It will continue exist, live, in the cache but won't be visible to any look up.
+Both CACHESTORE and USERSTORE are actual caches. Conceptually there are two major controls in SQL Server Operating System (SQLOS) caches - lifetime control and visibility control. Lifetime control provides lifetime management of an entry.  Visibility control manages visibility of an entry. It is important to understand that entry in a cache can exists but might not be visible. For example, if cache entry is marked for single use only, entry won't be visible after it is given away. In addition, the cache entry might be marked as dirty. It will continue live in the cache but won't be visible to any lookup.
 
+The lifetime of entries is controlled by store's mechanism themselves. In the Cache Store, the lifetime of entries is fully controlled by SQLOS's caching framework. In the User Store, entries lifetime is only partially controlled by a store. Since user implements its own storage user's mechanism also participate in lifetime control. For both stores, entry visibility is controlled by the caching framework.
 
-Life time of entries is controlled by store's mechanism themselves. In case of Cache Store the lifetime is fully controlled by SQLOS's caching framework. In case of User Store entrees' lifetime is only partially controlled by a store. Since user implements its own storage user's mechanism also participate in lifetime control. For both stores entrees' visibility is controlled by the caching framework.
+The lifetime of a cache entry is managed by embedded reference count in Clock Entry Info. Once this count goes to zero, an entry will be destroyed. In the User Store, only Clock Entry Info will be destroyed, but not the actual data.
 
+For more information, see [SQLOS Caching](https://docs.microsoft.com/archive/blogs/slavao/sqlos-caching).
 
-Lifetime of an entry is managed by embedded reference count in Clock Entry Info. Once this count goes to zero, an entry will be destroyed. In case of User Store only Clock Entry Info but not the actual data will be destroyed.
-
-For more information https://docs.microsoft.com/archive/blogs/slavao/sqlos-caching
-
-
-The following table lists the Memory Clerk types.
-
-
-
+The following table lists the Memory Clerk types:
 
 |Type  |Description  |
 |---------|---------|
@@ -101,7 +94,7 @@ The following table lists the Memory Clerk types.
 |CACHESTORE_QDSRUNTIMESTATS     |     To be documented in the future   |
 |CACHESTORE_SEARCHPROPERTYLIST     |     To be documented in the future   |
 |CACHESTORE_SEHOBTCOLUMNATTRIBUTE     |    To be documented in the future    |
-|CACHESTORE_SQLCP     |    CACHESTORE_SQLCP cachestore is used for Adhoc queries, prepared statements, and server side cursors. Ad-hoc queries are commonly language-event T-SQL statements submitted to the server without explicit parameterization. Prepared statements also use this cachestore - they are submitted by the application using API calls like [SQLPrepare()](https://docs.microsoft.com/sql/odbc/reference/syntax/sqlprepare-function)/ [SQLExecute](https://docs.microsoft.com/sql/odbc/reference/syntax/sqlexecute-function) (ODBC) or [SqlCommand.Prepare](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlcommand.prepare)/[SqlCommand.ExecuteNonQuery](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlcommand.executenonquery) (ADO.NET) and will appear on the server as [sp_prepare](../system-stored-procedures/sp-prepare-transact-sql.md)/[sp_execute](../system-stored-procedures/sp-execute-transact-sql.md) or [sp_prepexec](../system-stored-procedures/sp-prepexec-transact-sql.md) system procedure executions. Also, server-side cursors would consume from this cachestore ([sp_cursoropen](../system-stored-procedures/sp-cursoropen-transact-sql.md), [sp_cursorfetch](../system-stored-procedures/sp-cursorfetch-transact-sql.md), [sp_cursorclose](../system-stored-procedures/sp-cursorclose-transact-sql.md)).    |
+|CACHESTORE_SQLCP     |    CACHESTORE_SQLCP cachestore is used for Adhoc queries, prepared statements, and server side cursors. Ad-hoc queries are commonly language-event T-SQL statements submitted to the server without explicit parameterization. Prepared statements also use this cachestore - they are submitted by the application using API calls like [SQLPrepare()](../../odbc/reference/syntax/sqlprepare-function.md)/ [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) (ODBC) or [SqlCommand.Prepare](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlcommand.prepare)/[SqlCommand.ExecuteNonQuery](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlcommand.executenonquery) (ADO.NET) and will appear on the server as [sp_prepare](../system-stored-procedures/sp-prepare-transact-sql.md)/[sp_execute](../system-stored-procedures/sp-execute-transact-sql.md) or [sp_prepexec](../system-stored-procedures/sp-prepexec-transact-sql.md) system procedure executions. Also, server-side cursors would consume from this cachestore ([sp_cursoropen](../system-stored-procedures/sp-cursoropen-transact-sql.md), [sp_cursorfetch](../system-stored-procedures/sp-cursorfetch-transact-sql.md), [sp_cursorclose](../system-stored-procedures/sp-cursorclose-transact-sql.md)).    |
 |CACHESTORE_STACKFRAMES     |     To be documented in the future   |
 |CACHESTORE_SYSTEMROWSET     |    To be documented in the future    |
 |CACHESTORE_TEMPTABLES     |     To be documented in the future   |

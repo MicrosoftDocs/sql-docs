@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server Big Data Clusters in an Active Dire
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 02/11/2021
+ms.date: 02/18/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -22,6 +22,8 @@ For deployment of BDC with AD integration, there is some additional information 
 By using the `kubeadm-prod` profile (or `openshift-prod` starting with CU5 release), you will automatically have the placeholders for the security-related information and endpoint-related information that is required for AD integration.
 
 Furthermore, you need to provide credentials that [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] will use to create the necessary objects in AD. These credentials are provided as environment variables.
+
+You should also verify that any firewalls or third-party applications allow the required ports for Active Directory communication. For more information, see [Deploy SQL Server Big Data Clusters in AD mode on Azure Kubernetes Services (AKS)](active-directory-deployment-aks.md#traffic-and-ports).
 
 ## Set security environment variables
 
@@ -40,7 +42,7 @@ AD integration requires the following parameters. Add these parameters to the `c
 
 - `security.activeDirectory.ouDistinguishedName`: distinguished name of an organizational unit (OU) where all AD accounts created by cluster deployment will be added. If the domain is called `contoso.local`, the OU distinguished name is: `OU=BDC,DC=contoso,DC=local`.
 
-- `security.activeDirectory.dnsIpAddresses`: contains the list of domain’s DNS servers IP addresses. 
+- `security.activeDirectory.dnsIpAddresses`: contains the list of domain's DNS servers IP addresses. 
 
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: List of FQDN of domain controller. The FQDN contains the machine/host name of the domain controller. If you have multiple domain controllers, you can provide a list here. Example: `HOSTNAME.CONTOSO.LOCAL`.
 

@@ -5,7 +5,7 @@ description: Explains concepts and planning information for how to deploy SQL Se
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 02/18/2021
+ms.date: 11/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -49,20 +49,6 @@ A few key components can be used to connect your on-premises environment to Azur
 * **Azure ExpressRoute**: ExpressRoute connections do not go over the public internet, and offer higher security, reliability, and speeds with lower latencies than typical connections over the internet. The choice of your connectivity option will affect the latency, performance, and SLA level of your solution depending on the SKUs. For specific information, see [About ExpressRoute virtual network gateways](/azure/expressroute/expressroute-about-virtual-network-gateways).
 
 Most customers use a jump-box or [Azure Bastion](/azure/bastion/bastion-overview) to access other Azure infrastructure. **Azure Private Link** enables you to securely access Azure PaaS Services, including AKS in this scenario as well as and other Azure hosted services over a private endpoint in your virtual network. Traffic between your virtual network and the service traverses over the Microsoft backbone network, eliminating exposure to the public internet. You can also create your own private link service in your virtual network and deliver it privately to your customers.
-
-### Traffic and ports
-
-![Traffic diagram between Big Data Cluster and Active Directory. Controller, Security Support Service, and Other Cluster Services speak via LDAP / Kerberos to Domain Controllers. The BDC DNS Proxy Service speaks via DNS to the DNS Servers.](media/big-data-cluster-overview/big-data-cluster-active-directory-dns-traffic-ports.png)
-
-The standard port numbers that Active Directory uses:
-| Service | Port |
-|:---|:---|
-| DNS | 53 |
-| LDAP <BR> LDAPS | 389<BR> 636 |
-| Kerberos | 88 |
-| Global Catalog port <BR>via LDAP<BR>via LDAPS |<BR> 3268 <BR> 3269 |
-
-Requests are made on these protocols to and from the Kubernetes cluster services to the Active Directory domain, and so should be allowed incoming and outgoing in any firewall or third-party application listening on the required ports for both TCP and UDP.  
 
 ### Active Directory and Azure recommendation
 

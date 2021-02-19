@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server Big Data Clusters in an Active Dire
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 02/18/2021
+ms.date: 02/19/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -23,7 +23,20 @@ By using the `kubeadm-prod` profile (or `openshift-prod` starting with CU5 relea
 
 Furthermore, you need to provide credentials that [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] will use to create the necessary objects in AD. These credentials are provided as environment variables.
 
-You should also verify that any firewalls or third-party applications allow the required ports for Active Directory communication. For more information, see [Deploy SQL Server Big Data Clusters in AD mode on Azure Kubernetes Services (AKS)](active-directory-deployment-aks.md#traffic-and-ports).
+### Traffic and ports
+
+You should also verify that any firewalls or third-party applications allow the required ports for Active Directory communication. 
+
+![Traffic diagram between Big Data Cluster and Active Directory. Controller, Security Support Service, and Other Cluster Services speak via LDAP / Kerberos to Domain Controllers. The BDC DNS Proxy Service speaks via DNS to the DNS Servers.](media/big-data-cluster-overview/big-data-cluster-active-directory-dns-traffic-ports.png)
+
+Requests are made on these protocols to and from the Kubernetes cluster services to the Active Directory domain, and so should be allowed incoming and outgoing in any firewall or third-party application listening on the required ports for both TCP and UDP. The standard port numbers that Active Directory uses:
+
+| Service | Port |
+|:---|:---|
+| DNS | 53 |
+| LDAP <BR> LDAPS | 389<BR> 636 |
+| Kerberos | 88 |
+| Global Catalog port <BR>via LDAP<BR>via LDAPS |<BR> 3268 <BR> 3269 |
 
 ## Set security environment variables
 

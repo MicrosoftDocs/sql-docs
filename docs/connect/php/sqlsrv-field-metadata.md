@@ -234,7 +234,7 @@ As you can see in the JSON representation below, the data classification metadat
 
 ## Sensitivity Rank using a predefined set of values
 
-Beginning with 5.9.0, PHP drivers added classification rank retrieval when using ODBC Driver 17.4.2 or above. The user may define rank when using [ADD SENSITIVITY CLASSIFICATION](/sql/t-sql/statements/add-sensitivity-classification-transact-sql) to classify any data column. 
+Beginning with 5.9.0, PHP drivers added classification rank retrieval when using ODBC Driver 17.4.2 or above. The user may define rank when using [ADD SENSITIVITY CLASSIFICATION](../../t-sql/statements/add-sensitivity-classification-transact-sql.md) to classify any data column. 
 
 For example, if the user assigns `NONE` and `LOW` to BirthDate and SSN respectively, the JSON representation is shown as follows:
 
@@ -243,7 +243,7 @@ For example, if the user assigns `NONE` and `LOW` to BirthDate and SSN respectiv
 {"0":{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""},"rank":10},"rank":10}
 ```
 
-As shown in [sensitivity classification](/sql/relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql), the numerical values of the ranks are:
+As shown in [sensitivity classification](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md), the numerical values of the ranks are:
 
 ```
 0 for NONE
@@ -307,4 +307,4 @@ The updated JSON representation is shown below:
 
 [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 
-[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
+[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)

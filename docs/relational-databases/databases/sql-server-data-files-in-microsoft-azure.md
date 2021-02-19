@@ -106,7 +106,7 @@ For more information, see [Manage Access to Azure Storage Resources](/azure/stor
   
 ###  <a name="bkmk_Limitations"></a> Limitations  
   
-- Due to the performance characteristics of SQL Server workloads, SQL Server data files are implemented as page blobs in Azure Blob Storage. Other types of blob storage such as block blobs or [Azure Data Lake Storage](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction) are not supported.
+- Due to the performance characteristics of SQL Server workloads, SQL Server data files are implemented as page blobs in Azure Blob Storage. Other types of blob storage such as block blobs or [Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-introduction) are not supported.
 
 - In the current release of this feature, storing **FileStream** data in Azure Storage is not supported. You can store **FileStream** data in a database that also contains data files stored in Azure Storage, but all FileStream data files must be stored on local storage.  Since the FileStream data must reside on local storage, it cannot be moved between machines using Azure Storage, therefore we recommend that you continue using the [traditional techniques](../../relational-databases/blob/move-a-filestream-enabled-database.md) to move the data associated with FileStream between different machines.  
   

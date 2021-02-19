@@ -140,7 +140,7 @@ This release includes minor fixes and enhancements. The following articles inclu
 - [Deploy big data clusters with Azure Kubernetes Service (AKS) Private Cluster](private-deploy.md)
 - [Restrict egress traffic of Big Data Clusters (BDC) clusters in Azure Kubernetes Service (AKS) private cluster](private-restrict-egress-traffic.md)
 - [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md)
-- [Configure a SQL Server Big Data Cluster](configure-cluster.md)
+- [Configure a SQL Server Big Data Cluster](./configure-bdc-overview.md)
 - [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
 - [SQL Server master instance configuration properties](reference-config-master-instance.md)
 - [Apache Spark & Apache Hadoop (HDFS) configuration properties](reference-config-spark-hadoop.md)

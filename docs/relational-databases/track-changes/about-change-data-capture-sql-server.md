@@ -140,16 +140,22 @@ CREATE TABLE T1(
 Change data capture has the following limitations: 
 
 **Linux**   
-CDC is now supported for SQL Server 2017 on Linux starting with CU18, and SQL Server 2019 on Linux.
+Change Data Capture is now supported for SQL Server 2017 on Linux starting with CU18, and SQL Server 2019 on Linux.
 
 **Columnstore indexes**   
-Change data capture cannot be enabled on tables with a clustered columnstore index. Starting with SQL Server 2016, it can be enabled on tables with a non-clustered columnstore index.
+Change Data Capture cannot be enabled on tables with a clustered columnstore index. Starting with SQL Server 2016, it can be enabled on tables with a non-clustered columnstore index.
 
 **Partition switching with variables**   
-Using variables with partition switching on databases or tables with Change Data Capture (CDC) is not supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement. See [partition switching limitations](../replication/publish/replicate-partitioned-tables-and-indexes.md#replication-support-for-partition-switching) to learn more. 
+Using variables with partition switching on databases or tables with Change Data Capture is not supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement. See [partition switching limitations](../replication/publish/replicate-partitioned-tables-and-indexes.md#replication-support-for-partition-switching) to learn more. 
 
 **Supported tiers for Change Data Capture in Azure SQL Databases (Preview)**
-In Azure SQL, the following tiers within the DTU model are not supported for Change Data Capture: Basic, Standard (S0, S1, S2). If you want to downgrade a Change Data Capture-enabled database to an unsupported tier, you must first disable Change Data Capture on the database and then downgrade. 
+In Azure SQL Databases, the following tiers within the DTU model are not supported for Change Data Capture: Basic, Standard (S0, S1, S2). If you want to downgrade a Change Data Capture-enabled database to an unsupported tier, you must first disable Change Data Capture on the database and then downgrade. 
+
+**Point-in-time-restore (PITR) on Azure SQL Databases (Preview)**
+Running point-in-time-restore (PITR) on a Azure SQL Database that has Change Data Capture enabled will not preserve the Change Data Capture artifacts (e.g. system tables). After PITR, those artifacts will not be available. 
+
+**Azure Active Directory (AAD) on Azure SQL Databases (Preview)**
+If you create an Azure SQL Database as an AAD user and enable Change Data Capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to Change Data Capture artifacts. However, another AAD user will be able to enable/disable Change Data Capture on the same database. 
 
 ## See Also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

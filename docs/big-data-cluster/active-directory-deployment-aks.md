@@ -55,14 +55,14 @@ Most customers use a jump-box or [Azure Bastion](/azure/bastion/bastion-overview
 ![Traffic diagram between Big Data Cluster and Active Directory. Controller, Security Support Service, and Other Cluster Services speak via LDAP / Kerberos to Domain Controllers. The BDC DNS Proxy Service speaks via DNS to the DNS Servers.](media/big-data-cluster-overview/big-data-cluster-active-directory-dns-traffic-ports.png)
 
 The standard port numbers that Active Directory uses:
-| Service | TCP Port |
+| Service | Port |
 |:---|:---|
 | DNS | 53 |
 | LDAP <BR> LDAPS | 389<BR> 636 |
 | Kerberos | 88 |
 | Global Catalog port <BR>via LDAP<BR>via LDAPS |<BR> 3268 <BR> 3269 |
 
-Requests are made on these protocols to and from the Kubernetes cluster services to the Active Directory domain, and so should be allowed incoming and outgoing in any firewall or third-party application listening on the required ports. 
+Requests are made on these protocols to and from the Kubernetes cluster services to the Active Directory domain, and so should be allowed incoming and outgoing in any firewall or third-party application listening on the required ports for both TCP and UDP.  
 
 ### Active Directory and Azure recommendation
 

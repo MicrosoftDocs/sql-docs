@@ -149,7 +149,7 @@ The following table lists the Memory Clerk types.
 |MEMORYCLERK_SQLEXTENSIBILITY     |    To be documented in the future <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
 |MEMORYCLERK_SQLGENERAL     |   This memory clerk could be used by multiple consumers inside SQL engine. Examples include replication memory, internal debugging/diagnostics, some SQL Server startup functionality, some SQL parser functionality, building system indexes, initialize global memory objects, Create OLEDB connection inside the server and Linked Server queries, Server side Profiler tracing, creating showplan data, some security functionality, compilation of computed columns, memory for Parallelism structures, memory for some XML functionality     |
 |MEMORYCLERK_SQLHTTP     |   To be documented in the future     |
-|MEMORYCLERK_SQLLOGPOOL     |     To be documented in the future   |
+|MEMORYCLERK_SQLLOGPOOL     |     Log Pool is a cache memory used to improve log cache utilization during multiple log reads, reduce disk I/O log reads and  share log scans. Primary consumers of log pool are AlwaysOn (Change Capture and Send), Redo Manager , Database Recovery - Analysis/Redo/Undo, Transaction Runtime Rollback, Replication/CDC , Backup/Restore.    |
 |MEMORYCLERK_SQLOPTIMIZER     |     This memory clerk is used by query optimizer memory allocations during different phases of compiling a query. Some uses include query optimization, index statistics manager, view definitions compilation, histogram generation.   |
 |MEMORYCLERK_SQLQERESERVATIONS     |     To be documented in the future   |
 |MEMORYCLERK_SQLQUERYCOMPILE     |    To be documented in the future    |
@@ -160,7 +160,7 @@ The following table lists the Memory Clerk types.
 |MEMORYCLERK_SQLSLO_OPERATIONS     |     To be documented in the future   |
 |MEMORYCLERK_SQLSOAP     |     To be documented in the future   |
 |MEMORYCLERK_SQLSOAPSESSIONSTORE     |     To be documented in the future   |
-|MEMORYCLERK_SQLSTORENG     |   To be documented in the future     |
+|MEMORYCLERK_SQLSTORENG     |   This memory clerks is used for allocation from multiple storage engine components. Examples include structures for database files, database snapshot replica file manager, deadlock monitor, DBTABLE structures, Logmanager structures, some tempdb versioning structures, some server startup functionality, execution context for child threads in parallel queries, and so on.      |
 |MEMORYCLERK_SQLTRACE     |     To be documented in the future   |
 |MEMORYCLERK_SQLUTILITIES     |    This memory clerk can be used by multiple allocators inside SQL Server. Examples include Backup and Restore, Log Shipping, Database Mirroring, DBCC commands, BCP code on the server side, some query parallelism work, Log Scan buffers    |
 |MEMORYCLERK_SQLXML     |     To be documented in the future   |
@@ -182,7 +182,7 @@ The following table lists the Memory Clerk types.
 |USERSTORE_DBMETADATA     |    To be documented in the future    |
 |USERSTORE_OBJPERM     |    To be documented in the future    |
 |USERSTORE_QDSSTMT     |    To be documented in the future    |
-|USERSTORE_SCHEMAMGR     |    To be documented in the future    |
+|USERSTORE_SCHEMAMGR     |    Schema Manager cache stores different types of metadata information about the database objects in memory (e.g tables). A common user of this store could be the tempdb database with objects like tables, temp procedures, table variables, table valued parameters, worktables, workfiles, version store.  |
 |USERSTORE_SXC     |    This user store is used for allocations to store all [RPC](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/619c43b6-9495-4a58-9e49-a4950db245b3) parameters.     |
 |USERSTORE_TOKENPERM     |    To be documented in the future    |
 

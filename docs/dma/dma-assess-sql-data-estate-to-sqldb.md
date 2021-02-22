@@ -22,6 +22,8 @@ Migrating hundreds of SQL Server instances and thousands of databases to Azure S
 
 This article provides step-by-step instructions for leveraging the [Data Migration Assistant](./dma-overview.md) to summarize readiness results and surface them on the [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) hub.
 
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
+
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
 

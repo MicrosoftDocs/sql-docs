@@ -26,12 +26,11 @@ This article focuses on DMA's Azure SQL Database SKU recommendations feature. Az
 - Elastic pools
 - Managed Instance
 
-The SKU Recommendations feature allows you to identify both the minimum recommended Azure SQL Database single database or Azure SQL Managed Instance SKU based on performance counters collected from the computer(s) hosting your databases. The feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to bulk provision single databases and managed instances for all recommended databases.
-
-> [!NOTE]
-> This functionality is currently available only via the Command Line Interface (CLI).
+The SKU Recommendations feature allows you to identify both the minimum recommended Azure SQL Database single database or Azure SQL Managed Instance SKU based on performance counters collected from the computer(s) hosting your databases. The feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to bulk provision single databases and managed instances for all recommended databases. This functionality is currently available only via the Command Line Interface (CLI).
 
 The following are instructions to help you determine the SKU recommendations and provision corresponding single database(s) or managed instance(s) in Azure using DMA.
+
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 ## Prerequisites
 

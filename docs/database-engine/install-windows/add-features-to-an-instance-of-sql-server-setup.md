@@ -146,6 +146,7 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 Configure your SQL Server installation
 
 - To reduce the attackable surface area of a system, SQL Server selectively installs and activates key services and features. For more information, see [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).
+- Any features added will still be at original RTM version. You must reapply the necessary Service Pack and Cumulative Update to bring the newly added features to the same version of the instance prior to adding the features. Failure to do so will result in unexpected behavior.
 
 ## See Also
 - [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)

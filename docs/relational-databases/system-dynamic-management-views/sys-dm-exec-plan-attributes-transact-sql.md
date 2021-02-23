@@ -2,7 +2,7 @@
 description: "sys.dm_exec_plan_attributes (Transact-SQL)"
 title: "sys.dm_exec_plan_attributes (Transact-SQL)"
 ms.custom: ""
-ms.date: "02/12/2021"
+ms.date: "02/22/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -56,16 +56,16 @@ From the above table, **attribute** can have the following values:
 |language_id|**smallint**|ID of the language of the connection that created the cache object. For more information, see [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|Date format of the connection that created the cache object. For more information, see [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Date first value. For more information, see [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
-|compat_level| | | 
+|compat_level|**tinyint**|Represents the compatibility level set in the database in whose context the query plan was compiled.| 
 |status|**int**|Internal status bits that are part of the cache lookup key.|  
 |required_cursor_options|**int**|Cursor options specified by the user such as the cursor type.|  
 |acceptable_cursor_options|**int**|Cursor options that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may implicitly convert to in order to support the execution of the statement. For example, the user may specify a dynamic cursor, but the query optimizer is permitted to convert this cursor type to a static cursor.|  
 |merge_action_type|**smallint**|The type of trigger execution plan used as the result of a MERGE statement.<br /><br /> 0 indicates a non-trigger plan, a trigger plan that does not execute as the result of a MERGE statement, or a trigger plan that executes as the result of a MERGE statement that only specifies a DELETE action.<br /><br /> 1 indicates an INSERT trigger plan that runs as the result of a MERGE statement.<br /><br /> 2 indicates an UPDATE trigger plan that runs as the result of a MERGE statement.<br /><br /> 3 indicates a DELETE trigger plan that runs as the result of a MERGE statement containing a corresponding INSERT or UPDATE action.<br /><br /> For nested triggers run by cascading actions, this value is the action of the MERGE statement that caused the cascade.|  
-|is_replication_specific| | | 
+|is_replication_specific|**int**|Represents that the session from which this plan was compiled is one that connected to the instance of SQL Server using an undocumented connection property which allows the server to identify the session as one created by replication components, so that the behavior of certain functional aspects of the server are changed according to what such replication component expects.| 
 |optional_spid|**smallint**|The connection session_id (spid) becomes part of the cache key in order to reduce the number of re-compiles. This prevents recompilations for a single session's re-use of a plan involving non-dynamically bound temp tables.|
 |optional_clr_trigger_dbid| | | 
 |optional_clr_trigger_objid| | | 
-|parent_plan_handle| | | 
+|parent_plan_handle|**varbinary(64)**|Always NULL.| 
 |is_azure_user_plan| | | **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]** only.|
 |inuse_exec_context|**int**|Number of currently executing batches that are using the query plan.|  
 |free_exec_context|**int**|Number of cached execution contexts for the query plan that are not being currently used.|  
@@ -79,7 +79,6 @@ From the above table, **attribute** can have the following values:
 |removed_cursors|**int**|Number of cursors that have been removed because of memory pressure on the cached plan.|  
 |sql_handle|**varbinary**(64)|The SQL handle for the batch.|  
 
-  
 ## Permissions  
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   

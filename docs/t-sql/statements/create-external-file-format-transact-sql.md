@@ -2,7 +2,7 @@
 description: "CREATE EXTERNAL FILE FORMAT (Transact-SQL)"
 title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL)"
 ms.custom: ""
-ms.date: 02/12/2021
+ms.date: 02/23/2021
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""

@@ -28,19 +28,26 @@ content meets their needs. H1 format is # What is <product/service>?
 
 # Azure Synapse Pathway
 
+ #### Q. What is Azure Synapse Pathway?
+
+#### Q. Where can I download it?
+
+#### Q. How much does Azure Synapse Pathway cost?
+
+#### Q. What source/target pairs does Azure Synapse Pathway currently support?? 
+#### Q. What is included as part of the code conversion?
+
+#### Q. Can it also scan my environment and provide an assessment report of all the objects that need to be converted/translated?
+
+#### Q. What telemetry does it capture about my current data warehouse instance
+
+#### Q. Where can I raise issues that I encounter while running Azure Synapse Pathway?
 
 
-<!-- 2. Introductory paragraph 
-Required. Lead with a light intro that describes what the article covers. Answer the 
-fundamental “why would I want to know this?” question. Keep it short.
--->
+#### Q. Where is this service available?
 
+### Troubleshooting and optimization
 
+#### Q. Why do I see slow performance while running the code conversion?
 
-<!-- 3. H2s
-Required. Give each H2 a heading that sets expectations for the content that follows. 
-Follow the H2 headings with a sentence about how the section contributes to the whole.
--->
-
-## Overview
-
+#### Q. Translation of errors or unexpected results?

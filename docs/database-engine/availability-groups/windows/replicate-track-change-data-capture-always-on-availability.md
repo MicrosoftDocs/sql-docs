@@ -2,7 +2,7 @@
 title: "Replication, change tracking, change data capture & availability groups"
 description: Learn about the interoperability of replication, change tracking, and change data capture when used with SQL Server Always On availability groups. 
 ms.custom: seo-lt-2019
-ms.date: "08/21/2018"
+ms.date: "02/23/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups
@@ -103,7 +103,7 @@ ms.author: chadam
     ```  
   
     > [!NOTE]  
-    >  You should create the jobs at all of the possible failover targets before failover, and mark them as disabled until the availability replica at a host becomes the new primary replica. The CDC jobs running at the old primary database should be also disabled when the local database becomes a secondary database. To disable and enable jobs, use the *\@enabled* option of [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). For more information about creating CDC jobs, see [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
+    >  You should create the jobs at the new primary replica after failover. The CDC jobs running at the old primary database should be disabled when the local database becomes a secondary database. Post this if the replica becomes primary again, you need to reenable the CDC jobs on the replica. To disable and enable jobs, use the *\@enabled* option of [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). For more information about creating CDC jobs, see [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
   
 -   **Adding CDC Roles to an Always On Primary Database Replica**  
   

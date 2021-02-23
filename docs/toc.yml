@@ -448,6 +448,8 @@ items:
         href: big-data-cluster/spark-hive-tools-vscode.md
       - name: Use extended Spark History Server
         href: big-data-cluster/spark-history-server.md
+      - name: Manage libraries
+        href: big-data-cluster/spark-install-packages.md
     - name: Troubleshoot
       items:
       - name: Troubleshoot Kubernetes
@@ -526,6 +528,8 @@ items:
           href: azdata/reference/reference-azdata-bdc-endpoint.md
         - name: bdc gateway
           href: azdata/reference/reference-azdata-bdc-gateway.md
+        - name: bdc gateway settings
+          href: azdata/reference/reference-azdata-bdc-gateway-settings.md
         - name: bdc gateway status
           href: azdata/reference/reference-azdata-bdc-gateway-status.md
         - name: bdc hdfs
@@ -536,6 +540,8 @@ items:
           href: azdata/reference/reference-azdata-bdc-hdfs-key.md
         - name: bdc hdfs mount
           href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
+        - name: bdc hdfs settings
+          href: azdata/reference/reference-azdata-bdc-hdfs-settings.md
         - name: bdc hdfs status
           href: azdata/reference/reference-azdata-bdc-hdfs-status.md
         - name: bdc settings
@@ -546,12 +552,16 @@ items:
           href: azdata/reference/reference-azdata-bdc-spark-batch.md        
         - name: bdc spark session
           href: azdata/reference/reference-azdata-bdc-spark-session.md        
+        - name: bdc spark settings
+          href: azdata/reference/reference-azdata-bdc-spark-settings.md        
         - name: bdc spark statement
           href: azdata/reference/reference-azdata-bdc-spark-statement.md        
         - name: bdc spark status
           href: azdata/reference/reference-azdata-bdc-spark-status.md        
         - name: bdc sql
           href: azdata/reference/reference-azdata-bdc-sql.md
+        - name: bdc sql settings
+          href: azdata/reference/reference-azdata-bdc-sql-settings.md
         - name: bdc status
           href: azdata/reference/reference-azdata-bdc-status.md
 - name: Business continuity
@@ -7195,6 +7205,8 @@ items:
           href: relational-databases/polybase/polybase-troubleshoot-connectivity.md
         - name: PolyBase FAQ
           href: relational-databases/polybase/polybase-faq.md
+        - name: PolyBase errors and possible solutions
+          href: relational-databases/polybase/polybase-errors-and-possible-solutions.md
     - name: Reference
       items:
       - name: T-SQL reference
@@ -8884,6 +8896,8 @@ items:
         href: ssms/configure-login-auditing-sql-server-management-studio.md
       - name: Enable copying from find and replace window
         href: ssms/troubleshoot/enable-copying-find-replace-window.md
+      - name: Enable tabs to move
+        href: ssms/troubleshoot/workaround-move-tabs.md
       - name: Troubleshoot
         items:
         - name: Get full memory dump 
@@ -12537,6 +12551,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md
       - name: sys.dm_db_missing_index_group_stats
         href: relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md
+      - name: sys.dm_db_missing_index_group_stats_query
+        href: relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md        
     - name: I/O
       href: relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md
       items:

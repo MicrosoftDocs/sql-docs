@@ -117,7 +117,7 @@ The following table lists the Memory Clerk types:
 |MEMORYCLERK_EXTERNAL_EXTRACTORS     |   This memory clerk is used for allocations by query execution engine for [batch mode](../performance/intelligent-query-processing.md#batch-mode-on-rowstore) operations   <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
 |MEMORYCLERK_FILETABLE     |      This memory clerk is used for various allocations by [FileTables](../blob/filetables-sql-server.md) functionality.   |
 |MEMORYCLERK_FSAGENT     |      This memory clerk is used for various allocations by [FILESTREAM](../blob/filestream-sql-server.md) functionality.    |
-|MEMORYCLERK_FSCHUNKER     |      This memory clerk is used for various allocations by [FILESTREAM](../blob/filestream-sql-server.md) functionality used to create filestream chunks.   |
+|MEMORYCLERK_FSCHUNKER     |      This memory clerk is used for various allocations by [FILESTREAM](../blob/filestream-sql-server.md) functionality for creating filestream chunks.   |
 |MEMORYCLERK_FULLTEXT     |     This memory clerk is used for allocations by Full-Text engine structures.   |
 |MEMORYCLERK_FULLTEXT_SHMEM     |   This memory clerk is used for allocations by Full-Text engine structures related to Shared memory connectivity with the Full Text Daemon process.      |
 |MEMORYCLERK_HADR     |     This memory clerk is used for memory allocations by AlwaysOn functionality     |
@@ -143,18 +143,18 @@ The following table lists the Memory Clerk types:
 |MEMORYCLERK_SQLCLR     |     This memory clerk is used for allocations by [SQLCLR ](../clr-integration/clr-integration-overview.md).     |
 |MEMORYCLERK_SQLCLRASSEMBLY     |     This memory clerk is used for allocations for [SQLCLR ](../clr-integration/clr-integration-overview.md) assemblies.     |    |
 |MEMORYCLERK_SQLCONNECTIONPOOL     |     This memory clerk caches information on the server that the client application may need the server to keep track of. One example is an applications that creates prepare handles via  [sp_prepexecrpc](../system-stored-procedures/sp-prepexecrpc-transact-sql.md). The application should properly unprepare (close) those handles after execution.  |
-|MEMORYCLERK_SQLEXTENSIBILITY     |      <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
+|MEMORYCLERK_SQLEXTENSIBILITY     |    This memory clerk is used for allocations by the [Extensibility Framework](../../machine-learning/concepts/extensibility-framework.md) for running an external Python or R script on SQL server Machine Learning Services.  <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
 |MEMORYCLERK_SQLGENERAL     |   This memory clerk could be used by multiple consumers inside SQL engine. Examples include replication memory, internal debugging/diagnostics, some SQL Server startup functionality, some SQL parser functionality, building system indexes, initialize global memory objects, Create OLEDB connection inside the server and Linked Server queries, Server side Profiler tracing, creating showplan data, some security functionality, compilation of computed columns, memory for Parallelism structures, memory for some XML functionality     |
 |MEMORYCLERK_SQLHTTP     |    Deprecated     |
 |MEMORYCLERK_SQLLOGPOOL     |     Log Pool is a cache memory used to improve log cache utilization during multiple log reads, reduce disk I/O log reads and  share log scans. Primary consumers of log pool are AlwaysOn (Change Capture and Send), Redo Manager , Database Recovery - Analysis/Redo/Undo, Transaction Runtime Rollback, Replication/CDC , Backup/Restore.    |
 |MEMORYCLERK_SQLOPTIMIZER     |     This memory clerk is used by query optimizer memory allocations during different phases of compiling a query. Some uses include query optimization, index statistics manager, view definitions compilation, histogram generation.   |
 |MEMORYCLERK_SQLQERESERVATIONS     |     This memory clerk is used for Memory Grant allocations, that is memory allocated to queries to perform sort and hash operations during query execution. For more information on Query Exectuion reservations (memory grants), see [this blog](https://techcommunity.microsoft.com/t5/sql-server-support/memory-grants-the-mysterious-sql-server-memory-consumer-with/ba-p/333994)     |
 |MEMORYCLERK_SQLQUERYCOMPILE     |    This memory clerk is used by Query optimizer for allocating memory during query compiling.   |
-|MEMORYCLERK_SQLQUERYEXEC     |         |
-|MEMORYCLERK_SQLQUERYPLAN     |         |
+|MEMORYCLERK_SQLQUERYEXEC     |     [Batch mode processing](../query-processing-architecture-guide.md#batch-mode-execution), [Parallel query](../query-processing-architecture-guide.md#parallel-query-processing) execution, query execution context, [spatial index tessalation](../spatial/spatial-indexes-overview.md#tessellation), sort and hash operations (sort tables, hash tables), some DVM processing, [update statistics](../statistics/update-statistics.md) execution    |
+|MEMORYCLERK_SQLQUERYPLAN     |     This memory clerk is used for allocations by [Heap](../indexes/heaps-tables-without-clustered-indexes.md) page management, [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) allocations, and [sp_cursor* stored procedure](../system-stored-procedures/cursor-stored-procedures-transact-sql.md) allocations   |
 |MEMORYCLERK_SQLSERVICEBROKER     |   This memory clerk is used by [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) memory allocations.       |
 |MEMORYCLERK_SQLSERVICEBROKERTRANSPORT     |     This memory clerk is used by [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) transport memory allocations.    |
-|MEMORYCLERK_SQLSLO_OPERATIONS     |         |
+|MEMORYCLERK_SQLSLO_OPERATIONS     |      This memory clerk is used to gather performance statistics <br /><br />**Applies to**:  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   |
 |MEMORYCLERK_SQLSOAP     |     Deprecated    |
 |MEMORYCLERK_SQLSOAPSESSIONSTORE     |    Deprecated     |
 |MEMORYCLERK_SQLSTORENG     |   This memory clerks is used for allocation from multiple storage engine components. Examples include structures for database files, database snapshot replica file manager, deadlock monitor, DBTABLE structures, Logmanager structures, some tempdb versioning structures, some server startup functionality, execution context for child threads in parallel queries, and so on.      |
@@ -162,22 +162,22 @@ The following table lists the Memory Clerk types:
 |MEMORYCLERK_SQLUTILITIES     |    This memory clerk can be used by multiple allocators inside SQL Server. Examples include Backup and Restore, Log Shipping, Database Mirroring, DBCC commands, BCP code on the server side, some query parallelism work, Log Scan buffers    |
 |MEMORYCLERK_SQLXML     |     This memory clerk is used for memory allocations when performing XML operations.    |
 |MEMORYCLERK_SQLXP     |     This memory clerk is used for memory allocations when calling SQL Server [Extended Stored procedures](../extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md).    |
-|MEMORYCLERK_SVL     |    <br /><br />**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and later     |
-|MEMORYCLERK_TEST     |       <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later  |
-|MEMORYCLERK_UNITTEST     |      <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
-|MEMORYCLERK_WRITEPAGERECORDER     |       <br /><br />**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and later  |
+|MEMORYCLERK_SVL     |    This memory clerk is used used for allocations of internal SQL OS structures |
+|MEMORYCLERK_TEST     |    Internal Use Only   |
+|MEMORYCLERK_UNITTEST     |      Internal Use Only  |
+|MEMORYCLERK_WRITEPAGERECORDER     |    Internal Use Only   |
 |MEMORYCLERK_XE     |    This memory clerk is used for [Extended Events](../extended-events/extended-events.md) memory allocations      |
 |MEMORYCLERK_XE_BUFFER     |      This memory clerk is used for [Extended Events](../extended-events/extended-events.md) memory allocations   |
-|MEMORYCLERK_XLOG_SERVER     |      <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later |
+|MEMORYCLERK_XLOG_SERVER     |   This memory clerk is used for allocations by Xlog used for log file management in SQL Azure Database   <br /><br />**Applies to**:  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |
 |MEMORYCLERK_XTP     |    This memory clerk is used for [In-Memory OLTP](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md) memory allocations.     |
-|OBJECTSTORE_LBSS     |    OBJECTSTORE_LBSS is used to store temporary LOBs - variables, parameters, intermediate results of expressions. An example that uses this store is [table-valued parameters](../../connect/ado-net/sql/table-valued-parameters.md) (TVP) . See the [KB article 4468102](https://support.microsoft.com/topic/kb4468102-fix-excessive-memory-usage-when-you-trace-rpc-events-that-involve-table-valued-parameters-in-sql-server-2016-and-2017-c68aa214-26f1-98de-6b4d-c7dcad82dbd4) and  [KB article 4051359](https://support.microsoft.com/topic/kb4051359-fix-sql-server-runs-out-of-memory-when-table-valued-parameters-are-captured-in-extended-events-sessions-in-sql-server-2016-even-if-collecting-statement-or-data-stream-isn-t-enabled-a3639efa-0618-82a8-f6b1-8cdcba29ce6d) for more information on fixes in this space.     |
+|OBJECTSTORE_LBSS     |    This object store is used to allocate temporary LOBs - variables, parameters, intermediate results of expressions. An example that uses this store is [table-valued parameters](../../connect/ado-net/sql/table-valued-parameters.md) (TVP) . See the [KB article 4468102](https://support.microsoft.com/topic/kb4468102-fix-excessive-memory-usage-when-you-trace-rpc-events-that-involve-table-valued-parameters-in-sql-server-2016-and-2017-c68aa214-26f1-98de-6b4d-c7dcad82dbd4) and  [KB article 4051359](https://support.microsoft.com/topic/kb4051359-fix-sql-server-runs-out-of-memory-when-table-valued-parameters-are-captured-in-extended-events-sessions-in-sql-server-2016-even-if-collecting-statement-or-data-stream-isn-t-enabled-a3639efa-0618-82a8-f6b1-8cdcba29ce6d) for more information on fixes in this space.     |
 |OBJECTSTORE_LOCK_MANAGER     |      This memory clerk keeps track of allocations made by the [Lock Manager](../sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine) in SQL Server.   |
-|OBJECTSTORE_SECAUDIT_EVENT_BUFFER     |   This object store memory clerk is used for [SQL Server Audit](../security/auditing/sql-server-audit-database-engine.md) memory allocations.        |
-|OBJECTSTORE_SERVICE_BROKER     |         |
-|OBJECTSTORE_SNI_PACKET     |         |
-|OBJECTSTORE_XACT_CACHE     |         |
-|USERSTORE_DBMETADATA     |         |
-|USERSTORE_OBJPERM     |         |
+|OBJECTSTORE_SECAUDIT_EVENT_BUFFER     |   This object store is used for [SQL Server Audit](../security/auditing/sql-server-audit-database-engine.md) memory allocations.        |
+|OBJECTSTORE_SERVICE_BROKER     |     This object store is used by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)    |
+|OBJECTSTORE_SNI_PACKET     |     This object store is used by Server Network Interface (SNI) componets which manage connectivity    |
+|OBJECTSTORE_XACT_CACHE     |    This object store is used to cache transactions information     |
+|USERSTORE_DBMETADATA     |      This object store is used for metadata structures     |
+|USERSTORE_OBJPERM     |     This store is used for structures keeping track of object security/permission .    |
 |USERSTORE_QDSSTMT     |  This cachestore is used to cache [Query Store](../performance/monitoring-performance-by-using-the-query-store.md)  statements       |
 |USERSTORE_SCHEMAMGR     |    Schema Manager cache stores different types of metadata information about the database objects in memory (e.g tables). A common user of this store could be the tempdb database with objects like tables, temp procedures, table variables, table valued parameters, worktables, workfiles, version store.  |
 |USERSTORE_SXC     |    This user store is used for allocations to store all [RPC](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/619c43b6-9495-4a58-9e49-a4950db245b3) parameters.     |

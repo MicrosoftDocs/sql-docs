@@ -2,7 +2,7 @@
 description: "sys.dm_exec_plan_attributes (Transact-SQL)"
 title: "sys.dm_exec_plan_attributes (Transact-SQL)"
 ms.custom: ""
-ms.date: "02/22/2021"
+ms.date: "02/23/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -56,7 +56,7 @@ From the above table, **attribute** can have the following values:
 |language_id|**smallint**|ID of the language of the connection that created the cache object. For more information, see [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|Date format of the connection that created the cache object. For more information, see [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Date first value. For more information, see [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
-|compat_level|**tinyint**|Represents the compatibility level set in the database in whose context the query plan was compiled.| 
+|compat_level|**tinyint**|Represents the compatibility level set in the database in whose context the query plan was compiled. The compatibility level returned is the compatibility level of the current database context for adhoc statements, and is unaffected by the query hint [QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n](../../t-sql/queries/hints-transact-sql-query.md). For statements contained in a stored procedure or function it corresponds to the compatibility level of the database in which the stored procedure or function is created.| 
 |status|**int**|Internal status bits that are part of the cache lookup key.|  
 |required_cursor_options|**int**|Cursor options specified by the user such as the cursor type.|  
 |acceptable_cursor_options|**int**|Cursor options that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may implicitly convert to in order to support the execution of the statement. For example, the user may specify a dynamic cursor, but the query optimizer is permitted to convert this cursor type to a static cursor.|  
@@ -81,8 +81,9 @@ From the above table, **attribute** can have the following values:
 
 ## Permissions  
 
-On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.
+
+On Azure SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
 
 ## Remarks  
   

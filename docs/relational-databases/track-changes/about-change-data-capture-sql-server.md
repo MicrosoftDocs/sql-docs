@@ -16,7 +16,7 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 ---
-# About Change Data Capture (SQL Server)
+# About Change Data Capture 
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 

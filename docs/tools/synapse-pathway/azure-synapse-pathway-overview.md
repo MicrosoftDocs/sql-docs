@@ -47,13 +47,13 @@ Follow the H2 headings with a sentence about how the section contributes to the 
 As customers consider **modernizing their data warehouse systems**, one of the critical blockers they face is translating their SQL code written and optimized for their current system to be optimized for the new system they want to migrate to.
 
 Organizations worldwide want to modernize their analytics platform to enjoy both TCO and innovation benefits. However, customers have invested thousands of working hours, millions of dollars, and written tens of thousands of lines of code for their data warehouse. 
-To translate this critical SQL code, customers have to **either manually rewrite existing SQL code or invest large amounts of their budget for an outside practice to rewrite or convert their code**. That’s why we are investing in tolling to help accelerate the migration process without upfront cost.
+To translate this critical SQL code, customers have to **either manually rewrite existing SQL code or invest large amounts of their budget for an outside practice to rewrite or convert their code**. That’s why we are investing in tooling to help accelerate the migration process without upfront cost.
 
-**Azure Synapse Pathway (ASP)** helps you upgrade to a modern cloud data warehouse platform by automating the code translation of your existing data warehouse to fast track your migration to Azure Synapse Analytics.
+**Azure Synapse Pathway** helps you upgrade to a modern data warehouse platform by automating the code translation of your existing data warehouse to fast track your migration to Azure Synapse Analytics.
 
  ![Azure Synapse pathway overview.](./media/pathway-overview/synapse-pathway-overview.png) 
 
-ASP translates Data Definition Language (DDL) and Data Manipulation Language (DML) statements into T-SQL compliant language that is compatible with Azure Synapse SQL.
+Synapse Pathway translates Data Definition Language (DDL) and Data Manipulation Language (DML) statements into T-SQL compliant language that is compatible with Azure Synapse SQL.
 
 ## Behind the scenes
 This is the high level architecture of Azure Synapse Pathway.
@@ -62,15 +62,19 @@ This is the high level architecture of Azure Synapse Pathway.
 - Azure Synapse Pathway code conversion capability is based on 
 
 ## Install ASP
+
 To install ASP, download the latest version of the tool from the [Microsoft Download Center](https://aka.ms/asp-download), and then run the **AzureSynapsePathway.msi** file.
 
 ## Pricing
 There is no cost to download and use Azure Synapse Pathway for all your code conversion needs.
 
+See Azure policy for data ingress pricing
+
 ## Supported sources
 - **IBM Netezza** : Azure Synapse Pathway supports code conversion of database, schemas and tables. DDL statements like create & drop are supported. Function translation is also supported.
 
 - **Microsoft SQL Server**
+Azure Synapse Pathway supports code conversion of database, schemas and tables. 
 - **Teradata Vantage**
 - **Snowflake**
 

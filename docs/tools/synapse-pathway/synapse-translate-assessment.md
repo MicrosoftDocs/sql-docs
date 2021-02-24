@@ -69,7 +69,7 @@ This tutorial assumes you have already installed the Azure Synapse Translate MSI
 1. In the Input directory folder, click on browse and point the tool to the folder location of the **DDL** and **DML** scripts that need to be translated..
 1. When translating the Netezza code to Azure Synapse Analytics, choose IBM Netezza in the Translation Type drop down
 
-![Azure Synapse assessment input.](./media/perform-assessment/assessment-input.png)
+  ![Azure Synapse assessment input.](./media/perform-assessment/assessment-input.png)
 
 6. To select the output directory, click on browse to specify the location where the output will be generated.
  ![Azure Synapse output directory.](./media/perform-assessment/output-directory.png)

@@ -35,7 +35,7 @@ The table below shows the open-source projects in use as of [!INCLUDE [sssql19-m
 | [Livy](https://livy.apache.org/) |0.6.0|0.7.0|
 | [opendistro-elasticsearch-security](https://www.elastic.co/what-is/elastic-stack-security) | 1.0.0.1 | 1.10.1.0 |
 | [Openresty (Nginx)](https://openresty.org/) | 1.15.8 | 1.17.8.2 |
-| [Spark](configure-spark-hdfs.md) |2.4.6+|3.0.1|
+| [Spark](configure-spark-hdfs.md) |2.4.6+|2.4.10|
 | [Telegraf](https://docs.influxdata.com/telegraf/) | 1.10.3 | 1.16.1 |
 | [ZooKeeper](https://cwiki.apache.org/confluence/display/zookeeper) |3.5.8|3.6.2
 

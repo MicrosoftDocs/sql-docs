@@ -42,19 +42,19 @@ ms.author: "sstein"
 ## Planned Relocation Procedure  
  To move a data or log file as part of a planned relocation, follow these steps:  
   
-1.  Run the following statement.  
+1.  For each file to be moved, run the following statement.  
+  
+    ```  
+    ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name, FILENAME = 'new_path\os_file_name' );  
+    ```  
+  
+2.  Run the following statement.  
   
     ```  
     ALTER DATABASE database_name SET OFFLINE;  
     ```  
   
-2.  Move the file or files to the new location.  
-  
-3.  For each file moved, run the following statement.  
-  
-    ```  
-    ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name, FILENAME = 'new_path\os_file_name' );  
-    ```  
+3.  Move the file or files to the new location.  
   
 4.  Run the following statement.  
   

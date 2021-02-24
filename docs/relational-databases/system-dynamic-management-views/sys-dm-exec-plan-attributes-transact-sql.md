@@ -2,7 +2,7 @@
 description: "sys.dm_exec_plan_attributes (Transact-SQL)"
 title: "sys.dm_exec_plan_attributes (Transact-SQL)"
 ms.custom: ""
-ms.date: "02/23/2021"
+ms.date: "02/24/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -66,7 +66,7 @@ From the above table, **attribute** can have the following values:
 |optional_clr_trigger_dbid|**int**|Only populated in the case of a CLR DML trigger. The ID of the database containing the entity. <BR><BR>For any other object type, returns zero. | 
 |optional_clr_trigger_objid|**int** |Only populated in the case of a CLR DML trigger. The object ID stored in [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<BR><BR>For any other object type, returns zero.| 
 |parent_plan_handle|**varbinary(64)**|Always NULL.| 
-|is_azure_user_plan| | | **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]** only.|
+|is_azure_user_plan|**tinyint** | Set to 1 for queries executed in an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] from a session initiated by a user. <BR><BR>Set to 0 for queries that have been executed from a session not initiated by an end user, but by applications running from within Azure infrastructure that issue queries for other purposes of collecting telemetry or executing administrative tasks. Customers are not charged for resources consumed by queries where is_azure_user_plan = 0.<BR><BR>**[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]** only.|
 |inuse_exec_context|**int**|Number of currently executing batches that are using the query plan.|  
 |free_exec_context|**int**|Number of cached execution contexts for the query plan that are not being currently used.|  
 |hits_exec_context|**int**|Number of times the execution context was obtained from the plan cache and reused, saving the overhead of recompiling the SQL statement. The value is an aggregate for all batch executions so far.|  

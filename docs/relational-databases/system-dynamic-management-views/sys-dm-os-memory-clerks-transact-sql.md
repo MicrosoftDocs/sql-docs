@@ -51,7 +51,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
   
 ## Remarks
 
@@ -61,53 +61,53 @@ On SQL Database Basic, S0, and S1 service objectives, and for databases in elast
 
 ### CACHESTORE and USERSTORE
 
-CACHESTORE and USERSTORE are memory clerks but function as actual caches. Typically, caches keep allocations until a cache removal policy releases those allocations. To avoid re-creating a cached allocation, it is retained in cache as long as possible and is ordinarily removed from the cache when it is too old to be useful, or when the memory space is needed for new information (for more information see [clock hand sweep](sys-dm-os-memory-cache-clock-hands-transact-sql.md#remarks)). This is one of the two major controls for caches - lifetime control.
+CACHESTORE and USERSTORE are memory clerks but function as actual caches. Typically, caches keep allocations until a cache removal policy releases those allocations. To avoid re-creating a cached allocation, it is retained in cache as long as possible and is ordinarily removed from the cache when it is too old to be useful, or when the memory space is needed for new information (for more information see [clock hand sweep](sys-dm-os-memory-cache-clock-hands-transact-sql.md#remarks)). This is one of the two major controls for caches - lifetime control and visibility control.
 
-Cachestore and Userstore differ in the way they control lifetime of allocations. In the case of a Cache Store, the lifetime of entries is fully controlled by SQLOS's caching framework. In the case of a User Store, entries lifetime is only partially controlled by a store. The implementation of each userstore may be specific to the nature of memory allocations and therefore user stores participate in lifetime control of its entries. 
+Cache store and user store differ in the way they control lifetime of allocations. In the case of a cache store, the lifetime of entries is fully controlled by SQLOS's caching framework. In the case of user store, entries lifetime is only partially controlled by a store. The implementation of each user store may be specific to the nature of memory allocations and therefore user stores participate in lifetime control of its entries. 
 
-The second one is visibility control which manages visibility of an entry. An entry in a cache can exists but might not be visible. For example, if a cache entry is marked for single use only, the entry will not be visible after it is used. In addition, the cache entry might be marked as dirty; it will continue to live in the cache but won't be visible to any lookups. For both stores, entry visibility is controlled by the caching framework.
+Visibility control manages visibility of an entry. An entry in a cache can exist but might not be visible. For example, if a cache entry is marked for single use only, the entry will not be visible after it is used. In addition, the cache entry might be marked as dirty; it will continue to live in the cache but won't be visible to any lookups. For both stores, entry visibility is controlled by the caching framework.
 
 For more information, see [SQLOS Caching](https://docs.microsoft.com/archive/blogs/slavao/sqlos-caching).
 
 ### OBJECTSTORE
 
-Object store is a simple pool. It is used to cache homogeneous type of data. All entries in the pools are considered equal.  Object stores implement a maximum cap to control size relative to other caches.
+Object store is a simple pool. It is used to cache homogeneous data. All entries in the pools are considered equal.  Object stores implement a maximum cap to control size relative to other caches.
 
 For more information, see [SQLOS Caching](https://docs.microsoft.com/archive/blogs/slavao/sqlos-caching).
 
 ## Types
 
-The following table lists the Memory Clerk types:
+The following table lists the memory clerk types:
 
 |Type  |Description  |
 |---------|---------|
-|CACHESTORE_BROKERDSH     |     This cachestore is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) Dialog Security Header Cache    |
-|CACHESTORE_BROKERKEK     |   This cachestore is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  Key Exchange Key Cache    |
-|CACHESTORE_BROKERREADONLY     |     This cachestore is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) Read Only Cache    |
-|CACHESTORE_BROKERRSB     |  This cachestore is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) [Remote Service Binding](../../t-sql/statements/create-remote-service-binding-transact-sql.md) Cache.    |
-|CACHESTORE_BROKERTBLACS     |     This cachestore is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) for security access structures.    |
-|CACHESTORE_BROKERTO     |  This cachestore is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) [Transmission Object](../performance-monitor/sql-server-broker-to-statistics-object.md) Cache   |
-|CACHESTORE_BROKERUSERCERTLOOKUP     |    This cachestore is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  user certificates lookup cache  |
-|CACHESTORE_COLUMNSTOREOBJECTPOOL     |     This cachestore is used for allocations by [Columnstore Indexes](../indexes/columnstore-indexes-overview.md) for [segments](../system-catalog-views/sys-column-store-segments-transact-sql.md) and [dictionaries](../system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   |
-|CACHESTORE_CONVPRI     |  This cachestore is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) to keep track of   [Conversations priorities](../system-catalog-views/sys-conversation-priorities-transact-sql.md)     |
-|CACHESTORE_EVENTS     |     This cachestore is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) [Event Notifications](../service-broker/event-notifications.md) |
+|CACHESTORE_BROKERDSH     |     This cache store is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) Dialog Security Header Cache    |
+|CACHESTORE_BROKERKEK     |   This cache store is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  Key Exchange Key Cache    |
+|CACHESTORE_BROKERREADONLY     |     This cache store is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) Read Only Cache    |
+|CACHESTORE_BROKERRSB     |  This cache store is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) [Remote Service Binding](../../t-sql/statements/create-remote-service-binding-transact-sql.md) Cache.    |
+|CACHESTORE_BROKERTBLACS     |     This cache store is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) for security access structures.    |
+|CACHESTORE_BROKERTO     |  This cache store is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) [Transmission Object](../performance-monitor/sql-server-broker-to-statistics-object.md) Cache   |
+|CACHESTORE_BROKERUSERCERTLOOKUP     |    This cache store is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  user certificates lookup cache  |
+|CACHESTORE_COLUMNSTOREOBJECTPOOL     |     This cache store is used for allocations by [Columnstore Indexes](../indexes/columnstore-indexes-overview.md) for [segments](../system-catalog-views/sys-column-store-segments-transact-sql.md) and [dictionaries](../system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   |
+|CACHESTORE_CONVPRI     |  This cache store is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) to keep track of   [Conversations priorities](../system-catalog-views/sys-conversation-priorities-transact-sql.md)     |
+|CACHESTORE_EVENTS     |     This cache store is used to store allocations by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) [Event Notifications](../service-broker/event-notifications.md) |
 |CACHESTORE_FULLTEXTSTOPLIST     |    This memory clerk is used for allocations by Full-Text engine for [stoplist](../search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) functionality.       |
-|CACHESTORE_NOTIF     |    This cachestore is used for allocations by [Query Notification](../../connect/ado-net/sql/query-notifications-sql-server.md) functionality    |
-|CACHESTORE_OBJCP     |    This cachestore is used for caching objects with compiled plans (CP): stored procedures, functions, triggers. To illustrate, after a query plan for a stored procedure is created, its plan is stored in this cache.  |
-|CACHESTORE_PHDR     |    This cachestore is used for temporary memory caching during parsing for views, constraints and defaults algebrizer trees during compilation of a query. Once query is parsed, the memory should be released. Some examples include: many statements in one batch - a user can batch thousands of statement (insert or updates) into one batch, a T-SQL batch that contains a very large dynamically-generated query, very large number of values in IN clause.      |
-|CACHESTORE_QDSRUNTIMESTATS     |   This cachestore is used to cache [Query Store](../performance/monitoring-performance-by-using-the-query-store.md)  runtime statistics |
-|CACHESTORE_SEARCHPROPERTYLIST     |     This cachestore is used for allocations by Full-Text engine for [Property List](../search/search-document-properties-with-search-property-lists.md) Cache  |
-|CACHESTORE_SEHOBTCOLUMNATTRIBUTE     |  This cachestore is used by storage engine for caching Heap or B-Tree (HoBT) column metadata structures.      |
-|CACHESTORE_SQLCP     |    This cachestore is used for caching Adhoc queries, prepared statements, and server side cursors in plan cache. Ad-hoc queries are commonly language-event T-SQL statements submitted to the server without explicit parameterization. Prepared statements also use this cachestore - they are submitted by the application using API calls like [SQLPrepare()](../../odbc/reference/syntax/sqlprepare-function.md)/ [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) (ODBC) or [SqlCommand.Prepare](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlcommand.prepare)/[SqlCommand.ExecuteNonQuery](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlcommand.executenonquery) (ADO.NET) and will appear on the server as [sp_prepare](../system-stored-procedures/sp-prepare-transact-sql.md)/[sp_execute](../system-stored-procedures/sp-execute-transact-sql.md) or [sp_prepexec](../system-stored-procedures/sp-prepexec-transact-sql.md) system procedure executions. Also, server-side cursors would consume from this cachestore ([sp_cursoropen](../system-stored-procedures/sp-cursoropen-transact-sql.md), [sp_cursorfetch](../system-stored-procedures/sp-cursorfetch-transact-sql.md), [sp_cursorclose](../system-stored-procedures/sp-cursorclose-transact-sql.md)).    |
-|CACHESTORE_STACKFRAMES     |    This cachestore is used used for allocations of internal SQL OS structures related to stack frames.     |
-|CACHESTORE_SYSTEMROWSET     |   This cachestore is used used for allocations of internal structures related to transaction logging and recovery.      |
-|CACHESTORE_TEMPTABLES     |     This cachestore is used for allocations related to [temporary tables and table variables caching](../databases/tempdb-database.md#performance-improvements-in-tempdb-for-sql-server) - part of plan cache.    |
-|CACHESTORE_VIEWDEFINITIONS     |     This cachestore is used for caching view definitions as part of query optimization.    |
-|CACHESTORE_XML_SELECTIVE_DG     |     This cachestore is used to cache XML structures for XML processing.    |
-|CACHESTORE_XMLDBATTRIBUTE     |     This cachestore is used to cache XML attribute structures for XML activity like xquery.    |
-|CACHESTORE_XMLDBELEMENT     |   This cachestore is used to cache XML element structures for XML activity like xquery.      |
-|CACHESTORE_XMLDBTYPE     |    This cachestore is used to cache XML structures for XML activity like xquery.     |
-|CACHESTORE_XPROC     |   This cachestore is used used for caching structures for [Extended Stored procedures (Xprocs)](../extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md) in plan cache.     |
+|CACHESTORE_NOTIF     |    This cache store is used for allocations by [Query Notification](../../connect/ado-net/sql/query-notifications-sql-server.md) functionality    |
+|CACHESTORE_OBJCP     |    This cache store is used for caching objects with compiled plans (CP): stored procedures, functions, triggers. To illustrate, after a query plan for a stored procedure is created, its plan is stored in this cache.  |
+|CACHESTORE_PHDR     |    This cache store is used for temporary memory caching during parsing for views, constraints and defaults algebrizer trees during compilation of a query. Once query is parsed, the memory should be released. Some examples include: many statements in one batch - a user can batch thousands of statement (insert or updates) into one batch, a T-SQL batch that contains a very large dynamically-generated query, very large number of values in IN clause.      |
+|CACHESTORE_QDSRUNTIMESTATS     |   This cache store is used to cache [Query Store](../performance/monitoring-performance-by-using-the-query-store.md)  runtime statistics |
+|CACHESTORE_SEARCHPROPERTYLIST     |     This cache store is used for allocations by Full-Text engine for [Property List](../search/search-document-properties-with-search-property-lists.md) Cache  |
+|CACHESTORE_SEHOBTCOLUMNATTRIBUTE     |  This cache store is used by storage engine for caching Heap or B-Tree (HoBT) column metadata structures.      |
+|CACHESTORE_SQLCP     |    This cache store is used for caching Adhoc queries, prepared statements, and server side cursors in plan cache. Ad-hoc queries are commonly language-event T-SQL statements submitted to the server without explicit parameterization. Prepared statements also use this cache store - they are submitted by the application using API calls like [SQLPrepare()](../../odbc/reference/syntax/sqlprepare-function.md)/ [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) (ODBC) or [SqlCommand.Prepare](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlcommand.prepare)/[SqlCommand.ExecuteNonQuery](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlcommand.executenonquery) (ADO.NET) and will appear on the server as [sp_prepare](../system-stored-procedures/sp-prepare-transact-sql.md)/[sp_execute](../system-stored-procedures/sp-execute-transact-sql.md) or [sp_prepexec](../system-stored-procedures/sp-prepexec-transact-sql.md) system procedure executions. Also, server-side cursors would consume from this cache store ([sp_cursoropen](../system-stored-procedures/sp-cursoropen-transact-sql.md), [sp_cursorfetch](../system-stored-procedures/sp-cursorfetch-transact-sql.md), [sp_cursorclose](../system-stored-procedures/sp-cursorclose-transact-sql.md)).    |
+|CACHESTORE_STACKFRAMES     |    This cache store is used used for allocations of internal SQL OS structures related to stack frames.     |
+|CACHESTORE_SYSTEMROWSET     |   This cache store is used used for allocations of internal structures related to transaction logging and recovery.      |
+|CACHESTORE_TEMPTABLES     |     This cache store is used for allocations related to [temporary tables and table variables caching](../databases/tempdb-database.md#performance-improvements-in-tempdb-for-sql-server) - part of plan cache.    |
+|CACHESTORE_VIEWDEFINITIONS     |     This cache store is used for caching view definitions as part of query optimization.    |
+|CACHESTORE_XML_SELECTIVE_DG     |     This cache store is used to cache XML structures for XML processing.    |
+|CACHESTORE_XMLDBATTRIBUTE     |     This cache store is used to cache XML attribute structures for XML activity like xquery.    |
+|CACHESTORE_XMLDBELEMENT     |   This cache store is used to cache XML element structures for XML activity like xquery.      |
+|CACHESTORE_XMLDBTYPE     |    This cache store is used to cache XML structures for XML activity like xquery.     |
+|CACHESTORE_XPROC     |   This cache store is used used for caching structures for [Extended Stored procedures (Xprocs)](../extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md) in plan cache.     |
 |MEMORYCLERK_BACKUP     |    This memory clerk is used for various allocations by [Backup](../../t-sql/statements/backup-transact-sql.md) functionality    |
 |MEMORYCLERK_BHF     |      This memory clerk is used for allocations for binary large objects (BLOB) management during query execution (Blob Handle support)  |
 |MEMORYCLERK_BITMAP     |     This memory clerk is used for allocations by SQL OS functionality for bitmap filtering    |
@@ -139,12 +139,13 @@ The following table lists the Memory Clerk types:
 |MEMORYCLERK_SOSNODE     |     This memory clerk is used by SQLOS (SOS) scheduling, memory and I/O management for allocating memory structures.    |
 |MEMORYCLERK_SOSOS     |     This memory clerk is used by SQLOS (SOS) scheduling, memory and I/O management for allocating memory structures.    |
 |MEMORYCLERK_SPATIAL     |    This memory clerk is used by [Spatial Data](../spatial/spatial-data-sql-server.md) components for memory allocations.     |
-|MEMORYCLERK_SQLBUFFERPOOL     |    This memory clerk keeps track of the commonly the largest memory consumer inside SQL Server - data and index pages. Buffer Pool or data cache keeps data and index pages loaded in memory to provide fast access to data. See [Buffer Management](../memory-management-architecture-guide.md#buffer-management) for more information.     |
+|MEMORYCLERK_SQLBUFFERPOOL     |    This memory clerk keeps track of the commonly the largest memory consumer inside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+ - data and index pages. Buffer Pool or data cache keeps data and index pages loaded in memory to provide fast access to data. See [Buffer Management](../memory-management-architecture-guide.md#buffer-management) for more information.     |
 |MEMORYCLERK_SQLCLR     |     This memory clerk is used for allocations by [SQLCLR ](../clr-integration/clr-integration-overview.md).     |
 |MEMORYCLERK_SQLCLRASSEMBLY     |     This memory clerk is used for allocations for [SQLCLR ](../clr-integration/clr-integration-overview.md) assemblies.     |    |
 |MEMORYCLERK_SQLCONNECTIONPOOL     |     This memory clerk caches information on the server that the client application may need the server to keep track of. One example is an applications that creates prepare handles via  [sp_prepexecrpc](../system-stored-procedures/sp-prepexecrpc-transact-sql.md). The application should properly unprepare (close) those handles after execution.  |
-|MEMORYCLERK_SQLEXTENSIBILITY     |    This memory clerk is used for allocations by the [Extensibility Framework](../../machine-learning/concepts/extensibility-framework.md) for running an external Python or R script on SQL server Machine Learning Services.  <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
-|MEMORYCLERK_SQLGENERAL     |   This memory clerk could be used by multiple consumers inside SQL engine. Examples include replication memory, internal debugging/diagnostics, some SQL Server startup functionality, some SQL parser functionality, building system indexes, initialize global memory objects, Create OLEDB connection inside the server and Linked Server queries, Server side Profiler tracing, creating showplan data, some security functionality, compilation of computed columns, memory for Parallelism structures, memory for some XML functionality     |
+|MEMORYCLERK_SQLEXTENSIBILITY     |    This memory clerk is used for allocations by the [Extensibility Framework](../../machine-learning/concepts/extensibility-framework.md) for running an external Python or R script on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Machine Learning Services.  <br /><br />**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later   |
+|MEMORYCLERK_SQLGENERAL     |   This memory clerk could be used by multiple consumers inside SQL engine. Examples include replication memory, internal debugging/diagnostics, some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup functionality, some SQL parser functionality, building system indexes, initialize global memory objects, Create OLEDB connection inside the server and Linked Server queries, Server side Profiler tracing, creating showplan data, some security functionality, compilation of computed columns, memory for Parallelism structures, memory for some XML functionality     |
 |MEMORYCLERK_SQLHTTP     |    Deprecated     |
 |MEMORYCLERK_SQLLOGPOOL     |     Log Pool is a cache memory used to improve log cache utilization during multiple log reads, reduce disk I/O log reads and  share log scans. Primary consumers of log pool are AlwaysOn (Change Capture and Send), Redo Manager , Database Recovery - Analysis/Redo/Undo, Transaction Runtime Rollback, Replication/CDC , Backup/Restore.    |
 |MEMORYCLERK_SQLOPTIMIZER     |     This memory clerk is used by query optimizer memory allocations during different phases of compiling a query. Some uses include query optimization, index statistics manager, view definitions compilation, histogram generation.   |
@@ -161,27 +162,28 @@ The following table lists the Memory Clerk types:
 |MEMORYCLERK_SQLTRACE     |     This memory clerks is used for server-side [SQL Trace](../sql-trace/sql-trace.md) memory allocations.     |
 |MEMORYCLERK_SQLUTILITIES     |    This memory clerk can be used by multiple allocators inside SQL Server. Examples include Backup and Restore, Log Shipping, Database Mirroring, DBCC commands, BCP code on the server side, some query parallelism work, Log Scan buffers    |
 |MEMORYCLERK_SQLXML     |     This memory clerk is used for memory allocations when performing XML operations.    |
-|MEMORYCLERK_SQLXP     |     This memory clerk is used for memory allocations when calling SQL Server [Extended Stored procedures](../extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md).    |
+|MEMORYCLERK_SQLXP     |     This memory clerk is used for memory allocations when calling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+ [Extended Stored procedures](../extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md).    |
 |MEMORYCLERK_SVL     |    This memory clerk is used used for allocations of internal SQL OS structures |
-|MEMORYCLERK_TEST     |    Internal Use Only   |
-|MEMORYCLERK_UNITTEST     |      Internal Use Only  |
-|MEMORYCLERK_WRITEPAGERECORDER     |    Internal Use Only   |
+|MEMORYCLERK_TEST     |    Internal use only   |
+|MEMORYCLERK_UNITTEST     |      Internal use only  |
+|MEMORYCLERK_WRITEPAGERECORDER     |    Internal use only   |
 |MEMORYCLERK_XE     |    This memory clerk is used for [Extended Events](../extended-events/extended-events.md) memory allocations      |
 |MEMORYCLERK_XE_BUFFER     |      This memory clerk is used for [Extended Events](../extended-events/extended-events.md) memory allocations   |
 |MEMORYCLERK_XLOG_SERVER     |   This memory clerk is used for allocations by Xlog used for log file management in SQL Azure Database   <br /><br />**Applies to**:  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |
 |MEMORYCLERK_XTP     |    This memory clerk is used for [In-Memory OLTP](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md) memory allocations.     |
 |OBJECTSTORE_LBSS     |    This object store is used to allocate temporary LOBs - variables, parameters, intermediate results of expressions. An example that uses this store is [table-valued parameters](../../connect/ado-net/sql/table-valued-parameters.md) (TVP) . See the [KB article 4468102](https://support.microsoft.com/topic/kb4468102-fix-excessive-memory-usage-when-you-trace-rpc-events-that-involve-table-valued-parameters-in-sql-server-2016-and-2017-c68aa214-26f1-98de-6b4d-c7dcad82dbd4) and  [KB article 4051359](https://support.microsoft.com/topic/kb4051359-fix-sql-server-runs-out-of-memory-when-table-valued-parameters-are-captured-in-extended-events-sessions-in-sql-server-2016-even-if-collecting-statement-or-data-stream-isn-t-enabled-a3639efa-0618-82a8-f6b1-8cdcba29ce6d) for more information on fixes in this space.     |
-|OBJECTSTORE_LOCK_MANAGER     |      This memory clerk keeps track of allocations made by the [Lock Manager](../sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine) in SQL Server.   |
+|OBJECTSTORE_LOCK_MANAGER     |      This memory clerk keeps track of allocations made by the [Lock Manager](../sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   |
 |OBJECTSTORE_SECAUDIT_EVENT_BUFFER     |   This object store is used for [SQL Server Audit](../security/auditing/sql-server-audit-database-engine.md) memory allocations.        |
 |OBJECTSTORE_SERVICE_BROKER     |     This object store is used by [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)    |
 |OBJECTSTORE_SNI_PACKET     |     This object store is used by Server Network Interface (SNI) componets which manage connectivity    |
 |OBJECTSTORE_XACT_CACHE     |    This object store is used to cache transactions information     |
 |USERSTORE_DBMETADATA     |      This object store is used for metadata structures     |
-|USERSTORE_OBJPERM     |     This store is used for structures keeping track of object security/permission .    |
-|USERSTORE_QDSSTMT     |  This cachestore is used to cache [Query Store](../performance/monitoring-performance-by-using-the-query-store.md)  statements       |
-|USERSTORE_SCHEMAMGR     |    Schema Manager cache stores different types of metadata information about the database objects in memory (e.g tables). A common user of this store could be the tempdb database with objects like tables, temp procedures, table variables, table valued parameters, worktables, workfiles, version store.  |
+|USERSTORE_OBJPERM     |     This store is used for structures keeping track of object security/permission     |
+|USERSTORE_QDSSTMT     |  This cache store is used to cache [Query Store](../performance/monitoring-performance-by-using-the-query-store.md)  statements       |
+|USERSTORE_SCHEMAMGR     |    Schema manager cache stores different types of metadata information about the database objects in memory (e.g tables). A common user of this store could be the tempdb database with objects like tables, temp procedures, table variables, table valued parameters, worktables, workfiles, version store.  |
 |USERSTORE_SXC     |    This user store is used for allocations to store all [RPC](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/619c43b6-9495-4a58-9e49-a4950db245b3) parameters.     |
-|USERSTORE_TOKENPERM     |    TokenAndPermUserStore is a single SOS UserStore that keeps track of security entries for security context, login, user, permission, and audit. Multiple hash tables are allocated to store these objects.    |
+|USERSTORE_TOKENPERM     |    TokenAndPermUserStore is a single SOS user store that keeps track of security entries for security context, login, user, permission, and audit. Multiple hash tables are allocated to store these objects.    |
 
 ## See Also  
 

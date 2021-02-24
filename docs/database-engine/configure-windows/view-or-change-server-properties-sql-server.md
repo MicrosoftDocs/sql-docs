@@ -90,13 +90,13 @@ Execute permissions on **sp_configure** with no parameters or with only the firs
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) catalog view to return information about each server configuration option on the current server. The example returns the name (`name`) and description (`description`) of the option and whether the option is an advanced option (`is_advanced`).  
+3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) catalog view to return information about each server configuration option on the current server. The example returns the name (`name`) and description (`description`) of the option, its value (`value`), and whether the option is an advanced option (`is_advanced`).  
   
     ```wmimof  
     USE AdventureWorks2012;   
     GO  
-    SELECT name, description, is_advanced  
-    FROM sys.configurations ;   
+    SELECT name, description, value, is_advanced  
+    FROM sys.configurations;   
     GO  
   
     ```  

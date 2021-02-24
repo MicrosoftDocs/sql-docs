@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```syntaxsql
-TODATETIMEOFFSET ( expression , time_zone )  
+TODATETIMEOFFSET ( expression , offset )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -48,8 +48,8 @@ TODATETIMEOFFSET ( expression , time_zone )
 > [!NOTE]  
 >  The expression cannot be of type **text**, **ntext**, or **image** because these types cannot be implicitly converted to **varchar** or **nvarchar**.  
   
- *time_zone*  
- Is an expression that represents the time zone offset in minutes (if an integer), for example -120, or hours and minutes (if a string), for example '+13:00'. The range is +14 to -14 (in hours). The expression is interpreted in local time for the specified time_zone.  
+ *offset*  
+ Is an expression that represents the time zone offset in minutes (if an integer), for example -120, or hours and minutes (if a string), for example '+13:00'. The range is +14 to -14 (in hours). The expression is interpreted as a local time including the specified offset.  
   
 > [!NOTE]  
 >  If expression is a character string, it must be in the format {+|-}TZH:THM.  

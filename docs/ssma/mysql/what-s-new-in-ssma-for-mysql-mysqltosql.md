@@ -20,6 +20,7 @@ This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in ea
 
 The v8.17 release of SSMA for MySQL contains the following changes:
 
+* Update HTML assessment reports to use modern editor to display SQL text
 
 ## SSMA v8.16
 

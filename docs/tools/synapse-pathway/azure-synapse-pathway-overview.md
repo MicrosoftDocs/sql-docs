@@ -1,5 +1,5 @@
 ---
-title: Azure Synapse Pathway overview (Preview)
+title: Azure Synapse Pathway Preview overview 
 description: Azure Synapse Pathway is a tool to migrate a data warehouse to Azure Synapse Analytics.
 ms.author: anrampal
 ms.topic: overview 
@@ -8,7 +8,7 @@ ms.prod: sql
 ms.technology: "Azure Synapse Pathway"
 ms.custom: template-overview 
 ---
-# Azure Synapse Pathway (Preview)
+# Azure Synapse Pathway Preview
 
 ## Overview
 
@@ -16,7 +16,12 @@ As customers consider modernizing their data warehouse systems, one of the criti
 
 Organizations worldwide want to modernize their analytics platform to enjoy both total cost of ownership (TCO) and innovation benefits. However, customers have invested thousands of working hours, millions of dollars, and written tens of thousands of lines of code for their data warehouse.
  
-To translate this critical SQL code, customers have to either manually rewrite existing SQL code or invest large amounts of their budget for an outside practice to rewrite or convert their code. 
+To translate this critical SQL code, customers have to either manually rewrite existing SQL code or invest large amounts of their budget for an outside practice to rewrite or convert their code.
+
+> [!IMPORTANT]
+> Azure Synapse Pathway is currently in public preview.
+> This preview version is provided without a service level agreement, and it's not recommended for production workloads. Certain features might not be supported or might have constrained capabilities. 
+> For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). 
 
 **Azure Synapse Pathway** helps you upgrade to a modern data warehouse platform by automating the code translation of your existing data warehouse. Its a free, intuitive and easy to use tool that automates the code translation enabling a quicker migration to Azure Synapse Analytics .
 

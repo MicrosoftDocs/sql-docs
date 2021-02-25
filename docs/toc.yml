@@ -6181,7 +6181,7 @@ items:
         href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
   - name: SQL Server Migration Assistant (SSMA)
     href: ssma/toc.yml
-  - name: Azure Synapse Pathway (preview)
+  - name: Azure Synapse Pathway
     items:
     - name: Overview
       href: tools/synapse-pathway/azure-synapse-pathway-overview.md

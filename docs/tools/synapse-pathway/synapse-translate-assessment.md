@@ -1,6 +1,6 @@
 ---
-title: Azure Synapse Translate assessment.
-description: Perform a data warehouse code translation with Azure Synapse Translate 
+title: Azure Synapse Pathway assessment.
+description: Perform a data warehouse code translation with Azure Synapse Pathway 
 author: anshul82-ms
 ms.author: anrampal
 ms.prod: sql
@@ -10,11 +10,11 @@ ms.date: 02/16/2021
 ms.custom: template-tutorial 
 ---
 
-# Tutorial to perform your first code translation with Azure Synapse Translate 
+# Tutorial to perform your first code translation with Azure Synapse Pathway
 
 Azure Synapse Pathway v1.0 introduces support for translating schemas, tables, views, functions, etc. from **Netezza**, **Teradata**, **Snowflake**, or **Microsoft SQL Server** into T-SQL complaint code that automates migration to Azure Synapse Analytics.
 
-For more information, see the blog post [Use Azure Synapse Pathway to migrate your on-premise and cloud data warehouse to Azure Synapse Analytics](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/bg-p/AzureSynapseAnalyticsBlog).
+For more information, see [Azure Synapse Pathway overview](azure-synapse-pathway-overview).
 
 In this tutorial, you learn how to:
 
@@ -25,11 +25,11 @@ In this tutorial, you learn how to:
 
 ## Prerequisites
 
-This tutorial assumes you've already installed the Azure Synapse Translate MSI. If you need an introduction, see [Perform a Data warehouse code translation with Azure Synapse Translate](http://www.asp.net/mvc/overview/getting-started/introduction/getting-started).
+To complete this tutorial, make sure you've installed [Azure Synapse Pathway](synapse-pathway-download). If you need an introduction, see [Azure Synapse Pathway overview](azure-synapse-pathway-overview).
 
 ## Run the translation
 
-1. Launch the Azure Synapse Translate MSI. Follow steps as listed here to make sure you have the latest version the Azure Synapse Translate installer.
+1. Launch the Azure Synapse Pathway MSI. Follow steps as listed here to make sure you have the latest version the Azure Synapse Pathway installer.
 
 1. Select from one of the available sources, the ones that will be added soon are grayed out.
 1. In the Input directory folder, select browse and point the tool to the folder location of the **DDL** and **DML** scripts that need to be translated.
@@ -43,7 +43,7 @@ This tutorial assumes you've already installed the Azure Synapse Translate MSI. 
 1. Select **Translate** to start the translation
 1. 
 > [!NOTE]
-In this version of Azure Synapse Translate, you cannot specify the individual files and folder but rather one location where all the scripts are stored. If there are multiple folders, then you can run multiple translations to migrate the code.
+In this version of Azure Synapse Pathway, you cannot specify the individual files and folder but rather one location where all the scripts are stored. If there are multiple folders, then you can run multiple translations to migrate the code.
 
 ## View Results
 
@@ -55,4 +55,4 @@ In this version of Azure Synapse Translate, you cannot specify the individual fi
 
 ## Next steps
 
-[Learn how to save and load the assessment](contribute-how-to-mvc-tutorial.md)
+[Learn how to save and load the assessment](tutorial-saveload-assessment.md)

@@ -4,7 +4,7 @@ description: Update the `AZDATA_PASSWORD` manually
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 02/24/2021
+ms.date: 02/25/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -14,13 +14,13 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Whether or not the cluster is operating with Active Directory integration, `AZDATA_PASSWORD` is set during deployment. It provides a basic authentication to the cluster controller and master instance. This document describes how to manually update `AZDATA_PASSWORD`.
+Whether or not the [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)] is operating with Active Directory integration, `AZDATA_PASSWORD` is set during deployment. It provides a basic authentication to the cluster controller and master instance. This document describes how to manually update `AZDATA_PASSWORD`.
 
 ## Change `AZDATA_PASSWORD` for controller
 
 If the cluster is operating in non-Active Directory mode, update the Apache Knox Gateway password by doing the following:
 
-1. Obtain the controller SQL Server credentials by running the following commands:
+1. Obtain the controller [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] credentials by running the following commands:
 
    a. Run this command as a Kubernetes administrator:
 
@@ -67,7 +67,7 @@ If the cluster is operating in non-Active Directory mode, update the Apache Knox
 
 1. Update the password in the users table:
 
-   ```SQL
+   ```sql
    UPDATE [auth].[users] SET password = 'J2y4E4dhlgwHOaRr3HKiiVAKBfjuGDyYmzn88VXmrzM=' WHERE username = '<username>'
    ```
 
@@ -83,7 +83,7 @@ If the cluster is operating in non-Active Directory mode, update the Apache Knox
 
 ## Manually updating password for Grafana and Kibana
 
-After following the steps to update AZDATA_PASSWORD, you will see that Grafana and Kibana still accept the old password. This is because Grafana and Kibana does not have visibility to the new Kubernetes secret. You must manually update the password for Grafana and Kibana separately.
+After following the steps to update AZDATA_PASSWORD, you will see that [Grafana](app-monitor.md) and [Kibana](cluster-logging-kibana.md) still accept the old password. This is because Grafana and Kibana does not have visibility to the new Kubernetes secret. You must manually update the password for Grafana and Kibana separately.
 
 ## Update Grafana password
 
@@ -92,12 +92,12 @@ Follow these options for manually updating the password for [Grafana](app-monito
 1. The htpasswd utility is required. You can install this on any client machine.
 
 #### [For Ubuntu](#tab/ubuntu): 
-```console
+```bash
 sudo apt install apache2-utils
 ```
 
 #### [For RHEL](#tab/rhel): 
-```console
+```bash
 sudo yum install httpd-tools
 ```
 
@@ -105,21 +105,21 @@ sudo yum install httpd-tools
 
 2. Generate the new password. 
 
-```console
+```bash
 htpasswd -nbs <username> <password>
 admin:{SHA}<secret>
 ```
 
 Replace values for /<username/>, /<password/>, /<secret/> as appropriate, for example:
 
-```console
+```bash
 htpasswd -nbs admin Test@12345
 admin:{SHA}W/5VKRjIzjusUJ0ih0gHyEPjC/s=
 ```
 
 3. Now encode the password:
 
-```console
+```bash
 echo "admin:{SHA}W/5VKRjIzjusUJ0ih0gHyEPjC/s=" | base64
 ```             
 
@@ -127,7 +127,7 @@ Retain the output base64 string for later.
 
 4. Next, edit the mgmtproxy-secret:
 
-```console
+```bash
 kubectl edit secret -n mssql-cluster mgmtproxy-secret
 ```
          
@@ -145,13 +145,41 @@ data:
    mssql-internal-controller-username: <username>
 ```         
 
-6. Delete the mgmtproxy pod:
+6. Identify and delete the mgmtproxy pod. 
+ 
+If necessary, identify the name of your mgmtproxy prod.
 
-```console
+#### [For Windows](#tab/windows): 
+On a Windows server you can use the following:
+
+```bash 
+kubectl get pods -n <namespace> -l app=mgmtproxy
+```
+
+#### [For Linux](#tab/linux): 
+On Linux you can use the following:
+
+```bash
+kubectl get pods -n <namespace> | grep 'mgmtproxy'
+```
+
+---
+
+Remove the mgmtproxy pod:
+```bash
 kubectl delete pod mgmtproxy-xxxxx -n mssql-clutser
-```            
+```
 
 9. Wait for the mgmtproxy pod to come online and Grafana Dashboard to start.  
+ 
+The wait is not significant and the pod should be online within seconds. To check the status of the pod you can use the same `get pods` command as used in the previous step. 
+If you see the mgmtproxy pod is not promptly returning to Ready status, use kubectl to describe the pod:
+
+```bash
+kubectl describe pods mgmtproxy-xxxxx  -n <namespace>
+```
+
+For troubleshooting and further log collection, use the Azure Data CLI `[azdata bdc debug copy-logs](../azdata/reference/reference-azdata-bdc-debug.md)` command.
 
 10. Now login to Grafana using new password. 
 
@@ -160,7 +188,19 @@ kubectl delete pod mgmtproxy-xxxxx -n mssql-clutser
 
 Follow these options for manually updating the password for [Kibana](cluster-logging-kibana.md).
 
-1. Open the Kibana URL, for example: https://11.111.111.111:30777/kibana/app/kibana#/discover
+> [!NOTE]
+> The older Microsoft Edge browser is incompatible with Kibana, you must use the Edge chromium-based browser for the dashboard to display correctly. You will see a blank page when loading the dashboards using an unsupported browser, see [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
+
+1. Open the Kibana URL.
+
+You can find the Kibana service endpoint URL from within [Azure Data Studio](manage-with-controller-dashboard#controller-dashboard), or use the following **azdata** command:
+
+```azurecli
+azdata login
+azdata bdc endpoint list -e logsui -o table
+```
+
+For example: https://11.111.111.111:30777/kibana/app/kibana#/discover
 
 2. On the left side pane click on the **Security** option.
     
@@ -183,6 +223,8 @@ Follow these options for manually updating the password for [Kibana](cluster-log
 > [!Note]
 > After logging in with new password, if you see blank pages in Kibana, manually logout using the logout option at top right corner and login again.
 
-## See Also
+## See also
 
 * [azdata bdc (Azure Data CLI)](../../sql/azdata/reference/reference-azdata-bdc.md) 
+* [Monitor applications with azdata and Grafana Dashboard](app-monitor.md)  
+* [Check out cluster logs with Kibana Dashboard](cluster-logging-kibana.md)  

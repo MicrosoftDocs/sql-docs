@@ -23,10 +23,10 @@ Download the latest version of the tool from the [Microsoft Download Center](htt
 
 1. Once you've saved the **AzureSynapsePathway.msi** file, click on the file to bring up the Azure Synapse Pathway Setup wizard to begin installation.
 1. When you select **Next**, it will take you to the End-User license agreement.
-1. Once you accept the agreement and select on **Next**, it will show you the Microsoft privacy statement.
-1. Select **Install** to begin the installation process.
-1. The installation process will take a few seconds. Select **Finish** to complete the installation.
-1. You should see the Synapse Pathway home screen.
+1. Once you accept the agreement and click **Next**, you will see the Microsoft privacy statement.
+1. Click **Install** to begin the installation process.
+1. The installation process will take a few seconds. Click **Finish** to complete the installation.
+1. You should see the Azure Synapse Pathway home screen.
 
 ## Pricing
 

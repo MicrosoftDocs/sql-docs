@@ -10,13 +10,13 @@ ms.technology: "Azure Synapse Pathway"
 ms.custom: template-overview 
 ---
 # Azure Synapse Pathway
-In this guide, you'll find the most frequently asked questions for Azure Synapse Pathway.
+In this guide, you'll find the most frequently asked questions on Azure Synapse Pathway.
 
 ## General
 
 ### Q. What is Azure Synapse Pathway?
 
-A. Azure Synapse Pathway is code translation utility helps you upgrade to a modern data warehouse platform by automating the code translation of your existing data warehouse to make it complaint with T-SQL based Azure Synapse SQL.
+A. Azure Synapse Pathway is code translation tool that helps you upgrade to a modern data warehouse platform by automating the code translation of your existing data warehouse to make it complaint with T-SQL based Azure Synapse SQL.
 
 ### Q. How can I download Azure Synapse Pathway?
 
@@ -36,7 +36,7 @@ A. In this preview version of Synapse Pathway, following data warehouses are inc
 
 ### Q. What is included as part of the code conversion?
 
-A. Synpase Pathway supports code translation of tables, schemas, views, and stored procedures.
+A. Synapse Pathway supports code translation of tables, schemas, views, and stored procedures.
 
 ### Q. Can it also scan my environment and provide an assessment report of all the objects that need to be converted/translated?
 
@@ -48,7 +48,7 @@ A. Since you can run Synapse Pathway in your local environment, there is no data
 
 ### Q. Where can I raise issues found while running Azure Synapse Pathway?
 
-A. Support for Synapse Pathway is available through Microsoft support channel. You can raise the ticket either in the Azure portal or standard (typically on-prem support) portals.
+A. Azure Synapse Pathway is currently in **Preview**.   Support for Synapse Pathway is available through Microsoft support channel. You can raise the ticket either in the Azure portal or standard (typically on-prem support) portals.
 
 > [!NOTE] Like any other Azure Service, all preview services are eligible for support, just without SLA's in place.
 

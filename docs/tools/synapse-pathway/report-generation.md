@@ -12,7 +12,7 @@ ms.custom: template-tutorial
 
 # Report Generation
 
-Azure Synapse Pathway provides you with a comprehensive report of the number of scripts that were successfully translated. The report also shows the number of errors and warnings on statements that didn't get translated.
+Azure Synapse Pathway provides a comprehensive report of the number of scripts that were successfully translated. The report also shows the number of errors and warnings on statements that didn't get translated.
 
 ## Generate Report
 

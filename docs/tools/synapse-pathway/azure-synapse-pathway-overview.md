@@ -18,7 +18,7 @@ Organizations worldwide want to modernize their analytics platform to enjoy both
  
 To translate this critical SQL code, customers have to either manually rewrite existing SQL code or invest large amounts of their budget for an outside practice to rewrite or convert their code. 
 
-**Azure Synapse Pathway** (ASP) helps you upgrade to a modern data warehouse platform by automating the code translation of your existing data warehouse. Automating the code translation enables a quicker migration to Azure Synapse Analytics without cost.
+**Azure Synapse Pathway** helps you upgrade to a modern data warehouse platform by automating the code translation of your existing data warehouse. Its a free, intuitive and easy to use tool that automates the code translation enabling a quicker migration to Azure Synapse Analytics .
 
  ![Azure Synapse pathway overview.](./media/pathway-overview/synapse-pathway-overview.png) 
 
@@ -26,17 +26,13 @@ Synapse Pathway translates Data Definition Language (DDL) and Data Manipulation 
 
 ## Behind the scenes
 
-To learn more about Azure Synapse Pathway, see the [behind the scenes article](synapse-pathway-behind-the-scenes.md) that describes the step-by-step process on how Azure Synapse Pathway works.
+To learn more about Azure Synapse Pathway, see [behind the scenes](synapse-pathway-behind-the-scenes.md) for a step-by-step process on how Azure Synapse Pathway works.
 
-## Install ASP
+## Get Azure Synapse Pathway
 
-To install ASP, download the latest version of the tool from the [Microsoft Download Center](https://aka.ms/asp-download), and then run the **AzureSynapsePathway.msi** file.
+Azure Synapse Pathway is currently in **Preview**.
 
-## Pricing
-
-There's no cost to download and use Azure Synapse Pathway for all your code conversion needs.
-
-See Azure policy for data ingress pricing.
+To install Synapse Pathway, check [Azure Synapse Pathway download](synapse-pathway-download.md) for pre-requisites and the link to download the latest version.
 
 ## Supported sources
 
@@ -55,7 +51,7 @@ Review the [FAQ Page](pathway-faq.md) for additional information on Azure Synaps
 
 ## Next steps
 
-- [Run your first translation with Azure Synapse Pathway](contribute-how-to-write-overview.md)
+- [Run your first translation with Azure Synapse Pathway](synapse-pathway-assessment.md)
 - [Announcement Blog](links-how-to.md)
 
 

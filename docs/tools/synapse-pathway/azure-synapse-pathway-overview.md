@@ -16,7 +16,7 @@ Organizations worldwide want to modernize their analytics platform to enjoy both
  
 To translate this critical SQL code, customers have to either manually rewrite existing SQL code or invest large amounts of their budget for an outside practice to rewrite or convert their code. 
 
-**Azure Synapse Pathway**(ASP) helps you upgrade to a modern data warehouse platform by automating the code translation of your existing data warehouse. Automating the code translation enables a quicker migration to Azure Synapse Analytics at no cost.
+**Azure Synapse Pathway** (ASP) helps you upgrade to a modern data warehouse platform by automating the code translation of your existing data warehouse. Automating the code translation enables a quicker migration to Azure Synapse Analytics without cost.
 
  ![Azure Synapse pathway overview.](./media/pathway-overview/synapse-pathway-overview.png) 
 

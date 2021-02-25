@@ -21,7 +21,7 @@ A. Azure Synapse Pathway is code translation tool that helps you upgrade to a mo
 
 ### Q. How can I download Azure Synapse Pathway?
 
-A. Synapse Pathway is available to download from the [Microsoft Download Center](https://aka.ms/ast-download).
+A. Synapse Pathway is available to download from the [Microsoft Download Center](https://aka.ms/synapse-pathway-download).
 
 ### Q. How much does Azure Synapse Pathway cost?
 

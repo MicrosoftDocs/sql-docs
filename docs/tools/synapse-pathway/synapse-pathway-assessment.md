@@ -1,5 +1,5 @@
 ---
-title: Azure Synapse Pathway assessment.
+title: Azure Synapse Pathway (Preview) assessment.
 description: Perform a data warehouse code translation with Azure Synapse Pathway 
 author: anshul82-ms
 ms.author: anrampal
@@ -10,7 +10,7 @@ ms.date: 02/16/2021
 ms.custom: template-tutorial 
 ---
 
-# Tutorial to perform your first code translation with Azure Synapse Pathway
+# Tutorial to perform your first code translation with Azure Synapse Pathway (Preview)
 
 Azure Synapse Pathway v1.0 introduces support for translating schemas, tables, views, functions, etc. from **Netezza**, **Teradata**, **Snowflake**, and **Microsoft SQL Server** into T-SQL complaint code that automates migration to Azure Synapse Analytics.
 

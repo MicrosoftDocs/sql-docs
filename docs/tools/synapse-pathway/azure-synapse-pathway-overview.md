@@ -1,5 +1,5 @@
 ---
-title: Azure Synapse Pathway overview
+title: Azure Synapse Pathway overview (Preview)
 description: Azure Synapse Pathway is a tool to migrate a data warehouse to Azure Synapse Analytics.
 ms.author: anrampal
 ms.topic: overview 
@@ -8,7 +8,7 @@ ms.prod: sql
 ms.technology: "Azure Synapse Pathway"
 ms.custom: template-overview 
 ---
-# Azure Synapse Pathway
+# Azure Synapse Pathway (Preview)
 
 ## Overview
 

@@ -1,5 +1,5 @@
 ---
-title: Azure Synapse Pathway download 
+title: Azure Synapse Pathway (Preview) download 
 description: Learn how to get download Azure Synapse Pathway
 ms.date: 02/23/2021
 ms.prod: sql
@@ -13,7 +13,7 @@ ms.author: anrampal
 
 ## Prerequisites
 
-Azure Synapse Pathway requires [.NET Core Desktop Runtime 3.1.11 or later](https://dotnet.microsoft.com/download/dotnet-core/3.1).
+Azure Synapse Pathway (Preview) requires [.NET Core Desktop Runtime 3.1.11 or later](https://dotnet.microsoft.com/download/dotnet-core/3.1).
 
 ## Download
 

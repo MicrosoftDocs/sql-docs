@@ -1,5 +1,5 @@
 ---
-title: Azure Synapse Pathway FAQ
+title: Azure Synapse Pathway (Preview) FAQ 
 description: Frequently asked question for Azure Synapse Pathway
 author: anshul82-ms
 ms.author: anrampal
@@ -9,7 +9,8 @@ ms.prod: sql
 ms.technology: "Azure Synapse Pathway"
 ms.custom: template-overview 
 ---
-# Azure Synapse Pathway
+# Azure Synapse Pathway (Preview)
+
 In this guide, you'll find the most frequently asked questions on Azure Synapse Pathway.
 
 ## General

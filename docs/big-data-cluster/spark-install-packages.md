@@ -29,7 +29,7 @@ MRO 3.5.2 packages. Sparklyr and SparkR for R Spark workloads.
 
 Maven packages can be installed onto your Spark cluster using notebook cell configuration at the start of your spark session. Before starting a spark session in Azure Data Studio, run the following code:
 
-```
+```python
 %%configure -f \
 {"conf": {"spark.jars.packages": "com.microsoft.azure:azure-eventhubs-spark_2.11:2.3.1"}}
 ```

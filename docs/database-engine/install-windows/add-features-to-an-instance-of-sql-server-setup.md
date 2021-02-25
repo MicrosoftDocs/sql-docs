@@ -8,12 +8,11 @@ helpviewer_keywords:
   - "feature adding [SQL Server]"
   - " SQL Server, features"
   - "adding features to  SQL Server"
-ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: cawrites
 ms.author: chadam
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 09/07/2019
+ms.date: 02/05/2021
 monikerRange: ">=sql-server-2016"
 ---
 
@@ -21,9 +20,12 @@ monikerRange: ">=sql-server-2016"
 
 [!INCLUDE [ SQL Server - Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-This article provides a step-by-step procedure for adding features to an instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Some SQL Server components or services are specific to an instance of SQL Server. These are also known as instance-aware. They share the same version as the instance that hosts them, and are used exclusively for that instance. You can add the instance-aware components to an instance  SQL Server, along with the shared components of if they are not already installed. For a list of features that are supported by the different editions of SQL Server, see [Editions and supported features of SQL Server  2017](../../sql-server/editions-and-components-of-sql-server-2017.md) or [SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).
+This article provides a step-by-step procedure for adding features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Some SQL Server components or services are specific to an instance of SQL Server. These are also known as instance-aware. They share the same version as the instance that hosts them, and are used exclusively for that instance. You can add the instance-aware components to an instance SQL Server, along with the shared components of if they are not already installed. For a list of features that are supported by the different editions of SQL Server, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) or [SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).
 
 To add features to an instance of SQL Server from the command prompt, see [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md).
+
+> [!CAUTION]
+> Adding features to an existing installation of SQL Server will install the features at the version level of the installation media, which may be behind the version level other features of SQL Server. This may result in unexpected behavior or errors. Always follow the success of SQL Server Setup by bringing the new feature up to the same version level. Install service packs (SPs), cumulative updates (CUs), and/or general distribution releases (GDRs) as needed. To determine the version of features added to an installation of SQL Server, see [Determine the version, edition, and update level of SQL Server and its components](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level).
 
 ## Prerequisites
 
@@ -151,3 +153,4 @@ Configure your SQL Server installation
 - [Repair a Failed SQL Server 2016 Installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
 - [Upgrade SQL Server Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 - [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md)
+- [Latest Updates for SQL Server](latest-updates-for-microsoft-sql-server.md)

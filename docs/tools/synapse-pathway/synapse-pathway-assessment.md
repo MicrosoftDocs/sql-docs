@@ -52,4 +52,4 @@ To complete this tutorial, make sure you've installed [Azure Synapse Pathway](sy
 
 ## Next steps
 
-[Learn how to save and load the assessment](tutorial-saveload-assessment.md)
+[Learn how to save and load the assessment](tutorial-save-load-assessment.md)

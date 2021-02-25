@@ -6194,7 +6194,7 @@ items:
     - name: Tutorial - Run Azure Synapse Pathway
       href: tools/synapse-pathwaysynapse-translate-assessment.md
     - name: Tutorial - Save and Load
-      href: tools/synapse-pathway/tutorial-saveload-assessment.md
+      href: tools/synapse-pathway/tutorial-save-load-assessment.md
     - name: Generate Reports
       href: tools/synapse-pathway/report-generation.md
 - name: Manage, monitor, & tune

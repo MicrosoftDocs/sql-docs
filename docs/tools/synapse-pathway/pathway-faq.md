@@ -55,3 +55,7 @@ A. Support for Synapse Pathway is available through Microsoft support channel. Y
 #### Q. Why do I see slow performance while running the code conversion?
 
 #### Q. Translation of errors or unexpected results? -->
+
+## Next steps
+
+[Download Azure Synapse Pathway](synapse-pathway-download.md)

@@ -17,7 +17,7 @@ Azure Synapse Pathway requires [.NET Core Desktop Runtime 3.1.11 or later](https
 
 ## Download
 
-Download the latest version of the tool from the [Microsoft Download Center](https://aka.ms/ast-download), and then run the **AzureSynapsePathway.msi** file.
+Download the latest version of the tool from the [Microsoft Download Center](https://aka.ms/synapse-pathway-download), and then run the **AzureSynapsePathway.msi** file.
 
 ## Install
 

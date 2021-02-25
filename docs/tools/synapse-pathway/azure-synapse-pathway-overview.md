@@ -56,10 +56,8 @@ To translate this critical SQL code, customers have to **either manually rewrite
 Synapse Pathway translates Data Definition Language (DDL) and Data Manipulation Language (DML) statements into T-SQL compliant language that is compatible with Azure Synapse SQL.
 
 ## Behind the scenes
-This is the high level architecture of Azure Synapse Pathway.
- ![Azure Synapse pathway overview.](./media/pathway-overview/synapse-pathway-architecture.png) 
 
-- Azure Synapse Pathway code conversion capability is based on 
+To learn more about Azure Synapse Pathway, check the [behind the scenes article](..) that describes the step-by-step process on how Azure Synapse Pathway works.
 
 ## Install ASP
 
@@ -71,10 +69,10 @@ There is no cost to download and use Azure Synapse Pathway for all your code con
 See Azure policy for data ingress pricing
 
 ## Supported sources
-- **IBM Netezza** : Azure Synapse Pathway supports code conversion of database, schemas and tables. DDL statements like create & drop are supported. Function translation is also supported.
 
+Azure Synapse Pathway supports code conversion of database, schemas,and tables for the following sources:
+- **IBM Netezza** 
 - **Microsoft SQL Server**
-Azure Synapse Pathway supports code conversion of database, schemas and tables. 
 - **Teradata Vantage**
 - **Snowflake**
 
@@ -83,7 +81,7 @@ Check [release notes](..) for new sources added as well as feature additions.
 
 
 ## Frequently asked questions
-Please review the [FAQ Page](..) for additional queries on Azure Synapse Pathway
+Review the [FAQ Page](..) for additional queries on Azure Synapse Pathway
 
 ## Next steps
 <!-- Add a context sentence for the following links -->

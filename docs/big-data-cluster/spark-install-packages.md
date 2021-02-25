@@ -5,7 +5,7 @@ description: Spark Library Management
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: rahul.ajmera
-ms.date: 01/25/2021
+ms.date: 02/25/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -45,7 +45,7 @@ If the __"spark.pyspark.virtualenv.enabled" : "true"__ configuration is not set,
 If 
 Specify the path to a requirements.txt file in HDFS to use as a reference for packages to install.
 
-```
+```python
 %%configure -f \
 {
     "conf": {
@@ -60,7 +60,7 @@ Specify the path to a requirements.txt file in HDFS to use as a reference for pa
 
 Create a conda virtualenv without a requirements file and dynamically add packages during the Spark session.
 
-```
+```python
 %%configure -f \
 {
     "conf": {
@@ -90,13 +90,14 @@ import xgboost as xgb
 ## Import .jar from HDFS for use at runtime
 Import jar at runtime through Azure Data Studio notebook cell configuration.
 
-```
+```python
 %%configure -f
 {"conf": {"spark.jars": "/jar/mycodeJar.jar"}}
 ```
 
 ### Import .jar at runtime through Azure Data Studio notebook cell configuration
-```
+
+```python
 %%configure -f
 {"conf": {"spark.jars": "/jar/mycodeJar.jar"}}
 ```

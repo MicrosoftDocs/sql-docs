@@ -4,7 +4,7 @@ description: Update the `AZDATA_PASSWORD` manually
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 12/19/2019
+ms.date: 02/24/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -80,69 +80,109 @@ If the cluster is operating in non-Active Directory mode, update the Apache Knox
    ```sql
    ALTER LOGIN <AZDATA_USERNAME> WITH PASSWORD = 'newPassword'
    ```
-### Manually updating password for Grafana and Kibana
-After following the steps to update AZDATA_PASSWORD we would see that Grafana and Kibana are still accepting the old password and not the new password. This is because Grafana and Kibana does not have the ability to pick the new k8s secret. So we need to manually update the password for both of them separately.
 
-### Steps to update Grafana Password:
- 
+## Manually updating password for Grafana and Kibana
 
-- We will need htpasswd utility. You can install this on any client machine.
-    - [ ] For Ubuntu: 
-		`sudo apt install apache2-utils`
-    - [ ] For RHEL:
-		`sudo yum install httpd-tools`
-	
-- Generate the new password , where 'admin' is the user and 'Test@12345' is its new password:
+After following the steps to update AZDATA_PASSWORD, you will see that Grafana and Kibana still accept the old password. This is because Grafana and Kibana does not have visibility to the new Kubernetes secret. You must manually update the password for Grafana and Kibana separately.
 
-                htpasswd -nbs admin Test@12345
-                admin:{SHA}W/5VKRjIzjusUJ0ih0gHyEPjC/s=
+## Update Grafana password
 
-- Now encode the password:
+Follow these options for manually updating the password for [Grafana](app-monitor.md).
 
-		echo "admin:{SHA}W/5VKRjIzjusUJ0ih0gHyEPjC/s=" | base64
-		IGFkbWluOntTSEF9Vy81VktSakl6anVzVUowaWgwZ0h5RVBqQy9zPQo= 
-			 
+1. The htpasswd utility is required. You can install this on any client machine.
 
-- Now we need to edit the mgmtproxy-secret:
+#### [For Ubuntu](#tab/ubuntu): 
+```console
+sudo apt install apache2-utils
+```
 
-		kubectl edit secret -n mssql-cluster mgmtproxy-secret
-		 
+#### [For RHEL](#tab/rhel): 
+```console
+sudo yum install httpd-tools
+```
 
-- Update the controller-login-htpasswd with the new value generated above:
+---
 
-		# Please edit the object below. Lines beginning with a '#' will be ignored,
-		# and an empty file will abort the edit. If an error occurs while saving this file will be
-		# reopened with the relevant failures.
-		#
-		apiVersion: v1
-		data:
-		  controller-login-htpasswd: IGFkbWluOntTSEF9Vy81VktSakl6anVzVUowaWgwZ0h5RVBqQy9zPQo=
-		  mssql-internal-controller-password: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-		  mssql-internal-controller-username: xxxxxxxxxxxxxxxxxx
-		 
+2. Generate the new password. 
 
-- Delete the mgmtproxy pod:
+```console
+htpasswd -nbs <username> <password>
+admin:{SHA}<secret>
+```
 
-		kubectl delete pod mgmtproxy-xxxxx -n mssql-clutser
-			 
+Replace values for /<username/>, /<password/>, /<secret/> as appropriate, for example:
 
-- Wait for the mgmtproxy pod to come online and Grafana Dashboard to start. 
+```console
+htpasswd -nbs admin Test@12345
+admin:{SHA}W/5VKRjIzjusUJ0ih0gHyEPjC/s=
+```
 
-- Now login to Grafana using new password.
+3. Now encode the password:
 
-### Steps to update Kibana Password:
+```console
+echo "admin:{SHA}W/5VKRjIzjusUJ0ih0gHyEPjC/s=" | base64
+```             
 
-- Open kibana URL:
+Retain the output base64 string for later.
 
-			https://11.111.111.111:30777/kibana/app/kibana#/discover
-		 
+4. Next, edit the mgmtproxy-secret:
 
-- Go to -> Security -> Internal User Database -> Edit -> Reset Password:
+```console
+kubectl edit secret -n mssql-cluster mgmtproxy-secret
+```
+         
+5. Update the controller-login-htpasswd with the new encoded password base64 string generated above:
 
-    ![image](https://user-images.githubusercontent.com/54091686/108350492-4783ee00-720a-11eb-927d-d08c2b73fa60.png)
+```console
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+data:
+   controller-login-htpasswd: <base64 string from before>
+   mssql-internal-controller-password: <password>
+   mssql-internal-controller-username: <username>
+```         
+
+6. Delete the mgmtproxy pod:
+
+```console
+kubectl delete pod mgmtproxy-xxxxx -n mssql-clutser
+```            
+
+9. Wait for the mgmtproxy pod to come online and Grafana Dashboard to start.  
+
+10. Now login to Grafana using new password. 
+
+
+## Update the Kibana password
+
+Follow these options for manually updating the password for [Kibana](cluster-logging-kibana.md).
+
+1. Open the Kibana URL, for example: https://11.111.111.111:30777/kibana/app/kibana#/discover
+
+2. On the left side pane click on the **Security** option.
     
-    ![image](https://user-images.githubusercontent.com/54091686/108350588-684c4380-720a-11eb-9d22-e3c73f00cc07.png)
-    
-    ![image](https://user-images.githubusercontent.com/54091686/108350595-6b473400-720a-11eb-9477-6601106807c2.png)
+![A screenshot of the menu on the left pane of Kibana, with the Security option chosen](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-1.jpg)
 
-- Now reconnect to Kibana using the new password.
+3. On the security page, under the heading Authentication Backends, click on **Internal User Database**.
+
+![A screenshot of the security page, with the Internal User Database box chosen.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-2.jpg)
+
+4. Now you will see the list of users under the heading Internal Users Database. Use this page to add, modify and remove any users for Kibana endpoint access. For the user that need the updated password, click on **Edit** button on the right hand side for the user.
+
+![A screenshot of the Internal User Database page. In the list of users, for the KubeAdmin user, the Edit button is chosen.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-3.jpg)
+
+5. Enter the new password twice and click on **Submit**:
+
+![A screenshot of the Internal User edit form. A new password has been entered in the Password and Repeat password fields.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-4.jpg)
+
+6. Close the browser and reconnect to the Kibana URL using updated password.
+
+> [!Note]
+> After logging in with new password, if you see blank pages in Kibana, manually logout using the logout option at top right corner and login again.
+
+## See Also
+
+* [azdata bdc (Azure Data CLI)](../../sql/azdata/reference/reference-azdata-bdc.md) 

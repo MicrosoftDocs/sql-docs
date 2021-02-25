@@ -3,7 +3,8 @@ title: Azure Synpase Pathway behind the scenes.
 description: Technical deep dive into how Azure Synapse Pathway translates your code. 
 author: anshul82-ms
 ms.author: anrampal.
-ms.service: Azure Synpase Pathway.
+ms.prod: sql
+ms.technology: "Azure Synapse Pathway"
 ms.topic: conceptual 
 ms.date: 02/24/2021.
 ms.custom: template-concept 
@@ -41,7 +42,7 @@ Azure Synapse SQL defines the absolute function as:
 ABS ( numeric_expression )  
 ```
 
-In this simple case, Synapse Pathway understands that the conversion in Synapse SQL from float to numeric is an implicit [conversion](..https://docs.microsoft.com/en-us/sql/t-sql/functions/cast-and-convert-transact-sql?view=sql-server-ver15#implicit-conversions) and requires no further type casting. Simple, clean, and effective code translation. 
+In this simple case, Synapse Pathway understands that the conversion in Synapse SQL from float to numeric is an implicit [conversion](../../t-sql/functions/cast-and-convert-transact-sql?view=azure-sqldw-latest#implicit-conversions) and requires no further type casting. Simple, clean, and effective code translation.
 
 Keeping this meta-information about the source statements and fragments helps the structural differences between platforms – conversions in opt-out logic for search condition predicates in a WHERE clause for example.
 
@@ -57,7 +58,7 @@ INSERT INTO staging.table1…
 FROM staging.table2;
 ```
 
-Synapse SQL has an optimized path for this scenario – a [CREATE TABLE AS SELECT](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-develop-ctas). The CTAS statement is a batched based operation and minimally logged driving performance up by using all the compute infrastructure available. Without this insight about Synapse SQL, tools often produce a truncate and INSERT/SELECT statement.
+Synapse SQL has an optimized path for this scenario – a [CREATE TABLE AS SELECT](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-develop-ctas). The CTAS statement is a batched based operation and minimally logged driving performance up by using all the compute infrastructure available. Without this insight about Synapse SQL, tools often produce a truncate and INSERT/SELECT statement.
 
 ```sql  
 TRUNCATE TABLE staging.table1;

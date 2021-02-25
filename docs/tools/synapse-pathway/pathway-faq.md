@@ -5,6 +5,8 @@ author: anshul82-ms
 ms.author: anrampal
 ms.topic: overview 
 ms.date: 02/22/2020
+ms.prod: sql
+ms.technology: "Azure Synapse Pathway"
 ms.custom: template-overview 
 ---
 # Azure Synapse Pathway

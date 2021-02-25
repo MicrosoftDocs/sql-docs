@@ -4,7 +4,7 @@ description: Perform a data warehouse code translation with Azure Synapse Transl
 author: anshul82-ms
 ms.author: anrampal
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: "Azure Synapse Pathway"
 ms.topic: tutorial 
 ms.date: 02/16/2021
 ms.custom: template-tutorial 

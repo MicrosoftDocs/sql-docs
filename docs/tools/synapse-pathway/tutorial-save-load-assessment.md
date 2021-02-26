@@ -35,7 +35,7 @@ To complete this tutorial, make sure you've installed [Azure Synapse Pathway](sy
 ## Loading an assessment from a file
 
 1. To open the same assessment, select **Load assessment** and provide the .asmprj file name
-![Azure Synapse Pathway assessment.](./media/save-load-assessment/load-assessment.png)
+![Azure Synapse Pathway assessment.](./media/save-load-assessment/browse-location.png)
 
 1. The source, input, and output folders will be populated based on selected assessment.
 ![Azure Synapse Pathway assessment.](./media/save-load-assessment/load-assessment.png)

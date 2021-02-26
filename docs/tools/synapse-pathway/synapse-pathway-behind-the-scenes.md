@@ -12,9 +12,9 @@ ms.custom: template-concept
 
 # Azure Synapse Pathway Preview behind the scenes
 
-Azure Synapse Pathway’s goal is to preserve the functional intent of the original code while optimizing for the modern Synapse SQL data warehouse. Synapse Pathway uses a three-stage process for translating SQL code from a source system to Azure Synapse SQL.
+Azure Synapse Pathway’s goal is to preserve the functional intent of the original code while optimizing for the modern Synapse SQL. Synapse Pathway uses a three-stage process for translating SQL code from a source system to Azure Synapse SQL.
 
-Each of the stages preserves and augments the knowledge of the source with original location information including source-specific metadata to ensure the highest quality in translation.
+Each of the stages preserves and augments the knowledge of the source including source-specific metadata to ensure the highest quality in translation.
 
  ![Azure Synapse Pathway.](./media/technical-deep-dive/behind-the-scene.png)
 
@@ -26,7 +26,7 @@ Synapse Pathway defines source grammars that allow the tool to identify and proc
 
 ## Stage 2 - Augmented abstract syntax tree (AST)
 
-Synapse Pathway defines a common representation of all objects in an augment Abstract Syntax Tree (AST). The Synapse Pathway AST includes additional statements or fragmented metadata that is used to make the proper decision when translating code between the two systems.
+Synapse Pathway defines a common representation of all objects in an augmented Abstract Syntax Tree (AST). The Synapse Pathway AST includes additional statements or fragmented metadata that is used to make the proper decision when translating code between the two systems.
 
 By not just tracking that a token is a function but rather the source system type requirement, the script generation components can make smarter decisions about translating to Synapse SQL.
 

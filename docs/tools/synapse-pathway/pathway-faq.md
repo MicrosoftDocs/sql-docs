@@ -47,7 +47,7 @@ A. In this preview version of Synapse Pathway, you will have to provide the link
 
 A. Since you can run Synapse Pathway in your local environment, there is no data captured except your name and organization, which is required when you download the MSI from the Microsoft download center.
 
-### Q. Where can I raise issues found while running Azure Synapse Pathway?
+### Q. Where can I raise issues encountered in Azure Synapse Pathway?
 
 A. Azure Synapse Pathway is currently in **Preview**.   Support for Synapse Pathway is available through Microsoft support channel. You can raise the ticket either in the Azure portal or standard (typically on-prem support) portals.
 

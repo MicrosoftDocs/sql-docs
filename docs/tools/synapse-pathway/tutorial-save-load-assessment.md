@@ -18,8 +18,8 @@ The following step-by-step instructions demonstrate how to save and upload a dat
 In this tutorial, you learn how to:
 
 > [!div class="checklist"]
-> * Saving an assessment to a file
-> * Loading the assessment from a file
+> * Save an assessment to a file
+> * Load the assessment from a file
 
 ## Prerequisites
 

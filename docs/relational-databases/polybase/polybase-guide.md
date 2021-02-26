@@ -28,9 +28,9 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azur
 
 PolyBase is a data virtualization feature for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
-Data virtualization allows you to use your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a data hub, directly querying data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, SAP HANA, MongoDB, Hadoop clusters, Cosmos DB using T-SQL, and without separately installing client connection software. Data virtualization allows one T-SQL query to join the data from external sources and other SQL Server instances to relational tables in an instance of SQL Server.
+Data virtualization enables your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to query data directly from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, SAP HANA, MongoDB, Hadoop clusters, Cosmos DB using T-SQL, without separately installing client connection software. Data virtualization allows one T-SQL query to join the data from external sources and other SQL Server instances to relational tables in an instance of SQL Server. 
 
-A key use case for data virtualization is to allow the data to stay in its original location and format. You can virtualize the external data through the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, so that it can be queried in place like any other table in SQL Server. This process minimizes the need for ETL processes to facilitate data movement. This data virtualization scenario is possible with the use of PolyBase connectors. 
+A key use case for data virtualization is to allow the data to stay in its original location and format. You can virtualize the external data through the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, so that it can be queried in place like any other table in SQL Server. This process minimizes the need for ETL processes to facilitate data movement. This data virtualization scenario is possible with the use of PolyBase connectors.
 
 To use PolyBase in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
@@ -38,16 +38,15 @@ To use PolyBase in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnovers
 1. Create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md)
 1. Create an [external table](../../t-sql/statements/create-external-table-transact-sql.md)
 
+### PolyBase connectors
+
 The PolyBase feature provides the connection to the external data source.
 
 * [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduced PolyBase with support for connections to Hadoop and Azure Blob Storage.
 * [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] introduced additional connectors, including SQL Server, Oracle, Teradata, and MongoDB.
+* Other unstructured non-relational tables are also supported with PolyBase, such as delimited text files. 
 
 ![PolyBase logical](../../relational-databases/polybase/media/polybase-logical.png "PolyBase logical")
-
-PolyBase pushes some computations to the external source to optimize the overall query. For more information, see [Pushdown computations in PolyBase](polybase-pushdown-computation.md).
-
-PolyBase external access is not limited to Hadoop, other unstructured non-relational tables are also supported, such as delimited text files. 
 
 Examples of external connectors include:
 
@@ -96,7 +95,7 @@ PolyBase enables the following scenarios in [!INCLUDE[ssNoVersion](../../include
 
 ## Performance
 
-- **Push computation to Hadoop.** The query optimizer makes a cost-based decision to push computation to Hadoop, if that will improve query performance.  The query optimizer uses statistics on external tables to make the cost-based decision. Pushing computation creates MapReduce jobs and leverages Hadoop's distributed computational resources.
+- **Push computation to Hadoop.** PolyBase pushes some computations to the external source to optimize the overall query. The query optimizer makes a cost-based decision to push computation to Hadoop, if that will improve query performance.  The query optimizer uses statistics on external tables to make the cost-based decision. Pushing computation creates MapReduce jobs and leverages Hadoop's distributed computational resources. For more information, see [Pushdown computations in PolyBase](polybase-pushdown-computation.md). 
 
 - **Scale compute resources.** To improve query performance, you can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md). This enables parallel data transfer between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances and Hadoop nodes, and it adds compute resources for operating on the external data.
 

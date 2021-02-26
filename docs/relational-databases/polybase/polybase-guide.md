@@ -28,19 +28,13 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azur
 
 PolyBase is a data virtualization feature for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
-Data virtualization enables your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to query data directly from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, SAP HANA, MongoDB, Hadoop clusters, Cosmos DB using T-SQL, without separately installing client connection software. Data virtualization allows one T-SQL query to join the data from external sources and other SQL Server instances to relational tables in an instance of SQL Server. 
+PolyBase enables your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to query data directly from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, SAP HANA, MongoDB, Hadoop clusters, Cosmos DB using T-SQL, without separately installing client connection software. PolyBase allows one T-SQL query to join the data from external sources and other SQL Server instances to relational tables in an instance of SQL Server. 
 
-A key use case for data virtualization is to allow the data to stay in its original location and format. You can virtualize the external data through the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, so that it can be queried in place like any other table in SQL Server. This process minimizes the need for ETL processes to facilitate data movement. This data virtualization scenario is possible with the use of PolyBase connectors.
-
-To use PolyBase in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
-
-1. [Install PolyBase on Windows](polybase-installation.md) or [Install PolyBase on Linux](polybase-linux-setup.md)
-1. Create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md)
-1. Create an [external table](../../t-sql/statements/create-external-table-transact-sql.md)
+A key use case for data virtualization with the PolyBase feature is to allow the data to stay in its original location and format. You can virtualize the external data through the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, so that it can be queried in place like any other table in SQL Server. This process minimizes the need for ETL processes for data movement. This data virtualization scenario is possible with the use of PolyBase connectors.
 
 ### PolyBase connectors
 
-The PolyBase feature provides the connection to the external data source.
+ The PolyBase feature provides the connection to the external data source.
 
 * [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduced PolyBase with support for connections to Hadoop and Azure Blob Storage.
 * [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] introduced additional connectors, including SQL Server, Oracle, Teradata, and MongoDB.
@@ -48,12 +42,18 @@ The PolyBase feature provides the connection to the external data source.
 
 ![PolyBase logical](../../relational-databases/polybase/media/polybase-logical.png "PolyBase logical")
 
-Examples of external connectors include:
+ Examples of external connectors include:
 
 - [SQL Server](polybase-configure-sql-server.md)
 - [Oracle](polybase-configure-oracle.md)
 - [Teradata](polybase-configure-teradata.md)
 - [MongoDB](polybase-configure-mongodb.md)
+
+ To use PolyBase in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
+
+1. [Install PolyBase on Windows](polybase-installation.md) or [Install PolyBase on Linux](polybase-linux-setup.md)
+1. Create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md)
+1. Create an [external table](../../t-sql/statements/create-external-table-transact-sql.md)
 
 ### Supported SQL products and services
 

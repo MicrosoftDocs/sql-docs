@@ -1,5 +1,5 @@
 ---
-title: Azure Synpase Pathway Preview behind the scenes.
+title: Azure Synapse Pathway Preview behind the scenes.
 description: Technical deep dive into how Azure Synapse Pathway translates your code. 
 author: anshul82-ms
 ms.author: anrampal.
@@ -12,7 +12,7 @@ ms.custom: template-concept
 
 # Azure Synapse Pathway Preview behind the scenes
 
-Azure Synapse Pathway’s goal is to preserve the functional intent of the original code while optimizing for the modern Synapse SQL. Synapse Pathway uses a three-stage process for translating SQL code from a source system to Azure Synapse SQL.
+Azure Synapse Pathway’s goal is to preserve the functional intent of the original code while optimizing for Synapse SQL. Synapse Pathway uses a three-stage process for translating SQL code from a source system to Azure Synapse SQL.
 
 Each of the stages preserves and augments the knowledge of the source including source-specific metadata to ensure the highest quality in translation.
 

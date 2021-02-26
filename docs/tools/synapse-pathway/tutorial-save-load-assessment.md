@@ -11,7 +11,7 @@ ms.date: 02/18/2021
 
 # Save and load assessments with Azure Synapse Pathway (Preview) 
 
-The following step-by-step instructions demonstrates  saving and uploading a data warehouse assessment from a file using Azure Synapse Pathway.
+The following step-by-step instructions demonstrate how to save and upload a data warehouse assessment from a file using Azure Synapse Pathway.
 
 In this tutorial, you learn how to:
 

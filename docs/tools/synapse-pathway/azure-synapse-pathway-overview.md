@@ -20,14 +20,15 @@ To translate this critical SQL code, customers have to either manually rewrite e
 
 > [!IMPORTANT]
 > Azure Synapse Pathway is currently in public preview.
-> This preview version is provided without a service level agreement, and it's not recommended for production workloads. Certain features might not be supported or might have constrained capabilities. 
+> This preview version is provided without a service level agreement, and it's not recommended for production workloads. Certain features might not be supported or might have constrained capabilities.
+ 
 > For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). 
 
-**Azure Synapse Pathway** helps you upgrade to a modern data warehouse platform by automating the code translation of your existing data warehouse. It is a free, intuitive and easy to use tool that automates the code translation enabling a quicker migration to Azure Synapse Analytics .
+**Azure Synapse Pathway** helps you upgrade to a modern data warehouse platform by automating the code translation of your existing data warehouse. It's a free, intuitive, and easy to use tool that automates the code translation enabling a quicker migration to Azure Synapse Analytics.
 
  ![Azure Synapse pathway overview.](./media/pathway-overview/synapse-pathway-overview.png) 
 
-Synapse Pathway translates Data Definition Language (DDL), Data Manipulation Language (DML) statements into T-SQL compliant language that is compatible with Azure Synapse SQL.
+Synapse Pathway translates Data Definition Language (DDL) and Data Manipulation Language (DML) statements into T-SQL compliant language that is compatible with Azure Synapse SQL.
 
 ## Behind the scenes
 
@@ -35,20 +36,15 @@ To learn more about Azure Synapse Pathway, see [behind the scenes](synapse-pathw
 
 ## Get Azure Synapse Pathway
 
-Azure Synapse Pathway is currently in **Preview**.
-
 To install Synapse Pathway, check [Azure Synapse Pathway download](synapse-pathway-download.md) for pre-requisites and the link to download the latest version.
 
 ## Supported sources
 
-The preview version of Azure Synapse Pathway supports code conversion of database, schemas, and tables for the following sources:
+Azure Synapse Pathway supports code conversion of database, schemas, and tables for the following sources:
 - **IBM Netezza** 
 - **Microsoft SQL Server**
 - **Teradata Vantage**
 - **Snowflake**
-
-<!-- > [!NOTE]
-Check [release notes](..) for new sources added as well as feature additions.  -->
 
 ## Frequently asked questions
 

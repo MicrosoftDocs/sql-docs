@@ -1,7 +1,7 @@
 ---
 title: "SqlClient driver support lifecycle"
 description: "Page that contains product support lifecycle information."
-ms.date: "01/04/2020"
+ms.date: "02/26/2021"
 dev_langs:
   - "csharp"
   - "vb"

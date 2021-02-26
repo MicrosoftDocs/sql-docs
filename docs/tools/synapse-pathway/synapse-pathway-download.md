@@ -1,15 +1,21 @@
 ---
 title: Azure Synapse Pathway Preview download 
 description: Learn how to get download Azure Synapse Pathway
-ms.date: 02/23/2021
+ms.date: 03/02/2021
 ms.prod: sql
 ms.technology: "Azure Synapse Pathway"
 keywords: ""
 helpviewer_keywords: 
   - "Azure Synapse Pathway, download"
 author: anshul82-ms
+monikerRange: "=azure-sqldw-latest"
 ms.author: anrampal
 ---
+
+# Azure Synapse Pathway Preview download
+[!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
+
+This article contains directions to download Azure Synapse Pathway preview.
 
 ## Prerequisites
 

@@ -4,12 +4,14 @@ description: Frequently asked question for Azure Synapse Pathway
 author: anshul82-ms
 ms.author: anrampal
 ms.topic: overview 
-ms.date: 02/22/2020
+ms.date: 03/02/2021
 ms.prod: sql
 ms.technology: "Azure Synapse Pathway"
+monikerRange: "=azure-sqldw-latest"
 ms.custom: template-overview 
 ---
 # Azure Synapse Pathway Preview
+[!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 In this guide, you'll find the most frequently asked questions on Azure Synapse Pathway.
 

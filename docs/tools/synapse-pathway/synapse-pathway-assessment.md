@@ -6,11 +6,13 @@ ms.author: anrampal
 ms.prod: sql
 ms.technology: "Azure Synapse Pathway"
 ms.topic: tutorial 
-ms.date: 02/16/2021
+ms.date: 03/02/2021
+monikerRange: "=azure-sqldw-latest"
 ms.custom: template-tutorial 
 ---
 
 # Tutorial to perform your first code translation with Azure Synapse Pathway Preview
+[!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 Azure Synapse Pathway v1.0 introduces support for translating schemas, tables, views, functions, etc. from **Netezza**, **Teradata**, **Snowflake**, and **Microsoft SQL Server** into T-SQL complaint code that automates migration to Azure Synapse Analytics.
 

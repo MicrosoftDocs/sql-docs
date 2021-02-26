@@ -13,7 +13,7 @@ ms.custom: template-overview
 # Azure Synapse Pathway Preview
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
-In this guide, you'll find the most frequently asked questions on Azure Synapse Pathway.
+In this guide, you'll find the most frequently asked questions on Azure Synapse Pathway Preview.
 
 ## General
 

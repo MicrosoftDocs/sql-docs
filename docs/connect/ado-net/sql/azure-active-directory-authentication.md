@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: karinazhou
 ms.author: v-jizho2
-ms.reviewer: 
+ms.reviewer: v-daenge
 ---
 
 # Using Azure Active Directory authentication with SqlClient

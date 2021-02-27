@@ -234,12 +234,68 @@ Specifies the graph match pattern. For more information about the arguments for 
 > - A MERGE update is implemented as a delete and insert pair. The affected row count for a MERGE update includes the deleted and inserted rows. 
 > - During the preview, MERGE…WHEN NOT MATCHED INSERT is not supported for tables with IDENTITY columns.  
 > - The support for tables with different distribution types is described in this table:
-
+>
 >|MERGE CLAUSE in Azure Synapse Analytics|Supported TARGE distribution table| Supported SOURCE distribution table|Comment|  
 >|-----------------|---------------|-----------------|-----------|  
 >|**WHEN MATCHED**| All distribution types |All distribution types||  
 >|**NOT MATCHED BY TARGET**|HASH |All distribution types|Use UPDATE/DELETE FROM…JOIN to synchronize two tables. |
 >|**NOT MATCHED BY SOURCE**|All distribution types|All distribution types|||  
+
+>[!IMPORTANT]
+> During preview, the MERGE command in Azure Synapse SQL *may* leave the target table in an inconsistent state, with rows placed in the wrong distribution, causing later queries to return wrong results in some cases.    This problem may happen when these two conditions are met:
+> 1.	The MERGE T-SQL statement was executed on a HASH distributed TARGET table in Azure Synapse SQL database.
+> 2.	The TARGET table of the merge has secondary indices or a UNIQUE constraint.
+>
+> This issue will be fixed soon.  Until the fix is available, please stop using the MERGE command on TARGET tables that have secondary indices or UNIQUE constraints. **An important reminder**, any preview feature is for testing only and it cannot be used on production instances or production data.  Please also keep a copy of your test database if its data is important. 
+>
+> To check if a hash distributed TARGET table for MERGE gets affected by this issue, follow these steps to examine if the tables have rows landed in wrong distribution.  If 'no need for repair' is returned, this table is not affected.  
+>```sql
+> if object_id('[check_table_1]', 'U') is not null
+> drop table [check_table_1]
+> go
+> if object_id('[check_table_2]', 'U') is not null
+> drop table [check_table_2]
+> go
+>
+> create table [check_table_1] with(distribution = round_robin) as
+> select <DISTRIBUTION_COLUMN> as x from <MERGE_TARGET_TABLE> group by <DISTRIBUTION_COLUMN>;
+> go
+>
+> create table [check_table_2] with(distribution = hash(x)) as
+> select x from [check_table_1];
+>go
+>
+> if not exists(select top 1 * from (select <DISTRIBUTION_COLUMN> as x from <MERGE_TARGET_TABLE> except select x from 
+> [check_table_2]) as tmp)
+> select 'no need for repair' as result
+> else select 'needs repair' as result
+> go
+>
+> if object_id('[check_table_1]', 'U') is not null
+> drop table [check_table_1]
+> go
+> if object_id('[check_table_2]', 'U') is not null
+> drop table [check_table_2]
+> go
+>```
+>To repair affected tables, run these statements to copy all rows from the old table to a new table.
+>```sql
+> if object_id('[repair_table_temp]', 'U') is not null
+> drop table [repair_table_temp];
+> go
+> if object_id('[repair_table]', 'U') is not null
+> drop table [repair_table];
+> go
+> create table [repair_table_temp] with(distribution = round_robin) as select * from <MERGE_TARGET_TABLE>;
+> go
+>
+> -- [repair_table] will hold the repaired table generated from <MERGE_TARGET_TABLE>
+> create table [repair_table] with(distribution = hash(<DISTRIBUTION_COLUMN>)) as select * from [repair_table_temp];
+> go
+>if object_id('[repair_table_temp]', 'U') is not null
+> drop table [repair_table_temp];
+> go
+> ```   
 
 At least one of the three MATCHED clauses must be specified, but they can be specified in any order. A variable can't be updated more than once in the same MATCHED clause.  
   

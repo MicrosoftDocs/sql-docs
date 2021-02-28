@@ -145,7 +145,7 @@ FROM { <table_source> [ ,...n ] }
 }  
   
 <tablesample_clause> ::=
-    TABLESAMPLE ( sample_number [ PERCENT ] ) -- Azure Synapse Analytics only  
+    TABLESAMPLE ( sample_number [ PERCENT ] ) -- Azure Synapse Analytics Dedicated SQL pool only  
  
 <joined_table> ::=   
 {  

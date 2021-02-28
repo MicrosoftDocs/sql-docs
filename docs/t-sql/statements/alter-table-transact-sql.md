@@ -405,6 +405,8 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 }
 ```
 
+[!INCLUDE[synapse-analytics-od-supported-tables](../../includes/synapse-analytics-od-supported-tables.md)]
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments

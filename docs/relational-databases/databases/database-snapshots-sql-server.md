@@ -131,7 +131,7 @@ A database snapshot is a read-only, static view of a [!INCLUDE[ssNoVersion](../.
   
 -   The source database cannot be configured as a scalable shared database.  
 
--   Prior to SQL Server 2019, the source database must not contain a MEMORY_OPTIMIZED_DATA filegroup. Support for in-memory database snapshots was added in SQL Server 2019.
+-   Prior to SQL Server 2019, the source database could not contain a MEMORY_OPTIMIZED_DATA filegroup. Support for in-memory database snapshots was added in SQL Server 2019.
   
 > [!NOTE]  
 >  All recovery models support database snapshots.  

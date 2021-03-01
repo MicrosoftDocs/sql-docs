@@ -4,7 +4,7 @@ description: Update the `AZDATA_PASSWORD` manually
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 02/25/2021
+ms.date: 03/01/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -90,98 +90,98 @@ After following the steps to update AZDATA_PASSWORD, you will see that [Grafana]
 Follow these options for manually updating the password for [Grafana](app-monitor.md).
 
 1. The htpasswd utility is required. You can install this on any client machine.
-
-#### [For Ubuntu](#tab/ubuntu): 
-```bash
-sudo apt install apache2-utils
-```
-
-#### [For RHEL](#tab/rhel): 
-```bash
-sudo yum install httpd-tools
-```
-
----
+    
+    #### [For Ubuntu](#tab/ubuntu): 
+    ```bash
+    sudo apt install apache2-utils
+    ```
+    
+    #### [For RHEL](#tab/rhel): 
+    ```bash
+    sudo yum install httpd-tools
+    ```
+    
+    ---
 
 2. Generate the new password. 
-
-```bash
-htpasswd -nbs <username> <password>
-admin:{SHA}<secret>
-```
-
-Replace values for /<username/>, /<password/>, /<secret/> as appropriate, for example:
-
-```bash
-htpasswd -nbs admin Test@12345
-admin:{SHA}W/5VKRjIzjusUJ0ih0gHyEPjC/s=
-```
+    
+    ```bash
+    htpasswd -nbs <username> <password>
+    admin:{SHA}<secret>
+    ```
+    
+    Replace values for /<username/>, /<password/>, /<secret/> as appropriate, for example:
+    
+    ```bash
+    htpasswd -nbs admin Test@12345
+    admin:{SHA}W/5VKRjIzjusUJ0ih0gHyEPjC/s=
+    ```
 
 3. Now encode the password:
-
-```bash
-echo "admin:{SHA}W/5VKRjIzjusUJ0ih0gHyEPjC/s=" | base64
-```             
-
-Retain the output base64 string for later.
-
+    
+    ```bash
+    echo "admin:{SHA}W/5VKRjIzjusUJ0ih0gHyEPjC/s=" | base64
+    ```             
+    
+    Retain the output base64 string for later.
+    
 4. Next, edit the mgmtproxy-secret:
-
-```bash
-kubectl edit secret -n mssql-cluster mgmtproxy-secret
-```
+    
+    ```bash
+    kubectl edit secret -n mssql-cluster mgmtproxy-secret
+    ```
          
 5. Update the controller-login-htpasswd with the new encoded password base64 string generated above:
-
-```console
-# Please edit the object below. Lines beginning with a '#' will be ignored,
-# and an empty file will abort the edit. If an error occurs while saving this file will be
-# reopened with the relevant failures.
-#
-apiVersion: v1
-data:
-   controller-login-htpasswd: <base64 string from before>
-   mssql-internal-controller-password: <password>
-   mssql-internal-controller-username: <username>
-```         
+    
+    ```console
+    # Please edit the object below. Lines beginning with a '#' will be ignored,
+    # and an empty file will abort the edit. If an error occurs while saving this file will be
+    # reopened with the relevant failures.
+    #
+    apiVersion: v1
+    data:
+       controller-login-htpasswd: <base64 string from before>
+       mssql-internal-controller-password: <password>
+       mssql-internal-controller-username: <username>
+    ```         
 
 6. Identify and delete the mgmtproxy pod. 
+     
+    If necessary, identify the name of your mgmtproxy prod.
+    
+    #### [For Windows](#tab/windows): 
+    On a Windows server you can use the following:
+    
+    ```bash 
+    kubectl get pods -n <namespace> -l app=mgmtproxy
+    ```
+    
+    #### [For Linux](#tab/linux): 
+    On Linux you can use the following:
+    
+    ```bash
+    kubectl get pods -n <namespace> | grep 'mgmtproxy'
+    ```
+    
+    ---
+    
+    Remove the mgmtproxy pod:
+    ```bash
+    kubectl delete pod mgmtproxy-xxxxx -n mssql-clutser
+    ```
+
+7. Wait for the mgmtproxy pod to come online and Grafana Dashboard to start.  
  
-If necessary, identify the name of your mgmtproxy prod.
-
-#### [For Windows](#tab/windows): 
-On a Windows server you can use the following:
-
-```bash 
-kubectl get pods -n <namespace> -l app=mgmtproxy
-```
-
-#### [For Linux](#tab/linux): 
-On Linux you can use the following:
-
-```bash
-kubectl get pods -n <namespace> | grep 'mgmtproxy'
-```
-
----
-
-Remove the mgmtproxy pod:
-```bash
-kubectl delete pod mgmtproxy-xxxxx -n mssql-clutser
-```
-
-9. Wait for the mgmtproxy pod to come online and Grafana Dashboard to start.  
- 
-The wait is not significant and the pod should be online within seconds. To check the status of the pod you can use the same `get pods` command as used in the previous step. 
-If you see the mgmtproxy pod is not promptly returning to Ready status, use kubectl to describe the pod:
-
-```bash
-kubectl describe pods mgmtproxy-xxxxx  -n <namespace>
-```
-
-For troubleshooting and further log collection, use the Azure Data CLI `[azdata bdc debug copy-logs](../azdata/reference/reference-azdata-bdc-debug.md)` command.
-
-10. Now login to Grafana using new password. 
+    The wait is not significant and the pod should be online within seconds. To check the status of the pod you can use the same `get pods` command as used in the previous step. 
+    If you see the mgmtproxy pod is not promptly returning to Ready status, use kubectl to describe the pod:
+    
+    ```bash
+    kubectl describe pods mgmtproxy-xxxxx  -n <namespace>
+    ```
+    
+    For troubleshooting and further log collection, use the Azure Data CLI `[azdata bdc debug copy-logs](../azdata/reference/reference-azdata-bdc-debug.md)` command.
+    
+8. Now login to Grafana using new password. 
 
 
 ## Update the Kibana password
@@ -192,31 +192,31 @@ Follow these options for manually updating the password for [Kibana](cluster-log
 > The older Microsoft Edge browser is incompatible with Kibana, you must use the Edge chromium-based browser for the dashboard to display correctly. You will see a blank page when loading the dashboards using an unsupported browser, see [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
 
 1. Open the Kibana URL.
-
-You can find the Kibana service endpoint URL from within [Azure Data Studio](manage-with-controller-dashboard#controller-dashboard), or use the following **azdata** command:
-
-```azurecli
-azdata login
-azdata bdc endpoint list -e logsui -o table
-```
-
-For example: https://11.111.111.111:30777/kibana/app/kibana#/discover
+    
+    You can find the Kibana service endpoint URL from within [Azure Data Studio](manage-with-controller-dashboard#controller-dashboard), or use the following **azdata** command:
+    
+    ```azurecli
+    azdata login
+    azdata bdc endpoint list -e logsui -o table
+    ```
+    
+    For example: https://11.111.111.111:30777/kibana/app/kibana#/discover
 
 2. On the left side pane click on the **Security** option.
     
-![A screenshot of the menu on the left pane of Kibana, with the Security option chosen](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-1.jpg)
+    ![A screenshot of the menu on the left pane of Kibana, with the Security option chosen](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-1.jpg)
 
 3. On the security page, under the heading Authentication Backends, click on **Internal User Database**.
 
-![A screenshot of the security page, with the Internal User Database box chosen.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-2.jpg)
+    ![A screenshot of the security page, with the Internal User Database box chosen.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-2.jpg)
 
 4. Now you will see the list of users under the heading Internal Users Database. Use this page to add, modify and remove any users for Kibana endpoint access. For the user that need the updated password, click on **Edit** button on the right hand side for the user.
 
-![A screenshot of the Internal User Database page. In the list of users, for the KubeAdmin user, the Edit button is chosen.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-3.jpg)
+    ![A screenshot of the Internal User Database page. In the list of users, for the KubeAdmin user, the Edit button is chosen.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-3.jpg)
 
 5. Enter the new password twice and click on **Submit**:
 
-![A screenshot of the Internal User edit form. A new password has been entered in the Password and Repeat password fields.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-4.jpg)
+    ![A screenshot of the Internal User edit form. A new password has been entered in the Password and Repeat password fields.](\media\big-data-cluster-change-kibana-password\big-data-cluster-change-kibana-password-4.jpg)
 
 6. Close the browser and reconnect to the Kibana URL using updated password.
 

@@ -75,7 +75,7 @@ This switch is used by the client when connecting to Azure SQL Database or Azure
 
 > [!IMPORTANT]
 > The `-G` option only applies to Azure SQL Database and Azure Synapse Analytics.
-> AAD Interactive Authentication is not currently supported on Linux or macOS. AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](using-integrated-authentication#configure-kerberos).
+> AAD Interactive Authentication is not currently supported on Linux or macOS. AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](using-integrated-authentication.md#configure-kerberos).
 
 - -k  
 Specifies that empty columns should retain a null value during the operation, rather than have any default values for the columns inserted.  

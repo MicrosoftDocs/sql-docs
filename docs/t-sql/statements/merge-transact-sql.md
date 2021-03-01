@@ -242,11 +242,11 @@ Specifies the graph match pattern. For more information about the arguments for 
 >|**NOT MATCHED BY SOURCE**|All distribution types|All distribution types|||  
 
 >[!IMPORTANT]
-> During preview, the MERGE command in Azure Synapse SQL *may* leave the target table in an inconsistent state, with rows placed in the wrong distribution, causing later queries to return wrong results in some cases.    This problem may happen when these two conditions are met:
+> During preview, the MERGE command in Azure Synapse SQL *may* leave the target table in an inconsistent state, with rows placed in the wrong distribution, causing later queries to return wrong results in some cases.  This problem may happen when these two conditions are met:
 > 1.	The MERGE T-SQL statement was executed on a HASH distributed TARGET table in Azure Synapse SQL database.
 > 2.	The TARGET table of the merge has secondary indices or a UNIQUE constraint.
 >
-> This issue will be fixed soon.  Until the fix is available, please stop using the MERGE command on TARGET tables that have secondary indices or UNIQUE constraints. **An important reminder**, any preview feature is for testing only and it cannot be used on production instances or production data.  Please also keep a copy of your test database if its data is important. 
+> This issue will be fixed soon.  Until the fix is available, please stop using the MERGE command on TARGET tables that have secondary indices or UNIQUE constraints. **An important reminder**, preview features are meant for testing only and should not be used on production instances or production data.  Please also keep a copy of your test database if its data is important. 
 >
 > To check if a hash distributed TARGET table for MERGE gets affected by this issue, follow these steps to examine if the tables have rows landed in wrong distribution.  If 'no need for repair' is returned, this table is not affected.  
 >```sql

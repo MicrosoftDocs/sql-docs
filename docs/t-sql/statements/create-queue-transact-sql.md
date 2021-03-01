@@ -159,7 +159,7 @@ The following table lists the columns in a queue.
 |message_type_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object identifier of the message type that describes the message.|
 |validation|**nchar(2)**|Validation used for the message.<br /><br /> E=Empty<br /><br /> N=None<br /><br /> X=XML|
 |message_body|**varbinary(max)**|Content of the message.|
-|message_id|**uniqueidentifier**|Unique identifier for the message.|
+|message_enqueue_time|**datetime**|time when the message has been enqueued|
 
 ## Permissions
 

@@ -36,18 +36,18 @@ ms.author: chadam
 ###  <a name="Changes"></a> General changes to replication agents to support availability groups  
  Three replication agents were modified to support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. The Log Reader, Snapshot, and Merge agents were modified to query the distribution database for the redirected publisher and to use the returned availability group listener name, if a redirected publisher was declared, to connect to the database publisher.  
   
- By default, when the agents query the distributor to determine whether the original publisher has been redirected, the suitability of the current target or redirection will be verified prior to returning the redirected host to the agent. This is recommended behavior. However, if agent startup occurs very frequently the overhead associated with the validation stored procedure may be deemed too costly. A new command-line switch, *BypassPublisherValidation*, has been added to the Logreader, Snapshot, and Merge agents. When the switch is used, the redirected publisher is returned immediately to the agent and execution of the validation stored procedure is bypassed.  
+ By default, when the agents query the distributor to determine whether the original publisher has been redirected, the suitability of the current target or redirection will be verified prior to returning the redirected host to the agent. This is recommended behavior. However, if agent startup occurs very frequently the overhead associated with the validation stored procedure may be deemed too costly. A new command-line switch, *BypassPublisherValidation*, has been added to the Log reader, Snapshot, and Merge agents. When the switch is used, the redirected publisher is returned immediately to the agent and execution of the validation stored procedure is bypassed.  
   
  Failures returned from the validation stored procedure are logged in the agent history logs. Those errors with severity greater than or equal to 16 will cause the agents to terminate. Some retry capabilities have been built in to the agents to handle the expected disconnect from a published database when it fails over to a new primary.  
   
 #### Log Reader Agent Modifications  
- The Logreader Agent has the following changes.  
+ The Log reader Agent has the following changes.  
   
 -   **Replicated Database Consistency**  
   
      When a published database is a member of an availability group, by default the log reader will not process log records that have not already been hardened at all availability group secondary replicas. This ensures that on failover, all rows replicated to a subscriber also are present at the new primary.  
   
-     When the publisher has only two availability replicas (one primary and one secondary) and a failover happens, the original primary replica remains down because the logreader does not move forward until all secondary databases are brought back online or until the failing secondary replicas are removed from the availability group. The logreader, now running against the secondary database, will not proceed forward since Always On cannot harden any changes to any secondary database. To allow the logreader to proceed further and still have disaster recovery capacity, remove the original primary replica from the availability group using ALTER AVAILABITY GROUP <group_name> REMOVE REPLICA. Then add a new secondary replica to the availability group.  
+     When the publisher has only two availability replicas (one primary and one secondary) and a failover happens, the original primary replica remains down because the log reader does not move forward until all secondary databases are brought back online or until the failing secondary replicas are removed from the availability group. The log reader, now running against the secondary database, will not proceed forward since Always On cannot harden any changes to any secondary database. To allow the log reader to proceed further and still have disaster recovery capacity, remove the original primary replica from the availability group using ALTER AVAILABITY GROUP <group_name> REMOVE REPLICA. Then add a new secondary replica to the availability group.  
   
 -   **Trace flag 1448**  
   
@@ -218,7 +218,7 @@ If Change Data Capture needs to be disabled on a database which is part of an Al
 
 ### Distributed Availability Groups
 
-The publisher, or distribution database in an Availability Group cannot be configured as part of a Distributed Availability Group. The publisher database in an Availability Group and the distribution database in an Availability Group both require a listener endpoint for proper configuration and usage. However, it is not possiblle to configure a listener endpoint for a Distributed Availability group.
+The publisher, or distribution database in an Availability Group cannot be configured as part of a Distributed Availability Group. The publisher database in an Availability Group and the distribution database in an Availability Group both require a listener endpoint for proper configuration and usage. However, it is not possible to configure a listener endpoint for a Distributed Availability group.
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **Replication**  

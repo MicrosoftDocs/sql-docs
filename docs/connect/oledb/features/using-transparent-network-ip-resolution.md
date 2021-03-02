@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "01/02/2020"
 ms.prod: sql
 ms.prod_service:  connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: "reference"
 author: chris-rossi

@@ -251,7 +251,7 @@ Specifies the graph match pattern. For more information about the arguments for 
 >
 > An important reminder, preview features are meant for testing only and should not be used on production instances or production data. Please also keep a copy of your test data if the data is important.
 > 
-> To check which hash distributed tables in a database cannot work with current MERGE command in preview, run this statement
+> To check which hash distributed tables in a database cannot work with MERGE due to this issue, run this statement
 >```sql
 > select a.name, c.distribution_policy_desc, b.type from sys.tables a join sys.indexes b
 > on a.object_id = b.object_id

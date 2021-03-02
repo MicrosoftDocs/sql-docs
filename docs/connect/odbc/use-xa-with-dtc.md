@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -472,13 +472,13 @@ public:
     RETCODE Forget(const XID& xid, RETCODE& xaStatus);
     RETCODE Recover(const int flags, unsigned char* buffer, unsigned int& sizeBuffer, RETCODE& xaStatus);
 
-	bool CreateTable(const std::string& name, SQLHSTMT stmt = NULL);
-	bool DropTable(const std::string& name, SQLHSTMT stmt = NULL);
+    bool CreateTable(const std::string& name, SQLHSTMT stmt = NULL);
+    bool DropTable(const std::string& name, SQLHSTMT stmt = NULL);
 
-	void GetUniqueName(std::string& name);
-	bool ExecuteInsertSequence(const std::string& nameTable, int rows, SQLHSTMT stmt = NULL);
+    void GetUniqueName(std::string& name);
+    bool ExecuteInsertSequence(const std::string& nameTable, int rows, SQLHSTMT stmt = NULL);
 
-	static int CheckRC(SQLRETURN rc, const char *msg, SQLHANDLE handle, SQLSMALLINT htype);
+    static int CheckRC(SQLRETURN rc, const char *msg, SQLHANDLE handle, SQLSMALLINT htype);
 
     void SetTimeout(const int tmo);
     int GetTimeout();
@@ -492,15 +492,15 @@ public:
     static void XidShortToXid(const XID_SHORT& xids, XID& xid);
 
 private:
-	HDBC m_hdbc;
-	std::string m_tableName;
-	std::string m_commandCreateTable;
-	std::string m_commandInsertRow;
+    HDBC m_hdbc;
+    std::string m_tableName;
+    std::string m_commandCreateTable;
+    std::string m_commandInsertRow;
 
-	static const char* COMMAND_CREATE_TABLE;
-	static const char* COMMAND_INSERT_ROW;
+    static const char* COMMAND_CREATE_TABLE;
+    static const char* COMMAND_INSERT_ROW;
 
-	bool ExecuteQuery(const char* query, const char* msg, SQLHSTMT stmt = NULL);
+    bool ExecuteQuery(const char* query, const char* msg, SQLHSTMT stmt = NULL);
     RETCODE IssueXaCall(const XID* xid, int operation, const int flags, unsigned char* buffer, unsigned int& sizeBuffer, RETCODE& xaStatus);
 
 };
@@ -541,9 +541,9 @@ void XidMgr::GetRandomBuffer(unsigned char* buffer, unsigned int sizeBuffer)
 XaTestRunner::XaTestRunner(HDBC dbc)
              : m_hdbc(dbc)
 {
-	GetUniqueName(m_tableName);
-	m_commandCreateTable = COMMAND_CREATE_TABLE;
-	m_commandInsertRow = COMMAND_INSERT_ROW;
+    GetUniqueName(m_tableName);
+    m_commandCreateTable = COMMAND_CREATE_TABLE;
+    m_commandInsertRow = COMMAND_INSERT_ROW;
 }
 
 XaTestRunner::~XaTestRunner()
@@ -577,44 +577,44 @@ void XidMgr::GetUniqueXid(XID& xid, int formatId, unsigned char* globalId, unsig
 
 int XaTestRunner::CheckRC(SQLRETURN rc, const char *msg, SQLHANDLE handle, SQLSMALLINT htype)
 {
-	if (rc == SQL_ERROR)
-	{
-		printf("Error occurred upon [%s]\n", msg);
+    if (rc == SQL_ERROR)
+    {
+        printf("Error occurred upon [%s]\n", msg);
 
-		if (handle)
-		{
-			SQLSMALLINT i = 0;
-			SQLSMALLINT outlen = 0;
-			SQLCHAR errmsg[1024];
-			SQLCHAR sql_state[6];
-			SQLINTEGER native_error = 0;
+        if (handle)
+        {
+            SQLSMALLINT i = 0;
+            SQLSMALLINT outlen = 0;
+            SQLCHAR errmsg[1024];
+            SQLCHAR sql_state[6];
+            SQLINTEGER native_error = 0;
 
-			while ((rc = SQLGetDiagRec(htype, handle, ++i, sql_state, &native_error, errmsg, sizeof(errmsg), &outlen)) == SQL_SUCCESS
-				|| rc == SQL_SUCCESS_WITH_INFO)
-			{
-				printf("Error# %d: [%s] state [%s]\n", i, errmsg, sql_state);
-			}
-		}
+            while ((rc = SQLGetDiagRec(htype, handle, ++i, sql_state, &native_error, errmsg, sizeof(errmsg), &outlen)) == SQL_SUCCESS
+                || rc == SQL_SUCCESS_WITH_INFO)
+            {
+                printf("Error# %d: [%s] state [%s]\n", i, errmsg, sql_state);
+            }
+        }
 
-		return 0;
-	}
-	else if (rc == SQL_SUCCESS_WITH_INFO && handle)
-	{
-		SQLSMALLINT i = 0;
-		SQLSMALLINT outlen = 0;
-		SQLCHAR errmsg[1024];
-		SQLCHAR sql_state[6];
-		SQLINTEGER native_error = 0;
+        return 0;
+    }
+    else if (rc == SQL_SUCCESS_WITH_INFO && handle)
+    {
+        SQLSMALLINT i = 0;
+        SQLSMALLINT outlen = 0;
+        SQLCHAR errmsg[1024];
+        SQLCHAR sql_state[6];
+        SQLINTEGER native_error = 0;
 
-		printf("Success with info for [%s]:\n", msg);
+        printf("Success with info for [%s]:\n", msg);
 
-		while ((rc = SQLGetDiagRec(htype, handle, ++i, sql_state, &native_error, errmsg, sizeof(errmsg), &outlen)) == SQL_SUCCESS
-			|| rc == SQL_SUCCESS_WITH_INFO)
-		{
-			printf("Msg# %d: [%s] state [%s]\n", i, errmsg, sql_state);
-		}
-	}
-	return 1;
+        while ((rc = SQLGetDiagRec(htype, handle, ++i, sql_state, &native_error, errmsg, sizeof(errmsg), &outlen)) == SQL_SUCCESS
+            || rc == SQL_SUCCESS_WITH_INFO)
+        {
+            printf("Msg# %d: [%s] state [%s]\n", i, errmsg, sql_state);
+        }
+    }
+    return 1;
 }
 
 RETCODE XaTestRunner::IssueXaCall(const XID* pXid, int operation, const int flags, unsigned char* buffer, unsigned int& sizeBuffer, RETCODE& xaStatus)
@@ -718,95 +718,95 @@ void XaTestRunner::XidShortToXid(const XID_SHORT& xids, XID& xid)
 
 void XaTestRunner::GetUniqueName(std::string& name)
 {
-	static std::atomic<unsigned short> counter(0);
-	auto id = counter++;
+    static std::atomic<unsigned short> counter(0);
+    auto id = counter++;
 
-	auto duration = std::chrono::system_clock::now().time_since_epoch();
-	long long millis = std::chrono::duration_cast<std::chrono::milliseconds>(duration).count();
-	char szName[64];
-	sprintf_s(szName, sizeof(szName), "test_%d_%lld", id, millis);
-	name = szName;
+    auto duration = std::chrono::system_clock::now().time_since_epoch();
+    long long millis = std::chrono::duration_cast<std::chrono::milliseconds>(duration).count();
+    char szName[64];
+    sprintf_s(szName, sizeof(szName), "test_%d_%lld", id, millis);
+    name = szName;
 }
 
 bool XaTestRunner::ExecuteQuery(const char* query, const char* msg, SQLHSTMT stmt)
 {
-	RETCODE rc = SQL_SUCCESS;
-	SQLHSTMT hstmt = stmt;
-	bool isAllocateStatement = (stmt == NULL);
+    RETCODE rc = SQL_SUCCESS;
+    SQLHSTMT hstmt = stmt;
+    bool isAllocateStatement = (stmt == NULL);
 
-	if (isAllocateStatement)
-	{
-		rc = SQLAllocHandle(SQL_HANDLE_STMT, m_hdbc, &hstmt);
-	}
+    if (isAllocateStatement)
+    {
+        rc = SQLAllocHandle(SQL_HANDLE_STMT, m_hdbc, &hstmt);
+    }
 
-	if (SQL_SUCCEEDED(rc))
-	{
-		rc = SQLExecDirectA(hstmt, (SQLCHAR*)query, SQL_NTS);
-		if (!SQL_SUCCEEDED(rc))
-		{
-			CheckRC(rc, msg, hstmt, SQL_HANDLE_STMT);
-		}
+    if (SQL_SUCCEEDED(rc))
+    {
+        rc = SQLExecDirectA(hstmt, (SQLCHAR*)query, SQL_NTS);
+        if (!SQL_SUCCEEDED(rc))
+        {
+            CheckRC(rc, msg, hstmt, SQL_HANDLE_STMT);
+        }
 
-		if (isAllocateStatement)
-		{
-			SQLFreeStmt(hstmt, SQL_CLOSE);
-		}
-	}
-	else
-	{
-		CheckRC(rc, "Alloc Statement", m_hdbc, SQL_HANDLE_DBC);
-	}
+        if (isAllocateStatement)
+        {
+            SQLFreeStmt(hstmt, SQL_CLOSE);
+        }
+    }
+    else
+    {
+        CheckRC(rc, "Alloc Statement", m_hdbc, SQL_HANDLE_DBC);
+    }
 
-	return SQL_SUCCEEDED(rc);
+    return SQL_SUCCEEDED(rc);
 
 }
 
 bool XaTestRunner::CreateTable(const std::string& name, SQLHSTMT stmt)
 {
-	char query[256];
-	sprintf_s(query, sizeof(query), m_commandCreateTable.c_str(), name.empty() ? "testRunner" : name.c_str());
+    char query[256];
+    sprintf_s(query, sizeof(query), m_commandCreateTable.c_str(), name.empty() ? "testRunner" : name.c_str());
 
-	return ExecuteQuery(query, "Create Table", stmt);
+    return ExecuteQuery(query, "Create Table", stmt);
 }
 
 bool XaTestRunner::DropTable(const std::string& name, SQLHSTMT stmt)
 {
-	char query[256];
-	const char* tableName = name.empty() ? "testRunner" : name.c_str();
-	sprintf_s(query, sizeof(query), " IF OBJECT_ID('%s', 'U') IS NOT NULL DROP TABLE %s", tableName, tableName);
+    char query[256];
+    const char* tableName = name.empty() ? "testRunner" : name.c_str();
+    sprintf_s(query, sizeof(query), " IF OBJECT_ID('%s', 'U') IS NOT NULL DROP TABLE %s", tableName, tableName);
 
-	return ExecuteQuery(query, "Drop Table", stmt);
+    return ExecuteQuery(query, "Drop Table", stmt);
 }
 
 bool XaTestRunner::ExecuteInsertSequence(const std::string& nameTable, int rows, SQLHSTMT stmt)
 {
-	SQLHSTMT hstmt = stmt;
-	bool isAllocateStatement = (stmt == NULL);
-	RETCODE rc = SQL_SUCCESS;
+    SQLHSTMT hstmt = stmt;
+    bool isAllocateStatement = (stmt == NULL);
+    RETCODE rc = SQL_SUCCESS;
 
-	if (isAllocateStatement)
-	{
-		rc = SQLAllocHandle(SQL_HANDLE_STMT, m_hdbc, &hstmt);
-		if (!SQL_SUCCEEDED(rc))
-		{
-			CheckRC(rc, "Alloc Statement", m_hdbc, SQL_HANDLE_DBC);
-			return false;
-		}
-	}
+    if (isAllocateStatement)
+    {
+        rc = SQLAllocHandle(SQL_HANDLE_STMT, m_hdbc, &hstmt);
+        if (!SQL_SUCCEEDED(rc))
+        {
+            CheckRC(rc, "Alloc Statement", m_hdbc, SQL_HANDLE_DBC);
+            return false;
+        }
+    }
 
-	for (auto r = 0; r < rows; r++)
-	{
-		char query[256];
-		sprintf_s(query, sizeof(query), m_commandInsertRow.c_str(), nameTable.c_str(), r, r);
-		rc = ExecuteQuery(query, "Insert Row", hstmt);
-	}
+    for (auto r = 0; r < rows; r++)
+    {
+        char query[256];
+        sprintf_s(query, sizeof(query), m_commandInsertRow.c_str(), nameTable.c_str(), r, r);
+        rc = ExecuteQuery(query, "Insert Row", hstmt);
+    }
 
-	if (isAllocateStatement)
-	{
-		SQLFreeStmt(hstmt, SQL_CLOSE);
-	}
+    if (isAllocateStatement)
+    {
+        SQLFreeStmt(hstmt, SQL_CLOSE);
+    }
 
-	return true;
+    return true;
 }
 ```
 
@@ -872,14 +872,14 @@ struct xid_s
 #define XA_RETRY        4                   /* routine returned with no effect and may be re-issued */
 #define XA_RDONLY       3                   /* the transaction branch was read-only and has been committed */
 #define XA_OK           0                   /* normal execution */
-#define XAER_ASYNC		(-2)                /* asynchronous operation already outstanding */
-#define XAER_RMERR		(-3)                /* a resource manager error occurred in the transaction branch */
-#define XAER_NOTA		(-4)                /* the XID is not valid */
-#define XAER_INVAL		(-5)                /* invalid arguments were given */
-#define XAER_PROTO		(-6)                /* routine invoked in an improper context */
-#define XAER_RMFAIL		(-7)                /* resource manager unavailable */
-#define XAER_DUPID		(-8)                /* the XID already exists */
-#define XAER_OUTSIDE	(-9)                /* resource manager doing work outside */
+#define XAER_ASYNC      (-2)                /* asynchronous operation already outstanding */
+#define XAER_RMERR      (-3)                /* a resource manager error occurred in the transaction branch */
+#define XAER_NOTA       (-4)                /* the XID is not valid */
+#define XAER_INVAL      (-5)                /* invalid arguments were given */
+#define XAER_PROTO      (-6)                /* routine invoked in an improper context */
+#define XAER_RMFAIL     (-7)                /* resource manager unavailable */
+#define XAER_DUPID      (-8)                /* the XID already exists */
+#define XAER_OUTSIDE    (-9)                /* resource manager doing work outside */
                                             /* global transaction */
 
 

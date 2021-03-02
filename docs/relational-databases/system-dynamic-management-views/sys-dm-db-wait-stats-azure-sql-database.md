@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_db_wait_stats_TSQL"
   - "dm_db_wait_stats"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "sys.dm_db_wait_stats dynamic management view"
   - "dm_db_wait_stats"
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-author: markingmyname
-ms.author: maghan
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "= azuresqldb-current"
 ---
 # sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

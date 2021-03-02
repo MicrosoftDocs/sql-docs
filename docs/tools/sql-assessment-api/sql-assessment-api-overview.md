@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 11/04/2019
+ms.date: 1/25/2021
 ---
 
 # SQL Assessment API
@@ -17,23 +17,45 @@ SQL Assessment API provides a mechanism to evaluate the configuration of your SQ
 
 SQL Assessment API is useful when you want to make sure your SQL Server configuration is in line with recommended best practices. After an initial assessment, configuration stability can be tracked by regularly scheduled assessments.
 
-The API can be used to assess Azure SQL Managed Instance and SQL Server versions 2012 and higher. SQL on Linux is supported.
+The API can be used to assess:
+ 
+* Azure SQL Database Managed Instance and SQL Server versions 2012 and higher.
+
+* SQL on Linux-based systems.
+
+The API is also used by SQL Server Assessment Extension for Azure Data Studio (ADS).
 
 ## Rules
 
-Rules sometimes referred to as checks, are defined in JSON formatted files. Ruleset format requires a ruleset name and version to be specified. So when you use custom rulesets, you can easily know which recommendations from what ruleset come.
+Rules (sometimes referred to as checks) are defined in JSON formatted files. The ruleset format requires a ruleset name and version to be specified. When you use custom rulesets, you can easily know which recommendations from what ruleset come.
 
 Microsoft's shipped ruleset is available on GitHub. You can visit the [samples repository](https://aka.ms/sql-assessment-api) for more details.
 
-## SQL Assessment cmdlets and SMO extension
+## SQL Assessment cmdlets and associated extensions
 
-SQL Assessment API is part of the [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/installing-smo.md) July 2019 release version and higher and the [SQL Server PowerShell module](../../powershell/download-sql-server-ps-module.md) July 2019 release version and higher.
+The SQL Assessment API is part of:
+
+* [Azure Data Studio (ADS)](../../azure-data-studio/what-is-azure-data-studio.md)
+
+    Release version as of June 2020 and higher.
+
+* [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/installing-smo.md)
+
+    Release version as of July 2019 and higher.
+
+* [SQL Server PowerShell module](../../powershell/download-sql-server-ps-module.md)
+
+    Release version as of July 2019 and higher.
+
+Before you start using the SQL Assessment API, make sure to:
+
+* [Install ADS](https://techcommunity.microsoft.com/t5/sql-server/released-sql-server-assessment-extension-for-azure-data-studio/ba-p/1470603)
 
 * [Install SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)
 
 * [Install SQL Server PowerShell module](../../powershell/download-sql-server-ps-module.md)
 
-SqlServer module is getting two new cmdlets to work with SQL Assessment API:
+The SqlServer module is getting two new cmdlets to work with SQL Assessment API:
 
 * **Get-SqlAssessmentItem** – Provides a list of available assessment checks for a SQL Server object
 

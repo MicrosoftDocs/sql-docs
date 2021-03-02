@@ -20,7 +20,14 @@ This library contains the source code for the Apache Spark Connector for SQL Ser
 
 [Apache Spark](https://spark.apache.org/) is a unified analytics engine for large-scale data processing.
 
-You can import the connector into your project through the Maven coordinates: `com.microsoft.azure:spark-mssql-connector:1.0.0`. You can also build the connector from source or download the jar from the Release section in GitHub. For the latest information about the connector, see [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).
+There are two versions of the connector available through Maven, a 2.4.5 compatible version and a 3.0.0 compatible version. Both versions can be found [here](https://search.maven.org/search?q=spark-mssql-connector) and can be imported using the coordinates below:
+
+| Connector | Maven Coordinate |
+| --------- | ------------------ |
+| Spark 2.4.5 compatible connnector | `com.microsoft.azure:spark-mssql-connector:1.0.1` |
+| Spark 3.0.0 compatible connnector | `com.microsoft.azure:spark-mssql-connector_2.12_3.0:1.0.0-alpha` |
+
+You can also build the connector from source or download the jar from the Release section in GitHub. For the latest information about the connector, see [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).
 
 ## Supported Features
 
@@ -32,8 +39,8 @@ You can import the connector into your project through the Maven coordinates: `c
 
 | Component                            | Versions Supported              |
 |--------------------------------------|---------------------------------|
-| Apache Spark                         | 2.4.5 (Spark 3.0 not supported) |
-| Scala                                | 2.11                            |
+| Apache Spark                         | 2.4.5, 3.0.0 |
+| Scala                                | 2.11, 2.12                            |
 | Microsoft JDBC Driver for SQL Server | 8.2                             |
 | Microsoft SQL Server                 | SQL Server 2008 or later        |
 | Azure SQL Databases                  | Supported                       |

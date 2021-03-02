@@ -45,9 +45,9 @@ ms.author: "jroth"
 |**DATETIMEOFFSET**|**None**|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
 |**decimal**|**SqlDecimal**|**Decimal, Nullable\<Decimal>**|  
 |**float**|**SqlDouble**|**Double, Nullable\<Double>**|  
-|**geography**|**SqlGeography**<br /><br /> **SqlGeography** is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430).|None|  
-|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430).|None|  
-|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430).|None|  
+|**geography**|**SqlGeography**<br /><br /> **SqlGeography** is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430).|None|  
+|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430).|None|  
+|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=100430).|None|  
 |**image**|None|None|  
 |**int**|**SqlInt32**|**Int32, Nullable\<Int32>**|  
 |**money**|**SqlMoney**|**Decimal, Nullable\<Decimal>**|  

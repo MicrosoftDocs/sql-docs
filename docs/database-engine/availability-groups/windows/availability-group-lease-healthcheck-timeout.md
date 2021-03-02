@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "05/02/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid:
 author: cawrites
@@ -92,7 +92,7 @@ The delay values determine the wait time between heartbeats from the cluster ser
 To list all current cluster values, on any node in the target cluster open an elevated PowerShell terminal. Run the following command:
 
 ```PowerShell
- Get-Cluster | fl \
+ Get-Cluster | fl *
 ``` 
 
 To update any of these values, run the following command in an elevated PowerShell terminal:
@@ -119,6 +119,8 @@ The lease mechanism is controlled by a single value specific to each AG in a WSF
 
    Depending on the AG's configuration there may be additional resources for listeners, shared disks, file shares, etc., these resources do not require any additional configuration. 
 
+> [!NOTE]  
+>  The new value of property 'LeaseTimeout' will take effect after the resource is taken offline and brought online again.
    
 ### Health Check Values 
 

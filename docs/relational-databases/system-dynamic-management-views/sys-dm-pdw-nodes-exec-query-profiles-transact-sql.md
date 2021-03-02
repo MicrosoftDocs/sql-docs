@@ -6,13 +6,13 @@ ms.date: "10/14/2019"
 ms.prod: sql 
 ms.technology: data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 
 author: XiaoyuMSFT 
 ms.author: xiaoyul
-monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest"
 ---
 
 # sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
@@ -63,11 +63,11 @@ The counters returned are per operator per thread. The results are dynamic and d
 |segment_read_count|**int**|Number of segment read-aheads so far.|  
 |segment_skip_count|**int**|Number of segments skipped so far.| 
 |actual_read_row_count|**bigint**|Number of rows read by an operator before the residual predicate was applied.| 
-|estimated_read_row_count|**bigint**|**Applies to:** Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Number of rows estimated to be read by an operator before the residual predicate was applied.|  
+|estimated_read_row_count|**bigint**|**Applies to:** Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1. <br/>Number of rows estimated to be read by an operator before the residual predicate was applied.|  
   
 ## Remarks
 
-The same remarks in [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15) apply.  
+The same remarks in [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md) apply.  
 
 ## Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  

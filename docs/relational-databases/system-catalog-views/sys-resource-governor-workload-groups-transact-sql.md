@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.resource_governor_workload_groups"
   - "resource_governor_workload_groups_TSQL"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.resource_governor_workload_groups catalog view"
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.author: maghan
 |max_dop|**int**|Maximum degree of parallelism for the workload group. The default value, 0, uses global settings. Is not nullable.<br /><br /> **Node:** This setting will override the query option **maxdop**.|  
 |group_max_requests|**int**|Maximum number of concurrent requests. The default value, 0, specifies no limit. Is not nullable.|  
 |pool_id|**int**|ID of the resource pool that this workload group uses.|  
-|external_pool_id|**int**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.<br /><br /> ID of the external resource pool that this workload group uses.|  
+|external_pool_id|**int**|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.<br /><br /> ID of the external resource pool that this workload group uses.|  
   
 ## Remarks  
  The catalog view displays the stored metadata. To see the in-memory configuration, use the corresponding dynamic management view, [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  

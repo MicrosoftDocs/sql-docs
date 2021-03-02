@@ -6,13 +6,13 @@ ms.date: "05/24/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Broker:Forwarded Message Dropped event class"
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Broker:Forwarded Message Dropped Event Class
 

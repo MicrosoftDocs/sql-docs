@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER EXTERNAL DATA SOURCE"
   - "ALTER_EXTERNAL_DATA_SOURCE"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "polybase, alter external data source statement"
   - "ALTER EXTERNAL DATA SOURCE statement"
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
  Specifies the named credential. See  [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
 TYPE = [HADOOP | BLOB_STORAGE]   
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
 For bulk operations only, `LOCATION` must be valid the URL to Azure Blob storage. Do not put **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL.
 The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1).
 

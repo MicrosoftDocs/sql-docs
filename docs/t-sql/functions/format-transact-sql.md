@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FORMAT_TSQL"
   - "FORMAT"
@@ -15,9 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "FORMAT function"
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-author: markingmyname
-ms.author: maghan
-monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest"
+author: cawrites
+ms.author: chadam
+monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # FORMAT (Transact-SQL)
 
@@ -43,7 +43,7 @@ FORMAT( value, format [, culture ] )
  *format*  
  **nvarchar** format pattern.  
   
- The *format* argument must contain a valid .NET Framework format string, either as a standard format string (for example, "C" or "D"), or as a pattern of custom characters for dates and numeric values (for example, "MMMM DD, yyyy (dddd)"). Composite formatting is not supported. For a full explanation of these formatting patterns, consult the .NET Framework documentation on string formatting in general, custom date and time formats, and custom number formats. A good starting point is the topic, "[Formatting Types](https://go.microsoft.com/fwlink/?LinkId=211776)."  
+ The *format* argument must contain a valid .NET Framework format string, either as a standard format string (for example, "C" or "D"), or as a pattern of custom characters for dates and numeric values (for example, "MMMM DD, yyyy (dddd)"). Composite formatting is not supported. For a full explanation of these formatting patterns, consult the .NET Framework documentation on string formatting in general, custom date and time formats, and custom number formats. A good starting point is the topic, "[Formatting Types](/dotnet/standard/base-types/formatting-types)."  
   
  *culture*  
  Optional **nvarchar** argument specifying a culture.  
@@ -123,7 +123,7 @@ Sunday, November 22, 2020   22 November 2020       Sonntag, 22. November 2020  2
   
 ### B. FORMAT with custom formatting strings
 
- The following example shows formatting numeric values by specifying a custom format. The example assumes that the current date is September 27, 2012. For more information about these and other custom formats, see [Custom Numeric Format Strings](https://msdn.microsoft.com/library/0c899ak8.aspx).  
+ The following example shows formatting numeric values by specifying a custom format. The example assumes that the current date is September 27, 2012. For more information about these and other custom formats, see [Custom Numeric Format Strings](/dotnet/standard/base-types/custom-numeric-format-strings).  
   
 ```sql  
 DECLARE @d DATE = GETDATE();  
@@ -142,7 +142,7 @@ Date        Custom Number
   
 ### C. FORMAT with numeric types
 
- The following example returns 5 rows from the **Sales.CurrencyRate** table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The column **EndOfDateRate** is stored as type **money** in the table. In this example, the column is returned unformatted and then formatted by specifying the .NET Number format, General format, and Currency format types. For more information about these and other numeric formats, see [Standard Numeric Format Strings](https://msdn.microsoft.com/library/dwhawy9k.aspx).  
+ The following example returns 5 rows from the **Sales.CurrencyRate** table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The column **EndOfDateRate** is stored as type **money** in the table. In this example, the column is returned unformatted and then formatted by specifying the .NET Number format, General format, and Currency format types. For more information about these and other numeric formats, see [Standard Numeric Format Strings](/dotnet/standard/base-types/standard-numeric-format-strings).  
   
 ```sql  
 SELECT TOP(5) CurrencyRateID, EndOfDayRate  

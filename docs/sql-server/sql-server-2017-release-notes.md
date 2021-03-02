@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: "= sql-server-2017"
 ---
 # SQL Server 2017 Release Notes
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -24,7 +24,7 @@ This article describes limitations and issues with SQL Server 2017. For related 
 - [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Spin up a Virtual Machine with SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 > [!NOTE]
-> SQL Server 2019 preview is now available. For more information, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
+> SQL Server 2019 preview is now available. For more information, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15&preserve-view=true).
 
 ## SQL Server 2017 - general availability release (October 2017)
 ### Database Engine
@@ -79,8 +79,8 @@ There are no release notes for SQL Server on Windows related to this release. Se
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 CTP 2.1 (May  2017)
 ### Documentation (CTP 2.1)
-- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is noted with **Applies To**. 
-- **Issue and customer impact:** No offline content is available for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
+- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssql17-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql16-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssql17-md.md)] is noted with **Applies To**. 
+- **Issue and customer impact:** No offline content is available for [!INCLUDE[ssSQLv14_md](../includes/sssql17-md.md)].
 
 ### SQL Server Reporting Services (CTP 2.1)
 
@@ -125,12 +125,12 @@ There are no release notes for SQL Server on Windows related to this release. Se
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 CTP 2.0 (April  2017)
 ### Documentation (CTP 2.0)
-- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is noted with **Applies To**. 
-- **Issue and customer impact:** No offline content is available for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
+- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssql17-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql16-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssql17-md.md)] is noted with **Applies To**. 
+- **Issue and customer impact:** No offline content is available for [!INCLUDE[ssSQLv14_md](../includes/sssql17-md.md)].
 
 ### Always On availability groups
 
-- **Issue and customer impact:** A SQL Server instance hosting an availability group secondary replica crashes if the SQL Server major version is lower than the instance that hosts the primary replica. Affects upgrades from all supported versions of SQL Server that host availability groups to SQL Server [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0. The issue occurs under the following conditions. 
+- **Issue and customer impact:** A SQL Server instance hosting an availability group secondary replica crashes if the SQL Server major version is lower than the instance that hosts the primary replica. Affects upgrades from all supported versions of SQL Server that host availability groups to SQL Server [!INCLUDE[ssSQLv14_md](../includes/sssql17-md.md)] CTP 2.0. The issue occurs under the following conditions. 
 
 > 1. User upgrades SQL Server instance hosting secondary replica in accordance with [best practices](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).
 > 2. After upgrade, a failover occurs and a newly upgraded secondary becomes primary before completing upgrade for all secondary replicas in the availability group. The old primary is now a secondary, which is lower version than primary.

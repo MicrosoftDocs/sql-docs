@@ -10,7 +10,7 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import JSON documents into SQL Server
 
@@ -85,6 +85,9 @@ For more info about Azure File Storage, see [File storage](https://azure.microso
 ## Import JSON documents from Azure Blob Storage
 
 You can load files directly into Azure SQL Database from Azure Blob Storage with the T-SQL  BULK INSERT command or the OPENROWSET function.
+
+> [!NOTE]
+> This functionality is added in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and Azure SQL.
 
 First, create an external data source, as shown in the following example.
 

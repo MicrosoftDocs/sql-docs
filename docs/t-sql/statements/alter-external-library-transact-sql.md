@@ -6,7 +6,7 @@ ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: machine-learning
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER EXTERNAL LIBRARY"
   - "ALTER_EXTERNAL_LIBRARY_TSQL"
@@ -17,24 +17,24 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # ALTER EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Modifies the content of an existing external package library.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 > [!NOTE]
 > In SQL Server 2017, R language and Windows platform are supported. R, Python, and external languages on the Windows and Linux platforms are supported in SQL Server 2019 and later.
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current"
 > [!NOTE]
-> In Azure SQL Managed Instance, you can alter a library by removing it and then using **sqlmlutils** to install the altered version. For more information about **sqlmlutils**, see [Install Python packages with sqlmlutils](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current) and [Install new R packages with sqlmlutils](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current).
+> In Azure SQL Managed Instance, you can alter a library by removing it and then using **sqlmlutils** to install the altered version. For more information about **sqlmlutils**, see [Install Python packages with sqlmlutils](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current&preserve-view=true) and [Install new R packages with sqlmlutils](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current&preserve-view=true).
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ## Syntax for SQL Server 2019
 
 ```syntaxsql
@@ -77,7 +77,7 @@ WITH ( LANGUAGE = <language> )
 }
 ```
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 ## Syntax for SQL Server 2017
 
 ```syntaxsql
@@ -108,7 +108,7 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 ## Syntax for Azure SQL Managed Instance
 
 ```syntaxsql
@@ -149,7 +149,7 @@ The library name cannot be arbitrarily assigned. That is, you must use the name 
 
 Specifies the name of the user or role that owns the external library.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 **file_spec**
 
 Specifies the content of the package for a specific platform. Only one file artifact per platform is supported.
@@ -167,33 +167,33 @@ This option is useful if you have the required permission to alter a library, bu
 
 Instead, you can pass the package contents as a variable in binary format.
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 **platform = WINDOWS**
 
 Specifies the platform for the content of the library. This value is required when modifying an existing library to add a different platform.
 In SQL Server 2017, Windows is the only supported platform.
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 **platform**
 
 Specifies the platform for the content of the library. This value is required when modifying an existing library to add a different platform. 
 In SQL Server 2019, Windows and Linux are the supported platforms.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 **LANGUAGE = 'R'**
 
 Specifies the language of the package. R is supported in SQL Server 2017.
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 **language**
 
 Specifies the language of the package. The value can be **R** or **Python** in Azure SQL Managed Instance.
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 **language**
 
 Specifies the language of the package. The value can be **R**, **Python**, or the name of an external language (see [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)).
@@ -203,11 +203,11 @@ Specifies the language of the package. The value can be **R**, **Python**, or th
 
 ## Remarks
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 For the R language, packages must be prepared in the form of zipped archive files with the .ZIP extension for Windows. In SQL Server 2017, only the Windows platform is supported.  
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 For the R language, when using a file, packages must be prepared in the form of zipped archive files with the .ZIP extension. 
 
 For the Python language, the package in a .whl or .zip file must be prepared in the form of a zipped archive file. If the package already is a .zip file, it must be included in a new .zip file. Uploading a package as .whl or .zip file directly is currently not supported.
@@ -225,7 +225,7 @@ By default, the **dbo** user or any member of the role **db_owner** has permissi
 
 The following examples change an external library called `customPackage`.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 ### Replace the contents of a library using a file
 
 The following example modifies an external library called `customPackage`, using a zipped file containing the updated bits.
@@ -247,7 +247,7 @@ EXEC sp_execute_external_script
 ```
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 For the Python language, the example also works by replacing `'R'` with `'Python'`.
 ::: moniker-end
 
@@ -260,7 +260,7 @@ ALTER EXTERNAL LIBRARY customLibrary
 SET (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 ```
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 For the Python language, the example also works by replacing `'R'` with `'Python'`.
 ::: moniker-end
 

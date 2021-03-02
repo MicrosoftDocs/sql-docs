@@ -64,7 +64,6 @@ If you use the Connection String mode, enter the full connection string for the 
   
 Connection strings consist of parameter name and value pairs.  
   
--   For OLE DB connection string information, see [Microsoft OLE DB Provider for DB2](https://go.microsoft.com/fwlink/?LinkId=85640) article at the MSDN Library.  
+-   For OLE DB connection string information, see [Microsoft OLE DB Provider for DB2](../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) article at the MSDN Library.  
   
 For SSMA connection strings, always include the Provider parameter. Also, make sure that you include the Port parameter when you connect to DB2.  
-  

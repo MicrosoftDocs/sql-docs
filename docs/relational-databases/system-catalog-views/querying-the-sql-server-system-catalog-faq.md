@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "system catalogs [SQL Server], example queries"
   - "catalog views [SQL Server], frequently asked questions"
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Querying the SQL Server System Catalog FAQ
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

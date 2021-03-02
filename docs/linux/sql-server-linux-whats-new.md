@@ -20,11 +20,11 @@ This article describes the major features and services available for SQL Server 
 
 ## Ubuntu 18.04 supported
 
-Starting with SQL Server 2017 CU20, Ubuntu 18.04 is now supported. Check out our Quickstart on [Installing SQL Server and creating a database on Ubuntu](quickstart-install-connect-ubuntu.md?view=sql-server-2017).
+Starting with SQL Server 2017 CU20, Ubuntu 18.04 is now supported. Check out our Quickstart on [Installing SQL Server and creating a database on Ubuntu](quickstart-install-connect-ubuntu.md).
 
 ## RHEL 8 supported
 
-Starting with SQL Server 2017 CU20, RHEL 8 is now supported. Check out our Quickstart on [Installing SQL Server and creating a database on Red Hat](quickstart-install-connect-red-hat.md?view=sql-server-2017).
+Starting with SQL Server 2017 CU20, RHEL 8 is now supported. Check out our Quickstart on [Installing SQL Server and creating a database on Red Hat](quickstart-install-connect-red-hat.md).
 
 ## SQL Server Database Engine
 

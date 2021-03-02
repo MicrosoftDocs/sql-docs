@@ -22,7 +22,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 
 | Feature | Description |
 |----|-----|
-| [Analysis Services Client Libraries](https://go.microsoft.com/fwlink/?LinkID=853574) |The Microsoft Analysis Services client libraries encapsulate application programming interfaces (APIs) to authenticate and exchange requests and responses with Microsoft SQL Server Analysis Services 2005 or higher, Microsoft Azure Analysis Services, and Microsoft Power BI.<br><br> Microsoft Analysis Services client libraries include the following setup packages: </br> Microsoft Analysis Services ADOMD.NET </br> Microsoft Analysis Services OLE DB Provider (MSOLAP) </br> Microsoft Analysis Management Objects (AMO) |
+| [Analysis Services Client Libraries](/analysis-services/client-libraries) |The Microsoft Analysis Services client libraries encapsulate application programming interfaces (APIs) to authenticate and exchange requests and responses with Microsoft SQL Server Analysis Services 2005 or higher, Microsoft Azure Analysis Services, and Microsoft Power BI.<br><br> Microsoft Analysis Services client libraries include the following setup packages: </br> Microsoft Analysis Services ADOMD.NET </br> Microsoft Analysis Services OLE DB Provider (MSOLAP) </br> Microsoft Analysis Management Objects (AMO) |
 | [NuGetAnalysisSrvs](https://www.nuget.org/profiles/NuGetAnalysisSrvs) | NuGets for Analysis Services |
 |||
 
@@ -38,13 +38,13 @@ This article provides a brief explanation of the various downloads and stand-alo
 | Feature | Description |
 |----|-----|
 | [Command Line Utilities for SQL Server](https://www.microsoft.com/download/details.aspx?id=52680) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
-| [Drivers for PHP for SQL Server](https://aka.ms/downloadmsphpsql) | The Microsoft Drivers for PHP for SQL Server are PHP extensions that allow for the reading and writing of SQL Server data from within PHP scripts. |
-| [JDBC Driver for SQL Server](https://aka.ms/downloadmssqljdbc) | The Microsoft JDBC Driver for SQL Server provides access to SQL Server from any Java application, application server, or Java-enabled applet.|
+| [Drivers for PHP for SQL Server](../connect/php/download-drivers-php-sql-server.md) | The Microsoft Drivers for PHP for SQL Server are PHP extensions that allow for the reading and writing of SQL Server data from within PHP scripts. |
+| [JDBC Driver for SQL Server](../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md) | The Microsoft JDBC Driver for SQL Server provides access to SQL Server from any Java application, application server, or Java-enabled applet.|
 | [SQL Server Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=56508) | The SQL Server Data-tier Application (DAC) framework is a component based on the .NET Framework that provides application lifecycle services for database development and management. |
 | [SQL Server Semantic Language Statistics](../relational-databases/search/install-and-configure-semantic-search.md) | The Semantic Language Statistics Database is a required component for the Statistical Semantic Search feature in Microsoft SQL Server. |
 | [SQL Server Shared Management Objects](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | SQL Server Management Objects (SMO) is a .NET Framework object model that enables software developers to create client-side applications to manage and administer SQL Server objects and services. |
 | [System CLR Types](https://go.microsoft.com/fwlink/?linkid=2108808) | The SQL Server System CLR Types package contains the components implementing the geometry, geography, and hierarchy ID types in SQL Server. **Note: This component also requires [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)**. |
-| [Windows PowerShell Extensions for Microsoft SQL Server](../database-engine/install-windows/install-sql-server-powershell.md?view=sql-server-2017) | The Microsoft Windows PowerShell Extensions for SQL Server include a provider and a set of cmdlets that enable administrators and developers to build PowerShell scripts for managing instances of SQL Server. |
+| [Windows PowerShell Extensions for Microsoft SQL Server](../database-engine/install-windows/install-sql-server-powershell.md) | The Microsoft Windows PowerShell Extensions for SQL Server include a provider and a set of cmdlets that enable administrators and developers to build PowerShell scripts for managing instances of SQL Server. |
 |||
 
 ## Database engine
@@ -106,8 +106,8 @@ This article provides a brief explanation of the various downloads and stand-alo
 ## See also
 
 - [SQL Server Management Studio documentation](../ssms/download-sql-server-management-studio-ssms.md)
-- [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15)
-- [Additional updates and service packs](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md?view=sql-server-ver15)
+- [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
+- [Additional updates and service packs](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

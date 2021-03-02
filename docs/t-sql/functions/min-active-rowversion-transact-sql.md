@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "MIN_ACTIVE_ROWVERSION"
   - "MIN_ACTIVE_ROWVERSION_TSQL"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MIN_ACTIVE_ROWVERSION function [Transact-SQL]"
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

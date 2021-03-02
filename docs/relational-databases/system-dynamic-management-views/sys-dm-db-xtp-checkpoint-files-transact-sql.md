@@ -7,7 +7,7 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.custom: ""
 ms.technology: in-memory-oltp
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_db_xtp_checkpoint_files"
   - "sys.dm_db_xtp_checkpoint_files_TSQL"
@@ -18,9 +18,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_xtp_checkpoint_files dynamic management view"
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
-author: markingmyname
-ms.author: maghan
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -35,8 +35,8 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversio
   
  For more information, see [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
-##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later  
- The following table describes the columns for `sys.dm_db_xtp_checkpoint_files`, beginning with **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
+##  <a name="bkmk_2016"></a> [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later  
+ The following table describes the columns for `sys.dm_db_xtp_checkpoint_files`, beginning with **[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]**.  
   
 |Column name|Type|Description|  
 |-----------------|----------|-----------------|  

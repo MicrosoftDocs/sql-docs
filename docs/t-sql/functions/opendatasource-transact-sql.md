@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "OPENDATASOURCE"
   - "OPENDATASOURCE_TSQL"
@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # OPENDATASOURCE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

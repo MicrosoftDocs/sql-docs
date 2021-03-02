@@ -4,7 +4,7 @@ description: Learn how SQL Server compresses data streams for availability group
 ms.custom: ""
 ms.date: "06/22/2016"
 ms.prod: sql
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: cawrites

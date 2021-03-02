@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: jaszymas
 ms.author: jaszymas
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Always Encrypted cryptography
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +27,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  A column encryption key (CEK), is a content encryption key (for example, a key that is used to protect data) that is protected by a CMK.  
   
  All [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK store providers encrypt CEKs by using RSA with Optimal Asymmetric Encryption Padding (RSA-OAEP). The key store provider that supports Microsoft Cryptography API: Next Generation (CNG) in .NET Framework ([SqlColumnEncryptionCngProvider Class](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider)) uses the default parameters specified by RFC 8017 in Section A.2.1. Those default parameters are using a hash function of SHA-1 and a mask generation function of MGF1 with SHA-1. All other key store providers use SHA-256. 
-  
+
+Always Encrypted internally uses FIPS 140-2 validated cryptographic modules. 
+
 ## Data Encryption Algorithm  
  Always Encrypted uses the **AEAD_AES_256_CBC_HMAC_SHA_256** algorithm to encrypt data in the database.  
   

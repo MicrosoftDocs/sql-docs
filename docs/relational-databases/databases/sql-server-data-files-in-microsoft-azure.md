@@ -19,7 +19,7 @@ ms.author: mikeray
 SQL Server Data Files in Microsoft Azure enables native support for SQL Server database files stored as blobs. It allows you to create a database in SQL Server running in on-premises or in a virtual machine in Microsoft Azure with a dedicated storage location for your data in Microsoft Azure Blob storage. It also simplifies the process of moving databases between machines. You can detach databases from one machine and attach them to another machine. In addition, it provides an alternative storage location for your database backup files by allowing you to restore from or to Microsoft Azure Storage. Therefore, it enables several hybrid solutions by providing several benefits for data virtualization, data movement, security and availability, and any easy low costs and maintenance for high-availability and elastic scaling.
  
 > [!IMPORTANT]  
->  Storing system databases in Azure blob storage is not recommended and is not supported. 
+>  Storing system databases in Azure Blob Storage is not recommended and is not supported. 
 
  This topic introduces concepts and considerations that are central to storing SQL Server data files in Microsoft Azure Storage Service.  
   
@@ -106,6 +106,8 @@ For more information, see [Manage Access to Azure Storage Resources](/azure/stor
   
 ###  <a name="bkmk_Limitations"></a> Limitations  
   
+- Due to the performance characteristics of SQL Server workloads, SQL Server data files are implemented as page blobs in Azure Blob Storage. Other types of blob storage such as block blobs or [Azure Data Lake Storage](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction) are not supported.
+
 - In the current release of this feature, storing **FileStream** data in Azure Storage is not supported. You can store **FileStream** data in a database that also contains data files stored in Azure Storage, but all FileStream data files must be stored on local storage.  Since the FileStream data must reside on local storage, it cannot be moved between machines using Azure Storage, therefore we recommend that you continue using the [traditional techniques](../../relational-databases/blob/move-a-filestream-enabled-database.md) to move the data associated with FileStream between different machines.  
   
 - Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in  Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidentally started, and it also has a database which points to the same data file, the second server will fail to start the database with an error code **5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"**.  
@@ -172,7 +174,7 @@ For more information, see [Manage Access to Azure Storage Resources](/azure/stor
  **Database errors**  
   
 **Errors when creating a database**
-Resolution: Review the instructions given in Lesson 4 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../lesson-4-restore-database-to-virtual-machine-from-url.md).  
+Resolution: Review the instructions given in Lesson 4 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#4----restore-database-to-virtual-machine-from-url).  
   
 **Errors when running the Alter statement** 
 Resolution: Make sure to execute the Alter Database statement when the database is online. When copying the data files to Azure Storage, always create a page blob not a block blob. Otherwise, ALTER Database will fail. Review the instructions given in Lesson 7 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  

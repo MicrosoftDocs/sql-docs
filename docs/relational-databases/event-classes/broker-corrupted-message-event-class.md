@@ -6,13 +6,13 @@ ms.date: "05/24/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Broker:Corrupted Message event class"
 ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Broker:Corrupted Message Event Class
 

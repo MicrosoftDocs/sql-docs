@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 
 # Where to find the Reporting Services add-in for SharePoint Products
@@ -22,12 +22,12 @@ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
 > [!IMPORTANT]  
 >  For a list of the supported combinations of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in, report server, and SharePoint, see [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
-##  <a name="bkmk_sql16"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Reporting Services Add-in for SharePoint Products  
+##  <a name="bkmk_sql16"></a> [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Reporting Services Add-in for SharePoint Products  
  To download and install the add-in see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center:  
   
 -   [Microsoft® SQL Server 2016 Reporting Services Add-in for Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=52682)  
   
- The [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] version of the add-in is also available in the [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Installation wizard:  
+ The [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] version of the add-in is also available in the [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Installation wizard:  
   
 -   On the **Feature Selection** page of the setup wizard, select **Reporting Services Add-in for SharePoint Products**  
   
@@ -60,6 +60,6 @@ In the SQL Server 2016 release, the add-in can be installed as part of the SQL S
 ## Next steps
 
 [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[You are not able to browse SharePoint pages in non-default zone after uninstalling Reporting Services add-in](https://support.microsoft.com/kb/2009212)  
+[You are not able to browse SharePoint pages in non-default zone after uninstalling Reporting Services add-in](https://web.archive.org/web/20131006010947/http://support.microsoft.com:80/kb/2009212)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

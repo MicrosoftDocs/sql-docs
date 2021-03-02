@@ -6,7 +6,7 @@ ms.date: "08/09/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_xtp_transaction_stats_TSQL"
   - "dm_xtp_transaction_stats"
@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_xtp_transaction_stats dynamic management view"
 ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_xtp_transaction_stats (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "syscollector_collection_sets_TSQL"
   - "syscollector_collection_sets"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "data collector view"
   - "syscollector_collection_sets view"
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # syscollector_collection_sets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

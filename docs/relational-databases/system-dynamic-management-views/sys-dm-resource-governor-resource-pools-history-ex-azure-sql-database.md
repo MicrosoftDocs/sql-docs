@@ -2,12 +2,12 @@
 description: "sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)"
 title: "sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/27/2019"
+ms.date: "01/05/2021"
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.resource_governor"
   - "sys.resource_governor_TSQL"
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 
 author: joesackmsft
 ms.author: josack
-monikerRange: "=azuresqldb-current||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-Returns snapshot at 20 seconds interval for last 32 minutes (128 recs in total) of resource pools stats for an Azure SQL Database.  
-  
+Each row represents a periodic snapshot of resource pool statistics in Azure SQL Database. A snapshot is taken when the database engine starts, and every few seconds thereafter. The interval between the current and the previous snapshot may vary, and is provided in the `duration_ms` column. The latest available snapshots are returned, up to 128 snapshots for each resource pool.
+
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|int|The ID of the resource pool. Is not nullable.

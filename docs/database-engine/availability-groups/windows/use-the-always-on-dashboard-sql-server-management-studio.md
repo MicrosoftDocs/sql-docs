@@ -5,7 +5,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "08/09/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.agdashboard.f1"
@@ -19,7 +19,7 @@ ms.author: chadam
 # Use the Always On Availability Group dashboard (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  Database administrators use the Always On Availability Group dashboard to obtain an at-a-glance view the health of an availability group and its availability replicas and databases in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Some of the typical uses for the availability group dashboard are:  
+  Database administrators use the Always On Availability Group dashboard to obtain an at-a-glance view the health of an availability group and its availability replicas and databases in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Some of the typical uses for the availability group dashboard are:  
   
 -   Choosing a replica for a manual failover.    
 -   Estimating data loss if you force failover.  

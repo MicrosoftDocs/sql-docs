@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysschemaarticles_TSQL"
   - "sysschemaarticles"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysschemaarticles system table"
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # sysschemaarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -2,14 +2,14 @@
 title: "Deploy Host Guardian Service"
 description: "Deploy the Host Guardian Service for Always Encrypted with Secure Enclaves."
 ms.custom: ""
-ms.date: "11/15/2019"
+ms.date: "01/15/2021"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Deploy the Host Guardian Service for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
@@ -18,6 +18,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 This article describes how to deploy the Host Guardian Service (HGS) as an attestation service for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
 Before you start, make sure to read the [Plan for Host Guardian Service attestation](./always-encrypted-enclaves-host-guardian-service-plan.md) article for a full list of prerequisites and architectural guidance.
+
+> [!NOTE]
+> The HGS administrator is responsible for executing all steps described in this article. See [Roles and responsibilities when configuring attestation with HGS](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs).
 
 ## Step 1: Set up the first HGS computer
 
@@ -211,7 +214,7 @@ In a default installation, HGS only exposes an HTTP (port 80) binding.
 You can configure an HTTPS (port 443) binding to encrypt all communications between [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers and HGS.
 It is recommended that all production instances of HGS use an HTTPS binding.
 
-1. Obtain a TLS certificate from your certificate authority, using the fully qualified HGS service name from Step 1.3 as the subject name. If you do not know your service name, you can find it by running `Get-HgsServer` on any HGS computer. You can add alternative DNS names to the Subject Alternate Name list if your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers use a different DNS name to reach your HGS cluster (e.g. if HGS is behind a network load balancer with a different address).
+1. Obtain a TLS certificate from your certificate authority, using the fully qualified HGS service name from Step 1.3 as the subject name. If you do not know your service name, you can find it by running `Get-HgsServer` on any HGS computer. You can add alternative DNS names to the Subject Alternate Name list if your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers use a different DNS name to reach your HGS cluster (for example, if HGS is behind a network load balancer with a different address).
 
 2. On the HGS computer, use [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver) to enable the HTTPS binding and specify the TLS certificate obtained in the previous step. If your certificate is already installed on the computer in the local certificate store, use the following command to register it with HGS:
 
@@ -228,6 +231,27 @@ It is recommended that all production instances of HGS use an HTTPS binding.
     ```
 
 3. Repeat steps 1 and 2 for each HGS computer in the cluster. TLS certificates are not automatically replicated between HGS nodes. Additionally, each HGS computer can have its own unique TLS certificate so long as the subject matches the HGS service name.
+
+## Step 6: Determine and share the HGS attestation URL
+
+As the HGS administrator you need share the attestation URL of HGS with both SQL server computer administrators and application administrators in your organization. The SQL Server computers administrators will need the attestation URL to verify SQL Server computers can attest with HGS. Application administrators will need the attestation URL to configure how their apps connect to SQL Server.
+
+To determine the attestation URL, run the following cmdlet.
+
+```powershell
+Get-HGSServer
+```
+The output of the command will look similar to below:
+
+```
+Name                           Value                                                                         
+----                           -----                                                                         
+AttestationOperationMode       HostKey                                                                       
+AttestationUrl                 {http://hgs.bastion.local/Attestation}                                        
+KeyProtectionUrl               {}         
+```
+
+The attestation URL for your HGS is the value of the AttestationUrl property.
 
 ## Next steps
 

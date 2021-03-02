@@ -6,7 +6,7 @@ ms.date: 08/20/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "832 (Database Engine error)"
 ms.assetid: 
@@ -54,4 +54,4 @@ Only pages that are not currently modified in cache (or "dirty") are checked. It
 
 It is possible that even `DBCC CHECKDB` will not report an error for a page in this state after being written to disk. It is because the incorrect modification could be at locations on the page that don't hold any data, nor contain any important page or row structure information, or could be modifications to data that CHECKDB cannot detect.  
 
-More details and information about Msg 832 can also be read in the whitepaper [SQL Server I/O Basics, Chapter 2](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)).
+More details and information about Msg 832 can also be read in the whitepaper [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)).

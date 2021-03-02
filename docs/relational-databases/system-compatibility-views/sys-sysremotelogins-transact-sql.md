@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysremotelogins"
   - "sysremotelogins_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysremotelogins system table"
   - "sys.sysremotelogins compatibility view"
 ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysremotelogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

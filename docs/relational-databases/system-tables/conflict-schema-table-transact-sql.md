@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "conflict_"
   - "conflict_TSQL"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "conflict_<schema>_<table>"
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

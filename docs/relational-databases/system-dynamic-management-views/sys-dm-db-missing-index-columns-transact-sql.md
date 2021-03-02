@@ -1,13 +1,13 @@
 ---
 description: "sys.dm_db_missing_index_columns (Transact-SQL)"
-title: "sys.dm_db_missing_index_columns (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_db_missing_index_columns (Transact-SQL)"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_db_missing_index_columns_TSQL"
   - "sys.dm_db_missing_index_columns_TSQL"
@@ -18,10 +18,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_missing_index_columns dynamic management function"
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_columns dynamic management function"
-ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
-author: markingmyname
-ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +62,7 @@ sys.dm_db_missing_index_columns(index_handle)
 ## Examples  
  The following example runs a query against the `Address` table and then runs a query using the `sys.dm_db_missing_index_columns` dynamic management view to return the table columns that are missing an index.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT City, StateProvinceID, PostalCode  
@@ -83,5 +82,5 @@ GO
  [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
  [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
-  
+ [sys.dm_db_missing_index_group_stats_query &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md)     
   

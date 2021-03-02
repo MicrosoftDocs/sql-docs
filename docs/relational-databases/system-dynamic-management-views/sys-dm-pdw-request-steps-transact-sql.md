@@ -6,13 +6,13 @@ ms.date: "08/28/2020"
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -24,7 +24,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |request_id|**nvarchar(32)**|request_id and step_index make up the key for this view.<br /><br /> Unique numeric ID associated with the request.|See request_id in [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|request_id and step_index make up the key for this view.<br /><br /> The position of this step in the sequence of steps that make up the request.|0 to (n-1) for a request with n steps.|  
 |plan_node_id|**int**|The node ID corresponding to the operator ID of that step in the execution plan.|None|  
-|operation_type|**nvarchar(35)**|Type of operation represented by this step.|**DMS query plan operations:** 'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **SQL query plan operations:** 'OnOperation', 'RemoteOperation'<br /><br /> **Other query plan operations:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **External operations for reads:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **External operations for MapReduce:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **External operations for writes:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> For more information, see "Understanding Query Plans" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. <br /><br />  A query plan can also be affected by the database settings.  Check [ALTER DATABASE SET options](../../t-sql/statements/alter-database-transact-sql-set-options.md?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json&view=azure-sqldw-latest) for details.|  
+|operation_type|**nvarchar(35)**|Type of operation represented by this step.|**DMS query plan operations:** 'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **SQL query plan operations:** 'OnOperation', 'RemoteOperation'<br /><br /> **Other query plan operations:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **External operations for reads:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **External operations for MapReduce:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **External operations for writes:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> For more information, see "Understanding Query Plans" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. <br /><br />  A query plan can also be affected by the database settings.  Check [ALTER DATABASE SET options](../../t-sql/statements/alter-database-transact-sql-set-options.md?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json&view=azure-sqldw-latest&preserve-view=true) for details.|  
 |distribution_type|**nvarchar(32)**|Type of distribution this step will undergo.|'AllNodes', 'AllDistributions', 'AllComputeNodes', 'ComputeNode', 'Distribution', 'SubsetNodes', 'SubsetDistributions', 'Unspecified'|  
 |location_type|**nvarchar(32)**|Where the step is running.|'Compute', 'Control', 'DMS'|  
 |status|**nvarchar(32)**|Status of this step.|Pending, Running, Complete, Failed, UndoFailed, PendingCancel, Cancelled, Undone, Aborted|  

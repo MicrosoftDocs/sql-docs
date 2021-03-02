@@ -8,7 +8,7 @@ ms.date: 11/10/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # What is Java Language Extension?
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -21,7 +21,7 @@ The default Java runtime is Zulu Open JRE. You can also use another Java JRE or 
 
 The Java Language Extension uses the extensibility framework for executing external Java code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution. You can execute Java code at the data's source, eliminating the need to pull data across the network.
 
-The external Java language is defined with [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql). The system stored procedure [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) is used as the interface for executing the Java code.
+The external Java language is defined with [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). The system stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) is used as the interface for executing the Java code.
 
 ## Get started with Java Language Extension
 
@@ -31,8 +31,8 @@ The external Java language is defined with [CREATE EXTERNAL LANGUAGE](https://do
 
     + Use the IDE you prefer for developing Java code.
     + Install the [Microsoft Extensibility SDK for Java](how-to/extensibility-sdk-java-sql-server.md) to execute Java code on SQL Server.
-    + Use [Azure Data Studio](../azure-data-studio/what-is.md) for executing external code on SQL Server.
-    + Use the system stored procedure [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) to execute your Java code on SQL Server.
+    + Use [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) for executing external code on SQL Server.
+    + Use the system stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute your Java code on SQL Server.
 
 1. Write your first Java code.
 

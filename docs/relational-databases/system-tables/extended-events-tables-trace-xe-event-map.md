@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "trace_xe_event_map_TSQL"
   - "trace_xe_event_map"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "trace_xe_event_map"
   - "extended events [SQL Server], tables"
 ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # Extended Events Tables - trace_xe_event_map
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

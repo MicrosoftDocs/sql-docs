@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "cdc.change_tables"
   - "cdc.change_tables_TSQL"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.change_tables"
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # cdc.change_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

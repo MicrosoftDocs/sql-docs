@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_database_copies_TSQL"
   - "sys.dm_database_copies"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "dm_database_copies"
   - "sys.dm_database_copies"
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
-author: markingmyname
-ms.author: maghan
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "= azuresqldb-current"
 ---
 # sys.dm_database_copies (Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]

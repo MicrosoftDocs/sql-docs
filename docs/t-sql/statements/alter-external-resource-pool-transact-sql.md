@@ -6,7 +6,7 @@ ms.date: "08/06/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: machine-learning-services
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_EXTERNAL_RESOURCE_POOL_TSQL"
 dev_langs: 
@@ -17,25 +17,25 @@ ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Changes a Resource Governor external pool that specifies resources that can be used by external processes. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-For [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the external pool governs `rterm.exe`, `BxlServer.exe`, and other processes spawned by them.
+::: moniker range="=sql-server-2016"
+For [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] in [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], the external pool governs `rterm.exe`, `BxlServer.exe`, and other processes spawned by them.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], the external pool governs `rterm.exe`, `python.exe`, `BxlServer.exe`, and other processes spawned by them.
 ::: moniker-end
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## Syntax
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ```syntaxsql
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 [ WITH (
@@ -50,7 +50,7 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
 ```  
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
  ```syntaxsql
 
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
@@ -81,7 +81,7 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 Is the name of an existing user-defined external resource pool or the default external resource pool that is created when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.
 "default" must be enclosed by quotation marks ("") or brackets ([]) when used with `ALTER EXTERNAL RESOURCE POOL` to avoid conflict with `DEFAULT`, which is a system reserved word.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 MAX_CPU_PERCENT =*value*  
 Specifies the maximum average CPU bandwidth that all requests in the external resource pool can receive when there is CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
 
@@ -92,7 +92,7 @@ MAX_PROCESSES =*value*
 Specifies the maximum number of processes allowed for the external resource pool. Specify 0 to set an unlimited threshold for the pool, which is thereafter bound only by computer resources.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 MAX_CPU_PERCENT =*value*  
 Specifies the maximum average CPU bandwidth that all requests in the external resource pool can receive when there is CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
 
@@ -121,7 +121,7 @@ Requires `CONTROL SERVER` permission.
 ## Examples
 
 The following statement changes an external pool, restricting the CPU usage to 50 percent and the maximum memory to 25 percent of the available memory on the computer.
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
 WITH (
@@ -134,7 +134,7 @@ GO
 ```
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
 WITH (

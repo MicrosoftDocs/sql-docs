@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dbo.systargetservers_TSQL"
   - "dbo.systargetservers"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "systargetservers system table"
 ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # dbo.systargetservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

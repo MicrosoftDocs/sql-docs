@@ -69,5 +69,6 @@ The following example demonstrates how to create a <xref:Microsoft.Data.SqlClien
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Commands and parameters](commands-parameters.md)
 - [Update data sources with DataAdapters](update-data-sources-with-dataadapters.md)
+- [Modify data with stored procedures](modify-data-with-stored-procedures.md)
 - [Data type mappings in ADO.NET](data-type-mappings-ado-net.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

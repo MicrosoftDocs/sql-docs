@@ -18,7 +18,7 @@ ms.author: maghan
 ---
 # SqlLocalDB Utility
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-  Use the **SqlLocalDB** utility to create an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**. The **SqlLocalDB** utility (SqlLocalDB.exe) is a simple command line tool to enable users and developers to create and manage an instance of [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**. For information about how to use **LocalDB**, see [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md?view=sql-server-ver15).  
+  Use the **SqlLocalDB** utility to create an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**. The **SqlLocalDB** utility (SqlLocalDB.exe) is a simple command line tool to enable users and developers to create and manage an instance of [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**. For information about how to use **LocalDB**, see [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md).  
   
 ## Syntax  
   
@@ -78,7 +78,7 @@ SqlLocalDB.exe
 ## Examples  
   
 ### A. Creating an Instance of LocalDB  
- The following example creates an instance of [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** named `DEPARTMENT` using the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] binaries and starts the instance.  
+ The following example creates an instance of [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** named `DEPARTMENT` using the [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] binaries and starts the instance.  
   
 ```  
 SqlLocalDB.exe create "DEPARTMENT" 12.0 -s  
@@ -108,5 +108,5 @@ sqlcmd -S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52
 ```  
   
 ## See Also  
- [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md?view=sql-server-ver15)  
+ [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md)  
 [Command-Line Management Tool: SqlLocalDB.exe](../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.service_queues"
   - "service_queues"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.service_queues catalog view"
 ms.assetid: 9fd9fa76-6128-410c-896f-741e6050143a
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.service_queues (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

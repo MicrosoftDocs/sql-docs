@@ -8,7 +8,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ADD FILE"
   - "ADD_FILE_TSQL"
@@ -41,9 +41,9 @@ helpviewer_keywords:
   - "files [SQL Server], adding"
   - "databases [SQL Server], moving"
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-author: markingmyname
-ms.author: maghan
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # ALTER DATABASE (Transact-SQL) File and Filegroup Options
 
@@ -53,14 +53,14 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Managed Instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -139,7 +139,7 @@ Removes the logical file description from an instance of [!INCLUDE[ssNoVersion](
 Is the logical name used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when referencing the file.
 
 > [!WARNING]
-> Removing a database file that has `FILE_SNAPSHOT` backups associated with it will succeed, but any associated snapshots will not be deleted to avoid invalidating the backups referring to the database file. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later).
+> Removing a database file that has `FILE_SNAPSHOT` backups associated with it will succeed, but any associated snapshots will not be deleted to avoid invalidating the backups referring to the database file. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later).
 
 MODIFY FILE
 Specifies the file that should be modified. Only one \<filespec> property can be changed at a time. NAME must always be specified in the \<filespec> to identify the file to be modified. If SIZE is specified, the new size must be larger than the current file size.
@@ -258,7 +258,7 @@ If FILEGROWTH is not specified, the default values are:
 
 |Version|Default values|
 |-------------|--------------------|
-|Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Data 64 MB. Log files 64 MB.|
+|Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]|Data 64 MB. Log files 64 MB.|
 |Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 1 MB. Log files 10%.|
 |Prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 10%. Log files 10%.|
 
@@ -311,13 +311,13 @@ NAME = *new_filegroup_name*
 Changes the filegroup name to the *new_filegroup_name*.
 
 AUTOGROW_SINGLE_FILE
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later)
 
 When a file in the filegroup meets the autogrow threshold, only that file grows. This is the default.
 
 AUTOGROW_ALL_FILES
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later)
 
 When a file in the filegroup meets the autogrow threshold, all files in the filegroup grow.
 
@@ -692,7 +692,7 @@ GO
 
 ## See Also
 
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
@@ -707,11 +707,11 @@ GO
 - [Database File Initialization](../../relational-databases/databases/database-instant-file-initialization.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)
+        [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Managed Instance \*_**<br />&nbsp;
@@ -1097,7 +1097,7 @@ GO
 
 ## See Also
 
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)

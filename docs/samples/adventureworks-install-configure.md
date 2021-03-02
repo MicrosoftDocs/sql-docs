@@ -57,7 +57,7 @@ You can use the `.bak` file to restore your sample database to your SQL Server i
 
 # [SQL Server Management Studio (SSMS)](#tab/ssms)
 
-If you're not familiar using SQL Server Management Studio (SSMS), you can see [connect & query](../ssms/quickstarts/connect-query-sql-server.md) to get started. 
+If you're not familiar using SQL Server Management Studio (SSMS), you can see [connect & query](../ssms/quickstarts/ssms-connect-query-sql-server.md) to get started. 
 
 To restore your database in SQL Server Management Studio, follow these steps:
 
@@ -86,7 +86,8 @@ For more information on restoring a SQL Server database, see [Restore a database
 
 You can restore your sample database using Transact-SQL (T-SQL). An example to restore AdventureWorks2019 is provided below, but the database name and installation file path may vary depending on your environment. 
 
-To restore AdventureWorks2019, modify values as appropriate to your environment and then run the following Transact-SQL (T-SQL) command:
+To restore AdventureWorks2019 to **Windows**, modify values as appropriate to your environment and then run the following Transact-SQL (T-SQL) command:
+
 
 ```sql
 USE [master]
@@ -95,6 +96,19 @@ FROM  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\B
 WITH  FILE = 1,  NOUNLOAD,  STATS = 5
 GO
 
+```
+
+To restore AdventureWorks2019 to **Linux**, change the Windows filesystem path to Linux, and then run the following Transact-SQL (T-SQL) command: 
+
+
+```sql
+USE [master]
+RESTORE DATABASE [AdventureWorks2019]
+FROM DISK = '/var/opt/mssql/backup/AdventureWorks2019.bak'
+WITH MOVE 'AdventureWorks2017' TO '/var/opt/mssql/data/AdventureWorks2019.mdf',
+MOVE 'AdventureWorks2017_log' TO '/var/opt/mssql/data/AdventureWorks2019_log.ldf',
+FILE = 1,  NOUNLOAD,  STATS = 5
+GO
 ```
 
 # [Azure Data Studio](#tab/data-studio)
@@ -188,5 +202,5 @@ Once you've restored your sample database, using the following tutorials to get 
 
 
 [Tutorials for SQL Server database engine](../relational-databases/database-engine-tutorials.md)   
-[Connect and query with SQL Server Management Studio (SSMS)](../ssms/quickstarts/connect-query-sql-server.md)   
-[Connect and query with Azure Data Studio](../ssms/quickstarts/connect-query-sql-server.md)
+[Connect and query with SQL Server Management Studio (SSMS)](../ssms/quickstarts/ssms-connect-query-sql-server.md)   
+[Connect and query with Azure Data Studio](../ssms/quickstarts/ssms-connect-query-sql-server.md)

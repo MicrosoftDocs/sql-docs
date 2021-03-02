@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: troubleshooting
 f1_keywords: 
   - "sql13.swb.agdashboard.arp1rolehealthy.issues.f1"
@@ -29,9 +29,6 @@ ms.author: chadam
   
 ## Description  
  This policy checks the state of the role of the availability replica. The policy is in an unhealthy state when the role of the availability replica is neither primary nor secondary. The policy is otherwise in a healthy state.  
-  
-> [!NOTE]  
->  For this release of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [Availability replica does not have a healthy role](https://go.microsoft.com/fwlink/p/?LinkId=220856) on the TechNet Wiki.  
   
 ## Possible Causes  
  The role of this availability replica is unhealthy. The replica does not have either the primary or secondary role.  

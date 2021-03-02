@@ -2,16 +2,15 @@
 title: "Protocols for MSSQLSERVER Properties (Advanced Tab)"
 description: Learn about the benefits and requirements of the Extended Protection for Authentication for the SQL Server Database Engine. See how to enable and configure it.
 ms.custom: seo-lt-2019
-ms.date: 01/24/2019
+ms.date: 01/22/2021
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # Protocols for MSSQLSERVER Properties (Advanced Tab)
 
@@ -24,7 +23,7 @@ Use the **Advanced** tab on the **Protocols for MSSQLSERVER Properties** dialog 
 > - [Windows Extended Protection \<extendedProtection\>](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
 > - [Extended Protection for Authentication Overview](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
 
-For more information about how to configure other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, and a complete description of **Extended Protection**, see more recent information on [Microsoft.com](https://go.microsoft.com/fwlink/?LinkId=177752).
+For more information about how to configure other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, see [Manage the Database Engine Services](../../database-engine/configure-windows/manage-the-database-engine-services.md). For a complete description of Extended Protection, see [Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).
 
 **Extended Protection** is fully supported by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Support for **Extended Protection** for other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client providers is not currently supported.
 

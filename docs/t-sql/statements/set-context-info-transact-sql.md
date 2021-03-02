@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SET_CONTEXT_INFO_TSQL"
   - "SET CONTEXT_INFO"
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "CONTEXT_INFO option"
   - "SET CONTEXT_INFO statement"
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SET CONTEXT_INFO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

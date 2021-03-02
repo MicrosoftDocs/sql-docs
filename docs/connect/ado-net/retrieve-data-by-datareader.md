@@ -36,9 +36,9 @@ The following example iterates through a **DataReader** object and returns two c
 
 [!code-csharp[DataWorks SqlClient.HasRows#1](~/../sqlclient/doc/samples/SqlDataReader_HasRows.cs#1)]
 
-## Closing the DataReader  
+## Close the DataReader  
 
-Always call the **Close** method when you have finished using the **DataReader** object.
+Always call the `Close()` method when you have finished using the `DataReader` object.
 
 > [!NOTE]
 > If your **Command** contains output parameters or return values, those values are not available until the **DataReader** is closed.  
@@ -47,7 +47,7 @@ Always call the **Close** method when you have finished using the **DataReader**
 > While a **DataReader** is open, the **Connection** is in use exclusively by that **DataReader**. You cannot execute any commands for the **Connection**, including creating another **DataReader**, until the original **DataReader** is closed.  
 
 > [!NOTE]
-> Do not call **Close** or **Dispose** on a **Connection**, a **DataReader**, or any other managed object in the **Finalize** method of your class. In a finalizer, only release unmanaged resources that your class owns directly. If your class does not own any unmanaged resources, do not include a **Finalize** method in your class definition. For more information, see [Garbage Collection](/dotnet/standard/garbage-collection/index.md).
+> Do not call **Close** or **Dispose** on a **Connection**, a **DataReader**, or any other managed object in the **Finalize** method of your class. In a finalizer, only release unmanaged resources that your class owns directly. If your class does not own any unmanaged resources, do not include a **Finalize** method in your class definition. For more information, see [Garbage Collection](/dotnet/standard/garbage-collection/index).
  
 ## Retrieve multiple result-sets using NextResult
 
@@ -65,4 +65,5 @@ While a **DataReader** is open, you can retrieve schema information about the cu
 
 - [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Commands and parameters](commands-parameters.md)
+- [Retrieving database schema information](retrieving-database-schema-information.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

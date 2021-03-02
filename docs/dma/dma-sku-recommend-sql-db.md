@@ -39,7 +39,7 @@ The following are instructions to help you determine the SKU recommendations and
 - Ensure that your computer has [PowerShell Version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) or later, which is required to run all scripts. For information about how to find out which version of PowerShell is installed on your computer, see the article [Download and install Windows PowerShell 5.1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
   > [!NOTE]
   > To collect machine information, the data collection script uses the Get-WmiObject cmdlet, which was deprecated in PowerShell 6. To run this script in PowerShell 6 or 7, you must replace the WMI cmdlets with the newer CIM cmdlets.
-- Ensure that your computer has the Azure Powershell Module installed. For more information, see the article [Install the Azure PowerShell module](/powershell/azure/install-az-ps?view=azps-1.8.0).
+- Ensure that your computer has the Azure Powershell Module installed. For more information, see the article [Install the Azure PowerShell module](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true).
 - Verify that the PowerShell file **SkuRecommendationDataCollectionScript.ps1**, which is required to collect the performance counters, is installed in the DMA folder.
 - Ensure that the computer on which you'll perform this process has Administrator permissions to the computer that is hosting your databases.
 
@@ -202,8 +202,15 @@ To input provisioning information and make changes to the recommendations, updat
     - **Resource Group** - The resource group to which you want to deploy the databases. Enter a resource group that exists.
     - **Region** - The region in which to provision databases. Make sure your subscription supports the select region.
     - **Server Name** - The Azure SQL Database server to which you want the databases deployed. If you enter a server name that doesn't exist, it will be created.
-    - **Admin Username** - The server admin username.
-    - **Admin Password** - The server admin password. The password must be at least eight characters and no more than 128 characters in length. Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.). The password cannot contain all or part (3+ consecutive letters) from the username.
+    - **Admin Username** - The server admin username. Make sure your login name meets the following requirements:
+      - Your login name must not contain a SQL Identifier or a typical system name (like admin, administrator, sa, root, dbmanager, loginmanager, etc.) or a built-in database user or role (like dbo, guest, public, etc.).
+      - Your login name must not include non-alphanumeric characters (including whitespaces, Unicode characters).
+      - Your login name must not start with numbers or symbols.
+
+    - **Admin Password** - The server admin password. 
+      - Your password must be at least 8 characters in length and no more than 128 characters in length.
+      - Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.).
+      - Your password cannot contain all or part of the login name. (Part of a login name is defined as three or more consecutive alphanumeric characters.)
 
 2. Review recommendations for each database, and modify the pricing tier, compute level, and max data size as needed. Be sure to deselect any databases that you do not currently want to provision.
 
@@ -220,8 +227,16 @@ To input provisioning information and make changes to the recommendations, updat
     - **Resource Group** - The resource group to which you want to deploy the databases. Enter a resource group that exists.
     - **Region** - The region in which to provision databases. Make sure your subscription supports the select region.
     - **Instance Name** – The instance of Azure SQL Managed Instance to which you want to migrate the databases. The instance name can contain only lowercase letters, numbers, and ‘-‘, but it can’t begin or end with ‘-‘ or have more than 63 characters.
-    - **Instance Admin Username** – The instance admin username. Make sure your login name meets the following requirements - It's a SQL Identifier, and not a typical system name (like admin, administrator, sa, root, dbmanager, loginmanager, etc.), or a built-in database user or role (like dbo, guest, public, etc.). Make sure your name doesn't contain whitespaces, Unicode characters, or nonalphabetic characters, and that it doesn't begin with numbers or symbols. 
-    - **Instance Admin Password** - The instance admin password. Your password must be at least 16 characters and no more than 128 characters in length. Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.). The password cannot contain all or part (3+ consecutive letters) from the username.
+    - **Instance Admin Username** – The instance admin username. Make sure your login name meets the following requirements:
+      - Your login name must not contain a SQL Identifier or a typical system name (like admin, administrator, sa, root, dbmanager, loginmanager, etc.) or a built-in database user or role (like dbo, guest, public, etc.).
+      - Your login name must not include non-alphanumeric characters (including whitespaces, Unicode characters).
+      - Your login name must not start with numbers or symbols.
+
+    - **Instance Admin Password** - The instance admin password. 
+      - Your password must be at least 16 characters in length and no more than 128 characters in length.
+      - Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.).
+      - Your password cannot contain all or part of the login name. (Part of a login name is defined as three or more consecutive alphanumeric characters.)
+
     - **Vnet Name** – The VNet name under which the managed instance should be provisioned. Enter an existing VNet name.
     - **Subnet Name** – The Subnet name under which the managed instance should be provisioned. Enter an existing Subnet name.
 
@@ -234,4 +249,4 @@ To input provisioning information and make changes to the recommendations, updat
 
 ## Next step
 
-- For a complete listing of commands for running DMA from the CLI, see the article [Run Data Migration Assistant from the command line](./dma-commandline.md?view=sql-server-2017).
+- For a complete listing of commands for running DMA from the CLI, see the article [Run Data Migration Assistant from the command line](./dma-commandline.md).

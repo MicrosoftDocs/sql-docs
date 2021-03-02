@@ -6,13 +6,13 @@ ms.date: "10/14/2019"
 ms.prod: sql 
 ms.technology: data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 
 author: XiaoyuMSFT 
 ms.author: xiaoyul
-monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest"
 ---
 
 # sys.pdw_nodes_dm_exec_sql_text (Transact-SQL)
@@ -31,7 +31,7 @@ Returns the text of the SQL batch that is identified by the specified *sql_handl
 |**text**|**nvarchar(max)**|Text of the SQL query.<br /><br /> Is NULL for encrypted objects.|  
 
 ## Remarks  
-The same remarks in [sys.dm_exec_sql_text](./sys-dm-exec-sql-text-transact-sql.md?view=sql-server-ver15) apply.  
+The same remarks in [sys.dm_exec_sql_text](./sys-dm-exec-sql-text-transact-sql.md) apply.  
   
 ## Permissions  
  Require **sysadmin** server role or `VIEW SERVER STATE` permission on the server.  

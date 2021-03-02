@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "system tables [SQL Server], restore tables"
   - "restore system tables [SQL Server]"
 ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # Backup and Restore Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

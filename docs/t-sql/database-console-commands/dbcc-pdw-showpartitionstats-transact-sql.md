@@ -11,7 +11,7 @@ dev_langs:
   - "TSQL"
 author: pmasl
 ms.author: umajay
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 
 # DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)

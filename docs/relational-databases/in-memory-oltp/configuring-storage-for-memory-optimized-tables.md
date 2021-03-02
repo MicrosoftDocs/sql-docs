@@ -38,7 +38,7 @@ A good starting point for sizing storage for this area is to reserve four times 
 -   Checkpoint files are usually distributed uniformly across all containers, space permitting. With SQL Server 2014 you need to provision an odd number of  containers in order to achieve a uniform distribution - starting 2016, both odd and even numbers of containers lead to a uniform distribution.
   
 ## Encryption  
- In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later versions, storage for memory-optimized tables will be encrypted at rest as part of enabling Transparent Data Encryption (TDE) on the database. For more information, see [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md). In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] checkpoint files are not encrypted even if TDE is enabled on the database.
+ In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, storage for memory-optimized tables will be encrypted at rest as part of enabling Transparent Data Encryption (TDE) on the database. For more information, see [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md). In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] checkpoint files are not encrypted even if TDE is enabled on the database.
 
  Data in [non-durable](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md) (SCHEMA_ONLY) memory-optimized tables is not written to disk at any time. Therefore, TDE does not apply to such tables.
   

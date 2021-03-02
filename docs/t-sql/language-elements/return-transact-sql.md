@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "RETURN_TSQL"
   - "RETURN"
@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "exiting procedures [SQL Server]"
   - "RETURN statement"
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # RETURN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

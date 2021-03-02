@@ -11,7 +11,7 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Add Transact-SQL Snippets
@@ -21,7 +21,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 You can add your own Transact-SQL code snippets to the set of pre-defined snippets included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ## Creating a Transact-SQL Snippet File  
- The first part of creating a [!INCLUDE[tsql](../../includes/tsql-md.md)] code snippet is to create an XML file with the text of your code snippet. The file must have a .snippet file extension, and meet the requirements of the [Code Snippets Schema](https://go.microsoft.com/fwlink/?LinkId=207504). Set the snippet language to SQL.  
+ The first part of creating a [!INCLUDE[tsql](../../includes/tsql-md.md)] code snippet is to create an XML file with the text of your code snippet. The file must have a .snippet file extension, and meet the requirements of the [Code Snippets Schema](/previous-versions/visualstudio/visual-studio-2015/ide/code-snippets-schema-reference). Set the snippet language to SQL.  
   
  You can use the pre-defined snippets that ship with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as examples. To find the pre-defined snippets, open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], select the **Tools** menu, and click **Code Snippet Manager**. Select **SQL** in the **Language** list box, the path to the [!INCLUDE[tsql](../../includes/tsql-md.md)] snippets is displayed in the **Location** box.  
   
@@ -111,5 +111,4 @@ You can add your own Transact-SQL code snippets to the set of pre-defined snippe
 5.  Navigate to the folder containing TryCatch.snippet, click on the TryCatch.snippet file, and click the **Open** button. You should now have a TryCatch snippet in your **My Code Snippets** folder.  
   
 ## See Also  
- [Insert Surround-with Transact-SQL snippets](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
-    
+ [Insert Surround-with Transact-SQL snippets](./insert-surround-with-transact-sql-snippets.md)  

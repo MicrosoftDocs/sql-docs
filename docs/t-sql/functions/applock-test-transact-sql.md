@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "APPLOCK_TEST_TSQL"
   - "APPLOCK_TEST"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sessions [SQL Server], application locks"
   - "testing application locks"
 ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # APPLOCK_TEST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

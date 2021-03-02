@@ -15,13 +15,13 @@ ms.custom: seo-dt-2019
 Transact-SQL (T-SQL) statements for Analytic Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 
 ## Data Definition Language (DDL) statements
-* [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016)
+* [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [ALTER SCHEMA](../t-sql/statements/alter-schema-transact-sql.md)
 * [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
 * [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
-* [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016)
+* [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
 * [CREATE DATABASE SCOPED CREDENTIAL](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)
 * [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)
@@ -55,11 +55,11 @@ Transact-SQL (T-SQL) statements for Analytic Platform System (APS) SQL Server Pa
 ## Database Console Commands
 * [DBCC DROPCLEANBUFFERS](../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md)
 * [DBCC FREEPROCCACHE](/previous-versions/sql/sql-server-2016/mt204018(v=sql.130))
-* [DBCC SHRINKLOG](../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md?view=aps-pdw-2016-au7)
-* [DBCC PDW_SHOWEXECUTIONPLAN](../t-sql/database-console-commands/dbcc-pdw-showexecutionplan-transact-sql.md?view=aps-pdw-2016-au7)
-* [DBCC PDW_SHOWPARTITIONSTATS](../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md?view=aps-pdw-2016-au7)
+* [DBCC SHRINKLOG](../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md?view=aps-pdw-2016-au7&preserve-view=true)
+* [DBCC PDW_SHOWEXECUTIONPLAN](../t-sql/database-console-commands/dbcc-pdw-showexecutionplan-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
+* [DBCC PDW_SHOWPARTITIONSTATS](../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)
 * [DBCC PDW_SHOWSPACEUSED](../t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql.md)
-* [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md?view=sql-server-ver15)
+* [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
 
 ## Query statements
 * [SELECT](../t-sql/queries/select-transact-sql.md)

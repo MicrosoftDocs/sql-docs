@@ -18,11 +18,11 @@ ms.prod: sql
 
 ### Breaking change
 
-This release introduces an updated [resource provider](/azure/azure-resource-manager/management/azure-services-resource-providers.md) called `Microsoft.AzureArcData`. Before you can continue using Azure Arc enabled SQL Server, you need to register this resource provider. See the resource provider registration instructions in the [Prerequisites](connect.md#prerequisites) section.
+This release introduces an updated [resource provider](/azure/azure-resource-manager/management/azure-services-resource-providers) called `Microsoft.AzureArcData`. Before you can continue using Azure Arc enabled SQL Server, you need to register this resource provider. See the resource provider registration instructions in the [Prerequisites](connect.md#prerequisites) section.
 
 If you have existing existing SQL Server - Azure Arc resources, use these steps to migrate them to Microsoft.AzureArcData namespace.
 
-1. Launch the [Cloud Shell](https://shell.azure.com/). For details, [read more about PowerShell in Cloud Shell](https://aka.ms/pscloudshell/docs).
+1. Launch the [Cloud Shell](https://shell.azure.com/). For details, [read more about PowerShell in Cloud Shell](/azure/cloud-shell/quickstart-powershell).
 
 2. Upload the script to the shell using the following command:
 
@@ -37,7 +37,7 @@ If you have existing existing SQL Server - Azure Arc resources, use these steps 
 
 > [!NOTE]
 > - To paste the commands into the shell, use `Ctrl-Shift-V` on Windows or `Cmd-v` on MacOS.
-> - The script will be uploaded directly to the home folder associated with your Cloud Shell session.
+> - The `curl` command will copy the script directly to the home folder associated with your Cloud Shell session.
 > - The script will prompt for the resource group name and print a message when migration is completed.
 
 ### Other changes

@@ -21,11 +21,11 @@ ms.reviewer: v-chmalh
 
 Command objects use parameters to pass values to SQL statements or stored procedures, providing type checking and validation. Unlike command text, parameter input is treated as a literal value, not as executable code. This helps guard against "SQL injection" attacks, in which an attacker inserts a command that compromises security on the server into an SQL statement.
 
-Parameterized commands can also improve query execution performance, because they help the database server accurately match the incoming command with a proper cached query plan. For more information, see [Execution Plan Caching and Reuse](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse) and [Parameters and Execution Plan Reuse](/sql/relational-databases/query-processing-architecture-guide#PlanReuse). In addition to the security and performance benefits, parameterized commands provide a convenient method for organizing values passed to a data source.
+Parameterized commands can also improve query execution performance, because they help the database server accurately match the incoming command with a proper cached query plan. For more information, see [Execution Plan Caching and Reuse](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) and [Parameters and Execution Plan Reuse](../../relational-databases/query-processing-architecture-guide.md#PlanReuse). In addition to the security and performance benefits, parameterized commands provide a convenient method for organizing values passed to a data source.
 
 A <xref:System.Data.Common.DbParameter> object can be created by using its constructor, or by adding it to the <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> by calling the `Add` method of the <xref:System.Data.Common.DbParameterCollection> collection. The `Add` method will take as input either constructor arguments or an existing parameter object, depending on the data provider.
 
-## Supplying the ParameterDirection property
+## Supply the ParameterDirection property
 
 When adding parameters, you must supply a <xref:System.Data.ParameterDirection> property for parameters other than input parameters. The following table shows the `ParameterDirection` values that you can use with the <xref:System.Data.ParameterDirection> enumeration.
 
@@ -36,12 +36,12 @@ When adding parameters, you must supply a <xref:System.Data.ParameterDirection> 
 |<xref:System.Data.ParameterDirection.Output>|The parameter is an output parameter.|
 |<xref:System.Data.ParameterDirection.ReturnValue>|The parameter represents a return value from an operation such as a stored procedure, built-in function, or user-defined function.|
 
-## Working with parameter placeholders
+## Work with parameter placeholders
 
 The syntax for parameter placeholders depends on the data source. The Microsoft SqlClient Data Provider for SQL Server handles naming and specifying parameters and parameter placeholders differently. 
 The SqlClient data provider uses named parameters in the format `@`*parametername*.
 
-## Specifying parameter data types
+## Specify parameter data types
 
 The data type of a parameter is specific to the Microsoft SqlClient Data Provider for SQL Server. Specifying the type converts the value of the `Parameter` to the Microsoft SqlClient Data Provider for SQL Server type before passing the value to the data source. You may also specify the type of a `Parameter` in a generic manner by setting the `DbType` property of the `Parameter` object to a particular <xref:System.Data.DbType>.
 
@@ -84,7 +84,7 @@ The Microsoft SqlClient Data Provider for SQL Server type of a `Parameter` objec
 > [!NOTE]
 > When you send a null parameter value to the server, you must specify <xref:System.DBNull>, not `null` (`Nothing` in Visual Basic). The null value in the system is an empty object that has no value. <xref:System.DBNull> is used to represent null values.
 
-## Deriving parameter information
+## Derive parameter information
 
 Parameters can also be derived from a stored procedure using the `DbCommandBuilder` class. The `SqlCommandBuilder` class provides a static method, `DeriveParameters`, which automatically populates the parameters collection of a command object that uses parameter information from a stored procedure. Note that `DeriveParameters` overwrites any existing parameter information for the command.
 
@@ -98,7 +98,7 @@ For more information, see [Generating Commands with CommandBuilders](generate-co
 Stored procedures offer many advantages in data-driven applications. By using stored procedures, database operations can be encapsulated in a single command, optimized for best performance, and enhanced with additional security. Although a stored procedure can be called by passing the stored procedure name followed by parameter arguments as an SQL statement, by using the <xref:System.Data.Common.DbCommand.Parameters%2A> collection of the ADO.NET <xref:System.Data.Common.DbCommand> object enables you to more explicitly define stored procedure parameters, and to access output parameters and return values.
 
 > [!NOTE]
-> Parameterized statements are executed on the server by using `sp_executesql,` which allows for query plan reuse. Local cursors or variables in the `sp_executesql` batch are not visible to the batch that calls `sp_executesql`. Changes in database context last only to the end of the `sp_executesql` statement. For more information, see [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
+> Parameterized statements are executed on the server by using `sp_executesql,` which allows for query plan reuse. Local cursors or variables in the `sp_executesql` batch are not visible to the batch that calls `sp_executesql`. Changes in database context last only to the end of the `sp_executesql` statement. For more information, see [sp_executesql (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).
 
 When using parameters with a <xref:Microsoft.Data.SqlClient.SqlCommand> to execute a SQL Server stored procedure, the names of the parameters added to the <xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> collection must match the names of the parameter markers in the stored procedure. The Microsoft SqlClient Data Provider for SQL Server does not support the question mark (?) placeholder for passing parameters to an SQL statement or a stored procedure. It treats parameters in the stored procedure as named parameters and searches for matching parameter markers. For example, the `CustOrderHist` stored procedure is defined by using a parameter named `@CustomerID`. When your code executes the stored procedure, it must also use a parameter named `@CustomerID`.
 
@@ -118,4 +118,6 @@ This example demonstrates how to call a SQL Server stored procedure in the `Nort
 ## See also
 
 - [Commands and parameters](commands-parameters.md)
+- [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [Data type mappings in ADO.NET](data-type-mappings-ado-net.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

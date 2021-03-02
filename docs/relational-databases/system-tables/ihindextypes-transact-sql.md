@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "IHindextypes"
   - "IHindextypes_TSQL"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHindextypes system table"
 ms.assetid: 5eb67d59-a19d-4dba-9d2b-657f87818f6b
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # IHindextypes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

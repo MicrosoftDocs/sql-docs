@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FULLTEXTCATALOGPROPERTY_TSQL"
   - "FULLTEXTCATALOGPROPERTY"
@@ -18,13 +18,13 @@ helpviewer_keywords:
   - "FULLTEXTCATALOGPROPERTY function"
   - "status information [SQL Server], full-text catalogs"
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Returns information about full-text catalog properties in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+Returns information about full-text catalog properties in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,7 +65,7 @@ Is an expression containing the name of the full-text catalog property. The tabl
 ## Exceptions  
 Returns NULL on error or if a caller doesn't have permission to view the object.  
   
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a user can only view the metadata of securables. These securables are ones that the user owns or on which the user has been granted permission. As such, built-in functions that emit metadata, such as FULLTEXTCATALOGPROPERTY, may return NULL if the user doesn't have any permission on the object. For more information, see [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
+In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], a user can only view the metadata of securables. These securables are ones that the user owns or on which the user has been granted permission. As such, built-in functions that emit metadata, such as FULLTEXTCATALOGPROPERTY, may return NULL if the user doesn't have any permission on the object. For more information, see [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
   
 ## Remarks  
 FULLTEXTCATALOGPROPERTY ('_catalog\_name_','**IndexSize**') looks at only fragments with status 4 or 6 as shown in [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md). These fragments are part of the logical index. As such, the **IndexSize** property returns only the logical index size. 

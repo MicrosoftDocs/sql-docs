@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "KILL STATS JOB"
   - "KILL_STATS_JOB_TSQL"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "KILL STATS JOB statement"
   - "statistics update jobs [SQL Server]"
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # KILL STATS JOB (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

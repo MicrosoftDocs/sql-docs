@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "MOVE_CONVERSATION_TSQL"
   - "MOVE CONVERSATION"
@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "conversations [Service Broker], groups"
   - "conversations [Service Broker], moving"
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # MOVE CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

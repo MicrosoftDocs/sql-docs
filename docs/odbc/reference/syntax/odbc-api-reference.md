@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: "dllExport"
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel

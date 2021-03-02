@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "08/04/2017"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_delete_database_firewall_rule"
   - "sp_delete_database_firewall_rule_TSQL"
@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
 author: VanMSFT
 ms.author: vanto
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 # sp_delete_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]

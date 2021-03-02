@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSdbms_datatype_mapping_TSQL"
   - "MSdbms_datatype_mapping"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdbms_datatype_mapping system table"
 ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSdbms_datatype_mapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

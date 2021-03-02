@@ -7,12 +7,12 @@ ms.prod: sql
 ms.technology: system-objects
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: "jrasnick"
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 author: "ronortloff"
 ms.author: "rortloff"
-monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
+monikerRange: "=azure-sqldw-latest"
 ---
 # sys.workload_management_workload_classifier_details (Transact-SQL)
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: machine-learning-services
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_execute_external_script_TSQL"
   - "sys.sp_execute_external_script"
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 The **sp_execute_external_script** stored procedure executes a script provided as an input argument to the procedure, and is used with [Machine Learning Services](../../machine-learning/sql-server-machine-learning-services.md) and [Language Extensions](../../language-extensions/language-extensions-overview.md). 
 
 For Machine Learning Services, [Python](../../machine-learning/concepts/extension-python.md) and [R](../../machine-learning/concepts/extension-r.md) are supported languages. For Language Extensions, Java is supported but must be defined with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
@@ -33,7 +33,7 @@ For Machine Learning Services, [Python](../../machine-learning/concepts/extensio
 To execute **sp_execute_external_script**, you must first install Machine Learning Services or Language Extensions. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) and [Linux](../../linux/sql-server-linux-setup-machine-learning.md), or [Install SQL Server Language Extensions on Windows](../../language-extensions/install/windows-java.md) and [Linux](../../linux/sql-server-linux-setup-language-extensions-java.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 The **sp_execute_external_script** stored procedure executes a script provided as an input argument to the procedure, and is used with [Machine Learning Services](../../machine-learning/sql-server-machine-learning-services.md) on SQL Server 2017.
 
 For Machine Learning Services, [Python](../../machine-learning/concepts/extension-python.md) and [R](../../machine-learning/concepts/extension-r.md) are supported languages.
@@ -41,7 +41,7 @@ For Machine Learning Services, [Python](../../machine-learning/concepts/extensio
 To execute **sp_execute_external_script**, you must first install Machine Learning Services. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 The **sp_execute_external_script** stored procedure executes a script provided as an input argument to the procedure, and is used with [R Services](../../machine-learning/r/sql-server-r-services.md) on SQL Server 2016.
 
 For R Services,  [R](../../machine-learning/concepts/extension-r.md) is the supported language.
@@ -49,7 +49,7 @@ For R Services,  [R](../../machine-learning/concepts/extension-r.md) is the supp
 To execute **sp_execute_external_script**, you must first install R Services. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../../machine-learning/install/sql-r-services-windows-install.md).
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 The **sp_execute_external_script** stored procedure executes a script provided as an input argument to the procedure, and is used with [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 For Machine Learning Services, [Python](../../machine-learning/concepts/extension-python.md) and [R](../../machine-learning/concepts/extension-r.md) are supported languages.
@@ -59,7 +59,7 @@ To execute **sp_execute_external_script**, you must first enable Machine Learnin
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ## Syntax
 
 ```
@@ -76,7 +76,7 @@ sp_execute_external_script
     [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
 ```
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 ## Syntax for SQL Server 2017 and earlier
 
 ```
@@ -94,16 +94,16 @@ sp_execute_external_script
 
 ## Arguments
  **\@language** = N'*language*'  
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
  Indicates the script language. *language* is **sysname**. Valid values are **R**, **Python**, and any language defined with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) (for example, Java).
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
  Indicates the script language. *language* is **sysname**. In SQL Server 2017, valid values are **R** and **Python**.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
  Indicates the script language. *language* is **sysname**. In SQL Server 2016, the only valid value is **R**.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
  Indicates the script language. *language* is **sysname**. In Azure SQL Managed Instance, valid values are **R** and **Python**.
 ::: moniker-end
 
@@ -116,7 +116,7 @@ sp_execute_external_script
 `[ @input_data_1_name = N'input_data_1_name' ]`
  Specifies the name of the variable used to represent the query defined by @input_data_1. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular. *input_data_1_name* is **sysname**.  Default value is *InputDataSet*.  
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 `[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]`
   Used to build per-partition models. Specifies the name of the column used to order the result set, for example by product name. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular.
 
@@ -145,16 +145,16 @@ sp_execute_external_script
 > [!IMPORTANT]
 > The query tree is controlled by SQL machine learning and users cannot perform arbitrary operations on the query.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Use **sp_execute_external_script** to execute scripts written in a supported language. Supported languages are **Python** and **R** used with Machine Learning Services, and any language defined with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) (for example, Java) used with Language Extensions.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Use **sp_execute_external_script** to execute scripts written in a supported language. Supported languages are **Python** and **R** in SQL Server 2017 Machine Learning Services.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Use **sp_execute_external_script** to execute scripts written in a supported language. The only supported language is **R** in SQL Server 2016 R Services.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Use **sp_execute_external_script** to execute scripts written in a supported language. Supported languages are **Python** and **R** in Azure SQL Managed Instance Machine Learning Services.
 ::: moniker-end
 
@@ -162,7 +162,7 @@ By default, result sets returned by this stored procedure are output with unname
 
 In addition to returning a result set, you can return scalar values to using OUTPUT parameters.
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 You can control the resources used by external scripts by configuring an external resource pool. For more information, see [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md). Information about the workload can be obtained from the resource governor catalog views, DMV's, and counters. For more information, see [Resource Governor Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md), [Resource Governor Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md), and [SQL Server, External Scripts Object](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md).  
 ::: moniker-end
 
@@ -170,7 +170,7 @@ You can control the resources used by external scripts by configuring an externa
 
 Monitor script execution using [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) and [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md).
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ### Parameters for partition modeling
 
 You can set two additional parameters that enable modeling on partitioned data, where partitions are based on one or more columns you provide that naturally segment a data set into logical partitions created and used only during script execution. Columns containing repeating values for age, gender, geographic region, date or time, are a few examples that lend themselves to partitioned data sets.
@@ -291,7 +291,7 @@ GO
 
 Column headings used in Python code are not output to SQL Server; therefore, use the WITH RESULT statement to specify the column names and data types for SQL to use.
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 ### C. Generate an R model based on data from SQL Server  
 
 The following example creates a stored procedure that uses **sp_execute_external_script** to generate an iris model and return the model.  

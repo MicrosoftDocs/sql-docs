@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.failoverwizard.progress.f1"
@@ -19,7 +19,7 @@ ms.author: chadam
 # Progress Page (Always On Availability Group Wizards)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  Use this dialog box to view the progress of a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] wizard that you are running in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. The progress bar indicates the relative progress of the steps that the wizard is performing.  
+  Use this dialog box to view the progress of a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] wizard that you are running in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. The progress bar indicates the relative progress of the steps that the wizard is performing.  
   
 ## UI element list  
  **More details**  

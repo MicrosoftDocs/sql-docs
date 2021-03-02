@@ -5,7 +5,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.newagwizard.summary.f1"
@@ -21,7 +21,7 @@ ms.author: chadam
 
 <a name="Top"></a>  
   
-  This help topic describes the options of the **Summary** page. This topic applies to the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] and [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use the grid on this page to review your choices for the new availability group. To make one or more changes, click **Previous** to return to the relevant page or pages. When you are ready, click **Next** to return to the **Summary** page. Once you are satisfied with your choices, click **Finish**.  
+  This help topic describes the options of the **Summary** page. This topic applies to the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] and [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Use the grid on this page to review your choices for the new availability group. To make one or more changes, click **Previous** to return to the relevant page or pages. When you are ready, click **Next** to return to the **Summary** page. Once you are satisfied with your choices, click **Finish**.  
   
 ##  <a name="PageOptions"></a> Summary Page Options  
  **Script**  

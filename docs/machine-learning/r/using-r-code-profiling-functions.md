@@ -8,7 +8,7 @@ ms.date: 10/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Use R code profiling functions to improve performance
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -59,6 +59,6 @@ The documentation for Microsoft R Open, which is installed by default, includes 
 ## Next steps
 
 + For more information about optimizing R scripts in SQL Server, see [Performance tuning and data optimization for R](r-and-data-optimization-r-services.md).
-+ For more complete information about performance tuning on SQL Server, see [Performance Center for SQL Server Database Engine and Azure SQL Database](/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database).
++ For more complete information about performance tuning on SQL Server, see [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md).
 + For more information on the utils package, see [The R Utils Package](https://www.rdocumentation.org/packages/utils/versions/3.5.1).
 + For in-depth discussions of R programming, see ["Advanced R" by Hadley Wickham](http://adv-r.had.co.nz).

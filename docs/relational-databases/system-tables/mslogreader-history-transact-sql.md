@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSlogreader_history_TSQL"
   - "MSlogreader_history"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSlogreader_history system table"
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # MSlogreader_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

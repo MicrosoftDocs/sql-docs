@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 titleSuffix: SQL Server on Linux
-monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # Configure Replication with T-SQL
 
@@ -39,7 +39,7 @@ To complete this tutorial, you will need:
    See [Use SSMS to Manage SQL Server on Linux](./sql-server-linux-manage-ssms.md).
 
    >[!NOTE]
-   >[!INCLUDE[SQL Server 2017](../includes/sssqlv14-md.md)] ([CU18](https://support.microsoft.com/help/4527377)) and later support SQL Server Replication for instances of SQL Server on Linux.
+   >[!INCLUDE[SQL Server 2017](../includes/sssql17-md.md)] ([CU18](https://support.microsoft.com/help/4527377)) and later support SQL Server Replication for instances of SQL Server on Linux.
 
 ## Detailed steps
 

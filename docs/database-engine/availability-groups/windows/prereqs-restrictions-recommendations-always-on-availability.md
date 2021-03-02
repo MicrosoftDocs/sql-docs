@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], server instance"
@@ -29,7 +29,7 @@ ms.author: chadam
 >  Before you deploy [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], we strongly recommend that you read every section of this topic.  
     
 ##  <a name="DotNetHotfixes"></a> .NET Hotfixes that Support Availability Groups  
- Depending on the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] components and features you will use with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], you may need to install additional .NET hotfixes identified in the following table. The hotfixes can be installed in any order.  
+ Depending on the [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] components and features you will use with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], you may need to install additional .NET hotfixes identified in the following table. The hotfixes can be installed in any order.  
   
 |Dependent Feature|Hotfix|Link|  
 |-----------------------|------------|----------|  
@@ -257,7 +257,7 @@ ms.author: chadam
   
 -   **Unique availability group name:**  Each availability group name must be unique on the WSFC. The maximum length for an availability group name is 128 characters.  
   
--   **Availability replicas:**  Each availability group supports one primary replica and up to eight secondary replicas. All of the replicas can run under asynchronous-commit mode, or up to three of them can run under synchronous-commit mode (one primary replica with two synchronous secondary replicas).  
+-   **Availability replicas:**  Each availability group supports one primary replica and up to eight secondary replicas. All of the replicas can run under asynchronous-commit mode, or up to five of them can run under synchronous-commit mode (one primary replica with two synchronous secondary replicas).  
   
 -   **Maximum number of availability groups and availability databases per computer:** The actual number of databases and availability groups you can put on a computer (VM or physical) depends on the hardware and workload, but there is no enforced limit. Microsoft has tested up to 10 AGs and 100 DBs per physical machine, however this is not a binding limit. Depending on the hardware specification on the server and the workload, you can put a higher number of databases and availability groups on an instance of SQL Server. Signs of overloaded systems can include, but are not limited to, worker thread exhaustion, slow response times for availability group system views and DMVs, and/or stalled dispatcher system dumps. Please make sure to thoroughly test your environment with a production-like workload to ensure it can handle peak workload capacity within your application SLAs. When considering SLAs be sure to consider load under failure conditions as well as expected response times.  
   

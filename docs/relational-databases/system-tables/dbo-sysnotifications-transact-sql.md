@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dbo.sysnotifications_TSQL"
   - "sysnotifications"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysnotifications system table"
 ms.assetid: c5150d18-e8b7-48a7-ada7-77c583af6e41
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # dbo.sysnotifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

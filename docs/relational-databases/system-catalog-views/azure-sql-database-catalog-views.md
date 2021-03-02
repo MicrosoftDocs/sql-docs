@@ -6,15 +6,15 @@ ms.date: "08/20/2015"
 ms.service: sql-database 
 ms.reviewer: ""
 ms.prod_service: sql-database
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "Azure SQL Database catalog views"
 ms.assetid: 6ea26833-718b-4588-82f0-2511a76d3554
-author: markingmyname
-ms.author: maghan
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "= azuresqldb-current"
 ---
 # Azure SQL Database Catalog Views
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

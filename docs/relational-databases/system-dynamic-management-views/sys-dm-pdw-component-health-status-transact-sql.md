@@ -8,9 +8,9 @@ ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 68cc3f7a-693c-4d5d-a76b-455352af8d7f
-author: markingmyname
-ms.author: maghan
-monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">= aps-pdw-2016"
 ---
 # sys.dm_pdw_component_health_status (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SEND_ON_CONVERSATION_TSQL"
   - "ON_CONVERSATION_TSQL"
@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "messages [Service Broker], sending"
   - "sending messages"
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SEND (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

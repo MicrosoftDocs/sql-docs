@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.query_store_wait_stats"
   - "query_store_wait_stats"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "query_store_wait_stats catalog view"
   - "sys.query_store_wait_stats catalog view"
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-author: markingmyname
-ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_wait_stats (Transact-SQL)
 

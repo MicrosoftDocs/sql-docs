@@ -8,7 +8,7 @@ ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Troubleshoot issues with Launchpad service and external script execution in SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -71,7 +71,7 @@ For more information, see [GRANT (Transact-SQL](../../t-sql/statements/grant-tra
 
 This section lists the most common error messages that Launchpad returns.
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 ## "Unable to launch runtime for R script"
 
 If the Windows group for R users (also used for Python) cannot log on to the instance that is running R Services, you might see the following errors:
@@ -181,12 +181,12 @@ EXEC sp_execute_external_script @language = N'R',
 
 To resolve the issue, you must reinstall the package to the SQL Server instance library.
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 >[!NOTE]
 >If you have upgraded an instance of SQL Server 2016 to use the latest version of Microsoft R, the default library location is different. For more information, see [Use SqlBindR to upgrade an instance of R Services](../install/upgrade-r-and-python.md).
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 ## Launchpad shuts down due to mismatched DLLs
 
 If you install the database engine with other features, patch the server, and then later add the Machine Learning feature by using the original media, the wrong version of the Machine Learning components might be installed. When Launchpad detects a version mismatch, it shuts down and creates a dump file.

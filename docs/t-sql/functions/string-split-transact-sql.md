@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "jrasnick"
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "STRING_SPLIT"
   - "STRING_SPLIT_TSQL"
@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: "= azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions" 
+monikerRange: "= azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017" 
 ---
 # STRING_SPLIT (Transact-SQL)
 

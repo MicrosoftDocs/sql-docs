@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_os_buffer_descriptors_TSQL"
   - "dm_os_buffer_descriptors_TSQL"
@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_buffer_descriptors dynamic management view"
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
-author: markingmyname
-ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Returns information about all the data pages that are currently in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] buffer pool. The output of this view can be used to determine the distribution of database pages in the buffer pool according to database, object, or type. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], this dynamic management view also returns information about the data pages in the buffer pool extension file. For more information, see [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md).  
+  Returns information about all the data pages that are currently in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] buffer pool. The output of this view can be used to determine the distribution of database pages in the buffer pool according to database, object, or type. In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], this dynamic management view also returns information about the data pages in the buffer pool extension file. For more information, see [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md).  
   
  When a data page is read from disk, the page is copied into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] buffer pool and cached for reuse. Each cached data page has one buffer descriptor. Buffer descriptors uniquely identify each data page that is currently cached in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_os_buffer_descriptors returns cached pages for all user and system databases. This includes pages that are associated with the Resource database.  
   
@@ -50,7 +50,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Permissions  
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
    
 ## Remarks  
  sys.dm_os_buffer_descriptors returns pages that are being used by the Resource database. sys.dm_os_buffer_descriptors does not return information about free or stolen pages, or about pages that had errors when they were read.  

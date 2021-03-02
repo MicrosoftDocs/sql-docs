@@ -8,7 +8,7 @@ ms.prod_service: "reporting-services-native"
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 10/19/2020
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 
 # Server Properties Advanced Page - Power BI Report Server & Reporting Services

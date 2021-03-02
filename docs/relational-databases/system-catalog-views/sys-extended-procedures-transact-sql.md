@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "extended_procedures"
   - "sys.extended_procedures"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.extended_procedures catalog view"
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.extended_procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

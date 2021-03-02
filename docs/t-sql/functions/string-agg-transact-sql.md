@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STRING_AGG (Transact-SQL)
 

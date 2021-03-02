@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "USE_TSQL"
   - "USE"
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "context changes [SQL Server]"
   - "modifying database context"
 ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # USE (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]

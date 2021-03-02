@@ -18,7 +18,7 @@ ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: "table-view-index, sql-database"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Guidelines for online index operations
 
@@ -113,7 +113,7 @@ Generally, there is no difference in defragmentation quality between resumable a
 ## Online default options
 
 > [!IMPORTANT]
-> These options are in public preview for [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)].
+> These options are in public preview for [!INCLUDE[ssNoVersion](../../includes/sssql19-md.md)].
 
 You can set default options for online or resumable at a database level by setting the ELEVATE_ONLINE or ELEVATE_RESUMABLE database scoped configuration options. With these default options, you can avoid accidentally performing an operation that takes your database table offline. Both options will cause the engine to automatically elevate certain operations to online or resumable execution.  
 You can set either option as FAIL_UNSUPPORTED, WHEN_SUPPORTED, or OFF using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) command. You can set different values for online and resumable.

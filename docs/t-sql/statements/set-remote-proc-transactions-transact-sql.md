@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "REMOTE_PROC_TRANSACTIONS_TSQL"
   - "SET REMOTE_PROC_TRANSACTIONS"
@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "REMOTE_PROC_TRANSACTIONS option"
   - "active transactions"
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

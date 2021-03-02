@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dbo.syscategories_TSQL"
   - "syscategories"
@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "syscategories system table"
 ms.assetid: eb2cb75c-dc58-4a5b-b329-664e9fe20ce0
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # dbo.syscategories (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

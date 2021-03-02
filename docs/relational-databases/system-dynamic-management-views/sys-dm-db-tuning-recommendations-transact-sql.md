@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_db_tuning_recommendations"
   - "dm_db_tuning_recommendations"
@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm\_db\_tuning\_recommendations (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -79,6 +79,8 @@ JSON document in `state` column contains the reason that describes why is the re
 | `VerificationForcedQueryRecompile`| Query is recompiled because there is no significant performance improvement. |
 | `PlanForcedByUser`| User manually forced the plan using [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) procedure. Database engine will not apply the recommendation if user explicitly decided to force some plan. |
 | `PlanUnforcedByUser` | User manually unforced the plan using [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md) procedure. Since the user explicitly reverted the recommended plan, database engine will keep using the current plan and generate a new recommendation if some plan regression occurs in future. |
+| `UserForcedDifferentPlan` | User manually forced different plan using [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) procedure. Database engine will not apply the recommendation if user explicitly decided to force some plan. |
+| `TempTableChanged` | A temporary table that was used in the plan is changed. |
 
  Statistic in the details column do not show runtime plan statistics (for example, current CPU time). The recommendation details are taken at the time of regression detection and describe why [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identified performance regression. Use `regressedPlanId` and `recommendedPlanId` to query [Query Store catalog views](../../relational-databases/performance/how-query-store-collects-data.md) to find exact runtime plan statistics.
 
@@ -172,7 +174,7 @@ For more information about JSON functions that can be used to query values in th
 Requires `VIEW SERVER STATE` permission in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].   
 Requires the `VIEW DATABASE STATE` permission for the database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 
-## See Also  
+## See also  
  [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

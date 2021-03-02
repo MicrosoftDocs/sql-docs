@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "operators [Transact-SQL], about operators"
   - "operators [Transact-SQL]"
 ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # Operators (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

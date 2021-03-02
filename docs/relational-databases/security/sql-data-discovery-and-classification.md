@@ -8,7 +8,7 @@ ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 06/10/2020
+ms.date: 02/05/2021
 ms.author: datrigan
 author: DavidTrigano
 ---
@@ -18,19 +18,19 @@ author: DavidTrigano
 Data Discovery & Classification introduces a new tool built into [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) for **discovering**, **classifying**, **labeling** & **reporting** the sensitive data in your databases.
 Discovering and classifying your most sensitive data (business, financial, healthcare, etc.) can play a pivotal role in your organizational information protection stature. It can serve as infrastructure for:
 * Helping meet data privacy standards.
-* Controlling access to and hardening the security of databases/columns containing highly sensitive data.
+* Monitoring access to databases/columns containing highly sensitive data.
 
 > [!NOTE]
 > Data Discovery & Classification is **supported for SQL Server 2012 and later, and can be used with [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) or later**. For Azure SQL Database, see [Azure SQL Database Data Discovery & Classification](/azure/sql-database/sql-database-data-discovery-and-classification/).
 
-## <a id="subheading-1"></a>Overview
-Data Discovery & Classification introduces a set of advanced services, forming a new SQL Information Protection paradigm aimed at protecting the data, not just the database:
+## <a id="Overview"></a>Overview
+Data Discovery & Classification introduces a set of services, forming a new SQL Information Protection paradigm aimed at protecting the data, not just the database:
 
 * **Discovery & recommendations** - The classification engine scans your database and identifies columns containing potentially sensitive data. It then provides you an easy way to review and apply the appropriate classification recommendations, as well as to manually classify columns.
 * **Labeling** - Sensitivity classification labels can be persistently tagged on columns.
 * **Visibility** - The database classification state can be viewed in a detailed report that can be printed/exported to be used for compliance & auditing purposes, as well as other needs.
 
-## <a id="subheading-2"></a>Discovering, classifying & labeling sensitive columns
+## <a id="Discovering-classifying-labeling-sensitive-columns"></a>Discovering, classifying & labeling sensitive columns
 The following section describes the steps for discovering, classifying, and labeling columns containing sensitive data in your database, as well as viewing the current classification state of your database and exporting reports.
 
 The classification includes two metadata attributes:
@@ -85,7 +85,7 @@ The classification includes two metadata attributes:
 
     ![Screenshot showing the SQL Data Classification Report.][10]
 
-## <a id="subheading-3"></a>Manage information protection policy with SSMS
+## <a id="Manage-information-protection-policy-with-SSMS"></a>Manage information protection policy with SSMS
 
 You can manage the information protection policy using [SSMS 18.4](../../ssms/download-sql-server-management-studio-ssms.md) or later:
 
@@ -105,12 +105,9 @@ You can manage the information protection policy using [SSMS 18.4](../../ssms/do
 > Information protection policy file is not stored in the SQL Server.
 > SSMS uses a default information protection policy. If an information protection policy customized fails, SSMS cannot use the default policy. Data classification fails. To resolve, click **Reset Information Protection Policy** to use the default policy and re-enable data classification.
 
-## <a id="subheading-4"></a>Accessing the classification metadata
+## <a id="sAccessing-the-classification-metadata"></a>Accessing the classification metadata
 
-SQL Server 2019 introduces [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) system catalog view. This view returns information types and sensitivity labels. 
-
-> [!NOTE]
-> This view requires **VIEW ANY SENSITIVITY CLASSIFICATION** permission. For more information, see [Metadata Visibility Configuration](./metadata-visibility-configuration.md?view=sql-server-ver15).
+SQL Server 2019 introduces [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) system catalog view. This view returns information types and sensitivity labels.
 
 On SQL Server 2019 instances, query `sys.sensitivity_classifications` to review all classified columns with their corresponding classifications. For example: 
 
@@ -134,8 +131,6 @@ Prior to SQL Server 2019, the classification metadata for information types and 
 
 * `sys_information_type_name`
 * `sys_sensitivity_label_name`
-
-The metadata can be accessed using the Extended Properties catalog view [`sys.extended_properties`](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md).
 
 For instances of SQL Server 2017 and prior, the following example returns all classified columns with their corresponding classifications:
 
@@ -179,6 +174,14 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
+## <a id="Permissions"></a>Permissions
+
+On SQL Server 2019 instances, viewing classification requires **VIEW ANY SENSITIVITY CLASSIFICATION** permission. For more information, see [Metadata Visibility Configuration](./metadata-visibility-configuration.md).
+
+Prior to SQL Server 2019, the metadata can be accessed using the Extended Properties catalog view [`sys.extended_properties`](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md).
+
+Managing classification requires ALTER ANY SENSITIVITY CLASSIFICATION permission. The ALTER ANY SENSITIVITY CLASSIFICATION is implied by the database permission ALTER, or by the server permission CONTROL SERVER.
+
 ## <a id="subheading-5"></a>Manage classifications
 
 # [T-SQL](#tab/t-sql)
@@ -190,14 +193,12 @@ You can use T-SQL to add/remove column classifications, as well as retrieve all 
 # [PowerShell Cmdlet](#tab/sql-powelshell)
 You can use PowerShell Cmdlet to add/remove column classifications, as well as retrieve all classifications and get recommendations for the entire database.
 
-- [Get-SqlSensitivityClassification](/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
-- [Get-SqlSensitivityRecommendations](/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
-- [Set-SqlSensitivityClassification](/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
-- [Remove-SqlSensitivityClassification](/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityClassification](/powershell/module/sqlserver/Get-SqlSensitivityClassification)
+- [Get-SqlSensitivityRecommendations](/powershell/module/sqlserver/Get-SqlSensitivityRecommendations)
+- [Set-SqlSensitivityClassification](/powershell/module/sqlserver/Set-SqlSensitivityClassification)
+- [Remove-SqlSensitivityClassification](/powershell/module/sqlserver/Remove-SqlSensitivityClassification)
 
----
-
-## <a id="subheading-6"></a>Next steps
+## <a id="Next-steps"></a>Next steps
 
 For Azure SQL Database, see [Azure SQL Database Data Discovery & Classification](/azure/azure-sql/database/data-discovery-and-classification-overview).
 

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # SQL Server Replication 'Publisher Settings' dialog box
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

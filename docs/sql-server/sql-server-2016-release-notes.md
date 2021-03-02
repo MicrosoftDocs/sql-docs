@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
-monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= sql-server-2016"
 ---
 
 # SQL Server 2016 Release Notes
@@ -55,7 +55,7 @@ Supportability and Diagnostics related improvements included in SQL Server 2016 
 |Full DTC support for databases in an Availability Group   |   Cross-databases transactions for databases which are part of an Availability Group are currently not supported for SQL Server 2016. With SQL Server 2016 SP2, we are introducing full support for distributed transactions with Availability Group Databases.   |      |
 |Update to sys.databases is_encrypted column to accurately reflect encryption status for TempDB   |   The value of is_encryptedcolumn column in sys.databases is 1 for TempDB, even after you turn off encryption for all user databases and restart SQL Server. The expected behavior would be that the value for this is 0, since TempDB is no longer encrypted in this situation. Starting with SQL Server 2016 SP2, sys.databases.is_encrypted now accurately reflects encryption status for TempDB.   |      |
 |New DBCC CLONEDATABASE options to generate verified clone and backup   |   With SQL Server 2016 SP2, DBCC CLONEDATABASE allows two new options:  produce a verified clone, or produce a backup clone. When a clone database is created using WITH VERIFY_CLONEDB option, a consistent database clone is created and verified which will be supported by Microsoft for production use. A new property is introduced to validate if the clone is verified SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone'). When a clone is created with BACKUP_CLONEDB option, a backup is generated in the same folder as the data file to make it easy for customers to move the clone to different server or to send it to Microsoft Customer Support (CSS) for troubleshooting.   |      |
-|Service Broker (SSB) support for DBCC CLONEDATABASE   |   Enhanced DBCC CLONEDATABASE command to allow scripting of SSB objects.   |   [KB4092075](https://support.microsoft.com/help/4092075)   |
+|Service Broker (SSB) support for DBCC CLONEDATABASE   |   Enhanced DBCC CLONEDATABASE command to allow scripting of SSB objects.   |      |
 |New DMV to monitor TempDB version store space usage   |   A new sys.dm_tran_version_store_space_usage DMV is introduced in SQL Server 2016 SP2 to allow monitoring TempDB for version store usage. DBAs can now proactively plan TempDB sizing based on the version store usage requirement per database, without any performance overhead when running it on production servers.   |      |
 |Full Dumps support for Replication Agents | Today if replication agents encounter a unhandled exception, the default is to create a mini dump of the exception symptoms. This makes troubleshooting unhandled exception issues very difficult. Through this change we are introducing a new Registry key, which would allow to create a full dump for Replication Agents.   |      |
 |Extended Events enhancement for read routing failure for an Availability Group   |   Before, the read_only_rout_fail xEvent fired if there was a routing list present, but none of the servers in the routing list were available for connections. SQL Server 2016 SP2 includes additional information to assist with troubleshooting, and also expand on the code points where this xEvent gets fired.   |      |

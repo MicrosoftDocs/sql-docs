@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "variable_TSQL"
   - "@loca_variable"
@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "@local_variable"
   - "local variables [SQL Server]"
 ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
-author: rothja
-ms.author: jroth
-monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017"
 ---
 
 # SELECT @local_variable (Transact-SQL)

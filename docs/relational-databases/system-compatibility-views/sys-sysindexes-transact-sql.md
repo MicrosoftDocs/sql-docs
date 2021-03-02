@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysindexes"
   - "sysindexes_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysindexes system table"
   - "sys.sysindexes compatibility view"
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

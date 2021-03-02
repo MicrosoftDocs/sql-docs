@@ -58,7 +58,11 @@ Join your SQL Server Linux host with an Active Directory domain controller. For 
    ```
 
    > [!NOTE]
-   > It is a security best practice to have a dedicated AD account for SQL Server, so that SQL Server's credentials aren't shared with other services using the same account. However, you can optionally reuse an existing AD account if you know the account's password (which is required to generate a keytab file in the next step). Additionally, the account should be enabled to support 128-bit and 256-bit Kerberos AES encryption (**msDS-SupportedEncryptionTypes** attribute) on the user account.
+   > It is a security best practice to have a dedicated AD account for SQL Server, so that SQL Server's credentials aren't shared with other services using the same account. However, you can optionally reuse an existing AD account if you know the account's password (which is required to generate a keytab file in the next step). Additionally, the account should be enabled to support 128-bit and 256-bit Kerberos AES encryption (**msDS-SupportedEncryptionTypes** attribute) on the user account. To validate the account is enabled for AES encryption, locate the account in **Active Directory Users and Computers** utility, and select **Properties**. Locate **Accounts** tab in the **Properties** and validate two checkboxes titled following are selected. 
+   >
+   > 1. **This account supports Kerberos AES 128 bit encryption**
+   >
+   > 2. **This account supports Kerberos AES 256 bit encryption**
 
 2. Set the ServicePrincipalName (SPN) for this account using the **setspn.exe** tool. The SPN must be formatted exactly as specified in the following example. You can find the fully qualified domain name of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine by running `hostname --all-fqdns` on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host. The TCP port should be 1433 unless you have configured [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use a different port number.
 

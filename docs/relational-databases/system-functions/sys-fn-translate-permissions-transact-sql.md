@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_translate_permissions"
   - "sys.fn_translate_permissions_TSQL"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sys.fn_translate_permissions function"
   - "fn_translate_permissions function"
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

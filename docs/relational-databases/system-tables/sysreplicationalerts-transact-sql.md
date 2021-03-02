@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysreplicationalerts_TSQL"
   - "sysreplicationalerts"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysreplicationalerts system table"
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # sysreplicationalerts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

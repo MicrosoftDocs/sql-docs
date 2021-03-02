@@ -121,6 +121,9 @@ For *Windows operating systems*, the driver looks for sqljdbc_auth.dll by defaul
 
 From driver version 8.2.2 onward, 'sqljdbc_auth.dll' is renamed to 'mssql-jdbc_auth-\<version>-\<arch>.dll'. E.g. 'mssql-jdbc_auth-8.2.2.x64.dll'.
 
+In addition to the **mssql-jdbc_auth-\<version>-\<arch>.dll** (available in the JDBC driver package), the Azure Active Directory Authentication Library (**ADAL.DLL**) also needs to be installed for Active Directory Integrated authentication. ADAL can be installed from [Microsoft ODBC Driver for SQL Server](../odbc/download-odbc-driver-for-sql-server.md) or [Microsoft OLE DB Driver for SQL Server](../oledb/download-oledb-driver-for-sql-server.md). The JDBC driver only supports version **1.0.2028.318 and higher** for ADAL.DLL.
+
+
 You can get a [sample application](connecting-using-azure-active-directory-authentication.md) that uses this feature.
 
 ## See also

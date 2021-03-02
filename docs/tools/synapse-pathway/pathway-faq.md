@@ -33,7 +33,6 @@ A. There is no cost associated with downloading and running your code translatio
 
 A. In this preview version of Synapse Pathway, following data warehouses are included as sources:
 - Microsoft SQL Server
-- Teradata
 - Snowflake
 - Netezza
 

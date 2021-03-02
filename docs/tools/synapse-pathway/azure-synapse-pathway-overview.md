@@ -43,7 +43,6 @@ To install Synapse Pathway, check [Azure Synapse Pathway download](synapse-pathw
 Azure Synapse Pathway supports code conversion of database, schemas, and tables for the following sources:
 - **IBM Netezza** 
 - **Microsoft SQL Server**
-- **Teradata Vantage**
 - **Snowflake**
 
 ## Frequently asked questions

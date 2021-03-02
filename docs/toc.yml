@@ -3,7 +3,7 @@ items:
   href: sql-server/index.yml
 
 - name: Docs navigation tips
-  href: sql-server/sql-docs-navigation-guide.md
+  href: sql-server/sql-docs-navigation-guide.mdpathway
 - name: Previous versions 2005-2014
   href: sql-server/previous-versions-sql-server.md
 
@@ -6192,7 +6192,7 @@ items:
     - name: Installation
       href: tools/synapse-pathway/synapse-pathway-download.md
     - name: Tutorial - Run Azure Synapse Pathway
-      href: tools/synapse-pathwaysynapse-translate-assessment.md
+      href: tools/synapse-pathway/synapse-pathway-assessment.md
     - name: Tutorial - Save and Load
       href: tools/synapse-pathway/tutorial-save-load-assessment.md
     - name: Generate Reports

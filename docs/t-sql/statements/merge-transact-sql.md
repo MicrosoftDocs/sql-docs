@@ -250,8 +250,18 @@ Specifies the graph match pattern. For more information about the arguments for 
 > The fix will be available in a later release.  Until then, please avoid using the MERGE command on HASH distributed TARGET tables that have secondary indices or UNIQUE constraints.  The MERGE command may also be temporarily disabled on your Synapse SQL instances that have tables with these configurations.   
 >
 > An important reminder, preview features are meant for testing only and should not be used on production instances or production data. Please also keep a copy of your test data if its data is important.
->
-> To check if a hash distributed TARGET table for MERGE gets affected by this issue, follow these steps to examine if the tables have rows landed in wrong distribution.  If 'no need for repair' is returned, this table is not affected.  
+> 
+> To check which hash distributed tables in a database cannot work with current MERGE command in preview, run this statement
+>```sql
+> select a.name, c.distribution_policy_desc, b.type from sys.tables a join sys.indexes b
+> on a.object_id = b.object_id
+> join
+> sys.pdw_table_distribution_properties c
+> on a.object_id = c.object_id
+> where b.type = 2 and c.distribution_policy_desc = 'HASH'
+> ```
+> 
+> To check if a hash distributed TARGET table for MERGE is affected by this issue, follow these steps to examine if the tables have rows landed in wrong distribution.  If 'no need for repair' is returned, this table is not affected.  
 >
 >```sql
 > if object_id('[check_table_1]', 'U') is not null

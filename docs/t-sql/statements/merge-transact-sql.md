@@ -247,9 +247,9 @@ Specifies the graph match pattern. For more information about the arguments for 
 > - The MERGE T-SQL statement was executed on a HASH distributed TARGET table in Azure Synapse SQL database.
 > - The TARGET table of the merge has secondary indices or a UNIQUE constraint.
 >
-> The fix will be available in a later release.  Until then, please avoid using the MERGE command on HASH distributed TARGET tables that have secondary indices or UNIQUE constraints.  The MERGE feature support may be temporarily disabled on databases with HASH distributed tables that have UNIQUE constraints or secondary indices.      
+> Until the fix is available, avoid using the MERGE command on HASH distributed TARGET tables that have secondary indices or UNIQUE constraints.  The MERGE feature support may also be temporarily disabled on databases with HASH distributed tables that have UNIQUE constraints or secondary indices.      
 >
-> An important reminder, preview features are meant for testing only and should not be used on production instances or production data. Please also keep a copy of your test data if its data is important.
+> An important reminder, preview features are meant for testing only and should not be used on production instances or production data. Please also keep a copy of your test data if the data is important.
 > 
 > To check which hash distributed tables in a database cannot work with current MERGE command in preview, run this statement
 >```sql

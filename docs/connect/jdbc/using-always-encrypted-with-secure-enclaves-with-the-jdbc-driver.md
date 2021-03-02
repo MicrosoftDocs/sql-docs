@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "01/15/2021"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
@@ -53,23 +53,23 @@ Rich queries will trigger enclave computations:
 ```java
 private static final String URL = "jdbc:sqlserver://<server>:<port>;user=<username>;password=<password>;databaseName=ContosoHR;columnEncryptionSetting=enabled;enclaveAttestationUrl=<attestation-url>;enclaveAttestationProtocol=<attestation-protocol>;";
 try (Connection c = DriverManager.getConnection(URL)) {
-	try (PreparedStatement p = c.prepareStatement("SELECT * FROM Employees WHERE SSN LIKE ?")) {
-		p.setString(1, "%6818");
-		try (ResultSet rs = p.executeQuery()) {
-			while (rs.next()) {
-				// Do work with data
-			}
-		}
-	}
-	
-	try (PreparedStatement p = c.prepareStatement("SELECT * FROM Employees WHERE SALARY > ?")) {
-		((SQLServerPreparedStatement) p).setMoney(1, new BigDecimal(0));
-		try (ResultSet rs = p.executeQuery()) {
-			while (rs.next()) {
-				// Do work with data
-			}
-		}
-	}
+    try (PreparedStatement p = c.prepareStatement("SELECT * FROM Employees WHERE SSN LIKE ?")) {
+        p.setString(1, "%6818");
+        try (ResultSet rs = p.executeQuery()) {
+            while (rs.next()) {
+                // Do work with data
+            }
+        }
+    }
+    
+    try (PreparedStatement p = c.prepareStatement("SELECT * FROM Employees WHERE SALARY > ?")) {
+        ((SQLServerPreparedStatement) p).setMoney(1, new BigDecimal(0));
+        try (ResultSet rs = p.executeQuery()) {
+            while (rs.next()) {
+                // Do work with data
+            }
+        }
+    }
 }
 ```
 
@@ -77,7 +77,7 @@ Toggling encryption on a column will also trigger enclave computations:
 ```java
 private static final String URL = "jdbc:sqlserver://<server>:<port>;user=<username>;password=<password>;databaseName=ContosoHR;columnEncryptionSetting=enabled;enclaveAttestationUrl=<attestation-url>;enclaveAttestationProtocol=<attestation-protocol>;";
 try (Connection c = DriverManager.getConnection(URL);Statement s = c.createStatement()) {
-	s.executeUpdate("ALTER TABLE Employees ALTER COLUMN SSN CHAR(11) NULL WITH (ONLINE = ON)");
+    s.executeUpdate("ALTER TABLE Employees ALTER COLUMN SSN CHAR(11) NULL WITH (ONLINE = ON)");
 }
 ```
 

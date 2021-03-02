@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: karinazhou
 ms.author: v-jizho2
-ms.reviewer: 
+ms.reviewer: v-daenge
 ---
 
 # Using Azure Active Directory authentication with SqlClient
@@ -21,7 +21,7 @@ ms.reviewer:
 
 This article describes how to connect to Azure SQL data sources by using Azure Active Directory (Azure AD) authentication from a .NET application with SqlClient.
 
-Azure AD authentication uses identities in Azure AD to access Azure SQL data sources such as Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The **Microsoft.Data.SqlClient** namespace allows client applications to specify Azure AD credentials in different authentication modes when they're connecting to Azure SQL Database. 
+Azure AD authentication uses identities in Azure AD to access Azure SQL data sources such as Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The **Microsoft.Data.SqlClient** namespace allows client applications to specify Azure AD credentials in different authentication modes when they're connecting to Azure SQL Database.
 
 When you set the `Authentication` connection property in the connection string, the client can choose a preferred Azure AD authentication mode according to the value provided:
 
@@ -34,7 +34,6 @@ When you set the `Authentication` connection property in the connection string, 
 - More authentication modes are added in **Microsoft.Data.SqlClient** 2.1.0, including `Active Directory Device Code Flow` and `Active Directory Managed Identity` (also known as `Active Directory MSI`). These new modes enable the application to acquire an access token to connect to the server. 
 
 For information about Azure AD authentication beyond what the following sections describe, see [Connecting to SQL Database by using Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview).
-
 
 ## Setting Azure Active Directory authentication
 
@@ -49,8 +48,7 @@ When the application is connecting to Azure SQL data sources by using Azure AD a
 | Active Directory Device Code Flow | Authenticate with an Azure AD identity by using Device Code Flow mode | .NET Framework 4.6+, .NET Core 2.1+, .NET Standard 2.0+ | 2.1.0+ |
 | Active Directory Managed Identity, <br>Active Directory MSI | Authenticate with an Azure AD identity by using system-assigned or user-assigned managed identity | .NET Framework 4.6+, .NET Core 2.1+, .NET Standard 2.0+ | 2.1.0+ |
 
-<sup>1</sup> Before **Microsoft.Data.SqlClient** 2.0.0, `Active Directory Integrated` and `Active Directory Interactive` authentications are supported only on .NET Framework 4.6+. 
-
+<sup>1</sup> Before **Microsoft.Data.SqlClient** 2.0.0, `Active Directory Integrated` and `Active Directory Interactive` authentication modes are supported only on .NET Framework 4.6+.
 
 ## Using Active Directory Password authentication
 
@@ -156,9 +154,9 @@ using (SqlConnection conn = new SqlConnection(ConnectionString)) {
 
 ## Using Active Directory Managed Identity authentication
 
-*Managed identities* for Azure resources is the new name for the service formerly known as Managed Service Identity (MSI). When a client application uses an Azure resource to access an Azure service that supports Azure AD authentication, you can use managed identities to authenticate by providing an identity for the Azure resource in Azure AD. You can then use that identity to obtain access tokens. This can eliminate the need to manage credentials and secrets. 
+*Managed Identities* for Azure resources is the new name for the service formerly known as Managed Service Identity (MSI). When a client application uses an Azure resource to access an Azure service that supports Azure AD authentication, you can use managed identities to authenticate by providing an identity for the Azure resource in Azure AD. You can then use that identity to obtain access tokens. This authentication method can eliminate the need to manage credentials and secrets.
 
-There are two types of managed identities: 
+There are two types of managed identities:
 
 - _System-assigned managed identity_ is created on a service instance in Azure AD. It's tied to the lifecycle of that service instance. 
 - _User-assigned managed identity_ is created as a standalone Azure resource. It can be assigned to one or more instances of an Azure service. 

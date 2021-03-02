@@ -5,11 +5,11 @@ ms.custom: ""
 ms.date: "07/12/2017"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
-ms.author: "v-chojas"
+ms.author: v-daenge
 author: David-Engel
 ---
 # Custom Keystore Providers
@@ -63,7 +63,7 @@ typedef struct CEKeystoreProvider {
                         unsigned short ecekLen,
                         unsigned char **cekOut,
                         unsigned short *cekLen);
-    int (*EncryptCEK)( 	CEKEYSTORECONTEXT *ctx,
+    int (*EncryptCEK)(  CEKEYSTORECONTEXT *ctx,
                         errFunc *onError,
                         const wchar_t *keyPath,
                         const wchar_t *alg,

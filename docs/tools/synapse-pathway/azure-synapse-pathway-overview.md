@@ -52,6 +52,6 @@ Review the [FAQ Page](pathway-faq.md) for additional information on Azure Synaps
 ## Next steps
 
 - [Run your first translation with Azure Synapse Pathway](synapse-pathway-assessment.md)
-- [Announcement Blog](links-how-to.md)
+- Announcement Blog - [Announcing Azure Synapse Pathway: Turbocharge your data warehouse migration - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/announcing-azure-synapse-pathway-turbocharge-your-data-warehouse/ba-p/2176630)
 
 

@@ -88,7 +88,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |---------------------|------------------------------|  
 |**;**|Query delimiter.|  
 |**'**|Character data string delimiter.|  
-|**--**|Character data string delimiter.<br />.|  
+|**--**|Single-line comment delimiter. Text following **--** until the end of that line is not evaluated by the server.|  
 |**/\*** ... **\*/**|Comment delimiters. Text between **/\*** and **\*/** is not evaluated by the server.|  
 |**xp_**|Used at the start of the name of catalog-extended stored procedures, such as `xp_cmdshell`.|  
   

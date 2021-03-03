@@ -45,7 +45,10 @@ The **new Connection** function is used to connect to SQL Database.
     connection.on('connect', function(err) {  
         // If no error, then good to proceed.
         console.log("Connected");  
-    });  
+    });
+    
+    connection.connect();
+
 ```  
   
 ## Step 2:  Execute a query  
@@ -77,6 +80,8 @@ All SQL statements are executed using the **new Request()** function. If the sta
         console.log("Connected");  
         executeStatement();  
     });  
+    
+    connection.connect();
   
     var Request = require('tedious').Request;  
     var TYPES = require('tedious').TYPES;  
@@ -133,8 +138,10 @@ In this example you will see how to execute an [INSERT](../../t-sql/statements/i
         // If no error, then good to proceed.  
         console.log("Connected");  
         executeStatement1();  
-    });  
-  
+    });
+    
+    connection.connect();
+    
     var Request = require('tedious').Request  
     var TYPES = require('tedious').TYPES;  
   

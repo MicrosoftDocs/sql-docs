@@ -8,20 +8,34 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 1/22/2021
+ms.date: 2/18/2021
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](./download-azure-data-studio.md)**
 
-## December 2020 (hotfix)
+## February 2021
 
-January 22, 2021 &nbsp; / &nbsp; version: 1.25.2
+February 18, 2021 &nbsp; / &nbsp; version: 1.26.0
+
+&nbsp;
 
 | Change | Details |
 | ------ | ------- |
-| Fix bug [#13899](https://github.com/microsoft/azuredatastudio/issues/13899)| Scrolling to the appropriate cross-reference links in Notebooks |
+| Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22February+2021+Release%22+is%3Aclosed). |
+| Extension(s) update | [Dacpac](extensions/sql-server-dacpac-extension.md) <br/> [Kusto (KQL)](extensions/kusto-extension.md) </br> [MachineLearning](extensions/machine-learning-extension.md) </br> [Profiler](extensions/sql-server-profiler-extension.md) </br> [SchemaCompare](extensions/schema-compare-extension.md) </br> [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
+| New Azure Arc features | Multiple data controllers now supported <br/> New connection dialog options like kube config file <br/> Postgres dashboard enhancements |
+| New Notebook features | Improved Jupyter server start-up time by 50% on Windows <br/> Added support to edit Jupyter Books through right-click <br/> Added URI notebook parameterization support and [added notebook parameterization documentation](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-parameterization) |
+
+## December 2020 (hotfix)
+
+February 10, 2021 &nbsp; / &nbsp; version: 1.25.3
+
+| Change | Details |
+| ------ | ------- |
+| Fix bug [#13899](https://github.com/microsoft/azuredatastudio/issues/13899) | Scrolling to the appropriate cross-reference links in Notebooks |
+| Upgrade Electron to incorporate important bug fixes| N/A |
 
 ## December 2020
 

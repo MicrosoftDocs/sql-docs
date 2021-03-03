@@ -24,7 +24,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 
   This topic describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Deprecated features should not be used in new applications.  
   
-When a feature is marked deprecated, it means:\
+When a feature is marked deprecated, it means:
 
 - The feature is in maintenance mode only. No new changes will be done, including those related to inter-operability with new features.
 - We strive not to remove a deprecated feature from future releases to make upgrades easier. However, under rare situations, we may choose to permanently remove the feature from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if it limits future innovations.

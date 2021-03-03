@@ -4,6 +4,8 @@ titleSuffix: SQL Server Distributed Replay
 description: This article describes the replay command-line option & syntax of the SQL Server Distributed Replay administration tool, which initiates the event replay stage.
 ms.prod: sql
 ms.prod_service: sql-tools
+author: markingmyname
+ms.author: maghan
 ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual

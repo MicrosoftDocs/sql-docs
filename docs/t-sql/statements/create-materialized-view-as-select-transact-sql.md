@@ -190,7 +190,62 @@ select DATEDIFF(ms,@timerstart,@timerend);
 
 ```
 
-  
+B. In this example, User_B creates a materialized view on table T1 and T2.  Both the view and the two tables are owned by another user User_A.
+
+```sql
+
+-- Create the users 
+CREATE USER User_A WITHOUT LOGIN ;  
+CREATE USER User_B WITHOUT LOGIN ;  
+GO
+CREATE SCHEMA User_A authorization User_A;
+GO
+
+-- User_A creates two tables
+
+GRANT CREATE TABLE to User_A;
+GO
+EXECUTE AS USER = 'User_A';  
+SELECT USER_NAME();  
+Go
+CREATE TABLE [User_A].[T1]
+(
+	[vendorID] [varchar](255) Not NULL,
+	[totalAmount] [float] Not NULL,
+	[puYear] [int] NULL
+)
+GO
+CREATE TABLE [User_A].[T2]
+(
+	[vendorID] [varchar](255) Not NULL,
+	[totalAmount] [float] Not NULL,
+	[puYear] [int] NULL
+)
+GO
+REVERT;
+
+-- Grant User_B the required permissions to create a materialized view for User_A on T1 and T2 owned by User_A
+GRANT CREATE VIEW to User_B;
+GRANT Control ON SCHEMA::User_A to User_B;
+GRANT SELECT ON OBJECT::User_A.T3 to User_B;
+GRANT SELECT ON OBJECT::User_A.T4 to User_B;
+
+-- User_B creates a materialized view.  Both the view and the base tables are owned by User_A.
+EXECUTE AS USER = 'User_B';  
+SELECT USER_NAME(); 
+GO
+
+CREATE materialized VIEW [User_A].MV_CreatedBy_UserB with(distribution=round_robin) 
+as 
+		select A.vendorID, sum(A.totalamount) as S, Count_Big(*) as T 
+		from [User_A].[T1] A
+		inner join [User_A].[T2] B
+		on A.vendorID = B.vendorID
+		group by A.vendorID ;
+GO
+revert;
+```
+
 ## See also
 
 [Performance tuning with Materialized View](/azure/sql-data-warehouse/performance-tuning-materialized-views)   

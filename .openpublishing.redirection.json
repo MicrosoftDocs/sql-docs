@@ -42361,6 +42361,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/machine-learning/r/creating-workflows-that-use-r-in-sql-server.md",
+      "redirect_url": "https://techcommunity.microsoft.com/t5/sql-server-integration-services/operationalize-your-machine-learning-project-using-sql-server/ba-p/388296",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/advanced-analytics/r/data-exploration-and-predictive-modeling-with-r.md",
       "redirect_url": "/sql/machine-learning/r/data-exploration-and-predictive-modeling-with-r",
       "redirect_document_id": true

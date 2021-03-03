@@ -1018,5 +1018,6 @@ sections:
             
            [TOP](#_TOP)  
             
-  - name: See Also  
-    questions: [Mapping System Tables to System Views (Transact-SQL)](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)
+      - question: See Also  
+        answer: |
+          [Mapping System Tables to System Views (Transact-SQL)](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)

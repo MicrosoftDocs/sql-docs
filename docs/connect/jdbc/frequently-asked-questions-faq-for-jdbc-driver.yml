@@ -179,4 +179,3 @@ sections:
           
       - question: See also
         answer: [Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)
-

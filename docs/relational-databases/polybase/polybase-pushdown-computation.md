@@ -18,8 +18,6 @@ monikerRange: ">= sql-server-2016||>=sql-server-linux-ver15"
 
 Pushdown computation improves the performance of queries on external data sources. Beginning in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], pushdown computations were available for Hadoop external data sources. [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] introduced pushdown computations for other types of external data sources.  
 
-With PolyBase pushdown computation, you can delegate computation tasks to external data sources. This reduces the workload on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and can significantly improve performance. 
-
 ## Enable pushdown computation
 
 The following articles include information about configuring pushdown computation for specific types of external data sources:
@@ -31,7 +29,29 @@ The following articles include information about configuring pushdown computatio
 - [Configure PolyBase to access external data with ODBC generic types](polybase-configure-odbc-generic.md)
 - [Configure PolyBase to access external data in SQL Server](polybase-configure-sql-server.md)
 
-## Select a subset of rows
+## Key beneficial scenarios of pushdown computation
+
+With PolyBase pushdown computation, you can delegate computation tasks to external data sources. This reduces the workload on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and can significantly improve performance. 
+
+SQL Server can push joins, projections, aggregations and filters to external data sources to take advantage of remote compute and restrict the data sent over the network.
+
+| Data Source  | Pushdown of <BR>Join        | Projection | Aggregation | Filters                    | Statistics |
+|--------------|-------------|------------|-------------|----------------------------|------------|
+| SQL Server   | Yes         | Yes        | Yes         | Yes                        | Yes        |
+| MongoDB      | Yes         | Yes        | Yes         | Yes                        | Yes        |
+| Oracle       | Yes         | Yes        | Yes         | Yes                        | Yes        |
+| Cloudera     | Some types? | Yes        | No          | Some types, Some operators | Yes        |  
+| Generic ODBC | No          | No         | No          | No                         | No         |  
+| |
+
+
+### Pushdown of joins
+
+In many cases, PolyBase can facilitate pushdown of the join operator which will greatly improve performance.  
+
+If the join can be done at the external data source, this reduces the amount of data movement and improves the query's performance. Without join pushdown, the data from the tables to be joined must be brought locally into tempdb, then joined.
+
+### Select a subset of rows
 
 Use predicate pushdown to improve performance for a query that selects a subset of rows from an external table.
 
@@ -74,12 +94,6 @@ SELECT * FROM customer
 WHERE customer.account_balance <= 200000 
     AND customer.zipcode BETWEEN 92656 AND 92677;
 ```
-
-### Pushdown of joins
-
-In many cases, PolyBase can facilitate pushdown of the join operator which will greatly improve performance.  
-
-If the join can be done at the external data source, this reduces the amount of data movement and improves the query's performance. Without join pushdown, the data from the tables to be joined must be brought locally into tempdb, then joined.
 
 ## Examples
 

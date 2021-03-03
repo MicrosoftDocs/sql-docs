@@ -4,7 +4,7 @@ description: Update the `AZDATA_PASSWORD` manually
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 03/01/2021
+ms.date: 03/03/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -91,12 +91,12 @@ Follow these options for manually updating the password for [Grafana](app-monito
 
 1. The htpasswd utility is required. You can install this on any client machine.
     
-    #### [For Ubuntu](#tab/ubuntu): 
+    #### [For Ubuntu](#tab/for-ubuntu): 
     ```bash
     sudo apt install apache2-utils
     ```
     
-    #### [For RHEL](#tab/rhel): 
+    #### [For RHEL](#tab/for-rhel): 
     ```bash
     sudo yum install httpd-tools
     ```
@@ -149,14 +149,14 @@ Follow these options for manually updating the password for [Grafana](app-monito
      
     If necessary, identify the name of your mgmtproxy prod.
     
-    #### [For Windows](#tab/windows): 
+    #### [For Windows](#tab/for-windows): 
     On a Windows server you can use the following:
     
     ```bash 
     kubectl get pods -n <namespace> -l app=mgmtproxy
     ```
     
-    #### [For Linux](#tab/linux): 
+    #### [For Linux](#tab/for-linux): 
     On Linux you can use the following:
     
     ```bash
@@ -193,7 +193,7 @@ Follow these options for manually updating the password for [Kibana](cluster-log
 
 1. Open the Kibana URL.
     
-    You can find the Kibana service endpoint URL from within [Azure Data Studio](manage-with-controller-dashboard#controller-dashboard), or use the following **azdata** command:
+    You can find the Kibana service endpoint URL from within [Azure Data Studio](manage-with-controller-dashboard.md#controller-dashboard), or use the following **azdata** command:
     
     ```azurecli
     azdata login
@@ -225,6 +225,6 @@ Follow these options for manually updating the password for [Kibana](cluster-log
 
 ## See also
 
-* [azdata bdc (Azure Data CLI)](../../sql/azdata/reference/reference-azdata-bdc.md) 
-* [Monitor applications with azdata and Grafana Dashboard](app-monitor.md)  
-* [Check out cluster logs with Kibana Dashboard](cluster-logging-kibana.md)  
+* [azdata bdc (Azure Data CLI)](../azdata/reference/reference-azdata-bdc.md)  
+* [Monitor applications with azdata and Grafana Dashboard](app-monitor.md)   
+* [Check out cluster logs with Kibana Dashboard](cluster-logging-kibana.md)   

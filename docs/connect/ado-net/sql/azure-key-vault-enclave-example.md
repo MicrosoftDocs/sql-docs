@@ -3,7 +3,7 @@ description: "Example demonstrating use of Azure Key Vault provider with Always 
 title: "Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with Secure Enclaves | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/17/2020
-ms.reviewer: v-kaywon
+ms.reviewer: v-daenge
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity

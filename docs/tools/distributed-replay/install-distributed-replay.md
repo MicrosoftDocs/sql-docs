@@ -3,12 +3,11 @@ title: Install Distributed Replay
 titleSuffix: SQL Server Distributed Replay
 description: "This article describes the ways you can install Distributed Replay: using the Installation Wizard, the Command Prompt window, or a configuration file."
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ---
@@ -19,35 +18,36 @@ ms.date: 03/14/2017
 
 You can install Distributed Replay in one of three ways:  
   
--   [Install Distributed Replay from the Installation Wizard](#bkmk_wizard)  
+- [Install Distributed Replay from the Installation Wizard](#bkmk_wizard)  
   
--   [Install Distributed Replay from the Command Prompt](#bkmk_command_prompt)  
+- [Install Distributed Replay from the Command Prompt](#bkmk_command_prompt)  
   
--   [Install Distributed Replay Using a Configuration File](#bkmk_configuration_file)  
+- [Install Distributed Replay Using a Configuration File](#bkmk_configuration_file)  
   
 ##  <a name="bkmk_wizard"></a> Install Distributed Replay from the Installation Wizard  
- Install the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay features with the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Installation Wizard. When planning where to install the features, consider the following:  
+
+Install the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay features with the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Installation Wizard. When planning where to install the features, consider the following:  
   
--   You can install the administration tool on the same computer as the Distributed Replay controller, or on different computers.  
+- You can install the administration tool on the same computer as the Distributed Replay controller, or on different computers.  
   
--   There can only be one controller in each Distributed Replay environment.  
+- There can only be one controller in each Distributed Replay environment.  
   
--   You can install the client service on up to 16 (physical or virtual) computers.  
+- You can install the client service on up to 16 (physical or virtual) computers.  
   
--   Only one instance of the client service can be installed on the Distributed Replay controller computer. If your Distributed Replay environment will have more than one client, we do not recommend installing the client service on the same computer as the controller. Doing so may decrease the overall speed of the distributed replay.  
+- Only one instance of the client service can be installed on the Distributed Replay controller computer. If your Distributed Replay environment will have more than one client, we do not recommend installing the client service on the same computer as the controller. Doing so may decrease the overall speed of the distributed replay.  
   
--   For performance testing scenarios, we do not recommend installing the administration tool, Distributed Replay controller service, or client service on the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Installing all of these features on the target server should be limited to functional testing for application compatibility.  
+- For performance testing scenarios, we do not recommend installing the administration tool, Distributed Replay controller service, or client service on the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Installing all of these features on the target server should be limited to functional testing for application compatibility.  
   
--   After installation, the controller service, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay controller, must be running before you start the Distributed Replay client service on the clients.  
+- After installation, the controller service, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay controller, must be running before you start the Distributed Replay client service on the clients.  
   
 > [!NOTE]  
 >  To remove or change the Distributed Replay features, use the Windows **Programs and Features** window in **Control Panel**. Select [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] in the **Uninstall or change a program** window, and then click **Remove** to open the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Installation Wizard. On the **Select Features** page, check the Distributed Replay features you want to remove.  
   
  **Prerequisites:**  
   
--   Make sure that the computers that you want to use meet the requirements that are described in the topic [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md).  
+- Make sure that the computers that you want to use meet the requirements that are described in the topic [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md).  
   
--   Before you begin this procedure, you create the domain user accounts that the controller and client services will run under. We recommend that these accounts are not members of the Windows Administrators group. For more information, see the User and Service Accounts section in the [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md) topic.  
+- Before you begin this procedure, you create the domain user accounts that the controller and client services will run under. We recommend that these accounts are not members of the Windows Administrators group. For more information, see the User and Service Accounts section in the [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md) topic.  
   
     > [!NOTE]  
     >  You can use local user accounts if you are running the administration tool, controller service, and client service on the same computer.  
@@ -56,7 +56,7 @@ You can install Distributed Replay in one of three ways:
   
  Assuming you use the default file locations and a standard installation, the base directory is found at C:\Program Files\Microsoft SQL Server. Within that, following are where the binaries and assemblies are installed to:  
   
--   On a 32-bit system:  
+- On a 32-bit system:  
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools  
   
@@ -64,7 +64,7 @@ You can install Distributed Replay in one of three ways:
   
      \<Share Feature Directory>\Tools\\(user-supplied alternative shared feature directory)  
   
--   On a 64-bit system:  
+- On a 64-bit system:  
   
      C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86)\130\Tools  
   
@@ -88,23 +88,23 @@ You can install Distributed Replay in one of three ways:
   
 7.  On the **Feature Selection** page, configure which features you want to install.  
   
-    -   To install the administration tool, select **Management Tools - Basic**.  
+    - To install the administration tool, select **Management Tools - Basic**.  
   
-    -   To install the controller service, select **Distributed Replay Controller**.  
+    - To install the controller service, select **Distributed Replay Controller**.  
   
-    -   To install the client service, select **Distributed Replay Client**.  
+    - To install the client service, select **Distributed Replay Client**.  
   
      **Important**: When you configure Distributed Replay controller, you can specify one or more user accounts that will be used to run the Distributed Replay client services. The following is the list of supported accounts:  
   
-    -   Domain user account  
+    - Domain user account  
   
-    -   User created local user account  
+    - User created local user account  
   
-    -   Administrator  
+    - Administrator  
   
-    -   Virtual account and MSA (Managed Service Account)  
+    - Virtual account and MSA (Managed Service Account)  
   
-    -   Network Services, Local Services, and System  
+    - Network Services, Local Services, and System  
   
      Group accounts (local or domain) and other built-in accounts (like Everyone) are not accepted.  
   
@@ -183,9 +183,9 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
  Setup supports the use of the configuration file only through the command-line. The processing order of the parameters while using the configuration file is outlined below:  
   
--   The configuration file overwrites the defaults in a package  
+- The configuration file overwrites the defaults in a package  
   
--   Command-line values overwrite the values in the configuration file  
+- Command-line values overwrite the values in the configuration file  
   
  For more information about how to use a configuration file, see [Install SQL Server 2016 Using a Configuration File](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
   
@@ -200,7 +200,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
 #### To Install Distributed Replay Using the Configuration File  
   
--   Run the installation through the command prompt and supply the ConfigurationFile.ini using the ConfigurationFile parameter.  
+- Run the installation through the command prompt and supply the ConfigurationFile.ini using the ConfigurationFile parameter.  
   
  **Sample Syntax**  
   

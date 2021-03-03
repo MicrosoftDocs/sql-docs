@@ -1,7 +1,7 @@
 ---
-title: "What is PolyBase?"
+title: "Introducing Data Virtualization with PolyBase"
 description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Hadoop and Azure Blob Storage.
-ms.date: 02/25/2021
+ms.date: 03/03/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: "overview"
@@ -19,14 +19,16 @@ ms.custom: contperf-fy21q2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||>=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2019||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 
-# What is PolyBase?
+# Introducing Data Virtualization with PolyBase
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
 PolyBase is a data virtualization feature for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+
+## What is PolyBase?
 
 PolyBase enables your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to query data directly from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, SAP HANA, MongoDB, Hadoop clusters, Cosmos DB using T-SQL, without separately installing client connection software. PolyBase allows one T-SQL query to join the data from external sources and other SQL Server instances to relational tables in an instance of SQL Server. 
 
@@ -52,6 +54,7 @@ A key use case for data virtualization with the PolyBase feature is to allow the
  To use PolyBase in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
 1. [Install PolyBase on Windows](polybase-installation.md) or [Install PolyBase on Linux](polybase-linux-setup.md)
+1. [Enable PolyBase in sp_configure](polybase-installation#enable), if necessary. 
 1. Create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md)
 1. Create an [external table](../../t-sql/statements/create-external-table-transact-sql.md)
 
@@ -101,7 +104,7 @@ PolyBase enables the following scenarios in [!INCLUDE[ssNoVersion](../../include
 
 ## Next steps
 
-Before using PolyBase, you must [install PolyBase on Windows](polybase-installation.md) or [install PolyBase on Linux](polybase-linux-setup.md). Then see the following configuration guides depending on your data source:
+Before using PolyBase, you must [install PolyBase on Windows](polybase-installation.md) or [install PolyBase on Linux](polybase-linux-setup.md), and [enable PolyBase in sp_configure](polybase-installation#enable) if necessary. Then see the following configuration guides depending on your data source:
 
 - [Hadoop](polybase-configure-hadoop.md)
 - [Azure Blob Storage](polybase-configure-azure-blob-storage.md)

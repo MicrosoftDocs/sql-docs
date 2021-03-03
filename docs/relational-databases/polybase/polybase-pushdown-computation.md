@@ -2,14 +2,14 @@
 description: "Pushdown computations in PolyBase"
 title: "Pushdown computations in PolyBase"
 dexcription: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
-ms.date: 02/25/2021
+ms.date: 03/03/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
-monikerRange: ">= sql-server-2016"
+monikerRange: ">= sql-server-2016||>=sql-server-linux-2019"
 ---
 
 # Pushdown computations in PolyBase
@@ -74,6 +74,12 @@ SELECT * FROM customer
 WHERE customer.account_balance <= 200000 
     AND customer.zipcode BETWEEN 92656 AND 92677;
 ```
+
+### Pushdown of joins
+
+In many cases, PolyBase can facilitate pushdown of the join operator which will greatly improve performance.  
+
+If the join can be done at the external data source, this reduces the amount of data movement and improves the query's performance. Without join pushdown, the data from the tables to be joined must be brought locally into tempdb, then joined.
 
 ## Examples
 

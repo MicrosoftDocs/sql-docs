@@ -9,7 +9,7 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
-monikerRange: ">= sql-server-2016||>=sql-server-linux-2019"
+monikerRange: ">= sql-server-2016||>=sql-server-linux-ver15"
 ---
 
 # Pushdown computations in PolyBase

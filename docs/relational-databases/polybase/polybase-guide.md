@@ -19,7 +19,7 @@ ms.custom: contperf-fy21q2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2019||>=aps-pdw-2016||=azure-sqldw-latest"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 
 # Introducing Data Virtualization with PolyBase
@@ -54,7 +54,7 @@ A key use case for data virtualization with the PolyBase feature is to allow the
  To use PolyBase in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
 1. [Install PolyBase on Windows](polybase-installation.md) or [Install PolyBase on Linux](polybase-linux-setup.md)
-1. [Enable PolyBase in sp_configure](polybase-installation#enable), if necessary. 
+1. [Enable PolyBase in sp_configure](polybase-installation.md#enable), if necessary. 
 1. Create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md)
 1. Create an [external table](../../t-sql/statements/create-external-table-transact-sql.md)
 
@@ -104,7 +104,7 @@ PolyBase enables the following scenarios in [!INCLUDE[ssNoVersion](../../include
 
 ## Next steps
 
-Before using PolyBase, you must [install PolyBase on Windows](polybase-installation.md) or [install PolyBase on Linux](polybase-linux-setup.md), and [enable PolyBase in sp_configure](polybase-installation#enable) if necessary. Then see the following configuration guides depending on your data source:
+Before using PolyBase, you must [install PolyBase on Windows](polybase-installation.md) or [install PolyBase on Linux](polybase-linux-setup.md), and [enable PolyBase in sp_configure](polybase-installation.md#enable) if necessary. Then see the following configuration guides depending on your data source:
 
 - [Hadoop](polybase-configure-hadoop.md)
 - [Azure Blob Storage](polybase-configure-azure-blob-storage.md)

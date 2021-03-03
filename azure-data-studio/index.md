@@ -1,5 +1,3 @@
-# Welcome to azure-data-studio!
-
 ---
 title: Welcome to Azure Data Studio
 description: Intro to Azure Data Studio
@@ -12,3 +10,5 @@ ms.reviewer: maghan
 ms.custom: 
 ms.date: 03/03/21
 ---
+
+# Welcome to azure-data-studio!

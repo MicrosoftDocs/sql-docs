@@ -36,19 +36,18 @@ ms.author: chadam
 |**completion_time**|**datetime**|empty|  
 |**ag_id**|**uniqueidentifier**|ID .|  
 |**ag_db-id**|**uniqueidentifier**|empty |  
-|**ag_remote-replica_id**|**uniqueidentifier**|Error|
-|**operation_id**|**uniqueidentifier**|eatju |  
+|**ag_remote-replica_id**|**uniqueidentifier**|empty
+|**operation_id**|**uniqueidentifier**|empty |  
 |**is_source**|**bit**|empty|
 |**current_state**|**bit**|empty|
 |**performed_seeding**|**bit**|empty|
 |**failured_state**|**int**|empty|
 |**failured_state_desc**|**ncharvar**|empty|
 |**error_code**|**int**|empty|
-|**number_of_attempts**|**int**|
-  
-  
-|**page_status**|**int**|The status of the page-repair attempt:<br /><br /> 2 = Queued for request from partner.<br /><br /> 3 = Request sent to partner.<br /><br /> 4 = Page was successfully repaired.<br /><br /> 5 = The page could not be repaired during the last attempt/ Automatic page repair will attempt to repair the page again.|  
-|**modification_time**|**datetime**|Time of last change to the page status.|  
+|**number_of_attempts**|**int**| empty|
+
+ 
+
   
 ## Security  
   

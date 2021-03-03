@@ -178,4 +178,5 @@ sections:
           The Microsoft JDBC Driver does not contain any cryptographic algorithms. If a customer leverages operating system, application, and JVM algorithms that are deemed acceptable by Federal Information Processing Standards (FIPS) and configures the driver to use those algorithms then the driver uses only the designated algorithms for communication.
           
       - question: See also
-        answer: [Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)
+        answer: |
+          [Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)

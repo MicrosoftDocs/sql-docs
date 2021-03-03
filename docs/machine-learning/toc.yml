@@ -270,8 +270,6 @@ items:
       href: ../machine-learning/r/creating-workflows-that-use-r-in-sql-server.md
     - name: Convert R code for SQL Server
       href: ../machine-learning/r/converting-r-code-for-use-in-sql-server.md
-    - name: Create a stored procedure using sqlrutils
-      href: ../machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils.md
   - name: Predictions
     items:
     - name: Native scoring with PREDICT T-SQL

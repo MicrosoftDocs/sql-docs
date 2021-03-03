@@ -108,7 +108,7 @@ On an instance that becomes a secondary replica, once the instance is joined the
 After joining, grant the availability group permission to create databases on the secondary replica instance of SQL Server. In order for automatic seeding to work, the availability group needs permission to create a database. 
 
 >[!TIP]
->When the availability group creates a database on a secondary replica, it sets "sa" (more specifically account with sid 0x01) as the owner of the database owner. 
+>When the availability group creates a database on a secondary replica, it sets "sa" (more specifically account with sid 0x01) as the owner of the database. 
 >
 >To change database owner after a secondary replica automatically creates a database use `ALTER AUTHORIZATION`. See [ALTER AUTHORIZATION (Transact-SQL)](../../../t-sql/statements/alter-authorization-transact-sql.md).
  

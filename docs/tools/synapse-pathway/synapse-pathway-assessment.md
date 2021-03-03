@@ -4,7 +4,7 @@ description: Perform a data warehouse code translation with Azure Synapse Pathwa
 author: anshul82-ms
 ms.author: anrampal
 ms.prod: sql
-ms.technology: "Azure Synapse Pathway"
+ms.technology: tools-other
 ms.topic: tutorial 
 ms.date: 03/02/2021
 monikerRange: "=azure-sqldw-latest"
@@ -16,7 +16,7 @@ ms.custom: template-tutorial
 
 Azure Synapse Pathway Preview introduces support for translating schemas, tables, views, functions, etc. from **Netezza**, **Snowflake**, and **Microsoft SQL Server** into T-SQL complaint code that automates migration to Azure Synapse Analytics.
 
-For more information, see [Azure Synapse Pathway Preview overview](azure-synapse-pathway-overview).
+For more information, see [Azure Synapse Pathway Preview overview](azure-synapse-pathway-overview.md).
 
 In this tutorial, you learn how to:
 

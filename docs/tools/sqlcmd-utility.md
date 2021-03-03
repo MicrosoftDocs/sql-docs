@@ -26,7 +26,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 09/11/2020
+ms.date: 02/24/2021
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 
@@ -175,8 +175,8 @@ Sets the Column Encryption Setting to `Enabled`. For more information, see [Alwa
 This switch is used by the client when connecting to SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure Active Directory authentication. This option sets the **sqlcmd** scripting variable SQLCMDUSEAAD = true. The -G switch requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview). The -A option is not supported with the -G option.
 
 > [!IMPORTANT]
-> The `-G` option only applies to Azure SQL Database and Azure Data Warehouse.
-> AAD Interactive Authentication is not currently supported on Linux or macOS. AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly configured Kerberos environment.
+> The `-G` option only applies to Azure SQL Database and Azure Synapse Analytics.
+> AAD Interactive Authentication is not currently supported on Linux or macOS. AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](../connect/odbc/linux-mac/using-integrated-authentication#configure-kerberos).
 
 - **Azure Active Directory Username and Password:** 
 
@@ -195,7 +195,7 @@ This switch is used by the client when connecting to SQL Database or Azure Synap
 - **Azure Active Directory Integrated**
 
    For Azure Active Directory Integrated authentication, provide the **-G** option without a user name or password.
-   *AAD Integrated Authentication is not currently supported on Linux or macOS*.
+   *AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](../connect/odbc/linux-mac/using-integrated-authentication.md#configure-kerberos).*.
 
     ```cmd
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G

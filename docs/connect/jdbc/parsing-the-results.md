@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ""
@@ -26,19 +26,19 @@ This section will talk about the two most common results returned from SQL Serve
 The following code is an example of how a user could iterate through all results from the server:
 ```java
 try (Connection connection = DriverManager.getConnection(URL); Statement statement = connection.createStatement()) {
-	boolean resultsAvailable = statement.execute(USER_SQL);
-	int updateCount = -2;
-	while (true) {
-		updateCount = statement.getUpdateCount();
-		if (!resultsAvailable && updateCount == -1)
-			break;
-		if (resultsAvailable) {
-			// handle ResultSet
-		} else {
-			// handle Update Count
-		}
-		resultsAvailable = statement.getMoreResults();
-	}
+    boolean resultsAvailable = statement.execute(USER_SQL);
+    int updateCount = -2;
+    while (true) {
+        updateCount = statement.getUpdateCount();
+        if (!resultsAvailable && updateCount == -1)
+            break;
+        if (resultsAvailable) {
+            // handle ResultSet
+        } else {
+            // handle Update Count
+        }
+        resultsAvailable = statement.getMoreResults();
+    }
 }
 ```
 

@@ -11,7 +11,7 @@ f1_keywords:
   - "dm_hadr_physical_seeding_stats"
   - "sys.dm_hadr_physical_seeding_stats
   - "sys.dm_hadr_physical_seeding_stats_TSQL"
-  - "dm_hadr_automatic_seeding"
+  - "dm_hadr_physical_seeding"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -31,11 +31,25 @@ ms.author: chadam
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|ID of the database to which this row corresponds.|  
-|**file_id**|**int**|ID of the file in which the page is located.|  
-|**page_id**|**bigint**|ID of the page in the file.|  
-|**error_type**|**int**|Type of the error. The values can be:<br /><br /> **-**1 = All hardware 823 errors<br /><br /> 1 = 824 errors other than a bad checksum or a torn page (such as a bad page ID)<br /><br /> 2 = Bad checksum<br /><br /> 3 = Torn page|  
-|**page_status**|**int**|The status of the page-repair attempt:<br /><br /> 2 = Queued for request from partner.<br /><br /> 3 = Request sent to partner.<br /><br /> 4 = Page was successfully repaired.<br /><br /> 5 = The page could not be repaired during the last attempt/ Automatic page repair will attempt to repair the page again.|  
+|**local_physical_seeding_id**|**uniqueidentifier**|ID of the database to which this row corresponds.|  
+|**remote_physical_seeding_id**|**uniqueidentifier**|ID of the file in which the page is located.|  
+|**local_database_id**|**int**|ID of the database.|  
+|**local_database_name**|**nvarchar**|empty |
+|**remote_machine_name**|**nvarchar**|empty |  
+|**role_desc**|**nvarchar**|empty |
+|**internal_state_desc**|**nvarchar**|empty |
+|**transfer_rate_bytes_per_second**|**bigint**|empty |
+|**transfered_size_bytes**|**bigint**|empty |
+|**database_size_bytes**|**bigint**|empty |
+|**start_time_utc**|**datetime**|empty |
+|**end_time_utc**|**datetime**|empty |
+|**estimate_time_complete_utc**|**datetime**|empty |
+|**total_disk_io_wait_time_ms**|**bigint**|empty |
+|**total_network_wait_time_ms**|**bigint**|empty |
+|**failure_code**|**int**|empty |
+|**failure_message**|**nvarchar**|empty |
+|**failure_time_utc**|**datetime**|empty |
+|**is_compression_enabled**|**bit**|The status of the page-repair attempt:<br /><br /> 2 = Queued for request from partner.<br /><br /> 3 = Request sent to partner.<br /><br /> 4 = Page was successfully repaired.<br /><br /> 5 = The page could not be repaired during the last attempt/ Automatic page repair will attempt to repair the page again.|  
 |**modification_time**|**datetime**|Time of last change to the page status.|  
   
 ## Security  

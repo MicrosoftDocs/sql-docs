@@ -2,7 +2,7 @@
 description: "Always On Availability Groups Dynamic Management Views - Functions"
 title: "Always On Availability Groups Dynamic Management Views - Functions | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "03/01/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -57,9 +57,7 @@ ms.author: wiassaf
 
         [sys.dm_hadr_name_id_map](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md)
 
-        [sys.dm_hadr_physical_seeding_stats](../../relational-databases/
-        system-dynamic-management-views/sys.dm_hadr_physical_seeding_stats.
-        md)
+        [sys.dm_hadr_physical_seeding_stats](../../relational-databases/system-dynamic-management-views/sys.dm_hadr_physical_seeding_stats.md)
 
         [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)
 

@@ -2,7 +2,7 @@
 description: "sys.dm_hadr_automatic_seeding (Transact-SQL)"
 title: "sys.dm_hadr_automatic_seeding (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/05/2019"
+ms.date: "03/01/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -31,16 +31,22 @@ ms.author: chadam
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**completion_time**|**type**|ID of the database to which this row corresponds.|  
-|**ag_id**|**type**|ID of the file in which the page is located.|  
-|**ag_db-id**|**type**|ID of the page in the file.|  
-|**ag_remote-replica_id**|**type**|Type of the error. The values can be:<br /><br /> **-**1 = All hardware 823 errors<br /><br />  
-|**operation_id**|**type**|ID of the file 
-in which the page is located.|  
-|**is_source**|**type**|ID of
-file 
-in which the p
-is located.|  
+
+|**start_time**|**datetime**|
+|**completion_time**|**datetime**|empty|  
+|**ag_id**|**uniqueidentifier**|ID .|  
+|**ag_db-id**|**uniqueidentifier**|empty |  
+|**ag_remote-replica_id**|**uniqueidentifier**|Error|
+|**operation_id**|**uniqueidentifier**|eatju |  
+|**is_source**|**bit**|empty|
+|**current_state**|**bit**|empty|
+|**performed_seeding**|**bit**|empty|
+|**failured_state**|**int**|empty|
+|**failured_state_desc**|**ncharvar**|empty|
+|**error_code**|**int**|empty|
+|**number_of_attempts**|**int**|
+  
+  
 |**page_status**|**int**|The status of the page-repair attempt:<br /><br /> 2 = Queued for request from partner.<br /><br /> 3 = Request sent to partner.<br /><br /> 4 = Page was successfully repaired.<br /><br /> 5 = The page could not be repaired during the last attempt/ Automatic page repair will attempt to repair the page again.|  
 |**modification_time**|**datetime**|Time of last change to the page status.|  
   

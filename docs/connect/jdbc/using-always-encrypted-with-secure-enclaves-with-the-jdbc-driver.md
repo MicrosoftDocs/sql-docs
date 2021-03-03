@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "01/15/2021"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
@@ -41,7 +41,7 @@ To enable enclave computations for a database connection, you need to set the fo
 
 - **enclaveAttestationUrl:** - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
   - If you're using [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation).
+  - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](../../relational-databases/security/encryption/always-encrypted-enclaves.md?view=sql-server-ver15#secure-enclave-attestation).
 
 Users must enable **columnEncryptionSetting** and correctly set **both** of the above connection string properties to enable Always Encrypted with secure enclaves from the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 
@@ -53,23 +53,23 @@ Rich queries will trigger enclave computations:
 ```java
 private static final String URL = "jdbc:sqlserver://<server>:<port>;user=<username>;password=<password>;databaseName=ContosoHR;columnEncryptionSetting=enabled;enclaveAttestationUrl=<attestation-url>;enclaveAttestationProtocol=<attestation-protocol>;";
 try (Connection c = DriverManager.getConnection(URL)) {
-	try (PreparedStatement p = c.prepareStatement("SELECT * FROM Employees WHERE SSN LIKE ?")) {
-		p.setString(1, "%6818");
-		try (ResultSet rs = p.executeQuery()) {
-			while (rs.next()) {
-				// Do work with data
-			}
-		}
-	}
-	
-	try (PreparedStatement p = c.prepareStatement("SELECT * FROM Employees WHERE SALARY > ?")) {
-		((SQLServerPreparedStatement) p).setMoney(1, new BigDecimal(0));
-		try (ResultSet rs = p.executeQuery()) {
-			while (rs.next()) {
-				// Do work with data
-			}
-		}
-	}
+    try (PreparedStatement p = c.prepareStatement("SELECT * FROM Employees WHERE SSN LIKE ?")) {
+        p.setString(1, "%6818");
+        try (ResultSet rs = p.executeQuery()) {
+            while (rs.next()) {
+                // Do work with data
+            }
+        }
+    }
+    
+    try (PreparedStatement p = c.prepareStatement("SELECT * FROM Employees WHERE SALARY > ?")) {
+        ((SQLServerPreparedStatement) p).setMoney(1, new BigDecimal(0));
+        try (ResultSet rs = p.executeQuery()) {
+            while (rs.next()) {
+                // Do work with data
+            }
+        }
+    }
 }
 ```
 
@@ -77,7 +77,7 @@ Toggling encryption on a column will also trigger enclave computations:
 ```java
 private static final String URL = "jdbc:sqlserver://<server>:<port>;user=<username>;password=<password>;databaseName=ContosoHR;columnEncryptionSetting=enabled;enclaveAttestationUrl=<attestation-url>;enclaveAttestationProtocol=<attestation-protocol>;";
 try (Connection c = DriverManager.getConnection(URL);Statement s = c.createStatement()) {
-	s.executeUpdate("ALTER TABLE Employees ALTER COLUMN SSN CHAR(11) NULL WITH (ONLINE = ON)");
+    s.executeUpdate("ALTER TABLE Employees ALTER COLUMN SSN CHAR(11) NULL WITH (ONLINE = ON)");
 }
 ```
 
@@ -85,4 +85,4 @@ try (Connection c = DriverManager.getConnection(URL);Statement s = c.createState
 This feature requires the RSASSA-PSA signature algorithm. This algorithm was added in JDK 11, but not back-ported to JDK 8. Users who wish to use this feature with the JDK 8 version of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] must either load their own provider, which supports the RSASSA-PSA signature algorithm, or include the BouncyCastleProvider optional dependency. The dependency will be removed at a later date if JDK 8 backports the signature algorithm or if the support lifecycle of JDK 8 ends.
 
 ## See also
-[Using Always Encrypted with the JDBC driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
+[Using Always Encrypted with the JDBC driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)

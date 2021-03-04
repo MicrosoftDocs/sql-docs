@@ -1,7 +1,7 @@
 ---
 title: "Monitoring Report Server Performance | Microsoft Docs"
 description: Learn how to monitor report server performance to evaluate server activity, watch trends, diagnose bottlenecks, and gather data about system configuration.
-ms.date: 02/09/2021
+ms.date: 02/12/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server
@@ -64,28 +64,27 @@ SQL Server 2016 Reporting Services includes the following performance objects:
   
 -   **ReportServer:Service** and **ReportServerSharePoint:Service** to monitor HTTP-related events and memory management. These counters are specific to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and they track HTTP-related events for the report server, such as requests, connections, and sign in attempts. This performance object also includes counters related to memory management.  
   
- If you have multiple report server instances on a single computer, you can monitor the instances together or separately. Choose which instances to include when you add a counter. For more information about using Performance Monitor (perfmon.msc) and adding counters, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Windows Performance Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11)) product documentation.  
+ If you have multiple report server instances on a single computer, you can monitor the instances together or separately. Choose which instances to include when you add a counter. For more information about using Performance Monitor (perfmon.msc) and adding counters, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Windows Performance Monitor](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11)) product documentation.  
   
 ## Other performance counters  
  Custom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] performance counters are provided only for the Reporting Services performance objects listed above. The following .NET Framework performance objects provide additional performance monitoring data for the report server.
  
  > [!NOTE]
- > Power BI Report Server and SQL Server Reporting Services 2017 and later do not include Reporting Services performance objects. There are [.NET Framework performance counters](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/performance-counters) available to provide performance monitoring for the report server. 
+ > Power BI Report Server and SQL Server Reporting Services 2017 and later do not include Reporting Services performance objects. There are [.NET Framework performance counters](/dotnet/framework/debug-trace-profile/performance-counters) available to provide performance monitoring for the report server. 
  
 |Performance object|Notes|  
 |------------------------|-----------|  
 |**.NET CLR Data** and **.NET CLR Memory**|The web portal uses [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] performance counters. For more information, download [Improving .NET Application Performance and Scalability](https://www.microsoft.com/download/details.aspx?id=11711).|  
-
 |**Process**|Add the **Elapsed Time** and **ID Process** performance counters for a ReportingServicesService instance to track process uptime by process ID.|  
   
 ## SharePoint events  
  In addition to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] performance objects, you might also want to configure SharePoint events if you are running a report server in SharePoint integrated mode and have configured your reporting environment to use a SharePoint product. In this section, use the Events for a Report Server in SharePoint Integrated Mode to review diagnostic events that might provide useful information if your reporting environment is integrated with SharePoint.  
   
 ## In this section  
- [Performance Counters for the MSRS 2011 Web Service and MSRS 2011 Windows Service Performance Objects &#40;Native Mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
+ [Performance Counters for the MSRS 2016 Web Service and MSRS 2016 Windows Service Performance Objects &#40;Native Mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
  Describes the performance counters used by the Report Server Web service.  
   
- [Performance Counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
+ [Performance Counters for the MSRS 2016 Web Service SharePoint Mode and MSRS 2016 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  Describes the performance counters used by the Report Server Windows service.  
   
  [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
@@ -95,4 +94,3 @@ SQL Server 2016 Reporting Services includes the following performance objects:
  [Configure Available Memory for Report Server Applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)  
-  

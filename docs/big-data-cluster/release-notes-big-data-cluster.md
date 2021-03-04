@@ -92,8 +92,8 @@ SQL Server 2019 CU9 for SQL Server Big Data Clusters, includes important capabil
 
    Clusters using `mssql-conf` for SQL Server master instance configurations require additional steps after upgrading to CU9. Follow the instructions [here](bdc-upgrade-configuration.md).
 
-- Improved experience for encryption at rest.
-- Ability to install Python packages at Spark job submission time. 
+- Improved [!INCLUDE[azdata](../includes/azure-data-cli-azdata.md)] experience for encryption at rest.
+- Ability to dynamically [install Python Spark packages](spark-install-packages.md) using virtual environments.
 - Upgraded software versions for most of our OSS components (Grafana, Kibana, FluentBit, etc.) to ensure BDC images are up to date with the latest enhancements and fixes. See [Open-source software reference](reference-open-source-software.md).
 - Other miscellaneous improvements and bug fixes.
 
@@ -140,7 +140,7 @@ This release includes minor fixes and enhancements. The following articles inclu
 - [Deploy big data clusters with Azure Kubernetes Service (AKS) Private Cluster](private-deploy.md)
 - [Restrict egress traffic of Big Data Clusters (BDC) clusters in Azure Kubernetes Service (AKS) private cluster](private-restrict-egress-traffic.md)
 - [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md)
-- [Configure a SQL Server Big Data Cluster](configure-cluster.md)
+- [Configure a SQL Server Big Data Cluster](./configure-bdc-overview.md)
 - [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
 - [SQL Server master instance configuration properties](reference-config-master-instance.md)
 - [Apache Spark & Apache Hadoop (HDFS) configuration properties](reference-config-spark-hadoop.md)
@@ -248,7 +248,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 ### HA SQL Server Database Encryption key encryptor rotation
 
-- **Affected releases**: All big data cluster HA deployments irrespective of the release.
+- **Affected releases**: All version up to CU8. Resolved for CU9.
 
 - **Issue and customer impact**: With SQL Server deployed with HA, the certificate rotation for the encrypted database fails. When the following command is executed on the master pool, an error message will appear:
     ```
@@ -257,7 +257,13 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
     CERTIFICATE <NewCertificateName>
     ```
     There is no impact, the command fails and the target database encryption is preserved using the previous certificate.
-    
+
+### Enabling HDFS Encryption Zones support on CU8
+
+- **Affected releases**: This scenario surfaces when upgrading specifically to CU8 release from CU6 or previous. This won't happen on new deployments of CU8+ or when upgrading directly to CU9.
+
+- **Issue and customer impact**: HDFS Encryption Zones support is not enabled by default in this scenario and need to be configured using the steps provided in the [configuration guide](encryption-at-rest-concepts-and-configuration.md).
+
 ### Empty Livy jobs before you apply cumulative updates
 
 - **Affected releases**: All version up to CU6. Resolved for CU8.

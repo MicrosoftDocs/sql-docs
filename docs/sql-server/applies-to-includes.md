@@ -1,5 +1,6 @@
 ---
-title: "SQL Server documentation include files | Microsoft Docs"
+title: "SQL Server documentation include files"
+description: Explanation of SQL Server includes files for versioning and applies-to.
 ms.custom: ""
 ms.date: 01/19/2019
 ms.prod: sql

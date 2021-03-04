@@ -5,11 +5,11 @@ ms.custom: ""
 ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: "v-jizho2"
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-chojas
-ms.author: v-jizho2
+ms.author: v-chojas
 manager: kenvh
 ---
 # Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS

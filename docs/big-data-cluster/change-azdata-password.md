@@ -149,23 +149,19 @@ sudo yum install httpd-tools
      
     If necessary, identify the name of your mgmtproxy prod.
     
-### [For Windows](#tab/for-windows)
-On a Windows server you can use the following:
+    ### [For Windows](#tab/for-windows)
+     On a Windows server you can use the following:
+    ```bash
+    kubectl get pods -n <namespace> -l app=mgmtproxy
+    ```
+    ### [For Linux](#tab/for-linux)
+     On Linux you can use the following:
+    ```bash
+    kubectl get pods -n <namespace> | grep 'mgmtproxy'
+    ```
+    ---
 
-```bash
-kubectl get pods -n <namespace> -l app=mgmtproxy
-```
-
-### [For Linux](#tab/for-linux)
-On Linux you can use the following:
-
-```bash
-kubectl get pods -n <namespace> | grep 'mgmtproxy'
-```
-
----
-    
-    Remove the mgmtproxy pod:
+     Remove the mgmtproxy pod:
     ```bash
     kubectl delete pod mgmtproxy-xxxxx -n mssql-clutser
     ```
@@ -173,13 +169,15 @@ kubectl get pods -n <namespace> | grep 'mgmtproxy'
 7. Wait for the mgmtproxy pod to come online and Grafana Dashboard to start.  
  
     The wait is not significant and the pod should be online within seconds. To check the status of the pod you can use the same `get pods` command as used in the previous step. 
-    If you see the mgmtproxy pod is not promptly returning to Ready status, use kubectl to describe the pod:
-    
+
+    If you see the mgmtproxy pod is not promptly returning to Ready status, use kubectl to describe the pod: 
+
     ```bash
     kubectl describe pods mgmtproxy-xxxxx  -n <namespace>
-    ```
-    
-    For troubleshooting and further log collection, use the Azure Data CLI `[azdata bdc debug copy-logs](../azdata/reference/reference-azdata-bdc-debug.md)` command.
+    ```   
+
+    For troubleshooting and further log collection, use the Azure Data CLI `[azdata bdc debug copy-logs](../azdata/reference/reference-azdata-bdc-debug.md)` command.   
+
     
 8. Now login to Grafana using new password. 
 

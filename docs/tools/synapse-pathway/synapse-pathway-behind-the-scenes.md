@@ -18,7 +18,7 @@ Azure Synapse Pathway’s goal is to preserve the functional intent of the origi
 
 Each of the stages preserves and augments the knowledge of the source including source-specific metadata to ensure the highest quality in translation.
 
- ![Azure Synapse Pathway.](./media/technical-deep-dive/behind-the-scene.png)
+ ![Azure Synapse Pathway.](./media/synapse-pathway-behind-the-scenes/behind-the-scene.png)
 
 ## Stage 1 – Lexing and parsing
 

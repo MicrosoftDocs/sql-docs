@@ -40,17 +40,17 @@ To complete this tutorial, make sure you've installed [Azure Synapse Pathway](sy
     > Only files with .sql extension can be provided as an input source. If the user provides DDL, DML scripts in .txt file, tool will not perform any translation.
 
 1. When translating the Netezza code to Azure Synapse Analytics, choose IBM Netezza in the Translation Type drop down.
-  ![Azure Synapse assessment input.](./media/perform-assessment/assessment-input.png)
+  ![Azure Synapse assessment input.](./media/synapse-pathway-assessment/assessment-input.png)
 
 1. To select the output directory, select browse to specify the location where the output will be generated.
- ![Azure Synapse output directory.](./media/perform-assessment/output-directory.png)
+ ![Azure Synapse output directory.](./media/synapse-pathway-assessment/output-directory.png)
 
 1. Select **Translate** to start the translation
 
 ## View Results
 
 1. The duration of the assessment depends on the number of databases added and the schema size of each database. Results are displayed for each database as soon as they're available.
- ![Azure Synapse assessment report.](./media/perform-assessment/assessment-report.png)
+ ![Azure Synapse assessment report.](./media/synapse-pathway-assessment/assessment-report.png)
 
 1. When you select view results, it will take you to the output directory specified in the previous step and you'll see the translated script file(s) based on your input directory structure.
 

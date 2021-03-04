@@ -16,6 +16,14 @@ ms.author: alexiva
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
 
+## SSMA v8.17
+
+The v8.17 release of SSMA for DB2 contains the following changes:
+
+* Improve conversion of TRANSLATE function
+* Fix data migration for tables with computed columns
+* Update HTML assessment reports to use modern editor to display SQL text
+
 ## SSMA v8.16
 
 The v8.16 release of SSMA for DB2 contains the following changes:

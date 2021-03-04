@@ -32,10 +32,11 @@ sections:
   - name: Ignored
     questions:
       - question:  <a name="_TOP"></a> Frequently Asked Questions  
-        answer:  The sections below list frequently asked questions by category.  
-
-      - question: Data Types  
         answer: |
+           The sections below list frequently asked questions by category.  
+            
+          **Data Types**
+            
           -   [How do I find the data types of the columns of a specified table?](#_FAQ7)  
             
           -   [How do I find the LOB data types of a specified table?](#_FAQ14)  
@@ -50,8 +51,8 @@ sections:
             
           -   [How do I find the views, Transact-SQL functions, and Transact-SQL stored procedures that depend on a specified CLR user-defined type or alias type?](#_FAQ26)  
             
-      - question: Tables, Indexes, Views, and Constraints  
-        answer: |
+          **Tables, Indexes, Views, and Constraints** 
+            
           -   [How do I find all the user-defined tables in a specified database?](#_FAQ31)  
             
           -   [How do I find all the tables that do not have a clustered index in a specified database?](#_FAQ1)  
@@ -88,8 +89,8 @@ sections:
             
           -   [How do I find all the statistics and statistics columns on a specified object?](#_FAQ34)  
             
-      - question: Modules (Stored Procedures, User-Defined Functions, and Triggers)  
-        answer: |
+          **Modules (Stored Procedures, User-Defined Functions, and Triggers)** 
+            
           -   [How do I find all the stored procedures in a database?](#_FAQ9)  
             
           -   [How do I find all the user-defined functions in a database?](#_FAQ12)  
@@ -102,17 +103,16 @@ sections:
             
           -   [How do I view the definition of a server-level trigger?](#_FAQ19)  
             
-      - question: Schemas, Users, Roles, and Permissions  
-        answer: |
+          **Schemas, Users, Roles, and Permissions**
+            
           -   [How do I find all the owners of entities contained in a specified schema?](#_FAQ2)  
             
           -   [How do I find the permissions granted or denied to a specified principal?](#_FAQ18)  
             
       - question: Answers  
         answer: |
-      - question:  <a name="_FAQ1"></a> How do I find all the tables that do not have a clustered index in a specified database?  
-        answer: |
-           Before you run the following queries, replace `<database_name>` with a valid database name.  
+          <a name="_FAQ1"></a> **How do I find all the tables that do not have a clustered index in a specified database?**
+           Before you run the following queries, replace `<database_name>` with a valid database name.
             
           ```  
           SELECT SCHEMA_NAME(t.schema_id) AS schema_name, t.name AS table_name  
@@ -143,9 +143,8 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ2"></a> How do I find all the owners of entities contained in a specified schema?  
-        answer: |
-           Before you run the following query, replace `<database_name>` and `<schema_name>` with valid names.  
+          <a name="_FAQ2"></a> **How do I find all the owners of entities contained in a specified schema?**
+           Before you run the following query, replace `<database_name>` and `<schema_name>` with valid names.
             
           ```  
           USE <database_name>;  
@@ -172,9 +171,8 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ3"></a> How do I find all the tables that do not have a primary key?  
-        answer: |
-           Before you run the following queries, replace `<database_name>` with a valid database name.  
+          <a name="_FAQ3"></a> **How do I find all the tables that do not have a primary key?**
+           Before you run the following queries, replace `<database_name>` with a valid database name.
             
           ```  
           USE <database_name>;  
@@ -208,8 +206,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ4"></a> How do I find all the tables that do not have an index?  
-        answer: |
+          <a name="_FAQ4"></a> **How do I find all the tables that do not have an index?**
            Before you run the following query, replace `<database_name>` with a valid database name.  
             
           ```  
@@ -226,9 +223,8 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ5"></a> How do I find all the tables that have an identity column?  
-        answer: |
-           Before you run the following query, replace `<database_name>` with a valid database name.  
+          <a name="_FAQ5"></a> **How do I find all the tables that have an identity column?**
+           Before you run the following query, replace `<database_name>` with a valid database name.
             
           ```  
           USE <database_name>;  
@@ -262,8 +258,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ7"></a> How do I find the data types of the columns of a specified table?  
-        answer: |
+          <a name="_FAQ7"></a> **How do I find the data types of the columns of a specified table?** 
            Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
             
           ```  
@@ -288,8 +283,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ8"></a> How do I find the dependencies on a specified function?  
-        answer: |
+          <a name="_FAQ8"></a> **How do I find the dependencies on a specified function?** 
            Before you run the following query, replace `<database_name>` and `<schema_name.function_name>` with valid names.  
             
           ```  
@@ -307,8 +301,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ9"></a> How do I find all the stored procedures in a database?  
-        answer: |
+          <a name="_FAQ9"></a> **How do I find all the stored procedures in a database?** 
            Before you run the following query, replace `<database_name>` with a valid name.  
             
           ```  
@@ -327,8 +320,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ10"></a> How do I find the parameters for a specified stored procedure or function?  
-        answer: |
+          <a name="_FAQ10"></a> **How do I find the parameters for a specified stored procedure or function?** 
            Before you run the following query, replace `<database_name>` and `<schema_name.object_name>` with valid names.  
             
           ```  
@@ -354,8 +346,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ12"></a> How do I find all the user-defined functions in a database?  
-        answer: |
+          <a name="_FAQ12"></a> **How do I find all the user-defined functions in a database?** 
            Before you run the following query, replace `<database_name>` with a valid database name.  
             
           ```  
@@ -374,8 +365,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ13"></a> How do I find all views in a database?  
-        answer: |
+          <a name="_FAQ13"></a> **How do I find all views in a database?** 
            Before you run the following query, replace `<database_name>` with a valid database name.  
             
           ```  
@@ -393,8 +383,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ6"></a> How do I find all the entities that have been modified in the last N days?  
-        answer: |
+          <a name="_FAQ6"></a> **How do I find all the entities that have been modified in the last N days?** 
            Before you run the following query, replace `<database_name>` and `<n_days>` with valid values.  
             
           ```  
@@ -414,8 +403,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ14"></a> How do I find the LOB data types of a specified table?  
-        answer: |
+          <a name="_FAQ14"></a> **How do I find the LOB data types of a specified table?** 
            Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
             
           ```  
@@ -443,8 +431,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ15"></a> How do I view the definition of a module?  
-        answer: |
+          <a name="_FAQ15"></a> **How do I view the definition of a module?** 
            Before you run the following query, replace `<database_name>` and `<schema_name.object_name>` with valid names.  
             
           ```  
@@ -469,8 +456,8 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ19"></a> How do I view the definition of a server-level trigger?  
-        answer: |
+          <a name="_FAQ19"></a> **How do I view the definition of a server-level trigger?** 
+            
           ```  
           SELECT definition  
           FROM sys.server_sql_modules;  
@@ -480,8 +467,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ16"></a> How do I find the columns of a primary key for a specified table?  
-        answer: |
+          <a name="_FAQ16"></a> **How do I find the columns of a primary key for a specified table?** 
            Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
             
           ```  
@@ -524,8 +510,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ17"></a> How do I find the columns of a foreign key for a specified table?  
-        answer: |
+          <a name="_FAQ17"></a> **How do I find the columns of a foreign key for a specified table?** 
            Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
             
           ```  
@@ -549,8 +534,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ18"></a> How do I find the permissions granted or denied to a specified principal?  
-        answer: |
+          <a name="_FAQ18"></a> **How do I find the permissions granted or denied to a specified principal?** 
            The following example creates a function to return the name of the entity on which the permissions are checked. The function is invoked in the queries that follow. The function must be created in every database in which you want to check permissions.  
             
           ```  
@@ -633,8 +617,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ20"></a> How do I determine if a column is used in a computed column expression?  
-        answer: |
+          <a name="_FAQ20"></a> **How do I determine if a column is used in a computed column expression?** 
            Before you run the following query, replace `<database_name>`, `<schema_name.table_name>`, and `<column_name`> with valid names.  
             
           ```  
@@ -656,8 +639,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ21"></a> How do I find all the columns that are used in a computed column expression?  
-        answer: |
+          <a name="_FAQ21"></a> **How do I find all the columns that are used in a computed column expression?** 
            Before you run the following query, replace `<database_name>` with a valid name.  
             
           ```  
@@ -679,8 +661,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ22"></a> How do I find the columns that depend on a specified CLR user-defined type or alias type?  
-        answer: |
+          <a name="_FAQ22"></a> **How do I find the columns that depend on a specified CLR user-defined type or alias type?** 
            Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type, or schema-qualified alias type name. The following query requires membership in the **db_owner** role or permissions to see all dependent column and computed column metadata in the database.  
             
           ```  
@@ -718,8 +699,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ23"></a> How do I find the computed columns that depend on a specified CLR user-defined type or alias type?  
-        answer: |
+          <a name="_FAQ23"></a> **How do I find the computed columns that depend on a specified CLR user-defined type or alias type?** 
            Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type, alias type name.  
             
           ```  
@@ -736,8 +716,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ24"></a> How do I find the parameters that depend on a specified CLR user-defined type or alias type?  
-        answer: |
+          <a name="_FAQ24"></a> **How do I find the parameters that depend on a specified CLR user-defined type or alias type?** 
            Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type, alias type name. The following query requires membership in the **db_owner** role or permissions to see all dependent column and computed column metadata in the database.  
             
           ```  
@@ -779,8 +758,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ25"></a> How do I find the CHECK constraints that depend on a specified CLR user-defined type?  
-        answer: |
+          <a name="_FAQ25"></a> **How do I find the CHECK constraints that depend on a specified CLR user-defined type?** 
            Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type name.  
             
           ```  
@@ -800,8 +778,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ26"></a> How do I find the views, Transact-SQL functions, and Transact-SQL stored procedures that depend on a specified CLR user-defined type or alias type?  
-        answer: |
+          <a name="_FAQ26"></a> **How do I find the views, Transact-SQL functions, and Transact-SQL stored procedures that depend on a specified CLR user-defined type or alias type?** 
            Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type, alias type name.  
             
            The parameters defined in a function or procedure are implicitly schema bound. Therefore, parameters that depend on a CLR user-defined type or alias type can be viewed by using the [sys.sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) catalog view. Procedures and triggers are not schema bound. This means that dependencies between any expression defined in the body of the procedure or trigger and a CLR user-defined type or alias type is not maintained. Schema bound views and schema bound user-defined functions that have expressions that depend on a CLR user-defined type or alias type are maintained in the **sys.sql_dependencies** catalog view. Dependencies between types and CLR functions and CLR procedures are not maintained.  
@@ -829,8 +806,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ27"></a> How do I find all the constraints for a specified table?  
-        answer: |
+          <a name="_FAQ27"></a> **How do I find all the constraints for a specified table?** 
            Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
             
           ```  
@@ -854,8 +830,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ28"></a> How do I find all the indexes for a specified table?  
-        answer: |
+          <a name="_FAQ28"></a> **How do I find all the indexes for a specified table?** 
            Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
             
           ```  
@@ -884,8 +859,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ30"></a> How do I find all the objects that have a specified column name?  
-        answer: |
+          <a name="_FAQ30"></a> **How do I find all the objects that have a specified column name?** 
            Before you run the following query, replace `<database_name>` and `<column_name>` with valid names.  
             
           ```  
@@ -915,8 +889,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ31"></a> How do I find all the user-defined tables in a specified database?  
-        answer: |
+          <a name="_FAQ31"></a> **How do I find all the user-defined tables in a specified database?** 
            Before you run the following query, replace `<database_name>` with a valid name.  
             
           ```  
@@ -930,8 +903,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ32"></a> How do I find all the tables and indexes that are partitioned?  
-        answer: |
+          <a name="_FAQ32"></a> **How do I find all the tables and indexes that are partitioned?** 
            Before you run the following query, replace `<database_name>` with a valid name.  
             
           ```  
@@ -953,8 +925,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ33"></a> How do I find all the statistics on a specified object?  
-        answer: |
+          <a name="_FAQ33"></a> **How do I find all the statistics on a specified object?** 
            Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.object_name>` with a valid table, indexed view, or table-valued function name.  
             
           ```  
@@ -973,8 +944,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ34"></a> How do I find all the statistics and statistics columns on a specified object?  
-        answer: |
+          <a name="_FAQ34"></a> **How do I find all the statistics and statistics columns on a specified object?** 
            Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.object_name>` with a valid table, indexed view, or table-valued function name.  
             
           ```  
@@ -995,8 +965,7 @@ sections:
             
            [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ35"></a> How do I find the definition of a view?  
-        answer: |
+          <a name="_FAQ35"></a> **How do I find the definition of a view?** 
            Before you run the following query, replace `<database_name>` and `<schema_name.object_name>` with valid names.  
             
           ```  
@@ -1023,6 +992,6 @@ sections:
             
       - question: See Also  
         answer: |
-           [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+           [Mapping System Tables to System Views (Transact-SQL)](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
             
             

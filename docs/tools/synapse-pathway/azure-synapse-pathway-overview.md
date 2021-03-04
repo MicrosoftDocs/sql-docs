@@ -27,7 +27,7 @@ To translate this critical SQL code, customers have to either manually rewrite e
 
 **Azure Synapse Pathway** helps you upgrade to a modern data warehouse platform by automating the code translation of your existing data warehouse. It's a free, intuitive, and easy to use tool that automates the code translation enabling a quicker migration to Azure Synapse Analytics.
 
- ![Azure Synapse pathway overview.](./media/azure-synapse-pathway-overview/synapse-pathway-overview.png) 
+ ![Azure Synapse pathway overview.](./media/azure-synapse-pathway-overview/pathway-overview.png) 
 
 Synapse Pathway translates Data Definition Language (DDL) and Data Manipulation Language (DML) statements into T-SQL compliant language that is compatible with Azure Synapse SQL.
 

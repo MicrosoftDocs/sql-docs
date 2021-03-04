@@ -50,7 +50,7 @@ To complete this tutorial, make sure you've installed [Azure Synapse Pathway](sy
 ## View Results
 
 1. The duration of the assessment depends on the number of databases added and the schema size of each database. Results are displayed for each database as soon as they're available.
- ![Azure Synapse assessment report.](./media/synapse-pathway-assessment/assessment-report.png)
+ ![Azure Synapse assessment report.](./media/synapse-pathway-assessment/assessment-report-rendering.png)
 
 1. When you select view results, it will take you to the output directory specified in the previous step and you'll see the translated script file(s) based on your input directory structure.
 

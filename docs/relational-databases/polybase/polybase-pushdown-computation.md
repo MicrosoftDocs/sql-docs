@@ -33,7 +33,7 @@ The following articles include information about configuring pushdown computatio
 
 With PolyBase pushdown computation, you can delegate computation tasks to external data sources. This reduces the workload on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and can significantly improve performance. 
 
-SQL Server can push joins, projections, aggregations and filters to external data sources to take advantage of remote compute and restrict the data sent over the network. This table summarizes pushdown computation support on different external data sources:
+SQL Server can push joins, projections, aggregations, and filters to external data sources to take advantage of remote compute and restrict the data sent over the network. This table summarizes pushdown computation support on different external data sources:
 
 | Data Source  | Join        | Projection | Aggregation | Filters                    | Statistics |
 |--------------|-------------|------------|-------------|----------------------------|------------|

@@ -14,97 +14,106 @@ conceptualContent:
   items:
     - title: "SQL Server to"
       links:
-        - text: "From SQL Server"
+        - text: "From SQL Server (live, not guide)"
           url: /sql/database-engine/install-windows/upgrade-sql-server
           itemType: architecture
-        - text: Azure SQL Database
+        - text: Azure SQL Database (live)
           url: /azure/azure-sql/migration-guides/database/sql-server-to-sql-database-overview
           itemType: concept
-        - text: Azure SQL Managed Instance
+        - text: Azure SQL Managed Instance (live)
           url: /azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-overview
           itemType: deploy
-        - text: SQL Server on Azure VMs
+        - text: SQL Server on Azure VMs (live)
           url: /azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide
           itemType: download
     - title: "Oracle to"
       links:
-        - text: SQL Server
+        - text: SQL Server (staged, pending review + images)
           url: https://review.docs.microsoft.com/en-us/sql/sql-server/migrate/guides/mysql-to-sql-server?branch=pr-en-us-18413
           itemType: get-started
-        - text: Azure SQL Database
+        - text: Azure SQL Database (staged, pending review + images)
           url: https://review.docs.microsoft.com/en-us/azure/azure-sql/migration-guides/database/oracle-to-sql-database-guide?branch=pr-en-us-143697
           itemType: how-to-guide
-        - text: Azure SQL Managed Instance
+        - text: Azure SQL Managed Instance (staged, pending review + images)
           url: https://review.docs.microsoft.com/en-us/azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide?branch=pr-en-us-143697 
           itemType: video
-        - text: SQL Server on Azure VMs
+        - text: SQL Server on Azure VMs (staged, pending review + images)
           url: https://review.docs.microsoft.com/en-us/azure/azure-sql/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide?branch=pr-en-us-143697
           itemType: whats-new
     - title: "DB2 to"
       links:
-        - text: SQL Server
+        - text: SQL Server (live)
           url: /sql/sql-server/migrate/guides/db2-to-sql-server
           itemType: quickstart
-        - text: Azure SQL Database
+        - text: Azure SQL Database (live)
           url: /azure/azure-sql/migration-guides/database/db2-to-sql-database-guide
           itemType: quickstart
-        - text: Azure SQL Managed Instance
+        - text: Azure SQL Managed Instance (live)
           url: /azure/azure-sql/migration-guides/managed-instance/db2-to-managed-instance-guide
           itemType: quickstart
-        - text: SQL Server on Azure VMs
+        - text: SQL Server on Azure VMs (live)
           url: /azure/azure-sql/migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide
           itemType: quickstart
     - title: "MySQL to"
       links:
-        - text: SQL Server
+        - text: SQL Server (staged, pending review + images)
           url: https://review.docs.microsoft.com/en-us/sql/sql-server/migrate/guides/mysql-to-sql-server?view=sql-server-2016&branch=pr-en-us-18413
           itemType: quickstart
-        - text: Azure SQL Database
+        - text: Azure SQL Database  (pre-stage, needs images)"
           url: https://review.docs.microsoft.com/en-us/sql/migration-guides/mysql-to-sql-database?branch=migration-guides&view=sql-server-ver15
           itemType: quickstart
-        - text: Azure Database
+        - text: SQL Server on Azure VMs (unwritten)
+          url: linux/quickstart-install-connect-docker.md
+          itemType: quickstart
+        - text: Azure Database (live)
           url: /azure/mysql/concepts-migrate-import-export
           itemType: quickstart
     - title: "PostgreSQL to"
       links:
-        - text: Azure Database for PostgreSQL
+        - text: Azure Database for PostgreSQL (live?)
           url: /azure/postgresql/howto-migrate-using-dump-and-restore
           itemType: quickstart
     - title: "MongoDB to"
       links:
-        - text: Azure CosmosDB
+        - text: Azure CosmosDB (live)
           url: /azure/dms/tutorial-mongodb-cosmos-db?toc=/azure/cosmos-db/toc.json&bc=/azure/cosmos-db/breadcrumb/toc.json
           itemType: quickstart
     - title: "Cassandra to"
       links:
-        - text: Azure CosmosDB
+        - text: Azure CosmosDB (live)
           url: /azure/cosmos-db/cassandra-import-data
           itemType: quickstart
     - title: "MariaDB to"
       links:
-        - text: Azure Database for MariaDB
+        - text: Azure Database for MariaDB (live?)
           url: /azure/mariadb/howto-migrate-dump-restore
           itemType: quickstart
     - title: "Access to"
       links:
-        - text: SQL Server
+        - text: SQL Server  (pre-stage needs images)
           url: azure-data-studio/quickstart-sql-server.md
           itemType: quickstart
-        - text: Azure SQL Database
+        - text: Azure SQL Database (pre-stage needs images)
           url: https://review.docs.microsoft.com/en-us/sql/migration-guides/access-to-sql-database?branch=migration-guides&view=sql-server-ver15
+          itemType: quickstart
+        - text: Azure SQL Managed Instance (unwritten)
+          url: t-sql/tutorial-writing-transact-sql-statements.md
+          itemType: quickstart
+        - text: SQL Server on Azure VMs (unwritten)
+          url: linux/quickstart-install-connect-docker.md
           itemType: quickstart
     - title: "SAP ASE to"
       links:
-        - text: SQL Server
+        - text: SQL Server (prestage needs review)
           url: azure-data-studio/quickstart-sql-server.md
           itemType: quickstart
         - text: Azure SQL Database
           url: https://review.docs.microsoft.com/en-us/sql/migration-guides/sap-ase-to-sql-database?view=sql-server-ver15&branch=migration-guides
           itemType: quickstart
-        - text: Azure SQL Managed Instance
+        - text: Azure SQL Managed Instance (unwritten)
           url: t-sql/tutorial-writing-transact-sql-statements.md
           itemType: quickstart
-        - text: SQL Server on Azure VMs
+        - text: SQL Server on Azure VMs (unwritten)
           url: https://review.docs.microsoft.com/en-us/sql/migration-guides/sap-ase-to-sql-server?view=sql-server-ver15&branch=migration-guides
           itemType: quickstart
     - title: "Microsoft Azure Table Storage to"
@@ -119,24 +128,24 @@ tools:
   items:
     # Card
     - title: Azure Migrate
-      imageSrc: media/index/azure-migrate-symbol.svg
+      imageSrc: /media/index/azure-migrate-symbol.svg
       url: /azure/developer/python/
     # Card
     - title: Azure Database Migration Service
-      imageSrc: media/index/migration-service-symbol.svg
+      imageSrc: /media/index/migration-service-symbol.svg
       url: /dotnet/azure/
     # Card
     - title: Database Migration Assistant (DMA)
-      imageSrc: media/index/database-migration-assistant-symbol.svg
+      imageSrc: /media/index/database-migration-assistant-symbol.svg
       url: /azure/developer/javascript/
     # Card
     - title: SQL Server Migration Assistant (SSMA)
-      imageSrc: media/index/SQL-server-migration-assistant-symbol.svg
+      imageSrc: /media/index/SQL-server-migration-assistant-symbol.svg
       url: /azure/developer/java/
 
 additionalContent:
   sections:
-    - title: Most recent customer case studies
+    - title: Case studies
       items:
         # Card
         - title: Capita

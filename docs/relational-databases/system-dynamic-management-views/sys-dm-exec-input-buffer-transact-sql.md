@@ -83,13 +83,13 @@ GO
 
 ### B. Using cross apply to additional information
 
-The following example lists the input buffer for sessions with session ID greater than 50.
+The following example lists the input buffer for user sessions.
 
 ```sql
 SELECT es.session_id, ib.event_info
 FROM sys.dm_exec_sessions AS es
 CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) AS ib
-WHERE es.session_id > 50;
+WHERE es.is_user_process = 1;
 GO
 ```
 

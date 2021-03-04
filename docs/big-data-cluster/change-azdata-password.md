@@ -4,7 +4,7 @@ description: Update the `AZDATA_PASSWORD` manually
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 03/01/2021
+ms.date: 03/03/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -29,7 +29,7 @@ If the cluster is operating in non-Active Directory mode, update the Apache Knox
    ```
 
    b. Base64 decode the secret:
-   
+
    ```bash
    echo <password from kubectl command>  | base64 --decode && echo
    ```
@@ -90,18 +90,18 @@ After following the steps to update AZDATA_PASSWORD, you will see that [Grafana]
 Follow these options for manually updating the password for [Grafana](app-monitor.md).
 
 1. The htpasswd utility is required. You can install this on any client machine.
-    
-    #### [For Ubuntu](#tab/ubuntu): 
-    ```bash
-    sudo apt install apache2-utils
-    ```
-    
-    #### [For RHEL](#tab/rhel): 
-    ```bash
-    sudo yum install httpd-tools
-    ```
-    
-    ---
+  
+### [For Ubuntu](#tab/for-ubuntu)
+On Ubuntu Linux you can use the following:
+```bash
+sudo apt install apache2-utils
+```
+### [For RHEL](#tab/for-rhel)
+On Red Hat Enterprise Linux you can use the following:
+```bash
+sudo yum install httpd-tools
+```
+---
 
 2. Generate the new password. 
     
@@ -149,23 +149,19 @@ Follow these options for manually updating the password for [Grafana](app-monito
      
     If necessary, identify the name of your mgmtproxy prod.
     
-    #### [For Windows](#tab/windows): 
-    On a Windows server you can use the following:
-    
-    ```bash 
+    ### [For Windows](#tab/for-windows)
+     On a Windows server you can use the following:
+    ```bash
     kubectl get pods -n <namespace> -l app=mgmtproxy
     ```
-    
-    #### [For Linux](#tab/linux): 
-    On Linux you can use the following:
-    
+    ### [For Linux](#tab/for-linux)
+     On Linux you can use the following:
     ```bash
     kubectl get pods -n <namespace> | grep 'mgmtproxy'
     ```
-    
     ---
-    
-    Remove the mgmtproxy pod:
+
+     Remove the mgmtproxy pod:
     ```bash
     kubectl delete pod mgmtproxy-xxxxx -n mssql-clutser
     ```
@@ -173,13 +169,15 @@ Follow these options for manually updating the password for [Grafana](app-monito
 7. Wait for the mgmtproxy pod to come online and Grafana Dashboard to start.  
  
     The wait is not significant and the pod should be online within seconds. To check the status of the pod you can use the same `get pods` command as used in the previous step. 
-    If you see the mgmtproxy pod is not promptly returning to Ready status, use kubectl to describe the pod:
-    
+
+    If you see the mgmtproxy pod is not promptly returning to Ready status, use kubectl to describe the pod: 
+
     ```bash
     kubectl describe pods mgmtproxy-xxxxx  -n <namespace>
-    ```
-    
-    For troubleshooting and further log collection, use the Azure Data CLI `[azdata bdc debug copy-logs](../azdata/reference/reference-azdata-bdc-debug.md)` command.
+    ```   
+
+    For troubleshooting and further log collection, use the Azure Data CLI `[azdata bdc debug copy-logs](../azdata/reference/reference-azdata-bdc-debug.md)` command.   
+
     
 8. Now login to Grafana using new password. 
 
@@ -193,7 +191,7 @@ Follow these options for manually updating the password for [Kibana](cluster-log
 
 1. Open the Kibana URL.
     
-    You can find the Kibana service endpoint URL from within [Azure Data Studio](manage-with-controller-dashboard#controller-dashboard), or use the following **azdata** command:
+    You can find the Kibana service endpoint URL from within [Azure Data Studio](manage-with-controller-dashboard.md#controller-dashboard), or use the following **azdata** command:
     
     ```azurecli
     azdata login
@@ -225,6 +223,6 @@ Follow these options for manually updating the password for [Kibana](cluster-log
 
 ## See also
 
-* [azdata bdc (Azure Data CLI)](../../sql/azdata/reference/reference-azdata-bdc.md) 
-* [Monitor applications with azdata and Grafana Dashboard](app-monitor.md)  
-* [Check out cluster logs with Kibana Dashboard](cluster-logging-kibana.md)  
+* [azdata bdc (Azure Data CLI)](../azdata/reference/reference-azdata-bdc.md)  
+* [Monitor applications with azdata and Grafana Dashboard](app-monitor.md)   
+* [Check out cluster logs with Kibana Dashboard](cluster-logging-kibana.md)   

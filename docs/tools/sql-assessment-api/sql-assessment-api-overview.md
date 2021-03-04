@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 1/25/2021
+ms.date: 3/3/2021
 ---
 
 # SQL Assessment API
@@ -19,9 +19,13 @@ SQL Assessment API is useful when you want to make sure your SQL Server configur
 
 The API can be used to assess:
  
-* Azure SQL Database Managed Instance and SQL Server versions 2012 and higher.
+* SQL Server on Azure Virtual Machines
 
-* SQL on Linux-based systems.
+* Azure SQL Database Managed Instance
+
+* SQL Server 2012 and higher
+
+* SQL on Linux-based systems
 
 The API is also used by SQL Server Assessment Extension for Azure Data Studio (ADS).
 

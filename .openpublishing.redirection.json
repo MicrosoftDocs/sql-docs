@@ -42373,7 +42373,12 @@
     {
       "source_path": "docs/advanced-analytics/r/how-to-create-a-stored-procedure-using-sqlrutils.md",
       "redirect_url": "/sql/machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils",
-      "redirect_document_id": true
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql/machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils.md",
+      "redirect_url": "/machine-learning-server/r-reference/sqlrutils/how-to-create-a-stored-procedure-from-r",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md",

@@ -161,12 +161,11 @@ The following table lists the memory clerk types:
 |MEMORYCLERK_SQLTRACE     |     This memory clerk is used for server-side [SQL Trace](../sql-trace/sql-trace.md) memory allocations.     |
 |MEMORYCLERK_SQLUTILITIES     |    This memory clerk can be used by multiple allocators inside SQL Server. Examples include Backup and Restore, Log Shipping, Database Mirroring, DBCC commands, BCP code on the server side, some query parallelism work, Log Scan buffers.    |
 |MEMORYCLERK_SQLXML     |     This memory clerk is used for memory allocations when performing XML operations.    |
-|MEMORYCLERK_SQLXP     |     This memory clerk is used for memory allocations when calling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
- [Extended Stored procedures](../extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md).    |
+|MEMORYCLERK_SQLXP     |     This memory clerk is used for memory allocations when calling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Extended Stored procedures](../extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md).    |
 |MEMORYCLERK_SVL     |    This memory clerk is used used for allocations of internal SQL OS structures |
 |MEMORYCLERK_TEST     |    Internal use only   |
 |MEMORYCLERK_UNITTEST     |      Internal use only  |
-|MEMORYCLERK_WRITEPAGERECORDER     |    Internal use only   |
+|MEMORYCLERK_WRITEPAGERECORDER     |    This memory clerk is used for allocations by Write Page Recorder.   |
 |MEMORYCLERK_XE     |    This memory clerk is used for [Extended Events](../extended-events/extended-events.md) memory allocations      |
 |MEMORYCLERK_XE_BUFFER     |      This memory clerk is used for [Extended Events](../extended-events/extended-events.md) memory allocations   |
 |MEMORYCLERK_XLOG_SERVER     |   This memory clerk is used for allocations by Xlog used for log file management in SQL Azure Database   <br /><br />**Applies to**:  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |

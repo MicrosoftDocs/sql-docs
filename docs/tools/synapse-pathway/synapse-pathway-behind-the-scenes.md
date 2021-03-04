@@ -44,7 +44,7 @@ Azure Synapse SQL defines the absolute function as:
 ABS ( numeric_expression )  
 ```
 
-In this simple case, Synapse Pathway understands that the conversion in Synapse SQL from float to numeric is an implicit [conversion](../../t-sql/functions/cast-and-convert-transact-sql.md?view=azure-sqldw-latest#implicit-conversions) and requires no further type casting. Simple, clean, and effective code translation.
+In this simple case, Synapse Pathway understands that the conversion in Synapse SQL from float to numeric is an implicit [conversion](../../t-sql/functions/cast-and-convert-transact-sql.md?view=azure-sqldw-latest&preserve-view=true#implicit-conversions) and requires no further type casting. Simple, clean, and effective code translation.
 
 Keeping this meta-information about the source statements and fragments helps the structural differences between platforms – conversions in opt-out logic for search condition predicates in a WHERE clause for example.
 

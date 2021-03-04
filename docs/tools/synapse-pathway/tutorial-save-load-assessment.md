@@ -28,7 +28,7 @@ To complete this tutorial, make sure you've installed [Azure Synapse Pathway](sy
 ## Saving an assessment to a file
  
 1. Once you have run the translation, you should see the report summarizing the code translation 
- ![Azure Synapse Pathway assessment.](./media/save-load-assessment/report-overview.png)
+ ![Azure Synapse Pathway assessment report overview.](./media/save-load-assessment/report-overview.png)
 3. Select the **Save assessment** button, specify the name of the file, and then select **Save**.
 ![Azure Synapse Pathway assessment.](./media/save-load-assessment/save-assessment.png)
 
@@ -37,10 +37,10 @@ To complete this tutorial, make sure you've installed [Azure Synapse Pathway](sy
 ## Loading an assessment from a file
 
 1. To open the same assessment, select **Load assessment** and provide the .asmprj file name
-![Azure Synapse Pathway assessment.](./media/save-load-assessment/browse-location.png)
+![Azure Synapse Pathway browse to assessment location.](./media/save-load-assessment/browse-location.png)
 
 1. The source, input, and output folders will be populated based on selected assessment.
-![Azure Synapse Pathway assessment.](./media/save-load-assessment/load-assessment.png)
+![Azure Synapse Pathway assessment configuration for inputting translation type, input directory, and output directory.](./media/save-load-assessment/load-assessment.png)
 1. Select **Translate** to rerun the code translation again
 
 ## Next steps

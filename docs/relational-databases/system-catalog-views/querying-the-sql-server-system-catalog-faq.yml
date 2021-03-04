@@ -29,7 +29,7 @@ summary: |
     
 
 sections:
-  - name:  <a name="_TOP"></a> Frequently Asked Questions  
+  - name:  <a id="_TOP"></a> Frequently Asked Questions  
     questions:
       - question: Data Types  
         answer: |
@@ -107,11 +107,11 @@ sections:
             
   - name: Answers  
     questions:
-      - question:  <a name="_FAQ1"></a> How do I find all the tables that do not have a clustered index in a specified database?  
+      - question:  <a id="_FAQ1"></a> How do I find all the tables that do not have a clustered index in a specified database?  
         answer: |
-           Before you run the following queries, replace `<database_name>` with a valid database name.  
+          Before you run the following queries, replace `<database_name>` with a valid database name.  
             
-          ```  
+          ```sql
           SELECT SCHEMA_NAME(t.schema_id) AS schema_name, t.name AS table_name  
           FROM sys.tables AS t  
           WHERE NOT EXISTS   
@@ -125,9 +125,9 @@ sections:
             
           ```  
             
-           Or, you can use the `OBJECTPROPERTY` function as shown in the following example.  
+          Or, you can use the `OBJECTPROPERTY` function as shown in the following example.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT SCHEMA_NAME(schema_id) AS schema_name, name AS table_name  
@@ -138,13 +138,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ2"></a> How do I find all the owners of entities contained in a specified schema?  
+      - question:  <a id="_FAQ2"></a> How do I find all the owners of entities contained in a specified schema?  
         answer: |
-           Before you run the following query, replace `<database_name>` and `<schema_name>` with valid names.  
+          Before you run the following query, replace `<database_name>` and `<schema_name>` with valid names.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT 'OBJECT' AS entity_type  
@@ -167,13 +167,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ3"></a> How do I find all the tables that do not have a primary key?  
+      - question:  <a id="_FAQ3"></a> How do I find all the tables that do not have a primary key?  
         answer: |
-           Before you run the following queries, replace `<database_name>` with a valid database name.  
+          Before you run the following queries, replace `<database_name>` with a valid database name.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT SCHEMA_NAME(t.schema_id) AS schema_name  
@@ -189,9 +189,9 @@ sections:
             
           ```  
             
-           Or, you can run the following query.  
+          Or, you can run the following query.  
             
-          ```  
+          ```sql  
           USE <database_name>;  
           GO  
           SELECT SCHEMA_NAME(schema_id) AS schema_name  
@@ -203,13 +203,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ4"></a> How do I find all the tables that do not have an index?  
+      - question:  <a id="_FAQ4"></a> How do I find all the tables that do not have an index?  
         answer: |
-           Before you run the following query, replace `<database_name>` with a valid database name.  
+          Before you run the following query, replace `<database_name>` with a valid database name.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT SCHEMA_NAME(schema_id) AS schema_name  
@@ -221,13 +221,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ5"></a> How do I find all the tables that have an identity column?  
+      - question:  <a id="_FAQ5"></a> How do I find all the tables that have an identity column?  
         answer: |
-           Before you run the following query, replace `<database_name>` with a valid database name.  
+          Before you run the following query, replace `<database_name>` with a valid database name.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT SCHEMA_NAME(schema_id) AS schema_name  
@@ -240,12 +240,12 @@ sections:
             
           ```  
             
-           Or, you can run the following query.  
+          Or, you can run the following query.  
             
           > [!NOTE]  
           >  This query does not return the name of the columns.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT SCHEMA_NAME(schema_id) AS schema_name  
@@ -257,13 +257,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ7"></a> How do I find the data types of the columns of a specified table?  
+      - question:  <a id="_FAQ7"></a> How do I find the data types of the columns of a specified table?  
         answer: |
-           Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
+          Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT c.name AS column_name  
@@ -283,13 +283,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ8"></a> How do I find the dependencies on a specified function?  
+      - question:  <a id="_FAQ8"></a> How do I find the dependencies on a specified function?  
         answer: |
-           Before you run the following query, replace `<database_name>` and `<schema_name.function_name>` with valid names.  
+          Before you run the following query, replace `<database_name>` and `<schema_name.function_name>` with valid names.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT OBJECT_NAME(object_id) AS referencing_object_name  
@@ -302,13 +302,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ9"></a> How do I find all the stored procedures in a database?  
+      - question:  <a id="_FAQ9"></a> How do I find all the stored procedures in a database?  
         answer: |
-           Before you run the following query, replace `<database_name>` with a valid name.  
+          Before you run the following query, replace `<database_name>` with a valid name.  
             
-          ```  
+          ```sql
             
           USE <database_name>;  
           GO  
@@ -322,13 +322,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ10"></a> How do I find the parameters for a specified stored procedure or function?  
+      - question:  <a id="_FAQ10"></a> How do I find the parameters for a specified stored procedure or function?  
         answer: |
-           Before you run the following query, replace `<database_name>` and `<schema_name.object_name>` with valid names.  
+          Before you run the following query, replace `<database_name>` and `<schema_name.object_name>` with valid names.  
             
-          ```  
+          ```sql 
           USE <database_name>;  
           GO  
           SELECT SCHEMA_NAME(schema_id) AS schema_name  
@@ -349,13 +349,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ12"></a> How do I find all the user-defined functions in a database?  
+      - question:  <a id="_FAQ12"></a> How do I find all the user-defined functions in a database?  
         answer: |
-           Before you run the following query, replace `<database_name>` with a valid database name.  
+          Before you run the following query, replace `<database_name>` with a valid database name.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT name AS function_name   
@@ -369,13 +369,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ13"></a> How do I find all views in a database?  
+      - question:  <a id="_FAQ13"></a> How do I find all views in a database?  
         answer: |
-           Before you run the following query, replace `<database_name>` with a valid database name.  
+          Before you run the following query, replace `<database_name>` with a valid database name.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT name AS view_name   
@@ -388,13 +388,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ6"></a> How do I find all the entities that have been modified in the last N days?  
+      - question:  <a id="_FAQ6"></a> How do I find all the entities that have been modified in the last N days?  
         answer: |
-           Before you run the following query, replace `<database_name>` and `<n_days>` with valid values.  
+          Before you run the following query, replace `<database_name>` and `<n_days>` with valid values.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT name AS object_name   
@@ -409,13 +409,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ14"></a> How do I find the LOB data types of a specified table?  
+      - question:  <a id="_FAQ14"></a> How do I find the LOB data types of a specified table?  
         answer: |
-           Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
+          Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
             
-          ```  
+          ```sql
             
           USE <database_name>;  
           GO  
@@ -438,13 +438,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ15"></a> How do I view the definition of a module?  
+      - question:  <a id="_FAQ15"></a> How do I view the definition of a module?  
         answer: |
-           Before you run the following query, replace `<database_name>` and `<schema_name.object_name>` with valid names.  
+          Before you run the following query, replace `<database_name>` and `<schema_name.object_name>` with valid names.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT definition  
@@ -454,7 +454,7 @@ sections:
             
           ```  
             
-           Or, you can use the `OBJECT_DEFINITION` function as shown in the following example.  
+          Or, you can use the `OBJECT_DEFINITION` function as shown in the following example.  
             
           ```  
           USE <database_name>;  
@@ -464,24 +464,24 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ19"></a> How do I view the definition of a server-level trigger?  
+      - question:  <a id="_FAQ19"></a> How do I view the definition of a server-level trigger?  
         answer: |
-          ```  
+          ```sql
           SELECT definition  
           FROM sys.server_sql_modules;  
           GO  
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ16"></a> How do I find the columns of a primary key for a specified table?  
+      - question:  <a id="_FAQ16"></a> How do I find the columns of a primary key for a specified table?  
         answer: |
-           Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
+          Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT i.name AS index_name  
@@ -501,9 +501,9 @@ sections:
             
           ```  
             
-           Or, you can use the `COL_NAME` function as shown in the following example.  
+          Or, you can use the `COL_NAME` function as shown in the following example.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT i.name AS index_name  
@@ -519,13 +519,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ17"></a> How do I find the columns of a foreign key for a specified table?  
+      - question:  <a id="_FAQ17"></a> How do I find the columns of a foreign key for a specified table?  
         answer: |
-           Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
+          Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT   
@@ -544,13 +544,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ18"></a> How do I find the permissions granted or denied to a specified principal?  
+      - question:  <a id="_FAQ18"></a> How do I find the permissions granted or denied to a specified principal?  
         answer: |
-           The following example creates a function to return the name of the entity on which the permissions are checked. The function is invoked in the queries that follow. The function must be created in every database in which you want to check permissions.  
+          The following example creates a function to return the name of the entity on which the permissions are checked. The function is invoked in the queries that follow. The function must be created in every database in which you want to check permissions.  
             
-          ```  
+          ```sql
           -- Create a function to return the name of the entity on which the permissions are checked.  
           IF OBJECT_ID (N'dbo.entity_instance_name', N'FN') IS NOT NULL  
               DROP FUNCTION dbo.entity_instance_name;  
@@ -628,13 +628,13 @@ sections:
           GO  
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ20"></a> How do I determine if a column is used in a computed column expression?  
+      - question:  <a id="_FAQ20"></a> How do I determine if a column is used in a computed column expression?  
         answer: |
-           Before you run the following query, replace `<database_name>`, `<schema_name.table_name>`, and `<column_name`> with valid names.  
+          Before you run the following query, replace `<database_name>`, `<schema_name.table_name>`, and `<column_name`> with valid names.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT OBJECT_NAME(object_id) AS object_name  
@@ -651,13 +651,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ21"></a> How do I find all the columns that are used in a computed column expression?  
+      - question:  <a id="_FAQ21"></a> How do I find all the columns that are used in a computed column expression?  
         answer: |
-           Before you run the following query, replace `<database_name>` with a valid name.  
+          Before you run the following query, replace `<database_name>` with a valid name.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT OBJECT_NAME(d.referenced_major_id) AS object_name  
@@ -674,13 +674,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ22"></a> How do I find the columns that depend on a specified CLR user-defined type or alias type?  
+      - question:  <a id="_FAQ22"></a> How do I find the columns that depend on a specified CLR user-defined type or alias type?  
         answer: |
-           Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type, or schema-qualified alias type name. The following query requires membership in the **db_owner** role or permissions to see all dependent column and computed column metadata in the database.  
+          Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type, or schema-qualified alias type name. The following query requires membership in the **db_owner** role or permissions to see all dependent column and computed column metadata in the database.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT OBJECT_NAME(object_id) AS object_name   
@@ -713,13 +713,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ23"></a> How do I find the computed columns that depend on a specified CLR user-defined type or alias type?  
+      - question:  <a id="_FAQ23"></a> How do I find the computed columns that depend on a specified CLR user-defined type or alias type?  
         answer: |
-           Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type, alias type name.  
+          Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type, alias type name.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT OBJECT_NAME(object_id) AS object_name  
@@ -731,13 +731,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ24"></a> How do I find the parameters that depend on a specified CLR user-defined type or alias type?  
+      - question:  <a id="_FAQ24"></a> How do I find the parameters that depend on a specified CLR user-defined type or alias type?  
         answer: |
-           Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type, alias type name. The following query requires membership in the **db_owner** role or permissions to see all dependent column and computed column metadata in the database.  
+          Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type, alias type name. The following query requires membership in the **db_owner** role or permissions to see all dependent column and computed column metadata in the database.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT OBJECT_NAME(object_id) AS object_name  
@@ -760,9 +760,9 @@ sections:
             
           ```  
             
-           The following query returns a restricted and narrow view of parameters that depend on a CLR user-defined type or alias, but the result set is visible to the **public** role. You can use this query if you have granted REFERENCE permissions on your user-defined type to others and you do not have permission to view the metadata of the objects others have created that use the type.  
+          The following query returns a restricted and narrow view of parameters that depend on a CLR user-defined type or alias, but the result set is visible to the **public** role. You can use this query if you have granted REFERENCE permissions on your user-defined type to others and you do not have permission to view the metadata of the objects others have created that use the type.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT OBJECT_NAME(object_id) AS object_name  
@@ -774,13 +774,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ25"></a> How do I find the CHECK constraints that depend on a specified CLR user-defined type?  
+      - question:  <a id="_FAQ25"></a> How do I find the CHECK constraints that depend on a specified CLR user-defined type?  
         answer: |
-           Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type name.  
+          Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type name.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT SCHEMA_NAME(o.schema_id) AS schema_name  
@@ -795,17 +795,17 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ26"></a> How do I find the views, Transact-SQL functions, and Transact-SQL stored procedures that depend on a specified CLR user-defined type or alias type?  
+      - question:  <a id="_FAQ26"></a> How do I find the views, Transact-SQL functions, and Transact-SQL stored procedures that depend on a specified CLR user-defined type or alias type?  
         answer: |
-           Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type, alias type name.  
+          Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type, alias type name.  
             
            The parameters defined in a function or procedure are implicitly schema bound. Therefore, parameters that depend on a CLR user-defined type or alias type can be viewed by using the [sys.sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) catalog view. Procedures and triggers are not schema bound. This means that dependencies between any expression defined in the body of the procedure or trigger and a CLR user-defined type or alias type is not maintained. Schema bound views and schema bound user-defined functions that have expressions that depend on a CLR user-defined type or alias type are maintained in the **sys.sql_dependencies** catalog view. Dependencies between types and CLR functions and CLR procedures are not maintained.  
             
            The following query returns all schema-bound dependencies in views, [!INCLUDE[tsql](../../includes/tsql-md.md)] functions, and [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures for a specified CLR user-defined type or alias type.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT SCHEMA_NAME(o.schema_id) AS dependent_object_schema  
@@ -824,13 +824,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ27"></a> How do I find all the constraints for a specified table?  
+      - question:  <a id="_FAQ27"></a> How do I find all the constraints for a specified table?  
         answer: |
-           Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
+          Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT OBJECT_NAME(object_id) as constraint_name  
@@ -849,13 +849,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ28"></a> How do I find all the indexes for a specified table?  
+      - question:  <a id="_FAQ28"></a> How do I find all the indexes for a specified table?  
         answer: |
-           Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
+          Before you run the following query, replace `<database_name>` and `<schema_name.table_name>` with valid names.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT i.name AS index_name  
@@ -879,13 +879,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ30"></a> How do I find all the objects that have a specified column name?  
+      - question:  <a id="_FAQ30"></a> How do I find all the objects that have a specified column name?  
         answer: |
-           Before you run the following query, replace `<database_name>` and `<column_name>` with valid names.  
+          Before you run the following query, replace `<database_name>` and `<column_name>` with valid names.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT OBJECT_NAME(object_id)  
@@ -895,7 +895,7 @@ sections:
             
           ```  
             
-           Or  
+          Or  
             
           ```  
           USE <database_name>;  
@@ -910,13 +910,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ31"></a> How do I find all the user-defined tables in a specified database?  
+      - question:  <a id="_FAQ31"></a> How do I find all the user-defined tables in a specified database?  
         answer: |
-           Before you run the following query, replace `<database_name>` with a valid name.  
+          Before you run the following query, replace `<database_name>` with a valid name.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT *   
@@ -925,13 +925,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ32"></a> How do I find all the tables and indexes that are partitioned?  
+      - question:  <a id="_FAQ32"></a> How do I find all the tables and indexes that are partitioned?  
         answer: |
-           Before you run the following query, replace `<database_name>` with a valid name.  
+          Before you run the following query, replace `<database_name>` with a valid name.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT SCHEMA_NAME(o.schema_id) AS schema_name  
@@ -948,13 +948,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ33"></a> How do I find all the statistics on a specified object?  
+      - question:  <a id="_FAQ33"></a> How do I find all the statistics on a specified object?  
         answer: |
-           Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.object_name>` with a valid table, indexed view, or table-valued function name.  
+          Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.object_name>` with a valid table, indexed view, or table-valued function name.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT name AS statistics_name  
@@ -968,13 +968,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ34"></a> How do I find all the statistics and statistics columns on a specified object?  
+      - question:  <a id="_FAQ34"></a> How do I find all the statistics and statistics columns on a specified object?  
         answer: |
-           Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.object_name>` with a valid table, indexed view, or table-valued function name.  
+          Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.object_name>` with a valid table, indexed view, or table-valued function name.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT s.name AS statistics_name  
@@ -990,13 +990,13 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-      - question:  <a name="_FAQ35"></a> How do I find the definition of a view?  
+      - question:  <a id="_FAQ35"></a> How do I find the definition of a view?  
         answer: |
-           Before you run the following query, replace `<database_name>` and `<schema_name.object_name>` with valid names.  
+          Before you run the following query, replace `<database_name>` and `<schema_name.object_name>` with valid names.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT definition  
@@ -1006,9 +1006,9 @@ sections:
             
           ```  
             
-           Or, you can use the `OBJECT_DEFINITION` function as shown in the following example.  
+          Or, you can use the `OBJECT_DEFINITION` function as shown in the following example.  
             
-          ```  
+          ```sql
           USE <database_name>;  
           GO  
           SELECT OBJECT_DEFINITION (OBJECT_ID('<schema_name.object_name>')) AS ObjectDefinition;  
@@ -1016,10 +1016,8 @@ sections:
             
           ```  
             
-           [TOP](#_TOP)  
+          [TOP](#_TOP)  
             
-  - name: Ignored  
-    questions:
-      - question: See also
+      - question: See Also  
         answer: |
           [Mapping System Tables to System Views (Transact-SQL)](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)

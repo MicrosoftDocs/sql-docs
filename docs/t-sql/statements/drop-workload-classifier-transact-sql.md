@@ -29,7 +29,7 @@ Drops an existing user-defined workload management classifier.  If requests are 
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-## Syntax  
+## Syntax
 
 ```syntaxsql
 DROP WORKLOAD CLASSIFIER classifier_name;

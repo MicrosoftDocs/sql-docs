@@ -176,7 +176,7 @@ This switch is used by the client when connecting to SQL Database or Azure Synap
 
 > [!IMPORTANT]
 > The `-G` option only applies to Azure SQL Database and Azure Synapse Analytics.
-> AAD Interactive Authentication is not currently supported on Linux or macOS. AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](../connect/odbc/linux-mac/using-integrated-authentication#configure-kerberos).
+> AAD Interactive Authentication is not currently supported on Linux or macOS. AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [Configured Kerberos environment](../connect/odbc/linux-mac/using-integrated-authentication).
 
 - **Azure Active Directory Username and Password:** 
 
@@ -195,7 +195,7 @@ This switch is used by the client when connecting to SQL Database or Azure Synap
 - **Azure Active Directory Integrated**
 
    For Azure Active Directory Integrated authentication, provide the **-G** option without a user name or password.
-   *AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](../connect/odbc/linux-mac/using-integrated-authentication.md#configure-kerberos).*.
+   *AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](../connect/odbc/linux-mac/using-integrated-authentication.md).*.
 
     ```cmd
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
@@ -464,11 +464,10 @@ We recommend that you use a strong password.
   
 - **image**  
   
-> [!NOTE]  
->  UDTs can be of fixed length depending on the implementation. If this length of a fixed length UDT is shorter that *display_width*, the value of the UDT returned is not affected. However, if the length is longer than *display_width*, the output is truncated.  
-   
+> [!NOTE]
+> UDTs can be of fixed length depending on the implementation. If this length of a fixed length UDT is shorter that *display_width*, the value of the UDT returned is not affected. However, if the length is longer than *display_width*, the output is truncated.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Use the **-y 0** option with extreme caution because it may cause serious performance issues on both the server and the network, depending on the size of data returned.  
   
  **-Y** _fixed_length_type_display_width_  
@@ -511,7 +510,7 @@ We recommend that you use a strong password.
  Lists the locally configured server computers, and the names of the server computers that are broadcasting on the network. This parameter cannot be used in combination with other parameters. The maximum number of server computers that can be listed is 3000. If the server list is truncated because of the size of the buffer a warning message is displayed.  
   
 > [!NOTE]  
->  Because of the nature of broadcasting on networks, **sqlcmd** may not receive a timely response from all servers. Therefore, the list of servers returned may vary for each invocation of this option.  
+> Because of the nature of broadcasting on networks, **sqlcmd** may not receive a timely response from all servers. Therefore, the list of servers returned may vary for each invocation of this option.  
   
  If the optional parameter **c** is specified, the output appears without the **Servers:** header line, and each server line is listed without leading spaces. This presentation is referred to as clean output. Clean output improves the processing performance of scripting languages.  
   

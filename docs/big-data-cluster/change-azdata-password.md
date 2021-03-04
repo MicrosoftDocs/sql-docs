@@ -91,14 +91,14 @@ Follow these options for manually updating the password for [Grafana](app-monito
 
 1. The htpasswd utility is required. You can install this on any client machine.
   
-### [For Ubuntu](#tab/for-ubuntu): 
-
+### [For Ubuntu](#tab/for-ubuntu)
+On Ubuntu Linux you can use the following:
 ```bash
 sudo apt install apache2-utils
 ```
 
-### [For RHEL](#tab/for-rhel): 
-
+### [For RHEL](#tab/for-rhel)
+On Red Hat Enterprise Linux you can use the following:
 ```bash
 sudo yum install httpd-tools
 ```
@@ -151,21 +151,20 @@ sudo yum install httpd-tools
      
     If necessary, identify the name of your mgmtproxy prod.
     
-### [For Windows](#tab/for-windows): 
+### [For Windows](#tab/for-windows)
 On a Windows server you can use the following:
 
 ```bash 
 kubectl get pods -n <namespace> -l app=mgmtproxy
 ```
 
-### [For Linux](#tab/for-linux): 
+### [For Linux](#tab/for-linux)
 On Linux you can use the following:
 
 ```bash
 kubectl get pods -n <namespace> | grep 'mgmtproxy'
 ```
-    
-    ---
+---
     
     Remove the mgmtproxy pod:
     ```bash

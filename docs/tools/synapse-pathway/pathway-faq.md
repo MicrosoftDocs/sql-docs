@@ -10,7 +10,7 @@ ms.technology: tools-other
 monikerRange: "=azure-sqldw-latest"
 ms.custom: template-overview 
 ---
-# Azure Synapse Pathway Preview drequently asked questions (FAQ)
+# Azure Synapse Pathway Preview FAQ
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 In this guide, you'll find the most frequently asked questions on Azure Synapse Pathway Preview.

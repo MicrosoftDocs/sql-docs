@@ -322,16 +322,15 @@ Azure Key Vault is a convenient option to store and manage column master keys fo
 | Class | Description | Provider (lookup) name | Platform |
 |:---|:---|:---|:---|
 |[SqlColumnEncryptionAzureKeyVaultProvider Class](/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) | Provider for Azure Key Vault. | AZURE_KEY_VAULT | Windows, Linux, macOS |
-|||
 
 #### .NET Supportability
 
 | Version | Microsoft.Data.SqlClient version | .NET platforms | 
 | ------- | ----------- | ------- |
-| 2.0.0 | v1.1.3+ <br/> v2.1.0+ | .NET Framework 4.6.1+, .NET Core 2.1+ <br/>.NET Standard 2.0+ |
-| 1.2.0 | v1.0.19269.1+ <br/> v2.1.0+ | .NET Framework 4.6+, .NET Core 2.1+ <br/>.NET Standard 2.0+ |
-| 1.1.0 | v1.0.19269.1+ | .NET Framework 4.6+, .NET Core 2.1+ |
-| 1.0.0 | v1.0.19269.1+ | .NET Framework 4.6+, .NET Core 2.1+ |
+| 2.0.0 | 1.1.3+ <br/> 2.1.0+ | .NET Framework 4.6.1+, .NET Core 2.1+ <br/>.NET Standard 2.0+ |
+| 1.2.0 | 1.0.19269.1+ <br/> 2.1.0+ | .NET Framework 4.6+, .NET Core 2.1+ <br/>.NET Standard 2.0+ |
+| 1.1.0 | 1.0.19269.1+ | .NET Framework 4.6+, .NET Core 2.1+ |
+| 1.0.0 | 1.0.19269.1+ | .NET Framework 4.6+, .NET Core 2.1+ |
 |||
 
 Starting with **v2.0.0**, the `Microsoft.Data.SqLClient.AlwaysEncrypted.AzureKeyVaultProvider` supports the new Azure.Core and Azure.Identity APIs to perform authentication with Azure Key Vault. An instance of [`TokenCredential`](/dotnet/api/azure.core.tokencredential) implementation can now be passed to [`SqlColumnEncryptionAzureKeyVaultProvider`](/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) constructors to initialize Azure Key Vault provider object.
@@ -340,8 +339,8 @@ For examples demonstrating performing encryption/decryption with the `Microsoft.
 
 | Version | Links to Examples
 | ------- | ---------------------------- |
-| **v2.x+** | [Azure Key Vault working with Always Encrypted v2](azure-key-vault-2-0-example.md) <br/>[Azure Key Vault working with Always Encrypted with Secure Enclaves v2](azure-key-vault-enclave-example-2-0.md) |
-| **v1.x** | [Azure Key Vault working with Always Encrypted v1](azure-key-vault-example.md) <br/>[Azure Key Vault working with Always Encrypted with Secure Enclaves v1](azure-key-vault-enclave-example.md) |
+| **2.0+** | [Azure Key Vault working with Always Encrypted v2](azure-key-vault-2-0-example.md) <br/>[Azure Key Vault working with Always Encrypted with Secure Enclaves v2](azure-key-vault-enclave-example-2-0.md) |
+| **1.x** | [Azure Key Vault working with Always Encrypted v1](azure-key-vault-example.md) <br/>[Azure Key Vault working with Always Encrypted with Secure Enclaves v1](azure-key-vault-enclave-example.md) |
 
 
 ### Implementing a custom column master key store provider

@@ -1,0 +1,29 @@
+<svg id="Shapes" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.97 28">
+  <defs>
+    <linearGradient id="linear-gradient" x1="12.99" y1="1201.44" x2="12.99" y2="1219.86" gradientTransform="matrix(1, 0, 0, -1, 0, 1219.86)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2e76bc"/>
+      <stop offset="0.16" stop-color="#347dc0"/>
+      <stop offset="0.53" stop-color="#4c8dcb"/>
+      <stop offset="0.82" stop-color="#6198d1"/>
+      <stop offset="1" stop-color="#699cd3"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="6.17" y1="1198.8" x2="19.94" y2="1198.8" gradientTransform="matrix(1, 0, 0, -1, 0, 1219.86)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#33bedd"/>
+      <stop offset="0.06" stop-color="#3ac4e2"/>
+      <stop offset="0.3" stop-color="#66cce7"/>
+      <stop offset="0.45" stop-color="#74cfeb"/>
+      <stop offset="0.55" stop-color="#74cfeb"/>
+      <stop offset="0.7" stop-color="#66cce7"/>
+      <stop offset="0.94" stop-color="#3ac4e2"/>
+      <stop offset="1" stop-color="#33bedd"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path d="M26,12.65a5.8,5.8,0,0,0-5-5.6,7.38,7.38,0,0,0-7.59-7A7.59,7.59,0,0,0,6.11,4.92,7,7,0,0,0,0,11.62a7.06,7.06,0,0,0,7.31,6.8H20.06A5.93,5.93,0,0,0,26,12.65Z" fill="url(#linear-gradient)"/>
+    <path d="M13.07,16.32c-3.82,0-6.9-1-6.9-2.19V25.81C6.17,27,9.29,28,13,28h.1c3.79,0,6.87-1,6.87-2.19V14.13C19.94,15.34,16.86,16.32,13.07,16.32Z" fill="url(#linear-gradient-2)"/>
+    <path d="M19.94,14.13c0,1.21-3.11,2.19-6.87,2.19s-6.9-1-6.9-2.19,3.12-2.2,6.9-2.2,6.87,1,6.87,2.2" fill="#e8e8e8"/>
+    <path d="M18.34,14c0,.76-2.37,1.4-5.27,1.4S7.78,14.76,7.78,14s2.36-1.4,5.29-1.4,5.27.62,5.27,1.4" fill="#74cfeb"/>
+    <path d="M13.07,14.28a14.43,14.43,0,0,0-4.19.53,13.78,13.78,0,0,0,4.19.54,14.08,14.08,0,0,0,4.18-.54A14.41,14.41,0,0,0,13.07,14.28Z" fill="#33bedd"/>
+    <path d="M8.77,7.78l4-4.07a.46.46,0,0,1,.66,0h0l4,4.07a.2.2,0,0,1,0,.28.21.21,0,0,1-.19.08H14.87a.22.22,0,0,0-.22.22h0v5a.16.16,0,0,1-.14.17H11.77a.18.18,0,0,1-.17-.17v-5a.2.2,0,0,0-.17-.22H8.91a.2.2,0,0,1-.17-.23Z" fill="#f2f2f3"/>
+  </g>
+</svg>

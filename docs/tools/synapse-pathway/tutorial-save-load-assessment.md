@@ -4,7 +4,7 @@ description: Save and load data warehouse assessments with Azure Synapse Pathway
 author: anshul82-ms
 ms.author: anrampal
 ms.prod: sql
-ms.technology: "Azure Synapse Pathway"
+ms.technology: tools-other
 ms.topic: tutorial 
 ms.date: 03/02/2021
 monikerRange: "=azure-sqldw-latest"
@@ -26,21 +26,21 @@ In this tutorial, you learn how to:
 To complete this tutorial, make sure you've installed [Azure Synapse Pathway](synapse-pathway-download.md) See [Azure Synapse Pathway overview](azure-synapse-pathway-overview.md) to learn more about the tool.
 
 ## Saving an assessment to a file
- 
-1. Once you have run the translation, you should see the report summarizing the code translation 
- ![Azure Synapse Pathway assessment.](./media/save-load-assessment/report-overview.png)
-3. Select the **Save assessment** button, specify the name of the file, and then select **Save**.
-![Azure Synapse Pathway assessment.](./media/save-load-assessment/save-assessment.png)
 
-4. A .asmprj file gets created at the specified destination
+1. Once you have run the translation, you should see the report summarizing the code translation 
+ ![Azure Synapse Pathway assessment report overview.](./media/tutorial-save-load-assessment/report-overview.png)
+1. Select the **Save assessment** button, specify the name of the file, and then select **Save**.
+![Azure Synapse Pathway assessment.](./media/tutorial-save-load-assessment/save-assessment.png)
+
+1. A .asmprj file is created at the specified destination.
 
 ## Loading an assessment from a file
 
 1. To open the same assessment, select **Load assessment** and provide the .asmprj file name
-![Azure Synapse Pathway assessment.](./media/save-load-assessment/browse-location.png)
+![Azure Synapse Pathway browse to assessment location.](./media/tutorial-save-load-assessment/browse-location.png)
 
 1. The source, input, and output folders will be populated based on selected assessment.
-![Azure Synapse Pathway assessment.](./media/save-load-assessment/load-assessment.png)
+![Azure Synapse Pathway assessment configuration showing translation type, input directory, and output directory.](./media/tutorial-save-load-assessment/load-assessment.png)
 1. Select **Translate** to rerun the code translation again
 
 ## Next steps

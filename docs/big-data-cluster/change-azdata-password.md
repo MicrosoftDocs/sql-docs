@@ -90,18 +90,20 @@ After following the steps to update AZDATA_PASSWORD, you will see that [Grafana]
 Follow these options for manually updating the password for [Grafana](app-monitor.md).
 
 1. The htpasswd utility is required. You can install this on any client machine.
-    
-    #### [For Ubuntu](#tab/for-ubuntu): 
-    ```bash
-    sudo apt install apache2-utils
-    ```
-    
-    #### [For RHEL](#tab/for-rhel): 
-    ```bash
-    sudo yum install httpd-tools
-    ```
-    
-    ---
+  
+### [For Ubuntu](#tab/for-ubuntu): 
+
+```bash
+sudo apt install apache2-utils
+```
+
+### [For RHEL](#tab/for-rhel): 
+
+```bash
+sudo yum install httpd-tools
+```
+
+---
 
 2. Generate the new password. 
     
@@ -149,19 +151,19 @@ Follow these options for manually updating the password for [Grafana](app-monito
      
     If necessary, identify the name of your mgmtproxy prod.
     
-    #### [For Windows](#tab/for-windows): 
-    On a Windows server you can use the following:
-    
-    ```bash 
-    kubectl get pods -n <namespace> -l app=mgmtproxy
-    ```
-    
-    #### [For Linux](#tab/for-linux): 
-    On Linux you can use the following:
-    
-    ```bash
-    kubectl get pods -n <namespace> | grep 'mgmtproxy'
-    ```
+### [For Windows](#tab/for-windows): 
+On a Windows server you can use the following:
+
+```bash 
+kubectl get pods -n <namespace> -l app=mgmtproxy
+```
+
+### [For Linux](#tab/for-linux): 
+On Linux you can use the following:
+
+```bash
+kubectl get pods -n <namespace> | grep 'mgmtproxy'
+```
     
     ---
     

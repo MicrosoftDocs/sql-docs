@@ -136,7 +136,7 @@ tools:
 
 additionalContent:
   sections:
-    - title: Case studies
+    - title: Most recent customer case studies
       items:
         # Card
         - title: Capita

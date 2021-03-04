@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### Syntax for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssazure_md.md](../../includes/ssazure_md.md)].
 
 ```syntaxsql
-  
+
 [ OPTION ( <query_hint> [ ,...n ] ) ]   
 ```  
   

@@ -13,7 +13,7 @@ ms.author: v-daenge
 ms.reviewer: v-jizho2
 ---
 
-# Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with Secure Enclaves
+# Example demonstrating use of Azure Key Vault provider v1.x with Always Encrypted enabled with Secure Enclaves
 
 [!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 

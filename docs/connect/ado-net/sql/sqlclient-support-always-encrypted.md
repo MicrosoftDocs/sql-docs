@@ -82,7 +82,7 @@ To enable enclave computations for a database connection, you need to set the fo
 - `Enclave Attestation URL` - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
 
   - If you're using [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](../../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](../../../relational-databases/security/encryption/always-encrypted-enclaves.md?view=sql-server-ver15#secure-enclave-attestation).
+  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](../../../relational-databases/security/encryption/always-encrypted-enclaves.md#secure-enclave-attestation).
 
 For a step-by-step tutorial, see [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md).
 
@@ -339,7 +339,7 @@ For examples demonstrating performing encryption/decryption with the `Microsoft.
 
 | Version | Links to Examples
 | ------- | ---------------------------- |
-| **2.0+** | [Azure Key Vault working with Always Encrypted v2](azure-key-vault-2-0-example.md) <br/>[Azure Key Vault working with Always Encrypted with Secure Enclaves v2](azure-key-vault-enclave-example-2-0.md) |
+| **2.0+** | [Azure Key Vault working with Always Encrypted v2](azure-key-vault-2-0-example.md) <br/>[Azure Key Vault working with Always Encrypted with Secure Enclaves v2](azure-key-vault-enclave-2-0-example.md) |
 | **1.x** | [Azure Key Vault working with Always Encrypted v1](azure-key-vault-example.md) <br/>[Azure Key Vault working with Always Encrypted with Secure Enclaves v1](azure-key-vault-enclave-example.md) |
 
 

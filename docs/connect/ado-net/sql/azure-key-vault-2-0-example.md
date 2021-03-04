@@ -13,7 +13,7 @@ ms.author: v-daenge
 ms.reviewer: v-jizho2
 ---
 
-# Example demonstrating use of Azure Key Vault provider with Always Encrypted
+# Example demonstrating use of Azure Key Vault provider v2.0+ with Always Encrypted
 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 

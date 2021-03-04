@@ -95,7 +95,7 @@ For more information, see [Alerts](../../ssms/agent/alerts.md).
 
 An *operator* defines contact information for an individual responsible for the maintenance of one or more instances of SQL Server. In some enterprises, operator responsibilities are assigned to one individual. In enterprises with multiple servers, many individuals can share operator responsibilities. An operator doesn't contain security information, and doesn't define a security principal.  
 
-SQL Server can notify operators of alerts through one or more of the following:  
+SQL Server can notify operators of alerts through...
 
 - E-mail
 

@@ -128,19 +128,19 @@ tools:
   items:
     # Card
     - title: Azure Migrate
-      imageSrc: /media/index/azure-migrate-symbol.svg
+      imageSrc: media/index/azure-migrate-symbol.svg
       url: /azure/developer/python/
     # Card
     - title: Azure Database Migration Service
-      imageSrc: /media/index/migration-service-symbol.svg
+      imageSrc: media/index/migration-service-symbol.svg
       url: /dotnet/azure/
     # Card
     - title: Database Migration Assistant (DMA)
-      imageSrc: /media/index/database-migration-assistant-symbol.svg
+      imageSrc: media/index/database-migration-assistant-symbol.svg
       url: /azure/developer/javascript/
     # Card
     - title: SQL Server Migration Assistant (SSMA)
-      imageSrc: /media/index/SQL-server-migration-assistant-symbol.svg
+      imageSrc: media/index/SQL-server-migration-assistant-symbol.svg
       url: /azure/developer/java/
 
 additionalContent:

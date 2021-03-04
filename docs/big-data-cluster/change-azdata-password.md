@@ -29,7 +29,7 @@ If the cluster is operating in non-Active Directory mode, update the Apache Knox
    ```
 
    b. Base64 decode the secret:
-   
+
    ```bash
    echo <password from kubectl command>  | base64 --decode && echo
    ```
@@ -93,12 +93,14 @@ Follow these options for manually updating the password for [Grafana](app-monito
   
 ### [For Ubuntu](#tab/for-ubuntu)
 On Ubuntu Linux you can use the following:
+
 ```bash
 sudo apt install apache2-utils
 ```
 
 ### [For RHEL](#tab/for-rhel)
 On Red Hat Enterprise Linux you can use the following:
+
 ```bash
 sudo yum install httpd-tools
 ```
@@ -154,7 +156,7 @@ sudo yum install httpd-tools
 ### [For Windows](#tab/for-windows)
 On a Windows server you can use the following:
 
-```bash 
+```bash
 kubectl get pods -n <namespace> -l app=mgmtproxy
 ```
 
@@ -164,6 +166,7 @@ On Linux you can use the following:
 ```bash
 kubectl get pods -n <namespace> | grep 'mgmtproxy'
 ```
+
 ---
     
     Remove the mgmtproxy pod:

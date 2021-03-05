@@ -130,25 +130,29 @@ tools:
 
 additionalContent:
   sections:
-    - title: Most recent customer case studies
+    - title: Recent customer case studies
       items:
         # Card
-        - title: Capita
-          summary: A dedicated cloud for U.S. government agencies and their partners.
-          url: azure-government/index.yml
+        - title: Ferguson (US)
+          summary: Largest US plumbing wholesaler uses Azure Arc SQL Managed Instance to extend Azure services on-premises.
+          url: https://customers.microsoft.com/en-us/story/844232-ferguson-enterprises-retailers-azure-arc
         # Card
-        - title: Willis Towers Watson
-          summary: A dedicated cloud that adheres to German data-handling regulations.
-          url: germany/index.yml
+        - title: Clearsale (Brazil)
+          summary: ClearSale builds foundation for growth and innovation by migrating to Azure with the Azure SQL Database hyperscale service tier.
+          url: https://customers.microsoft.com/en-us/story/773410-clearsale-partner-professional-services-azure
         # Card
-        - title: Innovative Systems
-          summary: A dedicated cloud located in China and operated by 21Vianet.
-          url: /azure/china/
+        - title: Willis Towers Watson (United Kingdom)
+          summary: Willis Towers Watson achieves seamless scalability in the cloud by migrating to Azure SQL Database.
+          url: https://customers.microsoft.com/en-us/story/willis-towers-watson-partner-professional-services-azure
         # Card
-        - title: Geekwire
-          summary: A dedicated cloud located in China and operated by 21Vianet.
-          url: /azure/china/
+        - title: Paychex (United States)
+          summary: Paychex relies on Azure SQL Database Elastic Pools to handle explosive growth.
+          url: https://customers.microsoft.com/en-us/story/paychex-azure-sql-database-us
         # Card
-        - title: Vipps
-          summary: A dedicated cloud located in China and operated by 21Vianet.
-          url: /azure/china/
+        - title: Innovative Systems (United States)
+          summary: Innovative Systems unites its far-flung databases in the cloud by powering migrations using Azure Database Migration Service.
+          url: https://customers.microsoft.com/en-us/story/innovative-systems-partner-professional-services-azure-sql-database
+        # Card
+        - title: Capita Group (United Kingdom)
+          summary: Capita Reading Cloud migrates 10,000 databases and finds new scalability with Azure.
+          url: https://customers.microsoft.com/en-us/story/724217-capita-uk-professional-services-azure-sql-database

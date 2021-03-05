@@ -47,8 +47,8 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 |start_time|`datetime`|Beginning of the work||  
 |end_time|`datetime`|End of the work||  
 |total_elapsed_time|`int`|Total time in milliseconds||
-|compute_pool_id|`int`|Unique identifier for the pool where the worker is running. Only applies to SQL Server Big Data Cluster. See [sys.dm_exec_compute_pools (Transact-SQL)](sys-dm-exec-compute-pools.md).|Returns `0` for [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] on Windows and Linux.|
-|read_command|`nvarchar(4000)`|The query that is sent to the external data source. Introduced in [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)].|Text representing the query. For Hadoop and WASB return `NULL`.|
+|compute_pool_id|`int`|Unique identifier for the pool where the worker is running. Only applies to SQL Server Big Data Cluster. See [sys.dm_exec_compute_pools (Transact-SQL)](sys-dm-exec-compute-pools.md).|Returns `0` for [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] on Windows and Linux.|
+|read_command|`nvarchar(4000)`|The query that is sent to the external data source. Introduced in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)].|Text representing the query. For Hadoop and WASB return `NULL`.|
 
 
 ## See Also  

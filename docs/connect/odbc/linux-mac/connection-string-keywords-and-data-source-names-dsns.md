@@ -60,7 +60,7 @@ To connect to a named instance on a static port, use <b>Server=</b>*servername*,
 Alternatively, you can add the DSN information to a template file, and execute the following command to add it to `~/.odbc.ini` :
  - **odbcinst -i -s -f** _template_file_  
 
-For complete documentation on ini files and `odbcinst`, see the [unixODBC documention](http://www.unixodbc.org/odbcinst.html). For entries in the `odbc.ini` file specific to the ODBC Driver for SQL Server, see [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) for ones supported on Linux and macOS.
+For complete documentation on ini files and `odbcinst`, see the [unixODBC documentation](http://www.unixodbc.org/odbcinst.html). For entries in the `odbc.ini` file specific to the ODBC Driver for SQL Server, see [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) for ones supported on Linux and macOS.
 
 You can verify that your driver is working by using `isql` to test the connection, or you can use this command:
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  

@@ -277,7 +277,7 @@
           href: ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
         - name: Using Azure Key Vault with Always Encrypted
           href: ado-net/sql/azure-key-vault-example.md
-        - name: Using Azure Key Vault with Always Encrypted with Secure Enclaves
+        - name: Using Azure Key Vault with Always Encrypted with secure enclaves
           href: ado-net/sql/azure-key-vault-enclave-example.md
       - name: Data Discovery and Classification in SqlClient
         href: ../connect/ado-net/sql/data-classification.md
@@ -5761,7 +5761,7 @@
       href: ../connect/php/logging-activity.md
     - name: Using Always Encrypted with the PHP Drivers for SQL Server
       href: ../connect/php/using-always-encrypted-php-drivers.md
-    - name: Always Encrypted with Secure Enclaves with the PHP Drivers for SQL Server
+    - name: Always Encrypted with secure enclaves with the PHP Drivers for SQL Server
       href: ../connect/php/always-encrypted-secure-enclaves.md
     - name: Non-System Locale Settings
       href: ../connect/php/non-system-locale-settings.md

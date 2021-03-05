@@ -36,7 +36,7 @@ The following table summarizes the required .NET platforms to use Always Encrypt
 | Yes | Yes | .NET Standard 2.1+ | 2.1.0+ | Windows, Linux, macOS |
 
 > [!NOTE]
-> <sup>1</sup> Before Microsoft.Data.SqlClient version 2.1.0, Always Encrypted is only supported on Windows. 
+> <sup>1</sup> Before Microsoft.Data.SqlClient version 2.1.0, Always Encrypted is only supported on Windows.
 
 ## Enabling Always Encrypted for application queries
 
@@ -75,7 +75,7 @@ For general information on developing applications using enclaves, see [Develop 
 
 To enable enclave computations for a database connection, you need to set the following connection string keywords, in addition to enabling Always Encrypted (as explained in the previous section):
 
-- `Attestation Protocol` - specifies an attestation protocol. 
+- `Attestation Protocol` - specifies an attestation protocol.
   - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), the value of this keywords should be `HGS`.
   - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, the value of this keywords should be `AAS`.
 
@@ -212,7 +212,7 @@ using (SqlCommand cmd = connection.CreateCommand())
 
 If Always Encrypted is not enabled, a query can still retrieve data from encrypted columns, as long as the query has no parameters targeting encrypted columns.
 
-The following example demonstrates how to retrieve binary encrypted data from encrypted columns. 
+The following example demonstrates how to retrieve binary encrypted data from encrypted columns.
 
 ```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true";
@@ -323,7 +323,7 @@ Azure Key Vault is a convenient option to store and manage column master keys fo
 |:---|:---|:---|:---|
 |[SqlColumnEncryptionAzureKeyVaultProvider Class](/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) | Provider for Azure Key Vault. | AZURE_KEY_VAULT | Windows, Linux, macOS |
 
-For examples demonstrating performing encryption/decryption with Azure Key Vault, see [Azure Key Vault working with Always Encrypted](azure-key-vault-example.md) and [Azure Key Vault working with Always Encrypted with Secure Enclaves](azure-key-vault-enclave-example.md).
+For examples demonstrating performing encryption/decryption with Azure Key Vault, see [Azure Key Vault working with Always Encrypted](azure-key-vault-example.md) and [Azure Key Vault working with Always Encrypted with secure enclaves](azure-key-vault-enclave-example.md).
 
 ### Implementing a custom column master key store provider
 
@@ -459,7 +459,7 @@ connection, null, SqlCommandColumnEncryptionSetting.ResultSetOnly))
 
 To reduce the number of calls to a column master key store to decrypt column encryption keys, the **Microsoft .NET Data Provider for SQL Server** caches the plaintext column encryption keys in memory. After receiving the encrypted column encryption key value from the database metadata, the driver first tries to find the plaintext column encryption key corresponding to the encrypted key value. The driver calls the key store containing the column master key only if it cannot find the encrypted column encryption key value in the cache.
 
-The cache entries are evicted after a configurable time-to-live interval for security reasons. The default time-to-live value is 2 hours. If you have stricter security requirements about how long column encryption keys can be cached in plaintext in the application, you can change it using the [SqlConnection.ColumnEncryptionKeyCacheTtl property](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptionkeycachettl). 
+The cache entries are evicted after a configurable time-to-live interval for security reasons. The default time-to-live value is 2 hours. If you have stricter security requirements about how long column encryption keys can be cached in plaintext in the application, you can change it using the [SqlConnection.ColumnEncryptionKeyCacheTtl property](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptionkeycachettl).
 
 ## Enabling additional protection for a compromised SQL Server
 
@@ -585,4 +585,4 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 - [SQL Database tutorial: Protect sensitive data with Always Encrypted](/azure/azure-sql/database/always-encrypted-certificate-store-configure)
 - [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md)
 - [Example: Azure Key Vault working with Always Encrypted](azure-key-vault-example.md)
-- [Example: Azure Key Vault working with Always Encrypted with Secure Enclaves](azure-key-vault-enclave-example.md).
+- [Example: Azure Key Vault working with Always Encrypted with secure enclaves](azure-key-vault-enclave-example.md)

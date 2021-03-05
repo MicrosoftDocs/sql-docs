@@ -80,6 +80,9 @@ For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to load a TLS cert
 
 - The current system time must be after the **Valid from** property of the certificate and before the **Valid to** property of the certificate.
 
+> [!NOTE]  
+> Certificate validity is evaluated when connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with client connections that are initiated specifying the encryption option to true, unless overridden by the Trust Server Certificate setting. 
+
 - The certificate must be meant for server authentication. This requires the **Enhanced Key Usage** property of the certificate to specify **Server Authentication (1.3.6.1.5.5.7.3.1)**.
 
 - The certificate must be created by using the **KeySpec** option of **AT_KEYEXCHANGE**. Usually, the certificate's key usage property (**KEY_USAGE**) will also include key encipherment (**CERT_KEY_ENCIPHERMENT_KEY_USAGE**).

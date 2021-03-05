@@ -27,7 +27,7 @@ author: David-Engel
 
 Support for Always Encrypted with secure enclaves is available in the PHP Drivers for SQL Server starting with 5.8.0. Always Encrypted with secure enclaves requires SQL Server 2019 or later and version 17.4+ of the ODBC driver. Further details on general requirements for Always Encrypted with the PHP Drivers for SQL Server are available [here](using-always-encrypted-php-drivers.md).
 
-Always Encrypted with secure enclaves ensures the security of encrypted data by attesting the enclave - that is, verifying the enclave against an external attestation service. To use secure enclaves, the `ColumnEncryption` keyword must identify the attestation type and protocol along with associated attestation data, separated by a comma. Version 17.4 of the ODBC driver supports only Virtualization-Based Security (VBS) and the Host Guardian Service (HGS) protocol for the enclave type and protocol. The associated attestation data is the URL of the attestation server. Thus, the following would be added to the connection string:
+Always Encrypted with secure enclaves ensures the security of encrypted data by attesting the enclave - that is, verifying the enclave against an external attestation service. To use secure enclaves, the `ColumnEncryption` keyword must identify the attestation type and protocol along with associated attestation data, separated by a comma. Version 17.4 of the ODBC driver supports only Virtualization-Based Security (VBS) and the Host Guardian Service (HGS) protocol for the enclave type and protocol. The associated attestation data is the URL of the attestation server. Thus, the following setting would be added to the connection string:
 
 ```
 ColumnEncryption=VBS-HGS,http://attestationserver.mydomain/Attestation
@@ -39,7 +39,7 @@ Full details for configuring your environment to support Always Encrypted with s
 
 ## Examples
 
-The following examples, one for SQLSRV and one for PDO_SQLSRV, create a table with several data types in plaintext, then encrypt it and carry out comparisons and pattern matching. Note the following:
+The following examples, one for SQLSRV and one for PDO_SQLSRV, create a table with several data types in plaintext, then encrypt it and carry out comparisons and pattern matching. Note the following details:
 
 - When encrypting a table with `ALTER TABLE`, only one column may be encrypted for each call to `ALTER TABLE`, so multiple calls are required to encrypt multiple columns.
 - When passing the comparison threshold as a parameter for comparing char and nchar types, the column width must be specified in the corresponding `SQLSRV_SQLTYPE_*`, or the error `HY104`, `Invalid precision value`, will be returned.
@@ -49,7 +49,7 @@ The following examples, one for SQLSRV and one for PDO_SQLSRV, create a table wi
 - Pattern matching does not work against non-string types in Always Encrypted.
 - Error checking is excluded for clarity.
 
-What follows is common data for both examples:
+The following data is common for both examples:
 
 ```php
 <?php

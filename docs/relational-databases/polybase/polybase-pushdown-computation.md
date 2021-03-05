@@ -34,20 +34,22 @@ The following articles include information about configuring pushdown computatio
 
 With PolyBase pushdown computation, you can delegate computation tasks to external data sources. This reduces the workload on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and can significantly improve performance. 
 
-SQL Server can push joins, projections, aggregations, and filters to external data sources to take advantage of remote compute and restrict the data sent over the network. This table summarizes pushdown computation support on different external data sources:
+SQL Server can push joins, projections, aggregations, and filters to external data sources to take advantage of remote compute and restrict the data sent over the network. 
 
-| Data Source   | Join        | Projection | Aggregation | Filters                    | Statistics |
-|---------------|-------------|------------|-------------|----------------------------|------------|
-| SQL Server    | Yes         | Yes        | Yes         | Yes                        | Yes        |
-| MongoDB       | Yes         | Yes        | Yes         | Yes                        | Yes        |
-| Oracle        | Yes         | Yes        | Yes         | Yes                        | Yes        |
-| Hadoop (HDP*) | Some types? | Yes        | No          | Some types, Some operators | Yes        |  
-| Hadoop (CDH*) | Some types? | Yes        | No          | Some types, Some operators | Yes        |  
-| Teradata      | ?           | ?          | ?           | ?                          | ?          |  
-| Generic ODBC  | No          | No         | No          | No                         | No         |  
-|               |
+This table summarizes pushdown computation support on different external data sources:
 
-\* *PolyBase currently supports two Hadoop providers: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH).*
+| Data Source       | Joins  | Projections | Aggregations | Filters                    | Statistics |
+|-------------------|--------|-------------|--------------|----------------------------|------------|
+| **Generic ODBC**  | Yes    | Yes         | Yes          | Yes                        | Yes        |  
+| **Oracle**        | Yes    | Yes         | Yes          | Yes                        | Yes        |
+| **SQL Server**    | Yes    | Yes         | Yes          | Yes                        | Yes        |
+| **Teradata**      | Yes    | Yes         | Yes          | Yes                        | Yes        |  
+| **MongoDB**       | **No** | Yes         | Yes          | Yes                        | Yes        |
+| **Hadoop (HDP\*)** | **No** | Yes         | Yes          | Some types, some operators | Yes        |  
+| **Hadoop (CDH\*)** | **No** | Yes         | Yes          | Some types, some operators | Yes        |  
+|                   |
+
+**\*** *PolyBase currently supports two Hadoop providers: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH).*
 
 ### Pushdown of joins
 

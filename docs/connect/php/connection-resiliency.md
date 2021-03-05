@@ -1,7 +1,7 @@
 ---
 title: "Idle Connection Resiliency"
 description: "Learn what idle connection resiliency is and how it behaves within the Microsoft Drivers for PHP for SQL Server."
-ms.date: "07/13/2017"
+ms.date: "03/04/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
@@ -20,7 +20,7 @@ Connection resiliency is implemented with two connection keywords that can be ad
 |Keyword|Values|Default|Description|
 |-|-|-|-|
 |**ConnectRetryCount**| Integer between 0 and 255 (inclusive)|1|The maximum number of attempts to reestablish a broken connection before giving up. By default, a single attempt is made to reestablish a connection when broken. A value of 0 means that no reconnection will be attempted.|
-|**ConnectRetryInterval**| Integer between 1 and 60 (inclusive)|1| The time, in seconds, between attempts to reestablish a connection. The application will attempt to reconnect immediately upon detecting a broken connection, and will then wait **ConnectRetryInterval** seconds before trying again. This keyword is ignored if **ConnectRetryCount** is equal to 0.
+|**ConnectRetryInterval**| Integer between 1 and 60 (inclusive)|10| The time, in seconds, between attempts to reestablish a connection. The application will attempt to reconnect immediately upon detecting a broken connection, and will then wait **ConnectRetryInterval** seconds before trying again. This keyword is ignored if **ConnectRetryCount** is equal to 0.
 
 If the product of **ConnectRetryCount** multiplied by **ConnectRetryInterval** is larger than **LoginTimeout**, then the client will cease attempting to connect once **LoginTimeout** is reached; otherwise, it will continue to try to reconnect until **ConnectRetryCount** is reached.
 

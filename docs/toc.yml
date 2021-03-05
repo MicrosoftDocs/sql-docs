@@ -6151,7 +6151,7 @@ items:
       href: dma/dma-assess-ssis.md
     - name: Save and load assessments
       href: dma/dma-save-load-assessments.md
-    - name: Identify the right Azure SQL Database SKU
+    - name: Identify target Azure SQL SKU
       href: dma/dma-sku-recommend-sql-db.md
     - name: Upgrade SQL Server to a later version
       href: dma/dma-migrateonpremsql.md

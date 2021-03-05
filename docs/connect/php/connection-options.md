@@ -2,7 +2,7 @@
 title: "Connection Options"
 description: "This topic lists the options that are permitted in the associative array of sqlsrv_connect in the SQLSRV driver or the keywords that are permitted in the data source name the PDO_SQLSRV driver."
 ms.custom: ""
-ms.date: "01/29/2021"
+ms.date: "03/05/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -13,6 +13,7 @@ author: David-Engel
 ms.author: v-daenge
 ---
 # Connection Options
+
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 This topic lists the options that are permitted in the associative array (when using [sqlsrv_connect](sqlsrv-connect.md) in the SQLSRV driver) or the keywords that are permitted in the data source name (dsn) (when using [PDO::__construct](pdo-construct.md) in the PDO_SQLSRV driver).  
@@ -30,10 +31,10 @@ This topic lists the options that are permitted in the associative array (when u
 |ColumnEncryption|One of the following strings:<br /><br />**Enabled**<br /><br />**Disabled**<br /><br />A string identifying the attestation protocol and URL for attesting the enclave|Specifies whether the Always Encrypted feature is enabled or not. If an attestation protocol and URL are specified, Always Encrypted with Secure Enclaves is enabled, provided the other requirements are met as described [here](always-encrypted-secure-enclaves.md).|Disabled|  
 |ConnectionPooling|1 or **true** for connection pooling on.<br /><br />0 or **false** for connection pooling off.|Specifies whether the connection is assigned from a connection pool (1 or **true**) or not (0 or **false**).<sup>1</sup>|**true** (1)|  
 |ConnectRetryCount|Integer between 0 and 255 (inclusive)|The maximum number of attempts to reestablish a broken connection before giving up. By default, a single attempt is made to reestablish a connection when broken. A value of 0 means that no reconnection will be attempted.|1|  
-|ConnectRetryInterval|Integer between 1 and 60 (inclusive)|The time, in seconds, between attempts to reestablish a connection. The application will attempt to reconnect immediately upon detecting a broken connection, and will then wait `ConnectRetryInterval` seconds before trying again. This keyword is ignored if `ConnectRetryCount` is equal to 0.|1|  
+|ConnectRetryInterval|Integer between 1 and 60 (inclusive)|The time, in seconds, between attempts to reestablish a connection. The application will attempt to reconnect immediately upon detecting a broken connection, and will then wait `ConnectRetryInterval` seconds before trying again. This keyword is ignored if `ConnectRetryCount` is equal to 0.|10|  
 |Database|String|Specifies the name of the database in use for the connection being established<sup>2</sup>.|The default database for the login being used.|  
 |DecimalPlaces<br /><br />(not supported in the PDO_SQLSRV driver)|Integer between 0 and 4 (inclusive)|Specifies the decimal places when formatting fetched money values.<br /><br />This option works only when `FormatDecimals` is true. Any negative integer or value more than 4 will be ignored.|Default precision and scale|
-|Driver|String|Specifies the Microsoft ODBC driver used to communicate with SQL Server.<br /><br />Possible values are:<br />ODBC Driver 17 for SQL Server<br />ODBC Driver 13 for SQL Server<br />ODBC Driver 11 for SQL Server (Windows only).|When the Driver keyword is not specified, the Microsoft Drivers for PHP for SQL Server attempt to find supported Microsoft ODBC driver(s) in the system, starting with the latest version of ODBC and so on.| 
+|Driver|String|Specifies the Microsoft ODBC driver used to communicate with SQL Server.<br /><br />Possible values are:<br />ODBC Driver 17 for SQL Server<br />ODBC Driver 13 for SQL Server<br />ODBC Driver 11 for SQL Server (Windows only).|When the Driver keyword is not specified, the Microsoft Drivers for PHP for SQL Server attempt to find supported Microsoft ODBC driver(s) in the system, starting with the latest version of ODBC and so on.|
 |Encrypt|1 or **true** for encryption on.<br /><br />0 or **false** for encryption off.|Specifies whether the communication with SQL Server is encrypted (1 or **true**) or unencrypted (0 or **false**)<sup>3</sup>.|**false** (0)|  
 |Failover_Partner|String|Specifies the server and instance of the database's mirror (if enabled and configured) to use when the primary server is unavailable.<br /><br />There are restrictions to using `Failover_Partner` with `MultiSubnetFailover`. For more information, see [Support for High Availability, Disaster Recovery](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).<br /><br />This option is not supported on Linux or macOS because database mirroring is not supported by the ODBC driver on Linux or macOS. Instead, use Always On availability groups and set the `MultiSubnetFailover` and `TransparentNetworkIPResolution` options.|Not set.|
 |FormatDecimals<br /><br />(not supported in the PDO_SQLSRV driver)|1 or **true** to format fetched decimal strings.<br /><br />0 or **false** for default decimal formatting behavior.|Specifies whether to add leading zeroes to decimal strings when appropriate and enables the `DecimalPlaces` option for formatting money types. If left false, the default behavior of returning exact precision and omitting leading zeroes for values less than 1 is used.<br /><br />For more information, see [Formatting Decimal Strings and Money Values](formatting-decimals-sqlsrv-driver.md).|**false** (0)|
@@ -69,4 +70,5 @@ This topic lists the options that are permitted in the associative array (when u
 Many of the supported keys are ODBC connection string attributes. For information about ODBC connection strings, see [Using Connection String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 
 ## See Also  
+
 [Connecting to the Server](connecting-to-the-server.md)  

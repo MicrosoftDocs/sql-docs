@@ -1,6 +1,6 @@
 ---
 title: "Identify the right Azure SQL Database SKU for your on-premises database (Data Migration Assistant) | Microsoft Docs"
-description: Learn how to use Data Migration Assistant to identify the right Azure SQL Database SKU for your on-premises database
+description: Learn how to use Data Migration Assistant to identify the right Azure SQL Database or Azure SQL Managed Instance SKU for your on-premises database
 ms.custom: ""
 ms.date: "05/06/2019"
 ms.prod: sql
@@ -18,15 +18,10 @@ ms.author: rajpo
 
 # Identify the right Azure SQL Database/Managed Instance SKU for your on-premises database
 
-Migrating  databases to the cloud can be complicated, especially when trying to select the best Azure database target and SKU for your database. Our goal with the Database Migration Assistant (DMA) is to help address these questions and make your database migration experience easier by providing these SKU recommendations in a user-friendly output.
+Migrating  databases to the cloud can be complicated, especially when trying to select the best Azure SQL Database or SQL Managed Instance target and SKU for your database. Our goal with the Database Migration Assistant (DMA) is to help address these questions and make your database migration experience easier by providing these SKU recommendations in a user-friendly output.
 
-This article focuses on DMA's Azure SQL Database SKU recommendations feature. Azure SQL Database and Azure SQL Managed Instance have several deployment options, including:
 
-- Single database
-- Elastic pools
-- Managed Instance
-
-The SKU Recommendations feature allows you to identify both the minimum recommended Azure SQL Database single database or Azure SQL Managed Instance SKU based on performance counters collected from the computer(s) hosting your databases. The feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to bulk provision single databases and managed instances for all recommended databases. This functionality is currently available only via the Command Line Interface (CLI).
+The SKU Recommendations feature allows you to identify both the minimum recommended Azure SQL Database or Azure SQL Managed Instance SKU based on performance counters collected from the computer(s) hosting your databases. The feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to bulk provision single databases and managed instances for all recommended databases. This functionality is currently available only via the Command Line Interface (CLI).
 
 The following are instructions to help you determine the SKU recommendations and provision corresponding single database(s) or managed instance(s) in Azure using DMA.
 

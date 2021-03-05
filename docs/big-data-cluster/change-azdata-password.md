@@ -4,7 +4,7 @@ description: Update the `AZDATA_PASSWORD` manually
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 03/03/2021
+ms.date: 03/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -175,8 +175,8 @@ sudo yum install httpd-tools
     ```bash
     kubectl describe pods mgmtproxy-xxxxx  -n <namespace>
     ```   
-
-    For troubleshooting and further log collection, use the Azure Data CLI `[azdata bdc debug copy-logs](../azdata/reference/reference-azdata-bdc-debug.md)` command.   
+    
+    For troubleshooting and further log collection, use the Azure Data CLI [azdata bdc debug copy-logs](../azdata/reference/reference-azdata-bdc-debug.md) command.   
 
     
 8. Now login to Grafana using new password. 

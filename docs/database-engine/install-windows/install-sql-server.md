@@ -56,8 +56,7 @@ The download location for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.m
 * [Free version - latest](https://www.microsoft.com/sql-server/sql-server-downloads).
 * [Free version - others](https://www.microsoft.com/evalcenter/evaluate-sql-server).
 
-
-Other SQL Server components can be found here: 
+Other SQL Server components can be found here:
 
 * [All cumulative updates](https://sqlserverbuilds.blogspot.com/)
 * [SQL Server Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122). 

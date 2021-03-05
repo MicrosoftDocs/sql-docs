@@ -25,26 +25,26 @@ ms.author: chadam
 # sys.dm_hadr_automatic_seeding (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Returns a row for every automatic page-repair attempt on any availability database on an availability replica that is hosted for any availability group by the server instance. This view contains rows for the latest automatic page-repair attempts on a given primary or secondary database, with a maximum of 100 rows per database. As soon as a database reaches the maximum, the row for its next automatic page-repair attempt replaces one of the existing entries.
+On the primary replica, query sys.dm_hadr_automatic_seeding to check the status of the automatic seeding process. The view returns one row for each seeding process.  
   
-  The following table defines the meaning of the various columns:  
+The following table defines the meaning of the various columns:  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 
-|**start_time**|**datetime**|
-|**completion_time**|**datetime**|empty|  
-|**ag_id**|**uniqueidentifier**|ID .|  
-|**ag_db-id**|**uniqueidentifier**|empty |  
-|**ag_remote-replica_id**|**uniqueidentifier**|empty
-|**operation_id**|**uniqueidentifier**|empty |  
-|**is_source**|**bit**|empty|
-|**current_state**|**bit**|empty|
-|**performed_seeding**|**bit**|empty|
-|**failured_state**|**int**|empty|
-|**failured_state_desc**|**ncharvar**|empty|
-|**error_code**|**int**|empty|
-|**number_of_attempts**|**int**| empty|
+|**start_time**|**datetime**|The time the operation was initiated.|
+|**completion_time**|**datetime**|The time the operation completed (null if ongoing).|  
+|**ag_id**|**uniqueidentifier**|Unique Id for each Availability Group.|  
+|**ag_db-id**|**uniqueidentifier**|Unique Id for each database in the Available Group.|  
+|**ag_remote_replica_id**|**uniqueidentifier**|Unique Id for the other replica this seeding operation involves.|
+|**operation_id**|**uniqueidentifier**|Unique Id for the seeding operation.|  
+|**is_source**|**bit**|Gets a value indicating whether this replica is the source (primary) of the seeding operation.|
+|**current_state**|**bit**|Gets the current seeding state the operation is in.|
+|**performed_seeding**|**bit**|Gets a value indicating whether the primary send a seeding request message|
+|**failure_state**|**int**|Gets the reason the operation failed.|
+|**failure_state_desc**|**ncharvar**|Gets the description the operation failed.|
+|**error_code**|**int**|Gets any SQL error code encountered during seeding.|
+|**number_of_attempts**|**int**|Gets the number of times this seeding operation has been attempted.|
 
  
 

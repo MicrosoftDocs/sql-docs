@@ -25,15 +25,15 @@ ms.author: chadam
 # sys.dm_hadr_physical_seeding_stats (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Returns a row for every automatic page-repair attempt on any availability database on an availability replica that is hosted for any availability group by the server instance. This view contains rows for the latest automatic page-repair attempts on a given primary or secondary database, with a maximum of 100 rows per database. As soon as a database reaches the maximum, the row for its next automatic page-repair attempt replaces one of the existing entries.
-  
-  The following table defines the meaning of the various columns:  
+On the primary replica, query sys.dm_hadr_physical_seeding_stats DMV to see the physical statistics for each seeding process that is currently running.
+
+The following table defines the meaning of the various columns:  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**local_physical_seeding_id**|**uniqueidentifier**|ID of the database to which this row corresponds.|  
-|**remote_physical_seeding_id**|**uniqueidentifier**|ID of the file in which the page is located.|  
-|**local_database_id**|**int**|ID of the database.|  
+|**local_physical_seeding_id**|**uniqueidentifier**|empty|  
+|**remote_physical_seeding_id**|**uniqueidentifier**|empty|  
+|**local_database_id**|**int**|empty|  
 |**local_database_name**|**nvarchar**|empty |
 |**remote_machine_name**|**nvarchar**|empty |  
 |**role_desc**|**nvarchar**|empty |
@@ -49,8 +49,8 @@ ms.author: chadam
 |**failure_code**|**int**|empty |
 |**failure_message**|**nvarchar**|empty |
 |**failure_time_utc**|**datetime**|empty |
-|**is_compression_enabled**|**bit**|The status of the page-repair attempt:<br /><br /> 2 = Queued for request from partner.<br /><br /> 3 = Request sent to partner.<br /><br /> 4 = Page was successfully repaired.<br /><br /> 5 = The page could not be repaired during the last attempt/ Automatic page repair will attempt to repair the page again.|  
-|**modification_time**|**datetime**|Time of last change to the page status.|  
+|**is_compression_enabled**|**bit**|empty|
+|**datetime**|empty|  
   
 ## Security  
   

@@ -1,6 +1,6 @@
 ---
-description: "Example demonstrating use of Azure Key Vault provider v1.x with Always Encrypted enabled with Secure Enclaves"
-title: "Example demonstrating use of Azure Key Vault provider v1.x with Always Encrypted enabled with Secure Enclaves | Microsoft Docs"
+description: "Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with Secure Enclaves"
+title: "Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with Secure Enclaves | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/03/2021
 ms.prod: sql
@@ -13,13 +13,17 @@ ms.author: v-daenge
 ms.reviewer: v-jizho2
 ---
 
-# Example demonstrating use of Azure Key Vault provider v1.x with Always Encrypted enabled with Secure Enclaves
+# Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with Secure Enclaves
 
 [!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 [!INCLUDE [appliesto-netfx-netcore-netst-md](../../../includes/appliesto-netfx-netcore-netst-md.md)]
 
-This example demonstrates use of  the [`AzureKeyVaultProvider`](/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider) v1.x when accessing encrypted columns.
+## AzureKeyVaultProvider v2.0+
+
+[!code-csharp [Azure Key Vault Provider 2.0 with Enclave Example#1](~/../sqlclient/doc/samples/AzureKeyVaultProviderWithEnclaveProviderExample_2_0.cs#1)]
+
+## AzureKeyVaultProvider v1.x
 
 [!code-csharp [Azure Key Vault Provider with Enclave Example#1](~/../sqlclient/doc/samples/AzureKeyVaultProviderWithEnclaveProviderExample.cs#1)]
 
@@ -30,7 +34,6 @@ This example demonstrates use of  the [`AzureKeyVaultProvider`](/dotnet/api/micr
 
 ## See also
 
-- [Example demonstrating use of Azure Key Vault provider v2.0+ with Always Encrypted](azure-key-vault-2-0-example.md)
-- [Example demonstrating use of Azure Key Vault provider v2.0+ with Always Encrypted enabled with Secure Enclaves](azure-key-vault-enclave-2-0-example.md)
+- [Example demonstrating use of Azure Key Vault provider with Always Encrypted](azure-key-vault-example.md)
 - [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md)
 - [Using Always Encrypted with the Microsoft .NET Data Provider for SQL Server](sqlclient-support-always-encrypted.md)

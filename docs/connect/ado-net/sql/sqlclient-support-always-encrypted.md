@@ -339,8 +339,8 @@ For examples demonstrating performing encryption/decryption with the `Microsoft.
 
 | Version | Links to Examples
 | ------- | ---------------------------- |
-| **2.0+** | [Azure Key Vault working with Always Encrypted v2](azure-key-vault-2-0-example.md) <br/>[Azure Key Vault working with Always Encrypted with Secure Enclaves v2](azure-key-vault-enclave-2-0-example.md) |
-| **1.x** | [Azure Key Vault working with Always Encrypted v1](azure-key-vault-example.md) <br/>[Azure Key Vault working with Always Encrypted with Secure Enclaves v1](azure-key-vault-enclave-example.md) |
+| **2.0+** | [Azure Key Vault working with Always Encrypted v2](azure-key-vault-example.md#AzureKeyVaultProvider-v2_0+) <br/>[Azure Key Vault working with Always Encrypted with Secure Enclaves v2](azure-key-vault-enclave-example.md#AzureKeyVaultProvider-v2_0+) |
+| **1.x** | [Azure Key Vault working with Always Encrypted v1](azure-key-vault-example.md#AzureKeyVaultProvider-v1_x) <br/>[Azure Key Vault working with Always Encrypted with Secure Enclaves v1](azure-key-vault-enclave-example.md#AzureKeyVaultProvider-v1_x) |
 
 
 ### Implementing a custom column master key store provider

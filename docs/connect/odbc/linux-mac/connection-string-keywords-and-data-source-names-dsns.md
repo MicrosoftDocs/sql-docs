@@ -1,5 +1,5 @@
 ---
-title: "Connecting using ODBC"
+title: "Connecting from Linux or macOS"
 description: "Learn how to create a connection to a database from Linux or macOS using the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
 ms.date: 09/10/2020
@@ -9,15 +9,14 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "data source names"
-  - "connection string keywords"
-  - "DSNs"
+  - "connect to linux"
+  - "configure odbc.ini"
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
 ---
 
-# Connecting to SQL Server
+# Connecting from Linux or macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 

@@ -1,7 +1,7 @@
 ---
 title: "Introducing Data Virtualization with PolyBase"
-description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Hadoop and Azure Blob Storage.
-ms.date: 03/04/2021
+description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Hadoop and Azure blob storage.
+ms.date: 03/05/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: "overview"
@@ -35,17 +35,17 @@ PolyBase enables your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 A key use case for data virtualization with the PolyBase feature is to allow the data to stay in its original location and format. You can virtualize the external data through the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, so that it can be queried in place like any other table in SQL Server. This process minimizes the need for ETL processes for data movement. This data virtualization scenario is possible with the use of PolyBase connectors.
 
 > [!NOTE]
-> Some functionality of the PolyBase feature is in private preview for Azure SQL managed instances, including the ability to query external data (Parquet files) in Azure Data Lake Service (ADLS) Gen2. Private preview includes access to client libraries and documentation for testing purposes that are not yet available publicly. If you are interested and ready to invest some time in trying out the functionalities and sharing your feedback and questions, please review the [Azure SQL Managed Instance PolyBase Private Preview Guide](https://sqlmipg.blob.core.windows.net/azsqlpolybaseshare/Azure_SQL_Managed_Instance_Polybase_Private_Preview_Onboarding_Guide.pdf).
+> Some functionality of the PolyBase feature is in private preview for **Azure SQL managed instances**, including the ability to query external data (Parquet files) in Azure Data Lake Service (ADLS) Gen2. Private preview includes access to client libraries and documentation for testing purposes that are not yet available publicly. If you are interested and ready to invest some time in trying out the functionalities and sharing your feedback and questions, please review the [Azure SQL Managed Instance PolyBase Private Preview Guide](https://sqlmipg.blob.core.windows.net/azsqlpolybaseshare/Azure_SQL_Managed_Instance_Polybase_Private_Preview_Onboarding_Guide.pdf).
 
 ### PolyBase connectors
 
  The PolyBase feature provides the connection to the external data source.
 
-* [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduced PolyBase with support for connections to Hadoop and Azure Blob Storage.
+![PolyBase logical](../../relational-databases/polybase/media/polybase-logical.png "PolyBase logical")
+
+* [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduced PolyBase with support for connections to Hadoop and Azure blob storage.
 * [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] introduced additional connectors, including SQL Server, Oracle, Teradata, and MongoDB.
 * Other unstructured non-relational tables are also supported with PolyBase, such as delimited text files. 
-
-![PolyBase logical](../../relational-databases/polybase/media/polybase-logical.png "PolyBase logical")
 
  Examples of external connectors include:
 
@@ -53,6 +53,9 @@ A key use case for data virtualization with the PolyBase feature is to allow the
 - [Oracle](polybase-configure-oracle.md)
 - [Teradata](polybase-configure-teradata.md)
 - [MongoDB](polybase-configure-mongodb.md)
+- [Hadoop](polybase-configure-hadoop.md)*
+
+\* PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH).
 
  To use PolyBase in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
@@ -67,12 +70,12 @@ PolyBase provides these same functionalities for the following SQL products from
 
 - [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions (Windows only)
 - [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later versions (Linux)
-- Analytics Platform System (formerly Parallel Data Warehouse)
+- SQL Server [!INCLUDE[pdw](../../includes/sspdw-md.md)], hosted in the Analytics Platform System 
 - Azure Synapse Analytics
 
 ### Azure integration
 
-With the underlying help of PolyBase, T-SQL queries can also import and export data from Azure Blob Storage. Further, PolyBase enables Azure Synapse Analytics to import and export data from Azure Data Lake Store, and from Azure Blob Storage.
+With the underlying help of PolyBase, T-SQL queries can also import and export data from Azure blob storage. Further, PolyBase enables Azure Synapse Analytics to import and export data from Azure Data Lake Store, and from Azure blob storage.
 
 ## Why use PolyBase?
 
@@ -91,11 +94,11 @@ PolyBase enables the following scenarios in [!INCLUDE[ssNoVersion](../../include
 
 - **Query data stored in Hadoop from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or PDW.** Users are storing data in cost-effective distributed and scalable systems, such as Hadoop. PolyBase makes it easy to query the data by using T-SQL.
 
-- **Query data stored in Azure Blob Storage.** Azure blob storage is a convenient place to store data for use by Azure services. PolyBase makes it easy to access the data by using T-SQL.
+- **Query data stored in Azure blob storage.** Azure blob storage is a convenient place to store data for use by Azure services. PolyBase makes it easy to access the data by using T-SQL.
 
-- **Import data from Hadoop, Azure Blob Storage, or Azure Data Lake Store.** Leverage the speed of Microsoft SQL's columnstore technology and analysis capabilities by importing data from Hadoop, Azure Blob Storage, or Azure Data Lake Store into relational tables. There is no need for a separate ETL or import tool.
+- **Import data from Hadoop, Azure blob storage, or Azure Data Lake Store.** Leverage the speed of Microsoft SQL's columnstore technology and analysis capabilities by importing data from Hadoop, Azure blob storage, or Azure Data Lake Store into relational tables. There is no need for a separate ETL or import tool.
 
-- **Export data to Hadoop, Azure Blob Storage, or Azure Data Lake Store.** Archive data to Hadoop, Azure Blob Storage, or Azure Data Lake Store to achieve cost-effective storage and keep it online for easy access.
+- **Export data to Hadoop, Azure blob storage, or Azure Data Lake Store.** Archive data to Hadoop, Azure blob storage, or Azure Data Lake Store to achieve cost-effective storage and keep it online for easy access.
 
 - **Integrate with BI tools.** Use PolyBase with Microsoft's business intelligence and analysis stack, or use any third-party tools that are compatible with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -110,7 +113,7 @@ PolyBase enables the following scenarios in [!INCLUDE[ssNoVersion](../../include
 Before using PolyBase, you must [install PolyBase on Windows](polybase-installation.md) or [install PolyBase on Linux](polybase-linux-setup.md), and [enable PolyBase in sp_configure](polybase-installation.md#enable) if necessary. Then see the following configuration guides depending on your data source:
 
 - [Hadoop](polybase-configure-hadoop.md)
-- [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
+- [Azure blob storage](polybase-configure-azure-blob-storage.md)
 - [SQL Server](polybase-configure-sql-server.md)
 - [Oracle](polybase-configure-oracle.md)
 - [Teradata](polybase-configure-teradata.md)

@@ -1,7 +1,7 @@
 ---
 title: "Access external data: MongoDB - PolyBase"
 description: The article explains how to use PolyBase on a SQL Server instance to query external data in MongoDB. Create external tables to reference the external data.
-ms.date: 12/13/2019
+ms.date: 03/05/2021
 ms.metadata: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase

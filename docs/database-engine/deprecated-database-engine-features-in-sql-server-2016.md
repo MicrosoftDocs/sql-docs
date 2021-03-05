@@ -1,9 +1,9 @@
 ---
-title: "Deprecated Database Engine Features | Microsoft Docs"
+title: "Deprecated Database Engine Features"
 titleSuffix: "SQL Server 2016"
 description: Find out about deprecated database engine features that are still available in SQL Server 2016 (13.x), but shouldn't be used in new applications.
 ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
+ms.date: "02/11/2021"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -13,25 +13,24 @@ helpviewer_keywords:
   - "deprecated features [SQL Server]"
   - "Database Engine [SQL Server], backward compatibility"
   - "deprecation [SQL Server], feature list"
-ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Deprecated Database Engine Features in SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
-This topic describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]. Deprecated features should not be used in new applications.  
+This article describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]. Deprecated features should not be used in new applications.  
   
 When a feature is marked deprecated, it means:
--  The feature is in maintenance mode only. No new changes will be done, including those related to inter-operability with new features.
--  We strive not to remove a deprecated feature from future releases to make upgrades easier. However, under rare situations, we may choose to permanently remove the feature from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if it limits future innovations.
--  For new development work, we do not recommend using deprecated features.      
+- The feature is in maintenance mode only. No new changes will be done, including those related to addressing inter-operability with new features.
+- We strive not to remove a deprecated feature from future releases to make upgrades easier. However, under rare situations, we may choose to permanently discontinue (remove) the feature from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] if it limits future innovations.
+- For new development work, do not use deprecated features. For existing aplications, plan to modify applications that currently use these features as soon as possible.     
 
 For [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], see [Deprecated Database Engine Features in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md).
 
 You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object performance counter and trace events. For more information, see [Use SQL Server Objects](../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
-The value of these counters are also available by executing the following statement:  
+The value of these counters is also available by executing the following statement:  
   
 ```sql  
 SELECT * FROM sys.dm_os_performance_counters   
@@ -39,7 +38,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ```  
   
 ## Features deprecated in the next version of SQL Server
- The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features will not be supported in the next version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Do not use these features in new development work, and modify applications that currently use these features as soon as possible. The **Feature name** value appears in trace events as the ObjectName and in performance counters and `sys.dm_os_performance_counters` as the instance name. The **Feature ID** value appears in trace events as the ObjectId.  
+ The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features will not be supported in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Do not use these features in new development work, and modify applications that currently use these features as soon as possible. The **Feature name** value appears in trace events as the ObjectName and in performance counters and `sys.dm_os_performance_counters` as the instance name. The **Feature ID** value appears in trace events as the ObjectId.  
   
 |Category|Deprecated feature|Replacement|Feature name|Feature ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
@@ -61,6 +60,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Compatibility levels|sp_dbcmptlevel|ALTER DATABASE ... SET COMPATIBILITY_LEVEL. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
 |Compatibility levels|Database compatibility level 110 and 120.|Plan to upgrade the database and application for a future release. However, we will continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Database compatibility level 110<br /><br /> Database compatibility level 120||  
 |XML|Inline XDR Schema Generation|The XMLDATA directive to the FOR XML option is deprecated. Use XSD generation in the case of RAW and AUTO modes. There is no replacement for the XMLDATA directive in EXPLICT mode.|XMLDATA|181|  
+|XML|sys.sp_db_selective_xml_index|ALTER INDEX … DISABLE<BR><BR>For more information, see [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md).|[sys.sp_db_selective_xml_index](../relational-databases/system-stored-procedures/sp-db-selective-xml-index-transact-sql.md)|
 |Backup and restore|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE or LOG TO TAPE|235|  
 |Backup and restore|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
 |Backup and restore|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
@@ -169,4 +169,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 ## See Also  
  [Discontinued Database Engine Functionality in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)     
- [Deprecated Database Engine Features in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)
+ [Deprecated Database Engine Features in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)  

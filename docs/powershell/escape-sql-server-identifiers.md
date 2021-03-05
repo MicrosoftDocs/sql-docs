@@ -4,7 +4,6 @@ description: Some characters that can appear in SQL Server-delimited identifiers
 ms.prod: sql
 ms.technology: sql-server-powershell
 ms.topic: conceptual
-ms.assetid: 8a73e945-daa6-4e5d-93da-10f000f1f3a2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier

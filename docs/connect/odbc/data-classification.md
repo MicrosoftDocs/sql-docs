@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "07/26/2018"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 

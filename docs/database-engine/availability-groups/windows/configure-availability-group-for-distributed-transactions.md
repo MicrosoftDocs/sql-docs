@@ -138,9 +138,8 @@ When a database is in an availability group, the read-write copy of the database
 
 >[!IMPORTANT]
 >Note that the DTC has a limit of 32 enlistments per distributed transaction. Because each database within an availability group enlists with the DTC separately, if your transaction involves more than 32 databases, you may get the following error when [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] attempts to enlist the 33rd database:
->```
->Enlist operation failed: 0x8004d101(XACT_E_TOOMANY_ENLISTMENTS). SQL Server could not register with Microsoft Distributed Transaction Coordinator (MS DTC) as a resource manager for this transaction. The transaction may have been stopped by the client or the resource manager.
->```
+>
+>`Enlist operation failed: 0x8004d101(XACT_E_TOOMANY_ENLISTMENTS). SQL Server could not register with Microsoft Distributed Transaction Coordinator (MS DTC) as a resource manager for this transaction. The transaction may have been stopped by the client or the resource manager.`
 
 For more detail on distributed transactions in [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)], see [Distributed transactions](#distTran)
 

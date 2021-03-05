@@ -7,6 +7,9 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
+ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
+author: cawrites
+ms.author: chadam
 f1_keywords: 
   - "dm_hadr_physical_seeding_stats"
   - "sys.dm_hadr_physical_seeding_stats
@@ -18,9 +21,9 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_hadr_physical_seeding_stats
   - "sys.dm_hadr_physical_seeding_stats dynamic management view"
-ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
-author: cawrites
-ms.author: chadam
+
+
+
 ---
 # sys.dm_hadr_physical_seeding_stats (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

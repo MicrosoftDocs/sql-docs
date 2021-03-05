@@ -133,7 +133,7 @@ additionalContent:
     - title: Recent customer case studies
       items:
         # Card
-        - title: Ferguson (US)
+        - title: Ferguson (United States)
           summary: Largest US plumbing wholesaler uses Azure Arc SQL Managed Instance to extend Azure services on-premises.
           url: https://customers.microsoft.com/en-us/story/844232-ferguson-enterprises-retailers-azure-arc
         # Card

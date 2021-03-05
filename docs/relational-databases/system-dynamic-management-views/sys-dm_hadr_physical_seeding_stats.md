@@ -51,7 +51,7 @@ The following table defines the meaning of the various columns:
 |**failure_message**|**nvarchar**|empty |
 |**failure_time_utc**|**datetime**|empty |
 |**is_compression_enabled**|**bit**|empty|
-|**datetime**|empty|  
+|**datetime**|**datatime**|empty|  
   
 ## Security  
   

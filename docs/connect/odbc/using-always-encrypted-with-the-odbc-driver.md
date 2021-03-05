@@ -70,7 +70,7 @@ Beginning with version 17.4, the driver supports Always Encrypted with secure en
 - `<attestation URL>` - specifies an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
 
   - If you're using [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](../../relational-databases/security/encryption/always-encrypted-enclaves.md?view=sql-server-ver15#secure-enclave-attestation).
+  - If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](../../relational-databases/security/encryption/always-encrypted-enclaves.md#secure-enclave-attestation).
 
 Examples of connection strings enabling enclave computations for a database connection:
 
@@ -80,7 +80,7 @@ Examples of connection strings enabling enclave computations for a database conn
    Driver=ODBC Driver 17 for SQL Server;Server=myServer.myDomain;Database=myDataBase;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://myHGSServer.myDomain/Attestation
    ```
 
-- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] :
+- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]:
   
    ```
    Driver=ODBC Driver 17 for SQL Server;Server=myServer.database.windows.net;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Encrypt=yes;ColumnEncryption=SGX-AAS,https://myAttestationProvider.uks.attest.azure.net/attest/SgxEnclave
@@ -383,13 +383,13 @@ To control the Always Encrypted behavior of a statement, call SQLSetStmtAttr to 
 |`SQL_CE_RESULTSETONLY` (1)|Decryption Only. Result sets and return values are decrypted, and parameters are not encrypted|
 |`SQL_CE_ENABLED` (3) | Always Encrypted is enabled and used for both parameters and results|
 
-New statement handles created from a connection with Always Encrypted enabled default to SQL_CE_ENABLED. Those handles created from a connection with it disabled default to SQL_CE_DISABLED (and it is not possible to enable Always Encrypted on them.)
+New statement handles created from a connection with Always Encrypted enabled default to SQL_CE_ENABLED. Handles created from a connection with it disabled default to SQL_CE_DISABLED (and it is not possible to enable Always Encrypted on them.)
 
 If most of the queries of a client application access encrypted columns, the following points are recommended:
 
 - Set the `ColumnEncryption` connection string keyword to `Enabled`.
 
-- Set the `SQL_SOPT_SS_COLUMN_ENCRYPTION` attribute to `SQL_CE_DISABLED` on statements that do not access any encrypted columns. This setting will disable both calling `sys.sp_describe_parameter_encryption` as well as attempts to decrypt any values in the result set.
+- Set the `SQL_SOPT_SS_COLUMN_ENCRYPTION` attribute to `SQL_CE_DISABLED` on statements that do not access any encrypted columns. This setting will disable both calling `sys.sp_describe_parameter_encryption` and attempts to decrypt any values in the result set.
 
 - Set the `SQL_SOPT_SS_COLUMN_ENCRYPTION` attribute to `SQL_CE_RESULTSETONLY` on statements that do not have any parameters requiring encryption, but retrieve data from encrypted columns. This setting will disable calling `sys.sp_describe_parameter_encryption` and parameter encryption. Results containing encrypted columns will continue to be decrypted.
 
@@ -560,7 +560,7 @@ The driver attempts to load the library identified by the ValuePtr parameter usi
 
 #### Getting the List of Loaded Providers
 
-Getting this connection attribute enables a client application to determine the keystore providers currently loaded in the driver (including those built-in.) This process can only be performed after connecting.
+Getting this connection attribute enables a client application to determine the keystore providers currently loaded in the driver (including those providers built-in.) This process can only be performed after connecting.
 
 ```cpp
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
@@ -667,7 +667,7 @@ Use of the [SQL Bulk Copy functions](../../relational-databases/native-client-od
 
 - To insert and retrieve plaintext, and let the driver transparently perform encryption and decryption as required, setting `ColumnEncryption` to `Enabled` is sufficient. The functionality of the BCP API is otherwise unchanged.
 
-- To insert ciphertext in varbinary(max) form (for example, as retrieved above), set the `BCPMODIFYENCRYPTED` option to TRUE and perform a BCP IN operation. In order for the resulting data to be decryptable, ensure that the destination column's CEK is the same CEK as that from which the ciphertext was originally obtained.
+- To insert ciphertext in varbinary(max) form (for example, as retrieved above), set the `BCPMODIFYENCRYPTED` option to TRUE and perform a BCP IN operation. In order for the resulting data to be decrypted, ensure that the destination column's CEK is the same CEK as the one from which the ciphertext was originally obtained.
 
 When using the **bcp** utility: To control the `ColumnEncryption` setting, use the -D option and specify a DSN containing the desired value. To insert ciphertext, ensure the `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` setting of the user is enabled.
 
@@ -677,7 +677,7 @@ The following table provides a summary of the actions when operating on an encry
 |----------------|-------------|-----------|
 |`Disabled`|OUT (to client)|Retrieves ciphertext. The observed datatype is **varbinary(max)**.|
 |`Enabled`|OUT (to client)|Retrieves plaintext. The driver will decrypt the column data.|
-|`Disabled`|IN (to server)|Inserts ciphertext. This setting is intended for opaquely moving encrypted data without requiring it to be decrypted. The operation will fail if the `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` option is not set on the user, or BCPMODIFYENCRYPTED is not set on the connection handle. See below for more information.|
+|`Disabled`|IN (to server)|Inserts ciphertext. This setting is intended for opaquely moving encrypted data without requiring it to be decrypted. The operation will fail if the `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` option is not set on the user, or BCPMODIFYENCRYPTED is not set on the connection handle. For more information, see below.|
 |`Enabled`|IN (to server)|Inserts plaintext. The driver will encrypt the column data.|
 
 ### The BCPMODIFYENCRYPTED option
@@ -702,10 +702,10 @@ For more information, see [Migrate Sensitive Data Protected by Always Encrypted]
 |Name|Type|Description|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Pre-connect|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Disable Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Enable Always Encrypted<br> pointer to *attestation protocol*,*attestation URL* string -- (version 17.4 and later) enable with secure enclave|
-|`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Post-connect|[Set] Attempt to load CEKeystoreProvider<br>[Get] Return a CEKeystoreProvider name|
-|`SQL_COPT_SS_CEKEYSTOREDATA`|Post-connect|[Set] Write data to CEKeystoreProvider<br>[Get] Read data from CEKeystoreProvider|
-|`SQL_COPT_SS_CEKCACHETTL`|Post-connect|[Set] Set the CEK cache TTL<br>[Get] Get the current CEK cache TTL|
-|`SQL_COPT_SS_TRUSTEDCMKPATHS`|Post-connect|[Set] Set the trusted CMK paths pointer<br>[Get] Get the current trusted CMK paths pointer|
+|`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Post-connect|[Set] - Attempt to load CEKeystoreProvider<br>[Get] - Return a CEKeystoreProvider name|
+|`SQL_COPT_SS_CEKEYSTOREDATA`|Post-connect|[Set] - Write data to CEKeystoreProvider<br>[Get] - Read data from CEKeystoreProvider|
+|`SQL_COPT_SS_CEKCACHETTL`|Post-connect|[Set] - Set the CEK cache TTL<br>[Get] - Get the current CEK cache TTL|
+|`SQL_COPT_SS_TRUSTEDCMKPATHS`|Post-connect|[Set] - Set the trusted CMK paths pointer<br>[Get] - Get the current trusted CMK paths pointer|
 
 ### Statement Attributes
 

@@ -2,7 +2,7 @@
 description: "sys.dm_exec_external_work (Transact-SQL)"
 title: "sys.dm_exec_external_work (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 11/04/2019
+ms.date: 03/05/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.reviewer: ""

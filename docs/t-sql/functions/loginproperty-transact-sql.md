@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "BadPasswordCount_TSQL"
   - "BadPasswordTime_TSQL"
@@ -33,9 +33,10 @@ helpviewer_keywords:
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # LOGINPROPERTY (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Returns information about login policy settings.  
   

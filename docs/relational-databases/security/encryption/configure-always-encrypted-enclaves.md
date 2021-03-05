@@ -27,7 +27,7 @@ For tutorials that show you how to quickly get started with Always Encrypted wit
 
 Before you can use Always Encrypted with secure enclaves, you need to configure your environment to ensure the secure enclave is available for the database. You also need to set up [enclave attestation](always-encrypted-enclaves.md#secure-enclave-attestation). 
 
-The process for setting up your environment depends on whether you're using [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] or [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
+The process for setting up your environment depends on whether you're using [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] or [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ### Set up the secure enclave and attestation in [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
@@ -40,9 +40,9 @@ For details, see the following articles:
 ### Set up the secure enclave and attestation in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]
 
 For details, see the following articles:
-- [Plan for Intel SGX enclaves and attestation in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-plan)
-- [Enable Intel SGX for your Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-enable-sgx)
-- [Configure Azure Attestation for your Azure SQL Database logical server](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-configure-attestation)
+- [Plan for Intel SGX enclaves and attestation in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-plan)
+- [Enable Intel SGX for your Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx)
+- [Configure Azure Attestation for your Azure SQL Database logical server](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation)
 
 ## Manage keys for Always Encrypted with secure enclaves
 See the following articles for details:

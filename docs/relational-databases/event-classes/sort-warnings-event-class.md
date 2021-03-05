@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Sort Warnings event class"
 ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72

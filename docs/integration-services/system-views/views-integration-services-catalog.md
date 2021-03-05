@@ -18,9 +18,6 @@ ms.author: chugu
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-
   This section describes the [!INCLUDE[tsql](../../includes/tsql-md.md)] views that are available for administering [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects that have been deployed to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Query the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] views to inspect objects, settings, and operational data that are stored in the **SSISDB** catalog.  

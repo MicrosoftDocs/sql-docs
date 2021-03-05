@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "07/03/2019"
 ms.service: sql-data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
@@ -23,6 +23,8 @@ To understand tables and how to use them, see [Tables in [!INCLUDE[ssSDW](../../
 
 > [!NOTE]
 >  Discussions about [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] in this article apply to both [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] unless otherwise noted.
+
+[!INCLUDE[synapse-analytics-od-supported-tables](../../includes/synapse-analytics-od-supported-tables.md)]
 
  ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 

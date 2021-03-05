@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "MSSQL_ENG021076 error"
 ms.assetid: 612e5c59-ba3e-49c3-a3df-56bac3d850a2

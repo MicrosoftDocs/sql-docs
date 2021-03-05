@@ -5,7 +5,7 @@ titleSuffix: Azure SQL Database
 ms.date: "03/03/2017"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_db_objects_impacted_on_version_change_TSQL"
   - "dm_db_objects_impacted_on_version_change"

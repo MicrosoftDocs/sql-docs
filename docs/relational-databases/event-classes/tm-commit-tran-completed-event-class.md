@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "TM: Commit Tran Completed event class"
 ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa

@@ -35,7 +35,7 @@ To perform cryptographic operations, a tool you use to deploy a DACPAC needs to 
 ::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
-> If you are using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can run cryptographic operations in-place, without moving data out of the database. See [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md). Note that in-place encryption is not available for DACPAC deployments.
+> If you are using [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] and your SQL Server instance is configured with a secure enclave, you can run cryptographic operations in-place, without moving data out of the database. See [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md). Note that in-place encryption is not available for DACPAC deployments.
 
 ::: moniker-end
 

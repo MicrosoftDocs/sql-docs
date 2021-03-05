@@ -76,7 +76,7 @@ To use a dedicated server for extraction, transformation, and loading (ETL) proc
 
 ### Configuring SSIS event logging
 
-By default, in a new installation, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is configured not to log events that are related to the running of packages to the Application event log. This setting prevents too many event log entries when you use the Data Collector feature of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. The events that aren't logged are EventID 12288, "Package started," and EventID 12289, "Package finished successfully." To log these events to the Application event log, open the registry for editing. Then, in the registry, locate the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS node, and change the DWORD value of the LogPackageExecutionToEventLog setting from 0 to 1.
+By default, in a new installation, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is configured not to log events that are related to the running of packages to the Application event log. This setting prevents too many event log entries when you use the Data Collector feature of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. The events that aren't logged are EventID 12288, "Package started," and EventID 12289, "Package finished successfully." To log these events to the Application event log, open the registry for editing. Then, in the registry, locate the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS node, and change the DWORD value of the LogPackageExecutionToEventLog setting from 0 to 1.
 
 ## Install additional components for Integration Services
 

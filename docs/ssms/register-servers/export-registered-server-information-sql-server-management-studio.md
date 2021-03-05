@@ -23,7 +23,7 @@ ms.date: 03/01/2017
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This topic describes how to save and export registered server information in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]and distribute it to other employees or servers. You can use this export feature to present a consistent user interface on multiple computers.  
+This topic describes how to save and export registered server information in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]and distribute it to other employees or servers. You can use this export feature to present a consistent user interface on multiple computers.  
   
  Exporting and then importing Registered Server files lets you easily configure several computers with the same servers in Registered Servers. This is useful when managing a large number of servers from computers in several locations, or when you want to configure a less experienced user with basic connection settings.  
   

@@ -6,7 +6,7 @@ ms.date: "12/18/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_db_incremental_stats_properties"
   - "sys.dm_db_incremental_stats_properties_TSQL"

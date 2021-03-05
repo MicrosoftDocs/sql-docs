@@ -1,7 +1,7 @@
 ---
-title: "Install PolyBase on Windows | Microsoft Docs"
+title: "Install PolyBase on Windows"
 description: Learn to install PolyBase as a single node or PolyBase scale-out group. You can use an installation wizard or a command prompt. Finally, enable PolyBase.
-ms.date: 09/24/2018
+ms.date: 02/05/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -155,11 +155,12 @@ After installation, PolyBase must be enabled to access its features. Use the fol
 exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
 RECONFIGURE;
 ```
-
-
 ## Post-installation notes  
 
 PolyBase installs three user databases, DWConfiguration, DWDiagnostics, and DWQueue. These databases are for PolyBase use. Don't alter or delete them.  
+
+> [!CAUTION]
+> Adding PolyBase to an existing installation of SQL Server will install the feature at the version level of the installation media, which may be behind the version level other features of SQL Server. This may result in unexpected behavior or errors. Always follow up installing the PolyBase feature by bringing the new feature up to the same version level. Install service packs (SPs), cumulative updates (CUs), and/or general distribution releases (GDRs) as needed. To determine the version of PolyBase, see [Determine the version, edition, and update level of SQL Server and its components](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#polybase).
    
 ### <a id="confirminstall"></a> How to confirm installation  
 

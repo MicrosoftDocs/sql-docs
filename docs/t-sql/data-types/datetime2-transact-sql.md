@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "datetime2"
   - "datetime2_TSQL"
@@ -196,11 +196,11 @@ SELECT
   
 |Data type|Output|  
 |---|---|
-|**time**|12:35:29. 1234567|  
+|**time**|12:35:29.1234567|  
 |**date**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  
-|**datetime2**|2007-05-08 12:35:29. 1234567|  
+|**datetime2**|2007-05-08 12:35:29.1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
 ## See also

@@ -5,9 +5,9 @@ ms.custom: ""
 ms.date: "09/30/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.technology: connectivity
-ms.topic: "reference"
+ms.topic: reference
 apiname: 
   - "ISSDataClassification"
 apitype: "COM"

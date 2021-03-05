@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "GetDataProviderDSO Method [ADO]"
 ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50

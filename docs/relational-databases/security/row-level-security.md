@@ -154,7 +154,7 @@ It is possible to cause information leakage through the use of carefully crafted
   
 - **Filestream:** RLS is incompatible with Filestream.  
   
-- **PolyBase:** RLS is supported with Polybase external tables for Azure Synapse only.
+- **PolyBase:** RLS is supported with external tables in Azure Synapse and SQL Server 2019 CU1 or higher. 
 
 - **Memory-Optimized Tables:** The inline table-valued function used as a security predicate on a memory-optimized table must be defined using the `WITH NATIVE_COMPILATION` option. With this option, language features not supported by memory-optimized tables will be banned and the appropriate error will be issued at creation time. For more information, see the **Row-Level Security in Memory Optimized Tables** section in [Introduction to Memory-Optimized Tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -297,7 +297,7 @@ This short example creates three users and an external table with six rows. It t
 ### Prerequisites
 
 1. You must have a dedicated SQL pool. See [Create a dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
-1. The server hosting your dedicated SQL pool must be registered with AAD and you must have an Azure storage account with Storage Blog Contributor permissions. Follow the steps [here](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
+1. The server hosting your dedicated SQL pool must be registered with AAD and you must have an Azure storage account with Storage Blog Data Contributor permissions. Follow the steps [here](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
 1. Create a file system for your Azure Storage account. Use Storage Explorer to view your storage account. Right click on containers and select *Create file system*.  
 
 Once you have the prerequisites in place, create three user accounts that will demonstrate different access capabilities.

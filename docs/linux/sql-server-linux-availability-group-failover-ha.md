@@ -44,17 +44,18 @@ To manually fail over an AG resource named *ag_cluster* to cluster node named *n
 - **RHEL/Ubuntu example**
 
    ```bash
-   sudo pcs resource move ag_cluster-master nodeName2 --master
+   sudo pcs resource move ag_cluster-master nodeName2 --master --lifetime=30S
    ```
 
 - **SLES example**
 
    ```bash
-   crm resource migrate ag_cluster nodeName2
+   crm resource migrate ag_cluster nodeName2 --lifetime=30S
    ```
 
 >[!IMPORTANT]
->After you manually fail over a resource, you need to remove a location constraint that is automatically added.
+>When you use the --lifetime option, the location constraint created to move the resource is temporary in nature and is valid for 30 seconds in previous example.
+>Please note that the temporary constraint is not cleared automatically and may show up in the constraint list, but as an expired constraint. Expired constraints do not affect the failover behavior of pacemaker cluster. If you do not use the --lifetime option when moving the resource, you should remove a location constraint that is automatically added as noted below.
 
 #### <a name="removeLocConstraint"> </a> Step 2. Remove the location constraint
 

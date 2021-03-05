@@ -27,6 +27,9 @@ Download and install the latest .NET Framework release and macOS and Linux previ
 
 For details about the latest release, see the [release notes](release-notes-sqlpackage.md). To download additional languages, see the [Available Languages](#available-languages) section.
 
+
+An evergreen link ([https://aka.ms/sqlpackage-linux](https://aka.ms/sqlpackage-linux)) is available that points to the current version of sqlpackage for [Linux .NET Core](#get-sqlpackage-net-core-for-linux), which can be used in automating environments with the latest sqlpackage.
+
 ## DacFx
 SqlPackage is a command-line interface for the DacFx framework, exposing some of the public DacFx APIs. DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) is a related mechanism for integrating database deployment into your application pipeline.  The DacServices API is available in a package through NuGet, [Microsoft.SqlServer.DACFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DACFx).  The current DacFx version is 150.4897.1.
 
@@ -85,7 +88,7 @@ This release of sqlpackage includes a standard Windows installer experience, and
 
 ## Get sqlpackage .NET Core for Linux
 
-1. Download [sqlpackage for Linux](https://go.microsoft.com/fwlink/?linkid=2143497) by using one of the installers or the tar.gz archive:
+1. Download [sqlpackage for Linux](https://go.microsoft.com/fwlink/?linkid=2143497) by using one of the installers or the tar.gz archive.
 2. To extract the file and launch sqlpackage, open a new Terminal window and type the following commands:
 
    ```bash

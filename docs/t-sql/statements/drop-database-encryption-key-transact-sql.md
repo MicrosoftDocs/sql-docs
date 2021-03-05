@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP DATABASE ENCRYPTION KEY"
   - "DROP_DATABASE_ENCRYPTION_KEY_TSQL"
@@ -36,7 +36,9 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 ```syntaxsql  
 DROP DATABASE ENCRYPTION KEY  
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Remarks

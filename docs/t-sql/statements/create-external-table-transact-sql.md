@@ -1,13 +1,13 @@
 ---
 description: "CREATE EXTERNAL TABLE (Transact-SQL)"
-title: "CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
+title: "CREATE EXTERNAL TABLE (Transact-SQL)"
 ms.custom: ""
-ms.date: 01/27/2020
+ms.date: 02/12/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE_EXTERNAL_TABLE"
   - "CREATE EXTERNAL TABLE"
@@ -18,14 +18,13 @@ helpviewer_keywords:
   - "External"
   - "External, table create"
   - "PolyBase, external table"
-ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL TABLE (Transact-SQL)
 
-Creates an external table
+Creates an external table.
 
 This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 

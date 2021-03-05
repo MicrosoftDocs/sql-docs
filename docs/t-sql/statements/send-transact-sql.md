@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SEND_ON_CONVERSATION_TSQL"
   - "ON_CONVERSATION_TSQL"

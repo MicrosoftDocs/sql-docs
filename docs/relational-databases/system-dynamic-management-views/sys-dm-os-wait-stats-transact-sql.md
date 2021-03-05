@@ -1,13 +1,13 @@
 ---
 description: "sys.dm_os_wait_stats (Transact-SQL)"
 title: "sys.dm_os_wait_stats (Transact-SQL)"
-ms.custom: ""
-ms.date: "01/27/2021"
+ms.custom: "contperf-fy21q3"
+ms.date: "02/10/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_os_wait_stats_TSQL"
   - "dm_os_wait_stats"
@@ -41,7 +41,7 @@ Returns information about all the waits encountered by threads that executed. Yo
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the `Server admin` or an `Azure Active Directory admin` account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
 
 ##  <a name="WaitTypes"></a> Types of Waits  
  **Resource waits** occur when a worker requests access to a resource that is not available because the resource is being used by some other worker or is not yet available. Examples of resource waits are locks, latches, network, and disk I/O waits. Lock and latch waits are waits on synchronization objects  
@@ -88,8 +88,8 @@ This command resets all counters to 0.
 |ASSEMBLY_FILTER_HASHTABLE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |ASSEMBLY_LOAD |Occurs during exclusive access to assembly loading.| 
 |ASYNC_DISKPOOL_LOCK |Occurs when there is an attempt to synchronize parallel threads that are performing tasks such as creating or initializing a file.| 
-|ASYNC_IO_COMPLETION |Occurs when a task is waiting for I/Os to finish.| 
-|ASYNC_NETWORK_IO |Occurs on network writes when the task is blocked behind the network. Verify that the client is processing data from the server.| 
+|ASYNC_IO_COMPLETION |Occurs when a task is waiting for asynchronous non-data I/Os to finish. Examples include I/O involved in warm standby log shipping, database mirroring, some bulk import related operations.| 
+|ASYNC_NETWORK_IO |Occurs on network writes when the task is blocked waiting for the client application to acknowledge it has processed all the data sent to it. Verify that the client is processing data from the server or, less commonly-occurring, that network is performing as expected. Reasons the client cannot consume data fast enough include:  application design issues like writing results to a file while the results arrive, waiting for user input, or an artificial wait introduced. Also the client system may be experiencing slow response due to issues like low virtual/physical memory, 100% CPU consumption, etc. Network delays can also lead to this wait.|
 |ASYNC_OP_COMPLETION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |ASYNC_OP_CONTEXT_READ |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |ASYNC_OP_CONTEXT_WRITE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
@@ -159,8 +159,8 @@ This command resets all counters to 0.
 |CONNECTION_ENDPOINT_LOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |COUNTRECOVERYMGR |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |CREATE_DATINISERVICE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|CXCONSUMER <a name="cxconsumer"></a>|Occurs with parallel query plans when a consumer thread (parent) waits for a producer thread to send rows. CXCONSUMER waits are caused by an Exchange Iterator that runs out of rows from its producer thread. This is a normal part of parallel query execution. <br /><br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]|
-|CXPACKET <a name="cxpacket"></a>|Occurs with parallel query plans when waiting to synchronize the Query Processor [Exchange Iterator](../../relational-databases/showplan-logical-and-physical-operators-reference.md), and when producing and consuming rows. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the Cost Threshold for Parallelism or lowering the Max Degree of Parallelism (MaxDOP). <br /><br /> **Note:** Starting with [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, CXPACKET only refers to waiting to synchronize the Exchange Iterator and producing rows. Threads consuming rows are tracked separately in the CXCONSUMER wait type. If the consumer threads are too slow, the Exchange Iterator buffer may become full and cause CXPACKET waits. <br /><br /> **Note:** In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], CXPACKET only refers to waiting on threads producing rows. Exchange Iterator synchronization is tracked separately in the CXSYNC_PORT and CXSYNC_CONSUMER wait types. Threads consuming rows are tracked separately in the CXCONSUMER wait type.<br /> | 
+|CXCONSUMER <a name="cxconsumer"></a>|Occurs with parallel query plans when a consumer thread (parent) waits for a producer thread to send rows. CXCONSUMER waits are caused by an Exchange Iterator that runs out of rows from its producer thread. This is a normal part of parallel query execution. <br /><br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]|
+|CXPACKET <a name="cxpacket"></a>|Occurs with parallel query plans when waiting to synchronize the Query Processor [Exchange Iterator](../../relational-databases/showplan-logical-and-physical-operators-reference.md), and when producing and consuming rows. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the Cost Threshold for Parallelism or lowering the Max Degree of Parallelism (MaxDOP). <br /><br /> **Note:** Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, CXPACKET only refers to waiting to synchronize the Exchange Iterator and producing rows. Threads consuming rows are tracked separately in the CXCONSUMER wait type. If the consumer threads are too slow, the Exchange Iterator buffer may become full and cause CXPACKET waits. <br /><br /> **Note:** In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], CXPACKET only refers to waiting on threads producing rows. Exchange Iterator synchronization is tracked separately in the CXSYNC_PORT and CXSYNC_CONSUMER wait types. Threads consuming rows are tracked separately in the CXCONSUMER wait type.<br /> | 
 |CXSYNC_PORT|Occurs with parallel query plans when waiting to open, close, and synchronize [Exchange Iterator](../../relational-databases/showplan-logical-and-physical-operators-reference.md) ports between producer and consumer threads. For example, if a query plan has a long sort operation, CXSYNC_PORT waits may be higher because the sort must complete before the Exchange Iterator port can be synchronized. <br /><br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]| 
 |CXSYNC_CONSUMER|Occurs with parallel query plans when waiting to reach an [Exchange Iterator](../../relational-databases/showplan-logical-and-physical-operators-reference.md) synchronization point among all consumer threads. <br /><br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]| 
 |CXROWSET_SYNC |Occurs during a parallel range scan.| 
@@ -214,7 +214,7 @@ This command resets all counters to 0.
 |EXECSYNC |Occurs during parallel queries while synchronizing in query processor in areas not related to the exchange iterator. Examples of such areas are bitmaps, large binary objects (LOBs), and the spool iterator. LOBs may frequently use this wait state.| 
 |EXECUTION_PIPE_EVENT_INTERNAL |Occurs during synchronization between producer and consumer parts of batch execution that are submitted through the connection context.| 
 |EXTERNAL_RG_UPDATE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
-|EXTERNAL_SCRIPT_NETWORK_IO |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] through current.| 
+|EXTERNAL_SCRIPT_NETWORK_IO |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] through current.| 
 |EXTERNAL_SCRIPT_PREPARE_SERVICE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |EXTERNAL_SCRIPT_SHUTDOWN |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |EXTERNAL_WAIT_ON_LAUNCHER, |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
@@ -253,7 +253,7 @@ This command resets all counters to 0.
 |FILESTREAM_FILE_OBJECT |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |FILESTREAM_WORKITEM_QUEUE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |FILETABLE_SHUTDOWN |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|FOREIGN_REDO |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] through current.| 
+|FOREIGN_REDO |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] through current.| 
 |FORWARDER_TRANSITION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |FS_FC_RWLOCK |Occurs when there is a wait by the FILESTREAM garbage collector to do either of the following:| 
 |FS_GARBAGE_COLLECTOR_SHUTDOWN |Occurs when the FILESTREAM garbage collector is waiting for cleanup tasks to be completed.| 
@@ -275,12 +275,12 @@ This command resets all counters to 0.
 |FT_RESTART_CRAWL |Occurs when a full-text crawl needs to restart from a last known good point to recover from a transient failure. The wait lets the worker tasks currently working on that population to complete or exit the current step.| 
 |FULLTEXT GATHERER |Occurs during synchronization of full-text operations.| 
 |GDMA_GET_RESOURCE_OWNER |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|GHOSTCLEANUP_UPDATE_STATS |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|GHOSTCLEANUP_UPDATE_STATS |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |GHOSTCLEANUPSYNCMGR |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|GLOBAL_QUERY_CANCEL |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|GLOBAL_QUERY_CANCEL |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |GLOBAL_QUERY_CLOSE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
-|GLOBAL_QUERY_CONSUMER |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
-|GLOBAL_QUERY_PRODUCER |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|GLOBAL_QUERY_CONSUMER |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
+|GLOBAL_QUERY_PRODUCER |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |GLOBAL_TRAN_CREATE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |GLOBAL_TRAN_UCS_SESSION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |GUARDIAN |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
@@ -340,9 +340,9 @@ This command resets all counters to 0.
 |HADR_TDS_LISTENER_SYNC_PROCESSING |Used at the end of an Always On Transact-SQL statement that requires starting and/or stopping an availability group listener. Since the start/stop operation is done asynchronously, the user thread will block using this wait type until the situation of the listener is known. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO | Occurs when a geo-replication secondary is configured with lower compute size (lower SLO) than the primary. A primary database is throttled due to delayed log consumption by the secondary. This is caused  by the secondary database having insufficient compute capacity to keep up with the primary database's rate of change. <br /><br /> **Applies to**: Azure SQL Database| 
-|HADR_THROTTLE_LOG_RATE_LOG_SIZE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
-|HADR_THROTTLE_LOG_RATE_SEEDING |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
-|HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|HADR_THROTTLE_LOG_RATE_LOG_SIZE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
+|HADR_THROTTLE_LOG_RATE_SEEDING |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
+|HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |HADR_TIMER_TASK |Waiting to get the lock on the timer task object and is also used for the actual waits between times that work is being performed. For example, for a task that runs every 10 seconds, after one execution, Always On Availability Groups waits about 10 seconds to reschedule the task, and the wait is included here. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_TRANSPORT_DBRLIST |Waiting for access to the transport layer's database replica list. Used for the spinlock that grants access to it. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_TRANSPORT_FLOW_CONTROL |Waiting when the number of outstanding unacknowledged Always On messages is over the out flow control threshold. This is on an availability replica-to-replica basis (not on a database-to-database basis). <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
@@ -381,18 +381,18 @@ This command resets all counters to 0.
 |LATCH_SH |Occurs when waiting for an SH (share) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH\_\* waits is available in sys.dm_os_latch_stats. Note that sys.dm_os_latch_stats groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.| 
 |LATCH_UP |Occurs when waiting for an UP (update) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH\_\* waits is available in sys.dm_os_latch_stats. Note that sys.dm_os_latch_stats groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.| 
 |LAZYWRITER_SLEEP |Occurs when lazy writer tasks are suspended. This is a measure of the time spent by background tasks that are waiting. Do not consider this state when you are looking for user stalls.| 
-|LCK_M_BU |Occurs when a task is waiting to acquire a Bulk Update (BU) lock.| 
-|LCK_M_BU_ABORT_BLOCKERS |Occurs when a task is waiting to acquire a Bulk Update (BU) lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_BU_LOW_PRIORITY |Occurs when a task is waiting to acquire a Bulk Update (BU) lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_IS |Occurs when a task is waiting to acquire an Intent Shared (IS) lock.| 
-|LCK_M_IS_ABORT_BLOCKERS |Occurs when a task is waiting to acquire an Intent Shared (IS) lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_IS_LOW_PRIORITY |Occurs when a task is waiting to acquire an Intent Shared (IS) lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_IU |Occurs when a task is waiting to acquire an Intent Update (IU) lock.| 
-|LCK_M_IU_ABORT_BLOCKERS |Occurs when a task is waiting to acquire an Intent Update (IU) lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_IU_LOW_PRIORITY |Occurs when a task is waiting to acquire an Intent Update (IU) lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_IX |Occurs when a task is waiting to acquire an Intent Exclusive (IX) lock.| 
-|LCK_M_IX_ABORT_BLOCKERS |Occurs when a task is waiting to acquire an Intent Exclusive (IX) lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_IX_LOW_PRIORITY |Occurs when a task is waiting to acquire an Intent Exclusive (IX) lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_BU |Occurs when a task is waiting to acquire a Bulk Update (BU) lock. See [Bulk Update Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#bulk_update) for more information| 
+|LCK_M_BU_ABORT_BLOCKERS |Occurs when a task is waiting to acquire a Bulk Update (BU) lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Bulk Update Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#bulk_update) for more information <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_BU_LOW_PRIORITY |Occurs when a task is waiting to acquire a Bulk Update (BU) lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Bulk Update Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#bulk_update) for more information <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_IS |Occurs when a task is waiting to acquire an Intent Shared (IS) lock. See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information| 
+|LCK_M_IS_ABORT_BLOCKERS |Occurs when a task is waiting to acquire an Intent Shared (IS) lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.) See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_IS_LOW_PRIORITY |Occurs when a task is waiting to acquire an Intent Shared (IS) lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_IU |Occurs when a task is waiting to acquire an Intent Update (IU) lock. See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information| 
+|LCK_M_IU_ABORT_BLOCKERS |Occurs when a task is waiting to acquire an Intent Update (IU) lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.) See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_IU_LOW_PRIORITY |Occurs when a task is waiting to acquire an Intent Update (IU) lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.). See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_IX |Occurs when a task is waiting to acquire an Intent Exclusive (IX) lock. See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information| 
+|LCK_M_IX_ABORT_BLOCKERS |Occurs when a task is waiting to acquire an Intent Exclusive (IX) lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_IX_LOW_PRIORITY |Occurs when a task is waiting to acquire an Intent Exclusive (IX) lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |LCK_M_RIn_NL |Occurs when a task is waiting to acquire a NULL lock on the current key value, and an Insert Range lock between the current and previous key. A NULL lock on the key is an instant release lock.| 
 |LCK_M_RIn_NL_ABORT_BLOCKERS |Occurs when a task is waiting to acquire a NULL lock with Abort Blockers on the current key value, and an Insert Range lock with Abort Blockers between the current and previous key. A NULL lock on the key is an instant release lock. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |LCK_M_RIn_NL_LOW_PRIORITY |Occurs when a task is waiting to acquire a NULL lock with Low Priority on the current key value, and an Insert Range lock with Low Priority between the current and previous key. A NULL lock on the key is an instant release lock. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
@@ -420,30 +420,30 @@ This command resets all counters to 0.
 |LCK_M_RX_X |Occurs when a task is waiting to acquire an Exclusive lock on the current key value, and an Exclusive Range lock between the current and previous key.| 
 |LCK_M_RX_X_ABORT_BLOCKERS |Occurs when a task is waiting to acquire an Exclusive lock with Abort Blockers on the current key value, and an Exclusive Range lock with Abort Blockers between the current and previous key. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |LCK_M_RX_X_LOW_PRIORITY |Occurs when a task is waiting to acquire an Exclusive lock with Low Priority on the current key value, and an Exclusive Range lock with Low Priority between the current and previous key. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_S |Occurs when a task is waiting to acquire a Shared lock.| 
-|LCK_M_S_ABORT_BLOCKERS |Occurs when a task is waiting to acquire a Shared lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_S_LOW_PRIORITY |Occurs when a task is waiting to acquire a Shared lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_SCH_M |Occurs when a task is waiting to acquire a Schema Modify lock.| 
-|LCK_M_SCH_M_ABORT_BLOCKERS |Occurs when a task is waiting to acquire a Schema Modify lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_SCH_M_LOW_PRIORITY |Occurs when a task is waiting to acquire a Schema Modify lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_SCH_S |Occurs when a task is waiting to acquire a Schema Share lock.| 
-|LCK_M_SCH_S_ABORT_BLOCKERS |Occurs when a task is waiting to acquire a Schema Share lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_SCH_S_LOW_PRIORITY |Occurs when a task is waiting to acquire a Schema Share lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_SIU |Occurs when a task is waiting to acquire a Shared With Intent Update lock.| 
-|LCK_M_SIU_ABORT_BLOCKERS |Occurs when a task is waiting to acquire a Shared With Intent Update lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_SIU_LOW_PRIORITY |Occurs when a task is waiting to acquire a Shared With Intent Update lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_SIX |Occurs when a task is waiting to acquire a Shared With Intent Exclusive lock.| 
-|LCK_M_SIX_ABORT_BLOCKERS |Occurs when a task is waiting to acquire a Shared With Intent Exclusive lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_SIX_LOW_PRIORITY |Occurs when a task is waiting to acquire a Shared With Intent Exclusive lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_U |Occurs when a task is waiting to acquire an Update lock.| 
-|LCK_M_U_ABORT_BLOCKERS |Occurs when a task is waiting to acquire an Update lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_U_LOW_PRIORITY |Occurs when a task is waiting to acquire an Update lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_UIX |Occurs when a task is waiting to acquire an Update With Intent Exclusive lock.| 
-|LCK_M_UIX_ABORT_BLOCKERS |Occurs when a task is waiting to acquire an Update With Intent Exclusive lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_UIX_LOW_PRIORITY |Occurs when a task is waiting to acquire an Update With Intent Exclusive lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_X |Occurs when a task is waiting to acquire an Exclusive lock.| 
-|LCK_M_X_ABORT_BLOCKERS |Occurs when a task is waiting to acquire an Exclusive lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|LCK_M_X_LOW_PRIORITY |Occurs when a task is waiting to acquire an Exclusive lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX.), <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_S |Occurs when a task is waiting to acquire a Shared lock. See [Shared Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#shared) for more information.| 
+|LCK_M_S_ABORT_BLOCKERS |Occurs when a task is waiting to acquire a Shared lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Shared Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#shared) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_S_LOW_PRIORITY |Occurs when a task is waiting to acquire a Shared lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Shared Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#shared) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_SCH_M |Occurs when a task is waiting to acquire a Schema Modify lock. See [Schema Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#schema) for more information.| 
+|LCK_M_SCH_M_ABORT_BLOCKERS |Occurs when a task is waiting to acquire a Schema Modify lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Schema Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#schema) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_SCH_M_LOW_PRIORITY |Occurs when a task is waiting to acquire a Schema Modify lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Schema Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#schema) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_SCH_S |Occurs when a task is waiting to acquire a Schema Share lock. See [Schema Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#schema) for more information.| 
+|LCK_M_SCH_S_ABORT_BLOCKERS |Occurs when a task is waiting to acquire a Schema Share lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Schema Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#schema) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_SCH_S_LOW_PRIORITY |Occurs when a task is waiting to acquire a Schema Share lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX) See [Schema Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#schema) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_SIU |Occurs when a task is waiting to acquire a Shared With Intent Update lock. See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information.| 
+|LCK_M_SIU_ABORT_BLOCKERS |Occurs when a task is waiting to acquire a Shared With Intent Update lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_SIU_LOW_PRIORITY |Occurs when a task is waiting to acquire a Shared With Intent Update lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_SIX |Occurs when a task is waiting to acquire a Shared With Intent Exclusive lock. See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information.| 
+|LCK_M_SIX_ABORT_BLOCKERS |Occurs when a task is waiting to acquire a Shared With Intent Exclusive lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_SIX_LOW_PRIORITY |Occurs when a task is waiting to acquire a Shared With Intent Exclusive lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_U |Occurs when a task is waiting to acquire an Update lock. See [Update Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#update) for more information.| 
+|LCK_M_U_ABORT_BLOCKERS |Occurs when a task is waiting to acquire an Update lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Update Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#update) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_U_LOW_PRIORITY |Occurs when a task is waiting to acquire an Update lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Update Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#update) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_UIX |Occurs when a task is waiting to acquire an Update With Intent Exclusive lock. See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information.| 
+|LCK_M_UIX_ABORT_BLOCKERS |Occurs when a task is waiting to acquire an Update With Intent Exclusive lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_UIX_LOW_PRIORITY |Occurs when a task is waiting to acquire an Update With Intent Exclusive lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Intent Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#intent) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_X |Occurs when a task is waiting to acquire an Exclusive lock. See [Exclusive Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#exclusive) for more information.| 
+|LCK_M_X_ABORT_BLOCKERS |Occurs when a task is waiting to acquire an Exclusive lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Exclusive Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#exclusive) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
+|LCK_M_X_LOW_PRIORITY |Occurs when a task is waiting to acquire an Exclusive lock with Low Priority. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Exclusive Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#exclusive) for more information. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |LOG_POOL_SCAN |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |LOG_RATE_GOVERNOR |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |LOGBUFFER |Occurs when a task is waiting for space in the log buffer to store a log record. Consistently high values may indicate that the log devices cannot keep up with the amount of log being generated by the server.| 
@@ -465,9 +465,9 @@ This command resets all counters to 0.
 |MD_AGENT_YIELD |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |MD_LAZYCACHE_RWLOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |MEMORY_ALLOCATION_EXT |Occurs while allocating memory from either the internal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory pool or the operation system. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
-|MEMORY_GRANT_UPDATE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|MEMORY_GRANT_UPDATE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |METADATA_LAZYCACHE_RWLOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |  
-|MIGRATIONBUFFER |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|MIGRATIONBUFFER |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |MISCELLANEOUS |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
 |MISCELLANEOUS |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
 |MSQL_DQ |Occurs when a task is waiting for a distributed query operation to finish. This is used to detect potential Multiple Active Result Set (MARS) application deadlocks. The wait ends when the distributed query call finishes.| 
@@ -481,11 +481,11 @@ This command resets all counters to 0.
 |OLEDB |Occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] calls the SNAC OLE DB Provider (SQLNCLI) or the Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL). This wait type is not used for synchronization. Instead, it indicates the duration of calls to the OLE DB provider.| 
 |ONDEMAND_TASK_QUEUE |Occurs while a background task waits for high priority system task requests. Long wait times indicate that there have been no high priority requests to process, and should not cause concern.| 
 |PAGEIOLATCH_DT |Occurs when a task is waiting on a latch for a buffer that is in an I/O request. The latch request is in Destroy mode. Long waits may indicate problems with the disk subsystem.| 
-|PAGEIOLATCH_EX |Occurs when a task is waiting on a latch for a buffer that is in an I/O request. The latch request is in Exclusive mode - a mode used when the buffer is being written to disk. Long waits may indicate problems with the disk subsystem.| 
+|PAGEIOLATCH_EX |Occurs when a task is waiting on a latch for a buffer that is in an I/O request. The latch request is in Exclusive mode - a mode used when the buffer is being written to disk. Long waits may indicate problems with the disk subsystem. <br /><br /> See this [SQL Server Slow I/O troubleshooting blog](https://techcommunity.microsoft.com/t5/sql-server-support/slow-i-o-sql-server-and-disk-i-o-performance/ba-p/333983) for more information.| 
 |PAGEIOLATCH_KP |Occurs when a task is waiting on a latch for a buffer that is in an I/O request. The latch request is in Keep mode. Long waits may indicate problems with the disk subsystem.| 
 |PAGEIOLATCH_NL |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
-|PAGEIOLATCH_SH |Occurs when a task is waiting on a latch for a buffer that is in an I/O request. The latch request is in Shared mode - a mode used when the buffer is being read from disk. Long waits may indicate problems with the disk subsystem.| 
-|PAGEIOLATCH_UP |Occurs when a task is waiting on a latch for a buffer that is in an I/O request. The latch request is in Update mode. Long waits may indicate problems with the disk subsystem.| 
+|PAGEIOLATCH_SH |Occurs when a task is waiting on a latch for a buffer that is in an I/O request. The latch request is in Shared mode - a mode used when the buffer is being read from disk. Long waits may indicate problems with the disk subsystem.<br /><br /> See this [SQL Server Slow I/O troubleshooting blog](https://techcommunity.microsoft.com/t5/sql-server-support/slow-i-o-sql-server-and-disk-i-o-performance/ba-p/333983) for more information.| 
+|PAGEIOLATCH_UP |Occurs when a task is waiting on a latch for a buffer that is in an I/O request. The latch request is in Update mode. Long waits may indicate problems with the disk subsystem.<br /><br /> See this [SQL Server Slow I/O troubleshooting blog](https://techcommunity.microsoft.com/t5/sql-server-support/slow-i-o-sql-server-and-disk-i-o-performance/ba-p/333983) for more information.| 
 |PAGELATCH_DT |Occurs when a task is waiting on a latch for a buffer that is not in an I/O request. The latch request is in Destroy mode. Destroy mode must be acquired before deleting contents of a page. See [Latch Modes](../diagnose-resolve-latch-contention.md#sql-server-latch-modes-and-compatibility) for more information.| 
 |PAGELATCH_EX |Occurs when a task is waiting on a latch for a buffer that is not in an I/O request. The latch request is in Exclusive mode - it blocks other threads from writing to or reading from the page (buffer). </br></br> A common scenario that leads to this latch is the "last-page insert" buffer latch contention. To understand and resolve this, use [Resolve last-page insert PAGELATCH_EX contention](/troubleshoot/sql/performance/resolve-pagelatch-ex-contention) and [Diagnose and resolve last-page-insert latch contention on SQL Server](../diagnose-resolve-latch-contention.md#last-pagetrailing-page-insert-contention). Another scenario is [Latch contention on small tables with a non-clustered index and random inserts (queue table)](../diagnose-resolve-latch-contention.md#latch-contention-on-small-tables-with-a-non-clustered-index-and-random-inserts-queue-table).| 
 |PAGELATCH_KP |Occurs when a task is waiting on a latch for a buffer that is not in an I/O request. The latch request is in Keep mode which prevents the page from being destroyed by another thread. See [Latch Modes](../diagnose-resolve-latch-contention.md#sql-server-latch-modes-and-compatibility) for more information.| 
@@ -727,12 +727,12 @@ This command resets all counters to 0.
 |PWAIT_MD_RELATION_CACHE |Occurs during internal synchronization in metadata on table or index. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |PWAIT_MD_SERVER_CACHE |Occurs during internal synchronization in metadata on linked servers. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |PWAIT_MD_UPGRADE_CONFIG |Occurs during internal synchronization in upgrading server wide configurations. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|PWAIT_PREEMPTIVE_APP_USAGE_TIMER |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|PWAIT_PREEMPTIVE_APP_USAGE_TIMER |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |PWAIT_PREEMPTIVE_AUDIT_ACCESS_WINDOWSLOG |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |PWAIT_QRY_BPMEMORY |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |PWAIT_REPLICA_ONLINE_INIT_MUTEX |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|PWAIT_SBS_FILE_OPERATION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|PWAIT_SBS_FILE_OPERATION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |PWAIT_XTP_FSSTORAGE_MAINTENANCE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |PWAIT_XTP_HOST_STORAGE_WAIT |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |QDS_ASYNC_CHECK_CONSISTENCY_TASK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
@@ -746,7 +746,7 @@ This command resets all counters to 0.
 |QDS_DB_DISK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |QDS_DYN_VECTOR |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |QDS_EXCLUSIVE_ACCESS |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
-|QDS_HOST_INIT |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|QDS_HOST_INIT |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |QDS_LOADDB |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |QDS_PERSIST_TASK_MAIN_LOOP_SLEEP |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |QDS_QDS_CAPTURE_INIT |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
@@ -771,7 +771,7 @@ This command resets all counters to 0.
 |QUERY_OPTIMIZER_PRINT_MUTEX |Occurs during synchronization of query optimizer diagnostic output production. This wait type only occurs if diagnostic settings have been enabled under direction of Microsoft Product Support.| 
 |QUERY_TASK_ENQUEUE_MUTEX |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |QUERY_TRACEOUT |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
-|RBIO_WAIT_VLF |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|RBIO_WAIT_VLF |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |RBIO_RG_STORAGE |Occurs when a Hyperscale database compute node is being throttled due to delayed log consumption at the page server(s). <br /><br /> **Applies to**: Azure SQL Database Hyperscale.|
 |RBIO_RG_DESTAGE |Occurs when a Hyperscale database compute node is being throttled due to delayed log consumption by the long term log storage. <br /><br /> **Applies to**: Azure SQL Database Hyperscale.|
 |RBIO_RG_REPLICA |Occurs when a Hyperscale database compute node is being throttled due to delayed log consumption by the readable secondary replica node(s). <br /><br /> **Applies to**: Azure SQL Database Hyperscale.|
@@ -780,7 +780,7 @@ This command resets all counters to 0.
 |RECOVERY_MGR_LOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |REDO_THREAD_PENDING_WORK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |REDO_THREAD_SYNC |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|REMOTE_BLOCK_IO |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|REMOTE_BLOCK_IO |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |REMOTE_DATA_ARCHIVE_MIGRATION_DMV |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |REMOTE_DATA_ARCHIVE_SCHEMA_DMV |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |REMOTE_DATA_ARCHIVE_SCHEMA_TASK_QUEUE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
@@ -797,7 +797,7 @@ This command resets all counters to 0.
 |RESMGR_THROTTLED |Occurs when a new request comes in and is throttled based on the GROUP_MAX_REQUESTS setting.| 
 |RESOURCE_GOVERNOR_IDLE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |RESOURCE_QUEUE |Occurs during synchronization of various internal resource queues.| 
-|RESOURCE_SEMAPHORE |Occurs when a query memory request cannot be granted immediately due to other concurrent queries. High waits and wait times may indicate excessive number of concurrent queries, or excessive memory request amounts.| 
+|RESOURCE_SEMAPHORE |Occurs when a query memory request during query execution cannot be granted immediately due to other concurrent queries. High waits and wait times may indicate excessive number of concurrent queries, or excessive memory request amounts. Excessive waits of this type may raise SQL [error 8645](../errors-events/mssqlserver-8645-database-engine-error.md), "A time out occurred while waiting for memory resources to execute the query. Rerun the query."<br /><br /> For detailed information and troubleshooting ideas on memory grant waits, refer to this [blog post](https://techcommunity.microsoft.com/t5/sql-server-support/memory-grants-the-mysterious-sql-server-memory-consumer-with/ba-p/333994)| 
 |RESOURCE_SEMAPHORE_MUTEX |Occurs while a query waits for its request for a thread reservation to be fulfilled. It also occurs when synchronizing query compile and memory grant requests.| 
 |RESOURCE_SEMAPHORE_QUERY_COMPILE |Occurs when the number of concurrent query compilations reaches a throttling limit. High waits and wait times may indicate excessive compilations, recompiles, or uncacheable plans.| 
 |RESOURCE_SEMAPHORE_SMALL_QUERY |Occurs when memory request by a small query cannot be granted immediately due to other concurrent queries. Wait time should not exceed more than a few seconds, because the server transfers the request to the main query memory pool if it fails to grant the requested memory within a few seconds. High waits may indicate an excessive number of concurrent small queries while the main memory pool is blocked by waiting queries. <br /><br /> **Applies to**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |  
@@ -810,12 +810,12 @@ This command resets all counters to 0.
 |SATELLITE_CARGO |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |SATELLITE_SERVICE_SETUP |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |SATELLITE_TASK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
-|SBS_DISPATCH |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
-|SBS_RECEIVE_TRANSPORT |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
-|SBS_TRANSPORT |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|SBS_DISPATCH |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
+|SBS_RECEIVE_TRANSPORT |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
+|SBS_TRANSPORT |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |SCAN_CHAR_HASH_ARRAY_INITIALIZATION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |SEC_DROP_TEMP_KEY |Occurs after a failed attempt to drop a temporary security key before a retry attempt.| 
-|SECURITY_CNG_PROVIDER_MUTEX |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|SECURITY_CNG_PROVIDER_MUTEX |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |SECURITY_CRYPTO_CONTEXT_MUTEX |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |SECURITY_DBE_STATE_MUTEX |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |SECURITY_KEYRING_RWLOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
@@ -850,7 +850,7 @@ This command resets all counters to 0.
 |SNI_HTTP_WAITFOR_0_DISCON |Occurs during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shutdown, while waiting for outstanding HTTP connections to exit.| 
 |SNI_LISTENER_ACCESS |Occurs while waiting for non-uniform memory access (NUMA) nodes to update state change. Access to state change is serialized.| 
 |SNI_TASK_COMPLETION |Occurs when there is a wait for all tasks to finish during a NUMA node state change.| 
-|SNI_WRITE_ASYNC |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|SNI_WRITE_ASYNC |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |SOAP_READ |Occurs while waiting for an HTTP network read to complete.| 
 |SOAP_WRITE |Occurs while waiting for an HTTP network write to complete.| 
 |SOCKETDUPLICATEQUEUE_CLEANUP |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
@@ -863,7 +863,7 @@ This command resets all counters to 0.
 |SOS_PHYS_PAGE_CACHE |Accounts for the time a thread waits to acquire the mutex it must acquire before it allocates physical pages or before it returns those pages to the operating system. Waits on this type only appear if the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses AWE memory. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |SOS_PROCESS_AFFINITY_MUTEX |Occurs during synchronizing of access to process affinity settings.| 
 |SOS_RESERVEDMEMBLOCKLIST |Occurs during internal synchronization in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager. <br /><br /> **Applies to**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |  
-|SOS_SCHEDULER_YIELD |Occurs when a task voluntarily yields the scheduler for other tasks to execute. During this wait the task is waiting for its quantum to be renewed.| 
+|SOS_SCHEDULER_YIELD |Occurs when a task voluntarily yields the scheduler for other tasks to execute. During this wait, the task is waiting in a runnable queue for its quantum to be renewed, i.e. waiting to be scheduled to run on the CPU again. Prolonged waits on this wait type most frequently indicate opportunities to optimize queries that perform index or table scans. Focus on plan regression, missing index, stats updates, query re-writes. Optimizing runtimes reduces the need for tasks to be yielding multiple times. If query times for such CPU-consuming tasks are acceptable, then this wait type is expected and can be ignored. | 
 |SOS_SMALL_PAGE_ALLOC |Occurs during the allocation and freeing of memory that is managed by some memory objects.| 
 |SOS_STACKSTORE_INIT_MUTEX |Occurs during synchronization of internal store initialization.| 
 |SOS_SYNC_TASK_ENQUEUE_EVENT |Occurs when a task is started in a synchronous manner. Most tasks in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are started in an asynchronous manner, in which control returns to the starter immediately after the task request has been placed on the work queue.| 
@@ -901,7 +901,7 @@ This command resets all counters to 0.
 |TDS_INIT |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |TDS_PROXY_CONTAINER |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |TEMPOBJ |Occurs when temporary object drops are synchronized. This wait is rare, and only occurs if a task has requested exclusive access for temp table drops.| 
-|TEMPORAL_BACKGROUND_PROCEED_CLEANUP |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|TEMPORAL_BACKGROUND_PROCEED_CLEANUP |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |TERMINATE_LISTENER |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |THREADPOOL |Occurs when a task is waiting for a worker to run on. This can indicate that the maximum worker setting is too low, or that batch executions are taking unusually long, thus reducing the number of workers available to satisfy other batches.| 
 |TIMEPRIV_TIMEPERIOD |Occurs during internal synchronization of the Extended Events timer.| 
@@ -929,16 +929,16 @@ This command resets all counters to 0.
 |VIA_ACCEPT |Occurs when a Virtual Interface Adapter (VIA) provider connection is completed during startup.| 
 |VIEW_DEFINITION_MUTEX |Occurs during synchronization on access to cached view definitions.| 
 |WAIT_FOR_RESULTS |Occurs when waiting for a query notification to be triggered.| 
-|WAIT_ON_SYNC_STATISTICS_REFRESH |Occurs when waiting for synchronous statistics update to complete before query compilation and execution can resume.<br /><br /> **Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|WAIT_ON_SYNC_STATISTICS_REFRESH |Occurs when waiting for synchronous statistics update to complete before query compilation and execution can resume.<br /><br /> **Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|WAIT_XLOGREAD_SIGNAL |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|WAIT_XLOGREAD_SIGNAL |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |WAIT_XTP_ASYNC_TX_COMPLETION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |WAIT_XTP_CKPT_AGENT_WAKEUP |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |WAIT_XTP_CKPT_CLOSE |Occurs when waiting for a checkpoint to complete. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |WAIT_XTP_CKPT_ENABLED |Occurs when checkpointing is disabled, and waiting for checkpointing to be enabled. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |WAIT_XTP_CKPT_STATE_LOCK |Occurs when synchronizing checking of checkpoint state. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|WAIT_XTP_COMPILE_WAIT |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|WAIT_XTP_COMPILE_WAIT |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |WAIT_XTP_GUEST |Occurs when the database memory allocator needs to stop receiving low-memory notifications. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |WAIT_XTP_HOST_WAIT |Occurs when waits are triggered by the database engine and implemented by the host. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
@@ -946,7 +946,7 @@ This command resets all counters to 0.
 |WAIT_XTP_OFFLINE_CKPT_NEW_LOG |Occurs when offline checkpoint is waiting for new log records to scan. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |WAIT_XTP_PROCEDURE_ENTRY |Occurs when a drop procedure is waiting for all current executions of that procedure to complete. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |WAIT_XTP_RECOVERY |Occurs when database recovery is waiting for recovery of memory-optimized objects to finish. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|WAIT_XTP_SERIAL_RECOVERY |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|WAIT_XTP_SERIAL_RECOVERY |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |WAIT_XTP_SWITCH_TO_INACTIVE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |WAIT_XTP_TASK_SHUTDOWN |Occurs when waiting for an In-Memory OLTP thread to complete. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |WAIT_XTP_TRAN_DEPENDENCY |Occurs when waiting for transaction dependencies. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
@@ -995,10 +995,10 @@ This command resets all counters to 0.
 |XE_TIMER_TASK_DONE |Internal use only.| 
 |XIO_CREDENTIAL_MGR_RWLOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |XIO_CREDENTIAL_RWLOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
-|XIO_EDS_MGR_RWLOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
-|XIO_EDS_RWLOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
-|XIO_IOSTATS_BLOBLIST_RWLOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
-|XIO_IOSTATS_FCBLIST_RWLOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
+|XIO_EDS_MGR_RWLOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
+|XIO_EDS_RWLOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
+|XIO_IOSTATS_BLOBLIST_RWLOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
+|XIO_IOSTATS_FCBLIST_RWLOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 
 |XIO_LEASE_RENEW_MGR_RWLOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |XTP_HOST_DB_COLLECTION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |XTP_HOST_LOG_ACTIVITY |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
@@ -1023,5 +1023,4 @@ This command resets all counters to 0.
     
  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
-  
+ [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)

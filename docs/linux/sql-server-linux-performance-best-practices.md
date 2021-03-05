@@ -67,8 +67,8 @@ realtime =none                   extsz=4096   blocks=0, rtextents=0
 
 The log array is a 6-drive RAID-10 with a 64k stripe. As you can see:
 
-   1. The "sunit=16 blks", 16*4096 blk size= 64k, matches the stripe size.
-   2. The "swidth = 48 blks", swidth/sunit = 3, which is the number of data drives in the array, excluding parity drives.
+- The "sunit=16 blks", 16*4096 blk size= 64k, matches the stripe size.
+- The "swidth = 48 blks", swidth/sunit = 3, which is the number of data drives in the array, excluding parity drives.
 
 #### File System Configuration recommendation
 
@@ -378,9 +378,9 @@ Like there are storage and CPU recommendations, there are Network specific recom
 
 #### Additional advanced Kernel/OS configuration
 
-1. For best storage IO performance, the use of Linux multiqueue scheduling for block devices is recommended. This enables the block layer performance to scale well with fast solid-state drives (SSDs) and multi-core systems. Check the documentation if it is enabled by default in your Linux distributions. In most other cases, booting the kernel with **scsi_mod.use_blk_mq=y** enables it, though documentation of the Linux distribution in use may have additional guidance on it. This is consistent to the upstream Linux kernel.
+- For best storage IO performance, the use of Linux multiqueue scheduling for block devices is recommended. This enables the block layer performance to scale well with fast solid-state drives (SSDs) and multi-core systems. Check the documentation if it is enabled by default in your Linux distributions. In most other cases, booting the kernel with **scsi_mod.use_blk_mq=y** enables it, though documentation of the Linux distribution in use may have additional guidance on it. This is consistent to the upstream Linux kernel.
 
-2. As multipath IO is often used for SQL Server deployments, the device mapper (DM) multipath target should also be configured to use the `blk-mq` infrastructure by enabling the **dm_mod.use_blk_mq=y** kernel boot option. The default value is `n` (disabled). This setting, when the underlying SCSI devices are using `blk-mq`, reduces locking overhead at the DM layer. Refer to the documentation of the Linux distribution in use for additional guidance on how to configure it.
+- As multipath IO is often used for SQL Server deployments, the device mapper (DM) multipath target should also be configured to use the `blk-mq` infrastructure by enabling the **dm_mod.use_blk_mq=y** kernel boot option. The default value is `n` (disabled). This setting, when the underlying SCSI devices are using `blk-mq`, reduces locking overhead at the DM layer. Refer to the documentation of the Linux distribution in use for additional guidance on how to configure it.
 
 #### Configure swapfile
 

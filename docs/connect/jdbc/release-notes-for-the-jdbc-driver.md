@@ -385,7 +385,7 @@ Released: January 31, 2019
 | Additional details. | See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
-### 7.2 Known Issues
+### 7.2 Known issues
 
 | Known issues | Details |
 | :----------- | :------ |

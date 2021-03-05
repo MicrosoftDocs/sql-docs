@@ -21,9 +21,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_hadr_physical_seeding_stats
   - "sys.dm_hadr_physical_seeding_stats dynamic management view"
-
-
-
 ---
 # sys.dm_hadr_physical_seeding_stats (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

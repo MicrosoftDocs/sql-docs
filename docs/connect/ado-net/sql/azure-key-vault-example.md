@@ -3,7 +3,7 @@ description: "Example demonstrating use of Azure Key Vault provider with Always 
 title: "Example demonstrating use of Azure Key Vault provider with Always Encrypted | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/17/2020
-ms.reviewer: v-kaywon
+ms.reviewer: v-daenge
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -24,12 +24,13 @@ This example demonstrates use of Azure Key Vault Provider when accessing encrypt
 [!code-csharp [AKVProvider Example#1](~/../sqlclient/doc/samples/AzureKeyVaultProviderExample.cs#1)]
 
 > [!NOTE]
-> - To use Always Encrypted feature without secure enclaves for .NET Standard application, **Microsoft.Data.SqlClient** version 2.1.0 or higher is required. The supported .NET Standard version is 2.0 or higher. 
+>
+> - To use Always Encrypted feature without secure enclaves for .NET Standard application, **Microsoft.Data.SqlClient** version 2.1.0 or higher is required. The supported .NET Standard version is 2.0 or higher.
 >
 > - To use Always Encrypted feature on Linux and macOS, **Microsoft.Data.SqlClient** version 2.1.0 or higher is required.
 
 ## See also
 
-- [Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with Secure Enclaves](azure-key-vault-enclave-example.md)
+- [Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with secure enclaves](azure-key-vault-enclave-example.md)
 - [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md)
 - [Using Always Encrypted with the Microsoft .NET Data Provider for SQL Server](sqlclient-support-always-encrypted.md)

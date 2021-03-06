@@ -5,7 +5,6 @@ description: The SQL Server Distributed Replay feature helps you assess the impa
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: mikeray

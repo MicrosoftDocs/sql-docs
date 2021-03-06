@@ -31,7 +31,6 @@ The following table defines the meaning of the various columns:
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-
 |**start_time**|**datetime**|The time the operation was initiated.|
 |**completion_time**|**datetime**|The time the operation completed (null if ongoing).|  
 |**ag_id**|**uniqueidentifier**|Unique Id for each Availability Group.|  

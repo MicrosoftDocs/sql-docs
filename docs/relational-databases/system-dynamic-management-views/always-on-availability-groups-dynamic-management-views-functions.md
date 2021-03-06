@@ -29,7 +29,7 @@ ms.author: wiassaf
 
         [sys.dm_hadr_auto_page_repair](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)
 
-        [sys.dm_hadr_automatic_seeding](../../relational-databases/system-dynamic-management-views/sys.dm_hadr_automatic_seeding.md)
+        [sys.dm_hadr_automatic_seeding](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-automatic-seeding.md)
 
         [sys.dm_hadr_availability_group_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)
 
@@ -57,7 +57,7 @@ ms.author: wiassaf
 
         [sys.dm_hadr_name_id_map](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md)
 
-        [sys.dm_hadr_physical_seeding_stats](../../relational-databases/system-dynamic-management-views/sys.dm_hadr_physical_seeding_stats.md)
+        [sys.dm_hadr_physical_seeding_stats](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-physical-seeding-stats.md)
 
         [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)
 

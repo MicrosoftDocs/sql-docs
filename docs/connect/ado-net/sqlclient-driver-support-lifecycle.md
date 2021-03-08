@@ -41,9 +41,9 @@ New stable (GA) releases are published every six months on a regular cadence beg
 | 1.0 | September 26, 2019 | 1.0.19269.1 | February 20, 2020 |
 
 
-## Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider release cadence
+## Azure Key Vault Provider release cadence
 
-New stable (GA) releases are published on demand when new features are added. Long Term Support (LTS) releases will be chosen by stakeholders and maintainers based on a few qualifications and customer response.
+New stable (GA) releases for `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` are published on demand when new features are added. Long Term Support (LTS) releases will be chosen by stakeholders and maintainers based on a few qualifications and customer response.
 
 ### Actively supported releases
 

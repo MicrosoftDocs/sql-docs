@@ -31,6 +31,13 @@ Thank you.
 GeneMi.  2019/04/03.
 -->
 
+## 17.7.2, March 2021
+
+| New item | Details |
+| :------- | :------ |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## 17.7, January 2021
 
 | New item | Details |

@@ -227,8 +227,8 @@ REVERT;
 -- Grant User_B the required permissions to create a materialized view for User_A on T1 and T2 owned by User_A
 GRANT CREATE VIEW to User_B;
 GRANT Control ON SCHEMA::User_A to User_B;
-GRANT SELECT ON OBJECT::User_A.T3 to User_B;
-GRANT SELECT ON OBJECT::User_A.T4 to User_B;
+GRANT REFERENCES ON OBJECT::User_A.T1 to User_B;
+GRANT REFERENCES ON OBJECT::User_A.T2 to User_B;
 
 -- User_B creates a materialized view.  Both the view and the base tables are owned by User_A.
 EXECUTE AS USER = 'User_B';  

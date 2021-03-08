@@ -27,8 +27,8 @@ The redistributable installer for Microsoft ODBC Driver 17 for SQL Server instal
 
 Version 17.7.2 is the latest general availability (GA) version. If you have a previous version of Microsoft ODBC Driver 17 for SQL Server installed, installing 17.7.2 upgrades it to 17.7.2.
 
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 17 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2156851)**
-**[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 17 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2156749)**
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 17 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2156851)**  
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft ODBC Driver 17 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2156749)**  
 
 ### Version information
 
@@ -42,10 +42,10 @@ Version 17.7.2 is the latest general availability (GA) version. If you have a pr
 
 This release of Microsoft ODBC Driver for SQL Server can be installed in the following languages:
 
-Microsoft ODBC Driver 17.7.2 for SQL Server (x64):
+Microsoft ODBC Driver 17.7.2 for SQL Server (x64):  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x40a)
 
-Microsoft ODBC Driver 17.7.2 for SQL Server (x86):
+Microsoft ODBC Driver 17.7.2 for SQL Server (x86):  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x40a)
 
 ### Release notes for Windows

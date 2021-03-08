@@ -2,26 +2,32 @@
 description: "Example demonstrating use of Azure Key Vault provider with Always Encrypted"
 title: "Example demonstrating use of Azure Key Vault provider with Always Encrypted | Microsoft Docs"
 ms.custom: ""
-ms.date: 11/17/2020
-ms.reviewer: v-daenge
+ms.date: 03/03/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.tgt_pltfrm: ""
 ms.topic: tutorial
-author: karinazhou
-ms.author: v-jizho2
+author: David-Engel
+ms.author: v-daenge
+ms.reviewer: v-jizho2
 ---
 
 # Example demonstrating use of Azure Key Vault provider with Always Encrypted
 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-[!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-netst-md.md)]
+[!INCLUDE [appliesto-netfx-netcore-netst-md](../../../includes/appliesto-netfx-netcore-netst-md.md)]
 
 This example demonstrates use of Azure Key Vault Provider when accessing encrypted columns.
 
-[!code-csharp [AKVProvider Example#1](~/../sqlclient/doc/samples/AzureKeyVaultProviderExample.cs#1)]
+## AzureKeyVaultProvider v2.0+
+
+[!code-csharp [Azure Key Vault Provider 2.0 Example#1](~/../sqlclient/doc/samples/AzureKeyVaultProviderExample_2_0.cs#1)]
+
+## AzureKeyVaultProvider v1.x
+
+[!code-csharp [Azure Key Vault Provider Example#1](~/../sqlclient/doc/samples/AzureKeyVaultProviderExample.cs#1)]
 
 > [!NOTE]
 >

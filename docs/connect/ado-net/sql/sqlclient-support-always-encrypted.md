@@ -1,15 +1,15 @@
 ---
 title: "Using Always Encrypted with SqlClient"
 description: "Learn how to develop applications using Microsoft.Data.SqlClient and Always Encrypted to keep your data secure."
-ms.date: 11/16/2020
+ms.date: 03/03/2021
 ms.assetid: 
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: cheenamalhotra
-ms.author: v-chmalh
-ms.reviewer: v-daenge
+author: David-Engel
+ms.author: v-daenge
+ms.reviewer: v-jizho2
 ---
 
 # Using Always Encrypted with the Microsoft .NET Data Provider for SQL Server
@@ -323,6 +323,18 @@ Azure Key Vault is a convenient option to store and manage column master keys fo
 | Class | Description | Provider (lookup) name | Platform |
 |:---|:---|:---|:---|
 |[SqlColumnEncryptionAzureKeyVaultProvider Class](/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) | Provider for Azure Key Vault. | AZURE_KEY_VAULT | Windows, Linux, macOS |
+
+#### .NET Supportability
+
+| Version | Microsoft.Data.SqlClient version | .NET platforms | 
+| ------- | ----------- | ------- |
+| 2.0.0 | 1.1.3+ <br/> 2.1.0+ | .NET Framework 4.6.1+, .NET Core 2.1+ <br/>.NET Standard 2.0+ |
+| 1.2.0 | 1.0.19269.1+ <br/> 2.1.0+ | .NET Framework 4.6+, .NET Core 2.1+ <br/>.NET Standard 2.0+ |
+| 1.1.0 | 1.0.19269.1+ | .NET Framework 4.6+, .NET Core 2.1+ |
+| 1.0.0 | 1.0.19269.1+ | .NET Framework 4.6+, .NET Core 2.1+ |
+|||
+
+Starting with **v2.0.0**, the `Microsoft.Data.SqLClient.AlwaysEncrypted.AzureKeyVaultProvider` supports the new Azure.Core and Azure.Identity APIs to perform authentication with Azure Key Vault. An instance of [`TokenCredential`](/dotnet/api/azure.core.tokencredential) implementation can now be passed to [`SqlColumnEncryptionAzureKeyVaultProvider`](/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) constructors to initialize Azure Key Vault provider object.
 
 For examples demonstrating performing encryption/decryption with Azure Key Vault, see [Azure Key Vault working with Always Encrypted](azure-key-vault-example.md) and [Azure Key Vault working with Always Encrypted with secure enclaves](azure-key-vault-enclave-example.md).
 

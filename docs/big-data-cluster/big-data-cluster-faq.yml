@@ -12,7 +12,7 @@ metadata:
   ms.author: wiassaf
   ms.reviewer: 
   ms.custom: 
-  ms.date: 03/08/2021
+  ms.date: 03/09/2021
 
 title: Big Data Clusters FAQ
 summary: This article answers frequently asked questions about [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md) concepts, capabilities, deployment, supportability, and tools.
@@ -21,8 +21,8 @@ sections:
     questions: 
       - question: What are the recommended best practices regarding file locations?
         answer: |
-          There is less flexibility in this regard comparing to configuring SQL Server on bare metal machines on Windows or Linux. In the Kubernetes environment these artifacts are abstracted and they need to be portable. Currently, there are 2 PVs (data & logs) provided per pod that can be configured. For more information, see [Data persistence with SQL Server big data cluster in Kubernetes](concept-data-persistence.md).
-      - question: Do I need to take transaction log backups on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?	
+          There is less flexibility in this regard comparing to configuring SQL Server on bare metal machines on Windows or Linux. In the Kubernetes environment these artifacts are abstracted and they need to be portable. Currently, there are 2 persistent volumes (PVs), for data and logs, provided per pod that can be configured. For more information, see [Data persistence with SQL Server big data cluster in Kubernetes](concept-data-persistence.md).
+      - question: Do I need to take transaction log backups on SQL Server Big Data Clusters?	
         answer: |
           You need to perform log backups only for user databases in SQL Server master instance (depending on recovery model or HA configuration). Data pool databases use SIMPLE recovery model only. Same applies for the DW* databases created for PolyBase.
       - question: How can I monitor if distributed queries are actually using the compute pool?
@@ -50,7 +50,7 @@ sections:
           Data pool is a distributed table concept. Sharding is typically referenced as an OLTP concept - this is not currently supported.
       - question: When should I use the data pool or the storage pool for raw data storage?
         answer: |
-          The term pool is reserved to describe a collection of homogeneous services or applications. For example, data pool is a set of stateful SQL Server compute and storage & storage pool is a set of HDFS & Spark services. The SQL Server master is either a single-instance or multiple instances that can be configured in an availability group. The SQL Server master instance is a regular SQL Server instance on Linux and you can use any feature available on Linux there. You should start first with the data model, the entities and services/applications that will primarily operate on the entity. All the data doesn't have to be stored in one place like SQL Server or HDFS or data pool. Based on the data analysis, it is possible you store most of the data in HDFS, process the data to more efficient format, and expose to other services. The remaining data would be stored in SQL Master instance.
+          The term pool is reserved to describe a collection of homogeneous services or applications. For example, data pool is a set of stateful SQL Server compute and storage and storage pool is a set of HDFS and Spark services. The SQL Server master is either a single-instance or multiple instances that can be configured in an availability group. The SQL Server master instance is a regular SQL Server instance on Linux and you can use any feature available on Linux there. You should start first with the data model, the entities and services/applications that will primarily operate on the entity. All the data doesn't have to be stored in one place like SQL Server or HDFS or data pool. Based on the data analysis, it is possible you store most of the data in HDFS, process the data to more efficient format, and expose to other services. The remaining data would be stored in SQL Master instance.
       - question: Does SQL Server BDC support GPU-based deep learning libraries and computations (PyTorch, Keras, specific image libraries, etc.)?
         answer: |
           This is not a supported scenario at this time.
@@ -92,7 +92,7 @@ sections:
           At this time InfluxDB in a BDC is used only for storing monitoring data collected within the BDC and is not exposed as an external endpoint.
       - question: How do I add a database to the availability group?
         answer: |
-          In BDC, the HA configuration creates an availability group called containedag which also includes system databases that are replicated across replicas. Databases created as result of a CREATE DATABASE or RESTORE workflows are automatically added to the contained AG and seeded. Prior to SQL Server 2019 (15.0) CU2, you have to connect to the physical instance in BDC, restore the database & add it to the containedag. For more information, see [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md).
+          In BDC, the HA configuration creates an availability group called containedag which also includes system databases that are replicated across replicas. Databases created as result of a CREATE DATABASE or RESTORE workflows are automatically added to the contained AG and seeded. Prior to SQL Server 2019 (15.0) CU2, you have to connect to the physical instance in BDC, restore the database and add it to the containedag. For more information, see [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md).
       - question: Can I configure core/memory resources for components running within BDC?
         answer: |
           At this time, you can set memory for the SQL instances using sp_configure, just like in SQL Server. For cores, you can use `ALTER SERVER CONFIGURATION SET PROCESS AFFINITY`. By default, containers see all CPUs on the host and we don’t have a way to specify resource limits using Kubernetes at this time. For compute pool/data pool/storage pool, the configuration can be done using EXECUTE AT DATA_SOURCE statement from SQL Server master instance.
@@ -111,7 +111,7 @@ sections:
       - question: Does BDC overlap with Synapse in terms of functionality and integration?
         answer: |
           It depends on your use cases and requirements. BDC provides a full SQL Server surface area in addition to Microsoft-supported Spark and HDFS on-premise. BDC enables the SQL Server customer to be able to integrate into analytics/big data. Azure Synapse is purely an analytical platform offering a first class experience for customers as a managed service in Azure only, with a focus on scale out analytics. Azure Synapse is not targeting an operational workload as part of that. BDC is aiming to provide in database analytical scenarios, much closer to the operational store.
-      - question: Is SQL Server using HDFS as its storage in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
+      - question: Is SQL Server using HDFS as its storage in SQL Server Big Data Clusters?
         answer: |
           The SQL Server instance's database files are not stored in HDFS, however, SQL Server can query HDFS using external table interface.
       - question: What are the available distribution options for storing data in the distributed tables in each data pool?
@@ -142,7 +142,7 @@ sections:
           No, you can use [azdata bdc hdfs cp](reference-azdata-bdc-hdfs.md#azdata-bdc-hdfs-cp). If you provide the root directory the command will recursively copy the whole tree.  You can copy in/out using this command just by changing what is the source/target paths.
       - question: How can I load data into the data pool?
         answer: |
-          You can use MSSQL Spark connector library to help with SQL & data pool ingestion. For a guided walk-through, see [Tutorial: Ingest data into a SQL Server data pool with Spark jobs](tutorial-data-pool-ingest-spark.md#start-a-spark-streaming-job).
+          You can use MSSQL Spark connector library to help with SQL and data pool ingestion. For a guided walk-through, see [Tutorial: Ingest data into a SQL Server data pool with Spark jobs](tutorial-data-pool-ingest-spark.md#start-a-spark-streaming-job).
       - question: If I have a lot of data on a (Windows) network path, which contains lots of folders/sub-folders and text files, how do I upload them to HDFS on Big data cluster? 
         answer: |
           Give [azdata bdc hdfs cp](reference-azdata-bdc-hdfs.md#azdata-bdc-hdfs-cp) a try. If you provide the root directory the command will recursively copy the whole tree.  You can copy in/out using this command just by changing what is the source/target paths.
@@ -177,7 +177,7 @@ sections:
       - question: Is there a definitive list of everything that can be set in the BDC config?
         answer: |
           All the customizations that can be done at deployment time are documented here in [Configure deployment settings for cluster resources and services](deployment-custom-configuration.md). For Spark, see [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md).
-      - question: Can we deploy SQL Server Analysis Services together with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
+      - question: Can we deploy SQL Server Analysis Services together with SQL Server Big Data Clusters?
         answer: |
           No. Specifically, SQL Server Analysis Services (SSAS) is not supported on SQL Server on Linux, so you will have to install a SQL Server instance on Windows server to run SSAS.
       - question: Is BDC supported for deployment in EKS or GKS?
@@ -189,12 +189,12 @@ sections:
       - question: How do I install libraries and packages in Spark?
         answer: |
           You can add packages at job submission using the steps in the [sample notebook for installing packages in Spark](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/config-install/installpackage_Spark.ipynb).
-      - question: Do I need to use SQL Server 2019 to use R and Python for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
+      - question: Do I need to use SQL Server 2019 to use R and Python for SQL Server Big Data Clusters?
         answer: |
-          Machine Learning (ML) Services (R & Python) is available beginning in SQL Server 2017. ML Services is available in SQL Server Big Data Clusters as well. For more information, see [What is SQL Server Machine Learning?](../advanced-analytics/what-is-sql-server-machine-learning.md).
+          Machine Learning (ML) Services (R and Python) is available beginning in SQL Server 2017. ML Services is available in SQL Server Big Data Clusters as well. For more information, see [What is SQL Server Machine Learning?](../advanced-analytics/what-is-sql-server-machine-learning.md).
   - name: Licensing
     questions: 
-      - question: How do SQL Server licenses work for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
+      - question: How do SQL Server licenses work for SQL Server Big Data Clusters?
         answer: |
           Please refer to the licensing guide which goes into much more detail, [download the PDF](https://aka.ms/sql-bdc-licensing).<BR>For a summary, watch the video [SQL Server Licensing: Big Data Clusters | Data Exposed](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-Licensing-Big-Data-Clusters--Data-Exposed).
   - name: Security
@@ -220,13 +220,13 @@ sections:
           This depends on the dynamic storage provisioner configurations in Azure Kubernetes Service (AKS). See here for more details: [Best practices for storage and backups in Azure Kubernetes Service (AKS)](/azure/aks/operator-best-practices-storage.md).
   - name: Support
     questions: 
-      - question: Are Spark & HDFS deployed within BDC supported by Microsoft?
+      - question: Are Spark and HDFS deployed within BDC supported by Microsoft?
         answer: |
           Yes, Microsoft supports all components shipped within BDC.
-      - question: What is the support model for SparkML & SQL Server ML Service?
+      - question: What is the support model for SparkML and SQL Server ML Service?
         answer: |
           SQL Server ML Services support policy is same as that of SQL Server, except that every major release comes with a new runtime version. SparkML library itself is open source software (OSS). We do package many OSS components in BDC and this is supported by Microsoft. 
-      - question: Is Red Hat Enterprise Linux 8 (RHEL8) supported platform for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
+      - question: Is Red Hat Enterprise Linux 8 (RHEL8) supported platform for SQL Server Big Data Clusters?
         answer: |
           Not at this time. See here for the [supported platforms](release-notes-big-data-cluster.md#supported-platforms).
   - name: Tools

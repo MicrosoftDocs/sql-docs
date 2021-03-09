@@ -48,7 +48,7 @@ SWITCHOFFSET ( datetimeoffset_expression, timezoneoffset_expression )
  Is an expression that can be resolved to a **datetimeoffset(n)** value.  
   
  *timezoneoffset_expression*  
- Is a character string in the format [+|-]TZH:TZM or a signed integer (of minutes) that represents the time zone offset, and is assumed to be daylight-saving aware and adjusted.  
+ Is an expression in the format [+|-]TZH:TZM or a signed integer (of minutes) that represents the time zone offset, and is assumed to be daylight-saving aware and adjusted.  
   
 ## Return Type  
  **datetimeoffset** with the fractional precision of the *datetimeoffset_expression* argument.  

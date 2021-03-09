@@ -29,7 +29,7 @@ conceptualContent:
     - title: "Access to"
       links:
         - text: SQL Server
-          url: azure-data-studio/quickstart-sql-server.md
+          url: https://review.docs.microsoft.com/en-us/sql/sql-server/migrate/guides/access-to-sql-server?branch=pr-en-us-18413
           itemType: how-to-guide
         - text: Azure SQL Database
           url: https://review.docs.microsoft.com/en-us/sql/migration-guides/access-to-sql-database?branch=migration-guides&view=sql-server-ver15
@@ -37,7 +37,7 @@ conceptualContent:
     - title: "Oracle to"
       links:
         - text: SQL Server
-          url: https://review.docs.microsoft.com/en-us/sql/sql-server/migrate/guides/mysql-to-sql-server?branch=pr-en-us-18413
+          url: https://review.docs.microsoft.com/en-us/sql/sql-server/migrate/guides/oracle-to-sql-server?branch=pr-en-us-18413
           itemType: how-to-guide
         - text: Azure SQL Database
           url: https://review.docs.microsoft.com/en-us/azure/azure-sql/migration-guides/database/oracle-to-sql-database-guide?branch=pr-en-us-143697
@@ -68,7 +68,7 @@ conceptualContent:
           url: https://review.docs.microsoft.com/en-us/sql/sql-server/migrate/guides/mysql-to-sql-server?view=sql-server-2016&branch=pr-en-us-18413
           itemType: how-to-guide
         - text: Azure SQL Database
-          url: https://review.docs.microsoft.com/en-us/sql/migration-guides/mysql-to-sql-database?branch=migration-guides&view=sql-server-ver15
+          url: https://review.docs.microsoft.com/en-us/azure/azure-sql/migration-guides/mysql-to-sql-database?branch=migration-guides
           itemType: how-to-guide
         - text: Azure Database for MySQL
           url: /azure/mysql/concepts-migrate-import-export
@@ -76,7 +76,7 @@ conceptualContent:
     - title: "SAP ASE to"
       links:
         - text: SQL Server
-          url: azure-data-studio/quickstart-sql-server.md
+          url: https://review.docs.microsoft.com/en-us/sql/sql-server/migrate/guides/sap-ase-to-sql-server?view=sql-server-2016&branch=pr-en-us-18413
           itemType: how-to-guide
         - text: Azure SQL Database
           url: https://review.docs.microsoft.com/en-us/sql/migration-guides/sap-ase-to-sql-database?view=sql-server-ver15&branch=migration-guides

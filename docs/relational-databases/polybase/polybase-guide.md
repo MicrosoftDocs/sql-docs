@@ -30,12 +30,12 @@ PolyBase is a data virtualization feature for [!INCLUDE[ssNoVersion](../../inclu
 
 ## What is PolyBase?
 
-PolyBase enables your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to query data directly from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, SAP HANA, MongoDB, Hadoop clusters, Cosmos DB using T-SQL, without separately installing client connection software. PolyBase allows one T-SQL query to join the data from external sources and other SQL Server instances to relational tables in an instance of SQL Server. 
+PolyBase enables your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to query data with T-SQL directly from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, MongoDB, Hadoop clusters, Cosmos DB, and generic ODBC drivers, without separately installing client connection software. PolyBase allows one T-SQL query to join the data from external sources and other SQL Server instances to relational tables in an instance of SQL Server. 
 
 A key use case for data virtualization with the PolyBase feature is to allow the data to stay in its original location and format. You can virtualize the external data through the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, so that it can be queried in place like any other table in SQL Server. This process minimizes the need for ETL processes for data movement. This data virtualization scenario is possible with the use of PolyBase connectors.
 
 > [!NOTE]
-> Some functionality of the PolyBase feature is in private preview for **Azure SQL managed instances**, including the ability to query external data (Parquet files) in Azure Data Lake Service (ADLS) Gen2. Private preview includes access to client libraries and documentation for testing purposes that are not yet available publicly. If you are interested and ready to invest some time in trying out the functionalities and sharing your feedback and questions, please review the [Azure SQL Managed Instance PolyBase Private Preview Guide](https://sqlmipg.blob.core.windows.net/azsqlpolybaseshare/Azure_SQL_Managed_Instance_Polybase_Private_Preview_Onboarding_Guide.pdf).
+> Some functionality of the PolyBase feature is in private preview for **Azure SQL managed instances**, including the ability to query external data (Parquet files) in Azure Data Lake Storage (ADLS) Gen2. Private preview includes access to client libraries and documentation for testing purposes that are not yet available publicly. If you are interested and ready to invest some time in trying out the functionalities and sharing your feedback and questions, please review the [Azure SQL Managed Instance PolyBase Private Preview Guide](https://sqlmipg.blob.core.windows.net/azsqlpolybaseshare/Azure_SQL_Managed_Instance_Polybase_Private_Preview_Onboarding_Guide.pdf).
 
 ### PolyBase connectors
 

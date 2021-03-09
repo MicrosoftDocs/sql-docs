@@ -2,7 +2,7 @@
 description: "Pushdown computations in PolyBase"
 title: "Pushdown computations in PolyBase"
 dexcription: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
-ms.date: 03/05/2021
+ms.date: 03/09/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -31,18 +31,47 @@ The following articles include information about configuring pushdown computatio
 
 This table summarizes pushdown computation support on different external data sources:
 
-| Data Source       | Joins  | Projections | Aggregations | Filters                    | Statistics |
-|-------------------|--------|-------------|--------------|----------------------------|------------|
-| **Generic ODBC**  | Yes    | Yes         | Yes          | Yes                        | Yes        |  
-| **Oracle**        | Yes    | Yes         | Yes          | Yes                        | Yes        |
-| **SQL Server**    | Yes    | Yes         | Yes          | Yes                        | Yes        |
-| **Teradata**      | Yes    | Yes         | Yes          | Yes                        | Yes        |  
-| **MongoDB**       | **No** | Yes         | Yes          | Yes                        | Yes        |
-| **Hadoop (HDP\*)** | **No** | Yes         | Yes          | Some types, some operators | Yes        |  
-| **Hadoop (CDH\*)** | **No** | Yes         | Yes          | Some types, some operators | Yes        |  
-|                   |
+| Data Source      | Joins  | Projections | Aggregations              | Filters                   | Statistics |
+|------------------|--------|-------------|---------------------------|---------------------------|------------|
+| **Generic ODBC** | Yes    | Yes         | Yes                       | Yes                       | Yes        |  
+| **Oracle**       | Yes    | Yes         | Yes                       | Yes                       | Yes        |
+| **SQL Server**   | Yes    | Yes         | Yes                       | Yes                       | Yes        |
+| **Teradata**     | Yes    | Yes         | Yes                       | Yes                       | Yes        |  
+| **MongoDB**      | **No** | Yes         | Yes                       | Yes                       | Yes        |
+| **Hadoop**       | **No** | Yes         | Some *(see next section)* | Some *(see next section)* | Yes        |  
+|                  |
 
-**\*** *PolyBase currently supports two Hadoop providers: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH).*
+#### Hadoop pushdown support
+
+Hadoop providers support the following:
+
+| Implicit type conversions | Aggregations                      | Filters (binary comparison) | 
+| --------------------------|-----------------------------------|-----------------------------| 
+| Binary                    | Count_Big                         | NotEqual                    | 
+| Bit                       | Sum                               | LessThan                    | 
+| Char                      | Avg                               | LessOrEqual                 | 
+| DateTime                  | Accum                             | GreaterOrEqual              | 
+| Decimal                   | AccumNull                         | GreaterThan                 | 
+| Float                     | Max                               | Is                          | 
+| Int                       | Min                               | IsNot                       | 
+| Money                     | Approx_Count_Distinct             |                             | 
+| NChar                     | Approx_Count_Distinct_Accum       |                             | 
+| NVarChar                  | Approx_Count_Distinct_AccumSparse |                             | 
+| Real                      | Approx_Count_Distinct_Merge       |                             | 
+| SmallDateTime             |                                   |                             | 
+| SmallInt                  |                                   |                             | 
+| SmallMoney                |                                   |                             | 
+| TinyInt                   |                                   |                             | 
+| VarBinary                 |                                   |                             | 
+| VarChar                   |                                   |                             | 
+| Date                      |                                   |                             | 
+| Time                      |                                   |                             | 
+| DateTime2                 |                                   |                             | 
+| DateTimeOffset            |                                   |                             | 
+| UniqueIdentifier          |                                   |                             | 
+|                           |                                   |                             |  
+
+PolyBase currently supports two Hadoop providers: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). There are no differences between the two features in terms of pushdown computation.
 
 ## Key beneficial scenarios of pushdown computation
 

@@ -1,7 +1,7 @@
 ### YamlMime:FAQ
 metadata:
-  title: Big Data Clusters FAQ
-  description: FAQ on Big Data Clusters concepts, capabilities, deployment, supportability, and tools
+  title: SQL Server Big Data Clusters FAQ
+  description: FAQ on SQL Server Big Data Clusters concepts, capabilities, deployment, supportability, and tools
   services: sql-database
   ms.service: sql
   ms.subservice: 
@@ -14,7 +14,7 @@ metadata:
   ms.custom: 
   ms.date: 03/09/2021
 
-title: Big Data Clusters FAQ
+title: SQL Server Big Data Clusters FAQ
 summary: This article answers frequently asked questions about [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md) concepts, capabilities, deployment, supportability, and tools.
 sections:
   - name: Best practices
@@ -44,7 +44,7 @@ sections:
           This is not a supported scenario at this time.          
       - question: Is it possible to backup external tables stored in data pools?
         answer: |
-          Database in the data pool instance does not have any metadata about the external tables - it is like any user database. You can do backup/restore, but to avoid inconsistent results, you must ensure the external table metadata in the database in [the SQL Master instance](concept-master-instance.md) is in sync. 
+          Database in the data pool instance does not have any metadata about the external tables - it is like any user database. You can do backup/restore, but to avoid inconsistent results, you must ensure the external table metadata in the metadata database in [the SQL Master instance](concept-master-instance.md) is in sync. 
       - question: Does the data pool provide sharding?
         answer: |
           Data pool is a distributed table concept. Sharding is typically referenced as an OLTP concept - this is not currently supported.
@@ -209,9 +209,9 @@ sections:
         answer: |
           In basic authentication mode (username/password), there is no support for adding multiple users for controller or Knox gateway/HDFS endpoints. The only user supported for these endpoints is root. For SQL Server, you can add users using TSQL as you would for any other SQL Server instance. 
           If you deploy BDC with AD auth for its endpoints, multiple users are supported. See here for details on how to configure the AD groups at deployment time. For more information, see [Deploy SQL Server Big Data Cluster in Active Directory mode](active-directory-deploy.md).
-      - question: Is there an IP range I can restrict the outbound calls from SQL 2019 BDC upgrade to?
+      - question: For BDC to pull the latest container images, is there an outbound IP range I can restrict?
         answer: |
-          You can download the IP addresses used by the various services in Azure here, [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519). Note that these IP addresses rotate periodically.<BR>In order for the controller service to pull the container images from the Microsoft Container Registry (MCR) you'll need to grant access to the IP addresses specified in the MicrosoftContainerRegistry section. Another option is to set up a private Azure Container Registry and configure the Big Data Cluster to pull from there. In that case you'll need to expose the IP addresses specified in the AzureContainerRegistry section. Instructions on how to do this and a script are provided in [Perform an offline deployment of a SQL Server big data cluster](deploy-offline.md).
+          You can review the IP addresses used by the various services in [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519). Note that these IP addresses rotate periodically.<BR>In order for the controller service to pull the container images from the Microsoft Container Registry (MCR) you'll need to grant access to the IP addresses specified in the **MicrosoftContainerRegistry** section. Another option is to set up a private Azure Container Registry and configure the Big Data Cluster to pull from there. In that case you'll need to expose the IP addresses specified in the **AzureContainerRegistry** section. Instructions on how to do this and a script are provided in [Perform an offline deployment of a SQL Server big data cluster](deploy-offline.md).
       - question: Can I deploy BDC in an air gapped environment?
         answer: |
           Yes, for more details see [Perform an offline deployment of a SQL Server big data cluster](deploy-offline.md).

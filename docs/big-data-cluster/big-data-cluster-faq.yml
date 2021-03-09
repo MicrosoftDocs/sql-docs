@@ -241,7 +241,9 @@ sections:
     questions: 
       - question: What BDC training options are available? 
         answer: |
-          Here are some resources you can use:<BR>[Workshop: Kubernetes - From Bare Metal to SQL Server Big Data Clusters](https://github.com/microsoft/sqlworkshops-k8stobdc)<BR>[Big Data Clusters Overview](big-data-cluster-overview.md)
+          Here are some resources you can use:<BR>
+          [Workshop: Kubernetes - From Bare Metal to SQL Server Big Data Clusters](https://github.com/microsoft/sqlworkshops-k8stobdc)<BR>
+          [Workshop: SQL Server Big Data Clusters - Architecture](https://github.com/microsoft/sqlworkshops-bdc)
 
 additionalContent: |
  ## See Also

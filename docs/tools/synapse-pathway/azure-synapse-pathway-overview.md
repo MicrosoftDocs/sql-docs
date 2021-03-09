@@ -1,16 +1,17 @@
 ---
 title: Azure Synapse Pathway Preview overview 
 description: Azure Synapse Pathway is a tool to migrate a data warehouse to Azure Synapse Analytics.
+author: anshul82-ms
 ms.author: anrampal
 ms.topic: overview 
-ms.date: 02/22/2020
+ms.date: 03/02/2021
 ms.prod: sql
-ms.technology: "Azure Synapse Pathway"
+ms.technology: tools-other
+monikerRange: "=azure-sqldw-latest"
 ms.custom: template-overview 
 ---
-# Azure Synapse Pathway Preview
-
-## Overview
+# Azure Synapse Pathway Preview overview
+[!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 As customers consider modernizing their data warehouse systems, one of the critical blockers they face is translating their SQL code. The existing code is written and optimized for their current system but needs to be optimized for the new system they're migrating to.
 
@@ -26,7 +27,7 @@ To translate this critical SQL code, customers have to either manually rewrite e
 
 **Azure Synapse Pathway** helps you upgrade to a modern data warehouse platform by automating the code translation of your existing data warehouse. It's a free, intuitive, and easy to use tool that automates the code translation enabling a quicker migration to Azure Synapse Analytics.
 
- ![Azure Synapse pathway overview.](./media/pathway-overview/synapse-pathway-overview.png) 
+ ![Azure Synapse pathway overview.](./media/azure-synapse-pathway-overview/pathway-overview.png) 
 
 Synapse Pathway translates Data Definition Language (DDL) and Data Manipulation Language (DML) statements into T-SQL compliant language that is compatible with Azure Synapse SQL.
 
@@ -41,9 +42,8 @@ To install Synapse Pathway, check [Azure Synapse Pathway download](synapse-pathw
 ## Supported sources
 
 Azure Synapse Pathway supports code conversion of database, schemas, and tables for the following sources:
-- **IBM Netezza** 
+- **IBM Netezza**
 - **Microsoft SQL Server**
-- **Teradata Vantage**
 - **Snowflake**
 
 ## Frequently asked questions
@@ -53,6 +53,4 @@ Review the [FAQ Page](pathway-faq.md) for additional information on Azure Synaps
 ## Next steps
 
 - [Run your first translation with Azure Synapse Pathway](synapse-pathway-assessment.md)
-- [Announcement Blog](links-how-to.md)
-
-
+- Announcement Blog - [Announcing Azure Synapse Pathway: Turbocharge your data warehouse migration - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/announcing-azure-synapse-pathway-turbocharge-your-data-warehouse/ba-p/2176630)

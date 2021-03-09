@@ -4,17 +4,19 @@ description: Perform a data warehouse code translation with Azure Synapse Pathwa
 author: anshul82-ms
 ms.author: anrampal
 ms.prod: sql
-ms.technology: "Azure Synapse Pathway"
+ms.technology: tools-other
 ms.topic: tutorial 
-ms.date: 02/16/2021
+ms.date: 03/02/2021
+monikerRange: "=azure-sqldw-latest"
 ms.custom: template-tutorial 
 ---
 
 # Tutorial to perform your first code translation with Azure Synapse Pathway Preview
+[!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
-Azure Synapse Pathway v1.0 introduces support for translating schemas, tables, views, functions, etc. from **Netezza**, **Teradata**, **Snowflake**, and **Microsoft SQL Server** into T-SQL complaint code that automates migration to Azure Synapse Analytics.
+Azure Synapse Pathway Preview introduces support for translating schemas, tables, views, functions, etc. from **Netezza**, **Snowflake**, and **Microsoft SQL Server** into T-SQL complaint code that automates migration to Azure Synapse Analytics.
 
-For more information, see [Azure Synapse Pathway overview](azure-synapse-pathway-overview).
+For more information, see [Azure Synapse Pathway Preview overview](azure-synapse-pathway-overview.md).
 
 In this tutorial, you learn how to:
 
@@ -38,17 +40,17 @@ To complete this tutorial, make sure you've installed [Azure Synapse Pathway](sy
     > Only files with .sql extension can be provided as an input source. If the user provides DDL, DML scripts in .txt file, tool will not perform any translation.
 
 1. When translating the Netezza code to Azure Synapse Analytics, choose IBM Netezza in the Translation Type drop down.
-  ![Azure Synapse assessment input.](./media/perform-assessment/assessment-input.png)
+  ![Azure Synapse assessment input.](./media/synapse-pathway-assessment/assessment-input.png)
 
 1. To select the output directory, select browse to specify the location where the output will be generated.
- ![Azure Synapse output directory.](./media/perform-assessment/output-directory.png)
+ ![Azure Synapse output directory.](./media/synapse-pathway-assessment/output-directory.png)
 
 1. Select **Translate** to start the translation
 
 ## View Results
 
 1. The duration of the assessment depends on the number of databases added and the schema size of each database. Results are displayed for each database as soon as they're available.
- ![Azure Synapse assessment report.](./media/perform-assessment/assessment-report.png)
+ ![Azure Synapse assessment report.](./media/synapse-pathway-assessment/assessment-report-rendering.png)
 
 1. When you select view results, it will take you to the output directory specified in the previous step and you'll see the translated script file(s) based on your input directory structure.
 

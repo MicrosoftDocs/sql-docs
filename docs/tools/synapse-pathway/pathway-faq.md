@@ -4,14 +4,16 @@ description: Frequently asked question for Azure Synapse Pathway
 author: anshul82-ms
 ms.author: anrampal
 ms.topic: overview 
-ms.date: 02/22/2020
+ms.date: 03/02/2021
 ms.prod: sql
-ms.technology: "Azure Synapse Pathway"
+ms.technology: tools-other
+monikerRange: "=azure-sqldw-latest"
 ms.custom: template-overview 
 ---
-# Azure Synapse Pathway Preview
+# Azure Synapse Pathway Preview FAQ
+[!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
-In this guide, you'll find the most frequently asked questions on Azure Synapse Pathway.
+In this guide, you'll find the most frequently asked questions on Azure Synapse Pathway Preview.
 
 ## General
 
@@ -31,7 +33,6 @@ A. There is no cost associated with downloading and running your code translatio
 
 A. In this preview version of Synapse Pathway, following data warehouses are included as sources:
 - Microsoft SQL Server
-- Teradata
 - Snowflake
 - Netezza
 
@@ -56,7 +57,9 @@ A. Since you can run Synapse Pathway in your local environment, there is no data
 
 A. Azure Synapse Pathway is currently in **Preview**.   Support for Synapse Pathway is available through Microsoft support channel. You can raise the ticket either in the Azure portal or standard (typically on-prem support) portals.
 
-> [!NOTE] Like any other Azure Service, all preview services are eligible for support, just without SLA's in place.
+
+> [!NOTE] 
+> Like any other Azure Service, all preview services are eligible for support, just without SLA's in place.
 
 <!-- ### Troubleshooting and optimization
 

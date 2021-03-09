@@ -2,21 +2,23 @@
 title: Azure Synapse Pathway Preview behind the scenes.
 description: Technical deep dive into how Azure Synapse Pathway translates your code. 
 author: anshul82-ms
-ms.author: anrampal.
+ms.author: anrampal
 ms.prod: sql
-ms.technology: "Azure Synapse Pathway"
+ms.technology: tools-other
 ms.topic: conceptual 
-ms.date: 02/24/2021.
+ms.date: 03/02/2021
+monikerRange: "=azure-sqldw-latest"
 ms.custom: template-concept 
 ---
 
 # Azure Synapse Pathway Preview behind the scenes
+[!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 Azure Synapse Pathway’s goal is to preserve the functional intent of the original code while optimizing for Synapse SQL. Synapse Pathway uses a three-stage process for translating SQL code from a source system to Azure Synapse SQL.
 
 Each of the stages preserves and augments the knowledge of the source including source-specific metadata to ensure the highest quality in translation.
 
- ![Azure Synapse Pathway.](./media/technical-deep-dive/behind-the-scene.png)
+ ![Azure Synapse Pathway.](./media/synapse-pathway-behind-the-scenes/behind-the-scene.png)
 
 ## Stage 1 – Lexing and parsing
 
@@ -42,7 +44,7 @@ Azure Synapse SQL defines the absolute function as:
 ABS ( numeric_expression )  
 ```
 
-In this simple case, Synapse Pathway understands that the conversion in Synapse SQL from float to numeric is an implicit [conversion](../../t-sql/functions/cast-and-convert-transact-sql?view=azure-sqldw-latest#implicit-conversions) and requires no further type casting. Simple, clean, and effective code translation.
+In this simple case, Synapse Pathway understands that the conversion in Synapse SQL from float to numeric is an implicit [conversion](../../t-sql/functions/cast-and-convert-transact-sql.md?view=azure-sqldw-latest&preserve-view=true#implicit-conversions) and requires no further type casting. Simple, clean, and effective code translation.
 
 Keeping this meta-information about the source statements and fragments helps the structural differences between platforms – conversions in opt-out logic for search condition predicates in a WHERE clause for example.
 

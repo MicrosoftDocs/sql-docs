@@ -7,7 +7,7 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 12/11/2019
+ms.date: 03/09/2021
 ---
 
 # Configure a Report Server on a Network Load Balancing Cluster
@@ -50,7 +50,7 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
   
  To work around this issue, you can generate an arbitrary validation key to support view state validation, and then manually configure each report server node to use the same key. You can use any randomly generated hexadecimal sequence. The validation algorithm (such as SHA1) determines how long the hexadecimal sequence must be.  
 
-::: moniker range="=sql-server-2016"
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
 
 1. Generate a validation key and decryption key by using the autogenerate functionality provided by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In the end, you must have a single <`machineKey`> entry that you can paste into the Web.config file for each Report Server instance in the scale-out deployment.  
   
@@ -68,9 +68,8 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
   
 5. Verify that all Web.Config files in the \Reporting Services\Reportserver folders contain identical <`machineKey`> elements in the <`system.web`> section.  
 
-::: moniker-end
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-::: moniker range=">=sql-server-2017"
 
 1. Generate a validation key and decryption key by using the autogenerate functionality provided by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In the end, you must have a single \<**MachineKey**> entry that you can paste into the RSReportServer.config file for each report server instance in the scale-out deployment.
 
@@ -85,8 +84,6 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
 3. Repeat the previous step for each report server in the scale-out deployment.  
 
 4. Verify that all RSReportServer.config files in the \Reporting Services\Report Server folders contain identical \<**MachineKey**> elements.
-
-::: moniker-end
 
 ## <a name="SpecifyingVirtualServerName"></a> How to Configure Hostname and UrlRoot
 

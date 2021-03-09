@@ -55,7 +55,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 >  If expression is a character string, it must be in the format {+|-}TZH:THM.  
   
 ## Return Type  
- **datetimeoffset**. The fractional precision is the same as the *datetime* argument.  
+ **datetimeoffset**. The fractional precision is the same as the *datetime_expression* argument.  
   
 ## Examples  
   

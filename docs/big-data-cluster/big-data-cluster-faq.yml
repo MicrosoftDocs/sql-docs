@@ -15,14 +15,14 @@ metadata:
   ms.date: 03/08/2021
 
 title: Big Data Clusters FAQ
-summary: This article answers frequently asked questions about [Microsoft SQL Server Big Data Clusters](big-data-cluster-overview.md) concepts, capabilities, deployment, supportability, and tools
+summary: This article answers frequently asked questions about [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md) concepts, capabilities, deployment, supportability, and tools.
 sections:
   - name: Best practices
     questions: 
       - question: What are the recommended best practices regarding file locations?
         answer: |
           There is less flexibility in this regard comparing to configuring SQL Server on bare metal machines on Windows or Linux. In the Kubernetes environment these artifacts are abstracted and they need to be portable. Currently, there are 2 PVs (data & logs) provided per pod that can be configured. For more information, see [Data persistence with SQL Server big data cluster in Kubernetes](concept-data-persistence.md).
-      - question: Do I need to take transaction log backups on SQL Server BDC?	
+      - question: Do I need to take transaction log backups on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?	
         answer: |
           You need to perform log backups only for user databases in SQL Server master instance (depending on recovery model or HA configuration). Data pool databases use SIMPLE recovery model only. Same applies for the DW* databases created for PolyBase.
       - question: How can I monitor if distributed queries are actually using the compute pool?
@@ -111,7 +111,7 @@ sections:
       - question: Does BDC overlap with Synapse in terms of functionality and integration?
         answer: |
           It depends on your use cases and requirements. BDC provides a full SQL Server surface area in addition to Microsoft-supported Spark and HDFS on-premise. BDC enables the SQL Server customer to be able to integrate into analytics/big data. Azure Synapse is purely an analytical platform offering a first class experience for customers as a managed service in Azure only, with a focus on scale out analytics. Azure Synapse is not targeting an operational workload as part of that. BDC is aiming to provide in database analytical scenarios, much closer to the operational store.
-      - question: Is SQL Server using HDFS as its storage in Big Data Clusters?
+      - question: Is SQL Server using HDFS as its storage in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
         answer: |
           The SQL Server instance's database files are not stored in HDFS, however, SQL Server can query HDFS using external table interface.
       - question: What are the available distribution options for storing data in the distributed tables in each data pool?
@@ -149,7 +149,7 @@ sections:
       - question: Is it possible to increase the size of the storage pool on a deployed cluster? 
         answer: |
           There is no azdata interface to perform this operation at this time. You have the option to resize desired PVCs manually. Resizing is a complex operation, see [Persistent Volumes in Kubernetes Documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
-  - name: Data virtualization with PolyBase
+  - name: Data virtualization
     questions: 
       - question: When should I use linked servers vs PolyBase?
         answer: |
@@ -162,7 +162,7 @@ sections:
           Yes, you can use PolyBase in BDC to access data in Azure SQL Database.
       - question: Why do the CREATE TABLE statements include the key word EXTERNAL? What does EXTERNAL do differently than the standard CREATE TABLE?
         answer: |
-          In general, the external keyword implies that the data is not in the SQL Server instance. For example, you can define a storage pool table on top of an HDFS directory. The data are stored in HDFS files, not in your database files, but external table provided you the interface to query HDFS files as a relational table as if it is in the database. This concept of accessing external data is called data virtualization, for more information see [What is PolyBase and Data Virtualization?](../relational-databases/polybase/polybase-guide.md). For a tutorial on virtualizing data from CSV files in HDFS, see [Virtualize CSV data from storage pool (Big Data Clusters)](data-virtualization-csv.md).
+          In general, the external keyword implies that the data is not in the SQL Server instance. For example, you can define a storage pool table on top of an HDFS directory. The data are stored in HDFS files, not in your database files, but external table provided you the interface to query HDFS files as a relational table as if it is in the database.<BR>This concept of accessing external data is called data virtualization, for more information see [What is PolyBase and Data Virtualization?](../relational-databases/polybase/polybase-guide.md). For a tutorial on virtualizing data from CSV files in HDFS, see [Virtualize CSV data from storage pool [Big Data Clusters](data-virtualization-csv.md).
       - question: What are the differences between data virtualization using SQL Server running within BDC vs SQL Server?
         answer: |
           For an comparison, see [PolyBase in Big Data Clusters vs. PolyBase in stand-alone instances](../relational-databases/polybase/polybase-faq.yml#polybase-in-big-data-clusters-vs--polybase-in-stand-alone-instances).
@@ -177,7 +177,7 @@ sections:
       - question: Is there a definitive list of everything that can be set in the BDC config?
         answer: |
           All the customizations that can be done at deployment time are documented here in [Configure deployment settings for cluster resources and services](deployment-custom-configuration.md). For Spark, see [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md).
-      - question: Can we deploy SQL Server Analysis Services together with Big data cluster?
+      - question: Can we deploy SQL Server Analysis Services together with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
         answer: |
           No. Specifically, SQL Server Analysis Services (SSAS) is not supported on SQL Server on Linux, so you will have to install a SQL Server instance on Windows server to run SSAS.
       - question: Is BDC supported for deployment in EKS or GKS?
@@ -189,14 +189,14 @@ sections:
       - question: How do I install libraries and packages in Spark?
         answer: |
           You can add packages at job submission using the steps in the [sample notebook for installing packages in Spark](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/config-install/installpackage_Spark.ipynb).
-      - question: Do I need to use SQL Server 2019 to use R and Python for Big Data?
+      - question: Do I need to use SQL Server 2019 to use R and Python for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
         answer: |
           Machine Learning (ML) Services (R & Python) is available beginning in SQL Server 2017. ML Services is available in SQL Server Big Data Clusters as well. For more information, see [What is SQL Server Machine Learning?](../advanced-analytics/what-is-sql-server-machine-learning.md).
   - name: Licensing
     questions: 
-      - question: How do SQL Server licenses work for Big Data Clusters?
+      - question: How do SQL Server licenses work for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
         answer: |
-          Please refer to the licensing guide which goes into much more detail, [download the PDF](https://aka.ms/sql-bdc-licensing).<BR>For a summary, watch this video: [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-Licensing-Big-Data-Clusters--Data-Exposed]
+          Please refer to the licensing guide which goes into much more detail, [download the PDF](https://aka.ms/sql-bdc-licensing).<BR>For a summary, watch the video [SQL Server Licensing: Big Data Clusters | Data Exposed](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-Licensing-Big-Data-Clusters--Data-Exposed).
   - name: Security
     questions: 
       - question: Does BDC support Azure Active Directory?
@@ -226,7 +226,7 @@ sections:
       - question: What is the support model for SparkML & SQL Server ML Service?
         answer: |
           SQL Server ML Services support policy is same as that of SQL Server, except that every major release comes with a new runtime version. SparkML library itself is open source software (OSS). We do package many OSS components in BDC and this is supported by Microsoft. 
-      - question: Is RHEL8 supported platform for SQL 2019 BDC?
+      - question: Is Red Hat Enterprise Linux 8 (RHEL8) supported platform for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
         answer: |
           Not at this time. See here for the [supported platforms](release-notes-big-data-cluster.md#supported-platforms).
   - name: Tools
@@ -243,8 +243,8 @@ sections:
         answer: |
           Here are some resources you can use:<BR>
           [Workshop: Kubernetes - From Bare Metal to SQL Server Big Data Clusters](https://github.com/microsoft/sqlworkshops-k8stobdc)<BR>
-          [Workshop: SQL Server Big Data Clusters - Architecture](https://github.com/microsoft/sqlworkshops-bdc)
-
+          [Workshop: SQL Server Big Data Clusters - Architecture](https://github.com/microsoft/sqlworkshops-bdc)<BR>
+          [Tutorial: Prepare an application for Azure Kubernetes Service (AKS)](/azure/aks/tutorial-kubernetes-prepare-app)<BR>        
 additionalContent: |
  ## See Also
  - [SQL Server Big Data Clusters](big-data-cluster-overview.md) 

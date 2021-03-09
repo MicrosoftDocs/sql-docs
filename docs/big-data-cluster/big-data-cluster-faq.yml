@@ -33,12 +33,12 @@ sections:
           While you can modify some of the settings using Kubernetes API or kubectl, it is not supported nor recommended. You must execute all the BDC management operations [via azdata](../azdata/reference/reference-azdata-bdc.md).
       - question: How can I backup data stored in HDFS?
         answer: |
-            You can use any solutions that enable hardware level storage snapshotting or copy/sync via webHDFS.  You could also use azdata bdc hdfs cp, for more information see [azdata bdc hdfs](../azdata/reference/reference-azdata-bdc-hdfs.mds#azdata-bdc-hdfs-cp).
+            You can use any solutions that enable hardware level storage snapshotting or copy/sync via webHDFS.  You could also use azdata bdc hdfs cp, for more information see [azdata bdc hdfs](../azdata/reference/reference-azdata-bdc-hdfs.md#azdata-bdc-hdfs-cp).
   - name: Concepts and capabilities
     questions: 
       - question: Is there a way to 'scale out' a stored proc? For example, having it run on compute pool for example?	
         answer: |
-          Not at this time. One option is to deploy SQL Server in an [AlwaysOn Availability Group](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). You can then use [readable secondary replica(s)](database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) to run some processes (ex: ml training/scoring, maintenance activities, etc).
+          Not at this time. One option is to deploy SQL Server in an [AlwaysOn Availability Group](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). You can then use [readable secondary replica(s)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) to run some processes (ex: ml training/scoring, maintenance activities, etc).
       - question: How to dynamically scale pods of a Pool?
         answer: |
           This is not a supported scenario at this time.          
@@ -162,10 +162,10 @@ sections:
           Yes, you can use PolyBase in BDC to access data in Azure SQL Database.
       - question: Why do the CREATE TABLE statements include the key word EXTERNAL? What does EXTERNAL do differently than the standard CREATE TABLE?
         answer: |
-          In general, the external keyword implies that the data is not in the SQL Server instance. For example, you can define a storage pool table on top of an HDFS directory. The data are stored in HDFS files, not in your database files, but external table provided you the interface to query HDFS files as a relational table as if it is in the database. This concept of accessing external data is called data virtualization, for more information see (What is PolyBase and Data Virtualization?)[../relational-databases/polybase/polybase-guide.md]. For a tutorial on virtualizing data from CSV files in HDFS, see [Virtualize CSV data from storage pool (Big Data Clusters)](data-virtualization-csv.md).
+          In general, the external keyword implies that the data is not in the SQL Server instance. For example, you can define a storage pool table on top of an HDFS directory. The data are stored in HDFS files, not in your database files, but external table provided you the interface to query HDFS files as a relational table as if it is in the database. This concept of accessing external data is called data virtualization, for more information see [What is PolyBase and Data Virtualization?](../relational-databases/polybase/polybase-guide.md). For a tutorial on virtualizing data from CSV files in HDFS, see [Virtualize CSV data from storage pool (Big Data Clusters)](data-virtualization-csv.md).
       - question: What are the differences between data virtualization using SQL Server running within BDC vs SQL Server?
         answer: |
-          For an comparison, see [PolyBase in Big Data Clusters vs. PolyBase in stand-alone instances](../relational-databases/polybase/polybase-faq.md#polybase-in-big-data-clusters-vs--polybase-in-stand-alone-instances).
+          For an comparison, see [PolyBase in Big Data Clusters vs. PolyBase in stand-alone instances](../relational-databases/polybase/polybase-faq.yml#polybase-in-big-data-clusters-vs--polybase-in-stand-alone-instances).
       - question: How can I easily tell that an external table is pointing to data pool vs storage pool?
         answer: |
           You can determine type of external table by looking at the data source location prefix, for example, sqlserver://, oracle://, sqlhdfs://, sqldatapool://. We don’t use the TYPE column in sys.external_data_sources for the new data sources so that will work only for the older PolyBase data sources (HADOOP and BLOB_STORAGE).
@@ -204,7 +204,7 @@ sections:
           Not at this time.
       - question: Can we connect to BDC master using integrated authentication?
         answer: |
-          Yes, you can connect to various BDC services using integrated authentication (with Active Directory). For more information, see [Deploy SQL Server Big Data Cluster in Active Directory mode](active-directory-deploy.md). Also see [Security concepts for Big Data Clusters](concept.security.md).
+          Yes, you can connect to various BDC services using integrated authentication (with Active Directory). For more information, see [Deploy SQL Server Big Data Cluster in Active Directory mode](active-directory-deploy.md). Also see [Security concepts for Big Data Clusters](concept-security.md).
       - question: How can I add new users for various services within BDC?
         answer: |
           In basic authentication mode (username/password), there is no support for adding multiple users for controller or Knox gateway/HDFS endpoints. The only user supported for these endpoints is root. For SQL Server, you can add users using TSQL as you would for any other SQL Server instance. 

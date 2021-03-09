@@ -56,6 +56,16 @@ To complete this tutorial, make sure you've installed [Azure Synapse Pathway](sy
   
 1. A results file, which will have a list of errors and warnings, will be uploaded in the same output directory.
 
+## Run the translation using command line
+1. On installation, AspCmd.exe will be available in C:\Program Files (x86)\Azure Synapse Pathway (Preview)
+1. Launch the command prompt and go to the file location 
+1. Type aspcmd.exe --help for a list of commands
+
+  ![Azure Synapse assessment report.](./media/perform-assessment/cmd-help.png)
+
+4. You can start running the translations using the command line
+ ![Azure Synapse assessment report.](./media/perform-assessment/cmd-assessment.png)
+
 ## Next steps
 
 [Learn how to save and load the assessment](tutorial-save-load-assessment.md)

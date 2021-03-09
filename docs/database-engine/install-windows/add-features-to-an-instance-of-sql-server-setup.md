@@ -141,12 +141,16 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
 26. If you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you are done with Setup. For information about Setup log files, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
+> [!CAUTION]
+> Apply servicing updates
+>
+> Adding features to an existing installation of SQL Server will install the feature at the version level of the installation media, which may be behind the version level other features of SQL Server. This may result in unexpected behavior or errors. Always follow up installing the new feature by bringing the new feature up to the same version level. Install service packs (SPs), cumulative updates (CUs), and/or general distribution releases (GDRs) as needed. To determine the version of the server and new features, see [Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level).
+
 ## Next Steps
 
 Configure your SQL Server installation
 
 - To reduce the attackable surface area of a system, SQL Server selectively installs and activates key services and features. For more information, see [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).
-- Any features added will still be at original RTM version. You must reapply the necessary Service Pack and Cumulative Update to bring the newly added features to the same version of the instance prior to adding the features. Failure to do so will result in unexpected behavior.
 
 ## See Also
 - [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)

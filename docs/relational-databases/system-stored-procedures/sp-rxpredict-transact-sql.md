@@ -1,5 +1,6 @@
 ---
-title: "sp_rxPredict | Microsoft Docs"
+title: "sp_rxPredict"
+description: sp_rxPredict generates a predicted value for a given input consisting of a machine learning model stored in a binary format in a SQL Server database. 
 ms.date: "03/31/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"

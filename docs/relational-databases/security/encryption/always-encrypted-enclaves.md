@@ -40,7 +40,7 @@ During statement processing, both the data and the column encryption keys are no
 
 In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], Always Encrypted with secure enclaves uses [Virtualization-based Security (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) secure memory enclaves (also known as Virtual Secure Mode, or VSM enclaves) in Windows.
 
-In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], Always Encrypted with secure enclaves uses [Intel Software Guard Extensions (Intel SGX)](https://itpeernetwork.intel.com/microsoft-azure-confidential-computing/) enclaves. Intel SGX is a hardware-based trusted execution environment technology supported in databases that use the [DC-series](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series) hardware configuration.
+In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], Always Encrypted with secure enclaves uses [Intel Software Guard Extensions (Intel SGX)](https://itpeernetwork.intel.com/microsoft-azure-confidential-computing/) enclaves. Intel SGX is a hardware-based trusted execution environment technology supported in databases that use the [DC-series](/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series) hardware configuration.
 
 ## Secure enclave attestation
 
@@ -50,7 +50,7 @@ The process of verifying the enclave is called **enclave attestation**, and it i
 
 The attestation process for VBS secure enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] is [Windows Defender System Guard runtime attestation](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/), which requires Host Guardian Service (HGS) as an attestation service. 
 
-The attestation of Intel SGX enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] requires [Microsoft Azure Attestation](https://docs.microsoft.com/azure/attestation/overview).
+The attestation of Intel SGX enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] requires [Microsoft Azure Attestation](/azure/attestation/overview).
 
 > [!NOTE]
 > [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] does not support Microsoft Azure Attestation. Host Guardian Service is the only attestation solution supported for VBS enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
@@ -161,7 +161,7 @@ Here are the specific considerations you should keep in mind:
   - If your database contains indexes on enclave-enabled columns using randomized encryption, make sure to enable [Accelerated database recovery (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) in the database before creating a database backup. ADR will ensure the database, including the indexes, is available immediately after you restore the database. For more information, see [Database Recovery](#database-recovery).
   
 - **Azure SQL Database**
-  - When configuring [active geo-replication](https://docs.microsoft.com/azure/azure-sql/database/active-geo-replication-overview), make sure a secondary database supports secure enclaves, if the primary database does.
+  - When configuring [active geo-replication](/azure/azure-sql/database/active-geo-replication-overview), make sure a secondary database supports secure enclaves, if the primary database does.
 
 In both SQL Server and Azure SQL Database, when you migrate your database using a bacpac file, you need to make sure you drop all indexes for enclave-enabled columns using randomized encryption before creating the bacpac file.
 

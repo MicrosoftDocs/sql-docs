@@ -57,7 +57,8 @@
       "feedback_system": "None",
       "feedback_github_repo": "MicrosoftDocs/sql-docs",
       "feedback_product_url": "https://feedback.azure.com/forums/908035-sql-server/",
-      "titleSuffix": "SQL Server"
+      "titleSuffix": "SQL Server",
+      "recommendations": true
     },
 
     "fileMetadata": {
@@ -172,10 +173,8 @@
         "ssms/visual-db-tools/**/*.md": "Visual Database Tools",
         "tools/ssbdiagnose/**/*.md": "ssbdiagnose",
         "data-quality-services/**/*.md": "Data Quality Services (DQS)",
-        "azdata/**/*.md": "Azure Data CLI (azdata)"
-
-
-
+        "azdata/**/*.md": "Azure Data CLI (azdata)",
+        "tools/synapse-pathway/**/*.md": "Azure Synapse Pathway"
       },
 
       "breadcrumb_path": {
@@ -202,7 +201,7 @@
         "integration-services/**/*.md": ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current",
         "language-extensions/**/*.md": ">= sql-server-ver15 || >= sql-server-linux-ver15",
         "linux/**/*.md": ">= sql-server-2017 || >= sql-server-linux-2017",
-        "machine-learning/**/*.md": ">= sql-server-2016",
+        "machine-learning/**/*.md": ">= sql-server-2017",
         "master-data-services/**/*.md": ">= sql-server-2016",
         "mdx/**/*.md": ">= sql-server-2016",
         "odbc/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",

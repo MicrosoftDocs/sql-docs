@@ -468,6 +468,8 @@ items:
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
       - name: Cluster troubleshooting notebooks
         href: big-data-cluster/cluster-troubleshooter-notebooks.md
+      - name: Big Data Clusters FAQ
+        href: big-data-cluster/big-data-cluster-faq.yml
   - name: Reference
     items:
     - name: Deployment

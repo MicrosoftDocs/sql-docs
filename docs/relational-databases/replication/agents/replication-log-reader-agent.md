@@ -138,6 +138,7 @@ logread [-?]
  
  **-MultiSubnetFailover** [**0**\|**1**]
  Specifies whether the MultiSubnetFailover property is enabled or not. If your application is connecting to an AlwaysOn availability group (AG) on different subnets, setting MultiSubnetFailover to 1 (true) provides faster detection of and connection to the (currently) active server.
+   **Applies to**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)]).  
   
  **-Output** _output_path_and_file_name_  
  Is the path of the agent output file. If the file name is not provided, the output is sent to the console. If the specified file name exists, the output is appended to the file.  

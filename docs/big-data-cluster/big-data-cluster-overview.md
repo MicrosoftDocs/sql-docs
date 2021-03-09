@@ -30,7 +30,9 @@ Use [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)
 - Virtualize data with [PolyBase](../relational-databases/polybase/polybase-guide.md). Query data from external SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources with external tables.
 - Provide high availability for the SQL Server master instance and all databases by using Always On availability group technology.
 
-For more information about new features and known issues for latest release, see the [release notes](release-notes-big-data-cluster.md).
+For more information about new features and known issues for latest release, see the [release notes](release-notes-big-data-cluster.md).   
+
+For more information Big Data Clusters, see [Big Data Clusters FAQ](big-data-cluster-faq.yml).
 
 ## Scenarios
 
@@ -114,4 +116,5 @@ The storage pool consists of storage pool pods comprised of SQL Server on Linux,
 
 ## Next steps
 
-For more information about deploying [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Get started with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).
+* For more information about deploying [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Get started with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).    
+* Review the [Big Data Clusters FAQ](big-data-cluster-faq.yml).  

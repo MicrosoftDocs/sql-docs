@@ -1,0 +1,459 @@
+### YamlMime:FAQ
+metadata:
+  title: Big Data Clusters FAQ
+  description: FAQ on Big Data Clusters concepts, capabilities, deployment, supportability and tools
+  services: sql-database
+  ms.service: sql
+  ms.subservice: 
+  ms.topic: reference
+  ms.prod: sql
+  ms.technology: big-data-cluster
+  author: WilliamDAssafMSFT
+  ms.author: wiassaf
+  ms.reviewer: 
+  ms.custom: 
+  ms.date: 03/08/2021
+
+title: Big Data Clusters FAQ
+summary: This article answers frequently asked questions about [Microsoft SQL Server Big Data Clusters](big-data-cluster-overview.md) concepts, capabilities, deployment, supportability and tools
+sections:
+  - name: Best Practices
+    questions: 
+      - question: What are the recommended best practices regarding file locations?
+        answer: |
+          There is less flexibility in this regard comparing to configuring SQL Server on bare metal machines on Windows or Linux. In the Kubernetes environment these artifacts are abstracted and they need to be portable. Currently, there are 2 PVs (data & logs) provided per pod that can be configured. For more information, see [Data persistence with SQL Server big data cluster in Kubernetes](concept-data-persistence.md).
+      - question: Do I need to take transaction log backups on SQL Server BDC?	
+        answer: |
+          You need to perform log backups only for user databases in SQL Server master instance (depending on recovery model or HA configuration). Data pool databases use SIMPLE recovery model only. Same applies for the DW* databases created for PolyBase.
+      - question: How can you import data to the same table using PolyBase CTAS instead of creating NEW table every time you run the CTAS?
+        answer: |
+          You can use INSERT..SELECT approach to avoid the need a new table every time.
+      - question: My BDC deployment failed. How do I see what went wrong?
+        answer: |
+          See [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](notebooks-manage-bdc.md). Also see the troubleshooting topics in [Troubleshoot Kubernetes](cluster-troubleshooting-commands.md).
+      - question: When should I use linked servers vs PolyBase?
+        answer: |
+          See main differences and use cases here: [Polybase FAQ](../relational-databases/polybase/polybase-faq.yml).
+      - question: How can I monitor if distributed queries are actually leveraging the compute pool?
+        answer: |
+          You can use the existing PolyBase DMVs that were enhanced for BDC scenarios. For more information, see [Monitor and troubleshoot PolyBase](../relational-databases/polybase/polybase-troubleshooting.md).
+      - question: Is it possible to configure and manage BDC resources directly via kubectl to the Kubernetes API Server?
+        answer: |
+          While you can modify some of the settings using Kubernetes API or kubectl, it is not supported nor recommended. You must execute all the BDC management operations [via azdata](../azdata/reference/reference-azdata-bdc.md).
+      - question: What would be the advantage/considerations to load data into Data pool instead of directly into the Master Instance as local tables? 
+        answer: |
+          If your SQL Server Master instance has enough resources to satisfy your analytic workload then it is always the fastest option. Data pool helps if you want to offload execution to other SQL instances for your distributed queries. You can also use data pool to ingest data from Spark executors in parallel to different SQL instances – so load performance for large datasets that is being generated from the Hadoop Distributed File System (HDFS) will typically be better than going into a single SQL Server instance. However, this is also hard to say since you could still have multiple tables in a SQL Server and insert into parallel if you want. Performance depends on many factors and there is no single guidance or recommendation in that regard.
+      - question: How can I monitor the data distribution within the data pool tables?
+        answer: |
+          You can use EXECUTE AT to query DMVs like sys.dm_db_partition_stats to get the data in each local table.
+      - question: How can I backup data stored in HDFS?
+        answer: |
+            You can use any solutions that enable hardware level storage snapshotting or copy/sync via webHDFS.  You could also use azdata bdc hdfs cp, for more information see [azdata bdc hdfs](../azdata/reference/reference-azdata-bdc-hdfs.mds#azdata-bdc-hdfs-cp).
+  - name: Concepts and Capabilities
+    questions: 
+      - question: Is there a way to 'scale out' a stored proc? For example, having it run on compute pool for example?	
+        answer: |
+          Not at this time. One option is to deploy SQL Server in an [AlwaysOn Availability Group](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). You can then use [readable secondary replica(s)](database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) to run some processes (ex: ml training/scoring, maintenance activities, etc).
+      - question: How to dynamically scale pods of a Pool?
+        answer: |
+          This is not a supported scenario at this time.          
+      - question: Is it possible to backup external tables stored in datapools?
+        answer: |
+          Database in the data pool instance does not have any metadata about the external tables - it is like any user database. You can do backup/restore, but to avoid inconsistent results, you must ensure the external table metadata in the database in [the SQL Master instance](concept-master-instance.md) is in sync. 
+      - question: Does the data pool provide sharding?
+        answer: |
+          Data pool is a distributed table concept. Sharding is typically referenced as an OLTP concept - this is not currently supported.
+      - question: When should I use the data pool or the storage pool for raw data storage?
+        answer: |
+          The term pool is reserved to describe a collection of homogeneous services or applications. For example, data pool is a set of stateful SQL Server compute and storage & storage pool is a set of HDFS & Spark services. The SQL Server master is either a single-instance or multiple instances that can be configured in an availability group. The SQL Server master instance is a regular SQL Server instance on Linux and you can use any feature available on Linux there. You should start first with the data model, the entities and services/applications that will primarily operate on the entity. All the data doesn't have to be stored in one place like SQL Server or HDFS or data pool. Based on the data analysis, it is possible you store most of the data in HDFS, process the data to more efficient format, and expose to other services. The remaining data would be stored in SQL Master instance.
+      - question: What are the supported data virtualization sources?
+        answer: |
+          BDC supports [data virtualization](../relational-databases/polybase/data-virtualization.md) from ODBC sources – SQL Server, Oracle, MongoDB, Teradata, etc. It also supports tiering of remote stores such as Azure Data Lake Store Gen2 and S3-compatible storage.
+      - question: Does BDC support Azure Active Directory?
+        answer: |
+          Not at this time.
+      - question: Can we connect to BDC master using integrated authentication?
+        answer: |
+          Yes, you can connect to various BDC services using integrated authentication (with Active Directory). For more information, see [Deploy SQL Server Big Data Cluster in Active Directory mode](active-directory-deploy.md).
+      - question: How can I add new users for various services within BDC?
+        answer: |
+          In basic authentication mode (username/password), there is no support for adding multiple users for controller or Knox gateway/HDFS endpoints. The only user supported for these endpoints is root. For SQL Server, you can add users using TSQL as you would for any other SQL Server instance. 
+          If you deploy BDC with AD auth for its endpoints, multiple users are supported. See here for details on how to configure the AD groups at deployment time. For more information, see [Deploy SQL Server Big Data Cluster in Active Directory mode](active-directory-deploy.md).
+      - question: Does SQL Server BDC support GPU based deep learning libraries and computations (PyTorch, Keras, specific image libraries, etc)?
+        answer: |
+          This is not a supported scenario at this time.
+      - question: Is there a way to configure multiple volume claims for a pool?
+        answer: |
+          Each pod can have only two persisted volumes (PVs). You can abstract the volume at OS level and use it for persistent storage. For example, you can create a RAID 0 OS partition using multiple disks and use that for persistent volume using a local storage provisioner. There is no way to use more PVs per pod today. PVs are mapped to directories inside the container and this is fixed. For more information on persisted volumes see, [Persistent Volumes in Kubernetes Documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
+      - question: If we configure multiple providers and multiple disks, will the HDFS config be updated with all the data volume claims?
+        answer: |
+          You can configure storage pool to use a specific storage class at deployment time. See [Data persistence with SQL Server big data cluster in Kubernetes](concept-data-persistence.md#customize-storage-configurations-for-each-pool).
+      - question: Is it possible to increase the size of the storage pool on an deployed cluster? 
+        answer: |
+          There is no azdata interface to perform this operation at this time. You have the option to resize desired PVCs manually. Resizing is a complex operation, see [Persistent Volumes in Kubernetes Documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
+      - question: Does the feature "Azure Storage encryption" by default also applies to AKS-based BDC clusters?
+        answer: |
+          This depends on the dynamic storage provisioner configurations in Azure Kubernetes Service (AKS). See here for more details: [Best practices for storage and backups in Azure Kubernetes Service (AKS)](/azure/aks/operator-best-practices-storage.md).
+      - question: What are the options to access Ceph-based storage?
+        answer: |
+          HDFS Tiering allows us to integrate transparently with S3-based protocols.
+      - question: Is data in HDFS preserved after an upgrade?
+        answer: |
+          Yes, data will be preserved since it is backed by persistent volumes and upgrade just deploys existing pods with new images.
+      - question: How HDFS tiering controls the cache?
+        answer: |
+          Using HDFS tiering, data is cached withing the local HDFS running in BDC to allow users to attach to large data lakes without having to bring all the data in. There is a configurable amount of space allocated to the cache which is defaulted to 2% today. Data is maintained in the cache but will be removed if that threshold is exceeded. Security is also maintained from the lake and all ACLs are applied. 
+      - question: Can we use SQL Server 2019 (15.0) with Azure Data Lake Store Gen2? Will this integration take care of folder level permission?
+        answer: |
+          Yes you can virtualize data stored in ADLS Gen2 using HDFS tiering. See more details here: [Configure HDFS tiering on BDC](hdfs-tiering.md).
+      - question: Is there a definitive list of everything that can be set in the BDC config?
+        answer: |
+          All the customizations that can be done at deployment time are documented here in [Configure deployment settings for cluster resources and services](deployment-custom-configuration.md). For Spark, see [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md).
+      - question: Whats the default high-availability and/or redundancy setting for the master node on Azure Kubernetes Service (AKS)?
+        answer: |
+          There are features like Availability Zones for AKS to address this type of requirement. An Availability Zone (AZ) is a high availability offering from Azure that protects applications and data from datacenter failures. For more information, see [Create an Azure Kubernetes Service (AKS) cluster that uses availability zones](/azure/aks/availability-zones).
+      - question: Is there a way to retain YARN and Spark Job History logs?
+        answer: |
+          Restarting sparkhead won't cause the logs to be lost, these logs are in HDFS. You should still see Spark history logs from the /gateway/default/sparkhistory UI. For Yarn container logs, you won't see those apps in Yarn UI because Yarn RM restarts, but those yarn logs are still in HDFS and you can link to them from Spark history server. You should always use Spark history server as the entry point to diagnose their Spark apps.
+      - question: Is it possible to ingest data from SnowFlake into a big data cluster?
+        answer: |
+          SQL Server on Linux (applies to the SQL Server Master instance in BDC too) does not support the generic ODBC data source which allows you to install a 3rd party ODBC driver (SnowFlake, DB2, PostgreSQL etc) and query those. This feature is currently available only in SQL Server 2019 on Windows. In BDC, you can read the data via Spark using JDBC and ingest into SQL Server using the MSSQL Spark Connector.
+      - question: Is it possible to ingest data using a custom ODBC data source into a big data cluster?
+        answer: |
+          SQL Server on Linux (applies to SQL Server Master instance in BDC too) does not support the generic ODBC data source which allows you to install a 3rd party ODBC driver (SnowFlake, DB2, PostgreSQL etc) and query those.
+      - question: Is there a way to turn the caching feature off for any pools?
+        answer: |
+          Cach size for HDFS tiering is 2% by default. Currently, there is not an exposed way to turn it off. 
+      - question: How to schedule SQL stored procedures in SQL Server 2019 BDC?
+        answer: |
+          You can use the [SQL Server Agent](../ssms/agent/sql-server-agent.md) service in the SQL Server master instance of the big data cluster.
+      - question: Does BDC support native time series data scenarios, such as generated by IoT use-cases?
+        answer: |
+          At this time InfluxDB in a BDC is used only for storing monitoring data collected within the BDC and is not exposed as an external endpoint.
+      - question: Can the provided InfluxDB be used as a time series database for customer data?
+        answer: |
+          At this time InfluxDB in a BDC is used only for storing monitoring data collected within the BDC and is not exposed as an external endpoint.
+      - question: How do I install libraries and packages in Spark?
+        answer: |
+          You can add packages at job submission using the steps in the [sample notebook for installing packages in Spark](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/config-install/installpackage_Spark.ipynb).
+      - question: How do I add a database to the availability group?
+        answer: |
+          In BDC, the HA configuration creates a containedag availability group which also includes system databases that are replicated across replicas. Databases created as result of a CREATE DATABASE or RESTORE workflows are automatically added to the contained AG and seeded. Prior to SQL Server 2019 CU2, you have to connect to the physical instance in BDC, restore the database & add it to the containedag. For more information, see [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md).
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+      - question: 
+        answer: |
+          
+
+ 
+
+additionalContent: |
+ ## See Also
+ - [SQL Server Big Data Clusters](big-data-cluster-overview.md) 

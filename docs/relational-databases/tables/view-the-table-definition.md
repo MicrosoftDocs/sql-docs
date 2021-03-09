@@ -57,7 +57,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 2.  On the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. The example executes a system stored procedure sp_help to return all column information from the for the specified object.  
+3.  Copy and paste the following example into the query window and click **Execute**. The example executes the system stored procedure sp_help to return all column information for the specified object.  
   
 ```sql  
 EXEC sp_help 'dbo.mytable';
@@ -65,7 +65,7 @@ EXEC sp_help 'dbo.mytable';
     
  For more information, see [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md).
 
- You could alternatively query the system tables directly to query object metadata information about tables, schema, and columns. For example:  
+ You could alternatively query the system catalog views directly to query object metadata information about tables, schema, and columns. For example:  
   
 ```sql
 SELECT s.name, t.name, c.* FROM sys.columns AS c

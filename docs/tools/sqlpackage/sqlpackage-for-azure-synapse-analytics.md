@@ -10,7 +10,7 @@ ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
 ---
-# SqlPackage for Big Data
+# SqlPackage for Azure Synapse Analytics
 
 This article highlights features of SqlPackage.exe that are focused on Azure Synapse Analytics databases.
 

@@ -32,11 +32,11 @@ This article lists the features and fixes delivered by the released versions of 
 | Azure Synapse Analytics | Row level security support (inline table valued function, security policy, security predicate)  |
 | Azure Synapse Analytics | Workload classification support |
 | Azure SQL Edge | External streaming job support |
-| SQLCMD | Added property for Deployment and Schema Compare (DoNotEvaluateSqlCmdVariables) that specifies whether SQLCMD variables will be replaced with values. |
-| Logging | Added property for all operations (HashObjectNamesInLogs) that will turn all object names into a hash string in log messages. |
 | Azure SQL Edge | Added table and database options for data retention. |
 | Import | Added 2 new index option properties for import operation. *DisableIndexesForDataPhase* (Disable indexes before importing data into SQL Server, default true) and *RebuildIndexesOfflineForDataPhase* (Rebuild indexes offline after importing data into SQL Server, default false) |
+| Logging | Added property for all operations (HashObjectNamesInLogs) that will turn all object names into a hash string in log messages. |
 | Performance | Improvements to import and export performance, including additional logging to assist in determining additional bottlenecks. |
+| SQLCMD | Added property for Deployment and Schema Compare (DoNotEvaluateSqlCmdVariables) that specifies whether SQLCMD variables will be replaced with values. |
 
 
 

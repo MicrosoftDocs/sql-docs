@@ -40,7 +40,7 @@ Query `sys.dm_exec_external_work` to identify the work spun up to communicate wi
 |type|`nvarchar(60)`|The type of external work.|'File Split' (for Hadoop and Azure storage)<br/><br/>'ODBC Data Split' (for other external data sources) |  
 |work_id|`int`|ID of the actual split.|Greater than or equal to 0.|  
 |input_name|`nvarchar(4000)`|Name of the input to be read|File name (with path) when using Hadoop or Azure storage. For other external data sources, it is the concatenation of the external data source location and the external table location: `scheme://DataSourceHostname[:port]/[DatabaseName.][SchemaName.]TableName`|  
-|read_location|`bigint`|Offset of read location.| `0` to the nubmer of bytes in the file minus 1.<br/><br/>`NULL` for non-Hadoop or non-Azure storage. |  
+|read_location|`bigint`|Offset of read location.| `0` to the number of bytes in the file minus 1.<br/><br/>`NULL` for non-Hadoop or non-Azure storage. |  
 |read_command|`nvarchar(4000)`|The query that is sent to the external data source. Introduced in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].|Text representing the query. For Hadoop and Azure storage returns `NULL`.|
 |bytes_processed|`bigint`|Total bytes allocated for processing data by this worker. This value may not necessarily represent the total data being returned by the query |Greater than or equal to 0.|  
 |length|`bigint`|Length of the split or, HDFS block for Hadoop|User-definable. The default is 64M|  

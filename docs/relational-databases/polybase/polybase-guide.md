@@ -37,11 +37,28 @@ A key use case for data virtualization with the PolyBase feature is to allow the
 > [!NOTE]
 > Some functionality of the PolyBase feature is in private preview for **Azure SQL managed instances**, including the ability to query external data (Parquet files) in Azure Data Lake Storage (ADLS) Gen2. Private preview includes access to client libraries and documentation for testing purposes that are not yet available publicly. If you are interested and ready to invest some time in trying out the functionalities and sharing your feedback and questions, please review the [Azure SQL Managed Instance PolyBase Private Preview Guide](https://sqlmipg.blob.core.windows.net/azsqlpolybaseshare/Azure_SQL_Managed_Instance_Polybase_Private_Preview_Onboarding_Guide.pdf).
 
+### Supported SQL products and services
+
+PolyBase provides these same functionalities for the following SQL products from Microsoft:
+
+- [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions (Windows only)
+- [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later versions (Linux)
+- SQL Server [!INCLUDE[pdw](../../includes/sspdw-md.md)] (PDW), hosted in the Analytics Platform System (APS) 
+- Azure Synapse Analytics
+- 
 ### PolyBase connectors
 
  The PolyBase feature provides the connection to the external data source.
 
-![PolyBase logical](../../relational-databases/polybase/media/polybase-logical.png "PolyBase logical")
+| Platforms                           | SQL Server w/ PolyBase | APS PDW | Azure Synapse |
+|-------------------------------------|------------------------|---------|---------------|
+| Read from Oracle, MongoDB, Teradata | Yes                    | **No**  | **No**        |  
+| Read from Generic ODBC              | Yes (Windows Only)     | **No**  | **No**        | 
+| Read from Azure Storage             | Yes                    | Yes     | Yes           |
+| Read from Hadoop                    | Yes                    | Yes     | **No**        | 
+| Read from SQL Server                | Yes                    | **No**  | **No**        | 
+|                                     |
+
 
 * [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduced PolyBase with support for connections to Hadoop and Azure blob storage.
 * [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] introduced additional connectors, including SQL Server, Oracle, Teradata, and MongoDB.
@@ -64,14 +81,7 @@ A key use case for data virtualization with the PolyBase feature is to allow the
 1. Create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md)
 1. Create an [external table](../../t-sql/statements/create-external-table-transact-sql.md)
 
-### Supported SQL products and services
 
-PolyBase provides these same functionalities for the following SQL products from Microsoft:
-
-- [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions (Windows only)
-- [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later versions (Linux)
-- SQL Server [!INCLUDE[pdw](../../includes/sspdw-md.md)], hosted in the Analytics Platform System 
-- Azure Synapse Analytics
 
 ### Azure integration
 

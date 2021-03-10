@@ -46,12 +46,31 @@ In SQL Server and APS, not all T-SQL operators can be pushed down to the Hadoop 
 |---------|---------|---------|
 |Column projections|Yes|No|
 |Predicates|Yes|No|
-|Aggregates|Partial|No|
+|Aggregates|Partial (see next section)|No|
 |Joins between external tables|No|No|
 |Joins between external tables and local tables|No|No|
 |Sorts|No|No|
 
 Partial aggregation means that a final aggregation must occur after the data reaches SQL Server. But a portion of the aggregation occurs in Hadoop. This method is common in computing aggregations in massively parallel processing systems.  
+
+#### Hadoop pushdown support
+
+Hadoop providers support the following:
+
+| **Aggregations**                  | **Filters (binary comparison)** | 
+|-----------------------------------|-----------------------------| 
+| Count_Big                         | NotEqual                    | 
+| Sum                               | LessThan                    | 
+| Avg                               | LessOrEqual                 | 
+| Accum                             | GreaterOrEqual              | 
+| AccumNull                         | GreaterThan                 | 
+| Max                               | Is                          | 
+| Min                               | IsNot                       | 
+| Approx_Count_Distinct             |                             | 
+| Approx_Count_Distinct_Accum       |                             | 
+| Approx_Count_Distinct_AccumSparse |                             | 
+| Approx_Count_Distinct_Merge       |                             | 
+|                                   |                             | 
 
 ## Known limitations
 

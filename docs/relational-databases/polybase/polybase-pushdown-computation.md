@@ -31,47 +31,19 @@ The following articles include information about configuring pushdown computatio
 
 This table summarizes pushdown computation support on different external data sources:
 
-| Data Source      | Joins  | Projections | Aggregations              | Filters                   | Statistics |
-|------------------|--------|-------------|---------------------------|---------------------------|------------|
-| **Generic ODBC** | Yes    | Yes         | Yes                       | Yes                       | Yes        |  
-| **Oracle**       | Yes    | Yes         | Yes                       | Yes                       | Yes        |
-| **SQL Server**   | Yes    | Yes         | Yes                       | Yes                       | Yes        |
-| **Teradata**     | Yes    | Yes         | Yes                       | Yes                       | Yes        |  
-| **MongoDB**      | **No** | Yes         | Yes                       | Yes                       | Yes        |
-| **Hadoop**       | **No** | Yes         | Some *(see next section)* | Some *(see next section)* | Yes        |  
+| Data Source      | Joins  | Projections | Aggregations | Filters   | Statistics |
+|------------------|--------|-------------|--------------|-----------|------------|
+| **Generic ODBC** | Yes    | Yes         | Yes          | Yes       | Yes        |  
+| **Oracle**       | Yes    | Yes         | Yes          | Yes       | Yes        |
+| **SQL Server**   | Yes    | Yes         | Yes          | Yes       | Yes        |
+| **Teradata**     | Yes    | Yes         | Yes          | Yes       | Yes        |  
+| **MongoDB**      | **No** | Yes         | Yes          | Yes       | Yes        |
+| **Hadoop\***     | **No** | Yes         | Some\*\*     | Some \*\* | Yes        |  
 |                  |
 
-#### Hadoop pushdown support
+\* PolyBase currently supports two Hadoop providers: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). There are no differences between the two features in terms of pushdown computation.
 
-Hadoop providers support the following:
-
-| Implicit type conversions | Aggregations                      | Filters (binary comparison) | 
-| --------------------------|-----------------------------------|-----------------------------| 
-| Binary                    | Count_Big                         | NotEqual                    | 
-| Bit                       | Sum                               | LessThan                    | 
-| Char                      | Avg                               | LessOrEqual                 | 
-| DateTime                  | Accum                             | GreaterOrEqual              | 
-| Decimal                   | AccumNull                         | GreaterThan                 | 
-| Float                     | Max                               | Is                          | 
-| Int                       | Min                               | IsNot                       | 
-| Money                     | Approx_Count_Distinct             |                             | 
-| NChar                     | Approx_Count_Distinct_Accum       |                             | 
-| NVarChar                  | Approx_Count_Distinct_AccumSparse |                             | 
-| Real                      | Approx_Count_Distinct_Merge       |                             | 
-| SmallDateTime             |                                   |                             | 
-| SmallInt                  |                                   |                             | 
-| SmallMoney                |                                   |                             | 
-| TinyInt                   |                                   |                             | 
-| VarBinary                 |                                   |                             | 
-| VarChar                   |                                   |                             | 
-| Date                      |                                   |                             | 
-| Time                      |                                   |                             | 
-| DateTime2                 |                                   |                             | 
-| DateTimeOffset            |                                   |                             | 
-| UniqueIdentifier          |                                   |                             | 
-|                           |                                   |                             |  
-
-PolyBase currently supports two Hadoop providers: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). There are no differences between the two features in terms of pushdown computation.
+\*\* For more information Hadoop pushdown feature support, see [Pushdown computation supported by T-SQL operators](polybase-versioned-feature-summary.md#pushdown-computation-supported-by-t-sql-operators).
 
 ## Key beneficial scenarios of pushdown computation
 

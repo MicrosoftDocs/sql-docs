@@ -39,11 +39,13 @@ A. In this preview version of Synapse Pathway, following data warehouses are inc
 ### Q. What is included as part of the code conversion?
 
 A. Synapse Pathway preview version supports code translation of tables, schemas, and views.
-|Source Platform |Statement Types Supported| 
-|-------------|---------------|
-|IBM Netezza|Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table
-|Microsoft SQL Server|Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br />Create/Alter/Drop Table| 
-|Snowflake|Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br />Create/Alter/Drop Table| 
+
+| Source Platform| Statement Types Supported | 
+|:-------------------:|:------------------|
+| IBM Netezza  | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table |
+|Microsoft SQL Server  | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table | 
+| Snowflake |  Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table |                       
+
   
 ### Q. Can it also scan my environment and provide an assessment report of all the objects that need to be converted/translated?
 

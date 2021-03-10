@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 
 Returns information about the workload per worker, on each compute node.  
   
- Query sys.dm_exec_external_work to identify the work spun up to communicate with the external data source (e.g. Hadoop or external SQL Server).  
+Query `sys.dm_exec_external_work` to identify the work spun up to communicate with the external data source (e.g. Hadoop or external SQL Server).  
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
@@ -40,16 +40,15 @@ Returns information about the workload per worker, on each compute node.
 |type|`nvarchar(60)`|The type of external work.|'File Split' (for Hadoop and Azure storage)<br/><br/>'ODBC Data Split' (for other external data sources) |  
 |work_id|`int`|ID of the actual split.|Greater than or equal to 0.|  
 |input_name|`nvarchar(4000)`|Name of the input to be read|File name (with path) when using Hadoop or Azure storage. For other external data sources, it is the concatenation of the external data source location and the external table location: `scheme://DataSourceHostname[:port]/[DatabaseName.][SchemaName.]TableName`|  
-|read_location|`bigint`|Offset of read location. Introduced in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].| `NULL` for non-Hadoop or Azure storage. |  
-|read_command|`nvarchar(4000)`|The query that is sent to the external data source. Introduced in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].|Text representing the query. For Hadoop and WASB return `NULL`.|
+|read_location|`bigint`|Offset of read location. Introduced in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].| `NULL` for non-Hadoop or non-Azure storage. |  
+|read_command|`nvarchar(4000)`|The query that is sent to the external data source. Introduced in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].|Text representing the query. For Hadoop and Azure storage returns `NULL`.|
 |bytes_processed|`bigint`|Total bytes allocated for processing data by this worker. This may not necessarily represent the total data being returned by the query |Greater than or equal to 0.|  
 |length|`bigint`|Length of the split or HDFS block in case of Hadoop|User-definable. The default is 64M|  
 |status|`nvarchar(32)`|Status of the worker|Pending, Processing, Done, Failed, Aborted|  
 |start_time|`datetime`|Beginning of the work||  
 |end_time|`datetime`|End of the work||  
 |total_elapsed_time|`int`|Total time in milliseconds||
-|compute_pool_id|`int`|Unique identifier for the pool where the worker is running. Only applies to SQL Server Big Data Cluster. See [sys.dm_exec_compute_pools (Transact-SQL)](sys-dm-exec-compute-pools.md).|Returns `0` for [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] on Windows and Linux.|
-
+|compute_pool_id|`int`|Unique identifier for the pool where the worker is running. Only applies to SQL Server Big Data Cluster. See [sys.dm_exec_compute_pools (Transact-SQL)](sys-dm-exec-compute-pools.md).|Returns `0` for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on Windows and Linux.|
 
 ## See Also  
  [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   

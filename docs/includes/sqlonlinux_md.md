@@ -6,4 +6,4 @@ ms.date: 3/10/2021
 ms.author: v-tdzakhov
 ---
 
-SQL on Linux
+SQL Server on Linux

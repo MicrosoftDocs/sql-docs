@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 # sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
-  Returns information about the workload per worker, on each compute node.  
+Returns information about the workload per worker, on each compute node.  
   
  Query sys.dm_exec_external_work to identify the work spun up to communicate with the external data source (e.g. Hadoop or external SQL Server).  
   

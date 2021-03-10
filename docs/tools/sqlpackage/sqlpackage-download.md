@@ -127,6 +127,7 @@ This release of sqlpackage includes a standard Windows installer experience, and
    $ sudo apt-get install libicu55      # for 16.x
    $ sudo apt-get install libicu57      # for 17.x
    $ sudo apt-get install libicu60      # for 18.x
+   $ sudo apt-get install libicu60      # for 20.x
    ```
 
 ## Uninstall sqlpackage
@@ -159,7 +160,7 @@ sqlpackage runs on Windows, macOS, and Linux and is built using .NET Core 3.1.  
 
 - Red Hat Enterprise Linux 7+
 - SUSE Linux Enterprise Server v12 SP2+
-- Ubuntu 16.04, 18.04
+- Ubuntu 16.04, 18.04, 20.04
 
 ## Available Languages
 

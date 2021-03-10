@@ -38,7 +38,7 @@ The topics in this section provide a general overview of the JDBC driver, includ
 |[Deploying the JDBC driver](../../connect/jdbc/deploying-the-jdbc-driver.md)|Describes how to redistribute and deploy the Microsoft JDBC driver on Windows and Unix operating systems.|  
 |[Finding additional JDBC driver information](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Describes where to find additional resources about the Microsoft JDBC driver, including links to external resources.|  
 |[Microsoft JDBC Driver for SQL Server support matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Support matrix and support lifecycle policy for the Microsoft JDBC driver for SQL Server.|  
-|[Frequently asked questions &#40;FAQ&#41; for JDBC driver](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Frequently asked questions about the Microsoft JDBC driver.|  
+|[Frequently asked questions &#40;FAQ&#41; for JDBC driver](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.yml)|Frequently asked questions about the Microsoft JDBC driver.|  
 |[Feature dependencies of Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Feature dependencies of Microsoft JDBC Driver for SQL Server.|
 | &nbsp; | &nbsp; |
 

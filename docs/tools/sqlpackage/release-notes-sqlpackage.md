@@ -21,9 +21,9 @@ This article lists the features and fixes delivered by the released versions of 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
 |Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2157201)|March 10, 2021|18.7|15.0.5084.2|
-|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157203)|March 10, 2021| 18.7|15.0.|
-|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157202)|March 10, 2021| 18.7|15.0.|
-|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157302)|March 10, 2021| 18.7|15.0.|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157203)|March 10, 2021| 18.7|15.0.5084.2|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157202)|March 10, 2021| 18.7|15.0.5084.2|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157302)|March 10, 2021| 18.7|15.0.5084.2|
 
 ### Features
 | Feature | Details |

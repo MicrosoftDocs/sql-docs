@@ -39,8 +39,8 @@ Returns information about the workload per worker, on each compute node.
 |compute_node_id|`int`|The node the worker is running on.|See [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |type|`nvarchar(60)`|The type of external work.|'File Split' (for Hadoop and Azure storage)<br/><br/>'ODBC Data Split' (for other external data sources) |  
 |work_id|`int`|ID of the actual split.|Greater than or equal to 0.|  
-|input_name|`nvarchar(4000)`|Name of the input to be read|File name (with path) when using Hadoop or Windows Azure Storage Blob (WASB). For other external data sources, it is the concatenation of the external data source location and the external table location: `scheme://DataSourceHostname[:port]/DatabaseName.[SchemaName.]TableName`|  
-|read_location|`bigint`|Offset of read location. Introduced in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].|`0` for non-filesystem or blob store operations. |  
+|input_name|`nvarchar(4000)`|Name of the input to be read|File name (with path) when using Hadoop or Azure storage. For other external data sources, it is the concatenation of the external data source location and the external table location: `scheme://DataSourceHostname[:port]/[DatabaseName.][SchemaName.]TableName`|  
+|read_location|`bigint`|Offset of read location. Introduced in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].| `NULL` for non-Hadoop or Azure storage. |  
 |read_command|`nvarchar(4000)`|The query that is sent to the external data source. Introduced in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)].|Text representing the query. For Hadoop and WASB return `NULL`.|
 |bytes_processed|`bigint`|Total bytes allocated for processing data by this worker. This may not necessarily represent the total data being returned by the query |Greater than or equal to 0.|  
 |length|`bigint`|Length of the split or HDFS block in case of Hadoop|User-definable. The default is 64M|  

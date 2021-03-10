@@ -316,7 +316,7 @@ This release includes cross-platform preview builds of sqlpackage that target .N
 | :---------- | :------ |
 | Deployment | For .NET Core, build and deployment contributors aren't supported. | 
 | Deployment | For .NET Core, older .dacpac and .bacpac files that use json data serialization aren't supported. | 
-| Deployment | For .NET Core referenced .dacpacs (for example master.dacpac) may not resolve due to issues with case-sensitive file systems. | A workaround is to capitalize the name of the reference file (for example MASTER.BACPAC). |
+| Deployment | For .NET Core referenced .dacpacs (for example master.dacpac) may not resolve due to issues with case-sensitive file systems. A workaround is to capitalize the name of the reference file (for example MASTER.BACPAC). |
 | &nbsp; | &nbsp; |
 
 ## 18.0 sqlpackage

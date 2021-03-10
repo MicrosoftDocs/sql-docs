@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan; sstein"
-ms.date: 11/4/2020
+ms.date: 3/10/2021
 ---
 
 # SqlPackage.exe
@@ -101,7 +101,7 @@ Some parameters are shared between the SqlPackage actions. Below is a table summ
 |**/Properties:**|**/p**| x | x | x | x | x | | x |
 |**/Quiet:**|**/q**| x | x | x | x | x | x | x |
 |**/Secret:**|**/secr**| | x | | | | | |
-|**/SourceConnectionString:**|**/scs**| x | x | x | | x | | x | x |
+|**/SourceConnectionString:**|**/scs**| x | x | x | | x | | x |
 |**/SourceDatabaseName:**|**/sdn**| x | x | x | | x | | x |
 |**/SourceEncryptConnection:**|**/sec**| x | x | x | | x | | x |
 |**/SourceFile:**|**/sf**| | x | | x | x | | x |
@@ -134,6 +134,11 @@ Some properties are shared between the SqlPackage actions.  Below is a table sum
 |AllowDropBlockingAssemblies=(BOOLEAN)| | x | | | x | x |
 |AllowIncompatiblePlatform=(BOOLEAN)| | x | | | x | x |
 |AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)| | x | | | x | x |
+|AzureSharedAccessSignatureToken=(STRING)| | x | | | | |
+|AzureStorageBlobEndpoint=(STRING)| x | x | | | | |
+|AzureStorageContainer=(STRING)| x | x | | | | |
+|AzureStorageKey=(STRING)| x | x | | | | |
+|AzureStorageRootPath=(STRING)| x | x | | | | |
 |BackupDatabaseBeforeChanges=(BOOLEAN)| | x | | | x | x |
 |BlockOnPossibleDataLoss=(BOOLEAN 'True')| | x | | | x | x |
 |BlockWhenDriftDetected=(BOOLEAN 'True')| | x | | | x | x |
@@ -151,6 +156,7 @@ Some properties are shared between the SqlPackage actions.  Below is a table sum
 |DatabaseServiceObjective=(STRING)| | x | | x | x | x |
 |DeployDatabaseInSingleUserMode=(BOOLEAN)| | x | | | x | x |
 |DisableAndReenableDdlTriggers=(BOOLEAN 'True')| | x | | | x | x |
+|DisableIndexesForDataPhase=(BOOLEAN 'True')| | | | x | | |
 |DoNotAlterChangeDataCaptureObjects=(BOOLEAN 'True')| | x | | | x | x |
 |DoNotAlterReplicatedObjects=(BOOLEAN 'True')| | x | | | x | x |
 |DoNotDropObjectType=(STRING)| | x | | | x | x |
@@ -217,6 +223,7 @@ Some properties are shared between the SqlPackage actions.  Below is a table sum
 |LongRunningCommandTimeout=(INT32)| x | x | x | x | x | x |
 |NoAlterStatementsToChangeClrTypes=(BOOLEAN)| | x | | | x | x |
 |PopulateFilesOnFileGroups=(BOOLEAN 'True')| | x | | | x | x |
+|RebuildIndexesOfflineForDataPhase=(BOOLEAN 'False')| | | | x | | |
 |RegisterDataTierApplication=(BOOLEAN)| | x | | | x | x |
 |RunDeploymentPlanExecutors=(BOOLEAN)| | x | | | x | x |
 |ScriptDatabaseCollation=(BOOLEAN)| | x | | | x | x |

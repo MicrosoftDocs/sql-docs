@@ -101,7 +101,7 @@ Some parameters are shared between the SqlPackage actions. Below is a table summ
 |**/Properties:**|**/p**| x | x | x | x | x | | x |
 |**/Quiet:**|**/q**| x | x | x | x | x | x | x |
 |**/Secret:**|**/secr**| | x | | | | | |
-|**/SourceConnectionString:**|**/scs**| x | x | x | | x | | x | x |
+|**/SourceConnectionString:**|**/scs**| x | x | x | | x | | x |
 |**/SourceDatabaseName:**|**/sdn**| x | x | x | | x | | x |
 |**/SourceEncryptConnection:**|**/sec**| x | x | x | | x | | x |
 |**/SourceFile:**|**/sf**| | x | | x | x | | x |

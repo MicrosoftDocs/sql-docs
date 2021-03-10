@@ -51,7 +51,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Import/Deployment | Sequence value restored during deployment |
 | Deployment | Fixed an issue where changing the compression option on clustered index caused the table to be recreated instead of alter index. |
 | Deployment | Fixed an issue where a clustered columnstore index was dropped and recreated if table column changed. |
-| Deployment | Fix external users getting dropped and recreated during deployment. |
+| Deployment | Fixed external users getting dropped and recreated during deployment. |
 | Schema Compare | Fixed schema compare issue with external streaming job. |
 | Import | Null reference exception raised when enabling ambient setting ReliableDdlEnabled scripting a deployment report.|
 | Deployment | Fixed an issue where deployment steps containing system versioning would be created in the incorrect order. |

@@ -23,6 +23,8 @@ To [extract](sqlpackage-extract.md) a schema to Azure Blob Storage, the followin
 Access for extract is authorized via a storage account key.  An additional parameter is optional, which sets the storage root path within the container:
 - /p:AzureStorageRootPath
 
+Without this property, the path defaults to `servername/databasename/timestamp/`.
+
 ## Publish
 To [publish](sqlpackage-publish.md) a schema from a dacpac in Azure Blob Storage, the following properties are required:
 - /p:AzureStorageBlobEndpoint

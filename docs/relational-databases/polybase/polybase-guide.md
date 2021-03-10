@@ -45,18 +45,18 @@ PolyBase provides these same functionalities for the following SQL products from
 - [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later versions (Linux)
 - SQL Server [!INCLUDE[pdw](../../includes/sspdw-md.md)] (PDW), hosted in the Analytics Platform System (APS) 
 - Azure Synapse Analytics
-- 
+
 ### PolyBase connectors
 
  The PolyBase feature provides the connection to the external data source.
 
-| Platforms                           | SQL Server w/ PolyBase | APS PDW | Azure Synapse |
-|-------------------------------------|------------------------|---------|---------------|
-| Read from Oracle, MongoDB, Teradata | Yes                    | **No**  | **No**        |  
-| Read from Generic ODBC              | Yes (Windows Only)     | **No**  | **No**        | 
-| Read from Azure Storage             | Yes                    | Yes     | Yes           |
-| Read from Hadoop                    | Yes                    | Yes     | **No**        | 
-| Read from SQL Server                | Yes                    | **No**  | **No**        | 
+| Platforms                 | SQL Server with PolyBase | APS PDW | Azure Synapse |
+|---------------------------|------------------------|---------|---------------|
+| Oracle, MongoDB, Teradata | Read                   | **No**  | **No**        |  
+| Generic ODBC              | Read (Windows Only)    | **No**  | **No**        |  
+| Azure Storage             | Read/Write             | Read    | Read/Write    |
+| Hadoop                    | Read/Write             | Read    | **No**        |  
+| SQL Server                | Read                   | **No**  | **No**        |  
 |                                     |
 
 

@@ -55,7 +55,7 @@ Use SSMA in the following scenario:
 
 To learn more, see the [SQL Server Migration Assistant documentation](../../ssma/sql-server-migration-assistant.md)
 
-## Azure Database Migration Service 
+## Azure Database Migration Service (DMS)
 
 Azure Database Migration Service enables seamless migrations from multiple database sources to Azure Data platforms with minimal downtime.  The Database Migration Service provides a resilient and reliable migration pipeline that requires minimal user involvement during the overall migration process. 
 
@@ -81,20 +81,20 @@ To learn more, see the [Database Experimentation Assistant documentation](../../
 Use the following chart to compare capabilities of the SQL migration tools:
 
 
-| Capability |Azure Migrate  |Data Migration Assistant  |SQL Server Migration Assistant  | Azure Database Migration Service | Database Experimentation Assistant| 
+| Capability |Azure Migrate  |Data Migration Assistant (DMA)  |SQL Server Migration Assistant (SSMA)  | Azure Database Migration Service (DMS) | Database Experimentation Assistant (DEA)|
 |---------|---------|---------|---------|---|---|
 |Assess SQL data estate| Yes | Yes |No |No|No|
 |Migrate SQL Server objects to SQL Database or SQL Managed Instance| No| Yes | No  | Yes|No|
 |Migrate SQL Server objects to SQL Server on Azure VM|Yes |Yes|No         | Yes| No|
 |Lift and shift to VM | Yes | No | No | No| No |
 |Migrate non-SQL objects | No |No|Yes|No|No|
-|Migrate to Azure Database| No | No | No | Yes | No| 
-|Compare workloads between source and target SQL Server |No|No|No|No|
-| Can migrate at scale | No | Yes| No | Yes | No| 
-|---------|---------|---------|---------|---|---|
+|Migrate to Azure Database| No | No | No | Yes | No|
+|Compare workloads between source and target SQL Server |No|No|No|No|Yes|
+|Can migrate at scale | No | Yes| No | Yes | No|
+|||||||
 
 ## Next steps
 
-Get started with migrating to [SQL Server]() from another database engine, migrate to [Azure SQL](/azure/azure-sql/migration-guides/), or assess your SQL data estate with [Azure Migrate](/azure/migrate/how-to-create-azure-sql-assessment). 
+Get started with migrating to [SQL Server](../../ssma/sql-server-migration-assistant.md) from another database engine, migrate to [Azure SQL](/azure/azure-sql/migration-guides/), or assess your SQL data estate with [Azure Migrate](/azure/migrate/how-to-create-azure-sql-assessment). 
 
 

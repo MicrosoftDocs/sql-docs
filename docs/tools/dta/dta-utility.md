@@ -54,7 +54,7 @@ dta
       [ -ix input_XML_file_name ]  
       [ -A time_for_tuning_in_minutes ]  
       [ -n number_of_events ]
-      [ -I time_window_in_hours ]  
+      [ -l time_window_in_hours ]  
       [ -m minimum_improvement ]  
       [ -fa physical_design_structures_to_add ]  
       [ -fi filtered_indexes]  
@@ -269,10 +269,10 @@ dta -n number_of_events -A 0
   
  In this case, it is important to specify an unlimited tuning time (`-A 0`). Otherwise, Database Engine Tuning Advisor assumes an 8 hour tuning time by default.
  
- **-I** _time_window_in_hours_   
+ **-l** _time_window_in_hours_   
    Specifies the time window (in hours) when a query must have executed for it to be considered by DTA for tuning when using **-iq** option (Workload from Query Store). 
 ```  
-dta -iq -I 48  
+dta -iq -l 48  
 ```  
 In this case, DTA will use Query Store as the source of workload and only consider queries that have executed with the past 48 hours.  
   ||  

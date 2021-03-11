@@ -1,5 +1,5 @@
 ---
-description: "About Change Data Capture"
+description: "About Change Data Capture (SQL Server)"
 title: "About Change Data Capture"
 ms.custom: seo-dt-2019
 ms.date: "01/14/2019"
@@ -16,8 +16,8 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 ---
-# About Change Data Capture 
-[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+# About Change Data Capture (SQL Server)
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 
 
@@ -85,7 +85,7 @@ ms.author: jroth
   
  The capture process is also used to maintain history on the DDL changes to tracked tables. The DDL statements that are associated with change data capture make entries to the database transaction log whenever a change data capture-enabled database or table is dropped or columns of a change data capture-enabled table are added, modified, or dropped. These log entries are processed by the capture process, which then posts the associated DDL events to the cdc.ddl_history table. You can obtain information about DDL events that affect tracked tables by using the stored procedure [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md).  
   
-## Change Data Capture Capture and Cleanup in SQL Server and Azure SQL Managed Instance  
+## Change Data Capture Agent Jobs  
  Two [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs are typically associated with a change data capture enabled database: one that is used to populate the database change tables, and one that is responsible for change table cleanup. Both jobs consist of a single step that runs a [!INCLUDE[tsql](../../includes/tsql-md.md)] command. The [!INCLUDE[tsql](../../includes/tsql-md.md)] command that is invoked is a change data capture defined stored procedure that implements the logic of the job. The jobs are created when the first table of the database is enabled for change data capture. The Cleanup Job is always created. The capture job will only be created if there are no defined transactional publications for the database. The capture job is also created when both change data capture and transactional replication are enabled for a database, and the transactional logreader job is removed because the database no longer has defined publications.  
   
  Both the capture and cleanup jobs are created by using default parameters. The capture job is started immediately. It runs continuously, processing a maximum of 1000 transactions per scan cycle with a wait of 5 seconds between cycles. The cleanup job runs daily at 2 A.M. It retains change table entries for 4320 minutes or 3 days, removing a maximum of 5000 entries with a single delete statement.  
@@ -104,10 +104,6 @@ ms.author: jroth
  Both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs were designed to be flexible enough and sufficiently configurable to meet the basic needs of change data capture environments. In both cases, however, the underlying stored procedures that provide the core functionality have been exposed so that further customization is possible.  
   
  Change data capture cannot function properly when the Database Engine service or the SQL Server Agent service is running under the NETWORK SERVICE account. This can result in error 22832.  
- 
-## Change Data Capture Capture and Cleanup in Azure SQL Database (Preview)
-
-In Azure SQL, a Change Data Capture orchestrator takes the place of the SQL Server Agent that invokes stored procedures to start periodic capture and cleanup of the Change Data Capture tables. 
  
 ## Working with database and table collation differences
 
@@ -140,22 +136,15 @@ CREATE TABLE T1(
 Change data capture has the following limitations: 
 
 **Linux**   
-Change Data Capture is now supported for SQL Server 2017 on Linux starting with CU18, and SQL Server 2019 on Linux.
+CDC is now supported for SQL Server 2017 on Linux starting with CU18, and SQL Server 2019 on Linux.
 
 **Columnstore indexes**   
-Change Data Capture cannot be enabled on tables with a clustered columnstore index. Starting with SQL Server 2016, it can be enabled on tables with a non-clustered columnstore index.
+Change data capture cannot be enabled on tables with a clustered columnstore index. Starting with SQL Server 2016, it can be enabled on tables with a non-clustered columnstore index.
 
 **Partition switching with variables**   
-Using variables with partition switching on databases or tables with Change Data Capture is not supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement. See [partition switching limitations](../replication/publish/replicate-partitioned-tables-and-indexes.md#replication-support-for-partition-switching) to learn more. 
+Using variables with partition switching on databases or tables with Change Data Capture (CDC) is not supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement. See [partition switching limitations](../replication/publish/replicate-partitioned-tables-and-indexes.md#replication-support-for-partition-switching) to learn more. 
 
-**Supported tiers for Change Data Capture in Azure SQL Databases (Preview)**
-In Azure SQL Databases, the following tiers within the DTU model are not supported for Change Data Capture: Basic, Standard (S0, S1, S2). If you want to downgrade a Change Data Capture-enabled database to an unsupported tier, you must first disable Change Data Capture on the database and then downgrade. 
 
-**Point-in-time-restore (PITR) on Azure SQL Databases (Preview)**
-Running point-in-time-restore (PITR) on a Azure SQL Database that has Change Data Capture enabled will not preserve the Change Data Capture artifacts (e.g. system tables). After PITR, those artifacts will not be available. 
-
-**Azure Active Directory (AAD) on Azure SQL Databases (Preview)**
-If you create an Azure SQL Database as an AAD user and enable Change Data Capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to Change Data Capture artifacts. However, another AAD user will be able to enable/disable Change Data Capture on the same database. 
 
 ## See Also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

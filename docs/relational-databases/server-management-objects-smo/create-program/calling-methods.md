@@ -59,9 +59,8 @@ Database db;
 db = new Database(srv, "Test_SMO_Database");   
 //Call the Create method to create the database on the instance of SQL Server.   
 db.Create();   
+}
 ```  
-  
- }  
   
 ## Using an SMO Method with a Parameter in Visual Basic  
  The <xref:Microsoft.SqlServer.Management.Smo.Table> object has a method called <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>. This method requires a numeric parameter that specifies the **FillFactor**.  

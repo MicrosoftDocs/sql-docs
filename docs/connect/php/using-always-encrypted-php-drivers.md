@@ -7,7 +7,7 @@ ms.prod_service: connectivity
 ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual
-ms.reviewer: v-kaywon
+ms.reviewer: ""
 ms.author: v-daenge
 author: David-Engel
 manager: v-mabarw

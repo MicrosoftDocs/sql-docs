@@ -16,10 +16,13 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ---
-# Administer and Monitor Change Data Capture (SQL Server)
+# Administer and Monitor Change Data Capture 
 
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic describes how to administer and monitor change data capture.  
+  
+> [!NOTE]  
+> For Change Data Capture in Azure SQL Databases (Preview), the capture and cleanup SQL Server Agent jobs are replaced by a Change Data Capture orchestrator that invokes stored procedures to start periodic capture and cleanup of the change tables. 
   
 ## <a name="Capture"></a> Capture Job
 

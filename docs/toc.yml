@@ -528,6 +528,8 @@ items:
           href: azdata/reference/reference-azdata-bdc-endpoint.md
         - name: bdc gateway
           href: azdata/reference/reference-azdata-bdc-gateway.md
+        - name: bdc gateway settings
+          href: azdata/reference/reference-azdata-bdc-gateway-settings.md
         - name: bdc gateway status
           href: azdata/reference/reference-azdata-bdc-gateway-status.md
         - name: bdc hdfs
@@ -538,6 +540,8 @@ items:
           href: azdata/reference/reference-azdata-bdc-hdfs-key.md
         - name: bdc hdfs mount
           href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
+        - name: bdc hdfs settings
+          href: azdata/reference/reference-azdata-bdc-hdfs-settings.md
         - name: bdc hdfs status
           href: azdata/reference/reference-azdata-bdc-hdfs-status.md
         - name: bdc settings
@@ -548,12 +552,16 @@ items:
           href: azdata/reference/reference-azdata-bdc-spark-batch.md        
         - name: bdc spark session
           href: azdata/reference/reference-azdata-bdc-spark-session.md        
+        - name: bdc spark settings
+          href: azdata/reference/reference-azdata-bdc-spark-settings.md        
         - name: bdc spark statement
           href: azdata/reference/reference-azdata-bdc-spark-statement.md        
         - name: bdc spark status
           href: azdata/reference/reference-azdata-bdc-spark-status.md        
         - name: bdc sql
           href: azdata/reference/reference-azdata-bdc-sql.md
+        - name: bdc sql settings
+          href: azdata/reference/reference-azdata-bdc-sql-settings.md
         - name: bdc status
           href: azdata/reference/reference-azdata-bdc-status.md
 - name: Business continuity
@@ -7197,6 +7205,8 @@ items:
           href: relational-databases/polybase/polybase-troubleshoot-connectivity.md
         - name: PolyBase FAQ
           href: relational-databases/polybase/polybase-faq.md
+        - name: PolyBase errors and possible solutions
+          href: relational-databases/polybase/polybase-errors-and-possible-solutions.md
     - name: Reference
       items:
       - name: T-SQL reference
@@ -8886,6 +8896,8 @@ items:
         href: ssms/configure-login-auditing-sql-server-management-studio.md
       - name: Enable copying from find and replace window
         href: ssms/troubleshoot/enable-copying-find-replace-window.md
+      - name: Enable tabs to move
+        href: ssms/troubleshoot/workaround-move-tabs.md
       - name: Troubleshoot
         items:
         - name: Get full memory dump 

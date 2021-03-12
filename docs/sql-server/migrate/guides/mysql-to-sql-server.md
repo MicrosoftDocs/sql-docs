@@ -13,25 +13,30 @@ ms.date: 01/29/2021
 
 # Migration guide: MySQL to SQL Server
 
-This guide teaches you to migrate your MySQL databases to SQL Server. 
+This guide helps you migrate your MySQL databases to SQL Server. 
 
-For other migration guides, see [Database Migration](https://datamigration.microsoft.com/). 
+For other migration guides, see [Azure Database Migration Guides](./data-migration). 
 
 ## Prerequisites 
 
-To migrate your MySQL database to Azure SQL Database, you need:
+To migrate your MySQL database to SQL Server, you need:
 
-- to verify your source environment is supported. 
-- [SQL Server Migration Assistant for MySQL](https://www.microsoft.com/download/confirmation.aspx?id=54257)
+- connectivity to your source MySQL database to run assessment and conversion
+- [SQL Server Migration Assistant for MySQL](https://aka.ms/ssmaformysql)
 
 ## Pre-migration 
 
-After you have met the prerequisites, you are ready to discover the topology of your environment and assess the feasibility of your migration.
+After you have met the prerequisites, you are ready to discover your source MySQL environment and assess the feasibility of your migration.
+Before you start the migration using SSMA, you must:
+
+1.  Create a new project.  
+2.  Connect to a MySQL database.
+3.  After a successful connection, MySQL schemas will appear in MySQL Metadata Explorer. Right-click objects in MySQL Metadata Explorer to perform tasks such as create reports that assess conversions to SQL Server.
 
 ### Assess 
 
 
-To use [SSMA for MySQL](https://www.microsoft.com/download/confirmation.aspx?id=54257) to create an assessment, follow these steps: 
+To use [SSMA for MySQL](https://aka.ms/ssmaformysql) to create an assessment, follow these steps: 
 
 1. Open SQL Server Migration Assistant for MySQL. 
 1. Select **File** and choose **New Project**. Provide the project name, a location to save your project and the migration target.
@@ -59,12 +64,17 @@ To use [SSMA for MySQL](https://www.microsoft.com/download/confirmation.aspx?id=
 
 ### Validate type mappings
 
-Before you perform schema conversion validate the default datatype mappings or change them based on requirements. You could do so either by navigating to the **Tools** menu and choosing **Project Settings** or you can change type mapping for each table by selecting the table in the **MySQL Metadata Explorer**.
+Before you perform schema conversion, validate the default datatype mappings or change them based on requirements. You could do so either by navigating to the **Tools** menu and choosing **Project Settings** or you can change type mapping for each table by selecting the table in the **MySQL Metadata Explorer**.
 
 ![Type Mappings](./media/mysql-to-sql-server/type-mappings.png)
 
+To learn more about conversion settings in SSMA, see [Project Settings](../sql/ssma/mysql/project-settings-conversion-mysqltosql)
 
 ### Convert schema
+
+Converting database objects takes the object definitions from MySQL, converts them to similar SQL Server objects, and then loads this information into the SSMA metadata. It does not load the information into the instance of SQL Server. You can then view the objects and their properties by using the SQL Server Metadata Explorer.
+
+During the conversion, SSMA prints output messages to the Output pane and error messages to the Error List pane. Use the output and error information to determine whether you have to modify your MySQL databases or your conversion process to obtain the desired conversion results.
 
 To convert the schema, follow these steps:
 
@@ -84,11 +94,28 @@ To convert the schema, follow these steps:
 
    After schema conversion you can save this project locally for an offline schema remediation exercise. Select **Save Project** from the **File** menu. This gives you an opportunity to evaluate the source and target schemas offline and perform remediation before you can publish the schema to SQL Server.
 
+To learn more, see [Converting MySQL databases](./sql/ssma/mysql/converting-mysql-databases-mysqltosql)
 
 ## Migration 
 
-After you have the necessary prerequisites in place and have completed the tasks associated with the **Pre-migration** stage, you are ready to perform the schema and data migration.
+After you have the necessary prerequisites in place and have completed the tasks associated with the **Pre-migration** stage, you are ready to perform the schema and data migration.
 
+To migrate data, two cases arise:
+
+ 1. **Client Side Data Migration:**
+	 -   For performing  **Client Side Data Migration**, select the  **Client Side Data Migration Engine**  option in the  **Project Settings**  dialog box.
+
+> [!NOTE]
+> When SQL Express edition is used as the target database, only client side data migration is allowed and server side data migration is not supported.
+
+2. **Server Side Data Migration:**
+	-   Before performing data migration on the server side, ensure:
+	    a. The SSMA for MySQL Extension Pack is installed on the instance of SQL Server.
+	    b. The SQL Server Agent service is running on the instance of SQL Server 
+	-   For performing  **Server Side Data Migration**, select the  **Server Side Data Migration Engine**  option in the  **Project Settings**  dialog box.
+
+> [!IMPORTANT]  
+> If the engine being used is Server Side Data Migration Engine, then, before migrating data, you must install the SSMA for MySQL Extension Pack and the MySQL providers on the computer that is running SSMA. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service must also be running. For more information about how to install the extension pack, see [Installing SSMA Components on SQL Server (MySQL to SQL)](./installing-ssma-components-on-sql-server-mysqltosql.md)  
 
 To publish the schema and migrate the data, follow these steps: 
 
@@ -111,7 +138,7 @@ To publish the schema and migrate the data, follow these steps:
 
 ## Post-migration 
 
-After you have successfully completed the **Migration** stage, you need to go through a series of post-migration tasks to ensure that everything is functioning as smoothly and efficiently as possible.
+After you have successfully completed the **Migration** stage, you need to go through a series of post-migration tasks to ensure that everything is functioning as smoothly and efficiently as possible.
 
 ### Remediate applications
 
@@ -130,14 +157,14 @@ The test approach for database migration consists of performing the following ac
 4. **Run performance tests**. Run performance test against the source and the target, and then analyze and compare the results.
 
 > [!NOTE] 
-> For assistance with developing and running post-migration validation tests, consider the Data Quality Solution available from the partner [QuerySurge](http://www.querysurge.com/company/partners/microsoft).
+> For assistance with developing and running post-migration validation tests, consider the Data Quality Solution available from the partner [QuerySurge](http://www.querysurge.com/company/partners/microsoft).
 
 ### Optimize
 
 The post-migration phase is crucial for reconciling any data accuracy issues and verifying completeness, as well as addressing performance issues with the workload.
 
 > [!NOTE] 
-> For additional detail about these issues and specific steps to mitigate them, see the [Post-migration Validation and Optimization Guide](https://docs.microsoft.com/sql/relational-databases/post-migration-validation-and-optimization-guide).
+> For additional detail about these issues and specific steps to mitigate them, see the [Post-migration Validation and Optimization Guide](https://docs.microsoft.com/sql/relational-databases/post-migration-validation-and-optimization-guide).
 
 ## Migration assets 
 
@@ -152,12 +179,8 @@ These resources were developed as part of the Data Migration Jumpstart Program (
 
 ## Next steps
 
-- For an overview of the Azure Database Migration Guide and the information it contains, see the video [How to Use the Database Migration Guide](https://azure.microsoft.com/resources/videos/how-to-use-the-azure-database-migration-guide/).
+- To learn more about migrating MySQL databases to SQL Server, see [SSMA documentation for MySQL](./sql/ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql)
 
 - For a matrix of the Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios as well as specialty tasks, see the article [Service and tools for data migration](https://docs.microsoft.com/azure/dms/dms-tools-matrix).
 
-- For other migration guides, see [Database Migration](https://datamigration.microsoft.com/). 
-
-For videos, see: 
-- [How to Use the Database Migration Guide](https://azure.microsoft.com/resources/videos/how-to-use-the-azure-database-migration-guide/).
-- [Overview of the migration journey and the tools/services recommended for performing assessment and migration](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/).
+- For other migration guides, see [Azure Database Migration Guides](./data-migration). 

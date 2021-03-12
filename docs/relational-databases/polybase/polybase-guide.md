@@ -54,8 +54,8 @@ PolyBase provides these same functionalities for the following SQL products from
 |---------------------------|------------------------|---------|---------------|
 | Oracle, MongoDB, Teradata | Read                   | **No**  | **No**        |  
 | Generic ODBC              | Read (Windows Only)    | **No**  | **No**        |  
-| Azure Storage             | Read/Write             | Read    | Read/Write    |
-| Hadoop                    | Read/Write             | Read    | **No**        |  
+| Azure Storage             | Read/Write             | Read/Write    | Read/Write    |
+| Hadoop                    | Read/Write             | Read/Write    | **No**        |  
 | SQL Server                | Read                   | **No**  | **No**        |  
 |                                     |
 

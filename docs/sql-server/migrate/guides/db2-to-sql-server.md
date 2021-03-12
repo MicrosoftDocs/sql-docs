@@ -2,7 +2,7 @@
 title: "Migration guide: DB2 to SQL Server"
 description: Follow this guide to migrate your DB2 server to SQL Server. 
 ms.custom: ""
-ms.date: "08/17/2020"
+ms.date: 03/19/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: migration-guide

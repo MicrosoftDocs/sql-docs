@@ -65,6 +65,8 @@ The following code snippet calls the GetRoot() method:
 ```sql
 SqlHierarchyId.GetRoot()  
 ```  
+
+If coupled with `.ToString()`, the above will return the string `'/'`.
   
 ## See also
 [hierarchyid Data Type Method Reference](./hierarchyid-data-type-method-reference.md)  

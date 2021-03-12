@@ -15,7 +15,6 @@ ms.date: 01/29/2021
 
 This guide helps you migrate your MySQL databases to SQL Server. 
 
-For other migration guides, see [Azure Database Migration Guides](./data-migration). 
 
 ## Prerequisites 
 
@@ -183,4 +182,5 @@ These resources were developed as part of the Data Migration Jumpstart Program (
 
 - For a matrix of the Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios as well as specialty tasks, see the article [Service and tools for data migration](https://docs.microsoft.com/azure/dms/dms-tools-matrix).
 
-- For other migration guides, see [Azure Database Migration Guides](../data-migration/index.yml). 
+
+

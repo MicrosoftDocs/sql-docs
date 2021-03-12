@@ -15,8 +15,6 @@ ms.date: 01/29/2021
 
 This guide teaches you to migrate your Oracle databases to SQL Server using SQL Server Migration Assistant for Oracle. 
 
-For other scenarios, see the [Database Migration Guide](https://datamigration.microsoft.com/).
-
 ## Prerequisites 
 
 To migrate your Oracle database to SQL Server, you need:

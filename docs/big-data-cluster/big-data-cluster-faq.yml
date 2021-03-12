@@ -12,7 +12,7 @@ metadata:
   ms.author: wiassaf
   ms.reviewer: 
   ms.custom: 
-  ms.date: 03/09/2021
+  ms.date: 03/12/2021
 
 title: SQL Server Big Data Clusters FAQ
 summary: This article answers frequently asked questions about [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md) concepts, capabilities, deployment, supportability, and tools.
@@ -62,16 +62,16 @@ sections:
           You can configure storage pool to use a specific storage class at deployment time. See [Data persistence with SQL Server big data cluster in Kubernetes](concept-data-persistence.md#customize-storage-configurations-for-each-pool).
       - question: What are the options to access Ceph-based storage?
         answer: |
-          HDFS Tiering allows us to integrate transparently with S3-based protocols.
+          HDFS Tiering allows us to integrate transparently with S3-based protocols. For more information, se [How to mount S3 for HDFS tiering in a big data cluster](hdfs-tiering-mount-s3.md).
       - question: Is data in HDFS preserved after an upgrade?
         answer: |
           Yes, data will be preserved since it is backed by persistent volumes and upgrade just deploys existing pods with new images.
       - question: How does HDFS tiering control the cache?
         answer: |
           Using HDFS tiering, data is cached withing the local HDFS running in BDC to allow users to attach to large data lakes without having to bring all the data in. There is a configurable amount of space allocated to the cache which is defaulted to 2% today. Data is maintained in the cache but will be removed if that threshold is exceeded. Security is also maintained from the lake and all ACLs are applied. For more information, see [Configure HDFS tiering on Big Data Clusters](hdfs-tiering.md).
-      - question: Can we use SQL Server 2019 with Azure Data Lake Store Gen2? Will this integration take care of folder level permission?
+      - question: Can we use SQL Server 2019 to visualize Azure Data Lake Store Gen2? Will this integration take care of folder level permission?
         answer: |
-          Yes you can virtualize data stored in ADLS Gen2 using HDFS tiering. See more details here: [Configure HDFS tiering on BDC](hdfs-tiering.md).
+          Yes you can virtualize data stored in ADLS Gen2 using HDFS tiering. See more details here: [Configure HDFS tiering on BDC](hdfs-tiering.md). For more information on HDFS tier permissions, see [Manage HDFS permissions for SQL Server Big Data Clusters](hdfs-tiering-manage-permissions.md).
       - question: What's the default high-availability and/or redundancy setting for the master node on Azure Kubernetes Service (AKS)?
         answer: |
           There are features like Availability Zones for AKS to address this type of requirement. An Availability Zone (AZ) is a high availability offering from Azure that protects applications and data from datacenter failures. For more information, see [Create an Azure Kubernetes Service (AKS) cluster that uses availability zones](/azure/aks/availability-zones).
@@ -80,7 +80,7 @@ sections:
           Restarting sparkhead won't cause the logs to be lost, these logs are in HDFS. You should still see Spark history logs from the /gateway/default/sparkhistory UI. For Yarn container logs, you won't see those apps in Yarn UI because Yarn RM restarts, but those yarn logs are still in HDFS and you can link to them from Spark history server. You should always use Spark history server as the entry point to diagnose their Spark apps.
       - question: Is there a way to turn off the caching feature for any pools?
         answer: |
-          Cache size for HDFS tiering is 2% by default. Currently, there is not an exposed way to turn it off. 
+          Cache size for HDFS tiering is 1% by default. This means 1% of the total HDFS storage will be reserved for caching of mounted data. Caching is a global setting across mounts. Currently, there is not an exposed way to turn it off. For more information, see [Configure HDFS tiering on SQL Server Big Data Clusters](hdfs-tiering.md).
       - question: How to schedule SQL stored procedures in SQL Server 2019 BDC?
         answer: |
           You can use the [SQL Server Agent](../ssms/agent/sql-server-agent.md) service in the SQL Server master instance of the big data cluster.
@@ -95,7 +95,7 @@ sections:
           In BDC, the HA configuration creates an availability group called containedag which also includes system databases that are replicated across replicas. Databases created as result of a CREATE DATABASE or RESTORE workflows are automatically added to the contained AG and seeded. Prior to SQL Server 2019 (15.0) CU2, you have to connect to the physical instance in BDC, restore the database and add it to the containedag. For more information, see [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md).
       - question: Can I configure core/memory resources for components running within BDC?
         answer: |
-          At this time, you can set memory for the SQL instances using sp_configure, just like in SQL Server. For cores, you can use `ALTER SERVER CONFIGURATION SET PROCESS AFFINITY`. By default, containers see all CPUs on the host and we don’t have a way to specify resource limits using Kubernetes at this time. For compute pool/data pool/storage pool, the configuration can be done using EXECUTE AT DATA_SOURCE statement from SQL Server master instance.
+          At this time, you can set memory for the SQL instances using sp_configure, just like in SQL Server. For cores, you can use `ALTER SERVER CONFIGURATION SET PROCESS AFFINITY`. By default, containers see all CPUs on the host and we don’t have a way to specify resource limits using Kubernetes at this time. For compute pool/data pool/storage pool, the configuration can be done using [EXECUTE AT DATA_SOURCE](../t-sql/language-elements/execute-transact-sql.md) statement from SQL Server master instance.
       - question: What happens when one of the Kubernetes worker nodes shuts down or has an outage?
         answer: |
           Pods that are not affinitized to the respective worker node will be moved to another node in the Kubernetes cluster provided there are sufficient resources. Otherwise, the pod(s) will be unavailable causing outages.
@@ -116,7 +116,7 @@ sections:
           The SQL Server instance's database files are not stored in HDFS, however, SQL Server can query HDFS using external table interface.
       - question: What are the available distribution options for storing data in the distributed tables in each data pool?
         answer: |
-          ROUND_ROBIN and REPLICATED. HASH is not available.
+          ROUND_ROBIN and REPLICATED. ROUND_ROBIN is the default. HASH is not available. 
       - question: Does BDC have the Spark Thrift Server included? If so, is ODBC endpoint exposed to connect to Hive Metastore tables?
         answer: |
           We currently expose the Hive Metastore (HMS) via the Thrift protocol. We document the protocol but haven't opened up an ODBC endpoint at this time.  You can access it via the Hive Metastore HTTP protocol, for more information see [Hive Metastore HTTP Protocol](/openspecs/sql_server_protocols/ms-hmshttp/1f53d4a7-19be-41dc-aecc-f762096f2e92). 
@@ -156,7 +156,7 @@ sections:
           See main differences and use cases here: [PolyBase FAQ](../relational-databases/PolyBase/PolyBase-faq.yml).
       - question: What are the supported data virtualization sources?
         answer: |
-          BDC supports [data virtualization](../relational-databases/PolyBase/data-virtualization.md) from ODBC sources – SQL Server, Oracle, MongoDB, Teradata, etc. It also supports tiering of remote stores such as Azure Data Lake Store Gen2 and S3-compatible storage.
+          BDC supports [data virtualization](../relational-databases/PolyBase/data-virtualization.md) from ODBC sources – SQL Server, Oracle, MongoDB, Teradata, etc. It also supports tiering of remote stores such as [Azure Data Lake Store Gen2](hdfs-tiering-mount-adlsgen2.md) and [S3-compatible storage](hdfs-tiering-mount-s3.md), as well as AWS S3A and the Azure Blob File System (ABFS).
       - question: Can I use PolyBase to virtualize data stored in an Azure SQL database?
         answer: |
           Yes, you can use PolyBase in BDC to access data in Azure SQL Database.
@@ -168,7 +168,7 @@ sections:
           For an comparison, see [PolyBase in Big Data Clusters vs. PolyBase in stand-alone instances](../relational-databases/polybase/polybase-faq.yml#polybase-in-big-data-clusters-vs--polybase-in-stand-alone-instances).
       - question: How can I easily tell that an external table is pointing to data pool vs storage pool?
         answer: |
-          You can determine type of external table by looking at the data source location prefix, for example, sqlserver://, oracle://, sqlhdfs://, sqldatapool://. We don’t use the TYPE column in sys.external_data_sources for the new data sources so that will work only for the older PolyBase data sources (HADOOP and BLOB_STORAGE).
+          You can determine type of external table by looking at the data source location prefix, for example, sqlserver://, oracle://, sqlhdfs://, sqldatapool://. 
   - name: Deployment
     questions: 
       - question: My BDC deployment failed. How do I see what went wrong?
@@ -185,7 +185,7 @@ sections:
           BDC can run on any Kubernetes stack based on version 1.13 and higher. However, we have not performed specific validations of BDC on EKS or GKS.
       - question: What is version of HDFS and Spark running within BDC?
         answer: |
-          Spark is 2.4 and HDFS is 3.2.1.
+          Spark is 2.4 and HDFS is 3.2.1. For complete details on the open-source software included in BDC, see [Open-source software reference](reference-open-source-software.md).
       - question: How do I install libraries and packages in Spark?
         answer: |
           You can add packages at job submission using the steps in the [sample notebook for installing packages in Spark](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/config-install/installpackage_Spark.ipynb).
@@ -244,7 +244,8 @@ sections:
           Here are some resources you can use:<BR>
           [Workshop: Kubernetes - From Bare Metal to SQL Server Big Data Clusters](https://github.com/microsoft/sqlworkshops-k8stobdc)<BR>
           [Workshop: SQL Server Big Data Clusters - Architecture](https://github.com/microsoft/sqlworkshops-bdc)<BR>
-          [Tutorial: Prepare an application for Azure Kubernetes Service (AKS)](/azure/aks/tutorial-kubernetes-prepare-app)<BR>        
+          [Tutorial: Prepare an application for Azure Kubernetes Service (AKS)](/azure/aks/tutorial-kubernetes-prepare-app)<BR>   
+          (PDF)[Case Study: SQL Workloads running on Apache Spark in MS SQL Server 2019 Big Data Cluster](https://aka.ms/sql-bdc-spark-perf)<BR>    
 additionalContent: |
  ## See Also
  - [SQL Server Big Data Clusters](big-data-cluster-overview.md) 

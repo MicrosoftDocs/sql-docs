@@ -3,7 +3,8 @@ title: Azure Synapse Pathway Preview download
 description: Learn how to get download Azure Synapse Pathway
 ms.date: 03/02/2021
 ms.prod: sql
-ms.technology: "Azure Synapse Pathway"
+ms.technology: tools-other
+ms.topic: conceptual 
 keywords: ""
 helpviewer_keywords: 
   - "Azure Synapse Pathway, download"

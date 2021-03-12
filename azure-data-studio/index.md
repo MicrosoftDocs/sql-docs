@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: 
-ms.date: 03/03/21
+ms.date: 3/3/2021
 ---
 
 # Welcome to azure-data-studio!

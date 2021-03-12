@@ -32,7 +32,7 @@ ms.author: wiassaf
 |total_count|**bigint**|The total number of transactions that have run in the In-Memory OLTP database engine.|  
 |read_only_count|**bigint**|The number of read-only transactions.|  
 |total_aborts|**bigint**|Total number of transactions that were aborted, either through user or system abort.|  
-|user_aborts|**bigint**|Number of aborts initiated by the system. For example, because of write conflicts, validation failures, or dependency failures.|  
+|system_aborts|**bigint**|Number of aborts initiated by the system. For example, because of write conflicts, validation failures, or dependency failures.|  
 |validation_failures|**bigint**|The number of times a transaction has aborted due to a validation failure.|  
 |dependencies_taken|**bigint**|Internal use only.|  
 |dependencies_failed|**bigint**|The number of times a transaction aborts because a transaction on which it was dependent aborts.|  

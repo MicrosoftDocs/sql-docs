@@ -40,6 +40,9 @@ To use [SSMA for MySQL](https://www.microsoft.com/download/confirmation.aspx?id=
    ![New Project](./media/mysql-to-sql-server/new-project.png)
 
 1. Provide connect details in the **Connect to MySQL** dialog box and connect to  your MySQL server. 
+
+   ![New Project](./media/mysql-to-sql-server/connect-to-mysql.png)
+
 1. Right-click the MySQL schema in **MySQL Metadata Explorer** and choose **Create Report**. Alternatively, you can select **Create Report** from the top-line navigation bar. 
 
    ![Create Report](./media/mysql-to-sql-server/create-report.png)

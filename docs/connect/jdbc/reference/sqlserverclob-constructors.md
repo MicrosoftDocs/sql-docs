@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: "Assembly"
 ms.assetid: 287d261a-0527-4890-b0d9-49d5645b41ae
 author: David-Engel

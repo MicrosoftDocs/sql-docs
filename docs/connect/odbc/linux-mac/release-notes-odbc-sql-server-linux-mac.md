@@ -2,14 +2,14 @@
 title: "Release Notes ODBC Driver for SQL Server on Linux and macOS"
 description: "Learn what's new and changed in released versions of the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "05/06/2020"
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: "v-jizho2"
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-chojas
-ms.author: v-jizho2
+ms.author: v-chojas
 manager: kenvh
 ---
 # Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS
@@ -31,6 +31,22 @@ Thank you.
 GeneMi.  2019/04/03.
 -->
 
+## 17.7.2, March 2021
+
+| New item | Details |
+| :------- | :------ |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## 17.7, January 2021
+
+| New item | Details |
+| :------- | :------ |
+| New distributions supported. | Ubuntu 20.10, macOS Big Sur (11.0), Oracle Linux 7 |
+| Service Principal Authentication | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| Ability to insert into encrypted money and smallmoney columns | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## 17.6, July 2020
 
@@ -86,7 +102,7 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 
 | Feature added | Details |
 | :------------ | :------ |
-| Always Encrypted with Secure Enclaves. | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
+| Always Encrypted with secure enclaves. | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Dynamic loading of OpenSSL | See [Programming Guidelines](programming-guidelines.md#bkmk-openssl). |
 | Configurable TCP Keep Alive settings. | See [Connecting to SQL Server](connection-string-keywords-and-data-source-names-dsns.md). |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
@@ -127,7 +143,7 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 ## 17
 
 **New distributions supported**:
-macOS High Sierra and Ubuntu 17.10 
+macOS High Sierra and Ubuntu 17.10
 
 **Performance Improvements**:
 Greater than 10x performance improvement when driver converts to/from UTF-8/16.
@@ -138,19 +154,21 @@ Always Encrypted support for BCP API
 
 New connection string attribute UseFMTOnly causes driver to use legacy metadata in special cases requiring temp tables.
 
-Support for Azure SQL Managed Instance. 
+Support for Azure SQL Managed Instance.
+
 > [!NOTE]
 > There are a number of differences when using Managed Instance:
-> -   FILESTREAM is not supported 
-> -   Local filesystem access is not supported, but required for things like tracefiles 
-> -   Create UDT from local path is not supported 
-> -   Windows Integrated Authentication is not supported 
-> -   DTC is not supported 
-> -   'sa' account is not present (default account is called 'cloudSA')
-> -   TDS token ERROR (0xAA) returns incorrect server name
-> -   Special characters in database name are not supported 
-> -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] is not supported
-> -   The error messages are always shown in English, regardless of language settings (same as Azure) 
+>
+> - FILESTREAM is not supported
+> - Local filesystem access is not supported, but required for things like tracefiles
+> - Create UDT from local path is not supported
+> - Windows Integrated Authentication is not supported
+> - DTC is not supported
+> - 'sa' account is not present (default account is called 'cloudSA')
+> - TDS token ERROR (0xAA) returns incorrect server name
+> - Special characters in database name are not supported
+> - ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] is not supported
+> - The error messages are always shown in English, regardless of language settings (same as Azure)
 
 ## 13.1, for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS, May 2017
 

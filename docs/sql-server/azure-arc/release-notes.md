@@ -37,7 +37,7 @@ If you have existing existing SQL Server - Azure Arc resources, use these steps 
 
 > [!NOTE]
 > - To paste the commands into the shell, use `Ctrl-Shift-V` on Windows or `Cmd-v` on MacOS.
-> - The script will be uploaded directly to the home folder associated with your Cloud Shell session.
+> - The `curl` command will copy the script directly to the home folder associated with your Cloud Shell session.
 > - The script will prompt for the resource group name and print a message when migration is completed.
 
 ### Other changes

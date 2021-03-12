@@ -17,7 +17,7 @@ ms.date: 03/01/2017
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This topic describes how to change a server's registration in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can change the connection information for a registered server at any time.
+This topic describes how to change a server's registration in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can change the connection information for a registered server at any time.
 
 ## <a name="SSMSProcedure"></a>
 

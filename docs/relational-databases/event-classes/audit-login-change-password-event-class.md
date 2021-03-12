@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Audit Login Change Password event class"
 ms.assetid: c6dbe5e5-b523-4b7c-94f0-eb1dfbce2056

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "UPDATE_TSQL"
   - "UPDATE"
@@ -43,7 +43,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # UPDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Changes existing data in a table or view in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For examples, see [Examples](#UpdateExamples).  
+  Changes existing data in a table or view in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#UpdateExamples).  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -164,7 +164,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Is either the [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) function, subject to provider capabilities.  
   
  WITH **(** \<Table_Hint_Limited> **)**  
- Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required. NOLOCK and READUNCOMMITTED are not allowed. For information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required. NOLOCK, READUNCOMMITTED, and NOEXPAND are not allowed. For information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  @*table_variable*  
  Specifies a [table](../../t-sql/data-types/table-transact-sql.md) variable as a table source.  

@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan; sstein"
-ms.date: 12/11/2020
+ms.date: 3/10/2021
 ---
 
 # SqlPackage Publish parameters, properties, and SQLCMD variables
@@ -76,8 +76,13 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|This property is used by SqlClr deployment to cause any blocking assemblies to be dropped as part of the deployment plan. By default, any blocking/referencing assemblies will block an assembly update if the referencing assembly needs to be dropped.|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Specifies whether to attempt the action despite incompatible SQL Server platforms.|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Do not block data motion on a table that has Row Level Security if this property is set to true. Default is false.|
+|**/p:**|AzureSharedAccessSignatureToken=(STRING)|Azure shared access signature (SAS) token, see [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
+|**/p:**|AzureStorageBlobEndpoint=(STRING)|Azure blob storage endpoint, see [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
+|**/p:**|AzureStorageContainer=(STRING)|Azure blob storage container, see [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
+|**/p:**|AzureStorageKey=(STRING)|Azure storage account key, see [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
+|**/p:**|AzureStorageRootPath=(STRING)|Storage root path within the container. Without this property, the path defaults to `servername/databasename/timestamp/`. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Backups the database before deploying any changes.|
-|**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')|Specifies that the publish episode should be terminated if there is a possibility of data loss resulting from the publish.operation.|
+|**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')| Specifies that the operation will be terminated during the schema validation step if the resulting schema changes could incur a loss of data, including due to data precision reduction or a data type change that requires a cast operation. The default (`True`) value causes the operation to terminate regardless if the target database contains data.  An execution with a `False` value for BlockOnPossibleDataLoss can still fail during deployment plan execution if data is present on the target that cannot be converted to the new column type. |
 |**/p:**|BlockWhenDriftDetected=(BOOLEAN 'True')|Specifies whether to block updating a database whose schema no longer matches its registration or is unregistered.|
 |**/p:**|CommandTimeout=(INT32 '60')|Specifies the command timeout in seconds when executing queries against SQL Server.|
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|Specifies whether the declaration of SETVAR variables should be commented out in the generated publish script. You might choose to do this if you plan to specify the values on the command line when you publish by using a tool such as SQLCMD.EXE.|

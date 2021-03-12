@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
 author: David-Engel
 ms.author: v-daenge
@@ -124,14 +124,14 @@ pdo_sqlsrv.report_additional_errors = 0
 
 ## Warnings and errors
 
-Beginning with 5.9.0, ODBC warnings will no longer be logged as errors. That is, [error codes](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes) with prefix "01" are logged as warnings. In other words, if the user wants to log errors only, update the php.ini like this:
+Beginning with 5.9.0, ODBC warnings will no longer be logged as errors. That is, [error codes](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md) with prefix "01" are logged as warnings. In other words, if the user wants to log errors only, update the php.ini like this:
 
 ```
 [pdo_sqlsrv]  
 pdo_sqlsrv.log_severity = 1
 ```
 
-In this case, the log file will not contain any warning message(s). Please check how [logging](https://docs.microsoft.com/sql/connect/php/logging-activity#logging-activity-using-the-pdo_sqlsrv-driver) works for pdo_sqlsrv users.
+In this case, the log file will not contain any warning message(s). Please check how [logging](./logging-activity.md#logging-activity-using-the-pdo_sqlsrv-driver) works for pdo_sqlsrv users.
 
 ## See Also  
 [PDO Class](../../connect/php/pdo-class.md)

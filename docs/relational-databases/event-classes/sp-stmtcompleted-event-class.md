@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SP:StmtCompleted event class"
 ms.assetid: 9e8147a4-aeeb-49a6-80f8-df753d0f34cc

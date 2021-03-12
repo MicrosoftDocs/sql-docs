@@ -1,7 +1,7 @@
 ---
 title: "SqlClient troubleshooting guide"
 description: "Page that provides resolutions to commonly observed problems."
-ms.date: "11/27/2020"
+ms.date: "03/03/2021"
 dev_langs:
   - "csharp"
   - "vb"
@@ -166,6 +166,13 @@ at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception
 - TLS/SSL Certificates not signed with SHA-256 or above.
 
   **Recommended Solution:** Generate a new TLS/SSL Certificate for the server whose hash is signed with at-least the SHA-256 hashing algorithm.
+
+- Tightly restricted cipher suites on Linux with .NET 5+
+
+  .NET 5 introduced a breaking change for Linux clients, where a tightly restricted list of permitted cipher suites is used by default. You may need to expand the default cipher suite list to accept legacy clients (or to contact legacy servers) by either specify a `CipherSuitePolicy` value or changing the _OpenSSL_ configuration file.
+  
+  Read more on [Default TLS cipher suites for .NET on Linux
+](/dotnet/core/compatibility/cryptography/5.0/default-cipher-suites-for-tls-on-linux) for recommended action.
 
 ### Connection Pool exhaustion errors
 

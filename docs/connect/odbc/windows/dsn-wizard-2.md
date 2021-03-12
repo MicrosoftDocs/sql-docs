@@ -2,15 +2,15 @@
 description: "Data Source Wizard Screen 2 (ODBC Driver for SQL Server)"
 title: "Data Source Wizard Screen 2 (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/06/2020"
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
-ms.author: "v-jizho2"
+ms.author: v-daenge
 ---
 # Data Source Wizard Screen 2
 
@@ -43,6 +43,11 @@ Specifies that the driver authenticate to SQL Server using Azure Active Director
 ### With Managed Identity authentication
 
 Specifies that the driver authenticate to SQL Server using a Managed Identity.
+
+### With Active Directory Service Principal authentication
+
+Specifies that the driver authenticate to SQL Server using an Azure Active Directory Service Principal.
+
 
 ### Login ID
 

@@ -46,7 +46,7 @@ To use [SSMA for MySQL](https://aka.ms/ssmaformysql) to create an assessment, fo
 
 1. Provide connect details in the **Connect to MySQL** dialog box and connect to  your MySQL server. 
 
-   ![New Project](./media/mysql-to-sql-server/connect-to-mysql.png)
+   ![Connect to mysql](./media/mysql-to-sql-server/connect-to-mysql.png)
 
 1. Right-click the MySQL schema in **MySQL Metadata Explorer** and choose **Create Report**. Alternatively, you can select **Create Report** from the top-line navigation bar. 
 
@@ -68,7 +68,7 @@ Before you perform schema conversion, validate the default datatype mappings or 
 
 ![Type Mappings](./media/mysql-to-sql-server/type-mappings.png)
 
-To learn more about conversion settings in SSMA, see [Project Settings](../sql/ssma/mysql/project-settings-conversion-mysqltosql)
+To learn more about conversion settings in SSMA, see [Project Settings](../../../ssma/mysql/project-settings-conversion-mysqltosql.md)
 
 ### Convert schema
 
@@ -94,7 +94,7 @@ To convert the schema, follow these steps:
 
    After schema conversion you can save this project locally for an offline schema remediation exercise. Select **Save Project** from the **File** menu. This gives you an opportunity to evaluate the source and target schemas offline and perform remediation before you can publish the schema to SQL Server.
 
-To learn more, see [Converting MySQL databases](./sql/ssma/mysql/converting-mysql-databases-mysqltosql)
+To learn more, see [Converting MySQL databases](../../../ssma/mysql/converting-mysql-databases-mysqltosql.md)
 
 ## Migration 
 
@@ -115,7 +115,7 @@ To migrate data, two cases arise:
 	-   For performing  **Server Side Data Migration**, select the  **Server Side Data Migration Engine**  option in the  **Project Settings**  dialog box.
 
 > [!IMPORTANT]  
-> If the engine being used is Server Side Data Migration Engine, then, before migrating data, you must install the SSMA for MySQL Extension Pack and the MySQL providers on the computer that is running SSMA. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service must also be running. For more information about how to install the extension pack, see [Installing SSMA Components on SQL Server (MySQL to SQL)](./installing-ssma-components-on-sql-server-mysqltosql.md)  
+> If the engine being used is Server Side Data Migration Engine, then, before migrating data, you must install the SSMA for MySQL Extension Pack and the MySQL providers on the computer that is running SSMA. The SQL Server Agent service must also be running. For more information about how to install the extension pack, see [Installing SSMA Components on SQL Server (MySQL to SQL)](../../../ssma/mysql/installing-ssma-components-on-sql-server-mysqltosql.md)  
 
 To publish the schema and migrate the data, follow these steps: 
 
@@ -179,8 +179,8 @@ These resources were developed as part of the Data Migration Jumpstart Program (
 
 ## Next steps
 
-- To learn more about migrating MySQL databases to SQL Server, see [SSMA documentation for MySQL](./sql/ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql)
+- To learn more about migrating MySQL databases to SQL Server, see [SSMA documentation for MySQL](../../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)
 
 - For a matrix of the Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios as well as specialty tasks, see the article [Service and tools for data migration](https://docs.microsoft.com/azure/dms/dms-tools-matrix).
 
-- For other migration guides, see [Azure Database Migration Guides](./data-migration). 
+- For other migration guides, see [Azure Database Migration Guides](../data-migration/index.yml). 

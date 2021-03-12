@@ -19,6 +19,8 @@ ms.author: mathoma
 
 This migration guide teaches you to migrate your user databases from DB2 to SQL Server using the SQL Server Migration Assistant for DB2. 
 
+For other migration guides, see [Database Migration](https://datamigration.microsoft.com/). 
+
 
 ## Prerequisites
 

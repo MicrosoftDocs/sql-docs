@@ -15,6 +15,7 @@ ms.date: 01/29/2021
 
 This guide helps you migrate your MySQL databases to SQL Server. 
 
+For other migration guides, see [Database Migration](https://datamigration.microsoft.com/). 
 
 ## Prerequisites 
 
@@ -181,6 +182,8 @@ These resources were developed as part of the Data Migration Jumpstart Program (
 - To learn more about migrating MySQL databases to SQL Server, see [SSMA documentation for MySQL](../../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)
 
 - For a matrix of the Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios as well as specialty tasks, see the article [Service and tools for data migration](https://docs.microsoft.com/azure/dms/dms-tools-matrix).
+
+- For other migration guides, see [Database Migration](https://datamigration.microsoft.com/). 
 
 
 

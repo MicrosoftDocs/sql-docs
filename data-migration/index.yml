@@ -26,6 +26,9 @@ conceptualContent:
         - text: SQL Server on Azure VMs
           url: /azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide
           itemType: how-to-guide
+        - text: Azure Synapse Analytics
+          url: /azure/synapse-analytics/migration-guides/sql-server-to-synapse-analytics-guide
+          itemType: how-to-guide
     - title: "Access to"
       links:
         - text: SQL Server
@@ -44,9 +47,12 @@ conceptualContent:
           itemType: how-to-guide
         - text: Azure SQL Managed Instance
           url: https://review.docs.microsoft.com/en-us/azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide?branch=pr-en-us-143697 
-          itemType: video
+          itemType: how-to-guide
         - text: SQL Server on Azure VMs
           url: https://review.docs.microsoft.com/en-us/azure/azure-sql/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide?branch=pr-en-us-143697
+          itemType: how-to-guide
+        - text: Azure Synapse Analytics
+          url: https://docs.microsoft.com/en-us/azure/synapse-analytics/migration-guides/oracle-to-synapse-analytics-guide
           itemType: how-to-guide
     - title: "DB2 to"
       links:
@@ -106,7 +112,20 @@ conceptualContent:
         - text: Azure CosmosDB
           url: /azure/cosmos-db/table-import
           itemType: how-to-guide
-
+    - title: "Resources"
+      links:
+        - text: Migration partner resources
+          url: /azure/cosmos-db/table-import
+          itemType: how-to-guide
+        - text: Video guidance
+          url: /azure/cosmos-db/table-import
+          itemType: how-to-guide
+        - text: e CosmosDBAzur
+          url: /azure/cosmos-db/table-import
+          itemType: how-to-guide
+        - text: Azure Cost Calculator
+          url: /azure/cosmos-db/table-import
+          itemType: how-to-guide
 
 tools:
   title: Migration tools

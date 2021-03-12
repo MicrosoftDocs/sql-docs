@@ -1,8 +1,9 @@
 ---
 title: 'Migration guide: Access to SQL Server'
 description: 'This guide teaches you to migrate your Microsoft Access database to Microsoft SQL Server. '
-ms.service: sql-database
-ms.subservice: migration
+ms.prod: sql
+ms.reviewer: ""
+ms.technology: migration-guide
 ms.custom:
 ms.devlang:
 ms.topic: conceptual

@@ -1,14 +1,15 @@
 ---
 title: Migrate Oracle to SQL Server
 description: As you prepare for migrating your database to the cloud, verify that your source environment is supported and that you have addressed any prerequisites. This will help to ensure an efficient and successful migration.
-ms.service: sql-database
-ms.subservice: migration
+ms.prod: sql
+ms.reviewer: ""
+ms.technology: migration-guide
 ms.custom:
 ms.devlang:
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 01/29/2021
+ms.date: 03/19/2021
 ---
 
 # Migration guide: Migrate Oracle to SQL Server

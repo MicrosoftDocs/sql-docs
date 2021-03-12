@@ -1,8 +1,9 @@
 ---
 title: "SAP ASE to SQL Server - Migration guide"
 description: Migrate your SAP ASE databases to SQL Server using SQL Server Migration Assistant for SAP ASE. 
-ms.service: sql-database
-ms.subservice: migration
+ms.prod: sql
+ms.reviewer: ""
+ms.technology: migration-guide
 ms.custom: 
 ms.devlang: 
 ms.topic: conceptual

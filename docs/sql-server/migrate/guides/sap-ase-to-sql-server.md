@@ -1,6 +1,6 @@
 ---
 title: "SAP ASE to SQL Server - Migration guide"
-description: Migrate your SAP ASE databases to SQL Server using SQL Server Migration Assistant for SAP ASE. 
+description: 'This guide teaches you to migrate your SAP ASE databases to Microsoft SQL Server by using SQL Server Migration for SAP ASE (SSMA for SAP ASE). '
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: migration-guide
@@ -99,9 +99,6 @@ The test approach for database migration consists of performing the following ac
 
 4. **Run performance tests**. Run performance test against the source and the target, and then analyze and compare the results.
 
-> [!NOTE]
-> For assistance with developing and running post-migration validation tests, consider the Data Quality Solution available from the partner [QuerySurge](http://www.querysurge.com/company/partners/microsoft).
-
 ### Optimize
 
 The post-migration phase is crucial for reconciling any data accuracy issues and verifying completeness, as well as addressing performance issues with the workload.
@@ -130,5 +127,4 @@ For additional assistance with completing this migration scenario, please see th
 - For other migration guides, see [Database Migration](https://datamigration.microsoft.com/). 
 
 For videos, see: 
-- [How to Use the Database Migration Guide](https://azure.microsoft.com/resources/videos/how-to-use-the-azure-database-migration-guide/).
 - [Overview of the migration journey and the tools/services recommended for performing assessment and migration](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/).

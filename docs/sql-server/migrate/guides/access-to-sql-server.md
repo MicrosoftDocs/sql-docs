@@ -70,9 +70,13 @@ To convert database objects, follow these steps:
 
    ![Right-click the database and choose convert schema](./media/access-to-sql-server/convert-schema.png)
 
-1. (Optional) To convert an individual object, right-click the object and choose **Convert schema**. An object that has been converted appears bold in the **Access Metadata Explorer**: 
+   Compare converted items:
 
    ![Bold objects in metadata explorer have been converted](./media/access-to-sql-server/converted-items.png)
+
+1. (Optional) To convert an individual object, right-click the object and choose **Convert schema**. An object that has been converted appears bold in the **Access Metadata Explorer**: 
+
+   ![Bold objects in metadata explorer have been converted](./media/access-to-sql-server/converted-items-bold.png)
  
 1. Select **Review results** in the Output pane, and review errors in the **Error list** pane. 
 
@@ -84,9 +88,23 @@ After you have completed assessing your databases and addressing any discrepanci
 To migrate data by using SSMA for Access, follow these steps: 
 
 1. If you haven't already, select **Connect to SQL Server** and provide connection details. 
+1. 1. Right-click the database from the **Azure SQL Database Metadata Explorer** and choose **Synchronize with Database**. This action publishes the MySQL schema to Azure SQL Database.
+
+   ![Synchronize with Database](./media/access-to-sql-server/synchronize-with-database.png)
+
+   Review the synchronization with the database: 
+
+   ![Review the synchronization with the database](./media/access-to-sql-server/synchronize-with-database-review.png)
+
 1. Use **Access Metadata Explorer** to check boxes next to the items you want to migrate. If you want to migrate the entire database, check the box next to the database. 
 1. Right-click the database or object you want to migrate, and choose **Migrate data**. 
    To migrate data for an entire database, select the check box next to the database name. To migrate data from individual tables, expand the database, expand Tables, and then select the check box next to the table. To omit data from individual tables, clear the check box.
+
+   ![Migrate Data](./media/access-to-sql-server/migrate-data.png)
+
+   Review the migrated data: 
+
+   ![Migrate Data Review](./media/access-to-sql-server/migrate-data-review.png)
 
 
 ## Post-migration 
@@ -124,7 +142,6 @@ For additional assistance with completing this migration scenario, please see th
 | **Title/link** | **Description** |
 | -------------- | --------------- |
 | [Data Workload Assessment Model and Tool](https://github.com/Microsoft/DataMigrationTeam/tree/master/Data%20Workload%20Assessment%20Model%20and%20Tool) | This tool provides suggested “best fit” target platforms, cloud readiness, and application/database remediation level for a given workload. It offers simple, one-click calculation and report generation that greatly helps to accelerate large estate assessments by providing and automated and uniform target platform decision process. |
-| [Optimization Guide for Mainframe App/Data recompiled to .NET & SQL Server](https://aka.ms/dmj-wp-mainframe-optimize) | This guide offers optimization advice for executing point-lookups against SQL Server from .NET as efficiently as possible. Customers wishing to migrate from mainframe databases to SQL Server may desire to migrate existing mainframe-optimized design patterns, especially when using 3rd party tools (such as Raincode Compiler) to automatically migrate mainframe code (COBOL/JCL, etc.) to T-SQL and C# .NET. |
 
 These resources were developed as part of the Data SQL Ninja Program, which is sponsored by the Azure Data Group engineering team. The core charter of the Data SQL Ninja program is to unblock and accelerate complex modernization and compete data platform migration opportunities to Microsoft's Azure Data platform. If you think your organization would be interested in participating in the Data SQL Ninja program, please contact your account team and ask them to submit a nomination.
 

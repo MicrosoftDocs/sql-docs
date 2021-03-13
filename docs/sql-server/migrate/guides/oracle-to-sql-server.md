@@ -106,7 +106,17 @@ To create an assessment, follow these steps:
 
 1. Select **Connect to Oracle**, provide the connection details, and then select **Connect**.
 
+   Choose the appropriate Oracle Data Provider:
+
+   ![Connect to Oracle using driver](./media/oracle-to-sql-server/connect-to-oracle-driver.png)
+
+   Connect to Oracle:
+
    ![Connect to Oracle](./media/oracle-to-sql-server/connect-to-oracle.png)
+
+   Select the Oracle schema you want to migrate:
+
+   ![Select schema to load](./media/oracle-to-sql-server/connect-select-schema.png)
 
 1. In **Oracle Metadata Explorer**, select the Oracle schema, and then select **Create Report** to generate an HTML report with conversion statistics and error/warnings, if any..
 
@@ -154,6 +164,10 @@ To convert the schema, follow these steps:
 
    ![Convert Schema Compare And Review](./media/oracle-to-sql-server/compare-schema.png)
 
+   Review the recommendations:
+
+   ![Convert Schema Compare And Review object code](./media/oracle-to-sql-server/compare-schema-code.png)
+
    You can save the project locally for an offline schema remediation exercise. You can do so by selecting **Save Project** from the **File** menu. This gives you an opportunity to evaluate the source and target schemas offline and perform remediation before you can publish the schema to SQL Server.
 
 
@@ -167,6 +181,10 @@ To publish the schema and migrate the data, follow these steps:
 1. Right-click the database from the **SQL Server Metadata Explorer**  and choose **Synchronize with Database**. This action publishes the Oracle schema to SQL Server. 
 
    ![Synchronize with Database](./media/oracle-to-sql-server/synchronize-database.png)
+
+   Review the synchronization with the database:
+
+   ![Synchronize with Database - Review mapping](./media/oracle-to-sql-server/synchronize-database-review.png)
 
 1. Right-click the Oracle schema from the **Oracle Metadata Explorer** and choose **Migrate Data**. Alternatively, you can select Migrate Data from the top-line navigation.
 
@@ -246,4 +264,3 @@ For other migration guides, see [Database Migration](https://datamigration.micro
 
 For video content, see:
 - [How to use the Database Migration Guide](https://azure.microsoft.com/resources/videos/how-to-use-the-azure-database-migration-guide/)
-- [Overview of the migration journey](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/)

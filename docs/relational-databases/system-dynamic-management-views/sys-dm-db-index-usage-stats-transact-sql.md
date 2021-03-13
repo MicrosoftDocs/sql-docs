@@ -1,8 +1,8 @@
 ---
 description: "sys.dm_db_index_usage_stats (Transact-SQL)"
-title: "sys.dm_db_index_usage_stats (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_db_index_usage_stats (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/20/2017"
+ms.date: "03/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -17,7 +17,6 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_db_index_usage_stats dynamic management view"
-ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -63,7 +62,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  The **user_updates** counter indicates the level of maintenance on the index caused by insert, update, or delete operations on the underlying table or view. You can use this view to determine which indexes are used only lightly by your applications. You can also use the view to determine which indexes are incurring maintenance overhead. You may want to consider dropping indexes that incur maintenance overhead, but are not used for queries, or are only infrequently used for queries.  
   
- The counters are initialized to empty whenever the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) service is started. In addition, whenever a database is detached or is shut down (for example, because AUTO_CLOSE is set to ON), all rows associated with the database are removed.  
+ The counters are initialized to empty whenever the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) service is started. Use the **sqlserver_start_time** field in the DMV **sys.dm_os_sys_info** to find the last instance startup time of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. In addition, whenever a database is detached or is shut down (for example, because AUTO_CLOSE is set to ON), all rows associated with the database are removed.  
   
  When an index is used, a row is added to **sys.dm_db_index_usage_stats** if a row does not already exist for the index. When the row is added, its counters are initially set to zero.  
   
@@ -80,5 +79,5 @@ On SQL Database Basic, S0, and S1 service objectives, and for databases in elast
  [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-  
+ [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)    
+ [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)    

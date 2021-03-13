@@ -1,8 +1,8 @@
 ---
 description: "sys.dm_db_wait_stats (Azure SQL Database)"
-title: "sys.dm_db_wait_stats (Azure SQL Database) | Microsoft Docs"
+title: "sys.dm_db_wait_stats (Azure SQL Database)"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/12/2021"
 ms.service: sql-database
 ms.reviewer: ""
 ms.topic: "reference"
@@ -16,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_wait_stats dynamic management view"
   - "dm_db_wait_stats"
-ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: "= azuresqldb-current"
@@ -52,7 +51,7 @@ monikerRange: "= azuresqldb-current"
   
     -   An external process finishes.  
   
--   These statistics are not persisted across SQL Database failover events, and all data are cumulative since the last time the statistics were reset.  
+-   These statistics are not persisted across SQL Database failover events, and all data are cumulative since the last time the statistics were reset. Use the **sqlserver_start_time** field in the DMV **sys.dm_os_sys_info** to find the last instance startup time of the [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ## Permissions  
  Requires VIEW DATABASE STATE permission on the server.  
@@ -85,7 +84,7 @@ monikerRange: "= azuresqldb-current"
 |AUDIT_ON_DEMAND_TARGET_LOCK|Occurs when there is a wait on a lock that is used to ensure single initialization of audit related Extended Event targets.|  
 |AUDIT_XE_SESSION_MGR|Occurs when there is a wait on a lock that is used to synchronize the starting and stopping of audit related Extended Events sessions.|  
 |BACKUP|Occurs when a task is blocked as part of backup processing.|  
-|BACKUP_OPERATOR|Occurs when a task is waiting for a tape mount. To view the tape status, query [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md). If a mount operation is not pending, this wait type may indicate a hardware problem with the tape drive.|  
+|BACKUP_OPERATOR|Occurs when a task is waiting for a tape mount.|  
 |BACKUPBUFFER|Occurs when a backup task is waiting for data, or is waiting for a buffer in which to store data. This type is not typical, except when a task is waiting for a tape mount.|  
 |BACKUPIO|Occurs when a backup task is waiting for data, or is waiting for a buffer in which to store data. This type is not typical, except when a task is waiting for a tape mount.|  
 |BACKUPTHREAD|Occurs when a task is waiting for a backup task to finish. Wait times may be long, from several minutes to several hours. If the task that is being waited on is in an I/O process, this type does not indicate a problem.|  
@@ -382,3 +381,8 @@ monikerRange: "= azuresqldb-current"
 |FT_MASTER_MERGE|Full-text is waiting on master merge operation. Documented for informational purposes only. Not supported. Future compatibility is not guaranteed.|  
   
   
+## See also
+
+ [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)    
+ [sys.dm_tran_locks &#40;Transact-SQL&#41;](sys-dm-tran-locks-transact-sql.md)    
+ [sys.dm_os_waiting_tasks &#40;Transact-SQL&#41;](sys-dm-os-waiting-tasks-transact-sql.md)    

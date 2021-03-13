@@ -2,7 +2,7 @@
 description: "sys.dm_db_missing_index_details (Transact-SQL)"
 title: "sys.dm_db_missing_index_details (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/20/2017"
+ms.date: "03/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -41,7 +41,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |**statement**|**nvarchar(4000)**|Name of the table where the index is missing.|  
   
 ## Remarks  
- Information returned by **sys.dm_db_missing_index_details** is updated when a query is optimized by the query optimizer, and is not persisted. Missing index information is kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the missing index information if they want to keep it after server recycling.  
+ Information returned by **sys.dm_db_missing_index_details** is updated when a query is optimized by the query optimizer, and is not persisted. Missing index information is kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the missing index information if they want to keep it after server recycling. Use the **sqlserver_start_time** field in the DMV **sys.dm_os_sys_info** to find the last instance startup time of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
   
  To determine which missing index groups a particular missing index is part of, you can query the **sys.dm_db_missing_index_groups** dynamic management view by equijoining it with **sys.dm_db_missing_index_details** based on the **index_handle** column.  
 
@@ -66,3 +67,4 @@ On SQL Database Basic, S0, and S1 service objectives, and for databases in elast
  [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
  [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
  [sys.dm_db_missing_index_group_stats_query &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md)     
+ [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)

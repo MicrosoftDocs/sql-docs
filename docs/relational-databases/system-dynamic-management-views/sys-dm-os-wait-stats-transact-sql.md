@@ -2,7 +2,7 @@
 description: "sys.dm_os_wait_stats (Transact-SQL)"
 title: "sys.dm_os_wait_stats (Transact-SQL)"
 ms.custom: "contperf-fy21q3"
-ms.date: "02/10/2021"
+ms.date: "03/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -50,7 +50,7 @@ On SQL Database Basic, S0, and S1 service objectives, and for databases in elast
   
  **External waits** occur when a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] worker is waiting for an external event, such as an extended stored procedure call or a linked server query, to finish. When you diagnose blocking issues, remember that external waits do not always imply that the worker is idle, because the worker may actively be running some external code.  
   
- `sys.dm_os_wait_stats` shows the time for waits that have completed. This dynamic management view does not show current waits.  
+ This dynamic management view shows the time for waits that have completed. This dynamic management view does not show current waits.  
   
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] worker thread is not considered to be waiting if any of the following is true:  
   
@@ -66,17 +66,16 @@ On SQL Database Basic, S0, and S1 service objectives, and for databases in elast
   
  Specific types of wait times during query execution can indicate bottlenecks or stall points within the query. Similarly, high wait times, or wait counts server wide can indicate bottlenecks or hot spots in interaction query interactions within the server instance. For example, lock waits indicate data contention by queries; page IO latch waits indicate slow IO response times; page latch update waits indicate incorrect file layout.  
   
- The contents of this dynamic management view can be reset by running the following command:  
-  
+ The contents of this dynamic management view can be reset. This T-SQL command resets all counters to 0:  
 ```sql  
 DBCC SQLPERF ('sys.dm_os_wait_stats', CLEAR);  
 GO  
 ```  
   
-This command resets all counters to 0.  
+
   
 > [!NOTE]
-> These statistics are not persisted across [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarts, and all data is cumulative since the last time the statistics were reset or the server was started.  
+> These statistics are not persisted across [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarts, and all data is cumulative since the last time the statistics were reset or the instance was started. Use the **sqlserver_start_time** field in the DMV **sys.dm_os_sys_info** to find the last instance startup time of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
  The following table lists the wait types encountered by tasks.  
 
@@ -1023,4 +1022,5 @@ This command resets all counters to 0.
     
  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)
+ [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)    
+ [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)

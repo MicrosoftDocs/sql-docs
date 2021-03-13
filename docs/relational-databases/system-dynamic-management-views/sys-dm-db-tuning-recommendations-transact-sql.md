@@ -1,8 +1,8 @@
 ---
-title: "sys.dm_db_tuning_recommendations (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_db_tuning_recommendations (Transact-SQL)"
 description: Learn how to find potential performance issues and recommended fixes in SQL Server and Azure SQL Database
 ms.custom: ""
-ms.date: "07/20/2017"
+ms.date: "03/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -18,7 +18,6 @@ dev_langs:
 helpviewer_keywords: 
   - "database tuning recommendations feature [SQL Server], sys.dm_db_tuning_recommendations dynamic management view"
   - "sys.dm_db_tuning_recommendations dynamic management view"
-ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -52,7 +51,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 | **details** | **nvarchar(max)** | JSON document that contains more details about the recommendation. Following fields are available:<br /><br />`planForceDetails`<br />-    `queryId` - query\_id of the regressed query.<br />-    `regressedPlanId` - plan_id of the regressed plan.<br />-   `regressedPlanExecutionCount` - Number of executions of the query with regressed plan before the regression is detected.<br />-    `regressedPlanAbortedCount` - Number of detected errors during the execution of the regressed plan.<br />-    `regressedPlanCpuTimeAverage` - Average CPU time (in micro seconds) consumed by the regressed query before the regression is detected.<br />-    `regressedPlanCpuTimeStddev` - Standard deviation of CPU time consumed by the regressed query before the regression is detected.<br />-    `recommendedPlanId` - plan_id of the plan that should be forced.<br />-   `recommendedPlanExecutionCount`- Number of executions of the query with the plan that should be forced before the regression is detected.<br />-    `recommendedPlanAbortedCount` - Number of detected errors during the execution of the plan that should be forced.<br />-    `recommendedPlanCpuTimeAverage` - Average CPU time (in micro seconds) consumed by the query executed with the plan that should be forced (calculated before the regression is detected).<br />-    `recommendedPlanCpuTimeStddev` Standard deviation of CPU time consumed by the regressed query before the regression is detected.<br /><br />`implementationDetails`<br />-  `method` - The method that should be used to correct the regression. Value is always `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script that should be executed to force the recommended plan. |
   
 ## Remarks  
- Information returned by `sys.dm_db_tuning_recommendations` is updated when database engine identifies potential query performance regression, and is not persisted. Recommendations are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the tuning recommendation if they want to keep it after server recycling. 
+ Information returned by `sys.dm_db_tuning_recommendations` is updated when database engine identifies potential query performance regression, and is not persisted. Recommendations are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Use the **sqlserver_start_time** field in the DMV `sys.dm_os_sys_info` to find the last instance startup time of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Database administrators should periodically make backup copies of the tuning recommendation if they want to keep it after server recycling. 
 
  `currentValue` field in the `state` column might have the following values:
  
@@ -91,13 +90,13 @@ The following gets the generated [!INCLUDE[tsql](../../includes/tsql-md.md)] scr
  
 ```sql
 SELECT name, reason, score,
-	JSON_VALUE(details, '$.implementationDetails.script') AS script,
-	details.* 
+    JSON_VALUE(details, '$.implementationDetails.script') AS script,
+    details.* 
 FROM sys.dm_db_tuning_recommendations
 CROSS APPLY OPENJSON(details, '$.planForceDetails')
-	WITH (	[query_id] int '$.queryId',
-			regressed_plan_id int '$.regressedPlanId',
-			last_good_plan_id int '$.recommendedPlanId') AS details
+    WITH (    [query_id] int '$.queryId',
+            regressed_plan_id int '$.regressedPlanId',
+            last_good_plan_id int '$.recommendedPlanId') AS details
 WHERE JSON_VALUE(state, '$.currentValue') = 'Active';
 ```
 ### Example 2
@@ -130,39 +129,39 @@ The following gets the generated [!INCLUDE[tsql](../../includes/tsql-md.md)] scr
 ```sql
 WITH cte_db_tuning_recommendations
 AS (SELECT reason,
-		score,
-		query_id,
-		regressedPlanId,
-		recommendedPlanId,
-		current_state = JSON_VALUE(state, '$.currentValue'),
-		current_state_reason = JSON_VALUE(state, '$.reason'),
-		script = JSON_VALUE(details, '$.implementationDetails.script'),
-		estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
-				* (regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
-		error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
-	FROM sys.dm_db_tuning_recommendations
-	CROSS APPLY OPENJSON(Details, '$.planForceDetails')
-	WITH ([query_id] int '$.queryId',
-		regressedPlanId int '$.regressedPlanId',
-		recommendedPlanId int '$.recommendedPlanId',
-		regressedPlanErrorCount int,	
-		recommendedPlanErrorCount int,
-		regressedPlanExecutionCount int,
-		regressedPlanCpuTimeAverage float,
-		recommendedPlanExecutionCount int,
-		recommendedPlanCpuTimeAverage float
-		)
-	)
+        score,
+        query_id,
+        regressedPlanId,
+        recommendedPlanId,
+        current_state = JSON_VALUE(state, '$.currentValue'),
+        current_state_reason = JSON_VALUE(state, '$.reason'),
+        script = JSON_VALUE(details, '$.implementationDetails.script'),
+        estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                * (regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+        error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
+    FROM sys.dm_db_tuning_recommendations
+    CROSS APPLY OPENJSON(Details, '$.planForceDetails')
+    WITH ([query_id] int '$.queryId',
+        regressedPlanId int '$.regressedPlanId',
+        recommendedPlanId int '$.recommendedPlanId',
+        regressedPlanErrorCount int,    
+        recommendedPlanErrorCount int,
+        regressedPlanExecutionCount int,
+        regressedPlanCpuTimeAverage float,
+        recommendedPlanExecutionCount int,
+        recommendedPlanCpuTimeAverage float
+        )
+    )
 SELECT qsq.query_id,
-	qsqt.query_sql_text,
-	dtr.*,
-	CAST(rp.query_plan AS XML) AS RegressedPlan,
-	CAST(sp.query_plan AS XML) AS SuggestedPlan
+    qsqt.query_sql_text,
+    dtr.*,
+    CAST(rp.query_plan AS XML) AS RegressedPlan,
+    CAST(sp.query_plan AS XML) AS SuggestedPlan
 FROM cte_db_tuning_recommendations AS dtr
 INNER JOIN sys.query_store_plan AS rp ON rp.query_id = dtr.query_id
-	AND rp.plan_id = dtr.regressedPlanId
+    AND rp.plan_id = dtr.regressedPlanId
 INNER JOIN sys.query_store_plan AS sp ON sp.query_id = dtr.query_id
-	AND sp.plan_id = dtr.recommendedPlanId
+    AND sp.plan_id = dtr.recommendedPlanId
 INNER JOIN sys.query_store_query AS qsq ON qsq.query_id = rp.query_id
 INNER JOIN sys.query_store_query_text AS qsqt ON qsqt.query_text_id = qsq.query_text_id;
 ```
@@ -179,3 +178,4 @@ Requires the `VIEW DATABASE STATE` permission for the database in [!INCLUDE[ssSD
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [JSON Support](../json/json-data-sql-server.md)
+ [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)    

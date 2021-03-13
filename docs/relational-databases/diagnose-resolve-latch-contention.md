@@ -1,7 +1,7 @@
 ---
 title: "Whitepaper: Diagnose & resolve latch contention"
 description: This article is an in-depth look at diagnosing and resolving latch contention in SQL Server. This article was originally published by the SQLCAT team at Microsoft."
-ms.date: 09/30/2020
+ms.date: 03/12/2021
 ms.prod: sql
 ms.reviewer: wiassaf
 ms.technology: performance
@@ -252,7 +252,7 @@ The statistics exposed by this query are described as follows:
 | **Max_wait_time_ms** | Maximum time in milliseconds any request spent waiting on this latch type. |
 
 > [!NOTE]
-> The values returned by this DMV are cumulative since last time the server was restarted or the DMV was reset. On a system that has been running a long time this means some statistics such as *Max_wait_time_ms* are rarely useful. The following command can be used to reset the wait statistics for this DMV:
+> The values returned by this DMV are cumulative since last time the server was restarted or the DMV was reset. Use the **sqlserver_start_time** field in the DMV *sys.dm_os_sys_info* to find the last instance startup time of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance or [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. On a system that has been running a long time this means some statistics such as *Max_wait_time_ms* are rarely useful. The following command can be used to reset the wait statistics for this DMV:
 >
 > ```sql
 > DBCC SQLPERF ('sys.dm_os_latch_stats', CLEAR)

@@ -1,8 +1,8 @@
 ---
 description: "sys.dm_os_sys_info (Transact-SQL)"
-title: "sys.dm_os_sys_info (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_os_sys_info (Transact-SQL)"
 ms.custom: ""
-ms.date: "04/24/2018"
+ms.date: "03/12/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "sys.dm_os_sys_info dynamic management view"
   - "time [SQL Server], instance started"
   - "starting time"
-ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -56,7 +55,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 |**scheduler_total_count**|**int**|Represents the total number of schedulers in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not nullable.|  
 |**deadlock_monitor_serial_number**|**int**|Specifies the ID of the current deadlock monitor sequence. Not nullable.|  
 |**sqlserver_start_time_ms_ticks**|**bigint**|Represents the **ms_tick** number when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] last started. Compare to the current ms_ticks column. Not nullable.|  
-|**sqlserver_start_time**|**datetime**|Specifies the local system date and time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] last started. Not nullable.|  
+|**sqlserver_start_time**|**datetime**|Specifies the local system date and time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] last started. Not nullable. <BR>Information in many other SQL Server DMVs only includes activity since the latest instance startup time. Use this field to find the last startup time of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**affinity_type**|**int**|**Applies to:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and later.<br /><br /> Specifies the type of server CPU process affinity currently in use. Not nullable. For more information, see [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|**Applies to:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and later.<br /><br /> Describes the **affinity_type** column. Not nullable.<br /><br /> MANUAL = affinity has been set for at least one CPU.<br /><br /> AUTO = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can freely move threads between CPUs.|  
 |**process_kernel_time_ms**|**bigint**|**Applies to:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and later.<br /><br /> Total time in milliseconds spent by all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] threads in kernel mode. This value can be larger than a single processor clock because it includes the time for all processors on the server. Not nullable.|  
@@ -74,7 +73,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 |**socket_count** |**int** | **Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later.<br /><br />Specifies the number of processor sockets available on the system. |  
 |**cores_per_socket** |**int** | **Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later.<br /><br />Specifies the number of processors per socket available on the system. |  
 |**numa_node_count** |**int** | **Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later.<br /><br />Specifies the number of numa nodes available on the system. This column includes physical numa nodes as well as soft numa nodes. |  
-  
+
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   

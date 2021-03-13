@@ -124,6 +124,10 @@ To publish the schema and migrate the data, follow these steps:
 
    ![Synchronize with Database](./media/mysql-to-sql-server/synchronize-database.png)
 
+   Review the synchronization with the database:
+
+   ![Synchronize with Database - Review](./media/mysql-to-sql-server/synchronize-database-review.png)
+
 1. Right-click the MySQL schema in **MySQL Metadata Explorer** and choose **Migrate Data**.  Alternatively, you can select **Migrate Data** from the top-line navigation bar.  
 
    ![Migrate Data](./media/mysql-to-sql-server/migrate-data.png)

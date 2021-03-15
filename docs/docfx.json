@@ -173,10 +173,8 @@
         "ssms/visual-db-tools/**/*.md": "Visual Database Tools",
         "tools/ssbdiagnose/**/*.md": "ssbdiagnose",
         "data-quality-services/**/*.md": "Data Quality Services (DQS)",
-        "azdata/**/*.md": "Azure Data CLI (azdata)"
-
-
-
+        "azdata/**/*.md": "Azure Data CLI (azdata)",
+        "tools/synapse-pathway/**/*.md": "Azure Synapse Pathway"
       },
 
       "breadcrumb_path": {

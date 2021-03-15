@@ -82,7 +82,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
         DELETE
     :::column-end:::
     :::column:::
-        OPEN
+        MERGE
     :::column-end:::
     :::column:::
         UPDATE
@@ -93,6 +93,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
         DROP
     :::column-end:::
     :::column:::
+        OPEN
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -249,6 +250,7 @@ GO
  [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)
  [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

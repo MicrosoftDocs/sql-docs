@@ -41,7 +41,7 @@ To create an assessment, follow these steps:
 1. Provide a project name, a location to save your project, and then select SQL Server as the migration target from the drop-down. Select **OK**.
 1. Enter in values for SAP connection details on the **Connect to Sybase** dialog box. 
 1. Right-click the SAP database you want to migrate, and then choose **Create report**. This generates an HTML report.
-1. Review the HTML report to understand conversion statistics and any errors or warnings. You can also open the report in Excel to get an inventory of DB2 objects and the effort required to perform schema conversions. The default location for the report is in the report folder within SSMAProjects.
+1. Review the HTML report to understand conversion statistics and any errors or warnings. You can also open the report in Excel to get an inventory of SAP ASE objects and the effort required to perform schema conversions. The default location for the report is in the report folder within SSMAProjects.
 
    For example: `drive:\<username>\Documents\SSMAProjects\MyDB2Migration\report\report_<date>`. 
 

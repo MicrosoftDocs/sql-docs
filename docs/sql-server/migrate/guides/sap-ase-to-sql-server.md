@@ -50,8 +50,6 @@ To create an assessment, follow these steps:
 
 Before you perform schema conversion validate the default datatype mappings or change them based on requirements. You could do so either by navigating to the **Tools** menu and choosing **Project Settings** or you can change type mapping for each table by selecting the table in the **SAP ASE Metadata Explorer**.
 
-![Type Mappings](./media/SAP ASE-to-sql-server/type-mappings.png)
-
 
 ### Convert schema
 

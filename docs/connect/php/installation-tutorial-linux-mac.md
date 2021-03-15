@@ -17,7 +17,7 @@ The following instructions assume a clean environment and show how to install PH
 
 The following instructions install PHP 8.0 by default using `pecl install`, if the PHP 8.0 packages are available. You may need to run `pecl channel-update pecl.php.net` first. Some supported Linux distros default to PHP 7.1 or earlier, which is not supported for the latest version of the PHP drivers for SQL Server. See the notes at the beginning of each section to install PHP 7.4 or 7.3 instead.
 
-Also included are instructions for installing the PHP FastCGI Process Manager, PHP-FPM, on Ubuntu. This is needed if you're using the nginx web server instead of Apache.
+Also included are instructions for installing the PHP FastCGI Process Manager, PHP-FPM, on Ubuntu. PHP-FPM is needed if you're using the nginx web server instead of Apache.
 
 While these instructions contain commands to install both SQLSRV and PDO_SQLSRV drivers, the drivers can be installed and function independently. Users comfortable with customizing their configuration can adjust these instructions to be specific to SQLSRV or PDO_SQLSRV. Both drivers have the same dependencies except where noted below.
 
@@ -126,7 +126,7 @@ To configure nginx, you must edit the `/etc/nginx/sites-available/default` file.
 # Add index.php to the list if you are using PHP
 index index.html index.htm index.nginx-debian.html index.php;
 ```
-Next, uncomment and modify the section following `# pass PHP scripts to FastCGI server` as follows:
+Next, uncomment, and modify the section following `# pass PHP scripts to FastCGI server` as follows:
 ```
 # pass PHP scripts to FastCGI server
 #
@@ -145,7 +145,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 
 ### Step 1. Install PHP
 
-To install PHP on Red Hat 7, run the following:
+To install PHP on Red Hat 7, run the following commands:
 > [!NOTE]
 > To install PHP 7.4 or 7.3, replace remi-php80 with remi-php74 or remi-php73 respectively in the following commands.
 ```bash
@@ -160,7 +160,7 @@ yum update
 yum install php php-pdo php-xml php-pear php-devel re2c gcc-c++ gcc
 ```
 
-To install PHP on Red Hat 8, run the following:
+To install PHP on Red Hat 8, run the following commands:
 > [!NOTE]
 > To install PHP 7.4 or 7.3, replace remi-8.0 with remi-7.4 or remi-7.3 respectively in the following commands.
 ```bash
@@ -363,7 +363,7 @@ brew tap
 brew tap homebrew/core
 brew install php@8.0
 ```
-PHP should now be in your path. Run `php -v` to verify that you are running the correct version of PHP. If PHP is not in your path or it is not the correct version, run the following:
+PHP should now be in your path. Run `php -v` to verify that you are running the correct version of PHP. If PHP is not in your path or it is not the correct version, run the following commands:
 ```bash
 brew link --force --overwrite php@8.0
 ```
@@ -402,7 +402,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 
 ## Testing Your Installation
 
-To test this sample script, create a file called testsql.php in your system's document root. This is `/var/www/html/` on Ubuntu, Debian, and Redhat, `/srv/www/htdocs` on SUSE, `/var/www/localhost/htdocs` on Alpine, or `/usr/local/var/www` on macOS. Copy the following script to it, replacing the server, database, username, and password as appropriate.
+To test this sample script, create a file called testsql.php in your system's document root. This path is `/var/www/html/` on Ubuntu, Debian, and Redhat, `/srv/www/htdocs` on SUSE, `/var/www/localhost/htdocs` on Alpine, or `/usr/local/var/www` on macOS. Copy the following script to it, replacing the server, database, username, and password as appropriate.
 
 ### SQLSRV example
 
@@ -516,7 +516,7 @@ Point your browser to https://localhost/testsql.php (https://localhost:8080/test
 php testsql.php
 ```
 
-If running from the command line is successful but nothing shows in your browser, check the [Apache log files](https://linuxize.com/post/apache-log-files/#location-of-the-log-files). For additional help, see [Support resources](support-resources-for-the-php-sql-driver.md) for places to go.
+If running from the command line is successful but nothing shows in your browser, check the [Apache log files](https://linuxize.com/post/apache-log-files/#location-of-the-log-files). For more help, see [Support resources](support-resources-for-the-php-sql-driver.md) for places to go.
 
 ## See Also  
 [Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

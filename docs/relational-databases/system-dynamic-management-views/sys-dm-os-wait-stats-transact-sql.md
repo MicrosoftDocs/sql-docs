@@ -81,8 +81,8 @@ GO
 
 |Wait Type |Description| 
 |-------------------------- |--------------------------| 
-|ABR |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| | 
-|AM_INDBUILD_ALLOCATION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|ABR |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
+|AM_INDBUILD_ALLOCATION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.|
 |AM_SCHEMAMGR_UNSHARED_CACHE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |ASSEMBLY_FILTER_HASHTABLE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later.| 
 |ASSEMBLY_LOAD |Occurs during exclusive access to assembly loading.| 

@@ -85,10 +85,10 @@ Use the following chart to compare capabilities of the SQL migration tools:
 |---------|---------|---------|---------|---|---|
 |Discover and assess SQL data estate| At scale | Yes |No |No|No|
 |Migrate SQL Server objects to SQL Database or SQL Managed Instance| No| Yes | No  | Yes|No|
-|Lift and shift SQL Server to VM | Yes | No | No | No| No |
-|Migrate (and upgrade) SQL Server to SQL Server on Azure VM | No | Yes| No | No | No| 
+|Lift and shift SQL Server to SQL Server on Azure VM | Yes | No | No | No| No |
+|Migrate (and/or upgrade) SQL Server to SQL Server on Azure VM | No | Yes| No | No | No| 
 |Migrate non-SQL objects </br> (Oracle, Access, DB2, etc) | No |No|Yes|No|No|
-|Migrate to open source databases </br> (MySQL, PostgreSQL, MariaDB etc)| No | No | No | Yes | No|
+|Migrate open source databases </br> (MySQL, PostgreSQL, MariaDB, etc)| No | No | No | Yes | No|
 |Compare workloads between source and target SQL Server |No|No|No|No|Yes|
 |||||||
 

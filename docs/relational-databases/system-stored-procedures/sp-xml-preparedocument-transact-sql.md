@@ -27,7 +27,7 @@ ms.author: maghan
  **sp_xml_preparedocument** returns a handle that can be used to access the newly created internal representation of the XML document. This handle is valid for the duration of the session or until the handle is invalidated by executing **sp_xml_removedocument**.  
   
 > [!NOTE]  
->  A parsed document is stored in the internal cache of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The MSXML parser uses one-eighth the total memory available for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To avoid running out of memory, run **sp_xml_removedocument** to free up the memory.  
+>  A parsed document is stored in the internal cache of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The MSXML parser can use one-eighth of the total memory available for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To avoid running out of memory, run **sp_xml_removedocument** to free up the memory as soon as the document is no longer required. In many cases, the nodes() method might be a better alternative, and help to avoid excessive memory use.
   
 > [!NOTE]  
 >  For backwards compatibility, **sp_xml_preparedocument** collapses the CR (char(13)) and LF (char(10)) characters in attributes even if these characters are entitized.  
@@ -153,5 +153,6 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespac
  <br>[OPENXML(Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
  <br>[sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
  <br>[sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+ <br>[nodes&#40;&#41; Method &#40;xml Data Type&#41;](../../t-sql/xml/nodes-method-xml-data-type.md)
   
   

@@ -1,0 +1,40 @@
+name: Mark stale issues and pull requests
+
+on:
+  schedule:
+  - cron: "0 */6 * * *"
+
+jobs:
+  stale:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/stale@v3
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        days-before-pr-stale: 14
+        days-before-pr-close: 14
+        stale-pr-label: inactive
+        close-pr-label: auto-close
+        exempt-pr-labels: keep-open
+        stale-pr-message: >
+          This pull request has been inactive for 14 days.
+          If you are finished with your changes, don't forget to sign off. See the [contributor guide](https://review.docs.microsoft.com/en-us/help/contribute/contribute-how-to-write-pull-request-automation) for instructions.
+          If this PR is inactive for 14 more days, it will be closed automatically. Thank you!
+          
+          SQL Docs Team
+          
+          [Contact Us](mailto:rogue1@microsoft.com)
+          
+          [Contributor Guide](https://review.docs.microsoft.com/en-us/help/contribute/sql-server-docs-contribute?branch=master)
+        close-pr-message: >
+          This pull request has been inactive for 28 days. At this time, we are closing the PR. 
+          If you decide to continue working on your change, you can reopen the PR and continue working. Thank you!
+           
+          SQL Docs Team
+          
+          [Contact Us](mailto:rogue1@microsoft.com)
+          
+          [Contributor Guide](https://review.docs.microsoft.com/en-us/help/contribute/sql-server-docs-contribute?branch=master)
+        

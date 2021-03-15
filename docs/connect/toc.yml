@@ -277,7 +277,7 @@
           href: ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
         - name: Using Azure Key Vault with Always Encrypted
           href: ado-net/sql/azure-key-vault-example.md
-        - name: Using Azure Key Vault with Always Encrypted with Secure Enclaves
+        - name: Using Azure Key Vault with Always Encrypted with secure enclaves
           href: ado-net/sql/azure-key-vault-enclave-example.md
       - name: Data Discovery and Classification in SqlClient
         href: ../connect/ado-net/sql/data-classification.md
@@ -321,7 +321,7 @@
     - name: Finding additional information
       href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
     - name: Frequently asked questions (FAQ)
-      href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md
+      href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.yml
     - name: Feature dependencies
       href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
   - name: API reference
@@ -2933,7 +2933,7 @@
       href: ../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
     - name: Feature guides
       items:
-      - name: Connection String Keywords and Data Source Names (DSNs)
+      - name: Connecting from Linux or macOS
         href: ../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md
       - name: Data Access Tracing with the ODBC Driver on Linux and macOS
         href: ../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md
@@ -2956,7 +2956,7 @@
     - name: Known issues
       href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
     - name: Frequently asked questions (FAQ)
-      href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md
+      href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.yml
   - name: Windows
     items:
     - name: Microsoft ODBC Driver for SQL Server on Windows
@@ -5761,7 +5761,7 @@
       href: ../connect/php/logging-activity.md
     - name: Using Always Encrypted with the PHP Drivers for SQL Server
       href: ../connect/php/using-always-encrypted-php-drivers.md
-    - name: Always Encrypted with Secure Enclaves with the PHP Drivers for SQL Server
+    - name: Always Encrypted with secure enclaves with the PHP Drivers for SQL Server
       href: ../connect/php/always-encrypted-secure-enclaves.md
     - name: Non-System Locale Settings
       href: ../connect/php/non-system-locale-settings.md

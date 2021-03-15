@@ -24,6 +24,8 @@ To understand tables and how to use them, see [Tables in [!INCLUDE[ssSDW](../../
 > [!NOTE]
 >  Discussions about [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] in this article apply to both [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] unless otherwise noted.
 
+[!INCLUDE[synapse-analytics-od-supported-tables](../../includes/synapse-analytics-od-supported-tables.md)]
+
  ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 <a name="Syntax"></a>

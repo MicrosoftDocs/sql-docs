@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.suite: "sql"
 ms.technology: connectivity
 ms.tgt_pltfrm: ""

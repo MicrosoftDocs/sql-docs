@@ -338,8 +338,6 @@ items:
             href: machine-learning/r/operationalizing-your-r-code.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Convert R code for SQL Server
             href: machine-learning/r/converting-r-code-for-use-in-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-          - name: Create a stored procedure using sqlrutils
-            href: machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
         - name: Predictions
           items:
           - name: Native scoring with PREDICT T-SQL
@@ -6153,7 +6151,7 @@ items:
       href: dma/dma-assess-ssis.md
     - name: Save and load assessments
       href: dma/dma-save-load-assessments.md
-    - name: Identify the right Azure SQL Database SKU
+    - name: Identify target Azure SQL SKU
       href: dma/dma-sku-recommend-sql-db.md
     - name: Upgrade SQL Server to a later version
       href: dma/dma-migrateonpremsql.md
@@ -6181,6 +6179,22 @@ items:
         href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
   - name: SQL Server Migration Assistant (SSMA)
     href: ssma/toc.yml
+  - name: Azure Synapse Pathway
+    items:
+    - name: Overview
+      href: tools/synapse-pathway/azure-synapse-pathway-overview.md
+    - name: Azure Synapse Pathway FAQ
+      href: tools/synapse-pathway/pathway-faq.md
+    - name: Behind the Scenes
+      href: tools/synapse-pathway/synapse-pathway-behind-the-scenes.md
+    - name: Installation
+      href: tools/synapse-pathway/synapse-pathway-download.md
+    - name: Tutorial - Run Azure Synapse Pathway
+      href: tools/synapse-pathway/synapse-pathway-assessment.md
+    - name: Tutorial - Save and Load
+      href: tools/synapse-pathway/tutorial-save-load-assessment.md
+    - name: Generate Reports
+      href: tools/synapse-pathway/report-generation.md
 - name: Manage, monitor, & tune
   items:
   - name: Manage
@@ -7204,7 +7218,7 @@ items:
         - name: Kerberos connectivity
           href: relational-databases/polybase/polybase-troubleshoot-connectivity.md
         - name: PolyBase FAQ
-          href: relational-databases/polybase/polybase-faq.md
+          href: relational-databases/polybase/polybase-faq.yml
         - name: PolyBase errors and possible solutions
           href: relational-databases/polybase/polybase-errors-and-possible-solutions.md
     - name: Reference
@@ -9841,6 +9855,8 @@ items:
         href: tools/sqlpackage/sqlpackage-script.md
     - name: SqlPackage in development pipelines
       href: tools/sqlpackage/sqlpackage-pipelines.md
+    - name: SqlPackage for Azure Synapse Analytics
+      href: tools/sqlpackage/sqlpackage-for-azure-synapse-analytics.md
   - name: SQL Server Profiler
     href: tools/sql-server-profiler/sql-server-profiler.md
     items:
@@ -10029,7 +10045,7 @@ items:
       - name: SQL Server 2017
         href: linux/sql-server-linux-editions-and-components-2017.md
     - name: FAQ
-      href: linux/sql-server-linux-faq.md
+      href: linux/sql-server-linux-faq.yml
   - name: Quickstarts
     items:
     - name: Install & Connect - Red Hat
@@ -11505,7 +11521,7 @@ items:
     href: relational-databases/system-catalog-views/catalog-views-transact-sql.md
     items:
     - name: Querying the SQL Server System Catalog FAQ
-      href: relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md
+      href: relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml
     - name: Schemas - sys.schemas
       href: relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md
     - name: Messages (for errors) - sys.messages

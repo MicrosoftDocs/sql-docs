@@ -68,7 +68,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 4. Assign the custom SCC to the service accounts for users within the namespace where BDC is deployed:
 
    ```console
-   oc adm policy add-scc-to-group bdc-scc system:serviceaccounts:<namespaceName>
+   oc create rolebinding bdc-rbac --clusterrole=system:scc:bdc-scc --group=system:serviceaccounts:<namespace>
    ```
 
 5. Assign appropriate permission to the user deploying BDC. Do one of the following. 

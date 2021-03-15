@@ -23,8 +23,8 @@ For other scenarios, see the [Database Migration Guide](https://datamigration.mi
 To migrate your Oracle database to SQL Server, you need:
 
 - To verify your source environment is supported.
-- To install [SQL Server](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019?filetype=EXE).
-- To download [SQL Server Migration Assistant (SSMA) for Oracle](https://www.microsoft.com/en-us/download/details.aspx?id=54258).
+- To install [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019?filetype=EXE).
+- To download [SQL Server Migration Assistant (SSMA) for Oracle](https://www.microsoft.com/download/details.aspx?id=54258).
 - The [necessary permissions for SSMA for Oracle](/sql/ssma/oracle/connecting-to-oracle-database-oracletosql) and [provider](/sql/ssma/oracle/connect-to-oracle-oracletosql).
 
 
@@ -62,11 +62,11 @@ To use the MAP Toolkit to perform an inventory scan, follow these steps:
 
 ### Assess
 
-After identifying the data sources, use the [SQL Server Migration Assistant (SSMA) for Oracle](https://www.microsoft.com/en-us/download/details.aspx?id=54258) to assess the Oracle instance(s) migrating to the SQL Server VM so that you understand the gaps between the two. Using the migration assistant, you can review database objects and data, assess databases for migration, migrate database objects to SQL Server, and then migrate data to SQL Server.
+After identifying the data sources, use the [SQL Server Migration Assistant (SSMA) for Oracle](https://www.microsoft.com/download/details.aspx?id=54258) to assess the Oracle instance(s) migrating to the SQL Server VM so that you understand the gaps between the two. Using the migration assistant, you can review database objects and data, assess databases for migration, migrate database objects to SQL Server, and then migrate data to SQL Server.
 
 To create an assessment, follow these steps: 
 
-1. Open the  [SQL Server Migration Assistant (SSMA) for Oracle](https://www.microsoft.com/en-us/download/details.aspx?id=54258). 
+1. Open the  [SQL Server Migration Assistant (SSMA) for Oracle](https://www.microsoft.com/download/details.aspx?id=54258). 
 1. Select **File** and then choose **New Project**. 
 1. Provide a project name, a location to save your project, and then select a SQL Server migration target from the drop-down. Select **OK**. 
 1. Enter in values for Oracle connection details on the **Connect to Oracle** dialog box.

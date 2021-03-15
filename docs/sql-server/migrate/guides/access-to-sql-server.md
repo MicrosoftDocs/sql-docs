@@ -23,7 +23,7 @@ For other migration guides, see [Database Migration](https://datamigration.micro
 
 To migrate your Access database to SQL Server, you need:
 
-- to verify your source environment is supported. 
+- To verify your source environment is supported. 
 - [SQL Server Migration Assistant for Access](https://www.microsoft.com/download/details.aspx?id=54255). 
 
 
@@ -62,7 +62,7 @@ After you have completed assessing your databases and addressing any discrepanci
 To migrate data by using SSMA for Access, follow these steps: 
 
 1. If you haven't already, select **Connect to SQL Server** and provide connection details. 
-1. 1. Right-click the database from the **Azure SQL Database Metadata Explorer** and choose **Synchronize with Database**. This action publishes the MySQL schema to Azure SQL Database.
+1. Right-click the database from the **Azure SQL Database Metadata Explorer** and choose **Synchronize with Database**. This action publishes the MySQL schema to Azure SQL Database.
 1. Use **Access Metadata Explorer** to check boxes next to the items you want to migrate. If you want to migrate the entire database, check the box next to the database. 
 1. Right-click the database or object you want to migrate, and choose **Migrate data**. 
    To migrate data for an entire database, select the check box next to the database name. To migrate data from individual tables, expand the database, expand Tables, and then select the check box next to the table. To omit data from individual tables, clear the check box.

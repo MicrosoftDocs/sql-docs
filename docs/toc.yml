@@ -4934,8 +4934,16 @@ items:
     href: /azure/dms/dms-overview
   - name: Migration guides
     items:
+    - name: From Access
+      href: sql-server/migrate/guides/access-to-sql-server.md
     - name: From DB2
       href: sql-server/migrate/guides/db2-to-sql-server.md
+    - name: From MySQL
+      href: sql-server/migrate/guides/mysql-to-sql-server.md
+    - name: From Oracle
+      href: sql-server/migrate/guides/oracle-to-sql-server.md
+    - name: From SAP ASE
+      href: sql-server/migrate/guides/sap-ase-to-sql-server.md
   - name: Data Quality Services (DQS)
     items:
     - name: Overview

@@ -83,14 +83,13 @@ Use the following chart to compare capabilities of the SQL migration tools:
 
 | Capability |Azure Migrate  |Data Migration Assistant (DMA)  |SQL Server Migration Assistant (SSMA)  | Azure Database Migration Service (DMS) | Database Experimentation Assistant (DEA)|
 |---------|---------|---------|---------|---|---|
-|Assess SQL data estate| Yes | Yes |No |No|No|
+|Discover and assess SQL data estate| At scale | Yes |No |No|No|
 |Migrate SQL Server objects to SQL Database or SQL Managed Instance| No| Yes | No  | Yes|No|
-|Migrate SQL Server objects to SQL Server on Azure VM|Yes |Yes|No         | Yes| No|
-|Lift and shift to VM | Yes | No | No | No| No |
-|Migrate non-SQL objects | No |No|Yes|No|No|
-|Migrate to Azure Database| No | No | No | Yes | No|
+|Lift and shift SQL Server to VM | Yes | No | No | No| No |
+|Migrate (and upgrade) SQL Server to SQL Server on Azure VM | No | Yes| No | No | No| 
+|Migrate non-SQL objects </br> (Oracle, Access, DB2, etc) | No |No|Yes|No|No|
+|Migrate to open source databases </br> (MySQL, PostgreSQL, MariaDB etc)| No | No | No | Yes | No|
 |Compare workloads between source and target SQL Server |No|No|No|No|Yes|
-|Can migrate at scale | No | Yes| No | Yes | No|
 |||||||
 
 ## Next steps

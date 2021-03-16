@@ -9,9 +9,9 @@ metadata:
   ms.service: sql
   ms.subservice: # big-data-cluster - waiting for this to be on the allowlist
   ms.topic: landing-page
-  author: MikeRayMSFT
-  ms.author: mikeray
-  ms.date: 04/06/2020 
+  author: WilliamDAssafMSFT
+  ms.author: wiassaf
+  ms.date: 03/16/2021
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -59,26 +59,48 @@ landingContent:
   # Card (Architect)
   - title: Architect
     linkLists:
+      - linkListType: concept
+        links:
+          - text: How to deploy BDC on Kubernetes
+            url: deployment-guidance.md
+          - text: Configure HDFS tiering
+            url: hdfs-tiering.md
+      - linkListType: how-to-guide
+        links:
+          - text: Plan
+            url: deployment-guidance.md
+          - text: Deploy
+            url: deploy-get-started.md
+          - text: Install tools
+            url: deploy-big-data-tools.md
       - linkListType: quickstart
         links:
-          - text: <architect quickstart>
-            url: deployment-guidance.md
-          - text: <architect quickstart>
-            url: deploy-get-started.md
-          - text: <architect quickstart>
-            url: deploy-big-data-tools.md
+          - text: Deploy on Azure Kubernetes Service (AKS)
+            url: quickstart-big-data-cluster-deploy.md
+          - text: Deploy on Azure Red Hat OpenShift (ARO)
+            url: quickstart-big-data-cluster-deploy-aro.md  
       - linkListType: tutorial
         links:
-          - text: <architect tutorial>
+          - text: Deploy with high availability
             url: deployment-high-availability.md
-          - text: <architect tutorial>
+          - text: Deploy in Active Directory mode
             url: deploy-active-directory.md
+          - text: Configure AKS for BDC
+            url: deploy-on-aks.md
       - linkListType: sample
         links:
           - text: <architect sample>
             url: deploy-on-aks.md
           - text: <architect sample>
             url: deploy-on-aks.md
+
+  # Card (Deploy)
+  - title: Deploy
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: How to deploy BDC on Kubernetes
+            url: deployment-guidance.md
 
   # Card (Operate)
   - title: Operate
@@ -144,17 +166,6 @@ landingContent:
           - text: Active Directory
             url: troubleshoot-active-directory.md
 
-  # Card (Deploy)
-  - title: Deploy cluster
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Plan
-            url: deployment-guidance.md
-          - text: Deploy
-            url: deploy-get-started.md
-          - text: Install tools
-            url: deploy-big-data-tools.md
 
   # Card (Secure)
   - title: Secure
@@ -181,7 +192,7 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
-        - text: Integration partners
+        - text: BDC partners
           url: ../sql-server/partner-big-data-cluster.md
 
   # Card (Related technologies)
@@ -201,6 +212,8 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
+        - text: Big Data Clusters FAQ
+          url: big-data-cluster-faq.yml
         - text: Troubleshoot Kubernetes
           url: https://kubernetes.io/docs/tasks/debug-application-cluster/troubleshooting/
         - text: Apache Spark

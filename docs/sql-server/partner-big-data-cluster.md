@@ -29,7 +29,7 @@ For support implementing solutions with SQL Server Big Data Clusters, you can wo
 To learn more about some of our other partners, see [High availability, and disaster recovery partners][hadr_partners], [management partners][management_partners], and [monitoring partners][monitor_partners].
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/delltech_logo_stk_blue_gry_rgb.png
+[1]: ./media/partner-hadr-sql-server/delltechlogostkbluegryrgb.png
 [2]: ./media/partner-hadr-sql-server/hpe.png
 [3]: ./media/partner-hadr-sql-server/netapp-logo.png
 [4]: ./media/partner-hadr-sql-server/streamsets-logo.png

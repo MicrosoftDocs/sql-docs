@@ -26,14 +26,6 @@ conceptualContent:
         - text: SQL Server on Azure VMs
           url: /azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide
           itemType: how-to-guide
-    - title: "Access to"
-      links:
-        - text: SQL Server
-          url: /sql/sql-server/migrate/guides/access-to-sql-server
-          itemType: how-to-guide
-        - text: Azure SQL Database
-          url: /sql/migration-guides/access-to-sql-database
-          itemType: how-to-guide
     - title: "Oracle to"
       links:
         - text: SQL Server
@@ -62,6 +54,14 @@ conceptualContent:
         - text: SQL Server on Azure VMs
           url: /azure/azure-sql/migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide
           itemType: how-to-guide
+    - title: "Access to"
+      links:
+        - text: SQL Server
+          url: /sql/sql-server/migrate/guides/access-to-sql-server
+          itemType: how-to-guide
+        - text: Azure SQL Database
+          url: /sql/migration-guides/access-to-sql-database
+          itemType: how-to-guide
     - title: "MySQL to"
       links:
         - text: SQL Server
@@ -81,30 +81,27 @@ conceptualContent:
         - text: Azure SQL Database
           url: /sql/migration-guides/sap-ase-to-sql-database
           itemType: how-to-guide
-    - title: "PostgreSQL to"
+    - title: "Open source"
       links:
-        - text: Azure Database for PostgreSQL
-          url: /azure/postgresql/howto-migrate-using-dump-and-restore
+        - text: MariaDB to Azure Database for MariaDB
+          url: /sql/sql-server/migrate/guides/mysql-to-sql-server
           itemType: how-to-guide
-    - title: "MongoDB to"
-      links:
-        - text: Azure CosmosDB
-          url: /azure/dms/tutorial-mongodb-cosmos-db?toc=/azure/cosmos-db/toc.json&bc=/azure/cosmos-db/breadcrumb/toc.json
+        - text: MySQL to Azure Database for MySQL
+          url: /azure/azure-sql/migration-guides/mysql-to-sql-database
           itemType: how-to-guide
-    - title: "Cassandra to"
-      links:
-        - text: Azure CosmosDB
-          url: /azure/cosmos-db/cassandra-import-data
+        - text: PostgreSQL to Azure Database for PostgreSQL
+          url: /azure/mysql/concepts-migrate-import-export
           itemType: how-to-guide
-    - title: "MariaDB to"
+    - title: "NoSQL"
       links:
-        - text: Azure Database for MariaDB
-          url: /azure/mariadb/howto-migrate-dump-restore
+        - text: MongoDB to Azure CosmosDB
+          url: /sql/sql-server/migrate/guides/mysql-to-sql-server
           itemType: how-to-guide
-    - title: "Microsoft Azure Table Storage to"
-      links:
-        - text: Azure CosmosDB
-          url: /azure/cosmos-db/table-import
+        - text: Cassandra to Azure CosmosDB
+          url: /azure/azure-sql/migration-guides/mysql-to-sql-database
+          itemType: how-to-guide
+        - text: Microsoft Azure Table Storage to Azure CosmosDB
+          url: /azure/mysql/concepts-migrate-import-export
           itemType: how-to-guide
     - title: "Resources"
       links:

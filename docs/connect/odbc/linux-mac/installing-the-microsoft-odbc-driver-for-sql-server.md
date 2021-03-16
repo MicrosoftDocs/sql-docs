@@ -77,15 +77,15 @@ curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/source
 
 exit
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql17
+sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
 # optional: for bcp and sqlcmd
-sudo ACCEPT_EULA=Y apt-get install mssql-tools
+sudo ACCEPT_EULA=Y apt-get install -y mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
-sudo apt-get install unixodbc-dev
+sudo apt-get install -y unixodbc-dev
 # optional: kerberos library for debian-slim distributions
-sudo apt-get install libgssapi-krb5-2
+sudo apt-get install -y libgssapi-krb5-2
 ```
 
 > [!NOTE]
@@ -110,13 +110,13 @@ curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/m
 
 exit
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
-sudo ACCEPT_EULA=Y yum install msodbcsql17
+sudo ACCEPT_EULA=Y yum install -y msodbcsql17
 # optional: for bcp and sqlcmd
-sudo ACCEPT_EULA=Y yum install mssql-tools
+sudo ACCEPT_EULA=Y yum install -y mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
-sudo yum install unixODBC-devel
+sudo yum install -y unixODBC-devel
 ```
 
 ### <a id="suse17"></a> SUSE Linux Enterprise Server
@@ -142,13 +142,13 @@ zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
 SUSEConnect -p sle-module-legacy/15/x86_64
 
 exit
-sudo ACCEPT_EULA=Y zypper install msodbcsql17
+sudo ACCEPT_EULA=Y zypper install -y msodbcsql17
 # optional: for bcp and sqlcmd
-sudo ACCEPT_EULA=Y zypper install mssql-tools
+sudo ACCEPT_EULA=Y zypper install -y mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
-sudo zypper install unixODBC-devel
+sudo zypper install -y unixODBC-devel
 ```
 
 ### <a id="ubuntu17"></a> Ubuntu
@@ -174,13 +174,13 @@ curl https://packages.microsoft.com/config/ubuntu/20.10/prod.list > /etc/apt/sou
 
 exit
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql17
+sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
 # optional: for bcp and sqlcmd
-sudo ACCEPT_EULA=Y apt-get install mssql-tools
+sudo ACCEPT_EULA=Y apt-get install -y mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
-sudo apt-get install unixodbc-dev
+sudo apt-get install -y unixodbc-dev
 ```
 
 > [!NOTE]

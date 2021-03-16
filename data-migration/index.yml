@@ -14,7 +14,7 @@ conceptualContent:
   items:
     - title: "SQL Server to"
       links:
-        - text: "From SQL Server"
+        - text: "From SQL Server (upgrade)"
           url: /sql/database-engine/install-windows/upgrade-sql-server
           itemType: how-to-guide
         - text: Azure SQL Database

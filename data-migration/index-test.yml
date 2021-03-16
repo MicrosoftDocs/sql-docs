@@ -26,14 +26,6 @@ conceptualContent:
         - text: SQL Server on Azure VMs
           url: /azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide
           itemType: how-to-guide
-    - title: "Access to"
-      links:
-        - text: SQL Server
-          url: /sql/sql-server/migrate/guides/access-to-sql-server
-          itemType: how-to-guide
-        - text: Azure SQL Database
-          url: /sql/migration-guides/access-to-sql-database
-          itemType: how-to-guide
     - title: "Oracle to"
       links:
         - text: SQL Server
@@ -62,6 +54,14 @@ conceptualContent:
         - text: SQL Server on Azure VMs
           url: /azure/azure-sql/migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide
           itemType: how-to-guide
+    - title: "Access to"
+      links:
+        - text: SQL Server
+          url: /sql/sql-server/migrate/guides/access-to-sql-server
+          itemType: how-to-guide
+        - text: Azure SQL Database
+          url: /sql/migration-guides/access-to-sql-database
+          itemType: how-to-guide
     - title: "MySQL to"
       links:
         - text: SQL Server
@@ -89,10 +89,10 @@ conceptualContent:
         - text: MySQL to Azure Database for MySQL
           url: /azure/azure-sql/migration-guides/mysql-to-sql-database
           itemType: how-to-guide
-        - text: PostgreSQL to Azure Database for 
+        - text: PostgreSQL to Azure Database for PostgreSQL
           url: /azure/mysql/concepts-migrate-import-export
           itemType: how-to-guide
-    - title: "CosmosDB"
+    - title: "NoSQL"
       links:
         - text: MongoDB to Azure CosmosDB
           url: /sql/sql-server/migrate/guides/mysql-to-sql-server

@@ -99,13 +99,13 @@ sudo su
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
-#RedHat Enterprise Server 6
+#Red Hat Enterprise Server 6
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
-#RedHat Enterprise Server 7 and Oracle Linux 7
+#Red Hat Enterprise Server 7 and Oracle Linux 7
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
-#RedHat Enterprise Server 8 and Oracle Linux 8
+#Red Hat Enterprise Server 8 and Oracle Linux 8
 curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
 exit
@@ -219,7 +219,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### RedHat Enterprise Server 6
+### Red Hat Enterprise Server 6
 
 ```bash
 sudo su
@@ -235,7 +235,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### RedHat Enterprise Server 7
+### Red Hat Enterprise Server 7
 
 ```bash
 sudo su
@@ -336,7 +336,7 @@ sudo apt-get install unixodbc-dev
 
 The following sections explain how to install the Microsoft ODBC driver 13 from the bash shell for different Linux distributions.
 
-### RedHat Enterprise Server 6
+### Red Hat Enterprise Server 6
 
 ```bash
 sudo su
@@ -351,7 +351,7 @@ ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
 ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
-### RedHat Enterprise Server 7
+### Red Hat Enterprise Server 7
 
 ```bash
 sudo su
@@ -416,11 +416,11 @@ If you prefer/require the [!INCLUDE[msCoName](../../../includes/msconame_md.md)]
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SUSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-Each of these packages in turn has their own dependencies, which may or may not be present on the system. For a general solution to this issue, refer to your distribution's package manager documentation: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), and [SUSE](https://en.opensuse.org/Portal:Zypper)
+Each of these packages in turn has their own dependencies, which may or may not be present on the system. For a general solution to this issue, refer to your distribution's package manager documentation: [Red Hat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), and [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 It is also common to manually download all the dependent packages and place them together on the installation computer, then manually install each package in turn, finishing with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 package.
 
-#### Redhat Linux Enterprise Server 7
+#### Red Hat Linux Enterprise Server 7
 
 - Download the latest `msodbcsql` `.rpm` from [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/).
 - Install dependencies and the driver.

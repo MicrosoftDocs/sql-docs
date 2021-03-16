@@ -241,7 +241,7 @@ This release only applies to Linux and macOS.
 
 - Support for PHP 7.0  
 - Full 64-bit support
-- Support for Ubuntu 15.04, Ubuntu 16.04, and RedHat 7
+- Support for Ubuntu 15.04, Ubuntu 16.04, and Red Hat 7
 
 ## 3.2
 

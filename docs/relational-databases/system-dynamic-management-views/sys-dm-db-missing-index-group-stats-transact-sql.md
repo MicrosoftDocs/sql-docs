@@ -31,7 +31,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
     
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**group_handle**|**int**|Identifies a group of missing indexes. This identifier is unique across the server.<br /><br /> The other columns provide information about all queries for which the index in the group is considered missing.<br /><br /> An index group contains only one index.<BR><BR>Can be joined to **index_group_handle** in [sys.dm_db_missing_index_groups](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md).|  
+|**group_handle**|**int**|Identifies a group of missing indexes. This identifier is unique across the server.<br /><br /> The other columns provide information about all queries for which the index in the group is considered missing.<br /><br /> An index group contains only one index.<BR><BR>Can be joined to `index_group_handle` in [sys.dm_db_missing_index_groups](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md).|  
 |**unique_compiles**|**bigint**|Number of compilations and recompilations that would benefit from this missing index group. Compilations and recompilations of many different queries can contribute to this column value.|  
 |**user_seeks**|**bigint**|Number of seeks caused by user queries that the recommended index in the group could have been used for.|  
 |**user_scans**|**bigint**|Number of scans caused by user queries that the recommended index in the group could have been used for.|  
@@ -47,7 +47,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |**avg_system_impact**|**float**|Average percentage benefit that system queries could experience if this missing index group was implemented. The value means that the query cost would on average drop by this percentage if this missing index group was implemented.|  
   
 ## Remarks  
- Information returned by **sys.dm_db_missing_index_group_stats** is updated by every query execution, not by every query compilation or recompilation. Usage statistics are not persisted and are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the missing index information if they want to keep the usage statistics after server recycling. Use the **sqlserver_start_time** field in the DMV **sys.dm_os_sys_info** to find the last instance startup time of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+ Information returned by `sys.dm_db_missing_index_group_stats` is updated by every query execution, not by every query compilation or recompilation. Usage statistics are not persisted and are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the missing index information if they want to keep the usage statistics after server recycling. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last [!INCLUDE[ssSDSfull](../../includes/ssdenoversion-md.md)] startup time.   
 
   >[!NOTE]
   >The result set for this DMV is limited to 600 rows. Each row contains one missing index. If you have more than 600 missing indexes, you should address the existing missing indexes so you can then view the newer ones.
@@ -58,7 +58,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  To query this dynamic management view, users must be granted the VIEW SERVER STATE permission or any permission that implies the VIEW SERVER STATE permission.  
   
 ## Examples  
- The following examples illustrate how to use the **sys.dm_db_missing_index_group_stats** dynamic management view.  
+ The following examples illustrate how to use the `sys.dm_db_missing_index_group_stats` dynamic management view.  
   
 ### A. Find the 10 missing indexes with the highest anticipated improvement for user queries  
  The following query determines which 10 missing indexes would produce the highest anticipated cumulative improvement, in descending order, for user queries.  
@@ -70,7 +70,7 @@ ORDER BY avg_total_user_cost * avg_user_impact * (user_seeks + user_scans)DESC;
 ```  
   
 ### B. Find the individual missing indexes and their column details for a particular missing index group  
- The following query determines which missing indexes comprise a particular missing index group, and displays their column details. For the sake of this example, the missing index group handle is 24.  
+ The following query determines which missing indexes comprise a particular missing index group, and displays their column details. For the sake of this example, the missing index `group_handle` is 24.  
   
 ```sql
 SELECT migs.group_handle, mid.*  

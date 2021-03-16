@@ -140,7 +140,7 @@ The column `estimated_gain` represents the estimated number of seconds that woul
 Although the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] provides all the information required to identify plan choice regressions, continuous monitoring and fixing performance issues might become a tedious process. Automatic tuning makes this process much easier.
 
 > [!NOTE]
-> Data in the `sys.dm_db_tuning_recommendations` DMV is not persisted between restarts of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Use the **sqlserver_start_time** field in the DMV `sys.dm_os_sys_info` to find the last instance startup time of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> Data in the `sys.dm_db_tuning_recommendations` DMV is not persisted between restarts of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last [!INCLUDE[ssSDSfull](../../includes/ssdenoversion-md.md)] startup time.   
 
 ## Automatic index management
 

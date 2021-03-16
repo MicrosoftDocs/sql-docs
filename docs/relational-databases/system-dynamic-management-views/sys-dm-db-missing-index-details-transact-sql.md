@@ -32,25 +32,25 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**index_handle**|**int**|Identifies a particular missing index. The identifier is unique across the server. **index_handle** is the key of this table.|  
+|**index_handle**|**int**|Identifies a particular missing index. The identifier is unique across the server. `index_handle` is the key of this table.|  
 |**database_id**|**smallint**|Identifies the database where the table with the missing index resides.|  
 |**object_id**|**int**|Identifies the table where the index is missing.|  
 |**equality_columns**|**nvarchar(4000)**|Comma-separated list of columns that contribute to equality predicates of the form:<br /><br /> *table.column* =*constant_value*|  
 |**inequality_columns**|**nvarchar(4000)**|Comma-separated list of columns that contribute to inequality predicates, for example, predicates of the form:<br /><br /> *table.column* > *constant_value*<br /><br /> Any comparison operator other than "=" expresses inequality.|  
-|**included_columns**|**nvarchar(4000)**|Comma-separated list of columns needed as covering columns for the query. For more information about covering or included columns, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> For memory-optimized indexes (both hash and memory-optimized nonclustered), ignore **included_columns**. All columns of the table are included in every memory-optimized index.|  
+|**included_columns**|**nvarchar(4000)**|Comma-separated list of columns needed as covering columns for the query. For more information about covering or included columns, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> For memory-optimized indexes (both hash and memory-optimized nonclustered), ignore `included_columns`. All columns of the table are included in every memory-optimized index.|  
 |**statement**|**nvarchar(4000)**|Name of the table where the index is missing.|  
   
 ## Remarks  
- Information returned by **sys.dm_db_missing_index_details** is updated when a query is optimized by the query optimizer, and is not persisted. Missing index information is kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the missing index information if they want to keep it after server recycling. Use the **sqlserver_start_time** field in the DMV **sys.dm_os_sys_info** to find the last instance startup time of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+ Information returned by `sys.dm_db_missing_index_details` is updated when a query is optimized by the query optimizer, and is not persisted. Missing index information is kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the missing index information if they want to keep it after server recycling. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last [!INCLUDE[ssSDSfull](../../includes/ssdenoversion-md.md)] startup time.   
 
   
- To determine which missing index groups a particular missing index is part of, you can query the **sys.dm_db_missing_index_groups** dynamic management view by equijoining it with **sys.dm_db_missing_index_details** based on the **index_handle** column.  
+ To determine which missing index groups a particular missing index is part of, you can query the `sys.dm_db_missing_index_groups` dynamic management view by equijoining it with `sys.dm_db_missing_index_details` based on the `index_handle` column.  
 
   >[!NOTE]
   >The result set for this DMV is limited to 600 rows. Each row contains one missing index. If you have more than 600 missing indexes, you should address the existing missing indexes so you can then view the newer ones. 
   
 ## Using Missing Index Information in CREATE INDEX Statements  
- To convert the information returned by **sys.dm_db_missing_index_details** into a CREATE INDEX statement for both memory-optimized and disk-based indexes, equality columns should be put before the inequality columns, and together they should make the key of the index. Included columns should be added to the CREATE INDEX statement using the INCLUDE clause. To determine an effective order for the equality columns, order them based on their selectivity: list the most selective columns first (leftmost in the column list).  
+ To convert the information returned by `sys.dm_db_missing_index_details` into a CREATE INDEX statement for both memory-optimized and disk-based indexes, equality columns should be put before the inequality columns, and together they should make the key of the index. Included columns should be added to the CREATE INDEX statement using the INCLUDE clause. To determine an effective order for the equality columns, order them based on their selectivity: list the most selective columns first (leftmost in the column list).  
   
  For more information about memory-optimized indexes, see [Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
   

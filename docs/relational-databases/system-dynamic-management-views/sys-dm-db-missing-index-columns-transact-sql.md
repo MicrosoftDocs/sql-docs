@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Returns information about database table columns that are missing an index, excluding spatial indexes. **sys.dm_db_missing_index_columns** is a dynamic management function.  
+  Returns information about database table columns that are missing an index, excluding spatial indexes. `sys.dm_db_missing_index_columns` is a dynamic management function.  
 
 ## Syntax  
   
@@ -50,7 +50,8 @@ sys.dm_db_missing_index_columns(index_handle)
 |**column_usage**|**varchar(20)**|How the column is used by the query. The possible values and their descriptions are:<br /><br /> EQUALITY: Column contributes to a predicate that expresses equality, of the form: <br />                        *table.column* = *constant_value*<br /><br /> INEQUALITY: Column contributes to a predicate that expresses inequality, for example, a predicate of the form: *table.column* > *constant_value*. Any comparison operator other than "=" expresses inequality.<br /><br /> INCLUDE: Column is not used to evaluate a predicate, but is used for another reason, for example, to cover a query.|  
   
 ## Remarks  
- Information returned by **sys.dm_db_missing_index_columns** is updated when a query is optimized by the query optimizer, and is not persisted. Missing index information is kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the missing index information if they want to keep it after server recycling. Use the **sqlserver_start_time** field in the DMV **[sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md)** to find the last instance startup time of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+ Information returned by `sys.dm_db_missing_index_columns` is updated when a query is optimized by the query optimizer, and is not persisted. Missing index information is kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the missing index information if they want to keep it after server recycling. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last [!INCLUDE[ssSDSfull](../../includes/ssdenoversion-md.md)] startup time.   
+
   
 ## Transaction Consistency  
  If a transaction creates or drops a table, the rows containing missing index information about the dropped objects are removed from this dynamic management object, preserving transaction consistency.  

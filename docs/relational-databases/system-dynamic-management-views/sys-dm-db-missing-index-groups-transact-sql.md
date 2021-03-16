@@ -35,7 +35,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |**index_handle**|**int**|Identifies a missing index that belongs to the group specified by **index_group_handle**.<br /><br /> An index group contains only one index.|  
   
 ## Remarks  
- Information returned by **sys.dm_db_missing_index_groups** is updated when a query is optimized by the query optimizer, and is not persisted. Missing index information is kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the missing index information if they want to keep it after server recycling. Use the **sqlserver_start_time** field in the DMV **sys.dm_os_sys_info** to find the last instance startup time of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+ Information returned by `sys.dm_db_missing_index_groups` is updated when a query is optimized by the query optimizer, and is not persisted. Missing index information is kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the missing index information if they want to keep it after server recycling. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last [!INCLUDE[ssSDSfull](../../includes/ssdenoversion-md.md)] startup time.   
   
  Neither column of the output result set is a key, but together they form an index key.  
 

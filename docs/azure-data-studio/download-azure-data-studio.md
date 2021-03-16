@@ -21,9 +21,9 @@ Azure Data Studio offers a modern editor experience with IntelliSense, code snip
 
 | Platform | Download | Release date | Version |
 |----------|----------|--------------|---------|
-| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2157460)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2157459)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2157458) | March 16, 2021 | 1.27.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2157456) | March 16, 2021 | 1.27.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2157352)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2157248)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2157353) | March 16, 2021 | 1.27.0 |
+| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2157460)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2157459)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2157458) | March 17, 2021 | 1.27.0 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2157456) | March 17, 2021 | 1.27.0 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2157352)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2157248)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2157353) | March 17, 2021 | 1.27.0 |
 
 **For details about the latest release, see the [release notes](./release-notes-azure-data-studio.md).**
 

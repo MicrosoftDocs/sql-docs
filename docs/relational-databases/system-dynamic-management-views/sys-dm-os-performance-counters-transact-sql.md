@@ -52,7 +52,7 @@ Performance counters where the `cntr_type` column value is 65792, 272696320, and
 
 Performance counters where the `cntr_type` column value is 272696576, 1073874176, and 1073939712 display cumulative counter values instead of an instant snapshot. As such, to get a snapshot-like reading, you must compare the delta between two collection points.
 
-Data in the `sys.dm_os_performance_counters` DMV is not persisted between [!INCLUDE[ssSDSfull](../../includes/ssdenoversion-md.md)] restarts. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last [!INCLUDE[ssSDSfull](../../includes/ssdenoversion-md.md)] startup time.   
+Data in the `sys.dm_os_performance_counters` DMV is not persisted after the database engine restarts. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time.   
 
 ## Permission
 

@@ -75,7 +75,7 @@ GO
 
   
 > [!NOTE]
-> These statistics are not persisted across [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarts, and all data is cumulative since the last time the statistics were reset or the instance was started. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last [!INCLUDE[ssSDSfull](../../includes/ssdenoversion-md.md)] startup time.   
+> These statistics are not persisted after after the database engine restarts, and all data is cumulative since the last time the statistics were reset or the database engine started. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time.   
   
  The following table lists the wait types encountered by tasks.  
 

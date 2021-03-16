@@ -51,7 +51,9 @@ monikerRange: "= azuresqldb-current"
   
     -   An external process finishes.  
   
--   These statistics are not persisted across SQL Database failover events, and all data are cumulative since the last time the statistics were reset. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last [!INCLUDE[ssSDSfull](../../includes/ssdenoversion-md.md)] startup time.   
+
+> [!NOTE]
+> These statistics are not persisted after SQL Database failover events, and all data is cumulative since the last time the statistics were reset or the database engine started. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time.   
   
 ## Permissions  
  Requires VIEW DATABASE STATE permission on the server.  

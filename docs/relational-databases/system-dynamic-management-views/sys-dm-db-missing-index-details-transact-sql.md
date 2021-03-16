@@ -41,7 +41,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |**statement**|**nvarchar(4000)**|Name of the table where the index is missing.|  
   
 ## Remarks  
- Information returned by `sys.dm_db_missing_index_details` is updated when a query is optimized by the query optimizer, and is not persisted. Missing index information is kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the missing index information if they want to keep it after server recycling. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last [!INCLUDE[ssSDSfull](../../includes/ssdenoversion-md.md)] startup time.   
+ Information returned by `sys.dm_db_missing_index_details` is updated when a query is optimized by the query optimizer, and is not persisted. Missing index information is kept only until the database engine is restarted. Database administrators should periodically make backup copies of the missing index information if they want to keep it after server recycling. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time.   
 
   
  To determine which missing index groups a particular missing index is part of, you can query the `sys.dm_db_missing_index_groups` dynamic management view by equijoining it with `sys.dm_db_missing_index_details` based on the `index_handle` column.  

@@ -82,13 +82,13 @@ Use the **SQL Server:Latches** object and associated counters in Performance Mon
 
 ## Latch wait types
 
-Cumulative wait information is tracked by SQL Server and can be accessed using the Dynamic Management View (DMW) `sys.dm_os_wait_stats`. SQL Server employs three latch wait types as defined by the corresponding "wait_type" in the `sys.dm_os_wait_stats` DMV:
+Cumulative wait information is tracked by SQL Server and can be accessed using the Dynamic Management View (DMW) `sys.dm_os_wait_stats`. SQL Server employs three latch wait types as defined by the corresponding `wait_type` in the `sys.dm_os_wait_stats` DMV:
 
 * **Buffer (BUF) latch:** used to guarantee consistency of index and data pages for user objects. They are also used to protect access to data pages that SQL Server uses for system objects. For example, pages that manage allocations are protected by buffer latches. These include the Page Free Space (PFS), Global Allocation Map (GAM), Shared Global Allocation Map (SGAM) and Index Allocation Map (IAM) pages. Buffer latches are reported in `sys.dm_os_wait_stats` with a `wait_type` of **PAGELATCH\_\***.
 
-* **Non-buffer (Non-BUF) latch:** used to guarantee consistency of any in-memory structures other than buffer pool pages. Any waits for non-buffer latches will be reported as a *wait_type* of **LATCH\_\***.
+* **Non-buffer (Non-BUF) latch:** used to guarantee consistency of any in-memory structures other than buffer pool pages. Any waits for non-buffer latches will be reported as a `wait_type` of **LATCH\_\***.
 
-* **IO latch:** a subset of buffer latches that guarantee consistency of the same structures protected by buffer latches when these structures require loading into the buffer pool with an I/O operation. IO latches prevent another thread loading the same page into the buffer pool with an incompatible latch. Associated with a *wait_type* of **PAGEIOLATCH\_\***.
+* **IO latch:** a subset of buffer latches that guarantee consistency of the same structures protected by buffer latches when these structures require loading into the buffer pool with an I/O operation. IO latches prevent another thread loading the same page into the buffer pool with an incompatible latch. Associated with a `wait_type` of **PAGEIOLATCH\_\***.
 
    > [!NOTE]
    > If you see significant PAGEIOLATCH waits, it means that SQL Server is waiting on the I/O subsystem. While a certain amount of PAGEIOLATCH waits is expected and normal behavior, if the average PAGEIOLATCH wait times are consistently above 10 milliseconds (ms) you should investigate why the I/O subsystem is under pressure.
@@ -252,7 +252,7 @@ The statistics exposed by this query are described as follows:
 | **max_wait_time_ms** | Maximum time in milliseconds any request spent waiting on this latch type. |
 
 > [!NOTE]
-> The values returned by this DMV are cumulative since last time the server was restarted or the DMV was reset. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) to find the last [!INCLUDE[ssSDSfull](../includes/ssdenoversion-md.md)] startup time. On a system that has been running a long time this means some statistics such as `max_wait_time_ms` are rarely useful. The following command can be used to reset the wait statistics for this DMV:
+> The values returned by this DMV are cumulative since last time the database engine was restarted or the DMV was reset. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time. On a system that has been running a long time this means some statistics such as `max_wait_time_ms` are rarely useful. The following command can be used to reset the wait statistics for this DMV:
 >
 > ```sql
 > DBCC SQLPERF ('sys.dm_os_latch_stats', CLEAR);

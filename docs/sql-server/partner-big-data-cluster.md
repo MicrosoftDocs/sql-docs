@@ -49,7 +49,6 @@ To learn more about some of our other partners, see [High availability, and disa
 [streamsets_website]: https://streamsets.com/
 [purestorage_website]: https://www.purestorage.com/
 
-
 <!--Get Started Links-->
 
 <!--Datasheet Links-->

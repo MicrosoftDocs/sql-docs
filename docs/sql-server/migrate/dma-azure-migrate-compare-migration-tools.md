@@ -1,6 +1,6 @@
 ---
 title: "Compare SQL data migration tools"
-titleSuffix: SQL Migration
+titleSuffix: SQL Server
 description: "Compare SQL data migration tools to determine which tool best suits your business needs, such as Data Migration Assistant (DMA), Azure Migrate, Azure Database Migration Service, SQL Server Migration Assistant (SSMA), Database Experimentation Assistant (DEA). "
 ms.date: "03/15/2021"
 ms.prod: sql
@@ -87,13 +87,12 @@ Use the following chart to compare capabilities of the SQL migration tools:
 |Migrate SQL Server objects to SQL Database or SQL Managed Instance| No| Yes | No  | Yes|No|
 |Lift and shift SQL Server to SQL Server on Azure VM | Yes | No | No | No| No |
 |Migrate (and/or upgrade) SQL Server to SQL Server on Azure VM | No | Yes| No | No | No| 
-|Migrate non-SQL objects </br> (Oracle, Access, DB2, etc) | No |No|Yes|No|No|
-|Migrate open source databases </br> (MySQL, PostgreSQL, MariaDB, etc)| No | No | No | Yes | No|
+|Migrate non-SQL objects </br> (Oracle, Access, DB2, and so on) | No |No|Yes|No|No|
+|Migrate open source databases </br> (MySQL, PostgreSQL, MariaDB, and so on)| No | No | No | Yes | No|
 |Compare workloads between source and target SQL Server |No|No|No|No|Yes|
 |||||||
 
 ## Next steps
 
 Get started with migrating to [SQL Server](../../ssma/sql-server-migration-assistant.md) from another database engine, migrate to [Azure SQL](/azure/azure-sql/migration-guides/), or assess your SQL data estate with [Azure Migrate](/azure/migrate/how-to-create-azure-sql-assessment). 
-
 

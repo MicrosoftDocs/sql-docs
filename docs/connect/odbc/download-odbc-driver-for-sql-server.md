@@ -14,7 +14,7 @@ ms.author: v-daenge
 
 # Download ODBC Driver for SQL Server
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Microsoft ODBC Driver for SQL Server is a single dynamic-link library (DLL) containing run-time support for applications using native-code APIs to connect to SQL Server. Use Microsoft ODBC Driver 17 for SQL Server to create new applications or enhance existing applications that need to take advantage of newer SQL Server features.
 
@@ -33,7 +33,7 @@ Version 17.7.2 is the latest general availability (GA) version. If you have a pr
 - Released: March 10, 2021
 
 > [!Note]
-> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](). You can download different languages from the US-English version site by selecting [available languages](#available-languages).
+> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](https://aka.ms/downloadmsodbcsqlenglish). You can download different languages from the US-English version site by selecting [available languages](#available-languages).
 
 ## Available languages
 
@@ -80,11 +80,11 @@ If you need to download the packages for offline installation, all versions are 
 - [Debian 8 .deb packages](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
 - [Debian 8 .deb packages (msodbcsql 13.x)](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
 
-### RedHat
+### Red Hat
 
-- [RedHat 8 .rpm packages](https://packages.microsoft.com/rhel/8/prod/)
-- [RedHat 7 .rpm packages](https://packages.microsoft.com/rhel/7/prod/)
-- [RedHat 6 .rpm packages](https://packages.microsoft.com/rhel/6/prod/)
+- [Red Hat 8 .rpm packages](https://packages.microsoft.com/rhel/8/prod/)
+- [Red Hat 7 .rpm packages](https://packages.microsoft.com/rhel/7/prod/)
+- [Red Hat 6 .rpm packages](https://packages.microsoft.com/rhel/6/prod/)
 
 ### Suse
 

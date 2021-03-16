@@ -2,7 +2,7 @@
 description: "sys.dm_os_wait_stats (Transact-SQL)"
 title: "sys.dm_os_wait_stats (Transact-SQL)"
 ms.custom: "contperf-fy21q3"
-ms.date: "03/12/2021"
+ms.date: "03/15/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -378,7 +378,7 @@ GO
 |LATCH_KP |Occurs when waiting for a KP (keep) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH\_\* waits is available in `sys.dm_os_latch_stats`. Note that `sys.dm_os_latch_stats` groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.| 
 |LATCH_NL |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
 |LATCH_SH |Occurs when waiting for an SH (share) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH\_\* waits is available in `sys.dm_os_latch_stats`. Note that `sys.dm_os_latch_stats` groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.| 
-|LATCH_UP |Occurs when waiting for an UP (update) latch. This does not include buffer latches or transaction mark latches. A `sys.dm_os_latch_stats` groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.| 
+|LATCH_UP |Occurs when waiting for an UP (update) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH\_\* waits is available in `sys.dm_os_latch_stats`. Note that `sys.dm_os_latch_stats` groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.| 
 |LAZYWRITER_SLEEP |Occurs when lazy writer tasks are suspended. This is a measure of the time spent by background tasks that are waiting. Do not consider this state when you are looking for user stalls.| 
 |LCK_M_BU |Occurs when a task is waiting to acquire a Bulk Update (BU) lock. See [Bulk Update Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#bulk_update) for more information| 
 |LCK_M_BU_ABORT_BLOCKERS |Occurs when a task is waiting to acquire a Bulk Update (BU) lock with Abort Blockers. (Related to the low priority wait option of ALTER TABLE and ALTER INDEX). See [Bulk Update Locks](../sql-server-transaction-locking-and-row-versioning-guide.md#bulk_update) for more information <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
@@ -1023,4 +1023,4 @@ GO
  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
  [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)    
- [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)
+ [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)    

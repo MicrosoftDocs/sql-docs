@@ -181,7 +181,8 @@ The following table lists the memory clerk types:
 |USERSTORE_DBMETADATA     |      This object store is used for metadata structures     |
 |USERSTORE_OBJPERM     |     This store is used for structures keeping track of object security/permission     |
 |USERSTORE_QDSSTMT     |  This cache store is used to cache [Query Store](../performance/monitoring-performance-by-using-the-query-store.md)  statements       |
-|USERSTORE_SCHEMAMGR     |    Schema manager cache stores different types of metadata information about the database objects in memory (e.g tables). A common user of this store could be the tempdb database with objects like tables, temp procedures, table variables, table-valued parameters, worktables, work files, version store.  |
+|USERSTORE_SCHEMAMGR     |    Schema manager cache stores different types of metadata information about the database objects in memory (e.g tables). A common user of this store could be the tempdb database with objects like tables, temp procedures, table variables, table-valued parameters, worktables, workfiles, version store.  |
+
 
 |USERSTORE_SXC     |    This user store is used for allocations to store all [RPC](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/619c43b6-9495-4a58-9e49-a4950db245b3) parameters.     |
 |USERSTORE_TOKENPERM     |    TokenAndPermUserStore is a single SOS user store that keeps track of security entries for security context, login, user, permission, and audit. Multiple hash tables are allocated to store these objects.    |

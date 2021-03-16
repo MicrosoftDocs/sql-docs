@@ -58,7 +58,7 @@ To learn more about some of our other partners, see [High availability, and disa
 [purestorage_datasheet]:https://www.purestorage.com/content/dam/pdf/en/datasheets/ds-pure-service-orchestrator.pdf
 
 <!--Marketplace Links -->
-[delltech_marketplace]:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/dellemc.ppdm_ddve_0_0_1?tab=Overview
+[delltech_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/dellemc.ppdm_ddve_0_0_1?tab=Overview
 
 <!--YouTube links-->
 [delltech_youtube]:https://www.youtube.com/watch?v=7lM7xSsaBNg

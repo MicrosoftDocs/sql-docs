@@ -81,13 +81,13 @@ After you have the necessary prerequisites in place and have completed the tasks
 
 To migrate data, two cases arise:
 
- 1. **Client Side Data Migration:**
+- **Client Side Data Migration:**
 	 -   For performing  **Client Side Data Migration**, select the  **Client Side Data Migration Engine**  option in the  **Project Settings**  dialog box.
 
-   > [!NOTE]
-   > When SQL Express edition is used as the target database, only client side data migration is allowed and server side data migration is not supported.
+    > [!NOTE]
+    > When SQL Express edition is used as the target database, only client side data migration is allowed and server side data migration is not supported.
 
-2. **Server Side Data Migration:**
+- **Server Side Data Migration:**
 	-   Before performing data migration on the server side, ensure:
 	    - The SSMA for MySQL Extension Pack is installed on the instance of SQL Server.
 	    - The SQL Server Agent service is running on the instance of SQL Server. 
@@ -148,5 +148,4 @@ These resources were developed as part of the Data SQL Ninja Program, which is s
 - For a matrix of the Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios as well as specialty tasks, see the article [Service and tools for data migration](https://docs.microsoft.com/azure/dms/dms-tools-matrix).
 
 - For other migration guides, see [Database Migration](https://datamigration.microsoft.com/). 
-
 

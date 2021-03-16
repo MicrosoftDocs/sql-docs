@@ -15,7 +15,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 This guide describes how to identify and resolve latch contention issues observed when running SQL Server applications on high concurrency systems with certain workloads.
 
-As the number of CPU cores on servers continues to increase, the associated increase in concurrency can introduce contention points on data structures that must be accessed in a serial fashion within the database engine. This is especially true for high throughput/high concurrency transaction processing (OLTP) workloads. There are a number of tools, techniques, and ways to approach these challenges as well as practices that can be followed in designing applications which may help to avoid them altogether. This article will discuss a particular type of contention on data structures that use spinlocks to serialize access to these data structures.
+As the number of CPU cores on servers continues to increase, the associated increase in concurrency can introduce contention points on data structures that must be accessed in a serial fashion within the database engine. This is especially true for high throughput/high concurrency transaction processing (OLTP) workloads. There are a number of tools, techniques, and ways to approach these challenges as well as practices that can be followed in designing applications that may help to avoid them altogether. This article will discuss a particular type of contention on data structures that use spinlocks to serialize access to these data structures.
 
 > [!NOTE]
 > This content was written by the Microsoft SQL Server Customer Advisory Team (SQLCAT) team based on their process for identifying and resolving issues related to page latch contention in SQL Server applications on high-concurrency systems. The recommendations and best practices documented here are based on real-world experience during the development and deployment of real-world OLTP systems.
@@ -201,7 +201,7 @@ The following measures of latch wait time are indicators that excessive latch co
 
 * **CPU Utilization does not increase as application workload increases**: If the CPU utilization on the system does not increase as concurrency driven by application throughput increases, this is an indicator that SQL Server is waiting on something and symptomatic of latch contention.
 
-Analyze root cause. Even if each of the preceding conditions is true it is still possible that the root cause of the performance issues lies elsewhere. In fact, in the majority of cases sub-optimal CPU utilization is caused by other types of waits such as blocking on locks, I/O related waits or network-related issues. As a rule of thumb it is always best to resolve the resource wait that represents the greatest proportion of overall wait time before proceeding with more in-depth analysis.
+Analyze root cause. Even if each of the preceding conditions is true it is still possible that the root cause of the performance issues lies elsewhere. In fact, in the majority of cases suboptimal CPU utilization is caused by other types of waits such as blocking on locks, I/O related waits or network-related issues. As a rule of thumb it is always best to resolve the resource wait that represents the greatest proportion of overall wait time before proceeding with more in-depth analysis.
 
 ## Analyzing current wait buffer latches
 
@@ -246,13 +246,13 @@ The statistics exposed by this query are described as follows:
 
 | Statistic | Description |
 |---|---|
-| **Latch_class** | The type of latch that SQL Server has recorded in the engine, which is preventing a current request from being executed. |
-| **Waiting_requests_count** | Number of waits on latches in this class since SQL Server restarted. This counter is incremented at the start of a latch wait. |
-| **Wait_time_ms** | The total wait time in milliseconds spent waiting on this latch type. |
-| **Max_wait_time_ms** | Maximum time in milliseconds any request spent waiting on this latch type. |
+| **latch_class** | The type of latch that SQL Server has recorded in the engine, which is preventing a current request from being executed. |
+| **waiting_requests_count** | Number of waits on latches in this class since SQL Server restarted. This counter is incremented at the start of a latch wait. |
+| **wait_time_ms** | The total wait time in milliseconds spent waiting on this latch type. |
+| **max_wait_time_ms** | Maximum time in milliseconds any request spent waiting on this latch type. |
 
 > [!NOTE]
-> The values returned by this DMV are cumulative since last time the server was restarted or the DMV was reset. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last [!INCLUDE[ssSDSfull](../includes/ssdenoversion-md.md)] startup time. On a system that has been running a long time this means some statistics such as `Max_wait_time_ms` are rarely useful. The following command can be used to reset the wait statistics for this DMV:
+> The values returned by this DMV are cumulative since last time the server was restarted or the DMV was reset. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) to find the last [!INCLUDE[ssSDSfull](../includes/ssdenoversion-md.md)] startup time. On a system that has been running a long time this means some statistics such as `max_wait_time_ms` are rarely useful. The following command can be used to reset the wait statistics for this DMV:
 >
 > ```sql
 > DBCC SQLPERF ('sys.dm_os_latch_stats', CLEAR);
@@ -416,7 +416,7 @@ go
 
 **Reordered index definition**
 
-Re-ordering the index with UserID as the leading column in the primary key provided an almost random distribution of inserts across the pages. The resulting distribution was not 100% random since not all users are online at the same time, but the distribution was random enough to alleviate excessive latch contention. One caveat of reordering the index definition is that any select queries against this table must be modified to use both UserID and TransactionID as equality predicates.
+Reordering the key columns of the index with UserID as the leading column in the primary key provided an almost random distribution of inserts across the pages. The resulting distribution was not 100% random since not all users are online at the same time, but the distribution was random enough to alleviate excessive latch contention. One caveat of reordering the index definition is that any select queries against this table must be modified to use both UserID and TransactionID as equality predicates.
 
 > [!IMPORTANT]
 > Ensure that you thoroughly test any changes in a test environment before running in a production environment.
@@ -563,7 +563,7 @@ The following two sections provide a summary of the techniques that can be used 
 
 ## Walkthrough: Diagnose a latch contention
 
-The following walkthrough demonstrates the tools and techniques described in [Diagnosing SQL Server Latch Contention](#diagnosing-sql-server-latch-contention) and [Handling Latch Contention for Different Table Patterns](#handling-latch-contention-for-different-table-patterns) to resolve a problem in a real world scenario. This scenario describes a customer engagement to perform load testing of a point of sales system which simulated approximately 8,000 stores performing transactions against a SQL Server application which was running on an 8 socket, 32 physical core system with 256 GB of memory.
+The following walkthrough demonstrates the tools and techniques described in [Diagnosing SQL Server Latch Contention](#diagnosing-sql-server-latch-contention) and [Handling Latch Contention for Different Table Patterns](#handling-latch-contention-for-different-table-patterns) to resolve a problem in a real world scenario. This scenario describes a customer engagement to perform load testing of a point of sales system which simulated approximately 8,000 stores performing transactions against a SQL Server application running on an 8 socket, 32 physical core system with 256 GB of memory.
 
 The following diagram details the hardware used to test the point of sales system:
 
@@ -688,7 +688,7 @@ ALTER TABLE mytable ADD Padding CHAR(5000) NOT NULL DEFAULT ('X');
 > [!NOTE]
 > Use the smallest char possible that forces one row per page to reduce the extra CPU requirements for the padding value and the extra space required to log the row. Every byte counts in a high performance system.
 
-This technique is explained for completeness; in practice SQLCAT has only used this on a small table with 10,000 rows in a single performance engagement. This technique has a limited application due to the fact that it increases memory pressure on SQL Server for large tables and can result in non-buffer latch contention on non-leaf pages. The additional memory pressure can be a significant limiting factor for application of this technique. With the amount of memory available in a modern server, a large proportion of the working set for OLTP workloads is typically held in memory. When the data set increases to a size that it no longer fits in memory a significant drop-off in performance will occur. Therefore, this technique is something that is only applicable to small tables. This technique is not used by SQLCAT for scenarios such as last page/trailing page insert contention for large tables.
+This technique is explained for completeness; in practice SQLCAT has only used this on a small table with 10,000 rows in a single performance engagement. This technique has a limited application because it increases memory pressure on SQL Server for large tables and can result in non-buffer latch contention on non-leaf pages. The additional memory pressure can be a significant limiting factor for application of this technique. With the amount of memory available in a modern server, a large proportion of the working set for OLTP workloads is typically held in memory. When the data set increases to a size that it no longer fits in memory a significant drop-off in performance will occur. Therefore, this technique is something that is only applicable to small tables. This technique is not used by SQLCAT for scenarios such as last page/trailing page insert contention for large tables.
 
 > [!IMPORTANT]
 > Employing this strategy can cause a large number of waits on the ACCESS_METHODS_HBOT_VIRTUAL_ROOT latch type because this strategy can lead to a large number of page splits occurring in the non-leaf levels of the B-tree. If this occurs, SQL Server must acquire shared (SH) latches at all levels followed by exclusive (EX) latches on pages in the B-tree where a page split is possible. Check the `sys.dm_os_latch_stats` DMV for a high number of waits on the ACCESS_METHODS_HBOT_VIRTUAL_ROOT latch type after padding rows.

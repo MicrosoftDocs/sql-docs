@@ -121,11 +121,11 @@ GO
 
 -- table with masked columns
 CREATE TABLE Data.Membership(
-	MemberID			int IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED,
-	FirstName			varchar(100) MASKED WITH (FUNCTION = 'partial(1, "xxxxx", 1)') NULL,
-	LastName			varchar(100) NOT NULL,
-	Phone				varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,
-	Email				varchar(100) MASKED WITH (FUNCTION = 'email()') NOT NULL,
+	MemberID		int IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED,
+	FirstName		varchar(100) MASKED WITH (FUNCTION = 'partial(1, "xxxxx", 1)') NULL,
+	LastName		varchar(100) NOT NULL,
+	Phone			varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,
+	Email			varchar(100) MASKED WITH (FUNCTION = 'email()') NOT NULL,
 	DiscountCode	smallint MASKED WITH (FUNCTION = 'random(1, 100)') NULL
 	)
 
@@ -156,11 +156,11 @@ REVERT;
   
  The result demonstrates the masks by changing the data from  
   
- `1    Roberto     Tamburello    555.123.4567    RTamburello@contoso.com`    10  
+ `1    Roberto     Tamburello    555.123.4567    RTamburello@contoso.com    10`  
   
  into  
   
- `1    Rxxxxxo    Tamburello    xxxx            RXXX@XXXX.com`            91
+ `1    Rxxxxxo    Tamburello    xxxx            RXXX@XXXX.com            91`
  
  where the number in DiscountCode is random for every query result
   

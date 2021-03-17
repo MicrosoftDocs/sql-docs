@@ -8,12 +8,24 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 2/18/2021
+ms.date: 3/17/2021
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](./download-azure-data-studio.md)**
+
+## March 2021
+
+March 17, 2021 &nbsp; / &nbsp; version: 1.27.0
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22March+2021+Release%22). |
+| Extension(s) update | [Dacpac](extensions/sql-server-dacpac-extension.md) </br> [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
+| New Notebook features | Added create book dialog |
 
 ## February 2021
 

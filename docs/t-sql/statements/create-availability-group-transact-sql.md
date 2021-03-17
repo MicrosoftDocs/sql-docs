@@ -383,12 +383,12 @@ For more information, see [Secondary to primary replica read/write connection re
  You need to join the secondary availability group to the distributed availability group. For more information, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
  \<ag_name> 
- Specifies the name  of the availability group that makes up one half of the distributed availability group.  
+ Specifies the name of the availability group that makes up one half of the distributed availability group.  
   
- LISTENER **='**TCP**://**_system-address_**:**_port_**'**  
+ LISTENER_URL **='**TCP**://**_system-address_**:**_port_**'**  
  Specifies the URL path for the listener associated with the availability group.  
   
- The LISTENER clause is required.  
+ The LISTENER_URL clause is required.  
   
  **'**TCP**://**_system-address_**:**_port_**'**  
  Specifies a URL for the listener associated with the availability group. The URL parameters are as follows:  

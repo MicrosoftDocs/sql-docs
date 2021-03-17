@@ -30,7 +30,7 @@ For other deployment scenarios, see:
 > - [Ubuntu quickstart](quickstart-install-connect-ubuntu.md)
 > - [Docker quickstart](quickstart-install-connect-docker.md)
 
-For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.md).
+For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.yml).
 
 ## <a id="supportedplatforms"></a> Supported platforms
 
@@ -233,4 +233,4 @@ After installation, you can also install or enable optional SQL Server features.
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
 > [!TIP]
-> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).
+> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.yml).

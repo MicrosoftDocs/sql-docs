@@ -6,11 +6,11 @@ ms.author: anrampal
 ms.topic: overview 
 ms.date: 03/02/2021
 ms.prod: sql
-ms.technology: "Azure Synapse Pathway"
+ms.technology: tools-other
 monikerRange: "=azure-sqldw-latest"
 ms.custom: template-overview 
 ---
-# Azure Synapse Pathway Preview
+# Azure Synapse Pathway Preview FAQ
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 In this guide, you'll find the most frequently asked questions on Azure Synapse Pathway Preview.
@@ -38,8 +38,15 @@ A. In this preview version of Synapse Pathway, following data warehouses are inc
 
 ### Q. What is included as part of the code conversion?
 
-A. Synapse Pathway supports code translation of tables, schemas, views, and stored procedures.
+A. Synapse Pathway preview version supports code translation of tables, schemas, and views.
 
+| Source Platform| Statement Types Supported | 
+|:-------------------:|:------------------|
+| IBM Netezza  | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table |
+|Microsoft SQL Server  | Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table | 
+| Snowflake |  Create/Alter/Drop Database<br /> Create/Alter/Drop  Schema <br /> Create/Alter/Drop Table |                       
+
+  
 ### Q. Can it also scan my environment and provide an assessment report of all the objects that need to be converted/translated?
 
 A. In this preview version of Synapse Pathway, you will have to provide the link to the DDL/DML scripts that needs to be translated. Synapse Pathway will not scan your current environment to identify the objects that need to be translated.
@@ -52,7 +59,9 @@ A. Since you can run Synapse Pathway in your local environment, there is no data
 
 A. Azure Synapse Pathway is currently in **Preview**.   Support for Synapse Pathway is available through Microsoft support channel. You can raise the ticket either in the Azure portal or standard (typically on-prem support) portals.
 
-> [!NOTE] Like any other Azure Service, all preview services are eligible for support, just without SLA's in place.
+
+> [!NOTE] 
+> Like any other Azure Service, all preview services are eligible for support, just without SLA's in place.
 
 <!-- ### Troubleshooting and optimization
 

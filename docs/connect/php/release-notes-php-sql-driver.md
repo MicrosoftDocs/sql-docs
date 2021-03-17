@@ -54,7 +54,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | Added support for macOS Big Sur, Ubuntu 20.04, Ubuntu 20.10 and Alpine 3.12. | Some require ODBC Driver 17.5 or above. |
 | Dropped support for macOS High Sierra, Debian 8, and Ubuntu 19.10. | &nbsp; |
 | Support for GB18030 locale. | &nbsp; |
-| Extended PDO errorinfo to include additional odbc messages if available. | &nbsp; |
+| Extended PDO `errorinfo` to include additional ODBC messages if available. | &nbsp; |
 | Support for Data Classification with rank info. | Requires SQL Server 2019 and ODBC Driver 17.4.2 or above. |
 | Added Azure Active Directory Service Principal authentication support. | Requires ODBC Driver 17.7 or above. |
 | Improved performance when handling decimal numbers as inputs or outputs and removed unnecessary conversions for numeric values. | &nbsp; |
@@ -241,7 +241,7 @@ This release only applies to Linux and macOS.
 
 - Support for PHP 7.0  
 - Full 64-bit support
-- Support for Ubuntu 15.04, Ubuntu 16.04, and RedHat 7
+- Support for Ubuntu 15.04, Ubuntu 16.04, and Red Hat 7
 
 ## 3.2
 

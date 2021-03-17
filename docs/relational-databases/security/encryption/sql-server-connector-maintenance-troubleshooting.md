@@ -171,6 +171,12 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 **How do I connect to Azure Key Vault through an HTTP(S) Proxy Server?**
   The Connector uses Internet Explorer's Proxy configuration settings. These settings can be controlled via [Group Policy](/archive/blogs/askie/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available) or via the Registry, but it's important to note that they aren't system-wide settings and will need to be targeted to the service account running the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. If a Database Administrator views or edits the settings in Internet Explorer, they'll only affect the Database Administrator's account rather than the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] engine. Logging on to the server interactively using the service account isn't recommended and is blocked in many secure environments. Changes to the configured proxy settings may require restarting the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance to take effect as they're cached when the Connector first attempts to connect to a key vault.
 
+**Which key sizes in Azure Key Vault are supported by the SQL Server Connector?**
+  The latest build of SQL Server Connector supports Azure Key Vault keys of sizes 2048 and 3072.
+  
+ > [!NOTE] 
+ > The "sys.asymmetric_keys" view reports the key size as 2048 even if key size 3072 is used. This is a known gap in this view and the SQL Server product team will address this in a future release.
+
 **What are the minimum permission levels required for each configuration step in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]?**  
  Though you could perform all the configuration steps as a member of the sysadmin fixed server role, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] encourages you to minimize the permissions you use. The following list defines the minimum permission level for each action.  
   

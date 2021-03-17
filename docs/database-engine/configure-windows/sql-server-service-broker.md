@@ -2,7 +2,7 @@
 title: "SQL Server Service Broker | Microsoft Docs"
 description: Learn about Service Broker. See how it provides native support for messaging in the SQL Server Database Engine and Azure SQL  Managed Instance.
 ms.custom: ""
-ms.date: "03/16/2021"
+ms.date: "03/17/2021"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -100,14 +100,14 @@ FROM ExpenseQueue;
 
 Cross-instance service broker message exchange is supported only between Azure SQL Managed Instances:
 
-- `CREATE ROUTE`: You can't use CREATE ROUTE with ADDRESS other than LOCAL or DNS name of another SQL Managed Instance. See [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
-- `ALTER ROUTE`: You can't use ALTER ROUTE with ADDRESS other than LOCAL or DNS name of another SQL Managed Instance. See See [ALTER ROUTE](https://docs.microsoft.com/sql/t-sql/statements/alter-route-transact-sql).
+- `CREATE ROUTE`: You can't use CREATE ROUTE with ADDRESS other than LOCAL or DNS name of another SQL Managed Instance. Port specified must be 4022. See [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
+- `ALTER ROUTE`: You can't use ALTER ROUTE with ADDRESS other than LOCAL or DNS name of another SQL Managed Instance. Port specified must be 4022. See See [ALTER ROUTE](https://docs.microsoft.com/sql/t-sql/statements/alter-route-transact-sql).
 
 Transport security is supported, dialog security is not:
 
 - `CREATE REMOTE SERVICE BINDING` is not supported.
 
-Service broker is enabled by default and cannot be disabled. The following ALTER DATABSE options are not supported:
+Service broker is enabled by default and cannot be disabled. The following ALTER DATABASE options are not supported:
 
 - `ENABLE_BROKER`
 - `DISABLE_BROKER`

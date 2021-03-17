@@ -80,6 +80,8 @@ WHERE is_masked = 1;
 -   A mask cannot be configured on a computed column, but if the computed column depends on a column with a MASK, then the computed column will return masked data.  
   
 -   A column with data masking cannot be a key for a FULLTEXT index.  
+
+-   A column in an External table.  
   
  For users without the **UNMASK** permission, the deprecated **READTEXT**, **UPDATETEXT**, and **WRITETEXT** statements do not function properly on a column configured for Dynamic Data Masking. 
  

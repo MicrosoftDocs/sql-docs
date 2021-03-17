@@ -182,8 +182,10 @@ executeCmd (command)
 command = "oc apply -f bdc-scc.yaml"
 executeCmd (command)
 #
-#Adding the custom scc to BDC namespace
-command = "oc adm policy add-scc-to-group bdc-scc system:serviceaccounts:" + CLUSTER_NAME
+#Bind the custom scc with service accounts in the BDC namespace
+command = "oc create clusterrole bdc-role --verb=use --resource=scc --resource-name=bdc-scc -n " + CLUSTER_NAME
+executeCmd (command)
+command = "oc create rolebinding bdc-rbac --clusterrole=bdc-role --group=system:serviceaccounts:" + CLUSTER_NAME
 executeCmd (command)
 #
 # Deploy big data cluster

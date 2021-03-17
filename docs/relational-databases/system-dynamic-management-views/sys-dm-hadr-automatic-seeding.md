@@ -34,20 +34,18 @@ The following table defines the meaning of the various columns:
 |**start_time**|**datetime**|The time the operation was initiated.|
 |**completion_time**|**datetime**|The time the operation completed (null if ongoing).|  
 |**ag_id**|**uniqueidentifier**|Unique Id for each Availability Group.|  
-|**ag_db-id**|**uniqueidentifier**|Unique Id for each database in the Available Group.|  
+|**ag_db_id**|**uniqueidentifier**|Unique Id for each database in the Available Group.|  
 |**ag_remote_replica_id**|**uniqueidentifier**|Unique Id for the other replica this seeding operation involves.|
-|**operation_id**|**uniqueidentifier**|Unique Id for the seeding operation.|  
+|**operation_id**|**uniqueidentifier**|Unique identifier for this seeding operation.|  
 |**is_source**|**bit**|Gets a value indicating whether this replica is the source (primary) of the seeding operation.|
 |**current_state**|**bit**|Gets the current seeding state the operation is in.|
-|**performed_seeding**|**bit**|Gets a value indicating whether the primary send a seeding request message|
+|**performed_seeding**|**bit**|Database streaming for seeding is initialized.|
 |**failure_state**|**int**|Gets the reason the operation failed.|
 |**failure_state_desc**|**ncharvar**|Gets the description the operation failed.|
 |**error_code**|**int**|Gets any SQL error code encountered during seeding.|
 |**number_of_attempts**|**int**|Gets the number of times this seeding operation has been attempted.|
 
- 
 
-  
 ## Security  
   
 ### Permissions  
@@ -58,5 +56,3 @@ The following table defines the meaning of the various columns:
  [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [Manage the suspect_pages Table &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
-  
-

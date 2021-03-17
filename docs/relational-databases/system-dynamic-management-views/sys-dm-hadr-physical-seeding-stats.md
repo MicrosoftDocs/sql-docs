@@ -2,24 +2,22 @@
 description: "sys.dm_hadr_physical_seeding_stats (Transact-SQL)"
 title: "sys.dm_hadr_physical_seeding_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2021"
+ms.date: "03/17/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
-ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 f1_keywords: 
-  - "dm_hadr_physical_seeding_stats"
-  - "sys.dm_hadr_physical_seeding_stats
+  - "dm_hadr_physical_seeding_stats_TSQL"
+  - "sys.dm_hadr_physical_seeding_stats"
   - "sys.dm_hadr_physical_seeding_stats_TSQL"
-  - "dm_hadr_physical_seeding"
+  - "sys.dm_hadr_physical_seeding_stats"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"
-  - "sys.dm_hadr_physical_seeding_stats
+  - "physical seeding"
   - "sys.dm_hadr_physical_seeding_stats dynamic management view"
-ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 author: cawrites
 ms.author: chadam
 ---
@@ -32,26 +30,25 @@ The following table defines the meaning of the various columns:
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**local_physical_seeding_id**|**uniqueidentifier**|empty|  
-|**remote_physical_seeding_id**|**uniqueidentifier**|empty|  
-|**local_database_id**|**int**|empty|  
-|**local_database_name**|**nvarchar**|empty |
-|**remote_machine_name**|**nvarchar**|empty |  
-|**role_desc**|**nvarchar**|empty |
-|**internal_state_desc**|**nvarchar**|empty |
-|**transfer_rate_bytes_per_second**|**bigint**|empty |
-|**transfered_size_bytes**|**bigint**|empty |
-|**database_size_bytes**|**bigint**|empty |
-|**start_time_utc**|**datetime**|empty |
-|**end_time_utc**|**datetime**|empty |
-|**estimate_time_complete_utc**|**datetime**|empty |
-|**total_disk_io_wait_time_ms**|**bigint**|empty |
-|**total_network_wait_time_ms**|**bigint**|empty |
-|**failure_code**|**int**|empty |
-|**failure_message**|**nvarchar**|empty |
-|**failure_time_utc**|**datetime**|empty |
-|**is_compression_enabled**|**bit**|empty|
-|**datetime**|**datatime**|empty|  
+|**local_physical_seeding_id**|**uniqueidentifier**|Unique identifier of this seeding operation on the local replica.|  
+|**remote_physical_seeding_id**|**uniqueidentifier**|Unique identifier of this seeding operation on the remote replica.|  
+|**local_database_id**|**int**|Database ID on the local replica.|  
+|**local_database_name**|**nvarchar**|Database Name on the local replica. |
+|**remote_machine_name**|**nvarchar**|Remote replica machine name.|  
+|**role_desc**|**nvarchar**|Seeding role description. (available values: Source, Destination, Forwarder, ForwarderDestination)|
+|**internal_state_desc**|**nvarchar**|Description of the local replica state.|
+|**transfer_rate_bytes_per_second**|**bigint**|Current seeding transfer rate in bytes per second.|
+|**transfered_size_bytes**|**bigint**|Total bytes already transferred.|
+|**database_size_bytes**|**bigint**|Total size in bytes of the database being seeded.|
+|**start_time_utc**|**datetime**|Start time of the seeding operation in UTC.|
+|**end_time_utc**|**datetime**|End time of the seeding operation in UTC.|
+|**estimate_time_complete_utc**|**datetime**|Estimation of the completion time for an in-process seeding operation, in UTC.|
+|**total_disk_io_wait_time_ms**|**bigint**|Sum of the disk IO wait time encountered, in ms.|
+|**total_network_wait_time_ms**|**bigint**|Sum of the network IO wait time encountered, in ms.|
+|**failure_code**|**int**|Failure code for the seeding operation.|
+|**failure_message**|**nvarchar**|Message corresponding to the failure code.|
+|**failure_time_utc**|**datetime**|Time of failure, in UTC.|
+|**is_compression_enabled**|**bit**|Indicates whether compression in enabled for the seeding operation.|
   
 ## Security  
   
@@ -63,5 +60,3 @@ The following table defines the meaning of the various columns:
  [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [Manage the suspect_pages Table &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
-  
-

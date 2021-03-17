@@ -69,7 +69,7 @@ conceptualContent:
           url: /sql/sql-server/migrate/guides/access-to-sql-server
           itemType: how-to-guide
         - text: Azure SQL Database
-          url: /azure/azure-sql/migration-guides/database/access-to-sql-database
+          url: /azure/azure-sql/migration-guides/database/access-to-sql-database-guide
           itemType: how-to-guide
     - title: "MySQL to"
       links:
@@ -77,7 +77,7 @@ conceptualContent:
           url: /sql/sql-server/migrate/guides/mysql-to-sql-server
           itemType: how-to-guide
         - text: Azure SQL Database
-          url: /azure/azure-sql/migration-guides/database/mysql-to-sql-database
+          url: /azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide
           itemType: how-to-guide
         - text: Azure Database for MySQL
           url: /azure/mysql/concepts-migrate-import-export
@@ -133,7 +133,7 @@ conceptualContent:
           url: https://azure.microsoft.com/cloud-adoption-framework/#cloud-adoption-journey
           itemType: reference
         - text: Browse customer stories
-          url: https://customers.microsoft.com/en-us/search?sq=&ff=&p=0&so=story_publish_date%20descy
+          url: https://customers.microsoft.com/en-us/search?sq=&ff=&p=0&so=story_publish_date%20desc
           itemType: reference
 
 tools:

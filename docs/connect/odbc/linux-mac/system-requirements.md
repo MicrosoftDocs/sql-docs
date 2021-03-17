@@ -45,9 +45,9 @@ Versions 17, 13.1, and 13 of the Linux and macOS drivers are supported on the x6
 |Debian Linux 10                |Yes |Yes |Yes |Yes |    |    |    |    |    |   |
 |Oracle Linux 7                 |Yes |    |    |    |    |    |    |    |    |   |
 |Oracle Linux 8                 |Yes |Yes |Yes |    |    |    |    |    |    |   |
-|RedHat Enterprise Linux 6      |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-|RedHat Enterprise Linux 7      |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
-|RedHat Enterprise Linux 8      |Yes |Yes |Yes |Yes |    |    |    |    |    |   |
+|Red Hat Enterprise Linux 6     |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
+|Red Hat Enterprise Linux 7     |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
+|Red Hat Enterprise Linux 8     |Yes |Yes |Yes |Yes |    |    |    |    |    |   |
 |SUSE Linux Enterprise Server 11<sup>1</sup>|Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |SUSE Linux Enterprise Server 12|Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes |Yes|
 |SUSE Linux Enterprise Server 15|Yes |Yes |Yes |Yes |Yes |    |    |    |    |   |

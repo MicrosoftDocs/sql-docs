@@ -12,10 +12,6 @@ ms.author: davidph
 > [!NOTE]
 > If you have installed R in the default location of **/usr/lib/R**, you can skip this section and move on to the [Install Rcpp package](#install-rcpp-package-linux) section.
 ::: zone-end
-::: zone pivot="platform-linux-sles"
-> [!NOTE]
-> If you have installed R in the default location of **/usr/lib/R**, you can skip this section and move on to the [Install Rcpp package](#install-rcpp-package-linux) section.
-::: zone-end
 
 ### Update the environment variables
 

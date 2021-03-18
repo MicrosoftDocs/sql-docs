@@ -39,3 +39,11 @@ sudo zypper install mssql-server-extensibility
     ```
 
     You can ignore the warnings for **R-tcltk-3.6.1**, unless you need this package.
+
+## Install gcc-c++
+
+Install **gcc-c++** on SUSE Linux Enterprise Server (SLES). This is used for **Rcpp**, which is installed later.
+
+```bash
+sudo zypper install gcc-c++
+```

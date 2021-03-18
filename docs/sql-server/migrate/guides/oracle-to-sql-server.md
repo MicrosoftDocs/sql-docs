@@ -6,7 +6,7 @@ ms.reviewer: ""
 ms.technology: migration-guide
 ms.custom:
 ms.devlang:
-ms.topic: how-toconceptual
+ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/19/2021

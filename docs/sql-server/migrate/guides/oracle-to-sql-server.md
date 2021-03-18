@@ -160,7 +160,7 @@ To convert the schema, follow these steps:
 
    Compare converted procedures to original procedures: 
 
-   ![Convert Schema Compare And Review object code](./media/oracle-to-sql-server/procedure-comparison.png)
+   ![Review converted procedures](./media/oracle-to-sql-server/procedure-comparison.png)
 
    You can save the project locally for an offline schema remediation exercise. You can do so by selecting **Save Project** from the **File** menu. This gives you an opportunity to evaluate the source and target schemas offline and perform remediation before you can publish the schema to SQL Server.
 

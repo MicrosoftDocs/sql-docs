@@ -167,36 +167,36 @@ additionalContent:
         # Card
         - title: Ferguson (United States)
           summary: Largest US plumbing wholesaler uses Azure Arc SQL Managed Instance to extend Azure services on-premises.
-          url: https://customers.microsoft.com/en-us/story/844232-ferguson-enterprises-retailers-azure-arc
+          url: https://customers.microsoft.com/story/844232-ferguson-enterprises-retailers-azure-arc
         # Card
         - title: Clearsale (Brazil)
           summary: ClearSale builds foundation for growth and innovation by migrating to Azure with the Azure SQL Database hyperscale service tier.
-          url: https://customers.microsoft.com/en-us/story/773410-clearsale-partner-professional-services-azure
+          url: https://customers.microsoft.com/story/773410-clearsale-partner-professional-services-azure
         # Card
         - title: Willis Towers Watson (United Kingdom)
           summary: Willis Towers Watson achieves seamless scalability in the cloud by migrating to Azure SQL Database.
-          url: https://customers.microsoft.com/en-us/story/willis-towers-watson-partner-professional-services-azure
+          url: https://customers.microsoft.com/story/willis-towers-watson-partner-professional-services-azure
         # Card
         - title: Paychex (United States)
           summary: Paychex relies on Azure SQL Database Elastic Pools to handle explosive growth.
-          url: https://customers.microsoft.com/en-us/story/paychex-azure-sql-database-us
+          url: https://customers.microsoft.com/story/paychex-azure-sql-database-us
         # Card
         - title: Innovative Systems (United States)
           summary: Innovative Systems unites its far-flung databases in the cloud by powering migrations using Azure Database Migration Service.
-          url: https://customers.microsoft.com/en-us/story/innovative-systems-partner-professional-services-azure-sql-database
+          url: https://customers.microsoft.com/story/innovative-systems-partner-professional-services-azure-sql-database
         # Card
         - title: Capita Group (United Kingdom)
           summary: Capita Reading Cloud migrates 10,000 databases and finds new scalability with Azure.
-          url: https://customers.microsoft.com/en-us/story/724217-capita-uk-professional-services-azure-sql-database
+          url: https://customers.microsoft.com/story/724217-capita-uk-professional-services-azure-sql-database
         # Card
         - title: Intershop (United States)
           summary: Intershop, an e-commerce leader, migrates to SQL Server and Azure SQL Database from Oracle, boosts product performance and opens markets. 
-          url: https://customers.microsoft.com/en-ca/story/intershop-partner-professional-services-azure-sql-database
+          url: https://customers.microsoft.com/story/intershop-partner-professional-services-azure-sql-database
         # Card
         - title: Minecraft Realms (United States)
           summary: Minecraft Realms migrates from AWS to Azure with minimal disruption to the user base. 
-          url: https://developer.microsoft.com/en-us/games/blog/migrating-minecraft-realms-from-aws-to-azure/
+          url: https://developer.microsoft.com/games/blog/migrating-minecraft-realms-from-aws-to-azure/
         # Card
         - title: CCC Marketing (Japan)
           summary: CCC Marketing switched it's data analytics infrastructure from Oracle to Microsoft Azure. 
-          url: https://customers.microsoft.com/en-ca/story/843276-ccc-marketing-professional-services-azure-en-japan
+          url: https://customers.microsoft.com/story/843276-ccc-marketing-professional-services-azure-en-japan

@@ -81,15 +81,15 @@ To convert database objects, follow these steps:
 
 1. Right-click the database in **Access Metadata Explorer** and choose **Convert schema**. Alternatively, you can choose **Convert schema** from the top line navigation bar after choosing your database. 
 
-   ![Right-click the database and choose convert schema](./media/access-to-sql-server/convert-schema.png)
+   ![Convert the schema](./media/access-to-sql-server/convert-schema.png)
 
    Compare converted queries to original queries: 
 
-   ![Bold objects in metadata explorer have been converted](./media/access-to-sql-server/query-comparison.png)
+   ![Compare converted queries ](./media/access-to-sql-server/query-comparison.png)
 
    Compare converted objects to original objects: 
 
-   ![Bold objects in metadata explorer have been converted](./media/access-to-sql-server/table-comparison.png)
+   ![Review converted objects](./media/access-to-sql-server/table-comparison.png)
 
 1. (Optional) To convert an individual object, right-click the object and choose **Convert schema**. An object that has been converted appears bold in the **Access Metadata Explorer**: 
 

@@ -124,7 +124,7 @@ conceptualContent:
           url: https://azure.microsoft.com/pricing/tco/calculator/
           itemType: reference
         - text: Azure Hybrid Benefit
-          url: https://azure.microsoft.com/en-us/pricing/hybrid-benefit/
+          url: https://azure.microsoft.com/pricing/hybrid-benefit/
           itemType: reference
         - text: Browse Azure Architecture
           url: https://docs.microsoft.com/azure/architecture/browse/?azure_categories=migration

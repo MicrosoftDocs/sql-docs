@@ -27,7 +27,7 @@ First, edit the **mssql-launchpadd** service to add the **R_HOME** environment v
 
     ```text
     [Service]
-    Environment="R_HOME=/path/to/installation/of/R"
+    Environment="R_HOME=<path to R>"
     ```
 
 1. Save and close.
@@ -43,7 +43,7 @@ Next, make sure `libR.so` can be loaded.
 1. In the file that opens, add path to **libR.so** from the custom R installation.
 
     ```
-    /path/to/installation/of/R/lib
+    <path to the R lib>
     ```
 
 1. Save the new file and close the editor.
@@ -52,7 +52,7 @@ Next, make sure `libR.so` can be loaded.
 
     ```bash
     sudo ldconfig
-    ldd /path/to/installation/of/R/lib/libR.so
+    ldd <path to the R lib>/libR.so
     ```
 
 ### Grant access to the custom R installation folder
@@ -60,7 +60,7 @@ Next, make sure `libR.so` can be loaded.
 Set the `datadirectories` option in the extensibility section of `/var/opt/mssql/mssql.conf` file to the custom R installation.
 
 ```bash
-sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/installation/of/R
+sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories <path to R>
 ```
 
 ### Restart mssql-launchpadd service

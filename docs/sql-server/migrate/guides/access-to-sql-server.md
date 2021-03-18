@@ -40,7 +40,7 @@ By using SQL Server Migration Assistant (SSMA) for Access, you can review databa
 To create an assessment, follow these steps:
 
 1. Open [SQL Server Migration Assistant for Access](https://www.microsoft.com/download/details.aspx?id=54255). 
-1. Select **File** and then choose **New Project**. Provide a name for your migration project. 
+1. Select **File** and then choose **New Project**. Choose your migration target and provide a name for your migration project. 
 
    ![New Project](./media/access-to-sql-server/new-project.png)
 
@@ -64,7 +64,7 @@ Validate the default data type mappings and change them based on requirements if
 1. Select **Project Settings**. 
 1. Select the **Type mappings** tab. 
 
-   ![Type Mappings](./media/oracle-to-sql-server/type-mapping.png)
+   ![Type Mappings](./media/access-to-sql-server/type-mappings.png)
 
 1. You can change the type mapping for each table by selecting the table in the **Oracle Metadata explorer**. 
 
@@ -79,7 +79,7 @@ To convert database objects, follow these steps:
 
    ![Connect to SQL Server](./media/access-to-sql-server/connect-to-sql-server.png)
 
-1. Right-click the database in **Access Metadata Explorer** and choose **Convert schema**.  
+1. Right-click the database in **Access Metadata Explorer** and choose **Convert schema**. Alternatively, you can choose **Convert schema** from the top line navigation bar after choosing your database. 
 
    ![Right-click the database and choose convert schema](./media/access-to-sql-server/convert-schema.png)
 

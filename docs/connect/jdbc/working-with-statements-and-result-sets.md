@@ -1,6 +1,6 @@
 ---
-description: "Working with statements and result sets"
-title: "Working with statements and result sets | Microsoft Docs"
+description: Learn how to work with statements and result sets in JDBC and how to use the right object for the job.
+title: Working with statements and result sets
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

@@ -1,6 +1,6 @@
 ---
-description: "Data Source Wizard Screen 2 (ODBC Driver for SQL Server)"
-title: "Data Source Wizard Screen 2 (ODBC Driver for SQL Server) | Microsoft Docs"
+description: Learn how to select your authentication method in the Data Source Wizard to create a new ODBC connection to SQL Server.
+title: Data Source Wizard Screen 2 (ODBC Driver for SQL Server)
 ms.custom: ""
 ms.date: "01/29/2021"
 ms.prod: sql

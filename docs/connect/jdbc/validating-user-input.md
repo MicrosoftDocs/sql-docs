@@ -1,6 +1,6 @@
 ---
-description: "Validating user input"
-title: "Validating user input | Microsoft Docs"
+description: Learn why validating user input is critical to securing your application from SQL injection attacks.
+title: Validating user input
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

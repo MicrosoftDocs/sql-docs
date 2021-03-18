@@ -1,6 +1,6 @@
 ---
-description: "Data Source Wizard Screen 4 (ODBC Driver for SQL Server)"
-title: "Data Source Wizard Screen 4 (ODBC Driver for SQL Server) | Microsoft Docs"
+description: Learn how to define advanced options in the Data Source Wizard to create a new ODBC connection to SQL Server.
+title: Data Source Wizard Screen 4 (ODBC Driver for SQL Server)
 ms.custom: ""
 ms.date: "09/27/2017"
 ms.prod: sql
@@ -28,7 +28,7 @@ When selected, data that is passed through connections that are made using this 
 
 ### Trust server certificate
 
-This option is applicable only when **Use strong encryption for data** is enabled. When selected, the server's certificate will not be validated to have the correct hostname of the server and be issued by a trusted certificate authority. 
+This option is applicable only when **Use strong encryption for data** is enabled. When selected, the server's certificate will not be validated to have the correct hostname of the server and be issued by a trusted certificate authority.
 
 ### Perform translation for character data
 

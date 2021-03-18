@@ -1,6 +1,6 @@
 ---
-description: "Data Source Wizard Screen 1 (ODBC Driver for SQL Server)"
-title: "Data Source Wizard Screen 1 (ODBC Driver for SQL Server) | Microsoft Docs"
+description: Learn how to define name and description in the Data Source Wizard to create a new ODBC connection to SQL Server.
+title: Data Source Wizard Screen 1 (ODBC Driver for SQL Server)
 ms.custom: ""
 ms.date: "09/27/2017"
 ms.prod: sql
@@ -14,8 +14,8 @@ ms.author: v-daenge
 ---
 # Data Source Wizard Screen 1
 
-Specify the name and description of the data source, and the name of the server running SQL Server to which the data source will connect. 
-    
+Specify the name and description of the data source, and the name of the server running SQL Server to which the data source will connect.
+
 ## Options
 
 ### Name

@@ -13,6 +13,7 @@ ms.author: v-daenge
 author: David-Engel
 ---
 # Custom Keystore Providers
+
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## Overview
@@ -21,7 +22,7 @@ The column encryption feature of SQL Server 2016 requires that the Encrypted Col
 
 Each keystore provider contains and manages one or more CMKs, which are identified by key paths - strings of a format defined by the provider. This CMK, along with the encryption algorithm, also a string defined by the provider, can be used to perform the encryption of a CEK and the decryption of an ECEK. The algorithm, along with the ECEK and the name of the provider, are stored in the database's encryption metadata. For more information, see [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) and [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md). Thus, the two fundamental operations of key management are:
 
-```
+```cpp
 CEK = DecryptViaCEKeystoreProvider(CEKeystoreProvider_name, Key_path, Key_algorithm, ECEK)
 
 -and-
@@ -31,13 +32,13 @@ ECEK = EncryptViaCEKeystoreProvider(CEKeyStoreProvider_name, Key_path, Key_algor
 
 where the `CEKeystoreProvider_name` is used to identify the specific Column Encryption Keystore Provider (CEKeystoreProvider), and the other arguments are used by the CEKeystoreProvider to encrypt/decrypt the (E)CEK. The name and key path are provided by the CMK metadata, while the algorithm and ECEK value are provided by the CEK metadata. Multiple keystore providers may be present alongside the default built-in provider(s). Upon performing an operation that requires the CEK, the driver uses the CMK metadata to find the appropriate keystore provider by name, and executes its decryption operation, which can be expressed as:
 
-```
+```cpp
 CEK = CEKeyStoreProvider_specific_decrypt(Key_path, Key_algorithm, ECEK)
 ```
 
 Although the driver has no need to encrypt CEKs, a key management tool may need to do so in order to implement operations such as CMK creation and rotation. These actions require performing the inverse operation:
 
-```
+```cpp
 ECEK = CEKeyStoreProvider_specific_encrypt(Key_path, Key_algorithm, CEK)
 ```
 
@@ -49,7 +50,7 @@ A keystore provider library ("provider library") is a dynamic-link library that 
 
 A `CEKeystoreProvider` structure defines the entry points of a single keystore provider:
 
-```
+```cpp
 typedef struct CEKeystoreProvider {
     wchar_t *Name;
     int (*Init)(CEKEYSTORECONTEXT *ctx, errFunc *onError);
@@ -87,9 +88,10 @@ typedef struct CEKeystoreProvider {
 
 With the exception of Free, the functions in this interface all have a pair of parameters, **ctx** and **onError**. The former identifies the context in which the function is called, while the latter is used for reporting errors. For more information, see [Contexts](#context-association) and [Error Handling](#error-handling) below.
 
-```
+```cpp
 int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
 ```
+
 Placeholder name for a provider-defined initialization function. The driver calls this function once, after a provider has been loaded, but before the first time it needs it to perform ECEK decryption or Read()/Write() requests. Use this function to perform any initialization it needs.
 
 |Argument|Description|
@@ -98,7 +100,7 @@ Placeholder name for a provider-defined initialization function. The driver call
 |`onError`|[Input] Error-reporting function.|
 |`Return Value`|Return nonzero to indicate success, or zero to indicate failure.|
 
-```
+```cpp
 int Read(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int *len);
 ```
 
@@ -109,12 +111,13 @@ Placeholder name for a provider-defined communication function. The driver calls
 |`ctx`|[Input] Operation context.|
 |`onError`|[Input] Error-reporting function.|
 |`data`|[Output] Pointer to a buffer in which the provider writes data to be read by the application. This buffer corresponds to the data field of the CEKEYSTOREDATA structure.|
-|`len`|[InOut] Pointer to a length value; upon input, this is the maximum length of the data buffer, and the provider shall not write more than *len bytes to it. Upon return, the provider should update *len with the number of bytes written.|
+|`len`|[InOut] Pointer to a length value; upon input, this is the maximum length of the data buffer, and the provider shall not write more than `*len` bytes to it. Upon return, the provider should update `*len` with the number of bytes written.|
 |`Return Value`|Return nonzero to indicate success, or zero to indicate failure.|
 
-```
+```cpp
 int Write(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int len);
 ```
+
 Placeholder name for a provider-defined communication function. The driver calls this function when the application requests to write data to a provider using the SQL_COPT_SS_CEKEYSTOREDATA connection attribute, allowing the application to write arbitrary data to the provider. For more information, see [Communicating with Keystore Providers](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers).
 
 |Argument|Description|
@@ -125,9 +128,10 @@ Placeholder name for a provider-defined communication function. The driver calls
 |`len`|[Input] The number of bytes available in data. This corresponds to the dataSize field of the CEKEYSTOREDATA structure.|
 |`Return Value`|Return nonzero to indicate success, or zero to indicate failure.|
 
-```
+```cpp
 int (*DecryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg, unsigned char *ecek, unsigned short ecekLen, unsigned char **cekOut, unsigned short *cekLen);
 ```
+
 Placeholder name for a provider-defined ECEK decryption function. The driver calls this function to decrypt an ECEK encrypted by a CMK associated with this provider into a CEK.
 
 |Argument|Description|
@@ -142,9 +146,10 @@ Placeholder name for a provider-defined ECEK decryption function. The driver cal
 |`cekLen`|[Output] The provider shall write to the address pointed to by cekLen the length of the decrypted ECEK that it has written to **cekOut.|
 |`Return Value`|Return nonzero to indicate success, or zero to indicate failure.|
 
-```
+```cpp
 int (*EncryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg, unsigned char *cek,unsigned short cekLen, unsigned char **ecekOut, unsigned short *ecekLen);
 ```
+
 Placeholder name for a provider-defined CEK encryption function. The driver does not call this function nor expose its functionality through the ODBC interface, but it is provided to allow for programmatic access to ECEK creation by key management tools.
 
 |Argument|Description|
@@ -159,14 +164,14 @@ Placeholder name for a provider-defined CEK encryption function. The driver does
 |`ecekLen`|[Output] The provider shall write to the address pointed to by ecekLen the length of the encrypted CEK that it has written to **ecekOut.|
 |`Return Value`|Return nonzero to indicate success, or zero to indicate failure.|
 
-```
+```cpp
 void (*Free)();
 ```
+
 Placeholder name for a provider-defined termination function. The driver may call this function upon normal termination of the process.
 
 > [!NOTE]
 > *Wide-character strings are 2-byte characters (UTF-16) due to how SQL Server stores them.*
-
 
 ### Error Handling
 
@@ -186,7 +191,7 @@ The **onError** parameter points to an error-reporting function, with the follow
 
 To report when an error has occurred, the provider calls onError, supplying the context parameter passed into the provider function by the driver and an error message with optional additional parameters to be formatted in it. The provider may call this function multiple times to post multiple error messages consecutively within one provider-function invocation. For example:
 
-```
+```cpp
     if (!doSomething(...))
     {
         onError(ctx, L"An error occurred in doSomething.");
@@ -194,7 +199,6 @@ To report when an error has occurred, the provider calls onError, supplying the 
         return 0;
     }
 ```
-
 
 The `msg` parameter is ordinarily a wide-character string, but additional extensions are available:
 
@@ -204,12 +208,11 @@ By using one of the special predefined values with the IDS_MSG macro, generic er
 
 For the error to be recognized by the driver, the provider function must return failure. When a failure happens in the context of an ODBC operation, the posted errors will become accessible on the connection or statement handle via the standard ODBC diagnostics mechanism (`SQLError`, `SQLGetDiagRec`, and `SQLGetDiagField`).
 
-
 ### Context Association
 
 The `CEKEYSTORECONTEXT` structure, in addition to providing context for the error callback, can also be used to determine the ODBC context in which a provider operation is executed. This context allows a provider to associate data to each of these contexts, for example, to implement per-connection configuration. For this purpose, the structure contains three opaque pointers corresponding to the environment, connection, and statement context:
 
-```
+```cpp
 typedef struct CEKeystoreContext
 {
 void *envCtx;
@@ -226,14 +229,13 @@ void *stmtCtx;
 
 Each of these contexts is an opaque value which, while not the same as the corresponding ODBC handle, can be used as a unique identifier for the handle: if handle *X* is associated with context value *Y*, then no other environment, connection, or statement handles that exist simultaneously at the same time as *X* will have a context value of *Y*, and no other context values will be associated with handle *X*. If the provider operation being accomplished lacks a particular handle context, (for example, SQLSetConnectAttr calls to load and configure providers, in which there is no statement handle) the corresponding context value in the structure is null.
 
-
 ## Example
 
 ### Keystore Provider
 
 The following code is an example of a minimal keystore provider implementation.
 
-```
+```cpp
 /* Custom Keystore Provider Example
 
 Windows:   compile with cl MyKSP.c /LD /MD /link /out:MyKSP.dll
@@ -358,7 +360,7 @@ CEKEYSTOREPROVIDER *CEKeystoreProvider[] = {
 
 The following code is a demo application that uses the keystore provider above. When running it, ensure that the provider library is in the same directory as the application binary, and that the connection string specifies (or specifies a DSN that contains) the `ColumnEncryption=Enabled` setting.
 
-```
+```cpp
 /*
  Example application for demonstration of custom keystore provider usage
 

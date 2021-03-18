@@ -1,6 +1,6 @@
 ---
-description: "Understanding row locking"
-title: "Understanding row locking | Microsoft Docs"
+description: Learn how row locking is used to control how concurrent users access data at the same time from different connections.
+title: Understanding row locking
 ms.custom: ""
 ms.date: "12/08/2020"
 ms.prod: sql

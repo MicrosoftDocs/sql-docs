@@ -63,20 +63,20 @@ manager: erikre
   
  **SQL Server:**  
   
--   If the existing [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] installation is [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2) is required for an upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   If the existing [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] installation is [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2) is required for an upgrade to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
--   If the existing [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] installation is [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) is required for an upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   If the existing [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] installation is [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) is required for an upgrade to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
  **SharePoint 2010:**  
   
--   If the existing installation is running SharePoint 2010, install the SharePoint 2010 Service Pack 2 before upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. For more information, see [Service Pack 2 for Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672). Use the PowerShell command `(Get-SPfarm).BuildVersion.ToString()` to verify the version. To reference the build version to release date, see [SharePoint 2010 Build Numbers](https://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
+-   If the existing installation is running SharePoint 2010, install the SharePoint 2010 Service Pack 2 before upgrading to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. For more information, see [Service Pack 2 for Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672). Use the PowerShell command `(Get-SPfarm).BuildVersion.ToString()` to verify the version. To reference the build version to release date, see [SharePoint 2010 Build Numbers](https://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
   
 ##  <a name="bkmk_uprgade_sharepoint2013"></a> Upgrade an Existing SharePoint 2013 Farm  
  To upgrade [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] deployed in SharePoint 2013, do the following:  
   
  ![powerpivot for sharepoint 2013 upgrade](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "powerpivot for sharepoint 2013 upgrade")  
   
-1.  Run [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Setup on backend server(s) that run [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in SharePoint mode. If the server hosts multiple instances of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], upgrade at least the **POWERPIVOT** instance. The following list is a summary of setup wizard steps related to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] upgrade:  
+1.  Run [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Setup on backend server(s) that run [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in SharePoint mode. If the server hosts multiple instances of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], upgrade at least the **POWERPIVOT** instance. The following list is a summary of setup wizard steps related to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] upgrade:  
   
     1.  In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Wizard, click **Installation**.  
   
@@ -160,7 +160,7 @@ manager: erikre
     Get-Service | where {$_.displayname -like "*powerpivot*"}  
     ```  
   
-5.  **Run [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Setup** on the first SharePoint application server that runs the **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** Windows service to upgrade the POWERPIVOT instance. On the Installation page of the SQL Server Setup Wizard, choose the upgrade option. For more information, see [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
+5.  **Run [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Setup** on the first SharePoint application server that runs the **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** Windows service to upgrade the POWERPIVOT instance. On the Installation page of the SQL Server Setup Wizard, choose the upgrade option. For more information, see [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 6.  **Restart the server** before running the configuration tool. This step ensures that any updates or prerequisites installed by SQL Server Setup are fully configured on the system.  
   
@@ -243,7 +243,7 @@ manager: erikre
 Get-PowerPivotSystemService  
 ```  
   
- Verify the **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is version 13.0.\<major build>.\<minor build>  
+ Verify the **CurrentSolutionVersion**. [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] is version 13.0.\<major build>.\<minor build>  
   
 ### Verify the version of the Analysis Services Windows Service  
  If you upgraded only some of your [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] servers in a SharePoint 2010 farm, the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] on un-upgraded servers will be older than the version expected in the farm. You will need to upgrade all of your servers to the same version in order for them to be usable. Use one of the following methods to verify the version of the SQL Server Analysis Services ( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) Windows service on each computer.  
@@ -256,7 +256,7 @@ Get-PowerPivotSystemService
   
 3.  Click **Details**.  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] file version should be 13.00.\<major build>.\<minor build>.  
+4.  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] file version should be 13.00.\<major build>.\<minor build>.  
   
 5.  Verify that this number is identical to the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution and system service version.  
   

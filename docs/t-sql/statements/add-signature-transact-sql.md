@@ -17,7 +17,7 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 06/10/2020
+ms.date: 03/16/2021
 ---
 
 # ADD SIGNATURE (Transact-SQL)
@@ -97,7 +97,9 @@ The module being signed or countersigned and the certificate or asymmetric key u
 -   Signing ProcForAlice would not work by itself, because the signature would be lost in the call to ProcSelectT1.  
   
 However, by countersigning ProcSelectT1 with the same certificate used to sign ProcForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] the signature will be kept across the call chain and will allow access to T1. If Alice attempts to call ProcSelectT1 directly, she cannot access T1, because the countersignature doesn't grant any rights. Example C below, shows the [!INCLUDE[tsql](../../includes/tsql-md.md)] for this example.  
-  
+
+:::image type="content" source="media/signing-and-countersignature.png" alt-text="signature example":::
+
 ## Permissions  
 
 Requires ALTER permission on the object and CONTROL permission on the certificate or asymmetric key. If an associated private key is protected by a password, the user also must have the password.  

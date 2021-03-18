@@ -30,10 +30,12 @@ sudo zypper install mssql-server-extensibility
 
 1. Install [R (3.3 or later)](https://www.r-project.org/) for SUSE Linux Enterprise Server (SLES). By default, R is installed in **/usr/lib/R**. This path is your **R_HOME**. If you install R in a different location, take note of that path as your **R_HOME**.
 
+    Follow these steps to install R:
+
     ```bash
     sudo zypper ar -f http://download.opensuse.org/repositories/devel:/languages:/R:/patched/openSUSE_12.3/ R-patched
-    
     sudo zypper --gpg-auto-import-keys ref
-    
     sudo zypper install R-core-libs R-core R-core-doc R-patched
     ```
+
+    You can ignore the warnings for **R-tcltk-3.6.1**, unless you need this package.

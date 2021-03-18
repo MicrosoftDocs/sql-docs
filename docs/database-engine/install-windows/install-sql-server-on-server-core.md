@@ -53,16 +53,16 @@ The Server Core installation option provides a minimal environment for running s
 |Distributed Replay Controller|No||  
 |Distributed Replay Client|Remote Only|Installation of these features on Server Core is not supported. These components can be installed on a different server that is not Server Core , and connected to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] services installed on Server Core.|  
 |SQL Client Connectivity SDK|Yes||  
-|Microsoft Sync Framework|Yes|Microsoft Sync Framework is not included in the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] installation package. You can download the appropriate version of Sync Framework from this [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) page and install it on a computer that is running Server Core.|  
+|Microsoft Sync Framework|Yes|Microsoft Sync Framework is not included in the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] installation package. You can download the appropriate version of Sync Framework from this [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) page and install it on a computer that is running Server Core.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|No||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|No||  
   
 ## Supported scenarios  
- The following table shows the supported scenario matrix for installing [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] on a Server Core.  
+ The following table shows the supported scenario matrix for installing [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] on a Server Core.  
   
 | Installation | Valid target |  
 |-|-|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions|All [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 64-bit editions |  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions|All [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 64-bit editions |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] language|All languages|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] language on OS language/locale (combination)|ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on JPN (Japanese) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on GER (German) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on CHS (Chinese-China) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on ARA (Arabic (SA)) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on THA (Thai) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on TRK (Turkish) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on pt-PT (Portuguese Portugal) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on ENG (English) Windows|  
 |Windows edition|Windows Server 2019 Datacenter <br/><br/> Windows Server 2019 Standard <br /><br />  [!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
@@ -71,7 +71,7 @@ The Server Core installation option provides a minimal environment for running s
  On Server Core installations, upgrading from [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] is supported.  
   
 ## Install  
- [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] does not support setup by using the installation wizard on the Server Core operating system. When installing on Server Core, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup supports full quiet mode by using the /Q parameter, or Quiet Simple mode by using the /QS parameter. For more information, see [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md).  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] does not support setup by using the installation wizard on the Server Core operating system. When installing on Server Core, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup supports full quiet mode by using the /Q parameter, or Quiet Simple mode by using the /QS parameter. For more information, see [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md).  
   
  Regardless of the installation method, you are required to confirm acceptance of the software license terms as an individual or on behalf of an entity, unless your use of the software is governed by a separate agreement such as a [!INCLUDE[msCoName](../../includes/msconame-md.md)] volume licensing agreement or a third-party agreement with an ISV or OEM.  
   
@@ -107,7 +107,7 @@ The Server Core installation option provides a minimal environment for running s
 
   
 ### Installation options  
- The Setup supports the following installation options while installing [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] on a Server Core operating system:  
+ The Setup supports the following installation options while installing [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] on a Server Core operating system:  
   
 1.  **Installation from Command Line**  
   
@@ -181,7 +181,7 @@ The Server Core installation option provides a minimal environment for running s
   
     -   Installing all supported features  
   
-        The following example shows how to install all supported features of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] on Server Core:  
+        The following example shows how to install all supported features of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] on Server Core:  
   
         ```console
         ; SQL Server Configuration File  
@@ -254,7 +254,7 @@ The Server Core installation option provides a minimal environment for running s
          If the DefaultSetup.ini file does not exist, you can create it and copy it to the \x86 and \x64 folders at the root level of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source media.  
   
 ## Configure remote access of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Server Core  
- Perform the actions described below to configure remote access of a [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] instance that is running on Server Core.  
+ Perform the actions described below to configure remote access of a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance that is running on Server Core.  
   
 ### Enable remote connections on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
@@ -299,7 +299,7 @@ $Tcp
   
 ## Uninstall
 
- After you log on to a computer that is running Server Core, you have a limited desktop environment with an Administrator command prompt. You can use this command prompt to launch the uninstall an of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]. To uninstall an instance of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)], launch the uninstallation from the command prompt in full quiet mode by using the /Q parameter, or quiet simple mode by using the /QS parameter. The /QS parameter shows progress through the UI, but does not accept any input. /Q runs in a quiet mode without any user interface.  
+ After you log on to a computer that is running Server Core, you have a limited desktop environment with an Administrator command prompt. You can use this command prompt to launch the uninstall an of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. To uninstall an instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], launch the uninstallation from the command prompt in full quiet mode by using the /Q parameter, or quiet simple mode by using the /QS parameter. The /QS parameter shows progress through the UI, but does not accept any input. /Q runs in a quiet mode without any user interface.  
   
  To uninstall an existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   

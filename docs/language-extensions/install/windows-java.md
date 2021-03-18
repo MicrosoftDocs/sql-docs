@@ -144,7 +144,7 @@ If you did not install the default Zulu Open JRE that was included with SQL Serv
 1. Give AppContainer permissions
 
     ```cmd
-    icacls “<PATH to JRE>” /grant *S-1-15-2-1:(OI)(CI)RX /T
+    icacls "<PATH to JRE>" /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
 
     > [!NOTE]

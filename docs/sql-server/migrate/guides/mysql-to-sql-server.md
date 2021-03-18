@@ -1,18 +1,19 @@
 ---
-title: Migrate MySQL to SQL Server
+title: "MySQL to SQL Server: Migration guide"
 description: 'This guide teaches you to migrate your MySQL databases to Microsoft SQL Server by using SQL Server Migration for MySQL (SSMA for MySQL). '
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: migration-guide
 ms.custom:
 ms.devlang:
-ms.topic: conceptual
+ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/19/2021
 ---
 
 # Migration guide: MySQL to SQL Server
+[!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
 
 This guide helps you migrate your MySQL databases to SQL Server. 
 

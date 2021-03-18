@@ -118,13 +118,13 @@ conceptualContent:
           url: https://www.microsoft.com/azure/partners/advspec?filters=windows-server-and-sql-server-migration-to-azure
           itemType: reference
         - text: Cloud Economics
-          url: https://azure.microsoft.com/overview/cloud-economics/#cloud
+          url: https://azure.microsoft.com/en-gb/overview/cloud-economics
           itemType: reference
         - text: Total Cost of Ownership Calculator
           url: https://azure.microsoft.com/pricing/tco/calculator/
           itemType: reference
         - text: Azure Hybrid Benefit
-          url: https://azure.microsoft.com/pricing/hybrid-benefit/#customer-stories/azure/cosmos-db/table-import
+          url: https://azure.microsoft.com/en-us/pricing/hybrid-benefit/
           itemType: reference
         - text: Browse Azure Architecture
           url: https://docs.microsoft.com/azure/architecture/browse/?azure_categories=migration
@@ -195,7 +195,7 @@ additionalContent:
         # Card
         - title: Minecraft Realms (United States)
           summary: Minecraft Realms migrates from AWS to Azure with minimal disruption to the user base. 
-          url: hhttps://developer.microsoft.com/en-us/games/blog/migrating-minecraft-realms-from-aws-to-azure/
+          url: https://developer.microsoft.com/en-us/games/blog/migrating-minecraft-realms-from-aws-to-azure/
         # Card
         - title: CCC Marketing (Japan)
           summary: CCC Marketing switched it's data analytics infrastructure from Oracle to Microsoft Azure. 

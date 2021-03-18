@@ -1,11 +1,26 @@
 ---
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/08/2021
+ms.date: 03/18/2021
 ms.topic: include
 author: dphansen
 ms.author: davidph
 ---
+## Prerequisites
+
+Before installing a R custom runtime, install the following:
+
++ Install SQL Server 2019 for Linux. You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) version 12, and Ubuntu. For more information, see [the Installation guidance for SQL Server on Linux](../../../linux/sql-server-linux-setup.md).
+
++ Upgrade to Cumulative Update (CU) 3 or later for SQL Server 2019. Follow these steps:
+    1. Configure the repositories for Cumulative Updates. For more information, see [Configure repositories for installing and upgrading SQL Server on Linux](../../../linux/sql-server-linux-change-repo.md).
+
+    1. Update the **mssql-server** package to the latest Cumulative Update. For more information, see [the Update or Upgrade SQL Server section in the installation guidance for SQL Server on Linux](../../../linux/sql-server-linux-setup.md#upgrade).
+
++ RExtension requires GLIBCXX_3.4.20. Make sure the version of **libstdc++.so.6** on your RHEL m/c provides this. If **libstdc++.so.6** is not the correct version, you will see this error:
+
+    *Exthost: Load extension failed /lib64/libstdc++.so.6: version `GLIBCXX_3.4.20' not found (required by /home/mssql_satellite/externallanguagessandboxpath/libRExtension.so.1.1)*
+
 ## Install Language Extensions
 
 > [!NOTE]
@@ -28,4 +43,8 @@ sudo yum install mssql-server-extensibility
     sudo yum erase microsoft-r-open-mro-3.5.2
     ```
 
-1. Install [R (3.3 or later)](https://www.r-project.org/) for Red Hat Enterprise Linux (RHEL). By default, R is installed in **/usr/lib/R**. This path is your **R_HOME**. If you install R in a different location, take note of that path as your **R_HOME**.
+1. Install [R (3.3 or later)](https://www.r-project.org/) for Red Hat Enterprise Linux (RHEL). By default, R is installed in **/usr/lib64/R**. This path is your **R_HOME**. If you install R in a different location, take note of that path as your **R_HOME**.
+
+    ```bash
+    sudo yum install -y R
+    ```

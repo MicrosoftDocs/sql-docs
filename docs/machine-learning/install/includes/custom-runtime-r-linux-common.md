@@ -1,15 +1,21 @@
 ---
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/08/2021
+ms.date: 02/18/2021
 ms.topic: include
 author: dphansen
 ms.author: davidph
 ---
 ## Custom installation of R
 
+::: zone pivot="platform-linux-ubuntu"
 > [!NOTE]
 > If you have installed R in the default location of **/usr/lib/R**, you can skip this section and move on to the [Install Rcpp package](#install-rcpp-package-linux) section.
+::: zone-end
+::: zone pivot="platform-linux-sles"
+> [!NOTE]
+> If you have installed R in the default location of **/usr/lib/R**, you can skip this section and move on to the [Install Rcpp package](#install-rcpp-package-linux) section.
+::: zone-end
 
 ### Update the environment variables
 

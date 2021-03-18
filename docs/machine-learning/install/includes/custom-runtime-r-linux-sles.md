@@ -28,7 +28,7 @@ sudo zypper install mssql-server-extensibility
     sudo zypper remove microsoft-r-open-mro-3.4.4
     ```
 
-1. Install [R (3.3 or later)](https://www.r-project.org/) for SUSE Linux Enterprise Server (SLES). By default, R is installed in **/usr/lib/R**. This path is your **R_HOME**. If you install R in a different location, take note of that path as your **R_HOME**.
+1. Install [R (3.3 or later)](https://www.r-project.org/) for SUSE Linux Enterprise Server (SLES). By default, R is installed in **/usr/lib64/R**. This path is your **R_HOME**. If you install R in a different location, take note of that path as your **R_HOME**.
 
     Follow these steps to install R:
 

@@ -1,16 +1,12 @@
 ---
-title: "Migration guide: DB2 to SQL Server"
+title: "DB2 to SQL Server: Migration guide"
 description: 'This guide teaches you to migrate your DB2 databases to Microsoft SQL Server by using SQL Server Migration for DB2 (SSMA for DB2). '
 ms.custom: ""
 ms.date: 03/19/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: migration-guide
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "processors [SQL Server], supported"
-  - "number of processors supported"
-  - "maximum number of processors supported"
+ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
 ---
@@ -26,7 +22,7 @@ For other migration guides, see [Database Migration](https://datamigration.micro
 
 To migrate your DB2 database to SQL Server, you need:
 
-- to verify your source environment is supported.
+- To verify your source environment is supported.
 - [SQL Server Migration Assistant (SSMA) for DB2](https://www.microsoft.com/download/details.aspx?id=54254).
 
 

@@ -90,7 +90,7 @@ conceptualContent:
         - text: Azure SQL Database
           url:  /azure/azure-sql/migration-guides/database/sap-ase-to-sql-database
           itemType: how-to-guide
-    - title: "Open source"
+    - title: "Open-source"
       links:
         - text: MariaDB to Azure Database for MariaDB
           url: /azure/mariadb/howto-migrate-dump-restore
@@ -198,5 +198,5 @@ additionalContent:
           url: https://developer.microsoft.com/games/blog/migrating-minecraft-realms-from-aws-to-azure/
         # Card
         - title: CCC Marketing (Japan)
-          summary: CCC Marketing switched it's data analytics infrastructure from Oracle to Microsoft Azure. 
+          summary: CCC Marketing switched its data analytics infrastructure from Oracle to Microsoft Azure. 
           url: https://customers.microsoft.com/story/843276-ccc-marketing-professional-services-azure-en-japan

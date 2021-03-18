@@ -107,7 +107,7 @@ Follow these steps to download and register the R language extension, which is u
 
     ```sql
     CREATE EXTERNAL LANGUAGE [myR]
-    FROM (CONTENT = N'/path/to/R-lang-extension-linux-release.zip', FILE_NAME = 'libRExtension.so.1.0');
+    FROM (CONTENT = N'/path/to/R-lang-extension-linux-release.zip', FILE_NAME = 'libRExtension.so.1.1');
     GO
     ```
 

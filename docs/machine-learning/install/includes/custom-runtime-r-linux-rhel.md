@@ -17,9 +17,7 @@ Before installing a R custom runtime, install the following:
 
     1. Update the **mssql-server** package to the latest Cumulative Update. For more information, see [the Update or Upgrade SQL Server section in the installation guidance for SQL Server on Linux](../../../linux/sql-server-linux-setup.md#upgrade).
 
-+ RExtension requires GLIBCXX_3.4.20. Make sure the version of **libstdc++.so.6** on your RHEL m/c provides this. If **libstdc++.so.6** is not the correct version, you will see this error:
-
-    *Exthost: Load extension failed /lib64/libstdc++.so.6: version `GLIBCXX_3.4.20' not found (required by /home/mssql_satellite/externallanguagessandboxpath/libRExtension.so.1.1)*
++ RExtension requires GLIBCXX_3.4.20. Make sure the version of **libstdc++.so.6** on your RHEL m/c provides this.
 
 ## Install Language Extensions
 

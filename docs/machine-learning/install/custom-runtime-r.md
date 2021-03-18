@@ -67,7 +67,7 @@ RECONFIGURE WITH OVERRIDE;
 
 ## Verify installation
 
-Use the following SQL script to verify the installation and functionality of the Python custom runtime.
+Use the following SQL script to verify the installation and functionality of the R custom runtime.
 
 ```sql
 EXEC sp_execute_external_script
@@ -78,6 +78,10 @@ print(file.path(R.home("bin"), "R"));
 print(R.version);
 print("Hello RExtension!");'
 ```
+
+::: zone pivot="platform-linux-rhel"
+[!INCLUDE [R custom runtime - Linux - RHEL known issues](includes/custom-runtime-r-linux-known-issues-rhel.md)]
+::: zone-end
 
 ## Next steps
 

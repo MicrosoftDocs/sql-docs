@@ -108,9 +108,11 @@ To create an assessment, follow these steps:
 
    Select the Oracle schema you want to migrate:
 
-   ![Select schema to load](./media/oracle-to-sql-server/connect-select-schema.png)
+   ![Select schema to load](./media/oracle-to-sql-server/select-schema.png)
 
 1. In **Oracle Metadata Explorer**, select the Oracle schema, and then select **Create Report** to generate an HTML report with conversion statistics and error/warnings, if any.
+
+   ![Create report](./media/oracle-to-sql-server/create-report.png)
 
 1. Review the HTML report for conversion statistics, as well as errors and warnings. Analyze it to understand conversion issues and resolutions.
 
@@ -151,8 +153,6 @@ To convert the schema, follow these steps:
    ![Convert Schema](./media/oracle-to-sql-server/convert-schema.png)
 
 1. After the schema is finished converting, compare and review the structure of the schema to identify potential problems.
-
-   ![Convert Schema Compare And Review](./media/oracle-to-sql-server/compare-schema.png)
 
    Compare converted objects to original objects: 
 

@@ -73,10 +73,10 @@ Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system database
     setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="\\FileServer\Share1\" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-     For more information about the usage of various command line parameter options in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], see [Install SQL Server 2016 from the Command Prompt](./install-sql-server-from-the-command-prompt.md).  
+     For more information about the usage of various command line parameter options in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], see [Install SQL Server 2016 from the Command Prompt](./install-sql-server-from-the-command-prompt.md).  
   
 ## Operating system considerations (SMB Protocol vs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
- Different Windows operating systems has different SMB protocol versions, and the SMB protocol version is transparent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can find the benefits of different SMB protocol versions with respect to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Different Windows operating systems has different SMB protocol versions, and the SMB protocol version is transparent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can find the benefits of different SMB protocol versions with respect to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 |Operating System|SMB2 protocol version|Benefits to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
@@ -105,7 +105,7 @@ Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system database
   
 ## Known issues  
   
--   After you detach a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database that resides on network-attached storage, you might run into database permission issue while trying to reattach the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. For more information see, [Error 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md).
+-   After you detach a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] database that resides on network-attached storage, you might run into database permission issue while trying to reattach the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. For more information see, [Error 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md).
   
 -   If SMB file share is used as a storage option for a clustered instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], by default the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Diagnostics Log cannot be written to the file share because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource DLL lacks the read/write permission on the file share. To resolve this issue, try one of the following methods:  
   

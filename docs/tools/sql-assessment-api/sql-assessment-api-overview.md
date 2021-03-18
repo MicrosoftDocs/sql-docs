@@ -32,7 +32,7 @@ The API can be used to assess:
 The API is also used by SQL Server Assessment Extension for Azure Data Studio (ADS).
 
 >[!NOTE]
->The SQL Assessment API provides assessment on a variety of areas, but it does not go deeply into security. We recommend you use [SQL Vulnerability Assessment](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment) to proactively improve your database security.
+>The SQL Assessment API provides assessment on a variety of areas, but it does not go deeply into security. We recommend you use [SQL Vulnerability Assessment](../../relational-databases/security/sql-vulnerability-assessment.md) to proactively improve your database security.
 
 ## Rules
 
@@ -163,4 +163,4 @@ You can string together rulesets by adding one or more JSON files as parameters 
 
 * [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/overview-smo.md)
 * [PowerShell](../../powershell/download-sql-server-ps-module.md)
-* [SQL Vulnerability Assessment](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment)
+* [SQL Vulnerability Assessment](../../relational-databases/security/sql-vulnerability-assessment.md)

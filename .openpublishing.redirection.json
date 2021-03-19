@@ -8516,6 +8516,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/database-engine/configure-windows/precompute-rank-server-configuration-option.md",
+      "redirect_url": "/docs/database-engine/discontinued-database-engine-functionality-in-sql-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md",
       "redirect_url": "/previous-versions/sql/2014/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections",
       "redirect_document_id": false

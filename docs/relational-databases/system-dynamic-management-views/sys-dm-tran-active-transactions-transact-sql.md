@@ -50,7 +50,28 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
 On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+
+
+## Examples  
   
+### A. Using sys.dm_tran_active_transactions with other DMVs to find information about active transactions
+ The following example shows any active transactions on the system and provides detailed information about the transaction, the user session, the application that submitted, and the query that started it and many others.  
+  
+```sql  
+select
+  getdate() as now,
+  DATEDIFF(SECOND, transaction_begin_time, GETDATE()) as tran_elapsed_time_seconds,
+  *
+FROM
+  sys.dm_tran_active_transactions at
+  JOIN sys.dm_tran_session_transactions st ON st.transaction_id = at.transaction_id
+  INNER JOIN sys.sysprocesses sp ON st.session_id = sp.spid 
+    CROSS APPLY sys.dm_exec_sql_text(sql_handle) txt
+order by
+  tran_elapsed_time_seconds desc
+```
+
+
 ## See Also  
  [sys.dm_tran_session_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   
  [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   

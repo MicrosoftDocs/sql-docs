@@ -26,7 +26,7 @@ After upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], complete the fo
   
 - **Integration Services:**  
   
-     Migrate Integration Services packages to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] format. For more information, see [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
+     Migrate Integration Services packages to the latest format. For more information, see [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
   
 - **Reporting Services:** For a new installation upgrade, restore the Reporting Services  encryption Keys. For more information, see [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   

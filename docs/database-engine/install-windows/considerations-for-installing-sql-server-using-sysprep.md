@@ -55,7 +55,7 @@ You can use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPre
     - You cannot specify Product IDs for a prepared instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express editions.  
   
 ## Supported [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installations  
-SysPrep in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] supports all features, including tools, of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+SysPrep in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] supports all features, including tools.  
   
 You can prepare multiple instances for side-by-side installations of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] or earlier versions. The features of these instances must support SysPrep.  
   

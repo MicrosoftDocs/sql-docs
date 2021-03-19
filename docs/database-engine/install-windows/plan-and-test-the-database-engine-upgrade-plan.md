@@ -43,9 +43,6 @@ monikerRange: ">=sql-server-2016"
   
        -   TLS Security update  
 
-   >[!NOTE]
-   >The preceding list also applies to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
-  
 -   **Third-party components:** Determine the compatibility of third-party components, such as integrated backup.  
   
 -   **Target environment:** Verify that your target environment meets the hardware and software requirements and that it can support the original system's requirements. For example, your upgrade may involve the consolidation of multiple SQL Server instances to a single, new [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance, or the virtualization of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment to a private or public cloud.  

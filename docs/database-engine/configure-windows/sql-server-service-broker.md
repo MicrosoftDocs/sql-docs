@@ -92,7 +92,7 @@ FROM ExpenseQueue;
   
 -   [ssbdiagnose Utility &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
- See the [previously published documentation](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) for [!INCLUDE[ssSB](../../includes/sssb-md.md)] concepts and for development and management tasks. This documentation is not reproduced in the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] documentation due to the small number of changes in [!INCLUDE[ssSB](../../includes/sssb-md.md)] in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
+ See the [previously published documentation](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) for [!INCLUDE[ssSB](../../includes/sssb-md.md)] concepts and for development and management tasks. This documentation is not reproduced in the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] documentation due to the small number of changes in [!INCLUDE[ssSB](../../includes/sssb-md.md)] in recent versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ## What's new in Service Broker  
 

@@ -32,7 +32,7 @@ ms.author: wiassaf
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|Unique identifier of the availability group.|  
-|**primary_replica**|**varchar(128)**|Name of the server instance that is hosting the current primary replica.<br /><br /> NULL = Not the primary replica or unable to communicate with the WSFC failover cluster.|  
+|**primary_replica**|**varchar(128)**|Name of the server instance that is hosting the current primary replica.<br /><br /> NULL = Not the primary replica and unable to communicate with the WSFC failover cluster.|  
 |**primary_recovery_health**|**tinyint**|Indicates the recovery health of the primary replica, one of:<br /><br /> 0 = In progress<br /><br /> 1 = Online<br /><br /> NULL<br /><br /> On secondary replicas the **primary_recovery_health** column is NULL.|  
 |**primary_recovery_health_desc**|**nvarchar(60)**|Description of **primary_replica_health**, one of:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**secondary_recovery_health**|**tinyint**|Indicates the recovery health of a secondary replica replica,one of:<br /><br /> 0 = In progress<br /><br /> 1 = Online<br /><br /> NULL<br /><br /> On the primary replica, the **secondary_recovery_health** column is NULL.|  

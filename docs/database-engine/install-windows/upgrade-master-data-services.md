@@ -27,7 +27,6 @@ monikerRange: ">=sql-server-2016"
 -   [Upgrade with Restoring a Database from Backup](../../database-engine/install-windows/upgrade-master-data-services.md#restore)  
   
 > [!IMPORTANT]  
-> -   Upgrading from the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CTP1 release to the CTP2 release is not supported.  
 > -   Back up your database before performing any upgrade.  
 > -   The upgrade process recreates stored procedures and upgrades tables used by [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Any customizations you have made to either of these components may be lost.  
 > -   Model deployment packages can be used only in the edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] they were created in. You cannot deploy model deployment packages created in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].  

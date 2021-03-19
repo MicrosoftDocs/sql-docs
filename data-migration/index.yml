@@ -4,7 +4,7 @@ summary: "Step-by-step guidance for modernizing your data assets. "
 brand: sql
 metadata:
    title: Azure Database Migration Guides | Microsoft Docs
-   description: "Step-by-step guidance for modernizing your data assets."
+   description: "Step-by-step guidance for modernizing your data assets by migrating to SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Database, Azure Cosmos DB, SQL Server on Azure VMs and Azure Synapse Analytics. "
    ms.topic: hub-page
 
 # itemType: how-to-guide | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new

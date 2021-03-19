@@ -4934,6 +4934,8 @@ items:
     href: /azure/dms/dms-overview
   - name: Migration guides
     items:
+    - name: From SQL Server (upgrade)
+      href: sql-server/migrate/guides/sql-server-to-sql-server-upgrade-guide.md
     - name: From Access
       href: sql-server/migrate/guides/access-to-sql-server.md
     - name: From DB2

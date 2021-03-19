@@ -15,7 +15,7 @@ conceptualContent:
     - title: "SQL Server to"
       links:
         - text: "SQL Server (upgrade)"
-          url: /sql/database-engine/install-windows/upgrade-sql-server
+          url: /sql/sql-server/migrate/guides/sql-server-to-sql-server-upgrade-guide
           itemType: how-to-guide
         - text: Azure SQL Database
           url: /azure/azure-sql/migration-guides/database/sql-server-to-sql-database-overview

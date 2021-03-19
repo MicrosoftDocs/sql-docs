@@ -95,7 +95,7 @@ To convert the schema, follow these steps:
 
    ![Compare and review object](./media/mysql-to-sql-server/table-comparison.png)
 
-   Compare converted procedures to original procedures: 
+   Compare converted views to original views: 
 
    ![Compare and review converted code](./media/mysql-to-sql-server/procedure-comparison.png)
    

@@ -20,12 +20,10 @@ ms.author: chadam
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|Availability Replicas Data Synchronization State|  
-|**Issue**|Some availability replicas are not synchronizing data.|  
-|**Category**|**Warning**|  
-|**Facet**|Availability group|  
+- **Policy Name**: Availability Replicas Data Synchronization State
+- **Issue**: Some availability replicas are not synchronizing data.
+- **Category**: **Warning**
+- **Facet**: Availability group  
   
 ## Description  
  This policy rolls up the data synchronization state of all availability replicas in the availability group and checks if the synchronization of any availability replica is not operational. The policy is in an unhealthy state if any of the data synchronization states of the availability replica is NOT SYNCRONIZING.  

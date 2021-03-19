@@ -36,7 +36,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
 
 <a name="permissions-db"></a>
 
-## Grant databases permissions
+## Grant database permissions
 
 While a database user is running scripts, the database user might need to read data from other databases. The database user might also need to create new tables to store results, and write data into tables.
 

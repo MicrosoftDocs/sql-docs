@@ -7,7 +7,6 @@ ms.technology: migration-guide
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 03/19/2021
 ---
 
 # Upgrade SQL Server to SQL Server
@@ -219,13 +218,13 @@ To use the MAP Toolkit to perform an inventory scan, perform the following steps
 
    1. After setting up the credentials, select **Save**, and then select **Next**.
 
-      ![MAP Inventory and Assessment Wizard Discovery Credentials](./media/sql-server-to-sql-server-upgrade-guide/mapdiscoverycredsindividual.png)
+      ![MAP Inventory and Assessment Wizard Discovery All Computer Credentials](./media/sql-server-to-sql-server-upgrade-guide/mapdiscoverycredsindividual.png)
    1. Verify your selection summary, and then select **Finish**.
 
       ![MAP Inventory and Assessment Wizard Summary](./media/sql-server-to-sql-server-upgrade-guide/mapdiscoverysummary.png)
    1. Wait for a few minutes (depending on the number of databases) for the Data Collection summary report.
 
-      ![MAP Inventory and Assessment Wizard Summary](./media/sql-server-to-sql-server-upgrade-guide/mapdatacollectionsummary.png)
+      ![MAP Inventory and Assessment Wizard Summary Report](./media/sql-server-to-sql-server-upgrade-guide/mapdatacollectionsummary.png)
    1. Select **Close**.
 
       The Main window of the tool appears, showing a summary of the Database Discovery completed so far.
@@ -239,7 +238,7 @@ To use the MAP Toolkit to perform an inventory scan, perform the following steps
 
       This will take a couple of seconds to a few minutes depending on the size of the inventory completed during discovery.
 
-      ![MAP Report Generation](./media/sql-server-to-sql-server-upgrade-guide/mapexcelreportdone.png)
+      ![MAP Report Generation Status](./media/sql-server-to-sql-server-upgrade-guide/mapexcelreportdone.png)
 
 ### Assess
 
@@ -382,7 +381,7 @@ To use DEA for database migration testing, perform the following steps.
 
       On the drill-down page for a performance change category, you will see a list of queries in that category.
 
-      ![Drill down report](./media/sql-server-to-sql-server-upgrade-guide/deaerrorqueries.png)
+      ![Drill down report queries](./media/sql-server-to-sql-server-upgrade-guide/deaerrorqueries.png)
    1. Select an individual query to get performance summary statistics, error information, and query plan information.
 
       ![Summary Statistics](./media/sql-server-to-sql-server-upgrade-guide/deasummarystats.png)

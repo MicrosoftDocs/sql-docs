@@ -41,8 +41,7 @@ Before you start the migration using SSMA, you must:
 To use [SSMA for MySQL](https://aka.ms/ssmaformysql) to create an assessment, follow these steps: 
 
 1. Open SQL Server Migration Assistant for MySQL. 
-1. Select **File** and choose **New Project**. Provide the project name, a location to save your project and the migration target.
-1. Select **SQL Server** in the **Migrate to** option. 
+1. Select **File** and choose **New Project**. Provide the project name, a location to save your project and the migration target. Select **SQL Server** in the **Migrate to** option. 
 
    ![New Project](./media/mysql-to-sql-server/new-project.png)
 
@@ -74,7 +73,7 @@ Validate the default data type mappings and change them based on requirements if
 
    ![Type Mappings](./media/mysql-to-sql-server/type-mappings.png)
 
-1. You can change the type mapping for each table by selecting the table in the **Oracle Metadata explorer**. 
+1. You can change the type mapping for each table by selecting the table in the **MySQL Metadata explorer**. 
 
 
 To learn more about conversion settings in SSMA, see [Project Settings](../../../ssma/mysql/project-settings-conversion-mysqltosql.md)
@@ -98,18 +97,13 @@ To convert the schema, follow these steps:
 
 1. Compare and review the structure of the schema to identify potential problems. 
 
-   After schema conversion you can save this project locally for an offline schema remediation exercise. 
-   
-   
-   ![Convert Schema Compare And Review](./media/mysql-to-sql-server/compare-schema.png)
-
    Compare converted objects to original objects: 
 
-   ![Convert Schema Compare And Review object code](./media/mysql-to-sql-server/table-mapping.png)
+   ![Compare and review object](./media/mysql-to-sql-server/table-comparison.png)
 
    Compare converted procedures to original procedures: 
 
-   ![Convert Schema Compare And Review object code](./media/mysql-to-sql-server/procedure-comparison.png)
+   ![Compare and review converted code](./media/mysql-to-sql-server/procedure-comparison.png)
    
    
    Select **Save Project** from the **File** menu. This gives you an opportunity to evaluate the source and target schemas offline and perform remediation before you can publish the schema to SQL Server.

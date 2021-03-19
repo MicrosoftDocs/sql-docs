@@ -29,14 +29,8 @@ To migrate your MySQL database to SQL Server, you need:
 ## Pre-migration 
 
 After you have met the prerequisites, you are ready to discover your source MySQL environment and assess the feasibility of your migration.
-Before you start the migration using SSMA, you must:
-
-1.  Create a new project.  
-2.  Connect to a MySQL database.
-3.  After a successful connection, MySQL schemas will appear in MySQL Metadata Explorer. Right-click objects in MySQL Metadata Explorer to perform tasks such as create reports that assess conversions to SQL Server.
 
 ### Assess 
-
 
 To use [SSMA for MySQL](https://aka.ms/ssmaformysql) to create an assessment, follow these steps: 
 
@@ -76,7 +70,7 @@ Validate the default data type mappings and change them based on requirements if
 1. You can change the type mapping for each table by selecting the table in the **MySQL Metadata explorer**. 
 
 
-To learn more about conversion settings in SSMA, see [Project Settings](../../../ssma/mysql/project-settings-conversion-mysqltosql.md)
+To learn more about conversion settings in SSMA, see [Project Settings](../../../ssma/mysql/project-settings-conversion-mysqltosql.md).
 
 ### Convert schema
 
@@ -108,7 +102,7 @@ To convert the schema, follow these steps:
    
    Select **Save Project** from the **File** menu. This gives you an opportunity to evaluate the source and target schemas offline and perform remediation before you can publish the schema to SQL Server.
 
-To learn more, see [Converting MySQL databases](../../../ssma/mysql/converting-mysql-databases-mysqltosql.md)
+To learn more, see [Converting MySQL databases](../../../ssma/mysql/converting-mysql-databases-mysqltosql.md).
 
 ## Migration 
 
@@ -195,7 +189,7 @@ These resources were developed as part of the Data SQL Ninja Program, which is s
 
 ## Next steps
 
-- To learn more about migrating MySQL databases to SQL Server, see [SSMA documentation for MySQL](../../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)
+- To learn more about migrating MySQL databases to SQL Server, see [SSMA documentation for MySQL](../../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md).
 
 - For a matrix of the Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios as well as specialty tasks, see the article [Service and tools for data migration](https://docs.microsoft.com/azure/dms/dms-tools-matrix).
 

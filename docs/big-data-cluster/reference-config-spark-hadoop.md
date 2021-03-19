@@ -124,7 +124,8 @@ The HDFS settings below are those that have BDC-specific defaults but are user c
 | hdfs-env.HDFS_AUDIT_LOGGER                                                 | HDFS Audit Logger Options.                                                                          | string | INFO,RFAAUDIT                                                                          |
 | core-site.hadoop.security.group.mapping.ldap.search.group.hierarchy.levels | Hierarchy levels for core site Hadoop LDAP Search group.                                            | int    | 10                                                                                     |
 | core-site.fs.permissions.umask-mode                                        | Permission umask mode.                                                                              | string | 077                                                                                    |
-| core-site.hadoop.security.kms.client.failover.max.retries                  | Max retries for client failover.                                                                    | int    | 20                                                                                     || zoo-cfg.tickTime                                       | Tick Time for 'ZooKeeper' config.                         | int    | 2000                |
+| core-site.hadoop.security.kms.client.failover.max.retries                  | Max retries for client failover.                                                                    | int    | 20                                                                                     |
+| zoo-cfg.tickTime                                       | Tick Time for 'ZooKeeper' config.                         | int    | 2000                |
 | zoo-cfg.initLimit                                      | Init Time for 'ZooKeeper' config.                         | int    | 10                  |
 | zoo-cfg.syncLimit                                      | Sync Time for 'ZooKeeper' config.                         | int    | 5                   |
 | zoo-cfg.maxClientCnxns                                 | Max Client connections for 'ZooKeeper' config.            | int    | 60                  |
@@ -277,8 +278,8 @@ The following `hdfs` configurations are unsupported and cannot be changed in the
 |          |                             |                               | hadoop.http.authentication.kerberos.principal         |
 |          |                             |                               | hadoop.http.authentication.kerberos.keytab            |
 |          |                             |                               | hadoop.http.filter.initializers                       |
-|          |                             |                               | hadoop.security.group.mapping.*                       |                               |
-|          |                             |                               | hadoop.security.key.provider.path                     |                               |
+|          |                             |                               | hadoop.security.group.mapping.*                       |
+|          |                             |                               | hadoop.security.key.provider.path                     |
 |          | mapred-env                  | mapred-env.sh                 |                                                       |
 |          | hdfs-site                   | hdfs-site.xml                 | dfs.namenode.name.dir                                 |
 |          |                             |                               | dfs.datanode.data.dir                                 |

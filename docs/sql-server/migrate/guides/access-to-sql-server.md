@@ -40,18 +40,61 @@ By using SQL Server Migration Assistant (SSMA) for Access, you can review databa
 To create an assessment, follow these steps:
 
 1. Open [SQL Server Migration Assistant for Access](https://www.microsoft.com/download/details.aspx?id=54255). 
-1. Select **File** and then choose **New Project**. Provide a name for your migration project. 
+1. Select **File** and then choose **New Project**. Choose your migration target and provide a name for your migration project. 
+
+   ![New Project](./media/access-to-sql-server/new-project.png)
+
 1. Select **Add Databases** and choose the databases to add to  your project. 
+
+   ![Add databases](./media/access-to-sql-server/add-databases.png)
+
 1. In **Access Metadata Explorer**, right-click the database you want to assess, and then choose **Create report**. 
+
+   ![Create Report](./media/access-to-sql-server/create-report.png)
+
 1. Review the assessment report. For example: 
+
+   ![Sample Report](./media/access-to-sql-server/sample-report.png)
+
+### Validate data types
+
+Validate the default data type mappings and change them based on requirements if necessary. To do so, follow these steps: 
+
+1. Select **Tools** from the menu. 
+1. Select **Project Settings**. 
+1. Select the **Type mappings** tab. 
+
+   ![Type Mappings](./media/access-to-sql-server/type-mappings.png)
+
+1. You can change the type mapping for each table by selecting the table in the **Oracle Metadata explorer**. 
+
+
 
 ### Convert 
 
 To convert database objects, follow these steps: 
 
-1. Select **Connect to Azure SQL Database** and provide connection details. 
-1. Right-click the database in **Access Metadata Explorer** and choose **Convert schema**.  
+1. Select **Connect to SQL Server** and provide connection details. 
+
+
+   ![Connect to SQL Server](./media/access-to-sql-server/connect-to-sql-server.png)
+
+1. Right-click the database in **Access Metadata Explorer** and choose **Convert schema**. Alternatively, you can choose **Convert schema** from the top line navigation bar after choosing your database. 
+
+   ![Convert the schema](./media/access-to-sql-server/convert-schema.png)
+
+   Compare converted queries to original queries: 
+
+   ![Compare converted queries ](./media/access-to-sql-server/query-comparison.png)
+
+   Compare converted objects to original objects: 
+
+   ![Review converted objects](./media/access-to-sql-server/table-comparison.png)
+
 1. (Optional) To convert an individual object, right-click the object and choose **Convert schema**. An object that has been converted appears bold in the **Access Metadata Explorer**: 
+
+   ![Bold objects in metadata explorer have been converted](./media/access-to-sql-server/converted-items-bold.png)
+ 
 1. Select **Review results** in the Output pane, and review errors in the **Error list** pane. 
 
 
@@ -62,10 +105,29 @@ After you have completed assessing your databases and addressing any discrepanci
 To migrate data by using SSMA for Access, follow these steps: 
 
 1. If you haven't already, select **Connect to SQL Server** and provide connection details. 
-1. Right-click the database from the **Azure SQL Database Metadata Explorer** and choose **Synchronize with Database**. This action publishes the MySQL schema to Azure SQL Database.
+
+1. Right-click the database from the **SQL Server Metadata Explorer** and choose **Synchronize with Database**. This action publishes the MySQL schema to SQL Server.
+
+   ![Synchronize with Database](./media/access-to-sql-server/synchronize-with-database.png)
+
+   Review the synchronization with the database: 
+
+   ![Review the synchronization with the database](./media/access-to-sql-server/synchronize-with-database-review.png)
+
 1. Use **Access Metadata Explorer** to check boxes next to the items you want to migrate. If you want to migrate the entire database, check the box next to the database. 
 1. Right-click the database or object you want to migrate, and choose **Migrate data**. 
    To migrate data for an entire database, select the check box next to the database name. To migrate data from individual tables, expand the database, expand Tables, and then select the check box next to the table. To omit data from individual tables, clear the check box.
+
+   ![Migrate Data](./media/access-to-sql-server/migrate-data.png)
+
+   Review the migrated data: 
+
+   ![Migrate Data Review](./media/access-to-sql-server/migrate-data-review.png)
+
+1. Connect to your SQL Server using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) to review data and schema on your SQL Server instance. 
+
+   ![Validate in SSMA](./media/access-to-sql-server/validate-in-ssms.png)
+
 
 
 ## Post-migration 

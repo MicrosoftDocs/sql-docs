@@ -36,7 +36,7 @@ Specifies the name of the primary file for an attachable database. This database
 
 ### Use ANSI quoted identifiers
 
-Specifies that QUOTED_IDENTIFIERS be set on when the ODBC driver for SQL Server connects. When this check box is selected, SQL Server enforces ANSI rules regarding quote marks. Double quotes can only be used for identifiers, such as column and table names. Character strings must be enclosed in single quotes:
+Specifies that `QUOTED_IDENTIFIERS` is set to on when the ODBC driver for SQL Server connects. When this check box is selected, SQL Server enforces ANSI rules regarding quote marks. Double quotes can only be used for identifiers, such as column and table names. Character strings must be enclosed in single quotes:
 
 ```sql
 SELECT "LastName"
@@ -66,15 +66,15 @@ If your application is connecting to a high-availability, disaster recovery (Alw
 
 ### Transparent Network IP Resolution
 
-Alters the behavior of **Multi-subnet failover** to allow for faster reconnection during failover. See [Using Transparent Network IP Resolution](../../../connect/odbc/using-transparent-network-ip-resolution.md) for more information.
+Alters the behavior of **Multi-subnet failover** to allow for faster reconnection during failover. For more information, see [Using Transparent Network IP Resolution](../using-transparent-network-ip-resolution.md).
 
 ### Column Encryption
 
-Enables automatic decryption and encryption of data transfers to and from columns encrypted with the [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) feature available in SQL Server 2016 and later.
+Enables automatic decryption and encryption of data transfers to and from columns encrypted with the [Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md) feature available in SQL Server 2016 and later.
 
 ### Use FMTONLY metadata discovery
 
-Use the legacy SET FMTONLY metadata discovery method when connecting to SQL Server 2012 or newer. Enable this only when using queries not supported by [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), such as those containing temporary tables.
+Use the legacy SET FMTONLY metadata discovery method when connecting to SQL Server 2012 or newer. Enable this option only when using queries not supported by [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), such as those containing temporary tables.
 
 ### Next
 
@@ -86,6 +86,5 @@ Returns to the previous screen of the wizard.
 
 ## Next steps
 
-[Data Source Wizard Screen 2](../../../connect/odbc/windows/dsn-wizard-2.md)
-
-[Data Source Wizard Screen 4](../../../connect/odbc/windows/dsn-wizard-4.md)
+[Data Source Wizard Screen 2](dsn-wizard-2.md)  
+[Data Source Wizard Screen 4](dsn-wizard-4.md)  

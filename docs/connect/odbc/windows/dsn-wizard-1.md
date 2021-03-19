@@ -34,16 +34,16 @@ In most cases, the ODBC driver can connect by using the default protocol order a
 
 You can enter "(local)" in the server box when you are using the same computer as SQL Server. The user can then connect to the local instance of SQL Server, even when running a non-networked version of SQL Server. Multiple instances of SQL Server can run on the same computer. To specify a named instance of SQL Server, the server name is specified as _ServerName_\\_InstanceName_.
 
-For more information about server names for different types of networks, see the SQL Server installation documentation in SQL Server Books Online.
+For more information about server names for different types of networks, see [Logging In to SQL Server](../../../database-engine/configure-windows/logging-in-to-sql-server.md#format-for-specifying-the-name-of-sql-server).
 
 ### Finish
 
-If the information specified on this screen is all that is needed to connect to SQL Server, you can click **Finish**. Defaults are used for all attributes specified on other screens of the wizard.
+If the information specified on this screen is all that is needed to connect to SQL Server, you can select **Finish**. Defaults are used for all attributes specified on other screens of the wizard.
 
 ### Next
 
-To proceed to the next screen of the wizard, click **Next**.
+To proceed to the next screen of the wizard, select **Next**.
 
 ## Next steps
 
-[Data Source Wizard Screen 2](../../../connect/odbc/windows/dsn-wizard-2.md)
+[Data Source Wizard Screen 2](dsn-wizard-2.md)

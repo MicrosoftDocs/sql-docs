@@ -414,7 +414,7 @@ COMMIT;
 ## Using temporal history retention policy approach
 
 > [!NOTE]
-> Using the Temporal History Retention Policy approach applies to [!INCLUDE[ssSDS](../../includes/sssdsfull-md.md)] and SQL Server 2017 starting from CTP 1.3.
+> Using the Temporal History Retention Policy approach applies to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and SQL Server 2017 starting from CTP 1.3.
 
 Temporal history retention can be configured at the individual table level, which allows users to create flexible aging polices. Applying temporal retention is simple: it requires only one parameter to be set during table creation or schema change.
 

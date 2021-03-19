@@ -4,7 +4,7 @@ description: Learn how to create a schema in SQL Server by using SQL Server Mana
 ms.custom: ""
 ms.date: "07/05/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual

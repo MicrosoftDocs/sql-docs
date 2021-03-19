@@ -4,7 +4,7 @@ description: Use this procedure to estimate the amount of space that is required
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual

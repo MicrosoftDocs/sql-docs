@@ -4,7 +4,7 @@ title: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2020"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse"
+ms.prod_service: "synapse-analytics"
 ms.reviewer: "jrasnick"
 ms.technology: data-warehouse
 ms.topic: reference

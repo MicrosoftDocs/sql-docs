@@ -133,7 +133,7 @@ This example renames the Customer table to Customer1.
 -- Rename the customer table
 RENAME OBJECT Customer TO Customer1;
 
-RENAME OBJECT mydb.dbo.Customer TO Customer1;
+RENAME OBJECT [mydb].[dbo].[Customer] TO Customer1;
 ```
 
 When renaming a table, all objects and properties associated with the table are updated to reference the new table name. For example, table definitions, indexes, constraints, and permissions are updated. Views are not updated.

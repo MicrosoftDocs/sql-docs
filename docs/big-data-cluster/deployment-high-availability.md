@@ -27,9 +27,10 @@ Here are some of the capabilities that availability groups enable:
 - All databases are automatically added to the availability group, including all user and system databases like `master` and `msdb`. This capability provides a single-system view across the availability group replicas. Additional model databases - `model_replicatedmaster` and `model_msdb` - are used to seed the replicated portion of the system databases. In addition to these databases, you will see `containedag_master` and `containedag_msdb` databases if you connect directly to the instance. The `containedag` databases represent the `master` and `msdb` inside the availability group.
 
   > [!IMPORTANT]
-  > Databases created on the instance as result of workflows like attach database are not automatically added to the availability group and big data cluster admin would have to do this manually. See the [Connect to SQL Server instance](#instance-connect) section for instructions how to enable a temporary endpoint on the SQL Server instance master database. Prior to SQL Server 2019 CU2 release, databases created as result of a restore statement had the same behavior and required manually adding the databases to the contained availability group.
+  > Databases that are created on the instance as a result of a workflow, like attach database, aren't automatically added to the availability group. SQL Server Big Data Clusters administrators will have to do this manually. To learn how to enable a temporary endpoint to the SQL Server instance master database, see [Connect to SQL Server instance](#instance-connect). Before the SQL Server 2019 CU2 release, databases that were created as a result of a restore statement had the same behavior, and databases had to be added manually to the contained availability group.
   >
-- Polybase configuration databases are not included in the availability group because they include instance level metadata specific to each replica.
+
+- PolyBase configuration databases are not included in the availability group because they include instance level metadata specific to each replica.
 - An external endpoint is automatically provisioned for connecting to databases within the availability group. This endpoint `master-svc-external` plays the role of the availability group listener.
 - A second external endpoint is provisioned for read-only connections to the secondary replicas to scale out the read workloads.
 

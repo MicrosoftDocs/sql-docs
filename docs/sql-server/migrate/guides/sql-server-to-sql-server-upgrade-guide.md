@@ -1,7 +1,13 @@
 ---
 title: Upgrade SQL Server to SQL Server
-description:
-date: 03/19/2021
+description: Step-by-step guidance for modernizing your data assets
+ms.date: 03/19/2021
+ms.prod: sql
+ms.technology: migration-guide
+ms.topic: conceptual
+author: MashaMSFT
+ms.author: mathoma
+ms.date: 03/19/2021
 ---
 
 # Upgrade SQL Server to SQL Server
@@ -145,9 +151,9 @@ Backup and restore: A backup taken on SQL Server 2016 can be restored to SQL Ser
 
 Before beginning your migration project, it is important to address the associated prerequisites. To prepare for the migration, download and install the:
 
-- Latest version of the [MAP Toolkit](http://go.microsoft.com/fwlink/?LinkID=316883).
+- Latest version of the [MAP Toolkit](https://go.microsoft.com/fwlink/?LinkID=316883).
 - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) v3.3 or later.
-- Latest version of the [Database Experimentation Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=54090).
+- Latest version of the [Database Experimentation Assistant](https://www.microsoft.com/download/details.aspx?id=54090).
 
 ### Migration assets from real-world engagements
 
@@ -178,7 +184,7 @@ To use the MAP Toolkit to perform an inventory scan, perform the following steps
 
 #### Steps for the Discover phase
 
-1. Download the [MAP Toolkit](http://go.microsoft.com/fwlink/?LinkID=316883), and then install it.
+1. Download the [MAP Toolkit](https://go.microsoft.com/fwlink/?LinkID=316883), and then install it.
 1. Run the MAP Toolkit.
    1. Open the MAP Toolkit, and then on the left pane, select **Database**.
       You will be on the following screen:
@@ -333,7 +339,7 @@ After the data is migrated to target, perform tests against the databases to ver
 
 To use DEA for database migration testing, perform the following steps.
 
-1. **Download the [DEA tool](https://www.microsoft.com/en-us/download/details.aspx?id=54090)**, and then install it.
+1. **Download the [DEA tool](https://www.microsoft.com/download/details.aspx?id=54090)**, and then install it.
 1. **Run a trace capture**
    1. On the left navigation tree, select the camera icon the go to **All Captures**.
 
@@ -386,4 +392,4 @@ To use DEA for database migration testing, perform the following steps.
 The post-migration phase is crucial for reconciling any data accuracy issues and verifying completeness, as well as addressing performance issues with the workload.
 
 > [!NOTE]
-> For additional detail about these issues and specific steps to mitigate them, see the [Post-migration Validation and Optimization Guide](https://docs.microsoft.com/en-us/sql/relational-databases/post-migration-validation-and-optimization-guide).
+> For additional detail about these issues and specific steps to mitigate them, see the [Post-migration Validation and Optimization Guide](https://docs.microsoft.com/sql/relational-databases/post-migration-validation-and-optimization-guide).

@@ -57,7 +57,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
  Specifies the execution context to be impersonated is a login. The scope of impersonation is at the server level.  
   
 > [!NOTE]  
->  This option is not available in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on-premises contained database, or [!INCLUDE[ssSDS](../../includes/sssdsfull-md.md)] or [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
+>  This option is not available in a contained database, or [!INCLUDE[ssSDS](../../includes/sssdsfull-md.md)] or [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
  USER  
  Specifies the context to be impersonated is a user in the current database. The scope of impersonation is restricted to the current database. A context switch to a database user does not inherit the server-level permissions of that user.  

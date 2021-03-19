@@ -3,7 +3,7 @@ title: "Prepare data for bulk export or import"
 description: This article describes how to plan bulk import and bulk export operations, including data file format requirements and when to use the bcp utility.
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual

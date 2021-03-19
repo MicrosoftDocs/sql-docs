@@ -4,7 +4,7 @@ description: Review some basic security concepts in SQL Server and learn about a
 ms.custom: ""
 ms.date: "01/03/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: quickstart

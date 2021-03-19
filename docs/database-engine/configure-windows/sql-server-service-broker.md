@@ -80,7 +80,7 @@ FROM ExpenseQueue;
   Once you process all messages from the queue, you should close the conversation using the [END CONVERSATION](../../t-sql/statements/end-conversation-transact-sql.md) Transact-SQL statement.
 
 ## Where is the documentation for Service Broker?  
- The reference documentation for [!INCLUDE[ssSB](../../includes/sssb-md.md)] is included in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] documentation. This reference documentation includes the following sections:  
+ The reference documentation for [!INCLUDE[ssSB](../../includes/sssb-md.md)] is included in the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] documentation. This reference documentation includes the following sections:  
   
 -   [Data Definition Language &#40;DDL&#41; Statements &#40;Transact-SQL&#41;](../../t-sql/statements/statements.md) for CREATE, ALTER, and DROP statements  
   
@@ -92,7 +92,7 @@ FROM ExpenseQueue;
   
 -   [ssbdiagnose Utility &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
- See the [previously published documentation](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) for [!INCLUDE[ssSB](../../includes/sssb-md.md)] concepts and for development and management tasks. This documentation is not reproduced in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] documentation due to the small number of changes in [!INCLUDE[ssSB](../../includes/sssb-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ See the [previously published documentation](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) for [!INCLUDE[ssSB](../../includes/sssb-md.md)] concepts and for development and management tasks. This documentation is not reproduced in the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] documentation due to the small number of changes in [!INCLUDE[ssSB](../../includes/sssb-md.md)] in recent versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ## What's new in Service Broker  
 

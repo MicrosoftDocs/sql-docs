@@ -43,8 +43,17 @@ To use [SSMA for MySQL](https://aka.ms/ssmaformysql) to create an assessment, fo
 1. Open SQL Server Migration Assistant for MySQL. 
 1. Select **File** and choose **New Project**. Provide the project name, a location to save your project and the migration target.
 1. Select **SQL Server** in the **Migrate to** option. 
+
+   ![New Project](./media/mysql-to-sql-server/new-project.png)
+
 1. Provide connect details in the **Connect to MySQL** dialog box and connect to  your MySQL server. 
+
+   ![Connect to mysql](./media/mysql-to-sql-server/connect-to-mysql.png)
+
 1. Right-click the MySQL schema in **MySQL Metadata Explorer** and choose **Create Report**. Alternatively, you can select **Create Report** from the top-line navigation bar. 
+
+   ![Create Report](./media/mysql-to-sql-server/create-report.png)
+
 1. Review the HTML report with conversion statistics, errors, and warnings. Analyze this report to understand conversion issues and their resolutions. 
 
    This report can also be accessed from the SSMA projects folder as selected in the first screen. From the example above locate the report.xml file from:
@@ -53,9 +62,20 @@ To use [SSMA for MySQL](https://aka.ms/ssmaformysql) to create an assessment, fo
  
    and open it in Excel to get an inventory of MySQL objects and the effort required to perform schema conversions.
 
+   ![Conversion Report](./media/mysql-to-sql-server/conversion-report.png)
+
 ### Validate type mappings
 
-Before you perform schema conversion, validate the default datatype mappings or change them based on requirements. You could do so either by navigating to the **Tools** menu and choosing **Project Settings** or you can change type mapping for each table by selecting the table in the **MySQL Metadata Explorer**.
+Validate the default data type mappings and change them based on requirements if necessary. To do so, follow these steps: 
+
+1. Select **Tools** from the menu. 
+1. Select **Project Settings**. 
+1. Select the **Type mappings** tab. 
+
+   ![Type Mappings](./media/mysql-to-sql-server/type-mappings.png)
+
+1. You can change the type mapping for each table by selecting the table in the **Oracle Metadata explorer**. 
+
 
 To learn more about conversion settings in SSMA, see [Project Settings](../../../ssma/mysql/project-settings-conversion-mysqltosql.md)
 
@@ -69,10 +89,30 @@ To convert the schema, follow these steps:
 
 1. (Optional) To convert dynamic or ad-hoc queries, right-click the node, and choose **Add Statement**. 
 1. Select **Connect to SQL Server** in the top-line navigation bar and provide SQL Server details. You can choose to connect to an existing database or provide a new name, in which case a database will be created on the target server.
+
+   ![Connect to SQL](./media/mysql-to-sql-server/connect-to-sql-server.png)
+
 1. Right-click the MySQL schema in **MySQL Metadata Explorer** and choose **Convert schema**. Alternatively, you can select **Convert schema** from the top-line navigation bar. 
+
+   ![Convert Schema](./media/mysql-to-sql-server/convert-schema.png)
+
 1. Compare and review the structure of the schema to identify potential problems. 
 
-   After schema conversion you can save this project locally for an offline schema remediation exercise. Select **Save Project** from the **File** menu. This gives you an opportunity to evaluate the source and target schemas offline and perform remediation before you can publish the schema to SQL Server.
+   After schema conversion you can save this project locally for an offline schema remediation exercise. 
+   
+   
+   ![Convert Schema Compare And Review](./media/mysql-to-sql-server/compare-schema.png)
+
+   Compare converted objects to original objects: 
+
+   ![Convert Schema Compare And Review object code](./media/mysql-to-sql-server/table-mapping.png)
+
+   Compare converted procedures to original procedures: 
+
+   ![Convert Schema Compare And Review object code](./media/mysql-to-sql-server/procedure-comparison.png)
+   
+   
+   Select **Save Project** from the **File** menu. This gives you an opportunity to evaluate the source and target schemas offline and perform remediation before you can publish the schema to SQL Server.
 
 To learn more, see [Converting MySQL databases](../../../ssma/mysql/converting-mysql-databases-mysqltosql.md)
 
@@ -100,9 +140,26 @@ To migrate data, two cases arise:
 To publish the schema and migrate the data, follow these steps: 
 
 1. Right-click the database in **SQL Server Metadata Explorer** and choose **Synchronize with Database**.  This action publishes the MySQL schema to the SQL Server instance.
-1. Right-click the MySQL schema in **MySQL Metadata Explorer** and choose **Migrate Data**.  Alternatively, you can select **Migrate Data** from the top-line navigation bar.  
+
+   ![Synchronize with Database](./media/mysql-to-sql-server/synchronize-database.png)
+
+   Review the synchronization with the database:
+
+   ![Synchronize with Database - Review](./media/mysql-to-sql-server/synchronize-database-review.png)
+
+1. Right-click the MySQL schema in **MySQL Metadata Explorer** and choose **Migrate Data**.  Alternatively, you can select **Migrate Data** from the top-line navigation bar. 
+
+   ![Migrate Data](./media/mysql-to-sql-server/migrate-data.png)
+
 1. After migration completes, view the **Data Migration Report**: 
+
+   ![Data Migration Report](./media/mysql-to-sql-server/migration-report.png)
+
 1. Validate the migration by reviewing the data and schema on the SQL Server instance by using SQL Server Management Studio (SSMS).
+
+   ![Validate in SSMA](./media/mysql-to-sql-server/validate-in-ssms.png)
+
+
 
 ## Post-migration 
 

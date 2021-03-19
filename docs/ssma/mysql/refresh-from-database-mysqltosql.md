@@ -28,9 +28,8 @@ To access the **Refresh from Database** dialog box, right-click an object in MyS
   
 ## Options  
   
-|||  
-|-|-|  
 |**Term**|**Definition**|  
+|-|-|  
 |**Collapse (-)**|Collapse all object groups to hide individual objects.|  
 |**Expand (+)**|Expand all object groups to show individual objects.|  
 |**Hide/Show Equal Objects**|Hides objects from the list if the object metadata is the same in the MySQL database and in SSMA.|  

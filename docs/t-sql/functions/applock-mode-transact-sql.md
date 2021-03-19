@@ -53,11 +53,37 @@ The owner of the lock, which is the *lock_owner* value when the lock was request
 ## Return value
 Returns the lock mode held by the lock owner on a particular application resource. Lock mode can have any one of these values:
   
-||||  
-|-|-|-|  
-|**NoLock**|**Update**|**\*SharedIntentExclusive**|  
-|**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
-|**Shared**|**Exclusive**||  
+:::row:::
+   :::column span="":::
+      **NoLock**
+   :::column end:::
+   :::column span="":::
+      **Update**
+   :::column end:::
+   :::column span="":::
+      **\*SharedIntentExclusive**
+   :::column end:::
+:::row end:::
+:::row:::
+   :::column span="":::
+      **IntentShared**
+   :::column end:::
+   :::column span="":::
+      ****IntentExclusive**
+   :::column end:::
+   :::column span="":::
+      **\*UpdateIntentExclusive**
+   :::column end:::
+   :::column span="":::
+:::row end:::
+:::row:::
+   :::column span="":::
+      **Shared**
+   :::column end:::
+   :::column span="":::
+      **Exclusive**
+   :::column end:::
+:::row end:::
   
 *This lock mode is a combination of other lock modes and sp_getapplock cannot explicitly acquire it.
   

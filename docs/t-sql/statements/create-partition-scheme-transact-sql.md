@@ -97,9 +97,8 @@ TO (test1fg, test2fg, test3fg, test4fg);
   
  The partitions of a table that uses partition function `myRangePF1` on partitioning column **col1** would be assigned as shown in the following table.  
   
-||||||  
+|             |Filegroup`test1fg`|Filegroup `test2fg`|Filegroup `test3fg`|Filegroup`test4fg`|  
 |-|-|-|-|-|  
-|**Filegroup**|`test1fg`|`test2fg`|`test3fg`|`test4fg`|  
 |**Partition**|1|2|3|4|  
 |**Values**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
@@ -117,9 +116,8 @@ TO ( test1fg, test1fg, test1fg, test2fg );
   
  The partitions of a table that uses partition function `myRangePF2` on partitioning column **col1** would be assigned as shown in the following table.  
   
-||||||  
+|             |Filegroup`test1fg`|Filegroup `test2fg`|Filegroup `test3fg`|Filegroup`test4fg`|  
 |-|-|-|-|-|  
-|**Filegroup**|`test1fg`|`test1fg`|`test1fg`|`test2fg`|  
 |**Partition**|1|2|3|4|  
 |**Values**|**col1** <= `1`|**col1** > 1 AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   

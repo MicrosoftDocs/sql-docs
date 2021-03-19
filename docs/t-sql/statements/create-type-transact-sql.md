@@ -172,15 +172,110 @@ column_name <data_type>
  *base_type*  
  Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplied data type on which the alias data type is based. *base_type* is **sysname**, with no default, and can be one of the following values:  
   
-|||||  
-|-|-|-|-|  
-|**bigint**|**binary(** *n* **)**|**bit**|**char(** *n* **)**|  
-|**date**|**datetime**|**datetime2**|**datetimeoffset**|  
-|**decimal**|**float**|**image**|**int**|  
-|**money**|**nchar(** *n* **)**|**ntext**|**numeric**|  
-|**nvarchar(** *n* &#124; **max)**|**real**|**smalldatetime**|**smallint**|  
-|**smallmoney**|**sql_variant**|**text**|**time**|  
-|**tinyint**|**uniqueidentifier**|**varbinary(** *n* &#124; **max)**|**varchar(** *n* &#124; **max)**|  
+:::row:::
+**bigint**
+   :::column end:::
+   :::column span="":::
+      **binary(** *n* **)**
+   :::column end:::
+   :::column span="":::
+      **bit**
+   :::column end:::
+   :::column span="":::
+      **char(** *n* **)**
+   :::column end:::
+   :::column span="":::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **date**
+   :::column end:::
+   :::column span="":::
+      **datetime**
+   :::column end:::
+   :::column span="":::
+      **datetime2**
+   :::column end:::
+   :::column span="":::
+      **datetimeoffset**
+   :::column end:::
+   :::column span="":::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **decimal**
+   :::column end:::
+   :::column span="":::
+      **float**
+   :::column end:::
+   :::column span="":::
+      **image**
+   :::column end:::
+   :::column span="":::
+      **int**
+   :::column end:::
+   :::column span="":::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **money**
+   :::column end:::
+   :::column span="":::
+      **nchar(** *n* **)**
+   :::column end:::
+   :::column span="":::
+      **ntext**
+   :::column end:::
+   :::column span="":::
+      **numeric**
+   :::column end:::
+   :::column span="":::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **nvarchar(** *n* &#124; **max)**
+   :::column end:::
+   :::column span="":::
+      **real**
+   :::column end:::
+   :::column span="":::
+      **smalldatetime**
+   :::column end:::
+   :::column span="":::
+      **smallint**
+   :::column end:::
+   :::column span="":::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **smallmoney**
+   :::column end:::
+   :::column span="":::
+      **sql_variant**
+   :::column end:::
+   :::column span="":::
+      **text**
+   :::column end:::
+   :::column span="":::
+      **time**
+   :::column end:::
+   :::column span="":::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **tinyint**
+   :::column end:::
+   :::column span="":::
+      **uniqueidentifier**
+   :::column end:::
+   :::column span="":::
+      **varbinary(** *n* &#124; **max)**
+   :::column end:::
+   :::column span="":::
+      **varchar(** *n* &#124; **max)**
+   :::column end:::
+   :::column span="":::
+:::row-end:::
   
  *base_type* can also be any data type synonym that maps to one of these system data types.  
   

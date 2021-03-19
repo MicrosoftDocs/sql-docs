@@ -1,8 +1,8 @@
 ---
 description: "sys.dm_tran_active_transactions (Transact-SQL)"
-title: "sys.dm_tran_active_transactions (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_tran_active_transactions (Transact-SQL) "
 ms.custom: ""
-ms.date: "03/30/2017"
+ms.date: "03/18/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -16,8 +16,7 @@ f1_keywords:
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
-  - "sys.dm_tran_active_transactions dynamic management view"
-ms.assetid: 154ad6ae-5455-4ed2-b014-e443abe2c6ee
+  - "sys.dm_tran_active_transactions dynamic management view" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -62,14 +61,14 @@ SELECT
   GETDATE() as now,
   DATEDIFF(SECOND, transaction_begin_time, GETDATE()) as tran_elapsed_time_seconds,
   st.session_id,
-  text, 
+  txt.text, 
   *
 FROM
   sys.dm_tran_active_transactions at
   INNER JOIN sys.dm_tran_session_transactions st ON st.transaction_id = at.transaction_id
   LEFT OUTER JOIN sys.dm_exec_sessions sess ON st.session_id = sess.session_id
   LEFT OUTER JOIN sys.dm_exec_connections conn ON conn.session_id = sess.session_id
-    OUTER APPLY sys.dm_exec_sql_text(conn.most_recent_sql_handle) 
+    OUTER APPLY sys.dm_exec_sql_text(conn.most_recent_sql_handle)  AS txt
 ORDER BY
   tran_elapsed_time_seconds DESC;
 ```

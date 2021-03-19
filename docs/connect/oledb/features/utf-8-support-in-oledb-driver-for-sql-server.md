@@ -62,5 +62,5 @@ Microsoft OLE DB Driver for SQL Server ensures data is exposed to the server in 
 
 ## See Also  
 
-[OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md)  
-[UTF-16 Support in OLE DB Driver for SQL Server](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
+[OLE DB Driver for SQL Server Features](oledb-driver-for-sql-server-features.md)  
+[UTF-16 Support in OLE DB Driver for SQL Server](utf-16-support-in-oledb-driver-for-sql-server.md)  

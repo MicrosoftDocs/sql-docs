@@ -1,10 +1,10 @@
 ---
 description: "sys.dm_tran_active_transactions (Transact-SQL)"
-title: "sys.dm_tran_active_transactions (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_tran_active_transactions (Transact-SQL) "
 ms.custom: ""
-ms.date: "03/30/2017"
+ms.date: "03/18/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
@@ -16,8 +16,7 @@ f1_keywords:
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
-  - "sys.dm_tran_active_transactions dynamic management view"
-ms.assetid: 154ad6ae-5455-4ed2-b014-e443abe2c6ee
+  - "sys.dm_tran_active_transactions dynamic management view" 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -58,17 +57,20 @@ On SQL Database Basic, S0, and S1 service objectives, and for databases in elast
  The following example shows any active transactions on the system and provides detailed information about the transaction, the user session, the application that submitted, and the query that started it and many others.  
   
 ```sql  
-select
-  getdate() as now,
+SELECT
+  GETDATE() as now,
   DATEDIFF(SECOND, transaction_begin_time, GETDATE()) as tran_elapsed_time_seconds,
+  st.session_id,
+  txt.text, 
   *
 FROM
   sys.dm_tran_active_transactions at
-  JOIN sys.dm_tran_session_transactions st ON st.transaction_id = at.transaction_id
-  INNER JOIN sys.sysprocesses sp ON st.session_id = sp.spid 
-    CROSS APPLY sys.dm_exec_sql_text(sql_handle) txt
-order by
-  tran_elapsed_time_seconds desc
+  INNER JOIN sys.dm_tran_session_transactions st ON st.transaction_id = at.transaction_id
+  LEFT OUTER JOIN sys.dm_exec_sessions sess ON st.session_id = sess.session_id
+  LEFT OUTER JOIN sys.dm_exec_connections conn ON conn.session_id = sess.session_id
+    OUTER APPLY sys.dm_exec_sql_text(conn.most_recent_sql_handle)  AS txt
+ORDER BY
+  tran_elapsed_time_seconds DESC;
 ```
 
 

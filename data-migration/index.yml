@@ -136,7 +136,7 @@ conceptualContent:
           url: https://azure.microsoft.com/cloud-adoption-framework/#cloud-adoption-journey
           itemType: reference
         - text: Browse customer stories
-          url: https://customers.microsoft.com/search?sq=&ff=&p=0&so=story_publish_date%20desc
+          url: https://customers.microsoft.com/en-us/search?sq=&ff=&p=0&so=story_publish_date%20desc
           itemType: reference
 
 tools:

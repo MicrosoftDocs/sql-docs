@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "07/16/2017"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 

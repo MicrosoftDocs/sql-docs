@@ -4,7 +4,7 @@ title: "sys.dm_db_index_operational_stats (Transact-SQL)"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
+ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"

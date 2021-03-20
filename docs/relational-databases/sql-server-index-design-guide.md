@@ -4,7 +4,7 @@ description: Learn about designing efficient indexes in SQL Server to achieve go
 ms.custom: ""
 ms.date: 01/19/2019
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual

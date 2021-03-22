@@ -45,6 +45,9 @@ Describes how to obtain available databases or catalogs, tables and views in a d
 [DbProviderFactories](dbproviderfactories.md)  
 Describes the provider factory model and demonstrates how to use the base classes in the `System.Data.Common` namespace.  
 
+[Configurable retry logic with SqlClient](configurable-retry-logic.md)  
+Describes how to use the **configurable retry logic** feature of Microsoft SqlClient Data Provider for SQL Server to establish a connection or execute a command.  
+
 [Retrieve identity or autonumber values](retrieve-identity-or-autonumber-values.md)  
 Provides an example of mapping the values generated for an **identity** column in a SQL Server table to a column of an inserted row in a table. Discusses merging identity values in a `DataTable`.  
   

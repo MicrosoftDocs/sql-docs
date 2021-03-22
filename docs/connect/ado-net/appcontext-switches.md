@@ -87,6 +87,18 @@ By default, ReadAsync runs synchronously and blocks the calling thread on .NET F
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking", false);
 ```
 
+## Enable configurable retry logic
+
+[!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
+
+By default, configurable retry logic is ignored event a provider was assigned to a connection or command. To benefit this feature, you can set the AppContext switch **Switch.Microsoft.Data.SqlClient.EnableRetryLogic** to `true` at application startup:
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.EnableRetryLogic", false);
+```
+
+- To find how to enable it through the configuration file see [Enable safety switch](configurable-retry-logic-config-file.md#enable-safety-switch).
+
 ## See also
 
 [AppContext Class](/dotnet/api/system.appcontext?view=netcore-3.1&preserve-view=true)

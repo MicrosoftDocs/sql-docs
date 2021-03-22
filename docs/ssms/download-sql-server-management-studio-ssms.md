@@ -93,7 +93,7 @@ If you want to install SSMS in the background with no GUI prompts, then follow t
 2. Type the command below in the command prompt.
 
     ```console
-    start "" /w <path where SSMS-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
+    start "" /w <path where SSMS-Setup-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
     ```
 
     Example:

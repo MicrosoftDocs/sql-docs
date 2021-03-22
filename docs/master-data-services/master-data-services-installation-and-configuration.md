@@ -20,17 +20,17 @@ ms.author: lle
   
 > [!NOTE] 
 > You can install [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on a Windows 10 machine when you use the Developer edition that now supports [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. 
->>For more information on operating system support for different [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] editions, see [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
+>>For more information on operating system support for different editions, [SQL Server 2019: Hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md).
 
 For an overview of how you organize data in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], see [Master Data Services Overview (MDS)](../master-data-services/master-data-services-overview-mds.md).     
   
- For information about the new features in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], see [What's New in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md).  
+ For information about the new features, see [What's New in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md).  
  
 For links to videos and other training resources to help you learn [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], see [Learn Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Download**  
-> -   To download [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
-> -   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with SQL Server already installed.  
+> -   To download [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)], go to  **[[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] downloads](https://www.microsoft.com/sql-server/sql-server-downloads)**.
+> -   Have an Azure account?  Then go to **[Quickstart: Create [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] on a Windows virtual machine in the Azure portal](/azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart)** to spin up a Virtual Machine with SQL Server already installed.  
 > 
 > **Can't create an MDS web site?**
 > >Check out this Microsoft support article for instructions on how to resolve this problem.
@@ -41,16 +41,16 @@ For links to videos and other training resources to help you learn [!INCLUDE[ssM
 - To work in the Web application, Silverlight 5 must be installed on the client computer. If you do not have the required version of Silverlight, you will be prompted to install it when you navigate to an area of the Web application that requires it. You can install Silverlight 5 from **[here](https://www.microsoft.com/silverlight/)**.
 
 ## [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine
-By default, when you spin up an Azure Virtual Machine with [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] already installed, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] is also installed. 
+By default, when you spin up an Azure Virtual Machine with [!INCLUDE[ssnoversion_md](../includes/ssnoversion-md.md)] already installed, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] is also installed. 
 
 You're next step is to install Internet Information Services (IIS). See the [Installing and Configuring IIS](#InstallIIS) section. 
 
-If you're interested in making changes to the installation of [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)], you'll find the setup.exe file in the default location, `<drive>`:\SQLServer_13.0_Full.
+If you're interested in making changes to the installation of [!INCLUDE[ssnoversion_md](../includes/ssnoversion-md.md)], you'll find the setup.exe file in the default location, `<drive>`:\SQLServer_13.0_Full.
   
 ## <a name="InstallMDS"></a> Installing Master Data Services  
  You use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup installation wizard or a command prompt to install [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
- **To install [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup on a Windows Server 2012 R2 machine**  
+ **To install [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup on a Windows Server machine**  
   
 1.  Double-click Setup.exe, and follow the steps in the installation wizard.  
   
@@ -136,7 +136,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
     >In SQL Managed Instance, the user must be a member of the `sysadmin` fixed server role.
 
     > [!NOTE]  
-    >  When you select **Current User - Integrated Security** as the authentication type, **User name** box is read-only and displays the name of the Windows user account that is logged on to the computer. If you are running [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine (VM), the **User name** box displays the VM name and the user name for the local administrator account on the VM. 
+    >  When you select **Current User - Integrated Security** as the authentication type, **User name** box is read-only and displays the name of the Windows user account that is logged on to the computer. If you are running [!INCLUDE[ssnoversion_md](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine (VM), the **User name** box displays the VM name and the user name for the local administrator account on the VM. 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
@@ -221,7 +221,7 @@ For more information about the settings on the Web Configuration page, see [Web 
   
  For information about prerequisites for running this tool, see [Deploy a Model Deployment Package by Using MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
- For information about updates made to the data to support new features in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], see [SQL Server Samples: Model Deployment Packages (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+ For information about updates made to the data to support new features in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], see [SQL Server Samples: Model Deployment Packages (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
  **To deploy the sample models**  
   

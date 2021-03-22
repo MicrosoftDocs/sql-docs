@@ -24,9 +24,9 @@ ms.author: lle
  For instructions on how to deploy the sample model packages, see [Deploying Sample Models and Data](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). You deploy the sample model packages by using the [MDSModelDeploy tool](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 > [!IMPORTANT]
->  **Sample Updates in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **Sample Updates in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]**  
 > 
->  The sample packages were updated to support the following new capabilities.  
+>  The sample packages support the following capabilities.  
 > 
 >  -   Show Many-to-Many Relationships.  
 > 

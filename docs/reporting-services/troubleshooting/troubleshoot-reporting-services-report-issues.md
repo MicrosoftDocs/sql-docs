@@ -24,7 +24,7 @@ For more information, see [Monitoring Report Server Performance](../../reporting
   
 For more information, see [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
-In order to determine specifically whether report waits are due to data retrieval, report processing, or report rendering, use the Execution Log. For more information, see [Report Server ExecutionLog and the ExecutionLog3 view].   
+In order to determine specifically whether report waits are due to data retrieval, report processing, or report rendering, use the Execution Log. For more information, see [Report Server ExecutionLog and the ExecutionLog3 view](../../reporting-services/report-server/executionlog-and-the-executionlog3-view.md).   
   
 ## View the Call Stack for Report Processing Error Messages on the Report Server  
 When you view a published report in Report Manager, you might see an error message that represents a general processing or rendering error. To see more information, you can view the call stack.   

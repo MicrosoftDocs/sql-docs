@@ -30,7 +30,7 @@ ms.author: v-daenge
 > [!NOTE]
 > When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with [the Win32 cryptoAPI](/windows/win32/seccng/cng-portal).
 
-## In This Section
+## In this section
 
 - [Establishing a Connection to a Data Source](establishing-a-connection-to-a-data-source.md)
 - [Executing a Command](executing-a-command.md)
@@ -38,6 +38,6 @@ ms.author: v-daenge
 - [About OLE DB Properties](about-ole-db-properties.md)
 - [Using the OUTPUT Clause with OLE DB in OLE DB Driver for SQL Server](using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md)
 
-## See Also
+## See also
 
 [OLE DB Driver for SQL Server Programming](../ole-db/oledb-driver-for-sql-server-programming.md)

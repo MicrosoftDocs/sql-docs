@@ -39,6 +39,6 @@ When you upgrade from Microsoft Data Access Components (MDAC) to OLE DB Driver f
 |Inserting an empty string into a **sql_variant** bound as a date/time type generates an error.|In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0, inserting an empty string into a **sql_variant** bound as a date/time type did not generate an error. OLE DB Driver for SQL Server correctly generates an error in this situation.|
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] might return different results when a trigger runs.|Changes introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] might cause an application to have different results returned from a statement that caused a trigger to run when **NOCOUNT OFF** was in effect. In this situation, your application might generate an error. To resolve this error, set **NOCOUNT ON** in the trigger.|
 
-## See Also
+## See also
 
 [OLE DB Driver for SQL Server](../oledb-driver-for-sql-server.md)

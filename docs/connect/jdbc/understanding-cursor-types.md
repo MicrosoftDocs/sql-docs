@@ -51,7 +51,7 @@ The JDBC driver supports the following cursor types:
 |TYPE_SS_SCROLL_DYNAMIC<br /><br /> (CONCUR_READ_ONLY)|Dynamic|Scrollable,  read-only.<br /><br /> External row updates and inserts are visible, and deletes appear as transient missing data in the current fetch buffer.|N/A|N/A|Integer value = 1006. Application must see changed data for existing rows, and see inserted and deleted rows during the lifetime of the cursor.<br /><br /> Rows are retrieved from the server in blocks that are specified by the fetch size.|
 |TYPE_SS_SCROLL_DYNAMIC<br /><br /> (CONCUR_UPDATABLE, CONCUR_SS_SCROLL_LOCKS, CONCUR_SS_OPTIMISTIC_CC, CONCUR_SS_OPTIMISTIC_CCVAL)|Dynamic|Scrollable, updatable.<br /><br /> External and internal row updates and inserts are visible, and deletes appear as transient missing data in the current fetch buffer.|N/A|N/A|Integer value = 1006. The application may change data for existing rows, or insert or delete rows by using the ResultSet object. The application must also be able to see changes, inserts, and deletes made by others from outside the ResultSet object.<br /><br /> Rows are retrieved from the server in blocks that are specified by the fetch size.|
 
-## Cursor Positioning
+## Cursor positioning
 
 The TYPE_FORWARD_ONLY, TYPE_SS_DIRECT_FORWARD_ONLY, and TYPE_SS_SERVER_CURSOR_FORWARD_ONLY cursors support only the [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) positioning method.
 
@@ -70,7 +70,7 @@ If the key values of a TYPE_SS_SCROLL_KEYSET or TYPE_SCROLL_SENSITIVE cursor row
 
 For dynamic cursors, updated rows will retain their position within the fetch buffer until the window that is defined by the fetch buffer is left. Updated rows might later reappear at different positions within the result set, or might disappear completely. Applications that have to avoid transient inconsistencies in the result set should use a fetch size of 1 (the default is 8 rows with CONCUR_SS_SCROLL_LOCKS concurrency and 128 rows with other concurrencies).
 
-## Cursor Conversion
+## Cursor conversion
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can sometimes choose to implement a cursor type other than the one requested, which is referred to as an implicit cursor conversion (or cursor degradation).
 
@@ -81,7 +81,7 @@ To work around this problem, you can do one of the following two solutions:
 - Ensure that the underlying table has a primary key
 - Use [SQLServerResultSet.TYPE_SS_SCROLL_DYNAMIC](reference/type-ss-scroll-dynamic-field-sqlserverresultset.md) instead of ResultSet.TYPE_SCROLL_SENSITIVE while creating a statement.
 
-## Cursor Updating
+## Cursor updating
 
 In-place updates are supported for cursors where the cursor type and concurrency support updates. If the cursor is not positioned on an updatable row in the result set (no get\<Type> method call succeeded), a call to an update\<Type> method will throw an exception with the message, "The result set has no current row." The JDBC specification states that an exception arises when an update method is called for a column of a cursor that is CONCUR_READ_ONLY. In situations where the row is not updatable, such as because of an optimistic concurrency conflict such as a competing update or deletion, the exception might not arise until [insertRow](reference/insertrow-method-sqlserverresultset.md), [updateRow](reference/updaterow-method-sqlserverresultset.md), or [deleteRow](reference/deleterow-method-sqlserverresultset.md) is called.
 

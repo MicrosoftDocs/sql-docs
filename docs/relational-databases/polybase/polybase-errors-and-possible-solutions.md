@@ -1,7 +1,7 @@
 ---
 title: "PolyBase errors and possible solutions"
 description: PolyBase reference for errors and suggested solutions.
-ms.date: 02/17/2021
+ms.date: 03/22/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -31,6 +31,11 @@ For common PolyBase log file locations in Windows and Linux, see [Monitor and tr
 
 ## Error messages and possible solutions
 
+### Error: "100001;Failed to generate query plan"
+
+The "Failed to generate query plan" error can occur when the SQL Server database engine has been patched to at least Cumulative Update 8 (15.0.4073) but the PolyBase feature hasn't been updated to the same build. This can occur when adding the PolyBase feature to an existing SQL Server instance. For more information, see [PolyBase error - 100001;Failed to generate query plan](https://techcommunity.microsoft.com/t5/sql-server-support/polybase-error-100001-failed-to-generate-query-plan/ba-p/2174693).
+
+Always follow up installing the PolyBase feature by bringing the new feature up to the same version level. Install service packs (SPs), cumulative updates (CUs), and/or general distribution releases (GDRs) as needed. To determine the version of PolyBase, see [Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level#polybase).
 
 ### Service account change
 

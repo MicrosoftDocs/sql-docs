@@ -30,7 +30,7 @@ For links to videos and other training resources to help you learn [!INCLUDE[ssM
   
 > **Download**  
 > -   To download [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)], go to  **[[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] downloads](https://www.microsoft.com/sql-server/sql-server-downloads)**.
-> -   Have an Azure account?  Then go **[Quickstart: Create [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] on a Windows virtual machine in the Azure portal](/azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart)** to spin up a Virtual Machine with SQL Server already installed.  
+> -   Have an Azure account?  Then go to **[Quickstart: Create [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] on a Windows virtual machine in the Azure portal](/azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart)** to spin up a Virtual Machine with SQL Server already installed.  
 > 
 > **Can't create an MDS web site?**
 > >Check out this Microsoft support article for instructions on how to resolve this problem.

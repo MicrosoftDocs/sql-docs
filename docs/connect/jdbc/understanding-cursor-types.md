@@ -2,7 +2,7 @@
 description: Learn about the different cursor types you can use for your application queries and when to use them.
 title: Understanding cursor types
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: 03/22/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

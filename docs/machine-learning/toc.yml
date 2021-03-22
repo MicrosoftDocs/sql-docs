@@ -212,10 +212,6 @@ items:
       href: ../machine-learning/tutorials/demo-data-iris-in-sql.md
     - name: NYC Taxi data set
       href: ../machine-learning/tutorials/demo-data-nyctaxi-in-sql.md
-- name: Samples >>
-  href: https://github.com/Microsoft/sql-server-samples
-- name: Solutions
-  href: ../machine-learning/tutorials/data-science-scenarios-and-solution-templates.md
 - name: Concepts
   items:
   - name: Extensibility framework

@@ -42921,6 +42921,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/machine-learning/tutorials/data-science-scenarios-and-solution-templates.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-tutorials",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
       "redirect_url": "/sql/linux/sql-server-linux-manage-ssms",
       "redirect_document_id": false

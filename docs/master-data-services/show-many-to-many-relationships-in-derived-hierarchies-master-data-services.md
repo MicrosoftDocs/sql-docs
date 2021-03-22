@@ -19,15 +19,19 @@ ms.author: lle
   Derived Hierarchies (DH) display one-to-many relationships, and can now also show many-to-many relationships.  
   
 ## Many-to-Many (M2M) Relationships  
- A many-to-many (M2M) relationship between two entities may be modeled through the use of a third entity that provides a mapping between them:  
+
+A many-to-many (M2M) relationship between two entities may be modeled through the use of a third entity that provides a mapping between them:  
   
- ![mds_hierarchies_manytomany](../master-data-services/media/mds-hierarchies-manytomany.png "mds_hierarchies_manytomany")  
+![mds_hierarchies_manytomany](../master-data-services/media/mds-hierarchies-manytomany.png "mds_hierarchies_manytomany")  
   
- In the above example, there is an M2M relationship between the **Employee** and **TrainingClass** entities, provided by the mapping entity **ClassRegistration**. An employee may be registered as a student in multiple classes, and each class may contain multiple students.  
+In the above example, there is an M2M relationship between the **Employee** and **TrainingClass** entities, provided by the mapping entity **ClassRegistration**. An employee may be registered as a student in multiple classes, and each class may contain multiple students.  
   
 You can create a derived hierarchy that displays, for example, students by class, or invert the relationship and show classes grouped by student.  
+
+> [!NOTE]
+> [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] introduced derived hierarchy for M2M relationships. This capability was not available prior to that version.
   
- First, go to the derived hierarchy management page and create a new derived hierarchy:  
+First, go to the derived hierarchy management page and create a new derived hierarchy:  
   
  ![mds_hierarchies_add_derived_hierarchy](../master-data-services/media/mds-hierarchies-add-derived-hierarchy.png "mds_hierarchies_add_derived_hierarchy")  
   

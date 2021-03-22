@@ -64,7 +64,7 @@ In summary, a **request** may spawn one or more **tasks** to carry out units of 
 
 > [!NOTE]
 > Consider the following scenario:   
-> -  Worker 1 is a long-running task, for example a read query using read-ahead over in-memory based tables. Worker 1 finds its required data pages are already in Buffer Pool, so it doesn't have to yield to wait for I/O operations, and can consume its full quantum before yielding.   
+> -  Worker 1 is a long-running task, for example a read query using read-ahead over disk-based tables. Worker 1 finds its required data pages are already in Buffer Pool, so it doesn't have to yield to wait for I/O operations, and can consume its full quantum before yielding.   
 > -  Worker 2 is doing shorter sub-millisecond tasks and therefore is required to yield before its full quantum is exhausted.     
 >
 > In this scenario and up to [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], Worker 1 is allowed to basically monopolize the scheduler by having more overall quantum time.   

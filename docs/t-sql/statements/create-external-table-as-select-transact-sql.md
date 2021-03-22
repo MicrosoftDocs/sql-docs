@@ -3,7 +3,7 @@ description: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)"
 title: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.service: sql-data-warehouse
 ms.subservice: design

@@ -4,7 +4,7 @@ titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Use the COPY statement in Azure Synapse Analytics for loading from external storage accounts.
 ms.date: 09/25/2020
 ms.prod: sql
-ms.prod_service: "database-engine, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: jrasnick
 ms.technology: t-sql
 ms.topic: language-reference

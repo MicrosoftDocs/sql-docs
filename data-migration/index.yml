@@ -4,7 +4,7 @@ summary: "Step-by-step guidance for modernizing your data assets. "
 brand: sql
 metadata:
    title: Azure Database Migration Guides | Microsoft Docs
-   description: "Step-by-step guidance for modernizing your data assets."
+   description: "Step-by-step guidance for modernizing your data assets by migrating to SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Database, Azure Cosmos DB, SQL Server on Azure VMs and Azure Synapse Analytics. "
    ms.topic: hub-page
 
 # itemType: how-to-guide | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -31,6 +31,9 @@ conceptualContent:
           itemType: how-to-guide
     - title: "Oracle to"
       links:
+        - text: Azure Database for PostgreSQL
+          url: /azure/postgresql/howto-migrate-from-oracle
+          itemType: how-to-guide
         - text: SQL Server
           url: /sql/sql-server/migrate/guides/oracle-to-sql-server
           itemType: how-to-guide
@@ -42,9 +45,6 @@ conceptualContent:
           itemType: how-to-guide
         - text: SQL Server on Azure VMs
           url: /azure/azure-sql/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide
-          itemType: how-to-guide
-        - text: Azure Database for PostgreSQL
-          url: /azure/postgresql/howto-migrate-from-oracle
           itemType: how-to-guide
         - text: Azure Synapse Analytics
           url: /azure/synapse-analytics/migration-guides/migrate-to-synapse-analytics-guide
@@ -73,14 +73,14 @@ conceptualContent:
           itemType: how-to-guide
     - title: "MySQL to"
       links:
+        - text: Azure Database for MySQL
+          url: /azure/mysql/concepts-migrate-import-export
+          itemType: how-to-guide
         - text: SQL Server
           url: /sql/sql-server/migrate/guides/mysql-to-sql-server
           itemType: how-to-guide
         - text: Azure SQL Database
           url: /azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide
-          itemType: how-to-guide
-        - text: Azure Database for MySQL
-          url: /azure/mysql/concepts-migrate-import-export
           itemType: how-to-guide
     - title: "SAP ASE to"
       links:
@@ -92,33 +92,36 @@ conceptualContent:
           itemType: how-to-guide
     - title: "Open-source"
       links:
-        - text: MariaDB to Azure Database for MariaDB
-          url: /azure/mariadb/howto-migrate-dump-restore
+        - text: PostgreSQL to Azure Database for PostgreSQL
+          url: /azure/postgresql/howto-migrate-using-dump-and-restore
           itemType: how-to-guide
         - text: MySQL to Azure Database for MySQL
           url: /azure/mysql/concepts-migrate-import-export
           itemType: how-to-guide
-        - text: PostgreSQL to Azure Database for PostgreSQL
-          url: /azure/postgresql/howto-migrate-using-dump-and-restore
+        - text: MariaDB to Azure Database for MariaDB
+          url: /azure/mariadb/howto-migrate-dump-restore
           itemType: how-to-guide
     - title: "NoSQL"
       links:
         - text: MongoDB to Azure Cosmos DB
-          url: /azure/dms/tutorial-mongodb-cosmos-db?toc=/azure/cosmos-db/toc.json&bc=/azure/cosmos-db/breadcrumb/toc.json
-          itemType: how-to-guide
-        - text: Cassandra to Azure Cosmos DB
-          url: /azure/cosmos-db/cassandra-import-data
+          url: /azure/dms/tutorial-mongodb-cosmos-db-online?toc=/azure/cosmos-db/toc.json&bc=/azure/cosmos-db/breadcrumb/toc.json
           itemType: how-to-guide
         - text: Microsoft Azure Table Storage to Azure Cosmos DB
           url: /azure/cosmos-db/table-import
           itemType: how-to-guide
+        - text: Cassandra to Azure Cosmos DB
+          url: /azure/cosmos-db/cassandra-import-data
+          itemType: how-to-guide
     - title: "Resources"
       links:
+        - text: Azure Migration Center
+          url: https://azure.microsoft.com/migration/
+          itemType: reference
         - text: Migration partner resources
           url: https://www.microsoft.com/azure/partners/advspec?filters=windows-server-and-sql-server-migration-to-azure
           itemType: reference
         - text: Cloud Economics
-          url: https://azure.microsoft.com/en-gb/overview/cloud-economics
+          url: https://azure.microsoft.com/overview/cloud-economics
           itemType: reference
         - text: Total Cost of Ownership Calculator
           url: https://azure.microsoft.com/pricing/tco/calculator/

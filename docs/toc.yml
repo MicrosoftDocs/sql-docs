@@ -4755,8 +4755,6 @@ items:
         href: database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md
       - name: PH timeout
         href: database-engine/configure-windows/ph-timeout-server-configuration-option.md
-      - name: precompute rank
-        href: database-engine/configure-windows/precompute-rank-server-configuration-option.md
       - name: Configure the priority boost
         href: database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md
       - name: Configure the query governor cost limit

@@ -3,7 +3,7 @@ title: "Import native & character format data from earlier versions of SQL Serve
 description: In SQL Server 2019, you can use bcp to import native and character format data from other versions of SQL Server by using the -V switch with a qualifier.
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual

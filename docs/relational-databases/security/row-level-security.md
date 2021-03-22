@@ -4,7 +4,7 @@ description: Learn how Row-Level Security uses group membership or execution con
 ms.custom: ""
 ms.date: "09/01/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: "security"
 ms.topic: conceptual

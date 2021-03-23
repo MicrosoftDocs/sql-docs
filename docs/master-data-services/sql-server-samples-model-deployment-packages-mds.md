@@ -26,7 +26,7 @@ ms.author: lle
 > [!IMPORTANT]
 >  **Sample Updates in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]**  
 > 
->  The sample packages were updated to support the following new capabilities.  
+>  The sample packages support the following capabilities.  
 > 
 >  -   Show Many-to-Many Relationships.  
 > 

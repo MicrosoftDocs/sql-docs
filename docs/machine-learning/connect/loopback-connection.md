@@ -45,7 +45,7 @@ The server address, client certificate file location, and client key file locati
 For more information on the connection string attributes, see the [DSN and Connection String Keywords and Attributes](../../connect/odbc/dsn-connection-string-attribute.md#new-connection-string-keywords-and-connection-attributes) for Microsoft ODBC Driver for SQL Server.
 
 ### Connection string on Azure SQL Managed Instance
-To generate the connection string for Azure SQL Managed Instance, please refer to the below sections - "Generate connection string with revoscalepy for Python" and "Generate connection string with RevoScaleR for R". Please use "ODBC Driver 11 for SQL Server" as the ODBC driver for loopback connections.
+To generate the connection string for Azure SQL Managed Instance, see the examples in the next sections. Use **ODBC Driver 11 for SQL Server** as the ODBC driver for loopback connections.
 
 ## Generate connection string with revoscalepy for Python
 

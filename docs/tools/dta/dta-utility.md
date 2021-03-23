@@ -177,9 +177,8 @@ dta -d AdventureWorks2012 ...
 **-fc**  
  Specifies that columnstore indexes be considered for new recommendations. DTA will consider both clustered and nonclustered columnstore indexes. For more information, see    
 [Columnstore index recommendations in Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.|  
+
+> **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.  
 
   
  **-fk** _keep_existing_option_  
@@ -216,9 +215,8 @@ dta -d AdventureWorks2012 ...
 **-iq**  
  Specifies that the Query Store be used as the workload. The top 1,000 events from the Query Store for explicitly selected databases are analyzed. This value can be changed using the **-n** option.  See [Query Store](../../relational-databases/performance/how-query-store-collects-data.md) and 
  [Tuning Database Using Workload from Query Store](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) for more information.
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.|  
+  
+> **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.
      
  **-if** _workload_file_  
  Specifies the path and name of the workload file to use as input for tuning. The file must be in one of these formats: .trc (SQL Server Profiler trace file), .sql (SQL file), or .log ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace file). Either one workload file or one workload table must be specified.  
@@ -270,17 +268,17 @@ dta -n number_of_events -A 0
  In this case, it is important to specify an unlimited tuning time (`-A 0`). Otherwise, Database Engine Tuning Advisor assumes an 8 hour tuning time by default.
  
  **-l** _time_window_in_hours_   
-   Specifies the time window (in hours) when a query must have executed for it to be considered by DTA for tuning when using **-iq** option (Workload from Query Store). 
+   Specifies the time window (in hours) when a query must have executed for it to be considered by DTA for tuning when using **-iq** option (Workload from Query Store).
+   
 ```  
 dta -iq -l 48  
 ```  
+
 In this case, DTA will use Query Store as the source of workload and only consider queries that have executed with the past 48 hours.  
-  ||  
-|-|  
-|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.|  
 
+> **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.  
 
-  
+ 
  **-of** _output_script_file_name_  
  Specifies that **dta** writes the recommendation as a [!INCLUDE[tsql](../../includes/tsql-md.md)] script to the file name and destination specified.  
   

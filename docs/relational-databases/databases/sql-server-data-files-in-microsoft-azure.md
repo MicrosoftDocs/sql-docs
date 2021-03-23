@@ -62,7 +62,7 @@ Estimating the cost of using Azure Services is an important matter in the decisi
   
 ### SQL Server concepts  
 
-To use Azure blobs for SQL Server data files:
+To use Azure page blobs for SQL Server data files:
 
 - Create a policy on a container and also generate a shared access signature (SAS) key.
 

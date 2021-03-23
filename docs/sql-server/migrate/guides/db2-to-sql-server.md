@@ -24,7 +24,7 @@ To migrate your Db2 database to SQL Server, you need:
 
 - To verify your [source environment is supported](../../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md#prerequisites).
 - [SQL Server Migration Assistant (SSMA) for Db2](https://www.microsoft.com/download/details.aspx?id=54254).
-- Connectivity and proper permissions to access both source and target. 
+- Connectivity and sufficient permissions to access both source and target. 
 
 
 

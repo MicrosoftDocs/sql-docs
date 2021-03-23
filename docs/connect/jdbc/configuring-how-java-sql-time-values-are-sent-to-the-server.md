@@ -27,6 +27,8 @@ This scenario applies when using one of the following methods:
 - [SQLServerCallableStatement.setObject](reference/setobject-method-sqlservercallablestatement.md)
 - [SQLServerPreparedStatement.setObject](reference/setobject-method-sqlserverpreparedstatement.md)
 
+## SendTimeAsDatetime
+
 You can configure how the java.sql.Time value is sent by using the **sendTimeAsDatetime** connection property. For more information, see [Setting the Connection Properties](setting-the-connection-properties.md).
 
 You can programmatically modify the value of the **sendTimeAsDatetime** connection property with [SQLServerDataSource.setSendTimeAsDatetime](reference/setsendtimeasdatetime-method-sqlserverdatasource.md).

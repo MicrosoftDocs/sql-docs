@@ -57,7 +57,9 @@ ON Sales.SalesOrderHeader(vCustomerName)
 
 This statement will return the following warning:
 ```
-Warning! The maximum key length for a nonclustered index is 1700 bytes. The index 'col1' has maximum length of 8000 bytes. For some combination of large values, the insert/update operation will fail.
+Warning! The maximum key length for a nonclustered index is 1700 bytes.
+The index 'vCustomerName' has maximum length of 8000 bytes.
+For some combination of large values, the insert/update operation will fail.
 ```
 
 The `JSON_VALUE` function might return text values up to 8000 bytes (for example, as the NVARCHAR(4000) type). However, the values that are longer than 1700 bytes cannot be indexed. If you try to enter the value in the indexed computed column that is longer than 1700 bytes, the DML operation will fail. This will be the runtime error.

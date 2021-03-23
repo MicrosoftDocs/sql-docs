@@ -35,10 +35,10 @@ This table summarizes pushdown computation support on different external data so
 |------------------|--------|-------------|--------------|-----------|------------|
 | **Generic ODBC** | Yes    | Yes         | Yes          | Yes       | Yes        |  
 | **Oracle**       | Yes    | Yes         | Yes          | Yes       | Yes        |
-| **SQL Server**   | Yes    | Yes         | Yes          | Yes       | Yes        |
+| **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**   | Yes    | Yes         | Yes          | Yes       | Yes        |
 | **Teradata**     | Yes    | Yes         | Yes          | Yes       | Yes        |  
 | **MongoDB**      | **No** | Yes         | Yes          | Yes       | Yes        |
-| **Hadoop\***     | **No** | Yes         | Some\*\*     | Some \*\* | Yes        |  
+| **Hadoop\***     | **No** | Yes         | Some\*\*     | Some\*\*  | Yes        |  
 |                  |
 
 \* PolyBase currently supports two Hadoop providers: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). There are no differences between the two features in terms of pushdown computation.
@@ -49,7 +49,7 @@ This table summarizes pushdown computation support on different external data so
 
 With PolyBase pushdown computation, you can delegate computation tasks to external data sources. This reduces the workload on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and can significantly improve performance. 
 
-SQL Server can push joins, projections, aggregations, and filters to external data sources to take advantage of remote compute and restrict the data sent over the network. 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can push joins, projections, aggregations, and filters to external data sources to take advantage of remote compute and restrict the data sent over the network. 
 
 ### Pushdown of joins
 
@@ -121,4 +121,4 @@ OPTION (DISABLE EXTERNALPUSHDOWN);
 
 ## Next steps
 
-For more information about PolyBase, see [What is PolyBase?](polybase-guide.md).
+For more information about PolyBase, see [What is PolyBase?](polybase-guide.md)

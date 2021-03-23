@@ -45,12 +45,12 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and APS, not all T-
 |---------|---------|---------|
 |Column projections|Yes|No|
 |Predicates|Yes|No|
-|Aggregates|Partial (see next section)|No|
+|Aggregates|Partial\*|No|
 |Joins between external tables|No|No|
 |Joins between external tables and local tables|No|No|
 |Sorts|No|No|
 
-Partial aggregation means that a final aggregation must occur after the data reaches SQL Server. But a portion of the aggregation occurs in Hadoop. This method is common in computing aggregations in massively parallel processing systems.  
+\* Partial aggregation means that a final aggregation must occur after the data reaches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. But a portion of the aggregation occurs in Hadoop. This method is common in computing aggregations in massively parallel processing systems.  
 
 #### Hadoop pushdown support
 

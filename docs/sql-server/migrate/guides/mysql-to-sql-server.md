@@ -33,7 +33,9 @@ After you have met the prerequisites, you are ready to discover your source MySQ
 
 ### Assess 
 
-To use [SSMA for MySQL](https://www.microsoft.com/download/details.aspx?id=54257) to create an assessment, follow these steps: 
+Use SQL Server Migration Assistant (SSMA) for MySQL to review database objects and data, and assess databases for migration.
+
+To create an assessment, follow these steps: 
 
 1. Open SQL Server Migration Assistant for MySQL. 
 1. Select **File** and choose **New Project**. 
@@ -45,7 +47,11 @@ To use [SSMA for MySQL](https://www.microsoft.com/download/details.aspx?id=54257
 
    ![Connect to mysql](./media/mysql-to-sql-server/connect-to-mysql.png)
 
-1. Right-click the MySQL schema in **MySQL Metadata Explorer** and choose **Create Report**. Alternatively, you can select **Create Report** from the top-line navigation bar:
+1. Select the MySQL database(s) you want to migrate:
+
+   ![Connect to mysql](./media/mysql-to-sql-server/select-database.png)
+
+1. Right-click the MySQL database in **MySQL Metadata Explorer** and choose **Create Report**. Alternatively, you can select **Create Report** from the top-line navigation bar:
 
    ![Create Report](./media/mysql-to-sql-server/create-report.png)
 
@@ -83,11 +89,11 @@ To convert the schema, follow these steps:
      1. Enter connection details for your SQL Server instance. 
      1. Choose your target database from the drop-down, or provide a new name, in which case a database will be created on the target server. 
      1. Provide authentication details. 
-     1. Select **Connect**. 
+     1. Select **Connect**:
 
    ![Connect to SQL](./media/mysql-to-sql-server/connect-to-sql-server.png)
 
-1. Right-click the MySQL schema in **MySQL Metadata Explorer** and choose **Convert schema**. Alternatively, you can select **Convert schema** from the top-line navigation bar:
+1. Right-click the MySQL database in **MySQL Metadata Explorer** and choose **Convert schema**. Alternatively, you can select **Convert schema** from the top-line navigation bar:
 
    ![Convert Schema](./media/mysql-to-sql-server/convert-schema.png)
 
@@ -127,7 +133,7 @@ To migrate data, two cases arise:
 
 To publish your schema and migrate the data, follow these steps: 
 
-1. Publish the schema: Right-click the database in **SQL Server Metadata Explorer** and choose **Synchronize with Database**.  This action publishes the MySQL schema to the SQL Server instance:
+1. Publish the schema: Right-click the database in **SQL Server Metadata Explorer** and choose **Synchronize with Database**.  This action publishes the MySQL database to the SQL Server instance:
 
    ![Synchronize with Database](./media/mysql-to-sql-server/synchronize-database.png)
 

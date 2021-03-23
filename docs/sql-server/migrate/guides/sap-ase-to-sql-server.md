@@ -33,11 +33,11 @@ After you have met the prerequisites, you are ready to discover the topology of 
 
 ### Assess
 
-Use [SQL Server Migration Assistant (SSMA) for SAP Adaptive Server Enterprise (formally SAP Sybase ASE)](https://www.microsoft.com/download/details.aspx?id=54256) to review database objects and data, assess databases for migration, migrate Sybase database objects to SQL Server, and then migrate data to SQL Server. To learn more, see [SQL Server Migration Assistant for Sybase (SybaseToSQL)](../../../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md).
+Use SQL Server Migration Assistant (SSMA) for SAP ASE to review database objects and data, assess databases for migration, migrate Sybase database objects to SQL Server, and then migrate data to SQL Server. To learn more, see [SQL Server Migration Assistant for Sybase (SybaseToSQL)](../../../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md).
 
 To create an assessment, follow these steps: 
 
-1. Open **SSMA for Sybase**. 
+1. Open [SQL Server Migration Assistant (SSMA) for SAP ASE](https://www.microsoft.com/download/details.aspx?id=54256). 
 1. Select **File** and then choose **New Project**. 
 1. Provide a project name, a location to save your project, and then select SQL Server as the migration target from the drop-down. Select **OK**.
 1. Enter in values for SAP connection details on the **Connect to Sybase** dialog box. 

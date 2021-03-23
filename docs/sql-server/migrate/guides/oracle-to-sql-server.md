@@ -48,7 +48,7 @@ To use the MAP Toolkit to perform an inventory scan, follow these steps:
 
    ![Select database](./media/oracle-to-sql-server/select-database.png)
 
-1. Select **Create an inventory database**, enter a name for the new inventory database you're creating, provide a brief description, and then select **OK**. 
+1. Select **Create an inventory database**, enter a name for the new inventory database you're creating, provide a brief description, and then select **OK**:
 
    :::image type="content" source="media/oracle-to-sql-server/create-inventory-database.png" alt-text="Create an inventory database":::
 
@@ -143,7 +143,7 @@ To convert the schema, follow these steps:
      1. Enter connection details for your SQL Server instance. 
      1. Choose your target database from the drop-down, or provide a new name, in which case a database will be created on the target server. 
      1. Provide authentication details. 
-     1. Select **Connect**. 
+     1. Select **Connect**:
 
    ![Connect to SQL](./media/oracle-to-sql-server/connect-to-sql.png)
 

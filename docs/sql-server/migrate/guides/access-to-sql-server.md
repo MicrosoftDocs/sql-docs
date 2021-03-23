@@ -36,7 +36,7 @@ After you have met the prerequisites, you are ready to discover the topology of 
 
 ### Assess
 
-By using SQL Server Migration Assistant (SSMA) for Access, you can review database objects and data, and assess databases for migration. To learn more about the tool, see [SQL Server Migration Assistant for Access](/sql/ssma/access/sql-server-migration-assistant-for-access-accesstosql).
+Use SQL Server Migration Assistant (SSMA) for Access to review database objects and data, and assess databases for migration. To learn more about the tool, see [SQL Server Migration Assistant for Access](/sql/ssma/access/sql-server-migration-assistant-for-access-accesstosql). 
 
 To create an assessment, follow these steps:
 
@@ -71,13 +71,6 @@ Validate the default data type mappings and change them based on requirements if
    ![Type Mappings](./media/access-to-sql-server/type-mappings.png)
 
 1. You can change the type mapping for each table by selecting the table in the **Oracle Metadata explorer**. 
-
-1. Select **Connect to SQL Server** from the top-line navigation bar. 
-     1. Enter connection details for your SQL Server instance. 
-     1. Choose your target database from the drop-down, or provide a new name, in which case a database will be created on the target server. 
-     1. Provide authentication details. 
-     1. Select **Connect**. 
-
 
 
 ### Convert 

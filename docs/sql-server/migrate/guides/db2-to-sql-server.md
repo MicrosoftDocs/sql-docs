@@ -34,7 +34,7 @@ After you have met the prerequisites, you are ready to discover the topology of 
 
 ### Assess 
 
-Create an assessment using SQL Server Migration Assistant (SSMA). 
+Use SQL Server Migration Assistant (SSMA) for Db2 to review database objects and data, and assess databases for migration. 
 
 To create an assessment, follow these steps:
 
@@ -81,6 +81,7 @@ To convert the schema, follow these steps:
 1. Select **Connect to SQL Server**. 
     1. Enter connection details to connect to your SQL Server instance. 
     1. Choose to connect to an existing database on the target server, or provide a new name to create a new database on the target server. 
+    1. Provide authentication details. 
     1. Select **Connect**:
 
    :::image type="content" source="media/Db2-to-sql-server/connect-to-sql-server.png" alt-text="Fill in details to connect to SQL Server":::

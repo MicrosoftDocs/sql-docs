@@ -45,6 +45,9 @@ This table summarizes pushdown computation support on different external data so
 
 \*\* For more information Hadoop pushdown feature support, see [Pushdown computation supported by T-SQL operators](polybase-versioned-feature-summary.md#pushdown-computation-supported-by-t-sql-operators).
 
+> [!NOTE]
+> Pushdown computation can be blocked by some T-SQL syntax. For more information, review [Syntax that prevents pushdown](polybase-versioned-feature-summary.md#syntax-that-prevents-pushdown).
+
 ## Key beneficial scenarios of pushdown computation
 
 With PolyBase pushdown computation, you can delegate computation tasks to external data sources. This reduces the workload on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and can significantly improve performance. 

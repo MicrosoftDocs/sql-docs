@@ -5,7 +5,7 @@ description: Reference article for configuration properties for Apache Spark & A
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: rahul.ajmera
-ms.date: 08/04/2020
+ms.date: 03/23/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -105,6 +105,7 @@ The HDFS settings below are those that have BDC-specific defaults but are user c
 | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------------------- |
 | hdfs-site.dfs.replication                                                  | Default Block Replication.                                                                          | int    | 2                                                                                      |
 | hdfs-site.dfs.namenode.provided.enabled                                    | Enables the name node to handle provided storages.                                                   | bool   | true                                                                                   |
+| hdfs.site.dfs.namenode.mount.acls.enabled |  Set to true to inherit ACLs (Access Control Lists) from remote stores during mount.| bool | false |
 | hdfs-site.dfs.datanode.provided.enabled                                    | Enables the data node to handle provided storages.                                                   | bool   | true                                                                                   |
 | hdfs-site.dfs.datanode.provided.volume.lazy.load                           | Enable lazy load in data node for provided storages.                                                 | bool   | true                                                                                   |
 | hdfs-site.dfs.provided.aliasmap.inmemory.enabled                           | Enable in-memory alias map for provided storages.                                                     | bool   | true                                                                                   |
@@ -114,8 +115,9 @@ The HDFS settings below are those that have BDC-specific defaults but are user c
 | hdfs-site.dfs.provided.aliasmap.inmemory.batch-size                        | The batch size when iterating over the database backing the aliasmap.                               | int    | 500                                                                                    |
 | hdfs-site.dfs.datanode.provided.volume.readthrough                         | Enable readthrough for provided storages in datanode.                                               | bool   | true                                                                                   |
 | hdfs-site.dfs.provided.cache.capacity.mount                                | Enable cache capacity mount for provided storages.                                                  | bool   | true                                                                                   |
-| hdfs-site.dfs.provided.overreplication.factor                              | Overreplication factor for provided storages.                                                       | float  | 1                                                                                      |
-| hdfs-site.dfs.provided.cache.capacity.fraction                             | Cache capacity fraction for provided storage.                                                       | float  | 0.01                                                                                   |
+| hdfs-site.dfs.provided.overreplication.factor                              | Overreplication factor for provided storages.  Number of cache-blocks on BDC created per remote HDFS block.                                                     | float  | 1                                                                                      |
+| hdfs-site.dfs.provided.cache.capacity.fraction                             | Cache capacity fraction for provided storage. The fraction of the total capacity in the cluster that can be used to cache data from Provided stores.                                                      | float  | 0.01                                                                                   |
+| hdfs-site.dfs.provided.cache.capacity.bytes | Cluster capacity to use as cache space for Provided blocks, in bytes. | int | -1 | 
 | hdfs-site.dfs.ls.limit                                                     | Limit the number of files printed by ls.                                                            | int    | 500                                                                                    |
 | hdfs-env.HDFS_NAMENODE_OPTS                                                | HDFS Namenode options.                                                                              | string | -Dhadoop.security.logger=INFO,RFAS -Xmx2g                                              |
 | hdfs-env.HDFS_DATANODE_OPTS                                                | HDFS Datanode Options.                                                                              | string | -Dhadoop.security.logger=ERROR,RFAS -Xmx2g                                             |

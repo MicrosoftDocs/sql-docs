@@ -12,7 +12,7 @@ metadata:
   ms.author: wiassaf
   ms.reviewer: 
   ms.custom: 
-  ms.date: 03/12/2021
+  ms.date: 03/23/2021
 
 title: SQL Server Big Data Clusters FAQ
 summary: This article answers frequently asked questions about [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md) concepts, capabilities, deployment, supportability, and tools.
@@ -80,7 +80,7 @@ sections:
           Restarting sparkhead won't cause the logs to be lost, these logs are in HDFS. You should still see Spark history logs from the /gateway/default/sparkhistory UI. For Yarn container logs, you won't see those apps in Yarn UI because Yarn RM restarts, but those yarn logs are still in HDFS and you can link to them from Spark history server. You should always use Spark history server as the entry point to diagnose their Spark apps.
       - question: Is there a way to turn off the caching feature for any pools?
         answer: |
-          By default, 1% of the total HDFS storage will be reserved for caching of mounted data. Caching is a global setting across mounts. Currently, there is not an exposed way to turn it off. For more information, see [Configure HDFS tiering on SQL Server Big Data Clusters](hdfs-tiering.md).
+          By default, 1% of the total HDFS storage will be reserved for caching of mounted data. Caching is a global setting across mounts. Currently, there is not an exposed way to turn it off, however, the percentage can be configured via the [hdfs-site.dfs.provided.cache.capacity.fraction](reference-config-spark-hadoop.md#big-data-clusters-specific-default-hdfs-settings) setting. This setting controls the fraction of the total capacity in the cluster that can be used to cache data from Provided stores. To modify, see [How to configure BDC settings post deployment](configure-bdc-postdeployment.md). For more information, see [Configure HDFS tiering on SQL Server Big Data Clusters](hdfs-tiering.md). 
       - question: How to schedule SQL stored procedures in SQL Server 2019 BDC?
         answer: |
           You can use the [SQL Server Agent](../ssms/agent/sql-server-agent.md) service in the SQL Server master instance of the big data cluster.

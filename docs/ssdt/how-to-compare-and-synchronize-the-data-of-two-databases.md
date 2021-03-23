@@ -13,7 +13,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
-ms.date: 02/09/2017
+ms.date: 03/22/2021
 ---
 
 # How to: Compare and Synchronize the Data of Two Databases
@@ -73,12 +73,12 @@ For more information, see [Compare and Synchronize Data in One or More Tables wi
 2.  In the Command Window, type the following command:  
   
     ```  
-    Sql.NewDataComparison /SrcServerName sServerName /SrcDatabaseName sDatabaseName /SrcUserName sUserName /SrcPassword sPassword /SrcDisplayName sDisplayName /TargetServerName tServerName /TargetDatabaseName tDatabaseName /TargeUserName tUserName /TargetPassword tPassword /TargetDisplayName tDisplayName  
+    Tools.NewDataComparison /SrcServerName sServerName /SrcDatabaseName sDatabaseName /SrcUserName sUserName /SrcPassword sPassword /SrcDisplayName sDisplayName /TargetServerName tServerName /TargetDatabaseName tDatabaseName /TargeUserName tUserName /TargetPassword tPassword /TargetDisplayName tDisplayName  
     ```  
   
     Replace the placeholders (*sServerName*, *sDatabaseName*, *sUserName*, *sPassword*, *sDisplayName*, *tServerName*, *tDatabaseName*, *tUserName*, *tPassword*, and *tDisplayName*) with the values for your source and target databases.  
   
-    If you do not specify a source and a target, the **New Data Comparison** dialog box appears. For more information about the parameters for the Sql.NewDataComparison command, see [Automation Command Reference for Database Features of Visual Studio Team System](/previous-versions/visualstudio/visual-studio-2010/dd470565(v=vs.100)).  
+    If you do not specify a source and a target, the **New Data Comparison** dialog box appears. For more information about the parameters for the Tools.NewDataComparison command, see [Automation Command Reference for Database Features of Visual Studio Team System](/previous-versions/visualstudio/visual-studio-2010/dd470565(v=vs.100)).  
   
     The data in the specified source and target databases are compared. The results appear in a Data Compare session. For more information about how to view results or synchronize the data, see [Viewing Data Differences](#ViewDifferences) and [Synchronizing Database Data](#Synchronize).  
   

@@ -51,7 +51,7 @@ When using SQL Server Data Files in Azure feature, you need to create a storage 
 
 In [Microsoft Azure](https://azure.microsoft.com), an [Azure storage](https://azure.microsoft.com/services/storage/) account represents the highest level of the namespace for accessing blobs. A storage account can contain an unlimited number of containers, as long as their total size is below the storage limits. For the latest information on storage limits, see [Azure Subscription and Service Limits, Quotas, and Constraints](/azure/azure-subscription-service-limits). A container provides a grouping of a set of [blobs](/azure/storage/common/storage-introduction#blob-storage). All blobs must be in a container. An account can contain an unlimited number of containers. Similarly, a container can store an unlimited number of blobs. 
 
-There are two types of blobs that can be stored in Azure Storage: block and page blobs. This new feature uses page blobs, which are more efficient when ranges of bytes in a file are modified frequently. You can access blobs using the following URL format: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
+There are two types of blobs that can be stored in Azure Storage: block and page blobs. This feature uses page blobs, which are more efficient when ranges of bytes in a file are modified frequently. You can access blobs using the following URL format: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
 
 > [!NOTE]
 > You can not use block blobs for SQL Server data files. Use [page blobs](/azure/storage/blobs/storage-blob-pageblob-overview). 

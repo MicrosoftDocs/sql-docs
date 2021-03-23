@@ -154,7 +154,7 @@ Starting with SQL Server 2014, a new SQL Server object has been added to be used
  When using the SQL Server Data Files in Azure feature, all SQL Server Management Objects (SMO) are supported. If an SMO object requires a file path, use the BLOB URL format instead of a local file path, such as `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. For more information about SQL Server Management Objects (SMO), see [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) in SQL Server Books Online.  
   
 ### Transact-SQL support  
- This addition of this feature has introduced the following change in the Transact-SQL surface area:
+ The addition of this feature has introduced the following change in the Transact-SQL surface area:
 
 - A new **int** column, **credential_id**, in the **sys.master_files** system view. The **credential_id** column is used to enable Azure Storage data files to be cross-referenced back to `sys.credentials` for the credentials created for them. You can use it for troubleshooting, such as a credential cannot be deleted when there is a database file using it.  
   

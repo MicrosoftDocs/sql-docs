@@ -49,7 +49,7 @@ To create an assessment, follow these steps:
 
 1. Select the MySQL database(s) you want to migrate:
 
-   ![Connect to mysql](./media/mysql-to-sql-server/select-database.png)
+   ![Select MySQL database you want to migrate](./media/mysql-to-sql-server/select-database.png)
 
 1. Right-click the MySQL database in **MySQL Metadata Explorer** and choose **Create Report**. Alternatively, you can select **Create Report** from the top-line navigation bar:
 

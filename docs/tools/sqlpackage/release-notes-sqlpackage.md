@@ -59,9 +59,10 @@ This article lists the features and fixes delivered by the released versions of 
 | Deployment | Reseeds identity value after deployment based on target's previous last value. |
 
 ### Known Issues
-| Feature | Details |
-| :------ | :------ |
-| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported | 
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported | N/A |
+| Deployment | In an incremental deploy scenario when the user is dropping a temporal table along with dropping objects that are dependent on it, like functions, stored procs etc. the deployment can fail. The script generation order tries to turn off SYSTEM_VERSIONING on the table which is a pre-req for dropping the table, but the order of steps generated is incorrect. [Work item](https://github.com/microsoft/azuredatastudio/issues/14655) | Generate the deployment script, move the System_Versioning OFF step to just before the table being dropped and then run the script. |
 
 ## 18.6 sqlpackage
 

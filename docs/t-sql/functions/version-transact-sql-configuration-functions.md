@@ -4,7 +4,7 @@ title: "@@VERSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -29,7 +29,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Returns system and build information for the current installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+
+> [!NOTE]  
+> We are aware of an issue where the product version reported by @@VERSION is incorrect for **Azure SQL Database**.
+> 
+> The version of the SQL Server database engine run by Azure SQL Database is always ahead of the on-premises version of SQL Server, and includes the latest security fixes. This means that the patch level is always on par with or ahead of the on-premises version of SQL Server, and that the latest features available in SQL Server are available in Azure SQL Database.
+>
+> To programmatically determine the engine edition, use SELECT SERVERPROPERTY('EngineEdition'). This query will return '5' for Azure SQL Database and '8' for Azure SQL Managed Instance.
+>
+> We will update the documentation once this issue is resolved.
 ## Syntax  
   
 ```syntaxsql
@@ -69,15 +77,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -   Build date  
   
 -   Copyright statement  
-
-> [!NOTE]  
-> We are aware of an issue where the product version reported by @@VERSION is incorrect for Azure SQL Database. 
-> The version of the SQL Server database engine run by Azure SQL Database is always ahead of the on-premises version of SQL Server, and includes the latest security fixes. This means that the patch level is always on par with or ahead of the on-premises version of SQL Server, and that the latest features available in SQL Server are available in Azure SQL Database.
->
-> To programmatically determine the engine edition, use SELECT SERVERPROPERTY('EngineEdition'). This query will return '5' for Azure SQL Database and '8' for Azure SQL Managed Instance.
->
-> We will update the documentation once this issue is resolved.
-
   
 ## Examples  
   

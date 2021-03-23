@@ -9,7 +9,7 @@ ms.devlang:
 ms.topic: conceptual
 ms.date: 10/02/2019
 ms.prod: sql
-ms.prod_service: "polybase, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 monikerRange: ">= sql-server-2016"
 ---
 

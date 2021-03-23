@@ -4757,8 +4757,6 @@ items:
         href: database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md
       - name: PH timeout
         href: database-engine/configure-windows/ph-timeout-server-configuration-option.md
-      - name: precompute rank
-        href: database-engine/configure-windows/precompute-rank-server-configuration-option.md
       - name: Configure the priority boost
         href: database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md
       - name: Configure the query governor cost limit
@@ -4927,6 +4925,8 @@ items:
   items:
   - name: Migration documentation
     href: sql-server/migrate/index.yml
+  - name: Compare migration tools
+    href: sql-server/migrate/dma-azure-migrate-compare-migration-tools.md
   - name: SQL Server Integration Services (SSIS) > 
     href: ./integration-services/sql-server-integration-services.md
   - name: Bulk Copy Utility (bcp)
@@ -4936,8 +4936,16 @@ items:
     href: /azure/dms/dms-overview
   - name: Migration guides
     items:
+    - name: From Access
+      href: sql-server/migrate/guides/access-to-sql-server.md
     - name: From DB2
       href: sql-server/migrate/guides/db2-to-sql-server.md
+    - name: From MySQL
+      href: sql-server/migrate/guides/mysql-to-sql-server.md
+    - name: From Oracle
+      href: sql-server/migrate/guides/oracle-to-sql-server.md
+    - name: From SAP ASE
+      href: sql-server/migrate/guides/sap-ase-to-sql-server.md
   - name: Data Quality Services (DQS)
     items:
     - name: Overview
@@ -9857,6 +9865,8 @@ items:
         href: tools/sqlpackage/sqlpackage-script.md
     - name: SqlPackage in development pipelines
       href: tools/sqlpackage/sqlpackage-pipelines.md
+    - name: SqlPackage for Azure Synapse Analytics
+      href: tools/sqlpackage/sqlpackage-for-azure-synapse-analytics.md
   - name: SQL Server Profiler
     href: tools/sql-server-profiler/sql-server-profiler.md
     items:

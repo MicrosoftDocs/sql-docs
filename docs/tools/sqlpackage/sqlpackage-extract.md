@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "dzsquared"
 ms.author: "drskwier"
 ms.reviewer: "maghan; sstein"
-ms.date: 12/11/2020
+ms.date: 3/10/2021
 ---
 
 # SqlPackage Extract parameters and properties
@@ -54,6 +54,10 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 |Property|Value|Description|
 |---|---|---|
+|**/p:**|AzureStorageBlobEndpoint=(STRING)|Azure blob storage endpoint, see [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
+|**/p:**|AzureStorageContainer=(STRING)|Azure blob storage container, see [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
+|**/p:**|AzureStorageKey=(STRING)|Azure storage account key, see [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
+|**/p:**|AzureStorageRootPath=(STRING)|Storage root path within the container. Without this property, the path defaults to `servername/databasename/timestamp/`. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
 |**/p:**|CommandTimeout=(INT32 '60')|Specifies the command timeout in seconds when executing queries against SQL Server.|
 |**/p:**|DacApplicationDescription=(STRING)|Defines the Application description to be stored in the DACPAC metadata.|
 |**/p:**|DacApplicationName=(STRING)|Defined the Application name to be stored in the DACPAC metadata. The default value is the database name.|

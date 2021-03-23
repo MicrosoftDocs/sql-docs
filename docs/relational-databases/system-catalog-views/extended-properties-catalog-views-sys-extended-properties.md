@@ -4,7 +4,7 @@ title: "sys.extended_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|class|**tinyint**|Identifies the class of item on which the property exists. Can be one of the following:<br /><br /> 0 = Database<br /><br /> 1 = Object or column<br /><br /> 2 = Parameter<br /><br /> 3 = Schema<br /><br /> 4 = Database principal<br /><br /> 5 = Assembly<br /><br /> 6 = Type<br /><br /> 7 = Index<br /><br /> 10 = XML schema collection<br /><br /> 15 = Message type<br /><br /> 16 = Service contract<br /><br /> 17 = Service<br /><br /> 18 = Remote service binding<br /><br /> 19 = Route<br /><br /> 20 = Dataspace (filegroup or partition scheme)<br /><br /> 21 = Partition function<br /><br /> 22 = Database file<br /><br /> 27 = Plan guide|  
+|class|**tinyint**|Identifies the class of item on which the property exists. Can be one of the following:<br /><br /> 0 = Database<br /><br /> 1 = Object or column<br /><br /> 2 = Parameter<br /><br /> 3 = Schema<br /><br /> 4 = Database principal<br /><br /> 5 = Assembly<br /><br /> 6 = Type<br /><br /> 7 = Index<br /><br /> 8 = User defined table type column<br /><br /> 10 = XML schema collection<br /><br /> 15 = Message type<br /><br /> 16 = Service contract<br /><br /> 17 = Service<br /><br /> 18 = Remote service binding<br /><br /> 19 = Route<br /><br /> 20 = Dataspace (filegroup or partition scheme)<br /><br /> 21 = Partition function<br /><br /> 22 = Database file<br /><br /> 27 = Plan guide|  
 |class_desc|**nvarchar(60)**|Description of the class on which the extended property exists. Can be one of the following:<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> PARAMETER<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> INDEX<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> DATASPACE<br /><br /> PARTITION_FUNCTION<br /><br /> DATABASE_FILE<br /><br /> PLAN_GUIDE|  
 |major_id|**int**|ID of the item on which the extended property exists, interpreted according to its class. For most items, this is the ID that applies to what the class represents. Interpretation for nonstandard major IDs is as follows:<br /><br /> If class is 0, major_id is always 0.<br /><br /> If class is 1, 2, or 7 major_id is object_id.|  
 |minor_id|**int**|Secondary ID of the item on which the extended property exists, interpreted according to its class. For most items this is 0; otherwise, the ID is as follows:<br /><br /> If class = 1, minor_id is the column_id if column, else 0 if object.<br /><br /> If class = 2, minor_id is the parameter_id.<br /><br /> If class 7 = minor_id is the index_id.|  

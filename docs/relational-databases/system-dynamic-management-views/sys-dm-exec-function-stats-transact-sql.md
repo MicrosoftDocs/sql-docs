@@ -4,7 +4,7 @@ title: "sys.dm_exec_function_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/10/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: conceptual

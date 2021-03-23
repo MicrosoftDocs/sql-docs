@@ -4,7 +4,7 @@ description: Learn how Row-Level Security uses group membership or execution con
 ms.custom: ""
 ms.date: "09/01/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: "security"
 ms.topic: conceptual
@@ -154,7 +154,7 @@ It is possible to cause information leakage through the use of carefully crafted
   
 - **Filestream:** RLS is incompatible with Filestream.  
   
-- **PolyBase:** RLS is supported with external tables in Azure Synapse and SQL Server 2019 CU1 or higher. 
+- **PolyBase:** RLS is supported with external tables in Azure Synapse and SQL Server 2019 CU7 or higher. 
 
 - **Memory-Optimized Tables:** The inline table-valued function used as a security predicate on a memory-optimized table must be defined using the `WITH NATIVE_COMPILATION` option. With this option, language features not supported by memory-optimized tables will be banned and the appropriate error will be issued at creation time. For more information, see the **Row-Level Security in Memory Optimized Tables** section in [Introduction to Memory-Optimized Tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   

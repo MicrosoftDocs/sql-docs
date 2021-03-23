@@ -16,7 +16,7 @@ ms.author: lle
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  This topic summarizes the changes and updates in the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
+  This topic summarizes the changes and updates in the latest release of [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
  For an overview of how you organize data in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], see [Master Data Services Overview](../master-data-services/master-data-services-overview-mds.md). 
   
@@ -26,7 +26,7 @@ ms.author: lle
   
 -   To download [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
--   Have an Azure account?  Then go **[Here](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] already installed.  
+-   Have an Azure account?  Then go **[here](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** to spin up a Virtual Machine with [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] already installed.  
   
 ##  Improved Performance  
   

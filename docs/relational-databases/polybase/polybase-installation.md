@@ -160,7 +160,7 @@ RECONFIGURE;
 PolyBase installs three user databases, DWConfiguration, DWDiagnostics, and DWQueue. These databases are for PolyBase use. Don't alter or delete them.  
 
 > [!CAUTION]
-> Adding PolyBase to an existing installation of SQL Server will install the feature at the version level of the installation media, which may be behind the version level other features of SQL Server. This may result in unexpected behavior or errors. Always follow up installing the PolyBase feature by bringing the new feature up to the same version level. Install service packs (SPs), cumulative updates (CUs), and/or general distribution releases (GDRs) as needed. To determine the version of PolyBase, see [Determine the version, edition, and update level of SQL Server and its components](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#polybase).
+> Adding PolyBase to an existing installation of SQL Server will install the feature at the version level of the installation media, which may be behind the version level other features of SQL Server. This may result in unexpected behavior or errors. Always follow up installing the PolyBase feature by bringing the new feature up to the same version level. Install service packs (SPs), cumulative updates (CUs), and/or general distribution releases (GDRs) as needed. To determine the version of PolyBase, see [Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level#polybase).
    
 ### <a id="confirminstall"></a> How to confirm installation  
 

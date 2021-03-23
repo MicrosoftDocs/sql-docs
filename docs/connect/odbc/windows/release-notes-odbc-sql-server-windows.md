@@ -37,6 +37,25 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## 17.7.2
+
+![download](../../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2156851)  
+![download](../../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2156749)  
+
+Version number: 17.7.2.1  
+Released: March 10, 2021  
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x40a)  
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x40a)  
+
+| Feature added | Details |
+| :------- | :------ |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## Previous Releases
+
 ## 17.7
 
 ![download](../../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2153471)  
@@ -56,8 +75,6 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Ability to insert into encrypted money and smallmoney columns | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
-
-## Previous Releases
 
 ## 17.6
 

@@ -16,7 +16,7 @@ metadata:
 
 
 landingContent:
-  - title: SQL to SQL Server
+  - title: SQL Server to SQL Server
     linkLists:
     - linkListType: overview
       links:
@@ -51,7 +51,7 @@ landingContent:
       - text: From Sybase
         url: ../../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md
 
-  - title: SQL to Azure SQL
+  - title: SQL Server to Azure SQL
     linkLists:
     - linkListType: overview
       links:

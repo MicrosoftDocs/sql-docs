@@ -19,17 +19,16 @@ Big Data Clusters configuration settings can be defined at the following scopes:
 ## BDC cluster-scope settings
 You can configure the following settings at the cluster scope.
 
-|Property|Options|
-| --- | --- |
-|`mssql.telemetry`|`customerfeedback = { true | false }` |
-|`mssql.traceflag`|`traceflag<#> = <####>` |
+| Setting Name                                             | Description                                                                                                                                                                                                                                                                                                             | Type   | Default Value          | Deployment-time Only | 
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------------------- | --------- | 
+| bdc.telemetry.customerFeedback                              | Controls whether this cluster participates in the Customer Experience Improvement Program (CEIP) which sends product usage and diagnostic data to Microsoft. | boolean | true                    |           | 
 
 ## SQL service-scope settings
 You can configure the following settings at the SQL service scope.
 
-|Property|Options|
-| --- | --- |
-|`mssql.language`|`lcid = <language_identifier>` |
+| Setting Name                                             | Description                                                                                                                                                                                                                                                                                                             | Type   | Default Value          | Deployment-time Only | 
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------------------- | --------- | 
+| mssql.language.lcid                              | Changes the SQL Server locale to any supported language identifier (LCID).                                                                                                                                                                                                                                              | int    | 1033                         |           | 
 
 ## Spark service-scope settings
 Visit the [Apache Spark & Apache Hadoop configuration article](reference-config-spark-hadoop.md) to see all supported and unsupported settings.
@@ -44,75 +43,73 @@ No gateway service-scope settings configurable. Configure settings at the gatewa
 None available
 
 ## Master Pool resource-scope settings
-|Property|Options|
-| --- | --- |
-|`mssql.sqlagent`|`enabled = { true | false }` |
-|`mssql.licensing`|`pid = { Enterprise | Developer }` |
-<!-- |`mssql.collation`|`x = <language_identifier>` | -->
-
-> [!NOTE]
-> Changing the default collation for an instance of SQL Server is a complex operation. In addition to changing the `mssql.collation` setting, you may need to re-create your user databases and all objects in them. For instructions on how to do so, see [Set or Change the Server Collation](../relational-databases/collations/set-or-change-the-server-collation.md#changing-the-server-collation-in-sql-server)
+| Setting Name                                             | Description                                                                                                                                                                                                                                                                                                             | Type   | Default Value          | Deployment-time Only | 
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------------------- | --------- | 
+| mssql.licensing.pid                              | SQL Server edition.                                                                                                                                                                                                                                                                                                     | string | Developer                    |           | 
+| mssql.sqlagent.enabled                           | Enables SQL Server agent.                                                                                                                                                                                                                                                                                               | bool   | false                        |           | 
+| mssql.collation                                  | Changes the SQL Server collation to any of the supported collations.                                                                                                                                                                                                                                                    | string | SQL_Latin1_General_CP1_CI_AS | true      | 
+| hadr.enabled                                     | Boolean for enabling availability groups for SQL Server master pool.                                                                                                                                                                                                                                                    | bool   | false                        | true      | 
+| hadr.leaseDurationInSeconds                      | Lease expiration Timeout for HA Agent.                                                                                                                                                                                                                                                                                  | int    | 30                           |           | 
+| hadr.externalLeasePollingEnabled                 | Boolean for enabling external lease polling API.                                                                                                                                                                                                                                                                        | bool   | true                         | true      | 
+| mssql.telemetry.userRequestedLocalAuditDirectory | Enables Sql Server Local Audit and lets user set the directory where the 'Local Audit' logs are created. The directory must be under '/var/opt/mssql/audit'.                                                                                                                                                            | string |                              |           | 
 
 ## Storage Pool resource-scope settings
 The storage pool consists of SQL, Spark, and HDFS components.
 
 ### Available SQL configurations
-|Property|Options|
-| --- | --- |
-|`mssql.degreeOfParallelism`| |
-|`mssql.minServerMemory`| |
-|`mssql.maxServerMemory`| |
-|`mssql.network.tlscert`| |
-|`mssql.network.tlskey`| |
-|`mssql.numberOfCpus`| |
-|`mssql.storagePoolCacheSize`| |
-|`mssql.storagePoolMaxCacheSize`| |
-|`mssql.storagePoolCacheAutogrowth`| |
-|`mssql.tempdb.autogrowthPerDataFile`| |
-|`mssql.tempdb.autogrowthPerLogFile`| |
-|`mssql.tempdb.dataFileSize`| |
-|`mssql.tempdb.dataFileMaxSize`| |
-|`mssql.tempdb.logFileMaxSize`| |
-|`mssql.tempdb.numberOfDataFiles`| |
-|`mssql.traceflag`|`traceflag<#> = <####>` |
+| Setting Name                                             | Description                                                                                                                                                                                                                                                                                                             | Type   | Default Value          | Deployment-time Only | 
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------------------- | --------- | 
+| mssql.degreeOfParallelism                        | The number of processors employed to run a single statement, for each parallel plan execution, per SQL instance.                                                                                                                                                                                                        | int    | 0                            |           | 
+| mssql.maxServerMemory                            | The maximum amount of memory (in megabytes) for a SQL Server process used by an instance of SQL Server.                                                                                                                                                                                                                 | int    | 2147483647                   |           | 
+| mssql.minServerMemory                            | The minimum amount of memory (in megabytes) for a SQL Server process used by an instance of SQL Server.                                                                                                                                                                                                                 | int    | 0                            |           | 
+| mssql.numberOfCpus                    | Distributes SQL Server worker threads to each CPU within the specified range. CPUs outside the specified range won't have assigned threads. For AUTO, specify 0. | string | AUTO                         |           | 
+| mssql.storagePoolCacheSize                       | Size (in megabytes) of the cache for each SQL instance in the Storage Pool.                                                                                                                                                                                                                                             | int    | 8                            |           | 
+| mssql.storagePoolMaxCacheSize                    | Maximum size (in megabytes) of the cache for each SQL instance in the Storage Pool.                                                                                                                                                                                                                                     | int    | 16384                        |           | 
+| mssql.storagePoolCacheAutogrowth                 | Autogrowth factor (in MBs) for the Storage Pool cache.                                                                                                                                                                                                                                                                  | int    | 256                          |           | 
+| mssql.tempdb.autogrowthPerDataFile               | Autogrowth (in MBs) for each TempDB data file.                                                                                                                                                                                                                                                                          | int    | 64                           |           | 
+| mssql.tempdb.autogrowthPerLogFile                | Autogrowth (in MBs) for each TempDB log file.                                                                                                                                                                                                                                                                           | int    | 64                           |           | 
+| mssql.tempdb.dataFileSize                        | File size (in MBs) for each TempDB data file.                                                                                                                                                                                                                                                                           | int    | 8                            |           | 
+| mssql.tempdb.dataFileMaxSize                     | Maximum file size (in MBs) for each TempDB data file.                                                                                                                                                                                                                                                                   | int    | 16777215                     |           | 
+| mssql.tempdb.logFileSize                         | File size (in MBs) for each TempDB log file.                                                                                                                                                                                                                                                                            | int    | 8                            |           | 
+| mssql.tempdb.logFileMaxSize                      | Maximum file size (in MBs) for each TempDB log file.                                                                                                                                                                                                                                                                    | int    | 2097151                      |           | 
+| mssql.tempdb.numberOfDataFiles                   | Number of data files for TempDB.                                                                                                                                                                                                                                                                                        | int    | 8                            |           | 
+| mssql.traceflags                                 | Enables or disables traceflags for the startup of the SQL Server service. Provide a space separated list of traceflags to apply.                                                                                                                                                                                        | string | 3614                         |           | 
 
 
 ### Available Apache Spark and Hadoop configurations
 Visit the [Apache Spark & Apache Hadoop configuration article](reference-config-spark-hadoop.md) to see all supported and unsupported settings.
 
 ## Data Pool resource-scope settings
-|Property|Options|
-| --- | --- |
-|`mssql.degreeOfParallelism`| |
-|`mssql.minServerMemory`| |
-|`mssql.maxServerMemory`| |
-|`mssql.network.tlscert`| |
-|`mssql.network.tlskey`| |
-|`mssql.numberOfCpus`| |
-|`mssql.tempdb.autogrowthPerDataFile`| |
-|`mssql.tempdb.autogrowthPerLogFile`| |
-|`mssql.tempdb.dataFileSize`| |
-|`mssql.tempdb.dataFileMaxSize`| |
-|`mssql.tempdb.logFileMaxSize`| |
-|`mssql.tempdb.numberOfDataFiles`| |
-|`mssql.traceflag`|`traceflag<#> = <####>` |
+| Setting Name                                             | Description                                                                                                                                                                                                                                                                                                             | Type   | Default Value          | Deployment-time Only | 
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------------------- | --------- | 
+| mssql.degreeOfParallelism                        | The number of processors employed to run a single statement, for each parallel plan execution, per SQL instance.                                                                                                                                                                                                        | int    | 0                            |           | 
+| mssql.maxServerMemory                            | The maximum amount of memory (in megabytes) for a SQL Server process used by an instance of SQL Server.                                                                                                                                                                                                                 | int    | 2147483647                   |           | 
+| mssql.minServerMemory                            | The minimum amount of memory (in megabytes) for a SQL Server process used by an instance of SQL Server.                                                                                                                                                                                                                 | int    | 0                            |           | 
+| mssql.numberOfCpus                    | Distributes SQL Server worker threads to each CPU within the specified range. CPUs outside the specified range won't have assigned threads. For AUTO, specify 0. | string | AUTO                         |           | 
+| mssql.tempdb.autogrowthPerDataFile               | Autogrowth (in MBs) for each TempDB data file.                                                                                                                                                                                                                                                                          | int    | 64                           |           | 
+| mssql.tempdb.autogrowthPerLogFile                | Autogrowth (in MBs) for each TempDB log file.                                                                                                                                                                                                                                                                           | int    | 64                           |           | 
+| mssql.tempdb.dataFileSize                        | File size (in MBs) for each TempDB data file.                                                                                                                                                                                                                                                                           | int    | 8                            |           | 
+| mssql.tempdb.dataFileMaxSize                     | Maximum file size (in MBs) for each TempDB data file.                                                                                                                                                                                                                                                                   | int    | 16777215                     |           | 
+| mssql.tempdb.logFileSize                         | File size (in MBs) for each TempDB log file.                                                                                                                                                                                                                                                                            | int    | 8                            |           | 
+| mssql.tempdb.logFileMaxSize                      | Maximum file size (in MBs) for each TempDB log file.                                                                                                                                                                                                                                                                    | int    | 2097151                      |           | 
+| mssql.tempdb.numberOfDataFiles                   | Number of data files for TempDB.                                                                                                                                                                                                                                                                                        | int    | 8                            |           | 
+| mssql.traceflags                                 | Enables or disables traceflags for the startup of the SQL Server service. Provide a space separated list of traceflags to apply.                                                                                                                                                                                        | string | 3614                         |           | 
 
 ## Compute Pool resource-scope settings
-|Property|Options|
-| --- | --- |
-|`mssql.degreeOfParallelism`| |
-|`mssql.minServerMemory`| |
-|`mssql.maxServerMemory`| |
-|`mssql.network.tlscert`| |
-|`mssql.network.tlskey`| |
-|`mssql.numberOfCpus`| |
-|`mssql.tempdb.autogrowthPerDataFile`| |
-|`mssql.tempdb.autogrowthPerLogFile`| |
-|`mssql.tempdb.dataFileSize`| |
-|`mssql.tempdb.dataFileMaxSize`| |
-|`mssql.tempdb.logFileMaxSize`| |
-|`mssql.tempdb.numberOfDataFiles`| |
-|`mssql.traceflag`|`traceflag<#> = <####>` |
+| Setting Name                                             | Description                                                                                                                                                                                                                                                                                                             | Type   | Default Value          | Deployment-time Only | 
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------------------- | --------- | 
+| mssql.degreeOfParallelism                        | The number of processors employed to run a single statement, for each parallel plan execution, per SQL instance.                                                                                                                                                                                                        | int    | 0                            |           | 
+| mssql.maxServerMemory                            | The maximum amount of memory (in megabytes) for a SQL Server process used by an instance of SQL Server.                                                                                                                                                                                                                 | int    | 2147483647                   |           | 
+| mssql.minServerMemory                            | The minimum amount of memory (in megabytes) for a SQL Server process used by an instance of SQL Server.                                                                                                                                                                                                                 | int    | 0                            |           | 
+| mssql.numberOfCpus                    | Distributes SQL Server worker threads to each CPU within the specified range. CPUs outside the specified range won't have assigned threads. For AUTO, specify 0. | string | AUTO                         |           | 
+| mssql.tempdb.autogrowthPerDataFile               | Autogrowth (in MBs) for each TempDB data file.                                                                                                                                                                                                                                                                          | int    | 64                           |           | 
+| mssql.tempdb.autogrowthPerLogFile                | Autogrowth (in MBs) for each TempDB log file.                                                                                                                                                                                                                                                                           | int    | 64                           |           | 
+| mssql.tempdb.dataFileSize                        | File size (in MBs) for each TempDB data file.                                                                                                                                                                                                                                                                           | int    | 8                            |           | 
+| mssql.tempdb.dataFileMaxSize                     | Maximum file size (in MBs) for each TempDB data file.                                                                                                                                                                                                                                                                   | int    | 16777215                     |           | 
+| mssql.tempdb.logFileSize                         | File size (in MBs) for each TempDB log file.                                                                                                                                                                                                                                                                            | int    | 8                            |           | 
+| mssql.tempdb.logFileMaxSize                      | Maximum file size (in MBs) for each TempDB log file.                                                                                                                                                                                                                                                                    | int    | 2097151                      |           | 
+| mssql.tempdb.numberOfDataFiles                   | Number of data files for TempDB.                                                                                                                                                                                                                                                                                        | int    | 8                            |           | 
+| mssql.traceflags                                 | Enables or disables traceflags for the startup of the SQL Server service. Provide a space separated list of traceflags to apply.                                                                                                                                                                                        | string | 3614                         |           | 
 
 ## Spark Pool resource-scope settings
 Visit the [Apache Spark & Apache Hadoop configuration article](reference-config-spark-hadoop.md) to see all supported and unsupported settings.

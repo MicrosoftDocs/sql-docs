@@ -13,7 +13,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
-ms.date: 02/09/2017
+ms.date: 03/22/2021
 ---
 
 # How to: Compare and Synchronize the Data of Two Databases

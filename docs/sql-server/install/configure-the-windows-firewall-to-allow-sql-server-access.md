@@ -1,7 +1,7 @@
 ---
 title: "Configure Windows Firewall"
 description: Learn how to configure the Windows firewall to allow access to an instance of the SQL Server through the firewall.
-ms.custom: "contperf-fy21q3"
+ms.custom: "seo-lt-2019","contperf-fy21q3"
 ms.date: 03/18/2021
 ms.prod: sql
 ms.reviewer: ""

@@ -4936,7 +4936,7 @@ items:
     items:
     - name: From Access
       href: sql-server/migrate/guides/access-to-sql-server.md
-    - name: From DB2
+    - name: From Db2
       href: sql-server/migrate/guides/db2-to-sql-server.md
     - name: From MySQL
       href: sql-server/migrate/guides/mysql-to-sql-server.md
@@ -5580,7 +5580,7 @@ items:
           items:
           - name: Oracle
             href: relational-databases/replication/non-sql/oracle-subscribers.md
-          - name: IBM DB2
+          - name: IBM Db2
             href: relational-databases/replication/non-sql/ibm-db2-subscribers.md
           - name: Other Non-SQL Subscribers
             href: relational-databases/replication/non-sql/other-non-sql-server-subscribers.md

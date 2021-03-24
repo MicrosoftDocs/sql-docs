@@ -220,7 +220,7 @@ Constructs and operations not supported:
 
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
-- [Dynamic Data Masking](..\..\relational-databases\security\dynamic-data-masking.md) on external table columns
+- [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md) on external table columns
 
 ### Query limitations
 
@@ -713,7 +713,7 @@ Constructs and operations not supported:
 
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
-- [Dynamic Data Masking](..\..\relational-databases\security\dynamic-data-masking.md) on external table columns
+- [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md) on external table columns
 
 Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined during query execution can be used, that is, when used in conjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined to.
 
@@ -970,7 +970,7 @@ Constructs and operations not supported:
 
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
-- [Dynamic Data Masking](..\..\relational-databases\security\dynamic-data-masking.md) on external table columns
+- [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md) on external table columns
 
 ### Query limitations
 
@@ -1228,7 +1228,7 @@ Constructs and operations not supported:
 
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
-- [Dynamic Data Masking](..\..\relational-databases\security\dynamic-data-masking.md) on external table columns
+- [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md) on external table columns
 
 ### Query limitations
 

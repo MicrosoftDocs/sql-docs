@@ -80,7 +80,7 @@ WHERE is_masked = 1;
   
 -   A column with data masking cannot be a key for a FULLTEXT index.  
 
--   A column in a [PolyBase external table](..\..\t-sql\statements\create-external-table-transact-sql.md).
+-   A column in a PolyBase [external table](../../t-sql/statements/create-external-table-transact-sql.md).
   
  For users without the **UNMASK** permission, the deprecated **READTEXT**, **UPDATETEXT**, and **WRITETEXT** statements do not function properly on a column configured for Dynamic Data Masking. 
  

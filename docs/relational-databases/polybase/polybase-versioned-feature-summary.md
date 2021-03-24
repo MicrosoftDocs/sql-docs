@@ -61,6 +61,8 @@ The following T-SQL functions or syntax will prevent pushdown computation:
 
 Pushdown support for the `FORMAT` and `TRIM` syntax was introduced in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] CU10.
 
+For more information, see [Pushdown computations in PolyBase](polybase-pushdown-computation.md).
+
 ## Pushdown computation supported by T-SQL operators
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and APS, not all T-SQL operators can be pushed down to the Hadoop cluster. This table lists all the supported operators and a subset of the unsupported operators.
@@ -114,4 +116,4 @@ PolyBase has the following limitations:
 
 ## Next steps
 
-For more information about PolyBase, see [What is PolyBase?](polybase-guide.md).
+For more information about PolyBase, see [What is PolyBase?](polybase-guide.md)

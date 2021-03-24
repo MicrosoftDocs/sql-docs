@@ -3,7 +3,7 @@ title: "GETDATE (Transact-SQL) | Microsoft Docs"
 description: "Transact-SQL reference for the GETDATE function, which returns the current database system time as a datetime value."
 ms.date: "09/07/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference

@@ -4,7 +4,7 @@ title: "Transaction Locking and Row Versioning Guide"
 ms.custom: seo-dt-2019
 ms.date: "03/10/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual

@@ -2,9 +2,9 @@
 description: "sys.dm_os_performance_counters (Transact-SQL)"
 title: "sys.dm_os_performance_counters (Transact-SQL)"
 ms.custom: ""
-ms.date: "03/15/2021"
+ms.date: "03/22/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"
@@ -48,9 +48,13 @@ SELECT COUNT(*) FROM sys.dm_os_performance_counters;
 If the return value is 0 rows, this means that the performance counters have been disabled. You should then look at the setup log and search for error 3409, `Reinstall sqlctr.ini for this instance, and ensure that the instance login account has correct registry permissions.`
 This denotes that performance counters were not enabled. The errors immediately before the 3409 error should indicate the root cause for the failure of performance counter enabling. For more information about setup log files, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
 
-Performance counters where the `cntr_type` column value is 65792, 272696320, and 537003264 display an instant snapshot counter value.
+Performance counters where the `cntr_type` column value is 65792 display a snapshot of the last observed value only, not an average. 
 
-Performance counters where the `cntr_type` column value is 272696576, 1073874176, and 1073939712 display cumulative counter values instead of an instant snapshot. As such, to get a snapshot-like reading, you must compare the delta between two collection points.
+Performance counters where the `cntr_type` column value is 272696320 or 272696576 display the average number of operations completed during each second of the sample interval. Counters of this type measure time in ticks of the system clock. For example, to get a snapshot-like reading of the last second only for the `Buffer Manager:Lazy writes/sec` and `Buffer Manager:Checkpoint pages/sec` counters, you must compare the delta between two collection points that are one second apart.    
+
+Performance counters where the `cntr_type` column value is 537003264 display the ratio of a subset to its set as a percentage. For example, the `Buffer Manager:Buffer cache hit ratio` counter compares the total number of cache hits and the total number of cache lookups. As such, to get a snapshot-like reading of the last second only, you must compare the delta between the current value and the base value (denominator) between two collection points that are one second apart. The corresponding base value is the performance counter `Buffer Manager:Buffer cache hit ratio base` where the `cntr_type` column value is 1073939712.
+
+Performance counters where the `cntr_type` column value is 1073874176 display how many items are processed on average, as a ratio of the items processed to the number of operations. For example, the `Locks:Average Wait Time (ms)` counters compares the lock waits per second with the lock requests per second, to display the average amount of wait time (in milliseconds) for each lock request that resulted in a wait. As such, to get a snapshot-like reading of the last second only, you must compare the delta between the current value and the base value (denominator) between two collection points that are one second apart. The corresponding base value is the performance counter `Locks:Average Wait Time Base` where the `cntr_type` column value is 1073939712.
 
 Data in the `sys.dm_os_performance_counters` DMV is not persisted after the database engine restarts. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time.   
 

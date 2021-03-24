@@ -1,16 +1,12 @@
 ---
-title: "Migration guide: DB2 to SQL Server"
-description: Follow this guide to migrate your DB2 server to SQL Server. 
+title: "DB2 to SQL Server: Migration guide"
+description: 'This guide teaches you to migrate your DB2 databases to Microsoft SQL Server by using SQL Server Migration for DB2 (SSMA for DB2). '
 ms.custom: ""
-ms.date: "08/17/2020"
+ms.date: 03/19/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: migration-guide
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "processors [SQL Server], supported"
-  - "number of processors supported"
-  - "maximum number of processors supported"
+ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
 ---
@@ -26,7 +22,7 @@ For other migration guides, see [Database Migration](https://datamigration.micro
 
 To migrate your DB2 database to SQL Server, you need:
 
-- to verify your source environment is supported.
+- To verify your source environment is supported.
 - [SQL Server Migration Assistant (SSMA) for DB2](https://www.microsoft.com/download/details.aspx?id=54254).
 
 
@@ -140,9 +136,6 @@ The test approach for database migration consists of the following activities:
 1. **Run validation tests**: Run the validation tests against the source and the target, and then analyze the results.
 1. **Run performance tests**: Run performance test against the source and the target, and then analyze and compare the results.
 
-   > [!NOTE]
-   > For assistance developing and running post-migration validation tests, consider the Data Quality Solution available from the partner [QuerySurge](https://www.querysurge.com/company/partners/microsoft). 
-
 ## Migration assets 
 
 For additional assistance, see the following resources, which were developed in support of a real-world migration project engagement:
@@ -165,5 +158,4 @@ For a matrix of the Microsoft and third-party services and tools that are availa
 For other migration guides, see [Database Migration](https://datamigration.microsoft.com/). 
 
 For video content, see:
-- [How to use the Database Migration Guide](https://azure.microsoft.com/resources/videos/how-to-use-the-azure-database-migration-guide/)
 - [Overview of the migration journey](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/)

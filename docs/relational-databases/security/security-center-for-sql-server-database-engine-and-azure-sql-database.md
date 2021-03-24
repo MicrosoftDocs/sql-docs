@@ -4,7 +4,7 @@ description: A reference of security and protection-related content for SQL Serv
 ms.custom: seo-lt-2019
 ms.date: "09/27/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual

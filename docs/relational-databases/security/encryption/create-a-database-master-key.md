@@ -4,7 +4,7 @@ description: Create a database master key in SQL Server by using Transact-SQL. B
 ms.custom: ""
 ms.date: "09/12/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual

@@ -4,7 +4,7 @@ title: "sys.dm_os_sys_info (Transact-SQL)"
 ms.custom: ""
 ms.date: "03/12/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"

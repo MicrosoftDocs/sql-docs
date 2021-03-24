@@ -1,6 +1,6 @@
 ---
-description: "Wrappers and interfaces"
-title: "Wrappers and interfaces | Microsoft Docs"
+description: Learn how to create proxy interfaces and wrappers that let you access extensions to the JDBC API.
+title: Wrappers and interfaces
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -27,49 +27,33 @@ The java.sql.Wrapper interface defines two methods: **isWrapperFor** and **unwra
 
 **isWrapperFor** and **unwrap** methods are exposed as follows:
 
-- [isWrapperFor Method &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)
-
-- [unwrap Method &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)
-
-- [isWrapperFor Method &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverconnectionpooldatasource.md)
-
-- [unwrap Method &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)
-
-- [isWrapperFor Method &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)
-
-- [unwrap Method &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
-
-- [isWrapperFor Method &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)
-
-- [unwrap Method &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)
-
-- [isWrapperFor Method &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)
-
-- [unwrap Method &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
-
-- [isWrapperFor Method &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)
-
-- [unwrap Method &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
+- [isWrapperFor Method &#40;SQLServerCallableStatement&#41;](reference/iswrapperfor-method-sqlservercallablestatement.md)
+- [unwrap Method &#40;SQLServerCallableStatement&#41;](reference/unwrap-method-sqlservercallablestatement.md)
+- [isWrapperFor Method &#40;SQLServerConnectionPoolDataSource&#41;](reference/iswrapperfor-method-sqlserverconnectionpooldatasource.md)
+- [unwrap Method &#40;SQLServerConnectionPoolDataSource&#41;](reference/unwrap-method-sqlserverconnectionpooldatasource.md)
+- [isWrapperFor Method &#40;SQLServerDataSource&#41;](reference/iswrapperfor-method-sqlserverdatasource.md)
+- [unwrap Method &#40;SQLServerDataSource&#41;](reference/unwrap-method-sqlserverdatasource.md)
+- [isWrapperFor Method &#40;SQLServerPreparedStatement&#41;](reference/iswrapperfor-method-sqlserverpreparedstatement.md)
+- [unwrap Method &#40;SQLServerPreparedStatement&#41;](reference/unwrap-method-sqlserverpreparedstatement.md)
+- [isWrapperFor Method &#40;SQLServerStatement&#41;](reference/iswrapperfor-method-sqlserverstatement.md)
+- [unwrap Method &#40;SQLServerStatement&#41;](reference/unwrap-method-sqlserverstatement.md)
+- [isWrapperFor Method &#40;SQLServerXADataSource&#41;](reference/iswrapperfor-method-sqlserverxadatasource.md)
+- [unwrap Method &#40;SQLServerXADataSource&#41;](reference/unwrap-method-sqlserverxadatasource.md)
 
 ## Interfaces
 
-Beginning in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3.0, interfaces are available for an application server to access a driver specific method from the associated class. The application server can wrap the class by creating a proxy, exposing the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-specific functionality from an interface. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports interfaces that have the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] specific methods and constants so an application server can create a proxy of the class.
+Beginning in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3.0, interfaces are available for an application server to access a driver-specific method from the associated class. The application server can wrap the class by creating a proxy, exposing the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-specific functionality from an interface. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports interfaces that have the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] specific methods and constants so an application server can create a proxy of the class.
 
-The interfaces derive from standard Java interfaces so you can use the same object once it is unwrapped to access driver specific functionality or generic [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] functionality.
+The interfaces derive from standard Java interfaces so you can use the same object once it is unwrapped to access driver-specific functionality or generic [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] functionality.
 
 The following interfaces are added:
 
-- [ISQLServerCallableStatement](../../connect/jdbc/reference/isqlservercallablestatement-interface.md)
-
-- [ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md)
-
-- [ISQLServerDataSource](../../connect/jdbc/reference/isqlserverdatasource-interface.md)
-
-- [ISQLServerPreparedStatement](../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)
-
-- [ISQLServerResultSet](../../connect/jdbc/reference/isqlserverresultset-interface.md)
-
-- [ISQLServerStatement](../../connect/jdbc/reference/isqlserverstatement-interface.md)
+- [ISQLServerCallableStatement](reference/isqlservercallablestatement-interface.md)
+- [ISQLServerConnection](reference/isqlserverconnection-interface.md)
+- [ISQLServerDataSource](reference/isqlserverdatasource-interface.md)
+- [ISQLServerPreparedStatement](reference/isqlserverpreparedstatement-interface.md)
+- [ISQLServerResultSet](reference/isqlserverresultset-interface.md)
+- [ISQLServerStatement](reference/isqlserverstatement-interface.md)
 
 ## Example
 
@@ -80,33 +64,33 @@ This sample demonstrates how to access to a [!INCLUDE[jdbcNoVersion](../../inclu
 ### Code
 
 ```java
-import javax.sql.*;  
-import java.sql.*;  
-import com.microsoft.sqlserver.jdbc.*;  
+import javax.sql.*;
+import java.sql.*;
+import com.microsoft.sqlserver.jdbc.*;
 
-public class UnWrapTest {  
-   public static void main(String[] args) {  
+public class UnWrapTest {
+   public static void main(String[] args) {
       // This is a test.  This DataSource object could be something from an appserver
-      // which has wrapped the real SQLServerDataSource with its own wrapper  
-      SQLServerDataSource ds = new SQLServerDataSource();  
-      checkSendStringParametersAsUnicode(ds);  
-   }  
+      // which has wrapped the real SQLServerDataSource with its own wrapper
+      SQLServerDataSource ds = new SQLServerDataSource();
+      checkSendStringParametersAsUnicode(ds);
+   }
 
-   // Unwrap to the ISQLServerDataSource interface to access the getSendStringParametersAsUnicode function  
-   static void checkSendStringParametersAsUnicode(DataSource ds) {  
-      try {  
-         final ISQLServerDataSource sqlServerDataSource = ds.unwrap(ISQLServerDataSource.class);  
-         boolean sendStringParametersAsUnicode = sqlServerDataSource.getSendStringParametersAsUnicode();  
+   // Unwrap to the ISQLServerDataSource interface to access the getSendStringParametersAsUnicode function
+   static void checkSendStringParametersAsUnicode(DataSource ds) {
+      try {
+         final ISQLServerDataSource sqlServerDataSource = ds.unwrap(ISQLServerDataSource.class);
+         boolean sendStringParametersAsUnicode = sqlServerDataSource.getSendStringParametersAsUnicode();
 
-         System.out.println("Send string as parameter value is:-" + sendStringParametersAsUnicode);  
+         System.out.println("Send string as parameter value is:-" + sendStringParametersAsUnicode);
 
-      } catch (SQLException sqlE) {  
-         System.out.println("Exception:-" + sqlE);  
-      }  
-   }  
-}  
+      } catch (SQLException sqlE) {
+         System.out.println("Exception:-" + sqlE);
+      }
+   }
+}
 ```
 
 ## See also
 
-[Understanding the JDBC driver data types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)
+[Understanding the JDBC driver data types](understanding-the-jdbc-driver-data-types.md)

@@ -4,7 +4,7 @@ title: "Query Processing Architecture Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual

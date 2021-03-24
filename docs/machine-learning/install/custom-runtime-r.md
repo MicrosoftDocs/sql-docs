@@ -3,7 +3,7 @@ title: Install R custom runtime
 description: Learn how to install an R custom runtime for SQL Server using Language Extensions. The Python custom runtime can run machine learning scripts.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/08/2021
+ms.date: 03/16/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
@@ -20,7 +20,7 @@ Learn how to install an R custom runtime for running external R scripts with SQL
 + Windows
 + Ubuntu Linux
 + Red Hat Enterprise Linux (RHEL)
-+ SUSE Linux Enterprise Server (SLES)
++ SUSE Linux Enterprise Server (SLES) version 12
 
 The custom runtime can run machine learning scripts and uses the [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md).
 
@@ -67,7 +67,7 @@ RECONFIGURE WITH OVERRIDE;
 
 ## Verify installation
 
-Use the following SQL script to verify the installation and functionality of the Python custom runtime.
+Use the following SQL script to verify the installation and functionality of the R custom runtime.
 
 ```sql
 EXEC sp_execute_external_script
@@ -78,6 +78,10 @@ print(file.path(R.home("bin"), "R"));
 print(R.version);
 print("Hello RExtension!");'
 ```
+
+::: zone pivot="platform-linux-rhel"
+[!INCLUDE [R custom runtime - Linux - RHEL known issues](includes/custom-runtime-r-linux-known-issues-rhel.md)]
+::: zone-end
 
 ## Next steps
 

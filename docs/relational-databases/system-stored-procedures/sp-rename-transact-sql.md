@@ -29,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   Changes the name of a user-created object in the current database. This object can be a table, index, column, alias data type, or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) user-defined type.  
   
 > [!NOTE]
-> In [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)], sp_rename is in **Preview** and can only be used to rename a COLUMN in a user object.
+> In [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)], sp_rename is in **Preview** and can only be used to rename a COLUMN in a user object in the **dbo** schema.
 
 > [!CAUTION]  
 >  Changing any part of an object name can break scripts and stored procedures. We recommend you do not use this statement to rename stored procedures, triggers, user-defined functions, or views; instead, drop the object and re-create it with the new name.  
@@ -217,7 +217,10 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
 
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
 ### G. Renaming a column  
- The following example renames the `c1` column in the `table1` table to `col1`.  
+ The following example renames the `c1` column in the `table1` table to `col1`. 
+
+> [!NOTE]
+> This [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)] feature is still in preview and is currently available only for objects in the **dbo** schema. 
   
 ```sql  
 CREATE TABLE table1 (c1 INT, c2 INT);

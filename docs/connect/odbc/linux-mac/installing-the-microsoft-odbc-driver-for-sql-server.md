@@ -77,15 +77,15 @@ curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/source
 
 exit
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql17
+sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
 # optional: for bcp and sqlcmd
-sudo ACCEPT_EULA=Y apt-get install mssql-tools
+sudo ACCEPT_EULA=Y apt-get install -y mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
-sudo apt-get install unixodbc-dev
+sudo apt-get install -y unixodbc-dev
 # optional: kerberos library for debian-slim distributions
-sudo apt-get install libgssapi-krb5-2
+sudo apt-get install -y libgssapi-krb5-2
 ```
 
 > [!NOTE]
@@ -99,24 +99,24 @@ sudo su
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
-#RedHat Enterprise Server 6
+#Red Hat Enterprise Server 6
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
-#RedHat Enterprise Server 7 and Oracle Linux 7
+#Red Hat Enterprise Server 7 and Oracle Linux 7
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
-#RedHat Enterprise Server 8 and Oracle Linux 8
+#Red Hat Enterprise Server 8 and Oracle Linux 8
 curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
 exit
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
-sudo ACCEPT_EULA=Y yum install msodbcsql17
+sudo ACCEPT_EULA=Y yum install -y msodbcsql17
 # optional: for bcp and sqlcmd
-sudo ACCEPT_EULA=Y yum install mssql-tools
+sudo ACCEPT_EULA=Y yum install -y mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
-sudo yum install unixODBC-devel
+sudo yum install -y unixODBC-devel
 ```
 
 ### <a id="suse17"></a> SUSE Linux Enterprise Server
@@ -142,13 +142,13 @@ zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
 SUSEConnect -p sle-module-legacy/15/x86_64
 
 exit
-sudo ACCEPT_EULA=Y zypper install msodbcsql17
+sudo ACCEPT_EULA=Y zypper install -y msodbcsql17
 # optional: for bcp and sqlcmd
-sudo ACCEPT_EULA=Y zypper install mssql-tools
+sudo ACCEPT_EULA=Y zypper install -y mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
-sudo zypper install unixODBC-devel
+sudo zypper install -y unixODBC-devel
 ```
 
 ### <a id="ubuntu17"></a> Ubuntu
@@ -174,16 +174,17 @@ curl https://packages.microsoft.com/config/ubuntu/20.10/prod.list > /etc/apt/sou
 
 exit
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql17
+sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
 # optional: for bcp and sqlcmd
-sudo ACCEPT_EULA=Y apt-get install mssql-tools
+sudo ACCEPT_EULA=Y apt-get install -y mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
-sudo apt-get install unixodbc-dev
+sudo apt-get install -y unixodbc-dev
 ```
 
 > [!NOTE]
+>
 > - Driver version 17.2 or higher is required for Ubuntu 18.04 support.
 > - Driver version 17.3 or higher is required for Ubuntu 18.10 support.
 
@@ -219,7 +220,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### RedHat Enterprise Server 6
+### Red Hat Enterprise Server 6
 
 ```bash
 sudo su
@@ -235,7 +236,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### RedHat Enterprise Server 7
+### Red Hat Enterprise Server 7
 
 ```bash
 sudo su
@@ -336,7 +337,7 @@ sudo apt-get install unixodbc-dev
 
 The following sections explain how to install the Microsoft ODBC driver 13 from the bash shell for different Linux distributions.
 
-### RedHat Enterprise Server 6
+### Red Hat Enterprise Server 6
 
 ```bash
 sudo su
@@ -351,7 +352,7 @@ ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
 ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
-### RedHat Enterprise Server 7
+### Red Hat Enterprise Server 7
 
 ```bash
 sudo su
@@ -412,15 +413,16 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ### Offline installation
 
 If you prefer/require the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 to be installed on a computer with no internet connection, you will need to resolve package dependencies manually. The [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 has the following direct dependencies:
+
 - Ubuntu: libc6 (>= 2.21), libstdc++6 (>= 4.9), libkrb5-3, libcurl3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1-1)
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SUSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-Each of these packages in turn has their own dependencies, which may or may not be present on the system. For a general solution to this issue, refer to your distribution's package manager documentation: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), and [SUSE](https://en.opensuse.org/Portal:Zypper)
+Each of these packages in turn has their own dependencies, which may or may not be present on the system. For a general solution to this issue, refer to your distribution's package manager documentation: [Red Hat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), and [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 It is also common to manually download all the dependent packages and place them together on the installation computer, then manually install each package in turn, finishing with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 package.
 
-#### Redhat Linux Enterprise Server 7
+#### Red Hat Linux Enterprise Server 7
 
 - Download the latest `msodbcsql` `.rpm` from [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/).
 - Install dependencies and the driver.
@@ -506,7 +508,7 @@ The ODBC driver on Linux consists of the following components:
 |Component|Description|  
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X or libmsodbcsql-13.X.so.X.X|The shared object (`so`) dynamic library file that contains all of the driver's functionality. This file is installed in `/opt/microsoft/msodbcsql17/lib64/` for the Driver 17 and in `/opt/microsoft/msodbcsql/lib64/` for Driver 13.|  
-|`msodbcsqlr17.rll` or `msodbcsqlr13.rll`|The accompanying resource file for the driver library. This file is installed in `[driver .so directory]../share/resources/en_US/`| 
+|`msodbcsqlr17.rll` or `msodbcsqlr13.rll`|The accompanying resource file for the driver library. This file is installed in `[driver .so directory]../share/resources/en_US/`|
 |msodbcsql.h|The header file that contains all of the new definitions needed to use the driver.<br /><br /> **Note:**  You cannot reference msodbcsql.h and odbcss.h in the same program.<br /><br /> msodbcsql.h is installed in `/opt/microsoft/msodbcsql17/include/` for Driver 17 and in `/opt/microsoft/msodbcsql/include/` for Driver 13. |
 |LICENSE.txt|The text file that contains the terms of the End-User License Agreement. This file is placed in `/usr/share/doc/msodbcsql17/` for Driver 17 and in `/usr/share/doc/msodbcsql/` for Driver 13.|
 |RELEASE_NOTES|The text file that contains release notes. This file is placed in `/usr/share/doc/msodbcsql17/` for Driver 17 and in `/usr/share/doc/msodbcsql/` for Driver 13.|

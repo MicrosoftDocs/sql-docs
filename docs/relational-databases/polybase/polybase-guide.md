@@ -1,5 +1,5 @@
 ---
-title: "Introducing Data Virtualization with PolyBase"
+title: "Introducing data virtualization with PolyBase"
 description: PolyBase enables your SQL Server instance to process Transact-SQL queries that read data from external data sources such as Hadoop and Azure blob storage.
 ms.date: 03/23/2021
 ms.prod: sql
@@ -22,7 +22,7 @@ ms.reviewer: ""
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 
-# Introducing Data Virtualization with PolyBase
+# Introducing data virtualization with PolyBase
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
@@ -50,8 +50,7 @@ PolyBase provides these same functionalities for the following SQL products from
 
  The PolyBase feature provides connectivity to the following external data sources:
 
-| External data sources     | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with PolyBase | APS PDW    | [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)]
- |
+| External data sources     | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with PolyBase | APS PDW    | [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] |
 |---------------------------|--------------------------|------------|---------------|
 | Oracle, MongoDB, Teradata | Read                     | **No**     | **No**        |  
 | Generic ODBC              | Read (Windows Only)      | **No**     | **No**        |  

@@ -100,7 +100,7 @@ The one to three-part name of the table to create. For an external table, SQL st
 > For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.  
 
 \<column_definition> [ ,...*n* ]
-CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
+CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability, and collation. You can't use the DEFAULT CONSTRAINT on external tables.
 
 The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
 
@@ -241,7 +241,7 @@ The following data types cannot be used in PolyBase external tables:
 - `text`
 - `nText`
 - `xml`
-- Any user defined type
+- Any user-defined type
 
 ## Locking
 
@@ -658,7 +658,7 @@ The one to three-part name of the table to create. For an external table, SQL st
 > For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
 
 \<column_definition> [ ,...*n* ]
-CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
+CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability, and collation. You can't use the DEFAULT CONSTRAINT on external tables.
 
 > [!NOTE]
 > `Text`, `nText` and `XML` are not supported data types for columns in external tables for Azure SQL Database.
@@ -713,8 +713,9 @@ Constructs and operations not supported:
 
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
+- [Dynamic Data Masking](..\..\relational-databases\security\dynamic-data-masking.md) on external table columns
 
-Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined during query execution can be used, i.e. when used in conjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined to.
+Only literal predicates defined in a query can be pushed down to the external data source. This is unlike linked servers and accessing where predicates determined during query execution can be used, that is, when used in conjunction with a nested loop in a query plan. This will often lead to the whole external table being copied locally and then joined to.
 
 ```sql
   \\ Assuming External.Orders is an external table and Customer is a local table.
@@ -743,7 +744,7 @@ The following data types cannot be used in PolyBase external tables:
 - `text`
 - `nText`
 - `xml`
-- Any user defined type
+- Any user-defined type
 
 ## Locking
 
@@ -850,7 +851,7 @@ The one to three-part name of the table to create. For an external table, only t
 > For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
 
 \<column_definition> [ ,...*n* ]
-CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
+CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability, and collation. You can't use the DEFAULT CONSTRAINT on external tables.
 
 > [!NOTE]
 > `Text`, `nText` and `XML` are not supported data types for columns in external tables for Azure SQL Warehouse.
@@ -969,6 +970,7 @@ Constructs and operations not supported:
 
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
+- [Dynamic Data Masking](..\..\relational-databases\security\dynamic-data-masking.md) on external table columns
 
 ### Query limitations
 
@@ -989,7 +991,7 @@ The following data types cannot be used in PolyBase external tables:
 - `text`
 - `nText`
 - `xml`
-- Any user defined type
+- Any user-defined type
 
 ## Locking
 
@@ -1115,7 +1117,7 @@ The one to three-part name of the table to create. For an external table, Analyt
 > For best performance, if the external data source driver supports a three-part name, it is strongly recommended to provide the three-part name.
 
 \<column_definition> [ ,...*n* ]
-CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
+CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability, and collation. You can't use the DEFAULT CONSTRAINT on external tables.
 
 The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
 
@@ -1226,6 +1228,7 @@ Constructs and operations not supported:
 
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
+- [Dynamic Data Masking](..\..\relational-databases\security\dynamic-data-masking.md) on external table columns
 
 ### Query limitations
 
@@ -1248,7 +1251,7 @@ The following data types cannot be used in PolyBase external tables:
 - `text`
 - `nText`
 - `xml`
-- Any user defined type
+- Any user-defined type
 
 ## Locking
 

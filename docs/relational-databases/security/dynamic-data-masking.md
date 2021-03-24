@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 
 Dynamic data masking (DDM) limits sensitive data exposure by masking it to non-privileged users. It can be used to greatly simplify the design and coding of security in your application.  
 
-Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to specify how much sensitive data to reveal with minimal impact on the application layer. DDM can be configured on designated database fields to hide sensitive data in the result sets of queries. With DDM the data in the database is not changed. Dynamic data masking is easy to use with existing applications, since masking rules are applied in the query results. Many applications can mask sensitive data without modifying existing queries.
+Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to specify how much sensitive data to reveal with minimal impact on the application layer. DDM can be configured on designated database fields to hide sensitive data in the result sets of queries. With DDM the data in the database is not changed. DDM is easy to use with existing applications, since masking rules are applied in the query results. Many applications can mask sensitive data without modifying existing queries.
 
 * A central data masking policy acts directly on sensitive fields in the database.
 * Designate privileged users or roles that do have access to the sensitive data.
@@ -117,7 +117,7 @@ It is important to properly manage the permissions on the database, and to alway
 ```sql
 
 -- schema to contain user tables
-CREATE SCHEMA Data
+CREATE SCHEMA Data;
 GO
 
 -- table with masked columns
@@ -128,7 +128,7 @@ CREATE TABLE Data.Membership(
     Phone            varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,
     Email            varchar(100) MASKED WITH (FUNCTION = 'email()') NOT NULL,
     DiscountCode    smallint MASKED WITH (FUNCTION = 'random(1, 100)') NULL
-    )
+    );
 
 -- inserting sample data
 INSERT INTO Data.Membership (FirstName, LastName, Phone, Email, DiscountCode)

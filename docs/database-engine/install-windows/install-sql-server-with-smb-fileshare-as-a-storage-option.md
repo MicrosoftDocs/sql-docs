@@ -118,9 +118,9 @@ Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system database
         SET DIAGNOSTICS LOG PATH = 'C:\logs';  
         ```  
 
--   When hosting SQL Server data files on SMB file shares, all I/O against the files will go through the network interface on the server or virtual machine. Ensure that there is enough network bandwidth to support the I/O required by the workload.
+-   When hosting [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] data files on SMB file shares, all I/O against the files will go through the network interface on the server or virtual machine. Ensure that there is enough network bandwidth to support the I/O required by the workload.
 
--   Unavailability of the file share hosting the SQL Server data files due to network connectivity issues or other failure may result in I/O delays or failures in SQL Server. For mission critical workloads, ensure there is redundancy built into the network and file share and that the file share supports SMB 3.0 transparent failover, also known as [continuous availability](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-transparent-failover-8211-making-file-shares-continuously/ba-p/425693).
+-   Unavailability of the file share hosting the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] data files due to network connectivity issues or other failure may result in I/O delays or failures in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For mission critical workloads, ensure there is redundancy built into the network and file share and that the file share supports SMB 3.0 transparent failover, also known as [continuous availability](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-transparent-failover-8211-making-file-shares-continuously/ba-p/425693).
 
 ## See also  
  [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   

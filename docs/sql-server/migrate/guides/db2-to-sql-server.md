@@ -42,23 +42,23 @@ To create an assessment, follow these steps:
 1. Select **File** and then choose **New Project**. 
 1. Provide a project name, a location to save your project, and then select a SQL Server migration target from the drop-down. Select **OK**: 
 
-   :::image type="content" source="media/Db2-to-sql-server/new-project.png" alt-text="Provide project details and select OK to save.":::
+   :::image type="content" source="media/db2-to-sql-server/new-project.png" alt-text="Provide project details and select OK to save.":::
 
 
 1. Enter in values for the Db2 connection details on the **Connect to Db2** dialog box:
 
-   :::image type="content" source="media/Db2-to-sql-server/connect-to-Db2.png" alt-text="Connect to your Db2 instance":::
+   :::image type="content" source="media/db2-to-sql-server/connect-to-db2.png" alt-text="Connect to your Db2 instance":::
 
 
 1. Right-click the Db2 schema you want to migrate, and then choose **Create report**. This will generate an HTML report. Alternatively, you can choose **Create report** from the navigation bar after selecting the schema:
 
-   :::image type="content" source="media/Db2-to-sql-server/create-report.png" alt-text="Right-click the schema and choose create report":::
+   :::image type="content" source="media/db2-to-sql-server/create-report.png" alt-text="Right-click the schema and choose create report":::
 
 1. Review the HTML report to understand conversion statistics and any errors or warnings. You can also open the report in Excel to get an inventory of Db2 objects and the effort required to perform schema conversions. The default location for the report is in the report folder within SSMAProjects.
 
    For example: `drive:\<username>\Documents\SSMAProjects\MyDb2Migration\report\report_<date>`. 
 
-   :::image type="content" source="media/Db2-to-sql-server/report.png" alt-text="Review the report to identify any errors or warnings":::
+   :::image type="content" source="media/db2-to-sql-server/report.png" alt-text="Review the report to identify any errors or warnings":::
 
 
 ### Validate data types
@@ -69,7 +69,7 @@ Validate the default data type mappings and change them based on requirements if
 1. Select **Project Settings**. 
 1. Select the **Type mappings** tab:
 
-   :::image type="content" source="media/Db2-to-sql-server/type-mapping.png" alt-text="Select the schema and then type-mapping":::
+   :::image type="content" source="media/db2-to-sql-server/type-mapping.png" alt-text="Select the schema and then type-mapping":::
 
 1. You can change the type mapping for each table by selecting the table in the **Db2 Metadata explorer**. 
 
@@ -84,15 +84,15 @@ To convert the schema, follow these steps:
     1. Provide authentication details. 
     1. Select **Connect**:
 
-   :::image type="content" source="media/Db2-to-sql-server/connect-to-sql-server.png" alt-text="Fill in details to connect to SQL Server":::
+   :::image type="content" source="media/db2-to-sql-server/connect-to-sql-server.png" alt-text="Fill in details to connect to SQL Server":::
 
 1. Right-click the schema and then choose **Convert Schema**. Alternatively, you can choose **Convert Schema** from the top navigation bar after selecting your schema:
 
-   :::image type="content" source="media/Db2-to-sql-server/convert-schema.png" alt-text="Right-click the schema and choose convert schema":::
+   :::image type="content" source="media/db2-to-sql-server/convert-schema.png" alt-text="Right-click the schema and choose convert schema":::
 
 1. After the conversion completes, compare and review the structure of the schema to identify potential problems and address them based on the recommendations:
 
-   :::image type="content" source="media/Db2-to-sql-server/compare-review-schema-structure.png" alt-text="Compare and review the structure of the schema to identify potential problems and address them based on recommendations.":::
+   :::image type="content" source="media/db2-to-sql-server/compare-review-schema-structure.png" alt-text="Compare and review the structure of the schema to identify potential problems and address them based on recommendations.":::
 
 1. Select **Review results** in the Output pane, and review errors in the **Error list** pane. 
 1. Save the project locally for an offline schema remediation exercise. Select **Save Project** from the **File** menu. This gives you an opportunity to evaluate the source and target schemas offline and perform remediation before you can publish the schema to SQL Server.
@@ -106,20 +106,20 @@ To publish your schema and migrate your data, follow these steps:
 
 1. Publish the schema: Right-click the database from the **Databases** node in the **SQL Server Metadata Explorer** and choose **Synchronize with Database**:
 
-   :::image type="content" source="media/Db2-to-sql-server/synchronize-with-database.png" alt-text="Right-click the database and choose synchronize with database":::
+   :::image type="content" source="media/db2-to-sql-server/synchronize-with-database.png" alt-text="Right-click the database and choose synchronize with database":::
 
 1. Migrate the data: Right-click the database or object you want to migrate in **Db2 Metadata Explorer**, and choose **Migrate data**. Alternatively, you can select **Migrate Data** from the top-line navigation bar. To migrate data for an entire database, select the check box next to the database name. To migrate data from individual tables, expand the database, expand Tables, and then select the check box next to the table. To omit data from individual tables, clear the check box:
 
-   :::image type="content" source="media/Db2-to-sql-server/migrate-data.png" alt-text="Right-click the schema and choose migrate data":::
+   :::image type="content" source="media/db2-to-sql-server/migrate-data.png" alt-text="Right-click the schema and choose migrate data":::
 
 1. Provide connection details for both the Db2 and SQL Server instances. 
 1. After migration completes, view the **Data Migration Report**:  
 
-   :::image type="content" source="media/Db2-to-sql-server/data-migration-report.png" alt-text="Review the data migration report":::
+   :::image type="content" source="media/db2-to-sql-server/data-migration-report.png" alt-text="Review the data migration report":::
 
 1. Connect to your SQL Server instance by using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) and validate the migration by reviewing the data and schema: 
 
-   :::image type="content" source="media/Db2-to-sql-server/compare-schema-in-ssms.png" alt-text="Compare the schema in SSMS":::
+   :::image type="content" source="media/db2-to-sql-server/compare-schema-in-ssms.png" alt-text="Compare the schema in SSMS":::
 
 ## Post-migration 
 

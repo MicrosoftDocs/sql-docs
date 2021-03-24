@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2016"
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system databases (Master, Model, MSDB, and TempDB), and [!INCLUDE[ssDE](../../includes/ssde-md.md)] user databases can be installed with Server Message Block (SMB) file server as a storage option. This applies to both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stand-alone and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installations (FCI).  
+Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system databases (Master, Model, MSDB, and tempdb), and [!INCLUDE[ssDE](../../includes/ssde-md.md)] user databases can be installed with Server Message Block (SMB) file server as a storage option. This applies to both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stand-alone and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installations (FCI).  
   
 > [!NOTE]  
 >  Filestream is currently not supported on an SMB file share.  
@@ -99,11 +99,11 @@ Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system database
     >   
     >  Virtual accounts cannot be authenticated to a remote location. All virtual accounts use the permission of machine account. Provision the machine account in the format \<*domain_name*>\\<*computer_name*>\*$*.  
   
--   The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should have FULL CONTROL permissions on the SMB file share folder used as the data directory, or any other data folders (User database directory, user database log directory, TempDB directory, TempDB log directory, backup directory) during Cluster Setup.  
+-   The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should have FULL CONTROL permissions on the SMB file share folder used as the data directory, or any other data folders (User database directory, user database log directory, tempdb directory, tempdb log directory, backup directory) during Cluster Setup.  
   
 -   The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should be granted SeSecurityPrivilege privileges on the SMB file server. To grant this privilege, use the Local Security Policy console on the file server to add the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup account to the Manage auditing and security log policy. This setting is available in the User Rights Assignments section under Local Policies in the Local Security Policy console.  
   
-## Known issues  
+## Known issues and limitations 
   
 -   After you detach a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] database that resides on network-attached storage, you might run into database permission issue while trying to reattach the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. For more information see, [Error 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md).
   
@@ -117,7 +117,11 @@ Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system database
         ALTER SERVER CONFIGURATION  
         SET DIAGNOSTICS LOG PATH = 'C:\logs';  
         ```  
-  
+
+-   When hosting SQL Server data files on SMB file shares, all I/O against the files will go through the network interface on the server or virtual machine. Ensure that there is enough network bandwidth to support the I/O required by the workload.
+
+-   Unavailability of the file share hosting the SQL Server data files due to network connectivity issues or other failure may result in I/O delays or failures in SQL Server. For mission critical workloads, ensure there is redundancy built into the network and file share and that the file share supports SMB 3.0 transparent failover, also known as [continuous availability](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-transparent-failover-8211-making-file-shares-continuously/ba-p/425693).
+
 ## See also  
  [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  

@@ -25,6 +25,7 @@ To migrate your Access database to SQL Server, you need:
 
 - To verify your source environment is supported. 
 - [SQL Server Migration Assistant for Access](https://www.microsoft.com/download/details.aspx?id=54255). 
+- Connectivity and sufficient permissions to access both source and target. 
 
 
 ## Pre-migration 
@@ -35,24 +36,27 @@ After you have met the prerequisites, you are ready to discover the topology of 
 
 ### Assess
 
-By using SQL Server Migration Assistant (SSMA) for Access, you can review database objects and data, and assess databases for migration. To learn more about the tool, see [SQL Server Migration Assistant for Access)](/sql/ssma/access/sql-server-migration-assistant-for-access-accesstosql).
+Use SQL Server Migration Assistant (SSMA) for Access to review database objects and data, and assess databases for migration. To learn more about the tool, see [SQL Server Migration Assistant for Access](/sql/ssma/access/sql-server-migration-assistant-for-access-accesstosql). 
 
 To create an assessment, follow these steps:
 
 1. Open [SQL Server Migration Assistant for Access](https://www.microsoft.com/download/details.aspx?id=54255). 
-1. Select **File** and then choose **New Project**. Choose your migration target and provide a name for your migration project. 
+1. Select **File** and then choose **New Project**. 
+1. Provide a project name, a location to save your project, and then select a SQL Server migration target from the drop-down. Select **OK**:
 
    ![New Project](./media/access-to-sql-server/new-project.png)
 
-1. Select **Add Databases** and choose the databases to add to  your project. 
+1. Select **Add Databases** and choose the databases to add to  your project:
 
    ![Add databases](./media/access-to-sql-server/add-databases.png)
 
-1. In **Access Metadata Explorer**, right-click the database you want to assess, and then choose **Create report**. 
+1. In **Access Metadata Explorer**, right-click the database you want to assess, and then choose **Create report**. Alternatively, you can choose **Create report** from the navigation bar after selecting the schema:
 
    ![Create Report](./media/access-to-sql-server/create-report.png)
 
-1. Review the assessment report. For example: 
+1. Review the HTML report to understand conversion statistics and any errors or warnings. You can also open the report in Excel to get an inventory of Access objects and the effort required to perform schema conversions. The default location for the report is in the report folder within SSMAProjects.
+
+   For example: `drive:\<username>\Documents\SSMAProjects\MyAccessMigration\report\report_2020_11_12T02_47_55\`
 
    ![Sample Report](./media/access-to-sql-server/sample-report.png)
 
@@ -62,32 +66,30 @@ Validate the default data type mappings and change them based on requirements if
 
 1. Select **Tools** from the menu. 
 1. Select **Project Settings**. 
-1. Select the **Type mappings** tab. 
+1. Select the **Type mappings** tab:
 
    ![Type Mappings](./media/access-to-sql-server/type-mappings.png)
 
 1. You can change the type mapping for each table by selecting the table in the **Oracle Metadata explorer**. 
 
 
-
 ### Convert 
 
 To convert database objects, follow these steps: 
 
-1. Select **Connect to SQL Server** and provide connection details. 
-
+1. Select **Connect to SQL Server** and provide connection details:
 
    ![Connect to SQL Server](./media/access-to-sql-server/connect-to-sql-server.png)
 
-1. Right-click the database in **Access Metadata Explorer** and choose **Convert schema**. Alternatively, you can choose **Convert schema** from the top line navigation bar after choosing your database. 
+1. Right-click the database in **Access Metadata Explorer** and choose **Convert schema**. Alternatively, you can choose **Convert schema** from the top line navigation bar after choosing your database:
 
    ![Convert the schema](./media/access-to-sql-server/convert-schema.png)
 
-   Compare converted queries to original queries: 
+1. After the conversion completes, compare and review the converted objects to the original objects to identify potential problems and address them based on the recommendations:
 
    ![Compare converted queries ](./media/access-to-sql-server/query-comparison.png)
 
-   Compare converted objects to original objects: 
+   Compare the converted Transact-SQL text to the original code and review the recommendations:
 
    ![Review converted objects](./media/access-to-sql-server/table-comparison.png)
 
@@ -96,35 +98,34 @@ To convert database objects, follow these steps:
    ![Bold objects in metadata explorer have been converted](./media/access-to-sql-server/converted-items-bold.png)
  
 1. Select **Review results** in the Output pane, and review errors in the **Error list** pane. 
+1. Save the project locally for an offline schema remediation exercise. Select **Save Project** from the **File** menu. This gives you an opportunity to evaluate the source and target schemas offline and perform remediation before you can publish the schema to SQL Server.
 
 
 ## Migrate
 
 After you have completed assessing your databases and addressing any discrepancies, the next step is to execute the migration process. Migrating data is a bulk-load operation that moves rows of data into SQL Server in transactions. The number of rows to be loaded into SQL Server in each transaction is configured in the project settings.
 
-To migrate data by using SSMA for Access, follow these steps: 
+To publish your schema and migrate the data using SSMA for Access, follow these steps: 
 
 1. If you haven't already, select **Connect to SQL Server** and provide connection details. 
 
-1. Right-click the database from the **SQL Server Metadata Explorer** and choose **Synchronize with Database**. This action publishes the MySQL schema to SQL Server.
+1. Publish the schema: Right-click the database from the **SQL Server Metadata Explorer** and choose **Synchronize with Database**. This action publishes the MySQL schema to SQL Server:
 
    ![Synchronize with Database](./media/access-to-sql-server/synchronize-with-database.png)
 
-   Review the synchronization with the database: 
+   Review the mapping between your source project and your target:
 
    ![Review the synchronization with the database](./media/access-to-sql-server/synchronize-with-database-review.png)
 
-1. Use **Access Metadata Explorer** to check boxes next to the items you want to migrate. If you want to migrate the entire database, check the box next to the database. 
-1. Right-click the database or object you want to migrate, and choose **Migrate data**. 
-   To migrate data for an entire database, select the check box next to the database name. To migrate data from individual tables, expand the database, expand Tables, and then select the check box next to the table. To omit data from individual tables, clear the check box.
+1. Migrate the data: Right-click the database or object you want to migrate in **Access Metadata Explorer**, and choose **Migrate data**. Alternatively, you can select **Migrate Data** from the top-line navigation bar. To migrate data for an entire database, select the check box next to the database name. To migrate data from individual tables, expand the database, expand Tables, and then select the check box next to the table. To omit data from individual tables, clear the check box:
 
    ![Migrate Data](./media/access-to-sql-server/migrate-data.png)
 
-   Review the migrated data: 
+1. After migration completes, view the **Data Migration Report**:  
 
    ![Migrate Data Review](./media/access-to-sql-server/migrate-data-review.png)
 
-1. Connect to your SQL Server using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) to review data and schema on your SQL Server instance. 
+1. Connect to your SQL Server instance by using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) and validate the migration by reviewing the data and schema: 
 
    ![Validate in SSMA](./media/access-to-sql-server/validate-in-ssms.png)
 
@@ -156,7 +157,7 @@ The test approach for database migration consists of performing the following ac
 The post-migration phase is crucial for reconciling any data accuracy issues and verifying completeness, as well as addressing performance issues with the workload.
 
 > [!Note]
-> For additional detail about these issues and specific steps to mitigate them, see the [Post-migration Validation and Optimization Guide](https://docs.microsoft.com/sql/relational-databases/post-migration-validation-and-optimization-guide).
+> For additional detail about these issues and specific steps to mitigate them, see the [Post-migration Validation and Optimization Guide](../../../relational-databases/post-migration-validation-and-optimization-guide.md).
 
 ## Migration assets 
 

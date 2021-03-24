@@ -52,6 +52,8 @@ ALTER DATABASE <MyDB>
   );
 ```
 
+Note that the log file on the DAX volume will be sized at 20MB regardless of the size specified wih the ADD FILE command.
+
 The volume or mount the new log file is placed must be formatted with DAX (NTFS) or mounted with the DAX option (XFS/EXT4).
 
 ## Remove a persisted log buffer

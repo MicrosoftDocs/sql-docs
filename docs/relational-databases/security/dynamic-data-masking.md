@@ -1,13 +1,12 @@
 ---
-title: "Dynamic Data Masking | Microsoft Docs"
+title: "Dynamic Data Masking"
 description: Learn about dynamic data masking, which limits sensitive data exposure by masking it to non-privileged users. It can greatly simplify security in SQL Server.
-ms.date: "05/02/2019"
+ms.date: "03/24/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
-ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -80,6 +79,8 @@ WHERE is_masked = 1;
 -   A mask cannot be configured on a computed column, but if the computed column depends on a column with a MASK, then the computed column will return masked data.  
   
 -   A column with data masking cannot be a key for a FULLTEXT index.  
+
+-   A column in a [PolyBase external table](..\..\t-sql\statements\create-external-table-transact-sql.md).
   
  For users without the **UNMASK** permission, the deprecated **READTEXT**, **UPDATETEXT**, and **WRITETEXT** statements do not function properly on a column configured for Dynamic Data Masking. 
  
@@ -121,13 +122,13 @@ GO
 
 -- table with masked columns
 CREATE TABLE Data.Membership(
-	MemberID		int IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED,
-	FirstName		varchar(100) MASKED WITH (FUNCTION = 'partial(1, "xxxxx", 1)') NULL,
-	LastName		varchar(100) NOT NULL,
-	Phone			varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,
-	Email			varchar(100) MASKED WITH (FUNCTION = 'email()') NOT NULL,
-	DiscountCode	smallint MASKED WITH (FUNCTION = 'random(1, 100)') NULL
-	)
+    MemberID        int IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED,
+    FirstName        varchar(100) MASKED WITH (FUNCTION = 'partial(1, "xxxxx", 1)') NULL,
+    LastName        varchar(100) NOT NULL,
+    Phone            varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,
+    Email            varchar(100) MASKED WITH (FUNCTION = 'email()') NOT NULL,
+    DiscountCode    smallint MASKED WITH (FUNCTION = 'random(1, 100)') NULL
+    )
 
 -- inserting sample data
 INSERT INTO Data.Membership (FirstName, LastName, Phone, Email, DiscountCode)

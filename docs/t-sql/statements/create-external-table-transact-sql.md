@@ -220,7 +220,7 @@ Constructs and operations not supported:
 
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
-- Dynamic Data Masking on external table columns
+- [Dynamic Data Masking](..\..\relational-databases\security\dynamic-data-masking.md) on external table columns
 
 ### Query limitations
 

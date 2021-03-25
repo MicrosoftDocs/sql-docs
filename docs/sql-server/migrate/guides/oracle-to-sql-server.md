@@ -182,7 +182,7 @@ To publish your schema and migrate the database, do the following:
 
 1. On the **Migrate Data** pane, enter the connection details for both Oracle and SQL Server.
 
-1. After the the migration is completed, view the **Data Migration Report**.
+1. After the migration is completed, view the **Data Migration Report**.
 
     ![Screenshot of the Data Migration Report.](./media/oracle-to-sql-server/data-migration-report.png)
 

@@ -39,7 +39,7 @@ This part of the process involves conducting an inventory of the databases that 
 
 ### Discover
 
-To better understand and plan for the migration, use the [Microsoft Assessment and Planning (MAP) Toolkit](https://go.microsoft.com/fwlink/?LinkID=316883) to identify existing data sources and details about the features your organizations is using. This process involves scanning the network to identify all your organization's Oracle instances, versions, and features.
+To better understand and plan for the migration, use the [Microsoft Assessment and Planning (MAP) Toolkit](https://go.microsoft.com/fwlink/?LinkID=316883) to identify existing data sources and details about the features your organization is using. This process involves scanning the network to identify all your organization's Oracle instances, versions, and features.
 
 To use the MAP Toolkit to perform an inventory scan, do the following: 
 
@@ -65,7 +65,7 @@ To use the MAP Toolkit to perform an inventory scan, do the following:
 
    ![Screenshot of the list of computer-discovery methods that best suit your organization's needs.](./media/oracle-to-sql-server/choose-search-option.png)
 
-1. Either enter credentials or create new credentials for the systems that you want to explore, and then select **Next**.
+1. Either enter the current credentials or create new credentials for the systems that you want to explore, and then select **Next**.
 
     ![Screenshot of the wizard pane for entering your computer credentials.](./media/oracle-to-sql-server/choose-credentials.png)
 
@@ -90,7 +90,7 @@ To use the MAP Toolkit to perform an inventory scan, do the following:
 
 ### Assess
 
-After you identify the data sources, use the [SSMA for Oracle](https://www.microsoft.com/download/details.aspx?id=54258) to assess the Oracle instance you're migrating to the SQL Server virtual machine so that you understand the gaps between the two. By using the migration assistant, you can review the database objects and data, assess the databases for migration, migrate the database objects to SQL Server, and then migrate the data to SQL Server.
+After you identify the data sources, use [SSMA for Oracle](https://www.microsoft.com/download/details.aspx?id=54258) to assess the Oracle instance you're migrating to the SQL Server virtual machine so that you understand the gaps between the two. By using the migration assistant, you can review the database objects and data, assess the databases for migration, migrate the database objects to SQL Server, and then migrate the data to SQL Server.
 
 To create an assessment, do the following: 
 
@@ -100,19 +100,19 @@ To create an assessment, do the following:
 
    ![Screenshot of the New Project pane in SSMA for Oracle.](./media/oracle-to-sql-server/new-project.png)
 
-1. Select **Connect to Oracle**, and then enter the Oracle connection details.
+1. Select **Connect to Oracle**, enter the Oracle connection details, and then select **Connect**.
 
    ![Screenshot of the Connect to Oracle pane.](./media/oracle-to-sql-server/connect-to-oracle.png)
 
-   Select the Oracle schemas you want to migrate, and then select **OK**.
+ 1. On the **Filter objects** pane, select the Oracle schemas you want to migrate, and then select **OK**.
 
    ![Screenshot of the "Filter objects" pane for selecting the schemas to load.](./media/oracle-to-sql-server/select-schema.png)
 
-1. In **Oracle Metadata Explorer**, select the Oracle schemas you're working with, and then select **Create Report** to generate an HTML report with conversion statistics and errors or warnings, if any. Alternatively, you can select **Create Report** at the upper right.
+1. On the **Oracle Metadata Explorer** pane, select the Oracle schemas you're working with, and then select **Create Report** to generate an HTML report with conversion statistics and errors or warnings, if any. Alternatively, you can select the **Create Report** tab at the upper right.
 
    ![Screenshot of the "Create Report" links in Oracle Metadata Explorer.](./media/oracle-to-sql-server/create-report.png)
 
-1. Review the HTML report to understand the conversion statistics and any errors or warnings. You can also open the report in Excel to get an inventory of Oracle objects and the effort that's required to perform schema conversions. The default location for the report is in the report folder within SSMAProjects, as shown here:  
+1. Review the HTML report to understand the conversion statistics and any errors or warnings. You can also open the report in Excel to get an inventory of Oracle objects and the effort that's required to perform schema conversions. The default location for the report is the report folder within SSMAProjects. For example: 
 
    `drive:\<username>\Documents\SSMAProjects\MyOracleMigration\report\report_2016_11_12T02_47_55\`
 
@@ -124,7 +124,7 @@ To create an assessment, do the following:
 Validate the default data-type mappings and change them based on requirements if necessary. To do so: 
 
 1. Select **Tools**, and then select **Project Settings**.  
-1. Select the **Type mapping** tab.
+1. Select the **Type Mapping** tab.
 
    ![Screenshot of the "Type Mapping" pane in SSMA for Oracle.](./media/oracle-to-sql-server/type-mappings.png)
 
@@ -144,7 +144,7 @@ To convert the schema, do the following:
 
    ![Screenshot of the Connect to SQL Server pane in SSMA for Oracle.](./media/oracle-to-sql-server/connect-to-sql.png)
 
-1. Right-click the schema you're working with, and then select **Convert Schema**. Alternatively, you can select the **Convert Schema** tab at the upper right.
+1. On the **Oracle Metadata Explorer** pane, right-click the schema you're working with, and then select **Convert Schema**. Alternatively, you can select the **Convert Schema** tab at the upper right.
 
    ![Screenshot of the "Convert Schema" command on the "Oracle Metadata Explorer" pane.](./media/oracle-to-sql-server/convert-schema.png)
 
@@ -170,7 +170,7 @@ To publish your schema and migrate the database, do the following:
 
    ![Screenshot of the "Synchronize with Database" command on the SQL Server Metadata Explorer pane.](./media/oracle-to-sql-server/synchronize-database.png)
 
-   Review the mapping between your source project and your target, as shown here:
+1. Review the mapping between your source project and your target, as shown here:
 
    ![Screenshot of the "Synchronize with the Database" pane for reviewing database mapping.](./media/oracle-to-sql-server/synchronize-database-review.png)
 
@@ -180,7 +180,7 @@ To publish your schema and migrate the database, do the following:
 
    ![Screenshot of the Migrate Data links.](./media/oracle-to-sql-server/migrate-data.png)
 
-1. On the **Migrate Data** pane, enter connection details for both Oracle and the SQL Server instances.
+1. On the **Migrate Data** pane, enter the connection details for both Oracle and SQL Server.
 
 1. After the the migration is completed, view the **Data Migration Report**.
 
@@ -191,9 +191,9 @@ To publish your schema and migrate the database, do the following:
    ![Screenshot of SQL Server Management Server.](./media/oracle-to-sql-server/validate-in-ssms.png)
 
 
-In addition to using SSMA, you can also use SQL Server Integration Services (SSIS) to migrate the data. To learn more, see: 
+In addition to using SSMA, you can use SQL Server Integration Services (SSIS) to migrate the data. To learn more, see: 
 - [Get started with SQL Server Integration Services](https://docs.microsoft.com//sql/integration-services/sql-server-integration-services) (article)
-- [SQL Server Integration Services: SSIS for Azure and Hybrid Data Movement](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/SSIS%20Hybrid%20and%20Azure.docx) (technical white paper).
+- [SQL Server Integration Services: SSIS for Azure and Hybrid Data Movement](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/SSIS%20Hybrid%20and%20Azure.docx) (technical white paper)
 
 
 

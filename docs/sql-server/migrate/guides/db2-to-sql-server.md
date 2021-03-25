@@ -50,7 +50,7 @@ To create an assessment, do the following:
 
 1. Right-click the Db2 schema you want to migrate, and then select **Create report** to generate an HTML report. Alternatively, you can select **Create report** at the upper right.
 
-   :::image type="content" source="media/db2-to-sql-server/create-report.png" alt-text="Screenshot of the "Create Report" links in Db2 Metadata Explorer.":::
+   :::image type="content" source="media/db2-to-sql-server/create-report.png" alt-text="Screenshot of the 'Create Report' links in Db2 Metadata Explorer.":::
 
 1. Review the HTML report to understand the conversion statistics and any errors or warnings. You can also open the report in Excel to get an inventory of Db2 objects and the effort required to perform schema conversions. The default location for the report is in the report folder within SSMAProjects, as shown here:  
 

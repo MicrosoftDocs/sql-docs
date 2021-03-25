@@ -288,9 +288,9 @@ monikerRange: "= azuresqldb-current"
 |RESOURCE_SEMAPHORE_QUERY_COMPILE|Occurs when the number of concurrent query compilations reaches a throttling limit. High waits and wait times may indicate excessive compilations, recompiles, or uncachable plans.|  
 |RESOURCE_SEMAPHORE_SMALL_QUERY|Occurs when memory request by a small query cannot be granted immediately due to other concurrent queries. Wait time should not exceed more than a few seconds, because the server transfers the request to the main query memory pool if it fails to grant the requested memory within a few seconds. High waits may indicate an excessive number of concurrent small queries while the main memory pool is blocked by waiting queries.|  
 |SE_REPL_CATCHUP_THROTTLE|Occurs when the transaction is waiting for one of the database secondaries to make progress.|  
-|SE_REPL_COMMIT_ACK|Occurs when the transaction is waiting for quorum commit acknowledgement from secondary replicas.|  
-|SE_REPL_COMMIT_TURN|Occurs when the transaction is waiting for commit after receiving quorum commit acknowledgements.|  
-|SE_REPL_ROLLBACK_ACK|Occurs when the transaction is waiting for quorum rollback acknowledgement from secondary replicas.|  
+|SE_REPL_COMMIT_ACK|Occurs when the transaction is waiting for quorum commit acknowledgment from secondary replicas.|  
+|SE_REPL_COMMIT_TURN|Occurs when the transaction is waiting for commit after receiving quorum commit acknowledgments.|  
+|SE_REPL_ROLLBACK_ACK|Occurs when the transaction is waiting for quorum rollback acknowledgment from secondary replicas.|  
 |SE_REPL_SLOW_SECONDARY_THROTTLE|Occurs when the thread is waiting for one of the database secondary replicas.|  
 |SEC_DROP_TEMP_KEY|Occurs after a failed attempt to drop a temporary security key before a retry attempt.|  
 |SECURITY_MUTEX|Occurs when there is a wait for mutexes that control access to the global list of Extensible Key Management (EKM) cryptographic providers and the session-scoped list of EKM sessions.|  

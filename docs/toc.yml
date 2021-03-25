@@ -7358,7 +7358,7 @@ items:
     items:
     - name: Getting started
       items:
-      - name: Install and Configure Master Data Services
+      - name: Install and configure Master Data Services
         href: master-data-services/master-data-services-installation-and-configuration.md 
       - name: Tracing the Master Data Services web app
         href: master-data-services/tracing-master-data-services.md

@@ -7358,6 +7358,8 @@ items:
     items:
     - name: Getting started
       items:
+      - name: Install and Configure Master Data Services
+        href: master-data-services/master-data-services-installation-and-configuration.md 
       - name: Tracing
         href: master-data-services/tracing-master-data-services.md
       - name: Categorized Web Service Operations

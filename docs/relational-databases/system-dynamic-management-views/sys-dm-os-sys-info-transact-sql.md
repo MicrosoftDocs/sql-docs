@@ -72,7 +72,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-ser
 |**pdw_node_id**|**int**|**Applies to:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
 |**socket_count** |**int** | **Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later.<br /><br />Specifies the number of processor sockets available on the system. |  
 |**cores_per_socket** |**int** | **Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later.<br /><br />Specifies the number of processors per socket available on the system. |  
-|**numa_node_count** |**int** | **Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later.<br /><br />Specifies the number of numa nodes available on the system. This column includes physical numa nodes as well as soft numa nodes. |  
+|**numa_node_count** |**int** | **Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later.<br /><br />Specifies the number of NUMA nodes available on the system. This column includes physical NUMA nodes as well as soft NUMA nodes. |  
 
 ## Permissions
 

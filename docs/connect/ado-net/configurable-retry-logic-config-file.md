@@ -1,7 +1,7 @@
 ---
-title: "Configurable retry logic and configuration file"
-description: "Demonstrates how to specify default retry logic providers through a configuration file."
-ms.date: "03/22/2021"
+title: Configurable retry logic configuration file with SqlClient
+description: Learn how to use a configuration file to specify default retry logic providers and customize retry logic options in Microsoft.Data.SqlClient.
+ms.date: 03/22/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,45 +10,45 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-deshtehari
 ---
-# Configurable retry logic and configuration file
+# Configurable retry logic configuration file with SqlClient
 
 [!INCLUDE[appliesto-netfx-netcore-xxxx-md](../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-The default retry method when the safety switch's enabled is <xref:Microsoft.Data.SqlClient.SqlConnection.SqlConfigurableRetryFactory.CreateNoneRetryProvider>, either for <xref:Microsoft.Data.SqlClient.SqlConnection> or <xref:Microsoft.Data.SqlClient.SqlCommand> unless you specify a specific retry method through the configuration file.
+The default retry method when the safety switch is enabled, is the `Microsoft.Data.SqlClient.SqlConnection.SqlConfigurableRetryFactory.CreateNoneRetryProvider` for both <xref:Microsoft.Data.SqlClient.SqlConnection> and <xref:Microsoft.Data.SqlClient.SqlCommand>. You can specify a different retry method by using a configuration file.
 
 ## Configuration sections
 
-All the default retry logic configurations for an application can be specified after adding the following sections inside the `configSections` section at configuration file:
+Default retry logic options for an application can be changed by adding the following sections inside the `configSections` section of the configuration file:
 
-- `SqlConfigurableRetryLogicConnection`: to specify the default retry logic for <xref:Microsoft.Data.SqlClient.SqlConnection>.  
+- `SqlConfigurableRetryLogicConnection`: to specify the default retry logic for <xref:Microsoft.Data.SqlClient.SqlConnection>.
 
-```csharp  
+```csharp
 <section name="SqlConfigurableRetryLogicConnection"
         type="Microsoft.Data.SqlClient.SqlConfigurableRetryConnectionSection, Microsoft.Data.SqlClient"/>
-```  
+```
 
 - `SqlConfigurableRetryLogicCommand`: to specify the default retry logic for <xref:Microsoft.Data.SqlClient.SqlCommand>.
 
-```csharp  
+```csharp
 <section name="SqlConfigurableRetryLogicCommand"
         type="Microsoft.Data.SqlClient.SqlConfigurableRetryCommandSection, Microsoft.Data.SqlClient"/>
-```  
+```
 
-- `AppContextSwitchOverrides`: .NET Framework supports AppContext switches internally by `AppContextSwitchOverrides` section and doesn't need to be defined explicitly; but to turn on a switch in .NET Core you must specify this section.
+- `AppContextSwitchOverrides`: .NET Framework supports AppContext switches via an `AppContextSwitchOverrides` section, which doesn't need to be defined explicitly. To turn on a switch in .NET Core, you must specify this section.
 
-```csharp  
+```csharp
 <section name="AppContextSwitchOverrides"
         type="Microsoft.Data.SqlClient.AppContextSwitchOverridesSection, Microsoft.Data.SqlClient"/>
-```  
+```
 
-> [!NOTE]  
-> Following configurations should be specified inside the `configuration` section after declaring these new sections to set the default retry logic through an application configuration file.
+> [!NOTE]
+> The following configurations should be specified inside the `configuration` section. Declare these new sections to configure the default retry logic through an application configuration file.
 
 ### Enable safety switch
 
-It's possible to turn on the considered safety switch through the configuration file. To find how to enable it through application code, see [Enable configurable retry logic](appcontext-switches.md#Enable-configurable-retry-logic).
+You can enable the safety switch through a configuration file. To learn how to enable it through application code, see [Enable configurable retry logic](appcontext-switches.md#enable-configurable-retry-logic).
 
 - **.NET Framework**: For more information, see [AppContextSwitchOverrides element](/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element).
 
@@ -58,7 +58,7 @@ It's possible to turn on the considered safety switch through the configuration 
 </runtime>
 ```
 
-- **.NET Core**: supports more than one switch like .NET Framework.
+- **.NET Core**: supports multiple, semi-colon (;) delimited switches like .NET Framework.
 
 ```csharp
 <AppContextSwitchOverrides value="Switch.Microsoft.Data.SqlClient.EnableRetryLogic=true"/>
@@ -66,95 +66,100 @@ It's possible to turn on the considered safety switch through the configuration 
 
 ### Connection section
 
-Following attributes can be used to specify the default retry logic for all <xref:Microsoft.Data.SqlClient.SqlConnection> instances in an application:  
+The following attributes can be used to specify the default retry logic for all `Microsoft.Data.SqlClient.SqlConnection` instances in an application:
 
-- **numberOfTries**: sets the number of times to try. For more information, see <xref:Microsoft.Data.SqlClient.SqlRetryLogicOption.NumberOfTries>.
+- **numberOfTries**: sets the number of times to try.
 
-- **deltaTime**: sets the gap time interval as a <see cref="T:System.TimeSpan" /> object. For more information, see <xref:Microsoft.Data.SqlClient.DeltaTime.NumberOfTries>.
+- **deltaTime**: sets the gap time interval as a `System.TimeSpan` object.
 
-- **minTime**: sets the minimum allowed gap time interval as a <see cref="T:System.TimeSpan" /> object. For more information, see <xref:Microsoft.Data.SqlClient.SqlRetryLogicOption.MinTimeInterval>.
+- **minTime**: sets the minimum allowed gap time interval as a `System.TimeSpan` object.
 
-- **maxTime**: sets the allowed maximum gap time interval as a <see cref="T:System.TimeSpan" /> object. For more information, see <xref:Microsoft.Data.SqlClient.SqlRetryLogicOption.MaxTimeInterval>.
+- **maxTime**: sets the allowed maximum gap time interval as a `System.TimeSpan` object.
 
-- **transientErrors**: sets the list of transient error numbers on which to retry when they occur. For more information, see <xref:Microsoft.Data.SqlClient.SqlRetryLogicOption.TransientErrors>.
+- **transientErrors**: sets the list of transient error numbers on which to retry.
 
-- **retryMethod**: specifies a retry method creator that receives the retry configurations through a <xref:Microsoft.Data.SqlClient.SqlRetryLogicOption> parameter and returns a <xref:Microsoft.Data.SqlClient.SqlRetryLogicBaseProvider> object.
+- **retryMethod**: specifies a retry method creator that receives the retry configuration via a `Microsoft.Data.SqlClient.SqlRetryLogicOption` parameter and returns a `Microsoft.Data.SqlClient.SqlRetryLogicBaseProvider` object.
 
-- **retryLogicType**: sets custom retry logic `fully qualified type name`, which contains the retry method creators to specify by `retryMethod`. These methods should meet the required criteria for `retryMethod`. For more information, see [Specifying fully qualified type names](/dotnet/framework/reflection-and-codedom/specifying-fully-qualified-type-names).
+- **retryLogicType**: sets custom the retry logic `fully qualified type name`, which contains the retry method creators that provide the `retryMethod`. These methods should meet the criteria for `retryMethod`. For more information, see [Specifying fully qualified type names](/dotnet/framework/reflection-and-codedom/specifying-fully-qualified-type-names).
 
-> [!NOTE]  
-> It's not required to specify the `retryLogicType` if you use the internal pre-defined retry providers. To find the pre-defined retry providers, see [Internal retry logic providers](internal-retry-logic-providers.md).
+> [!NOTE]
+> It's not required to specify the `retryLogicType` if you use the built-in retry providers. To find the built-in retry providers, see [Internal retry logic providers](internal-retry-logic-providers.md).
 
 ### Command section
 
-In addition to all the above attributes, the following attribute can be set to specify the default retry logic for all <xref:Microsoft.Data.SqlClient.SqlCommand> instances in an application:
+The following attribute can also be set for all <xref:Microsoft.Data.SqlClient.SqlCommand> instances in an application:
 
-- **authorizedSqlCondition**: Sets a pre-retry validation function over <see cref="T:Microsoft.Data.SqlClient.SqlCommand.CommandText"/>, only to include specific SQL statements. For more information, see <xref:Microsoft.Data.SqlClient.SqlRetryLogicOption.AuthorizedSqlCondition>.
+- **authorizedSqlCondition**: Sets a pre-retry regular expression for <xref:Microsoft.Data.SqlClient.SqlCommand.CommandText> to filter specific SQL statements.
 
-> [!NOTE]  
-> Consider the regular expression is case sensitive.
+> [!NOTE]
+> The regular expression is case sensitive.
 
 ### Examples
 
-- Attempts to establish a connection maximum three times and about 1-second delay time before each retry by <xref:Microsoft.Data.SqlClient.SqlConfigurableRetryFactory.CreateFixedRetryProvider> method and default transient error list:  
-```csharp
-<SqlConfigurableRetryLogicConnection retryMethod ="CreateFixedRetryProvider" 
-                                        numberOfTries ="3" deltaTime ="00:00:01"/>
-```
+- Attempts to establish a connection up to three times with about a 1-second delay between tries by using the `Microsoft.Data.SqlClient.SqlConfigurableRetryFactory.CreateFixedRetryProvider` method and the default transient error list:
 
-- Attempts to establish a connection maximum five times and maximum 45-seconds delay time before each retry by <xref:Microsoft.Data.SqlClient.SqlConfigurableRetryFactory.CreateExponentialRetryProvider> method and default transient error list:  
-```csharp
-<SqlConfigurableRetryLogicConnection retryMethod ="CreateExponentialRetryProvider" 
-                    numberOfTries ="5" deltaTime ="00:00:03" maxTime ="00:00:45"/>
-```
+    ```csharp
+    <SqlConfigurableRetryLogicConnection retryMethod ="CreateFixedRetryProvider" 
+                                            numberOfTries ="3" deltaTime ="00:00:01"/>
+    ```
 
-- Attempts to execute a command maximum four times and starts delay time from 2 seconds to maximum 30 seconds by <xref:Microsoft.Data.SqlClient.SqlConfigurableRetryFactory.CreateIncrementalRetryProvider> method and default transient error list:  
-```csharp
-<SqlConfigurableRetryLogicCommand retryMethod ="CreateIncrementalRetryProvider"
-                    numberOfTries ="4" deltaTime ="00:00:02" maxTime ="00:00:30"/>
-```
+- Attempts to establish a connection up to five times with up to a 45-second delay between tries by using the `Microsoft.Data.SqlClient.SqlConfigurableRetryFactory.CreateExponentialRetryProvider` method and the default transient error list:
 
-- Attempts to execute a command start with `SELECT` statement for maximum eight times and starts delay time from 1 second to maximum 1 minute when exception numbers 102 or 997 happen by <xref:Microsoft.Data.SqlClient.SqlConfigurableRetryFactory.CreateIncrementalRetryProvider> method:  
-```csharp
-<SqlConfigurableRetryLogicCommand retryMethod ="CreateIncrementalRetryProvider" 
-                        numberOfTries ="8" deltaTime ="00:00:01" maxTime ="00:01:00"
-                        transientErrors="102, 997"
-                        authorizedSqlCondition="\b(SELECT)\b"/>
-```
+    ```csharp
+    <SqlConfigurableRetryLogicConnection retryMethod ="CreateExponentialRetryProvider" 
+                        numberOfTries ="5" deltaTime ="00:00:03" maxTime ="00:00:45"/>
+    ```
 
-> [!NOTE]  
-> In the next samples, you can find the custom retry logic source code from [Core application program interfaces](core-application-program-interfaces.md#Example). It's assumed the `CreateCustomProvider` method is defined in `CustomCRL_Doc.CustomRetry` class by `CustomCRL_Doc.dll` assembly that must be copy to the application running directory.
+- Attempts to execute a command up to four times with a delay between 2 and 30 seconds by using the `Microsoft.Data.SqlClient.SqlConfigurableRetryFactory.CreateIncrementalRetryProvider` method and the default transient error list:
 
-- Attempts to establish a connection maximum 5 times and delay time before each execution from 3 seconds to 45 seconds in encounter with error numbers 4060, 997, and 233 by the specified customized retry provider:  
-```csharp
-<SqlConfigurableRetryLogicConnection retryLogicType ="CustomCRL_Doc.CustomRetry, CustomCRL_Doc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
-                    retryMethod ="CreateCustomProvider" 
-                    numberOfTries ="5" deltaTime ="00:00:03" maxTime ="00:00:45"
-                    transientErrors ="4060, 997, 233"/>
-```
+    ```csharp
+    <SqlConfigurableRetryLogicCommand retryMethod ="CreateIncrementalRetryProvider"
+                        numberOfTries ="4" deltaTime ="00:00:02" maxTime ="00:00:30"/>
+    ```
 
-- This sample behaves like the previous:
-```csharp
-<SqlConfigurableRetryLogicConnection retryLogicType ="CustomCRL_Doc.CustomRetry, CustomCRL_Doc"
-                    retryMethod ="CreateCustomProvider" 
-                    numberOfTries ="5" deltaTime ="00:00:03" maxTime ="00:00:45"
-                    transientErrors ="4060, 997, 233"/>
-```
+- Attempts to execute a command up to eight times with a delay from one second to one minute. It's limited to commands with `CommandText` containing the word `SELECT` and exception numbers 102 or 997. It uses the built-in `Microsoft.Data.SqlClient.SqlConfigurableRetryFactory.CreateIncrementalRetryProvider` method:
 
-> [!NOTE]  
-> Both default retry logics will be resolved and cached at the first attempt to open a connection or executing a command for further usage in an application lifetime.
+    ```csharp
+    <SqlConfigurableRetryLogicCommand retryMethod ="CreateIncrementalRetryProvider" 
+                            numberOfTries ="8" deltaTime ="00:00:01" maxTime ="00:01:00"
+                            transientErrors="102, 997"
+                            authorizedSqlCondition="\b(SELECT)\b"/>
+    ```
 
-> [!NOTE]  
-> Any failures in the process of resolving the default retry logic methods through an application configuration file won't interrupt the application and will use the default <xref:Microsoft.Data.SqlClient.SqlConnection.SqlConfigurableRetryFactory.CreateNoneRetryProvider> instead of the specified settings.
+> [!NOTE]
+> In the next two samples, you can find the custom retry logic source code from [Core application program interfaces](core-application-program-interfaces.md#example). It's assumed the `CreateCustomProvider` method is defined in the `CustomCRL_Doc.CustomRetry` class in the `CustomCRL_Doc.dll` assembly that is in the application's executing directory.
 
-> [!NOTE]  
-> Use the event source tracing logs for more investigation on the process of resolving the default retry logic methods. For more information, see [Enable event tracing in SqlClient](enable-eventsource-tracing.md).
+- Attempts to establish a connection up to five times, with a delay between 3 and 45 seconds, error numbers 4060, 997, and 233 in the list, and using the specified custom retry provider:
+
+    ```csharp
+    <SqlConfigurableRetryLogicConnection retryLogicType ="CustomCRL_Doc.CustomRetry, CustomCRL_Doc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                        retryMethod ="CreateCustomProvider" 
+                        numberOfTries ="5" deltaTime ="00:00:03" maxTime ="00:00:45"
+                        transientErrors ="4060, 997, 233"/>
+    ```
+
+- This sample behaves like the previous one:
+
+    ```csharp
+    <SqlConfigurableRetryLogicConnection retryLogicType ="CustomCRL_Doc.CustomRetry, CustomCRL_Doc"
+                        retryMethod ="CreateCustomProvider" 
+                        numberOfTries ="5" deltaTime ="00:00:03" maxTime ="00:00:45"
+                        transientErrors ="4060, 997, 233"/>
+    ```
+
+> [!NOTE]
+> Retry logic providers will be cached at the first use on a connection or command for future use during an application's lifetime.
+
+> [!NOTE]
+> Any errors when reading an application configuration file for retry logic settings won't cause errors in the application. The default `Microsoft.Data.SqlClient.SqlConnection.SqlConfigurableRetryFactory.CreateNoneRetryProvider` will be used instead.
+>
+> You can use event source tracing to verify or troubleshoot issues with configuring retry logic. For more information, see [Enable event tracing in SqlClient](enable-eventsource-tracing.md).
 
 ## See also
 
-- [Enable configurable retry logic](appcontext-switches.md#Enable-configurable-retry-logic)
+- [Enable configurable retry logic](appcontext-switches.md#enable-configurable-retry-logic)
 - [Internal retry logic providers](internal-retry-logic-providers.md)
 - [Enable event tracing in SqlClient](enable-eventsource-tracing.md)
 - [Specifying fully qualified type names](/dotnet/framework/reflection-and-codedom/specifying-fully-qualified-type-names)
-- [Configurable retry logic with SqlClient](configurable-retry-logic.md)
+- [Configurable retry logic in SqlClient](configurable-retry-logic.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

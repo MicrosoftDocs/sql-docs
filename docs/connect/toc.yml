@@ -141,22 +141,22 @@
         href: ../connect/ado-net/common-schema-collections.md
       - name: SQL Server schema collections
         href: ../connect/ado-net/sql-server-schema-collections.md
+    - name: Configurable retry logic
+      href: ../connect/ado-net/configurable-retry-logic.md
+      items:
+      - name: Introduction
+        href: ../connect/ado-net/configurable-retry-logic-introduction.md
+      - name: Internal providers
+        href: ../connect/ado-net/internal-retry-logic-providers.md
+      - name: Core APIs
+        href: ../connect/ado-net/configurable-retry-logic-core-apis.md
+      - name: Configuration file
+        href: ../connect/ado-net/configurable-retry-logic-config-file.md
     - name: DbProviderFactories
       href: ../connect/ado-net/dbproviderfactories.md
       items:
       - name: Obtain a SqlClientFactory
         href: ../connect/ado-net/obtain-sqlclientfactory.md
-    - name: configurable retry logic
-      href: ../connect/ado-net/configurable-retry-logic.md
-      items:
-      - name: Configurable retry logic introduction
-        href: ../connect/ado-net/configurable-retry-logic-introduction.md
-      - name: Internal retry logic providers
-        href: ../connect/ado-net/internal-retry-logic-providers.md
-      - name: Configurable retry logic core APIs
-        href: ../connect/ado-net/configurable-retry-logic-core-apis.md
-      - name: Configurable retry logic and configuration file
-        href: ../connect/ado-net/configurable-retry-logic-config-file.md
     - name: Retrieve identity or autonumber values
       href: ../connect/ado-net/retrieve-identity-or-autonumber-values.md
     - name: Retrieve binary data

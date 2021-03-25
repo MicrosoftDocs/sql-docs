@@ -1,7 +1,7 @@
 ---
-title: "Retrieving and modifying data"
+title: Retrieving and modifying data
 description: In .NET, Microsoft SqlClient Data Provider for SQL Server serves as a bridge between an application and a data source to read and update data.
-ms.date: "11/30/2020"
+ms.date: 03/24/2021
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
 ms.prod: sql
 ms.prod_service: connectivity
@@ -43,31 +43,31 @@ Contains topics describing how to perform local transactions, distributed transa
 Describes how to obtain available databases or catalogs, tables and views in a database, constraints that exist for tables, and other schema information from a data source.
 
 [DbProviderFactories](dbproviderfactories.md)  
-Describes the provider factory model and demonstrates how to use the base classes in the `System.Data.Common` namespace.  
+Describes the provider factory model and demonstrates how to use the base classes in the `System.Data.Common` namespace.
 
-[Configurable retry logic with SqlClient](configurable-retry-logic.md)  
-Describes how to use the **configurable retry logic** feature of Microsoft SqlClient Data Provider for SQL Server to establish a connection or execute a command.  
+[Configurable retry logic in SqlClient](configurable-retry-logic.md)  
+Describes how to use the **configurable retry logic** feature when establishing a connection or executing a command.
 
 [Retrieve identity or autonumber values](retrieve-identity-or-autonumber-values.md)  
-Provides an example of mapping the values generated for an **identity** column in a SQL Server table to a column of an inserted row in a table. Discusses merging identity values in a `DataTable`.  
-  
+Provides an example of mapping the values generated for an **identity** column in a SQL Server table to a column of an inserted row in a table. Discusses merging identity values in a `DataTable`.
+
 [Retrieve Binary Data](retrieve-binary-data.md)  
-Describes how to retrieve binary data or large data structures using `CommandBehavior`.`SequentialAccess` to modify the default behavior of a `DataReader`.  
-  
+Describes how to retrieve binary data or large data structures using `CommandBehavior`.`SequentialAccess` to modify the default behavior of a `DataReader`.
+
 [Modify data with stored procedures](modify-data-with-stored-procedures.md)  
-Describes how to use stored procedure input parameters and output parameters to insert a row in a database, returning a new identity value.  
+Describes how to use stored procedure input parameters and output parameters to insert a row in a database, returning a new identity value.
 
 [Data tracing in SqlClient](data-tracing.md)  
-Describes how Microsoft SqlClient Data Provider for SQL Server provides built-in data tracing functionality.  
+Describes how Microsoft SqlClient Data Provider for SQL Server provides built-in data tracing functionality.
   
 [Performance counters in SqlClient](performance-counters.md)  
-Describes performance counters available for Microsoft SqlClient Data Provider for SQL Server.  
+Describes performance counters available for Microsoft SqlClient Data Provider for SQL Server.
   
 [Asynchronous programming](asynchronous-programming.md)  
-Describes Microsoft SqlClient Data Provider for SQL Server support for asynchronous programming.  
+Describes Microsoft SqlClient Data Provider for SQL Server support for asynchronous programming.
   
 [SqlClient streaming support](sqlclient-streaming-support.md)  
-Discusses how to write applications that stream data from SQL Server without having it fully loaded in memory.  
+Discusses how to write applications that stream data from SQL Server without having it fully loaded in memory.
 
 ## See also
 

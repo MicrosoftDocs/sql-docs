@@ -36,7 +36,7 @@ For links to videos and other training resources to help you learn [!INCLUDE[ssM
 ## Internet Explorer and Silverlight
 - When you install [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on a Windows Server 2012 machine, you may have to configure Internet Explorer Enhanced Security to allow scripting for the Web application site. Otherwise, browsing to the site on the server computer will fail.
 - Prior to [!INCLUDE[sqlv15](../includes/sssql19-md.md)], to work in the Web application, Silverlight 5 must be installed on the client computer. If you do not have the required version of Silverlight, you will be prompted to install it when you navigate to an area of the Web application that requires it. You can install Silverlight 5 from **[here](https://www.microsoft.com/silverlight/)**.
-- Starting in [!INCLUDE[sqlv15](../includes/sssql19-md.md)], HTML controls replace all former Silverlight components, therefore the Silverlight dependency removed. More browsers, including Chrome and Edge, now work for accessing the Master Data Services portal.
+- Starting in [!INCLUDE[sqlv15](../includes/sssql19-md.md)], HTML controls replace all former Silverlight components, therefore the Silverlight dependency removed. More browsers, including Chrome and Edge, now work for accessing the Master Data Services web app.
 
 ## [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine
 By default, when you spin up an Azure Virtual Machine with [!INCLUDE[ssnoversion_md](../includes/ssnoversion-md.md)] already installed, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] is also installed. 
@@ -66,7 +66,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
   
      ![Icon for the Server Manager in Windows Server 2012 taskbar](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "Icon for the Server Manager in Windows Server 2012 taskbar")  
   
-5.  In **Server Manager**, click, **Add Roles and Features** on the **Manage** menu.  
+5.  In **Server Manager**, on the **Manage** menu, click **Add Roles and Features**.
    
      ![In Server Manage, the Add Roles and Features menu command](../master-data-services/media/mds-servermanagerdashboard-addrolesfeaturesmenu.png "In Server Manage, the Add Roles and Features menu command")  
   

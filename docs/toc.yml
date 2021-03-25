@@ -7360,7 +7360,7 @@ items:
       items:
       - name: Install and Configure Master Data Services
         href: master-data-services/master-data-services-installation-and-configuration.md 
-      - name: Tracing
+      - name: Tracing the Master Data Services web app
         href: master-data-services/tracing-master-data-services.md
       - name: Categorized Web Service Operations
         href: master-data-services/develop/categorized-web-service-operations-master-data-services.md

@@ -22,9 +22,9 @@ Configurable retry logic lets developers and administrators manage application b
 
 This feature consists of three main components:
 
-1. **Core APIs**: Developers can use these interfaces to implement their own retry logic on <xref:Microsoft.Data.SqlClient.SqlConnection> and <xref:Microsoft.Data.SqlClient.SqlCommand> objects. For more information, see [Configurable retry logic core APIsin SqlClient](configurable-retry-logic-core-apis.md).
-2. **Pre-defined configurable retry logic**: Built-in retry logic methods using the core APIs are accessible from the `Microsoft.Data.SqlClient.SqlConfigurableRetryFactory` class. For more information, see [Internal retry logic providers in SqlClient](internal-retry-logic-providers.md).
-3. **Configuration file schema**: To specify the default retry logic for <xref:Microsoft.Data.SqlClient.SqlConnection> and <xref:Microsoft.Data.SqlClient.SqlCommand> in an application. For more information, see [Configurable retry logic configuration file with SqlClient](configurable-retry-logic-config-file.md).
+1. **Core APIs**: Developers can use these interfaces to implement their own retry logic on <xref:Microsoft.Data.SqlClient.SqlConnection> and <xref:Microsoft.Data.SqlClient.SqlCommand> objects. For more information, see [Configurable retry logic core APIs in SqlClient](configurable-retry-logic-core-apis-sqlclient.md).
+2. **Pre-defined configurable retry logic**: Built-in retry logic methods using the core APIs are accessible from the `Microsoft.Data.SqlClient.SqlConfigurableRetryFactory` class. For more information, see [Internal retry logic providers in SqlClient](internal-retry-logic-providers-sqlclient.md).
+3. **Configuration file schema**: To specify the default retry logic for <xref:Microsoft.Data.SqlClient.SqlConnection> and <xref:Microsoft.Data.SqlClient.SqlCommand> in an application. For more information, see [Configurable retry logic configuration file with SqlClient](configurable-retry-logic-config-file-sqlclient.md).
 
 ## Quick start
 
@@ -51,9 +51,9 @@ In this sample, the connection open command will retry if it hits one of the tra
 
 ## See also
 
-- [Configurable retry logic core APIs](configurable-retry-logic-core-apis.md)
-- [Internal retry logic providers](internal-retry-logic-providers.md)
-- [Configurable retry logic configuration file](configurable-retry-logic-config-file.md)
+- [Configurable retry logic core APIs in SqlClient](configurable-retry-logic-core-apis-sqlclient.md)
+- [Internal retry logic providers in SqlClient](internal-retry-logic-providers-sqlclient.md)
+- [Configurable retry logic configuration file with SqlClient](configurable-retry-logic-config-file-sqlclient.md)
 - [Enable configurable retry logic](appcontext-switches.md#enable-configurable-retry-logic)
 - [Configurable retry logic in SqlClient](configurable-retry-logic.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

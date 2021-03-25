@@ -98,7 +98,7 @@ By default, configurable retry logic is disabled. To enable this feature, set th
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.EnableRetryLogic", false);
 ```
 
-* For information on how to enable the switch by using a configuration file see [Enable safety switch](configurable-retry-logic-config-file.md#enable-safety-switch).
+* For information on how to enable the switch by using a configuration file see [Enable safety switch](configurable-retry-logic-config-file-sqlclient.md#enable-safety-switch).
 
 ## See also
 

@@ -83,7 +83,7 @@ The following attributes can be used to specify the default retry logic for all 
 - **retryLogicType**: sets custom the retry logic `fully qualified type name`, which contains the retry method creators that provide the `retryMethod`. These methods should meet the criteria for `retryMethod`. For more information, see [Specifying fully qualified type names](/dotnet/framework/reflection-and-codedom/specifying-fully-qualified-type-names).
 
 > [!NOTE]
-> It's not required to specify the `retryLogicType` if you use the built-in retry providers. To find the built-in retry providers, see [Internal retry logic providers](internal-retry-logic-providers.md).
+> It's not required to specify the `retryLogicType` if you use the built-in retry providers. To find the built-in retry providers, see [Internal retry logic providers in SqlClient](internal-retry-logic-providers-sqlclient.md).
 
 ### Command section
 
@@ -127,7 +127,7 @@ The following attribute can also be set for all <xref:Microsoft.Data.SqlClient.S
     ```
 
 > [!NOTE]
-> In the next two samples, you can find the custom retry logic source code from [Core application program interfaces](core-application-program-interfaces.md#example). It's assumed the `CreateCustomProvider` method is defined in the `CustomCRL_Doc.CustomRetry` class in the `CustomCRL_Doc.dll` assembly that is in the application's executing directory.
+> In the next two samples, you can find the custom retry logic source code from [Configurable retry logic core APIs in SqlClient](configurable-retry-logic-core-apis-sqlclient.md#example). It's assumed the `CreateCustomProvider` method is defined in the `CustomCRL_Doc.CustomRetry` class in the `CustomCRL_Doc.dll` assembly that is in the application's executing directory.
 
 - Attempts to establish a connection up to five times, with a delay between 3 and 45 seconds, error numbers 4060, 997, and 233 in the list, and using the specified custom retry provider:
 
@@ -158,7 +158,7 @@ The following attribute can also be set for all <xref:Microsoft.Data.SqlClient.S
 ## See also
 
 - [Enable configurable retry logic](appcontext-switches.md#enable-configurable-retry-logic)
-- [Internal retry logic providers](internal-retry-logic-providers.md)
+- [Internal retry logic providers in SqlClient](internal-retry-logic-providers-sqlclient.md)
 - [Enable event tracing in SqlClient](enable-eventsource-tracing.md)
 - [Specifying fully qualified type names](/dotnet/framework/reflection-and-codedom/specifying-fully-qualified-type-names)
 - [Configurable retry logic in SqlClient](configurable-retry-logic.md)

@@ -35,16 +35,16 @@ Even though using a retry pattern greatly improves an application's resiliency, 
 
 ## In this section
 
-[Configurable retry logic introduction](configurable-retry-logic-introduction.md)  
+[Configurable retry logic in SqlClient introduction](configurable-retry-logic-sqlclient-introduction.md)  
 Introduces different section of configurable retry logic.
 
-[Internal retry logic providers](internal-retry-logic-providers.md)  
+[Internal retry logic providers in SqlClient](internal-retry-logic-providers-sqlclient.md)  
 Demonstrates how to use pre-defined retry providers to apply the retry logic against database.
 
-[Configurable retry logic core APIs](configurable-retry-logic-core-apis.md)  
+[Configurable retry logic core APIs in SqlClient](configurable-retry-logic-core-apis-sqlclient.md)  
 Demonstrates how to use core APIs to implement custom retry logic.
 
-[Configurable retry logic configuration file](configurable-retry-logic-config-file.md)  
+[Configurable retry logic configuration file with SqlClient](configurable-retry-logic-config-file-sqlclient.md)  
 Demonstrates how to specify default retry logic providers through a configuration file.
 
 ## See also

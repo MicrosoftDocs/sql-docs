@@ -24,7 +24,7 @@ Before you begin migrating your Db2 database to SQL Server, do the following:
 
 - Verify that your [source environment is supported](../../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md#prerequisites).
 - Download and install [SSMA for Db2](https://www.microsoft.com/download/details.aspx?id=54254).
-- Get connectivity and sufficient permissions to access both source and target 
+- Get connectivity and sufficient permissions to access both source and target. 
 
 ## Pre-migration
 
@@ -54,7 +54,7 @@ To create an assessment, do the following:
 
 1. Review the HTML report to understand the conversion statistics and any errors or warnings. You can also open the report in Excel to get an inventory of Db2 objects and the effort required to perform schema conversions. The default location for the report is in the report folder within SSMAProjects, as shown here:  
 
-   `drive:\<username>\Documents\SSMAProjects\MyDb2Migration\report\report_<date>`. 
+   `drive:\<username>\Documents\SSMAProjects\MyDb2Migration\report\report_<date>` 
 
    :::image type="content" source="media/db2-to-sql-server/report.png" alt-text="Screenshot of a conversion report in SSMA.":::
 
@@ -107,7 +107,7 @@ To publish your schema and migrate your data, do the following:
 
    :::image type="content" source="media/db2-to-sql-server/synchronize-with-database.png" alt-text="Screenshot of the 'Synchronize with Database' command on the SQL Server Metadata Explorer pane.":::
 
-1. Migrate the data. On the **Db2 Metadata Explorer** pane, right-click the schema or object you want to migrate, and then select **Migrate data**. Alternatively, you can select the **Migrate Data** tab at the upper right.
+1. Migrate the data. On the **Db2 Metadata Explorer** pane, right-click the schema or object you want to migrate, and then select **Migrate Data**. Alternatively, you can select the **Migrate Data** tab at the upper right.
  
    To migrate data for an entire database, select the check box next to the database name. To migrate data from individual tables, expand the database, expand **Tables**, and then select the check box next to the table. To omit data from individual tables, clear the check box.
 
@@ -151,7 +151,7 @@ For more assistance with completing this migration scenario, see the following r
 | --- | --- |
 | [Data workload assessment model and tool](https://github.com/Microsoft/DataMigrationTeam/tree/master/Data%20Workload%20Assessment%20Model%20and%20Tool) | Provides suggested “best fit” target platforms, cloud readiness, and application/database remediation levels for specified workloads. It offers simple, one-click calculation and report generation that helps to accelerate large estate assessments by providing an automated, uniform target-platform decision process. |
 | [Db2 zOS data assets discovery and assessment package](https://github.com/Microsoft/DataMigrationTeam/tree/master/Db2%20zOS%20Data%20Assets%20Discovery%20and%20Assessment%20Package) | After running the SQL script on a database, you can export the results to a file on the file system. Several file formats are supported, including CSV, so that you can capture the results in external tools, such as spreadsheets. This method can be useful if you want to easily share results with teams that do not have the workbench installed.|
-| [IBM Db2 LUW inventory scripts and artifacts](https://github.com/Microsoft/DataMigrationTeam/tree/master/IBM%20Db2%20LUW%20Inventory%20Scripts%20and%20Artifacts) | Includes a SQL query that hits IBM Db2 LUW version 11.1 system tables and provides a count of objects by schema and object type, a rough estimate of 'Raw Data' in each schema, and the sizing of tables in each schema, with results stored in CSV format. |
+| [IBM Db2 LUW inventory scripts and artifacts](https://github.com/Microsoft/DataMigrationTeam/tree/master/IBM%20Db2%20LUW%20Inventory%20Scripts%20and%20Artifacts) | Includes a SQL query that hits IBM Db2 LUW version 11.1 system tables and provides a count of objects by schema and object type, a rough estimate of "Raw Data" in each schema, and the sizing of tables in each schema, with results stored in CSV format. |
 | [Db2 LUW pure scale on Azure - setup guide](https://github.com/Microsoft/DataMigrationTeam/blob/master/Whitepapers/Db2%20PureScale%20on%20Azure.pdf) | Serves as a starting point for a Db2 implementation plan. Although business requirements will differ, the same basic pattern applies. This architectural pattern may also be used for OLAP applications on Azure. |
 
 These resources were developed as part of the Data SQL Ninja Program, which is sponsored by the Azure Data Group engineering team. The core charter of the Data SQL Ninja program is to unblock and accelerate complex modernization and compete data platform migration opportunities to the Microsoft Azure Data platform. If you think your organization would be interested in participating in the Data SQL Ninja program, contact your account team and ask them to submit a nomination.

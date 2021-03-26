@@ -20,7 +20,22 @@ ms.author: rajpo
 
 This article lists the additions in each release of Data Migration Assistant.
 
+## Data Migration Assistant v 5.3
+
+The v5.3 release of the Data Migration Assistant provides support for:
+- External application ad hoc query assessment in command line. 
+- Users to customize command timeout parameter in Dma.exe.config configuration file.
+- Assessment configuration sample file and PowerShell sample script, which explain how to use configuration file to run DMA command line.
+- Backup and restore operations in on-premises migration without the timeout limitation.
+
+In addition, this release of Data Migration Assistant has been updated to .NET 4.8 and provides bug fixes for the following issues:
+- Cannot run assessment or connect to Azure SQL Database without sysadmin permission in migration phase.
+- Users cannot run assessment without sysadmin permission for RDS assesments.
+- Users encountered issues uploading JSON assessment reports to Azure Migrate.
+- Cannot migrate the objects containing Chinese characters.
+
 ## Data Migration Assistant v 5.2
+
 The v5.2 release of the Data Migration Assistant provides support for:
 - Uploading assessments to Azure Migrate with support for Azure Government and national clouds (sovereign offering).  This feature enables to assess the readiness of SQL Server data estate migrating to Azure SQL.
 - Command line support for uploading assessments to Azure Migrate with support for Azure Government and national clouds.  Now, you can completely automate uploading the assessments to Azure migrate project to get a consolidated Azure SQL readiness report. 

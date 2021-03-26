@@ -49,7 +49,7 @@ conceptualContent:
         - text: Azure Synapse Analytics
           url: /azure/synapse-analytics/migration-guides/migrate-to-synapse-analytics-guide
           itemType: how-to-guide
-    - title: "DB2 to"
+    - title: "Db2 to"
       links:
         - text: SQL Server
           url: /sql/sql-server/migrate/guides/db2-to-sql-server

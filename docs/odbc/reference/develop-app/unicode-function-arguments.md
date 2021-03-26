@@ -27,7 +27,7 @@ The ODBC 3.5 (or higher) Driver Manager supports both ANSI and Unicode versions 
   
 :::row:::
    :::column span="":::
-      **SQLBrowseConnect**<br>      **SQLColAttribute**<br>      **SQLColAttributes**<br>      **SQLColumnPrivileges**<br>      **SQLColumns** <br>      **SQLConnect** <br>      **SQLDataSources**<br>      **SQLDescribeCol**  <br>      **SQLDriverConnect** <br>      **SQLDrivers** <br>      **SQLError  <br>      **SQLExecDirect**<br>      **SQLForeignKeys**<br>      **SQLGetConnectAttr** <br>      **SQLGetConnectOption** <br>      **SQLGetCursorName**<br>      **SQLGetDescField** <br>      **SQLGetDescRec** <br>      **SQLGetDiagField**
+      **SQLBrowseConnect**<br>      **SQLColAttribute**<br>      **SQLColAttributes**<br>      **SQLColumnPrivileges**<br>      **SQLColumns** <br>      **SQLConnect** <br>      **SQLDataSources**<br>      **SQLDescribeCol**  <br>      **SQLDriverConnect** <br>      **SQLDrivers** <br>      **SQLError**  <br>      **SQLExecDirect**<br>      **SQLForeignKeys**<br>      **SQLGetConnectAttr** <br>      **SQLGetConnectOption** <br>      **SQLGetCursorName**<br>      **SQLGetDescField** <br>      **SQLGetDescRec** <br>      **SQLGetDiagField**
    :::column-end:::
    :::column span="":::
       **SQLGetDiagRec**        <br>      **SQLGetInfo**        <br>      **SQLGetStmtAttr**<br>      **SQLGetTypeInfo**<br>      **SQLNativeSql**<br>      **SQLPrepare**<br>      **SQLPrimaryKeys**<br>      **SQLProcedureColumns**<br>      **SQLProcedures**<br>      **SQLSetConnectAttr**<br>      **SQLSetConnectOption**<br>      **SQLSetCursorName**<br>      **SQLSetDescField**<br>      **SQLSetStmtAttr**<br>      **SQLSpecialColumns**<br>      **SQLStatistics**<br>      **SQLTablePrivileges**<br>      **SQLTables**

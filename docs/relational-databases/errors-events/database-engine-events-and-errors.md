@@ -1372,7 +1372,7 @@ ORDER BY message_id
 |    2752    |    16    |    No    |    Identity column '%.*ls' contains invalid SEED.    |
 |    2753    |    16    |    No    |    Identity column '%.*ls' contains invalid INCREMENT.    |
 |    2754    |    16    |    No    |    Error severity levels greater than %d can only be specified by members of the sysadmin role, using the WITH LOG option.    |
-|    2755    |    16    |    No    |    SET DEADLOCK_PRIORITY option is invalid. Valid options are {HIGH | NORMAL | LOW | [%d ... %d] of type integer}.    |
+|    2755    |    16    |    No    |    SET DEADLOCK_PRIORITY option is invalid. Valid options are {HIGH \| NORMAL \| LOW | [%d ... %d] of type integer}.    |
 |    2756    |    16    |    No    |    Invalid value %d for state. Valid range is from %d to %d.    |
 |    2759    |    16    |    No    |    CREATE SCHEMA failed due to previous errors.    |
 |    2760    |    16    |    No    |    The specified schema name "%.*ls" either does not exist or you do not have permission to use it.    |
@@ -2192,7 +2192,7 @@ ORDER BY message_id
 |    4863    |    16    |    No    |    Bulk load data conversion error (truncation) for row %d, column %d (%ls).    |
 |    4864    |    16    |    No    |    Bulk load data conversion error (type mismatch or invalid character for the specified codepage) for row %d, column %d (%ls).    |
 |    4865    |    16    |    No    |    Cannot bulk load because the maximum number of errors (%d) was exceeded.    |
-|    4866    |    16    |    No    |    The bulk load failed. The column is too long in the data file for row %d, column %d. Verify that the field terminator and row terminator are specified correctly.    | Bulk load failed due to invalid column value in CSV data file %ls in row %d, column %d | 
+|    4866    |    16    |    No    |    The bulk load failed. The column is too long in the data file for row %d, column %d. Verify that the field terminator and row terminator are specified correctly. Bulk load failed due to invalid column value in CSV data file %ls in row %d, column %d | 
 |    4867    |    16    |    No    |    Bulk load data conversion error (overflow) for row %d, column %d (%ls).    |
 |    4868    |    16    |    No    |    The bulk load failed. The codepage "%d" is not installed. Install the codepage and run the command again.    |
 |    4869    |    16    |    No    |    The bulk load failed. Unexpected NULL value in data file row %d, column %d. The destination column (%ls) is defined as NOT NULL.    |
@@ -3463,7 +3463,7 @@ ORDER BY message_id
 |    7802    |    16    |    No    |    Functions that have a return type of "%.*ls" are unsupported through SOAP invocation.    |
 |    7803    |    15    |    No    |    The clause %.*ls can not be used in the %.*ls statement.    |
 |    7804    |    15    |    No    |    %.*ls and %.*ls can not share the same value.    |
-|    7805    |    16    |    No    |    The parameter SITE can not be prefixed by a scheme such as 'https://'. Valid values for SITE include {'*' | '+' | 'site_name'}.    |
+|    7805    |    16    |    No    |    The parameter SITE can not be prefixed by a scheme such as 'https://'. Valid values for SITE include {'*' \| '+' \| 'site_name'}.    |
 |    7806    |    16    |    No    |    The URL specified by endpoint '%.*ls' is already registered to receive requests or is reserved for use by another service.    |
 |    7807    |    16    |    No    |    An error ('0x%x') occurred while attempting to register the endpoint '%.*ls'.    |
 |    7808    |    10    |    No    |    The endpoint '%.*ls' could not be unregistered.    |
@@ -3835,7 +3835,7 @@ ORDER BY message_id
 |    8388    |    10    |    No    |    The ability to return results from triggers will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it.    |
 |    8389    |    10    |    No    |    The ALL permission will be removed in a future version of SQL Server. Avoid using this permission in new development work and plan to modify applications that currently use it.    |
 |    8390    |    10    |    No    |    The '::' function calling syntax will be removed in a future version of SQL Server. Replace it with "sys.".    |
-|    8391    |    10    |    No    |    The usage of 2-part names in DROP INDEX is deprecated. New-style syntax DROP INDEX <1p-name> ON {<3p-table-name> | <3p-view-name> }    |
+|    8391    |    10    |    No    |    The usage of 2-part names in DROP INDEX is deprecated. New-style syntax DROP INDEX <1p-name> ON {<3p-table-name> \| <3p-view-name> }    |
 |    8393    |    10    |    No    |    The ability to not specify a column name when the datatype is timestamp will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it.    |
 |    8394    |    10    |    No    |    Usage of deprecated index option syntax. The deprecated relational index option syntax structure will be removed in a future version of SQL Server. Avoid using this syntax structure in new development work, and plan to modify applications that currently use the feature.    |
 |    8396    |    10    |    No    |    %ls will be removed in a future version of SQL Server. Avoid using this feature in new development work, and plan to modify applications that currently use it. Use %ls instead.    |
@@ -5725,7 +5725,7 @@ ORDER BY message_id
 |    14504    |    16    |    No    |    '%s' is the fail-safe operator. You must make another operator the fail-safe operator before '%s' can be dropped.    |
 |    14505    |    16    |    No    |    Specify a null %s when supplying a performance condition.    |
 |    14506    |    16    |    No    |    Cannot set alerts on message ID %ld.    |
-|    14507    |    16    |    No    |    A performance condition must be formatted as: 'object_name|counter_name|instance_name|comparator(> or < or =)|numeric value'.    |
+|    14507    |    16    |    No    |    A performance condition must be formatted as: 'object_name\|counter_name\|instance_name\|comparator(> or \< or =)\|numeric value'.    |
 |    14508    |    16    |    No    |    Specify both \@wmi_namespace and \@wmi_query.    |
 |    14509    |    16    |    No    |    Specify a valid %s when supplying a \@wmi_namespace.    |
 |    14510    |    16    |    No    |    Specify a null %s when supplying a \@wmi_namespace.    |
@@ -5990,7 +5990,7 @@ ORDER BY message_id
 |    15068    |    16    |    No    |    A remote user '%s' already exists for remote server '%s'.    |
 |    15069    |    16    |    No    |    One or more users are using the database. The requested operation cannot be completed.    |
 |    15070    |    10    |    No    |    Object '%s' was successfully marked for recompilation.    |
-|    15071    |    16    |    No    |    Usage: sp_addmessage <msgnum>,<severity>,<msgtext> [,<language> [,FALSE | TRUE [,REPLACE]]]    |
+|    15071    |    16    |    No    |    Usage: sp_addmessage <msgnum>,<severity>,<msgtext> [,<language> [,FALSE \| TRUE [,REPLACE]]]    |
 |    15072    |    16    |    No    |    Usage: sp_addremotelogin remoteserver [,loginname [,remotename]]    |
 |    15074    |    10    |    No    |    Warning: You must recover this database prior to access.    |
 |    15076    |    16    |    No    |    Default, table, and user data types must be in the current database.    |
@@ -6001,7 +6001,7 @@ ORDER BY message_id
 |    15081    |    16    |    No    |    Membership of the public role cannot be changed.    |
 |    15083    |    16    |    No    |    Physical data type '%s' does not accept a collation    |
 |    15084    |    16    |    No    |    The column or user data type must be in the current database.    |
-|    15085    |    16    |    No    |    Usage: sp_addtype name, 'data type' [,'NULL' | 'NOT NULL']    |
+|    15085    |    16    |    No    |    Usage: sp_addtype name, 'data type' [,'NULL' \| 'NOT NULL']    |
 |    15096    |    16    |    No    |    Could not find object '%ls' or you do not have required permission or the object is not valid for adding extended property.    |
 |    15097    |    16    |    No    |    The size associated with an extended property cannot be more than 7,500 bytes.    |
 |    15098    |    16    |    No    |    The name change cannot be performed because the SID of the new name does not match the old SID of the principal.    |
@@ -6506,7 +6506,7 @@ ORDER BY message_id
 |    16996    |    16    |    No    |    %ls cannot take output parameters.    |
 |    16998    |    16    |    No    |    The asynchronous cursor worktable population thread spawn failed.    |
 |    16999    |    20    |    Yes    |    Internal Cursor Error: The cursor is in an invalid state.    |
-|    17000    |    10    |    No    |    Usage: sp_autostats <table_name> [, {ON|OFF} [, <index_name>] ]    |
+|    17000    |    10    |    No    |    Usage: sp_autostats <table_name> [, {ON\|OFF} [, <index_name>] ]    |
 |    17001    |    16    |    Yes    |    Failure to send an event notification instance of type '%s' on conversation handle '%s'. Error Code = '%s'.    |
 |    17002    |    16    |    Yes    |    Failed to post QUEUE_ACTIVATION event. Error code: '0x%s'.    |
 |    17003    |    16    |    Yes    |    Closed event notification conversation endpoint with handle '%s', due to the following error: '%.*ls'.    |
@@ -7608,7 +7608,7 @@ ORDER BY message_id
 |    21273    |    16    |    No    |    You must upgrade the Subscriber to SQL Server 2000 to create updatable subscriptions when the Publisher is SQL Server 2000 or higher.    |
 |    21274    |    16    |    No    |    Invalid publication name '%s'.    |
 |    21275    |    16    |    No    |    Cannot publish the schema-bound view '%ls'. The value specified for the \@type parameter must be "indexed view schema only" (for snapshot or transactional replication) or "indexed view logbased" (for transactional replication only).    |
-|    21276    |    16    |    No    |    The type must be 'table' or '( view | indexed view | proc | func ) schema only'.    |
+|    21276    |    16    |    No    |    The type must be 'table' or '( view \| indexed view \| proc \| func ) schema only'.    |
 |    21277    |    16    |    No    |    Cannot publish the source object '%ls'. The value specified for the \@type parameter ("indexed view schema only" or "indexed view logbased") can be used only for indexed views. Either specify a value of "view schema only" for the \@type parameter, or modify the view to be schema bound with a unique clustered index.    |
 |    21278    |    16    |    No    |    Cannot publish the source object '%ls'. The value specified for the \@type parameter ("indexed view logbased") requires that the view be schema bound with a unique clustered index. Either specify a value of "view schema only" for the \@type parameter, or modify the view to be schema bound with a unique clustered index.    |
 |    21279    |    16    |    No    |    The 'schema_option' property for a merge article cannot be changed after a snapshot is generated for the publication. To change the 'schema_option' property of this article the corresponding merge publication must be dropped and re-created.    |

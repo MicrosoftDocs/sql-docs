@@ -23,20 +23,38 @@ ms.author: v-daenge
   
  The cursor library executes the following functions. When an application calls a function in this list, the Driver Manager invokes the cursor library, not the driver. Note that the cursor library may call the driver when executing the function.  
   
-|||  
-|-|-|  
-|**SQLBindCol**|**SQLGetStmtOption**|  
-|**SQLBindParam**|**SQLNativeSql**|  
-|**SQLBindParameter**|**SQLNumParams**|  
-|**SQLCloseCursor**|**SQLParamOptions**|  
-|**SQLEndTran**|**SQLRowCount**|  
-|**SQLExtendedFetch**|**SQLSetConnectAttr**|  
-|**SQLFetchScroll**|**SQLSetConnectOption**|  
-|**SQLFreeHandle**|**SQLSetDescField**|  
-|**SQLFreeStmt**|**SQLSetDescRec**|  
-|**SQLGetData**|**SQLSetPos**|  
-|**SQLGetDescField**|**SQLSetScrollOptions**|  
-|**SQLGetDescRec**|**SQLSetStmtAttr**|  
-|**SQLGetFunctions**|**SQLSetStmtOption**|  
-|**SQLGetInfo**|**SQLTransact**|  
-|**SQLGetStmtAttr**||
+:::row:::
+   :::column span="":::
+      **SQLBindCol**
+      **SQLBindParam**
+      **SQLBindParameter**
+      **SQLCloseCursor**
+      **SQLEndTran**
+      **SQLExtendedFetch**
+      **SQLFetchScroll**
+      **SQLFreeHandle**
+      **SQLFreeStmt**
+      **SQLGetData**
+      **SQLGetDescField**
+      **SQLGetDescRec**
+      **SQLGetFunctions**
+      **SQLGetInfo**
+      **SQLGetStmtAttr**
+   :::column-end:::
+   :::column span="":::
+      **SQLGetStmtOption**
+      **SQLNativeSql**
+      **SQLNumParams**
+      **SQLParamOptions**
+      **SQLRowCount**
+      **SQLSetConnectAttr**
+      **SQLSetConnectOption**
+      **SQLSetDescField**
+      **SQLSetDescRec**
+      **SQLSetPos**
+      **SQLSetScrollOptions**
+      **SQLSetStmtAttr**
+      **SQLSetStmtOption**
+      **SQLTransact**
+   :::column-end:::
+:::row-end:::

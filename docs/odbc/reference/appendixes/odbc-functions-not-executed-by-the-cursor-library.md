@@ -23,9 +23,17 @@ ms.author: v-daenge
   
  The cursor library does not execute the following functions. When an application calls one of these functions, the Driver Manager invokes the driver, not the cursor library.  
   
-|||  
-|-|-|  
-|**SQLFetch**|**SQLGetEnvAttr**|  
-|**SQLGetConnectAttr**|**SQLSetDescRec**|  
-|**SQLGetDiagField**|**SQLSetEnvAttr**|  
-|**SQLGetDiagRec**||
+:::row:::
+   :::column span="":::
+      **SQLFetch**
+      **SQLGetConnectAttr**
+      **SQLGetDiagField**
+      **SQLGetDiagRec**||
+   :::column-end:::
+   :::column span="":::
+      **SQLGetEnvAttr**
+      **SQLSetDescRec**
+      **SQLSetEnvAttr**|  
+   :::column-end:::
+:::row-end:::
+

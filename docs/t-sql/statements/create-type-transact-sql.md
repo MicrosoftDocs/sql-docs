@@ -163,119 +163,49 @@ column_name <data_type>
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *schema_name*  
- Is the name of the schema to which the alias data type or user-defined type belongs.  
-  
- *type_name*  
- Is the name of the alias data type or user-defined type. Type names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
-  
- *base_type*  
- Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplied data type on which the alias data type is based. *base_type* is **sysname**, with no default, and can be one of the following values:  
-  
+*schema_name*  
+Is the name of the schema to which the alias data type or user-defined type belongs.  
+
+*type_name*  
+Is the name of the alias data type or user-defined type. Type names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
+
+*base_type*  
+Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplied data type on which the alias data type is based. *base_type* is **sysname**, with no default, and can be one of the following values:  
+
 :::row:::
    :::column span="":::
-      **bigint**
+      **bigint**<br>            **binary(** *n* **)**<br>            **bit**<br>            **char(** *n* **)**
    :::column end:::
-   :::column span="":::
-      **binary(** *n* **)**
-   :::column end:::
-   :::column span="":::
-      **bit**
-   :::column end:::
-   :::column span="":::
-      **char(** *n* **)**
-   :::column end:::
-   :::column span="":::
 :::row-end:::
 :::row:::
    :::column span="":::
-      **date**
+      **date**<br>            **datetime**<br>            **datetime2**<br>            **datetimeoffset**
    :::column end:::
-   :::column span="":::
-      **datetime**
-   :::column end:::
-   :::column span="":::
-      **datetime2**
-   :::column end:::
-   :::column span="":::
-      **datetimeoffset**
-   :::column end:::
-   :::column span="":::
 :::row-end:::
 :::row:::
    :::column span="":::
-      **decimal**
+      **decimal**<br>            **float**<br>            **image**<br>            **int**
    :::column end:::
-   :::column span="":::
-      **float**
-   :::column end:::
-   :::column span="":::
-      **image**
-   :::column end:::
-   :::column span="":::
-      **int**
-   :::column end:::
-   :::column span="":::
 :::row-end:::
 :::row:::
    :::column span="":::
-      **money**
+      **money**<br>            **nchar(** *n* **)**<br>            **ntext**<br>            **numeric**
    :::column end:::
-   :::column span="":::
-      **nchar(** *n* **)**
-   :::column end:::
-   :::column span="":::
-      **ntext**
-   :::column end:::
-   :::column span="":::
-      **numeric**
-   :::column end:::
-   :::column span="":::
 :::row-end:::
 :::row:::
    :::column span="":::
-      **nvarchar(** *n* &#124; **max)**
+      **nvarchar(** *n* &#124; **max)**<br>            **real**<br>            **smalldatetime**<br>            **smallint**
    :::column end:::
-   :::column span="":::
-      **real**
-   :::column end:::
-   :::column span="":::
-      **smalldatetime**
-   :::column end:::
-   :::column span="":::
-      **smallint**
-   :::column end:::
-   :::column span="":::
 :::row-end:::
 :::row:::
    :::column span="":::
-      **smallmoney**
+      **smallmoney**<br>            **sql_variant**<br>            **text**<br>            **time**
    :::column end:::
-   :::column span="":::
-      **sql_variant**
-   :::column end:::
-   :::column span="":::
-      **text**
-   :::column end:::
-   :::column span="":::
-      **time**
-   :::column end:::
-   :::column span="":::
 :::row-end:::
 :::row:::
    :::column span="":::
-      **tinyint**
+      **tinyint**<br>            **uniqueidentifier**<br>            **varbinary(** *n* &#124; **max)**<br>            **varchar(** *n* &#124; **max)**
    :::column end:::
-   :::column span="":::
-      **uniqueidentifier**
-   :::column end:::
-   :::column span="":::
-      **varbinary(** *n* &#124; **max)**
-   :::column end:::
-   :::column span="":::
-      **varchar(** *n* &#124; **max)**
-   :::column end:::
-   :::column span="":::
 :::row-end:::
   
  *base_type* can also be any data type synonym that maps to one of these system data types.  

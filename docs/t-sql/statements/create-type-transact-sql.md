@@ -176,33 +176,21 @@ Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplied data t
    :::column span="":::
       **bigint**<br>            **binary(** *n* **)**<br>            **bit**<br>            **char(** *n* **)**
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       **date**<br>            **datetime**<br>            **datetime2**<br>            **datetimeoffset**
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       **decimal**<br>            **float**<br>            **image**<br>            **int**
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       **money**<br>            **nchar(** *n* **)**<br>            **ntext**<br>            **numeric**
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       **nvarchar(** *n* &#124; **max)**<br>            **real**<br>            **smalldatetime**<br>            **smallint**
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       **smallmoney**<br>            **sql_variant**<br>            **text**<br>            **time**
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       **tinyint**<br>            **uniqueidentifier**<br>            **varbinary(** *n* &#124; **max)**<br>            **varchar(** *n* &#124; **max)**
    :::column-end:::

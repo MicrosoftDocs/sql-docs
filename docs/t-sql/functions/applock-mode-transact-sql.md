@@ -57,13 +57,9 @@ Returns the lock mode held by the lock owner on a particular application resourc
    :::column span="":::
       **NoLock**<br>      **Update**<br>      **\*SharedIntentExclusive**
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       **IntentShared**<br>      ****IntentExclusive**<br>      **\*UpdateIntentExclusive**
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       **Shared**<br>      **Exclusive**
    :::column-end:::

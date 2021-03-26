@@ -54,11 +54,11 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 4.  Check **Write to Windows application event log**, and choose one of the following:  
   
-    -   Click**When the job succeeds**to log the job status when the job completes successfully.  
+    -   Click **When the job succeeds** to log the job status when the job completes successfully.  
   
-    -   Click**When the job fails**to log the job status when the job completes unsuccessfully.  
+    -   Click **When the job fails** to log the job status when the job completes unsuccessfully.  
   
-    -   Click**When the job completes** to log the job status regardless of completion status.  
+    -   Click **When the job completes** to log the job status regardless of completion status.  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 **To write job status to the Windows application log**  

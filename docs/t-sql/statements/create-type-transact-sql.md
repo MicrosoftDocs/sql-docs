@@ -173,7 +173,8 @@ column_name <data_type>
  Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplied data type on which the alias data type is based. *base_type* is **sysname**, with no default, and can be one of the following values:  
   
 :::row:::
-**bigint**
+   :::column span="":::
+      **bigint**
    :::column end:::
    :::column span="":::
       **binary(** *n* **)**

@@ -47,34 +47,13 @@ sp_addtype [ @typename = ] type,
   
 :::row:::
    :::column span="":::
-      **bigint**
-      **char(n)**
-      **float**
-      **money**
-      **numeric**
-      **smalldatetime**
-      **sql_variant**
-      **uniqueidentifier**
+      **bigint**<br>      **char(n)**<br>      **float**<br>      **money**<br>      **numeric**<br>      **smalldatetime**<br>      **sql_variant**<br>      **uniqueidentifier**
    :::column-end:::
    :::column span="":::
-      **binary(n)**
-      **datetime**
-      **image**
-      **nchar(n)**
-      **nvarchar(n)**
-      **smallint**
-      **text**
-      **varbinary(n)**
+      **binary(n)**<br>      **datetime**<br>      **image**<br>      **nchar(n)**<br>      **nvarchar(n)**<br>      **smallint**<br>      **text**<br>      **varbinary(n)**
    :::column-end:::
    :::column span="":::
-      **bit**
-      **decimal**
-      **int**
-      **ntext**
-      **real**
-      **smallmoney**
-      **tinyint**
-      **varchar(n)**
+      **bit**<br>      **decimal**<br>      **int**<br>      **ntext**<br>      **real**<br>      **smallmoney**<br>      **tinyint**<br>      **varchar(n)**
     :::column-end:::
 :::row-end:::
  

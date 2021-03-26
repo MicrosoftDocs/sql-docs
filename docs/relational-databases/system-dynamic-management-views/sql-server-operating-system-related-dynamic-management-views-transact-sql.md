@@ -25,43 +25,10 @@ This section documents dynamic management views (DMV) that are associated with [
 
 :::row:::
    :::column span="":::
-      **sys.dm_os_buffer_descriptors**
-      **sys.dm_os_buffer_pool_extension_configuration**
-      **sys.dm_os_child_instances**
-      **sys.dm_os_cluster_nodes** 
-      **sys.dm_os_cluster_properties**
-      **sys.dm_os_dispatcher_pools** 
-      **sys.dm_os_enumerate_fixed_drives**
-      **sys.dm_os_host_info** 
-      **sys.dm_os_hosts**
-      **sys.dm_os_latch_stats** 
-      **sys.dm_os_loaded_modules**
-      **sys.dm_os_memory_brokers**
-      **sys.dm_os_memory_cache_clock_hands**
-      **sys.dm_os_memory_cache_counters** 
-      **sys.dm_os_memory_cache_entries**
-      **sys.dm_os_memory_cache_hash_tables**
-      **sys.dm_os_memory_clerks**
-      **sys.dm_os_memory_nodes**
+      **sys.dm_os_buffer_descriptors**<br>      **sys.dm_os_buffer_pool_extension_configuration**<br>      **sys.dm_os_child_instances**<br>      **sys.dm_os_cluster_nodes** <br>      **sys.dm_os_cluster_properties**<br>      **sys.dm_os_dispatcher_pools** <br>      **sys.dm_os_enumerate_fixed_drives**<br>      **sys.dm_os_host_info** <br>      **sys.dm_os_hosts**<br>      **sys.dm_os_latch_stats** <br>      **sys.dm_os_loaded_modules**<br>      **sys.dm_os_memory_brokers**<br>      **sys.dm_os_memory_cache_clock_hands**<br>      **sys.dm_os_memory_cache_counters** <br>      **sys.dm_os_memory_cache_entries**<br>      **sys.dm_os_memory_cache_hash_tables**<br>      **sys.dm_os_memory_clerks**<br>      **sys.dm_os_memory_nodes**
    :::column-end:::
    :::column span="":::
-      **sys.dm_os_nodes**
-      **sys.dm_os_performance_counters**
-      **sys.dm_os_process_memory**
-      **sys.dm_os_schedulers**
-      **sys.dm_os_server_diagnostics_log_configurations**
-      **sys.dm_os_spinlock_stats** 
-      **sys.dm_os_stacks**
-      **sys.dm_os_sys_info**
-      **sys.dm_os_sys_memory**
-      **sys.dm_os_tasks**
-      **sys.dm_os_threads**
-      **sys.dm_os_virtual_address_dump**
-      **sys.dm_os_volume_stats**
-      **sys.dm_os_waiting_tasks**
-      **sys.dm_os_wait_stats**
-      **sys.dm_os_windows_info**
-      **sys.dm_os_workers** 
+      **sys.dm_os_nodes**<br>      **sys.dm_os_performance_counters**<br>      **sys.dm_os_process_memory**<br>      **sys.dm_os_schedulers**<br>      **sys.dm_os_server_diagnostics_log_configurations**<br>      **sys.dm_os_spinlock_stats** <br>      **sys.dm_os_stacks**<br>      **sys.dm_os_sys_info**<br>      **sys.dm_os_sys_memory**<br>      **sys.dm_os_tasks**<br>      **sys.dm_os_threads**<br>      **sys.dm_os_virtual_address_dump**<br>      **sys.dm_os_volume_stats**<br>      **sys.dm_os_waiting_tasks**<br>      **sys.dm_os_wait_stats**<br>      **sys.dm_os_windows_info**<br>      **sys.dm_os_workers** 
    :::column-end:::
 :::row-end:::
 
@@ -69,13 +36,10 @@ This section documents dynamic management views (DMV) that are associated with [
   
 :::row:::
    :::column span="":::
-      **sys.dm_os_function_symbolic_name**
-      **sys.dm_os_ring_buffers**  
-      **sys.dm_os_memory_allocations**
+      **sys.dm_os_function_symbolic_name**<br>      **sys.dm_os_ring_buffers**  <br>      **sys.dm_os_memory_allocations**
    :::column-end:::
    :::column span="":::
-      **sys.dm_os_sublatches**  
-      **sys.dm_os_worker_local_storage**  
+      **sys.dm_os_sublatches**  <br>      **sys.dm_os_worker_local_storage**  
    :::column-end:::
 :::row-end:::
   

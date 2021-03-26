@@ -58,15 +58,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 :::row:::
    :::column span="":::
-      **geography**
-      **geometry**
-      **image**
-      **ntext**
+      **geography**<br>      **geometry**<br>      **image**<br>      **ntext**
    :::column-end:::
    :::column span="":::
-      **text**  
-      **timestamp**  
-      **user-defined data types**
+      **text**  <br>      **timestamp**  <br>      **user-defined data types**
    :::column-end:::
 :::row-end:::
   

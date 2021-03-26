@@ -25,36 +25,9 @@ ms.author: v-daenge
   
 :::row:::
    :::column span="":::
-      **SQLBindCol**
-      **SQLBindParam**
-      **SQLBindParameter**
-      **SQLCloseCursor**
-      **SQLEndTran**
-      **SQLExtendedFetch**
-      **SQLFetchScroll**
-      **SQLFreeHandle**
-      **SQLFreeStmt**
-      **SQLGetData**
-      **SQLGetDescField**
-      **SQLGetDescRec**
-      **SQLGetFunctions**
-      **SQLGetInfo**
-      **SQLGetStmtAttr**
+      **SQLBindCol**<br>      **SQLBindParam**<br>      **SQLBindParameter**<br>      **SQLCloseCursor**<br>      **SQLEndTran**<br>      **SQLExtendedFetch**<br>      **SQLFetchScroll**<br>      **SQLFreeHandle**<br>      **SQLFreeStmt**<br>      **SQLGetData**<br>      **SQLGetDescField**<br>      **SQLGetDescRec**<br>      **SQLGetFunctions**<br>      **SQLGetInfo**<br>      **SQLGetStmtAttr**
    :::column-end:::
    :::column span="":::
-      **SQLGetStmtOption**
-      **SQLNativeSql**
-      **SQLNumParams**
-      **SQLParamOptions**
-      **SQLRowCount**
-      **SQLSetConnectAttr**
-      **SQLSetConnectOption**
-      **SQLSetDescField**
-      **SQLSetDescRec**
-      **SQLSetPos**
-      **SQLSetScrollOptions**
-      **SQLSetStmtAttr**
-      **SQLSetStmtOption**
-      **SQLTransact**
+      **SQLGetStmtOption**<br>      **SQLNativeSql**<br>      **SQLNumParams**<br>      **SQLParamOptions**<br>      **SQLRowCount**<br>      **SQLSetConnectAttr**<br>      **SQLSetConnectOption**<br>      **SQLSetDescField**<br>      **SQLSetDescRec**<br>      **SQLSetPos**<br>      **SQLSetScrollOptions**<br>      **SQLSetStmtAttr**<br>      **SQLSetStmtOption**<br>      **SQLTransact**
    :::column-end:::
 :::row-end:::

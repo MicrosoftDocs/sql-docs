@@ -25,15 +25,10 @@ ms.author: v-daenge
   
 :::row:::
    :::column span="":::
-      **SQLFetch**
-      **SQLGetConnectAttr**
-      **SQLGetDiagField**
-      **SQLGetDiagRec**||
+      **SQLFetch**<br>      **SQLGetConnectAttr**<br>      **SQLGetDiagField**<br>      **SQLGetDiagRec**
    :::column-end:::
    :::column span="":::
-      **SQLGetEnvAttr**
-      **SQLSetDescRec**
-      **SQLSetEnvAttr**|  
+      **SQLGetEnvAttr**<br>      **SQLSetDescRec**<br>      **SQLSetEnvAttr**  
    :::column-end:::
 :::row-end:::
 

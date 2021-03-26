@@ -27,45 +27,10 @@ The ODBC 3.5 (or higher) Driver Manager supports both ANSI and Unicode versions 
   
 :::row:::
    :::column span="":::
-      **SQLBrowseConnect**
-      **SQLColAttribute**
-      **SQLColAttributes**
-      **SQLColumnPrivileges**
-      **SQLColumns** 
-      **SQLConnect** 
-      **SQLDataSources**
-      **SQLDescribeCol**  
-      **SQLDriverConnect** 
-      **SQLDrivers** 
-      **SQLError  
-      **SQLExecDirect**
-      **SQLForeignKeys**
-      **SQLGetConnectAttr** 
-      **SQLGetConnectOption** 
-      **SQLGetCursorName**
-      **SQLGetDescField** 
-      **SQLGetDescRec** 
-      **SQLGetDiagField**
+      **SQLBrowseConnect**<br>      **SQLColAttribute**<br>      **SQLColAttributes**<br>      **SQLColumnPrivileges**<br>      **SQLColumns** <br>      **SQLConnect** <br>      **SQLDataSources**<br>      **SQLDescribeCol**  <br>      **SQLDriverConnect** <br>      **SQLDrivers** <br>      **SQLError  <br>      **SQLExecDirect**<br>      **SQLForeignKeys**<br>      **SQLGetConnectAttr** <br>      **SQLGetConnectOption** <br>      **SQLGetCursorName**<br>      **SQLGetDescField** <br>      **SQLGetDescRec** <br>      **SQLGetDiagField**
    :::column-end:::
    :::column span="":::
-      **SQLGetDiagRec**        
-      **SQLGetInfo**        
-      **SQLGetStmtAttr**
-      **SQLGetTypeInfo**
-      **SQLNativeSql**
-      **SQLPrepare**
-      **SQLPrimaryKeys**
-      **SQLProcedureColumns**
-      **SQLProcedures**
-      **SQLSetConnectAttr**
-      **SQLSetConnectOption**
-      **SQLSetCursorName**
-      **SQLSetDescField**
-      **SQLSetStmtAttr**
-      **SQLSpecialColumns**
-      **SQLStatistics**
-      **SQLTablePrivileges**
-      **SQLTables**
+      **SQLGetDiagRec**        <br>      **SQLGetInfo**        <br>      **SQLGetStmtAttr**<br>      **SQLGetTypeInfo**<br>      **SQLNativeSql**<br>      **SQLPrepare**<br>      **SQLPrimaryKeys**<br>      **SQLProcedureColumns**<br>      **SQLProcedures**<br>      **SQLSetConnectAttr**<br>      **SQLSetConnectOption**<br>      **SQLSetCursorName**<br>      **SQLSetDescField**<br>      **SQLSetStmtAttr**<br>      **SQLSpecialColumns**<br>      **SQLStatistics**<br>      **SQLTablePrivileges**<br>      **SQLTables**
    :::column-end:::
 :::row-end:::
   
@@ -73,24 +38,10 @@ The ODBC 3.5 (or higher) Driver Manager supports both ANSI and Unicode versions 
   
 :::row:::
    :::column span="":::
-      **SQLConfigDataSource**
-      **SQLCreateDataSource**
-      **SQLDataSourceToDriver**
-      **SQLDriverToDataSource**
-      **SQLGetAvailableDrivers**
-      **SQLGetInstalledDrivers**
-      **SQLGetTranslator**
-      **SQLInstallDriver**
+      **SQLConfigDataSource**<br>      **SQLCreateDataSource**<br>      **SQLDataSourceToDriver**<br>      **SQLDriverToDataSource**<br>      **SQLGetAvailableDrivers**<br>      **SQLGetInstalledDrivers**<br>      **SQLGetTranslator**<br>      **SQLInstallDriver**
    :::column-end:::
    :::column span="":::
-      **SQLInstallDriverManager**  
-      **SQLInstallerError**  
-      **SQLInstallODBC**  
-      **SQLReadFileDSN**  
-      **SQLRemoveDSNFromINI**  
-      **SQLValidDSN**  
-      **SQLWriteDSNToINI**  
-   :::column-end:::
+      **SQLInstallDriverManager**  <br>      **SQLInstallerError**  <br>      **SQLInstallODBC**  <br>      **SQLReadFileDSN**  <br>      **SQLRemoveDSNFromINI**  <br>      **SQLValidDSN**  <br>      **SQLWriteDSNToINI**  <br>   :::column-end:::
 :::row-end:::
   
 > [!NOTE]

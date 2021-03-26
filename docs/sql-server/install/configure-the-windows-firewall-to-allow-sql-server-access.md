@@ -23,6 +23,7 @@ helpviewer_keywords:
 author: cawrites
 ms.author: chadam
 ---
+
 # Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 

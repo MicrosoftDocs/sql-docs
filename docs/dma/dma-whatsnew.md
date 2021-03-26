@@ -28,7 +28,7 @@ The v5.3 release of the Data Migration Assistant provides support for:
 - Assessment configuration sample file and PowerShell sample script, which explain how to use configuration file to run DMA command line.
 - Backup and restore operations in on-premises migration without the timeout limitation.
 
-In addition, this release of Data Migration Assistant has been updated to .Net 4.8 and provides bug fixes for the following issues:
+In addition, this release of Data Migration Assistant has been updated to .NET 4.8 and provides bug fixes for the following issues:
 - Cannot run assessment or connect to Azure SQL Database without sysadmin permission in migration phase.
 - Users cannot run assessment without sysadmin permission for RDS assesments.
 - Users encountered issues uploading JSON assessment reports to Azure Migrate.

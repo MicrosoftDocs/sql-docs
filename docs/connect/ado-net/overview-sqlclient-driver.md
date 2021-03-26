@@ -34,5 +34,5 @@ The articles in this section provide a general overview of the SqlClient driver.
 
 ## Next steps
 
-[SqlClient driver GitHub Repository](https://github.com/dotnet/SqlClient)
-[.NET API browser](/dotnet/api/)
+- [SqlClient driver GitHub Repository](//github.com/dotnet/SqlClient)
+- [.NET API browser](/dotnet/api/)

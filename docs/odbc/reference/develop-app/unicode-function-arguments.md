@@ -41,7 +41,8 @@ The ODBC 3.5 (or higher) Driver Manager supports both ANSI and Unicode versions 
       **SQLConfigDataSource**<br>      **SQLCreateDataSource**<br>      **SQLDataSourceToDriver**<br>      **SQLDriverToDataSource**<br>      **SQLGetAvailableDrivers**<br>      **SQLGetInstalledDrivers**<br>      **SQLGetTranslator**<br>      **SQLInstallDriver**
    :::column-end:::
    :::column span="":::
-      **SQLInstallDriverManager**  <br>      **SQLInstallerError**  <br>      **SQLInstallODBC**  <br>      **SQLReadFileDSN**  <br>      **SQLRemoveDSNFromINI**  <br>      **SQLValidDSN**  <br>      **SQLWriteDSNToINI**  <br>   :::column-end:::
+      **SQLInstallDriverManager**  <br>      **SQLInstallerError**  <br>      **SQLInstallODBC**  <br>      **SQLReadFileDSN**  <br>      **SQLRemoveDSNFromINI**  <br>      **SQLValidDSN**  <br>      **SQLWriteDSNToINI**
+   :::column-end:::
 :::row-end:::
   
 > [!NOTE]

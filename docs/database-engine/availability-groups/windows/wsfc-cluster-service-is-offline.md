@@ -22,12 +22,10 @@ monikerRange: ">=sql-server-2016"
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|WSFC Cluster State|  
-|**Issue**|WSFC cluster service is offline.|  
-|**Category**|**Critical**|  
-|**Facet**|Instance of SQL Server|  
+- **Policy Name**: WSFC Cluster State
+- **Issue**: WSFC cluster service is offline.
+- **Category**: **Critical**
+- **Facet**: Instance of SQL Server  
   
 ## Description  
  This policy checks the state of the Windows Server Failover Cluster (WSFC). The policy is in an unhealthy state and an alert is raised when the WSFC cluster is offline or in the forced quorum state. All availability groups hosted within this cluster are offline or a disaster recovery action is required.  

@@ -20,12 +20,10 @@ ms.author: chadam
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|Availability Group Online State|  
-|**Issue**|Availability group is offline.|  
-|**Category**|**Critical**|  
-|**Facet**|Availability group|  
+- **Policy Name**: Availability Group Online State
+- **Issue**: Availability group is offline.
+- **Category**: **Critical**
+- **Facet**: Availability group  
   
 ## Description  
  This policy checks the online or offline state of the availability group. The policy is in an unhealthy state and an alert is raised when the cluster resource of the availability group is offline or the availability group does not have a primary replica.  

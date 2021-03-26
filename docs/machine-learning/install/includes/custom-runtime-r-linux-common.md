@@ -1,15 +1,17 @@
 ---
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/08/2021
+ms.date: 02/18/2021
 ms.topic: include
 author: dphansen
 ms.author: davidph
 ---
 ## Custom installation of R
 
+::: zone pivot="platform-linux-ubuntu"
 > [!NOTE]
 > If you have installed R in the default location of **/usr/lib/R**, you can skip this section and move on to the [Install Rcpp package](#install-rcpp-package-linux) section.
+::: zone-end
 
 ### Update the environment variables
 
@@ -25,7 +27,7 @@ First, edit the **mssql-launchpadd** service to add the **R_HOME** environment v
 
     ```text
     [Service]
-    Environment="R_HOME=/path/to/installation/of/R"
+    Environment="R_HOME=<path to R>"
     ```
 
 1. Save and close.
@@ -41,7 +43,7 @@ Next, make sure `libR.so` can be loaded.
 1. In the file that opens, add path to **libR.so** from the custom R installation.
 
     ```
-    /path/to/installation/of/R/lib
+    <path to the R lib>
     ```
 
 1. Save the new file and close the editor.
@@ -50,7 +52,7 @@ Next, make sure `libR.so` can be loaded.
 
     ```bash
     sudo ldconfig
-    ldd /path/to/installation/of/R/lib/libR.so
+    ldd <path to the R lib>/libR.so
     ```
 
 ### Grant access to the custom R installation folder
@@ -58,7 +60,7 @@ Next, make sure `libR.so` can be loaded.
 Set the `datadirectories` option in the extensibility section of `/var/opt/mssql/mssql.conf` file to the custom R installation.
 
 ```bash
-sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/installation/of/R
+sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories <path to R>
 ```
 
 ### Restart mssql-launchpadd service
@@ -101,7 +103,7 @@ Follow these steps to download and register the R language extension, which is u
 
     ```sql
     CREATE EXTERNAL LANGUAGE [myR]
-    FROM (CONTENT = N'/path/to/R-lang-extension-linux-release.zip', FILE_NAME = 'libRExtension.so.1.0');
+    FROM (CONTENT = N'/path/to/R-lang-extension-linux-release.zip', FILE_NAME = 'libRExtension.so.1.1');
     GO
     ```
 

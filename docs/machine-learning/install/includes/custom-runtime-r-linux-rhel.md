@@ -1,11 +1,13 @@
 ---
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/08/2021
+ms.date: 03/18/2021
 ms.topic: include
 author: dphansen
 ms.author: davidph
 ---
++ RExtension requires GLIBCXX_3.4.20. Make sure the version of **libstdc++.so.6** on your Red Hat Enterprise Linux (RHEL) installation provides this.
+
 ## Install Language Extensions
 
 > [!NOTE]
@@ -28,4 +30,8 @@ sudo yum install mssql-server-extensibility
     sudo yum erase microsoft-r-open-mro-3.5.2
     ```
 
-1. Install [R (3.3 or later)](https://www.r-project.org/) for Red Hat Enterprise Linux (RHEL). By default, R is installed in **/usr/lib/R**. This path is your **R_HOME**. If you install R in a different location, take note of that path as your **R_HOME**.
+1. Install [R (3.3 or later)](https://www.r-project.org/) for Red Hat Enterprise Linux (RHEL). By default, R is installed in **/usr/lib64/R**. This path is your **R_HOME**. If you install R in a different location, take note of that path as your **R_HOME**.
+
+    ```bash
+    sudo yum install -y R
+    ```

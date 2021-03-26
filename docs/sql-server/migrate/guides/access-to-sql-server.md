@@ -1,6 +1,6 @@
 ---
 title: 'Access to SQL Server: Migration guide'
-description: 'In this guide, you learn how to migrate your Microsoft Access databases to Microsoft SQL Server by using SQL Server Migration for Access.'
+description: 'This guide teaches you how to migrate your Microsoft Access databases to Microsoft SQL Server by using SQL Server Migration Assistant for Access (SSMA for Access).'
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: migration-guide
@@ -16,7 +16,7 @@ ms.date: 03/19/2021
 
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
 
-In this guide, you learn how to migrate your Microsoft Access databases to SQL Server by using SQL Server Migration for Access (SSMA for Access).
+In this guide, you learn how to migrate your Microsoft Access databases to SQL Server by using SQL Server Migration Assistant for Access (SSMA for Access).
 
 For other migration guides, see [Azure Database Migration Guides](https://datamigration.microsoft.com/).
 
@@ -25,8 +25,8 @@ For other migration guides, see [Azure Database Migration Guides](https://datami
 Before you begin migrating your Access database to SQL Server:
 
 - Verify that your source environment is supported.
-- Have [SSMA for Access](https://www.microsoft.com/download/details.aspx?id=54255).
-- Have connectivity and sufficient permissions to access both the source and target.
+- Get [SSMA for Access](https://www.microsoft.com/download/details.aspx?id=54255).
+- Get connectivity and sufficient permissions to access both the source and target.
 
 ## Pre-migration
 
@@ -48,19 +48,19 @@ To create an assessment:
 
    ![Screenshot that shows Add Databases.](./media/access-to-sql-server/add-databases.png)
 
-1. In **Access Metadata Explorer**, right-click the database you want to assess and then select **Create Report**. Alternatively, you can select the schema and then select the **Create Report** tab.
+1. In **Access Metadata Explorer**, right-click the database you want to assess and then select **Create Report**. Alternatively, you can select the **Create Report** tab in the upper-right corner.
 
    ![Screenshot that shows Create Report.](./media/access-to-sql-server/create-report.png)
 
-1. Review the HTML report to understand conversion statistics and any errors or warnings. You can also open the report in Excel to get an inventory of Access objects and the effort required to perform schema conversions. The default location for the report is in the report folder within SSMAProjects.
+1. Review the HTML report to understand conversion statistics and any errors or warnings. You can also open the report in Excel to get an inventory of Access objects and the effort required to perform schema conversions. The default location for the report is in the report folder within SSMAProjects, as shown here:
 
-   For example, see `drive:\<username>\Documents\SSMAProjects\MyAccessMigration\report\report_2020_11_12T02_47_55\`.
+   `drive:\<username>\Documents\SSMAProjects\MyAccessMigration\report\report_2020_11_12T02_47_55\`.
 
    ![Screenshot that shows a sample report.](./media/access-to-sql-server/sample-report.png)
 
 ### Validate the data types
 
-Validate the default data type mappings and change them based on requirements if necessary. To do so, follow these steps:
+Validate the default data type mappings and change them based on requirements, if necessary. To do so:
 
 1. On the **Tools** menu, select **Project Settings**.
 1. Select the **Type Mapping** tab.
@@ -77,7 +77,7 @@ To convert database objects:
 
    ![Screenshot that shows Connect to SQL Server.](./media/access-to-sql-server/connect-to-sql-server.png)
 
-1. Right-click the database in **Access Metadata Explorer**, and select **Convert Schema**. Alternatively, you can select your database and then select the **Convert Schema** tab.
+1. Right-click the database in **Access Metadata Explorer**, and select **Convert Schema**. Alternatively, you can select the **Convert Schema** tab in the upper-right corner.
 
    ![Screenshot that shows Convert Schema.](./media/access-to-sql-server/convert-schema.png)
 
@@ -130,16 +130,16 @@ After you've successfully completed the *migration* stage, you need to complet
 
 ### Remediate applications
 
-After the data is migrated to the target environment, all the applications that formerly consumed the source need to start consuming the target. Accomplishing this task will require changes to the applications in some cases.
+After you've migrated the data to the target environment, all the applications that formerly consumed the source need to start consuming the target. Accomplishing this task will require changes to the applications in some cases.
 
 ### Perform tests
 
 The test approach for database migration consists of the following activities:
 
 1. **Develop validation tests**: To test database migration, you need to use SQL queries. You must create the validation queries to run against both the source and the target databases. Your validation queries should cover the scope you've defined.
-2. **Set up a test environment**: The test environment should contain a copy of the source database and the target database. Be sure to isolate the test environment.
-3. **Run validation tests**: Run validation tests against the source and the target, and then analyze the results.
-4. **Run performance tests**: Run performance tests against the source and the target, and then analyze and compare the results.
+1. **Set up a test environment**: The test environment should contain a copy of the source database and the target database. Be sure to isolate the test environment.
+1. **Run validation tests**: Run validation tests against the source and the target, and then analyze the results.
+1. **Run performance tests**: Run performance tests against the source and the target, and then analyze and compare the results.
 
 ### Optimize
 
@@ -152,7 +152,7 @@ The post-migration phase is crucial for reconciling any data accuracy issues, ve
 
 For more assistance with completing this migration scenario, see the following resource. It was developed in support of a real-world migration project engagement.
 
-| **Title/link** | **Description** |
+| Title | Description |
 | -------------- | --------------- |
 | [Data Workload Assessment Model and Tool](https://github.com/Microsoft/DataMigrationTeam/tree/master/Data%20Workload%20Assessment%20Model%20and%20Tool) | This tool provides suggested "best fit" target platforms, cloud readiness, and application or database remediation level for a given workload. It offers simple, one-click calculation and report generation that helps to accelerate large estate assessments by providing an automated and uniform target platform decision process. |
 
@@ -160,7 +160,7 @@ The preceding resource was developed by the Data SQL Engineering team. A core ch
 
 ## Next steps
 
-- After migration, review the [Post-migration validation and optimization guide](/sql/relational-databases/post-migration-validation-and-optimization-guide).
+- After the migration, review the [Post-migration validation and optimization guide](/sql/relational-databases/post-migration-validation-and-optimization-guide).
 - For a matrix of Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios and specialty tasks, see [Data migration services and tools](/azure/dms/dms-tools-matrix).
 - For other migration guides, see [Azure Database Migration Guides](https://datamigration.microsoft.com/).
-- For video content, see [Overview of the migration journey](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/).
+- For migration videos, see [Overview of the migration journey](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/).

@@ -56,18 +56,18 @@ Returns the lock mode held by the lock owner on a particular application resourc
 :::row:::
    :::column span="":::
       **NoLock**<br>      **Update**<br>      **\*SharedIntentExclusive**
-   :::column end:::
-:::row end:::
+   :::column-end:::
+:::row-end:::
 :::row:::
    :::column span="":::
       **IntentShared**<br>      ****IntentExclusive**<br>      **\*UpdateIntentExclusive**
-   :::column end:::
-:::row end:::
+   :::column-end:::
+:::row-end:::
 :::row:::
    :::column span="":::
       **Shared**<br>      **Exclusive**
-   :::column end:::
-:::row end:::
+   :::column-end:::
+:::row-end:::
   
 *This lock mode is a combination of other lock modes and sp_getapplock cannot explicitly acquire it.
   

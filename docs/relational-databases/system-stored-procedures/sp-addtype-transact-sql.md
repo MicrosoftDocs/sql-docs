@@ -45,17 +45,39 @@ sp_addtype [ @typename = ] type,
 `[ @phystype = ] system_data_type`
  Is the physical, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplied, data type on which the alias data type is based.*system_data_type* is **sysname**, with no default, and can be one of these values:  
   
-||||  
-|-|-|-|  
-|**bigint**|**binary(n)**|**bit**|  
-|**char(n)**|**datetime**|**decimal**|  
-|**float**|**image**|**int**|  
-|**money**|**nchar(n)**|**ntext**|  
-|**numeric**|**nvarchar(n)**|**real**|  
-|**smalldatetime**|**smallint**|**smallmoney**|  
-|**sql_variant**|**text**|**tinyint**|  
-|**uniqueidentifier**|**varbinary(n)**|**varchar(n)**|  
-  
+:::row:::
+   :::column span="":::
+      **bigint**
+      **char(n)**
+      **float**
+      **money**
+      **numeric**
+      **smalldatetime**
+      **sql_variant**
+      **uniqueidentifier**
+   :::column-end:::
+   :::column span="":::
+      **binary(n)**
+      **datetime**
+      **image**
+      **nchar(n)**
+      **nvarchar(n)**
+      **smallint**
+      **text**
+      **varbinary(n)**
+   :::column-end:::
+   :::column span="":::
+      **bit**
+      **decimal**
+      **int**
+      **ntext**
+      **real**
+      **smallmoney**
+      **tinyint**
+      **varchar(n)**
+    :::column-end:::
+:::row-end:::
+ 
  Quotation marks are required around all parameters that have embedded blank spaces or punctuation marks. For more information about available data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
  *n*  

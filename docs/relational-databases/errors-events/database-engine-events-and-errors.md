@@ -589,7 +589,7 @@ ORDER BY message_id
 |977 | 10 |  No  |  Warning: Could not find associated index for the constraint '%.*ls' on object_id '%d' in database '%.*ls'.|
 |978 | 14 |  No  |  The target database ('%.*ls') is in an availability group and is currently accessible for connections when the application intent is set to read only. For more information about application intent, see SQL Server Books Online. |
 |979  | 14 | No  |  The target database ('%.*ls') is in an availability group and currently does not allow read only connections. For more information about application intent, see SQL Server Books Online.|
-|980 |  21 |  Yes |  SQL Server cannot load database '%.*ls' because it contains a columnstore index. The currently installed edition of SQL Server |does not support columnstore indexes. Either disable the columnstore index in the database by using a supported edition of SQL Se|
+|980 |  21 |  Yes |  SQL Server cannot load database '%.*ls' because it contains a columnstore index. The currently installed edition of SQL Server does not support columnstore indexes. Either disable the columnstore index in the database by using a supported edition of SQL Se|
 |981  |  10 | No | Database manager will be using %d target database version. |
 |982  |  14 | No | Unable to access the '%.*ls' database because no online secondary replicas are enabled for read-only access. Check the availability group configuration to verify that at least one secondary replica is configured for read-only access. Wait for an enabled re|
 |983 |  14  | No | Unable to access availability database '%.*ls' because the database replica is not in the PRIMARY or SECONDARY role. Connections to an availability database is permitted only when the database replica is in the PRIMARY or SECONDARY role. Try the operation |
@@ -1372,7 +1372,7 @@ ORDER BY message_id
 |    2752    |    16    |    No    |    Identity column '%.*ls' contains invalid SEED.    |
 |    2753    |    16    |    No    |    Identity column '%.*ls' contains invalid INCREMENT.    |
 |    2754    |    16    |    No    |    Error severity levels greater than %d can only be specified by members of the sysadmin role, using the WITH LOG option.    |
-|    2755    |    16    |    No    |    SET DEADLOCK_PRIORITY option is invalid. Valid options are {HIGH \| NORMAL \| LOW | [%d ... %d] of type integer}.    |
+|    2755    |    16    |    No    |    SET DEADLOCK_PRIORITY option is invalid. Valid options are {HIGH \| NORMAL \| LOW \| [%d ... %d] of type integer}.    |
 |    2756    |    16    |    No    |    Invalid value %d for state. Valid range is from %d to %d.    |
 |    2759    |    16    |    No    |    CREATE SCHEMA failed due to previous errors.    |
 |    2760    |    16    |    No    |    The specified schema name "%.*ls" either does not exist or you do not have permission to use it.    |
@@ -5422,7 +5422,7 @@ ORDER BY message_id
 |    14020    |    16    |    No    |    Could not obtain the column ID for the specified column. Schema replication failed.    |
 |    14021    |    16    |    No    |    The column was not added correctly to the article.    |
 |    14022    |    16    |    No    |    The \@property parameter value must be either 'description', 'sync_object', 'type', 'ins_cmd', 'del_cmd', 'upd_cmd', 'filter', 'dest_table', 'dest_object', 'creation_script', 'pre_creation_cmd', 'status', 'schema_option', or 'destination_owner'.    |
-|    14023    |    16    |    No    |    The type must be '[indexed view ]logbased[ (manualview|manualfilter|manualboth)]', '[serializable ]proc exec', or '(view|indexed view|proc|func|aggregate|synonym) schema only'.    |
+|    14023    |    16    |    No    |    The type must be '[indexed view ]logbased[ (manualview\|manualfilter\|manualboth)]', '[serializable ]proc exec', or '(view\|indexed view\|proc\|func\|aggregate\|synonym) schema only'.    |
 |    14024    |    16    |    No    |    The value of property 'subscriber_provider' cannot be NULL.    |
 |    14025    |    10    |    No    |    Article update successful.    |
 |    14026    |    16    |    No    |    The value of property 'subscriber_type is not a supported heterogeneous subscriber type. The value must be 1 (ODBC subscriber), or 3 (OLEDB subscriber).    |
@@ -6076,7 +6076,7 @@ ORDER BY message_id
 |    15174    |    16    |    No    |    Login '%s' owns one or more database(s). Change the owner of the database(s) before dropping the login.    |
 |    15175    |    16    |    No    |    Login '%s' is aliased or mapped to a user in one or more database(s). Drop the user or alias before dropping the login.    |
 |    15176    |    16    |    No    |    The only valid \@parameter value is 'WITH_LOG'.    |
-|    15177    |    16    |    No    |    Usage: sp_dropmessage <msg number> [,<language> | 'ALL']    |
+|    15177    |    16    |    No    |    Usage: sp_dropmessage <msg number> [,<language> \| 'ALL']    |
 |    15178    |    16    |    No    |    Cannot drop or alter a message with an ID less than 50,000.    |
 |    15179    |    16    |    No    |    The message number %u or specified language version does not exist.    |
 |    15182    |    16    |    No    |    Cannot disable access to the guest user in master or tempdb.    |
@@ -6128,7 +6128,7 @@ ORDER BY message_id
 |    15238    |    16    |    No    |    Column '%s' has no rule.    |
 |    15239    |    16    |    No    |    User data type '%s' has no rule.    |
 |    15240    |    16    |    No    |    Cannot write into file '%s'. Verify that you have write permissions, that the file path is valid, and that the file does not already exist.    |
-|    15241    |    16    |    No    |    Usage: sp_dboption [dbname [,optname [,'true' | 'false']]]    |
+|    15241    |    16    |    No    |    Usage: sp_dboption [dbname [,optname [,'true' \| 'false']]]    |
 |    15242    |    16    |    No    |    Database option '%s' is not unique.    |
 |    15243    |    16    |    No    |    The option '%s' cannot be changed for the master database.    |
 |    15244    |    16    |    No    |    Only members of the sysadmin role or the database owner may set database options.    |
@@ -6232,7 +6232,7 @@ ORDER BY message_id
 |    15351    |    10    |    No    |    The CLR procedure/function/type being signed refers to an assembly that is not signed either by a strong name or an assembly.    |
 |    15352    |    16    |    No    |    The %S_MSG cannot be dropped because one or more entities are either signed or encrypted using it.    |
 |    15353    |    16    |    No    |    An entity of type %S_MSG cannot be owned by a role, a group, an approle, or by principals mapped to certificates or asymmetric keys.    |
-|    15354    |    10    |    No    |    Usage: sp_detach_db <dbname>, [TRUE|FALSE], [TRUE|FALSE]    |
+|    15354    |    10    |    No    |    Usage: sp_detach_db <dbname>, [TRUE\|FALSE], [TRUE\|FALSE]    |
 |    15356    |    16    |    No    |    The current application role has been dropped. The current security context contains no valid database user context.    |
 |    15357    |    16    |    No    |    The current security context was set by "%ls". It cannot be reverted by statement "%ls".    |
 |    15358    |    10    |    No    |    User-defined filegroups should be made read-only.    |
@@ -9088,7 +9088,7 @@ ORDER BY message_id
 |    35011    |    16    |    No    |    The \@server_name parameter cannot be a relative name.    |
 |    35012    |    16    |    No    |    You cannot add a shared registered server with the same name as the Configuration Server.    |
 |    [41030](mssqlserver-41030-database-engine-error.md)    |        |        |    Failed to open the Windows Server Failover Clustering registry subkey '%.*ls' (Error code %d).  The parent key is the cluster root key.  The WSFC service may not be running or may not be accessible in its current state, or the specified arguments are invalid. If the corresponding availability group has been dropped, this error is expected. For information about this error code, see "System Error Codes" in the Windows Development documentation.    |
-|    [41301](mssqlserver-41301-database-engine-error.md)    |        |        |    A previous transaction that the current transaction took a dependency on has aborted, and the current transaction can no longer commit.|    |
+|    [41301](mssqlserver-41301-database-engine-error.md)    |        |        |    A previous transaction that the current transaction took a dependency on has aborted, and the current transaction can no longer commit.   |
 |    [41302](mssqlserver-41302-database-engine-error.md)    |        |        |    The current transaction attempted to update a record that has been updated since this transaction started. The transaction was aborted.    |
 |    [41305](mssqlserver-41305-database-engine-error.md)    |        |        |    The current transaction failed to commit due to a repeatable read validation failure.    |
 |    [41307](mssqlserver-41307-database-engine-error.md)    |        |        |    The row size limit of *number* bytes for memory optimized tables has been exceeded. Please simplify the table definition.    |

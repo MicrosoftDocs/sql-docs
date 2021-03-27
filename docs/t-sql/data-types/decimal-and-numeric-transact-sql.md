@@ -36,9 +36,6 @@ Fixed precision and scale numbers. When maximum precision is used, valid values 
 p (precision)  
 The maximum total number of decimal digits to be stored. This number includes both the left and the right sides of the decimal point. The precision must be a value from 1 through the maximum precision of 38. The default precision is 18.
   
-> [!NOTE]  
->  Informatica only supports 16 significant digits, regardless of the precision and scale specified.  
-  
 *s* (scale)  
 The number of decimal digits that are stored to the right of the decimal point. This number is subtracted from *p* to determine the maximum number of digits to the left of the decimal point. Scale must be a value from 0 through *p*, and can only be specified if precision is specified. The default scale is 0 and so 0 <= *s* \<= *p*. Maximum storage sizes vary, based on the precision.
   

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "number of processors for parallel queries"
   - "max degree of parallelism option"
   - "MaxDop"
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: contperf-fy20q4
 ---
 # Configure the max degree of parallelism Server Configuration Option

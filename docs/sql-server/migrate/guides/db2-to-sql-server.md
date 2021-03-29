@@ -1,5 +1,5 @@
 ---
-title: "Db2 to SQL Server: Migration guide"
+title: "IBM Db2 to SQL Server: Migration guide"
 description: 'This guide teaches you how to migrate your Db2 databases to Microsoft SQL Server by using SQL Server Migration Assistant (SSMA) for Db2.'
 ms.custom: ""
 ms.date: 03/19/2021
@@ -10,10 +10,10 @@ ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
 ---
-# Migration guide: Db2 to SQL Server
+# Migration guide: IBM Db2 to SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
 
-In this guide, you learn how to migrate your user databases from Db2 to SQL Server by using SQL Server Migration Assistant (SSMA) for Db2. 
+In this guide, you learn how to migrate your user databases from IBM Db2 to SQL Server by using SQL Server Migration Assistant (SSMA) for Db2. 
 
 For other migration guides, see [Azure Database Migration Guides](https://docs.microsoft.com/data-migration). 
 
@@ -30,7 +30,7 @@ Before you begin migrating your Db2 database to SQL Server, do the following:
 
 After you've met the prerequisites, you're ready to discover the topology of your environment and assess the feasibility of your migration. 
 
-### Assess 
+### Assess and convert 
 
 Use SSMA for Db2 to review database objects and data, and assess your databases for migration. 
 
@@ -59,7 +59,7 @@ To create an assessment, do the following:
    :::image type="content" source="media/db2-to-sql-server/report.png" alt-text="Screenshot of a conversion report in SSMA.":::
 
 
-### Validate the data types
+### Validate data types
 
 Validate the default data-type mappings, and change them based on requirements, if necessary. To do so: 
 
@@ -70,7 +70,7 @@ Validate the default data-type mappings, and change them based on requirements, 
 
 1. You can change the type mapping for each table by selecting the table name on the **Db2 Metadata explorer** pane. 
 
-### Convert the schema 
+### Convert schema 
 
 To convert the schema, do the following:
 
@@ -97,7 +97,7 @@ To convert the schema, do the following:
 
 
 
-## Migrate the database
+## Migrate
 
 After you've completed assessing your databases and addressing any discrepancies, the next step is to run the migration process.
 
@@ -150,9 +150,9 @@ For more assistance with completing this migration scenario, see the following r
 | Title | Description |
 | --- | --- |
 | [Data workload assessment model and tool](https://github.com/Microsoft/DataMigrationTeam/tree/master/Data%20Workload%20Assessment%20Model%20and%20Tool) | Provides suggested “best fit” target platforms, cloud readiness, and application/database remediation levels for specified workloads. It offers simple, one-click calculation and report generation that helps to accelerate large estate assessments by providing an automated, uniform target-platform decision process. |
-| [Db2 zOS data assets discovery and assessment package](https://github.com/Microsoft/DataMigrationTeam/tree/master/Db2%20zOS%20Data%20Assets%20Discovery%20and%20Assessment%20Package) | After running the SQL script on a database, you can export the results to a file on the file system. Several file formats are supported, including CSV, so that you can capture the results in external tools, such as spreadsheets. This method can be useful if you want to easily share results with teams that do not have the workbench installed.|
+| [IBM Db2 zOS data assets discovery and assessment package](https://github.com/Microsoft/DataMigrationTeam/tree/master/Db2%20zOS%20Data%20Assets%20Discovery%20and%20Assessment%20Package) | After running the SQL script on a database, you can export the results to a file on the file system. Several file formats are supported, including CSV, so that you can capture the results in external tools, such as spreadsheets. This method can be useful if you want to easily share results with teams that do not have the workbench installed.|
 | [IBM Db2 LUW inventory scripts and artifacts](https://github.com/Microsoft/DataMigrationTeam/tree/master/IBM%20Db2%20LUW%20Inventory%20Scripts%20and%20Artifacts) | Includes a SQL query that hits IBM Db2 LUW version 11.1 system tables and provides a count of objects by schema and object type, a rough estimate of "Raw Data" in each schema, and the sizing of tables in each schema, with results stored in CSV format. |
-| [Db2 LUW pure scale on Azure - setup guide](https://github.com/Microsoft/DataMigrationTeam/blob/master/Whitepapers/Db2%20PureScale%20on%20Azure.pdf) | Serves as a starting point for a Db2 implementation plan. Although business requirements will differ, the same basic pattern applies. This architectural pattern may also be used for OLAP applications on Azure. |
+| [IBM Db2 LUW pure scale on Azure - setup guide](https://github.com/Microsoft/DataMigrationTeam/blob/master/Whitepapers/Db2%20PureScale%20on%20Azure.pdf) | Serves as a starting point for an IBM Db2 implementation plan. Although business requirements will differ, the same basic pattern applies. This architectural pattern may also be used for OLAP applications on Azure. |
 
 The Data SQL Engineering team developed these resources. This team's core charter is to unblock and accelerate complex modernization for data platform migration projects to Microsoft's Azure data platform.
 

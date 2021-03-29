@@ -2,7 +2,7 @@
 description: "sp_adddistributor (Transact-SQL)"
 title: "sp_adddistributor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/09/2020"
+ms.date: "03/29/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -40,8 +40,13 @@ sp_adddistributor [ @distributor= ] 'distributor'
 `[ @distributor = ] 'distributor'`
  Is the distribution server name. *distributor* is **sysname**, with no default. This parameter is only used if setting up a remote Distributor. It adds entries for the Distributor properties in the **msdb..MSdistributor** table.  
 
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
+
 > [!NOTE]
-> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled.
+> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled. The use of custom port numbers for remote distributor applies to SQL 2019 only.
+
+::: moniker-end
 
 `[ @heartbeat_interval = ] heartbeat_interval`
  Is the maximum number of minutes that an agent can go without logging a progress message. *heartbeat_interval* is **int**, with a default of 10 minutes. A SQL Server Agent job is created that runs on this interval to check the status of the replication agents that are running.  

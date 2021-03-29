@@ -1,7 +1,7 @@
 ---
 title: "sp_addsubscription (Transact-SQL) | Microsoft Docs"
 description: Adds a subscription to a publication and sets the Subscriber status. This stored procedure runs at the Publisher on the publication database.
-ms.date: "06/09/2020"
+ms.date: "03/29/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -79,8 +79,13 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber=] '*subscriber*'  
  Is the name of the Subscriber. *subscriber* is **sysname**, with a default of NULL.  
 
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
+
 > [!NOTE]
-> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled.
+> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled. The use of custom port numbers for remote distributor applies to SQL 2019 only.
+
+::: moniker-end
   
  [ @destination_db=] '*destination_db*'  
  Is the name of the destination database in which to place replicated data. *destination_db* is **sysname**, with a default of NULL. When NULL, *destination_db* is set to the name of the publication database. For Oracle Publishers, *destination_db* must be specified. For a non-SQL Server Subscriber, specify a value of (default destination) for *destination_db*.  

@@ -2,7 +2,7 @@
 description: "sp_addpullsubscription (Transact-SQL)"
 title: "sp_addpullsubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/09/2020"
+ms.date: "03/29/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -42,8 +42,13 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 `[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
 
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
+
 > [!NOTE]
-> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled.
+> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled. The use of custom port numbers for remote distributor applies to SQL 2019 only.
+
+::: moniker-end
   
 `[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db* is **sysname**, with a default of NULL. *publisher_db* is ignored by Oracle Publishers.  

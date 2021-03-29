@@ -404,7 +404,7 @@ For tips on planning a permissions system, see [Getting Started with Database En
   
     > [!NOTE]  
     >  A GRANT of a column-level permission overrides a DENY at the object level.
-    >  You can read more about his here: [DENY Object Permissions &#40;Transact-SQL&#41;](../../../t-sql/statements/deny-object-permissions-transact-sql.md).
+    >  You can read more about his here: [DENY Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md).
   
 5.  Identify the **required permission**.  
   

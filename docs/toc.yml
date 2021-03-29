@@ -93,7 +93,7 @@ items:
         items:
         - name: Master instance
           href: big-data-cluster/deployment-high-availability.md
-        - name: HDFS node name and Spark
+        - name: HDFS name node and Spark
           href: big-data-cluster/deployment-high-availability-hdfs-spark.md
       - name: Kubernetes clusters
         items:

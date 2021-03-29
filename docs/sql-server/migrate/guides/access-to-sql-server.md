@@ -156,7 +156,8 @@ For more assistance with completing this migration scenario, see the following r
 | -------------- | --------------- |
 | [Data Workload Assessment Model and Tool](https://github.com/Microsoft/DataMigrationTeam/tree/master/Data%20Workload%20Assessment%20Model%20and%20Tool) | This tool provides suggested "best fit" target platforms, cloud readiness, and application or database remediation level for a given workload. It offers simple, one-click calculation and report generation that helps to accelerate large estate assessments by providing an automated and uniform target platform decision process. |
 
-The preceding resource was developed by the Data SQL Engineering team. A core charter of this team is to unblock and accelerate complex modernization and complete data platform migration projects to the Microsoft Azure Data platform.
+The Data SQL Engineering team developed these resources. This team's core charter is to unblock and accelerate complex modernization for data platform migration projects to Microsoft's Azure data platform.
+
 
 ## Next steps
 

@@ -34,8 +34,13 @@ ms.author: wiassaf
   
 ## Permissions  
  Requires membership in the **public** role. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ 
+## Remarks
+
+For partitioned tables, the **partition_scheme_id** column is equal to the **data_space_id** column in the DMV **sys.partition_schemes** for the partition scheme used by the table. For a given partition boundary value, the **destination_id** column is equal to the **boundary_id** column in the DMV **sys.partition_range_values**
   
 ## See Also  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
-  
-  
+ [sys.partition_schemes](../../system-catalog-views/sys-partition-schemes-transact-sql.md)  
+ [sys.partition_range_values](../../system-catalog-views/sys-partition-range-values-transact-sql.md)  
+

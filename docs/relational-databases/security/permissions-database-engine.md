@@ -29,10 +29,10 @@ Every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] securable has as
 The total number of permissions for [!INCLUDE[ssSQLv15_md](../../includes/sssql19-md.md)] is 248. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] exposes 254 permissions. Most permissions apply to all platforms, but some do not. For example server level permissions cannot be granted on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and a few permissions only make sense on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 New permissions are being introduced gradually with new release. [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] exposed 238 permissions. [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] exposed 230 permissions. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] exposed 219 permissions. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] exposed 214 permissions. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] exposed 195 permissions. The [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) topic specifies which permissions are new in recent versions.
 
-Once you understand the permissions, apply server level permissions to logins and database level permissions users with the [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md), and [DENY](../../t-sql/statements/deny-transact-sql.md) statements. For Example:   
+Once you understand the permissions, apply server level permissions to logins or server roles and database level permissions users or database roles with the [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md), and [DENY](../../t-sql/statements/deny-transact-sql.md) statements. For Example:   
 ```sql
-GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
-REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
+GRANT SELECT ON SCHEMA::HumanResources TO role_HumanResourcesDept;
+REVOKE SELECT ON SCHEMA::HumanResources TO role_HumanResourcesDept;
 ```   
 For tips on planning a permissions system, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
   
@@ -403,7 +403,8 @@ For tips on planning a permissions system, see [Getting Started with Database En
 4.  For that **security context**, collect all the permissions that are granted or denied for the **permission space**. The permission can be explicitly stated as a GRANT, GRANT WITH GRANT, or DENY; or the permissions can be an implied or covering permission GRANT or DENY. For example, CONTROL permission on a schema implies CONTROL on a table. And CONTROL on a table implies SELECT. Therefore, if CONTROL on the schema was granted, SELECT on the table is granted. If CONTROL was denied on the table, SELECT on the table is denied.  
   
     > [!NOTE]  
-    >  A GRANT of a column-level permission overrides a DENY at the object level.  
+    >  A GRANT of a column-level permission overrides a DENY at the object level.
+    >  You can read more about his here: [DENY Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md).
   
 5.  Identify the **required permission**.  
   

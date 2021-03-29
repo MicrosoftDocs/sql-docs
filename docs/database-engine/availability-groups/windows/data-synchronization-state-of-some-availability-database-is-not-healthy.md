@@ -20,12 +20,10 @@ ms.author: chadam
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|Availability Replica Data Synchronization State|  
-|**Issue**|Data synchronization state of some availability database is not healthy.|  
-|**Category**|**Warning**|  
-|**Facet**|Availability replica|  
+- **Policy Name**: Availability Replica Data Synchronization State
+- **Issue**: Data synchronization state of some availability database is not healthy.
+- **Category**: **Warning**
+- **Facet**: Availability replica  
   
 ## Description  
  This policy checks the data synchronization state of the availability database (also known as a "database replica"). The policy is in an unhealthy state when the data synchronization state is NOT SYNCHRONIZING or the state is not SYNCHRONIZED for the synchronous-commit database replica.   

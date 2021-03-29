@@ -20,12 +20,10 @@ ms.author: chadam
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|Availability Replica Join State|  
-|**Issue**|Availability Replica is not joined.|  
-|**Category**|**Warning**|  
-|**Facet**|Availability replica|  
+- **Policy Name**: Availability Replica Join State
+- **Issue**: Availability Replica is not joined.
+- **Category**: **Warning**
+- **Facet**: Availability replica  
   
 ## Description  
  This policy checks the join state of the availability replica. The policy is in an unhealthy state when the availability replica is added to the availability group, but is not joined properly. The policy is otherwise in a healthy state.  

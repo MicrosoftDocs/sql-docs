@@ -1,6 +1,6 @@
 ---
 description: "sys.dm_os_performance_counters (Transact-SQL)"
-title: "sys.dm_os_performance_counters (Transact-SQL) | Microsoft Docs"
+title: "sys.dm_os_performance_counters (Transact-SQL)"
 ms.custom: ""
 ms.date: "03/22/2021"
 ms.prod: sql
@@ -17,7 +17,6 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_os_performance_counters dynamic management view"
-ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -28,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Returns a row per performance counter maintained by the server. For information about each performance counter, see [Use SQL Server Objects](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_performance_counters**.  
+>  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name `sys.dm_pdw_nodes_os_performance_counters`.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -57,6 +56,8 @@ Performance counters where the `cntr_type` column value is 537003264 display the
 
 Performance counters where the `cntr_type` column value is 1073874176 display how many items are processed on average, as a ratio of the items processed to the number of operations. For example, the `Locks:Average Wait Time (ms)` counters compares the lock waits per second with the lock requests per second, to display the average amount of wait time (in milliseconds) for each lock request that resulted in a wait. As such, to get a snapshot-like reading of the last second only, you must compare the delta between the current value and the base value (denominator) between two collection points that are one second apart. The corresponding base value is the performance counter `Locks:Average Wait Time Base` where the `cntr_type` column value is 1073939712.
 
+Data in the `sys.dm_os_performance_counters` DMV is not persisted after the database engine restarts. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time.   
+
 ## Permission
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
@@ -74,3 +75,4 @@ WHERE cntr_type = 65792 OR cntr_type = 272696320 OR cntr_type = 537003264;
 ## See Also  
   [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.sysperfinfo &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)  
+ [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)

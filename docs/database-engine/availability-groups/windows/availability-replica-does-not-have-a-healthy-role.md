@@ -20,12 +20,10 @@ ms.author: chadam
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|Availability Replica Role State|  
-|**Issue**|Availability replica does not have a healthy role.|  
-|**Category**|**Critical**|  
-|**Facet**|Availability replica|  
+- **Policy Name**: Availability Replica Role State
+- **Issue**: Availability replica does not have a healthy role.
+- **Category**: **Critical**
+- **Facet**: Availability replica  
   
 ## Description  
  This policy checks the state of the role of the availability replica. The policy is in an unhealthy state when the role of the availability replica is neither primary nor secondary. The policy is otherwise in a healthy state.  

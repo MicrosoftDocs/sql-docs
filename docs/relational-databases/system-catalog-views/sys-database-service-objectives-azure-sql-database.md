@@ -4,7 +4,7 @@ title: "sys.database_service_objectives"
 titleSuffix: Azure SQL Database
 ms.date: "03/21/2018"
 ms.service: sql-database
-ms.prod_service: "sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.topic: conceptual
 keywords: 

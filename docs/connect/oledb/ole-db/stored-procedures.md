@@ -4,7 +4,7 @@ description: Learn how you can run stored procedures in a SQL database using the
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"

@@ -5,7 +5,7 @@ titleSuffix: "Azure Synapse Analytics"
 ms.custom: "seo-lt-2019​"
 ms.date: "08/10/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference

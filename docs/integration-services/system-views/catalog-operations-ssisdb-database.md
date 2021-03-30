@@ -56,7 +56,7 @@ ms.author: chugu
 |`202`|**stop_operation**<br /><br /> (Stored procedure)|Project ID|**NULL**|  
 |`300`|**validate_project**<br /><br /> (Stored procedure)|Project ID|Project name|  
 |`301`|**validate_package**<br /><br /> (Stored procedure)|Project ID|Package name|  
-|`1000`|**configure_catalog**<br /><br /> (Stored procedure)|**NULL**|**NULL**||  
+|`1000`|**configure_catalog**<br /><br /> (Stored procedure)|**NULL**|**NULL**|
   
 ## Permissions  
  This view requires one of the following permissions:  

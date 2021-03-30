@@ -52,7 +52,7 @@ HRESULT BCPSetBulkMode (
 ## Returns  
  IBCPSession2::BCPSetBulkMode can return one of the following:  
   
-|||  
+|Value|Description|  
 |-|-|  
 |**S_OK**|The method succeeded.|  
 |**E_FAIL**|A provider specific error occurred, for detailed information use the ISQLServerErrorInfo interface.|  

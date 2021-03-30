@@ -86,7 +86,7 @@ You should also review the functions in [microsoftml](/machine-learning-server/p
 
 | Function| Description|
 | ------- | ---------- |
-| [rx_predict](/machine-learning-server/python-reference/revoscalepy/rx-predict) | Generate predictions from a trained model|) | Generates predictions from a trained model and can be used for real-time scoring. |
+| [rx_predict](/machine-learning-server/python-reference/revoscalepy/rx-predict) | Generate predictions from a trained model and can be used for real-time scoring. |
 |[rx_predict_default](/machine-learning-server/python-reference/revoscalepy/rx-predict-default) | Compute predicted values and residuals using rx_lin_mod and rx_logit objects. |
 |[rx_predict_rx_dforest](/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dforest) | Calculate predicted or fitted values for a data set from an rx_dforest or rx_btrees object. |
 |[rx_predict_rx_dtree](/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dtree) | Calculate predicted or fitted values for a data set from an rx_dtree object. |

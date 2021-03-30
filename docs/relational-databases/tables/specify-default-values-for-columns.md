@@ -41,7 +41,7 @@ Before you begin, be aware of the following limitations and restrictions:
 - To enter an object/function, enter the name of the object/function without quotation marks around it.
 
 > [!NOTE]
-> In Azure Synapse Analytics, one can specify only constants for a default constraint and an expression cannot be used with a default constraint.
+> In Azure Synapse Analytics, only constants can be used for a default constraint. An expression cannot be used with a default constraint.
 
 ### <a name="Security"></a> Security Permissions
 

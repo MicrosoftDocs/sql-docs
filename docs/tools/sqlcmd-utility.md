@@ -611,17 +611,78 @@ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any 
 ## sqlcmd Commands  
  In addition to Transact-SQL statements within **sqlcmd**, the following commands are also available:  
   
-|||  
-|-|-|  
-|**GO** [*count*]|**:List**|  
-|[**:**] **RESET**|**:Error**|  
-|[**:**] **ED**|**:Out**|  
-|[**:**] **!!**|**:Perftrace**|  
-|[**:**] **QUIT**|**:Connect**|  
-|[**:**] **EXIT**|**:On Error**|  
-|**:r**|**:Help**|  
-|**:ServerList**|**:XML** [**ON** &#124; **OFF**]|  
-|**:Setvar**|**:Listvar**|  
+:::row:::
+   :::column span="":::
+      **GO** [*count*]
+   :::column-end:::
+   :::column span="":::
+      **:List**
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **RESET**
+   :::column-end:::
+   :::column span="":::
+      **:Error**  
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **ED**
+   :::column-end:::
+   :::column span="":::
+      **:Out**  
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **!!**
+   :::column-end:::
+   :::column span="":::
+      **:Perftrace**
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **QUIT**
+   :::column-end:::
+   :::column span="":::
+      **:Connect**  
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **EXIT**
+   :::column-end:::
+   :::column span="":::
+      **:On Error**
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **:r**
+   :::column-end:::
+   :::column span="":::
+      **:Help**
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **:ServerList**
+   :::column-end:::
+   :::column span="":::
+      **:XML** [**ON** &#124; **OFF**]
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **:Setvar**
+   :::column-end:::
+   :::column span="":::
+      **:Listvar** 
+   :::column-end:::
+:::row-end:::
   
  Be aware of the following when you use **sqlcmd** commands:  
   

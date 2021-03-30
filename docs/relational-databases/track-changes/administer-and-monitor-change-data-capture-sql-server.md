@@ -89,7 +89,7 @@ When a cleanup is performed, the low watermark for all capture instances is init
  For the cleanup job, the possibility for customization is in the strategy used to determine which change table entries are to be discarded. The only supported strategy in the delivered cleanup job is a time-based one. In that situation, the new low watermark is computed by subtracting the allowed retention period from the commit time of the last transaction processed. Because the underlying cleanup procedures are based on `lsn` instead of time, any number of strategies can be used to determine the smallest `lsn` to keep in the change tables. Only some of these are strictly time-based. Knowledge about the clients, for example, could be used to provide a failsafe if downstream processes that require access to the change tables cannot run. Also, although the default strategy applies the same `lsn` to clean up all the databases' change tables, the underlying cleanup procedure, can also be called to clean up at the capture instance level.  
  
 > [!NOTE]  
-> In Azure SQL Databases, the capture and cleanup SQL Server Agent jobs are replaced by a Change Data Capture orchestrator that invokes stored procedures to start periodic capture and cleanup of the change tables. 
+> In Azure SQL Databases, the capture and cleanup SQL Server Agent jobs are replaced by a Change Data Capture orchestrator that invokes stored procedures to start periodic capture and cleanup of the change tables. As of now, the customization of the capture and the cleanup processes in Azure SQL Databases is not possible. Capture and cleanup are run automatically by the orchestrator.
 
 ## <a name="Monitor"></a> Monitor the Change Data Capture Process
 

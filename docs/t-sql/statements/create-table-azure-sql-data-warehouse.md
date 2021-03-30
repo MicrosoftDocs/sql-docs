@@ -2,7 +2,7 @@
 description: "CREATE TABLE (Azure Synapse Analytics)"
 title: "CREATE TABLE (Azure Synapse Analytics) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2019"
+ms.date: "03/29/2021"
 ms.service: sql-data-warehouse
 ms.reviewer: ""
 ms.topic: reference
@@ -42,13 +42,14 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 [;]  
 
 <column_options> ::=
-    [ COLLATE Windows_collation_name ]  
-    [ NULL | NOT NULL ] -- default is NULL  
+    [ COLLATE Windows_collation_name ]
+    [ NULL | NOT NULL ] -- default is NULL
+    [ IDENTITY [ ( seed, increment ) ]
     [ <column_constraint> ]
 
 <column_constraint>::=
     {
-        DEFAULT DEFAULT constant_expression
+        DEFAULT constant_expression
         | PRIMARY KEY NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
         | UNIQUE NOT ENFORCED -- Applies to Azure Synapse Analytics only
     }

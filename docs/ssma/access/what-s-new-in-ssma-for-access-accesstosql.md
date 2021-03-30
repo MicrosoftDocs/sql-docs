@@ -16,6 +16,12 @@ ms.author: alexiva
 
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.
 
+## SSMA v8.18
+
+The v8.18 release of SSMA for Access contains the following changes:
+
+* Minor performance improvements and bug fixes
+
 ## SSMA v8.17
 
 The v8.17 release of SSMA for Access contains the following changes:

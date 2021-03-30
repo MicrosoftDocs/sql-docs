@@ -42,9 +42,8 @@ You can start the Profiler in a number of ways from within [!INCLUDE[ssManStudio
 
 The following table shows the features we recommend using in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] to capture and replay your trace data.
 
-||||
-|-|-|-|
 |**Feature\Target Workload**|**Relational Engine**|**Analysis Services**|  
+|-|-|-|
 |**Trace Capture**|[Extended Events](../../relational-databases/extended-events/extended-events.md) graphical user interface in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
 |**Trace Replay**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|
 

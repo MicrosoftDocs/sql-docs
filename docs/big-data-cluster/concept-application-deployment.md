@@ -82,35 +82,29 @@ The two main interfaces for application deployment are:
 
 It is also possible for an application to be executed using a RESTful web service. For more information, see [Consume applications on big data clusters](app-consume.md).
 
-\\\\\\\\\\\\\\\\\\\\\\\\\\\
+## App deploy scenarios
 
-## App Deploy Scenarios
+Application deployment enables the deployment of applications on a SQL Server BDC by providing interfaces to create, manage, and run applications.
 
-Application deployment (App Deploy) enables the deployment of applications on a SQL Server BDC by providing interfaces to create, manage, and run applications.
+:::image type="content" source="media/concept-applicaiton-deployment/process-overview.png" alt-text="Identify sources (R, Python, SSIS (dtexec)", deploy with command line, Azure Data Studio, or Visual Studio Code, and consume them with an interactive, RESTful API schedule.:::
 
-:::image type="content" source="media/concept-applicaiton-deployment/process-overview.png" alt-text="Identify sources (R, Python, SSIS( (dtexec)", deploy with command line, Azure Data Studio, or Visual Studio Code, and consume them with an interactive, RESTful API schedule.:::
+The followings are the target scenarios for app deploy:
 
-The followings are the target scenarios for App Deploy: 
-
-- Deploy Python or R web services inside the BDC cluster to address variety of use cases such as machine learning inferencing, API serving, etc
+- Deploy Python or R web services inside the BDC cluster to address variety of use cases such as machine learning inferencing, API serving, etc.
 - Create a machine learning inferencing endpoint using the MLeap engine.
-- Schedule and run packages from DTSX files using dtexec utility for data transformation and movment.
+- Schedule and run packages from DTSX files using dtexec utility for data transformation and movement.
 
-### Use App Deploy Python Runtime
+### Use app deploy Python runtime
 
-In App Deploy, BDC python runtime allows Python application inside the BDC cluster to address variety of use cases such as machine learning inferencing, API serving and more.
+In app deploy, BDC python runtime allows Python application inside the BDC cluster to address variety of use cases such as machine learning inferencing, API serving and more.
 
-#### Supported versions
+Python 3.5 for Ubuntu 16.04 and Python 3.8 for Ubuntu 20.04.
 
-Python 3.5 for Ubuntu 16.04 and Python 3.8 for Ubuntu 20.04. 
+In app deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields which can be specified:
 
-#### How to use it? 
-
-In App Deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields which can be specified:
-
-- `name`: the application name 
-- `version`: the application version, for instance, such as v1 
-- `runtime`: the app deploy runtime, you need to specify it as: Python
+- `name`: the application name
+- `version`: the application version, for instance, such as `v1`
+- `runtime`: the app deploy runtime, you need to specify it as: `Python`
 - `src`: the path to the Python application
 - `entry point`: the entry point function in the src script to execute for this Python application.
 
@@ -118,61 +112,77 @@ Aside from above you need to specify the input and output of your Python applica
 
 :::image type="content" source="media/concept-applicaiton-deployment/example-yaml-python.png" alt-text="Example python yaml":::
 
-You can scaffold a new python application using the following command: 
+You can deploy a new python application using the following command:
 
 ```console
 azdata app init --template python --name hello-py --version v1
 ```
 
-#### More details on limitations
+#### App deploy Python runtime limitations
 
-App Deploy Python runtime doesn’t support scheduling scenario, once python app is deployed, then up and running in BDC, a RESTful endpoint is configured to listen for incoming requests. 
+App deploy Python runtime doesn’t support scheduling scenario, once Python app is deployed, then up and running in BDC, a RESTful endpoint is configured to listen for incoming requests.
 
-### Using App Deploy R Runtime
+### Use app deploy R runtime
 
-In App Deploy, BDC python runtime allows R application inside the BDC cluster to address variety of use cases such as machine learning inferencing, API serving and more.
+In app deploy, BDC Python runtime allows R application inside the BDC cluster to address variety of use cases such as machine learning inferencing, API serving and more.
 
-Supported version
-The App deploy R runtime supports Microsoft R Open (MRO) 3.5.2.
-How to use it? 
-In App Deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields which can be specified: 
-- name: the application name 
-- version: the application version, for instance, such as v1 
-- runtime: the app deploy runtime, you need to specify it as: R
-- src: the path to the R application
-- entry point: the entry point to execute this R application
+The app deploy R runtime supports Microsoft R Open (MRO) 3.5.2.
+
+#### How to use it? 
+
+In app deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields which can be specified:
+
+- `name`: the application name
+- `version`: the application version, for instance, such as `v1`
+- `runtime`: the app deploy runtime, you need to specify it as: `R`
+- `src`: the path to the R application
+- `entry point`: the entry point to execute this R application
 
 Aside from above you need to specify the input and output of your R application. That generates a `spec.yaml` file similar to the following:
 
-You can scaffold a new R application using the following command: 
+:::image type="content" source="media/concept-applicaiton-deployment/example-yaml-r.png" alt-text="Example yaml r script":::
+
+You can deploy a new R application using the following command:
+
+```console
 azdata app init --template r --name hello-r --version v1
+```
 
-More details on limitations
-The LIMITATION aligns with the Microsoft R Application Network.
+#### More details on limitations
 
-Using App Deploy dtexec utility SSIS Runtime
-In App Deploy, BDC SSIS runtime integrated dtexec utility which is from SQL Server Integration Services on Linux (mssql-server-is) . App Deploy uses dtexec utility to load packages from *.dtsx files. It supports running SSIS packages on cron-style schedule or on-demand through web service requests. 
+The limitation aligns with the [Microsoft R Application Network](https://mran.microsoft.com/open).
 
-Supported version
-This feature uses /opt/ssis/bin/dtexec /FILE from SQL Server 2019 Integration Service on Linux, it supports dtsx format that SQL Server 2019 Integration Service on Linux (mssql-server-is 15.0.2). To learn more about dtexec utility, please see: dtexec Utility - SQL Server Integration Services (SSIS) . 
+### Using app deploy dtexec runtime
 
-How to use it? 
-In App Deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields which can be specified: 
-		
-- name: the application name 
-- version: the application version, for instance, such as v1 
-- runtime: the app deploy runtime, in order to run dtexec utility, you need to specify it as: SSIS
-- entrypoint: specify an entrypoint, this is usually your .dtsx file in our case.
-- options: specify additional options for /opt/ssis/bin/dtexec /FILE, for example to connect to a database with connection string, it would follow the following pattern: 
-- /REP V /CONN "sqldatabasename"\;"\"Data Source=xx;User ID=xx;Password=xx\""
-For details on syntax, see: dtexec Utility - SQL Server Integration Services (SSIS) 
-- schedule: specify how often the job needs to be executed, for instances, when using cron expression to specify this value specifies as  "*/1 * * * *" meaning  the job is being executed on minute basis. 
+In app deploy, BDC runtime integrated dtexec utility which is from SQL Server Integration Services on Linux (mssql-server-is) . App deploy uses dtexec utility to load packages from *.dtsx files. It supports running SSIS packages on cron-style schedule or on-demand through web service requests.
 
-You can scaffold a new SSIS application using the following command: 
+This feature uses `/opt/ssis/bin/dtexec /FILE` from SQL Server 2019 Integration Service on Linux, it supports dtsx format for [SQL Server 2019 Integration Service on Linux (mssql-server-is 15.0.2)](../linux/sql-server-linux-setup-ssis.md). To learn more about dtexec utility, see [dtexec Utility](../integration-services/packages/dtexec-utility.md).
+
+In app deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields which can be specified:
+
+- `name`: the application `name`
+- `version`: the application version, for instance, such as `v1`
+- `runtime`: the app deploy runtime, in order to run dtexec utility, you need to specify it as: `SSIS`
+- `entrypoint`: specify an entry point, this is usually your .dtsx file in our case.
+- `options`: specify additional options for `/opt/ssis/bin/dtexec /FILE`, for example to connect to a database with connection string, it would follow the following pattern: 
+
+   ```console
+   /REP V /CONN "sqldatabasename"\;"\"Data Source=xx;User ID=xx;Password=xx\""
+   ```
+
+  For details on syntax, see [dtexec Utility](../integration-services/packages/dtexec-utility.md).
+
+- `schedule`: specify how often the job needs to be executed, for instances, when using cron expression to specify this value specifies as  "*/1 * * * *" meaning  the job is being executed on minute basis.
+
+You can deploy a new SSIS application using the following command:
+
+```console
 azdata app init --name hello-is –version v1 --template ssis                                 
+```
 
 That generates a `spec.yaml` file to the following:
 
+```yml
 entrypoint: ./hello.dtsx
 name: hello-is
 options: /REP V
@@ -181,43 +191,46 @@ replicas: 2
 runtime: SSIS
 schedule: '*/2 * * * *'
 version: v1
-Alongside with a sample hello.dtsx package.
+```
 
-Note that all of your app files are in the same directory as your spec.yaml. The `spec.yaml` must be at the root level of your app source code directory including the dtsx file.
+The example also creates a sample `hello.dtsx` package.
 
-More details on limitations
-All limitation and known issue for SQL Server Integration Services (SSIS) on Linux are applied for this feature. You can find out more from: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-ssis-known-issues?view=sql-server-ver15
+All of your app files are in the same directory as your `spec.yaml`. The `spec.yaml` must be at the root level of your app source code directory including the dtsx file.
 
-Using App Deploy MLeap Runtime
+#### Limitations of dtsx utility
 
-Supported version
-The App Deploy MLeap runtime supports MLeap Serving v0.13.0.
+All limitations and known issue for SQL Server Integration Services (SSIS) on Linux are applied for this feature. You can find out more from [Limitations and known issues for SSIS on Linux](../linux/sql-server-linux-ssis-known-issues.md)
 
-How to use it? 
-In App Deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields which can be specified: 
-- name: the application name 
-- version: the application version, for instance, such as v1 
-- runtime: the app deploy runtime, you need to specify it as: Mleap
+### Using app deploy MLeap runtime
 
-Aside from above you need to specify the bundleFileName of your MLeap application. That generates a `spec.yaml` file similar to the following:
- 
+The app deploy MLeap runtime supports MLeap Serving v0.13.0.
 
-You can scaffold a new MLeap application using the following command: 
+In app deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields which can be specified:
+
+- `name`: the application name 
+- `version`: the application version, for instance, such as `v1` 
+- `runtime`: the app deploy runtime, you need to specify it as: `Mleap`
+
+Aside from above you need to specify the `bundleFileName` of your MLeap application. That generates a `spec.yaml` file similar to the following:
+
+:::image type="content" source="media/concept-applicaiton-deployment/example-yaml-mleap.png" alt-text="Example mleap yaml":::
+
+You can deploy a new MLeap application using the following command:
+
+```console
 azdata app init --template mleap --name hello-mleap --version v1
+```
 
-More details on limitations
-The LIMITATION aligns with the vision from MLeap Open-source project from combust on Github .
+#### MLeap limitations
 
-
-
-//////////////////////////
+The limitations aligns with the vision from MLeap open-source project from combust on [GitHub](https://github.com/combust/mleap).
 
 ## Next steps
 
 To learn more about how to create and run applications on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following:
 
 - [Deploy applications using azdata](app-create.md)
-- [Deploy applications using the App Deploy extension](app-deployment-extension.md)
+- [Deploy applications using the app deploy extension](app-deployment-extension.md)
 - [Consume applications on big data clusters](app-consume.md)
 
 To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following overview:

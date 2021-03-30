@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Resource Pool Stats Object | Microsoft Docs"
+description: Learn about the SQLServer:Resource Pool Stats object, which contains performance counters that report about Resource Governor resource pool statistics.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -11,11 +12,11 @@ helpviewer_keywords:
   - "Reosurce Pool Stats object"
   - "SQLServer: Resource Pool Stats object"
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Resource Pool Stats Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The SQLServer:Resource Pool Stats object contains performance counters that report information about Resource Governor resource pool statistics.  
   
  Each active resource pool creates an instance of the SQLServer:Resource Pool Stats performance object that has the same instance name as the Resource Governor resource pool name. The following table describes counters supported on this instance.  

@@ -1,4 +1,5 @@
 ---
+description: "Concatenation Operators"
 title: "Concatenation Operators | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -26,10 +27,9 @@ FROM [Adventure Works]
 ```  
   
 ## Language Considerations  
- When the strings used in a concatenation both have the same collation, the resulting concatenated string has the same collation as the inputs. When the strings used in a concatenation have different collations, the rules of collation precedence determine the collation of the resulting concatenated string. For more information, see [Languages and Collations &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services).  
+ When the strings used in a concatenation both have the same collation, the resulting concatenated string has the same collation as the inputs. When the strings used in a concatenation have different collations, the rules of collation precedence determine the collation of the resulting concatenated string. For more information, see [Languages and Collations &#40;Analysis Services&#41;](/analysis-services/languages-and-collations-analysis-services).  
   
 ## See Also  
  [MDX Operator Reference &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [Operators &#40;MDX Syntax&#41;](../mdx/operators-mdx-syntax.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: "Configure Web Synchronization"
 title: "Configure Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2017"
@@ -34,7 +35,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Configure Web Synchronization
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The Web synchronization option for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Merge Replication enables data replication using the HTTPS protocol over the Internet. To use Web synchronization, you first need to perform the following configuration actions:  
   
@@ -75,12 +76,12 @@ ms.author: "mathoma"
   
  Web synchronization is supported on IIS beginning with version 5.0. The Configure Web Synchronization Wizard is not supported on IIS version 7.0. Beginning with SQL Server 2012, to use the web sync component on IIS server, we recommend users install SQL Server with replication. This can be the free SQL Server Express edition.  
   
- SSL is required for Web synchronization. You will need a security certificate issued by a certification authority. For testing purposes only, you can use a self-issued security certificate.  
+ TLS is required for Web synchronization. You will need a security certificate issued by a certification authority. For testing purposes only, you can use a self-issued security certificate.  
    
   
  **To configure IIS for Web synchronization**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS for Web Synchronization](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS for Web Synchronization](./configure-iis-7-for-web-synchronization.md)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Configure IIS 7 for Web Synchronization](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
@@ -138,7 +139,7 @@ ms.author: "mathoma"
   
 -   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor and Publisher can be on the same computer (a typical setup for merge replication). However, IIS should be installedon a separate computer.  
   
--   Use Secure Sockets Layer (SSL) to encrypt the connection between the Subscriber and the computer running IIS. This is required for Web synchronization.  
+-   Use Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), to encrypt the connection between the Subscriber and the computer running IIS. This is required for Web synchronization.  
   
 -   Use Basic Authentication for connections from the Subscriber to IIS. Using Basic Authentication, IIS can make connections to the Publisher/Distributor on behalf of the Subscriber without requiring delegation. Delegation is required if you use Integrated Authentication.  
   
@@ -153,13 +154,13 @@ ms.author: "mathoma"
   
 -   Each publication should use a separate virtual directory for IIS.  
   
--   The account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) runs is also the account that will connect to the Publisher and Distributor during synchronization. This account must be mapped to a SQL Login account on the Publisher and Distributor. For more information, see the "Setting Permissions for the SQL Server Replication Listener" section in the [Configure IIS for Web Synchronization](../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
+-   The account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) runs is also the account that will connect to the Publisher and Distributor during synchronization. This account must be mapped to a SQL Login account on the Publisher and Distributor. For more information, see the "Setting Permissions for the SQL Server Replication Listener" section in the [Configure IIS for Web Synchronization](./configure-iis-7-for-web-synchronization.md).  
   
 -   You can use FTP to deliver the snapshot from the Publisher to the computer that is running IIS. The snapshot is always delivered from the computer that is running IIS to the Subscriber by using HTTPS. For more information, see [Transfer Snapshots Through FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 -   If servers in the replication topology are behind a firewall, you might need to open ports in the firewall to enable Web synchronization.  
   
-    -   The Subscriber computer connects to the computer that is running IIS over HTTPS using SSL, which is typically configured to use port 443. [!INCLUDE[ssEW](../../includes/ssew-md.md)] Subscribers can also connect over HTTP, which is typically configured to use port 80.  
+    -   The Subscriber computer connects to the computer that is running IIS over HTTPS using TLS, which is typically configured to use port 443. [!INCLUDE[ssEW](../../includes/ssew-md.md)] Subscribers can also connect over HTTP, which is typically configured to use port 80.  
   
     -   The computer that is running IIS typically connects to the Publisher or Distributor using port 1433 (default instance). When the Publisher or Distributor is a named instance on a server with another default instance, port 1500 is typically used to connect to the named instance.  
   
@@ -170,5 +171,4 @@ ms.author: "mathoma"
   
 ## See Also  
  [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
-  
   

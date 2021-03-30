@@ -4,51 +4,176 @@
 - name: Welcome to SQL Server >
   href: ../sql-server/index.yml
 
-- name: SQL Server Drivers
+- name: SQL Server drivers
   href: ../connect/sql-connection-libraries.md
-- name: SQL Server Driver History
+- name: Driver feature support matrix
+  href: ../connect/driver-feature-matrix.md
+- name: SQL Server driver history
   href: ../connect/connect-history.md
-- name: SQL Data Developer
+- name: SQL data developer
   href: ../connect/sql-data-developer.md
+
+
 
 - name: ADO.NET
   items:
   - name: Microsoft ADO.NET for SQL Server
     href: ../connect/ado-net/microsoft-ado-net-sql-server.md
-  - name: Getting started with the SqlClient Driver
+  - name: Getting started
     href: ../connect/ado-net/get-started-sqlclient-driver.md
     items:
-    - name: "Step 1: Configure development environment for ADO.NET development"
+    - name: "Step 1: Configure development environment"
       href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
-    - name: "Step 2: Create a SQL database for ADO.NET development"
+    - name: "Step 2: Create a SQL database"
       href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
-    - name: "Step 3: Proof of concept connecting to SQL using ADO.NET"
+    - name: "Step 3: Proof of concept connecting to SQL"
       href: ../connect/ado-net/step-3-connect-sql-ado-net.md
-    - name: "Step 4: Connect resiliently to SQL with ADO.NET"
+    - name: "Step 4: Connect resiliently to SQL"
       href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
-  - name: Overview of the SqlClient Driver
+  - name: Overview
     href: ../connect/ado-net/overview-sqlclient-driver.md
     items:
-    - name: Introduction to Microsoft.Data.SqlClient namespace
+    - name: Microsoft.Data.SqlClient namespace
       href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
-    - name: Download Microsoft SqlClient Data Provider for SQL Server
+    - name: Download
       href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
-    - name: SqlClient Driver support lifecycle
+    - name: Support lifecycle
       href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
-    - name: Finding additional SqlClient Driver information
+    - name: Enable event tracing
+      href: ../connect/ado-net/enable-eventsource-tracing.md
+    - name: AppContext switches
+      href: ../connect/ado-net/appcontext-switches.md
+    - name: Troubleshooting guide
+      href: ../connect/ado-net/sqlclient-troubleshooting-guide.md
+    - name: Finding additional information
       href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
+  - name: Data Type Mappings In ADO.NET
+    href: ../connect/ado-net/data-type-mappings-ado-net.md
+    items:
+    - name: SQL Server Data Type Mappings
+      href: ../connect/ado-net/sql-server-data-type-mappings.md
+    - name: Floating-Point Numbers
+      href: ../connect/ado-net/floating-point-numbers.md
+  - name: Retrieving and Modifying Data In ADO.NET
+    href: ../connect/ado-net/retrieving-modifying-data.md
+    items:
+    - name: Connecting To Data Source
+      href: ../connect/ado-net/connecting-to-data-source.md
+      items:
+      - name: Establishing Connection
+        href: ../connect/ado-net/establishing-connection.md
+      - name: Connection Events
+        href: ../connect/ado-net/connection-events.md
+    - name: Connection Strings
+      href: ../connect/ado-net/connection-strings.md
+      items:
+      - name: Connection String Builders
+        href: ../connect/ado-net/connection-string-builders.md
+      - name: Connection Strings And Configuration Files
+        href: ../connect/ado-net/connection-strings-and-configuration-files.md
+      - name: Connection String Syntax
+        href: ../connect/ado-net/connection-string-syntax.md
+      - name: Protecting Connection Information
+        href: ../connect/ado-net/protecting-connection-information.md
+    - name: Connection Pooling
+      href: ../connect/ado-net/connection-pooling.md
+      items:
+        - name: SQL Server Connection Pooling (ADO.NET)
+          href: ../connect/ado-net/sql-server-connection-pooling.md
+    - name: Commands and Parameters
+      href: ../connect/ado-net/commands-parameters.md
+      items:
+      - name: Executing a Command
+        href: ../connect/ado-net/execute-command.md
+      - name: Configuring Parameters
+        href: ../connect/ado-net/configure-parameters.md
+      - name: Generating Commands with CommandBuilders
+        href: ../connect/ado-net/generate-commands-with-commandbuilders.md
+      - name: Obtaining a Single Value from a Database
+        href: ../connect/ado-net/obtain-single-value-from-database.md
+      - name: Using Commands to Modify Data
+        href: ../connect/ado-net/use-commands-to-modify-data.md
+        items:
+        - name: Updating Data in a Data Source
+          href: ../connect/ado-net/update-data-inside-data-source.md
+        - name: Performing Catalog Operations
+          href: ../connect/ado-net/perform-catalog-operations.md
+    - name: DataAdapters and DataReaders
+      href: ../connect/ado-net/dataadapters-datareaders.md
+      items: 
+      - name: Retrieve data by a DataReader
+        href: ../connect/ado-net/retrieve-data-by-datareader.md
+      - name: Populate a DataSet from a DataAdapter
+        href: ../connect/ado-net/populate-dataset-from-dataadapter.md
+      - name: DataAdapter parameters
+        href: ../connect/ado-net/dataadapter-parameters.md
+      - name: Add existing constraints to a DataSet
+        href: ../connect/ado-net/add-existing-constraints-to-dataset.md
+      - name: DataAdapter, DataTable, and DataColumn mappings
+        href: ../connect/ado-net/dataadapter-datatable-datacolumn-mappings.md
+      - name: Paging through a query result
+        href: ../connect/ado-net/paging-through-query-result.md
+      - name: Update data sources with DataAdapters
+        href: ../connect/ado-net/update-data-sources-with-dataadapters.md
+      - name: Handle DataAdapter events
+        href: ../connect/ado-net/handle-dataadapter-events.md
+      - name: Batch operations using DataAdapters
+        href: ../connect/ado-net/batch-operations-using-dataadapters.md
+    - name: Transactions and concurrency
+      href: ../connect/ado-net/transactions-and-concurrency.md
+      items:
+      - name: Local transactions
+        href: ../connect/ado-net/local-transactions.md
+      - name: Distributed transactions
+        href: ../connect/ado-net/distributed-transactions.md
+      - name: System.Transactions integration with SQL Server
+        href: ../connect/ado-net/system-transactions-integration-with-sql-server.md
+      - name: Optimistic concurrency
+        href: ../connect/ado-net/optimistic-concurrency.md
+    - name: Retrieving database schema information
+      href: ../connect/ado-net/retrieving-database-schema-information.md
+      items:
+      - name: GetSchema and schema collections
+        href: ../connect/ado-net/getschema-and-schema-collections.md
+      - name: Schema restrictions
+        href: ../connect/ado-net/schema-restrictions.md
+      - name: Common schema collections
+        href: ../connect/ado-net/common-schema-collections.md
+      - name: SQL Server schema collections
+        href: ../connect/ado-net/sql-server-schema-collections.md
+    - name: DbProviderFactories
+      href: ../connect/ado-net/dbproviderfactories.md
+      items:
+      - name: Obtain a SqlClientFactory
+        href: ../connect/ado-net/obtain-sqlclientfactory.md
+    - name: Retrieve identity or autonumber values
+      href: ../connect/ado-net/retrieve-identity-or-autonumber-values.md
+    - name: Retrieve binary data
+      href: ../connect/ado-net/retrieve-binary-data.md
+    - name: Modify data with stored procedures
+      href: ../connect/ado-net/modify-data-with-stored-procedures.md
+    - name: Data tracing in SqlClient
+      href: ../connect/ado-net/data-tracing.md
+    - name: Performance counters in SqlClient
+      href: ../connect/ado-net/performance-counters.md
+    - name: Asynchronous programming
+      href: ../connect/ado-net/asynchronous-programming.md
+    - name: SqlClient streaming support
+      href: ../connect/ado-net/sqlclient-streaming-support.md
   - name: SQL Server and ADO.NET
     href: ../connect/ado-net/sql/index.md
     items:
     - name: SQL Server security
       href: ../connect/ado-net/sql/sql-server-security.md
       items:
-      - name: Authentication in SQL Server
+      - name: Authentication
         href: ../connect/ado-net/sql/authentication-sql-server.md
-      - name: Application security scenarios in SQL Server
+      - name: Azure Active Directory authentication
+        href: ../connect/ado-net/sql/azure-active-directory-authentication.md
+      - name: Application security scenarios
         href: ../connect/ado-net/sql/application-security-scenarios-sql-server.md
         items:
-        - name: Writing secure dynamic SQL in SQL Server
+        - name: Writing secure dynamic SQL
           href: ../connect/ado-net/sql/writing-secure-dynamic-sql.md
       - name: SQL Server Express security
         href: ../connect/ado-net/sql/sql-server-express-security.md
@@ -95,6 +220,8 @@
           href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
         - name: Transaction and bulk copy operations
           href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
+        - name: Order hints for bulk copy operations
+          href: ../connect/ado-net/sql/bulk-copy-order-hints.md
       - name: Multiple Active Result Sets (MARS)
         href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
         items:
@@ -145,12 +272,59 @@
         href: ../connect/ado-net/sql/sqlclient-support-localdb.md
       - name: SqlClient support for Always Encrypted
         href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
+        items:
+        - name: Develop a .NET application using Always Encrypted with secure enclaves
+          href: ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
+        - name: Using Azure Key Vault with Always Encrypted
+          href: ado-net/sql/azure-key-vault-example.md
+        - name: Using Azure Key Vault with Always Encrypted with secure enclaves
+          href: ado-net/sql/azure-key-vault-enclave-example.md
+      - name: Data Discovery and Classification in SqlClient
+        href: ../connect/ado-net/sql/data-classification.md
+
+
 
 - name: JDBC
   items:
   - name: Microsoft JDBC Driver for SQL Server
     href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md
-  - name: JDBC Driver API Reference
+  - name: Getting started
+    href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
+    items:
+    - name: "Step 1: Configure development environment"
+      href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
+    - name: "Step 2: Create a SQL database"
+      href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
+    - name: "Step 3: Proof of concept connecting to SQL"
+      href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
+  - name: Overview
+    href: ../connect/jdbc/overview-of-the-jdbc-driver.md
+    items:
+    - name: Download
+      href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
+    - name: Release notes
+      href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
+    - name: System requirements
+      href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
+    - name: Support matrix
+      href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md
+    - name: Using the driver
+      href: ../connect/jdbc/using-the-jdbc-driver.md
+    - name: Parsing results
+      href: ../connect/jdbc/parsing-the-results.md
+    - name: Using useFMTOnly
+      href: ../connect/jdbc/using-usefmtonly.md
+    - name: Understanding Java EE support
+      href: ../connect/jdbc/understanding-java-ee-support.md
+    - name: Deploying the driver
+      href: ../connect/jdbc/deploying-the-jdbc-driver.md
+    - name: Finding additional information
+      href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
+    - name: Frequently asked questions (FAQ)
+      href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.yml
+    - name: Feature dependencies
+      href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
+  - name: API reference
     href: ../connect/jdbc/reference/jdbc-driver-api-reference.md
     items:
     - name: ISQLServerCallableStatement Interface
@@ -2485,43 +2659,7 @@
         items:
         - name: SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)
           href: ../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md
-  - name: Getting Started with the JDBC Driver
-    href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
-    items:
-    - name: "Step 1: Configure development environment for Java development"
-      href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
-    - name: "Step 2: Create a SQL database for Java development"
-      href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
-    - name: "Step 3: Proof of concept connecting to SQL using Java"
-      href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
-  - name: Overview of the JDBC Driver
-    href: ../connect/jdbc/overview-of-the-jdbc-driver.md
-    items:
-    - name: Download Microsoft JDBC Driver for SQL Server
-      href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
-    - name: Parsing the Results
-      href: ../connect/jdbc/parsing-the-results.md
-    - name: Release Notes for the JDBC Driver
-      href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
-    - name: System Requirements for the JDBC Driver
-      href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
-    - name: Using the JDBC Driver
-      href: ../connect/jdbc/using-the-jdbc-driver.md
-    - name: Using useFMTOnly
-      href: ../connect/jdbc/using-usefmtonly.md
-    - name: Understanding Java EE Support
-      href: ../connect/jdbc/understanding-java-ee-support.md
-    - name: Deploying the JDBC Driver
-      href: ../connect/jdbc/deploying-the-jdbc-driver.md
-    - name: Finding Additional JDBC Driver Information
-      href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
-    - name: Microsoft JDBC Driver for SQL Server Support Matrix
-      href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md
-    - name: Frequently Asked Questions (FAQ) for JDBC Driver
-      href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md
-    - name: Feature dependencies of Microsoft JDBC Driver for SQL Server
-      href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
-  - name: Securing JDBC Driver Applications
+  - name: Securing applications
     href: ../connect/jdbc/securing-jdbc-driver-applications.md
     items:
     - name: Securing Connection Strings
@@ -2541,7 +2679,7 @@
         href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
     - name: FIPS Mode
       href: ../connect/jdbc/fips-mode.md
-  - name: Improving Performance and Reliability with the JDBC Driver
+  - name: Improving performance and reliability
     href: ../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md
     items:
     - name: Closing Objects when Not In Use
@@ -2556,7 +2694,7 @@
       href: ../connect/jdbc/sparse-columns.md
     - name: Prepared Statement Metadata Caching for the JDBC Driver
       href: ../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md
-  - name: Diagnosing Problems with the JDBC Driver
+  - name: Diagnosing problems
     href: ../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md
     items:
     - name: Handling Errors
@@ -2569,7 +2707,7 @@
       href: ../connect/jdbc/troubleshooting-connectivity.md
     - name: Accessing Diagnostic Information in the Extended Events Log
       href: ../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md
-  - name: JDBC Driver Application Code Samples
+  - name: Application code samples
     href: ../connect/jdbc/sample-jdbc-driver-applications.md
     items:
     - name: Connecting and Retrieving Data
@@ -2608,7 +2746,7 @@
         href: ../connect/jdbc/updating-large-data-sample.md
     - name: Data Discovery and Classification Sample
       href: ../connect/jdbc/data-discovery-classification-sample.md
-  - name: Compliance and Legal for the JDBC SQL Driver
+  - name: Compliance and legal
     href: ../connect/jdbc/compliance-and-legal-for-the-jdbc-sql-driver.md
     items:
     - name: JDBC 4.1 Compliance for the JDBC Driver
@@ -2617,26 +2755,26 @@
       href: ../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md
     - name: JDBC 4.3 Compliance for the JDBC Driver
       href: ../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md
-  - name: Programming Guide for JDBC SQL Driver
+  - name: Programming guide
     href: ../connect/jdbc/programming-guide-for-jdbc-sql-driver.md
     items:
-    - name: Connecting to SQL Server with the JDBC Driver
+    - name: Connecting to SQL
       href: ../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md
-    - name: Understanding the JDBC Driver Data Types
+    - name: Understanding JDBC data types
       href: ../connect/jdbc/understanding-the-jdbc-driver-data-types.md
-    - name: Using Statements with the JDBC Driver
+    - name: Using statements
       href: ../connect/jdbc/using-statements-with-the-jdbc-driver.md
-    - name: Managing Result Sets with the JDBC Driver
+    - name: Managing result sets
       href: ../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md
-    - name: Performing Transactions with the JDBC Driver
+    - name: Performing transactions
       href: ../connect/jdbc/performing-transactions-with-the-jdbc-driver.md
-    - name: Handling Metadata with the JDBC Driver
+    - name: Handling metadata
       href: ../connect/jdbc/handling-metadata-with-the-jdbc-driver.md
-    - name: Using Always Encrypted with the JDBC Driver
+    - name: Using Always Encrypted
       href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
       items:
-      - name: Always Encrypted with secure enclaves
-        href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
+      - name: Using Always Encrypted with secure enclaves
+        href: ../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
     - name: Guide articles
       items:
       - name: Using Statements with SQL
@@ -2751,6 +2889,8 @@
         href: ../connect/jdbc/using-sql-escape-sequences.md
       - name: Using Statements with Stored Procedures
         href: ../connect/jdbc/using-statements-with-stored-procedures.md
+      - name: Client Certificate Authentication for Loopback Scenarios
+        href: ../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md
       - name: Azure Key Vault samples, for 7.0 and others
         href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
         items:
@@ -2765,12 +2905,13 @@
   items:
   - name: Node.js Driver for SQL Server
     href: ../connect/node-js/node-js-driver-for-sql-server.md
-  - name: "Step 1:  Configure development environment for Node.js development"
+  - name: "Step 1:  Configure development environment"
     href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
-  - name: "Step 2: Create a SQL database for Node.js development"
+  - name: "Step 2: Create a SQL database"
     href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
-  - name: "Step 3: Proof of concept connecting to SQL using Node.js"
+  - name: "Step 3: Proof of concept connecting to SQL"
     href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
+
 
 
 # docs/connect/odbc/ , plus big expando for docs/odbc/ .
@@ -2778,17 +2919,21 @@
   items:
   - name: Microsoft ODBC Driver for SQL Server
     href: ../connect/odbc/microsoft-odbc-driver-for-sql-server.md
-  - name: Linux and Mac
+  - name: Download
+    href: ../connect/odbc/download-odbc-driver-for-sql-server.md
+  - name: Linux and macOS
     items:
-    - name: System Requirements
+    - name: System requirements
       href: ../connect/odbc/linux-mac/system-requirements.md
-    - name: Installing the Driver Manager
+    - name: Install the Driver Manager
       href: ../connect/odbc/linux-mac/installing-the-driver-manager.md
-    - name: Installing the Microsoft ODBC Driver for SQL Server
+    - name: Install the ODBC Driver (Linux)
       href: ../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md
-    - name: Feature Guides
+    - name: Install the ODBC Driver (macOS)
+      href: ../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
+    - name: Feature guides
       items:
-      - name: Connection String Keywords and Data Source Names (DSNs)
+      - name: Connecting from Linux or macOS
         href: ../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md
       - name: Data Access Tracing with the ODBC Driver on Linux and macOS
         href: ../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md
@@ -2798,37 +2943,39 @@
         href: ../connect/odbc/linux-mac/programming-guidelines.md
       - name: Tools
         items:
-        - name: Connecting with bcp.exe
+        - name: Connecting with bcp
           href: ../connect/odbc/linux-mac/connecting-with-bcp.md
-        - name: Connecting with sqlcmd.exe
+        - name: Connecting with sqlcmd
           href: ../connect/odbc/linux-mac/connecting-with-sqlcmd.md
       - name: Using Integrated Authentication
         href: ../connect/odbc/linux-mac/using-integrated-authentication.md
-    - name: Release Notes
+    - name: Release notes
       href: ../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md
-    - name: Known Issues
+    - name: Release notes (mssql-tools)
+      href: ../connect/odbc/linux-mac/release-notes-tools.md
+    - name: Known issues
       href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
-    - name: Frequently Asked Questions (FAQ) for ODBC Linux and macOS
-      href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md
+    - name: Frequently asked questions (FAQ)
+      href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.yml
   - name: Windows
     items:
     - name: Microsoft ODBC Driver for SQL Server on Windows
       href: ../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md
-    - name: Features of the Microsoft ODBC Driver for SQL Server on Windows
+    - name: Features
       href: ../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md
-    - name: Release Notes
+    - name: Release notes
       href: ../connect/odbc/windows/release-notes-odbc-sql-server-windows.md
-    - name: System Requirements, Installation, and Driver Files
+    - name: System requirements, installation, and driver files
       href: ../connect/odbc/windows/system-requirements-installation-and-driver-files.md
-    - name: Feature Guides
+    - name: Feature guides
       items:
-      - name: Connection Resiliency in the Windows ODBC Driver
+      - name: Connection resiliency
         href: ../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md
-      - name: Driver-Aware Connection Pooling in the ODBC Driver for SQL Server
+      - name: Driver-aware connection pooling
         href: ../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md
-    - name: Asynchronous Execution (Notification Method) Sample
+    - name: Asynchronous execution (notification method) sample
       href: ../connect/odbc/windows/asynchronous-execution-notification-method-sample.md
-    - name: Help Topics
+    - name: Help topics
       items:
       - name: Data Source Wizard screen 1
         href: ../connect/odbc/windows/dsn-wizard-1.md
@@ -2840,11 +2987,11 @@
         href: ../connect/odbc/windows/dsn-wizard-4.md
       - name: SQL Server Login dialog
         href: ../connect/odbc/windows/sql-server-login-dialog.md
-  - name: Feature Guides
+  - name: Feature guides
     items:
     - name: Custom Keystore Providers
       href: ../connect/odbc/custom-keystore-providers.md
-    - name: DSN Connection String Keywords and Attributes
+    - name: DSN and Connection String Keywords and Attributes
       href: ../connect/odbc/dsn-connection-string-attribute.md
     - name: Using Always Encrypted
       href: ../connect/odbc/using-always-encrypted-with-the-odbc-driver.md
@@ -2858,12 +3005,10 @@
       href: ../connect/odbc/use-xa-with-dtc.md
     - name: Bug Fixes
       href: ../connect/odbc/bug-fixes.md
-  - name: Download ODBC Driver for SQL Server
-    href: ../connect/odbc/download-odbc-driver-for-sql-server.md
-  - name: C++ sample application using ODBC
+  - name: C++ sample application
     href: ../connect/odbc/cpp-code-example-app-connect-access-sql-db.md
   # docs/odbc/
-  - name: ODBC Advanced
+  - name: ODBC advanced
     items:
     - name: Microsoft Open Database Connectivity (ODBC)
       href: ../odbc/microsoft-open-database-connectivity-odbc.md
@@ -5075,15 +5220,15 @@
   items:
   - name: Microsoft OLE DB Driver for SQL Server
     href: ../connect/oledb/oledb-driver-for-sql-server.md
+  - name: Download
+    href: ../connect/oledb/download-oledb-driver-for-sql-server.md
   - name: Release notes
     href: ../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md
-  - name: Download Microsoft OLE DB Driver for SQL Server
-    href: ../connect/oledb/download-oledb-driver-for-sql-server.md
   - name: System requirements
     href: ../connect/oledb/system-requirements-for-oledb-driver-for-sql-server.md
-  - name: When to use OLE DB Driver for SQL Server
+  - name: When to use OLE DB Driver
     href: ../connect/oledb/when-to-use-oledb-driver-for-sql-server.md
-  - name: Finding more OLE DB Driver for SQL Server information
+  - name: Finding more information
     href: ../connect/oledb/finding-more-oledb-driver-for-sql-server-information.md
   - name: Features
     href: ../connect/oledb/features/oledb-driver-for-sql-server-features.md
@@ -5116,6 +5261,8 @@
       href: ../connect/oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md
     - name: Using Azure Active Directory
       href: ../connect/oledb/features/using-azure-active-directory.md
+    - name: Using Data Classification
+      href: ../connect/oledb/features/using-data-classification.md
     - name: Using Database Mirroring
       href: ../connect/oledb/features/using-database-mirroring.md
     - name: Using Encryption Without Validation
@@ -5124,6 +5271,8 @@
       href: ../connect/oledb/features/using-large-value-types.md
     - name: Using Multiple Active Result Sets (MARS)
       href: ../connect/oledb/features/using-multiple-active-result-sets-mars.md
+    - name: Using Transparent Network IP Resolution
+      href: ../connect/oledb/features/using-transparent-network-ip-resolution.md
     - name: Using User-Defined Types
       href: ../connect/oledb/features/using-user-defined-types.md
     - name: Using XML Data Types
@@ -5384,6 +5533,12 @@
           href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md
         - name: ISSCommandWithParameters::SetParameterProperties
           href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md
+        - name: ISSDataClassification
+          items:
+          - name: ISSDataClassification
+            href: oledb/ole-db-interfaces/issdataclassification-ole-db.md
+          - name: ISSDataClassification::GetSensitivityClassification
+            href: oledb/ole-db-interfaces/issdataclassification-getsensitivityclassification-ole-db.md
       - name: How to
         href: ../connect/oledb/ole-db-how-to/ole-db-how-to-topics.md
         items:
@@ -5468,39 +5623,39 @@
   items:
   - name: Microsoft Drivers for PHP for SQL Server
     href: ../connect/php/microsoft-php-driver-for-sql-server.md
-  - name: Getting Started
+  - name: Getting started
     href: ../connect/php/getting-started-with-the-php-sql-driver.md
     items:
-    - name: "Step 1: Configure development environment for PHP development"
+    - name: "Step 1: Configure development environment"
       href: ../connect/php/step-1-configure-development-environment-for-php-development.md
-    - name: "Step 2: Create a SQL database for PHP development"
+    - name: "Step 2: Create a SQL database"
       href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
-    - name: "Step 3: Proof of concept connecting to SQL Server using PHP"
+    - name: "Step 3: Proof of concept connecting to SQL"
       href: ../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md
-    - name: "Step 4: Connect resiliently to SQL Server with PHP"
+    - name: "Step 4: Connect resiliently to SQL"
       href: ../connect/php/step-4-connect-resiliently-to-sql-with-php.md
   - name: Overview
     href: ../connect/php/overview-of-the-php-sql-driver.md
     items:
-    - name: System Requirements
-      href: ../connect/php/system-requirements-for-the-php-sql-driver.md
-    - name: Download Drivers for PHP for SQL Server
+    - name: Download
       href: ../connect/php/download-drivers-php-sql-server.md
+    - name: Installation on Linux and macOS
+      href: ../connect/php/installation-tutorial-linux-mac.md
+    - name: Release notes
+      href: ../connect/php/release-notes-php-sql-driver.md
+    - name: System requirements
+      href: ../connect/php/system-requirements-for-the-php-sql-driver.md
+    - name: Support matrix
+      href: ../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md
     - name: Loading the drivers
       href: ../connect/php/loading-the-php-sql-driver.md
     - name: Configuring IIS
       href: ../connect/php/configuring-iis-for-php-sql-driver.md
-    - name: PHP Linux and Mac drivers installation tutorial
-      href: ../connect/php/installation-tutorial-linux-mac.md
-    - name: Release Notes
-      href: ../connect/php/release-notes-php-sql-driver.md
-    - name: Support Resources
+    - name: Support resources
       href: ../connect/php/support-resources-for-the-php-sql-driver.md
-    - name: About Code Samples
+    - name: About code samples
       href: ../connect/php/about-code-examples-in-the-documentation.md
-    - name: Support Matrix for the Microsoft Drivers for PHP for SQL Server
-      href: ../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md
-  - name: Programming Guide
+  - name: Programming guide
     href: ../connect/php/programming-guide-for-php-sql-driver.md
     items:
     - name: Connecting to the Server
@@ -5516,7 +5671,7 @@
         href: ../connect/php/how-to-connect-on-a-specified-port.md
       - name: Connection Pooling
         href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-      - name: "How to: Disable Multiple Active Resultsets (MARS)"
+      - name: "How to: Disable Multiple Active Result Sets (MARS)"
         href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
       - name: Connection Options
         href: ../connect/php/connection-options.md
@@ -5606,7 +5761,7 @@
       href: ../connect/php/logging-activity.md
     - name: Using Always Encrypted with the PHP Drivers for SQL Server
       href: ../connect/php/using-always-encrypted-php-drivers.md
-    - name: Always Encrypted with Secure Enclaves with the PHP Drivers for SQL Server
+    - name: Always Encrypted with secure enclaves with the PHP Drivers for SQL Server
       href: ../connect/php/always-encrypted-secure-enclaves.md
     - name: Non-System Locale Settings
       href: ../connect/php/non-system-locale-settings.md
@@ -5742,14 +5897,14 @@
           href: ../connect/php/pdostatement-setattribute.md
         - name: "PDOStatement::setFetchMode"
           href: ../connect/php/pdostatement-setfetchmode.md
-  - name: Security Considerations
+  - name: Security considerations
     href: ../connect/php/security-considerations-for-php-sql-driver.md
-  - name: Code Samples
+  - name: Code samples
     href: ../connect/php/code-samples-for-php-sql-driver.md
     items:
-    - name: Example Application (PDO_SQLSRV Driver)
+    - name: Example application (PDO_SQLSRV)
       href: ../connect/php/example-application-pdo-sqlsrv-driver.md
-    - name: Example Application (SQLSRV Driver)
+    - name: Example application (SQLSRV)
       href: ../connect/php/example-application-sqlsrv-driver.md
 
 
@@ -5761,20 +5916,20 @@
   - name: Python SQL Driver - pyodbc
     href: ../connect/python/pyodbc/python-sql-driver-pyodbc.md
     items:
-    - name: "Step 1: Configure development environment for pyodbc Python development"
+    - name: "Step 1: Configure development environment"
       href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
-    - name: "Step 2: Create a SQL database for pyodbc Python development"
+    - name: "Step 2: Create a SQL database"
       href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
-    - name: "Step 3: Proof of concept connecting to SQL using pyodbc"
+    - name: "Step 3: Proof of concept connecting to SQL"
       href: ../connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md
   - name: Python SQL Driver - pymssql
     href: ../connect/python/pymssql/python-sql-driver-pymssql.md
     items:
-    - name: "Step 1: Configure development environment for pymssql Python development"
+    - name: "Step 1: Configure development environment"
       href: ../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md
-    - name: "Step 2: Create a SQL database for pymssql Python development"
+    - name: "Step 2: Create a SQL database"
       href: ../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md
-    - name: "Step 3: Proof of concept connecting to SQL using pymssql"
+    - name: "Step 3: Proof of concept connecting to SQL"
       href: ../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
 
 
@@ -5783,14 +5938,17 @@
   items:
   - name: Ruby Driver for SQL Server
     href: ../connect/ruby/ruby-driver-for-sql-server.md
-  - name: "Step 1: Configure development environment for Ruby development"
+  - name: "Step 1: Configure development environment"
     href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md
-  - name: "Step 2: Create a SQL database for Ruby development"
+  - name: "Step 2: Create a SQL database"
     href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
-  - name: "Step 3: Proof of concept connecting to SQL using Ruby"
+  - name: "Step 3: Proof of concept connecting to SQL"
     href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
 
-
+- name: Spark
+  items:
+  - name: Connector for SQL Server
+    href: ../connect/spark/connector.md
 
 # docs/ado/
 - name: ADO
@@ -5989,8 +6147,6 @@
         href: ../ado/guide/data/handling-errors-in-vbscript.md
       - name: Handling Errors in Visual C++
         href: ../ado/guide/data/handling-errors-in-visual-c.md
-      - name: Handline Errors in Visual J++
-        href: ../ado/guide/data/handline-errors-in-visual-j.md
       - name: Handling Errors in JScript
         href: ../ado/guide/data/handling-errors-in-jscript.md
     - name: Anticipating Errors
@@ -6013,8 +6169,6 @@
         href: ../ado/guide/data/ado-event-instantiation-visual-basic.md
       - name: "ADO Event Instantiation: Visual C++"
         href: ../ado/guide/data/ado-event-instantiation-visual-c.md
-      - name: "ADO Event Instantiation: Visual J++"
-        href: ../ado/guide/data/ado-event-instantiation-visual-j.md
       - name: "ADO Event Instantiation: VBScript"
         href: ../ado/guide/data/ado-event-instantiation-vbscript.md
       - name: "ADO Event Instantiation: JScript"
@@ -6105,7 +6259,7 @@
       href: ../ado/guide/data/streams-and-persistence.md
     - name: Command Streams
       href: ../ado/guide/data/command-streams.md
-    - name: Retrieving Resultsets into Streams
+    - name: Retrieving Result Sets into Streams
       href: ../ado/guide/data/retrieving-resultsets-into-streams.md
     - name: Using ADO for Internet Publishing
       href: ../ado/guide/data/using-ado-for-internet-publishing.md

@@ -8,7 +8,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE DATABASE AUDIT"
   - "DATABASE_AUDIT_SPECIFICATION_TSQL"
@@ -26,7 +26,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a database audit specification object using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit feature. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -34,8 +34,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 CREATE DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  
     FOR SERVER AUDIT audit_name   
@@ -49,8 +48,10 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
       action [ ,...n ]ON [ class :: ] securable BY principal [ ,...n ]  
 }  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *audit_specification_name*  
  Is the name of the audit specification.  
   
@@ -84,20 +85,20 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## Permissions  
  Users with the `ALTER ANY DATABASE AUDIT` permission can create database audit specifications and bind them to any audit.  
   
- After a database audit specification is created, it can be viewed by principals with the `CONTROL SERVER`, `ALTER ANY DATABASE AUDIT` permissions, or the `sysadmin` account.  
+ After a database audit specification is created, it can be viewed by users with the `CONTROL SERVER` permission, or the `sysadmin` account.  
   
 ## Examples
 
 ### A. Audit SELECT and INSERT on a table for any database principal 
- The following example creates a server audit called `Payrole_Security_Audit` and then a database audit specification called `Payrole_Security_Audit` that audits `SELECT` and `INSERT` statements by the `dbo` user, for the `HumanResources.EmployeePayHistory` table in the `AdventureWorks2012` database.  
+ The following example creates a server audit called `Payrole_Security_Audit` and then a database audit specification called `Payrole_Security_Audit` that audits `SELECT` and `INSERT` statements by any member of the `public` database role, for the `HumanResources.EmployeePayHistory` table in the `AdventureWorks2012` database. This has the effect that every user is audited as every user is always member of the `public` role.
   
-```  
+```sql  
 USE master ;  
 GO  
 -- Create the server audit.  
 CREATE SERVER AUDIT Payrole_Security_Audit  
     TO FILE ( FILEPATH =   
-'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA' ) ;  
+'D:\SQLAudit\' ) ;  -- make sure this path exists
 GO  
 -- Enable the server audit.  
 ALTER SERVER AUDIT Payrole_Security_Audit   
@@ -110,7 +111,7 @@ GO
 CREATE DATABASE AUDIT SPECIFICATION Audit_Pay_Tables  
 FOR SERVER AUDIT Payrole_Security_Audit  
 ADD (SELECT , INSERT  
-     ON HumanResources.EmployeePayHistory BY dbo )  
+     ON HumanResources.EmployeePayHistory BY public )  
 WITH (STATE = ON) ;  
 GO  
 ``` 
@@ -118,14 +119,14 @@ GO
 ### B. Audit any DML (INSERT, UPDATE or DELETE) on _all_ objects in the _sales_ schema for a specific database role  
  The following example creates a server audit called `DataModification_Security_Audit` and then a database audit specification called `Audit_Data_Modification_On_All_Sales_Tables` that audits `INSERT`, `UPDATE` and `DELETE` statements by users in a new database role `SalesUK`, for all objects in the `Sales` schema in the `AdventureWorks2012` database.  
   
-```  
+```sql  
 USE master ;  
 GO  
 -- Create the server audit.
 -- Change the path to a path that the SQLServer Service has access to. 
 CREATE SERVER AUDIT DataModification_Security_Audit  
     TO FILE ( FILEPATH = 
-'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA' ) ; 
+'D:\SQLAudit\' ) ;  -- make sure this path exists
 GO  
 -- Enable the server audit.  
 ALTER SERVER AUDIT DataModification_Security_Audit   

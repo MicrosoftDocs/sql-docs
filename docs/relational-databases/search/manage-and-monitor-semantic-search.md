@@ -1,4 +1,5 @@
 ---
+description: "Manage and Monitor Semantic Search"
 title: "Manage and Monitor Semantic Search | Microsoft Docs"
 ms.date: "03/20/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ---
 # Manage and Monitor Semantic Search
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes the process of semantic indexing and the tasks related to managing and monitoring the indexes.  
   
 ##  <a name="HowToMonitorStatus"></a> Check the status of semantic indexing  

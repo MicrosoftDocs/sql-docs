@@ -76,9 +76,8 @@ To connect to the Admin Console, use Internet Explorer and https to browse to th
 ## <a name="RelatedTasks"></a>Admin Console Tasks  
 The Admin Console provides the ability to monitor the following:  
   
-|||  
-|-|-|  
-|**Information Type**|**How to Access in the Admin Console**|  
+|Information Type|How to Access in the Admin Console|
+|-|-|
 |Overall status of the appliance|Click **Appliance State** in the top menu, or **Home**.|  
 |Alerts|Click **Alerts**. For more information, see [Understanding Admin Console Alerts &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
 |Appliance components and their status|Click **Appliance State** in the top menu, or **Home**.|  

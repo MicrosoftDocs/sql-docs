@@ -1,20 +1,23 @@
 ---
+description: "Attention Event Class"
 title: "Attention Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Attention event class"
 ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Attention Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+
   The **Attention** event class indicates that an attention event, such as cancel, client-interrupt requests, or broken client connections, has occurred. Cancel operations can also be seen as part of implementing data access driver time-outs.  
   
 ## Attention Event Class Data Columns  

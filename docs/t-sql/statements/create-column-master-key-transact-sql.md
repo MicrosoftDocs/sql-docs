@@ -1,4 +1,5 @@
 ---
+description: "CREATE COLUMN MASTER KEY (Transact-SQL)"
 title: "CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/15/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SQL13.SWB.NEWCOLUMNMASTERKEYDEF.GENERAL.F1"
   - "SQL13.SWB.COLUMNMASTERKEYDEF.GENERAL.F1"
@@ -28,7 +29,8 @@ author: jaszymas
 ms.author: jaszymas
 ---
 # CREATE COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 Creates a column master key metadata object in a database. A column master key metadata entry represents a key, stored in an external key store. The key protects (encrypts) column encryption keys when you're using [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) or [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Multiple column master keys allow for periodic key rotation to enhance security. Create a column master key in a key store and its related metadata object in the database by using the Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or PowerShell. For details, see [Overview of Key Management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
@@ -40,7 +42,7 @@ Creates a column master key metadata object in a database. A column master key m
 
 ## Syntax  
 
-``` sql 
+```syntaxsql
 CREATE COLUMN MASTER KEY key_name   
     WITH (  
         KEY_STORE_PROVIDER_NAME = 'key_store_provider_name',  
@@ -49,8 +51,8 @@ CREATE COLUMN MASTER KEY key_name
          )   
 [;]  
 ```  
-  
-## Arguments  
+
+## Arguments
 *key_name*  
 The name of the column master key in the database.  
   
@@ -76,7 +78,7 @@ The following table shows the names of system providers:
     |'MSSQL_CERTIFICATE_STORE'|Windows Certificate Store| 
     |'MSSQL_CSP_PROVIDER'|A store, such as a hardware security module (HSM), that supports Microsoft CryptoAPI.|
     |'MSSQL_CNG_STORE'|A store, such as a hardware security module (HSM), that supports Cryptography API: Next Generation.|  
-    |'AZURE_KEY_VAULT'|See [Getting Started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
+    |'AZURE_KEY_VAULT'|See [Getting Started with Azure Key Vault](/azure/key-vault/general/overview)|  
     |'MSSQL_JAVA_KEYSTORE'| Java Key Store.}
   
 
@@ -93,7 +95,7 @@ The path of the key in the column master key store. The key path must be valid f
      Where:  
   
     *CertificateStoreLocation*  
-    Certificate store location, which must be Current User or Local Machine. For more information, see [Local Machine and Current User Certificate Stores](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx).  
+    Certificate store location, which must be Current User or Local Machine. For more information, see [Local Machine and Current User Certificate Stores](/windows-hardware/drivers/install/local-machine-and-current-user-certificate-stores).  
   
     *CertificateStore*  
     Certificate store name, for example 'My'.  
@@ -159,9 +161,8 @@ Specifies that the column master key is enclave-enabled. You can share all colum
 
 *signature*  
 A binary literal that's a result of digitally signing *key path* and the ENCLAVE_COMPUTATIONS setting with the column master key. The signature reflects whether ENCLAVE_COMPUTATIONS is specified or not. The signature protects the signed values from being altered by unauthorized users. An Always Encrypted-enabled client driver verifies the signature and returns an error to the application if the signature is invalid. The signature must be generated using client-side tools. For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
-  
-  
-## Remarks  
+
+## Remarks
 
 Create a column master key metadata entry before you create a column encryption key metadata entry in the database and before any column in the database can be encrypted using Always Encrypted. A column master key entry in the metadata doesn't contain the actual column master key. The column master key must be stored in an external column key store (outside of SQL Server). The key store provider name and the column master key path in the metadata must be valid for a client application. The client application needs to use the column master key to decrypt a column encryption key. The column encryption key is encrypted with the column master key. The client application also needs to query encrypted columns.
 
@@ -245,4 +246,3 @@ WITH (
 * [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
 * [Overview of Key Management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
 * [Manage keys for Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
-  

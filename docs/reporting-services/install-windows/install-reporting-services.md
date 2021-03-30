@@ -1,13 +1,14 @@
 ---
+description: "Install SQL Server Reporting Services"
 title: "Install SQL Server Reporting Services | Microsoft Docs"
-ms.date: 10/02/2019
+ms.date: 12/11/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-2016"
 ---
 # Install SQL Server Reporting Services
 
@@ -15,18 +16,20 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 
 SQL Server Reporting Services installation involves server components for storing report items, rendering reports, and processing of subscription and other report services. 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 Download [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) from the Microsoft Download Center.
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Download [SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252) from the Microsoft Download Center.
 
 ::: moniker-end
 
 > [!NOTE]
 > Looking for Power BI Report Server? See [Install Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
+> 
+> Upgrading or migrating from a SQL Server 2016 or earlier version of Reporting Services? See [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md).
 
 ## Before you begin
 
@@ -60,9 +63,9 @@ Installing a report server is straightforward. There are only a few steps to ins
     > [!NOTE]
     > The default path is C:\Program Files\Microsoft SQL Server Reporting Services.
 
-7. After a successful setup, select **Configure Report Server** to launch the Reporting Services Configuration Manager.
+7. After a successful setup, select **Configure Report Server** to launch the Report Server Configuration Manager.
 
-## Configuration your report server
+## Configure your report server
 
 After you select **Configure Report Server** in the setup, you will be presented with **Report Server Configuration Manager**. For more information, see [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md).
 
@@ -90,7 +93,7 @@ URL reservations are composed of a prefix, host name, port, and virtual director
 
 |Part|Description|
 |----------|-----------------|
-|Prefix|The default prefix is HTTP. If you previously installed a Secure Sockets Layer (SSL) certificate, Setup tries to create URL reservations that use the HTTPS prefix.|
+|Prefix|The default prefix is HTTP. If you previously installed a Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), certificate, Setup tries to create URL reservations that use the HTTPS prefix.|
 |Host name|The default host name is a strong wildcard (+). It specifies that the report server accepts any HTTP request on the designated port for any host name that resolves to the computer, including `https://<computername>/reportserver`, `https://localhost/reportserver`, or `https://<IPAddress>/reportserver.`|
 |Port|The default port is 80. If you use any port other than port 80, you have to explicitly add it to the URL when you open web portal in a browser window.|
 |Virtual directory|By default, virtual directories are created in the format of ReportServer for the Report Server Web service and Reports for the web portal. For the Report Server Web service, the default virtual directory is **reportserver**. For the web portal, the default virtual directory is **reports**.|
@@ -119,7 +122,7 @@ You need to open up the TCP port that you have configured for your Web Service U
 
 For information on how to install SQL Server Reporting Services native mode, see [Install Reporting Services native mode report server](install-reporting-services-native-mode-report-server.md). 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 For information on how to install SQL Server 2016 Reporting Services (and earlier) in SharePoint integration mode, see [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md).
 
@@ -129,6 +132,6 @@ For information on how to install SQL Server 2016 Reporting Services (and earlie
 
 With your report server installed, begin to create reports and deploy those to your report server. For information on how to start with Report Builder, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).
 
-To create reports using SQL Server Data Tools, [download SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).
+To create reports using SQL Server Data Tools, [download SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

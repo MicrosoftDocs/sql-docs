@@ -1,10 +1,11 @@
 ---
-title: "Using NTLM authentication to connect to SQL Server | Microsoft Docs"
+title: "Using NTLM authentication to connect to SQL Server"
+description: "Learn how to establish a SQL database connection using NTLM authentication with the JDBC driver."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.suite: "sql"
 ms.technology: connectivity
 ms.topic: conceptual
@@ -29,11 +30,11 @@ The following properties are also used for NTLM Authentication:
 
 Other than **domain**, the other properties are mandatory, the driver will throw an error if any are missing when the **NTLM** authenticationScheme property is used. 
 
-For more information on connection properties, see [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md). For more information on the Microsoft NTLM authentication protocol, see [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm).
+For more information on connection properties, see [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md). For more information on the Microsoft NTLM authentication protocol, see [Microsoft NTLM](/windows/desktop/SecAuthN/microsoft-ntlm).
 
 ## Remarks
 
-See [Network security: LAN Manager authentication level](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for description of the SQL server settings, which control the behavior of NTLM authentication. 
+See [Network security: LAN Manager authentication level](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for description of the SQL server settings, which control the behavior of NTLM authentication. 
 
 ## Logging
 
@@ -73,7 +74,7 @@ For example, your SPN might look like: "MSSQLSvc/some-server.zzz.corp.contoso.co
 
 For more information about service principal names (SPNs), see:
 
-- [Service Principal Name (SPN) Support in Client Connections](https://docs.microsoft.com/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections?view=sql-server-2017)
+- [Service Principal Name (SPN) Support in Client Connections](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)
 
 > [!NOTE]  
 > The serverSpn connection attribute is only supported by Microsoft JDBC Drivers 4.2 and higher.
@@ -84,7 +85,7 @@ For more information about service principal names (SPNs), see:
 
 The NTLM protocol is an old authentication protocol with various vulnerabilities, which pose a security risk. It's based on a relatively weak cryptographic scheme and is vulnerable to various attacks. It's replaced with Kerberos, which is a lot more secure and recommended. NTLM authentication should only be used in a secure trusted environment, or when Kerberos can't be used.
 
-The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] only supports NTLM v2, which has some security improvements over the original v1 protocol. It'ss also recommended to enable Extended Protection, or use SSL Encryption for increased security. 
+The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] only supports NTLM v2, which has some security improvements over the original v1 protocol. It's also recommended to enable Extended Protection, or use SSL Encryption for increased security. 
 
 For more information on how to enable Extended Protection and, see:
 

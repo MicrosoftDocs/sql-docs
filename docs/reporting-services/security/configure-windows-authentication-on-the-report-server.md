@@ -1,6 +1,7 @@
 ---
+description: "Configure Windows Authentication on the Report Server"
 title: "Configure Windows Authentication on the Report Server | Microsoft Docs"
-ms.date: 08/26/2016
+ms.date: 06/22/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: security
@@ -126,7 +127,7 @@ ms.author: maggies
   
 -   Register an SPN for the Report Server service under the domain user account. For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
--   Change the service account to run under a built-in account such as Network Service. Built-in accounts map HTTP SPN to the Host SPN, which is defined when you join a computer to your network. For more information, see [Configure a Service Account &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).
+-   Change the service account to run under a built-in account such as Network Service. Built-in accounts map HTTP SPN to the Host SPN, which is defined when you join a computer to your network. For more information, see [Configure a Service Account &#40;Report Server Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).
   
 -   Use NTLM. NTLM will generally work in cases where Kerberos authentication fails. To use NTLM, remove **RSWindowsNegotiate** from the RSReportServer.config file and verify that only **RSWindowsNTLM** is specified. If you choose this approach, you can continue to use a domain user account for the Report Server service even if you do not define an SPN for it.  
   
@@ -144,7 +145,7 @@ ms.author: maggies
   
 -   One option for converting the value Decimal value to hexadecimal form is to us the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Calculator. Windows Calculator supports several modes that show the 'Dec' option and 'Hex' options. Select the 'Dec' option, paste or type in the decimal value you found in the log file and then select the 'Hex' option.  
   
--   Then refer to the topic [User-Account-Control Attribute](https://go.microsoft.com/fwlink/?LinkId=183366) to derive the attribute for the service account.  
+-   Then refer to the topic [User-Account-Control Attribute](/windows/win32/adschema/a-useraccountcontrol) to derive the attribute for the service account.  
   
 ##### SPNs Configured in Active Directory for the Reporting Services service account.  
  To log the SPNs in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service trace log file, you can enable the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Extended Protection feature temporarily.  
@@ -156,15 +157,9 @@ ms.author: maggies
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   Restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service and look for entries similar to the following in the trace log file:  
-  
-    ```  
-    rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - \<HTTP/sqlpod064-13.w2k3.net>.  
-    ```  
-  
--   The values under \<Explicit> will contain the SPNs configured in Active Directory for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service account.  
-  
- If you do not want to continue using Extended Protection, then set the configuration values back to defaults and restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service account.  
+-   Restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service.
+
+ If you don't want to continue using Extended Protection, then set the configuration values back to defaults and restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service account.  
   
 ```  
 <RSWindowsExtendedProtectionLevel>Off</RSWindowsExtendedProtectionLevel>  
@@ -198,7 +193,7 @@ ms.author: maggies
   
 ## External resources  
   
--   For additional information regarding Kerberos and report servers, see [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos.](https://go.microsoft.com/fwlink/?LinkID=177751)  
+-   For additional information regarding Kerberos and report servers, see [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos.](https://www.kasperonbi.com/deploying-a-business-intelligence-solution-using-sharepoint-reporting-services-and-performancepoint-monitoring-server-with-kerberos/)  
   
 ## See Also  
  [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md)   
@@ -207,5 +202,4 @@ ms.author: maggies
  [Configure Basic Authentication on the Report Server](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
  [Configure Custom or Forms Authentication on the Report Server](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
  [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
-  
   

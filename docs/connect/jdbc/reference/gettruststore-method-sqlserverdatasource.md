@@ -1,4 +1,5 @@
 ---
+description: "getTrustStore Method (SQLServerDataSource)"
 title: "getTrustStore Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "getTrustStore Method (SQLServerDataSource)"
 apilocation: 
   - "getTrustStore Method (SQLServerDataSource)"
 apitype: "Assembly"
 ms.assetid: 8f5850e4-8627-49a8-ba0e-b1f4014322a5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getTrustStore Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

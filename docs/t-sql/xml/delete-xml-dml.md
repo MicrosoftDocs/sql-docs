@@ -1,11 +1,12 @@
 ---
-title: "delete (XML DML) | Microsoft Docs"
+description: "delete (XML DML)"
+title: delete (XML DML)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -18,18 +19,19 @@ author: MightyPen
 ms.author: genemi
 ---
 # delete (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Deletes nodes from an XML instance.  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 delete Expression  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Expression*  
  Is an XQuery expression identifying the nodes to be deleted. All the nodes selected by the expression, and also all the nodes or values that are contained within the selected nodes, are deleted. As described in [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md), this must be a reference to an existing node in the document. It cannot be a constructed node. The expression cannot be the root (/) node. If the expression returns an empty sequence, no deletion occurs and no errors are returned.  
   
@@ -38,8 +40,8 @@ delete Expression
 ### A. Deleting nodes from a document stored in an untyped xml variable  
  The following example illustrates how to delete various nodes from a document. First, an XML instance is assigned to variable of **xml** type. Then, subsequent delete XML DML statements delete various nodes from the document.  
   
-```  
-DECLARE @myDoc xml  
+```sql
+DECLARE @myDoc XML  
 SET @myDoc = '<?Instructions for=TheWC.exe ?>   
 <Root>  
  <!-- instructions for the 1st work center -->  
@@ -80,9 +82,9 @@ SELECT @myDoc
 ### B. Deleting nodes from a document stored in an untyped xml column  
  In the following example, a **delete** XML DML statement removes the second child element of <`Features`> from the document stored in the column.  
   
-```  
-CREATE TABLE T (i int, x xml)  
-go  
+```sql
+CREATE TABLE T (i INT, x XML)  
+GO  
 INSERT INTO T VALUES(1,'<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
@@ -91,7 +93,7 @@ INSERT INTO T VALUES(1,'<Root>
 </Features>  
 </ProductDescription>  
 </Root>')  
-go  
+GO
 -- verify the contents before delete  
 SELECT x.query(' //ProductDescription/Features')  
 FROM T  
@@ -114,68 +116,69 @@ FROM T
   
  In the example, you first create a table (T) with a typed **xml** column in the AdventureWorks database. You then copy a manufacturing instructions XML instance from the Instructions column in the ProductModel table into table T and delete one or more nodes from the document.  
   
-```  
-use AdventureWorks  
-go  
-drop table T  
-go  
-create table T(ProductModelID int primary key,   
-Instructions xml (Production.ManuInstructionsSchemaCollection))  
-go  
-insert  T   
-select ProductModelID, Instructions  
-from Production.ProductModel  
-where ProductModelID=7  
-go  
-select Instructions  
-from T  
+```sql
+USE AdventureWorks  
+GO  
+DROP TABLE T  
+GO  
+CREATE TABLE T(
+    ProductModelID INT PRIMARY KEY,   
+    Instructions XML (Production.ManuInstructionsSchemaCollection))  
+GO  
+INSERT T   
+SELECT ProductModelID, Instructions  
+FROM Production.ProductModel  
+WHERE ProductModelID = 7  
+GO  
+SELECT Instructions  
+FROM T  
 --1) insert <Location 1000/>. Note: <Root> must be singleton in the query  
-update T  
-set Instructions.modify('  
-  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
-  insert <MI:Location LocationID="1000"  LaborHours="1000" >  
+UPDATE T  
+SET Instructions.modify('  
+  DECLARE namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  INSERT <MI:Location LocationID="1000"  LaborHours="1000" >  
            These are manu steps at location 1000.   
            <MI:step>New step1 instructions</MI:step>  
            Instructions for step 2 are here  
            <MI:step>New step 2 instructions</MI:step>  
          </MI:Location>  
-  as first  
-  into   (/MI:root)[1]  
+  AS first  
+  INTO   (/MI:root)[1]  
 ')  
-go  
-select Instructions  
-from T  
+GO 
+SELECT Instructions  
+FROM T  
   
 -- delete an attribute  
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   delete(/MI:root/MI:Location[@LocationID=1000]/@LaborHours)   
 ')  
-go  
-select Instructions  
-from T  
+GO  
+SELECT Instructions  
+FROM T  
 -- delete text in <location>  
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   delete(/MI:root/MI:Location[@LocationID=1000]/text())   
 ')  
-go  
-select Instructions  
-from T  
+GO  
+SET Instructions  
+FROM T  
 -- delete 2nd manu step at location 1000  
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   delete(/MI:root/MI:Location[@LocationID=1000]/MI:step[2])   
 ')  
-go  
-select Instructions  
-from T  
+GO  
+SELECT Instructions  
+FROM T  
 -- cleanup  
-drop table T  
-go  
+DROP TABLE T  
+GO 
 ```  
   
 ## See Also  

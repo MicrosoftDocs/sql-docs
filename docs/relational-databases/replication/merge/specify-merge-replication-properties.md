@@ -1,4 +1,5 @@
 ---
+description: "Specify Merge Replication properties"
 title: "Specify Merge Replication properties| Microsoft Docs"
 ms.custom: ""
 ms.date: "11/20/2018"
@@ -16,7 +17,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Specify Merge Replication properties
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 This topic explains how to specify various properties for your merge replication. 
 
 ## Merge Article is Download-Only
@@ -111,7 +112,7 @@ On the **Articles** page of the New Publication Wizard select a table, and then 
 1.  At the Publisher on the publication database, execute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify the name of the publication to which the article belongs for `@publication`, a name for the article for `@article`, the database object being published for `@source_object`, and a value of **true** for `@allow_interactive_resolver`. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
  
 ## Conflict Tracking and Resolution Level for Merge Articles
-This topic describes how to specify the conflict tracking and resolution level for merge articles in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+This topic describes how to specify the conflict tracking and resolution level for merge articles in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  When a subscription to a merge publication is synchronized, replication checks for conflicts caused by changes to the same data made at both the Publisher and the Subscriber. You can specify whether conflicts are detected at the row-level, where any change to the row is considered a conflict, or column-level, where only changes to the same row and column are considered a conflict. Conflict resolution for articles is performed at the row-level. For more information about conflict detection and resolution when logical records are used, see [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
  
@@ -163,8 +164,8 @@ This topic describes how to specify the conflict tracking and resolution level f
   
 At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify a value of **false** for `@delete_tracking`. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).
   
-    > [!NOTE]  
-    >  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  
+> [!NOTE]  
+>  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  
   
 ### Specify that deletes be ignored for an existing merge article  
   

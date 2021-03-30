@@ -1,9 +1,8 @@
 ---
+description: "Upgrade a database using detach and attach (Transact-SQL)"
 title: "Upgrade a database using detach & attach (Transact-SQL)"
-ms.custom: ""
-ms.date: "11/26/2018"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
@@ -20,8 +19,8 @@ ms.author: "sstein"
 ms.custom: seo-dt-2019
 ---
 # Upgrade a database using detach and attach (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-This topic describes how to use detach and attach operations to upgrade a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. After being attached to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the database is available immediately and is automatically upgraded. This prevents the database from being used with an older version of the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. However, metadata upgrade does not affect the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) setting of a database. See more information in [Database Compatibility Level After Upgrade](#dbcompat) later in this topic.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+This topic describes how to use detach and attach operations to upgrade a database in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. After being attached to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the database is available immediately and is automatically upgraded. This prevents the database from being used with an older version of the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. However, metadata upgrade does not affect the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) setting of a database. See more information in [Database Compatibility Level After Upgrade](#dbcompat) later in this topic.  
   
  **In this topic**  
   
@@ -67,7 +66,7 @@ We recommend that you do not attach or restore databases from unknown or untrust
     > [!NOTE]  
     >  If you try to attach the database without specifying the log file, the attach operation will look for the log file in its original location. If the original copy of the log still exists in that location, that copy is attached. To avoid using the original log file, either specify the path of the new log file or remove the original copy of the log file (after copying it to the new location).  
   
-3.  Attach the copied files to the instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Attach a Database](../../relational-databases/databases/attach-a-database.md).  
+3.  Attach the copied files to the instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For more information, see [Attach a Database](../../relational-databases/databases/attach-a-database.md).  
   
 ## Example  
  The following example upgrades a copy of a database from an earlier version of SQL Server. The [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are executed in a Query Editor window that is connected to the server instance to which is attached.  
@@ -106,8 +105,11 @@ We recommend that you do not attach or restore databases from unknown or untrust
 If the database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **upgrade_option** server property. If the upgrade option is set to import (**upgrade_option** = 2) or rebuild (**upgrade_option** = 0), the full-text indexes will be unavailable during the upgrade. Depending the amount of data being indexed, importing can take several hours, and rebuilding can take up to ten times longer. Note also that when the upgrade option is set to import, the associated full-text indexes are rebuilt if a full-text catalog is not available. To change the setting of the **upgrade_option** server property, use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
 ### <a name="dbcompat"></a> Database Compatibility Level After Upgrade  
-If the compatibility level of a user database is 100 or higher before upgrade, it remains the same after upgrade. If the compatibility level is 90 before upgrade in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
-  
+
+After the upgrade, the database compatibility level remains at the compatibility level before the upgrade, unless the previous compatibility level is not supported on the new version. In this case, the upgraded database compatibility level is set to the lowest supported compatibility level.
+
+For example, if you attach a database that was compatibility level 90 before attaching it to an instance of [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], after the upgrade the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
+
 ### Managing Metadata on the Upgraded Server Instance  
 When you attach a database onto another server instance, to provide a consistent experience to users and applications, you might have to re-create some or all of the metadata for the database, such as logins, jobs, and permissions, on the other server instance. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   

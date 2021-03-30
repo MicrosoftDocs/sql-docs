@@ -1,5 +1,6 @@
 ---
 title: "Copy-Only Backups | Microsoft Docs"
+description: A copy-only backup is a SQL Server backup that is independent of the sequence of SQL Server backups. It does not affect how later backups are restored.
 ms.custom: ""
 ms.date: "01/30/2019"
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
   - "COPY_ONLY option [BACKUP statement]"
   - "backups [SQL Server], copy-only backups"
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+author: cawrites
+ms.author: chadam
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # Copy-Only Backups
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups. Usually, taking a backup changes the database and affects how later backups are restored. However, occasionally, it is useful to take a backup for a special purpose without affecting the overall backup and restore procedures for the database. Copy-only backups serve this purpose.
   
@@ -38,7 +39,7 @@ A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
  Copy-only backups are recorded in the **is_copy_only** column of the [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) table.  
  
  > [!IMPORTANT]  
-> In Azure SQL managed instance copy-only backup cannot be created for a database encrypted with [service-managed Transparent Data Encryption (TDE)](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption). Service-managed TDE uses internal key for encryption of data, and that key cannot be exported, so you could not restore the backup anywhere else. Consider using [customer-managed TDE](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql) instead to be able to create copy-only backups of encrypted databases, but make sure to have encryption key available for later restore.
+> In Azure SQL Managed Instance copy-only backup cannot be created for a database encrypted with [service-managed Transparent Data Encryption (TDE)](/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption). Service-managed TDE uses internal key for encryption of data, and that key cannot be exported, so you could not restore the backup anywhere else. Consider using [customer-managed TDE](/azure/sql-database/transparent-data-encryption-byok-azure-sql) instead to be able to create copy-only backups of encrypted databases, but make sure to have encryption key available for later restore.
   
 ## To Create a Copy-Only Backup  
  You can create a copy-only backup by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.  
@@ -91,7 +92,7 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
  **To set up and use the SQL Server PowerShell provider**  
   
-- [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+- [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md)  
 
 ## See also  
  [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
@@ -101,4 +102,3 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase)
 
-  

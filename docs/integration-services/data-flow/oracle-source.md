@@ -1,5 +1,6 @@
 ---
-title: "Oracle source | Microsoft Docs"
+description: "Oracle source"
+title: Oracle source
 ms.custom: ""
 ms.date: "08/14/2019"
 ms.prod: sql
@@ -10,9 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ---
+
 # Oracle source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 The Oracle source extracts data from Oracle Database with below modes:
 
@@ -64,7 +66,7 @@ For more information, see one of the following sections:
 - [Oracle Source Editor (Columns Page)](#oracle-source-editor-columns-page)
 - [Oracle Source Editor (Error Output Page)](#oracle-source-editor-error-output-page)
 
-![](media/oracle-source.png)
+![Oracle source](media/oracle-source.png)
 
 The **Advanced Editor dialog box** contains the properties that can be set programmatically.
 
@@ -155,7 +157,7 @@ Use the **Error Output** page of the **Oracle Source Editor** dialog box to sele
 **Error behavior**
 
 Select how the Oracle source should handle errors in a flow: ignore the failure, redirect the row, or fail the component.
-**Related section**: [Error Handling in Data](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**Related section**: [Error Handling in Data](./error-handling-in-data.md)
 
 **Truncation**
 

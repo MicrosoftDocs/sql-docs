@@ -1,10 +1,10 @@
 ---
-title: "Rowset Properties and Behaviors | Microsoft Docs"
-description: "Rowset properties and behaviors in OLE DB Driver for SQL Server"
+title: Rowset properties and behaviors (OLE DB driver)
+description: These are the OLE DB Driver for SQL Server rowset properties, including property name and description.
 ms.custom: ""
-ms.date: "06/14/2018"
+ms.date: "09/30/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -13,15 +13,15 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, rowsets"
   - "properties [OLE DB]"
   - "OLE DB rowsets, properties"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Rowset Properties and Behaviors
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  These are the OLE DB Driver for SQL Server rowset properties.  
+  The following are the OLE DB Driver for SQL Server rowset properties:
   
 |Property ID|Description|  
 |-----------------|-----------------|  
@@ -31,10 +31,10 @@ ms.author: pelopes
 |DBPROP_BLOCKINGSTORAGEOBJECTS|R/W: Read-only<br /><br /> Default: VARIANT_TRUE<br /><br /> Description: The OLE DB Driver for SQL Server storage objects block using other rowset methods.|  
 |DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|R/W: Read/write<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: The OLE DB Driver for SQL Server supports bookmarks for rowset row identification when DBPROP_BOOKMARKS or DBPROP_LITERALBOOKMARKS is VARIANT_TRUE.<br /><br /> Setting either property to VARIANT_TRUE does not enable rowset positioning by bookmark. Set DBPROP_IRowsetLocate or DBPROP_IRowsetScroll to VARIANT_TRUE to create a rowset supporting rowset positioning by bookmark.<br /><br /> The OLE DB Driver for SQL Server uses a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursor to support a rowset that contains bookmarks. For more information, see [Rowsets and SQL Server Cursors](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).<br /><br /> Note: Setting these properties in conflict with other OLE DB Driver for SQL Server cursor-defining properties causes an error. For example, setting the DBPROP_BOOKMARKS to VARIANT_TRUE when DBPROP_OTHERINSERT is also VARIANT_TRUE generates an error when the consumer tries to open a rowset.|  
 |DBPROP_BOOKMARKSKIPPED|R/W: Read-only<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: The OLE DB Driver for SQL Server returns DB_E_BADBOOKMARK if the consumer indicates an invalid bookmark when positioning or searching a bookmarked rowset.|  
-|DBPROP_BOOKMARKTYPE|R/W: Read-only<br /><br /> Default: DBPROPVAL_BMK_NUMERIC<br /><br /> Description: The OLE DB Driver for SQL Server implements numeric bookmarks only. A OLE DB Driver for SQL Server bookmark is 32-bit unsigned integer, type DBTYPE_UI4.|  
+|DBPROP_BOOKMARKTYPE|R/W: Read-only<br /><br /> Default: DBPROPVAL_BMK_NUMERIC<br /><br /> Description: The OLE DB Driver for SQL Server implements numeric bookmarks only. An OLE DB Driver for SQL Server bookmark is 32-bit unsigned integer, type DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|This rowset property is not implemented by the OLE DB Driver for SQL Server. Trying to read or write the property value generates an error.|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|R/W: Read/write<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: The OLE DB Driver for SQL Server supports backward fetching and scrolling in nonsequential rowsets. The OLE DB Driver for SQL Server creates a cursor-supported rowset when either DBPROP_CANFETCHBACKWARDS or DBPROP_CANSCROLLBACKWARDS is VARIANT_TRUE. For more information, see [Rowsets and SQL Server Cursors](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
-|DBPROP_CANHOLDROWS|R/W: Read/write<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: By default, the OLE DB Driver for SQL Server returns DB_E_ROWSNOTRELEASED if the consumer tries to obtain more rows for a rowset while pending changes exist on those currently in the rowset. This behavior can be modified.<br /><br /> Setting both DBPROP_CANHOLDROWS and DBPROP_IRowsetChange to VARIANT_TRUE implies a bookmarked rowset. If both properties are VARIANT_TRUE, the **IRowsetLocate** interface is available on the rowset and DBPROP_BOOKMARKS and DBPROP_LITERALBOOKMARKS are both VARIANT_TRUE.<br /><br /> OLE DB Driver for SQL Server rowsets that contain bookmarks are supported by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursors.|  
+|DBPROP_CANHOLDROWS|R/W: Read/write<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: By default, the OLE DB Driver for SQL Server returns DB_E_ROWSNOTRELEASED if the consumer tries to obtain more rows for a rowset while pending changes exist on the rows currently in the rowset. This behavior can be modified.<br /><br /> Setting both DBPROP_CANHOLDROWS and DBPROP_IRowsetChange to VARIANT_TRUE implies a bookmarked rowset. If both properties are VARIANT_TRUE, the **IRowsetLocate** interface is available on the rowset and DBPROP_BOOKMARKS and DBPROP_LITERALBOOKMARKS are both VARIANT_TRUE.<br /><br /> OLE DB Driver for SQL Server rowsets that contain bookmarks are supported by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursors.|  
 |DBPROP_CHANGEINSERTEDROWS|R/W: Read/write<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: This property can only be set to VARIANT_TRUE if the rowset is using a keyset-driven cursor.|  
 |DBPROP_COLUMNRESTRICT|R/W: Read-only<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: The OLE DB Driver for SQL Server sets the property to VARIANT_TRUE when a column in a rowset cannot be changed by the consumer. Other columns in the rowset may be updatable and the rows themselves may be deleted.<br /><br /> When the property is VARIANT_TRUE, the consumer examines the *dwFlags* member of the DBCOLUMNINFO structure to determine whether the value of an individual column can be written or not. For modifiable columns, *dwFlags* exhibits DBCOLUMNFLAGS_WRITE.|  
 |DBPROP_COMMANDTIMEOUT|R/W: Read/write<br /><br /> Default: 0<br /><br /> Description: By default, the OLE DB Driver for SQL Server does not time out on the **ICommand::Execute** method.|  
@@ -74,7 +74,7 @@ ms.author: pelopes
 |DBPROP_REPORTMULTIPLECHANGES|This rowset property is not implemented by the OLE DB Driver for SQL Server. Trying to read or write the property value generates an error.|  
 |DBPROP_RETURNPENDINGINSERTS|R/W: Read-only<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: When a method that fetches rows is called, the OLE DB Driver for SQL Server does not return pending insert rows.|  
 |DBPROP_ROWRESTRICT|R/W: Read-only<br /><br /> Default: VARIANT_TRUE<br /><br /> Description: OLE DB Driver for SQL Server rowsets do not support access rights based on the row. If the **IRowsetChange** interface is exposed on a rowset, the **SetData** method can be called by the consumer.|  
-|DBPROP_ROWSET_ASYNCH|R/W: Read/write<br /><br /> Default: 0<br /><br /> Description: Provides for anychronous rowset processing. This property is in the Rowset property group and DBPROPSET_ROWSET property set. Type is VT_14.<br /><br /> The only value in the bitmask supported by OLE DB Driver for SQL Server is **DBPROPVAL_ASYNCH_INITIALIZE**.|  
+|DBPROP_ROWSET_ASYNCH|R/W: Read/write<br /><br /> Default: 0<br /><br /> Description: Provides for asynchronous rowset processing. This property is in the Rowset property group and DBPROPSET_ROWSET property set. Type is VT_14.<br /><br /> The only value in the bitmask supported by OLE DB Driver for SQL Server is **DBPROPVAL_ASYNCH_INITIALIZE**.|  
 |DBPROP_ROWTHREADMODEL|R/W: Read-only<br /><br /> Default: DBPROPVAL_RT_FREETHREAD<br /><br /> Description: The OLE DB Driver for SQL Server supports access to its objects from multiple execution threads of a single consumer.|  
 |DBPROP_SERVERCURSOR|R/W: Read/write<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: When set, a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursor is used to support the rowset. For more information, see [Rowsets and SQL Server Cursors](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_SERVERDATAONINSERT|R/W: Read/write<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: Server data on insert.<br /><br /> VARIANT_TRUE: At the time an insert is transmitted to the server, the provider retrieves data from the server to update the local row cache.<br /><br /> VARIANT_FALSE: The provider does not retrieve server values for newly inserted rows.|  
@@ -91,6 +91,7 @@ ms.author: pelopes
 |SSPROP_DEFERPREPARE|Column: No<br /><br /> R/W: Read/write<br /><br /> Type: VT_BOOL<br /><br /> Default: VARIANT_TRUE<br /><br /> Description: VARIANT_TRUE: In prepared execution, the command preparation is deferred until **ICommand::Execute** is called or a metaproperty operation is performed. If the property is set to<br /><br /> VARIANT_FALSE: The statement is prepared when **ICommandPrepare::Prepare** is executed.|  
 |SSPROP_IRowsetFastLoad|Column: No<br /><br /> R/W: Read/write<br /><br /> Type: VT_BOOL<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: Set this property to VARIANT_TRUE to open a fast load rowset through **IOpenRowset::OpenRowset**. You cannot set this property in **ICommandProperties::SetProperties**.|  
 |SSPROP_ISSAsynchStatus|Column: No.<br /><br /> R/W: Read/write<br /><br /> Type: VT_BOOL<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: Set this property to VARIANT_TRUE to enable asynchronous operations using the [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) interface.|  
+|SSPROP_ISSDataClassification|R/W: Read/write<br /><br />  Type: VT_BOOL<br /><br /> Default: VARIANT_TRUE<br /><br /> Description: The OLE DB Driver for SQL Server supports retrieval of sensitivity classification information using the [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md) interface.|  
 |SSPROP_MAXBLOBLENGTH|Column: No<br /><br /> R/W: Read/write<br /><br /> Type: VT_I4<br /><br /> Default: The provider does not restrict the size of the text returned by the server and the property value is set to its maximum. For example, 2147483647.<br /><br /> Description: The OLE DB Driver for SQL Server executes a SET TEXTSIZE statement to restrict the length of binary large object (BLOB) data returned in a SELECT statement.|  
 |SSPROP_NOCOUNT_STATUS|Column: NoCount<br /><br /> R/W: Read-only<br /><br /> Type: VT_BOOL<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: A boolean value representing the status of SET NOCOUNT ON/OFF in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:<br /><br /> VARIANT_TRUE: when SET NOCOUNT ON<br /><br /> VARIANT_FALSE: when SET NOCOUNT OFF|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|Column: No<br /><br /> R/W: Read/write<br /><br /> Type: VT_BSTR (1-2000 characters allowed)<br /><br /> Default: Empty string<br /><br /> Description: The message text of the query notification. This is user defined, and has no defined format.|  

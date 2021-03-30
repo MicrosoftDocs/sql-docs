@@ -1,4 +1,5 @@
 ---
+description: "Revert word breakers used by Search to previous version (SQL Server Search)"
 title: "Revert word breakers used by Search to previous version"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -9,22 +10,24 @@ ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---
 # Revert word breakers used by Search to previous version (SQL Server Search)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installs and enables a version of the word breakers and stemmers for all languages supported by Full-Text Search with the exception of Korean. This article describes how to switch from this version of these components to the previous version, or to switch back from the previous version to the new version.  
+
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] installs and enables a version of the word breakers and stemmers for all languages supported by Full-Text Search with the exception of Korean. This article describes how to switch from this version of these components to the previous version, or to switch back from the previous version to the new version.  
   
  This article does not discuss the following languages:  
   
--   **English**. To revert or restore the English components, see [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+- **English**. To revert or restore the English components, see [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
--   **Danish, Polish, and Turkish**. The third-party word breakers for Danish, Polish, and Turkish that were included with previous releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] have been replaced with [!INCLUDE[msCoName](../../includes/msconame-md.md)] components.  
+- **Danish, Polish, and Turkish**. The third-party word breakers for Danish, Polish, and Turkish that were included with previous releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] have been replaced with [!INCLUDE[msCoName](../../includes/msconame-md.md)] components.  
   
--   **Czech and Greek**. There are new word breakers for Czech and Greek. Previous releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text Search did not include support for these two languages.  
+- **Czech and Greek**. There are new word breakers for Czech and Greek. Previous releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text Search did not include support for these two languages.  
   
--   **Korean**. The word breaker and stemmer for the Korean language are not upgraded in this release.  
+- **Korean**. The word breaker and stemmer for the Korean language are not upgraded in this release.  
   
  For general information about word breakers and stemmers, see [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
@@ -35,7 +38,7 @@ ms.custom: "seo-lt-2019"
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
 |NaturalLanguage6.dll|NaturalLanguage6.dll|34|Obtain and install a previous version of NaturalLanguage6.dll, overwriting the current version of the file.|No action required.<br /><br /> The registry keys and values have not changed for this release.|  
 |(Other file name)|NaturalLanguage6.dll|5|Obtain and install a previous version of NaturalLanguage6.dll, overwriting the current version of the file.|Change a set of registry entries to specify the previous version of the components.|  
-|(Other file name)|(Other file name)|6|No action required.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] setup copies both the current and the previous versions of the components to the Binn folder.|Change a set of registry entries to specify the previous version of the components.|  
+|(Other file name)|(Other file name)|6|No action required.<br /><br /> [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] setup copies both the current and the previous versions of the components to the Binn folder.|Change a set of registry entries to specify the previous version of the components.|  
   
 > [!WARNING]  
 >  If you replace the current version of the file NaturalLanguage6.dll with a different version, then the behavior of all the languages that use this file is affected.  
@@ -54,40 +57,40 @@ ms.custom: "seo-lt-2019"
   
 |Language|Abbreviation<br />used in the<br />registry|LCID|  
 |--------------|---------------------------------------|----------|  
-|Bengali|ben|1093|  
-|Bulgarian|bgr|1026|  
-|Catalan|cat|1027|  
-|Spanish|esn|3082|  
-|French|fra|1036|  
-|Gujarati|guj|1095|  
-|Hebrew|heb|1037|  
-|Hindi|hin|1081|  
-|Croatian|hrv|1050|  
-|Indonesian|ind|1057|  
-|Icelandic|isl|1039|  
-|Italian|ita|1040|  
-|Kannada|kan|1099|  
-|Lithuanian|lth|1063|  
-|Latvian|lvi|1062|  
-|Malayalam|mal|1100|  
-|Marathi|mar|1102|  
-|Malay|msl|1086|  
-|Neutral|Neutral|0000|  
-|Norwegial Bokmaal|nor|1044|  
-|Punjabi|pan|1094|  
-|Portuguese (Brazil)|ptb|1046|  
-|Portuguese|ptg|2070|  
-|Romanian|rom|1048|  
-|Slovak|sky|1051|  
-|Slovenian|slv|1060|  
-|Serbian - Cyrillic|srb|3098|  
-|Serbian - Latin|srl|2074|  
-|Swedish|sve|1053|  
-|Tamil|tam|1097|  
-|Telugu|tel|1098|  
-|Ukrainian|ukr|1058|  
-|Urdu|urd|1056|  
-|Vietnamese|vit|1066|  
+|Bengali|`ben`|1093|  
+|Bulgarian|`bgr`|1026|  
+|Catalan|`cat`|1027|  
+|Spanish|`esn`|3082|  
+|French|`fra`|1036|  
+|Gujarati|`guj`|1095|  
+|Hebrew|`heb`|1037|  
+|Hindi|`hin`|1081|  
+|Croatian|`hrv`|1050|  
+|Indonesian|`ind`|1057|  
+|Icelandic|`isl`|1039|  
+|Italian|`ita`|1040|  
+|Kannada|`kan`|1099|  
+|Lithuanian|`lth`|1063|  
+|Latvian|`lvi`|1062|  
+|Malayalam|`mal`|1100|  
+|Marathi|`mar`|1102|  
+|Malay|`msl`|1086|  
+|Neutral|`Neutral`|0000|  
+|Norwegial Bokmaal|`nor`|1044|  
+|Punjabi|`pan`|1094|  
+|Portuguese (Brazil)|`ptb`|1046|  
+|Portuguese|`ptg`|2070|  
+|Romanian|`rom`|1048|  
+|Slovak|`sky`|1051|  
+|Slovenian|`slv`|1060|  
+|Serbian - Cyrillic|`srb`|3098|  
+|Serbian - Latin|`srl`|2074|  
+|Swedish|`sve`|1053|  
+|Tamil|`tam`|1097|  
+|Telugu|`tel`|1098|  
+|Ukrainian|`ukr`|1058|  
+|Urdu|`urd`|1056|  
+|Vietnamese|`vit`|1066|  
   
  The preceding table is sorted alphabetically on the Abbreviation column.  
   
@@ -95,9 +98,9 @@ ms.custom: "seo-lt-2019"
   
 1.  Navigate to the Binn folder described above.  
   
-2.  Back up the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of NaturalLanguage6.dll to another location.  
+2.  Back up the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] version of NaturalLanguage6.dll to another location.  
   
-3.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] into the Binn folder of the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance.  
+3.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] into the Binn folder of the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance.  
   
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
@@ -106,9 +109,9 @@ ms.custom: "seo-lt-2019"
 
 ###  <a name="nl6nl6restore"></a> To restore the current components  
   
-1.  Navigate to the location where you backed up the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of NaturalLanguage6.dll.  
+1.  Navigate to the location where you backed up the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] version of NaturalLanguage6.dll.  
   
-2.  Copy the current version of NaturalLanguage6.dll from the backup location into the Binn folder of the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance.  
+2.  Copy the current version of NaturalLanguage6.dll from the backup location into the Binn folder of the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance.  
   
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
@@ -141,9 +144,9 @@ ms.custom: "seo-lt-2019"
   
 2.  Do not remove the files for the current version of the components from the Binn folder.  
   
-3.  Back up the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of NaturalLanguage6.dll to another location.  
+3.  Back up the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] version of NaturalLanguage6.dll to another location.  
   
-4.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] into the Binn folder of the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance.  
+4.  Copy the previous version of NaturalLanguage6.dll from the Binn folder of an instance of [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] into the Binn folder of the new [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance.  
   
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
@@ -170,9 +173,9 @@ ms.custom: "seo-lt-2019"
   
 ###  <a name="newnl6restore"></a> To restore the current components  
   
-1.  Navigate to the location where you backed up the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of NaturalLanguage6.dll.  
+1.  Navigate to the location where you backed up the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] version of NaturalLanguage6.dll.  
   
-2.  Copy the current version of NaturalLanguage6.dll from the backup location into the Binn folder of the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance.  
+2.  Copy the current version of NaturalLanguage6.dll from the backup location into the Binn folder of the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance.  
   
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
@@ -248,7 +251,7 @@ ms.custom: "seo-lt-2019"
 |Current file name|MsWb7.dll|MsWb7.dll|  
   
 ##  <a name="newnew"></a> Languages for which neither the previous nor the current file name is NaturalLanguage6.dll  
- For the languages in the following table, the file names of the previous word breakers and stemmers are different from the file names of the new versions. Neither the previous nor the current file name is NaturalLanguage6.dll. You do not have to replace any files, because [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] setup copies both the current and the previous versions of the components to the Binn folder. However you have to change a set of registry entries to specify the previous or current version of the components.  
+ For the languages in the following table, the file names of the previous word breakers and stemmers are different from the file names of the new versions. Neither the previous nor the current file name is NaturalLanguage6.dll. You do not have to replace any files, because [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] setup copies both the current and the previous versions of the components to the Binn folder. However you have to change a set of registry entries to specify the previous or current version of the components.  
   
  **List of affected languages**  
   
@@ -374,5 +377,4 @@ ms.custom: "seo-lt-2019"
   
 ## See Also  
  [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [Behavior Changes to Full-Text Search](/sql/database-engine/behavior-changes-to-full-text-search)
- 
+ [Behavior Changes to Full-Text Search](./full-text-search.md)

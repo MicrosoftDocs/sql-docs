@@ -1,4 +1,5 @@
 ---
+description: "unwrap Method (SQLServerConnectionPoolDataSource)"
 title: "unwrap Method (SQLServerConnectionPoolDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f5c9b734-2096-4ae4-a284-6b4d1b4a00d4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # unwrap Method (SQLServerConnectionPoolDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,6 @@
 ---
 title: "Highlight Chart Data by Adding Strip Lines (Report Builder) | Microsoft Docs"
+description: Use strip lines in horizontal or vertical ranges to improve readability, highlight dates, or highlight a specific key range in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

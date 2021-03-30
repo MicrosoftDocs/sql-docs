@@ -1,12 +1,13 @@
 ---
-title: "sqlsrv_prepare | Microsoft Docs"
+title: "sqlsrv_prepare"
+description: "API reference for the sqlsrv_prepare function in the Microsoft SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
 ms.date: "04/11/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "sqlsrv_prepare"
 apitype: "NA"
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_prepare"
   - "sqlsrv_prepare"
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -83,7 +84,7 @@ For alternative strategies for writing and reading large amounts of information,
   
 For more information, see [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
-## Example  
+## Example 1  
 The following example prepares and executes a statement. The statement, when executed (see [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), updates a field in the *Sales.SalesOrderDetail* table of the AdventureWorks database. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
@@ -130,7 +131,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## Example  
+## Example 2  
 The following example demonstrates how to prepare a statement and then re-execute it with different parameter values. The example updates the *OrderQty* column of the *Sales.SalesOrderDetail* table in the AdventureWorks database. After the updates have occurred, the database is queried to verify that the updates were successful. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
@@ -216,9 +217,9 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](https://php.net/manual/en/language.types.float.php). The same applies to bigint columns, especially when the values are outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](https://php.net/manual/en/language.types.float.php). The same applies to bigint columns, especially when the values are outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
-## Example  
+## Example 3  
 This code sample shows how to bind a decimal value as an input parameter.  
 
 ```
@@ -257,4 +258,3 @@ sqlsrv_close($conn);
 [Retrieving Data](../../connect/php/retrieving-data.md)
 
 [Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
-

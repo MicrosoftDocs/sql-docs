@@ -1,6 +1,6 @@
 ---
 title: "Bulk access to data in Azure Blob storage"
-ms.description: "Transact-SQL examples that use BULK INSERT and OPENROWSET to access data in an Azure Blob storage account."
+description: "Transact-SQL examples that use BULK INSERT and OPENROWSET to access data in an Azure Blob storage account."
 ms.date: "10/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---
 # Examples of bulk access to data in Azure Blob storage
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 The `BULK INSERT` and `OPENROWSET` statements can directly access a file in Azure blob storage. The following examples use data from a CSV (comma separated value) file (named `inv-2017-01-19.csv`), stored in a container (named `Week3`), stored in a storage account (named `newinvoices`). The path to format file can be used, but is not included in these examples.
 
-Bulk access to Azure blob storage from SQL Server, requires at least [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+Bulk access to Azure blob storage from SQL Server, requires at least [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
 
 > [!IMPORTANT]
 > All the paths to the container and to the files on blob are `CASE SENSITIVE`. If not correct, it might return error like "Cannot bulk load. The file "file.csv" does not exist or you don't have file access rights."
@@ -34,7 +34,7 @@ Bulk access to Azure blob storage from SQL Server, requires at least [!INCLUDE[s
 All of the examples below require a database scoped credential referencing a shared access signature.
 
 > [!IMPORTANT]
-> The external data source must be created with a database scoped credential that uses the `SHARED ACCESS SIGNATURE` identity. To create a shared access signature for your storage account, see the **Shared access signature** property on the storage account property page, in the Azure portal. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). For more information on credentials, see [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+> The external data source must be created with a database scoped credential that uses the `SHARED ACCESS SIGNATURE` identity. To create a shared access signature for your storage account, see the **Shared access signature** property on the storage account property page, in the Azure portal. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). For more information on credentials, see [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
 Create a database scoped credential using the `IDENTITY` which must be `SHARED ACCESS SIGNATURE`. Use the SAS token generated for the blob storage account. Verify that your SAS token does not have a leading `?`, that you have at least read permission on the object that should be loaded, and that the expiration period is valid (all dates are in UTC time).
 

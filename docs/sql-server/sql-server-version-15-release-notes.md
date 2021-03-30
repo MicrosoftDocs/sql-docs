@@ -1,5 +1,6 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
+description: Find information about SQL Server 2019 (15.x) limitations, known issues, help resources, and other release notes.
 ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
@@ -8,18 +9,18 @@ ms.topic: "article"
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: "= sql-server-ver15"
 ---
-# [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] release notes
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] release notes
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. For related information, see:
+This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]. For related information, see:
 
-> [What's New in [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]](../sql-server/what-s-new-in-sql-server-ver15.md)
+> [What's New in [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
+## [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] is the latest public release of [!INCLUDE[SQL Server 2019](../includes/ssnoversion-md.md)].
+[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] is the latest public release of [!INCLUDE[SQL Server 2019](../includes/ssnoversion-md.md)].
 
 Complete details about licensing are in `License Terms` folder on the installation media.
 
@@ -35,16 +36,16 @@ The RTM build number for SQL Server 2019 is `15.0.2000.5`.
 
 ## SQL Server installation may fail if SSMS 18.x is installed
 
-- **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] installation fails when the following installations happen in this order:
+- **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] installation fails when the following installations happen in this order:
   1. SQL Server Management Studio (SSMS) version 18.0, 18.1, 18.2, or 18.3 is installed on the server.
-  1. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] installation is attempted from removable media. For example, the installation media is a DVD.
+  1. [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] installation is attempted from removable media. For example, the installation media is a DVD.
 
 - **Workaround**:
   1. Uninstall any version of SSMS older than SSMS 18.3.1.
   1. Install a newer version of SSMS (18.3.1 or later). For the latest version, see [Download SSMS](../ssms/download-sql-server-management-studio-ssms.md).
-  1. Install [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] normally.
+  1. Install [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] normally.
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]
 
 ## UTF-8 collations
 
@@ -58,7 +59,7 @@ The RTM build number for SQL Server 2019 is `15.0.2000.5`.
   > [!NOTE]
   > There is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SQL Server Data Tools (SSDT). The latest [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) version 18 supports choice of UTF-8 enabled collations in the UI.
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RTM
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] RTM
 
 ## Master Data Service notification email contains broken link
 
@@ -68,7 +69,7 @@ The RTM build number for SQL Server 2019 is `15.0.2000.5`.
 
 - **Workaround**: Open the MDS portal and go to the resource manually.
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RTM
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] RTM
 
 ## See also
 
@@ -76,6 +77,6 @@ The RTM build number for SQL Server 2019 is `15.0.2000.5`.
 
 ## Machine Learning Services
 
-For issues in SQL Server Machine Learning Services, see [Known issues in SQL Server Machine Learning Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md).
+For issues in SQL Server Machine Learning Services, see [Known issues in SQL Server Machine Learning Services](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md).
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]

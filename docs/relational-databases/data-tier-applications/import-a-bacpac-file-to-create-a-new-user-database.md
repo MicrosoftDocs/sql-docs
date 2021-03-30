@@ -1,7 +1,7 @@
 ---
+description: "Import a BACPAC File to Create a New User Database"
 title: "Import a BACPAC file to create a new user database"
-ms.custom: ""
-ms.date: "01/31/2017"
+ms.date: 06/03/2020
 ms.prod: sql
 ms.technology:
 ms.topic: conceptual
@@ -25,10 +25,10 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: "stevestein"
 ms.author: "sstein"
 ms.custom: seo-dt-2019
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import a BACPAC File to Create a New User Database
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Import a data-tier application (DAC) file - a .bacpac file - to create a copy of the original database, with the data, on a new instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or to [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Export-import operations can be combined to migrate a DAC or database between instances, or to create a logical backup, such as creating an on-premises copy of a database deployed in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## Before You Begin  
@@ -116,8 +116,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  **For an Azure SQL Database:**  
   
- - **[Import a BACPAC file to create a new Azure SQL database](https://azure.microsoft.com/documentation/articles/sql-database-import/)** provides step by step instructions using the Azure portal, PowerShell, SSMS, or SqlPackage.  
- - Consult **[SQL Database options and performance: Understand what's available in each service tier](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** for a detailed look at the different service tiers.  
+ - **[Import a BACPAC file to create a new Azure SQL database](/azure/azure-sql/database/database-import)** provides step by step instructions using the Azure portal, PowerShell, SSMS, or SqlPackage.  
+ - Consult **[SQL Database options and performance: Understand what's available in each service tier](/azure/azure-sql/database/purchasing-models)** for a detailed look at the different service tiers.  
 
 ### Validation Page  
  Use this page to review any issues that block the operation. To continue, resolve blocking issues and then click **Re-run Validation** to ensure that validation is successful.  
@@ -138,8 +138,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  Click **Close** to close the wizard.  
   
 ## See Also  
-[Import a BACPAC file to create a new Azure SQL database](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+[Import a BACPAC file to create a new Azure SQL database](/azure/azure-sql/database/database-import)  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Export a Data-tier Application](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
-  
   

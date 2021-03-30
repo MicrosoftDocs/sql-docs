@@ -1,5 +1,6 @@
 ---
 title: "Add a Chart to a Report (Report Builder) | Microsoft Docs"
+description: Learn how to add a chart to a paginated report when you want to summarize data in a visual format in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -64,9 +65,8 @@ ms.author: maggies
  [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Chart Types &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Empty and Null Data Points in Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Tutorial: Adding a Bar Chart to Your Report (Report Builder)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutorial: Adding a Bar Chart to a Report (Report Designer)](https://go.microsoft.com/fwlink/?LinkId=198042)   
- [Tutorial: Adding a Pie Chart to Your Report (Report Builder)](https://go.microsoft.com/fwlink/?LinkId=198051)   
- [Tutorial: Adding a Pie Chart to a Report (Report Designer)](https://go.microsoft.com/fwlink/?LinkId=198041)  
-  
+ [Tutorial: Adding a Bar Chart to Your Report (Report Builder)](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [Tutorial: Adding a Bar Chart to a Report (Report Designer)](/previous-versions/sql/sql-server-2008-r2/cc281302(v=sql.105))   
+ [Tutorial: Adding a Pie Chart to Your Report (Report Builder)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Tutorial: Adding a Pie Chart to a Report (Report Designer)](/previous-versions/sql/sql-server-2008-r2/cc281304(v=sql.105))  
   

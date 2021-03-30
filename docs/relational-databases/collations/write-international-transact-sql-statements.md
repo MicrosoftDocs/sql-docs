@@ -1,4 +1,5 @@
 ---
+description: "Write International Transact-SQL Statements"
 title: "Write International Transact-SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2019"
@@ -17,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Write International Transact-SQL Statements
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Databases and database applications that use [!INCLUDE[tsql](../../includes/tsql-md.md)] statements will become more portable from one language to another, or will support multiple languages, if the following guidelines are followed:  
 
--   Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use either:
+-   Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use either:
     -   The **char**, **varchar**, and **varchar(max)** data types with a [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) enabled collation, and data is encoded using UTF-8.
     -   The **nchar**, **nvarchar**, and **nvarchar(max)** data types with [supplementary character (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) enabled collation, and data is encoded using UTF-16. Using a non-SC collation results in data being encoded using UCS-2.      
 

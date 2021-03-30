@@ -1,5 +1,6 @@
 ---
 title: "Customize the Data and Display of a Map or Map Layer (Report Builder) | Microsoft Docs"
+description:  Improve the user experience of data and display with changes to legends, color, labels, and resolution in Report Builder. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -82,7 +83,7 @@ ms.author: maggies
   
 -   Resolution and simplification. Choose a balance between drawing time and detailed outlines for lines and polygons.  
   
- To change these options, right-click the map viewport, use the [Map Viewport Properties Dialog Box, General](https://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) page and related pages.  
+ To change these options, right-click the map viewport, use the [Map Viewport Properties Dialog Box, General](./maps-report-builder-and-ssrs.md) page and related pages.  
   
 ##  <a name="Legends"></a> Change Options for the Legends  
  Legends help users interpret the data on a map.  
@@ -117,7 +118,7 @@ ms.author: maggies
   
  The group expression specifies how analytical data that has a relationship to spatial data is aggregated for each map element on the layer. By default, the group expression is the set of match fields that was specified for the relationship between the spatial data and the analytical data. For example, for a bubble map that displays city locations and population size for a country or region, the match fields include city name [City] and region name [Region] because there can be multiple cities with the same name. The corresponding group expression includes two fields: [City] and [Region].  
   
- For more information, see [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991).  
+ For more information, see [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](/archive/blogs/seanboon/sql-server-2008-r2-map-tips-how-to-import-shapefiles-into-sql-server-and-aggregate-spatial-data).  
   
 ##  <a name="MapElements"></a> Change Options for the Map Elements on the Layer  
  Map elements are the points, lines, or polygons on a layer that are based on the spatial data. For map elements, the following options can be set. These options apply to all map elements on the layer, whether or not they are embedded:  
@@ -158,5 +159,4 @@ ms.author: maggies
 ## See Also  
  [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
-  
   

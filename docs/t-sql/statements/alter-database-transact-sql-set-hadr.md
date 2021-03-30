@@ -1,4 +1,5 @@
 ---
+description: "ALTER DATABASE SET HADR (Transact-SQL)"
 title: "ALTER DATABASE SET HADR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SET HADR"
   - "SET_HADR_TSQL"
@@ -21,11 +22,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], Transact-SQL statements"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
-author: CarlRabeler
-ms.author: carlrab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER DATABASE (Transact-SQL) SET HADR 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic contains the ALTER DATABASE syntax for setting [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] options on a secondary database. Only one SET HADR option is permitted per ALTER DATABASE statement. These options are supported only on secondary replicas.  
   
@@ -33,8 +34,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 ALTER DATABASE database_name  
    SET HADR   
    {  
@@ -44,7 +44,9 @@ ALTER DATABASE database_name
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name*  
  Is the name of the secondary database to be modified.  
   
@@ -61,7 +63,7 @@ ALTER DATABASE database_name
   
 -   The database must already have been added to the availability group on the primary replica.  
   
--   The primary replica must be active. For information about how troubleshoot an inactive primary replica, see [Troubleshooting Always On Availability Groups Configuration (SQL Server)](https://go.microsoft.com/fwlink/?LinkId=225834).  
+-   The primary replica must be active. For information about how troubleshoot an inactive primary replica, see [Troubleshooting Always On Availability Groups Configuration (SQL Server)](/previous-versions/sql/sql-server-2012/ff878308(v=sql.110)).  
   
 -   The primary replica must be online, and the secondary replica must be connected to the primary replica.  
   
@@ -128,7 +130,7 @@ ALTER DATABASE database_name
 ## Examples  
  The following example joins the secondary database, `AccountsDb1`, to the local secondary replica of the `AccountsAG` availability group.  
   
-```  
+```sql  
 ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;  
 ```  
   
@@ -141,5 +143,4 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
  [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
-  
   

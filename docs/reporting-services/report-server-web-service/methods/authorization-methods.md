@@ -1,5 +1,6 @@
 ---
 title: "Authorization Methods | Microsoft Docs"
+description: In Reporting Services, you can use these authorization methods to manage tasks, roles, and policies on the report server.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -30,7 +31,7 @@ ms.author: maggies
 |<xref:ReportService2010.ReportingService2010.GetSystemPermissions%2A>|Returns the user's system permissions. This method applies to native mode only.|  
 |<xref:ReportService2010.ReportingService2010.GetSystemPolicies%2A>|Returns the system policies, including groups and roles with which they are associated. This method applies to native mode only.|  
 |<xref:ReportService2010.ReportingService2010.InheritParentSecurity%2A>|Deletes the policies that are associated with a particular item in the report server database and sets the security policies for the item to those of its parent.|  
-|<xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>|Returns a Boolean value that indicates whether the Secure Socket Layer (SSL) protocol is required to use the <xref:ReportService2010> end point.|  
+|<xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>|Returns a Boolean value that indicates whether the Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), protocol is required to use the <xref:ReportService2010> end point.|  
 |<xref:ReportService2010.ReportingService2010.ListRoles%2A>|Returns the names and descriptions of roles that are managed by the report server.|  
 |<xref:ReportExecution2005.ReportExecutionService.ListSecureMethods%2A>|Returns a list of Simple Object Access Protocol (SOAP) methods in the <xref:ReportExecution2005> endpoint that require a secure connection when invoked. The **SecureConnectionLevel** setting of the report server is used to determine which methods are returned.|  
 |<xref:ReportService2010.ReportingService2010.ListTasks%2A>|Returns the tasks that are managed by the report server.|  

@@ -1,4 +1,5 @@
 ---
+description: "Data-tier Application Tables - sysdac_instances_internal"
 title: "sysdac_instances_internal (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysdac_instances_internal_TSQL"
   - "sysdac_instances_internal"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysdac_instances_internal"
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
-author: "stevestein"
-ms.author: "sstein"
+author: cawrites
+ms.author: chadam
 ---
 # Data-tier Application Tables - sysdac_instances_internal
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays one row for each data-tier application (DAC) instance deployed to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. This table is stored in the dbo schema in the msdb database.  
   

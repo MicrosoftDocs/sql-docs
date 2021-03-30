@@ -1,4 +1,5 @@
 ---
+description: "Notification of Asynchronous Function Completion"
 title: "Notification of Asynchronous Function Completion | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Notification of Asynchronous Function Completion
 In the Windows 8 SDK, ODBC added a mechanism to notify applications when an asynchronous operation completes, which we will refer to as "notification on completion". (See [Asynchronous Execution (Notification Method)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) for more information.) This topic discusses some of the issues for driver developers.  

@@ -1,4 +1,5 @@
 ---
+description: "SQLGetTypeInfo (Text File Driver)"
 title: "SQLGetTypeInfo (Text File Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "SQLGetTypeInfo function [ODBC], Text File Driver"
   - "text file driver [ODBC], SQLGetTypeInfo"
 ms.assetid: 05a58975-093c-4bd9-bd72-b5f0026a6e36
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetTypeInfo (Text File Driver)
 > [!NOTE]  

@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_cdc_map_lsn_to_time (Transact-SQL)"
 title: "sys.fn_cdc_map_lsn_to_time (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_cdc_map_lsn_to_time_TSQL"
   - "sys.fn_cdc_map_lsn_to_time"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "sys.fn_cdc_map_lsn_to_time"
   - "fn_cdc_map_lsn_to_time"
 ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_cdc_map_lsn_to_time (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the date and time value from the **tran_end_time** column in the [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) system table for the specified log sequence number (LSN). You can use this function to systematically map LSN ranges to date ranges in a change table.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Access FILESTREAM Data with OpenSqlFilestream | Microsoft Docs"
+description: Find out how to access FILESTREAM data with OpenSqlFilestream. View examples demonstrating how to use this API to obtain a Win32 handle.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -19,8 +20,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Access FILESTREAM Data with OpenSqlFilestream
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  The OpenSqlFilestream API obtains a Win32 compatible file handle for a FILESTREAM binary large object (BLOB) stored in the file system. The handle can be passed to any of the following Win32 APIs: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), or [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). If you pass this handle to any other Win32 API, the error ERROR_ACCESS_DENIED is returned. The handle must be closed by passing it to the Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) API before the transaction is committed or rolled back. Failing to close the handle will cause server-side resource leaks.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  The OpenSqlFilestream API obtains a Win32 compatible file handle for a FILESTREAM binary large object (BLOB) stored in the file system. The handle can be passed to any of the following Win32 APIs: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile), [TransmitFile](/windows/win32/api/mswsock/nf-mswsock-transmitfile), [SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer), [SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile), or [FlushFileBuffers](/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers). If you pass this handle to any other Win32 API, the error ERROR_ACCESS_DENIED is returned. The handle must be closed by passing it to the Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) API before the transaction is committed or rolled back. Failing to close the handle will cause server-side resource leaks.  
   
  You must perform All FILESTREAM data container access in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can also be executed in the same transaction. This maintains consistency between the SQL data and FILESTREAM BLOB data.  
   
@@ -47,7 +48,7 @@ HANDLE OpenSqlFilestream (
  [in] Is the **nvarchar(max)** path that is returned by the [PathName](../../relational-databases/system-functions/pathname-transact-sql.md) function. PathName must be called from the context of an account that has [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT or UPDATE permissions on the FILESTREAM table and column.  
   
  *DesiredAccess*  
- [in] Sets the mode used to access FILESTREAM BLOB data. This value is passed to the [DeviceIoControl Function](https://go.microsoft.com/fwlink/?LinkId=105527).  
+ [in] Sets the mode used to access FILESTREAM BLOB data. This value is passed to the [DeviceIoControl Function](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol).  
   
 |Name|Value|Meaning|  
 |----------|-----------|-------------|  
@@ -98,5 +99,4 @@ HANDLE OpenSqlFilestream (
  [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [Make Partial Updates to FILESTREAM Data](../../relational-databases/blob/make-partial-updates-to-filestream-data.md)   
  [Avoid Conflicts with Database Operations in FILESTREAM Applications](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  
-  
   

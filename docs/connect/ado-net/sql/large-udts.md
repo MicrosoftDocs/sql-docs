@@ -9,19 +9,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Large UDTs
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 User-defined types (UDTs) allow a developer to extend the server's scalar type system by storing common language runtime (CLR) objects in a SQL Server database. UDTs can contain multiple elements and can have behaviors, unlike the traditional alias data types, which consist of a single SQL Server system data type.  
   
 Previously, UDTs were restricted to a maximum size of 8 kilobytes. In SQL Server 2008, this restriction has been removed for UDTs that have a format of <xref:Microsoft.Data.SqlClient.Server.Format.UserDefined>.  
   
-For the complete documentation for user-defined types, see [CLR User-Defined Types](https://go.microsoft.com/fwlink/?LinkId=98366) from SQL Server Books Online.
+For the complete documentation for user-defined types, see [CLR User-Defined Types](/previous-versions/sql/sql-server-2008/ms131120(v=sql.100)) from SQL Server Books Online.
   
 ## Retrieving UDT schemas using GetSchema  
 The <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> method of <xref:Microsoft.Data.SqlClient.SqlConnection> returns database schema information in a <xref:System.Data.DataTable>.

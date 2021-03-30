@@ -1,5 +1,6 @@
 ---
 title: "Enable or Disable a Server Network Protocol | Microsoft Docs"
+description: Find out how to enable or disable a server network protocol. See how to use SQL Server Configuration Manager or PowerShell for this task.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,18 +19,18 @@ helpviewer_keywords:
   - "surface area configuration [SQL Server], connection protocols"
   - "connections [SQL Server], enabling remote using Configuration Manager"
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Enable or Disable a Server Network Protocol
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  All network protocols are installed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, but may or may not be enabled. This topic describes how to enable or disable a server network protocol in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager or PowerShell. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be stopped and restarted for the change to take effect.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  All network protocols are installed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, but may or may not be enabled. This topic describes how to enable or disable a server network protocol in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager or PowerShell. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be stopped and restarted for the change to take effect.  
   
 > [!IMPORTANT]  
 >  During setup of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] a login is added for the BUILTIN\Users group. This allows all authenticated users of the computer to access the instance of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] as a member of the public role. The BUILTIN\Users login can be safely removed to restrict [!INCLUDE[ssDE](../../includes/ssde-md.md)] access to computer users who have individual logins or are members of other Windows groups with logins.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] data providers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] up to [!INCLUDE[sssql14](../../includes/sssql14-md.md)] only support TLS 1.0 and SSL 3.0 by default. If you enforce a different protocol (such as TLS 1.1 or TLS 1.2) by making changes in the operating system SChannel layer, your connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might fail unless you have installed the appropriate update to add support for TLS 1.1 and 1.2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] which is listed <a href="https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server">here</a>. Starting from [!INCLUDE[sssql15](../../includes/sssql15-md.md)], all release versions of SQL Server include TLS 1.2 support without further updates required.
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] data providers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] up to [!INCLUDE[sssql14](../../includes/sssql14-md.md)] only support TLS 1.0 and SSL 3.0 by default. If you enforce a different protocol (such as TLS 1.1 or TLS 1.2) by making changes in the operating system SChannel layer, your connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might fail unless you have installed the appropriate update to add support for TLS 1.1 and 1.2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] which is listed <a href="https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server">here</a>. Starting from [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], all release versions of SQL Server include TLS 1.2 support without further updates required.
   
  **In This Topic**  
   

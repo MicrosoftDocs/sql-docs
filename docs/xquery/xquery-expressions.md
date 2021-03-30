@@ -1,5 +1,6 @@
 ---
 title: "XQuery Expressions | Microsoft Docs"
+description: View information about XQuery expressions that includes descriptions of each type of expression and how to use them.
 ms.custom: ""
 ms.date: "08/10/2016"
 ms.prod: sql
@@ -18,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # XQuery Expressions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Topics that describe the XQuery expressions.  
   

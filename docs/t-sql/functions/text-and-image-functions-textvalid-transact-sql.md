@@ -1,4 +1,5 @@
 ---
+description: "Text and Image Functions - TEXTVALID (Transact-SQL)"
 title: "TEXTVALID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "TEXTVALID_TSQL"
   - "TEXTVALID"
@@ -20,11 +21,11 @@ helpviewer_keywords:
   - "text-pointer values"
   - "verifying text pointers"
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # Text and Image Functions - TEXTVALID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A **text**, **ntext**, or **image** function that checks whether a specific text pointer is valid.  
   
@@ -35,12 +36,13 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 TEXTVALID ( 'table.column' ,text_ ptr )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table*  
  Is the name of the table that will be used.  
   
@@ -70,7 +72,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
 > [!NOTE]  
 >  To run this example, you must install the **pubs** database.  
   
-```  
+```sql
 USE pubs;  
 GO  
 SELECT pub_id, 'Valid (if 1) Text data'   
@@ -101,7 +103,6 @@ pub_id Valid (if 1) Text data
  [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [Text and Image Functions &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [Text and Image Functions &#40;Transact-SQL&#41;](./text-and-image-functions-textptr-transact-sql.md)   
  [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)  
-  
   

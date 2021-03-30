@@ -1,5 +1,6 @@
 ---
 title: "Identifying Execution State | Microsoft Docs"
+description: Learn to use Reporting Services to identify the execution state so that you can interact with the report in several ways.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,11 +1,12 @@
 ---
+description: "sys.dm_fts_index_keywords (Transact-SQL)"
 title: "sys.dm_fts_index_keywords (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_fts_index_keywords"
   - "sys.dm_fts_index_keywords"
@@ -22,7 +23,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # sys.dm_fts_index_keywords (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about the content of a full-text index for the specified table.  
   

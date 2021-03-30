@@ -1,4 +1,5 @@
 ---
+description: "DataMember (MDX)"
 title: "DataMember (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -45,6 +46,5 @@ FROM [Adventure Works]
   
 ## See Also  
  [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Key Concepts in MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
-  
+ [Key Concepts in MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
   

@@ -1,9 +1,10 @@
 ---
+description: "Create Tables (Database Engine)"
 title: "Create Tables (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/22/2016"
 ms.prod: sql
-ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
@@ -12,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Tables (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   You can create a new table, name it, and add it to an existing database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -39,7 +40,7 @@ This task requires CREATE TABLE permission in the database, and ALTER permission
   
 4.  Type column names, choose data types, and choose whether to allow nulls for each column as shown in the following illustration:  
   
-     ![AddColumnsinTableDesigner](../../relational-databases/tables/media/addcolumnsintabledesigner.gif "AddColumnsinTableDesigner")  
+     ![Screenshot showing the Allow Nulls option selected for the ModifiedDate column.](../../relational-databases/tables/media/addcolumnsintabledesigner.gif "AddColumnsinTableDesigner")  
   
 5.  To specify more properties for a column, such as identity or computed column values, click the column and in the column properties tab, choose the appropriate properties. For more information about column properties, see [Table Column Properties &#40;SQL Server Management Studio&#41;](../../relational-databases/tables/table-column-properties-sql-server-management-studio.md).  
   
@@ -47,13 +48,13 @@ This task requires CREATE TABLE permission in the database, and ALTER permission
   
 7.  To create foreign key relationships, check constraints, or indexes, right-click in the Table Designer pane and select an object from the list as shown in the following illustration:  
   
-     ![AddTableObjects](../../relational-databases/tables/media/addtableobjects.gif "AddTableObjects")  
+     ![Screenshot showing the Relationships option.](../../relational-databases/tables/media/addtableobjects.gif "AddTableObjects")  
   
      For more information about these objects, see [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md), [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md) and [Indexes](../../relational-databases/indexes/indexes.md).  
   
 8.  By default, the table is contained in the **dbo** schema. To specify a different schema for the table, right-click in the Table Designer pane and select **Properties** as shown in the following illustration. From the **Schema** drop-down list, select the appropriate schema.  
   
-     ![Specifyatableschema](../../relational-databases/tables/media/specifyatableschema.gif "Specifyatableschema")  
+     ![Screenshot of the Properties pane showing the Schema option.](../../relational-databases/tables/media/specifyatableschema.gif "Specifyatableschema")  
   
      For more information about schemas, see [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md).  
   

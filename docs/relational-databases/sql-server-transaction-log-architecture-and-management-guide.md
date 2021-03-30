@@ -1,9 +1,10 @@
 ---
+description: "SQL Server Transaction Log Architecture and Management Guide"
 title: "Transaction Log Architecture and Management Guide"
 ms.custom: ""
 ms.date: "10/23/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
@@ -20,10 +21,10 @@ helpviewer_keywords:
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: "rothja"
 ms.author: "jroth"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Transaction Log Architecture and Management Guide
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Every [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database has a transaction log that records all transactions and the database modifications that are made by each transaction. The transaction log is a critical component of the database and, if there is a system failure, the transaction log might be required to bring your database back to a consistent state. This guide provides information about the physical and logical architecture of the transaction log. Understanding the architecture can improve your effectiveness in managing transaction logs.  
 
@@ -89,11 +90,11 @@ For more information on `FILEGROWTH` and `SIZE` arguments of `ALTER DATABASE`, s
   
  The transaction log is a wrap-around file. For example, consider a database with one physical log file divided into four VLFs. When the database is created, the logical log file begins at the start of the physical log file. New log records are added at the end of the logical log and expand toward the end of the physical log. Log truncation frees any virtual logs whose records all appear in front of the minimum recovery log sequence number (MinLSN). The *MinLSN* is the log sequence number of the oldest log record that is required for a successful database-wide rollback. The transaction log in the example database would look similar to the one in the following illustration.  
   
- ![tranlog3](../relational-databases/media/tranlog3.gif)  
+ ![Illustrates how a physical log file is divided into virtual logs](../relational-databases/media/tranlog3.png)  
   
  When the end of the logical log reaches the end of the physical log file, the new log records wrap around to the start of the physical log file.  
   
-![tranlog4](../relational-databases/media/tranlog4.gif)   
+![Illustrates how a logical transaction log wraps around in its physical log file](../relational-databases/media/tranlog4.png)   
   
  This cycle repeats endlessly, as long as the end of the logical log never reaches the beginning of the logical log. If the old log records are truncated frequently enough to always leave sufficient room for all the new log records created through the next checkpoint, the log never fills. However, if the end of the logical log does reach the start of the logical log, one of two things occurs:  
   
@@ -111,11 +112,11 @@ For more information on `FILEGROWTH` and `SIZE` arguments of `ALTER DATABASE`, s
   
  The following illustrations show a transaction log before and after truncation. The first illustration shows a transaction log that has never been truncated. Currently, four virtual log files are in use by the logical log. The logical log starts at the front of the first virtual log file and ends at virtual log 4. The MinLSN record is in virtual log 3. Virtual log 1 and virtual log 2 contain only inactive log records. These records can be truncated. Virtual log 5 is still unused and is not part of the current logical log.  
   
-![tranlog2](../relational-databases/media/tranlog2.gif)  
+![Illustrates how a transaction log appears before it is truncated](../relational-databases/media/tranlog2.png)  
   
  The second illustration shows how the log appears after being truncated. Virtual log 1 and virtual log 2 have been freed for reuse. The logical log now starts at the beginning of virtual log 3. Virtual log 5 is still unused, and it is not part of the current logical log.  
   
-![tranlog3](../relational-databases/media/tranlog3.gif)  
+![Illustrates how a transaction log appears after it is truncated](../relational-databases/media/tranlog3.png)  
   
  Log truncation occurs automatically after the following events, except when delayed for some reason:  
   
@@ -223,7 +224,7 @@ The section of the log file from the MinLSN to the last-written log record is ca
 
 The following illustration shows a simplified version of the end-of-a-transaction log with two active transactions. Checkpoint records have been compacted to a single record.
 
-![active_log](../relational-databases/media/active-log.gif) 
+![Illustrates an end-of-a-transaction log with two active transactions and a compacted checkpoint record](../relational-databases/media/active-log.png) 
 
 LSN 148 is the last record in the transaction log. At the time that the recorded checkpoint at LSN 147 was processed, Tran 1 had been committed and Tran 2 was the only active transaction. That makes the first log record for Tran 2 the oldest log record for a transaction active at the time of the last checkpoint. This makes LSN 142, the Begin transaction record for Tran 2, the MinLSN.
 
@@ -233,7 +234,7 @@ The active log must include every part of all uncommitted transactions. An appli
 * If the system is shut down after the transaction has performed many uncommitted modifications, the recovery phase of the subsequent restart can take much longer than the time specified in the **recovery interval** option.
 * The log might grow very large, because the log cannot be truncated past the MinLSN. This occurs even if the database is using the simple recovery model, in which the transaction log is generally truncated on each automatic checkpoint.
 
-Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] and in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], recovery of long-running transactions and the problems described above can be avoided by using [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).  
+Starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], recovery of long-running transactions and the problems described above can be avoided by using [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).  
 
 ### Replication transactions
 The Log Reader Agent monitors the transaction log of each database configured for transactional replication, and it copies the transactions marked for replication from the transaction log into the distribution database. The active log must contain all transactions that are marked for replication, but that have not yet been delivered to the distribution database. If these transactions are not replicated in a timely manner, they can prevent the truncation of the log. For more information, see [Transactional Replication](../relational-databases/replication/transactional/transactional-replication.md).
@@ -249,7 +250,6 @@ We recommend the following articles and books for additional information about t
 [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)       
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-[Understanding Logging and Recovery in SQL Server by Paul Randal](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    
+[Understanding Logging and Recovery in SQL Server by Paul Randal](/previous-versions/technet-magazine/dd392031(v=msdn.10))    
 [SQL Server Transaction Log Management by Tony Davis and Gail Shaw](https://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
-  
   

@@ -1,5 +1,6 @@
 ---
 title: "Implementing a Data Processing Extension | Microsoft Docs"
+description: Find out how to create a bridge between a data source and a dataset in Reporting Services by implementing a data processing extension.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

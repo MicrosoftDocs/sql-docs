@@ -1,11 +1,12 @@
 ---
+description: "MSSQLSERVER_41368"
 title: "MSSQLSERVER_41368 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "41368 (Database Engine error)"
 ms.assetid: abc71559-4c4d-4cce-a08f-3299dd167842
@@ -14,12 +15,12 @@ ms.author: mathoma
 robots: noindex,nofollow
 ---
 # MSSQLSERVER_41368
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Event ID|41368|  
 |Event Source|MSSQLSERVER|  

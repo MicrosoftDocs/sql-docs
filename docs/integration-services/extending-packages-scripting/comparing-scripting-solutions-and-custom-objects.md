@@ -1,4 +1,5 @@
 ---
+description: "Comparing Scripting Solutions and Custom Objects"
 title: "Comparing Scripting Solutions and Custom Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -20,7 +21,7 @@ ms.author: chugu
 ---
 # Comparing Scripting Solutions and Custom Objects
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   An [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Script task or Script component can implement much of the same functionality that is possible in a custom managed task or data flow component. Here are some considerations to help you choose the appropriate type of task for your needs:  

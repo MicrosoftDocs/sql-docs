@@ -1,4 +1,5 @@
 ---
+description: "SqlService Class"
 title: "SqlService Class"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SqlService class"
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SqlService Class
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The [SqlService Class](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) represents an instance of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service.  
   
  The [SqlService Class](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) is used to programmatically manage the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service. With the [SqlService Class](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) object, you can perform the following tasks:  

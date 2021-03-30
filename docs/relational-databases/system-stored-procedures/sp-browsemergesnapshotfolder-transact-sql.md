@@ -1,4 +1,5 @@
 ---
+description: "sp_browsemergesnapshotfolder (Transact-SQL)"
 title: "sp_browsemergesnapshotfolder (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_browsemergesnapshotfolder"
   - "sp_browsemergesnapshotfolder_TSQL"
 helpviewer_keywords: 
   - "sp_browsemergesnapshotfolder"
 ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_browsemergesnapshotfolder (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the complete path for the latest snapshot generated for a merge publication. This stored procedure is executed at the Publisher on the publication database.  
   

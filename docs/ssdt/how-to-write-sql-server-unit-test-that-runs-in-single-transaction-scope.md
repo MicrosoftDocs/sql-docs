@@ -1,12 +1,12 @@
 ---
 title: Write a SQL Server Unit Test that Runs a Scope of a Single Transaction
+description: Learn how to start the Distributed Transaction Coordinator service, write a single-transaction SQL Server unit test, and roll back the test changes.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
@@ -49,10 +49,10 @@ For some procedures in this topic, the Distributed Transaction Coordinator servi
     > [!NOTE]  
     > You cannot roll back a transaction after a COMMIT TRANSACTION statement is executed.  
   
-    For more information about how ROLLBACK TRANSACTION works with stored procedures and triggers, see this page on the Microsoft Web site: [ROLLBACK TRANSACTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=115927).  
+    For more information about how ROLLBACK TRANSACTION works with stored procedures and triggers, see this page on the Microsoft Web site: [ROLLBACK TRANSACTION (Transact-SQL)](../t-sql/language-elements/rollback-transaction-transact-sql.md).  
   
 ## To create a transaction for a single test method  
-In this example, you are using an ambient transaction when you use the [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope) type. By default, the Execution and Privileged connections will not use the ambient transaction, because the connections were created before the method is executed. The SqlConnection has an [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) method, which associates an active connection with a transaction. When an ambient transaction is created, it registers itself as the current transaction, and you can access it through the [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current) property. In this example, the transaction is rolled back when the ambient transaction is disposed. If you want to commit any changes that were made when you ran the unit test, you must call the [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete) method.  
+In this example, you are using an ambient transaction when you use the [System.Transactions.TransactionScope](/dotnet/api/system.transactions.transactionscope) type. By default, the Execution and Privileged connections will not use the ambient transaction, because the connections were created before the method is executed. The SqlConnection has an [System.Data.SqlClient.SqlConnection.EnlistTransaction](/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) method, which associates an active connection with a transaction. When an ambient transaction is created, it registers itself as the current transaction, and you can access it through the [System.Transactions.Transaction.Current](/dotnet/api/system.transactions.transaction.current) property. In this example, the transaction is rolled back when the ambient transaction is disposed. If you want to commit any changes that were made when you ran the unit test, you must call the [System.Transactions.TransactionScope.Complete](/dotnet/api/system.transactions.transactionscope.complete) method.  
   
 #### To create a transaction for a single test method  
   
@@ -166,8 +166,7 @@ Some procedures in this topic use types in the System.Transactions assembly. Bef
     The status of the service should update to **Started**. You should now be able to run unit tests that use System.Transactions.  
   
 > [!IMPORTANT]  
-> The following error might appear, even if you have started the Distributed Transaction Controller service: `System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)`. If this error appears, you must configure the Distributed Transaction Controller for network access. For more information, see [Enable Network DTC Access](https://go.microsoft.com/fwlink/?LinkId=193916).  
+> The following error might appear, even if you have started the Distributed Transaction Controller service: `System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)`. If this error appears, you must configure the Distributed Transaction Controller for network access. For more information, see [Enable Network DTC Access](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753510(v=ws.10)).  
   
 ## See Also  
 [Creating and Defining SQL Server Unit Tests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-  

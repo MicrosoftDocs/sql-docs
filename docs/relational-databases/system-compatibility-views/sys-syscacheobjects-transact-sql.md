@@ -1,4 +1,5 @@
 ---
+description: "sys.syscacheobjects (Transact-SQL)"
 title: "sys.syscacheobjects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.syscacheobjects_TSQL"
   - "sys.syscacheobjects"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "syscacheobjects system table"
   - "sys.syscacheobjects compatibility view"
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.syscacheobjects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains information about how the cache is used.  
   

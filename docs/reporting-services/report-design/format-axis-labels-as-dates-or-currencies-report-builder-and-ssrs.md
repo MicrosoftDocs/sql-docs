@@ -1,5 +1,6 @@
 ---
 title: "Format Axis Labels as Dates or Currencies (Report Builder) | Microsoft Docs"
+description: Specify a date or time interval for an x-axis by formatting the axis labels and setting the type of axis interval to a valid interval.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

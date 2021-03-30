@@ -1,4 +1,5 @@
 ---
+description: "getBestRowIdentifier Method (SQLServerDatabaseMetaData)"
 title: "getBestRowIdentifier Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerDatabaseMetaData.getBestRowIdentifier"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getBestRowIdentifier Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

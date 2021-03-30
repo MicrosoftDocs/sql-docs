@@ -1,5 +1,6 @@
 ---
 title: "Memory Optimization Advisor | Microsoft Docs"
+description: Use the memory optimization advisor in SQL Server Management Studio to help you migrate disk-based tables to memory-optimized tables.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,10 +14,10 @@ f1_keywords:
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Memory Optimization Advisor
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Transaction Performance Analysis reports (see [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informs you about which tables in your database will benefit if ported to use In-Memory OLTP. After you identify a table that you would like to port to use In-Memory OLTP, you can use the memory optimization advisor in SQL Server Management Studio to help you migrate the disk-based table to a memory-optimized table.  
   
@@ -26,7 +27,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   Migrate a table and data to memory-optimized (if there are no unsupported features).  
     
- For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx).  
+ For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](/previous-versions/dn673538(v=msdn.10)).  
   
 ## Walkthrough Using the Memory-Optimization Advisor  
  In **Object Explorer**, right click the table you want to convert, and select **Memory-Optimization Advisor**. This will display the welcome page for the **Table Memory Optimization Advisor**.  
@@ -92,7 +93,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  If a primary key doesn't exist and the table is being migrated to a non-durable table, this screen will not appear.  
   
- For textual columns (columns with types **char**, **nchar**, **varchar**, and **nvarchar**) you must select an appropriate collation. In-Memory OLTP only supports BIN2 collations for columns on a memory-optimized table and it does not support collations with supplementary characters. See [Collations and Code Pages](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) for information on the collations supported and the potential impact of a change in collation.  
+ For textual columns (columns with types **char**, **nchar**, **varchar**, and **nvarchar**) you must select an appropriate collation. In-Memory OLTP only supports BIN2 collations for columns on a memory-optimized table and it does not support collations with supplementary characters. See [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) for information on the collations supported and the potential impact of a change in collation.  
   
  You can configure the following parameters for the primary key:  
   
@@ -106,7 +107,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   A NONCLUSTERED index. This type of index is best for indexes with many range queries. You may configure the sort order for each column in the **Sort column and order** list.  
   
- To understand the type of index best for your primary key, see [Hash Indexes](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
+ To understand the type of index best for your primary key, see [Hash Indexes](/previous-versions/sql/sql-server-2016/dn133190(v=sql.130)).  
   
  Click **Next** after you make your primary key choices.  
   
@@ -123,6 +124,5 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  After the process is finished, refresh **Object Explorer** to see the new memory-optimized table and the old disk-based table. You can keep the old table or delete it at your convenience.  
   
 ## See Also  
- [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

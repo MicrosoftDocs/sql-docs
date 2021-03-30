@@ -1,5 +1,6 @@
 ---
 title: "Work with Directories and Paths in FileTables | Microsoft Docs"
+description: The FileTables feature uses a directory structure to store files. Learn how to work with its directories, paths, restrictions, and semantics.
 ms.custom: ""
 ms.date: "08/26/2016"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Work with Directories and Paths in FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes the directory structure in which the files are stored in FileTables.  
   
 ##  <a name="HowToDirectories"></a> How To: Work with Directories and Paths in FileTables  
@@ -86,9 +87,8 @@ GO
 ##  <a name="is_directory"></a> The is_directory column in the FileTable schema  
  The following table describes the interaction between the **is_directory** column and the **file_stream** column that contains the FILESTREAM data in a FileTable.  
   
-||||  
-|-|-|-|  
-|*is_directory* **value**|*file_stream* **value**|**Behavior**|  
+|is_directory value|file_stream value|Behavior|  
+|-|-|-|    
 |FALSE|NULL|This is an invalid combination that will be caught by a system-defined constraint.|  
 |FALSE|\<value>|The item represents a file.|  
 |TRUE|NULL|The item represents a directory.|  

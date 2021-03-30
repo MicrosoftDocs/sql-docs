@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)"
 title: "@@LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/19/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@LOCK_TIMEOUT"
   - "@@LOCK_TIMEOUT_TSQL"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "current lock time-out setting"
   - "locking [SQL Server], time-outs"
 ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # &#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the current lock time-out setting in milliseconds for the current session.  
   
@@ -30,11 +31,13 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@LOCK_TIMEOUT  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  
@@ -45,7 +48,7 @@ ms.author: mikeray
 ## Examples  
  This example shows the result set when a LOCK_TIMEOUT value is not set.  
   
-```  
+```sql  
 SELECT @@LOCK_TIMEOUT AS [Lock Timeout];  
 GO  
 ```  
@@ -60,7 +63,7 @@ Lock Timeout
   
  This example sets LOCK_TIMEOUT to 1800 milliseconds and then calls @@LOCK_TIMEOUT.  
   
-```  
+```sql  
 SET LOCK_TIMEOUT 1800;  
 SELECT @@LOCK_TIMEOUT AS [Lock Timeout];  
 GO  

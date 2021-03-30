@@ -1,4 +1,5 @@
 ---
+description: "DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)"
 title: "DROP DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/27/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP DATABASE SCOPED CREDENTIAL"
   - "DROP_DATABASE_SCOPED_CREDENTIAL_TSQL"
@@ -16,10 +17,10 @@ helpviewer_keywords:
 ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
 author: VanMSFT
 ms.author: vanto
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current"
 ---
 # DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
   Removes a database scoped credential from the server.  
   
@@ -27,8 +28,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
   
 ## Syntax  
   
-```  
-  
+```syntaxsql  
 DROP DATABASE SCOPED CREDENTIAL credential_name  
 ```  
   
@@ -48,7 +48,7 @@ DROP DATABASE SCOPED CREDENTIAL credential_name
  The following example removes the database scoped credential called `SalesAccess`.  
   
 ```sql  
-DROP DATABASE SCOPED CREDENTIAL AppCred;  
+DROP DATABASE SCOPED CREDENTIAL SalesAccess;  
 GO  
 ```  
   

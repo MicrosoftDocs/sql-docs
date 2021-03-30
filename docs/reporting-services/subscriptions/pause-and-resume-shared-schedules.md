@@ -1,5 +1,6 @@
 ---
 title: "Pause and Resume Shared Schedules | Microsoft Docs"
+description: In this article, learn how to pause and resume a shared schedule that's in use but not in progress. You can pause and resume in native mode or SharePoint mode.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

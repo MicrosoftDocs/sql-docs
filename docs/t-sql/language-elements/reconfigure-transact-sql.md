@@ -1,4 +1,5 @@
 ---
+description: "RECONFIGURE (Transact-SQL)"
 title: "RECONFIGURE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/20/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "RECONFIGURE"
   - "RECONFIGURE_TSQL"
@@ -20,11 +21,11 @@ helpviewer_keywords:
   - "RECONFIGURE"
   - "RECONFIGURE, WITH OVERRIDE statement"
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # RECONFIGURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates the currently configured value (the **config_value** column in the **sp_configure** result set) of a configuration option changed with the **sp_configure** system stored procedure. Because some configuration options require a server stop and restart to update the currently running value, RECONFIGURE does not always update the currently running value (the **run_value** column in the **sp_configure** result set) for a changed configuration value.    
     
@@ -32,12 +33,13 @@ ms.author: jroth
     
 ## Syntax    
     
-```    
-    
+```syntaxsql
 RECONFIGURE [ WITH OVERRIDE ]    
 ```    
     
-## Arguments    
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  RECONFIGURE    
  Specifies that if the configuration setting does not require a server stop and restart, the currently running value should be updated. RECONFIGURE also checks the new configuration values for either values that are not valid (for example, a sort order value that does not exist in **syscharsets**) or nonrecommended values. With those configuration options not requiring a server stop and restart, the currently running value and the currently configured values for the configuration option should be the same value after RECONFIGURE is specified.    
     
@@ -59,7 +61,7 @@ RECONFIGURE [ WITH OVERRIDE ]
 ## Examples    
  The following example sets the upper limit for the `recovery interval` configuration option to `75` minutes and uses `RECONFIGURE WITH OVERRIDE` to install it. Recovery intervals greater than 60 minutes are not recommended and disallowed by default. However, because the `WITH OVERRIDE` option is specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not check whether the value specified (`75`) is a valid value for the `recovery interval` configuration option.    
     
-```    
+```sql    
 EXEC sp_configure 'recovery interval', 75    
 RECONFIGURE WITH OVERRIDE;    
 GO    

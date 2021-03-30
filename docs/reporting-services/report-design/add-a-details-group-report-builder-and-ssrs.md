@@ -1,5 +1,6 @@
 ---
 title: "Add a Details Group (Report Builder) | Microsoft Docs"
+description: Find out about adding a details group to an existing tablix data region to display the detail data for a matrix in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

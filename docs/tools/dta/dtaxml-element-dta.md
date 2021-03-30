@@ -1,5 +1,6 @@
 ---
 title: "DTAXML Element (DTA)"
+description: In the dta utility, the DTAXML element contains all elements that describe tuning input and output that the Database Engine Tuning Advisor generates.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -8,10 +9,8 @@ dev_langs:
   - "XML"
 helpviewer_keywords: 
   - "DTAXML element"
-ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -19,7 +18,7 @@ ms.date: 03/14/2017
 
 # DTAXML Element (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The root element of a Database Engine Tuning Advisor XML input or output file, **DTAXML** contains all elements that describe tuning input and the tuning output that Database Engine Tuning Advisor generates.  
   
@@ -57,7 +56,7 @@ The root element of a Database Engine Tuning Advisor XML input or output file, *
 |**Child elements**|[DTAInput Element &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)<br /><br /> **DTAOutput** Element (see [Database Engine Tuning Advisor XML schema](https://schemas.microsoft.com/sqlserver/) for information)|  
   
 ## Remarks  
- For more information about XML namespaces, see [Namespaces in an XML Document](https://go.microsoft.com/fwlink/?LinkId=7341) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN Library.  
+ For more information about XML namespaces, see [Namespaces in an XML Document](/dotnet/standard/data/xml/managing-namespaces-in-an-xml-document). 
   
 ## Example  
  For examples of typical **DTAXML** elements, see [XML Input File Samples &#40;DTA&#41;](../../tools/dta/xml-input-file-samples-dta.md).  
@@ -65,5 +64,4 @@ The root element of a Database Engine Tuning Advisor XML input or output file, *
 ## See Also  
  [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)   
  [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
-  
   

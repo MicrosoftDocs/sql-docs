@@ -1,4 +1,5 @@
 ---
+description: "CHECKSUM_AGG (Transact-SQL)"
 title: "CHECKSUM_AGG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CHECKSUM_AGG"
   - "CHECKSUM_AGG_TSQL"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "CHECKSUM_AGG function"
   - "groups [SQL Server], checksum values"
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # CHECKSUM_AGG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns the checksum of the values in a group. `CHECKSUM_AGG` ignores null values. The [OVER clause](../../t-sql/queries/select-over-clause-transact-sql.md) can follow `CHECKSUM_AGG`.
   
@@ -29,11 +30,13 @@ This function returns the checksum of the values in a group. `CHECKSUM_AGG` igno
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CHECKSUM_AGG ( [ ALL | DISTINCT ] expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 **ALL**  
 Applies the aggregate function to all values. ALL is the default argument.
   
@@ -61,7 +64,7 @@ These examples use `CHECKSUM_AGG` to detect changes in the `Quantity` column of 
 ```sql
 --Get the checksum value before the column value is changed.  
 
-SELECT CHECKSUM_AGG(CAST(Quantity AS int))  
+SELECT CHECKSUM_AGG(CAST(Quantity AS INT))  
 FROM Production.ProductInventory;  
 GO  
 ```  
@@ -80,7 +83,7 @@ WHERE Quantity=100;
 GO  
 
 --Get the checksum of the modified column.  
-SELECT CHECKSUM_AGG(CAST(Quantity AS int))  
+SELECT CHECKSUM_AGG(CAST(Quantity AS INT))  
 FROM Production.ProductInventory;  
 ```  
   

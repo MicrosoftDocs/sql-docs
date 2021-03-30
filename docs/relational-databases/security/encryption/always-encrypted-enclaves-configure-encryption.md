@@ -1,7 +1,8 @@
 ---
+description: "Configure column encryption in-place using Always Encrypted with secure enclaves"
 title: "Configure column encryption in-place using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/10/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
@@ -9,17 +10,17 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions" 
+monikerRange: ">= sql-server-ver15" 
 ---
 # Configure column encryption in-place using Always Encrypted with secure enclaves 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
-[Always Encrypted with secure enclaves](always-encrypted-enclaves.md) supports cryptographic operations on database columns in-place - inside a secure enclave in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In-place encryption eliminates the need to move the data for such operations outside of the database, making the cryptographic operations faster and more reliable. 
+[Always Encrypted with secure enclaves](always-encrypted-enclaves.md) supports cryptographic operations on database columns in-place - inside a secure enclave in the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)]. In-place encryption eliminates the need to move the data for such operations outside of the database, making the cryptographic operations faster and more reliable. 
 
 > [!NOTE]
 > Despite the performance benefits of in-place encryption, cryptographic operations on large tables can take a long time and consume substantial resources, potentially impacting and degrading performance and availability of your applications.
 
-In-place encryption makes it also possible to trigger cryptographic operations using the [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) statement, which is not possible without an enclave.
+In-place encryption makes it also possible to trigger cryptographic operations using the [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) statement, which isn't possible without an enclave.
 
 ## Prerequisites
 The supported cryptographic operations and the requirements for column encryption key(s), used for the operations, are:
@@ -29,16 +30,19 @@ The supported cryptographic operations and the requirements for column encryptio
 
 See [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md) for information how to ensure your column encryption keys are enclave-enabled.
 
-In-place encryption also requires a SQL Server instance that has a correctly initialized secure enclave. See [Configure the enclave type for Always Encrypted Server Configuration Option](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md).
+You also need ensure that your environment meets the general [Prerequisites for running statements using secure enclaves](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves).
 
 A user or an application triggering cryptographic operations must have permissions to make schema changes on the table containing the impacted columns and to access column master keys involved in the operations, and relevant key metadata in the database.
 
 You can only trigger in-place encryption using [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) from SQL Server Management Studio or your custom application. See [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md).
 
 > [!NOTE]
-> Currently, the [Always Encrypted wizard](always-encrypted-wizard.md) and the [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/module/sqlserver/set-sqlcolumnencryption) cmdlet do not support in-place encryption, and always download the data for cryptographic operations, even if your configuration meets the above requirements. 
+> Currently, the [Always Encrypted wizard](always-encrypted-wizard.md) and the [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption) cmdlet do not support in-place encryption, and always download the data for cryptographic operations, even if your configuration meets the above requirements. 
 
 ## Next Steps
 - [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
 - [Create and use indexes on column using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
+
+## See Also  
+- [Troubleshoot common issues for Always Encrypted with secure enclaves](always-encrypted-enclaves-troubleshooting.md)

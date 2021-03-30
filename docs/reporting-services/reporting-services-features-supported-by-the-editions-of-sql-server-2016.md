@@ -1,6 +1,6 @@
 ---
 title: Features supported by different editions - SQL Server Reporting Services | Microsoft Docs
-description: "This topic explains the SQL Server Reporting Services (SSRS) features supported by the different editions of SQL Server. SQL Server Evaluation edition is available for a 180-day trial period."
+description: Learn about SQL Server Reporting Services (SSRS) features supported by the different editions of SQL Server. 
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services

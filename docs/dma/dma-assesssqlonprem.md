@@ -12,7 +12,7 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ms.custom: "seo-lt-2019"
 ---
@@ -21,8 +21,9 @@ ms.custom: "seo-lt-2019"
 
 The following step-by-step instructions help you perform your first assessment for migrating to on-premises SQL Server, SQL Server running on an Azure VM, or Azure SQL Database by using Data Migration Assistant.
 
-   > [!NOTE]
-   > Data Migration Assistant v5.0 introduces support for analyzing database connectivity and embedded SQL queries in the application code. For more information, see the blog post [Using Data Migration Assistant to assess an application’s data access layer](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
+Data Migration Assistant v5.0 introduces support for analyzing database connectivity and embedded SQL queries in the application code. For more information, see the blog post [Using Data Migration Assistant to assess an application’s data access layer](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
+
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 ## Create an assessment
 
@@ -75,7 +76,7 @@ The following step-by-step instructions help you perform your first assessment f
     DROP EVENT SESSION [DatalayerSession] ON SERVER
     go
     CREATE EVENT SESSION [DatalayerSession] ON SERVER  
-    ADD EVENT sqlserver.sql_statement_completed( 
+    ADD EVENT sqlserver.sql_batch_completed( 
         ACTION (sqlserver.sql_text,sqlserver.client_app_name,sqlserver.client_hostname,sqlserver.database_id))
     ADD TARGET package0.asynchronous_file_target(SET filename=N'C:\temp\Demos\DataLayerAppassess\DatalayerSession.xel')  
     WITH (MAX_MEMORY=2048 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=3 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)
@@ -146,7 +147,7 @@ If you want further extend these assessments to the entire data estate and find 
 
 Doing so allows you to view the consolidated results on the Azure Migrate hub project.
 
-Detailed, step-by-step guidance for target readiness assessments is available [here](https://docs.microsoft.com/sql/dma/dma-assess-sql-data-estate-to-sqldb?view=sql-server-2017).
+Detailed, step-by-step guidance for target readiness assessments is available [here](./dma-assess-sql-data-estate-to-sqldb.md).
 
    ![Upload results to Azure Migrate](../dma/media/dma-assesssqlonprem/upload-to-azure-migrate.png)
 

@@ -1,4 +1,5 @@
 ---
+description: "Open With (New File)"
 title: "Open With (New File)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -14,7 +15,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Open With (New File)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can open a document in one or more editors by clicking **Open** on the **File** menu and then clicking **File**. In the **Open File** dialog box, select the file, click the **Open** arrow, and then click **Open With**. In the **Open With** dialog box, in the **Select a program to open** list, click the preferred program, and then click **Open**.  
   
 ## Options  
@@ -37,4 +38,4 @@ To specify a default editor (and language encoding options, if applicable) for t
 > In the list of programs under **Select a program to open**, the name of the default editor for the type of file selected is followed by **(Default)**.  
   
 ## See Also  
-[Associating File Extensions to a Code Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
+[Associating File Extensions to a Code Editor](../scripting/associate-file-extensions-to-a-code-editor.md)

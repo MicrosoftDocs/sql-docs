@@ -1,7 +1,8 @@
 ---
 title: "Define the Serialization of XML Data | Microsoft Docs"
+description: Learn about the rules used when serializing xml data in SQL Server.
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: 12/07/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -20,7 +21,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Define the Serialization of XML Data
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   When casting the xml data type explicitly or implicitly to a SQL string or binary type, the content of the xml data type will be serialized according to the rules outlined in this topic.  
   
 ## Serialization Encoding  
@@ -28,13 +29,13 @@ ms.author: genemi
   
  For example:  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
 ```  
   
  This is the result:  
   
-```  
+```console
 0xFFFE3C0094032F003E00  
 ```  
   
@@ -42,13 +43,13 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  For example:  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
 ```  
   
  This is the result:  
   
-```  
+```console
 <Δ/>  
 ```  
   
@@ -56,7 +57,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
   
  For example:  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
@@ -70,21 +71,21 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## Entitization of XML Characters During Serialization  
  Every serialized XML structure should be capable of being reparsed. Therefore, some characters have to be serialized in an entitized way to preserve the round-trip capability of the characters through the XML parser's normalization phase . However, some characters have to be entitized so that the document is well-formed and, therefore, able to be parsed. Following are the entitization rules that apply during serialization:  
   
--   The characters &, \<, and > are always entitized to &amp;, &lt;, and &gt; respectively, if they occur inside an attribute value or element content.  
+-   The characters &, \<, and > are always entitized to `&amp;`, `&lt;`, and `&gt;` respectively, if they occur inside an attribute value or element content.  
   
--   Because SQL Server uses a quotation mark (U+0022) for enclosing attribute values, the quotation mark in attribute values is entitized as &quot;.  
+-   Because SQL Server uses a quotation mark (U+0022) for enclosing attribute values, the quotation mark in attribute values is entitized as `&quot;`.  
   
--   A surrogate pair is entitized as a single numeric character reference, when casting on the server only. For example the surrogate pair U+D800 U+DF00 is entitized to the numeric character reference &\#x00010300;.  
+-   A surrogate pair is entitized as a single numeric character reference, when casting on the server only. For example the surrogate pair U+D800 U+DF00 is entitized to the numeric character reference `&#x00010300;`.  
   
--   To protect a TAB (U+0009) and a linefeed (LF, U+000A) from being normalized during parsing, they are entitized to their numeric character references &\#x9; and &\#xA; respectively, inside attribute values.  
+-   To protect a TAB (U+0009) and a linefeed (LF, U+000A) from being normalized during parsing, they are entitized to their numeric character references `&#x9;` and `&#xA;` respectively, inside attribute values.  
   
--   To prevent a carriage return (CR, U+000D) from being normalized during parsing, it is entitized to its numeric character reference, &\#xD; inside both attribute values and element content.  
+-   To prevent a carriage return (CR, U+000D) from being normalized during parsing, it is entitized to its numeric character reference, `&#xD;` inside both attribute values and element content.  
   
 -   To protect text nodes that only contain white space, one of the white-space characters, generally the last one, is entitized as its numeric character reference. In this way, reparsing preserves the white-space text node, regardless of the setting of the white-space handling during parsing.  
   
  For example:  
   
-```  
+```sql
 declare @u NVARCHAR(50)  
 set @u = N'<a a="  
     '+NCHAR(0xD800)+NCHAR(0xDF00)+N'>">   '+NCHAR(0xA)+N'</a>'  
@@ -93,7 +94,7 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
   
  This is the result:  
   
-```  
+```console
 <a a="  
     𐌀>">     
 </a>  
@@ -101,13 +102,13 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
   
  If you do not want to apply the last white-space protection rule, you can use the explicit CONVERT option 1 when casting from **xml** to a string or binary type. For example, to avoid entitization, you can do the following:  
   
-```  
+```sql
 select CONVERT(NVARCHAR(50), CONVERT(XML, '<a>   </a>', 1), 1)  
 ```  
   
  Note that, the [query() Method (xml Data Type)](../../t-sql/xml/query-method-xml-data-type.md) results in an xml data type instance. Therefore, any result of the **query()** method that is cast to a string or binary type is entitized according to the previously described rules. If you want to obtain the string values that are not entitized, you should use the [value() Method (xml Data Type)](../../t-sql/xml/value-method-xml-data-type.md) instead. Following is an example of using the **query()** method:  
   
-```  
+```sql
 declare @x xml  
 set @x = N'<a>This example contains an entitized char: <.</a>'  
 select @x.query('/a/text()')  
@@ -115,19 +116,19 @@ select @x.query('/a/text()')
   
  This is the result:  
   
-```  
+```console
 This example contains an entitized char: <.  
 ```  
   
  Following is an example of using the **value()** method:  
   
-```  
+```sql
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
  This is the result:  
   
-```  
+```console
 This example contains an entitized char: <.  
 ```  
   
@@ -136,7 +137,7 @@ This example contains an entitized char: <.
   
  For example, the xs:double value 1.34e1 is serialized to 13.4 as shown in the following example:  
   
-```  
+```sql
 declare @x xml  
 set @x =''  
 select CAST(@x.query('1.34e1') as nvarchar(50))  
@@ -146,6 +147,5 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
 ## See Also  
  [Type Casting Rules in XQuery](../../xquery/type-casting-rules-in-xquery.md)   
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-  
-  
+ [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+ 

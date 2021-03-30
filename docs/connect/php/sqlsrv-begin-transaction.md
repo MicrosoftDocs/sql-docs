@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_begin_transaction"
 title: "sqlsrv_begin_transaction | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "sqlsrv_begin_transaction"
 apitype: "NA"
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "transaction support"
   - "API Reference, sqlsrv_begin_transaction"
 ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

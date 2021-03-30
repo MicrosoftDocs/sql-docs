@@ -1,4 +1,5 @@
 ---
+description: "SQLCompleteAsync Function"
 title: "SQLCompleteAsync Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,20 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords: 
   - "SQLCompleteAsync"
 helpviewer_keywords: 
   - "SQLCompleteAsync function [ODBC]"
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLCompleteAsync Function
 **Conformance**  
- Version Introduced: ODBC 3.8  
-  
- Standards Compliance: None  
+ Version Introduced: ODBC 3.8 Standards Compliance: None  
   
  **Summary**  
  **SQLCompleteAsync** can be used to determine when an asynchronous function is complete using either notification- or polling-based processing. For more information about asynchronous operations, see [Asynchronous Execution](../../../odbc/reference/develop-app/asynchronous-execution.md).  

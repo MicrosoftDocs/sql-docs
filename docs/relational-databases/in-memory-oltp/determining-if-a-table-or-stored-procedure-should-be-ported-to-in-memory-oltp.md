@@ -1,5 +1,6 @@
 ---
 title: "Should table or stored procedure be ported to in-memory OLTP"
+description: Use the Transaction Performance Analysis report in SQL Server Management Studio to evaluate whether In-Memory OLTP can improve database application performance.
 ms.custom: seo-dt-2019
 ms.date: "08/02/2017"
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  The Transaction Performance Analysis report in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] helps you evaluate if In-Memory OLTP will improve your database application's performance. The report also indicates how much work you must do to enable In-Memory OLTP in your application. After you identify a disk-based table to port to In-Memory OLTP, you can use the [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md), to help you migrate the table. Similarly, the [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) will help you port a stored procedure to a natively compiled stored procedure. For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx).  
+  The Transaction Performance Analysis report in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] helps you evaluate if In-Memory OLTP will improve your database application's performance. The report also indicates how much work you must do to enable In-Memory OLTP in your application. After you identify a disk-based table to port to In-Memory OLTP, you can use the [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md), to help you migrate the table. Similarly, the [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) will help you port a stored procedure to a natively compiled stored procedure. For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](/previous-versions/dn673538(v=msdn.10)).  
   
  The Transaction Performance Analysis report is run directly against the production database, or a test database with an active workload that is similar to the production workload.  
   
@@ -33,7 +34,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     > [!IMPORTANT]  
     >  The performance of a database system is dependent on a variety of factors, not all of which the transaction performance collector can observe and measure. Therefore, the transaction performance analysis report does not guarantee actual performance gains will match its predictions, if any predictions are made.  
   
- The Transaction Performance Analysis report and the migration advisors are installed as part of SQL Server Management Studio (SSMS) when you select **Management Tools-Basic** or **Management Tools-Advanced** when you install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], or when you [Download SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).    
+ The Transaction Performance Analysis report and the migration advisors are installed as part of SQL Server Management Studio (SSMS) when you select **Management Tools-Basic** or **Management Tools-Advanced** when you install [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], or when you [Download SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).    
   
 ## Transaction Performance Analysis Reports  
  You can generate transaction performance analysis reports in **Object Explorer** by right-clicking on the database, selecting **Reports**, then **Standard Reports**, and then **Transaction Performance Analysis Overview**. The database needs to have an active workload, or a recent run of a workload, in order to generate a meaningful analysis report.  
@@ -167,6 +168,5 @@ Scan and contention statistics on the table details report is gathered and aggre
     -   A migration checklist report for <object_name> is the only report in the location specified by folder_path2.  
   
 ## See Also  
- [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

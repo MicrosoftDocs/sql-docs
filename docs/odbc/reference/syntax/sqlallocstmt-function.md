@@ -1,4 +1,5 @@
 ---
+description: "SQLAllocStmt Function"
 title: "SQLAllocStmt Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLAllocStmt"
 apilocation: 
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLAllocStmt function [ODBC]"
 ms.assetid: 7bb38a06-e3d5-4c9a-a0e8-7b59b2ec6927
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLAllocStmt Function
 **Conformance**  

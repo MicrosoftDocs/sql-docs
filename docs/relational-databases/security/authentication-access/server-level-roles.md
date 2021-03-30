@@ -1,5 +1,6 @@
 ---
 title: "Server-Level Roles | Microsoft Docs"
+description: SQL Server provides server-level roles. These security principals group other principals to manage the server-wide permissions.
 ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: sql
@@ -22,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Server-Level Roles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -33,9 +34,9 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides nine fixed server roles. The permissions that are granted to the fixed server roles (except **public**) cannot be changed. Beginning with [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], you can create user-defined server roles and add server-level permissions to the user-defined server roles.  
   
- You can add server-level principals ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins, Windows accounts, and Windows groups) into server-level roles. Each member of a fixed server role can add other logins to that same role. Members of user-defined server roles cannot add other server principals to the role.  
+ You can add server-level principals ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins, Windows accounts, and Windows groups) into server-level roles. Each member of a fixed server role can add other logins to that same role. Members of user-defined server roles cannot add other server principals to the role.  
 > [!NOTE]
->  Server-level permissions are not available in SQL Database or SQL Data Warehouse. For more information about SQL Database, see [Controlling and granting database access.](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)
+>  Server-level permissions are not available in SQL Database or Azure Synapse Analytics. For more information about SQL Database, see [Controlling and granting database access.](/azure/sql-database/sql-database-manage-logins)
   
 ## Fixed Server-Level Roles  
  The following table shows the fixed server-level roles and their capabilities.  
@@ -51,6 +52,9 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
 |**diskadmin**|The **diskadmin** fixed server role is used for managing disk files.|  
 |**dbcreator**|Members of the **dbcreator** fixed server role can create, alter, drop, and restore any database.|  
 |**public**|Every [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login belongs to the **public** server role. When a server principal has not been granted or denied specific permissions on a securable object, the user inherits the permissions granted to public on that object. Only assign public permissions on any object when you want the object to be available to all users. You cannot change membership in public.<br /><br /> **Note:** **public** is implemented differently than other roles, and permissions can be granted, denied, or revoked from the public fixed server roles.|  
+  
+> [!IMPORTANT] 
+> Most of the permissions provided by the following server roles are not applicable to Synapse SQL - **processadmin**, **serveradmin**, **setupadmin**, and **diskadmin**.
   
 ## Permissions of Fixed Server Roles  
  Each fixed server role has certain permissions assigned to it. The following graphic shows the permissions assigned to the server roles.   
@@ -94,5 +98,4 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
  [REVOKE Server Principal Permissions &#40;Transact-SQL&#41;](../../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)   
  [DENY Server Principal Permissions &#40;Transact-SQL&#41;](../../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)   
  [Create a Server Role](../../../relational-databases/security/authentication-access/create-a-server-role.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Express LocalDB Reference - Instance APIs"
 title: "SQL Server Express LocalDB Instance API Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -9,11 +10,11 @@ ms.technology:
 
 ms.topic: "reference"
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SQL Server Express LocalDB Reference - Instance APIs
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In the traditional, service-based SQL Server world, individual SQL Server instances installed on a single computer are physically separated; that is, each instance must be installed and removed separately, has a separate set of binaries, and runs under a separate service process. The SQL Server instance name is used to specify which SQL Server instance the user wants to connect to.  
   
  The SQL Server Express LocalDB instance API uses a simplified, "light" instance model. Although individual LocalDB instances are separated on the disk and in the registry, they use the same set of shared LocalDB binaries. Moreover, LocalDB does not use services; LocalDB instances are launched on demand through LocalDB instance API calls. In LocalDB, the instance name is used to specify which of the LocalDB instances the user wants to work with.  

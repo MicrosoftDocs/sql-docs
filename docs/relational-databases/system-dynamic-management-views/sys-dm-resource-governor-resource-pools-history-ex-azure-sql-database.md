@@ -1,13 +1,13 @@
 ---
+description: "sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)"
 title: "sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/27/2019"
+ms.date: "01/05/2021"
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.resource_governor"
   - "sys.resource_governor_TSQL"
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 
 author: joesackmsft
 ms.author: josack
-monikerRange: "=azuresqldb-current||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-Returns snapshot at 20 seconds interval for last 32 minutes (128 recs in total) of resource pools stats for an Azure SQL Database.  
-  
+Each row represents a periodic snapshot of resource pool statistics in Azure SQL Database. A snapshot is taken when the database engine starts, and every few seconds thereafter. The interval between the current and the previous snapshot may vary, and is provided in the `duration_ms` column. The latest available snapshots are returned, up to 128 snapshots for each resource pool.
+
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|int|The ID of the resource pool. Is not nullable.
@@ -89,7 +89,7 @@ Returns snapshot at 20 seconds interval for last 32 minutes (128 recs in total
 |**avg_data_io_percent**|decimal(5,2)|Average I/O utilization in percentage based on the limit of the pool.|
 |**avg_log_write_percent**|decimal(5,2)|Average write resource utilization in percentage of the limit of the pool.|
 |**avg_storage_percent**|decimal(5,2)|Average storage utilization in percentage of the storage limit of the pool.|
-|**avg_allocated_storage_percent**|decimal(5,2)|The percentage of data space allocated by all databases in the elastic pool. This is the ratio of data space allocated to data max size for the elastic pool. For more information see: File space management in SQL DB|
+|**avg_allocated_storage_percent**|decimal(5,2)|The percentage of data space allocated by all databases in the elastic pool. This is the ratio of data space allocated to data max size for the elastic pool. For more information see: File space management in SQL Database|
 |**max_worker_percent**|decimal(5,2)|Maximum concurrent workers (requests) in percentage based on the limit of the pool.|
 |**max_session_percent**|decimal(5,2)|Maximum concurrent sessions in percentage based on the limit of the pool.|
 |||
@@ -129,6 +129,6 @@ select snapshot_time, name, cap_vcores_used_percent,
 
 ## See Also
 
-- [Translation log rate governance](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [Elastic pool DTU resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [Elastic pool vCore resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [Translation log rate governance](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [Elastic pool DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [Elastic pool vCore resource limits](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

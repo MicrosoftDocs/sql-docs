@@ -1,4 +1,5 @@
 ---
+description: "Known errors and resolutions with change data capture for Oracle by Attunity"
 title: "Known errors and resolutions with change data capture for Oracle by Attunity | Microsoft Docs"
 ms.date: "07/23/2019"
 ms.prod: sql
@@ -57,7 +58,7 @@ Before spending too much time troubleshooting, it is important to use the latest
 - Some changes are missed and are not replicated to the SQL Server database. This issue occurs when a table contains more than one character large binary object (CLOB) and one of the CLOBs has a large value. 
     - Fixed in _Cumulative Update 1 for SQL Server 2014 SP1_ and _Cumulative Update 8 for SQL Server 2014 RTM_ as described in KB [3029096](https://support.microsoft.com/kb/3029096). 
 - Change Data Capture for Oracle by Attunity stops working when Oracle tables have column with Long data type.
-    - Fixed in _Cumulative Update 5 for SQL Server 2014 SP1_ and _Cumulative Update 12 for SQL 2014 RTM_ as described in KB [3145983](https://support.microsoft.com/kb/3145983).
+    - Fixed in _Cumulative Update 5 for SQL Server 2014 SP1_ and _Cumulative Update 12 for SQL 2014 RTM_ as described in KB [KB4017793](https://support.microsoft.com/topic/kb4017793-cumulative-update-12-for-sql-server-2014-sp1-bc24907b-afe2-6703-ccd9-99d6cb76a74d).
 
 ### SQL Server 2012
 
@@ -67,9 +68,9 @@ Before spending too much time troubleshooting, it is important to use the latest
 - CDC for Oracle instance hangs when you start it, and does not capture changes. Oracle server memory may increase until it runs out of memory or crash.
 - [2672759](https://support.microsoft.com/kb/2672759): Error message when you use the Microsoft Change Data Capture Service for Oracle by Attunity: "ORA-00600: internal error code". Add the SOURCE level tracing and confirm if you get the same ORA-00600 error. Fixed by an Oracle patch download.
 - Multiple Partitions
-    - When you use more than 10 partitions on an Oracle table, the CDC instance cannot capture all the changes for the table. When the Oracle table is defined with more than 10 partitions, the changes are only captured from the last 10 partitions. Fixed in the _Service Pack 1 release for SQL Server 2012_. See [SP1 Feature Pack download page](https://www.microsoft.com/download/details.aspx?id=35580). 
+    - When you use more than 10 partitions on an Oracle table, the CDC instance cannot capture all the changes for the table. When the Oracle table is defined with more than 10 partitions, the changes are only captured from the last 10 partitions. Fixed in the _Service Pack 1 release for SQL Server 2012_. See [SP1 Feature Pack download page](https://www.microsoft.com/download/details.aspx?id=35575). 
 - Changes are lost
-    - The capturing of events can go into an infinite loop and stop capturing new data changes (related to Oracle bug 5623813). When on Oracle RAC environment is performing a stop or resume  of the CDC instance, changes can be skipped/lost. This means the SQL Server change data capture will be missing important rows, and thus there is data loss in the data warehouse or subscribing system. Fixed in the _Service Pack 1 release for SQL Server 2012_. See [SP1 Feature Pack download page](https://www.microsoft.com/download/details.aspx?id=35580)
+    - The capturing of events can go into an infinite loop and stop capturing new data changes (related to Oracle bug 5623813). When on Oracle RAC environment is performing a stop or resume  of the CDC instance, changes can be skipped/lost. This means the SQL Server change data capture will be missing important rows, and thus there is data loss in the data warehouse or subscribing system. Fixed in the _Service Pack 1 release for SQL Server 2012_. See [SP1 Feature Pack download page](https://www.microsoft.com/download/details.aspx?id=35575)
 - Double widths on columns in SQL
     - When creating a CDC for Oracle instance, in the scripts to run against SQL Server, the length of a variable width data type column is doubled in SQL Server tables that are created in the script. For example, if you try to track changes on a VARCHAR2(10) column in an Oracle table, then the corresponding column in the SQL Server table is NVARCHAR(20) in the deployment script. Fix in either _Cumulative Update 2 for SQL Server 2012 SP1_ or _Cumulative update 5 for SQL Server 2012_ as described in KB [2769673](https://support.microsoft.com/kb/2769673). 
 - DDL Data is truncated
@@ -82,7 +83,7 @@ Before spending too much time troubleshooting, it is important to use the latest
 - The metadata validation for Oracle table cdc.table_name failed. Column column_name index is out of range. Fixed in _Cumulative Update 7 for SQL Server 2012 SP1_ as described in KB [2883524](https://support.microsoft.com/kb/2883524).
 - Oracle CDC service shows aborted status when you use CDC for Oracle by Attunity in SQL Server 2012. Fixed in _Cumulative Update 8 for SQL Server 2012 SP1_ as described in KB [2923839](https://support.microsoft.com/kb/2923839).  
 - Some changes are missed and are not replicated to the SQL Server databases. This issue occurs when a table contains more than one character large binary object (CLOB) and one of the CLOBs has a large value. Fixed in _Cumulative Update 8 for SQL Server 2012 SP1_ as described in KB [2923839](https://support.microsoft.com/kb/2923839).   
-- Change Data Capture for Oracle by Attunity stops working when Oracle tables have column with Long data type. Fixed in _Cumulative Update 2 for SQL Server 2012 SP3_ and _Cumulative Update 11 for SQL 2012 SP2_  as described in KB [3145983](https://support.microsoft.com/kb/3145983). 
+- Change Data Capture for Oracle by Attunity stops working when Oracle tables have column with Long data type. Fixed in _Cumulative Update 2 for SQL Server 2012 SP3_ and _Cumulative Update 11 for SQL 2012 SP2_  as described in KB [KB4017793](https://support.microsoft.com/topic/kb4017793-cumulative-update-12-for-sql-server-2014-sp1-bc24907b-afe2-6703-ccd9-99d6cb76a74d). 
 
 ## Collect detailed logs 
 
@@ -100,27 +101,27 @@ You can query the trace table in the CDC database within SQL Server to see logge
 
 To capture diagnostics, select **Collect Diagnostics** on the status tab in the Oracle Change Data Capture management console. 
 
-![Collect diagnostics link](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
+![Screenshot showing the Status tab in the Oracle Change Data Capture management console with the Collect Diagnostics option called out.](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
 
 Choose a start time and select a location for the log file. Then select **Create** to start the diagnostics collection. 
 
-![Collect diagnostics link](media/known-issues-resolutions-with-cdc-for-oracle-attunity/start-diagnostics.png)
+![Screenshot of the Collect Diagnostics for testTA dialog box.](media/known-issues-resolutions-with-cdc-for-oracle-attunity/start-diagnostics.png)
 
 ### Detailed errors
 
 You can increase the level of tracing collected by the instance and repeat the scenario to gather more detailed logging. To do so, select **Properties** under **Actions** and then add a new property in the **Advanced Settings** grid on the **Advanced** tab. Set the name of the property to `trace` and then set the value to `SOURCE`. 
 
-![Collect diagnostics link](media/known-issues-resolutions-with-cdc-for-oracle-attunity/properties.png)
+![Screenshot showing the Properties option under Actions.](media/known-issues-resolutions-with-cdc-for-oracle-attunity/properties.png)
 
 Reproduce the error and then select the **Collect diagnostics** option to gather logs. 
 
-![Collect diagnostics link](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
+![Another screenshot of the Status tab in the Oracle Change Data Capture management console with the Collect Diagnostics option called out.](media/known-issues-resolutions-with-cdc-for-oracle-attunity/collect-diagnostics.png)
 
 ## ORA-00942 Table of view does not exist 
 
 This is a common error displayed in the **Status** message field of the CDC Instance. The instance retries numerous times, so the status icon will change to green momentarily, but then it will fail with the red exclamation and UNEXPECTED status. 
 
-![Oracle error](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-error.png)
+![Screenshot showing the common error displayed in the Status message field of the CDC Instance.](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-error.png)
 
 ```
 "ERROR","computername","ERROR","UNEXPECTED",
@@ -146,7 +147,7 @@ The list of all the necessarily permissions is detailed in the help file include
 
 You can set the user account by selecting the CDCInstance from the left pane and selecting the Properties button in the Actions right-most pane within the **CDC Designer** window. You can change the Oracle log mining authentication account from the properties dialogue page.
 
-![Oracle error](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-connection.png)
+![Screenshot showing the Oracle tab of the testTA Properties dialog box.](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-connection.png)
 
 
   

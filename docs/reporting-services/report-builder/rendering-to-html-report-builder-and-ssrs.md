@@ -1,5 +1,6 @@
 ---
 title: "Rendering to HTML (Report Builder) | Microsoft Docs"
+description: In Report Builder, the HTML rendering extension renders paginated reports in HTML format. It can produce full HTML pages or fragments to embed in other pages.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

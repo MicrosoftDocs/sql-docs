@@ -1,5 +1,6 @@
 ---
-title: "Example Application (SQLSRV Driver) | Microsoft Docs"
+title: "Example Application (SQLSRV Driver)"
+description: "The AdventureWorks Product Reviews example is a Web application that uses the SQLSRV driver to demonstrate how to interact with a SQL Server database from PHP."
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: sql
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "example application"
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Example Application (SQLSRV Driver)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +34,7 @@ To run the AdventureWorks Product Reviews example application, the following mus
 -   SQL Server 2005 or SQL Server 2008, with the [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database attached, is installed on the local computer.  
 -   A Web browser is installed.  
   
-## Demonstrates  
+## AdventureWorks example  
 The AdventureWorks Product Reviews example application demonstrates the following:  
   
 -   How to open a connection to SQL Server by using Windows Authentication.  
@@ -45,8 +46,7 @@ The AdventureWorks Product Reviews example application demonstrates the followin
 -   How to send data as a stream.  
 -   How to check for errors.  
   
-## Example  
-The AdventureWorks Product Reviews example application returns product information from the database for products whose names contain a string entered by the user. From the list of returned products, the user can see reviews, see an image, upload an image, and write a review for a selected product.  
+This example returns product information from the database for products whose names contain a string entered by the user. From the list of returned products, the user can see reviews, see an image, upload an image, and write a review for a selected product.  
   
 Put the following code in a file named adventureworks_demo.php:  
   
@@ -485,7 +485,7 @@ function FormatErrors( $errors )
 </html>  
 ```  
   
-## Example  
+## LOB example  
 The photo.php script returns a product photo for a specified **ProductID**. This script is called from the adventureworks_demo.php script.  
   
 Put the following code in a file named photo.php:  

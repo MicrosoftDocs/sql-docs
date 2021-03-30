@@ -1,5 +1,6 @@
 ---
 title: "Working with subscriptions (web portal) | Microsoft Docs"
+description: Learn how to use the Subscriptions page to list all of the subscriptions for the current report in Reporting Services. 
 ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -40,7 +41,7 @@ Subscriptions are supported for reports that can run unattended. At a minimum, t
 ## Type of subscription  
 You can select between a **Standard subscription** and a **Data-driven subscription**.  
   
-![ssRSWebPortal-subscriptions3](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
+![Screenshot showing the Type of Subscription section.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
    
 A data-driven subscription is one that queries a subscriber database for subscription information each time the subscription runs. Data-driven subscriptions use query results to determine the recipients of the subscription, delivery settings, and report parameter values. At run time, the report server runs a query to get values used for subscription settings.   
   
@@ -53,7 +54,7 @@ Select the delivery extension to use to distribute the report.
   
 The availability of a delivery extension depends on whether it is installed and configured on the report server. Report Server email is the default delivery extension, but it must be configured before you can use it. File Share delivery does not require configuration, but you must define a shared folder before you can use it.  
   
-![ssRSWebPortal-subscriptions2](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
+![Screenshot showing the Destination and Delivery Options (Windows File Share) sections.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
   
 Depending on the delivery extension you select, the following settings appear:  
   
@@ -64,7 +65,7 @@ Depending on the delivery extension you select, the following settings appear:
 ## Data-driven subscription dataset  
 For a data-driven subscription, you will need to define the dataset used for the subscription. Select **Edit Dataset** to supply that information.  
   
-![ssRSWebPortal-subscriptions4](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
+![Screenshot showing the Dataset section.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
   
 You need to first provide a **data source** to use for the query. This can be either a shared data source, or you can supply a custom data source.  
   
@@ -76,7 +77,7 @@ For best result, run the query in SQL Server Management Studio first, before usi
   
 -   Rows in the result set determine the number of report deliveries that are generated. If you have 10,000 rows, the report server will generate 10,000 notifications and deliveries.  
   
-![ssRSWebPortal-subscriptions5](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
+![Screenshot showing the Query section.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
   
 You can then validate the query. You can also define a **query timeout**.  
   

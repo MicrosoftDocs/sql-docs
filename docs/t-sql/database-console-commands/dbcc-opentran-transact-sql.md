@@ -1,4 +1,5 @@
 ---
+description: "DBCC OPENTRAN (Transact-SQL)"
 title: "DBCC OPENTRAN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2017"
@@ -27,7 +28,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 DBCC OPENTRAN helps to identify active transactions that may be preventing log truncation. DBCC OPENTRAN displays information about the oldest active transaction and the oldest distributed and nondistributed replicated transactions, if any, within the transaction log of the specified database. Results are displayed only if there is an active transaction that exists in the log or if the database contains replication information. An informational message is displayed if there are no active transactions in the log.
   
@@ -38,7 +39,7 @@ DBCC OPENTRAN helps to identify active transactions that may be preventing log t
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC OPENTRAN   
 [   
     ( [ database_name | database_id | 0 ] )   
@@ -48,7 +49,9 @@ DBCC OPENTRAN
 ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name* | *database_id*| 0  
  Is the name or ID of the database for which to display the oldest transaction information. If not specified, or if 0 is specified, the current database is used. Database names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
@@ -64,7 +67,7 @@ Use DBCC OPENTRAN to determine whether an open transaction exists within the tra
 ## Result Sets  
 DBCC OPENTRAN returns the following result set when there are no open transactions:
   
-```sql
+```
 No active open transactions.  
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
@@ -77,7 +80,7 @@ Requires membership in the **sysadmin** fixed server role or the **db_owner** fi
 The following example obtains transaction information for the current database. Results may vary.
   
 ```sql  
-CREATE TABLE T1(Col1 int, Col2 char(3));  
+CREATE TABLE T1(Col1 INT, Col2 CHAR(3));  
 GO  
 BEGIN TRAN  
 INSERT INTO T1 VALUES (101, 'abc');  
@@ -112,7 +115,7 @@ The following example loads the results of the DBCC OPENTRAN command into a temp
 ```sql  
 -- Create the temporary table to accept the results.  
 CREATE TABLE #OpenTranStatus (  
-   ActiveTransaction varchar(25),  
+   ActiveTransaction VARCHAR(25),  
    Details sql_variant   
    );  
 -- Execute the command, putting the results in the table.  

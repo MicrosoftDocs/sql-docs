@@ -1,12 +1,13 @@
 ---
+description: "NEWID (Transact-SQL)"
 title: "NEWID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, sql-database"
+ms.prod_service: "synapse-analytics, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "NEWID"
   - "NEWID_TSQL"
@@ -16,25 +17,28 @@ helpviewer_keywords:
   - "uniqueidentifier data type"
   - "NEWID function"
 ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# NEWID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Creates a unique value of type **uniqueidentifier**.  
+# NEWID (Transact-SQL)
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+
+Creates a unique value of type **uniqueidentifier**.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql 
 NEWID ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **uniqueidentifier**  
   
 ## Remarks  
@@ -45,7 +49,7 @@ NEWID ( )
 ### A. Using the NEWID function with a variable  
  The following example uses `NEWID()` to assign a value to a variable declared as the **uniqueidentifier** data type. The value of the **uniqueidentifier** data type variable is printed before the value is tested.  
   
-```  
+```sql
 -- Creating a local variable with DECLARE/SET syntax.  
 DECLARE @myid uniqueidentifier  
 SET @myid = NEWID()  
@@ -67,45 +71,45 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
  The following example creates the `cust` table with a **uniqueidentifier** data type, and uses NEWID to fill the table with a default value. In assigning the default value of `NEWID()`, each new and existing row has a unique value for the `CustomerID` column.  
   
-```  
+```sql
 -- Creating a table using NEWID for uniqueidentifier data type.  
 CREATE TABLE cust  
 (  
  CustomerID uniqueidentifier NOT NULL  
    DEFAULT newid(),  
- Company varchar(30) NOT NULL,  
- ContactName varchar(60) NOT NULL,   
- Address varchar(30) NOT NULL,   
- City varchar(30) NOT NULL,  
- StateProvince varchar(10) NULL,  
- PostalCode varchar(10) NOT NULL,   
- CountryRegion varchar(20) NOT NULL,   
- Telephone varchar(15) NOT NULL,  
- Fax varchar(15) NULL  
+ Company VARCHAR(30) NOT NULL,  
+ ContactName VARCHAR(60) NOT NULL,   
+ Address VARCHAR(30) NOT NULL,   
+ City VARCHAR(30) NOT NULL,  
+ StateProvince VARCHAR(10) NULL,  
+ PostalCode VARCHAR(10) NOT NULL,   
+ CountryRegion VARCHAR(20) NOT NULL,   
+ Telephone VARCHAR(15) NOT NULL,  
+ Fax VARCHAR(15) NULL  
 );  
 GO  
 -- Inserting 5 rows into cust table.  
 INSERT cust  
-(CustomerID, Company, ContactName, Address, City, StateProvince,   
+(Company, ContactName, Address, City, StateProvince,   
  PostalCode, CountryRegion, Telephone, Fax)  
 VALUES  
- (NEWID(), 'Wartian Herkku', 'Pirkko Koskitalo', 'Torikatu 38', 'Oulu', NULL,  
+ ('Wartian Herkku', 'Pirkko Koskitalo', 'Torikatu 38', 'Oulu', NULL,  
  '90110', 'Finland', '981-443655', '981-443655')  
-,(NEWID(), 'Wellington Importadora', 'Paula Parente', 'Rua do Mercado, 12', 'Resende', 'SP',  
+,('Wellington Importadora', 'Paula Parente', 'Rua do Mercado, 12', 'Resende', 'SP',  
  '08737-363', 'Brasil', '(14) 555-8122', '')  
-,(NEWID(), 'Cactus Comidas para Ilevar', 'Patricio Simpson', 'Cerrito 333', 'Buenos Aires', NULL,   
+,('Cactus Comidas para Ilevar', 'Patricio Simpson', 'Cerrito 333', 'Buenos Aires', NULL,   
  '1010', 'Argentina', '(1) 135-5555', '(1) 135-4892')  
-,(NEWID(), 'Ernst Handel', 'Roland Mendel', 'Kirchgasse 6', 'Graz', NULL,  
+,('Ernst Handel', 'Roland Mendel', 'Kirchgasse 6', 'Graz', NULL,  
  '8010', 'Austria', '7675-3425', '7675-3426')  
-,(NEWID(), 'Maison Dewey', 'Catherine Dewey', 'Rue Joseph-Bens 532', 'Bruxelles', NULL,  
+,('Maison Dewey', 'Catherine Dewey', 'Rue Joseph-Bens 532', 'Bruxelles', NULL,  
  'B-1180', 'Belgium', '(02) 201 24 67', '(02) 201 24 68');  
-GO  
+GO
 ```  
   
 ### C. Using uniqueidentifier and variable assignment  
  The following example declares a local variable called `@myid` as a variable of **uniqueidentifier** data type. Then, the variable is assigned a value by using the `SET` statement.  
   
-```  
+```sql  
 DECLARE @myid uniqueidentifier ;  
 SET @myid = 'A972C577-DFB0-064E-1189-0154C99310DAAC12';  
 SELECT @myid;  

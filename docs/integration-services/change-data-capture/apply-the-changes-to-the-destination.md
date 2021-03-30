@@ -1,4 +1,5 @@
 ---
+description: "Apply the Changes to the Destination"
 title: "Apply the Changes to the Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Apply the Changes to the Destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In the data flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the third and final task is to apply the changes to your destination. You will need one component to apply inserts, one to apply updates, and one to apply deletes.  

@@ -1,4 +1,5 @@
 ---
+description: "sp_indexes (Transact-SQL)"
 title: "sp_indexes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_indexes_TSQL"
   - "sp_indexes"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_indexes"
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns index information for the specified remote table.  
   

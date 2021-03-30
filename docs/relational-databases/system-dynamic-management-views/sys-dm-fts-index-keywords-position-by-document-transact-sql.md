@@ -1,11 +1,12 @@
 ---
+description: "sys.dm_fts_index_keywords_position_by_document (Transact-SQL)"
 title: "sys.dm_fts_index_keywords_position_by_document (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_fts_index_keywords_position_by_document_TSQL"
   - "dm_fts_index_keywords_position_by_document_TSQL"
@@ -20,7 +21,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns keyword positional information in the indexed documents.  
   

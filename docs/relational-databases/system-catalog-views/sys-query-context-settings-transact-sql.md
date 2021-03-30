@@ -1,4 +1,5 @@
 ---
+description: "sys.query_context_settings (Transact-SQL)"
 title: "sys.query_context_settings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/29/2018"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "QUERY_CONTEXT_SETTINGS_TSQL"
   - "SYS.QUERY_CONTEXT_SETTINGS_TSQL"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.query_context_settings catalog view"
 ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
-author: stevestein
-ms.author: sstein
-monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_context_settings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Contains  information about the semantics affecting context settings associated with a query. There are a number of context settings available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that influence the query semantics (defining the correct result of the query). The same query text compiled under different settings may produce different results (depending on the underlying data).  
   

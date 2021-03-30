@@ -1,5 +1,6 @@
 ---
 title: "Data-Driven Subscriptions | Microsoft Docs"
+description: Learn about data-driven subscriptions, which provide a way to use dynamic subscription data that's retrieved from an external data source at run time.
 ms.date: 05/20/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

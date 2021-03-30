@@ -1,12 +1,12 @@
 ---
 title: Clone an Existing Database
+description: Learn how to clone a database. View the steps that are involved with creating a new database, duplicating its schema, and replicating its data.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017

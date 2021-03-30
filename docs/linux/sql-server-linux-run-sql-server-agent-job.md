@@ -1,6 +1,6 @@
 ---
 title: Create and run jobs for SQL Server on Linux
-description: This tutorial shows how to run SQL Server Agent job on Linux.
+description: Learn how to create a SQL Server Agent job on Linux using both Transact-SQL and SQL Server Management Studio (SSMS).
 author: VanMSFT 
 ms.author: vanto
 ms.date: 02/20/2018
@@ -11,7 +11,7 @@ ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ---
 # Create and run SQL Server Agent jobs on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 SQL Server jobs are used to regularly perform the same sequence of commands in your SQL Server database. This tutorial provides an example of how to create a SQL Server Agent job on Linux using both Transact-SQL and SQL Server Management Studio (SSMS).
 
@@ -33,7 +33,7 @@ The following prerequisites are required to complete this tutorial:
 The following prerequisites are optional:
 
 * Windows machine with SSMS:
-  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) for optional SSMS steps.
+  * [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) for optional SSMS steps.
 
 ## Enable SQL Server Agent
 
@@ -75,7 +75,7 @@ Use the following steps to create a sample database named **SampleDB**. This dat
 The following steps create a SQL Server Agent job on Linux with Transact-SQL commands. The job runs a daily backup of the sample database, **SampleDB**.
 
 > [!TIP]
-> You can use any T-SQL client to run these commands. For example, on Linux you can use [sqlcmd](sql-server-linux-setup-tools.md) or [Visual Studio Code](sql-server-linux-develop-use-vscode.md). From a remote Windows Server, you can also run queries in SQL Server Management Studio (SSMS) or use the UI interface for job management, which is described in the next section.
+> You can use any T-SQL client to run these commands. For example, on Linux you can use [sqlcmd](sql-server-linux-setup-tools.md) or [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md). From a remote Windows Server, you can also run queries in SQL Server Management Studio (SSMS) or use the UI interface for job management, which is described in the next section.
 
 1. Use [sp_add_job](../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md) to create a job named `Daily SampleDB Backup`.
 
@@ -173,9 +173,9 @@ You can also create and manage jobs remotely using SQL Server Management Studio 
 
 1. Create a new job schedule.
 
-   ![Job schedule](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
+   ![Screenshot of the New Job dialog box with the Schedules option highlighted and the New option called out.](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
 
-   ![Job schedule](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
+   ![Screenshot of the New Job dialog box with the OK option called out.](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
 
 1. Start your job.
 
@@ -194,4 +194,4 @@ In this tutorial, you learned how to:
 Next, explore other capabilities for creating and managing jobs:
 
 > [!div class="nextstepaction"]
->[SQL Server Agent documentation](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)
+>[SQL Server Agent documentation](../ssms/agent/sql-server-agent.md)

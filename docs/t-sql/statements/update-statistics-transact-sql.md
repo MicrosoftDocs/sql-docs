@@ -1,12 +1,13 @@
 ---
+description: "UPDATE STATISTICS (Transact-SQL)"
 title: "UPDATE STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "UPDATE STATISTICS"
   - "UPDATE_STATISTICS_TSQL"
@@ -18,12 +19,12 @@ helpviewer_keywords:
   - "UPDATE STATISTICS statement"
   - "statistical information [SQL Server], updating"
 ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # UPDATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Updates query optimization statistics on a table or indexed view. By default, the query optimizer already updates statistics as necessary to improve the query plan; in some cases you can improve query performance by using `UPDATE STATISTICS` or the stored procedure [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) to update statistics more frequently than the default updates.  
   
@@ -33,7 +34,7 @@ Updating statistics ensures that queries compile with up-to-date statistics. How
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 UPDATE STATISTICS table_or_indexed_view_name   
@@ -65,8 +66,8 @@ UPDATE STATISTICS table_or_indexed_view_name
     [ PAGECOUNT = numeric_contant ]  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 UPDATE STATISTICS [ schema_name . ] table_name   
     [ ( { statistics_name | index_name } ) ]  
@@ -79,8 +80,12 @@ UPDATE STATISTICS [ schema_name . ] table_name
     ]  
 [;]  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
+## Arguments
  *table_or_indexed_view_name*  
  Is the name of the table or indexed view that contains the statistics object.  
   
@@ -97,7 +102,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
   
  SAMPLE is useful for special cases in which the query plan, based on default sampling, is not optimal. In most situations, it is not necessary to specify SAMPLE because the query optimizer uses sampling and determines the statistically significant sample size by default, as required to create high-quality query plans. 
  
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], sampling of data to build statistics is done in parallel, when using compatibility level 130, to improve the performance of statistics collection. The query optimizer will use parallel sample statistics, whenever a table size exceeds a certain threshold. 
+Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], sampling of data to build statistics is done in parallel, when using compatibility level 130, to improve the performance of statistics collection. The query optimizer will use parallel sample statistics, whenever a table size exceeds a certain threshold. 
    
  SAMPLE cannot be used with the FULLSCAN option. When neither SAMPLE nor FULLSCAN is specified, the query optimizer uses sampled data and computes the sample size by default.  
   
@@ -105,7 +110,7 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], sampling of dat
   
  For most workloads, a full scan is not required, and default sampling is adequate.  
 However, certain workloads that are sensitive to widely varying data distributions may require an increased sample size, or even a full scan.  
-For more information, see  the [CSS SQL Escalation Services blog](https://docs.microsoft.com/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed).  
+For more information, see  the [CSS SQL Escalation Services blog](/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed).  
   
  RESAMPLE  
  Update each statistic using its most recent sample rate.  
@@ -125,7 +130,7 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) and [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) expose the persisted sample percent value for the selected statistic.
  
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) and later (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
+ **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4) and later (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
  
  ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] 
  Forces the leaf-level statistics covering the partitions specified in the ON PARTITIONS clause to be recomputed, and then merged to build the global statistics. WITH RESAMPLE is required because partition statistics built with different sample rates cannot be merged together.  
@@ -161,7 +166,7 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later
 
 MAXDOP = *max_degree_of_parallelism*  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Overrides the **max degree of parallelism** configuration option for the duration of the statistic operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
   
@@ -177,6 +182,7 @@ MAXDOP = *max_degree_of_parallelism*
  Uses the actual number of processors or fewer based on the current system workload.  
   
  \<update_stats_stream_option> 
+ 
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
 ## Remarks  
@@ -202,27 +208,27 @@ Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/
 ### Determining the Last Statistics Update  
  To determine when statistics were last updated, use the [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) function.  
   
-### PDW / SQL Data Warehouse  
- The following syntax is not supported by PDW / SQL Data Warehouse  
+### PDW / Azure Synapse Analytics  
+ The following syntax is not supported by [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] / [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]  
   
-```sql  
-update statistics t1 (a,b);   
+```sql
+UPDATE STATISTICS t1 (a,b);   
 ```  
   
 ```sql  
-update statistics t1 (a) with sample 10 rows;  
+UPDATE STATISTICS t1 (a) WITH SAMPLE 10 ROWS;  
 ```  
   
 ```sql  
-update statistics t1 (a) with NORECOMPUTE;  
+UPDATE STATISTICS t1 (a) WITH NORECOMPUTE;  
 ```  
   
 ```sql  
-update statistics t1 (a) with INCREMENTAL=ON;  
+UPDATE STATISTICS t1 (a) WITH INCREMENTAL = ON;  
 ```  
   
 ```sql  
-update statistics t1 (a) with stats_stream = 0x01;  
+UPDATE STATISTICS t1 (a) WITH stats_stream = 0x01;  
 ```  
   
 ## Permissions  
@@ -308,4 +314,4 @@ UPDATE STATISTICS Customer;
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
- [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)

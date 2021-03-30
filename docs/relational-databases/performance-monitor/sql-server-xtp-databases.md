@@ -1,5 +1,6 @@
 ---
 title: "SQL Server XTP Databases | Microsoft Docs"
+description: Learn about the SQL Server XTP Databases performance object, which provides In-Memory OLTP database-specific counters.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -10,11 +11,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server 2016 XTP Databases"
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server XTP Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The **SQL Server XTP Databases** performance object provides In-Memory OLTP database-specific counters.
 

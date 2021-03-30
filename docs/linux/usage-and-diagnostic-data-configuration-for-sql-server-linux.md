@@ -11,11 +11,11 @@ ms.technology: linux
 ---
 # Configure usage & diagnostic data collection for SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 By default, Microsoft SQL Server collects information about how its customers are using the application. Specifically, SQL Server collects information about the installation experience, usage, and performance. This information helps Microsoft improve the product to better meet customer needs. For example, Microsoft collects information about what kinds of error codes customers encounter so that we can fix related bugs, improve our documentation about how to use SQL Server, and determine whether features should be added to the product to better serve customers.
 
-This document provides details about what kinds of information are collected and about how to configure Microsoft SQL Server on Linux to send that collected information to Microsoft. SQL Server 2017 includes a privacy statement that explains what information we do and do not collect from users. For more information, see the [privacy statement](https://go.microsoft.com/fwlink/?LinkID=868444).
+This document provides details about what kinds of information are collected and about how to configure Microsoft SQL Server on Linux to send that collected information to Microsoft. SQL Server 2017 includes a privacy statement that explains what information we do and do not collect from users. For more information, see the [privacy statement](../sql-server/sql-server-privacy.md).
 
 Specifically, Microsoft does not send any of the following types of information through this mechanism:
 
@@ -50,7 +50,7 @@ This option lets you change if SQL Server sends usage and diagnostic data collec
    ```
    
 ### On Docker
-To disable usage and diagnostic data collection on docker, you must have Docker [persist your data](sql-server-linux-configure-docker.md). 
+To disable usage and diagnostic data collection on docker, you must have Docker [persist your data](./sql-server-linux-docker-container-deployment.md). 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -77,7 +77,7 @@ To disable usage and diagnostic data collection on docker, you must have Docker 
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Add an `mssql.conf` file with the lines `[telemetry]` and `customerfeedback = false` in the host directory:
 
@@ -137,7 +137,7 @@ This option enables Local Audit and lets you set the directory where the Local A
    ```
    
 ### On Docker
-To enable Local Audit on docker, you must have Docker [persist your data](sql-server-linux-configure-docker.md). 
+To enable Local Audit on docker, you must have Docker [persist your data](./sql-server-linux-docker-container-deployment.md). 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -170,7 +170,7 @@ To enable Local Audit on docker, you must have Docker [persist your data](sql-se
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. The target directory for new Local Audit logs will be in the container. Create a target directory for new Local Audit logs in the host directory on your machine. The following example creates a new **/audit** directory:
 

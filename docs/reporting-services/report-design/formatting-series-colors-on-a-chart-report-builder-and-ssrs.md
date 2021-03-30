@@ -1,5 +1,6 @@
 ---
 title: "Formatting Series Colors on a Chart (Report Builder) | Microsoft Docs"
+description: Learn how to use the many built-in palettes for charts or define a custom palette of your own design in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

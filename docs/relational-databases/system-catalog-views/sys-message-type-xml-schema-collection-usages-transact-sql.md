@@ -1,4 +1,5 @@
 ---
+description: "sys.message_type_xml_schema_collection_usages (Transact-SQL)"
 title: "sys.message_type_xml_schema_collection_usages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "message_type_xml_schema_collection_usages_TSQL"
   - "sys.message_type_xml_schema_collection_usages_TSQL"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.message_type_xml_schema_collection_usages catalog view"
 ms.assetid: 544f61a1-c7b7-44b4-bf8d-980ba87d0665
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.message_type_xml_schema_collection_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This catalog view returns a row for each service message type that is validated by an XML schema collection.  
   

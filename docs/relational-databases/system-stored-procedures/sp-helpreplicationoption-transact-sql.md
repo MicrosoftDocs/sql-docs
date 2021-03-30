@@ -1,4 +1,5 @@
 ---
+description: "sp_helpreplicationoption (Transact-SQL)"
 title: "sp_helpreplicationoption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_helpreplicationoption"
   - "sp_helpreplicationoption_TSQL"
 helpviewer_keywords: 
   - "sp_helpreplicationoption"
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpreplicationoption (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Shows the types of replication options enabled for a server. This stored procedure is executed at any server on any database.  
   

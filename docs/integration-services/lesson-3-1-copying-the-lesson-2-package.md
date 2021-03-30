@@ -1,4 +1,5 @@
 ---
+description: "Lesson 3-1: Copy the Lesson 2 package"
 title: "Step 1: Copy the Lesson 2 package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2019"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 3-1: Copy the Lesson 2 package
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

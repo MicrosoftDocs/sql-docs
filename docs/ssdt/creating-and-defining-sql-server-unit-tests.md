@@ -1,12 +1,12 @@
 ---
 title: Creating and Defining SQL Server Unit Tests
+description: Learn about SQL Server unit tests. View sources of information on how to create and run unit tests, troubleshoot problems, and perform other related tasks.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
@@ -38,9 +38,8 @@ In the following table, you can find descriptions of common tasks that support t
 [Running SQL Server Unit Tests](../ssdt/running-sql-server-unit-tests.md)  
 After you create your SQL Server unit tests, you can run them from the Test View window, the SQL Server Unit Test Designer, or by using Team Foundation Build.  
   
-[Scenario: Define Custom Test Conditions for Database Unit Tests](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[Scenario: Define Custom Test Conditions for Database Unit Tests](/previous-versions/visualstudio/visual-studio-2010/dd193282(v=vs.100))  
 You can create a custom test condition to test a behavior that the default test conditions cannot verify.  
   
 ## See Also  
 [Verifying Database Code by Using SQL Server Unit Tests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

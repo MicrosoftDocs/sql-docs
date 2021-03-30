@@ -1,5 +1,6 @@
 ---
-title: "Troubleshooting connectivity | Microsoft Docs"
+title: "Troubleshooting connectivity"
+description: "Learn about JDBC connectivity and how to troubleshoot potential connection issues when using the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Troubleshooting connectivity
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,7 +38,7 @@ ms.author: genemi
 -   When you use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, the JDBC driver requires that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, which is not the default. Make sure that this option is included when you install or configure your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## See also  
- [Diagnosing problems with the JDBC driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
- [Connecting to SQL Server with the JDBC driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [Diagnosing problems with the JDBC driver](diagnosing-problems-with-the-jdbc-driver.md)   
+ [Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

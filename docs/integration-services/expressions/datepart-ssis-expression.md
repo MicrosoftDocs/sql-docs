@@ -1,4 +1,5 @@
 ---
+description: "DATEPART (SSIS Expression)"
 title: "DATEPART (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # DATEPART (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns an integer representing a datepart of a date.  
@@ -54,7 +55,7 @@ DATEPART(datepart, date)
 |Day|dd, d|  
 |Week|wk, ww|  
 |Weekday|dw|  
-|Hour|Hh|  
+|Hour|Hh, hh, HH|  
 |Minute|mi, n|  
 |Second|ss, s|  
 |Millisecond|Ms|  
@@ -76,6 +77,14 @@ DATEPART("dd", ModifiedDate)
   
 ```  
 DATEPART("yy",GETDATE())  
+```  
+  
+ These examples all return 19. 
+  
+```  
+DATEPART("HH", (DT_DATE) "2020-09-02 19:24" )
+DATEPART("hh", (DT_DATE) "2020-09-02 19:24" )
+DATEPART("Hh", (DT_DATE) "2020-09-02 19:24" )
 ```  
   
 ## See Also  

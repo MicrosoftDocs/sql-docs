@@ -1,7 +1,8 @@
 ---
+description: "DBCC FREESYSTEMCACHE (Transact-SQL)"
 title: "DBCC FREESYSTEMCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/16/2017"
+ms.date: "02/25/2020"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -26,14 +27,14 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC FREESYSTEMCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Releases all unused cache entries from all caches. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] proactively cleans up unused cache entries in the background to make memory available for current entries. However, you can use this command to manually remove unused entries from every cache or from a specified Resource Governor pool cache.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
-```sql
+```syntaxsql
 DBCC FREESYSTEMCACHE   
     ( 'ALL' [, pool_name ] )   
     [WITH   
@@ -41,10 +42,18 @@ DBCC FREESYSTEMCACHE
     ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 ( 'ALL' [,_pool\_name_ ] )  
 ALL specifies all supported caches.  
-_pool\_name_ specifies a Resource Governor pool cache. Only entries associated with this pool are freed.  
+_pool\_name_ specifies a resource governor pool cache. Only entries associated with this pool are freed. To list the available pool names run:
+
+```sql
+SELECT name FROM sys.dm_os_memory_clerks
+```
+
+Most, but not all, caches can be individually freed using this command.
   
 MARK_IN_USE_FOR_REMOVAL  
 Asynchronously frees currently used entries from their respective caches after they're unused. After the DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL runs, new entries created in the cache aren't affected.  
@@ -53,7 +62,11 @@ NO_INFOMSGS
 Suppresses all informational messages.  
   
 ## Remarks  
-Running DBCC FREESYSTEMCACHE clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all upcoming execution plans and can cause a sudden, temporary reduction in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations." This message is logged every five minutes as long as the cache is flushed within that time interval.
+Running DBCC FREESYSTEMCACHE clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all upcoming execution plans and can cause a sudden, temporary reduction in query performance. For each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message:
+
+>`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.`
+
+ This message is logged every five minutes as long as the cache is flushed within that time interval.
 
 ## Result sets  
 DBCC FREESYSTEMCACHE returns:

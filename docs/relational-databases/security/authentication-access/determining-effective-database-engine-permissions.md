@@ -1,9 +1,10 @@
 ---
 title: "Determining Effective Database Engine Permissions | Microsoft Docs"
+description: Learn how to determine who has permissions to various objects in the SQL Server Database Engine, including the current and previous permissions systems.
 ms.custom: ""
 ms.date: "01/03/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
@@ -13,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Determining Effective Database Engine Permissions
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This article describes how to determine who has permissions to various objects in the SQL Server Database Engine. SQL Server implements two permission systems for the Database Engine. An older system of fixed roles has preconfigured permissions. Beginning with SQL Server 2005 a more flexible and precise system is available. (The information in this article applies to SQL Server, beginning with 2005. Some types of permissions are not available in some versions of SQL Server.)
 
@@ -45,7 +46,7 @@ This article describes how to determine who has permissions to various objects i
 
 Fixed Server Roles and Fixed Database Roles have preconfigured permissions that cannot be changed. To determine who is a member of a fixed server role, execute the following query:    
 > [!NOTE]
->  Does not apply to SQL Database or SQL Data Warehouse where server level permission is not available. The `is_fixed_role` column of `sys.server_principals` was added in SQL Server 2012. It is not needed for older versions of SQL Server.  
+>  Does not apply to SQL Database or Azure Synapse Analytics where server level permission is not available. The `is_fixed_role` column of `sys.server_principals` was added in SQL Server 2012. It is not needed for older versions of SQL Server.  
 > ```sql
 > SELECT SP1.name AS ServerRoleName, 
 >  isnull (SP2.name, 'No members') AS LoginName   
@@ -100,7 +101,7 @@ Remember that a Windows user might be a member of more than one Windows group (e
 
 The following query returns a list of the permissions that have been granted or denied at the server level. This query should be executed in the master database.   
 > [!NOTE]
->  Server-level permissions cannot be granted or queried on SQL Database or SQL Data Warehouse.   
+>  Server-level permissions cannot be granted or queried on SQL Database or Azure Synapse Analytics.   
 > ```sql
 > SELECT pr.type_desc, pr.name, 
 >  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
@@ -150,5 +151,5 @@ For the details of the syntax, see [HAS_PERMS_BY_NAME](../../../t-sql/functions/
 ## See Also:
 
 [Getting Started with Database Engine Permissions](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
-[Tutorial: Getting Started with Database Engine](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
+[Tutorial: Getting Started with Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
 

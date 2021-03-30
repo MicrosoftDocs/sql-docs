@@ -1,4 +1,5 @@
 ---
+description: "ENCRYPTBYKEY (Transact-SQL)"
 title: "ENCRYPTBYKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ENCRYPTBYKEY_TSQL"
   - "ENCRYPTBYKEY"
@@ -20,24 +21,29 @@ helpviewer_keywords:
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
 ---
 # ENCRYPTBYKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
 
   Encrypts data by using a symmetric key.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/\synapse-analytics-od-unsupported-syntax.md)] 
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }  
     [, { add_authenticator | @add_authenticator }  
      , { authenticator | @authenticator } ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *key_GUID*  
  Is the GUID of the key to be used to encrypt the *cleartext*. **uniqueidentifier**.  
   
@@ -94,7 +100,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 ### A. Encrypting a string with a symmetric key  
  The following example adds a column to the `Employee` table, and then encrypts the value of the Social Security number that is stored in column `NationalIDNumber`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -117,7 +123,7 @@ GO
   
 ### B. Encrypting a record together with an authentication value  
   
-```  
+```sql 
 USE AdventureWorks2012;  
   
 -- Create a column in which to store the encrypted data.  

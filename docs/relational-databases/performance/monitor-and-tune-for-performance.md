@@ -1,5 +1,6 @@
 ---
 title: "Monitor and Tune for Performance | Microsoft Docs"
+description: Learn about monitoring databases to assess server performance, using periodic snapshots and gathering data continuously to track performance trends.
 ms.custom: ""
 ms.date: "07/18/2016"
 ms.prod: sql
@@ -26,12 +27,12 @@ helpviewer_keywords:
   - "database monitoring [SQL Server]"
   - "monitoring server performance [SQL Server], about monitoring server performance"
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
-author: julieMSFT
-ms.author: jrasnick
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Monitor and Tune for Performance
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The goal of monitoring databases is to assess how a server is performing. Effective monitoring involves taking periodic snapshots of current performance to isolate processes that are causing problems, and gathering data continuously over time to track performance trends.  
   
  Ongoing evaluation of the database performance helps you minimize response times and maximize throughput, yielding optimal performance. Efficient network traffic, disk I/O, and CPU usage are key to peak performance. You need to thoroughly analyze the application requirements, understand the logical and physical structure of the data, assess database usage, and negotiate tradeoffs between conflicting uses such as online transaction processing (OLTP) versus decision support.  

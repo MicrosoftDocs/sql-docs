@@ -1,5 +1,6 @@
 ---
 title: "Database Engine Instances (SQL Server) | Microsoft Docs"
+description: Find out about Database Engine instances. View information on tasks you can perform on instances, such as configuring properties and enabling protocols.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,11 +9,11 @@ ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Database Engine Instances (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   An instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is a copy of the **sqlservr.exe** executable that runs as an operating system service. Each instance manages several system databases and one or more user databases. Each computer can run multiple instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Applications connect to the instance in order to perform work in a database managed by the instance.  
   
 ## Instances  
@@ -31,7 +32,7 @@ ms.author: mikeray
 |Describes how to manage the service associated with an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. This includes actions such as starting and stopping the service, or configuring startup options.|[Manage the Database Engine Services](../../database-engine/configure-windows/manage-the-database-engine-services.md)|  
 |Describes how to perform server network configuration tasks such as enabling protocols, modifying the port or pipe used by a protocol, configuring encryption, configuring the SQL Server Browser service, exposing or hiding the SQL Server Database Engine on the network, and registering the Server Principal Name.|[Server Network Configuration](../../database-engine/configure-windows/server-network-configuration.md)|  
 |Describes how to perform client network configuration tasks such as configuring client protocols and creating or deleting a Server Alias.|[Client Network Configuration](../../database-engine/configure-windows/client-network-configuration.md)|  
-|Describes the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editors that can be used to design, debug, and run scripts such as [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. Also describes how to code Windows PowerShell scripts to work with SQL Server components.|[Database Engine Scripting](../../relational-databases/scripting/database-engine-scripting.md)|  
+|Describes the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editors that can be used to design, debug, and run scripts such as [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. Also describes how to code Windows PowerShell scripts to work with SQL Server components.|[Database Engine Scripting](../../ssms/scripting/database-engine-scripting.md)|  
 |Describes how to use maintenance plans to specify a workflow of common administration tasks for an instance. Workflows include tasks such as backing up databases and updating statistics to improve performance.|[Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)|  
 |Describes how to use the resource governor to manage resource consumption and workloads by specifying limits to the amount of CPU and memory that application requests can use.|[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)|  
 |Describes how database applications can use database mail to send e-mail messages from the [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Database Mail](../../relational-databases/database-mail/database-mail.md)|  
@@ -48,7 +49,6 @@ ms.author: mikeray
   
 ## See Also  
  [sqlservr Application](../../tools/sqlservr-application.md)   
- [Database Features](../../relational-databases/database-features.md)   
- [Database Engine Cross-Instance Features](../../relational-databases/database-engine-cross-instance-features.md)  
-  
+ [Database Features](../../relational-databases/databases/databases.md)   
+ [Database Engine Cross-Instance Features](../../relational-databases/databases/databases.md)  
   

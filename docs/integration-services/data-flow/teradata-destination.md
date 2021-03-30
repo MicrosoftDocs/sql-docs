@@ -1,4 +1,5 @@
 ---
+description: "Teradata destination"
 title: "Teradata destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/22/2019"
@@ -13,7 +14,7 @@ ms.author: chugu
 
 # Teradata destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 The Teradata destination bulk loads data into Teradata Database.
 
@@ -223,7 +224,7 @@ Use the Error Output page of the Teradata Destination Editor dialog box to selec
 
 Select how the Teradata destination should handle errors in a flow: ignore the failure, redirect the row, or fail the component.
 
-**Related Topics**: [Error Handing in Data](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**Related Topics**: [Error Handing in Data](./error-handling-in-data.md)
 
 **Truncation**
 

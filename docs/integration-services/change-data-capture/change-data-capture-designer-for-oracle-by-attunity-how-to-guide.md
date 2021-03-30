@@ -1,4 +1,5 @@
 ---
+description: "Change Data Capture Designer for Oracle by Attunity How to Guide"
 title: "Change Data Capture Designer for Oracle by Attunity How to Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Change Data Capture Designer for Oracle by Attunity How to Guide
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This section describes how to carry out tasks in the Change Data Capture Designer for Oracle by Attunity.  

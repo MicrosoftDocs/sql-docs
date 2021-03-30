@@ -1,10 +1,11 @@
 ---
+description: "sys.sensitivity_classifications (Transact-SQL)"
 title: "sys.sensitivity_classifications (Transact-SQL) | Microsoft Docs"
 ms.date: 03/25/2019
 ms.reviewer: ""
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 ms.custom: ""
 ms.author: mibar
 author: barmichal
@@ -22,10 +23,10 @@ helpviewer_keywords:
   - "labels [SQL]"
   - "information types"
   - "rank"
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest"
 ---
 # sys.sensitivity_classifications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Returns a row for each classified item in the database.
 
@@ -52,10 +53,10 @@ Returns a row for each classified item in the database.
 
 ### A. Listing all classified columns and their corresponding classification
 
-The following example returns a table listing the table name, column name, label, label ID, information type, information type ID for each classified column in the database.
+The following example returns a table that lists the table name, column name, label, label ID, information type, information type ID, rank, and rank description for each classified column in the database.
 
 > [!NOTE]
-> Label is a keyword for Azure SQL Data Warehouse.
+> Label is a keyword for Azure Synapse Analytics.
 
 ```sql
 SELECT
@@ -80,4 +81,4 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 
 [DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
-[Getting started with SQL Information Protection](https://aka.ms/sqlip)
+[Getting started with SQL Information Protection](/azure/azure-sql/database/data-discovery-and-classification-overview)

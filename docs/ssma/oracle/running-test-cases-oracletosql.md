@@ -1,4 +1,5 @@
 ---
+description: "Running Test Cases (OracleToSQL)"
 title: "Running Test Cases (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,9 +8,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Running Test Cases (OracleToSQL)
 When SSMA Tester runs a Test Case, it executes the objects selected for testing and creates a report about verification results. If the results are identical on both platforms, the test was successful. The correspondence of objects between Oracle and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is determined according to the schema-mapping settings for the current SSMA project.  
@@ -35,9 +36,8 @@ At this step, SSMA Tester creates auxiliary objects (tables, triggers, and views
   
 Assume that the verified table is named USER_TABLE. For such a table, the following auxiliary objects are created in Oracle.  
   
-||||  
-|-|-|-|  
 |Name|Type|Description|  
+|-|-|-|  
 |USER_TABLE$Trg|trigger|Trigger auditing the changes in the verified table.|  
 |USER_TABLE$AUD|table|Table where deleted and overwritten rows are saved.|  
 |USER_TABLE$AUDID|table|Table where new and changed rows are saved.|  
@@ -48,16 +48,14 @@ Assume that the verified table is named USER_TABLE. For such a table, the follow
   
 The following object is created in the schema of verified table at [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-||||  
-|-|-|-|  
 |Name|Type|Description|  
+|-|-|-|  
 |USER_TABLE$Trg|trigger|Trigger auditing the changes in the verified table.|  
   
 And the following objects are created at [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in the ssmatesterdb database.  
   
-||||  
-|-|-|-|  
 |Name|Type|Description|  
+|-|-|-|  
 |USER_TABLE$Aud|table|Table where deleted and overwritten rows are saved.|  
 |USER_TABLE$AudID|table|Table where new and changed rows are saved.|  
 |USER_TABLE|view|Simplified representation of the table modifications.|  

@@ -1,4 +1,5 @@
 ---
+description: "Dimension Processing Destination Custom Properies"
 title: "Dimension Processing Destination Custom Properies | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Dimension Processing Destination Custom Properies
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Dimension Processing destination has both custom properties and the properties common to all data flow components.  
@@ -39,6 +40,5 @@ ms.author: chugu
  For more information, see [Dimension Processing Destination](../../integration-services/data-flow/dimension-processing-destination.md).  
   
 ## See Also  
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   

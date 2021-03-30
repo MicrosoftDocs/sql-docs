@@ -1,5 +1,6 @@
 ---
 title: "Implementing a Connection Class for a Data Processing Extension | Microsoft Docs"
+description: Implement a Connection object for a data processing extension in Reporting Services. See which interfaces to implement and what to require of clients.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

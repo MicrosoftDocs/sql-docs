@@ -1,4 +1,5 @@
 ---
+description: "executeUpdate Method (java.lang.String)"
 title: "executeUpdate Method (java.lang.String) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/07/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerPreparedStatement.executeUpdate (java.lang.String)"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # executeUpdate Method (java.lang.String)
 

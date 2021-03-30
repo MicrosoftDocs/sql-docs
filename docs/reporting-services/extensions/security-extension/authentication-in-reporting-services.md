@@ -1,5 +1,6 @@
 ---
 title: "Authentication in Reporting Services | Microsoft Docs"
+description: Find out how to extend authentication schemes in Reporting Services by using either Forms Authentication or the IAuthenticationExtension2 interface.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -113,14 +114,14 @@ internal static bool VerifyPassword(string suppliedUserName,
  When the Web service successfully authenticates a user through the security extension, it generates a cookie that is used for subsequent requests. The cookie may not persist within the custom security authority because the report server does not own the security authority. The cookie is returned from the <xref:ReportService2010.ReportingService2010.LogonUser%2A> Web service method and is used in subsequent Web service method calls and in URL access.  
   
 > [!NOTE]  
->  In order to avoid compromising the cookie during transmission, authentication cookies returned from <xref:ReportService2010.ReportingService2010.LogonUser%2A> should be transmitted securely using Secure Sockets Layer (SSL) encryption.  
+>  In order to avoid compromising the cookie during transmission, authentication cookies returned from <xref:ReportService2010.ReportingService2010.LogonUser%2A> should be transmitted securely using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), encryption.  
   
  If you access the report server through URL access when a custom security extension is installed, Internet Information Services (IIS) and [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] automatically manage the transmission of the authentication ticket. If you are accessing the report server through the SOAP API, your implementation of the proxy class must include additional support for managing the authentication ticket. For more information about using the SOAP API and managing the authentication ticket, see "Using the Web Service with Custom Security."  
   
 ## Forms Authentication  
  Forms Authentication is a type of [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] authentication in which an unauthenticated user is directed to an HTML form. Once the user provides credentials, the system issues a cookie containing an authentication ticket. On later requests, the system first checks the cookie to see if the user was already authenticated by the report server.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] can be extended to support Forms Authentication using the security extensibility interfaces available through the Reporting Services API. If you extend [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] to use Forms Authentication, use Secure Sockets Layer (SSL) for all communications with the report server to prevent malicious users from gaining access to another user's cookie. SSL enables clients and a report server to authenticate each other and to ensure that no other computers can read the contents of communications between the two computers. All data sent from a client through an SSL connection is encrypted so that malicious users cannot intercept passwords or data sent to a report server.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] can be extended to support Forms Authentication using the security extensibility interfaces available through the Reporting Services API. If you extend [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] to use Forms Authentication, use Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), for all communications with the report server to prevent malicious users from gaining access to another user's cookie. TLS enables clients and a report server to authenticate each other and to ensure that no other computers can read the contents of communications between the two computers. All data sent from a client through a TLS connection is encrypted so that malicious users cannot intercept passwords or data sent to a report server.  
   
  Forms Authentication is generally implemented to support accounts and authentication for platforms other than Windows. A graphical interface is presented to a user who requests access to a report server, and the supplied credentials are submitted to a security authority for authentication.  
   

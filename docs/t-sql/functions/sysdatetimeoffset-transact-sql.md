@@ -1,12 +1,13 @@
 ---
+description: "SYSDATETIMEOFFSET (Transact-SQL)"
 title: "SYSDATETIMEOFFSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SYSDATETIMEOFFSET_TSQL"
   - "SYSDATETIMEOFFSET"
@@ -27,12 +28,12 @@ helpviewer_keywords:
   - "time zones [SQL Server]"
   - "time [SQL Server], system"
 ms.assetid: 8423c753-cebe-4edd-871d-0138e092199f
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SYSDATETIMEOFFSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a **datetimeoffset(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The time zone offset is included.  
   
@@ -42,10 +43,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 SYSDATETIMEOFFSET ( )  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return Type  
  **datetimeoffset(7)**  
   
@@ -63,7 +66,7 @@ SYSDATETIMEOFFSET ( )
 ### A. Showing the formats that are returned by the date and time functions  
  The following example shows the different formats that are returned by the date and time functions.  
   
-```  
+```sql
 SELECT SYSDATETIME() AS [SYSDATETIME()]  
     ,SYSDATETIMEOFFSET() AS [SYSDATETIMEOFFSET()]  
     ,SYSUTCDATETIME() AS [SYSUTCDATETIME()]  
@@ -86,7 +89,7 @@ GETUTCDATE()       2007-04-30 20:10:02.047
 ### B. Converting date and time to date  
  The following example shows you how to convert date and time values to `date`.  
   
-```  
+```sql
 SELECT CONVERT (date, SYSDATETIME())  
     ,CONVERT (date, SYSDATETIMEOFFSET())  
     ,CONVERT (date, SYSUTCDATETIME())  
@@ -109,7 +112,7 @@ SELECT CONVERT (date, SYSDATETIME())
 ### C. Converting date and time to times  
  The following example shows you how to convert date and time values to `time`.  
   
-```  
+```sql
 SELECT CONVERT (time, SYSDATETIME()) AS [SYSDATETIME()]  
     ,CONVERT (time, SYSDATETIMEOFFSET()) AS [SYSDATETIMEOFFSET()]  
     ,CONVERT (time, SYSUTCDATETIME()) AS [SYSUTCDATETIME()]  

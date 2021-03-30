@@ -1,9 +1,9 @@
 ---
+description: "Index JSON data"
 title: "Index JSON data | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/01/2016"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -12,11 +12,11 @@ helpviewer_keywords:
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
 author: jovanpop-msft
 ms.author: jovanpop
-ms.reviewer: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.reviewer: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Index JSON data
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
 In SQL Server and SQL Database, JSON is not a built-in data type, and SQL Server does not have custom JSON indexes. You can optimize your queries over JSON documents, however, by using standard indexes. 
 
@@ -54,6 +54,18 @@ ADD vCustomerName AS JSON_VALUE(Info,'$.Customer.Name')
 CREATE INDEX idx_soh_json_CustomerName
 ON Sales.SalesOrderHeader(vCustomerName)  
 ```  
+
+This statement will return the following warning:
+```
+Warning! The maximum key length for a nonclustered index is 1700 bytes.
+The index 'vCustomerName' has maximum length of 8000 bytes.
+For some combination of large values, the insert/update operation will fail.
+```
+
+The `JSON_VALUE` function might return text values up to 8000 bytes (for example, as the NVARCHAR(4000) type). However, the values that are longer than 1700 bytes cannot be indexed. If you try to enter the value in the indexed computed column that is longer than 1700 bytes, the DML operation will fail. This will be the runtime error.
+
+For better performance try to cast the value that you have exposed using the computed column into the smallest applicable type. Useint and datetime2 types instead of string types.
+
 ### More info about the computed column 
 The computed column is not persisted. It's computed only when the index needs to be rebuilt. It does not occupy additional space in the table.   
   
@@ -64,7 +76,7 @@ You don't have to rewrite your queries. If you use expressions with the `JSON_VA
 ### Execution plan for this example
 Here's the execution plan for the query in this example.  
   
-![Execution plan](../../relational-databases/json/media/jsonindexblog1.png "Execution plan")  
+![Screenshot showing the execution plan for this example.](../../relational-databases/json/media/jsonindexblog1.png "Execution plan")  
   
 Instead of a full table scan, SQL Server uses an index seek into the nonclustered index and finds the rows that satisfy the specified conditions. Then it uses a key lookup in the `SalesOrderHeader` table to fetch the other columns that are referenced in the query -  in this example, `SalesOrderNumber` and `OrderDate`.  
  
@@ -132,13 +144,13 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  If you look at the actual execution plan, you see that it uses sorted values from the nonclustered index.  
   
- ![Execution plan](../../relational-databases/json/media/jsonindexblog2.png "Execution plan")  
+ ![Screenshot showing an execution plan that uses sorted values from the non-clustered index.](../../relational-databases/json/media/jsonindexblog2.png "Execution plan")  
   
  Although the query has an `ORDER BY` clause, the execution plan doesn't use a Sort operator. The JSON index is already ordered according to Serbian Cyrillic rules. Therefore SQL Server can use the nonclustered index where results are already sorted.  
   
  However, if you change the collation of the `ORDER BY` expression - for example, if you add `COLLATE French_100_CI_AS_SC` after the `JSON_VALUE` function - you get a different query execution plan.  
   
- ![Execution plan](../../relational-databases/json/media/jsonindexblog3.png "Execution plan")  
+ ![Screenshot showing a different execution plan.](../../relational-databases/json/media/jsonindexblog3.png "Execution plan")  
   
  Since the order of values in the index is not compliant with French collation rules, SQL Server can't use the index to order results. Therefore, it adds a Sort operator that sorts results using French collation rules.  
  

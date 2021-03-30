@@ -1,4 +1,5 @@
 ---
+description: "Using Microsoft Internet Information Services"
 title: "Using Microsoft Internet Information Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "internet information services [ODBC]"
   - "IIS [ODBC]"
 ms.assetid: 3328f2f1-b34a-472f-82cf-ad49768ff061
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using Microsoft Internet Information Services
 > [!IMPORTANT]  

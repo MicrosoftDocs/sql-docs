@@ -1,27 +1,28 @@
 ---
+description: "RENAME (Transact-SQL)"
 title: "RENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2019"
 ms.service: sql-data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # RENAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-Renames a user-created table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renames a user-created table or database in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+Renames a user-created table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renames a user-created table, a column in a user-created table or database in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 > [!NOTE]
-> To rename a database in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use [ALTER DATABASE (Azure SQL Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7). To rename a database in Azure SQL Database, use the [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current) statement. To rename a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the stored procedure [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
+> To rename a database in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use [ALTER DATABASE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true). To rename a database in Azure SQL Database, use the [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true) statement. To rename a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the stored procedure [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
 
 ## Syntax
 
-```
--- Syntax for Azure SQL Data Warehouse
+```syntaxsql
+-- Syntax for Azure Synapse Analytics
 
 -- Rename a table.
 RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name
@@ -29,7 +30,7 @@ RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ]
 
 ```
 
-```
+```syntaxsql
 -- Syntax for Analytics Platform System
 
 -- Rename a table
@@ -39,7 +40,12 @@ RENAME OBJECT [::] [ [ database_name . [ schema_name ] . ] | [ schema_name . ] ]
 -- Rename a database
 RENAME DATABASE [::] database_name TO new_database_name
 [;]
+
+-- Rename a column 
+RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name COLUMN column_name TO new_column_name [;]
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments
 
@@ -51,7 +57,7 @@ Change the name of a user-defined table. Specify the table to be renamed with a 
 RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 **APPLIES TO:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Change the name of a user-defined database from *database_name* to *new_database_name*. You can't rename a database to any of these [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]reserved database names:
+Change the name of a user-defined database from *database_name* to *new_database_name*. You can't rename a database to any of the following [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]reserved database names:
 
 - master
 - model
@@ -62,6 +68,12 @@ Change the name of a user-defined database from *database_name* to *new_database
 - DWConfiguration
 - DWDiagnostics
 - DWQueue
+
+
+RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* COLUMN *column_name* TO *new_column_name*
+**APPLIES TO:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+
+Change the name of a column in a table. 
 
 ## Permissions
 
@@ -77,13 +89,19 @@ You can't rename an external table, indexes, or views. Instead of renaming, you 
 
 ### Cannot rename a table in use
 
-You can't rename a table or database while it is in use. Renaming a table requires an exclusive lock on the table. If the table is in use, you may need to terminate sessions that are using the table. To terminate a session, you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in SQL Data Warehouse are prefixed by 'SID'. Include 'SID' and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.
+You can't rename a table or database while it is in use. Renaming a table requires an exclusive lock on the table. If the table is in use, you may need to terminate sessions that are using the table. To terminate a session, you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] are prefixed by 'SID'. Include 'SID' and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.
+
+### Rename column restrictions
+
+You can't rename a column that is used for the table's distribution. You also can't rename any columns in an external table or a temp table. 
 
 ### Views are not updated
 
 When renaming a database, all views that use the former database name will become invalid. This behavior applies to views both inside and outside the database. For example, if the Sales database is renamed, a view that contains `SELECT * FROM Sales.dbo.table1` will become invalid. To resolve this issue, you can either avoid using three-part names in views, or update the views to reference the new database name.
 
 When renaming a table, views are not updated to reference the new table name. Each view, inside or outside of the database, that references the former table name will become invalid. To resolve this issue, you can update each view to reference the new table name.
+
+When renaming a column, views are not updated to reference the new column name. Views will keep showing the old column name until an alter view is performed. In certain cases, views can become invalid needing a drop and recreate.
 
 ## Locking
 
@@ -134,7 +152,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 **APPLIES TO:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-It is important to remember that you can't rename a table while it is in use. A rename of a table requires an exclusive lock on the table. If the table is in use, you may need to terminate the session using the table. To terminate a session, you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in SQL Data Warehouse are prefixed by 'SID'. You will need to include 'SID' and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.
+You can't rename a table while it is in use. A rename of a table requires an exclusive lock on the table. If the table is in use, you may need to terminate the session using the table. To terminate a session, you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] are prefixed by 'SID'. You will need to include 'SID' and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.
 
 ```sql
 -- View a list of the current sessions
@@ -144,4 +162,17 @@ WHERE status='Active' OR status='Idle';
 
 -- Terminate a session using the session_id.
 KILL 'SID1234';
+```
+
+### E. Rename a column 
+
+**APPLIES TO:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+
+This example renames the FName column of the Customer table to FirstName.
+
+```sql
+-- Rename the Fname column of the customer table
+RENAME OBJECT::Customer COLUMN FName TO FirstName;
+
+RENAME OBJECT mydb.dbo.Customer COLUMN FName TO FirstName;
 ```

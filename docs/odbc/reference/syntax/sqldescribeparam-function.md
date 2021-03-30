@@ -1,4 +1,5 @@
 ---
+description: "SQLDescribeParam Function"
 title: "SQLDescribeParam Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLDescribeParam"
 apilocation: 
@@ -18,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLDescribeParam function [ODBC]"
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLDescribeParam Function
 **Conformance**  
@@ -41,7 +42,7 @@ SQLRETURN SQLDescribeParam(
       SQLSMALLINT *   NullablePtr);  
 ```  
   
-## Argument  
+## Arguments  
  *StatementHandle*  
  [Input] Statement handle.  
   

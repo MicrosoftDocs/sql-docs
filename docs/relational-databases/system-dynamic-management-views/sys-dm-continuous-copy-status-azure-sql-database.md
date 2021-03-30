@@ -1,10 +1,11 @@
 ---
+description: "sys.dm_continuous_copy_status (Azure SQL Database)"
 title: "sys.dm_continuous_copy_status"
 titleSuffix: Azure SQL Database
 ms.date: "03/03/2017"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_continuous_copy_status_TSQL"
   - "dm_continuous_copy_status_TSQL"
@@ -16,13 +17,13 @@ helpviewer_keywords:
   - "dm_continuous_copy_status"
   - "sys.dm_continuous_copy_status"
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-author: stevestein
-ms.author: sstein
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "= azuresqldb-current"
 ms.custom: seo-dt-2019
 ---
 # sys.dm_continuous_copy_status (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Returns a row for each user database (V11) that is currently engaged in a Geo-replication continuous-copy relationship. If more than one continuous copy relationship is initiated for a given primary database this table contains one row for each active secondary database.  
   
@@ -54,6 +55,5 @@ If you are using SQL Database V12 you should use [sys.dm_geo_replication_link_st
   
 ## See Also  
  [sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [Active Geo-Replication Stored Procedures &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
-  
+ [Active Geo-Replication Stored Procedures &#40;Transact-SQL&#41;](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

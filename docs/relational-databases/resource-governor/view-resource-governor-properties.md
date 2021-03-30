@@ -1,5 +1,6 @@
 ---
 title: "View Resource Governor Properties | Microsoft Docs"
+description: Learn how to create or configure Resource Governor entities by using the Resource Governor Properties page in SQL Server Management Studio.
 ms.custom: ""
 ms.date: "07/18/2016"
 ms.prod: sql
@@ -11,11 +12,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "Resource Governor, properties"
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # View Resource Governor Properties
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   You can create or configure Resource Governor entities, such as resource pools and workload groups, by using the Resource Governor Properties page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

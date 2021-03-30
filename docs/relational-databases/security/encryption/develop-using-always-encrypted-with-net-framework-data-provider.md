@@ -2,7 +2,7 @@
 title: "Always Encrypted with .NET Framework Data Provider"
 description: Learn how to develop .NET applications using the Always Encrypted feature for SQL Server. 
 ms.custom: seo-lt-2019
-ms.date: "10/31/2019"
+ms.date: "01/15/2021"
 ms.prod: sql
 ms.prod_service: "security, sql-database"
 ms.reviewer: vanto
@@ -11,19 +11,20 @@ ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Always Encrypted with the .NET Framework Data Provider for SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-This article provides information on how to develop .NET applications using [Always Encrypted](always-encrypted-database-engine.md) or [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) and the [.NET Framework Data Provider for SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx).
+This article provides information on how to develop .NET applications using [Always Encrypted](always-encrypted-database-engine.md) or [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) and the [.NET Framework Data Provider for SQL Server](/dotnet/framework/data/adonet/sql/).
 
-Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the .NET Framework Data Provider for SQL Server, achieves this by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Develop applications using Always Encrypted](always-encrypted-client-development.md) and [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md).
+Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the .NET Framework Data Provider for SQL Server, achieves this by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md).
 
 ## Prerequisites
 
-- Configure Always Encrypted in your database. This involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](always-encrypted-database-engine.md#getting-started-with-always-encrypted).
-- Ensure .NET Framework version 4.6.1 or higher is installed on your development machine. For details, see [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). You also need to ensure .NET Framework version 4.6 or higher is configured as the target .NET Framework version in your development environment. If you're using Visual Studio, please refer to [How to: Target a Version of the .NET Framework](https://msdn.microsoft.com/library/bb398202.aspx). 
+- Configure Always Encrypted in your database. This involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted).
+- If you are using Always Encrypted with secure enclaves, see [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md) for additional prerequisites.
+- Ensure .NET Framework version 4.6.1 or higher is installed on your development machine. For details, see [.NET Framework 4.6](/dotnet/framework/). You also need to ensure .NET Framework version 4.6 or higher is configured as the target .NET Framework version in your development environment. If you're using Visual Studio, please refer to [How to: Target a Version of the .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework). 
 
 > [!NOTE]
 > The level of support for Always Encrypted in particular versions of .NET Framework varies. Please, see the Always Encrypted API reference section below for details.
@@ -51,28 +52,34 @@ SqlConnection connection = new SqlConnection(strbldr.ConnectionString);
 
 Always Encrypted can also be enabled for individual queries. See the **Controlling performance impact of Always Encrypted** section below.
 Enabling Always Encrypted isn't sufficient for encryption or decryption to succeed. You also need to make sure:
-- The application has the *VIEW ANY COLUMN MASTER KEY DEFINITION* and *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* database permissions, required to access the metadata about Always Encrypted keys in the database. For details, see [Permissions section in Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_7).
+- The application has the *VIEW ANY COLUMN MASTER KEY DEFINITION* and *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* database permissions, required to access the metadata about Always Encrypted keys in the database. For details, see [Permissions section in Always Encrypted (Database Engine)](./always-encrypted-database-engine.md#database-permissions).
 - The application can access the column master key that protects the column encryption keys, encrypting the queried database columns.
 
 ## Enabling Always Encrypted with Secure Enclaves
 
 Beginning with .NET Framework version 4.7.2, the driver supports [Always Encrypted with secure enclaves](always-encrypted-enclaves.md). 
 
-To enable the use of the enclave when connecting to [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] or later, you need to configure your application and the .NET Framework Data Provider for SQL Server to enable enclave computations and enclave attestation. 
-
 For general information on the client driver role in enclave computations and enclave attestation, see [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md). 
 
 To configure your application:
 
-1. Integrate the [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders) NuGet package with your application. The NuGet is a library of enclave providers, implementing the client-side logic for attestation protocols and for establishing a secure channel with a secure enclave inside SQL Server.  
-2. Update your application configuration (for example in web.config or app.config) to define the mapping between an enclave type, your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance has been configured with (see [Configure the enclave type for Always Encrypted Server Configuration Option](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)). [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] supports VBS enclaves and Host Guardian Service for attestation. Therefore, you need to map the VBS enclave type to the Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider class from the NuGet package. 
-3. Enable enclave computations for a connection from your application to the database by setting the Enclave Attestation URL keyword in the connection string to an attestation endpoint. The value of the keyword should be set to the attestation endpoint of the HGS server, configured in your environment. 
+1. Enable Always Encrypted  for your application queries, as explained in the previous section.
+2. Integrate the [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders) NuGet package with your application. The NuGet is a library of enclave providers, implementing the client-side logic for attestation protocols and for establishing a secure channel with a secure enclave.  
+3. Update your application configuration (for example in web.config or app.config) to define the mapping between an enclave type, configured for your database, and an enclave provider. 
+    1. If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), you need to map the VBS enclave type to the Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider class from the NuGet package.
+    2. If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, you need to map the SGX enclave type to the Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.AzureAttestationEnclaveProvider class from the NuGet package.
+
+    For detailed instructions for how to edit your application configuration, see [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md).
+
+4. Set the `Enclave Attestation URL` keyword in your database connection string to an attestation URL (an attestation service endpoint). You need to obtain an attestation URL for your environment from your attestation service administrator.
+   1. If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
+   2. If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation).
 
 For a step-by-step tutorial, see [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
 ## Retrieving and Modifying Data in Encrypted Columns
 
-Once you enable Always Encrypted for application queries, you can use standard ADO.NET APIs (see [Retrieving and Modifying Data in ADO.NET](https://msdn.microsoft.com/library/ms254937(v=vs.110).aspx)) or the [.NET Framework Data Provider for SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx) APIs, defined in the [System.Data.SqlClient Namespace](https://msdn.microsoft.com/library/system.data.sqlclient.aspx), to retrieve or modify data in encrypted database columns. Assuming your application has the required database permissions and can access the column master key, the .NET Framework Data Provider for SQL Server will encrypt any query parameters that target encrypted columns, and will decrypt data retrieved from encrypted columns returning plaintext values of .NET types, corresponding to the SQL Server data types set for the columns in the database schema.
+Once you enable Always Encrypted for application queries, you can use standard ADO.NET APIs (see [Retrieving and Modifying Data in ADO.NET](/dotnet/framework/data/adonet/retrieving-and-modifying-data)) or the [.NET Framework Data Provider for SQL Server](/dotnet/framework/data/adonet/sql/) APIs, defined in the [System.Data.SqlClient Namespace](/dotnet/api/system.data.sqlclient), to retrieve or modify data in encrypted database columns. Assuming your application has the required database permissions and can access the column master key, the .NET Framework Data Provider for SQL Server will encrypt any query parameters that target encrypted columns, and will decrypt data retrieved from encrypted columns returning plaintext values of .NET types, corresponding to the SQL Server data types set for the columns in the database schema.
 If Always Encrypted isn't enabled, queries with parameters that target encrypted columns will fail. Queries can still retrieve data from encrypted columns, as long as the query has no parameters targeting encrypted columns. However, the .NET Framework Data Provider for SQL Server won't attempt to decrypt any values retrieved from encrypted columns and the application will receive binary encrypted data (as byte arrays).
 
 The below table summarizes the behavior of queries, depending on whether Always Encrypted is enabled or not:
@@ -105,9 +112,9 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 
 This example inserts a row into the Patients table. Note the following:
 - There is nothing specific to encryption in the sample code. The .NET Framework Data Provider for SQL Server automatically detects and encrypts the *paramSSN* and *paramBirthdate* parameters that target encrypted columns. This makes encryption transparent to the application. 
-- The values inserted into database columns, including the encrypted columns, are passed as [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) objects. While using **SqlParameter** is optional when sending values to non-encrypted columns (although, it's highly recommended because it helps prevent SQL injection), it's required for values targeting encrypted columns. If the values inserted in the SSN or BirthDate columns were passed as literals embedded in the query statement, the query would fail because the .NET Framework Data Provider for SQL Server would not be able to determine the values in the target encrypted columns, so it would not encrypt the values. As a result, the server would reject them as incompatible with the encrypted columns.
+- The values inserted into database columns, including the encrypted columns, are passed as [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) objects. While using **SqlParameter** is optional when sending values to non-encrypted columns (although, it's highly recommended because it helps prevent SQL injection), it's required for values targeting encrypted columns. If the values inserted in the SSN or BirthDate columns were passed as literals embedded in the query statement, the query would fail because the .NET Framework Data Provider for SQL Server would not be able to determine the values in the target encrypted columns, so it would not encrypt the values. As a result, the server would reject them as incompatible with the encrypted columns.
 - The data type of the parameter targeting the SSN column is set to an ANSI (non-Unicode) string, which maps to the char/varchar SQL Server data type. If the type of the parameter was set to a Unicode string (String), which maps to nchar/nvarchar, the query would fail, as Always Encrypted doesn't support conversions from encrypted nchar/nvarchar values to encrypted char/varchar values. See [SQL Server Data Type Mappings](/dotnet/framework/data/adonet/sql-server-data-type-mappings) for information about the data type mappings.
-- The data type of the parameter inserted into the BirthDate column is explicitly set to the target SQL Server data type using [SqlParameter.SqlDbType Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx), instead of relying on the implicit mapping of .NET types to SQL Server data types applied when using [SqlParameter.DbType Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.dbtype.aspx). By default, [DateTime Structure](https://msdn.microsoft.com/library/system.datetime.aspx) maps to the datetime SQL Server data type. As the data type of the BirthDate column is date and Always Encrypted does not support a conversion of encrypted datetime values to encrypted date values, using the default mapping would result in an error. 
+- The data type of the parameter inserted into the BirthDate column is explicitly set to the target SQL Server data type using [SqlParameter.SqlDbType Property](/dotnet/api/system.data.sqlclient.sqlparameter.sqldbtype), instead of relying on the implicit mapping of .NET types to SQL Server data types applied when using [SqlParameter.DbType Property](/dotnet/api/system.data.sqlclient.sqlparameter.dbtype). By default, [DateTime Structure](/dotnet/api/system.datetime) maps to the datetime SQL Server data type. As the data type of the BirthDate column is date and Always Encrypted does not support a conversion of encrypted datetime values to encrypted date values, using the default mapping would result in an error. 
 
 ```cs
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true; Column Encryption Setting=enabled";
@@ -249,7 +256,7 @@ System.Data.SqlClient.SqlException (0x80131904): Operand type clash: varchar is 
 ```
 
 To prevent such errors, make sure:
-- Always Encrypted is enabled for application queries targeting encrypted columns (for the connection string or in the [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) object for a specific query).
+- Always Encrypted is enabled for application queries targeting encrypted columns (for the connection string or in the [SqlCommand](/dotnet/api/system.data.sqlclient.sqlcommand) object for a specific query).
 - You use SqlParameter to send data targeting encrypted columns. The following example shows a query that incorrectly filters by a literal/constant on an encrypted column (SSN)(instead of passing the literal inside a SqlParameter object). 
 
 
@@ -265,7 +272,7 @@ cmd.ExecuteNonQuery();
 
 To encrypt a parameter value or to decrypt data in query results, the .NET Framework Data Provider for SQL Server needs to obtain a column encryption key that is configured for the target column. Column encryption keys are stored in the encrypted form in the database metadata. Each column encryption key has a corresponding column master key that was used to encrypt the column encryption key. The database metadata does not store the column master keys - it only contains the information about a key store containing a particular column master key and the location of the key in the key store.
 
-To obtain a plaintext value of a column encryption key, the .NET Framework Data Provider for SQL Server first obtains the metadata about both the column encryption key and its corresponding column master key, and then it uses the information in the metadata to contact the key store, containing the column master key, and to decrypt the encrypted column encryption key. The .NET Framework Data Provider for SQL Server communicates with a key store using a column master key store provider - which is an instance of a class derived from [SqlColumnEncryptionKeyStoreProvider Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx).
+To obtain a plaintext value of a column encryption key, the .NET Framework Data Provider for SQL Server first obtains the metadata about both the column encryption key and its corresponding column master key, and then it uses the information in the metadata to contact the key store, containing the column master key, and to decrypt the encrypted column encryption key. The .NET Framework Data Provider for SQL Server communicates with a key store using a column master key store provider - which is an instance of a class derived from [SqlColumnEncryptionKeyStoreProvider Class](/dotnet/api/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider).
 
 
 The process to obtain a column encryption key:
@@ -292,8 +299,8 @@ The .NET Framework Data Provider for SQL Server comes with the following built-i
 | Class | Description | Provider (lookup) name |
 |:---|:---|:---|
 |SqlColumnEncryptionCertificateStoreProvider Class| A provider for Windows Certificate Store. | MSSQL_CERTIFICATE_STORE |
-|[SqlColumnEncryptionCngProvider Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Note:** this provider is available in .NET Framework 4.6.1 and later versions. |A provider for a key store that supports [Microsoft Cryptography API: Next Generation (CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). Typically, a store of this type is a hardware security module - a physical device that safeguards and manages digital keys and provides crypto-processing.  | MSSQL_CNG_STORE|
-| [SqlColumnEncryptionCspProvider Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncspprovider.aspx)<br><br>**Note:** this provider is available in .NET Framework 4.6.1 or later versions.| A provider for a key store that supports [Microsoft Cryptography API (CAPI)](https://msdn.microsoft.com/library/aa266944.aspx). Typically, a store of this type is a hardware security module - a physical device that safeguards and manages digital keys and provides crypto-processing.| MSSQL_CSP_PROVIDER |
+|[SqlColumnEncryptionCngProvider Class](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider) <br><br>**Note:** this provider is available in .NET Framework 4.6.1 and later versions. |A provider for a key store that supports [Microsoft Cryptography API: Next Generation (CNG) API](/windows/win32/seccng/cng-portal). Typically, a store of this type is a hardware security module - a physical device that safeguards and manages digital keys and provides crypto-processing.  | MSSQL_CNG_STORE|
+| [SqlColumnEncryptionCspProvider Class](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncspprovider)<br><br>**Note:** this provider is available in .NET Framework 4.6.1 or later versions.| A provider for a key store that supports [Microsoft Cryptography API (CAPI)](/previous-versions/visualstudio/aa266944(v=vs.60)). Typically, a store of this type is a hardware security module - a physical device that safeguards and manages digital keys and provides crypto-processing.| MSSQL_CSP_PROVIDER |
   
 You do not need to make any application code changes to use these providers but note the following:
 
@@ -302,11 +309,11 @@ You do not need to make any application code changes to use these providers but 
 
 ### Using Azure Key Vault provider
 
-Azure Key Vault is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The .NET Framework Data Provider for SQL Server does not include a built-in column master key store provider for Azure Key Vault, but it is available as a Nuget package, that you can easily integrate with your application. For details, see [Always Encrypted - Protect sensitive data in SQL Database with data encryption and store your encryption keys in the Azure Key Vault](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/).
+Azure Key Vault is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The .NET Framework Data Provider for SQL Server does not include a built-in column master key store provider for Azure Key Vault, but it is available as a NuGet package, that you can easily integrate with your application. For details, see [Always Encrypted - Protect sensitive data in SQL Database with data encryption and store your encryption keys in the Azure Key Vault](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
 
 ### Implementing a custom column master key store provider
 
-If you want to store column master keys in a key store that is not supported by an existing provider, you can implement a custom provider by extending the [SqlColumnEncryptionCngProvider Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) and registering the provider using the [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders.aspx) method.
+If you want to store column master keys in a key store that is not supported by an existing provider, you can implement a custom provider by extending the [SqlColumnEncryptionCngProvider Class](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider) and registering the provider using the [SqlConnection.RegisterColumnEncryptionKeyStoreProviders](/dotnet/api/system.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders) method.
 
 
 ```cs
@@ -341,7 +348,7 @@ public class MyCustomKeyStoreProvider : SqlColumnEncryptionKeyStoreProvider
 
 When accessing encrypted columns, the .NET Framework Data Provider for SQL Server transparently finds and calls the right column master key store provider to decrypt column encryption keys. Typically, your normal application code does not directly call column master key store providers. You may, however, instantiate and call a provider explicitly to programmatically provision and manage Always Encrypted keys: to generate an encrypted column encryption key and decrypt a column encryption key (e.g. as part column master key rotation). For more information, see [Overview of key management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 Implementing your own key management tools may be required only if you use a custom key store provider. When using keys stored in keys stores, for which built-in providers exist, and or in  Azure Key Vault, you can use existing tools, such as SQL Server Management Studio or PowerShell, to manage and provision keys.
-The below example, illustrates generating a column encryption key and using [SqlColumnEncryptionCertificateStoreProvider Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx) to encrypt the key with a certificate.
+The below example, illustrates generating a column encryption key and using [SqlColumnEncryptionCertificateStoreProvider Class](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) to encrypt the key with a certificate.
 
 
 ```cs
@@ -386,7 +393,7 @@ If Always Encrypted is enabled for a connection, by default, the .NET Framework 
 
 ### Query metadata caching
 
-In .NET Framework 4.6.2 and later, the .NET Framework Data Provider for SQL Server caches the results of **sys.sp_describe_parameter_encryption** for each query statement. Consequently, if the same query statement is executed multiple times, the driver calls **sys.sp_describe_parameter_encryption** only once. Encryption metadata caching for query statements substantially reduces the performance cost of fetching metadata from the database. Caching is enabled by default. You can disable parameter metadata caching by setting the  [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled.aspx) to false, but doing so isn't recommended except in rare cases like the one described below:
+In .NET Framework 4.6.2 and later, the .NET Framework Data Provider for SQL Server caches the results of **sys.sp_describe_parameter_encryption** for each query statement. Consequently, if the same query statement is executed multiple times, the driver calls **sys.sp_describe_parameter_encryption** only once. Encryption metadata caching for query statements substantially reduces the performance cost of fetching metadata from the database. Caching is enabled by default. You can disable parameter metadata caching by setting the  [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled Property](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled) to false, but doing so isn't recommended except in rare cases like the one described below:
 
 Consider a database that has two different schemas: s1 and s2. Each schema contains a table with the same name: t. The definitions of the s1.t and s2.t tables are identical, except encryption-related properties: A column, named c, in s1.t is not encrypted, and it is encrypted in s2.t. The database has two users: u1 and u2. The default schema for the u1 users it s1. The default schema for u2 is s2. A .NET application opens two connections to the database, impersonating the u1 user on one connection, and the u2 user on another connection. The application sends a query with a parameter targeting the c column over the connection for user u1 (the query does not specify the schema, so the default user scheme is assumed). Next, the application sends the same query over the connection for the u2 user. If query metadata caching is enabled, after the first query, the cache will be populated with metadata indicating the c column, the query parameter targets, is not encrypted. As the second query has the identical query statement, the information stored in the cache will be used. As a result, the driver will send the query without encrypting the parameter (which is incorrect, as the target column, s2.t.c, is encrypted), leaking the plaintext value of the parameter to the server. The server will detect that incompatibility and it will force the driver to refresh the cache, so the application will transparently resend the query with the correctly encrypted parameter value. In such a case, caching should be disabled to prevent leaking sensitive values to the server. 
 
@@ -401,7 +408,7 @@ To control performance impact of retrieving encryption metadata for parameterize
 > Setting Always Encrypted at the query level has limited performance benefits in .NET 4.6.2 and later versions, which implement parameter encryption metadata caching.
 
 To control the Always Encrypted behavior of individual queries, you need to use this constructor of
- [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) and [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx). Here are some useful guidelines:
+ [SqlCommand](/dotnet/api/system.data.sqlclient.sqlcommand) and [SqlCommandColumnEncryptionSetting](/dotnet/api/system.data.sqlclient.sqlcommandcolumnencryptionsetting). Here are some useful guidelines:
 - If most queries a client application sends over a database connection access encrypted columns:
     - Set the **Column Encryption Setting** connection string keyword to *Enabled*.
     - Set **SqlCommandColumnEncryptionSetting.Disabled** for individual queries that do not access any encrypted columns. This will disable both calling sys.sp_describe_parameter_encryption as well as an attempt to decrypt any values in the result set.
@@ -452,7 +459,7 @@ To reduce the number of calls to a column master key store to decrypt column enc
 > [!NOTE]
 > In .NET Framework 4.6 and 4.6.1, the column encryption key entries in the cache are never evicted. This means that for a given encrypted column encryption key, the driver contacts the key store only once during the life time of the application.
 
-In .NET Framework 4.6.2 and later, the cache entries are evicted after a configurable time-to-live interval for security reasons. The default time-to-live value is 2 hours. If you have stricter security requirements about how long column encryption keys can be cached in plaintext in the application, you can change it using the [SqlConnection.ColumnEncryptionKeyCacheTtl Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionkeycachettl.aspx). 
+In .NET Framework 4.6.2 and later, the cache entries are evicted after a configurable time-to-live interval for security reasons. The default time-to-live value is 2 hours. If you have stricter security requirements about how long column encryption keys can be cached in plaintext in the application, you can change it using the [SqlConnection.ColumnEncryptionKeyCacheTtl Property](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptionkeycachettl). 
 
 
 ## Enabling Additional Protection for a Compromised SQL Server
@@ -463,7 +470,7 @@ By default, the *.NET Framework Data Provider for SQL Server* relies on the data
 
 Before the .NET Framework Data Provider for SQL Server sends a parameterized query to SQL Server, it asks SQL Server (by calling [sys.sp_describe_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)) to analyze the query statement and provide information about which parameters in the query should be encrypted. A compromised SQL Server instance could mislead the .NET Framework Data Provider for SQL Server by sending the metadata indicating the parameter does not target an encrypted column, despite the fact the column is encrypted in the database. As a result, the .NET Framework Data Provider for SQL Server would not encrypt the parameter value and it would send it as plaintext to the compromised SQL Server instance.
 
-To prevent such an attack, an application can set the [SqlParameter.ForceColumnEncryption Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.forcecolumnencryption.aspx) for the parameter to true. This will cause the .NET Framework Data Provider for SQL Server to throw an exception, if the metadata, it has received from the server, indicates the parameter does not need to be encrypted.
+To prevent such an attack, an application can set the [SqlParameter.ForceColumnEncryption Property](/dotnet/api/system.data.sqlclient.sqlparameter.forcecolumnencryption) for the parameter to true. This will cause the .NET Framework Data Provider for SQL Server to throw an exception, if the metadata, it has received from the server, indicates the parameter does not need to be encrypted.
 
 Although using the **SqlParameter.ForceColumnEncryption Property** helps improve security, it also reduces the transparency of encryption to the client application. If you update the database schema to change the set of encrypted columns, you might need to make application changes as well.
 
@@ -495,7 +502,7 @@ SqlDataReader reader = cmd.ExecuteReader();
 
 The encryption metadata, SQL Server returns for query parameters targeting encrypted columns and for the results retrieved from encryption columns, includes the key path of the column master key that identifies the key store and the location of the key in the key store. If the SQL Server instance is compromised, it could send the key path directing the .NET Framework Data Provider for SQL Server to the location controlled by an attacker. This may lead to leaking key store credentials, in the case of the key store that requires the application to authenticate. 
 
-To prevent such attacks, the application can specify the list of trusted key paths for a given server using the [SqlConnection.ColumnEncryptionTrustedMasterKeyPaths Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths.aspx). If the.NET Framework Data Provider for SQL Server receives a key path outside of the trusted key path list, it will throw an exception. 
+To prevent such attacks, the application can specify the list of trusted key paths for a given server using the [SqlConnection.ColumnEncryptionTrustedMasterKeyPaths Property](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths). If the.NET Framework Data Provider for SQL Server receives a key path outside of the trusted key path list, it will throw an exception. 
 
 Although setting trusted key paths improves security of your application, you will need to change the code or/and the configuration of the application, whenever you rotate your column master key (whenever the column master key path changes). 
 
@@ -522,7 +529,7 @@ With SqlBulkCopy, you can copy data, which is already encrypted and stored in on
 
 - Make sure the encryption configuration of the target table is identical to the configuration of the source table. In particular, both tables must have the same columns encrypted, and the columns must be encrypted using the same encryption types and the same encryption keys. Note: if any of the target columns is encrypted differently than its corresponding source column, you will not be able to decrypt the data in the target table after the copy operation. The data will be corrupted.
 - Configure both database connections, to the source table and to the target table, without Always Encrypted enabled. 
-- Set the AllowEncryptedValueModifications option (see [SqlBulkCopyOptions](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopyoptions.aspx)). 
+- Set the AllowEncryptedValueModifications option (see [SqlBulkCopyOptions](/dotnet/api/system.data.sqlclient.sqlbulkcopyoptions)). 
 Note: Use caution when specifying AllowEncryptedValueModifications as this may lead to corrupting the database because the .NET Framework Data Provider for SQL Server does not check if the data is indeed encrypted, or if it is correctly encrypted using the same encryption type, algorithm and key as the target column.
 
 The AllowEncryptedValueModifications option is available in .NET Framework 4.6.1 and later versions.
@@ -554,7 +561,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## Always Encrypted API Reference
 
-**Namespace:** [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)
+**Namespace:** [System.Data.SqlClient](/dotnet/api/system.data.sqlclient)
 
 **Assembly:** System.Data (in System.Data.dll)
 
@@ -563,41 +570,24 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 |Name|Description|Introduced in .NET version
 |:---|:---|:---
-|[SqlColumnEncryptionCertificateStoreProvider Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|A key store provider for Windows Certificate Store.|  4.6
-|[SqlColumnEncryptionCngProvider Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|A key store provider for Microsoft Cryptography API: Next Generation (CNG).|  4.6.1
-|[SqlColumnEncryptionCspProvider Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncspprovider.aspx)|A key store provider for Microsoft CAPI based Cryptographic Service Providers (CSP).|4.6.1  
-|[SqlColumnEncryptionKeyStoreProvider Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx)|Base class of the key store providers.|  4.6
-|[SqlCommandColumnEncryptionSetting Enumeration](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)|Settings to enable encryption and decryption for a database connection.|4.6  
-|[SqlConnectionColumnEncryptionSetting Enumeration](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnectioncolumnencryptionsetting.aspx)|Settings to control the behavior of Always Encrypted for individual queries.|4.6  
-| [SqlConnectionStringBuilder.ColumnEncryptionSetting Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnectionstringbuilder.columnencryptionsetting.aspx)|Gets and sets Always Encrypted in the connection string.|4.6|
-| [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled.aspx) | Enables and disables encryption query metadata caching. | 4.6.2
-| [SqlConnection.ColumnEncryptionKeyCacheTtl Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionkeycachettl.aspx) | Gets and sets time-to-live for entries in the column encryption key cache. | 4.6.2
-|[SqlConnection.ColumnEncryptionTrustedMasterKeyPaths Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths.aspx)|Allows you to set a list of trusted key paths for a database server. If while processing an application query the driver receives a key path that is not on the list, the query will fail. This property provides additional protection against security attacks that involve a compromised SQL Server providing fake key paths, which may lead to leaking key store credentials.|  4.6
-|[SqlConnection.RegisterColumnEncryptionKeyStoreProviders Method](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders.aspx)|Allows you to register custom key store providers. It is a dictionary that maps key store provider names to key store provider implementations.|  4.6
+|[SqlColumnEncryptionCertificateStoreProvider Class](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider)|A key store provider for Windows Certificate Store.|  4.6
+|[SqlColumnEncryptionCngProvider Class](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider)|A key store provider for Microsoft Cryptography API: Next Generation (CNG).|  4.6.1
+|[SqlColumnEncryptionCspProvider Class](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncspprovider)|A key store provider for Microsoft CAPI based Cryptographic Service Providers (CSP).|4.6.1  
+|[SqlColumnEncryptionKeyStoreProvider Class](/dotnet/api/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider)|Base class of the key store providers.|  4.6
+|[SqlCommandColumnEncryptionSetting Enumeration](/dotnet/api/system.data.sqlclient.sqlcommandcolumnencryptionsetting)|Settings to enable encryption and decryption for a database connection.|4.6  
+|[SqlConnectionColumnEncryptionSetting Enumeration](/dotnet/api/system.data.sqlclient.sqlconnectioncolumnencryptionsetting)|Settings to control the behavior of Always Encrypted for individual queries.|4.6  
+| [SqlConnectionStringBuilder.ColumnEncryptionSetting Property](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.columnencryptionsetting)|Gets and sets Always Encrypted in the connection string.|4.6|
+| [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled Property](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled) | Enables and disables encryption query metadata caching. | 4.6.2
+| [SqlConnection.ColumnEncryptionKeyCacheTtl Property](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptionkeycachettl) | Gets and sets time-to-live for entries in the column encryption key cache. | 4.6.2
+|[SqlConnection.ColumnEncryptionTrustedMasterKeyPaths Property](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)|Allows you to set a list of trusted key paths for a database server. If while processing an application query the driver receives a key path that is not on the list, the query will fail. This property provides additional protection against security attacks that involve a compromised SQL Server providing fake key paths, which may lead to leaking key store credentials.|  4.6
+|[SqlConnection.RegisterColumnEncryptionKeyStoreProviders Method](/dotnet/api/system.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders)|Allows you to register custom key store providers. It is a dictionary that maps key store provider names to key store provider implementations.|  4.6
 |[SqlCommand Constructor (String, SqlConnection, SqlTransaction, SqlCommandColumnEncryptionSetting)](https://msdn.microsoft.com/library/dn956511\(v=vs.110\).aspx)|Enables you to control the behavior of Always Encrypted for individual queries.|  4.6
-|[SqlParameter.ForceColumnEncryption Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.forcecolumnencryption.aspx)|Enforces encryption of a parameter. If SQL Server informs the driver that the parameter does not need to be encrypted, the query using the parameter will fail. This property provides additional protection against security attacks that involve a compromised SQL Server providing incorrect encryption metadata to the client, which may lead to data disclosure.|4.6  
-|New [connection string](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx) keyword: `Column Encryption Setting=enabled`|Enables or disables Always Encrypted functionality for the connection.| 4.6 
+|[SqlParameter.ForceColumnEncryption Property](/dotnet/api/system.data.sqlclient.sqlparameter.forcecolumnencryption)|Enforces encryption of a parameter. If SQL Server informs the driver that the parameter does not need to be encrypted, the query using the parameter will fail. This property provides additional protection against security attacks that involve a compromised SQL Server providing incorrect encryption metadata to the client, which may lead to data disclosure.|4.6  
+|New [connection string](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring) keyword: `Column Encryption Setting=enabled`|Enables or disables Always Encrypted functionality for the connection.| 4.6 
   
 
 ## See Also
 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted blog](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-- [SQL Database tutorial: Protect sensitive data with Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- [Always Encrypted blog](/archive/blogs/sqlsecurity/getting-started-with-always-encrypted)
+- [SQL Database tutorial: Protect sensitive data with Always Encrypted](/azure/azure-sql/database/always-encrypted-certificate-store-configure)

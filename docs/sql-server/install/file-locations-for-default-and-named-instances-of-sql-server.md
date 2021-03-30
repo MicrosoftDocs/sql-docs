@@ -1,5 +1,6 @@
 ---
 title: "File Locations"
+description: A SQL Server instance has its own program and data files. It can share common files with other instances of SQL Server. This article includes file locations.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql
@@ -7,11 +8,11 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # File Locations for Default and Named Instances of SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   An installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consists of one or more separate instances. An instance, whether default or named, has its own set of program and data files, as well as a set of common files shared between all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the computer.  
   
@@ -33,9 +34,9 @@ ms.author: mathoma
 
 |Version|\*nnn*|{nn}|
 |-----|-----|--------|
-|[!INCLUDE[ssqlv15](../../includes/sssqlv15-md.md)]| 150| 15| 
-|[!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]| 140| 14| 
-|[!INCLUDE[ssqlv13](../../includes/sssql15-md.md)]| 130| 13 | 
+|[!INCLUDE[ssqlv15](../../includes/sssql19-md.md)]| 150| 15| 
+|[!INCLUDE[ssqlv14](../../includes/sssql17-md.md)]| 140| 14| 
+|[!INCLUDE[ssqlv13](../../includes/sssql16-md.md)]| 130| 13 | 
 |[!INCLUDE[ssqlv12](../../includes/sssql14-md.md)]  | 120|12 | 
 |[!INCLUDE[sssql11](../../includes/sssql11-md.md)] | 110|11 | 
   
@@ -52,14 +53,14 @@ ms.author: mathoma
   
  Examples of default instance IDs in this release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are as follows:  
   
--   MSSQL\{nn}.MSSQLSERVER for a default instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+-   MSSQL\{nn}.MSSQLSERVER for a default instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 -   MSAS\{nn}.MSSQLSERVER for a default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.  
   
--   MSSQL\{nn}.MyInstance for a named instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] named "MyInstance."  
+-   MSSQL\{nn}.MyInstance for a named instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] named "MyInstance."  
   
 
- The directory structure for a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] named instance that includes the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], named "MyInstance", and installed to the default directories would be as follows:  
+ The directory structure for a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] named instance that includes the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], named "MyInstance", and installed to the default directories would be as follows:  
   
 -   C:\Program Files\Microsoft SQL Server\MSSQL\{nn}.MyInstance\  
   
@@ -135,7 +136,6 @@ Note that the default drive for file locations is *systemdrive*, normally drive 
 >  Data files are always expected to be found in a child directory named Data. For example, specify C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<InstanceName>\ to specify the root path to the data directory of the system databases during upgrade when data files are found under C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<InstanceName>\MSSQL\Data.  
   
 ## See Also  
- [Database Engine Configuration - Data Directories](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   
- [Analysis Services Configuration - Data Directories](https://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb)  
-  
+ [Database Engine Configuration - Data Directories](../../database-engine/install-windows/install-sql-server.md)   
+ [Analysis Services Configuration - Data Directories](../../database-engine/install-windows/install-sql-server.md)  
   

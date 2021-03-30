@@ -1,4 +1,5 @@
 ---
+description: "Installing Integration Services Versions Side by Side"
 title: "Installing Integration Services Versions Side by Side | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,10 @@ ms.author: chugu
 ---
 # Installing Integration Services Versions Side by Side
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  You can install   
-      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) side-by-side with earlier versions of SSIS. This topic describes some limitations of side-by-side installations.  
+  You can install [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] Integration Services (SSIS) side-by-side with earlier versions of SSIS. This topic describes some limitations of side-by-side installations.  
   
 ## Designing and maintaining packages  
  To design and maintain packages that target SQL Server 2016, SQL Server 2014, or SQL Server 2012, use SQL Server Data Tools (SSDT) for Visual Studio 2015. To get SSDT, see [Download Latest SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
@@ -37,6 +37,6 @@ ms.author: chugu
  When you add an existing package to an existing project, the package is converted to the format targeted by the project .  
   
 ## Running packages  
- You can use the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of the **dtexec** utility or of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to run Integration Services packages created by earlier versions of the development tools. When these [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tools load a package that was developed in an earlier version of the development tools, the tool temporarily converts the package in memory to the package format that [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] uses. If the package has issues that prevent a successful conversion, the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tool can't run the package until those issues are resolved. For more info, see [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
+ You can use the [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] version of the **dtexec** utility or of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to run Integration Services packages created by earlier versions of the development tools. When these [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] tools load a package that was developed in an earlier version of the development tools, the tool temporarily converts the package in memory to the package format that [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] uses. If the package has issues that prevent a successful conversion, the [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] tool can't run the package until those issues are resolved. For more info, see [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
   
   

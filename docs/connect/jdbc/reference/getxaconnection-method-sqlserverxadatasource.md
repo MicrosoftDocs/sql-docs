@@ -1,4 +1,5 @@
 ---
+description: "getXAConnection Method (SQLServerXADataSource)"
 title: "getXAConnection Method (SQLServerXADataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerXADataSource.getXAConnection"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: cb1d53c9-27f1-4880-8f1d-c32df0d2fb27
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getXAConnection Method (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

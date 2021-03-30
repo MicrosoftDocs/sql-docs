@@ -1,5 +1,6 @@
 ---
 title: "SharePoint List Connection Type | Microsoft Docs"
+description: Use the information in this article about the SharePoint List connection type to learn how to build a data source.
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -35,7 +36,7 @@ Use the information in this topic to build a data source. For step-by-step instr
   
  **Table 1**  
   
-||Supported Credentials|Classic Mode Windows Authentication|*Claims Authentication|  
+|Retrieval Type|Supported Credentials|Classic Mode Windows Authentication|*Claims Authentication|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Local farm SharePoint List|Windows Authentication (integrated) or SharePoint User Token|Yes|Yes|  
 ||Stored, Prompt, None (with Windows credentials)<br /><br /> Stored and prompt credentials with non-Windows credentials is not supported.|Yes|No|  
@@ -46,7 +47,7 @@ Use the information in this topic to build a data source. For step-by-step instr
   
  **Table 2**  
   
-||Supported Credentials|Classic Mode Windows Authentication|*Claims Authentication|  
+|Retrieval Type|Supported Credentials|Classic Mode Windows Authentication|*Claims Authentication|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Local Farm SharePoint List|Windows Authentication (integrated) or SharePoint User Token|Yes|Yes|  
 ||Stored, Prompt, None (with Windows credentials)<br /><br /> Stored and prompt credentials with non-Windows credentials is not supported.|No|No|  
@@ -63,7 +64,7 @@ Use the information in this topic to build a data source. For step-by-step instr
  For a SharePoint technology that is configured to work without a Report Server (local mode), this option is not supported. For more information on local mode, see [Local Mode vs. Connected Mode Reports in the Report Viewer &#40;Reporting Services in SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
  **Credentials are not required (Do not use credentials):**  
- To use this option, the unattended execution account must be configured on the report server. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ To use this option, the unattended execution account must be configured on the report server. For more information, see [Configure the Unattended Execution Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  For information about Claims authentication support across the Microsoft BI stack, see [Using Claims Authentication across the Microsoft BI Stack](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   

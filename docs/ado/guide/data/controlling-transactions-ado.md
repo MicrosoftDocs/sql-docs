@@ -1,8 +1,9 @@
 ---
+description: "Controlling Transactions (ADO)"
 title: "Controlling Transactions (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "transactions [ADO]"
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Controlling Transactions (ADO)
 ADO supports transaction processing within a connection with the help of the **BeginTrans**, **CommitTrans**, and **RollbackTrans** methods on a **Connection** object. The general idea of implementing transaction processing in ADO is illustrated in the following simple code snippet.  
@@ -73,4 +74,4 @@ oConn.Close
   
  Here transaction processing is used to ensure that the two records are updated as one unit of operation, and that the two product names are either interchanged or not changed at all.  
   
- For detailed discussions of transaction processing see [Updating and Persisting Data](../../../ado/guide/data/updating-and-persisting-data.md).
+ For detailed discussions of transaction processing see [Updating and Persisting Data](./updating-and-persisting-data.md).

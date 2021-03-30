@@ -1,5 +1,6 @@
 ---
 title: "Specify Consistent Colors in Multiple Shape Charts-Report Builder-SSRS | Microsoft Docs"
+description: Find out how choosing colors for a shape chart results in mapping each color in the pallette to a data point in the dataset.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

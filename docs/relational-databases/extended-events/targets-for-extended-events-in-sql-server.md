@@ -1,5 +1,6 @@
 ---
 title: "Targets for Extended Events in SQL Server"
+description: This article explains package0 targets for extended events in SQL Server. Learn about target abilities in gathering and reporting data and target parameters.
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -9,11 +10,11 @@ ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # Targets for Extended Events in SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 This article explains when and how to use the package0 targets for extended events in SQL Server. For each target, the present article explains:
@@ -144,12 +145,12 @@ The **event_file** target writes event session output from buffer to a disk file
 
 - The file name you choose is used by the system as a prefix to which a date-time based long integer is appended, followed by the .xel extension.
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
 
 > [!NOTE]
-> Azure SQL Database only supports storing `xel` files on Azure blob storage. 
+> Azure SQL Database only supports storing `xel` files on Azure Blob Storage. 
 >
-> For an **event_file** code example particular to SQL Database (and to SQL Database Managed Instance), see [Event File target code for extended events in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
+> For an **event_file** code example particular to SQL Database (and to SQL Managed Instance), see [Event File target code for extended events in SQL Database](/azure/sql-database/sql-database-xevent-code-event-file).
 
 ::: moniker-end
 
@@ -785,9 +786,6 @@ If encountered, error **25726** means the event stream filled up with data faste
 ### XEvent namespaces
 
 
-- [Microsoft.SqlServer.Management.XEvent Namespace](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
+- [Microsoft.SqlServer.Management.XEvent Namespace](/dotnet/api/microsoft.sqlserver.management.xevent)
 
-- [Microsoft.SqlServer.XEvent.Linq Namespace](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
-
-
-
+- [Microsoft.SqlServer.XEvent.Linq Namespace](/dotnet/api/microsoft.sqlserver.xevent.linq)

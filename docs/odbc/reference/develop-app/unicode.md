@@ -1,4 +1,5 @@
 ---
+description: "Unicode"
 title: "Unicode | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "Unicode [ODBC]"
   - "Unicode [ODBC], about Unicode"
 ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Unicode
 Unicode defines encoding for characters in many languages.  

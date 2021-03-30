@@ -1,4 +1,5 @@
 ---
+description: "getCharacterStream Method (long, long)"
 title: "getCharacterStream Method (long, long) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: d70f502f-f60f-436a-83e6-797a0ed71bf3
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getCharacterStream Method (long, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

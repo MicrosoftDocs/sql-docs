@@ -1,5 +1,6 @@
 ---
 title: "Report Definition Language | Microsoft Docs"
+description: Learn details about Report Definition Language (RDL). You'll learn that RDL is an XML representation of a SQL Server Reporting Services report definition.
 ms.date: 01/24/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -32,7 +33,7 @@ ms.author: maggies
 -   An extensible and open schema that supports additional namespaces and custom elements.  
   
 ##  <a name="bkmk_RDL_Specifications"></a> RDL Specifications  
- To download specifications for specific schema versions, see [Report Definition Language Specification](https://go.microsoft.com/fwlink/?linkid=116865).  
+ To download specifications for specific schema versions, see [Report Definition Language Specification](/openspecs/sql_server_protocols/ms-rdl/53287204-7cd0-4bc9-a5cd-d42a5925dca1).  
   
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML Schema Definition  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report Definition Language (RDL) file is validated by using an XML Schema Definition (XSD) file. The schema defines the rules for where RDL elements can occur in an .rdl file. An element includes its data type and cardinality, that is, the number of occurrences that are allowed. An element can be simple or complex. A simple element does not have child elements or attributes. A complex element does have children and optionally, attributes.  
@@ -84,5 +85,4 @@ ms.author: maggies
  [Find the Report Definition Schema Version &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
  [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Custom Report Items](../../reporting-services/custom-report-items/custom-report-items.md)  
-  
   

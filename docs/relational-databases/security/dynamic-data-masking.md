@@ -1,35 +1,33 @@
 ---
-title: "Dynamic Data Masking | Microsoft Docs"
-ms.date: "05/02/2019"
+title: "Dynamic Data Masking"
+description: Learn about dynamic data masking, which limits sensitive data exposure by masking it to non-privileged users. It can greatly simplify security in SQL Server.
+ms.date: "03/24/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
-ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Dynamic Data Masking
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server 2016 ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 ![Dynamic data masking](../../relational-databases/security/media/dynamic-data-masking.png)
 
 Dynamic data masking (DDM) limits sensitive data exposure by masking it to non-privileged users. It can be used to greatly simplify the design and coding of security in your application.  
 
-Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to specify how much sensitive data to reveal with minimal impact on the application layer. DDM can be configured on designated database fields to hide sensitive data in the result sets of queries. With DDM the data in the database is not changed. Dynamic data masking is easy to use with existing applications, since masking rules are applied in the query results. Many applications can mask sensitive data without modifying existing queries.
+Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to specify how much sensitive data to reveal with minimal impact on the application layer. DDM can be configured on designated database fields to hide sensitive data in the result sets of queries. With DDM the data in the database is not changed. DDM is easy to use with existing applications, since masking rules are applied in the query results. Many applications can mask sensitive data without modifying existing queries.
 
 * A central data masking policy acts directly on sensitive fields in the database.
 * Designate privileged users or roles that do have access to the sensitive data.
 * DDM features full masking and partial masking functions, and a random mask for numeric data.
 * Simple [!INCLUDE[tsql_md](../../includes/tsql-md.md)] commands define and manage masks.
 
-As an example, a call center support person may identify callers by several digits of their social security number or credit card number.  Social security numbers or credit card numbers should not be fully exposed to the support person. A masking rule can be defined that masks all but the last four digits of any social security number or credit card number in the result set of any query. For another example, by using the appropriate data mask to protect personally identifiable information (PII) data, a developer can query production environments for troubleshooting purposes without violating compliance regulations.
-
 The purpose of dynamic data masking is to limit exposure of sensitive data, preventing users who should not have access to the data from viewing it. Dynamic data masking does not aim to prevent database users from connecting directly to the database and running exhaustive queries that expose pieces of the sensitive data. Dynamic data masking is complementary to other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security features (auditing, encryption, row level security...) and it is highly recommended to use this feature in conjunction with them in addition in order to better protect the sensitive data in the database.  
   
-Dynamic data masking is available in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], and is configured by using [!INCLUDE[tsql](../../includes/tsql-md.md)] commands. For more information about configuring dynamic data masking by using the Azure portal, see [Get started with SQL Database Dynamic Data Masking (Azure portal)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
+Dynamic data masking is available in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], and is configured by using [!INCLUDE[tsql](../../includes/tsql-md.md)] commands. For more information about configuring dynamic data masking by using the Azure portal, see [Get started with SQL Database Dynamic Data Masking (Azure portal)](/azure/azure-sql/database/dynamic-data-masking-overview).  
   
 ## Defining a Dynamic Data Mask
  A masking rule may be defined on a column in a table, in order to obfuscate the data in that column. Four types of masks are available.  
@@ -39,7 +37,7 @@ Dynamic data masking is available in [!INCLUDE[ssSQL15](../../includes/sssql15-m
 |Default|Full masking according to the data types of the designated fields.<br /><br /> For string data types, use XXXX or fewer Xs if the size of the field is less than 4 characters (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> For numeric data types use a zero value (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> For date and time data types use 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />For binary data types use a single byte of ASCII value 0 (**binary**, **varbinary**, **image**).|Example column definition syntax: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Example of alter syntax: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|Masking method that exposes the first letter of an email address and the constant suffix ".com", in the form of an email address. `aXXX@XXXX.com`.|Example definition syntax: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Example of alter syntax: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |Random|A random masking function for use on any numeric type to mask the original value with a random value within a specified range.|Example definition syntax: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Example of alter syntax: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
-|Custom String|Masking method that exposes the first and last letters and adds a custom padding string in the middle. `prefix,[padding],suffix`<br /><br /> Note: If the original value is too short to complete the entire mask, part of the prefix or suffix will not be exposed.|Example definition syntax: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Example of alter syntax: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Additional examples:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
+|Custom String|Masking method that exposes the first and last letters and adds a custom padding string in the middle. `prefix,[padding],suffix`<br /><br /> Note: If the original value is too short to complete the entire mask, part of the prefix or suffix will not be exposed.|Example definition syntax: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Example of alter syntax: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Additional example:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`|  
   
 ## Permissions  
  You do not need any special permission to create a table with a dynamic data mask, only the standard **CREATE TABLE** and **ALTER** on schema permissions.  
@@ -81,6 +79,8 @@ WHERE is_masked = 1;
 -   A mask cannot be configured on a computed column, but if the computed column depends on a column with a MASK, then the computed column will return masked data.  
   
 -   A column with data masking cannot be a key for a FULLTEXT index.  
+
+-   A column in a PolyBase [external table](../../t-sql/statements/create-external-table-transact-sql.md).
   
  For users without the **UNMASK** permission, the deprecated **READTEXT**, **UPDATETEXT**, and **WRITETEXT** statements do not function properly on a column configured for Dynamic Data Masking. 
  
@@ -115,73 +115,93 @@ It is important to properly manage the permissions on the database, and to alway
  The following example creates a table with three different types of dynamic data masks. The example populates the table, and selects to show the result.  
   
 ```sql
-CREATE TABLE Membership  
-  (MemberID int IDENTITY PRIMARY KEY,  
-   FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)') NULL,  
-   LastName varchar(100) NOT NULL,  
-   Phone varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,  
-   Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL);  
-  
-INSERT Membership (FirstName, LastName, Phone, Email) VALUES   
-('Roberto', 'Tamburello', '555.123.4567', 'RTamburello@contoso.com'),  
-('Janice', 'Galvin', '555.123.4568', 'JGalvin@contoso.com.co'),  
-('Zheng', 'Mu', '555.123.4569', 'ZMu@contoso.net');  
-SELECT * FROM Membership;  
+
+-- schema to contain user tables
+CREATE SCHEMA Data;
+GO
+
+-- table with masked columns
+CREATE TABLE Data.Membership(
+    MemberID        int IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED,
+    FirstName        varchar(100) MASKED WITH (FUNCTION = 'partial(1, "xxxxx", 1)') NULL,
+    LastName        varchar(100) NOT NULL,
+    Phone            varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,
+    Email            varchar(100) MASKED WITH (FUNCTION = 'email()') NOT NULL,
+    DiscountCode    smallint MASKED WITH (FUNCTION = 'random(1, 100)') NULL
+    );
+
+-- inserting sample data
+INSERT INTO Data.Membership (FirstName, LastName, Phone, Email, DiscountCode)
+VALUES   
+('Roberto', 'Tamburello', '555.123.4567', 'RTamburello@contoso.com', 10),  
+('Janice', 'Galvin', '555.123.4568', 'JGalvin@contoso.com.co', 5),  
+('Shakti', 'Menon', '555.123.4570', 'SMenon@contoso.net', 50),  
+('Zheng', 'Mu', '555.123.4569', 'ZMu@contoso.net', 40);  
+
 ```  
   
- A new user is created and granted **SELECT** permission on the table. Queries executed as the `TestUser` view masked data.  
+ A new user is created and granted the **SELECT** permission on the schema where the table resides. Queries executed as the `MaskingTestUser` view masked data.  
   
 ```sql 
-CREATE USER TestUser WITHOUT LOGIN;  
-GRANT SELECT ON Membership TO TestUser;  
+CREATE USER MaskingTestUser WITHOUT LOGIN;  
+
+GRANT SELECT ON SCHEMA::Data TO MaskingTestUser;  
   
-EXECUTE AS USER = 'TestUser';  
-SELECT * FROM Membership;  
+  -- impersonate for testing:
+EXECUTE AS USER = 'MaskingTestUser';  
+
+SELECT * FROM Data.Membership;  
+
 REVERT;  
 ```  
   
  The result demonstrates the masks by changing the data from  
   
- `1    Roberto     Tamburello    555.123.4567    RTamburello@contoso.com`  
+ `1    Roberto     Tamburello    555.123.4567    RTamburello@contoso.com    10`  
   
  into  
   
- `1    RXXXXXXX    Tamburello    xxxx            RXXX@XXXX.com`  
+ `1    Rxxxxxo    Tamburello    xxxx            RXXX@XXXX.com            91`
+ 
+ where the number in DiscountCode is random for every query result
   
 ### Adding or Editing a Mask on an Existing Column  
  Use the **ALTER TABLE** statement to add a mask to an existing column in the table, or to edit the mask on that column.  
-The following example adds a masking function to th `LastName` column:  
+The following example adds a masking function to the `LastName` column:  
   
 ```sql  
-ALTER TABLE Membership  
-ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"XXX",0)');  
+ALTER TABLE Data.Membership  
+ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"xxxx",0)');  
 ```  
   
  The following example changes a masking function on the `LastName` column:  
 
 ```sql  
-ALTER TABLE Membership  
+ALTER TABLE Data.Membership  
 ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');  
 ```  
   
 ### Granting Permissions to View Unmasked Data  
- Granting the **UNMASK** permission allows `TestUser` to see the data unmasked.  
+ Granting the **UNMASK** permission allows `MaskingTestUser` to see the data unmasked.  
   
 ```sql
-GRANT UNMASK TO TestUser;  
-EXECUTE AS USER = 'TestUser';  
-SELECT * FROM Membership;  
-REVERT;   
+GRANT UNMASK TO MaskingTestUser;  
+
+EXECUTE AS USER = 'MaskingTestUser';  
+
+SELECT * FROM Data.Membership;  
+
+REVERT;    
   
 -- Removing the UNMASK permission  
-REVOKE UNMASK TO TestUser;  
+REVOKE UNMASK TO MaskingTestUser;  
 ```  
   
 ### Dropping a Dynamic Data Mask  
  The following statement drops the mask on the `LastName` column created in the previous example:  
   
 ```sql  
-ALTER TABLE Membership   
+ALTER TABLE Data.Membership   
 ALTER COLUMN LastName DROP MASKED;  
 ```  
   
@@ -190,4 +210,4 @@ ALTER COLUMN LastName DROP MASKED;
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
- [Get started with SQL Database Dynamic Data Masking (Azure portal)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+ [Get started with SQL Database Dynamic Data Masking (Azure portal)](/azure/azure-sql/database/dynamic-data-masking-overview)

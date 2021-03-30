@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;CONNECTIONS (Transact-SQL)"
 title: "@@CONNECTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@CONNECTIONS"
   - "@@CONNECTIONS_TSQL"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "number of connection attempts"
   - "attempted connections"
 ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # &#x40;&#x40;CONNECTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This function returns the number of attempted connections - both successful and unsuccessful - since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started.
   
@@ -31,10 +32,12 @@ This function returns the number of attempted connections - both successful and 
   
 ## Syntax  
   
-```sql
+```syntaxsql
 @@CONNECTIONS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return types
 **integer**
   
@@ -55,8 +58,7 @@ SELECT GETDATE() AS 'Today''s Date and Time',
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
-  
+``` 
 Today's Date and Time  Login Attempts  
 ---------------------- --------------  
 12/5/2006 10:32:45 AM  211023         

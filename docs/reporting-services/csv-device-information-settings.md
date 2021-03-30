@@ -1,5 +1,6 @@
 ---
 title: "CSV Device Information Settings | Microsoft Docs"
+description: Learn about the CSV device information settings that are available for rendering in text format.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

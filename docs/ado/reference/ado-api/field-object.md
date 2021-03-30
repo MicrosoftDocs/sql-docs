@@ -1,20 +1,21 @@
 ---
+description: "Field Object"
 title: "Field Object | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 apitype: "COM"
 f1_keywords: 
   - "Field"
 helpviewer_keywords: 
   - "Field object [ADO]"
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Field Object
 Represents a column of data with a common data type.  

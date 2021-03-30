@@ -1,20 +1,20 @@
 ---
 title: Cancel option admin tool
 titleSuffix: SQL Server Distributed Replay
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
+description: This article describes the cancel command-line option and syntax of the SQL Server Distributed Replay administration tool.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
 # Cancel Option (Distributed Replay Administration Tool)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay administration tool, **DReplay.exe**, is a command-line tool that you can use to communicate with the distributed replay controller. This topic describes the **cancel** command-line option and corresponding syntax.  
   
@@ -29,7 +29,7 @@ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
 dreplay cancel [-m controller] [-q]   
 ```  
   
-#### Parameters  
+#### Parameters
  **-m** *controller*  
  The computer name of the controller. You can use "`localhost`" or "`.`" to refer to the local computer.  
   

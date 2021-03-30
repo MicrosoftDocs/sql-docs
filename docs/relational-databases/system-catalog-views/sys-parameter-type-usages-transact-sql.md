@@ -1,4 +1,5 @@
 ---
+description: "sys.parameter_type_usages (Transact-SQL)"
 title: "sys.parameter_type_usages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.parameter_type_usages"
   - "sys.parameter_type_usages_TSQL"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.parameter_type_usages catalog view"
 ms.assetid: af0e167b-bffb-4525-84ec-3607f9268d3d
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.parameter_type_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns one row for each parameter that is of user-defined type.  
   

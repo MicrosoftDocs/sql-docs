@@ -1,4 +1,5 @@
 ---
+description: "Deploy Packages with SSIS"
 title: "Deploy Packages with SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/20/2018"
@@ -23,16 +24,16 @@ ms.author: chugu
 ---
 # Deploy Packages with SSIS
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides tools that make it easy to deploy packages to another computer. The deployment tools also manage any dependencies, such as configurations and files that the package needs. In this tutorial, you will learn how to use these tools to install packages and their dependencies on a target computer.    
     
 First, you will perform tasks to prepare for deployment. You will create a new [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and add existing packages and data files to the project. You will not create any new packages from scratch; instead, you will work only with completed packages that were created just for this tutorial. You will not modify the functionality of the packages in this tutorial; however, after you have added the packages to the project, you might find it useful to open the packages in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer and review the contents of each package. By examining the packages, you will learn about package dependencies such as log files and about other interesting features of the packages.    
     
-In preparation for deployment, you will also update the packages to use configurations. Configurations make the properties of packages and package objects updatable at run time. In this tutorial, you will use configurations to update the connection strings of log and text files and the locations of the XML and XSD files that the package uses. For more information, see [Package Configurations](../integration-services/packages/package-configurations.md) and [Create Package Configurations](../integration-services/packages/create-package-configurations.md).    
+In preparation for deployment, you will also update the packages to use configurations. Configurations make the properties of packages and package objects updatable at run time. In this tutorial, you will use configurations to update the connection strings of log and text files and the locations of the XML and XSD files that the package uses. For more information, see [Package Configurations](./packages/legacy-package-deployment-ssis.md) and [Create Package Configurations](./packages/legacy-package-deployment-ssis.md).    
     
-After you have verified that the packages run successfully in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you will create the deployment bundle to use to install the packages. The deployment bundle will consist of the package files and other items that you added to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, the package dependencies that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] automatically includes, and the deployment utility that you built. For more information, see [Create a Deployment Utility](../integration-services/packages/create-a-deployment-utility.md).    
+After you have verified that the packages run successfully in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you will create the deployment bundle to use to install the packages. The deployment bundle will consist of the package files and other items that you added to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, the package dependencies that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] automatically includes, and the deployment utility that you built. For more information, see [Create a Deployment Utility](./packages/legacy-package-deployment-ssis.md).    
     
 You will then copy the deployment bundle to the target computer and run the Package Installation Wizard to install the packages and package dependencies. The packages will be installed in the msdb SQL Server database, and the supporting and ancillary files will be installed in the file system. Because the deployed packages use configurations, you will update the configuration to use new values that enable packages to run successfully in the new environment.    
     
@@ -91,5 +92,3 @@ In this lesson, you will build a deployment utility and verify that the deployme
     
 [Lesson 3: Install SSIS Packages](../integration-services/lesson-3-install-ssis-packages.md)    
 In this lesson, you will copy the deployment bundle to the target computer, install the packages, and then run the packages.    
-    
-

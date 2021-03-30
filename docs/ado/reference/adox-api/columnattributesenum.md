@@ -1,23 +1,24 @@
 ---
+description: "ColumnAttributesEnum"
 title: "ColumnAttributesEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 apitype: "COM"
 f1_keywords: 
   - "ColumnAttributesEnum"
 helpviewer_keywords: 
   - "ColumnAttributesEnum enumeration [ADOX]"
 ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ColumnAttributesEnum
-Specifies characteristics of a [Column](../../../ado/reference/adox-api/column-object-adox.md).  
+Specifies characteristics of a [Column](./column-object-adox.md).  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -25,4 +26,4 @@ Specifies characteristics of a [Column](../../../ado/reference/adox-api/column-o
 |**adColNullable**|2|The column may contain null values.|  
   
 ## Applies To  
- [Attributes Property (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)
+ [Attributes Property (ADOX)](./attributes-property-adox.md)

@@ -1,4 +1,5 @@
 ---
+description: "log_shipping_monitor_history_detail (Transact-SQL)"
 title: "log_shipping_monitor_history_detail (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "log_shipping_monitor_history_detail_TSQL"
   - "log_shipping_monitor_history_detail"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "log_shipping_monitor_history_detail system table"
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
-author: "stevestein"
-ms.author: "sstein"
+author: cawrites
+ms.author: chadam
 ---
 # log_shipping_monitor_history_detail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Stores history details for log shipping jobs. This table is stored in the **msdb** database.  
   

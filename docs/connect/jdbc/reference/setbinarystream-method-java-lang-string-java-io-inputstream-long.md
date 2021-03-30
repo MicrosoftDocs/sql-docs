@@ -1,4 +1,5 @@
 ---
+description: "setBinaryStream Method (java.lang.String, java.io.InputStream, long)"
 title: "setBinaryStream Method to input stream - long | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: d59c7327-c9dc-4e4f-9dff-19e1a3c62eb2
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setBinaryStream Method (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

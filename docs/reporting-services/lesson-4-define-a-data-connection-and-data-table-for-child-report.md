@@ -1,5 +1,6 @@
 ---
 title: "Lesson 4: Define a Data Connection and Data Table for Child Report | Microsoft Docs"
+description: Learn how to use Reporting Services to create a data connection and a data table for the child report.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -56,7 +57,7 @@ After you design the parent report, you next step is to create a data connection
     > [!WARNING]  
     > Be sure to uncheck **Create methods to send updates directly to the database (GenerateDBDirectMethods)**  
   
-    You have now completed configuring the ADO.NET [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) as a data source for your report. On the DataSet Designer page in Visual Studio, you should see the **DataTable** you added, listing the columns specified in the query. DataSet2 contains the data from the PurhcaseOrderDetail table, based on the query.  
+    You have now completed configuring the ADO.NET [DataTable](/dotnet/api/system.data.datatable) as a data source for your report. On the DataSet Designer page in Visual Studio, you should see the **DataTable** you added, listing the columns specified in the query. DataSet2 contains the data from the PurhcaseOrderDetail table, based on the query.  
   
 11. Save the file.  
   
@@ -64,5 +65,3 @@ After you design the parent report, you next step is to create a data connection
   
 ## Next Task  
 You have successfully created a data connection and data table for the child report. Next, you will design the child report using the Report Wizard. See [Lesson 5: Design the Child Report using the Report Wizard](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
-  
-

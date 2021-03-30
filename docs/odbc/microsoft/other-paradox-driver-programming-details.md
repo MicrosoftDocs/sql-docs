@@ -1,4 +1,5 @@
 ---
+description: "Other Paradox Driver Programming Details"
 title: "Other Paradox Driver Programming Details | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "desktop database drivers [ODBC], Paradox driver"
   - "Jet-based ODBC drivers [ODBC], Paradox driver"
 ms.assetid: 0a723323-b2a6-4ac3-81d0-6ed66ec08ab8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Other Paradox Driver Programming Details
 > [!NOTE]  

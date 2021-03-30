@@ -1,4 +1,5 @@
 ---
+description: "SQLTables (Excel Driver)"
 title: "SQLTables (Excel Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "Excel driver [ODBC], SQLTables"
   - "SQLTables function [ODBC], Excel Driver"
 ms.assetid: 9410b686-4b5b-4b51-b5ef-f9d2e7a48faa
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLTables (Excel Driver)
 > [!NOTE]  

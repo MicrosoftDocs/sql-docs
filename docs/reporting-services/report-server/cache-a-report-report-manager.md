@@ -1,5 +1,6 @@
 ---
 title: "Cache a Report (Report Manager) | Microsoft Docs"
+description: Learn how to schedule the expiration of a cached report in Report Manager. Caching a report speeds up viewing while it remains cached.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -24,7 +25,7 @@ ms.author: maggies
   
 ### To schedule the expiration of a cached report  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md).  
   
 2.  In Report Manager, navigate to the **Contents** page. Navigate to the report for which you want to set caching properties, hover over the item, and click the drop-down arrow.  
   
@@ -45,5 +46,4 @@ ms.author: maggies
 ## See Also  
  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Caching Reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
-  
   

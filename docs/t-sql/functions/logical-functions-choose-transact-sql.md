@@ -1,4 +1,5 @@
 ---
+description: "Logical Functions - CHOOSE (Transact-SQL)"
 title: "CHOOSE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CHOOSE"
   - "CHOOSE_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "CHOOSE function"
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Logical Functions - CHOOSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the item at the specified index from a list of values in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -27,12 +28,13 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 CHOOSE ( index, val_1, val_2 [, val_n ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *index*  
  Is an integer expression that represents a 1-based index into the list of the items following it.  
   
@@ -53,7 +55,7 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 
  The following example returns the third item from the list of values that is provided.  
  
-```  
+```sql 
 SELECT CHOOSE ( 3, 'Manager', 'Director', 'Developer', 'Tester' ) AS Result;  
 ```  
   
@@ -71,7 +73,7 @@ Developer
 
  The following example returns a simple character string based on the value in the `ProductCategoryID` column.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ProductCategoryID, CHOOSE (ProductCategoryID, 'A','B','C','D','E') AS Expression1  
@@ -97,7 +99,7 @@ ProductCategoryID Expression1
   
  The following example returns the season in which an employee was hired. The MONTH function is used to return the month value from the column `HireDate`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT JobTitle, HireDate, CHOOSE(MONTH(HireDate),'Winter','Winter', 'Spring','Spring','Spring','Summer','Summer',   

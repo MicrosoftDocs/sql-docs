@@ -1,5 +1,6 @@
 ---
 title: "Update a Resource (web portal) | Microsoft Docs"
+description: Update a resource by using Reporting Services web portal. Replace an existing resource by importing new or different file content into the existing resource.
 ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

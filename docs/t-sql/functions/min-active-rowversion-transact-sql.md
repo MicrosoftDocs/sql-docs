@@ -1,4 +1,5 @@
 ---
+description: "MIN_ACTIVE_ROWVERSION (Transact-SQL)"
 title: "MIN_ACTIVE_ROWVERSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "MIN_ACTIVE_ROWVERSION"
   - "MIN_ACTIVE_ROWVERSION_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MIN_ACTIVE_ROWVERSION function [Transact-SQL]"
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # MIN_ACTIVE_ROWVERSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the lowest active **rowversion** value in the current database. A **rowversion** value is active if it is used in a transaction that has not yet been committed. For more information, see [rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md).  
   
@@ -30,12 +31,13 @@ ms.author: mikeray
   
 ## Syntax  
   
+```syntaxsql  
+MIN_ACTIVE_ROWVERSION ( ) 
 ```  
   
-MIN_ACTIVE_ROWVERSION  
-```  
-  
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  Returns a **binary(8)** value.  
   
 ## Remarks  
@@ -48,7 +50,7 @@ MIN_ACTIVE_ROWVERSION
 ## Examples  
  The following example returns **rowversion** values by using `MIN_ACTIVE_ROWVERSION` and `@@DBTS`. Notice that the values differ when there are no active transactions in the database.  
   
-```  
+```sql  
 -- Create a table that has a ROWVERSION column in it.  
 CREATE TABLE RowVersionTestTable (rv ROWVERSION)  
 GO  

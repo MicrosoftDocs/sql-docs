@@ -1,4 +1,5 @@
 ---
+description: "catalog.catalog_properties (SSISDB Database)"
 title: "catalog.catalog_properties (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/11/2018"
@@ -13,10 +14,7 @@ ms.author: chugu
 ---
 # catalog.catalog_properties (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
   Displays the properties of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   

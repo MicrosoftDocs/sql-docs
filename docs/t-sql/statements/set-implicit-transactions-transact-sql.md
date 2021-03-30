@@ -1,12 +1,13 @@
 ---
+description: "SET IMPLICIT_TRANSACTIONS (Transact-SQL)"
 title: "SET IMPLICIT_TRANSACTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "IMPLICIT_TRANSACTIONS"
   - "SET IMPLICIT_TRANSACTIONS"
@@ -21,12 +22,12 @@ helpviewer_keywords:
   - "SET IMPLICIT_TRANSACTIONS statement"
   - "IMPLICIT_TRANSACTIONS option"
 ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET IMPLICIT_TRANSACTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Sets the BEGIN TRANSACTION mode to *implicit*, for the connection.  
   
@@ -34,21 +35,72 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  When ON, the system is in *implicit* transaction mode. This means that if @@TRANCOUNT = 0, any of the following Transact-SQL statements begins a new transaction. It is equivalent to an unseen BEGIN TRANSACTION being executed first:  
-  
-||||  
-|-|-|-|  
-|ALTER TABLE|FETCH|REVOKE|  
-|BEGIN TRANSACTION|GRANT|SELECT (See exception below.)|  
-|CREATE|INSERT|TRUNCATE TABLE|  
-|DELETE|OPEN|UPDATE|  
-|DROP|.|.|  
-  
+
+:::row:::
+    :::column:::
+        ALTER TABLE
+    :::column-end:::
+    :::column:::
+        FETCH
+    :::column-end:::
+    :::column:::
+        REVOKE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        BEGIN TRANSACTION
+    :::column-end:::
+    :::column:::
+        GRANT
+    :::column-end:::
+    :::column:::
+        SELECT (See exception below.)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        CREATE
+    :::column-end:::
+    :::column:::
+        INSERT
+    :::column-end:::
+    :::column:::
+        TRUNCATE TABLE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DELETE
+    :::column-end:::
+    :::column:::
+        MERGE
+    :::column-end:::
+    :::column:::
+        UPDATE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DROP
+    :::column-end:::
+    :::column:::
+        OPEN
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
+&nbsp;
+
  When OFF, each of the preceding T-SQL statements is bounded by an unseen BEGIN TRANSACTION and an unseen COMMIT TRANSACTION statement. When OFF, we say the transaction mode is *autocommit*. If your T-SQL code visibly issues a BEGIN TRANSACTION, we say the transaction mode is *explicit*.  
   
  There are several clarifying points to understand:  
@@ -67,7 +119,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
   
  To view the current setting for IMPLICIT_TRANSACTIONS, run the following query.  
   
-```  
+```sql
 DECLARE @IMPLICIT_TRANSACTIONS VARCHAR(3) = 'OFF';  
 IF ( (2 & @@OPTIONS) = 2 ) SET @IMPLICIT_TRANSACTIONS = 'ON';  
 SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;  
@@ -78,88 +130,87 @@ SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;
   
 ```sql  
 -- Transact-SQL.  
-go  
 -- Preparations.  
 SET NOCOUNT ON;  
 SET IMPLICIT_TRANSACTIONS OFF;  
-go  
+GO  
 WHILE (@@TranCount > 0) COMMIT TRANSACTION;  
-go  
+GO  
 IF (OBJECT_ID(N'dbo.t1',N'U') IS NOT NULL) DROP TABLE dbo.t1;  
-go  
-CREATE table dbo.t1 (a int);  
-go  
+GO  
+CREATE table dbo.t1 (a INT);  
+GO  
   
 PRINT N'-------- [Test A] ---- OFF ----';  
 PRINT N'[A.01] Now, SET IMPLICIT_TRANSACTIONS OFF.';  
 PRINT N'[A.02] @@TranCount, at start, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 SET IMPLICIT_TRANSACTIONS OFF;  
-go  
+GO 
 INSERT INTO dbo.t1 VALUES (11);  
 INSERT INTO dbo.t1 VALUES (12);  
 PRINT N'[A.03] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
-go  
+GO  
   
 PRINT N' ';  
 PRINT N'-------- [Test B] ---- ON ----';  
 PRINT N'[B.01] Now, SET IMPLICIT_TRANSACTIONS ON.';  
 PRINT N'[B.02] @@TranCount, at start, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 SET IMPLICIT_TRANSACTIONS ON;  
-go  
+GO
 INSERT INTO dbo.t1 VALUES (21);  
 INSERT INTO dbo.t1 VALUES (22);  
 PRINT N'[B.03] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
-go  
+GO 
 COMMIT TRANSACTION;  
 PRINT N'[B.04] @@TranCount, after COMMIT, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
-go  
+GO
   
 PRINT N' ';  
 PRINT N'-------- [Test C] ---- ON, then BEGIN TRAN ----';  
 PRINT N'[C.01] Now, SET IMPLICIT_TRANSACTIONS ON.';  
 PRINT N'[C.02] @@TranCount, at start, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 SET IMPLICIT_TRANSACTIONS ON;  
-go  
+GO  
 BEGIN TRANSACTION;  
 INSERT INTO dbo.t1 VALUES (31);  
 INSERT INTO dbo.t1 VALUES (32);  
 PRINT N'[C.03] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
-go  
+GO  
 COMMIT TRANSACTION;  
 PRINT N'[C.04] @@TranCount, after a COMMIT, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 COMMIT TRANSACTION;  
 PRINT N'[C.05] @@TranCount, after another COMMIT, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
-go  
+GO
   
 PRINT N' ';  
 PRINT N'-------- [Test D] ---- ON, INSERT, BEGIN TRAN, INSERT ----';  
 PRINT N'[D.01] Now, SET IMPLICIT_TRANSACTIONS ON.';  
 PRINT N'[D.02] @@TranCount, at start, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 SET IMPLICIT_TRANSACTIONS ON;  
-go  
+GO 
 INSERT INTO dbo.t1 VALUES (41);  
 BEGIN TRANSACTION;  
 INSERT INTO dbo.t1 VALUES (42);  
 PRINT N'[D.03] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
-go  
+GO 
 COMMIT TRANSACTION;  
-PRINT N'[D.04] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
+PRINT N'[D.04] @@TranCount, after a COMMIT, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 COMMIT TRANSACTION;  
-PRINT N'[D.05] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
-go  
+PRINT N'[D.05] @@TranCount, after another COMMIT, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
+GO
   
 -- Clean up.  
 SET IMPLICIT_TRANSACTIONS OFF;  
-go  
+GO  
 WHILE (@@TranCount > 0) COMMIT TRANSACTION;  
-go  
+GO  
 DROP TABLE dbo.t1;  
-go  
+GO
 ```  
   
  Next is the text output from the preceding Transact-SQL script.  
   
-```sql  
+```
 -- Text output from Transact-SQL:  
   
 -------- [Test A] ---- OFF ----  
@@ -199,6 +250,7 @@ go
  [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)
  [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

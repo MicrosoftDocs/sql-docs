@@ -1,12 +1,13 @@
 ---
+description: "OBJECTPROPERTYEX (Transact-SQL)"
 title: "OBJECTPROPERTYEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "OBJECTPROPERTYEX"
   - "OBJECTPROPERTYEX_TSQL"
@@ -21,10 +22,10 @@ helpviewer_keywords:
 ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OBJECTPROPERTYEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns information about schema-scoped objects in the current database. For a list of these objects, see [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). OBJECTPROPERTYEX cannot be used for objects that are not schema-scoped, such as data definition language (DDL) triggers and event notifications.  
   
@@ -32,11 +33,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 OBJECTPROPERTYEX ( id , property )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *id*  
  Is an expression that represents the ID of the object in the current database. *id* is **int** and is assumed to be a schema-scoped object in the current database context.  
   
@@ -156,7 +159,7 @@ OBJECTPROPERTYEX ( id , property )
 |UserDataAccess|Function, View|Indicates the object accesses user data, user tables, in the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Read<br /><br /> 0 = None<br /><br /> Base data type: **int**|  
 |TableHasColumnSet|Table|Table has a column set.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> For more information, see [Use Column Sets](../../relational-databases/tables/use-column-sets.md).|  
 |Cardinality|Table (system or user-defined), view, or index|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> The number of rows in the specified object.|  
-|TableTemporalType|Table|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.<br /><br /> Specifies the type of table.<br /><br /> 0 = non-temporal table<br /><br /> 1 = history table for system-versioned table<br /><br /> 2 = system-versioned temporal table|  
+|TableTemporalType|Table|**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later.<br /><br /> Specifies the type of table.<br /><br /> 0 = non-temporal table<br /><br /> 1 = history table for system-versioned table<br /><br /> 2 = system-versioned temporal table|  
   
 ## Return Types  
  **sql_variant**  
@@ -169,7 +172,7 @@ OBJECTPROPERTYEX ( id , property )
 ## Remarks  
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] assumes that *object_id* is in the current database context. A query that references an *object_id* in another database will return NULL or incorrect results. For example, in the following query the current database context is the master database. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] will try to return the property value for the specified *object_id* in that database instead of the database that is specified in the query. The query returns incorrect results because the view `vEmployee` is not in the master database.  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID(N'AdventureWorks2012.HumanResources.vEmployee'), 'IsView');  
@@ -187,7 +190,7 @@ GO
 ### A. Finding the base type of an object  
  The following example creates a SYNONYM `MyEmployeeTable` for the `Employee` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database and then returns the base type of the SYNONYM.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE SYNONYM MyEmployeeTable FOR HumanResources.Employee;  
@@ -207,18 +210,17 @@ U
 ### B. Returning a property value  
  The following example returns the number of UPDATE triggers on the specified table.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID(N'HumanResources.Employee'), N'TABLEUPDATETRIGGERCOUNT');  
 GO  
-  
 ```  
   
 ### C. Finding tables that have a FOREIGN KEY constraint  
  The following example uses the `TableHasForeignKey` property to return all the tables that have a FOREIGN KEY constraint.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT name, object_id, schema_id, type_desc  
@@ -226,7 +228,6 @@ FROM sys.objects
 WHERE OBJECTPROPERTYEX(object_id, N'TableHasForeignKey') = 1  
 ORDER BY name;  
 GO  
-  
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -234,7 +235,7 @@ GO
 ### D: Finding the base type of an object  
  The following example returns the base type of `dbo.DimReseller` object.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OBJECTPROPERTYEX ( object_id(N'dbo.DimReseller'), N'BaseType')AS BaseType;  

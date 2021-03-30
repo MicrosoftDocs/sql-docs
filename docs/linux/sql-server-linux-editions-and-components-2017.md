@@ -1,5 +1,6 @@
 ---
 title: "Editions and supported features of SQL Server 2017 ~ Linux"
+description: This article describes features supported by the various editions of SQL Server 2017 on Linux. It helps you choose from available editions and components.
 ms.date: 01/14/2020
 ms.prod: sql
 ms.technology: linux
@@ -21,13 +22,13 @@ helpviewer_keywords:
   - "installing SQL Server, editions"
   - "editions [SQL Server], about edition options"
   - "Setup [SQL Server]"
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ---
 # Editions and supported features of SQL Server 2017 on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article provides details of features supported by the various editions of SQL Server 2017 on Linux. For editions and supported features of SQL Server on Windows, see [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
@@ -203,6 +204,7 @@ For info about the Integration Services (SSIS) features supported by the edition
 |Planar and geodetic datatypes|Yes|Yes|Yes|Yes| 
 |Advanced spatial libraries|Yes|Yes|Yes|Yes|   
 |Import/export of industry-standard spatial data formats|Yes|Yes|Yes|Yes|   
+
 ## <a name="Unsupported"></a> Unsupported features & services
 
 The following features and services are not available SQL Server 2017 on Linux. The support of these features will be increasingly enabled over time.
@@ -218,6 +220,7 @@ The following features and services are not available SQL Server 2017 on Linux. 
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
 | &nbsp; | Buffer Pool Extension |
+| &nbsp; | Backup to URL - page blob <sup>1</sup>|
 | **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alerts |
 | &nbsp; | Log Reader Agent |
@@ -234,10 +237,11 @@ The following features and services are not available SQL Server 2017 on Linux. 
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
   
+<sup>1</sup> Backup to URL is supported for block blobs, using the [Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
+
 ## Next steps
  [Editions and supported features for SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Editions and supported features for SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Editions and supported features for SQL Server 2016 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [Editions and supported features for SQL Server 2014 - Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
- [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
- [Product Specifications for SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
+ [Installation for SQL Server](../database-engine/install-windows/install-sql-server.md)  
+ [Product Specifications for SQL Server](../sql-server/index.yml)

@@ -1,4 +1,5 @@
 ---
+description: "dBASE Driver Programming Considerations"
 title: "dBASE Driver Programming Considerations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "DBase driver [ODBC]"
   - "ODBC desktop database drivers [ODBC], DBasedriver"
 ms.assetid: ce5e8efc-6a2d-40d5-a658-8dd35cd1dd09
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # dBASE Driver Programming Considerations
 This section contains the following topics.  

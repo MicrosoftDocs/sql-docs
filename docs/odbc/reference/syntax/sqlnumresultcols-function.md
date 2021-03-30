@@ -1,4 +1,5 @@
 ---
+description: "SQLNumResultCols Function"
 title: "SQLNumResultCols Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLNumResultCols"
 apilocation: 
@@ -18,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLNumResultCols function [ODBC]"
 ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLNumResultCols Function
 **Conformance**  

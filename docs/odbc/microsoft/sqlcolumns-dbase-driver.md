@@ -1,4 +1,5 @@
 ---
+description: "SQLColumns (dBASE Driver)"
 title: "SQLColumns (dBASE Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "SQLColumns function [ODBC], dBASE Driver"
   - "DBase driver [ODBC], SQLColumns"
 ms.assetid: 168171de-ab7d-4b5b-af7f-6e2106adfcce
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLColumns (dBASE Driver)
 > [!NOTE]  

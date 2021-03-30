@@ -1,4 +1,5 @@
 ---
+description: "sys.conversation_priorities (Transact-SQL)"
 title: "sys.conversation_priorities (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "conversation_priorities_TSQL"
   - "conversation_priorities"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "Service Broker, conversations"
   - "sys.conversation_priorities catalog view"
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.conversation_priorities (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains a row for each conversation priority created in the current database, as shown in the following table: 
   

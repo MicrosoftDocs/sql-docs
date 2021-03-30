@@ -1,9 +1,9 @@
 ---
 title: Configure availability group for SQL Server on Linux
 description: Learn about creating a SQL Server Always On availability group (AG) for high availability on Linux.
-author: MikeRayMSFT
+author: VanMSFT
 ms.custom: seo-lt-2019
-ms.author: mikeray
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/26/2019
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.assetid:
 ---
 # Configure SQL Server Always On Availability Group for high availability on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article describes how to create a SQL Server Always On Availability Group (AG) for high availability on Linux. There are two configuration types for AGs. A *high availability* configuration uses a cluster manager to provide business continuity. This configuration can also include read-scale replicas. This document explains how to create the AG for high availability.
 
@@ -74,7 +74,7 @@ For information, see [High availability and data protection for Availability Gro
 >[!NOTE]
 >The availability groups can include additional synchronous or asynchronous replicas. 
 
-Create the AG for high availability on Linux. Use the [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/create-availability-group-transact-sql) with `CLUSTER_TYPE = EXTERNAL`. 
+Create the AG for high availability on Linux. Use the [CREATE AVAILABILITY GROUP](../t-sql/statements/create-availability-group-transact-sql.md) with `CLUSTER_TYPE = EXTERNAL`. 
 
 * Availability group - `CLUSTER_TYPE = EXTERNAL` 
    Specifies that an external cluster entity manages the AG. Pacemaker is an example of an external cluster entity. When the AG cluster type is external, 
@@ -206,7 +206,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->After you create the AG, you must configure integration with a cluster technology like Pacemaker for high availability. For a read-scale configuration using AGs, starting with [!INCLUDE [SQL Server version](../includes/sssqlv14-md.md)], setting up a cluster is not required.
+>After you create the AG, you must configure integration with a cluster technology like Pacemaker for high availability. For a read-scale configuration using AGs, starting with [!INCLUDE [SQL Server version](../includes/sssql17-md.md)], setting up a cluster is not required.
 
 If you followed the steps in this document, you have an AG that is not yet clustered. The next step is to add the cluster. This configuration is valid for read-scale/load balancing scenarios, it is not complete for high availability. For high availability, you need to add the AG as a cluster resource. See [Next steps](#next-steps) for instructions. 
 

@@ -1,4 +1,5 @@
 ---
+description: "Select Oracle Tables for Capturing Changes"
 title: "Select Oracle Tables for Capturing Changes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Select Oracle Tables for Capturing Changes
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use this dialog box to select the tables that are included in the CDC instance. The tables selected are added to the list in the **Select Tables and Columns** page of the New Instance wizard. You can do the following in this dialog box.  

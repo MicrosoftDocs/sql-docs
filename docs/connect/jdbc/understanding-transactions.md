@@ -1,5 +1,6 @@
 ---
-title: "Understanding transactions | Microsoft Docs"
+description: Learn about transactions and how to group logical units of work that need to maintain consistent data across multiple database operations.
+title: Understanding transactions
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d3e0414c-6809-4bb1-93b1-4960507faecc
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Understanding transactions

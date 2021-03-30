@@ -1,20 +1,21 @@
 ---
+description: "PreConnect:Completed Event Class"
 title: "PreConnect:Completed Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "PreConnect:Completed Event Class"
 ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PreConnect:Completed Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The PreConnect:Completedevent class indicates when a LOGON trigger or the Resource Governor classifier function finishes execution.  
   
 ## PreConnect:Completed Event Class Data Columns  

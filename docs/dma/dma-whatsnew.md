@@ -1,5 +1,6 @@
 ---
 title: "What's new in Data Migration Assistant (SQL Server) | Microsoft Docs"
+description: Learn about the new features in each release of Data Migration Assistant for SQL Server and Azure SQL Database.
 ms.custom: ""
 ms.date: "11/05/2019"
 ms.prod: sql
@@ -11,13 +12,33 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, new features"
 ms.assetid: ""
-author: HJToland3
-ms.author: jtoland
+author: rajeshsetlem
+ms.author: rajpo
 ---
 
 # What's new in Data Migration Assistant
 
 This article lists the additions in each release of Data Migration Assistant.
+
+## Data Migration Assistant v 5.3
+
+The v5.3 release of the Data Migration Assistant provides support for:
+- External application ad hoc query assessment in command line. 
+- Users to customize command timeout parameter in Dma.exe.config configuration file.
+- Assessment configuration sample file and PowerShell sample script, which explain how to use configuration file to run DMA command line.
+- Backup and restore operations in on-premises migration without the timeout limitation.
+
+In addition, this release of Data Migration Assistant has been updated to .NET 4.8 and provides bug fixes for the following issues:
+- Cannot run assessment or connect to Azure SQL Database without sysadmin permission in migration phase.
+- Users cannot run assessment without sysadmin permission for RDS assesments.
+- Users encountered issues uploading JSON assessment reports to Azure Migrate.
+- Cannot migrate the objects containing Chinese characters.
+
+## Data Migration Assistant v 5.2
+
+The v5.2 release of the Data Migration Assistant provides support for:
+- Uploading assessments to Azure Migrate with support for Azure Government and national clouds (sovereign offering).  This feature enables to assess the readiness of SQL Server data estate migrating to Azure SQL.
+- Command line support for uploading assessments to Azure Migrate with support for Azure Government and national clouds.  Now, you can completely automate uploading the assessments to Azure migrate project to get a consolidated Azure SQL readiness report. 
 
 ## Data Migration Assistant v 5.0
 
@@ -32,7 +53,7 @@ In addition, this release of Data Migration Assistant provides additional enhanc
 
 ## Data Migration Assistant v4.5
 
-The v4.5 release of Data Migration Assistant provides support for assessment of migrating SQL Server Integration Services (SSIS) packages hosted in File system to Azure SQL Database or Azure SQL Database managed instance.
+The v4.5 release of Data Migration Assistant provides support for assessment of migrating SQL Server Integration Services (SSIS) packages hosted in File system to Azure SQL Database or SQL Managed Instance.
 
 ## Data Migration Assistant v4.4
 
@@ -42,9 +63,9 @@ The v4.4 release of Data Migration Assistant provides support for uploading asse
 
 The v4.3 release of Data Migration Assistant provides support for:
 
-- SKU Recommendations for Azure SQL Database managed instances based on workload assessment.
+- SKU Recommendations for Azure SQL Managed Instance based on workload assessment.
 - RDS SQL Server as a source for assessments.
-- Agent job assessments for Azure SQL Database managed instance as a target.
+- Agent job assessments for Azure SQL Managed Instance as a target.
 - The ability to ignore certain assessment rules; the list of error codes specified in the 'ignoreErrorCodes' property configured in DMA won't show up in DMA assessment results.
 - Assessment of T-SQL queries in job activity steps and providing appropriate recommendations
 - Extended events assessments (Public Preview).
@@ -56,15 +77,15 @@ In addition, this release of DMA provides improved performance for handling a la
 
 ## Data Migration Assistant v4.2
 
-The v4.2 release of Data Migration Assistant provides command-line support for target readiness assessment for one or more server instances when migrating from on-premises SQL Server to an Azure SQL Database managed instance. Customers can now use the Data Migration Assistant command line to collect metadata about their database schema, detect the blockers, and learn about partially supported or unsupported features that affect migration to an Azure SQL Database managed instance. The results can then be rendered using the Power BI template provided.
+The v4.2 release of Data Migration Assistant provides command-line support for target readiness assessment for one or more server instances when migrating from on-premises SQL Server to a SQL Managed Instance. Customers can now use the Data Migration Assistant command line to collect metadata about their database schema, detect the blockers, and learn about partially supported or unsupported features that affect migration to a SQL Managed Instance. The results can then be rendered using the Power BI template provided.
 
 ## Data Migration Assistant v4.1
 
-The v4.1 release of Data Migration Assistant introduces support for comprehensive assessment of on-premises SQL Server databases migrating to Azure SQL Database managed instance.
+The v4.1 release of Data Migration Assistant introduces support for comprehensive assessment of on-premises SQL Server databases migrating to SQL Managed Instance.
 
-The assessment workflow helps you detect the following issues, which can affect your migration to Azure SQL Database managed instance:
+The assessment workflow helps you detect the following issues, which can affect your migration to SQL Managed Instance:
 
-- **Unsupported or partially supported features**. Data Migration Assistant assesses your source SQL Server database for features in use that are partially supported or unsupported on the target Azure SQL Database Managed Instance. The tool then provides a comprehensive set of recommendations, alternative approaches available in Azure, and mitigating steps so that customers can take this information into account when planning their migration projects.
+- **Unsupported or partially supported features**. Data Migration Assistant assesses your source SQL Server database for features in use that are partially supported or unsupported on the target SQL Managed Instance. The tool then provides a comprehensive set of recommendations, alternative approaches available in Azure, and mitigating steps so that customers can take this information into account when planning their migration projects.
 
 - **Compatibility issues**. Data Migration Assistant also identifies compatibility issues related to the following areas:
 
@@ -72,7 +93,7 @@ The assessment workflow helps you detect the following issues, which can affect 
   - Behavioral changes: The schema objects reported may continue to work, but they may exhibit a different behavior, for example performance degradation.
   - Informational issues: These objects won't impact the migration but may have been deprecated from feature SQL Server releases.
 
-After the assessment is complete, use our [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) to perform the migration of your SQL Server databases to Azure SQL Database Managed Instance.  DMS supports both [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (one-time) and [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (minimal-downtime) database migrations to Azure SQL Database Managed Instance.
+After the assessment is complete, use our [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) to perform the migration of your SQL Server databases to SQL Managed Instance.  DMS supports both [offline](/azure/dms/tutorial-sql-server-to-managed-instance) (one-time) and [online](/azure/dms/tutorial-sql-server-managed-instance-online) (minimal-downtime) database migrations to SQL Managed Instance.
 
 ## Data Migration Assistant v4.0
 
@@ -113,7 +134,7 @@ The v3.4 release of Data Migration Assistant includes the following additions:
 - Support for SQL Server 2017 as a source for migrations to Azure SQL Database.
 - Enhancements to stability, performance, and assessment rule correctness.
 
-## DData Migration Assistant v3.3
+## Data Migration Assistant v3.3
 
 The v3.3 release of Data Migration Assistant enables migration of an on-premises SQL Server instance to the new version of SQL Server 2017, on both Windows and Linux. While the overall migration workflow for Windows and Linux is the same, the move to SQL Server 2017 for Linux requires a couple of additional considerations.
 
@@ -130,7 +151,7 @@ If the physical back-up file is on a computer running:
 
 ### Migrating Windows logins
 
-While the migration of Active Directory (AD) logins is officially supported by SQL Server 2017 on Linux, it requires additional configuration to work successfully. Refer to the article [Active Directory Authentication with SQL Server on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) for detailed information about setting up Active Directory logins on SQL Server 2017 on Linux. After performing the required configuration, the setup is complete and you can migrate Active Directory logins as usual. Standard SQL Authentication works as expected without any additional setup.
+While the migration of Active Directory (AD) logins is officially supported by SQL Server 2017 on Linux, it requires additional configuration to work successfully. Refer to the article [Active Directory Authentication with SQL Server on Linux](../linux/sql-server-linux-active-directory-authentication.md) for detailed information about setting up Active Directory logins on SQL Server 2017 on Linux. After performing the required configuration, the setup is complete and you can migrate Active Directory logins as usual. Standard SQL Authentication works as expected without any additional setup.
 
 ## Data Migration Assistant v3.2
 
@@ -143,8 +164,8 @@ The v3.2 release of Data Migration Assistant includes the following additions:
 
 The v3.1 release of Data Migration Assistant includes the following additions:
 
-- Improved assessment recommendations for Azure SQL Databases in terms of database collations, use of unsupported system stored procedures, and CLR objects.
-- Assessment guidance for compatibility levels 130, 120, 110, and 100 when migrating to Azure SQL Databases.
+- Improved assessment recommendations for Azure SQL Database in terms of database collations, use of unsupported system stored procedures, and CLR objects.
+- Assessment guidance for compatibility levels 130, 120, 110, and 100 when migrating to Azure SQL Database.
 
 ## Data Migration Assistant v3.0
 

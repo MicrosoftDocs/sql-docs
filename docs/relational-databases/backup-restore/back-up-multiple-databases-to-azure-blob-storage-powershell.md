@@ -1,5 +1,6 @@
 ---
 title: "Back up multiple databases: Azure Blob Storage"
+description: This article provides sample scripts that can be used to automate backups in SQL Server to Azure Blob storage service using PowerShell cmdlets.
 titleSuffix: "PowerShell"
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
@@ -9,12 +10,12 @@ ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Back up Multiple Databases to Azure Blob Storage - PowerShell
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic provides sample scripts that can be used to automate backups to Azure Blob storage service using PowerShell cmdlets.  
   
@@ -37,7 +38,7 @@ The following are considerations for the sample scripts:
   
 - SQL Server PowerShell implements cmdlets to navigate the path structure that represents the hierarchy of objects supported by a PowerShell provider. When you have navigated to a node in the path, you can use other cmdlets to perform basic operations on the current object.
 
-  For more information, see [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md).
+  For more information, see [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md).
 
 - **Get-ChildItem** cmdlet: The information returned by the **Get-ChildItem** depends on the location in a SQL Server PowerShell path. For example, if the location is at the computer level, this cmdlet returns all the SQL Server database engine instances installed on the computer. Or, if the location is at the object level such as databases, then it returns a list of database objects. By default the **Get-ChildItem** cmdlet does not return system objects. Use the `–Force` parameter to see the system objects.
 

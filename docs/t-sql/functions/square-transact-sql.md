@@ -1,12 +1,13 @@
 ---
+description: "SQUARE (Transact-SQL)"
 title: "SQUARE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw, sql-database"
+ms.prod_service: "synapse-analytics, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SQUARE"
   - "SQUARE_TSQL"
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "SQUARE"
   - "square values"
 ms.assetid: 007b6b12-da86-4229-8f5c-fdd4fa839f5f
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQUARE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the square of the specified float value.  
   
@@ -29,11 +30,13 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SQUARE ( float_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *float_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float** or of a type that can be implicitly converted to float.  
   
@@ -43,8 +46,8 @@ SQUARE ( float_expression )
 ## Examples  
  The following example returns the volume of a cylinder having a radius of `1` inch and a height of `5` inches.  
   
-```  
-DECLARE @h float, @r float;  
+```sql  
+DECLARE @h FLOAT, @r FLOAT;  
 SET @h = 5;  
 SET @r = 1;  
 SELECT PI()* SQUARE(@r)* @h AS 'Cyl Vol';  
@@ -61,13 +64,13 @@ Cyl Vol
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the square of each value in the `volume` column in the `containers` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 CREATE TABLE Containers (  
-    ID int NOT NULL,  
-    Name varchar(20),  
-    Volume float(24));  
+    ID INT NOT NULL,  
+    Name VARCHAR(20),  
+    Volume FLOAT(24));  
   
 INSERT INTO Containers VALUES (1, 'Cylinder', '125.22');  
 INSERT INTO Containers VALUES (2, 'Cube', '23.98');  

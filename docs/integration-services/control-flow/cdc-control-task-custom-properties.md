@@ -1,4 +1,5 @@
 ---
+description: "CDC Control Task Custom Properties"
 title: "CDC Control Task Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,15 +14,15 @@ ms.author: chugu
 ---
 # CDC Control Task Custom Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The following table describes the custom properties of the CDC Control task. All properties are read/write.  
   
 |Property name|Data Type|Description|  
 |-------------------|---------------|-----------------|  
-|Connection|ADO.NET Connection|An ADO.NET connection to the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC database for access to the change tables and to the CDC State if stored in the same database.<br /><br /> The connection must be to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that is enabled for CDC and where the selected change table is located.|  
-|TaskOperation|Integer (enumeration)|The selected operation for the CDC control task. The possible values are **Mark Initial Load Start**, **Mark Initial Load End**, **Mark CDC Start**, **Get Processing Range**, **Mark Processed Range**, and **Reset CDC State**.<br /><br /> If you select **MarkCdcStart**, **MarkInitialLoadStart**, or **MarkInitialLoadEnd** when working on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC (that is, not Oracle) the user specified in the connection manager must be either  **db_owner** or **sysadmin**.<br /><br /> For more information about these operations, see [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) and [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
+|Connection|ADO.NET Connection|An ADO.NET connection to the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC database for access to the change tables and to the CDC State if stored in the same database.<br /><br /> The connection must be to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that is enabled for CDC and where the selected change table is located.|  
+|TaskOperation|Integer (enumeration)|The selected operation for the CDC control task. The possible values are **Mark Initial Load Start**, **Mark Initial Load End**, **Mark CDC Start**, **Get Processing Range**, **Mark Processed Range**, and **Reset CDC State**.<br /><br /> If you select **MarkCdcStart**, **MarkInitialLoadStart**, or **MarkInitialLoadEnd** when working on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC (that is, not Oracle) the user specified in the connection manager must be either  **db_owner** or **sysadmin**.<br /><br /> For more information about these operations, see [CDC Control Task Editor](./cdc-control-task.md) and [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
 |OperationParameter|String|Currently used with the **MarkCdcStart** operation. This parameter allows additional input required for the specific operation. For example, the LSN number required for the **MarkCdcStart** operation|  
 |StateVariable|String|An SSIS package variable that stores the CDC state of the current CDC context. The CDC Control task reads and writes the state to the **StateVariable** and does not load it or store it to a persistent storage unless **AutomaticStatePersistence** is selected. See [Define a State Variable](../../integration-services/data-flow/define-a-state-variable.md).|  
 |AutomaticStatePersistence|Boolean|The CDC Control task reads the CDC State from the CDC State package variable. Following an operation, the CDC Control task updates the value of the CDC State package variable. The **AutomaticStatePersistence** property tells the CDC Control task who is responsible for persisting the CDC State value between runs of the SSIS package.<br /><br /> When this property is **true**, the CDC Control task automatically loads the value of the CDC State variable from a state table. When the CDC Control task updates the value of the CDC State variable it also updates its value in the same state **table.stores**, the state in a special table and updates the State Variable. The developer can control which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database contains that state table and its name. The structure of this state table is predefined.<br /><br /> When **false**, the CDC Control task does not deal with persisting its value. When true, the CDC Control task stores the state in a special table and updates the StateVariable.<br /><br /> The default value is **true**, indicating that state persistence is updated automatically.|  
@@ -32,6 +33,5 @@ ms.author: chugu
   
 ## See Also  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
- [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
-  
+ [CDC Control Task Editor](./cdc-control-task.md)  
   

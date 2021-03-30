@@ -1,12 +1,13 @@
 ---
+description: "SELECT - GROUP BY- Transact-SQL"
 title: "GROUP BY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "GROUP"
   - "CUBE"
@@ -31,10 +32,10 @@ helpviewer_keywords:
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - GROUP BY- Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A SELECT statement clause that divides the query result into groups of rows, usually for the purpose of performing one or more aggregations on each group. The SELECT statement returns one row per group.  
   
@@ -42,7 +43,7 @@ A SELECT statement clause that divides the query result into groups of rows, usu
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database   
 -- ISO-Compliant Syntax  
   
@@ -78,8 +79,8 @@ GROUP BY
 
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse 
+```syntaxsql
+-- Syntax for Azure Synapse Analytics 
   
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
@@ -89,7 +90,7 @@ GROUP BY {
 
 ```
 
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 GROUP BY {
@@ -99,7 +100,9 @@ GROUP BY {
 
 ```  
     
-## Arguments 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  
 ### *column-expression*  
 Specifies a column or a non-aggregate calculation on a column. This column can belong to a table, derived table, or view. The column must appear in the FROM clause of the SELECT statement, but is not required to appear in the SELECT list. 
@@ -139,7 +142,7 @@ Groups the SELECT statement results according to the values in a list of one or 
 For example, this query creates a Sales table with columns for Country, Region, and Sales. It inserts four rows and two of the rows have matching values for Country and Region.  
 
 ```sql
-CREATE TABLE Sales ( Country varchar(50), Region varchar(50), Sales int );
+CREATE TABLE Sales ( Country VARCHAR(50), Region VARCHAR(50), Sales INT );
 
 INSERT INTO sales VALUES (N'Canada', N'Alberta', 100);
 INSERT INTO sales VALUES (N'Canada', N'British Columbia', 200);
@@ -279,11 +282,11 @@ GROUP BY ALL:
 - Will fail on columns that have the FILESTREAM attribute.
   
 ### WITH (DISTRIBUTED_AGG)
-Applies to: Azure SQL Data Warehouse and Parallel Data Warehouse
+Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 The DISTRIBUTED_AGG query hint forces the massively parallel processing (MPP) system to redistribute a table on a specific column before performing an aggregation. Only one column in the GROUP BY clause can have a DISTRIBUTED_AGG query hint. After the query finishes, the redistributed table is dropped. The original table is not changed.  
 
-NOTE: The DISTRIBUTED_AGG query hint is provided for backwards compatibility with earlier Parallel Data Warehouse versions and will not improve performance for most queries. By default, MPP already redistributes data as necessary to improve performance for aggregations. 
+NOTE: The DISTRIBUTED_AGG query hint is provided for backwards compatibility with earlier [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] versions and will not improve performance for most queries. By default, MPP already redistributes data as necessary to improve performance for aggregations. 
   
 ## General Remarks
 
@@ -306,7 +309,7 @@ NULL values:
   
 ## Limitations and Restrictions
 
-Applies to: SQL Server (starting with 2008) and Azure SQL Data Warehouse
+Applies to: SQL Server (starting with 2008) and [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 
 ### Maximum capacity
 
@@ -407,7 +410,7 @@ HAVING DATEPART(yyyy,OrderDate) >= N'2003'
 ORDER BY DATEPART(yyyy,OrderDate);  
 ```  
   
-## Examples: SQL Data Warehouse and Parallel Data Warehouse  
+## Examples: Azure Synapse Analytics and Parallel Data Warehouse  
   
 ### E. Basic use of the GROUP BY clause  
  The following example finds the total amount for all sales on each day. One row containing the sum of all sales is returned for each day.  

@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Shared Management Objects (SMO) License Terms"
 title: SQL Server Shared Management Objects (SMO) License Terms
 ms.date: 12/15/2019
 ms.prod: sql
@@ -8,10 +9,10 @@ ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: "markingmyname"
 ms.author: "maghan"
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Shared Management Objects (SMO) License Terms
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 ## MICROSOFT SOFTWARE LICENSE TERMS
 **MICROSOFT SQL SERVER 2017 SHARED MANAGEMENT OBJECTS**

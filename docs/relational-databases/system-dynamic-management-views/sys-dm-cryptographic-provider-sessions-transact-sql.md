@@ -1,11 +1,12 @@
 ---
+description: "sys.dm_cryptographic_provider_sessions (Transact-SQL)"
 title: "sys.dm_cryptographic_provider_sessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_cryptographic_provider_sessions"
   - "dm_cryptographic_provider_sessions_TSQL"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_cryptographic_provider_sessions dynamic management function"
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_cryptographic_provider_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about open sessions for a cryptographic provider.  
  
@@ -48,8 +49,8 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 |**identity**|**nvarchar(128)**|Identity used to authenticate with the cryptographic provider.|  
 |**spid**|**short**|Session ID SPID of the connection. For more information, see [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md).|  
   
-## Remarks  
- The **sys.dm_cryptographic_provider_sessions** view is visible to the public for the current connection. To view all cryptographic connections, you must have the **CONTROL** server permission.  
+## Permissions  
+ Members of the public server role can use **sys.dm_cryptographic_provider_sessions** to return information about the current connection. To view all cryptographic connections, the **CONTROL** server permission is required.  
   
 ## See Also  
  [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

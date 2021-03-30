@@ -1,5 +1,6 @@
 ---
-title: "Getting the driver version | Microsoft Docs"
+title: "Getting the driver version"
+description: "Learn how and where to find the version of the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Getting the driver version
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

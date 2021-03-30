@@ -1,4 +1,5 @@
 ---
+description: "DROP SEARCH PROPERTY LIST (Transact-SQL)"
 title: "DROP SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP_SEARCH_PROPERTY_LIST_TSQL"
   - "DROP SEARCH PROPERTY LIST"
@@ -18,29 +19,30 @@ helpviewer_keywords:
   - "search property lists [SQL Server], dropping"
   - "search property lists [SQL Server], deleting"
 ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
-author: CarlRabeler
-ms.author: carlrab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops a property list from the current database if the search property list is currently not associated with any full-text index in the database.  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP SEARCH PROPERTY LIST property_list_name  
 ;  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *property_list_name*  
  Is the name of the search property list to be dropped. *property_list_name* is an identifier.  
   
  To view the names of the existing property lists, use the [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) catalog view, as follows:  
   
-```  
+```sql  
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
@@ -68,7 +70,7 @@ SELECT name FROM sys.registered_search_property_lists;
 ## Examples  
  The following example drops the `JobCandidateProperties` property list from the `AdventureWorks2012` database.  
   
-```  
+```sql  
 DROP SEARCH PROPERTY LIST JobCandidateProperties;  
 GO  
 ```  

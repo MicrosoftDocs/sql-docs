@@ -1,4 +1,5 @@
 ---
+description: "Change the Entity Transaction Log Type (Master Data Services)"
 title: Change the Entity Transaction Log Type
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Change the Entity Transaction Log Type (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   You can change the transaction log type of an entity, to attribute, member, or none.  
   

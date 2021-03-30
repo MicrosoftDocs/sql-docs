@@ -1,7 +1,8 @@
 ---
-title: "How to: Specify SQL Server Data Types When Using the SQLSRV Driver | Microsoft Docs"
+title: "How to: specify SQL Server data types when using the SQLSRV driver"
+description: "Learn how to specify SQL Server Data Types with the optional *$params* array in prepared statements or direct queries when using the SQLSRV Driver for PHP"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "converting data types"
   - "streaming data"
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # How to: Specify SQL Server Data Types When Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

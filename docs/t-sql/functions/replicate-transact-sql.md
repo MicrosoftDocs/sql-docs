@@ -1,12 +1,13 @@
 ---
+description: "REPLICATE (Transact-SQL)"
 title: "REPLICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "REPLICATE_TSQL"
   - "REPLICATE"
@@ -17,12 +18,12 @@ helpviewer_keywords:
   - "REPLICATE function"
   - "repeating character expressions"
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REPLICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Repeats a string value a specified number of times.  
   
@@ -30,16 +31,21 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
-REPLICATE ( string_expression ,integer_expression )   
+```syntaxsql
+REPLICATE ( string_expression , integer_expression )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *string_expression*  
- Is an expression of a character string or binary data type. *string_expression* can be either character or binary data.  
+ Is an expression of a character string or binary data type.  
   
 > [!NOTE]  
->  If *string_expression* is not of type **varchar(max)** or **nvarchar(max)**, REPLICATE truncates the return value at 8,000 bytes. To return values greater than 8,000 bytes, *string_expression* must be explicitly cast to the appropriate large-value data type.  
+> If *string_expression* is of type **binary**, REPLICATE will perform an implicit conversion to **varchar**, and therefore will not preserve the binary input.  
+
+> [!NOTE]  
+> If *string_expression* input is of type **varchar(max)** or **nvarchar(max)**, REPLICATE truncates the return value at 8,000 bytes. To return values greater than 8,000 bytes, *string_expression* must be explicitly cast to the appropriate large-value data type.  
   
  *integer_expression*  
  Is an expression of any integer type, including **bigint**. If *integer_expression* is negative, NULL is returned.  
@@ -52,7 +58,7 @@ REPLICATE ( string_expression ,integer_expression )
 ### A. Using REPLICATE  
  The following example replicates a `0` character four times in front of a production line code in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql
 SELECT [Name]  
 , REPLICATE('0', 4) + [ProductLine] AS 'Line Code'  
 FROM [Production].[Product]  
@@ -78,7 +84,7 @@ HL Touring Frame - Yellow, 50                      0000T
 ### B. Using REPLICATE and DATALENGTH  
  The following example left pads numbers to a specified length as they are converted from a numeric data type to character or Unicode.  
   
-```  
+```sql
 IF EXISTS(SELECT name FROM sys.tables  
       WHERE name = 't1')  
    DROP TABLE t1;  
@@ -116,7 +122,7 @@ Varchar Column        Char Column
 ### C: Using REPLICATE  
  The following example replicates a `0` character four times in front of an `ItemCode` value.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EnglishProductName AS Name,  

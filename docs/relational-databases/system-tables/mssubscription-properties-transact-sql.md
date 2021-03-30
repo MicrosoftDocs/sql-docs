@@ -1,4 +1,5 @@
 ---
+description: "MSsubscription_properties (Transact-SQL)"
 title: "MSsubscription_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSsubscription_properties"
   - "MSsubscription_properties_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsubscription_properties system table"
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
-author: stevestein
-ms.author: sstein
+author: cawrites
+ms.author: chadam
 ---
 # MSsubscription_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSsubscription_properties** table contains rows for the parameter information required to run replication agents at the Subscriber. This table is stored in the subscription database at the Subscriber for a pull subscription or in the distribution database at the Distributor for a push subscription.  
   

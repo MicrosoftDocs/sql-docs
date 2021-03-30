@@ -1,4 +1,5 @@
 ---
+description: "SQLServerConnection Members"
 title: "SQLServerConnection Members | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLServerConnection Members
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

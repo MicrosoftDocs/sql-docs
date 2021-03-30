@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_next_result"
 title: "sqlsrv_next_result | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "sqlsrv_next_result"
 apitype: "NA"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "stored procedure support"
   - "API Reference, sqlsrv_next_result"
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +41,7 @@ sqlsrv_next_result( resource $stmt )
 ## Return Value  
 If the next result was successfully made active, the Boolean value **true** is returned. If an error occurred in making the next result active, **false** is returned. If no more results are available, **null** is returned.  
   
-## Example  
+## Example 1  
 The following example creates and executes a stored procedure that inserts a product review into the *Production.ProductReview* table, and then selects all reviews for the specified product. After execution of the stored procedure, the first result (the number of rows affected by the INSERT query in the stored procedure) is consumed without calling **sqlsrv_next_result**. The next result (the rows returned by the SELECT query in the stored procedure) is made available by calling **sqlsrv_next_result** and consumed using [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
 > [!NOTE]  
@@ -173,7 +174,7 @@ sqlsrv_close( $conn );
   
 When executing a stored procedure that has output parameters, it is recommended that all other results are consumed before accessing the values of output parameters. For more information see [How to: Specify Parameter Direction Using the SQLSRV Driver](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md).  
   
-## Example  
+## Example 2  
 The following example executes a batch query that retrieves product review information for a specified product ID, inserts a review for the product, then again retrieves the product review information for the specified product ID. The newly inserted product review will be included in the final result set of the batch query. The example uses [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) to move from one result of the batch query to the next.  
   
 > [!NOTE]  

@@ -1,5 +1,6 @@
 ---
 title: "Specify the Size of an Indicator Using an Expression (Report Builder) | Microsoft Docs"
+description: Discover ways to use size, in addition to color, direction, and shape, to maximize the visual impact of indicators in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

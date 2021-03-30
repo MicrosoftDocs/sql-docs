@@ -1,15 +1,16 @@
 ---
-title: "PDO::prepare | Microsoft Docs"
+title: "PDO::prepare"
+description: "API reference for the PDO::prepare function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
 ms.date: "01/31/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -66,7 +67,7 @@ You can close a PDOStatement object by calling `unset`:
 unset($stmt);
 ```
 
-## Example
+## Forward-only example
 This example shows how to use PDO::prepare with parameter markers and a forward-only cursor.
 
 ```
@@ -93,7 +94,7 @@ unset($stmt);
 ?>
 ```
 
-## Example
+## Static cursor example
 This example shows how to use PDO::prepare with a server-side static cursor. For an example showing a client-side cursor, see [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
 
 ```
@@ -133,7 +134,7 @@ print_r($row);
 ?>
 ```
 
-## Example
+## Targeted example
 The following two snippets show how to use PDO::prepare with data targeted for CHAR/VARCHAR columns. Because the default encoding for PDO::prepare is UTF-8, the user can use the option `PDO::SQLSRV_ENCODING_SYSTEM` to avoid implicit conversions.
 
 **Option 1**
@@ -162,7 +163,7 @@ $statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCO
 
 <a name="emulate-prepare" />
 
-## Example
+## Prepare example
 
 This example shows how to use PDO::prepare with `PDO::ATTR_EMULATE_PREPARES` set to true.
 

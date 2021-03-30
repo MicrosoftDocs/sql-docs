@@ -1,16 +1,17 @@
 ---
+description: "IsTestCase (DMX)"
 title: "IsTestCase (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # IsTestCase (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Indicates whether a case is used as a test case for the specified data mining model or mining structure.  
   
@@ -30,12 +31,12 @@ IsTestCase()
  You can determine whether a test set has been created on a particular mining structure by viewing the value of the <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> and <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> properties.  
   
 > [!NOTE]  
->  Drillthrough must be enabled on the model if you want to use the IsTrainingCase or IsTestCase functions to return details about the cases in a particular model. For more information, see [Enable Drillthrough for a Mining Model](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
+>  Drillthrough must be enabled on the model if you want to use the IsTrainingCase or IsTestCase functions to return details about the cases in a particular model. For more information, see [Enable Drillthrough for a Mining Model](/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
   
  To return cases that are part of the training data set, use the function [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md).  
   
 ## Examples  
- The following example uses the `Targeted Mailing` mining structure that is created in the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The query returns all the cases in the structure that are used for testing.  
+ The following example uses the `Targeted Mailing` mining structure that is created in the [Basic Data Mining Tutorial](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)). The query returns all the cases in the structure that are used for testing.  
   
 ```  
 SELECT *  
@@ -47,7 +48,6 @@ WHERE IsTestCase()
   
 ## See Also  
  [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Data Mining Queries](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)   
- [Training and Testing Data Sets](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)  
-  
+ [Data Mining Queries](/analysis-services/data-mining/data-mining-queries)   
+ [Training and Testing Data Sets](/analysis-services/data-mining/training-and-testing-data-sets)  
   

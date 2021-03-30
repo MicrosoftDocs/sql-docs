@@ -1,5 +1,5 @@
 ---
-title: "Install SQL Server Integration Services (SSIS) | Microsoft Docs"
+title: "Install SQL Server Integration Services | Microsoft Docs"
 description: Learn how to install Microsoft SQL Server Integration Services (SSIS) and how to get other downloads for SSIS
 ms.custom: ""
 ms.date: "09/19/2019"
@@ -23,7 +23,7 @@ ms.author: chugu
 
 # Install Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a single setup program to install any or all of its components, including [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Use Setup to install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] with or without other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components on a single computer.
 
@@ -76,7 +76,7 @@ To use a dedicated server for extraction, transformation, and loading (ETL) proc
 
 ### Configuring SSIS event logging
 
-By default, in a new installation, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is configured not to log events that are related to the running of packages to the Application event log. This setting prevents too many event log entries when you use the Data Collector feature of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. The events that aren't logged are EventID 12288, "Package started," and EventID 12289, "Package finished successfully." To log these events to the Application event log, open the registry for editing. Then, in the registry, locate the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS node, and change the DWORD value of the LogPackageExecutionToEventLog setting from 0 to 1.
+By default, in a new installation, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is configured not to log events that are related to the running of packages to the Application event log. This setting prevents too many event log entries when you use the Data Collector feature of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. The events that aren't logged are EventID 12288, "Package started," and EventID 12289, "Package finished successfully." To log these events to the Application event log, open the registry for editing. Then, in the registry, locate the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS node, and change the DWORD value of the LogPackageExecutionToEventLog setting from 0 to 1.
 
 ## Install additional components for Integration Services
 
@@ -110,7 +110,7 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
 - **SQL Server Data Tools (SSDT)**. We've discontinued the SSDT standalone installer for Visual Studio 2019. For Visual Studio 2019, you now can get the SSIS designer extension from the [VS market place](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview).
 
-- **Integration Services Feature Pack for Azure**. To download and install the Feature Pack, see [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://docs.microsoft.com/sql/integration-services/azure-feature-pack-for-integration-services-ssis?view=sql-server-2017). Installing the Feature Pack lets your packages connect to storage and analytics services in the Azure cloud, including the following services:
+- **Integration Services Feature Pack for Azure**. To download and install the Feature Pack, see [Microsoft SQL Server Integration Services Feature Pack for Azure](../azure-feature-pack-for-integration-services-ssis.md). Installing the Feature Pack lets your packages connect to storage and analytics services in the Azure cloud, including the following services:
 
   - Azure Blob Storage.
 
@@ -118,7 +118,7 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
   - Azure Data Lake Store.
 
-  - Azure SQL Data Warehouse.
+  - Azure Synapse Analytics.
 
   - Azure Data Lake Storage (Gen2).
 
@@ -126,7 +126,7 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
   - Microsoft® Connector for SAP BW for Microsoft SQL Server®. To get these components, see [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
 
-  - Microsoft Connector Version 5.0 for Oracle by Attunity and Microsoft Connector Version 5.0 for Teradata by Attunity. To get these components, see [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179).
+  - Microsoft Connectors for Oracle and Teradata by Attunity. To get these components, see [Attunity connectors](../attunity-connectors.md).
 
 ## Next steps
 

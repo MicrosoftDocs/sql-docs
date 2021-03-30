@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_cdc_map_time_to_lsn (Transact-SQL)"
 title: "sys.fn_cdc_map_time_to_lsn (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_cdc_map_time_to_lsn"
   - "fn_cdc_map_time_to_lsn_TSQL"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "fn_cdc_map_time_to_lsn"
   - "sys.fn_cdc_map_time_to_lsn"
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_cdc_map_time_to_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the log sequence number (LSN) value from the **start_lsn** column in the [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) system table for the specified time. You can use this function to systematically map datetime ranges into the LSN-based range needed by the change data capture enumeration functions [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) and [cdc.fn_cdc_get_net_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) to return data changes within that range.  
   
@@ -43,7 +44,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ```  
   
 ## Arguments  
- **'**<relational_operator>**'** { largest less than | largest less than or equal | smallest greater than | smallest greater than or equal }  
+ **'**<relational_operator>**'** { largest less than \| largest less than or equal \| smallest greater than \| smallest greater than or equal }  
  Is used to identify a distinct LSN value in within the **cdc.lsn_time_mapping** table with an associated **tran_end_time** that satisfies the relation when compared to the *tracking_time* value.  
   
  *relational_operator* is **nvarchar(30)**.  

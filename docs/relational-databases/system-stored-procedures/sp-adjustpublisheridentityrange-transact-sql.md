@@ -1,4 +1,5 @@
 ---
+description: "sp_adjustpublisheridentityrange (Transact-SQL)"
 title: "sp_adjustpublisheridentityrange (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_adjustpublisheridentityrange_TSQL"
   - "sp_adjustpublisheridentityrange"
 helpviewer_keywords: 
   - "sp_adjustpublisheridentityrange"
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_adjustpublisheridentityrange (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adjusts the identity range on a publication and reallocates new ranges based on the threshold value on the publication. This stored procedure is executed at the Publisher on the publication database.  
   

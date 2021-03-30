@@ -1,6 +1,7 @@
 ---
 title: Replay Requirements
 titleSuffix: SQL Server Profiler
+description: Learn which event classes and data columns to capture in a trace so that you can replay trace data with SQL Server Profiler or the Distributed Replay Utility.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
@@ -15,7 +16,7 @@ ms.date: 03/14/2017
 
 # Replay Requirements
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In order to replay trace data with [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] or the Distributed Replay Utility, a specific set of event classes and columns must be captured in the trace. These settings are enabled by default if the **TSQL_Replay** trace template is used to configure a trace that is later used for replay. This topic describes these settings and other replay requirements.  
   

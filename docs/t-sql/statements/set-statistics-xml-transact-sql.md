@@ -1,4 +1,5 @@
 ---
+description: "SET STATISTICS XML (Transact-SQL)"
 title: "SET STATISTICS XML (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SET_STATISTICS_XML_TSQL"
   - "SET STATISTICS XML"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "statements [SQL Server], statistical information"
   - "XML [SQL Server], statement execution information"
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SET STATISTICS XML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Causes Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and generate detailed information about how the statements were executed in the form of a well-defined XML document.  
   
@@ -31,12 +32,14 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET STATISTICS XML { ON | OFF }  
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  The setting of SET STATISTICS XML is set at execute or run time and not at parse time.  
   
  When SET STATISTICS XML is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns execution information for each statement after executing it. After this option is set ON, information about all subsequent [!INCLUDE[tsql](../../includes/tsql-md.md)] statements is returned until the option is set to OFF. Note that SET STATISTICS XML need not be the only statement in a batch.  
@@ -68,7 +71,7 @@ SET STATISTICS XML { ON | OFF }
 ## Examples  
  The two statements that follow use the SET STATISTICS XML settings to show the way [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analyzes and optimizes the use of indexes in queries. The first query uses the Equals (=) comparison operator in the WHERE clause on an indexed column. The second query uses the LIKE operator in the WHERE clause. This forces [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use a clustered index scan to find the data that satisfies the WHERE clause condition. The values in the **EstimateRows** and the **EstimatedTotalSubtreeCost** attributes are smaller for the first indexed query indicating that it was processed much faster and used fewer resources than the nonindexed query.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET STATISTICS XML ON;  

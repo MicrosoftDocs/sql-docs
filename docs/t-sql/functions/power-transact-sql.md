@@ -1,12 +1,13 @@
 ---
+description: "POWER (Transact-SQL)"
 title: "POWER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "POWER_TSQL"
   - "POWER"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "POWER function"
 ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # POWER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the value of the specified expression to the specified power.  
   
@@ -28,11 +29,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 POWER ( float_expression , y )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *float_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float** or of a type that can be implicitly converted to **float**.  
   
@@ -58,9 +61,9 @@ If the result does not fit in the return type, an arithmetic overflow error occu
 ### A. Using POWER to return the cube of a number  
  The following example demonstrates raising a number to the power of 3 (the cube of the number).  
   
-```  
-DECLARE @input1 float;  
-DECLARE @input2 float;  
+```sql  
+DECLARE @input1 FLOAT;  
+DECLARE @input2 FLOAT;  
 SET @input1= 2;  
 SET @input2 = 2.5;  
 SELECT POWER(@input1, 3) AS Result1, POWER(@input2, 3) AS Result2;  
@@ -79,14 +82,14 @@ Result1                Result2
 ### B. Using POWER to show results of data type conversion  
  The following example shows how the *float_expression* preserves the data type which can return unexpected results.  
   
-```  
+```sql 
 SELECT   
-POWER(CAST(2.0 AS float), -100.0) AS FloatResult,  
+POWER(CAST(2.0 AS FLOAT), -100.0) AS FloatResult,  
 POWER(2, -100.0) AS IntegerResult,  
-POWER(CAST(2.0 AS int), -100.0) AS IntegerResult,  
+POWER(CAST(2.0 AS INT), -100.0) AS IntegerResult,  
 POWER(2.0, -100.0) AS Decimal1Result,  
 POWER(2.00, -100.0) AS Decimal2Result,  
-POWER(CAST(2.0 AS decimal(5,2)), -100.0) AS Decimal2Result;  
+POWER(CAST(2.0 AS DECIMAL(5,2)), -100.0) AS Decimal2Result;  
 GO  
 ```  
   
@@ -101,8 +104,8 @@ FloatResult            IntegerResult IntegerResult Decimal1Result Decimal2Result
 ### C. Using POWER  
  The following example returns `POWER` results for `2`.  
   
-```  
-DECLARE @value int, @counter int;  
+```sql  
+DECLARE @value INT, @counter INT;  
 SET @value = 2;  
 SET @counter = 1;  
   
@@ -145,7 +148,7 @@ GO
 ### D: Using POWER to return the cube of a number  
  The following example shows returns `POWER` results for `2.0` to the 3rd power.  
   
-```  
+```sql  
 SELECT POWER(2.0, 3);  
 ```  
   

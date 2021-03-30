@@ -1,5 +1,6 @@
 ---
 title: "Database Properties (Files Page) | Microsoft Docs"
+description: "Find out how to view or modify a database's properties and how to create a new database in SQL Server Management Studio."
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -14,10 +15,10 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Database Properties (Files Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to create a new database, or view or modify properties for the selected database. This topic applies to the **Database Properties (Files Page)** for existing databases, and to the **New Database (General Page)**.  
   
-## UIElement List  
+## UI element list  
  **Database name**  
  Add or display the name of the database.  
   
@@ -25,7 +26,7 @@ ms.author: "sstein"
  Specify the owner of the database by selecting from the list.  
   
  **Use full-text indexing**  
- This check box is checked and disabled because full-text indexing is always enabled in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Full-Text Search](../../relational-databases/search/full-text-search.md).  
+ This check box is checked and disabled because full-text indexing is always enabled in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For more information, see [Full-Text Search](../../relational-databases/search/full-text-search.md).  
   
  **Database Files**  
  Add, view, modify, or remove database files for the associated database. Database files have the following properties:  

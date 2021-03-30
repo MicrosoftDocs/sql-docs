@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_page_info (Transact-SQL)"
 title: "sys.dm_db_page_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2018"
@@ -19,7 +20,7 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: "pamela"
 manager: amitban
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15"
 ---
 # sys.dm_db_page_info (Transact-SQL)
 
@@ -28,7 +29,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 Returns information about a page in a database.  The function returns one row that contains the header information from the page, including the `object_id`, `index_id`, and `partition_id`.  This function replaces the need to use `DBCC PAGE` in most cases.
 
 > [!NOTE]
-> `sys.dm_db_page_info` is currently supported only in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.
+> `sys.dm_db_page_info` is currently supported only in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later.
 
 
 ## Syntax   

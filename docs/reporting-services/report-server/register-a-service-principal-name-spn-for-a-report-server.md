@@ -1,6 +1,7 @@
 ---
 title: "Register a Service Principal Name (SPN) for a Report Server | Microsoft Docs"
-ms.date: 03/01/2017
+description: Learn how to create an SPN for the Report Server service if it runs as a domain user, if your network uses Kerberos for authentication.
+ms.date: 09/24/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server
@@ -19,17 +20,18 @@ ms.author: maggies
   
  To create an SPN, you can use the **SetSPN** command line utility. For more information, see the following:  
   
--   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx).  
+-   [Setspn](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)).  
   
 -   [Service Principal Names (SPNs) SetSPN Syntax (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
   
  You must be a domain administrator to run the utility on the domain controller.  
   
 ## Syntax  
- The command syntax for using SetSPN utility to create an SPN for the report server resembles the following:  
+
+When you manipulate SPNs with the setspn, the SPN must be entered in the correct format. The format of an HTTP SPN is `http/host`. The command syntax for using SetSPN utility to create an SPN for the report server resembles the following:  
   
 ```  
-Setspn -s http/<computername>.<domainname> <domain-user-account>  
+Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
 ```  
   
  **SetSPN** is available with Windows Server. The **-s** argument adds a SPN after validating no duplicate exists. **NOTE:-s** is available in Windows Server starting with Windows Server 2008.  
@@ -40,7 +42,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
   
 ## Register an SPN for Domain User Account  
   
-#### To register an SPN for a Report Server service running as a domain user  
+### To register an SPN for a Report Server service running as a domain user  
   
 1.  Install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and configure the Report Server service to run as a domain user account. Note that users will not be able to connect to the report server until you complete the following steps.  
   
@@ -54,17 +56,16 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
     Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
     ```  
   
-     For example: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
+    For example: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
   
 5.  Run the command.  
   
 6.  Open the **RsReportServer.config** file and locate the `<AuthenticationTypes>` section.  
   
-7.  Add `<RSWindowsNegotiate/>` as the first entry in this section to enable Kerberos.  
+7.  Add `<RSWindowsNegotiate />` as the first entry in this section to enable Kerberos.  
   
 ## See Also  
- [Configure a Service Account &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configure a Service Account &#40;Report Server Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configure the Report Server Service Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
-  
   

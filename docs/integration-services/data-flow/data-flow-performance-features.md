@@ -1,4 +1,5 @@
 ---
+description: "Data Flow Performance Features"
 title: "Data Flow Performance Features | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -26,7 +27,7 @@ ms.author: chugu
 ---
 # Data Flow Performance Features
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This topic provides suggestions about how to design [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages to avoid common performance issues. This topic also provides information about features and tools that you can use to troubleshoot the performance of packages.  
@@ -132,7 +133,7 @@ ms.author: chugu
  If you have to create multiple aggregations in a data flow, consider creating multiple aggregations that use one Aggregate transformation instead of creating multiple transformations. This approach improves performance when one aggregation is a subset of another aggregation because the transformation can optimize internal storage and scan incoming data only once. For example, if an aggregation uses a GROUP BY clause and an AVG aggregation, combining them into one transformation can improve performance. However, performing multiple aggregations within one Aggregate transformation serializes the aggregation operations, and therefore might not improve performance when multiple aggregations must be computed independently.  
   
 #### Fuzzy Lookup and Fuzzy Grouping Transformations  
- For information about optimizing the performance of the Fuzzy Lookup and Fuzzy Grouping transformations, see the white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
+ For information about optimizing the performance of the Fuzzy Lookup and Fuzzy Grouping transformations, see the white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90)).  
   
 #### Lookup Transformation  
  Minimize the size of the reference data in memory by entering a SELECT statement that looks up only the columns that you need. This option performs better than selecting an entire table or view, which returns a large amount of unnecessary data.  
@@ -168,38 +169,37 @@ ms.author: chugu
 ## Related Content  
  **Articles and Blog Posts**  
   
--   Technical article, [SQL Server 2005 Integration Services: A Strategy for Performance](https://go.microsoft.com/fwlink/?LinkId=98899), on technet.microsoft.com  
+-   Technical article, [SQL Server 2005 Integration Services: A Strategy for Performance](/previous-versions/sql/sql-server-2005/administrator/cc966530(v=technet.10)), on technet.microsoft.com  
   
--   Technical article, [Integration Services: Performance Tuning Techniques](https://go.microsoft.com/fwlink/?LinkId=98900), on technet.microsoft.com  
+-   Technical article, [Integration Services: Performance Tuning Techniques](/previous-versions/sql/sql-server-2005/administrator/cc966529(v=technet.10)), on technet.microsoft.com  
   
 -   Technical article, [Increasing Throughput of Pipelines by Splitting Synchronous Transformations into Multiple Tasks](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf), in _SQLCAT's Guide to BI and Analytics_
   
--   Technical article, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=220816), on msdn.microsoft.com.  
+-   Technical article, [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)), on msdn.microsoft.com.  
   
--   Technical article, [We Loaded 1TB in 30 Minutes with SSIS, and So Can You](https://go.microsoft.com/fwlink/?LinkId=220817), on msdn.microsoft.com.  
+-   Technical article, [We Loaded 1TB in 30 Minutes with SSIS, and So Can You](/previous-versions/sql/sql-server-2008/dd537533(v=sql.100)), on msdn.microsoft.com.  
   
--   Technical article, [Top 10 SQL Server Integration Services Best Practices](https://go.microsoft.com/fwlink/?LinkId=220818), on sqlcat.com.  
+-   Technical article, [Top 10 SQL Server Integration Services Best Practices](https://techcommunity.microsoft.com/t5/datacat/top-10-sql-server-integration-services-best-practices/ba-p/305163), on sqlcat.com.  
   
--   Technical article and sample, [The "Balanced Data Distributor" for SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), on sqlcat.com.  
+-   Technical article and sample, [The "Balanced Data Distributor" for SSIS](https://www.sqlshack.com/ssis-balanced-data-distributor-overview/), on sqlcat.com.  
   
--   Blog post, [Troubleshooting SSIS Package Performance Issues](https://go.microsoft.com/fwlink/?LinkId=238156), on blogs.msdn.com  
+-   Blog post, [Troubleshooting SSIS Package Performance Issues](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553), on blogs.msdn.com  
   
  **Videos**  
   
 -   Video series, [Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   Video, [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686901.aspx), on technet.microsoft.com  
+-   Video, [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](/previous-versions/ff686901(v=msdn.10)), on technet.microsoft.com  
   
--   Video, [Understanding SSIS Data Flow Buffers (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686905.aspx), on technet.microsoft.com  
+-   Video, [Understanding SSIS Data Flow Buffers (SQL Server Video)](/previous-versions/ff686905(v=msdn.10)), on technet.microsoft.com  
   
 -   Video, [Microsoft SQL Server Integration Services Performance Design Patterns](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409), on channel9.msdn.com.  
   
--   Presentation, [How Microsoft IT Leverages SQL Server 2008 SSIS Dataflow Engine Enhancements](https://go.microsoft.com/fwlink/?LinkId=217660), on sqlcat.com.  
+-   Presentation, [How Microsoft IT Leverages SQL Server 2008 SSIS Dataflow Engine Enhancements](https://channel9.msdn.com/Shows/TechNet+Radio/TechNet-Radio-How-Microsoft-IT-Leverages-SQL-Server-2008-SSIS-Dataflow-Engine-Enhancements), on sqlcat.com.  
   
--   Video, [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), on technet.microsoft.com.  
+-   Video, [Balanced Data Distributor](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com.  
   
 ## See Also  
  [Troubleshooting Tools for Package Development](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Troubleshooting Tools for Package Execution](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
-  
   

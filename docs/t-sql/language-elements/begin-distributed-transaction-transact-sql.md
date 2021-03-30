@@ -1,4 +1,5 @@
 ---
+description: "BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)"
 title: "BEGIN DISTRIBUTED TRANSACTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/29/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DISTRIBUTED"
   - "BEGIN_DISTRIBUTED_TRANSACTION_TSQL"
@@ -24,11 +25,11 @@ helpviewer_keywords:
   - "remote servers [SQL Server], distributed transactions"
   - "starting transactions"
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Specifies the start of a [!INCLUDE[tsql](../../includes/tsql-md.md)] distributed transaction managed by [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC).  
     
@@ -37,14 +38,15 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 BEGIN DISTRIBUTED { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable ]   
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *transaction_name*  
  Is a user-defined transaction name used to track the distributed transaction within MS DTC utilities. *transaction_name* must conform to the rules for identifiers and must be \<= 32 characters.  
   
@@ -79,7 +81,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
 > [!NOTE]  
 >  Unless MS DTC is currently installed on the computer running the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], this example produces an error message. For more information about installing MS DTC, see the Microsoft Distributed Transaction Coordinator documentation.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BEGIN DISTRIBUTED TRANSACTION;  

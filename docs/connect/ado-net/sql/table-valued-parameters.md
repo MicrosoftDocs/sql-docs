@@ -9,13 +9,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Table-valued parameters
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Table-valued parameters provide an easy way to marshal multiple rows of data from a client application to SQL Server without requiring multiple round trips or special server-side logic for processing the data. You can use table-valued parameters to encapsulate rows of data in a client application and send the data to the server in a single parameterized command. The incoming data rows are stored in a table variable that can then be operated on by using Transact-SQL.  
   
@@ -28,8 +28,8 @@ For more information about table-valued parameters, see the following resources.
   
 |Resource|Description|  
 |--------------|-----------------|  
-|[Table-Valued Parameters (Database Engine)](https://go.microsoft.com/fwlink/?LinkId=98363) in SQL Server Books Online|Describes how to create and use table-valued parameters.|  
-|[User-Defined Table Types](https://go.microsoft.com/fwlink/?LinkId=98364) in SQL Server Books Online|Describes user-defined table types that are used to declare table-valued parameters.|  
+|[Table-Valued Parameters (Database Engine)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) in SQL Server Books Online|Describes how to create and use table-valued parameters.|  
+|[User-Defined Table Types](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) in SQL Server Books Online|Describes user-defined table types that are used to declare table-valued parameters.|  
   
 ## Passing multiple rows in previous versions of SQL Server  
 Before table-valued parameters were introduced to SQL Server 2008, the options for passing multiple rows of data to a stored procedure or a parameterized SQL command were limited. A developer could choose from the following options for passing multiple rows to the server:  
@@ -43,7 +43,7 @@ Before table-valued parameters were introduced to SQL Server 2008, the options f
 - Use the `bcp` utility program or the <xref:Microsoft.Data.SqlClient.SqlBulkCopy> object to load many rows of data into a table. Although this technique is very efficient, it does not support server-side processing unless the data is loaded into a temporary table or table variable.  
   
 ## Creating table-valued parameter types  
-Table-valued parameters are based on strongly-typed table structures that are defined by using Transact-SQL CREATE TYPE statements. You have to create a table type and define the structure in SQL Server before you can use table-valued parameters in your client applications. For more information about creating table types, see [User-Defined Table Types](https://go.microsoft.com/fwlink/?LinkID=98364) in SQL Server Books Online.  
+Table-valued parameters are based on strongly-typed table structures that are defined by using Transact-SQL CREATE TYPE statements. You have to create a table type and define the structure in SQL Server before you can use table-valued parameters in your client applications. For more information about creating table types, see [User-Defined Table Types](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) in SQL Server Books Online.  
   
 The following statement creates a table type named CategoryTableType that consists of CategoryID and CategoryName columns:  
   

@@ -1,5 +1,6 @@
 ---
 title: "Provision Always Encrypted keys using SQL Server Management Studio | Microsoft Docs"
+description: Learn how to provision column master keys and column encryption keys for Always Encrypted using SQL Server Management Studio.
 ms.custom: ""
 ms.date: 10/01/2019
 ms.prod: sql
@@ -14,10 +15,10 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Provision Always Encrypted keys using SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 This article provides the steps to provision column master keys and column encryption keys for Always Encrypted using [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md).
 
@@ -43,7 +44,7 @@ The **New Column Master Key** dialog allows you to generate a column master key 
    
     For more information about the above key stores, see [Create and store column master keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-5. If you're using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can select the **Allow enclave computations** checkbox to make the master key enclave-enabled. See [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) for details. 
+5. If you're using [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] and your SQL Server instance is configured with a secure enclave, you can select the **Allow enclave computations** checkbox to make the master key enclave-enabled. See [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) for details. 
 
     > [!NOTE]
     > The **Allow enclave computations** checkbox does not appear if your SQL Server instance is not correctly configured with a secure enclave.
@@ -53,7 +54,7 @@ The **New Column Master Key** dialog allows you to generate a column master key 
 
 Once you complete the dialog, SQL Server Management Studio creates metadata for your column master key in the database. The dialog achieves this by generating and issuing a [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) statement.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 If you're configuring an enclave-enabled column master key, SSMS also signs the metadata using the column master key. 
 

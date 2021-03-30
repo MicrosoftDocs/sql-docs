@@ -1,5 +1,6 @@
 ---
 title: "Add Bevel, Emboss, and Texture Styles to a Chart (Report Builder) | Microsoft Docs"
+description: Learn how to specify a drawing effect, such as bevels, embossing, or textures, to increase the visual impact of your chart in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

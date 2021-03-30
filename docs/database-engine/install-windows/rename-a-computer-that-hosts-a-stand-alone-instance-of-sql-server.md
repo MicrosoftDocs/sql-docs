@@ -1,5 +1,6 @@
 ---
 title: "Rename computer hosting instance"
+description: When you rename a computer that hosts an instance of SQL Server, update the system metadata stored in sys.servers.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql
@@ -16,13 +17,13 @@ helpviewer_keywords:
   - "deleting remote logins"
   - "dropping remote logins"
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Rename a Computer that Hosts a Stand-Alone Instance of SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 When you change the name of the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the new name is recognized during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup. You do not have to run Setup again to reset the computer name. Instead, use the following steps to update system metadata that is stored in sys.servers and reported by the system function @@SERVERNAME. Update system metadata to reflect computer name changes for remote connections and applications that use @@SERVERNAME, or that query the server name from sys.servers.  
   
@@ -32,7 +33,7 @@ The following steps cannot be used to rename an instance of [!INCLUDE[ssNoVersio
   
  Before you begin the renaming process, review the following information:  
   
--   When an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is part of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster, the computer renaming process differs from a computer that hosts a stand-alone instance.  
+-   When an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is part of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster, the computer renaming process differs from a computer that hosts a stand-alone instance. For more information, see [Rename a SQL Server Failover Cluster Instance](../../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support renaming computers that are involved in replication, except when you use log shipping with replication. The secondary computer in log shipping can be renamed if the primary computer is permanently lost. For more information, see [Log Shipping and Replication &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
@@ -49,9 +50,9 @@ The following steps cannot be used to rename an instance of [!INCLUDE[ssNoVersio
 -   For a renamed computer that hosts a default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], run the following procedures:  
   
     ```sql
-    sp_dropserver <old_name>;  
+    EXEC sp_dropserver '<old_name>';  
     GO  
-    sp_addserver <new_name>, local;  
+    EXEC sp_addserver '<new_name>', local;  
     GO  
     ```  
   
@@ -60,9 +61,9 @@ The following steps cannot be used to rename an instance of [!INCLUDE[ssNoVersio
 -   For a renamed computer that hosts a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], run the following procedures:  
   
     ```sql
-    sp_dropserver <old_name\instancename>;  
+    EXEC sp_dropserver '<old_name\instancename>';  
     GO  
-    sp_addserver <new_name\instancename>, local;  
+    EXEC sp_addserver '<new_name\instancename>', local;  
     GO  
     ```  
   
@@ -91,22 +92,21 @@ The following steps cannot be used to rename an instance of [!INCLUDE[ssNoVersio
 -   For a default instance, run the following procedure:  
   
     ```sql
-    sp_dropremotelogin old_name;  
+    EXEC sp_dropremotelogin old_name;  
     GO  
     ```  
   
 -   For a named instance, run the following procedure:  
   
     ```sql
-    sp_dropremotelogin old_name\instancename;  
+    EXEC sp_dropremotelogin old_name\instancename;  
     GO  
     ```  
   
  **Linked Server Configurations** - Linked server configurations will be affected by the computer renaming operation. Use **sp_addlinkedserver** or **sp_setnetname** to update computer name references. For more information, see the [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md).  
   
- **Client Alias Names** - Client aliases that use named pipes will be affected by the computer renaming operation. For example, if an alias "PROD_SRVR" was created to point to SRVR1 and uses the named pipes protocol, the pipe name will look like `\\SRVR1\pipe\sql\query`. After the computer is renamed, the path of the named pipe will no longer be valid and. For more information about named pipes, see the [Creating a Valid Connection String Using Named Pipes](https://go.microsoft.com/fwlink/?LinkId=111063).  
+ **Client Alias Names** - Client aliases that use named pipes will be affected by the computer renaming operation. For example, if an alias "PROD_SRVR" was created to point to SRVR1 and uses the named pipes protocol, the pipe name will look like `\\SRVR1\pipe\sql\query`. After the computer is renamed, the path of the named pipe will no longer be valid and. For more information about named pipes, see the [Creating a Valid Connection String Using Named Pipes](/previous-versions/sql/sql-server-2008/ms189307(v=sql.100)).  
   
 ## See also  
  [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)  
-  
   

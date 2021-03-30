@@ -1,4 +1,5 @@
 ---
+description: "Use Annotations in Packages"
 title: "Use Annotations in Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -17,14 +18,14 @@ ms.author: chugu
 ---
 # Use Annotations in Packages
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer provides annotations, which you can use to make packages self-documenting and easier to understand and maintain. You can add annotations to the control flow, data flow, and event handler design surfaces of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer. The annotations can contain any type of text, and they are useful for adding labels, comments, and other descriptive information to a package. Annotations are a design-time feature only. For example, they are not written to logs.  
   
  When you press ENTER, the text wraps to the next line. The annotation box automatically increases in size as you add additional lines of text. Package annotations are persisted as clear text in the CDATA section of the package file.  
   
- For more information about changes to the format of the package file, see [SSIS Package Format](https://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94).  
+ For more information about changes to the format of the package file, see [SSIS Package Format](./integration-services-ssis-packages.md).  
   
  When you save the package, [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer saves the annotations in the package.  
   
@@ -49,4 +50,4 @@ ms.author: chugu
   
 7.  To add an annotation to a group, right-click the annotation and then click **Group**.  
   
-8.  To save the updated package, on the **File** menu, click **Save All**.  
+8.  To save the updated package, on the **File** menu, click **Save All**.

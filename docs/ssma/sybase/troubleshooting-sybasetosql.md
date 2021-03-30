@@ -1,4 +1,5 @@
 ---
+description: "Troubleshooting (SybaseToSQL)"
 title: "Troubleshooting (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -9,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Sybase Console,Troubleshooting"
 ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Troubleshooting (SybaseToSQL)
 It is not uncommon to run into migration issues midway executing the console scripts or commands.  

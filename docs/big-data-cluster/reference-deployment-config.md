@@ -1,12 +1,12 @@
 ---
 title: Deployment configuration file
 titleSuffix: SQL Server Big Data Clusters
-description: Reference for a big data cluster deployment configuration file.
+description: Learn about a JSON file that documents the structure of a SQL Server 2019 Big Data Cluster deployment configuration file.
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 2/19/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -14,7 +14,7 @@ ms.technology: big-data-cluster
 
 # Deployment configuration file reference for big data clusters
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article provides a JSON file that documents the structure of a SQL Server 2019 big data cluster deployment configuration file.
 
@@ -27,10 +27,14 @@ Use the following JSON file as a reference for the structure and settings in a b
 
 ```json
 {
+  "apiVersion": {
+    "name": "API Version",
+    "description": "The API version"
+  },
   "metadata": {
     "kind": {
-      "name": "Deployment type",
-      "description": "The type of deployment - in this case a 'Cluster'. Do not change this value."
+      "name": "Deployment Type",
+      "description": "The type of deployment - in this case a 'Cluster'"
     },
     "name": {
       "name": "Cluster Name",
@@ -38,104 +42,127 @@ Use the following JSON file as a reference for the structure and settings in a b
     }
   },
   "spec": {
-    "controlPlane": {
-      "spec": {
-        "docker": {
-          "registry": {
-            "name": "Docker Registry",
-            "description": "The private Docker registry where the images used to deploy the SQL Server big data cluster are stored."
+    "resources": [
+      {
+        "spec": {
+          "type": {
+            "name": "Pool Type",
+            "description": "HDFS Name Node"
           },
-          "repository": {
-            "name": "Docker Repository",
-            "description": "The private Docker repository within the above registry where images used to deploy the big data cluster are stored."
+          "replicas": {
+            "name": "HDFS Name Node Replicas",
+            "description": "The number of replicas you would like in HDFS Name Node pool"
           },
-          "imageTag": {
-            "name": "Docker Image Tag",
-            "description": "The Docker image tag used for the Docker images used for deploying the SQL Server big data cluster."
-          },
-          "imagePullPolicy": {
-            "name": "Docker Image Pull Policy",
-            "description": "The Docker image pull policy."
+          "settings": {
+            "name": "HDFS Name Node pool configurations",
+            "description": "Configuration key-value pairs for HDFS Name Node pool, overriding service configurations"
           }
-        },
-        "storage": {
-          "usePersistentVolume": {
-            "name": "Kubernetes Persistent Volume Use",
-            "description": "Set this value to `true` to use Kubernetes Persistent Volume Claims for storage. Also specify the className in this case. Set this value to `false` to use ephemeral host storage for non production deployments."
-          },
-          "className": {
-            "name": "Kubernetes Storage Class",
-            "description": "If usePersistentVolume is `true` this indicates the name of the Kubernetes Storage Class to use. You must pre-provision the storage class and the persistent volumes or you can use a built in storage class if the platform you are deploying provides this capability."
-          },
-          "accessMode": {
-            "name": "Kubernetes Persistent Volume Access Mode",
-            "description": "Access mode for the Persistent Volume. Default value is ReadWriteOnce."
-          },
-          "size": {
-            "name": "Kubernetes Persistent Volume Claim Size",
-            "description": "The size of each Persisted Volume Claim created. Default value is 10Gi."
-          }
-        },
-        "endpoints": [
-          {
-            "name": {
-              "name": "Controller Endpoint Name",
-              "description": "Name of Kubernetes service created for controller endpoint."
-            },
-            "serviceType": {
-              "name": "Controller Service Type",
-              "description": "Kubernetes service type for controller service. Possible values are LoadBalancer or NodePort."
-            },
-            "port": {
-              "name": "Controller Service Port",
-              "description": "The TCP/IP port that the controller service listens on the public network."
-            }
-          },
-          {
-            "name": {
-              "name": "Management Proxy Endpoint Name",
-              "description": "Name of Kubernetes service created for management proxy endpoint."
-            },
-            "serviceType": {
-              "name": "Management Proxy Service Type",
-              "description": "Kubernetes service type for management proxy service. Possible values are LoadBalancer or NodePort."
-            },
-            "port": {
-              "name": "Management Proxy Service Port",
-              "description": "The TCP/IP port that proxy service listens on the public network. This is the port used for computing the portal URL."
-            }
-          },
-          {
-            "name": {
-              "name": "App Proxy Endpoint Name",
-              "description": "Name of Kubernetes service created for app proxy endpoint."
-            },
-            "serviceType": {
-              "name": "App Proxy Service Type",
-              "description": "Kubernetes service type for proxy service. Possible values are LoadBalancer or NodePort."
-            },
-            "port": {
-              "name": "App Proxy Service Port",
-              "description": "The TCP/IP port that proxy service listens on the public network."
-            }
-          },
-          {
-            "name": {
-              "name": "Gateway Endpoint Name",
-              "description": "Name of Kubernetes service created for gateway endpoint."
-            },
-            "serviceType": {
-              "name": "Gateway Service Type",
-              "description": "Kubernetes service type for gateway service. Possible values are LoadBalancer or NodePort."
-            },
-            "port": {
-              "name": "Gateway Service Port",
-              "description": "The TCP/IP port that gateway service listens on the public network."
-            }
-          }
-        ]
+        }
       },
-    "pools": [
+      {
+        "spec": {
+          "type": {
+            "name": "Pool Type",
+            "description": "Spark Head Node"
+          },
+          "replicas": {
+            "name": "Spark Head Node Replicas",
+            "description": "The number of replicas you would like in Spark Head Node pool"
+          },
+          "settings": {
+            "name": "Spark Head Node pool configurations",
+            "description": "Configuration key-value pairs for Spark Head Node pool, overriding service configurations"
+          }
+        }
+      },
+      {
+        "spec": {
+          "type": {
+            "name": "Pool Type",
+            "description": "Zookeeper"
+          },
+          "replicas": {
+            "name": "Zookeeper Node Replicas",
+            "description": "The number of replicas you would like in Zookeeper pool"
+          },
+          "settings": {
+            "name": "Zookeeper Node pool configurations",
+            "description": "Configuration key-value pairs for Zookeeper Node pool, overriding service configurations"
+          }
+        }
+      },
+      {
+        "spec": {
+          "type": {
+            "name": "Pool Type",
+            "description": "Gateway"
+          },
+          "replicas": {
+            "name": "Gateway Node Replicas",
+            "description": "The number of replicas you would like in Gateway pool"
+          },
+          "settings": {
+            "name": "Gateway pool configurations",
+            "description": "Configuration key-value pairs for Gateway pool, overriding service configurations"
+          },
+          "endpoints": [
+            {
+              "name": {
+                "name": "Gateway Endpoint Name",
+                "description": "Endpoint name of gateway pool"
+              },
+              "dnsName": {
+                "name": "Gateway DNS Name",
+                "description": "External DNS name for gateway pool"
+              },
+              "serviceType": {
+                "name": "Gateway Pool Endpoint Type",
+                "description": "Endpoint type of gateway pool - NodePort"
+              },
+              "port": {
+                "name": "Gateway Pool Port",
+                "description": "The port for the gateway endpoint"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "spec": {
+          "type": {
+            "name": "Pool Type",
+            "description": "AppProxy"
+          },
+          "replicas": {
+            "name": "AppProxy Node Replicas",
+            "description": "The number of replicas you would like in AppProxy pool"
+          },
+          "settings": {
+            "name": "AppProxy pool configurations",
+            "description": "Configuration key-value pairs for AppProxy pool, overriding service configurations"
+          },
+          "endpoints": [
+            {
+              "name": {
+                "name": "AppProxy Endpoint Name",
+                "description": "Endpoint name of appproxy pool"
+              },
+              "dnsName": {
+                "name": "AppProxy DNS Name",
+                "description": "External DNS name for appproxy pool"
+              },
+              "serviceType": {
+                "name": "AppProxy Pool Endpoint Type",
+                "description": "Endpoint type of appproxy pool - NodePort"
+              },
+              "port": {
+                "name": "AppProxy Pool Port",
+                "description": "The port for the appproxy endpoint"
+              }
+            }
+          ]
+        }
+      },
       {
         "metadata": {
           "kind": {
@@ -156,14 +183,14 @@ Use the following JSON file as a reference for the structure and settings in a b
             "name": "Master Pool Replicas",
             "description": "The number of replicas you would like in Master pool"
           },
+          "settings": {
+            "name": "Master pool configurations",
+            "description": "Configuration key-value pairs for Master pool, overriding service configurations"
+          },
           "storage": {
-            "usePersistentVolume": {
-              "name": "Kubernetes Persistent Volume Use",
-              "description": "Set this value to `true` to use Kubernetes Persistent Volume Claims for storage. Also specify the className in this case. Set this value to `false` to use ephemeral host storage for non production deployments."
-            },
             "className": {
               "name": "Kubernetes Storage Class",
-              "description": "If usePersistentVolume is `true` this indicates the name of the Kubernetes Storage Class to use. You must pre-provision the storage class and the persistent volumes or you can use a built in storage class if the platform you are deploying provides this capability."
+              "description": "This indicates the name of the Kubernetes Storage Class to use. You must pre-provision the storage class and the persistent volumes or you can use a built in storage class if the platform you are deploying provides this capability."
             },
             "accessMode": {
               "name": "Kubernetes Persistent Volume Access Mode",
@@ -180,6 +207,10 @@ Use the following JSON file as a reference for the structure and settings in a b
                 "name": "Master Endpoint Name",
                 "description": "Endpoint name of Master pool"
               },
+              "dnsName": {
+                "name": "Master DNS Name",
+                "description": "External DNS name for Master pool"
+              },
               "serviceType": {
                 "name": "Master Pool Endpoint Type",
                 "description": "Endpoint type of Master Pool - NodePort"
@@ -190,58 +221,6 @@ Use the following JSON file as a reference for the structure and settings in a b
               }
             }
           ]
-        },
-        "hadoop": {
-          "yarn": {
-            "nodeManager": {
-              "memory": {
-                "name": "Yarn Node Manager Memory",
-                "description": "The standard memory is 18432"
-              },
-              "vcores": {
-                "name": "Yarn Node Manager Virtual Cores",
-                "description": "The standard virtual cores is 6"
-              }
-            },
-            "schedulerMax": {
-              "memory": {
-                "name": "Yarn Scheduler Max Memory",
-                "description": "The standard memory is 18432"
-              },
-              "vcores": {
-                "name": "Yarn Scheduler Max Virtual Cores",
-                "description": "The standard virtual cores is 6"
-              }
-            },
-            "capacityScheduler": {
-              "maxAmPercent": {
-                "name": "Capacity Scheduler Max Percent",
-                "description": "The standard max percentage is 0.3"
-              }
-            }
-          },
-          "spark": {
-            "driverMemory": {
-              "name": "Spark Driver Memory",
-              "description": "The standard Spark driver memory is 2g"
-            },
-            "driverCores": {
-              "name": "Spark Driver Cores",
-              "description": "The standard Spark driverCores is 1"
-            },
-            "executorInstances": {
-              "name": "Spark Executor Instances",
-              "description": "The standard Spark executor instances is 3"
-            },
-            "executorMemory": {
-              "name": "Spark Executor Memory",
-              "description": "The standard Spark executor memory is 1536m"
-            },
-            "executorCores": {
-              "name": "Spark Executor Cores",
-              "description": "The standard Spark executor cores is 1"
-            }
-          }
         }
       },
       {
@@ -264,14 +243,14 @@ Use the following JSON file as a reference for the structure and settings in a b
             "name": "Compute Pool Replicas",
             "description": "The number of replicas you would like in Compute pool"
           },
+          "settings": {
+            "name": "Compute pool configurations",
+            "description": "Configuration key-value pairs for Compute pool, overriding service configurations"
+          },
           "storage": {
-            "usePersistentVolume": {
-              "name": "Kubernetes Persistent Volume Use",
-              "description": "Set this value to `true` to use Kubernetes Persistent Volume Claims for storage. Also specify the className in this case. Set this value to `false` to use ephemeral host storage for non production deployments."
-            },
             "className": {
               "name": "Kubernetes Storage Class",
-              "description": "If usePersistentVolume is `true` this indicates the name of the Kubernetes Storage Class to use. You must pre-provision the storage class and the persistent volumes or you can use a built in storage class if the platform you are deploying provides this capability."
+              "description": "This indicates the name of the Kubernetes Storage Class to use. You must pre-provision the storage class and the persistent volumes or you can use a built in storage class if the platform you are deploying provides this capability."
             },
             "accessMode": {
               "name": "Kubernetes Persistent Volume Access Mode",
@@ -304,14 +283,14 @@ Use the following JSON file as a reference for the structure and settings in a b
             "name": "Data Pool Replicas",
             "description": "The number of replicas you would like in Data pool"
           },
+          "settings": {
+            "name": "Data pool configurations",
+            "description": "Configuration key-value pairs for Data pool, overriding service configurations"
+          },
           "storage": {
-            "usePersistentVolume": {
-              "name": "Kubernetes Persistent Volume Use",
-              "description": "Set this value to `true` to use Kubernetes Persistent Volume Claims for storage. Also specify the className in this case. Set this value to `false` to use ephemeral host storage for non production deployments."
-            },
             "className": {
               "name": "Kubernetes Storage Class",
-              "description": "If usePersistentVolume is `true` this indicates the name of the Kubernetes Storage Class to use. You must pre-provision the storage class and the persistent volumes or you can use a built in storage class if the platform you are deploying provides this capability."
+              "description": "This indicates the name of the Kubernetes Storage Class to use. You must pre-provision the storage class and the persistent volumes or you can use a built in storage class if the platform you are deploying provides this capability."
             },
             "accessMode": {
               "name": "Kubernetes Persistent Volume Access Mode",
@@ -344,14 +323,14 @@ Use the following JSON file as a reference for the structure and settings in a b
             "name": "Storage Pool Replicas",
             "description": "The number of replicas you would like in Storage pool"
           },
+          "settings": {
+            "name": "Storage pool configurations",
+            "description": "Configuration key-value pairs for Storage pool, overriding service configurations"
+          },
           "storage": {
-            "usePersistentVolume": {
-              "name": "Kubernetes Persistent Volume Use",
-              "description": "Set this value to `true` to use Kubernetes Persistent Volume Claims for storage. Also specify the className in this case. Set this value to `false` to use ephemeral host storage for non production deployments."
-            },
             "className": {
               "name": "Kubernetes Storage Class",
-              "description": "If usePersistentVolume is `true` this indicates the name of the Kubernetes Storage Class to use. You must pre-provision the storage class and the persistent volumes or you can use a built in storage class if the platform you are deploying provides this capability."
+              "description": "This indicates the name of the Kubernetes Storage Class to use. You must pre-provision the storage class and the persistent volumes or you can use a built in storage class if the platform you are deploying provides this capability."
             },
             "accessMode": {
               "name": "Kubernetes Persistent Volume Access Mode",
@@ -362,89 +341,90 @@ Use the following JSON file as a reference for the structure and settings in a b
               "description": "The size of each Persisted Volume Claim created. Default value is 10Gi."
             }
           }
-        },
-        "namenode": {
-          "replicas": {
-            "name": "Hadoop Replicas",
-            "description": "The number of replicas for hadoop"
+        }
+      },
+      {
+        "metadata": {
+          "kind": {
+            "name": "Deployment Type",
+            "description": "The type of deployment - in this case a Pool"
           },
-          "spec": {
-            "storage": {
-              "usePersistentVolume": {
-                "name": "Kubernetes Persistent Volume Use",
-                "description": "Set this value to `true` to use Kubernetes Persistent Volume Claims for storage. Also specify the className in this case. Set this value to `false` to use ephemeral host storage for non production deployments."
-              },
-              "className": {
-                "name": "Kubernetes Storage Class",
-                "description": "If usePersistentVolume is `true` this indicates the name of the Kubernetes Storage Class to use. You must pre-provision the storage class and the persistent volumes or you can use a built in storage class if the platform you are deploying provides this capability."
-              },
-              "accessMode": {
-                "name": "Kubernetes Persistent Volume Access Mode",
-                "description": "Access mode for the Persistent Volume. Default value is ReadWriteOnce."
-              },
-              "size": {
-                "name": "Kubernetes Persistent Volume Claim Size",
-                "description": "The size of each Persisted Volume Claim created. Default value is 10Gi."
-              }
-            }
+          "name": {
+            "name": "Pool Name",
+            "description": "The name of the pool. `Default` is only allowed value in current version."
           }
         },
-        "hadoop": {
-          "yarn": {
-            "nodeManager": {
-              "memory": {
-                "name": "Yarn Node Manager Memory",
-                "description": "The standard memory is 18432"
-              },
-              "vcores": {
-                "name": "Yarn Node Manager Virtual Cores",
-                "description": "The standard virtual cores is 6"
-              }
-            },
-            "schedulerMax": {
-              "memory": {
-                "name": "Yarn Scheduler Max Memory",
-                "description": "The standard memory is 18432"
-              },
-              "vcores": {
-                "name": "Yarn Scheduler Max Virtual Cores",
-                "description": "The standard virtual cores is 6"
-              }
-            },
-            "capacityScheduler": {
-              "maxAmPercent": {
-                "name": "Capacity Scheduler Max Percent",
-                "description": "The standard max percentage is 0.3"
-              }
-            }
+        "spec": {
+          "type": {
+            "name": "Pool Type",
+            "description": "Spark - this is an optional pool that only runs Spark job, it does not run HDFS data node"
           },
-          "spark": {
-            "driverMemory": {
-              "name": "Spark Driver Memory",
-              "description": "The standard Spark driver memory is 2g"
+          "replicas": {
+            "name": "Spark Pool Replicas",
+            "description": "The number of replicas you would like in Spark pool"
+          },
+          "settings": {
+            "name": "Spark pool configurations",
+            "description": "Configuration key-value pairs for Spark pool, overriding service configurations"
+          },
+          "storage": {
+            "className": {
+              "name": "Kubernetes Storage Class",
+              "description": "This indicates the name of the Kubernetes Storage Class to use. You must pre-provision the storage class and the persistent volumes or you can use a built in storage class if the platform you are deploying provides this capability."
             },
-            "driverCores": {
-              "name": "Spark Driver Cores",
-              "description": "The standard Spark driverCores is 1"
+            "accessMode": {
+              "name": "Kubernetes Persistent Volume Access Mode",
+              "description": "Access mode for the Persistent Volume. Default value is ReadWriteOnce."
             },
-            "executorInstances": {
-              "name": "Spark Executor Instances",
-              "description": "The standard Spark executor instances is 3"
-            },
-            "executorMemory": {
-              "name": "Spark Executor Memory",
-              "description": "The standard Spark executor memory is 1536m"
-            },
-            "executorCores": {
-              "name": "Spark Executor Cores",
-              "description": "The standard Spark executor cores is 1"
+            "size": {
+              "name": "Kubernetes Persistent Volume Claim Size",
+              "description": "The size of each Persisted Volume Claim created. Default value is 10Gi."
             }
           }
         }
       }
-    ]
+    ],
+    "services": {
+      "sql": {
+        "resources": [
+          {
+            "name": "Resource",
+            "description": "Resource to be included in sql service, includes master, compute, data and storage pool"
+          }
+        ],
+        "settings": {
+          "name": "sql service configurations",
+          "description": "Configuration key-value pairs for sql service"
+        }
+      },
+      "hdfs": {
+        "resources": [
+          {
+            "name": "Resource",
+            "description": "Resource to be included in hdfs service, includes name node, zookeeper, storage and spark head pool, optionally includes spark pool"
+          }
+        ],
+        "settings": {
+          "name": "hdfs service configurations",
+          "description": "Configuration key-value pairs for hdfs service"
+        }
+      },
+      "spark": {
+        "resources": [
+          {
+            "name": "Resource",
+            "description": "Resource to be included in spark service, includes storage and spark head pool, optionally includes spark pool"
+          }
+        ],
+        "settings": {
+          "name": "spark service configurations",
+          "description": "Configuration key-value pairs for spark service"
+        }
+      }
+    }
   }
 }
+
 ```
 
 ## Next steps

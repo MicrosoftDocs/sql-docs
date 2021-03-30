@@ -1,4 +1,5 @@
 ---
+description: "sys.sysmembers (Transact-SQL)"
 title: "sys.sysmembers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.sysmembers_TSQL"
   - "sysmembers"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "sysmembers system table"
   - "sys.sysmembers compatibility view"
 ms.assetid: ceb18341-f985-4849-ac83-21d67ab7b980
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysmembers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains a row for each member of a database role.  
   

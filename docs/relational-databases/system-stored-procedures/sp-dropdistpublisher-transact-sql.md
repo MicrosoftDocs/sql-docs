@@ -1,4 +1,5 @@
 ---
+description: "sp_dropdistpublisher (Transact-SQL)"
 title: "sp_dropdistpublisher (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_dropdistpublisher"
   - "sp_dropdistpublisher_TSQL"
 helpviewer_keywords: 
   - "sp_dropdistpublisher"
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dropdistpublisher (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops a distribution Publisher. This stored procedure is executed at the Distributor on any database.  
   

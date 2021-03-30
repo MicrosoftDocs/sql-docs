@@ -1,5 +1,6 @@
 ---
 title: "Lay out a Reporting Services mobile report for phone or tablet | Microsoft Docs"
+description: After you create a Reporting Services mobile report in SQL Server Mobile Report Publisher, you can lay out a phone and tablet version of it.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,16 +1,17 @@
 ---
+description: "Data Mining Extensions (DMX) Operator Reference"
 title: "Data Mining Extensions (DMX) Operator Reference | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # Data Mining Extensions (DMX) Operator Reference
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   The Data Mining Extensions (DMX) language in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports arithmetic, assignment, comparison, logical, and unary operators. The following table lists the operators that DMX supports.  
   

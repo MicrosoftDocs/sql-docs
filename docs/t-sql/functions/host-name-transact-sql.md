@@ -1,4 +1,5 @@
 ---
+description: "HOST_NAME (Transact-SQL)"
 title: "HOST_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/21/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "HOST_NAME_TSQL"
   - "HOST_NAME"
@@ -20,7 +21,8 @@ author: VanMSFT
 ms.author: vanto
 ---
 # HOST_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Returns the workstation name.  
   
@@ -28,12 +30,11 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 HOST_NAME ()  
 ```  
-  
-## Return Types  
+
+## Return Types
  **nvarchar(128)**  
   
 ## Remarks  
@@ -47,14 +48,14 @@ HOST_NAME ()
 ## Examples  
  The following example creates a table that uses `HOST_NAME()` in a `DEFAULT` definition to record the workstation name of computers that insert rows into a table recording orders.  
   
-```  
+```sql  
 CREATE TABLE Orders  
-   (OrderID     int        PRIMARY KEY,  
-    CustomerID  nchar(5)   REFERENCES Customers(CustomerID),  
-    Workstation nchar(30)  NOT NULL DEFAULT HOST_NAME(),  
-    OrderDate   datetime   NOT NULL,  
-    ShipDate    datetime   NULL,  
-    ShipperID   int        NULL REFERENCES Shippers(ShipperID));  
+   (OrderID     INT        PRIMARY KEY,  
+    CustomerID  NCHAR(5)   REFERENCES Customers(CustomerID),  
+    Workstation NCHAR(30)  NOT NULL DEFAULT HOST_NAME(),  
+    OrderDate   DATETIME   NOT NULL,  
+    ShipDate    DATETIME   NULL,  
+    ShipperID   INT        NULL REFERENCES Shippers(ShipperID));  
 GO  
 ```  
   

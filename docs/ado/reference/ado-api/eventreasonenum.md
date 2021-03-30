@@ -1,20 +1,21 @@
 ---
+description: "EventReasonEnum"
 title: "EventReasonEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 apitype: "COM"
 f1_keywords: 
   - "EventReasonEnum"
 helpviewer_keywords: 
   - "EventReasonEnum enumeration [ADO]"
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # EventReasonEnum
 Specifies the reason that caused an event to occur.  
@@ -59,8 +60,14 @@ Specifies the reason that caused an event to occur.
 |AdoEnums.EventReason.UPDATE|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[WillChangeRecord and RecordChangeComplete Events (ADO)](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|[WillChangeRecordset and RecordsetChangeComplete Events (ADO)](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|  
-|[WillMove and MoveComplete Events (ADO)](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)||
+
+:::row:::
+    :::column:::
+        [WillChangeRecord and RecordChangeComplete Events (ADO)](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
+
+        [WillChangeRecordset and RecordsetChangeComplete Events (ADO)](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
+    :::column-end:::
+    :::column:::
+        [WillMove and MoveComplete Events (ADO)](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
+    :::column-end:::
+:::row-end:::

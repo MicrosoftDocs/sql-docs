@@ -1,5 +1,6 @@
 ---
 title: "Sum Function (Report Builder) | Microsoft Docs"
+description: The Sum function in Report Builder returns the sum of all the non-null numeric values specified by the expression.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -38,7 +39,7 @@ Sum(expression, scope, recursive)
  Returns a **Decimal** for decimal expressions and a **Double** for all other expressions.  
   
 ## Remarks  
- The set of data specified in the expression must have the same data type. To convert data that has multiple numeric data types to the same data type, use conversion functions like **CInt**, **CDbl** or **CDec**. For more information, see [Type Conversion Functions](https://go.microsoft.com/fwlink/?LinkId=96142).  
+ The set of data specified in the expression must have the same data type. To convert data that has multiple numeric data types to the same data type, use conversion functions like **CInt**, **CDbl** or **CDec**. For more information, see [Type Conversion Functions](/dotnet/visual-basic/language-reference/functions/type-conversion-functions).  
   
  The value of *scope* must be a string constant andcannot be an expression. For outer aggregates or aggregates that do not specify other aggregates, *scope* must refer to the current scope or a containing scope. For aggregates of aggregates, nested aggregates can specify a child scope.  
   
@@ -56,8 +57,10 @@ Sum(expression, scope, recursive)
   
  For more information about recursive aggregates, see [Creating Recursive Hierarchy Groups &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-## Example  
- The following two code examples provides a sum of line item totals in the `Order` group or data region.  
+## Examples  
+
+### A. Sum of line item totals 
+ The following two code examples provide a sum of line item totals in the `Order` group or data region.  
   
 ```  
 =Sum(Fields!LineTotal.Value, "Order")  
@@ -65,7 +68,7 @@ Sum(expression, scope, recursive)
 =Sum(CDbl(Fields!LineTotal.Value), "Order")  
 ```  
   
-## Example  
+### B. Maximum value from all nested regions 
  In a matrix data region with nested row groups Category and Subcategory, and nested column groups Year and Quarter, in a cell that belongs to the innermost row and column groups, the following expression evaluates to the maximum value from all quarters for all subcategories.  
   
 ```  
@@ -77,5 +80,4 @@ Sum(expression, scope, recursive)
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
-  
   

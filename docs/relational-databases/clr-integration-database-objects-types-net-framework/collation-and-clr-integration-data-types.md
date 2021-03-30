@@ -1,5 +1,6 @@
 ---
 title: "Collation and CLR Integration Data Types | Microsoft Docs"
+description: In SQL Server CLR integration, the .NET Framework string APIs use the CompareInfo property of CultureInfo of the current thread to perform string comparisons.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Collation and CLR Integration Data Types
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], the **CompareInfo** object handles collations. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] string application programming interfaces (APIs) use the **CompareInfo** property associated with the **CultureInfo** object of the current thread to perform string comparisons. The default setting of the **CultureInfo** object is based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows locale setting for the computer on which [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. This determines the default comparison semantics, if no explicit **CultureInfo** is specified, for comparisons of **System.String** values. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not explicitly change the **CompareInfo** property to the database or server collation. If required, users must set the appropriate **CompareInfo** property in their routines.  
   
 ## Parameter Collation  

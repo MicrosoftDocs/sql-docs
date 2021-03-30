@@ -1,4 +1,5 @@
 ---
+description: "OGC Methods on Geography Instances"
 title: "OGC Methods on Geography Instances | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/27/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 ms.assetid: a33d5db9-aed1-4c96-85bf-9d3b5051c635
@@ -14,7 +15,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # OGC Methods on Geography Instances
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the Open Geospatial Consortium (OGC) methods on **geography** instances.  
   

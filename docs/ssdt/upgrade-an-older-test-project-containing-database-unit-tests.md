@@ -1,12 +1,12 @@
 ---
 title: Upgrade an Older Test Project Containing Database Unit Tests
+description: Find out how to upgrade Visual Studio 2010 test projects that contain database unit tests. See how to use SQL Server Data Tools with those projects.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
@@ -19,7 +19,7 @@ You can upgrade an older test project, which was created in Visual Studio 2010 a
 > [!TIP]  
 > If you are using Visual Studio 2010, after you add SQL Server unit tests to a test project, you should not add unit tests using the older database unit test template. If you do, you will need to convert the project again before the tests will execute correctly.  
   
-If you have a test database project that was created in a release older than Visual Studio 2010, you can use the information in [How to: Upgrade Database Unit Tests from Previous Releases of Visual Studio](https://msdn.microsoft.com/library/dd193412(VS.100).aspx) to upgrade your database project to Visual Studio 2010, before upgrading the project to SQL Server Data Tools.  
+If you have a test database project that was created in a release older than Visual Studio 2010, you can use the information in [How to: Upgrade Database Unit Tests from Previous Releases of Visual Studio](/previous-versions/visualstudio/visual-studio-2010/dd193412(v=vs.100)) to upgrade your database project to Visual Studio 2010, before upgrading the project to SQL Server Data Tools.  
   
 ### Initiating an Upgrade  
   
@@ -36,4 +36,3 @@ If you have a test database project that was created in a release older than Vis
   
 ## See Also  
 [Verifying Database Code by Using SQL Server Unit Tests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

@@ -1,10 +1,10 @@
 ---
 title: Install SQL Server command-line tools on Linux
 titleSuffix: SQL Server
-description: This article describes how to install the SQL Server Tools on Linux.
+description: Learn how to install the SQL Server command-line tools, Microsoft ODBC drivers, and their dependencies on Linux.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 06/07/2019
+ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sqlfreshmay19"
@@ -13,7 +13,7 @@ ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ---
 # Install sqlcmd and bcp the SQL Server command-line tools on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 The following steps install the command-line tools, Microsoft ODBC drivers, and their dependencies. The **mssql-tools** package contains:
 
@@ -30,7 +30,7 @@ Install the tools for your platform:
 
 This article describes how to install the command-line tools. If you are looking for examples of how to use **sqlcmd** or **bcp**, see the [links](#next-steps) at the end of this topic.
 
-## <a id="RHEL"><a/>Install tools on RHEL 7
+## <a id="RHEL"><a/>Install tools on RHEL 8
 
 Use the following steps to install the **mssql-tools** on Red Hat Enterprise Linux. 
 
@@ -43,7 +43,7 @@ Use the following steps to install the **mssql-tools** on Red Hat Enterprise Lin
 1. Download the Microsoft Red Hat repository configuration file.
 
    ```bash
-   curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
+   curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/msprod.repo
    ```
 
 1. Exit superuser mode.
@@ -88,7 +88,10 @@ Use the following steps to install the **mssql-tools** on Red Hat Enterprise Lin
 
 ## <a id="ubuntu"></a>Install tools on Ubuntu 16.04
 
-Use the following steps to install the **mssql-tools** on Ubuntu. 
+Use the following steps to install the **mssql-tools** on Ubuntu.
+
+> [!NOTE]
+> Ubuntu 18.04 is supported starting with SQL Server 2019 CU3. If you are using Ubuntu 18.04, change the repository path from `/ubuntu/16.04` to `/ubuntu/18.04`.
 
 1. Import the public repository GPG keys.
 
@@ -176,11 +179,11 @@ A preview of **sqlcmd** and **bcp** is now available on macOS. For more informat
 
 *Install [Homebrew](https://brew.sh) if you don't have it already:*
 
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+- `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 To install the tools for Mac El Capitan and Sierra, use the following commands:
 
-```
+```bash
 # brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
@@ -209,7 +212,7 @@ If you [run SQL Server in a Docker container](quickstart-install-connect-docker.
 
    | Linux distribution | ODBC packages location |
    |---|---|
-   | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
+   | Red Hat | [https://packages.microsoft.com/rhel/8/prod](https://packages.microsoft.com/rhel/8/prod) |
    | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
    | Ubuntu 16.04 | [**msodbcsql**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql)<br/>[**unixodbc-dev**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/u/unixodbc/) |
 

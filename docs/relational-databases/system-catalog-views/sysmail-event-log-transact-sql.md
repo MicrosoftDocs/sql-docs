@@ -1,4 +1,5 @@
 ---
+description: "sysmail_event_log (Transact-SQL)"
 title: "sysmail_event_log (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysmail_event_log"
   - "sysmail_event_log_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_event_log database mail view"
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sysmail_event_log (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each Windows or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message returned by the Database Mail system. (Message in this context refers to a message such as an error message, not an e-mail message.) Configure the **Logging Level** parameter by using the **Configure System Parameters** dialog box of the Database Mail Configuration Wizard, or the [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) stored procedure, to determine which messages are returned.  
   

@@ -1,4 +1,5 @@
 ---
+description: "sp_columns_ex (Transact-SQL)"
 title: "sp_columns_ex (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_columns_ex"
   - "sp_columns_ex_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_columns_ex"
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_columns_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the column information, one row per column, for the specified linked server tables. **sp_columns_ex** returns column information for only the specific column if *column* is specified.  
   
@@ -86,15 +87,14 @@ sp_columns_ex [ @table_server = ] 'table_server'
  For more information, see the Microsoft ODBC documentation.  
   
 ## Remarks  
- **sp_columns_ex** is executed by querying the COLUMNS rowset of the **IDBSchemaRowset** interface of the OLE DB provider corresponding to *table_server*. The *table_name*, *table_schema*, *table_catalog*, and *column* parameters are passed to this interface to restrict the rows returned.  
+- **sp_columns_ex** is executed by querying the COLUMNS rowset of the **IDBSchemaRowset** interface of the OLE DB provider corresponding to *table_server*. The *table_name*, *table_schema*, *table_catalog*, and *column* parameters are passed to this interface to restrict the rows returned.  
   
- **sp_columns_ex** returns an empty result set if the OLE DB provider of the specified linked server does not support the COLUMNS rowset of the **IDBSchemaRowset** interface.  
+- **sp_columns_ex** returns an empty result set if the OLE DB provider of the specified linked server does not support the COLUMNS rowset of the **IDBSchemaRowset** interface.  
+  
+- **sp_columns_ex** follows the requirements for delimited identifiers. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## Permissions  
  Requires SELECT permission on the schema.  
-  
-## Remarks  
- **sp_columns_ex** follows the requirements for delimited identifiers. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## Examples  
  The following example returns the data type of the `JobTitle` column of the `HumanResources.Employee` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database on the linked server `Seattle1`.  

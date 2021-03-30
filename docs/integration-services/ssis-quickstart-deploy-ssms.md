@@ -1,17 +1,21 @@
 ---
-title: "Deploy an SSIS project with SSMS | Microsoft Docs"
-ms.date: "05/21/2018"
+title: Deploy an SSIS project with SSMS
+description: "Deploy an SSIS project with SQL Server Management Studio (SSMS)"
 ms.topic: quickstart
 ms.prod: sql
-ms.prod_service: "integration-services"
-ms.custom: ""
 ms.technology: integration-services
+f1_keywords:
+  - sql13.swb.deploymentwizard.deploymentsettings.f1
 author: chugugrace
 ms.author: chugu
+ms.reviewer: ""
+ms.custom: ""
+ms.date: 05/21/2018
 ---
+
 # Deploy an SSIS project with SQL Server Management Studio (SSMS)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This quickstart how to use SQL Server Management Studio (SSMS) to connect to the SSIS Catalog database, and then run the Integration Services Deployment Wizard to deploy an SSIS project to the SSIS Catalog. 
@@ -20,7 +24,7 @@ SQL Server Management Studio is an integrated environment for managing any SQL i
 
 ## Prerequisites
 
-Before you start, make sure you have the latest version of SQL Server Management Studio. To download SSMS, see [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Before you start, make sure you have the latest version of SQL Server Management Studio. To download SSMS, see [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
 The validation described in this article for deployment to Azure SQL Database requires SQL Server Data Tools (SSDT) version 17.4 or later. To get the latest version of SSDT, see [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
@@ -116,4 +120,4 @@ Use SQL Server Management Studio to establish a connection to the SSIS Catalog.
     - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md)
     - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md)
-    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) 
+    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md)

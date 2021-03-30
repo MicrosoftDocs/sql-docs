@@ -1,4 +1,5 @@
 ---
+description: "sys.database_scoped_configurations (Transact-SQL)"
 title: "sys.database_scoped_configurations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/14/2018"
@@ -14,14 +15,16 @@ f1_keywords:
   - "sys.database_scoped_configurations_TSQL"
 helpviewer_keywords: 
   - "sys.database_scoped_configurations catalog view"
+dev_langs: 
+  - TSQL
 ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest"
 ---
 # sys.database_scoped_configurations (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-addw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 Contains one row per configuration. 
 

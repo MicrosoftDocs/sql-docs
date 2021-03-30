@@ -1,4 +1,5 @@
 ---
+description: "Master Data Services Features and Tasks"
 title: Features and Tasks
 ms.custom: ""
 ms.date: "04/01/2016"
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Master Data Services Features and Tasks
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Learn how to use [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] to manage your organization's master data. Learn how to create and manipulate model objects, which are containers for data. Learn how to organize and maintain the master data itself. Learn how to import and export master data, as well as share models between test and production environments. Finally, learn how to develop custom applications that access the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] web service.  
   

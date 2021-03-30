@@ -1,4 +1,5 @@
 ---
+description: "Appendix - 1 (OracleToSQL)"
 title: "Appendix - 1 (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,9 +8,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e01f8be5-ce68-4c9f-bd13-d65e73a16470
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Appendix - 1 (OracleToSQL)
 Quick view of the SSMA Console command line options:  
@@ -26,5 +27,4 @@ Quick view of the SSMA Console command line options:
 |8|-?|No|Not Applicable|Not Applicable|  
   
 ## See Also  
-[Executing the SSMA Console (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
-  
+[Executing the SSMA Console (Oracle)](./executing-the-ssma-console-oracletosql.md)  

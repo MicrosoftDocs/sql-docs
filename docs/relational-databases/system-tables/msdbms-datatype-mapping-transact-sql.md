@@ -1,4 +1,5 @@
 ---
+description: "MSdbms_datatype_mapping (Transact-SQL)"
 title: "MSdbms_datatype_mapping (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSdbms_datatype_mapping_TSQL"
   - "MSdbms_datatype_mapping"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdbms_datatype_mapping system table"
 ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
-author: stevestein
-ms.author: sstein
+author: cawrites
+ms.author: chadam
 ---
 # MSdbms_datatype_mapping (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSdbms_datatype_mapping** table contains the allowable data type mappings from the data type in the source database management system (DBMS) to one or more specific data types in the destination DBMS. This table is stored in the **msdb** database and is used for heterogeneous database replication.  
   

@@ -13,14 +13,34 @@ metadata:
   ms.date: 01/07/2020  
 
 landingContent:
+  - title: Learn SQL 
+    linkLists:
+    - linkListType: learn 
+      links:
+      - text: Azure SQL for beginners
+        url: https://aka.ms/azuresql4beginners
+      - text: Azure SQL fundamentals 
+        url: /learn/paths/azure-sql-fundamentals/
+      - text: Azure SQL hands-on labs
+        url: https://aka.ms/asqlworkshop
+      - text: Azure SQL bootcamp 
+        url: https://aka.ms/azuresqlbootcamp
+      - text: LinkedIn Learning
+        url: https://www.linkedin.com/learning/topics/sql-server
+      - text: Pluralsight
+        url: https://www.pluralsight.com/browse/data-professional/sql-server
+      - text: Channel 9
+        url: https://channel9.msdn.com/Tags/sql+server
+
+
   - title: SQL Server
     linkLists:
     - linkListType: learn
       links:
       - text: Upgrade SQL Server
-        url: https://docs.microsoft.com/learn/modules/introduction-upgrading-sql-server/
+        url: /learn/modules/introduction-upgrading-sql-server/
       - text: Use the Query Tuning Assistant
-        url: https://docs.microsoft.com/learn/modules/use-sql-server-query-tuning-assistant/
+        url: /learn/modules/use-sql-server-query-tuning-assistant/
       - text: SQL Server workshops
         url: https://aka.ms/sqlworkshops
     - linkListType: quickstart
@@ -28,7 +48,7 @@ landingContent:
       - text: Connect & query with Azure Data Studio
         url: ../azure-data-studio/quickstart-sql-server.md
       - text: Connect & query with SSMS
-        url: ../ssms/tutorials/connect-query-sql-server.md
+        url: ../ssms/quickstarts/ssms-connect-query-sql-server.md
       - text: Writing Transact-SQL (T-SQL)
         url: ../t-sql/tutorial-writing-transact-sql-statements.md
       - text: Extended events 
@@ -92,18 +112,18 @@ landingContent:
       - text: Use Azure Storage for backup & restore
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-use-storage-sql-server-backup-restore
 
-  - title: Azure SQL Database single database
+  - title: Azure SQL Database (PaaS)
     linkLists:
     - linkListType: learn
       links:
       - text: Choose data storage approach
-        url: https://docs.microsoft.com/learn/modules/choose-storage-approach-in-azure/
+        url: /learn/modules/choose-storage-approach-in-azure/
       - text: Secure SQL Database
-        url: https://docs.microsoft.com/learn/modules/secure-your-azure-sql-database/
+        url: /learn/modules/secure-your-azure-sql-database/
       - text: Geographically distributed app
-        url: https://docs.microsoft.com/learn/modules/design-a-geographically-distributed-application/
+        url: /learn/modules/design-a-geographically-distributed-application/
       - text: ASP.NET App to query SQL Database
-        url: https://docs.microsoft.com/learn/modules/develop-app-that-queries-azure-sql/
+        url: /learn/modules/develop-app-that-queries-azure-sql/
     - linkListType: quickstart
       links:
       - text: Create DB with portal or code 
@@ -125,33 +145,18 @@ landingContent:
       - text: Configure security
         url: /azure/sql-database/sql-database-security-tutorial
 
-  - title: Additional resources 
-    linkLists:
-    - linkListType: reference 
-      links:
-      - text: Microsoft Learn
-        url: /azure/sql-database/sql-database-single-database
-      - text: LinkedIn Learning
-        url: /azure/sql-database/sql-database-managed-instance
-      - text: Microsoft Virtual Academy
-        url: /azure/sql-database/sql-database-single-database
-      - text: Pluralsight
-        url: /azure/sql-database/sql-database-managed-instance
-      - text: Channel 9
-        url: /azure/sql-database/sql-database-managed-instance
-
   - title: SQL Server on Linux
     linkLists:
     - linkListType: learn
       links:
       - text: Introduction
-        url: https://docs.microsoft.com/learn/modules/introduction-sql-server-linux/
+        url: /learn/modules/introduction-sql-server-linux/
       - text: Deploy
-        url: https://docs.microsoft.com/learn/modules/deploy-sql-server-linux/
+        url: /learn/modules/deploy-sql-server-linux/
       - text: Automatically tune
-        url: https://docs.microsoft.com/learn/modules/automatically-tune-sql-server-linux/
+        url: /learn/modules/automatically-tune-sql-server-linux/
       - text: Containers  
-        url: https://docs.microsoft.com/learn/modules/run-sql-server-2017-linux-containers/
+        url: /learn/modules/run-sql-server-2017-linux-containers/
     - linkListType: quickstart
       links:
       - text: Red Hat
@@ -185,7 +190,7 @@ landingContent:
       - text: Configure replication
         url: ../linux/sql-server-linux-replication-tutorial-tsql.md
 
-  - title: Azure SQL Database managed instance 
+  - title: Azure SQL Managed Instance (PaaS)
     linkLists:
     - linkListType: quickstart
       links:

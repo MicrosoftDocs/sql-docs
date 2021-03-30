@@ -1,5 +1,6 @@
 ---
 title: "Securing SQL Server | Microsoft Docs"
+description: Use these articles to create and implement an effective security plan in SQL Server. Learn about the platform, authentication, objects, and applications.
 ms.custom: ""
 ms.date: "06/21/2019"
 ms.prod: sql
@@ -21,7 +22,7 @@ ms.author: vanto
 ---
 # Securing SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Securing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be viewed as a series of steps, involving four areas: the platform, authentication, objects (including data), and applications that access the system. The following topics will guide you through creating and implementing an effective security plan.  
   
@@ -49,7 +50,7 @@ Securing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be viewed
 |---------------------------|---------|  
 |Configuring a firewall to work with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |Configuring a firewall to work with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md)|  
-|Configuring a firewall to work with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configure the Windows Firewall to Allow Analysis Services Access](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
+|Configuring a firewall to work with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configure the Windows Firewall to Allow Analysis Services Access](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |Opening specific ports on a firewall to enable access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Configuring support for Extended Protection for Authentication by using channel binding and service binding|[Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
 | &nbsp; | &nbsp; |
@@ -137,7 +138,7 @@ Windows Defender Application Control (WDAC) prevents unauthorized code execution
   
 |For information about|See|  
 |---------------------------|---------|  
-|Connecting to, configuring, and controlling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
+|Connecting to, configuring, and controlling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)|  
 |Connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and running queries at the command prompt|[sqlcmd Utility](../../tools/sqlcmd-utility.md)|  
 |Network configuration and control for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)|  
 |Enabling and disabling features by using Policy-Based Management|[Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
@@ -158,8 +159,7 @@ Windows Defender Application Control (WDAC) prevents unauthorized code execution
  [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [SQL Server 2012 Security Best Practices - Operational and Administrative Tasks](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
-[SQL Server Security Blog](https://blogs.msdn.microsoft.com/sqlsecurity/)  
-[Security Best Practice and Label Security Whitepapers](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
+[SQL Server Security Blog](/archive/blogs/sqlsecurity/)  
+[Security Best Practice and Label Security Whitepapers](/archive/blogs/sqlsecurity/security-best-practice-and-label-security-whitepapers)  
 [Row-Level Security](../../relational-databases/security/row-level-security.md)   
 [Protecting Your SQL Server Intellectual Property](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
-  

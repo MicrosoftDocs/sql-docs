@@ -1,12 +1,13 @@
 ---
+description: "+ (Unary Plus) (Transact-SQL)"
 title: "+ (Unary Plus) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "+ (positive)"
   - "+"
@@ -18,11 +19,12 @@ helpviewer_keywords:
   - "positive operator (+)"
   - "positive values [SQL Server]"
 ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Unary Operators - Positive
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Returns the value of a numeric expression (a unary operator). Unary operators perform an operation on only one expression of any one of the data types of the numeric data type category.   
   
@@ -38,12 +40,13 @@ Returns the value of a numeric expression (a unary operator). Unary operators pe
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 + numeric_expression  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *numeric_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any one of the data types in the numeric data type category, except the **datetime** and **smalldatetime** data types.  
   
@@ -58,8 +61,8 @@ Returns the value of a numeric expression (a unary operator). Unary operators pe
 ### A. Setting a variable to a positive value  
  The following example sets a variable to a positive value.  
   
-```  
-DECLARE @MyNumber decimal(10,2);  
+```sql  
+DECLARE @MyNumber DECIMAL(10,2);  
 SET @MyNumber = +123.45;  
 SELECT @MyNumber;  
 GO  
@@ -77,10 +80,10 @@ GO
 ### B. Using the unary plus operator with a negative value  
  The following example shows using the unary plus with a negative expression and the ABS() function on the same negative expression. The unary plus does not affect the expression, but the ABS function returns the positive value of the expression.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
-DECLARE @Num1 int;  
+DECLARE @Num1 INT;  
 SET @Num1 = -5;  
 SELECT +@Num1, ABS(@Num1);  
 GO  

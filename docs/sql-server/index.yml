@@ -21,9 +21,9 @@ landingContent:
       links:
       - text: Azure SQL Database single database
         url: /azure/sql-database/sql-database-single-database
-      - text: Azure SQL Database managed instance
+      - text: Azure SQL Managed Instance
         url: /azure/sql-database/sql-database-managed-instance
-      - text: Azure Synapse Analytics (SQL DW)
+      - text: Azure Synapse Analytics
         url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
       - text: SQL Server on a Windows VM
         url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
@@ -41,7 +41,7 @@ landingContent:
       - text: Data Migration Guide
         url:  https://datamigration.microsoft.com/
       - text: Database Compatibility Certification
-        url: https://aka.ms/dbcompat
+        url: ../database-engine/install-windows/compatibility-certification.md
       - text: Data Migration Assistant (DMA)
         url: ../dma/dma-overview.md
       - text: SQL Server Migration Assistant (SSMA)
@@ -57,13 +57,15 @@ landingContent:
       - text: SQL Server Big Data Clusters
         url: ../big-data-cluster/big-data-cluster-overview.md
       - text: Azure Data Studio
-        url: ../azure-data-studio/what-is.md
+        url: ../azure-data-studio/what-is-azure-data-studio.md
       - text: SQL Server on Linux
         url: ../linux/sql-server-linux-overview.md
+      - text: SQL Server for Azure Arc (preview)
+        url: azure-arc/overview.md
     - linkListType: quickstart
       links:
       - text: Connect & query (SSMS)
-        url: ../ssms/tutorials/connect-query-sql-server.md
+        url: ../ssms/quickstarts/ssms-connect-query-sql-server.md
       - text: Connect & query (Azure Data Studio)
         url: ../azure-data-studio/quickstart-sql-server.md
     - linkListType: download
@@ -73,21 +75,21 @@ landingContent:
       - text: SQL Server Management Studio
         url: ../ssms/download-sql-server-management-studio-ssms.md
       - text: Azure Data Studio
-        url: ../azure-data-studio/download.md
+        url: ../azure-data-studio/download-azure-data-studio.md
     - linkListType: reference
       links:
       - text: Transact-SQL (T-SQL)
         url: ../t-sql/language-reference.md
       - text: SQL Server 2014 docs
-        url: https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014
+        url: ./sql-server-2014-release-notes.md
       - text: Educational SQL resources
         url: ../sql-server/educational-sql-resources.yml
       - text: Sample databases
-        url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
+        url: ../samples/sql-samples-where-are.md
       - text: Internals & architecture guides
-        url: https://aka.ms/sqlserverguides
+        url: ../relational-databases/sql-server-guides.md
       - text: Previous versions 2005-2012
-        url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
+        url: ./previous-versions-sql-server.md
 
   - title: Business continuity 
     linkLists:
@@ -179,7 +181,7 @@ landingContent:
       - text: Performance center
         url: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
       - text: Intelligent Query Processing
-        url: https://aka.ms/IQP
+        url: ../relational-databases/performance/intelligent-query-processing.md
       - text: Automatic Tuning
         url: ../relational-databases/automatic-tuning/automatic-tuning.md
       - text: Database Tuning Advisor 
@@ -222,7 +224,7 @@ landingContent:
       - text: Analytics Platform System 
         url: https://www.microsoft.com/sql/analytics-platform-system/
       - text: SQL Server Machine Learning (R & Python)
-        url: https://docs.microsoft.com/sql/advanced-analytics/
+        url: ../machine-learning/index.yml
       - text: Data virtualization with Polybase
         url: ../relational-databases/polybase/polybase-guide.md
 
@@ -238,4 +240,4 @@ landingContent:
       - text: SQL Server Integration Services (SSIS)
         url: ../integration-services/sql-server-integration-services.md
       - text: Azure Data Factory
-        url: https://docs.microsoft.com/azure/data-factory/
+        url: /azure/data-factory/

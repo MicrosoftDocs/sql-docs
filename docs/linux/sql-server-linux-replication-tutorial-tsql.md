@@ -1,20 +1,20 @@
 ---
 title: "Tutorial: Configure replication (T-SQL)"
-description: This tutorial shows how to configure SQL Server snapshot replication on Linux using T-SQL.
+description: Configure SQL Server snapshot replication on Linux with two instances of SQL Server using Transact-SQL (T-SQL).
 ms.custom: seo-dt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 12/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 titleSuffix: SQL Server on Linux
-monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # Configure Replication with T-SQL
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)] 
 
 In this tutorial, configure SQL Server snapshot replication on Linux with two instances of SQL Server using Transact-SQL. The publisher and distributor will be the same instance, and the subscriber will be on a separate instance.
 
@@ -39,7 +39,7 @@ To complete this tutorial, you will need:
    See [Use SSMS to Manage SQL Server on Linux](./sql-server-linux-manage-ssms.md).
 
    >[!NOTE]
-   >[!INCLUDE[SQL Server 2017](../includes/sssqlv14-md.md)] ([CU18](https://support.microsoft.com/help/4527377)) and later support SQL Server Replication for instances of SQL Server on Linux.
+   >[!INCLUDE[SQL Server 2017](../includes/sssql17-md.md)] ([CU18](https://support.microsoft.com/help/4527377)) and later support SQL Server Replication for instances of SQL Server on Linux.
 
 ## Detailed steps
 

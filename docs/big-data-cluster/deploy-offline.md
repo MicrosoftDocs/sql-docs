@@ -1,7 +1,7 @@
 ---
 title: Deploy offline
 titleSuffix: SQL Server big data clusters
-description: Learn how to perform an offline deployment of a SQL Server big data cluster.
+description: Learn how to perform an offline deployment of a SQL Server 2019 Big Data Cluster and how to load container images into a private repository.
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -49,6 +49,10 @@ The following steps describe how to pull the big data cluster container images f
    ```PowerShell
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
+ 
+> [!WARNING]
+> Do not modify the big data cluster images once they are pushed into your private repository. Performing a deployment with modified images will result in an unsupported big data cluster setup.
+
 
 ### <a id="images"></a> Big data cluster container images
 
@@ -68,10 +72,8 @@ The following big data cluster container images are required for an offline inst
 - **mssql-monitor-influxdb**
 - **mssql-monitor-kibana**
 - **mssql-monitor-telegraf**
-- **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
-- **mssql-server**
 - **mssql-server-controller**
 - **mssql-server-data**
 - **mssql-ha-operator**
@@ -113,7 +115,7 @@ You can use an automated python script that will automatically pull all required
 
 ## Install tools offline
 
-Big data cluster deployments require several tools, including **Python**, `azdata`, and **kubectl**. Use the following steps to install these tools on an offline server.
+Big data cluster deployments require several tools, including **Python**, [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], and **kubectl**. Use the following steps to install these tools on an offline server.
 
 ### <a id="python"></a> Install python offline
 
@@ -135,7 +137,7 @@ Big data cluster deployments require several tools, including **Python**, `azdat
 
 ### <a id="azdata"></a> Install azdata offline
 
-1. On a machine with internet access and [Python](https://wiki.python.org/moin/BeginnersGuide/Download), run the following command to download all off the `azdata` packages to the current folder.
+1. On a machine with internet access and [Python](https://wiki.python.org/moin/BeginnersGuide/Download), run the following command to download all off the [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] packages to the current folder.
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
@@ -159,7 +161,7 @@ To install **kubectl** to an offline machine, use the following steps.
 
 ## Deploy from private repository
 
-To deploy from the private repository, use the steps described in the [deployment guide](deployment-guidance.md), but use a custom deployment configuration file that specifies your private Docker repository information. The following `azdata` commands demonstrate how to change the Docker settings in a custom deployment configuration file named `control.json`:
+To deploy from the private repository, use the steps described in the [deployment guide](deployment-guidance.md), but use a custom deployment configuration file that specifies your private Docker repository information. The following [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] commands demonstrate how to change the Docker settings in a custom deployment configuration file named `control.json`:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"

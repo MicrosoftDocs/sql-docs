@@ -1,4 +1,5 @@
 ---
+description: "prepareStatement Method (java.lang.String)"
 title: "prepareStatement Method (java.lang.String) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/07/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerConnection.prepareStatement (java.lang.String)"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: e825765c-eb55-4800-951b-f3495da36641
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # prepareStatement Method (java.lang.String)
 

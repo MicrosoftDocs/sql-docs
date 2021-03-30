@@ -1,4 +1,5 @@
 ---
+description: "APP_NAME (Transact-SQL)"
 title: "APP_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "APP_NAME_TSQL"
   - "APP_NAME"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "current session application names"
   - "APP_NAME function"
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # APP_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns the application name for the current session, if the application sets that name value.
   
@@ -34,12 +35,13 @@ This function returns the application name for the current session, if the appli
   
 ## Syntax  
   
-```sql
-  
+```syntaxsql
 APP_NAME  ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
 **nvarchar(128)**
   
 ## Remarks  
@@ -54,9 +56,9 @@ This example checks whether the client application that initiated this process i
 USE AdventureWorks2012;  
 GO  
 IF APP_NAME() = 'Microsoft SQL Server Management Studio - Query'  
-PRINT 'This process was started by ' + APP_NAME() + '. The date is ' + CONVERT ( varchar(100) , GETDATE(), 101) + '.';  
+PRINT 'This process was started by ' + APP_NAME() + '. The date is ' + CONVERT ( VARCHAR(100) , GETDATE(), 101) + '.';  
 ELSE   
-PRINT 'This process was started by ' + APP_NAME() + '. The date is ' + CONVERT ( varchar(100) , GETDATE(), 102) + '.';  
+PRINT 'This process was started by ' + APP_NAME() + '. The date is ' + CONVERT ( VARCHAR(100) , GETDATE(), 102) + '.';  
 GO  
 ```  
   

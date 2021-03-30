@@ -4,10 +4,10 @@ description: Orphaned users occur when a database user login no longer exist in 
 ms.custom: "seo-lt-2019"
 ms.date: "07/14/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords: 
   - "orphaned users [SQL Server]"
   - "logins [SQL Server], orphaned users"
@@ -17,12 +17,12 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], metadata"
   - "users [SQL Server], orphaned"
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016"
 ---
 # Troubleshoot orphaned users (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Orphaned users in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] occur when a database user is based on  a login in the **master** database, but the login no longer exists in **master**. This can occur when the login is deleted, or when the database is moved to another server where the login does not exist. This topic describes how to find orphaned users, and remap them to logins.  
   
@@ -67,9 +67,9 @@ WHERE sp.SID IS NULL
   
  The output lists the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication  users and corresponding security identifiers (SID) in the current database that are not linked to any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
 
-**For SQL Database and SQL Data Warehouse**
+**For SQL Database and Azure Synapse Analytics**
 
-The `sys.server_principals` table is not available in SQL Database or SQL Data Warehouse. Identify orphaned users in those environments with the following steps:
+The `sys.server_principals` table is not available in SQL Database or Azure Synapse Analytics. Identify orphaned users in those environments with the following steps:
 
 1. Connect to the `master` database and select the SID's for the logins with the following query:
     ```
@@ -112,9 +112,7 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 ```  
   
 > [!IMPORTANT]  
->  Any login can change it's own password. Only logins with the `ALTER ANY LOGIN` permission can change the password of another user's login. However, only members of the **sysadmin** role can modify passwords of **sysadmin** role members.  
-  
- The deprecated procedure [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) also works with orphaned users. `sp_change_users_login` cannot be used with [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+>  Any login can change its own password. Only logins with the `ALTER ANY LOGIN` permission can change the password of another user's login. However, only members of the **sysadmin** role can modify passwords of **sysadmin** role members.  
   
 ## See Also  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   

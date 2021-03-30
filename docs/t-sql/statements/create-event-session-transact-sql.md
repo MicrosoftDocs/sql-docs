@@ -1,4 +1,5 @@
 ---
+description: "CREATE EVENT SESSION (Transact-SQL)"
 title: "CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/10/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE EVENT SESSION"
   - "SESSION"
@@ -20,12 +21,12 @@ helpviewer_keywords:
   - "event sessions [SQL Server]"
   - "CREATE EVENT SESSION statement"
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-author: CarlRabeler
-ms.author: carlrab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE EVENT SESSION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Creates an Extended Events session that identifies the source of the events, the event session targets, and the event session options.
 
@@ -33,7 +34,7 @@ Creates an Extended Events session that identifies the source of the events, the
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE EVENT SESSION event_session_name
 ON { SERVER | DATABASE }
 {  
@@ -99,6 +100,8 @@ ON { SERVER | DATABASE }
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 *event_session_name*
@@ -162,7 +165,7 @@ SET { *target_parameter_name*= \<value> [, ...*n*] }
 Sets a target parameter. Target parameters appear in the sys.dm_xe_object_columns view as column_type 'customizable' and object_name = *target_name*.
 
 > [!IMPORTANT]
-> If you are using the ring buffer target, we recommend that you set the max_memory target parameter to 2048 kilobytes (KB) to help avoid possible data truncation of the XML output. For more information about when to use the different target types, see [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).
+> If you are using the ring buffer target, we recommend that you set the max_memory target parameter to 2048 kilobytes (KB) to help avoid possible data truncation of the XML output. For more information about when to use the different target types, see [SQL Server Extended Events Targets](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130)).
 
 WITH ( \<event_session_options> [ ,...*n*] )
 Specifies options to use with the event session.
@@ -254,7 +257,7 @@ GO
 ```
 ### SQL Database example
 
-For an Azure SQL Database example, see example in [Event File target code for extended events in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file#transact-sql-code)
+For an Azure SQL Database example, see example in [Event File target code for extended events in SQL Database](/azure/sql-database/sql-database-xevent-code-event-file#transact-sql-code)
 
 ### Code examples can differ for Azure SQL Database
 

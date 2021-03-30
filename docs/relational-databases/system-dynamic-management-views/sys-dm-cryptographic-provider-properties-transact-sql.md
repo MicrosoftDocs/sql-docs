@@ -1,11 +1,12 @@
 ---
+description: "sys.dm_cryptographic_provider_properties (Transact-SQL)"
 title: "sys.dm_cryptographic_provider_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_cryptographic_provider_properties_TSQL"
   - "sys.dm_cryptographic_provider_properties"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_cryptographic_provider_properties dynamic management view"
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_cryptographic_provider_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about registered cryptographic providers.  
   
@@ -42,8 +43,8 @@ ms.author: sstein
 |symmetric_key_import|**tinyint**|0 (not supported)<br /><br /> 1 (supported)|  
 |symmetric_key_persistance|**tinyint**|0 (not supported)<br /><br /> 1 (supported)|  
   
-## Remarks  
- The sys.dm_cryptographic_provider_properties view is visible to the public.  
+## Permissions  
+ The **sys.dm_cryptographic_provider_properties** view is visible to the public.  
   
 ## See Also  
  [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

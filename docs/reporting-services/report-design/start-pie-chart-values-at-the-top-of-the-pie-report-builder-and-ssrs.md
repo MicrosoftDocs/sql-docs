@@ -1,5 +1,6 @@
 ---
 title: "Start Pie Chart Values at the Top of the Pie (Report Builder) | Microsoft Docs"
+description: Learn how to start pie chart values a the top of the chart rather than the default 90 degrees from the top.  
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -14,13 +15,13 @@ ms.author: maggies
 # Start Pie Chart Values at the Top of the Pie (Report Builder and SSRS)
 In pie charts in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports, by default the first value in the dataset starts at 90 degrees from the top of the pie. 
 
-![report-builder-pie-chart-start-at-90](../../reporting-services/media/report-builder-pie-chart-start-at-90.png)
+![Screenshot of a report builder pie chart with the dataset starting at 90 degrees.](../../reporting-services/media/report-builder-pie-chart-start-at-90.png)
 
 *Chart values start at 90 degrees.*
 
-You may want the first value start at the top instead. 
+You might want the first value to start at the top instead. 
 
-![report-builder-pie-chart-start-at-top](../../reporting-services/media/report-builder-pie-chart-start-at-top.png)
+![Screenshot of a report builder pie chart with the dataset starting at the top.](../../reporting-services/media/report-builder-pie-chart-start-at-top.png)
 
 *Chart values start at the top of the chart.*
   

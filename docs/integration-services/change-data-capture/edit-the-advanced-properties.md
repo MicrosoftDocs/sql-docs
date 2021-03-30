@@ -1,4 +1,5 @@
 ---
+description: "Edit the Advanced Properties"
 title: "Edit the Advanced Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Edit the Advanced Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Advanced** tab to add special properties to the CDC instance.  

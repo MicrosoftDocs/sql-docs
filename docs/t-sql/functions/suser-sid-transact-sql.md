@@ -1,4 +1,5 @@
 ---
+description: "SUSER_SID (Transact-SQL)"
 title: "SUSER_SID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SUSER_SID"
   - "SUSER_SID_TSQL"
@@ -26,7 +27,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SUSER_SID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the security identification number (SID) for the specified login name.  
   
@@ -34,12 +35,13 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 SUSER_SID ( [ 'login' ] [ , Param2 ] )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *login* **'**  
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
@@ -62,12 +64,17 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
  `Windows NT user or group '%s' not found. Check the name again.`  
   
+## [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Remarks  
+ SUSER_SID always return the login SID for the current security context. Use [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) to obtain the SID of a different login.
+  
+ The SUSER_SID statement does not support execution using an impersonated security context through EXECUTE AS.  
+
 ## Examples  
   
 ### A. Using SUSER_SID  
  The following example returns the security identification number (SID) for the current security context.  
   
-```  
+```sql
 SELECT SUSER_SID();  
 ```  
   
@@ -76,7 +83,7 @@ SELECT SUSER_SID();
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later
   
-```  
+```sql
 SELECT SUSER_SID('sa');  
 GO  
 ```  
@@ -86,7 +93,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later
   
-```  
+```sql
 SELECT SUSER_SID('London\Workstation1');  
 GO  
 ```  
@@ -94,15 +101,15 @@ GO
 ### D. Using SUSER_SID as a DEFAULT constraint  
  The following example uses `SUSER_SID` as a `DEFAULT` constraint in a `CREATE TABLE` statement.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE sid_example  
 (  
-login_sid   varbinary(85) DEFAULT SUSER_SID(),  
-login_name  varchar(30) DEFAULT SYSTEM_USER,  
-login_dept  varchar(10) DEFAULT 'SALES',  
-login_date  datetime DEFAULT GETDATE()  
+login_sid   VARBINARY(85) DEFAULT SUSER_SID(),  
+login_name  VARCHAR(30) DEFAULT SYSTEM_USER,  
+login_dept  VARCHAR(10) DEFAULT 'SALES',  
+login_date  DATETIME DEFAULT GETDATE()  
 );   
 GO  
 INSERT sid_example DEFAULT VALUES;  
@@ -114,7 +121,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later
   
-```  
+```sql
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  
 ```  
   

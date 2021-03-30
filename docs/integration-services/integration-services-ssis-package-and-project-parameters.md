@@ -1,5 +1,6 @@
 ---
-title: "Integration Services (SSIS) Package and Project Parameters | Microsoft Docs"
+description: "Integration Services (SSIS) Package and Project Parameters"
+title: "Package and Project Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.author: chugu
 ---
 # Integration Services (SSIS) Package and Project Parameters
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) parameters allow you to assign values to properties within packages at the time of package execution. You can create *project parameters* at the project level and *package parameters* at the package level. Project parameters are used to supply any external input the project receives to one or more packages in the project. Package parameters allow you to modify package execution without having to edit and redeploy the package.  
   
- In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] you create, modify, or delete project parameters by using the **Project.params** window. You create, modify, and delete package parameters by using the **Parameters** tab in the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer. You associate a new or an existing parameter with a task property by using the **Parameterize** dialog box. For more about using the **Project.params** window and the **Parameters** tab, see [Create Parameters](https://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99). For more information about the **Parameterize** dialog box, see [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
+ In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] you create, modify, or delete project parameters by using the **Project.params** window. You create, modify, and delete package parameters by using the **Parameters** tab in the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer. You associate a new or an existing parameter with a task property by using the **Parameterize** dialog box. For more about using the **Project.params** window and the **Parameters** tab, see [Create Parameters](). For more information about the **Parameterize** dialog box, see [Parameterize Dialog Box]().  
   
 ## Parameters and Package Deployment Model  
  In general, if you are deploying a package using the package deployment model, you should use configurations instead of parameters.  
@@ -35,7 +36,7 @@ ms.author: chugu
   
 -   [Stored Procedures &#40;Integration Services Catalog&#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
   
--   [Configure Dialog Box](../integration-services/service/configure-dialog-box.md)  
+-   [Configure Dialog Box](./catalog/configure-dialog-box.md)  
   
 -   [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
@@ -70,10 +71,10 @@ ms.author: chugu
  The following Transact-SQL views and stored procedure can be used to display and set parameter values.  
   
  [catalog.execution_parameter_values &#40;SSISDB Database&#41;](../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)(view)  
- Shows the actual parameter values that will be used by a specific execution  
+ Shows the actual parameter values in a specific execution.
   
  [catalog.get_parameter_values &#40;SSISDB Database&#41;](../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) (stored procedure)  
- Resolves and shows the actual values for the specified package and environment reference  
+ Resolves and shows the actual values for the specified package and environment reference.
   
  [catalog.object_parameters &#40;SSISDB Database&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) (view)  
  Displays the parameters and properties for all packages and projects in the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] catalog, including the design default and server default values.  
@@ -88,7 +89,7 @@ ms.author: chugu
 ### Parameter Validation  
  If parameter values cannot be resolved, the corresponding package execution will fail. To help avoid failures, you can validate projects and packages by using the **Validate** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Validation allows you to confirm that all parameters have the necessary values or can resolve the necessary values with specific environment references. Validation also checks for other common package issues.  
   
- For more information, see [Validate Dialog Box](../integration-services/service/validate-dialog-box.md).  
+ For more information, see [Validate Dialog Box](./catalog/validate-dialog-box.md).  
   
 ### Parameter Example  
  This example describes a parameter named **pkgOptions** that is used to specify options for the package in which it resides.  
@@ -159,7 +160,7 @@ You use [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to cr
     > **WARNING!!!** You can in-place edit in the list or use the **Properties** window to modify the values of parameter properties. You can delete a parameter by using the **Delete (X)** toolbar button. Using the last toolbar button to open the **Manage Parameter Values** dialog box, you can specify a value for a parameter that is used only when you execute the package in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
     
 ## Parameterize Dialog Box
-The **Parameterize** dialog box lets you associate a new or an existing parameter with a property of a task. You open the dialog box by right-clicking a task or the Control Flow tab in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer and then by clicking **Parameterize**. The following list describes UI elements in the dialog box. For more information about parameters, see [Integration Services (SSIS) Parameters](https://msdn.microsoft.com/library/hh213214.aspx).
+The **Parameterize** dialog box lets you associate a new or an existing parameter with a property of a task. You open the dialog box by right-clicking a task or the Control Flow tab in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer and then by clicking **Parameterize**. The following list describes UI elements in the dialog box. For more information about parameters, see [Integration Services (SSIS) Parameters]().
   
 ### Options  
  **Property**  
@@ -212,5 +213,4 @@ The Deployment Wizard allows you to set server default parameter values when you
   
 ## Related Content  
  Blog entry, [SSIS Quick Tip: Required Parameters](https://go.microsoft.com/fwlink/?LinkId=239781), on mattmasson.com.  
-  
   

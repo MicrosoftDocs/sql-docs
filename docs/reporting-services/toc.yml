@@ -147,23 +147,23 @@
       href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
     - name: Host a Report Server Database in a SQL Server Failover Cluster
       href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
-  - name: Reporting Services Configuration Manager (Native Mode)
+  - name: Report Server Configuration Manager (Native Mode)
     href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
     items:
-    - name: Configure the Report Server Service Account (SSRS Configuration Manager)
+    - name: Configure the Report Server Service Account
       href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
-    - name: Configure Report Server URLs  (SSRS Configuration Manager)
+    - name: Configure Report Server URLs 
       href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
       items:
-      - name: About URL Reservations and Registration  (SSRS Configuration Manager)
+      - name: About URL Reservations and Registration 
         href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
-      - name: Configure a URL  (SSRS Configuration Manager)
+      - name: Configure a URL 
         href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
-      - name: URL Reservation Syntax  (SSRS Configuration Manager)
+      - name: URL Reservation Syntax 
         href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
-      - name: URLs in Configuration Files  (SSRS Configuration Manager)
+      - name: URLs in Configuration Files 
         href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
-      - name: URL Reservations for Multi-Instance Report Server Deployments  (SSRS Configuration Manager)
+      - name: URL Reservations for Multi-Instance Report Server Deployments 
         href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
     - name: Create a Database
       href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
@@ -173,7 +173,7 @@
       href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
     - name: E-Mail Settings - Reporting Services Native mode (Configuration Manager)
       href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
-    - name: Configure the Unattended Execution Account (SSRS Configuration Manager)
+    - name: Configure the Unattended Execution Account
       href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
     - name: SSRS Encryption Keys - Manage Encryption Keys
       href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
@@ -190,7 +190,7 @@
         href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
     - name: Subscription Settings and a File Share Account (Configuration Manager)
       href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
-    - name: Configure a Native Mode Report Server Scale-Out Deployment (SSRS Configuration Manager)
+    - name: Configure a Native Mode Report Server Scale-Out Deployment
       href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
     - name: Power BI Integration
       href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
@@ -349,11 +349,11 @@
     - name: Monitoring Report Server Performance
       href: ../reporting-services/report-server/monitoring-report-server-performance.md
       items:
-      - name: Performance Counters for the MSRS 2011 Web Service and MSRS 2011 Windows Service Performance Objects (Native Mode)
+      - name: Performance Counters, MSRS 2016 Web Service & MSRS 2016 Windows Service Performance Objects (Native Mode)
         href: ../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md
-      - name: Performance Counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint Mode Performance Objects (SharePoint Mode)
+      - name: Performance Counters, MSRS 2016 Web Service SharePoint Mode & MSRS 2016 Windows Service SharePoint Mode Performance Objects
         href: ../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md
-      - name: "Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects"
+      - name: "Performance Counters, ReportServer:Service & ReportServerSharePoint:Service Performance Objects"
         href: ../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md
     - name: Set Report Processing Properties
       href: ../reporting-services/report-server/set-report-processing-properties.md
@@ -417,8 +417,6 @@
     href: ../reporting-services/report-server-sharepoint/high-availability-reporting-services.md
   - name: Enable and disable RDL sandboxing
     href: ../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md
-  - name: Configure Reporting Services to use a subject alternative name
-    href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
 - name: Report Viewer web part on a SharePoint site
   href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
   items:
@@ -443,6 +441,8 @@
     items:
     - name: Set default options for Report Builder
       href: ../reporting-services/report-builder/set-default-options-for-report-builder.md
+    - name: Configure Report Builder Access
+      href: ../reporting-services/report-server/configure-report-builder-access.md
   - name: Report Design View
     href: ../reporting-services/report-builder/report-design-view-report-builder.md
     items:
@@ -1055,7 +1055,7 @@
       href: ../reporting-services/report-data/power-pivot-connection-type-ssrs.md
     - name: SharePoint List Connection Type
       href: ../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md
-    - name: SQL Azure Connection Type
+    - name: Azure SQL Connection Type
       href: ../reporting-services/report-data/sql-azure-connection-type-ssrs.md
     - name: OLE DB Connection Type
       href: ../reporting-services/report-data/ole-db-connection-type-ssrs.md
@@ -1269,6 +1269,8 @@
         href: ../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md
   - name: Configure SSL Connections on a Native Mode Report Server
     href: ../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md
+  - name: Configure Reporting Services to use a subject alternative name
+    href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
 - name: Report subscriptions
   items:
   - name: SSRS Schedules Overview
@@ -1469,7 +1471,7 @@
 - name: Relational Databases
   items:
   - name: How To Manage Logins, Users, and Schemas
-    href: ../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md
+    href: ../relational-databases/security/authentication-access/create-a-login.md
   - name: Dynamic Data Masking
     href: ../relational-databases/security/dynamic-data-masking.md
   - name: SQL Server Express LocalDB Reference

@@ -1,4 +1,5 @@
 ---
+description: "Using Directional Parameters"
 title: "Using Directional Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cfe35e14-49cb-45df-b444-addbb94a773f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using Directional Parameters
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

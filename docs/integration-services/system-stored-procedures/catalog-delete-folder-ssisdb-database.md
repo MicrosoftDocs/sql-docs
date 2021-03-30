@@ -1,4 +1,5 @@
 ---
+description: "catalog.delete_folder (SSISDB Database)"
 title: "catalog.delete_folder (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -13,17 +14,17 @@ ms.author: chugu
 ---
 # catalog.delete_folder (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes a folder from the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   
 ## Syntax  
   
 ```sql  
-delete_folder [ @folder_name = ] folder_name  
+catalog.delete_folder [ @folder_name = ] folder_name  
 ```  
   
 ## Arguments  

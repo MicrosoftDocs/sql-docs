@@ -1,4 +1,5 @@
 ---
+description: "Replicate Partitioned Tables and Indexes"
 title: "Replicate Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/10/2015"
@@ -16,10 +17,10 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replicate Partitioned Tables and Indexes
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Partitioning makes large tables or indexes more manageable because partitioning enables you to manage and access subsets of data quickly and efficiently, and maintain the integrity of a data collection at the same time. For more information, see [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). Replication supports partitioning by providing a set of properties that specify how partitioned tables and indexes should be treated.  
   
 ## Article Properties for Transactional and Merge Replication  
@@ -31,7 +32,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 |Partition function|CREATE PARTITION FUNCTION|  
 |Partition scheme|CREATE PARTITION SCHEME|  
   
- The first set of properties related to partitioning are the article schema options that determine whether partitioning objects should be copied to the Subscriber. These schema options can be set in the following ways:  
+ Partitioning properties are the article schema options that determine whether partitioning objects should be copied to the Subscriber. These schema options can be set in the following ways:  
   
 -   In the **Article Properties** page of the New Publication Wizard or the Publication Properties dialog box. To copy the objects listed in the previous table, specify a value of **true** for the properties **Copy table partitioning schemes** and **Copy index partitioning schemes**. For information about how to access the **Article Properties** page, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
@@ -54,15 +55,40 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 -   If the Subscriber has a different definition for the partitioned table than the Publisher, the Distribution Agent will fail when it tries to apply changes at the Subscriber.  
   
- Despite these potential issues, partition switching can be enabled for transactional replication. Before you enable partition switching, make sure that all tables that are involved in partition switching exist at the Publisher and Subscriber, and make sure that the table and partition definitions are the same.  
+Despite these potential issues, partition switching can be enabled for transactional replication. Before you enable partition switching, make sure that all tables that are involved in partition switching exist at the Publisher and Subscriber, and make sure that the table and partition definitions are the same.  
   
- When partitions have the exact same partition scheme at the publishers and subscribers you can turn on *allow_partition_switch* along with *replication_partition_switch* which will only replicate the partition switch statement to the subscriber. You can also turn on *allow_partition_switch* without replicating the DDL. This is useful in the case where you want to roll old months out of the partition but keep the replicated partition in place for another year for backup purposes at the subscriber.  
+When partitions have the exact same partition scheme at the publishers and subscribers, you can turn on *allow_partition_switch* along with *replication_partition_switch*, which will only replicate the partition switch statement to the subscriber. You can also turn on *allow_partition_switch* without replicating the DDL. This is useful in the case where you want to roll old months out of the partition but keep the replicated partition in place for another year for backup purposes at the subscriber.  
   
- If you enable partition switching on SQL Server 2008 R2 through the current version, you might also need split and merge operations in near future. Before executing a split or merge operation on a replicated table ensure that the partition in question does not have any pending replicated commands. You should also ensure that no DML operations are executed on the partition during the split and merge operations. If there are transactions which the log reader has not processed, or if DML operations are performed on a partition of a replicated table while a split or merge operation is executed (involving the same partition), it could lead to a processing error with log reader agent. In order to correct the error, it might require a re-initialization of the subscription.  
-  
-> [!WARNING]  
->  You should not enable partition switching for Peer-to-Peer publications, due to the hidden column which is used to detect and resolve conflict.  
-  
+If you enable partition switching on SQL Server 2008 R2 through the current version, you might also need split and merge operations in near future. Before executing a split or merge operation on a replicated or CDC enabled table ensure that the partition in question does not have any pending replicated commands. You should also ensure that no DML operations are executed on the partition during the split and merge operations. If there are transactions which the log reader or CDC capture job has not processed, or if DML operations are performed on a partition of a replicated or CDC enabled table while a split or merge operation is executed (involving the same partition), it could lead to a processing error (error 608 - No catalog entry found for partition ID) with log reader agent or CDC capture job. In order to correct the error, it might require a reinitialization of the subscription or disabling CDC on that table or database. 
+
+### Unsupported scenarios
+
+The following scenarios are not supported when using replication with partition switching: 
+
+**Peer-to-peer replication**   
+Peer-to-peer replication is not supported with partition switching. 
+
+**Use of variables with partition switching**   
+
+Using variables with partition switching on tables published with transactional replication or Change Data Capture (CDC) is not supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement.
+
+For example, the following partition switching code will not work with CDC enabled on the database, or with TableA participating in a transactional publication: 
+
+```sql
+DECLARE @SomeVariable INT = $PARTITION.pf_test(10);
+ALTER TABLE dbo.TableA
+SWITCH TO dbo.TableB 
+PARTITION @SomeVariable;
+```
+
+Instead, switch your partition using the partition function directly, such as the following example: 
+
+```sql
+ALTER TABLE NonPartitionedTable 
+SWITCH TO PartitionedTable PARTITION $PARTITION.pf_test(10);
+```
+
+
 ### Enabling Partition Switching  
  The following properties for transactional publications enable users to control the behavior of partition switching in a replicated environment:  
   

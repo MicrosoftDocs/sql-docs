@@ -1,4 +1,5 @@
 ---
+description: "FriendlyName Property (SecurityCertificate Class)"
 title: "FriendlyName Property (SecurityCertificate)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "FriendlyName property"
 ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # FriendlyName Property (SecurityCertificate Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets or sets an alternative friendly name for the security certificate.  
   
 ## Syntax  

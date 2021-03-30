@@ -1,8 +1,9 @@
 ---
+description: "Types of Events"
 title: "Types of Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "complete events [ADO]"
   - "WillEvent event [ADO]"
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Types of Events
 There are two basic types of events. "Will Events," which are called before an operation starts, usually include "Will" in their names - for example, **WillChangeRecordset** or **WillConnect**. Events that are called after an event has been completed usually include "Complete" in their names - for example, **RecordChangeComplete** or **ConnectComplete**. Exceptions exist - such as **InfoMessage** - but these occur after the associated operation has completed.  

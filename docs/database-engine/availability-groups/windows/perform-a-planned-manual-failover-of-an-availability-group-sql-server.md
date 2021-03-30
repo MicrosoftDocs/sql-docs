@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: "10/25/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.manualfailover.f1"
@@ -13,13 +13,13 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], failover"
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 
 # Perform a planned manual failover of an Always On availability group (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-This topic describes how to perform a manual failover without data loss (a *planned manual failover*) on an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. An availability group fails over at the level of an availability replica. A planned manual failover, like any AlwaysOn availability group failover, transitions a secondary replica to primary role. Concurrently, the failover transitions the former primary replica to the secondary role.  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+This topic describes how to perform a manual failover without data loss (a *planned manual failover*) on an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. An availability group fails over at the level of an availability replica. A planned manual failover, like any AlwaysOn availability group failover, transitions a secondary replica to primary role. Concurrently, the failover transitions the former primary replica to the secondary role.  
   
 A planned manual failover is supported only when the primary replica and the target secondary replica are running in synchronous-commit mode and are currently synchronized. A planned manual failover preserves all the data in the secondary databases that are joined to the availability group on the target secondary replica. After the former primary replica transitions to the secondary role, its databases become secondary databases. Then they begin to synchronize with the new primary databases. After they all transition into the SYNCHRONIZED state, the new secondary replica becomes eligible to serve as the target of a future planned manual failover.  
   
@@ -89,7 +89,7 @@ A planned manual failover is supported only when the primary replica and the tar
 2. Use the **Switch-SqlAvailabilityGroup** cmdlet. 
   
     > [!NOTE] 
-    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell environment. For more information, see [Get help for SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md). 
+    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get help for SQL Server PowerShell](../../../powershell/sql-server-powershell.md). 
   
      The following example manually fails over the *MyAg* availability group to the secondary replica with the specified path: 
   
@@ -99,8 +99,8 @@ A planned manual failover is supported only when the primary replica and the tar
   
     To set up and use the SQL Server PowerShell provider: 
   
-    -   [SQL Server PowerShell provider](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
-    -   [Get help for SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
+    -   [SQL Server PowerShell provider](../../../powershell/sql-server-powershell-provider.md) 
+    -   [Get help for SQL Server PowerShell](../../../powershell/sql-server-powershell.md) 
 
 ##  <a name="FollowUp"></a> Follow up: After you manually fail over an availability group 
  If you failed over outside the [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] of the availability group, adjust the quorum votes of the Windows Server failover clustering nodes to reflect your new availability group configuration. For more information, see [Windows Server failover clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
@@ -116,5 +116,4 @@ A planned manual failover is supported only when the primary replica and the tar
  * [Overview of AlwaysOn availability groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
  * [Failover and failover modes &#40;AlwaysOn availability groups&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 
  * [Perform a forced manual failover of an availability group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 
-  
   

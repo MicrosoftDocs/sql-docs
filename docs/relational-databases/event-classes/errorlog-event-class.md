@@ -1,20 +1,21 @@
 ---
+description: "ErrorLog Event Class"
 title: "ErrorLog Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ErrorLog event class"
 ms.assetid: b0153a31-5794-410b-8816-d9f1290a5b36
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ErrorLog Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The ErrorLog event class indicates that messages have been logged in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log.  
   
 ## ErrorLog Event Class Data Columns  

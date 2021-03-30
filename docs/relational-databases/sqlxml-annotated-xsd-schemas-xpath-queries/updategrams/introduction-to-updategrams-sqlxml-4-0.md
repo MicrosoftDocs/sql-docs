@@ -1,5 +1,6 @@
 ---
 title: "Introduction to Updategrams (SQLXML)"
+description: Learn about SQLXML 4.0 updategrams that can be used to insert, update, or delete data in a database.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -22,10 +23,10 @@ ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
 author: MightyPen
 ms.author: genemi
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Updategrams (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   You can modify (insert, update, or delete) a database in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from an existing XML document by using an updategram or the OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] function.  
   
  The OPENXML function modifies a database by shredding the existing XML document and providing a rowset that can be passed to an INSERT, UPDATE, or DELETE statement. With OPENXML, operations are performed directly against the database tables. Therefore, OPENXML is most appropriate wherever rowset providers, such as a table, can appear as a source.  
@@ -104,7 +105,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  With default mapping (when the mapping schema is not specified in the updategram), the updategram elements map to tables and the  child elements (in the case of element-centric mapping) and the attributes (in the case of attribute-centric mapping) map to columns.  
   
 ### Element-centric Mapping  
- In an element-centric updategram, an element contains child elements that denote the properties of the element. As an example, refer to the following updategram. The **\<Person.Contact>** element contains the **\<FirstName>**and **\<LastName>** child elements. These child elements are properties of the **\<Person.Contact>** element.  
+ In an element-centric updategram, an element contains child elements that denote the properties of the element. As an example, refer to the following updategram. The **\<Person.Contact>** element contains the **\<FirstName>** and **\<LastName>** child elements. These child elements are properties of the **\<Person.Contact>** element.  
   
  Because this updategram does not specify a mapping schema, the updategram uses implicit mapping, where the **\<Person.Contact>** element maps to the Person.Contact table and its child elements map to the FirstName and LastName columns.  
   

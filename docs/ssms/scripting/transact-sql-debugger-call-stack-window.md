@@ -1,8 +1,9 @@
 ---
 title: Call Stack Window
+description: Learn how to use the Call Stack Window of the Transact-SQL debugger to see parameter data types, and also values of stored procedures, functions, and triggers.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Call Stack Window [Transact-SQL]"
@@ -12,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Transact-SQL Debugger - Call Stack Window
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The **Call Stack** window displays the modules on the call stack, and the data types and values of any parameters that are passed to the modules. [!INCLUDE[tsql](../../includes/tsql-md.md)] modules include stored procedures, functions, and triggers. To display the call stack, you must be in debug mode.  
 
@@ -71,6 +72,6 @@ All expressions in the **Locals**, **Watch**, and **QuickWatch** windows are eva
   
 ## See Also
 
-- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [Step Through Transact-SQL Code](../../relational-databases/scripting/step-through-transact-sql-code.md)
+- [Transact-SQL Debugger](./transact-sql-debugger.md)
+- [Transact-SQL Debugger Information](./transact-sql-debugger-information.md)
+- [Step Through Transact-SQL Code](./step-through-transact-sql-code.md)

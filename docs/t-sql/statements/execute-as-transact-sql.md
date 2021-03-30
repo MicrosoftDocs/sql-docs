@@ -1,12 +1,13 @@
 ---
+description: "EXECUTE AS (Transact-SQL)"
 title: "EXECUTE AS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/27/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "EXECUTE AS"
   - "EXECUTE_AS_TSQL"
@@ -20,13 +21,12 @@ helpviewer_keywords:
   - "execution context [SQL Server]"
   - "switching execution context"
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # EXECUTE AS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Sets the execution context of a session.  
   
@@ -38,7 +38,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
   
 ## Syntax  
   
-```  
+```syntaxsql
 { EXEC | EXECUTE } AS <context_specification>  
 [;]  
   
@@ -48,14 +48,16 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
 | CALLER  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  LOGIN  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Specifies the execution context to be impersonated is a login. The scope of impersonation is at the server level.  
   
 > [!NOTE]  
->  This option is not available in a contained database or SQL Database or SQL Data Warehouse.  
+>  This option is not available in a contained database, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], or [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
  USER  
  Specifies the context to be impersonated is a user in the current database. The scope of impersonation is restricted to the current database. A context switch to a database user does not inherit the server-level permissions of that user.  
@@ -89,7 +91,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
  When used inside a module, specifies the statements inside the module are executed in the context of the caller of the module.
  When used outside a module, the statement has no action.
  > [!NOTE]  
->  This option is not available in SQL Data Warehouse.  
+>  This option is not available in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
 ## Remarks  
  The change in execution context remains in effect until one of the following occurs:  
@@ -139,7 +141,8 @@ If the user is orphaned (the associated login no longer exists), and the user wa
 ###  <a name="_exampleA"></a> A. Using EXECUTE AS and REVERT to switch context  
  The following example creates a context execution stack using multiple principals. The `REVERT` statement is then used to reset the execution context to the previous caller. The `REVERT` statement is executed multiple times moving up the stack until the execution context is set to the original caller.  
   
-```  
+
+```sql
 USE AdventureWorks2012;  
 GO  
 --Create two temporary principals  
@@ -181,10 +184,11 @@ GO
 ```  
   
 ### B. Using the WITH COOKIE clause  
- The following example sets the execution context of a session to a specified user and specifies the WITH NO REVERT COOKIE = @*varbinary_variabl*e clause. The `REVERT` statement must specify the value passed to the `@cookie` variable in the `EXECUTE AS` statement to successfully revert the context back to the caller. To run this example, the `login1` login and `user1` user created in example A must exist.  
+ The following example sets the execution context of a session to a specified user and specifies the WITH COOKIE INTO @*varbinary_variable* clause. The `REVERT` statement must specify the value passed to the `@cookie` variable in the `EXECUTE AS` statement to successfully revert the context back to the caller. To run this example, the `login1` login and `user1` user created in example A must exist.  
   
-```  
-DECLARE @cookie varbinary(8000);  
+
+```sql 
+DECLARE @cookie VARBINARY(8000);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie in a safe location in your application.  
 -- Verify the context switch.  
@@ -193,7 +197,7 @@ SELECT SUSER_NAME(), USER_NAME();
 SELECT @cookie;  
 GO  
 -- Use the cookie in the REVERT statement.  
-DECLARE @cookie varbinary(8000);  
+DECLARE @cookie VARBINARY(8000);  
 -- Set the cookie value to the one from the SELECT @cookie statement.  
 SET @cookie = <value from the SELECT @cookie statement>;  
 REVERT WITH COOKIE = @cookie;  

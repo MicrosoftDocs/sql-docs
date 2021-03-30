@@ -1,10 +1,11 @@
 ---
 title: "Change Font Color, Size, and Style"
+description: Learn how to change font color, size, and style for the SQL Server Management Studio editors. The color can be different for different text types (such as comments and statements).
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,10 +18,10 @@ helpviewer_keywords:
 ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change Font Color, Size, and Style
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   You can customize the way the text appears in the Editor as well as other places in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### To change font color, size, and style in the Editor  
@@ -39,7 +40,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The settings for text color and font type are global for all text element types, such as comments, strings, and so on.  
   
 ## See Also  
- [Print Code and Results](../../relational-databases/scripting/print-code-and-results.md)   
- [Color Coding in Query Editors](../../relational-databases/scripting/color-coding-in-query-editors.md)  
-  
+ [Print Code and Results](./print-code-and-results.md)   
+ [Color Coding in Query Editors](./color-coding-in-query-editors.md)  
   

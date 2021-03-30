@@ -1,12 +1,15 @@
 ---
+description: "Manage Metadata When Making a Database Available on Another Server"
 title: "Manage metadata when making a database available on another server"
-ms.custom: ""
-ms.date: "08/24/2016"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
+ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
+author: "stevestein"
+ms.author: "sstein"
+ms.custom: seo-dt-2019
 helpviewer_keywords: 
   - "cross-database queries [SQL Server]"
   - "logins [SQL Server], recreating on another server instance"
@@ -31,13 +34,9 @@ helpviewer_keywords:
   - "extended stored procedures [SQL Server], metadata"
   - "credentials [SQL Server], metadata"
   - "copying databases"
-ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-author: "stevestein"
-ms.author: "sstein"
-ms.custom: seo-dt-2019
 ---
 # Manage Metadata When Making a Database Available on Another Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This article is relevant in the following situations:  
   
 -   Configuring the availability replicas of an [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] availability group.  
@@ -189,7 +188,7 @@ ms.custom: seo-dt-2019
   
  Additionally, if the [word breakers and stemmers](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) component or [full-text search filters](../../relational-databases/search/configure-and-manage-filters-for-search.md) component have different versions on the original and destination server instances, full-text index and queries may behave differently. Also, the [thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) is stored in instance-specific files. You must either transfer a copy of those files to an equivalent location on the destination server instance or re-create them on new instance.  
   
-> **NOTE:** When you attach a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database that contains full-text catalog files onto a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] server instance, the catalog files are attached from their previous location along with the other database files, the same as in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [Upgrade Full-Text Search](../../relational-databases/search/upgrade-full-text-search.md).  
+> **NOTE:** When you attach a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database that contains full-text catalog files onto a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] server instance, the catalog files are attached from their previous location along with the other database files, the same as in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [Upgrade Full-Text Search](../../relational-databases/search/upgrade-full-text-search.md).  
   
  For more information, see also:  
   

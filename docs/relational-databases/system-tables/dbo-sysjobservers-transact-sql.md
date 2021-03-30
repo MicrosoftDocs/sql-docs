@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysjobservers (Transact-SQL)"
 title: "dbo.sysjobservers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysjobservers"
   - "sysjobservers_TSQL"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysjobservers system table"
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
-author: "stevestein"
-ms.author: "sstein"
+author: cawrites
+ms.author: chadam
 ---
 # dbo.sysjobservers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Stores the association or relationship of a particular job with one or more target servers. This table is stored in the msdb database.
   

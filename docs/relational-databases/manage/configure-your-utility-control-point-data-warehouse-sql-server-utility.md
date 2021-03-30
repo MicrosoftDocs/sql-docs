@@ -1,5 +1,6 @@
 ---
 title: "Configure Your Utility Control Point Data Warehouse (SQL Server Utility) | Microsoft Docs"
+description: Find out about the utility management data warehouse, where instances of SQL Server store data. Learn how to configure its data retention period and directory.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Configure Your Utility Control Point Data Warehouse (SQL Server Utility)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Data collected by managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are stored in the utility management data warehouse (UMDW); the UMDW file name is sysutility_mdw.  
   
- You can configure the UMDW data retention period. For more information, see [Utility Administration &#40;SQL Server Utility&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d).  
+ You can configure the UMDW data retention period. For more information, see [Utility Administration &#40;SQL Server Utility&#41;](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130)).  
   
  The following configuration settings are not configurable in this release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -30,5 +31,4 @@ ms.author: mikeray
   
 ## See Also  
  [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
-  
   

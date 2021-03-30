@@ -1,10 +1,14 @@
 ---
-title: "Create and Manage Full-Text Catalogs | Microsoft Docs"
+title: Create and Manage Full-Text Catalogs
+description: "Create and Manage Full-Text Catalogs"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
 ms.technology: search
 ms.topic: conceptual
+f1_keywords:
+  - sql13.swb.fulltextsearch.ftcatalog.general.f1
+  - sql13.swb.fulltextsearch.fulltextindexproperties.general.f1
 helpviewer_keywords: 
   - "full-text catalogs [SQL Server], creating"
   - "full-text search [SQL Server], using SQL Server Management Studio"
@@ -12,10 +16,12 @@ ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Create and Manage Full-Text Catalogs
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 A full-text catalog is a logical container for a group of full-text indexes. You have to create a full-text catalog before you can create a full-text index.
 
 A full-text catalog is a virtual object that does not belong to any filegroup.
@@ -39,7 +45,7 @@ GO
   
 3.  Select **New Full-Text Catalog**.  
   
-4.  In the **New Full-Text Catalog** dialog box, specify the information for the catalog that you are re-creating. For more information, see [New Full-Text Catalog &#40;General Page&#41;](/sql/database-engine/new-full-text-catalog-general-page).  
+4.  In the **New Full-Text Catalog** dialog box, specify the information for the catalog that you are re-creating. For more information, see [New Full-Text Catalog &#40;General Page&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md).  
   
     > [!NOTE]  
     >  Full-text catalog IDs begin at 00005 and are incremented by one for each new catalog created.  

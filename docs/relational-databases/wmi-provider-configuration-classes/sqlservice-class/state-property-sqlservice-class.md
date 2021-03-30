@@ -1,4 +1,5 @@
 ---
+description: "State Property (SqlService Class)"
 title: "State Property (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "State property"
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # State Property (SqlService Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets or sets the current state of the service.  
   
 ## Syntax  

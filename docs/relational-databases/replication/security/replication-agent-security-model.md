@@ -1,5 +1,6 @@
 ---
 title: "Replication Agent Security Model | Microsoft Docs"
+description: In SQL Server, the replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections.
 ms.custom: ""
 ms.date: "04/26/2018"
 ms.prod: sql
@@ -22,10 +23,10 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Replication Agent Security Model
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections: A different account can be specified for each agent. For more information about how to specify accounts, see [Identity and access control for replication](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
 
-The replication agent security model is a little bit different for Azure SQL Database managed instances, as there are no Windows accounts under which the agents will run. Instead, everything must be done through SQL Server authentication. 
+The replication agent security model is a little bit different for Azure SQL Managed Instance, as there are no Windows accounts under which the agents will run. Instead, everything must be done through SQL Server authentication. 
   
 > [!IMPORTANT]  
 >  When a member of the **sysadmin** fixed server role configures replication, replication agents can be configured to impersonate the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent account. This is done by not specifying a login and password for a replication agent; however, we do not recommend this approach. Instead, as a security best practice, we recommend that you specify an account for each agent that has the minimum permissions that are described in the section "Permissions That Are Required by Agents" later in this topic.  

@@ -1,5 +1,6 @@
 ---
 title: "Type mapping with PolyBase | Microsoft Docs"
+description: Refer to these tables for mapping between PolyBase external data sources and SQL Server. Define external tables with Transact-SQL CREATE EXTERNAL TABLE.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -50,14 +51,15 @@ For external tables that reference files in external data sources, the column an
 | decimal       | Decimal                   | decimal        | BigDecimalWritable    | Applies to Hive0.11 and later. |
 
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-ver15 "
 
 ## Oracle Type mapping reference
 
 | Oracle data type | SQL Server type | 
 | -------------    | --------------- |
 |Float             |Float            |
-|NUMBER            |Decimal          |
+|NUMBER            |Float            |
+|NUMBER (p,s)      |Decimal (p, s)   |
 |LONG              |Nvarchar         |
 |BINARY_FLOAT      |Real             | 
 |BINARY_DOUBLE     |Float            | 

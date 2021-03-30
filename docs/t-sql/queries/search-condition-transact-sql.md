@@ -1,12 +1,13 @@
 ---
+description: "Search Condition (Transact-SQL)"
 title: "Search Condition (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/15/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "search"
   - "Search Condition"
@@ -36,10 +37,10 @@ helpviewer_keywords:
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Search Condition (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Is a combination of one or more predicates that use the logical operators AND, OR, and NOT.  
   
@@ -47,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 <search_condition> ::=  
@@ -56,7 +57,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 <search_condition_without_match> ::= 
     { [ NOT ] <predicate> | ( <search_condition_without_match> ) }   
     [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]   
-[ ,...n ]   
+[ ...n ]   
   
 <predicate> ::=   
     { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression   
@@ -87,13 +88,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     edge_table_name | edge_table_alias
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 < search_condition > ::=   
     { [ NOT ] <predicate> | ( <search_condition> ) }   
     [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition> ) } ]   
-[ ,...n ]   
+[ ...n ]   
   
 <predicate> ::=   
     { expression { = | < > | ! = | > | > = | < | < = } expression   
@@ -104,7 +105,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     | expression [ NOT ] EXISTS (subquery)     }   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  \<search_condition>  
  Specifies the conditions for the rows returned in the result set for a SELECT statement, query expression, or subquery. For an UPDATE statement, specifies the rows to be updated. For a DELETE statement, specifies the rows to be deleted. There is no limit to the number of predicates that can be included in a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement search condition.  
   
@@ -202,7 +205,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### A. Using WHERE with LIKE and ESCAPE syntax  
  The following example searches for the rows in which the `LargePhotoFileName` column has the characters `green_`, and uses the `ESCAPE` option because _ is a wildcard character. Without specifying the `ESCAPE` option, the query would search for any description values that contain the word `green` followed by any single character other than the _ character.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT *   
@@ -213,7 +216,7 @@ WHERE LargePhotoFileName LIKE '%greena_%' ESCAPE 'a' ;
 ### B. Using WHERE and LIKE syntax with Unicode data  
  The following example uses the `WHERE` clause to retrieve the mailing address for any company that is outside the United States (`US`) and in a city whose name starts with `Pa`.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT AddressLine1, AddressLine2, City, PostalCode, CountryRegionCode    
@@ -228,7 +231,7 @@ AND City LIKE N'Pa%' ;
 ### C. Using WHERE with LIKE  
  The following example searches for the rows in which the `LastName` column has the characters `and`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, LastName  
@@ -239,7 +242,7 @@ WHERE LastName LIKE '%and%';
 ### D. Using WHERE and LIKE syntax with Unicode data  
  The following example uses the `WHERE` clause to perform a Unicode search on the `LastName` column.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, LastName  

@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_servershareddrives (Transact-SQL)"
 title: "sys.fn_servershareddrives (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "fn_servershareddrives"
   - "fn_servershareddrives_TSQL"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "names [SQL Server], shared drives"
   - "sys.fn_serversharedrives function"
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_servershareddrives (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the names of shared drives used by the clustered server.  
   

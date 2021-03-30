@@ -1,5 +1,6 @@
 ---
 title: "Relational Query Designer User Interface (Report Builder) | Microsoft Docs"
+description: Learn to use the graphical query designer to explore the metadata, interactively build a query, and view the results for your query.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -85,7 +86,7 @@ ms.author: maggies
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses [!INCLUDE[tsql](../../includes/tsql-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] uses [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Both dialects of the SQL language support the clause, keyword, and aggregates that the query designer provides.  
   
- For more information about [!INCLUDE[tsql](../../includes/tsql-md.md)], see [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+ For more information about [!INCLUDE[tsql](../../includes/tsql-md.md)], see [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/language-reference.md).  
   
  The following table list the aggregates and provides brief descriptions of them.  
   
@@ -192,5 +193,4 @@ ms.author: maggies
   
 ## See Also  
  [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)  
-  
   

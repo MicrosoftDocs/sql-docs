@@ -1,10 +1,11 @@
 ---
+description: "Retrieving ParameterMetaData via useFmtOnly"
 title: "Retrieving ParameterMetaData via useFmtOnly | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.suite: "sql"
 ms.technology: connectivity
 ms.tgt_pltfrm: ""
@@ -84,7 +85,7 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  The feature only supports `SELECT/INSERT/UPDATE/DELETE` queries. Queries should start with one of the 4 supported key words or a [Common Table Expression](https://docs.microsoft.com/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017) followed by one of the supported queries. Parameters within Common Table Expressions are not supported.
+>  The feature only supports `SELECT/INSERT/UPDATE/DELETE` queries. Queries should start with one of the 4 supported key words or a [Common Table Expression](../../t-sql/queries/with-common-table-expression-transact-sql.md) followed by one of the supported queries. Parameters within Common Table Expressions are not supported.
 
 ## Known issues
   There are currently some issues with the feature, which are caused by deficiencies in SQL parsing logic. These issues may be addressed in a future update to the feature, and are documented below along with workaround suggestions.
@@ -134,5 +135,4 @@ UPDATE Foo SET c1 = (SELECT c1 FROM Foo HAVING (HASH JOIN)) WHERE c1 = ?;
 
 ## See also  
  [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md)  
-  
   

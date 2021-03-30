@@ -1,5 +1,6 @@
 ---
 title: "Change the Order of a Report Parameter (Report Builder) | Microsoft Docs"
+description: Learn how to change the order of report parameters when you have a dependent parameter that is listed out of order in Report Builder.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

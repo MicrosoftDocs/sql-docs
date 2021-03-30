@@ -1,11 +1,12 @@
 ---
+description: "Auto Stats Event Class"
 title: "Auto Stats Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Auto Stats event class"
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
@@ -13,7 +14,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Auto Stats Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Auto Stats** event class indicates that an automatic updating of index and column statistics has occurred.  **Auto Stats** also fires when statistics are being loaded for use by the optimizer.
   
 ## Auto Stats Event Class Data Columns  

@@ -1,5 +1,6 @@
 ---
 title: "Make Partial Updates to FILESTREAM Data | Microsoft Docs"
+description: Discover how to use the FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT value to make partial updates to FILESTREAM BLOB data. View an example of a partial update.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -15,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Make Partial Updates to FILESTREAM Data
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  An application uses FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT to make partial updates to FILESTREAM BLOB data. The [DeviceIoControl](https://go.microsoft.com/fwlink/?LinkId=105527) function passes this value and the handle that is returned from [OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) to the FILESTREAM driver. The driver then forces a server-side copy of the current FILESTREAM data into the file that is referenced by the handle. If the application issues the FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT value after the handle has been written to, the last write operation persists and previous write operations that were made to the handle are lost.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  An application uses FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT to make partial updates to FILESTREAM BLOB data. The [DeviceIoControl](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) function passes this value and the handle that is returned from [OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) to the FILESTREAM driver. The driver then forces a server-side copy of the current FILESTREAM data into the file that is referenced by the handle. If the application issues the FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT value after the handle has been written to, the last write operation persists and previous write operations that were made to the handle are lost.  
   
 > [!NOTE]  
->  FILESTREAM relies on the [SMB protocol](https://go.microsoft.com/fwlink/?LinkId=112454) for remote access.  
+>  FILESTREAM relies on the [SMB protocol](/windows/win32/fileio/microsoft-smb-protocol-and-cifs-protocol-overview) for remote access.  
   
 ## Example  
  The following example shows you how to use the `FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT` value to perform a partial update of an inserted FILESTREAM BLOB.  
@@ -32,5 +33,4 @@ ms.author: mikeray
 ## See Also  
  [Access FILESTREAM Data with OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [Create Client Applications for FILESTREAM Data](../../relational-databases/blob/create-client-applications-for-filestream-data.md)  
-  
   

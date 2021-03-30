@@ -1,4 +1,5 @@
 ---
+description: "Implementation Notes"
 title: "Implementation Notes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,10 +7,10 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7ec14b9c-69b8-4c6e-838a-88d1ebdc8725
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Implementation Notes
 > [!IMPORTANT]  

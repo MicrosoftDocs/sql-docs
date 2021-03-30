@@ -1,16 +1,17 @@
 ---
+description: "SELECT FROM &lt;model&gt; PREDICTION JOIN (DMX)"
 title: "SELECT FROM &lt;model&gt; PREDICTION JOIN (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # SELECT FROM &lt;model&gt; PREDICTION JOIN (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Uses a mining model to predict the states of columns in an external data source. The **PREDICTION JOIN** statement matches each case from the source query to the model.  
   

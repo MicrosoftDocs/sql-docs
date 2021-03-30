@@ -1,4 +1,5 @@
 ---
+description: "SQL Graph Architecture"
 title: "SQL Graph Architecture | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/24/2018"
@@ -13,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: 
 author: shkale-msft
 ms.author: shkale
-monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Graph Architecture  
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
 Learn how SQL Graph is architected. Knowing the basics will make it easier to understand other SQL Graph articles.
  
@@ -24,7 +25,7 @@ Learn how SQL Graph is architected. Knowing the basics will make it easier to un
 Users can create one graph per database. A graph is a collection of node and edge tables. Node or edge tables can be created under any schema in the database, but they all belong to one logical graph. A node table is collection of similar type of nodes. For example, a Person node table holds all the Person nodes belonging to a graph. Similarly, an edge table is a collection of similar type of edges. For example, a Friends edge table holds all the edges that connect a Person to another Person. Since nodes and edges are stored in tables, most of the operations supported on regular tables are supported on node or edge tables. 
  
  
-![sql-graph-architecture](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql graph database architecture")   
+![Diagram showing the SQL Graph database architecture.](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql graph database architecture")   
 
 Figure 1: SQL Graph database architecture
  
@@ -49,7 +50,7 @@ Similar to the `$node_id` column, it is recommended that users create a unique i
 
 Figure 2 shows how node and edge tables are stored in the database. 
 
-![person-friends-tables](../../relational-databases/graphs/media/person-friends-tables.png "Person node and friends edge tables")   
+![Diagram showing the Node and edge table representation.](../../relational-databases/graphs/media/person-friends-tables.png "Person node and friends edge tables")   
 
 Figure 2: Node and edge table representation
 

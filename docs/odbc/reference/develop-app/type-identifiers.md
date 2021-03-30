@@ -1,4 +1,5 @@
 ---
+description: "Type Identifiers"
 title: "Type Identifiers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "identifiers [ODBC], type"
   - "type identifiers [ODBC], about type identifiers"
 ms.assetid: 1d9fdfa2-e378-44fe-ac66-9743d9bbdd5a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Type Identifiers
 To describe SQL and C data types, ODBC defines two sets of *type identifiers*. A type identifier describes the type of an SQL column or a C buffer. It is a **#define** value and is generally passed as a function argument or returned in metadata.  

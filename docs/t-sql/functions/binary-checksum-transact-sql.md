@@ -1,12 +1,13 @@
 ---
+description: "BINARY_CHECKSUM  (Transact-SQL)"
 title: "BINARY_CHECKSUM  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
+ms.prod_service: "synapse-analytics, database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "BINARY_CHECKSUM"
   - "BINARY_CHECKSUM_TSQL"
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "BINARY_CHECKSUM function"
   - "binary [SQL Server], checksum values"
 ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BINARY_CHECKSUM  (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Returns the binary checksum value computed over a row of a table or over a list of expressions.
   
@@ -29,11 +30,15 @@ Returns the binary checksum value computed over a row of a table or over a list 
   
 ## Syntax  
   
-```sql
+```syntaxsql
 BINARY_CHECKSUM ( * | expression [ ,...n ] )   
 ```  
   
-## Arguments  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *\**  
 Specifies that the computation covers all the table columns. BINARY_CHECKSUM ignores columns of noncomparable data types in its computation. Noncomparable data types include  
 * **cursor**  
@@ -78,7 +83,7 @@ This example uses `BINARY_CHECKSUM` to detect changes in a table row.
 ```sql
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE myTable (column1 int, column2 varchar(256));  
+CREATE TABLE myTable (column1 INT, column2 VARCHAR(256));  
 GO  
 INSERT INTO myTable VALUES (1, 'test');  
 GO  

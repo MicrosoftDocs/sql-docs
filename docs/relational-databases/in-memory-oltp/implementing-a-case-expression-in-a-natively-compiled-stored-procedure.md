@@ -1,5 +1,6 @@
 ---
 title: "CASE expression in a natively compiled stored procedure"
+description: Natively compiled T-SQL modules support CASE expressions in some versions of SQL Server. This example implements the CASE expression in a query.
 ms.custom: seo-dt-2019
 ms.date: "11/21/2017"
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing a CASE Expression in a Natively Compiled Stored Procedure
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-**Applies to:** [!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] and SQL Server starting [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+**Applies to:** [!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] and SQL Server starting [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]
 
 CASE expressions are supported in natively compiled T-SQL modules. The following example demonstrates a way to use
 the CASE expression in a query. 
@@ -39,7 +40,7 @@ EXEC dbo.usp_SOHOnlineOrderResult
 GO  
 ``` 
 
-**Applies to:** [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] and SQL Server starting [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
+**Applies to:** [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] and SQL Server starting [!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)]
 
   CASE expressions are *not* supported in natively compiled T-SQL modules. The following sample shows a way to implement the functionality of a CASE expression in a natively compiled stored procedure.  
   
@@ -97,7 +98,6 @@ GO
 ```  
   
 ## See Also  
- [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)   
+ [Migration Issues for Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)   
  [Transact-SQL Constructs Not Supported by In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
-  
   

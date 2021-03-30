@@ -1,6 +1,6 @@
 ---
 title: Replay a trace for SQL Server upgrades
-description: Replay a trace with Database Experimentation Assistant for SQL Server upgrades
+description: Learn how to replay a captured trace with Database Experimentation Assistant for SQL Server upgrades.
 ms.custom: "seo-lt-2019"
 ms.date: 12/12/2019
 ms.prod: sql
@@ -9,8 +9,8 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: HJToland3
-ms.author: rajsell
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ---
 
@@ -43,7 +43,7 @@ First, you need to perform a trace replay against target 1, which represents you
     - **Replay Trace Location**: Specify the path to store trace files/XEvents associated with the trace replay.
 
         > [!NOTE]
-        > For an Azure SQL Database or an Azure SQL Database managed instance, you need to provide the SAS URI of the Azure blob storage account.
+        > For an Azure SQL Database or an Azure SQL Managed Instance, you need to provide the SAS URI of the Azure blob storage account.
 
 3. Verify that you have restored the database(s) by selecting the **Yes, I have manually restored the database(s)** check box.
 
@@ -117,7 +117,7 @@ Open a target trace file and view it in SQL Profiler. Or, if you want to make mo
 
 **Q: What trace events does DEA collect during replay?**
 
-DEA captures trace events that contain performance-related information. The capture configuration is in the StartReplayCaptureTrace.sql script. These events are typical SQL Server trace events that are listed in the [sp_trace_setevent (Transact-SQL) reference documentation](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql).
+DEA captures trace events that contain performance-related information. The capture configuration is in the StartReplayCaptureTrace.sql script. These events are typical SQL Server trace events that are listed in the [sp_trace_setevent (Transact-SQL) reference documentation](../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).
 
 ## Troubleshoot trace replay
 
@@ -134,7 +134,7 @@ You can get more details in the logs in %temp%\\DEA. If the problem persists, co
 
 - Verify that the Distributed Replay controller service is running on the controller machine. To verify, use the Distributed Replay Management Tools (run the command `dreplay.exe status -f 1`).
 - If the replay is started remotely:
-  - Confirm that the computer running DEA can successfully ping the controller. Confirm that firewall settings allow connections per the instructions on the **Configure Replay Environment** page. For more information, see the article [SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017).
+  - Confirm that the computer running DEA can successfully ping the controller. Confirm that firewall settings allow connections per the instructions on the **Configure Replay Environment** page. For more information, see the article [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md).
   - Make sure that DCOM Remote Launch and Remote Activation are allowed for the user of the Distributed Replay controller.
   - Make sure that DCOM Remote Access user rights are allowed for the user of the Distributed Replay controller.
 

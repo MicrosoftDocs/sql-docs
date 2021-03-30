@@ -13,7 +13,7 @@ ms.reviewer: maghan
 ---
 # Run SQL Server Integration Services (SSIS) packages deployed in Azure
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -68,11 +68,11 @@ For more info, see the following examples:
 
 ## <a name="exec_activity"></a> Run a package with the Execute SSIS Package activity
 
-For more info, see [Run an SSIS package using the Execute SSIS Package Activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+For more info, see [Run an SSIS package using the Execute SSIS Package Activity in Azure Data Factory](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
 
 ## <a name="sproc_activity"></a> Run a package with the Stored Procedure activity
 
-For more info, see [Run an SSIS package using stored procedure activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
+For more info, see [Run an SSIS package using stored procedure activity in Azure Data Factory](/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
 
 ## Next steps
 

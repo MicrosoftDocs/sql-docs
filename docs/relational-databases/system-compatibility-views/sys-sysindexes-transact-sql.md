@@ -1,4 +1,5 @@
 ---
+description: "sys.sysindexes (Transact-SQL)"
 title: "sys.sysindexes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysindexes"
   - "sysindexes_TSQL"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "sysindexes system table"
   - "sys.sysindexes compatibility view"
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysindexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each index and table in the current database. XML indexes are not supported in this view. Partitioned tables and indexes are not fully supported in this view; use the [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view instead.  
   

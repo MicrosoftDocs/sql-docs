@@ -1,5 +1,6 @@
 ---
 title: "Change Map Legends-Color Scale-Associated Rules in Report Builder-SSRS | Microsoft Docs"
+description: Learn how to change map legends to help users interpret the data visualization on maps in Report Builder. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

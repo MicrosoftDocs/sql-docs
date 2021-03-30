@@ -1,4 +1,5 @@
 ---
+description: "Flat File Destination"
 title: "Flat File Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -22,7 +23,7 @@ ms.author: chugu
 ---
 # Flat File Destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Flat File destination writes data to a text file. The text file can be in delimited, fixed width, fixed width with row delimiter, or ragged right format.  
@@ -44,7 +45,7 @@ ms.author: chugu
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md)  
   
@@ -93,5 +94,4 @@ ms.author: chugu
 ## See Also  
  [Flat File Source](../../integration-services/data-flow/flat-file-source.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
-  
   

@@ -1,33 +1,33 @@
 ---
-title: "Fetch Columns Using IRow::GetColumns (OLE DB) | Microsoft Docs"
-description: "Fetch columns using IRow::GetColumns (OLE DB)"
+title: "Fetch columns using IRow::GetColumns (OLE DB driver) | Microsoft Docs"
+description: Learn to fetch columns using the IRow::GetColumns method in OLE DB Driver for SQL Server. This example gets one column at a time from a row.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "IRow interface"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Fetch Columns Using IRow::GetColumns (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   The **IRow** interface allows direct access to columns of a single row in the result set. Thus, **IRow** is an efficient way to retrieve columns from a result set with one row.  
   
- A code sample is available that showshow to fetch a single row using **IRow**. In this sample, one column at a time is retrieved from the row. The sample shows:  
+ A code sample is available that shows how to fetch a single row using **IRow**. In this sample, one column at a time is retrieved from the row. The sample shows:  
   
 -   How to fetch a group of columns (in sequence).  
   
 -   How to access a column twice. The first time the actual column width is obtained, and later the actual data is accessed. In the DBCOLUMNACCESS structure, if **pData** is NULL and **cbMaxLen** is 0, the call to **IRow**-**>GetColumns()** returns only the actual column length. In this case, **IRow->GetColumns()** can be called again on the same column to retrieve the actual data.  
   
 > [!IMPORTANT]  
->  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference).  
   
 ### To fetch columns using IRow::GetColumns  
   
@@ -52,7 +52,7 @@ ms.author: pelopes
   
  The first ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing creates a table used by the sample.  
   
- Compile with ole32.lib oleaut32.lib and execute the second (C++) code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains msoledbsql.h.  
+ Compile with ole32.lib oleaut32.lib and execute the second (C++) code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name", where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains msoledbsql.h.  
   
  The third ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing deletes the table used by the sample.  
   
@@ -516,5 +516,4 @@ go
   
 ## See Also  
  [OLE DB How-to Topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

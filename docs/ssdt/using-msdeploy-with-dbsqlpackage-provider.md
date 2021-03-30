@@ -1,12 +1,12 @@
 ---
 title: Using MSDeploy with dbSqlPackage Provider
+description: Learn about the obsolete MSDeploy provider DbSqlPackage. View parameters, examples, and alternative SQL Server and Azure SQL Database publishing tools.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
@@ -14,9 +14,9 @@ ms.date: 04/26/2017
 
 # Using MSDeploy with dbSqlPackage Provider
 
-**DbSqlPackage** is an **MSDeploy** provider that allows you interact with SQL Server/SQL Azure databases. **DbSqlPackage** supports the following actions:  
+**DbSqlPackage** is an **MSDeploy** provider that allows you interact with SQL Server / Azure SQL Database. **DbSqlPackage** supports the following actions:  
   
--   **Extract**: Creates a database snapshot (.dacpac) file from a live SQL Server or SQL Azure databases.  
+-   **Extract**: Creates a database snapshot (.dacpac) file from a live SQL Server or Azure SQL Database.  
   
 -   **Publish**: Incrementally updates a database schema to match the schema of a source .dacpac file.  
   
@@ -24,7 +24,7 @@ ms.date: 04/26/2017
   
 -   **Script**: Creates a Transact\-SQL script equivalent to the script executed by the Publish Action.  
   
-For more information regarding DACFx, please see the DACFx managed API documentation at [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) or [SqlPackage.exe](../tools/sqlpackage.md) (DACFx command-line tool).  
+For more information regarding DACFx, please see the DACFx managed API documentation at [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) or [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) (DACFx command-line tool).  
   
 > [!IMPORTANT]  
 > The dbSqlPackage provider feature will be removed from the next major release of Visual Studio. For information on how to do database publishing with Web Deploy, see [dbDacFx Provider for Incremental Database publishing](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  
@@ -52,7 +52,7 @@ The **dbSqlPackage** provider takes an input that is either a valid SQL Server/S
 |---------|-----------|---------------|  
 |**-source:dbSqlPackage=**{*input*}|**N/A**|*input* is a valid SQL Server or SQL Azure connection string or a path to a .dacpac file on disk.<br /><br />**NOTE:** The only connection string properties supported when using a connection string as an input source are *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate*, and *ConnectionTimeout*.|  
   
-If your input source is a connection string to a live SQL Server/SQL Azure database, **dbSqlPackage** will extract a database snapshot in the form of a .dacpac file from a live SQL Server/SQL Azure database.  
+If your input source is a connection string to SQL Server / Azure SQL Database, **dbSqlPackage** will extract a database snapshot in the form of a .dacpac file from SQL Server / Azure SQL Database.  
   
 The **Source** parameters are:  
   
@@ -198,4 +198,3 @@ The following is example syntax for a **Script** operation using **dbSqlPackage*
 ```  
 MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
 ```  
-  

@@ -1,7 +1,9 @@
 ---
 title: "Encrypt a Column of Data | Microsoft Docs"
+description: Learn how to encrypt a column of data by using symmetric encryption in SQL Server using Transact-SQL, sometimes known as column-level or cell-level encryption.
 ms.custom: ""
-ms.date: "01/02/2019"
+titleSuffix: SQL Server & Azure Synapse Analytics & Azure SQL Database & SQL Managed Instance
+ms.date: "12/15/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -15,49 +17,50 @@ helpviewer_keywords:
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
-# Encrypt a Column of Data
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  This article describes how to encrypt a column of data by using symmetric encryption in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. This is sometimes known as column-level encryption, or cell-level encryption.  
+# Encrypt a Column of Data
+
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
+
+This article describes how to encrypt a column of data by using symmetric encryption in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. This is sometimes known as column-level encryption, or cell-level encryption. This feature is in preview for Azure Synapse Analytics
+
+The examples in this article have been validated against AdventureWorks2017. To get sample databases, see [AdventureWorks sample databases](../../../samples/adventureworks-install-configure.md).
 
 ## Security  
   
 ### Permissions  
- The following permissions are necessary to perform the steps below:  
-  
-- CONTROL permission on the database.  
-  
-- CREATE CERTIFICATE permission on the database. Only Windows logins, SQL Server logins, and application roles can own certificates. Groups and roles cannot own certificates.  
-  
-- ALTER permission on the table.  
-  
-- Some permission on the key and must not have been denied VIEW DEFINITION permission.  
-  
-## Using Transact-SQL  
 
-To use the following examples, you must have a database master key. If your database does not already have a database master key, create one by executing the following statement providing your password:
+The following permissions are necessary to perform the steps below:  
+  
+- `CONTROL` permission on the database.  
+- `CREATE CERTIFICATE` permission on the database. Only Windows logins, SQL Server logins, and application roles can own certificates. Groups and roles cannot own certificates.  
+- `ALTER` permission on the table.  
+- Some permission on the key and must not have been denied `VIEW DEFINITION` permission.  
+  
+## Create database master key  
+
+To use the following examples, you must have a database master key. If your database does not already have a database master key, create one. To create one, connect to your database and run the following script. Be sure to use a complex password.
+
+Copy and paste the following example into the query window that is connected to the AdventureWorks sample database. Click **Execute**.  
 
 ```sql  
 CREATE MASTER KEY ENCRYPTION BY   
-PASSWORD = '<some strong password>';  
+PASSWORD = '<complex password>';  
 ```  
 
 Always back up your database master key. For more information on database master keys, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
 
-### To encrypt a column of data using symmetric encryption that includes an authenticator  
+## Example: Encrypt with symmetric encryption and authenticator
   
 1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2. On the Standard bar, click **New Query**.  
   
-3. Copy and paste the following example into the query window and click **Execute**.  
+3. Copy and paste the following example into the query window that is connected to the AdventureWorks sample database. Click **Execute**.
 
     ```sql
-    USE AdventureWorks2012;  
-    GO  
-  
     CREATE CERTIFICATE Sales09  
        WITH SUBJECT = 'Customer Credit Card Numbers';  
     GO  
@@ -81,7 +84,7 @@ Always back up your database master key. For more information on database master
     -- Save the result in column CardNumber_Encrypted.    
     UPDATE Sales.CreditCard  
     SET CardNumber_Encrypted = EncryptByKey(Key_GUID('CreditCards_Key11')  
-        , CardNumber, 1, HashBytes('SHA1', CONVERT( varbinary  
+        , CardNumber, 1, HASHBYTES('SHA2_256', CONVERT( varbinary  
         , CreditCardID)));  
     GO  
   
@@ -99,24 +102,21 @@ Always back up your database master key. For more information on database master
     SELECT CardNumber, CardNumber_Encrypted   
         AS 'Encrypted card number', CONVERT(nvarchar,  
         DecryptByKey(CardNumber_Encrypted, 1 ,   
-        HashBytes('SHA1', CONVERT(varbinary, CreditCardID))))  
+        HASHBYTES('SHA2_256', CONVERT(varbinary, CreditCardID))))  
         AS 'Decrypted card number' FROM Sales.CreditCard;  
     GO  
     ```  
   
-### To encrypt a column of data using a simple symmetric encryption  
-  
+## Encrypt with simple symmetric encryption  
+
 1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2. On the Standard bar, click **New Query**.  
   
-3. Copy and paste the following example into the query window and click **Execute**.  
+3. Copy and paste the following example into the query window that is connected to the AdventureWorks sample database. Click **Execute**.  
   
     ```sql
-    USE AdventureWorks2012;  
-    GO  
-  
-    CREATE CERTIFICATE HumanResources037  
+     CREATE CERTIFICATE HumanResources037  
        WITH SUBJECT = 'Employee Social Security Numbers';  
     GO  
   

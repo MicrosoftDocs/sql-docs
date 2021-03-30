@@ -1,4 +1,5 @@
 ---
+description: "Extended Events for Stretch Database"
 title: "Extended Events for Stretch Database"
 ms.date: "06/14/2016"
 ms.service: sql-server-stretch-database
@@ -10,12 +11,12 @@ ms.author: jroth
 ms.custom: seo-dt-2019
 ---
 # Extended Events for Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
 Stretch Database provides a set of extended events for troubleshooting.  
   
-For more info, see [Extended Events](../../relational-databases/extended-events/extended-events.md). For info about how to start an extended events session for troubleshooting, see [Create an Extended Events Session](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)  
+For more info, see [Extended Events](../../relational-databases/extended-events/extended-events.md). For info about how to start an extended events session for troubleshooting, see [Create an Extended Events Session](/previous-versions/sql/sql-server-2016/hh213147(v=sql.130))  
   
 ## List of extended events for Stretch Database  
   
@@ -75,5 +76,4 @@ stretch_table_validation_error|Reports the completion of validation for a table 
 stretch_unprovision_table_start|Reports the start of stretch table un-provisioning  
   
 ## See Also  
-[Manage and troubleshoot Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
-
+[Manage and troubleshoot Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)

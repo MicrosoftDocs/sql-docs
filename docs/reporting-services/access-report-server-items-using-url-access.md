@@ -1,5 +1,6 @@
 ---
 title: "Access Report Server Items Using URL Access | Microsoft Docs"
+description: "Learn how to access catalog items of different types in a report server database or in a SharePoint site using rs:Command=Value."
 ms.date: 05/08/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -15,7 +16,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Access Report Server Items Using URL Access
-  This topic describes how to access catalog items of different types in a report server data base or in a SharePoint site using *rs:Command*=*Value*. It is not necessary to actually add this parameter string. If you omit it, the report server evaluates the item type and selects the appropriate parameter value automatically. However, using the *rs:Command*=*Value* string in the URL improves the performance of the report server.  
+  This topic describes how to access catalog items of different types in a report server database or in a SharePoint site using *rs:Command*=*Value*. It is not necessary to actually add this parameter string. If you omit it, the report server evaluates the item type and selects the appropriate parameter value automatically. However, using the *rs:Command*=*Value* string in the URL improves the performance of the report server.  
   
  Note the `_vti_bin` proxy syntax in the examples below. For more information about using the proxy syntax, see [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md).  
 
@@ -27,7 +28,7 @@ ms.author: maggies
   
  - **Native** `https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
  - **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
@@ -41,7 +42,7 @@ ms.author: maggies
   
  **Native** `https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
 
@@ -52,7 +53,7 @@ ms.author: maggies
   
  **Native** `https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
@@ -79,7 +80,7 @@ ms.author: maggies
   
  **Native** `https://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rs:Command=GetChildren`  
 

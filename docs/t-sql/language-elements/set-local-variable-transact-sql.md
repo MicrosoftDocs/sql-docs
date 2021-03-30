@@ -1,12 +1,13 @@
 ---
+description: "SET @local_variable (Transact-SQL)"
 title: "SET @local_variable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -15,12 +16,12 @@ helpviewer_keywords:
   - "SET statement, @local_variable"
   - "local variables [SQL Server]"
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Sets the specified local variable, previously created by using the DECLARE @*local_variable* statement, to the specified value.  
   
@@ -29,7 +30,7 @@ Sets the specified local variable, previously created by using the DECLARE @*loc
 ## Syntax  
 Syntax for SQL Server and Azure SQL Database:
 
-```sql    
+```syntaxsql
 SET   
 { @local_variable  
     [ . { property_name | field_name } ] = { expression | udt_name { . | :: } method_name }  
@@ -54,12 +55,14 @@ SET
     }  
 }   
 ```  
-Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse:  
-```sql  
-SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression  
+Syntax for Azure Synapse Analytics and Parallel Data Warehouse:  
+```syntaxsql
+SET @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 **@** _local_variable_  
 The name of a variable of any type except **cursor**, **text**, **ntext**, **image**, or **table**. Variable names must start with one at sign (**@**). Variable names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
@@ -175,7 +178,7 @@ For more information, see [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/la
   
 You can use the compound assignment operator anywhere you have an assignment with an expression on the right-hand side of the operator, including variables, and a SET in an UPDATE, SELECT, and RECEIVE statement.  
   
-Don't use a variable in a SELECT statement to concatenate values (that is, to compute aggregate values). Unexpected query results may occur. Because, all expressions in the SELECT list (including assignments) aren't necessarily run exactly once for each output row. For more information, see [this KB article](https://support.microsoft.com/kb/287515).  
+Don't use a variable in a SELECT statement to concatenate values (that is, to compute aggregate values). Unexpected query results may occur. Because, all expressions in the SELECT list (including assignments) aren't necessarily run exactly once for each output row. For more information, see [this KB article](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/287515).  
   
 ## Permissions  
 Requires membership in the public role. All users can use SET **@**_local_variable_.  
@@ -185,8 +188,8 @@ Requires membership in the public role. All users can use SET **@**_local_variab
 ### A. Printing the value of a variable initialized by using SET  
 The following example creates the `@myvar` variable, puts a string value into the variable, and prints the value of the `@myvar` variable.  
   
-```  
-DECLARE @myvar char(20);  
+```sql  
+DECLARE @myvar CHAR(20);  
 SET @myvar = 'This is a test';  
 SELECT @myvar;  
 GO  
@@ -195,10 +198,10 @@ GO
 ### B. Using a local variable assigned a value by using SET in a SELECT statement  
 The following example creates a local variable named `@state` and uses the local variable in a `SELECT` statement to find the first and last names of all employees who live in the state of `Oregon`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @state char(25);  
+DECLARE @state CHAR(25);  
 SET @state = N'Oregon';  
 SELECT RTRIM(FirstName) + ' ' + RTRIM(LastName) AS Name, City  
 FROM HumanResources.vEmployee  
@@ -208,15 +211,15 @@ WHERE StateProvinceName = @state;
 ### C. Using a compound assignment for a local variable  
 The following two examples produce the same result. They create a local variable named `@NewBalance`, multiplies it by 10 and displays the new value of the local variable in a `SELECT` statement. The second example uses a compound assignment operator.  
   
-```  
+```sql  
 /* Example one */  
-DECLARE  @NewBalance  int ;  
+DECLARE  @NewBalance  INT ;  
 SET  @NewBalance  =  10;  
 SET  @NewBalance  =  @NewBalance  *  10;  
 SELECT  @NewBalance;  
   
 /* Example Two */  
-DECLARE @NewBalance int = 10;  
+DECLARE @NewBalance INT = 10;  
 SET @NewBalance *= 10;  
 SELECT @NewBalance;  
 ```  
@@ -224,7 +227,7 @@ SELECT @NewBalance;
 ### D. Using SET with a global cursor  
 The following example creates a local variable and then sets the cursor variable to the global cursor name.  
   
-```  
+```sql  
 DECLARE my_cursor CURSOR GLOBAL   
 FOR SELECT * FROM Purchasing.ShipMethod  
 DECLARE @my_variable CURSOR ;  
@@ -239,7 +242,7 @@ DEALLOCATE my_cursor;
 ### E. Defining a cursor by using SET  
 The following example uses the `SET` statement to define a cursor.  
   
-```  
+```sql  
 DECLARE @CursorVar CURSOR;  
   
 SET @CursorVar = CURSOR SCROLL DYNAMIC  
@@ -263,10 +266,10 @@ DEALLOCATE @CursorVar;
 ### F. Assigning a value from a query  
 The following example uses a query to assign a value to a variable.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @rows int;  
+DECLARE @rows INT;  
 SET @rows = (SELECT COUNT(*) FROM Sales.Customer);  
 SELECT @rows;  
 ```  
@@ -274,7 +277,7 @@ SELECT @rows;
 ### G. Assigning a value to a user-defined type variable by modifying a property of the type  
 The following example sets a value for user-defined type `Point` by modifying the value of the property `X` of the type.  
   
-```  
+```sql  
 DECLARE @p Point;  
 SET @p.X = @p.X + 1.1;  
 SELECT @p;  
@@ -284,7 +287,7 @@ GO
 ### H. Assigning a value to a user-defined type variable by invoking a method of the type  
 The following example sets a value for user-defined type **point** by invoking method `SetXY` of the type.  
   
-```  
+```sql  
 DECLARE @p Point;  
 SET @p=point.SetXY(23.5, 23.5);  
 ```  
@@ -292,8 +295,8 @@ SET @p=point.SetXY(23.5, 23.5);
 ### I. Creating a variable for a CLR type and calling a mutator method  
 The following example creates a variable for the type `Point`, and then executes a mutator method in `Point`.  
   
-```  
-CREATE ASSEMBLY mytest from 'c:\test.dll' WITH PERMISSION_SET = SAFE  
+```sql  
+CREATE ASSEMBLY mytest FROM 'c:\test.dll' WITH PERMISSION_SET = SAFE  
 CREATE TYPE Point EXTERNAL NAME mytest.Point  
 GO  
 DECLARE @p Point = CONVERT(Point, '')  
@@ -305,20 +308,19 @@ SET @p.SetXY(22, 23);
 ### J. Printing the value of a variable initialized by using SET  
 The following example creates the `@myvar` variable, puts a string value into the variable, and prints the value of the `@myvar` variable.  
   
-```  
-DECLARE @myvar char(20);  
+```sql  
+DECLARE @myvar CHAR(20);  
 SET @myvar = 'This is a test';  
-SELECT top 1 @myvar FROM sys.databases;  
-  
+SELECT TOP 1 @myvar FROM sys.databases;
 ```  
   
 ### K. Using a local variable assigned a value by using SET in a SELECT statement  
 The following example creates a local variable named `@dept` and uses this local variable in a `SELECT` statement to find the first and last names of all employees who work in the `Marketing` department.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @dept char(25);  
+DECLARE @dept CHAR(25);  
 SET @dept = N'Marketing';  
 SELECT RTRIM(FirstName) + ' ' + RTRIM(LastName) AS Name  
 FROM DimEmployee   
@@ -328,15 +330,15 @@ WHERE DepartmentName = @dept;
 ### L. Using a compound assignment for a local variable  
 The following two examples produce the same result. They create a local variable named `@NewBalance`, multiplies it by `10` and displays the new value of the local variable in a `SELECT` statement. The second example uses a compound assignment operator.  
   
-```  
+```sql  
 /* Example one */  
-DECLARE  @NewBalance  int ;  
+DECLARE  @NewBalance INT;  
 SET  @NewBalance  =  10;  
 SET  @NewBalance  =  @NewBalance  *  10;  
-SELECT  TOP 1 @NewBalance FROM sys.tables;  
+SELECT TOP 1 @NewBalance FROM sys.tables;  
   
 /* Example Two */  
-DECLARE @NewBalance int = 10;  
+DECLARE @NewBalance INT = 10;  
 SET @NewBalance *= 10;  
 SELECT TOP 1 @NewBalance FROM sys.tables;  
 ```  
@@ -344,10 +346,10 @@ SELECT TOP 1 @NewBalance FROM sys.tables;
 ### M. Assigning a value from a query  
 The following example uses a query to assign a value to a variable.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @rows int;  
+DECLARE @rows INT;  
 SET @rows = (SELECT COUNT(*) FROM dbo.DimCustomer);  
 SELECT TOP 1 @rows FROM sys.tables;  
 ```  

@@ -1,4 +1,5 @@
 ---
+description: "Integration Services (SSIS) Queries"
 title: "Integration Services (SSIS) Queries | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,7 +21,7 @@ ms.author: chugu
 ---
 # Integration Services (SSIS) Queries
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Execute SQL task, the OLE DB source, the OLE DB destination, and the Lookup transformation can use SQL queries. In the Execute SQL task, the SQL statements can create, update, and delete database objects and data; run stored procedures; and perform SELECT statements. In the OLE DB source and the Lookup transformation, the SQL statements are typically SELECT statements or EXEC statements. The latter most frequently run stored procedures that return result sets.  
@@ -55,13 +56,13 @@ You can provide the SQL statement in the following ways:
   
  You can also provide direct input by typing the query in the task or data flow component dialog box or the Properties window.  
   
- For more information, see [Query Builder](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5).  
+ For more information, see [Query Builder]().  
   
 ## SQL in Files  
  The SQL statement for the Execute SQL task can also reside in a separate file. For example, you can write queries using tools such as the Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], save the query to a file, and then read the query from the file when running a package. The file can contain only the SQL statements to run and comments. To use a SQL statement stored in a file, you must provide a file connection that specifies the file name and location. For more information, see [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md).  
   
 ## SQL in Variables  
- If the source of the SQL statement in the Execute SQL task is a variable, you provide the name of the variable that contains the query. The Value property of the variable contains the query text. You set the ValueType property of the variable to a string data type and then type or copy the SQL statement into the Value property. For more information, see [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ If the source of the SQL statement in the Execute SQL task is a variable, you provide the name of the variable that contains the query. The Value property of the variable contains the query text. You set the ValueType property of the variable to a string data type and then type or copy the SQL statement into the Value property. For more information, see [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](./integration-services-ssis-variables.md).  
 
 ## Query Builder dialog box
 Use the **Query Builder** dialog box to create a query for use in the Execute SQL task, the OLE DB source and the OLE DB destination, and the Lookup transformation.  
@@ -78,9 +79,9 @@ Use the **Query Builder** dialog box to create a query for use in the Execute SQ
   
  The graphical tools in the **Query Builder** dialog box let you construct queries using drag-and-drop operations. By default, the Query Builder dialog box constructs SELECT queries, but you can also build INSERT, UPDATE, or DELETE queries. All types of SQL statements can be parsed and run in the **Query Builder** dialog box. For more information about SQL statements in packages, see [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md).  
   
- To learn more about the Transact-SQL language and its syntax, see [Transact-SQL Reference &#40;Database Engine&#41;](../t-sql/transact-sql-reference-database-engine.md).  
+ To learn more about the Transact-SQL language and its syntax, see [Transact-SQL Reference &#40;Database Engine&#41;](../t-sql/language-reference.md).  
   
- You can also use variables in a query to provide values to an input parameter, to capture values of output parameters, and to store return codes. To learn more about using variables in the queries that packages use, see [Execute SQL Task](../integration-services/control-flow/execute-sql-task.md), [OLE DB Source](../integration-services/data-flow/ole-db-source.md), and [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). To learn more about using variables in the Execute SQL Task, see [Parameters and Return Codes in the Execute SQL Task](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) and [Result Sets in the Execute SQL Task](https://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109).  
+ You can also use variables in a query to provide values to an input parameter, to capture values of output parameters, and to store return codes. To learn more about using variables in the queries that packages use, see [Execute SQL Task](../integration-services/control-flow/execute-sql-task.md), [OLE DB Source](../integration-services/data-flow/ole-db-source.md), and [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). To learn more about using variables in the Execute SQL Task, see [Parameters and Return Codes in the Execute SQL Task](./control-flow/execute-sql-task.md) and [Result Sets in the Execute SQL Task](./control-flow/execute-sql-task.md).  
   
  The Lookup and Fuzzy lookup transformations can also use variables with parameters and return codes. The information about the OLE DB source applies to these two transformations also.  
   
@@ -112,4 +113,3 @@ Use the **Query Builder** dialog box to create a query for use in the Execute SQ
 |**SQL** pane|Displays the query as SQL text. Changes made in the **Diagram** pane and the **Grid** pane will appear here, and changes made here will appear in the **Diagram** pane and the **Grid** pane.|  
 |**Results** pane|Displays the results of the query when you click **Run** on the toolbar.| 
 
-  

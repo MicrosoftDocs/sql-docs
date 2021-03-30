@@ -1,4 +1,5 @@
 ---
+description: "Oracle Subscribers"
 title: "Oracle Subscribers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,7 +19,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Oracle Subscribers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports push subscriptions to Oracle through the Oracle OLE DB provider supplied by Oracle.  
   
 ## Configuring an Oracle Subscriber  

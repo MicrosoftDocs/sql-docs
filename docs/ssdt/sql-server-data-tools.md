@@ -1,14 +1,15 @@
 ---
 title: SQL Server Data Tools
+description: View resources on database development tasks that you can accomplish with SQL Server Data Tools, such as designing tables and creating feature extensions.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.errortask.generichelp"
+  - "sql.data.tools.sqlserverobjectexplorer"
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017

@@ -1,12 +1,12 @@
 ---
 title: Extend Database Project Build to Generate Model Stats
+description: Find out how to create, install, and test a build contributor that outputs statistics from the SQL database model when you build a database project.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
@@ -51,12 +51,12 @@ Here are some of the commands used by the example contributor in this walkthroug
   
 |**Class**|**Method/Property**|**Description**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Queries the model for objects, and is the main entry point to the model API. Only top-level types such as Table or View can be queried - types such as Columns can only be found by traversing the model. If no ModelTypeClass filters are specified then all top level types will be returned.|  
-|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Finds relationships to elements referenced by the current TSqlObject. For instance, for a table this will return objects like the Table's columns. In this case, a ModelRelationshipClass filter can be used to specify exact relationships to query (for instance using the "Table.Columns" filter would ensure only columns were returned).<br /><br />There are a number of similar methods, such as GetReferencingRelationshipInstances, GetChildren, and GetParent. See the API documentation for more information.|  
+|[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel)|GetObjects()|Queries the model for objects, and is the main entry point to the model API. Only top-level types such as Table or View can be queried - types such as Columns can only be found by traversing the model. If no ModelTypeClass filters are specified then all top level types will be returned.|  
+|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|GetReferencedRelationshipInstances()|Finds relationships to elements referenced by the current TSqlObject. For instance, for a table this will return objects like the Table's columns. In this case, a ModelRelationshipClass filter can be used to specify exact relationships to query (for instance using the "Table.Columns" filter would ensure only columns were returned).<br /><br />There are a number of similar methods, such as GetReferencingRelationshipInstances, GetChildren, and GetParent. See the API documentation for more information.|  
   
 **Uniquely Identifying your Contributor**  
   
-During the build process, custom contributors are loaded from a standard extension directory. Build Contributors are identified by an [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) attribute. This attribute is required so that contributors can be discovered. This attribute should look similar to the following:  
+During the build process, custom contributors are loaded from a standard extension directory. Build Contributors are identified by an [ExportBuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute) attribute. This attribute is required so that contributors can be discovered. This attribute should look similar to the following:  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -70,7 +70,7 @@ To create a build contributor, you must perform the following tasks:
   
 -   Create a class library project and add required references.  
   
--   Define a class named ModelStatistics that inherits from [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx).  
+-   Define a class named ModelStatistics that inherits from [BuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.buildcontributor).  
   
 -   Override the OnExecute method.  
   
@@ -589,4 +589,3 @@ You could create additional tools to perform processing of the output XML file. 
 ## See Also  
 [Customize Database Build and Deployment by Using Build and Deployment Contributors](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
 [Walkthrough: Extend Database Project Deployment to Analyze the Deployment Plan](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
-  

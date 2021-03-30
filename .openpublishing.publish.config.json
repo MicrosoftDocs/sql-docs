@@ -2,18 +2,43 @@
   "build_entry_point": "docs",
   "docsets_to_publish": [
     {
+      "docset_name": "data-migration",
+      "build_source_folder": "data-migration",
+      "build_output_subfolder": "data-migration",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "azure-data-studio",
+      "build_source_folder": "azure-data-studio",
+      "build_output_subfolder": "azure-data-studio",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
       "docset_name": "sql-content",
       "build_source_folder": "docs",
       "build_output_subfolder": "sql",
       "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
       "xref_query_tags": [
         "/uwp/api",
         "/dotnet"
-      ],
-      "monikers": [],
-      "moniker_ranges": [
-        "sql-server-2014",
-        "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || sql-server-previousversions || sqlallproducts-allversions"
       ],
       "open_to_public_contributors": true,
       "type_mapping": {
@@ -42,12 +67,6 @@
       "branch_mapping": {}
     },
     {
-      "path_to_root": "_themes.MSDN.Modern",
-      "url": "https://github.com/Microsoft/templates.msdn.msft",
-      "branch": "master",
-      "branch_mapping": {}
-    },
-    {
       "path_to_root": "samples",
       "url": "https://github.com/dotnet/samples",
       "branch": "master",
@@ -64,19 +83,17 @@
     {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master"
+      "branch": "master",
+      "branch_mapping": {}
     },
     {
       "path_to_root": "sql-server-samples",
       "url": "https://github.com/Microsoft/sql-server-samples",
-      "branch": "master"
+      "branch": "master",
+      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {
-    "release-sqlseattle": [
-      "Publish",
-      "PDF"
-    ],
     "live": [
       "Publish",
       "PDF"
@@ -84,19 +101,23 @@
     "master": [
       "Publish",
       "PDF"
+    ],
+    "build-pdf": [
+      "Publish",
+      "PDF"
     ]
   },
   "need_generate_pdf_url_template": true,
-  "need_generate_pdf": false,
-  "need_generate_intellisense": false,
-  "enable_branch_build_custom_validation": true,
-  "enable_pull_request_custom_validation": true,
-  "Targets": {
+  "targets": {
     "Pdf": {
       "template_folder": "_themes.pdf"
     }
   },
   "docs_build_engine": {
     "name": "docfx_v3"
-  }
+  },
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false,
+  "enable_branch_build_custom_validation": true,
+  "enable_pull_request_custom_validation": true
 }

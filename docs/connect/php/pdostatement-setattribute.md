@@ -1,15 +1,16 @@
 ---
-title: "PDOStatement::setAttribute | Microsoft Docs"
+title: "PDOStatement::setAttribute"
+description: "API reference for the PDOStatement::setAttribute function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
-ms.date: "01/31/2020"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 329d9b5e-1c5d-40b0-9127-1051d0646fc7
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # PDOStatement::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

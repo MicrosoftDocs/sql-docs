@@ -1,5 +1,6 @@
 ---
 title: "XTP (In-Memory OLTP) Performance Counters"
+description: SQL Server provides objects and counters that can be used by Performance Monitor to monitor In-Memory OLTP activity.
 ms.custom: seo-dt-2019
 ms.date: "04/06/2016"
 ms.prod: sql
@@ -8,15 +9,15 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server XTP (In-Memory OLTP) Performance Counters
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides objects and counters that can be used by Performance Monitor to monitor In-Memory OLTP activity. The objects and counters are shared across all instances of a given version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the machine, starting in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
- In the past the object and counter names began with *XTP*, as in **XTP Cursors**. Now starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the names are like the following pattern:  
+ In the past the object and counter names began with *XTP*, as in **XTP Cursors**. Now starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], the names are like the following pattern:  
   
 -   **SQL Server** *\<version>* **XTP Cursors**  
   

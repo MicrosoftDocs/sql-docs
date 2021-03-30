@@ -1,42 +1,49 @@
 ---
-title: "Connecting to an Azure SQL database | Microsoft Docs"
+title: "Connecting to an Azure SQL database"
+description: "This article discusses issues when using the Microsoft JDBC Driver for SQL Server to connect to an Azure SQL Database."
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "12/18/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Connecting to an Azure SQL database
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This article discusses issues when using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to connect to a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. For more information about connecting to a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], see:  
+This article discusses issues when using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. For more information about connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], see:  
   
-- [SQL Azure Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
+- [Azure SQL Database](/azure/sql-database/sql-database-technical-overview)  
   
-- [How to: Connect to SQL Azure Using JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [How to: Connect to Azure SQL Using JDBC](/azure/sql-database/sql-database-connect-query-java)  
 
-- [Connecting using Azure Active Directory Authentication](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
+- [Connecting using Azure Active Directory Authentication](connecting-using-azure-active-directory-authentication.md)  
   
 ## Details
 
-When connecting to a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] doesn't support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** use the sys.databases view to get the catalogs. Please refer to the discussion of permissions in [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+When connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**.  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] doesn't support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** use the sys.databases view to get the catalogs. Refer to the discussion of permissions in [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
 ## Connections dropped
 
-When connecting to a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], idle connections may be terminated by a network component (such as a firewall) after a period of inactivity. There are two types of idle connections, in this context:  
+When connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], idle connections may be terminated by a network component (such as a firewall) after a period of inactivity. There are two types of idle connections, in this context:  
 
 - Idle at the TCP layer, where connections can be dropped by any number of network devices.  
 
-- Idle by the SQL Azure Gateway, where TCP **keepalive** messages might be occurring (making the connection not idle from a TCP perspective), but not had an active query in 30 minutes. In this scenario, the Gateway will determine that the TDS connection is idle at 30 minutes and terminate the connection.  
+- Idle by the Azure SQL Gateway, where TCP **keepalive** messages might be occurring (making the connection not idle from a TCP perspective), but not had an active query in 30 minutes. In this scenario, the Gateway will determine that the TDS connection is idle at 30 minutes and terminate the connection.  
   
-To avoid dropping idle connections by a network component, the following registry settings (or their non-Windows equivalents) should be set on the operating system where the driver is loaded:  
+To address the second point and avoid the Gateway terminating idle connections, you can:
+
+* Use the **Redirect** [connection policy](/azure/azure-sql/database/connectivity-architecture#connection-policy) when configuring your Azure SQL data source.
+
+* Keep connections active via lightweight activity. This method is not recommended and should only be used if there are no other possible options.
+
+To address the first point and avoid dropping idle connections by a network component, the following registry settings (or their non-Windows equivalents) should be set on the operating system where the driver is loaded:  
   
 |Registry Setting|Recommended Value|  
 |----------------------|-----------------------|  
@@ -46,7 +53,13 @@ To avoid dropping idle connections by a network component, the following registr
   
 Restart the computer for the registry settings to take effect.  
 
-To accomplish this when running in Azure create a startup task to add the registry keys.  For example, add the following Startup task to the service definition file:  
+The KeepAliveTime and KeepAliveInterval values are in milliseconds. These settings will have the effect of disconnecting an unresponsive connection within 10 to 40 seconds. After a keep alive packet is sent, if no response is received, it will be retried every second up to 10 times. If no response is received during that time, the client-side socket is disconnected. Depending on your environment, you may want to increase the KeepAliveInterval to accommodate known disruptions (like virtual machine migrations) that might cause a server to be unresponsive for longer than 10 seconds.
+
+> [!NOTE]
+> TcpMaxDataRetransmissions is not controllable on Windows Vista or Windows 2008 and higher.
+
+To perform this configuration when running in Azure, create a startup task to add the registry keys.  For example, add the following Startup task to the service definition file:  
+
 
 ```xml
 <Startup>  
@@ -55,12 +68,12 @@ To accomplish this when running in Azure create a startup task to add the regist
 </Startup>  
 ```
 
-Then add a AddKeepAlive.cmd file to your project. Set the "Copy to Output Directory" setting to Copy always. The following is a sample AddKeepAlive.cmd file:  
+Then add a AddKeepAlive.cmd file to your project. Set the "Copy to Output Directory" setting to Copy always. The following script is a sample AddKeepAlive.cmd file:  
 
 ```bat
 if exist keepalive.txt goto done  
 time /t > keepalive.txt  
-REM Workaround for JDBC keep alive on SQL Azure  
+REM Workaround for JDBC keep alive on Azure SQL  
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters /v KeepAliveTime /t REG_DWORD /d 30000 >> keepalive.txt  
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters /v KeepAliveInterval /t REG_DWORD /d 1000 >> keepalive.txt  
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters /v TcpMaxDataRetransmissions /t REG_DWORD /d 10 >> keepalive.txt  
@@ -84,4 +97,4 @@ jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password
 
 ## See also
 
-[Connecting to SQL Server with the JDBC driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+[Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)

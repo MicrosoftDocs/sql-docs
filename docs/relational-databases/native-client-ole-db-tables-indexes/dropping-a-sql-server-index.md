@@ -1,9 +1,10 @@
 ---
-title: "Dropping a SQL Server Index | Microsoft Docs"
+description: "Drop SQL Server index (Native Client OLE DB provider)"
+title: "Drop SQL Server index (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 
@@ -16,10 +17,10 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, indexes"
   - "indexes [OLE DB]"
 ms.assetid: add3ba14-10b1-4723-b7c0-3e83689e9fdd
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ---
-# Dropping a SQL Server Index
+# Dropping a SQL Server Native Client Index
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the **IIndexDefinition::DropIndex** function. This allows consumers to remove an index from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  
   

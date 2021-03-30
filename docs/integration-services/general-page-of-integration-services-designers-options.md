@@ -1,4 +1,5 @@
 ---
+description: "General Page of Integration Services Designers Options"
 title: "General Page of Integration Services Designers Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # General Page of Integration Services Designers Options
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **General** page of the **Integration Services Designers** page in the **Options** dialog box to specify the options for loading, displaying, and upgrading packages.  
@@ -26,7 +27,7 @@ ms.author: chugu
  **Check digital signature when loading a package**  
  Select to have [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] check the digital signature when loading a package. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] will only check whether the digital signature is present, is valid, and is from a trusted source. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] will not check whether the package has been changed since the package was signed.  
   
- If you set the **BlockedSignatureStates** registry value, this registry value overrides the **Check digital signature when loading a package** option. For more information, see [Implement a Signing Policy by Setting a Registry Value](../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md).  
+ If you set the **BlockedSignatureStates** registry value, this registry value overrides the **Check digital signature when loading a package** option. For more information, see [Implement a Signing Policy by Setting a Registry Value](./security/identify-the-source-of-packages-with-digital-signatures.md).  
   
  For more information about digital certificates and packages, see [Identify the Source of Packages with Digital Signatures](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).  
   
@@ -54,5 +55,4 @@ ms.author: chugu
 ## See Also  
  [Security Overview &#40;Integration Services&#41;](../integration-services/security/security-overview-integration-services.md)   
  [Extending Packages with Scripting](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
-  
   

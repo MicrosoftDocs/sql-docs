@@ -1,4 +1,5 @@
 ---
+description: "Editions and supported features of SQL Server 2019 on Linux"
 title: "Editions and supported features of SQL Server 2019 - Linux"
 ms.date: 01/08/2020
 ms.prod: sql
@@ -23,11 +24,11 @@ helpviewer_keywords:
   - "Setup [SQL Server]"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mikeray
+ms.reviewer: vanto
 ---
 # Editions and supported features of SQL Server 2019 on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article provides details of features supported by the various editions of SQL Server 2019 on Linux. For editions and supported features of SQL Server on Windows, see [SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
@@ -90,7 +91,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 |-------------|----------------|--------------|---------|------------------------|  
 |Log shipping|Yes|Yes|Yes|No|  
 |Backup compression|Yes|Yes|No|No| 
-|Database snapshot|Yes|No|No|No|
+|Database snapshot|Yes|Yes|No|No|
 |Always On failover cluster instance<sup>1</sup>|Yes|Yes|No|No| 
 |Always On availability groups<sup>2</sup>|Yes|No|No|No|
 |Basic availability groups <sup>3</sup>|No|Yes|No|No|
@@ -146,7 +147,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 |Dynamic data masking|Yes|Yes|Yes|Yes|   
 |Basic auditing|Yes|Yes|Yes|Yes| 
 |Fine grained auditing|Yes|Yes|Yes|Yes| 
-|Transparent database encryption|Yes|No|No|No|   
+|Transparent database encryption|Yes|Yes|No|No|   
 |User-defined roles|Yes|Yes|Yes|Yes| 
 |Contained databases|Yes|Yes|Yes|Yes| 
 |Encryption for backups|Yes|Yes|No|No|  
@@ -218,6 +219,7 @@ The following features and services are not available for SQL Server 2019 on Lin
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
 | &nbsp; | Buffer Pool Extension |
+| &nbsp; | Backup to URL - page blob<sup>2</sup> |
 | **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alerts |
 | &nbsp; | Managed Backup |
@@ -234,14 +236,13 @@ The following features and services are not available for SQL Server 2019 on Lin
 | &nbsp; | Master Data Services |
 
 <sup>1</sup> SQL Server R is supported within SQL Server, but SQL Server R services as a separate package is not supported.
-  
+
+<sup>2</sup> Backup to URL is supported for block blobs, using the [Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
+
 ## Next steps
  [Editions and supported features for SQL Server 2017 - Linux](sql-server-linux-editions-and-components-2017.md)  
  [Editions and supported features for SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Editions and supported features for SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Editions and supported features for SQL Server 2016 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [Editions and supported features for SQL Server 2014 - Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
- [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
- [Product Specifications for SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
-
-
+ [Installation for SQL Server](../database-engine/install-windows/install-sql-server.md)  
+ [Product Specifications for SQL Server](../sql-server/index.yml)

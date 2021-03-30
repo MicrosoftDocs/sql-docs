@@ -1,4 +1,5 @@
 ---
+description: "sp_execute_remote (Azure SQL Database)"
 title: "sp_execute_remote (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/01/2017"
@@ -12,16 +13,16 @@ helpviewer_keywords:
   - "remote execution"
   - "queries, remote execution"
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-author: stevestein
-ms.author: sstein
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+author: markingmyname
+ms.author: maghan
+monikerRange: "= azuresqldb-current"
 ---
 # sp_execute_remote (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Executes a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement on a single remote Azure SQL Database or set of databases serving as shards in a horizontal partitioning scheme.  
   
- The stored procedure is part of the elastic query feature.  See [Azure SQL Database elastic database query overview](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) and [Elastic database queries for sharding (horizontal partitioning)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-horizontal-partitioning/).  
+ The stored procedure is part of the elastic query feature.  See [Azure SQL Database elastic database query overview](/azure/azure-sql/database/elastic-query-overview) and [Elastic database queries for sharding (horizontal partitioning)](/azure/azure-sql/database/elastic-query-horizontal-partitioning).  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -99,4 +100,3 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 
 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
-    

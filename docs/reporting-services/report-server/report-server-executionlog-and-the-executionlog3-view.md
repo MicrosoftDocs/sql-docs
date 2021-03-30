@@ -1,5 +1,6 @@
 ---
 title: "Report Server ExecutionLog and the ExecutionLog3 View | Microsoft Docs"
+description: Learn about the report server execution log in Reporting Services, which contains information about reports on servers in native mode or a SharePoint farm.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -323,11 +324,11 @@ select * from ExecutionLog2 order by TimeStart DESC
 |Format|Rendering format.|  
 |Parameters|Parameter values used for a report execution.|  
 |ReportAction|Possible values: Render, Sort, BookMarkNavigation, DocumentNavigation, GetDocumentMap, Findstring|  
-|TimeStart|Start and stop times that indicate the duration of a report process.|  
-|TimeEnd||  
-|TimeDataRetrieval|Number of milliseconds spent retrieving the data, processing the report, and rendering the report.|  
-|TimeProcessing||  
-|TimeRendering||  
+|TimeStart|Start time that indicate the duration of a report process.|
+|TimeEnd|End time that indicate the duration of a report process.|
+|TimeDataRetrieval|Number of milliseconds spent retrieving the data.|
+|TimeProcessing|Number of milliseconds spent processing the report.|
+|TimeRendering|Number of milliseconds spent rendering the report.|
 |Source|Source of the report execution (1=Live, 2=Cache, 3=Snapshot, 4=History).|  
 |Status|Status (either rsSuccess or an error code; if multiple errors occur, only the first error is recorded).|  
 |ByteCount|Size of rendered reports in bytes.|  

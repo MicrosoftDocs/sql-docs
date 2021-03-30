@@ -1,21 +1,20 @@
 ---
-title: "Step 2: Create a SQL database for ADO.NET development | Microsoft Docs"
-description: "Describes how to create a SQL database for ADO.NET development."
+title: "Step 2: Create a SQL database for ADO.NET development"
+description: "Learn how to create a SQL database for ADO.NET development using Microsoft.Data.SqlClient."
 ms.custom: ""
 ms.date: "08/15/2019"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: dd0f6329-d379-458e-aba1-7b0b9e7277ae
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Step 2: Create a SQL database for ADO.NET development
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]
 

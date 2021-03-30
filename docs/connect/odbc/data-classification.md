@@ -1,10 +1,11 @@
 ---
-title: "Using Data Classification with Microsoft ODBC Driver for SQL Server | Microsoft Docs"
+description: Learn how to use Data Classification with the ODBC driver and how to incorporate your data protection policies into your ODBC application.
+title: Using Data Classification ODBC driver
 ms.custom: ""
 ms.date: "07/26/2018"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -15,19 +16,22 @@ ms.author: v-makouz
 manager: kenvh
 ---
 # Data Classification
+
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## Overview
-For the purpose of managing sensitive data, SQL Server and Azure SQL Server introduced the ability to provide database columns with sensitivity metadata that allows the client application to handle different types of sensitive data (such as health, financial, etc.) in accordance with data protection policies.
 
-For more information on how to assign classification to columns, see [SQL Data Discovery and Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
+For managing sensitive data, SQL Server and Azure SQL Server introduced the ability to provide database columns with sensitivity metadata that allows the client application to handle different types of sensitive data (such as health, financial, etc.) in accordance with data protection policies.
+
+For more information on how to assign classification to columns, see [SQL Data Discovery and Classification](../../relational-databases/security/sql-data-discovery-and-classification.md).
 
 Microsoft ODBC Driver 17.2 allows the retrieval of this metadata via SQLGetDescField using the SQL_CA_SS_DATA_CLASSIFICATION field identifier.
 
 ## Format
+
 SQLGetDescField has the following syntax:
 
-```  
+```cpp
 SQLRETURN SQLGetDescField(  
      SQLHDESC        DescriptorHandle,  
      SQLSMALLINT     RecNumber,  
@@ -36,8 +40,9 @@ SQLRETURN SQLGetDescField(
      SQLINTEGER      BufferLength,  
      SQLINTEGER *    StringLengthPtr);  
 ```
+
 *DescriptorHandle*  
- [Input] IRD(Implementation Row Descriptor) handle. Can be retrieved by a call to SQLGetStmtAttr with SQL_ATTR_IMP_ROW_DESC statement attribute
+ [Input] IRD (Implementation Row Descriptor) handle. Can be retrieved by a call to SQLGetStmtAttr with SQL_ATTR_IMP_ROW_DESC statement attribute
   
  *RecNumber*  
  [Input] 0
@@ -53,11 +58,11 @@ SQLRETURN SQLGetDescField(
 
  *StringLengthPtr*
  [Output] Pointer to the buffer in which to return the total number of bytes available to return in *ValuePtr*.
- 
+
 > [!NOTE]
 > If the size of the buffer is unknown, it can be determined by calling SQLGetDescField with *ValuePtr* as NULL and examining the value of *StringLengthPtr*.
- 
-If Data Classification information is not available, an *Invalid Descriptor Field* error will be returned.
+
+If Data Classification information isn't available, an *Invalid Descriptor Field* error will be returned.
 
 Upon a successful call to SQLGetDescField, the buffer pointed to by *ValuePtr* will contain the following data:
 
@@ -82,11 +87,10 @@ s - index into the *`sensitivitylabels`* array, `FF FF` if not labeled
 
 t - index into the *`informationtypes`* array, `FF FF` if not labeled
 
-
 <br><br>
 The format of the data can be expressed as the following pseudo-structures:
 
-```
+```cpp
 struct IDnamePair {
  BYTE nameLen;
  USHORT name[nameLen];
@@ -110,11 +114,11 @@ struct {
 } columnClassification[nColumns];
 ```
 
-
 ## Code sample
+
 Test application that demonstrates how to read Data Classification metadata. On Windows it can be compiled using `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` and run with a connection string, and a SQL query (that returns classified columns) as parameters:
 
-```
+```cpp
 #ifdef _WIN32
 #include <windows.h>
 #endif
@@ -239,23 +243,23 @@ int main(int argc, char **argv)
 ```
 
 ## <a name="bkmk-version"></a>Supported Version
-Microsoft ODBC Driver 17.2 allows the retrieval Data Classification information via `SQLGetDescField` if `FieldIdentifier` is set to `SQL_CA_SS_DATA_CLASSIFICATION` (1237). 
 
-Starting from Microsoft ODBC Driver 17.4.1.1 it is possible to retrieve version of Data Classification supported by a server via `SQLGetDescField` using the `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238) field identifier. In 17.4.1.1 the supported data classification version  is set to "2".
+Microsoft ODBC Driver 17.2 allows the retrieval of Data Classification information via `SQLGetDescField` if `FieldIdentifier` is set to `SQL_CA_SS_DATA_CLASSIFICATION` (1237).
 
- 
+Starting from Microsoft ODBC Driver 17.4.1.1, it's possible to retrieve the version of Data Classification supported by a server via `SQLGetDescField` using the `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238) field identifier. In 17.4.1.1, the supported data classification version is set to "2".
 
-Starting from 17.4.2.1 introduced the default version of data classification which is set to "1" and is the version driver is reporting to SQL Server as supported. New connection attribute `SQL_COPT_SS_DATACLASSIFICATION_VERSION` (1400) can allow application to change the supported version of Data Classification from "1" up to maximum supported.  
+Starting from 17.4.2.1, the default version of data classification is set to "1" and is the version the driver reports to SQL Server as supported. A new connection attribute `SQL_COPT_SS_DATACLASSIFICATION_VERSION` (1400) can allow application to change the supported version of Data Classification from "1" up to the maximum supported.
 
-Example: 
+Example:
 
-To set the version this call should be made right before the SQLConnect or SQLDriverConnect call:
-```
+To set the version, this call should be made right before the SQLConnect or SQLDriverConnect call:
+
+```cpp
 ret = SQLSetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)2, SQL_IS_INTEGER);
 ```
 
-The value of the currently supported version of Data Classification can be retirved via SQLGetConnectAttr call: 
-```
+The value of the currently supported version of Data Classification can be retrieved via SQLGetConnectAttr call:
+
+```cpp
 ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```
-

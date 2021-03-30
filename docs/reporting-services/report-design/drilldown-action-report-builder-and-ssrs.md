@@ -1,5 +1,6 @@
 ---
 title: "Drilldown Action (Report Builder) | Microsoft Docs"
+description: Enable users with Drilldown Action to hide and display items interactively in Report Builder by providing plus and minus icons on a text box.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

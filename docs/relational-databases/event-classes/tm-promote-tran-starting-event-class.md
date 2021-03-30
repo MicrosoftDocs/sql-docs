@@ -1,20 +1,21 @@
 ---
+description: "TM: Promote Tran Starting Event Class"
 title: "TM: Promote Tran Starting Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "TM: Promote Tran Starting event class"
 ms.assetid: 32da85bb-d980-4044-8572-31372867649b
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TM: Promote Tran Starting Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The TM: Promote Tran Starting event class indicates that a PROMOTE TRANSACTION request is starting. The request is sent from the client through the transaction management interface.  
   
 ## TM: Promote Tran Starting Event Class Data Columns  

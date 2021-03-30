@@ -1,6 +1,6 @@
 ---
-title: "Troubleshoot Server & Database Connection Problems | Microsoft Docs"
-description: "Use this topic to troubleshoot problems that you experience when connecting to a report server. This topic also provides information about 'Unexpected error' messages."
+title: "Troubleshoot Server & Database Connection Problems"
+description: "In this article, diagnose and fix problems you experience when connecting to a report server. Also learn about 'Unexpected error' messages."
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -11,7 +11,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Troubleshoot Server & Database Connection Problems with Reporting Services
-Use this topic to troubleshoot problems that you experience when connecting to a report server. This topic also provides information about "Unexpected error" messages. For more information about data source configuration and configuring report server connection information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) and [Configure a Report Server Database Connection (SSRS Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+Use this topic to troubleshoot problems that you experience when connecting to a report server. This topic also provides information about "Unexpected error" messages. For more information about data source configuration and configuring report server connection information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) and [Configure a Report Server Database Connection (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## Cannot create a connection to data source 'datasourcename'. (rsErrorOpeningConnection)  
 This is a generic error that occurs when the report server cannot open a connection to an external data source that provides data to a report. This error appears with a second error message that indicates the underlying cause. The following additional errors can appear with **rsErrorOpeningConnection**.  
@@ -26,10 +26,10 @@ This error occurs when credentials are passed across multiple computer connectio
 When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server). This error is returned by the instance of the Database Engine that hosts the report server database. In most cases, this error occurs because the SQL Server service is stopped. Or, if you are using SQL Server Express with Advanced Services or a named instance, this error will occur if the report server URL or connection string for the report server database is not correct. To work through these issues, do the following:  
   
 * Verify that the SQL Server (**MSSQLSERVER**) service is started. On the computer that hosts the instance of the Database Engine, click Start, click Administrative Tools, click Services, and scroll to SQL Server (**MSSQLSERVER**). If it is not started, right-click the service, select Properties, in Startup Type select Automatic, click Apply, click Start, and then click OK.   
-* Verify that the report server URL and report server database connection string is correct. If Reporting Services or the Database Engine was installed as a named instance, the default connection string that is created during Setup will include the instance name. For example, if you installed a default instance of SQL Server Express with Advanced Services on a server named DEVSRV01, the web portal URL is DEVSRV01\Reports$SQLEXPRESS. Furthermore, the database server name in the connection string will resemble DEVSRV01\SQLEXPRESS. For more information about URLs and data source connection strings for SQL Server Express, see [Reporting Services in SQL Server Express with Advanced Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx). To verify the connection string for the report server database, start the Reporting Services Configuration tool and view the Database Setup page.  
+* Verify that the report server URL and report server database connection string is correct. If Reporting Services or the Database Engine was installed as a named instance, the default connection string that is created during Setup will include the instance name. For example, if you installed a default instance of SQL Server Express with Advanced Services on a server named DEVSRV01, the web portal URL is DEVSRV01\Reports$SQLEXPRESS. Furthermore, the database server name in the connection string will resemble DEVSRV01\SQLEXPRESS. For more information about URLs and data source connection strings for SQL Server Express, see [Reporting Services in SQL Server Express with Advanced Services](/previous-versions/sql/sql-server-2008-r2/ms365166(v=sql.105)). To verify the connection string for the report server database, start the Reporting Services Configuration tool and view the Database Setup page.  
   
 ### A connection cannot be made. Ensure that the server is running.  
-This error is returned by ADOMD.NET provider. There are several reasons why this error can occur. If you specified the server as "localhost", try specifying the server name instead. This error can also occur if memory cannot be allocated to the new connection. For more information, see [Knowledge Base Article 912017 - Error message when you connect to an instance of SQL Server 2005 Analysis Services:](https://support.microsoft.com/kb/912017).  
+This error is returned by ADOMD.NET provider. There are several reasons why this error can occur. If you specified the server as "localhost", try specifying the server name instead. This error can also occur if memory cannot be allocated to the new connection. For more information, see [Knowledge Base Article 912017 - Error message when you connect to an instance of SQL Server 2005 Analysis Services:](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/912017).  
   
 If the error also includes "No such host is known", it indicates that the Analysis Services server is not available or is refusing the connection. If the Analysis Services server is installed as a named instance on a remote computer, you might have to run the SQL Server Browser service to get the port number used by that instance.  
   
@@ -63,7 +63,7 @@ An **rsReportServerDatabaseLogonFailed** error can occur if you are using a doma
   
 The full error text is: "The report server cannot open a connection to the report server database. The logon failed (**rsReportServerDatabaseLogonFailed**). Logon failure: unknown user name or bad password."  
   
-If you reset the password, you must update the connection. For more information, see [Configure a Report Server Database Connection (SSRS Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+If you reset the password, you must update the connection. For more information, see [Configure a Report Server Database Connection (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## The report server cannot open a connection to the report server database. (rsReportServerDatabaseUnavailable).  
 Full Message: The report server cannot open a connection to the report server database. A connection to the database is required for all requests and processing. (rsReportServerDatabaseUnavailable)  
@@ -114,4 +114,3 @@ When you create the report server databases, **ReportServer** and **ReportServer
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-

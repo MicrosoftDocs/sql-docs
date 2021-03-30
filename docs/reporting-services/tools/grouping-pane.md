@@ -1,5 +1,6 @@
 ---
 title: "Grouping Pane | Microsoft Docs"
+description: Learn about the Grouping pane on the Report menu in Reporting Services that displays the row groups and column groups for the currently selected Tablix data region.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -19,7 +20,7 @@ ms.author: maggies
 # Grouping Pane
 When designing [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] reports, the Grouping pane displays the row groups and column groups for the currently selected Tablix data region. The Grouping pane is not available for the Chart or Gauge data regions. The Grouping pane consists of a Row Groups pane and a Column Groups pane. The Grouping pane has two modes: default and Advanced. Default mode displays a hierarchical view of the dynamic members for row and column groups. Advanced mode displays both dynamic and static members for row and column groups. A group is a named set of data from a report dataset that is displayed on a data region. Groups are organized into hierarchies that include static and dynamic members. For more information, see [Understanding Groups &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
-  ![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) If you do not see the Grouping pane, on the **Report** menu, click **Grouping**.
+  ![ssrs_fyi_note](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) If you do not see the Grouping pane, on the **Report** menu, click **Grouping**.
   
  Cells in the row and column group areas can be static or dynamic members of a group. Static members repeat once per group and typically contain labels or totals. Dynamic members repeat once per group instance and typically contain the unique values of the group expression. As you select Tablix cells in the row group area or column group area, the corresponding group member is selected in the Row Groups or Column Groups pane. Conversely, if you select groups in the Grouping pane, the corresponding cell associated with the group member is selected on the design surface. For more information about Tablix row and column group areas, see [Tablix Data Region Areas &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
@@ -45,7 +46,7 @@ When designing [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 
 ## Advanced Mode  
 In Advanced mode, you can view all static and dynamic members of a group. When you select a member, the Properties window displays properties for the currently selected **Tablix member**.  
   
-![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) To toggle **Advanced mode**, right-click the down arrow at the side of the Column Groups pane, and then click **Advanced Mode**.  
+![ssrs_fyi_note](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) To toggle **Advanced mode**, right-click the down arrow at the side of the Column Groups pane, and then click **Advanced Mode**.  
   
 In most cases, properties that control the display of static and dynamic group rows and group columns are set automatically when you create a group or add totals. 
 
@@ -77,5 +78,4 @@ To edit the default values, you must select the group member in the Row or Colum
  [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: "SELECT - INTO Clause (Transact-SQL)"
 title: "INTO Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/23/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "INTO_TSQL"
   - "INSERT_INTO_TSQL"
@@ -28,10 +29,10 @@ helpviewer_keywords:
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - INTO Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SELECT...INTO creates a new table in the default filegroup and inserts the resulting rows from the query into it. To view the complete SELECT syntax, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
@@ -39,12 +40,14 @@ SELECT...INTO creates a new table in the default filegroup and inserts the resul
   
 ## Syntax  
   
-```  
+```syntaxsql
 [ INTO new_table ]
 [ ON filegroup ]
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *new_table*   
  Specifies the name of a new table to be created, based on the columns in the select list and the rows chosen from the data source.  
  
@@ -57,7 +60,7 @@ SELECT...INTO creates a new table in the default filegroup and inserts the resul
  *filegroup*    
  Specifies the name of the filegroup in which new table will be created. The filegroup specified should exist on the database else the SQL Server engine throws an error.   
  
- **Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later.
+ **Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later.
   
 ## Data Types  
  The FILESTREAM attribute does not transfer to the new table. FILESTREAM BLOBs are copied and stored in the new table as **varbinary(max)** BLOBs. Without the FILESTREAM attribute, the **varbinary(max)** data type has a limitation of 2 GB. If a FILESTREAM BLOB exceeds this value, error 7119 is raised and the statement is stopped.  
@@ -93,7 +96,9 @@ The `SELECT...INTO` statement operates in two parts - the new table is created, 
  When a computed column is included in the select list, the corresponding column in the new table is not a computed column. The values in the new column are the values that were computed at the time `SELECT...INTO` was executed.  
   
 ## Logging Behavior  
- The amount of logging for `SELECT...INTO` depends on the recovery model in effect for the database. Under the simple recovery model or bulk-logged recovery model, bulk operations are minimally logged. With minimal logging, using the `SELECT...INTO` statement can be more efficient than creating a table and then populating the table with an INSERT statement. For more information, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ The amount of logging for `SELECT...INTO` depends on the recovery model in effect for the database. Under the simple recovery model or bulk-logged recovery model, bulk operations are minimally logged. With minimal logging, using the `SELECT...INTO` statement can be more efficient than creating a table and then populating the table with an INSERT statement. For more information, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).
+ 
+`SELECT...INTO` statements that contain user-defined functions (UDFs) are fully logged operations. If the user-defined functions that are used in the `SELECT...INTO` statement don't perform any data access operations, you can specify the SCHEMABINDING clause for the user-defined functions, which will set the derived UserDataAccess property for those user-defined functions to 0. After this change, `SELECT...INTO` statements will be minimally logged. If the `SELECT...INTO` statement still references at least one user-defined function that has this property set to 1, the operation is fully logged.
   
 ## Permissions  
  Requires CREATE TABLE permission in the destination database.  
@@ -208,7 +213,7 @@ GO
 ### E. Import from an external table created with PolyBase  
  Import data from Hadoop or Azure Storage into SQL Server for persistent storage. Use `SELECT INTO` to import data referenced by an external table for persistent storage in SQL Server. Create a relational table on-the-fly and then create a column-store index on top of the table in a second step.  
   
- **Applies to:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to:** [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
@@ -222,10 +227,10 @@ INTO Fast_Customers from Insured_Customers INNER JOIN
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
 ORDER BY YearlyIncome;  
 ```  
-### F. Creating a new table as a copy of another table and loading it a specified filegroup
+### F. Copying the data from one table to another and create the new table on a specified filegroup
 The following example demonstrates creating a new table as a copy of another table and loading it into a specified filegroup different from the default filegroup of the user.
 
- **Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later.
+ **Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later.
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

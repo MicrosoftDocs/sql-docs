@@ -1,4 +1,5 @@
 ---
+description: "Text and Image Functions - TEXTPTR (Transact-SQL)"
 title: "TEXTPTR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "TEXTPTR_TSQL"
   - "TEXTPTR"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "text-pointer values"
   - "displaying text pointer values"
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # Text and Image Functions - TEXTPTR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the text-pointer value that corresponds to a **text**, **ntext**, or **image** column in **varbinary** format. The retrieved text pointer value can be used in READTEXT, WRITETEXT, and UPDATETEXT statements.  
   
@@ -33,12 +34,13 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 TEXTPTR ( column )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *column*  
  Is the **text**, **ntext**, or **image** column that will be used.  
   
@@ -69,10 +71,10 @@ TEXTPTR ( column )
 ### A. Using TEXTPTR  
  The following example uses the `TEXTPTR` function to locate the **image** column `logo` associated with `New Moon Books` in the `pub_info` table of the `pubs` database. The text pointer is put into a local variable `@ptrval.`  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @ptrval varbinary(16);  
+DECLARE @ptrval VARBINARY(16);  
 SELECT @ptrval = TEXTPTR(logo)  
 FROM pub_info pr, publishers p  
 WHERE p.pub_id = pr.pub_id   
@@ -83,8 +85,8 @@ GO
 ### B. Using TEXTPTR with in-row text  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the in-row text pointer must be used inside a transaction, as shown in the following example.  
   
-```  
-CREATE TABLE t1 (c1 int, c2 text);  
+```sql
+CREATE TABLE t1 (c1 INT, c2 TEXT);  
 EXEC sp_tableoption 't1', 'text in row', 'on';  
 INSERT t1 VALUES ('1', 'This is text.');  
 GO  
@@ -100,7 +102,7 @@ COMMIT;
 ### C. Returning text data  
  The following example selects the `pub_id` column and the 16-byte text pointer of the `pr_info` column from the `pub_info` table.  
   
-```  
+```sql
 USE pubs;  
 GO  
 SELECT pub_id, TEXTPTR(pr_info)  
@@ -128,7 +130,7 @@ pub_id
   
  The following example shows how to return the first `8000` bytes of text without using TEXTPTR.  
   
-```  
+```sql
 USE pubs;  
 GO  
 SET TEXTSIZE 8000;  
@@ -159,10 +161,10 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ### D. Returning specific text data  
  The following example locates the `text` column (`pr_info`) associated with `pub_id``0736` in the `pub_info` table of the `pubs` database. It first declares the local variable `@val`. The text pointer (a long binary string) is then put into `@val` and supplied as a parameter to the `READTEXT` statement. This returns 10 bytes starting at the fifth byte (offset of 4).  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @val varbinary(16);  
+DECLARE @val VARBINARY(16);  
 SELECT @val = TEXTPTR(pr_info)   
 FROM pub_info  
 WHERE pub_id = '0736';  
@@ -184,8 +186,7 @@ pr_info
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
  [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [Text and Image Functions &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [Text and Image Functions &#40;Transact-SQL&#41;]()   
  [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)   
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
-  
   

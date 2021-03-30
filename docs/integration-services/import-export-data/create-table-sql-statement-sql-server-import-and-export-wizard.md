@@ -1,4 +1,5 @@
 ---
+description: "Create Table SQL Statement (SQL Server Import and Export Wizard)"
 title: "Create Table SQL Statement (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/16/2017"
@@ -14,7 +15,7 @@ ms.author: chugu
 ---
 # Create Table SQL Statement (SQL Server Import and Export Wizard)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 If you select **Create destination table** and then select **Edit SQL** in the **Column Mappings** dialog box, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows the **Create Table SQL Statement** dialog box. On this page, you review and optionally customize the **CREATE TABLE** command that the wizard will run to create the new destination table.

@@ -1,43 +1,40 @@
 ---
-title: "Load the SMO Assemblies in Windows PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: Load the SMO Assemblies in Windows PowerShell
+description: Learn how to load the SQL Server Management Object (SMO) assemblies in Windows PowerShell scripts that don't use the SQL Server PowerShell provider.
 ms.prod: sql
-ms.reviewer: ""
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
-ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: markingmyname
 ms.author: maghan
+ms.reviewer: matteot, drskwier
+ms.custom: ""
+ms.date: 10/14/2020
 ---
+
 # Load the SMO Assemblies in Windows PowerShell
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-This article describes how to load the SQL Server Management Object (SMO) assemblies in Windows PowerShell scripts that do not use the SQL Server PowerShell provider.  
-  
-> [!NOTE]
-> There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
-> Previous versions of the **SqlServer** module *were* included with SQL Server Management Studio (SSMS), but only with the 16.x versions of SSMS. To use PowerShell with SSMS 17.0 and later, the **SqlServer** module must be installed from the PowerShell Gallery.
-> To install the **SqlServer** module, see [Install SQL Server PowerShell](download-sql-server-ps-module.md).
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
+This article describes how to load the SQL Server Management Object (SMO) assemblies in Windows PowerShell scripts that don't use the SQL Server PowerShell provider.  
+
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 The preferred mechanism for loading the SMO assemblies is to load the **SqlServer** module. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider included in the module automatically loads the SMO assemblies, and also implements features that extend the usefulness of the SMO objects in PowerShell scripts.
-  
+
 There are two cases where you may need to load the SMO assemblies directly:  
-  
--   If your script references a SMO object before the first command that references the provider or cmdlets from the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snap-ins.  
-  
--   You want to port SMO code from another language, such as C# or Visual Basic, which does not use the provider or cmdlets.  
-  
-## Example: Loading the SQL Server Management Objects  
- The following code loads the SMO assemblies:  
-  
-```  
-#  
+
+- If your script references a SMO object before the first command that references the provider or cmdlets from the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snap-ins.  
+
+- You want to port SMO code from another language, such as C# or Visual Basic, which doesn't use the provider or cmdlets.  
+
+## Example: Loading the SQL Server Management Objects
+
+The following code loads the SMO assemblies:  
+
+```powershell
 # Loads the SQL Server Management Objects (SMO)  
-#  
-  
-$ErrorActionPreference = "Stop"  
+
+$ErrorActionPreference = "Stop"
   
 $sqlpsreg="HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.SqlServer.Management.PowerShell.sqlps"  
   
@@ -51,7 +48,7 @@ else
     $sqlpsPath = [System.IO.Path]::GetDirectoryName($item.Path)  
 }  
   
-$assemblylist =   
+$assemblylist =
 "Microsoft.SqlServer.Management.Common",  
 "Microsoft.SqlServer.Smo",  
 "Microsoft.SqlServer.Dmf ",  
@@ -81,11 +78,10 @@ foreach ($asm in $assemblylist)
   
 Push-Location  
 cd $sqlpsPath  
-update-FormatData -prependpath SQLProvider.Format.ps1xml   
+update-FormatData -prependpath SQLProvider.Format.ps1xml
 Pop-Location  
-```  
-  
-## See Also  
- [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  
+```
+
+## See Also
+
+- [SQL Server PowerShell](sql-server-powershell.md)

@@ -1,5 +1,6 @@
 ---
 title: "Add, Change, or Delete a Map or Map Layer (Report Builder) | Microsoft Docs"
+description: Learn how to add, remove, or change map options manually or by using the map layer wizard in Report Builder.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -33,7 +34,7 @@ ms.author: maggies
   
  The easiest way to add, remove, or change options for a layer is to use the map layer wizard. You can also change options manually from the Map pane. To display the **Map** pane, click in the map on the report design surface. The following figure displays the parts of the pane:  
   
- ![rsMapLayerZone](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![Screenshot of the Map Layers section that points out the Layer Toolbar, Layer visibility, Layer name, Type of spacial data source, Layer type, Adjust Zoom Level, and Adjust View Center options.](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
   
  Map layers are drawn from bottom to top in the order that they appear in the Map pane. In the previous figure, the tile layer is drawn first and the polygon layer is drawn last. Layers that are drawn later might hide map elements on layers that are drawn earlier. You can change the order of layers by using the arrow keys on the Map pane toolbar. To show or hide layers, toggle the visibility icon. You can change the transparency of a layer on the **Visibility** page of the **Layer Data** properties dialog box.  
   
@@ -41,12 +42,12 @@ ms.author: maggies
   
 |Symbol|Description|When to use|  
 |------------|-----------------|-----------------|  
-|![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Map Layer Wizard|To add a layer by using a wizard, click **New layer wizard**.|  
-|![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Add Layer|To manually add a layer, click **Add Layer**, and then click the type of map layer to add.|  
-|![rs_IconMapPolygonLayer](../../reporting-services/report-design/media/rs-iconmappolygonlayer.gif "rs_IconMapPolygonLayer")|Polygon Layer|Add a map layer that displays areas or shapes that are based sets of polygon coordinates.|  
-|![rs_IconMapLineLayer](../../reporting-services/report-design/media/rs-iconmaplinelayer.gif "rs_IconMapLineLayer")|Line Layer|Add a map layer that displays paths or routes that are based on sets of line coordinates.|  
-|![rs_IconMapPointLayer](../../reporting-services/report-design/media/rs-iconmappointlayer.gif "rs_IconMapPointLayer")|Point Layer|Add a map layer that displays locations that are based on sets of point coordinates.|  
-|![rs_IconMapTileLayer](../../reporting-services/report-design/media/rs-iconmaptilelayer.gif "rs_IconMapTileLayer")|Tile Layer|Add a map layer that displays Bing Map tiles that correspond to the current map view area that is defined by the viewport.|  
+|:::image type="icon" source="../../reporting-services/media/rs-iconmaplayerwizard.gif":::|Map Layer Wizard|To add a layer by using a wizard, click **New layer wizard**.|  
+|:::image type="icon" source="../../reporting-services/media/rs-iconmapaddlayer.gif":::|Add Layer|To manually add a layer, click **Add Layer**, and then click the type of map layer to add.|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmappolygonlayer.gif":::|Polygon Layer|Add a map layer that displays areas or shapes that are based sets of polygon coordinates.|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmaplinelayer.gif":::|Line Layer|Add a map layer that displays paths or routes that are based on sets of line coordinates.|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmappointlayer.gif":::|Point Layer|Add a map layer that displays locations that are based on sets of point coordinates.|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmaptilelayer.gif":::|Tile Layer|Add a map layer that displays Bing Map tiles that correspond to the current map view area that is defined by the viewport.|  
   
  At the bottom of the Map pane is the Map view area. To change the center or zoom options for the map, use the arrow keys to adjust the view center and the slider to adjust the zoom level.  
   
@@ -110,9 +111,9 @@ ms.author: maggies
   
 1.  Select **General** on the **Map Point Properties** dialog box to change label, tooltip, and marker type options for the following map elements:  
   
-    -   All dynamic or embedded points on a point layer. Color rules, size rules, and marker type rules for points override these options. To override options for a specific embedded point, use the [Map Embedded Point Properties Dialog Box, Marker](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) page.  
+    -   All dynamic or embedded points on a point layer. Color rules, size rules, and marker type rules for points override these options. To override options for a specific embedded point, use the [Map Embedded Point Properties Dialog Box, Marker](./maps-report-builder-and-ssrs.md) page.  
   
-    -   The center point for all dynamic or embedded polygons on a polygon layer. Color rules, size rules, and marker type rules for center points override these options. To override options for a specific center point, use the [Map Embedded Point Properties Dialog Box, Marker](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) page.  
+    -   The center point for all dynamic or embedded polygons on a polygon layer. Color rules, size rules, and marker type rules for center points override these options. To override options for a specific center point, use the [Map Embedded Point Properties Dialog Box, Marker](./maps-report-builder-and-ssrs.md) page.  
   
 ##  <a name="Embedded"></a> To specify embedded data as a source of spatial data  
   
@@ -216,7 +217,7 @@ ms.author: maggies
   
 3.  In the Properties pane, set UseSecureConnection to **True**.  
   
- The connection for the Bing Maps Web service will use the HTTP SSL (Secure Sockets Layer) service to retrieve Bing map tiles for this layer.  
+ The connection for the Bing Maps Web service will use the HTTP SSL service to retrieve Bing map tiles for this layer. Transport Layer Security (TLS) was previously known as Secure Sockets Layer (SSL).
   
 ##  <a name="Language"></a> To specify the language for tile labels  
   
@@ -247,5 +248,4 @@ ms.author: maggies
 ## See Also  
  [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
-  
   

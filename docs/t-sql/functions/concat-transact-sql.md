@@ -1,4 +1,5 @@
 ---
+description: "CONCAT (Transact-SQL)"
 title: "CONCAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CONCAT"
   - "CONCAT_TSQL"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "CONCAT function"
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONCAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns a string resulting from the concatenation, or joining, of two or more string values in an end-to-end manner. (To add a separating value during concatenation, see [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md).)
   
@@ -28,11 +29,13 @@ This function returns a string resulting from the concatenation, or joining, of 
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CONCAT ( string_value1, string_value2 [, string_valueN ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *string_value*  
 A string value to concatenate to the other values. The `CONCAT` function requires at least two *string_value* arguments, and no more than 254 *string_value* arguments.
   
@@ -68,7 +71,7 @@ SELECT CONCAT ( 'Happy ', 'Birthday ', 11, '/', '25' ) AS Result;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Result  
 -------------------------  
 Happy Birthday 11/25  
@@ -80,9 +83,9 @@ Happy Birthday 11/25
   
 ```sql
 CREATE TABLE #temp (  
-    emp_name nvarchar(200) NOT NULL,  
-    emp_middlename nvarchar(200) NULL,  
-    emp_lastname nvarchar(200) NOT NULL  
+    emp_name NVARCHAR(200) NOT NULL,  
+    emp_middlename NVARCHAR(200) NULL,  
+    emp_lastname NVARCHAR(200) NOT NULL  
 );  
 INSERT INTO #temp VALUES( 'Name', NULL, 'Lastname' );  
 SELECT CONCAT( emp_name, emp_middlename, emp_lastname ) AS Result  
@@ -91,7 +94,7 @@ FROM #temp;
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Result  
 ------------------  
 NameLastname  

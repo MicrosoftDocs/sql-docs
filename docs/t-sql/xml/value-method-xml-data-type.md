@@ -1,11 +1,12 @@
 ---
-title: "value() Method (xml Data Type) | Microsoft Docs"
+description: "value() Method (xml Data Type)"
+title: value() Method (xml Data Type)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -16,7 +17,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # value() Method (xml Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Performs an XQuery against the XML and returns a value of SQL type. This method returns a scalar value.  
   
@@ -24,12 +25,13 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 value (XQuery, SQLType)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *XQuery*  
  Is the *XQuery* expression, a string literal, that retrieves data inside the XML instance. The XQuery must return at most one value. Otherwise, an error is returned.  
   
@@ -46,9 +48,9 @@ value (XQuery, SQLType)
 ### A. Using the value() method against an xml type variable  
  In the following example, an XML instance is stored in a variable of `xml` type. The `value()` method retrieves the `ProductID` attribute value from the XML. The value is then assigned to an `int` variable.  
   
-```  
-DECLARE @myDoc xml  
-DECLARE @ProdID int  
+```sql
+DECLARE @myDoc XML  
+DECLARE @ProdID INT  
 SET @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
@@ -69,13 +71,13 @@ SELECT @ProdID
 ### B. Using the value() method to retrieve a value from an xml type column  
  The following query is specified against an **xml** type column (`CatalogDescription`) in the `AdventureWorks` database. The query retrieves `ProductModelID` attribute values from each XML instance stored in the column.  
   
-```  
+```sql
 SELECT CatalogDescription.value('             
     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";             
        (/PD:ProductDescription/@ProductModelID)[1]', 'int') AS Result             
 FROM Production.ProductModel             
 WHERE CatalogDescription IS NOT NULL             
-ORDER BY Result desc             
+ORDER BY Result DESC             
 ```  
   
  Note the following from the previous query:  
@@ -98,10 +100,10 @@ ORDER BY Result desc
   
  The query retrieves product model IDs from XML instances that include warranty information (the <`Warranty`> element) as one of the features. The condition in the `WHERE` clause uses the `exist()` method to retrieve only the rows satisfying this condition.  
   
-```  
+```sql
 SELECT CatalogDescription.value('  
      declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-           (/PD:ProductDescription/@ProductModelID)[1] ', 'int') as Result  
+           (/PD:ProductDescription/@ProductModelID)[1] ', 'int') AS Result  
 FROM  Production.ProductModel  
 WHERE CatalogDescription.exist('  
      declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -131,8 +133,8 @@ Result
 ### D. Using the exist() method instead of the value() method  
  For performance reasons, instead of using the `value()` method in a predicate to compare with a relational value, use `exist()` with `sql:column()`. For example:  
   
-```  
-CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  
+```sql
+CREATE TABLE T (c1 INT, c2 VARCHAR(10), c3 XML)  
 GO  
   
 SELECT c1, c2, c3   
@@ -143,7 +145,7 @@ GO
   
  This can be written in the following way:  
   
-```  
+```sql
 SELECT c1, c2, c3   
 FROM T  
 WHERE c3.exist( '/root[@a=sql:column("c1")]') = 1  

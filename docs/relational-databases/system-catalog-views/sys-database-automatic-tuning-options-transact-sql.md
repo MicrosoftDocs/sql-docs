@@ -1,13 +1,13 @@
 ---
 title: "sys.database_automatic_tuning_options (Transact-SQL) | Microsoft Docs"
-description: Learn how to view automatic tuning options on a SQL Database
+description: Learn how to view automatic tuning options on an SQL Database. See required permissions and view additional available resources.
 ms.custom: ""
 ms.date: "07/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "database_automatic_tuning_options_tsql"
   - "database_automatic_tuning_options"
@@ -21,10 +21,10 @@ helpviewer_keywords:
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database\_automatic\_tuning_options (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   Returns the Automatic Tuning options for this database.  
 

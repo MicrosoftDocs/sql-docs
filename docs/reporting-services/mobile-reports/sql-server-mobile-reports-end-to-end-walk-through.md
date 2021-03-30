@@ -1,6 +1,6 @@
 ---
 title: "SQL Server mobile reports: End-to-end walk-through"
-description: Walk through creating mobile reports for any screen size with SQL Server Mobile Report Publisher on the Reporting Services web portal, and viewing them in the Power BI mobile apps.
+description: Learn to create mobile reports on SQL Server Mobile Report Publisher, save reports on the Reporting Services web portal, & view reports in Power BI mobile apps.
 ms.date: 12/07/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -28,12 +28,12 @@ To follow along, you need these products:
   
 * To create data sources and KPIs, and publish datasets and mobile reports, you need access to a [Reporting Services native mode report server](../install-windows/install-reporting-services-native-mode-report-server.md).  
 * To create shared datasets, [install Report Builder](../install-windows/install-report-builder.md).  
-* To create mobile reports, [install SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkId=717766).  
+* To create mobile reports, [install SQL Server Mobile Report Publisher](../reporting-services-features-and-tasks-ssrs.md).  
 * [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases).  
-*  OR: World Wide Importers sample database, available from the [Microsoft SQL Server Samples](../../sample/microsoft-sql-server-samples.md) page.
+*  OR: World Wide Importers sample database, available from the [Microsoft SQL Server Samples](../../samples/sql-samples-where-are.md) page.
 * To view the result: 
   *   [Sign up for the Power BI service](https://go.microsoft.com/fwlink/?LinkID=513879) and
-  *  [Download the Power BI mobile app](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) to your mobile device: iOS, Android phone, or Windows 10 device.  
+  *  [Download the Power BI mobile app](/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) to your mobile device: iOS, Android phone, or Windows 10 device.  
 
   
 ## Create a shared data source  
@@ -109,7 +109,7 @@ You create KPIs right in the [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversio
      
 5. Choose the aggregation your want. KPIs can only display one number, so the field will be aggregated to show that number.
 
-   ![reporting-services-kpi-pick-aggregation](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
+   ![Screenshot of the Choose a field from AWSalesYTD section showing the Average Aggregation section.](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
 
 6. Click **OK**.
 
@@ -129,7 +129,7 @@ You create KPIs right in the [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversio
     
 ## <a name="create-mobile-report">Create a Reporting Services mobile report</a>  
    
-To create a Reporting Services mobile report, [install SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkId=717766), or launch it from the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] web portal. 
+To create a Reporting Services mobile report, [install SQL Server Mobile Report Publisher](../reporting-services-features-and-tasks-ssrs.md), or launch it from the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] web portal. 
 
 When you first open [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)], you see a blank canvas where you can create your mobile report. You can start by creating visuals first, or start with your data. If you create the visuals first, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] automatically generates simulated data that is tied to the report and changes dynamically as you change your visual selections. Try this yourself.   
   
@@ -182,7 +182,7 @@ When you first open [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-shor
    *  **Size Represents**, **Color Represents**, and **Custom Center Value** have to be fields with numeric values. 
    *  **Group By** is a category, so it's a text field.
    
-   ![ssrs-mobile-report-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
+   ![Screenshot of the Data properties section.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
    
 6. Select **Preview** to see the tree map updated with your data.  
 
@@ -196,17 +196,17 @@ Let's add a gauge to see how year-to-date sales compare to last year's sales, us
 
    Note that in **Visual properties**, by default **Higher values are better**, and the **Delta label** is a **Percentage of target**. It has default **Range stops** you can change, but for now they're fine.
 
-   ![ssrs-mobile-report-donut-visual-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
+   ![Screenshot of the Set ranges section of the mobile report donut visual properties.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
    
 3. On the **Data** tab, select the table with your data and select the **Main Value** field and the field you want to compare it to in **Comparison Value**.
 
 4. You can choose different aggregations to come up with one number for **Main Value** and one for **Comparison Value**. By default, it's a sum.
 
-   ![ssrs-mobile-report-donut-sum](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
+   ![Screenshot of the Options or the Comparison Value.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
 
 5. Select **Preview** to see how it looks. 
 
-   ![ssrs-mobile-report-donut-preview](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
+   ![Screenshot of the mobile report donut preview.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
 
 ## Add a selection list as a filter
 
@@ -214,11 +214,11 @@ Selection lists act like slicers in Power BI and Excel. We can add one to filter
 
 1. On the **Layout** tab, drag a selection list to the right of the tree map, and drag the lower-right corner to make it two squares wide and as tall as the canvas, five squares. 
 
-   ![ssrs-mobile-report-selection-list](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
+   ![Screenshot of the mobile report selection list.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
 
 2. On the **Data** tab, **Data properties**, set **Keys** and **Labels** to a field in your data that you want to filter on.
 
-   ![ssrs-mobile-report-selection-list-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
+   ![Screenshot of the data properties section of the mobile report selection list.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
    
 ## Create a mobile report for phones  
   
@@ -297,8 +297,6 @@ The KPIs and mobile reports are displayed in the same folders they're in on the 
   
 ## See also  
  
--  View [on-premises report server mobile reports and KPIs in the Power BI mobile app](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports) for iOS and Android devices
+-  View [on-premises report server mobile reports and KPIs in the Power BI mobile app](/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports) for iOS and Android devices
 -  View [on-premises report server mobile reports and KPIs in the Power BI mobile app for Windows 10 devices](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
-   
-

@@ -1,5 +1,6 @@
 ---
 title: "Connect to the Database Engine Using Extended Protection | Microsoft Docs"
+description: Learn how Extended Protection uses service binding and channel binding to help prevent authentication relay attacks. See how to enable this feature.
 ms.custom: ""
 ms.date: "05/21/2019"
 ms.prod: sql
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Connect to the Database Engine Using Extended Protection
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports **Extended Protection** beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. **Extended Protection for Authentication** is a feature of the network components implemented by the operating system. **Extended Protection** is supported in Windows 7 and Windows Server 2008 R2. **Extended Protection** is included in service packs for older [!INCLUDE[msCoName](../../includes/msconame-md.md)] operating systems. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is more secure when connections are made using **Extended Protection**.  
   
 > [!IMPORTANT]  
@@ -48,7 +49,7 @@ ms.author: vanto
 ### Operating System Support  
  The following links provide more information about how Windows supports **Extended Protection**:  
   
--   [Integrated Windows Authentication with Extended Protection](https://msdn.microsoft.com/library/dd639324.aspx)  
+-   [Integrated Windows Authentication with Extended Protection](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   
 -   [Microsoft Security Advisory (973811), Extended Protection for Authentication](/security-updates/SecurityAdvisories/2009/973811)
   
@@ -93,12 +94,11 @@ ms.author: vanto
 ## Configuring Other SQL Server Components  
  For more information about how to configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
   
- When using IIS to access [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data using an HTTP or HTTPs connection, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] can take advantage of Extended Protection provided by IIS. For more information about how to configure IIS to use Extended Protection, see [Configure Extended Protection in IIS 7.5](https://go.microsoft.com/fwlink/?LinkId=181105).  
+ When using IIS to access [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data using an HTTP or HTTPs connection, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] can take advantage of Extended Protection provided by IIS. For more information about how to configure IIS to use Extended Protection, see [Configure Extended Protection in IIS 7.5](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee909472(v=ws.10)).  
   
 ## See Also  
  [Server Network Configuration](../../database-engine/configure-windows/server-network-configuration.md)   
  [Client Network Configuration](../../database-engine/configure-windows/client-network-configuration.md)   
- [Extended Protection for Authentication Overview](https://go.microsoft.com/fwlink/?LinkID=177943)   
- [Integrated Windows Authentication with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=179922)  
-  
+ [Extended Protection for Authentication Overview](/previous-versions/dotnet/netframework-3.5/dd767318(v=vs.90))   
+ [Integrated Windows Authentication with Extended Protection](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   

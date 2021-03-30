@@ -1,4 +1,5 @@
 ---
+description: "MSreplmonthresholdmetrics (Transact-SQL)"
 title: "MSreplmonthresholdmetrics (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "msreplmonthresholdmetrics_TSQL"
   - "msreplmonthresholdmetrics"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSreplmonthresholdmetrics system table"
 ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
-author: stevestein
-ms.author: sstein
+author: cawrites
+ms.author: chadam
 ---
 # MSreplmonthresholdmetrics (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSreplmonthresholdmetrics** table defines the metrics provided for monitoring replication. This table is stored in the **msdb** database.  
   

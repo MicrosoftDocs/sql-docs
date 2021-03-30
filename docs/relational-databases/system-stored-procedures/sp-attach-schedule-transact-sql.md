@@ -1,4 +1,5 @@
 ---
+description: "sp_attach_schedule (Transact-SQL)"
 title: "sp_attach_schedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_attach_schedule_TSQL"
   - "sp_attach_schedule"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_attach_schedule"
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_attach_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Sets a schedule for a job.  
   

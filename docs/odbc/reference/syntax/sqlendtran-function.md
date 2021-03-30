@@ -1,4 +1,5 @@
 ---
+description: "SQLEndTran Function"
 title: "SQLEndTran Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLEndTran"
 apilocation: 
@@ -18,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLEndTran function [ODBC]"
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLEndTran Function
 **Conformance**  

@@ -1,5 +1,6 @@
 ---
 title: Overview
+description: Learn about the key data organization and management features of Master Data Services. Master Data Services enables you to manage a master set of your data.
 ms.custom: ""
 ms.date: "02/14/2017"
 ms.prod: sql
@@ -18,13 +19,13 @@ ms.author: lle
 ---
 # Master Data Services Overview (MDS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 This topic describes the key data organization and management features of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] enables you to manage a master set of your organization's data. You can organize the data into models, create rules for updating the data, and control who updates the data. With Excel, you can share the master data set with other people in your organization. 
   
- >  For a description of the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] architecture, see the [Master Data Services -- The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) article on simple-talk.com. For information about the new features  in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], see [What's New in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
+ >  For a description of the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] architecture, see the [Master Data Services -- The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) article on simple-talk.com. For information about the new features  in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)], see [What's New in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
    **For instructions on how to install [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], set up the database and Website, and deploy the sample models, see** [Master Data Services Installation and Configuration](../master-data-services/master-data-services-installation-and-configuration.md).  
   
  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], the model is the highest level container in the structure of your master data. You create a model to manage groups of similar data, for example to manage online product data. A model contains one or more entities, and entities contain members that are the data records. An entity is similar to a table.  

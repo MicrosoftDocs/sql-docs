@@ -1,5 +1,6 @@
 ---
 title: "Connect to a Report Server in Management Studio | Microsoft Docs"
+description: Learn how to connect to any server in the SQL Server family and graphically browse its contents by using the Object Explorer in SQL Server Management Studio.
 ms.date: 05/07/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -108,5 +109,5 @@ ms.author: maggies
 
 ## See also
 
- [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [Configure a Report Server Database Connection  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)

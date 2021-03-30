@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_send_stream_data"
 title: "sqlsrv_send_stream_data | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "sqlsrv_send_stream_data"
 apitype: "NA"
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_send_stream_data"
   - "streaming data"
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

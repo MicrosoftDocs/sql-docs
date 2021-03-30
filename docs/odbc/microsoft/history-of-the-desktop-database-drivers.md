@@ -1,4 +1,5 @@
 ---
+description: "History of the Desktop Database Drivers"
 title: "History of the Desktop Database Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "ODBC desktop database drivers [ODBC], history"
   - "desktop database drivers [ODBC], history"
 ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # History of the Desktop Database Drivers
 The following table shows the Desktop Database Drivers version history.  

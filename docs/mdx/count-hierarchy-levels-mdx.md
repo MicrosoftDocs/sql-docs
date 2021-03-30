@@ -1,4 +1,5 @@
 ---
+description: "Count (Hierarchy Levels) (MDX)"
 title: "Count (Hierarchy Levels) (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

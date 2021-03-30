@@ -1,15 +1,16 @@
 ---
 title: "SQL Server 2014 Release Notes | Microsoft Docs"
+description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2014 (12.x) releases.
 ms.custom: ""
-ms.date: "03/15/2018"
+ms.date: 07/22/2020
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-author: craigg-msft
-ms.author: craigg
-monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
+author: rothja
+ms.author: jroth
+monikerRange: "= sql-server-2016"
 ---
 # SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -23,27 +24,27 @@ SQL Server 2014 SP2 contains rollups of released hotfixes for SQL Server 2014 SP
 
 |Feature|Description|For more information|
 |---|---|---|
-|Automatic Soft NUMA partitioning|You can automatically configure Soft NUMA on systems reporting 8 or more CPUs per NUMA node.|[Soft-NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
-|Buffer Pool Extension|Enables SQL Server Buffer Pool to scale beyond 8 TB.|[Buffer Pool Extension](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
-|Dynamic Memory Object Scaling| Dynamically partition memory object based on number of nodes and cores. This enhancement eliminates the need of Trace Flag 8048 post SQL 2014 SP2.|[Dynamic Memory Object Scaling](https://blogs.msdn.microsoft.com/sql_server_team/dynamic-memory-object-scaling/)|
-|MAXDOP hint for DBCC CHECK* commands|This improvement is useful to run DBCC CHECKDB with a MAXDOP setting other than the sp_configure value.|[Hints (Transact-SQL) - Query](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query)|
-|SOS_RWLock spinlock improvement|Removes the need for spinlock for SOS_RWLock and instead uses lock-free techniques similar to in-memory OLTP. |[SOS_RWLock Redesign](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)|
+|Automatic Soft NUMA partitioning|You can automatically configure Soft NUMA on systems reporting 8 or more CPUs per NUMA node.|[Soft-NUMA (SQL Server)](../database-engine/configure-windows/soft-numa-sql-server.md)|
+|Buffer Pool Extension|Enables SQL Server Buffer Pool to scale beyond 8 TB.|[Buffer Pool Extension](../database-engine/configure-windows/buffer-pool-extension.md)|
+|Dynamic Memory Object Scaling| Dynamically partition memory object based on number of nodes and cores. This enhancement eliminates the need of Trace Flag 8048 post SQL 2014 SP2.|[Dynamic Memory Object Scaling](/archive/blogs/sql_server_team/dynamic-memory-object-scaling)|
+|MAXDOP hint for DBCC CHECK* commands|This improvement is useful to run DBCC CHECKDB with a MAXDOP setting other than the sp_configure value.|[Hints (Transact-SQL) - Query](../t-sql/queries/hints-transact-sql-query.md)|
+|SOS_RWLock spinlock improvement|Removes the need for spinlock for SOS_RWLock and instead uses lock-free techniques similar to in-memory OLTP. |[SOS_RWLock Redesign](/archive/blogs/psssql/sql-2016-it-just-runs-faster-sos_rwlock-redesign)|
 |Spatial Native Implementation|Significant improvement in spatial query performance.|[Spatial performance improvements in SQL Server 2012 and 2014](https://support.microsoft.com/help/3107399/spatial-performance-improvements-in-sql-server-2012-and-2014)
 
 ### Supportability and diagnostics improvements in SP2
 
 |Feature|Description|For more information|
 |---|---|---|
-|AlwaysON timeout logging|Added new logging capability for Lease Timeout messages so that the current time and the expected renewal times are logged. |[Improved AlwaysOn Availability Group Lease Timeout Diagnostics](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)
+|AlwaysON timeout logging|Added new logging capability for Lease Timeout messages so that the current time and the expected renewal times are logged. |[Improved AlwaysOn Availability Group Lease Timeout Diagnostics](/archive/blogs/alwaysonpro/improved-alwayson-availability-group-lease-timeout-diagnostics)
 |AlwaysON XEvents and performance counters|New AlwaysON XEvents and performance counters to improve diagnostics when troubleshooting latency issues with AlwaysON. |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) and [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)
 |Change tracking cleanup|A new stored procedure sp_flush_CT_internal_table_on_demand cleans up change tracking internal tables on demand.|[KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)
 |Database cloning|Use the new DBCC command to troubleshoot existing production databases by cloning the schema, metadata, and statistics but without the data. Cloned databases are not meant to be used in production environments.|[KB 3177838](https://support.microsoft.com/help/3177838/how-to-use-dbcc-clonedatabase-to-generate-a-schema-and-statistics-only)
 |DMF additions|New DMF sys.dm_db_incremental_stats_properties expose information per-partition for incremental statistics.|[KB 3170114](https://support.microsoft.com/help/3170114/update-to-add-dmf-sys-dm-db-incremental-stats-properties-in-sql-server)
-|DMF for retrieving input buffer in SQL Server|A new DMF for retrieving the input buffer for a session/request (sys.dm_exec_input_buffer) is now available. This is functionally equivalent to DBCC INPUTBUFFER.|[sys.dm_exec_input_buffer](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql)
+|DMF for retrieving input buffer in SQL Server|A new DMF for retrieving the input buffer for a session/request (sys.dm_exec_input_buffer) is now available. This is functionally equivalent to DBCC INPUTBUFFER.|[sys.dm_exec_input_buffer](../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
 |DROP DDL Support for Replication|Allows a table that's included as an article in transactional replication publication to be dropped from the database and the publication.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
-|IFI privilege to SQL service account|Determine whether Instant File initialization (IFI) is in effect at the SQL Server service startup.|[Database File Initialization](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
+|IFI privilege to SQL service account|Determine whether Instant File initialization (IFI) is in effect at the SQL Server service startup.|[Database File Initialization](../relational-databases/databases/database-instant-file-initialization.md)
 |Memory Grants - Handling issues|You can leverage diagnostic hints while running queries by capping their memory grants to prevent memory contention.|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
-|Query execution lightweight per-operator profiling |Optimizes collecting per-operator query execution statistics such as actual number of rows.|[Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+|Query execution lightweight per-operator profiling |Optimizes collecting per-operator query execution statistics such as actual number of rows.|[Developers Choice: Query progress - anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere)
 |Query execution diagnostics|Actual rows read are now  reported in the query execution plans to help improve query performance troubleshooting.|[KB 3107397](https://support.microsoft.com/help/3107397/improved-diagnostics-for-query-execution-plans-that-involve-residual-p)
 |Query execution diagnostics for tempdb spill|Hash Warning and Sort Warnings now have additional columns to track physical I/O statistics, memory used, and rows affected. |[Improve temptdb spill diagnostics](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve)
 |Tempdb supportability |Use a new Errorlog message for the number of tempdb files, and tempdb data file changes, at server startup.|[KB 2963384](https://support.microsoft.com/help/2963384/fix-sql-server-crashes-when-the-log-file-of-tempdb-database-is-full-in)
@@ -70,14 +71,14 @@ In addition, note the following fixes:
 SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and including CU 5, as well as a rollup of fixes previously shipped in SQL Server 2012 SP2.
 
 > [!NOTE]
-> If your SQL Server instance has SSISDB catalog enabled, and if you get an installation error when you upgrade to SP1, follow the instructions described for this issue on [Error 912 or 3417 when you install SQL Server 2014 SP1](https://support.microsoft.com/help/3018269/error-912-or-3417-when-you-install-sql-server-2014-sp1-build-12-0-4050/).
+> If your SQL Server instance has SSISDB catalog enabled, and if you get an installation error when you upgrade to SP1, follow the instructions described for this issue on [Error 912 or 3417 when you install SQL Server 2014 SP1](https://support.microsoft.com/topic/kb3018269-error-912-or-3417-when-you-install-sql-server-2014-sp1-build-12-0-4050-0-7f34525c-d517-6399-a31b-e7033db13706).
 
 ### Download pages and more information for SP1
 
 - [Download Service Pack 1 for Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=46694)
-- [SQL Server 2014 Service Pack 1 has released - Updated](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
+- [SQL Server 2014 Service Pack 1 has released - Updated](/archive/blogs/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated)
 - [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=42299)
-- [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46696)
+- [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46694)
 
 
 ## Before You Install SQL Server 2014 RTM
@@ -96,7 +97,7 @@ Upgrade is fully supported. Specifically, you can:
 1.  Attach a SQL Server 2014 CTP 2 database to an instance of SQL Server 2014 RTM.    
 2.  Restore a database backup taken on SQL Server 2014 CTP 2 to an instance of SQL Server 2014 RTM.    
 3.  In-place upgrade to SQL Server 2014 RTM.
-4.  Rolling upgrade to SQL Server 2014 RTM. You are required to switch to manual failover mode before initiating the rolling upgrade. Refer to [Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss](https://msdn.microsoft.com/library/dn178483.aspx) for details.    
+4.  Rolling upgrade to SQL Server 2014 RTM. You are required to switch to manual failover mode before initiating the rolling upgrade. Refer to [Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md) for details.    
 5.  Data collected by Transaction Performance Collection Sets installed in SQL Server 2014 CTP 2 cannot be viewed through SQL Server Management Studio in SQL Server 2014 RTM, and vice versa.
   
 #### Downgrading from SQL Server 2014 RTM to SQL Server 2014 CTP 2  
@@ -107,7 +108,7 @@ This action is not supported.
 #### Incorrect version of StreamInsight Client on SQL Server 2014 media/ISO/CAB  
 The wrong version of StreamInsight.msi and StreamInsightClient.msi is located in the following path on the SQL Server media/ISO/CAB (StreamInsight\\\<Architecture\>\\\<Language ID\>).  
   
-**Workaround:** Download and install the correct version from the [SQL Server 2014 Feature Pack download page](https://go.microsoft.com/fwlink/?LinkID=306709).  
+**Workaround:** Download and install the correct version from the [SQL Server 2014 Feature Pack download page](https://www.microsoft.com/download/details.aspx?id=57474).  
   
 ### <a name="ProdDoc"></a>Product Documentation RTM
   
@@ -151,7 +152,7 @@ SQL Server 2014 Standard has the following changes:
 -   The maximum memory has been raised from 64 GB to 128 GB.  
  
 #### Memory Optimization Advisor flags default constraints as incompatible  
-**Issue:** The Memory Optimized Advisor in SQL Server Management Studio flags all default constraints as incompatible. Not all default constraints are supported in a memory-optimized table; the Advisor does not distinguish between supported and unsupported types of default constraints. Supported default constraints include all constants, expressions, and built-in functions supported within natively compiled stored procedures. To see the list of functions supported in natively compiled stored procedures, refer to [Supported Constructs in Natively Compiled Stored Procedures](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
+**Issue:** The Memory Optimized Advisor in SQL Server Management Studio flags all default constraints as incompatible. Not all default constraints are supported in a memory-optimized table; the Advisor does not distinguish between supported and unsupported types of default constraints. Supported default constraints include all constants, expressions, and built-in functions supported within natively compiled stored procedures. To see the list of functions supported in natively compiled stored procedures, refer to [Supported Constructs in Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md?viewFallbackFrom=sql-server-2014).  
   
 **Workaround:** If you want to use the advisor to identify blockers, ignore the compatible default constraints. To use the Memory Optimization Advisor to migrate tables that have compatible default constraints, but no other blockers, follow these steps:  
   
@@ -263,7 +264,7 @@ DATEPART(weekday, @d)
 #### Register through SSMS adds DAC meta-data with mismatched instance IDs  
 **Issue:** When registering or deleting a Data-Tier Application package (.dacpac) through SQL Server Management Studio, the sysdac* tables are not updated correctly to allow a user to query dacpac history for the database.  The instance_id for sysdac_history_internal and sysdac_instances_internal do not match to allow for a join.  
   
-**Workaround:** This issue is fixed with the feature pack redistribution of the [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=42295).  After the update is applied, all new history entries will use the value listed for the instance_id in the sysdac_instances_internal table.  
+**Workaround:** This issue is fixed with the feature pack redistribution of the [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=100297).  After the update is applied, all new history entries will use the value listed for the instance_id in the sysdac_instances_internal table.  
   
 If you already have the issue with mismatched instance_id values, the only way to correct the mismatched values is to connect to the server as a user with privileges to write to MSDB database and update the instance_id values to match.  If you get several register and unregister events from the same database, you may need to look at the time/date to see which records match with the current instance_id value.  
   
@@ -341,7 +342,7 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
     This workaround will allow the Wizard to complete adding the replica in Azure.  
   
-2.  After the Wizard completes, you will need to finish the configuration of the Listener in Azure as described in [Listener Configuration for AlwaysOn Availability Groups in Azure](https://msdn.microsoft.com/library/dn376546.aspx)  
+2.  After the Wizard completes, you will need to finish the configuration of the Listener in Azure as described in [Listener Configuration for AlwaysOn Availability Groups in Azure](/previous-versions/azure/dn376546(v=azure.100))  
   
 ### <a name="SSAS"></a>Analysis Services (RTM)
   
@@ -352,9 +353,9 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
 **Workaround:**  
   
-1.  Download the MSOLAP.5 provider from the [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Install the provider on the application servers running Excel Services. For more information, see the section "Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1" [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Download the MSOLAP.5 provider from the [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Install the provider on the application servers running Excel Services. For more information, see the section "Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1" [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575).  
   
-2.  Register MSOLAP.5 as a trusted provider with SharePoint Excel Services. For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
+2.  Register MSOLAP.5 as a trusted provider with SharePoint Excel Services. For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15).  
   
 **More Information:**  
   
@@ -367,9 +368,9 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
 **Workaround:**  
   
-1.  Download the MSOLAP.5 provider from the [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Install the provider on the application servers running Excel Services. For more information, see the section "Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1" [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Download the MSOLAP.5 provider from the [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Install the provider on the application servers running Excel Services. For more information, see the section "Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1" [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575).  
   
-2.  Register MSOLAP.5 as a trusted provider with SharePoint Excel Services. For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
+2.  Register MSOLAP.5 as a trusted provider with SharePoint Excel Services. For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15).  
   
 **More Information:**  
   
@@ -404,7 +405,7 @@ This issue is because Availability Group Listeners require assigning one IP addr
 #### SQL Server 2014 Upgrade Advisor reports irrelevant upgrade issues for SQL Server Reporting Services  
 **Issue:** SQL Server Upgrade Advisor (SSUA) shipped with the SQL Server 2014 media incorrectly reports multiple errors when analyzing SQL Server Reporting Services server.  
   
-**Workaround:** This issue is fixed in the SQL Server Upgrade Advisor provided in the [SQL Server 2014 Feature Pack for SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
+**Workaround:** This issue is fixed in the SQL Server Upgrade Advisor provided in the [SQL Server 2014 Feature Pack for SSUA](https://www.microsoft.com/download/details.aspx?id=57474).  
   
 #### SQL Server 2014 Upgrade Advisor reports an error when analyzing SQL Server Integration Services server  
 **Issue:** SQL Server Upgrade Advisor (SSUA) shipped with the SQL Server 2014 media reports an error when analyzing SQL Server Integration Services server.  The error that is displayed to the user is:  
@@ -415,6 +416,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**Workaround:** This issue is fixed in the SQL Server Upgrade Advisor provided in the [SQL Server 2014 Feature Pack for SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
+**Workaround:** This issue is fixed in the SQL Server Upgrade Advisor provided in the [SQL Server 2014 Feature Pack for SSUA](https://www.microsoft.com/download/details.aspx?id=57474).  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

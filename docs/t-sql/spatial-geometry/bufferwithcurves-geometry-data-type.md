@@ -1,4 +1,5 @@
 ---
+description: "BufferWithCurves (geometry Data Type)"
 title: "BufferWithCurves (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -14,25 +15,26 @@ helpviewer_keywords:
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
 author: MladjoA
 ms.author: mlandzic 
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BufferWithCurves (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns a **geometry** instance that represents the set of all points whose distance from the calling **geometry** instance is less than or equal to the *distance* parameter.  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 .BufferWithCurves ( distance )  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments  
  *distance*  
  Is a **float** indicating the maximum distance that points forming the buffer can be from the **geometry** instance.  
   
-## Return Types  
+## Return Types
 SQL Server return type: **geometry**  
   
  CLR return type: **SqlGeometry**  
@@ -49,7 +51,7 @@ SQL Server return type: **geometry**
 ## Remarks  
  The following illustration shows an example of a geometry instance returned by this method.  
   
- ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
+ ![Diagram showing an example of a geometry instance returned by this method.](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
   
  The following table shows the results returned for different distance values.  
   

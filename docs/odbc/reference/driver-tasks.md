@@ -1,4 +1,5 @@
 ---
+description: "Driver Tasks"
 title: "Driver Tasks | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "ODBC architecture [ODBC], drivers"
   - "drivers [ODBC], tasks"
 ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Driver Tasks
 Specific tasks performed by drivers include:  

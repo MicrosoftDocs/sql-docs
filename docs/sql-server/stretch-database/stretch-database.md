@@ -1,4 +1,5 @@
 ---
+description: "Stretch Database"
 title: "Stretch Database"
 ms.date: "06/27/2016"
 ms.service: sql-server-stretch-database
@@ -12,7 +13,7 @@ ms.author: jroth
 ms.custom: seo-dt-2019
 ---
 # Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Stretch Database migrates your cold data transparently and securely to the Microsoft Azure cloud.  
@@ -67,7 +68,7 @@ ms.custom: seo-dt-2019
  Use Stretch Database Advisor, a feature of SQL Server 2016 Upgrade Advisor, to identify databases and tables for Stretch Database. For more info, see [Identify databases and tables for Stretch Database by running Stretch Database Advisor](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md). To learn more about potential blocking issues, see [Limitations for Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
 
 ## Test drive Stretch Database  
- **Test drive Stretch Database with the AdventureWorks sample database.** To get the AdventureWorks sample database, download at least the database file and the samples and scripts file from [here](https://www.microsoft.com/download/details.aspx?id=49502). After you restore the sample database to an instance of SQL Server 2016, unzip the samples file and open the Stretch DB Samples file from the Stretch DB folder. Run the scripts in this file to check the space used by your data before and after you enable Stretch Database,  to track the progress of data migration, and to confirm that you can continue to query existing data and insert new data both during and after data migration.  
+ **Test drive Stretch Database with the AdventureWorks sample database.** To get the AdventureWorks sample database, download at least the database file and the samples and scripts file from [here](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks). After you restore the sample database to an instance of SQL Server 2016, unzip the samples file and open the Stretch DB Samples file from the Stretch DB folder. Run the scripts in this file to check the space used by your data before and after you enable Stretch Database,  to track the progress of data migration, and to confirm that you can continue to query existing data and insert new data both during and after data migration.  
   
 ## Next step  
  **Identify databases and tables that are candidates for Stretch Database.** Download the Data Migration Assistant and run an Assessment to identify databases and tables that are candidates for Stretch Database. For more info, see [Identify databases and tables for Stretch Database by running Stretch Database Advisor](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  

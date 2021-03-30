@@ -14,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Enable a Remote Publisher at a Distributor (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Enable a Publisher to use a remote Distributor on the **Publishers** page. This page is available in the Configure Distribution Wizard and the **Distributor Properties - \<Distributor>** dialog box. For more information about using the wizard and accessing the dialog box, see [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md) and [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 ### To enable a Publisher in the Configure Distribution Wizard  

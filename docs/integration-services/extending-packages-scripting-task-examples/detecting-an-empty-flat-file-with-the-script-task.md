@@ -1,4 +1,5 @@
 ---
+description: "Detecting an Empty Flat File with the Script Task"
 title: "Detecting an Empty Flat File with the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # Detecting an Empty Flat File with the Script Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Flat File source does not determine whether a flat file contains rows of data before attempting to process it. You may want to improve the efficiency of a package, especially of a package that iterates over numerous flat files, by skipping files that do not contain any rows of data. The Script task can look for an empty flat file before the package begins to process the data flow.  

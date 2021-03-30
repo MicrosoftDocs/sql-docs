@@ -1,4 +1,5 @@
 ---
+description: "Character Map Transformation"
 title: "Character Map Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -21,7 +22,7 @@ ms.author: chugu
 ---
 # Character Map Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Character Map transformation applies string functions, such as conversion from lowercase to uppercase, to character data. This transformation operates only on column data with a string data type.  
@@ -71,7 +72,7 @@ ms.author: chugu
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -119,6 +120,5 @@ ms.author: chugu
  Type an alias for each output column. The default is **Copy of** followed by the input column name; however, you can choose any unique, descriptive name.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling options for this transformation.  
-  
+ Use the [Configure Error Output](../error-handling-in-data.md) dialog box to specify error handling options for this transformation.  
   

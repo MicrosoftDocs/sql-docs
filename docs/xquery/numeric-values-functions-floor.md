@@ -1,5 +1,6 @@
 ---
 title: "floor Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery floor() function that returns the largest number with no fraction part that is not greater than the value of its argument. 
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Numeric Values Functions - floor
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns the largest number with no fraction part that is not greater than the value of its argument. If the argument is an empty sequence, it returns the empty sequence.  
   

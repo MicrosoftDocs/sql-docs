@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;MAX_PRECISION (Transact-SQL)"
 title: "@@MAX_PRECISION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@MAX_PRECISION_TSQL"
   - "@@MAX_PRECISION"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "@@MAX_PRECISION function"
   - "data types [SQL Server], precision"
 ms.assetid: 9e7158a1-e503-422a-b326-3c9b06e181b2
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # &#x40;&#x40;MAX_PRECISION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the precision level used by **decimal** and **numeric** data types as currently set in the server.  
   
@@ -31,12 +32,13 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 @@MAX_PRECISION  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **tinyint**  
   
 ## Remarks  
@@ -44,7 +46,7 @@ ms.author: mikeray
   
 ## Examples  
   
-```  
+```sql  
 SELECT @@MAX_PRECISION AS 'Max Precision'  
 ```  
   

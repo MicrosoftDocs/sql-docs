@@ -1,4 +1,5 @@
 ---
+description: "Rules for Conversions"
 title: "Rules for Conversions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "numeric data type [ODBC], literals"
   - "conversions with numeric literals [ODBC]"
   - "numeric literals [ODBC]"
   - "literals [ODBC], numeric"
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Rules for Conversions
 The rules in this section apply for conversions involving numeric literals. For the purposes of these rules, the following terms are defined:  

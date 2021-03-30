@@ -1,18 +1,18 @@
 ---
 title: "Configure a distributed availability group"
-description: "Describes how to create and configure an Always On distributed availability group. " 
+description: "Learn how to configure a distributed availability group by using a Transact-SQL example. Also learn where to find information about distributed availability groups." 
 ms.custom: "seodec18"
 ms.date: "01/28/2020"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: availability-groups
+ms.topic: how-to
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Configure an Always On distributed availability group  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 To create a distributed availability group, you must create two availability groups each with its own listener. You then combine these availability groups into a distributed availability group. The following steps provide a basic example in Transact-SQL. This example doesn't cover all of the details of creating availability groups and listeners; instead, it focuses on highlighting the key requirements.
 
@@ -149,6 +149,10 @@ GO
 ## Create distributed availability group on first cluster  
  On the first WSFC, create a distributed availability group (named `distributedag` in this example). Use the **CREATE AVAILABILITY GROUP** command with the **DISTRIBUTED** option. The **AVAILABILITY GROUP ON** parameter specifies the member availability groups `ag1` and `ag2`.  
   
+# [Automatic seeding](#tab/automatic)
+
+To create your distributed availability group using automatic seeding, use the following Transact-SQL code: 
+
 ```sql  
 CREATE AVAILABILITY GROUP [distributedag]  
    WITH (DISTRIBUTED)   
@@ -170,8 +174,37 @@ CREATE AVAILABILITY GROUP [distributedag]
 GO   
 ```  
   
+
+# [Manual seeding](#tab/manual)
+
+To create your distributed availability group using manual seeding, use the following Transact-SQL code: 
+
+```sql
+CREATE AVAILABILITY GROUP [distributedag]  
+   WITH (DISTRIBUTED)   
+   AVAILABILITY GROUP ON  
+      'ag1' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',    
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = MANUAL   
+      ),   
+      'ag2' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022',   
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = MANUAL   
+      );    
+GO   
+
+```
+
+---
+
 > [!NOTE]  
->  The **LISTENER_URL** specifies the listener for each availability group along with the database mirroring endpoint of the availability group. In this example, that is port `5022` (not port `60173` used to create the listener). If you are using a load balancer, for instance in Azure, [add a load balancing rule for the distributed availability group port](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Add the rule for the listener port, in addition to the SQL Server instance port. 
+>  The **LISTENER_URL** specifies the listener for each availability group along with the database mirroring endpoint of the availability group. In this example, that is port `5022` (not port `60173` used to create the listener). If you are using a load balancer, for instance in Azure, [add a load balancing rule for the distributed availability group port](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Add the rule for the listener port, in addition to the SQL Server instance port. 
 
 ### Cancel automatic seeding to forwarder
 
@@ -190,6 +223,10 @@ ALTER AVAILABILITY GROUP [distributedag] ​
 ## Join distributed availability group on second cluster  
  Then join the distributed availability group on the second WSFC.  
   
+# [Automatic seeding](#tab/automatic)
+
+To join your distributed availability group using automatic seeding, use the following Transact-SQL code: 
+
 ```sql  
 ALTER AVAILABILITY GROUP [distributedag]   
    JOIN   
@@ -210,6 +247,61 @@ ALTER AVAILABILITY GROUP [distributedag]
       );    
 GO  
 ```  
+
+
+
+# [Manual seeding](#tab/manual)
+
+To join your distributed availability group using manual seeding, use the following Transact-SQL code: 
+
+```sql
+ALTER AVAILABILITY GROUP [distributedag]   
+   JOIN   
+   AVAILABILITY GROUP ON  
+      'ag1' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',    
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = MANUAL   
+      ),   
+      'ag2' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022',   
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = MANUAL  
+      );    
+GO  
+```
+
+If manual seeding is used to create the database on the forwarder, perform a full backup and a transaction log backup from the global primary, and restore them to the forwarder with NONRECOVERY option. For example:
+
+To back up on the global primary: 
+
+```sql
+BACKUP DATABASE [db1] 
+TO DISK = '<full backup location>' WITH FORMAT
+BACKUP LOG [db1] 
+TO DISK = '<log backup location>' WITH FORMAT
+```
+
+To restore to the forwarder: 
+
+```sql
+RESTORE DATABASE [db1] 
+FROM DISK = '<full backup location>' WITH NORECOVERY
+RESTORE LOG [db1] FROM DISK = '<log backup location>' WITH NORECOVERY
+```
+
+After that, run the following on the forwarder
+
+```sql
+ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [distributedag]
+```
+
+---
+
 
 ## <a name="failover"></a> Join the database on the secondary of the second availability group
 After the database on the secondary replica of the second availability group is in a restoring state, you have to manually join it to the availability group.
@@ -386,5 +478,4 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
 
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
-  
   

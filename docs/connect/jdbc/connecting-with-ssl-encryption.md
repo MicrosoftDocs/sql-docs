@@ -1,4 +1,5 @@
 ---
+description: "Connecting with encryption"
 title: "Connecting with encryption | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2019"
@@ -8,8 +9,8 @@ ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Connecting with encryption
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

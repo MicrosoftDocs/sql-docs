@@ -1,4 +1,5 @@
 ---
+description: "Copy a Package in SQL Server Data Tools"
 title: "Copy a Package in SQL Server Data Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # Copy a Package in SQL Server Data Tools
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This topic describes how to create a new [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package by copying an existing package, and how to update the **Name** and **GUID** properties of the new package.  
@@ -51,8 +52,7 @@ ms.author: chugu
 11. On the **File** menu, click **Save Selected Items** to save the new package.  
   
 ## See Also  
- [Save a Copy of a Package](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
+ [Save a Copy of a Package](./save-packages.md)   
  [Create Packages in SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)   
  [Integration Services &#40;SSIS&#41; Packages](../integration-services/integration-services-ssis-packages.md)  
-  
   

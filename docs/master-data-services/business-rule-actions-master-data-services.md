@@ -1,5 +1,6 @@
 ---
 title: Business Rule Actions
+description: In Master Data Services, business rules cause actions. Learn about default value actions, change value actions, validation actions, and external actions.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Business Rule Actions (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], business rule actions are the consequence of business rule condition evaluations. If a condition is true, the action is initiated.  
   
@@ -46,7 +47,7 @@ ms.author: lle
 |---------------------|-----------------|  
 |**is required**|The selected attribute **is required**, which means it cannot be null or blank.<br /><br /> This action is valid for text, number, date, and link values.|  
 |**is not valid**|The selected attribute **is not valid**.<br /><br /> This action is valid for text, number, date, and link values.|  
-|**must contain the pattern**|The selected attribute **must contain the pattern** that is specified. Use .NET Framework regular expressions to specify the pattern.<br /><br /> For more information about regular expressions, see [Regular Expression Language Elements](https://go.microsoft.com/fwlink/?LinkId=164401) in the MSDN Library.<br /><br /> This action is valid for text and link values.|  
+|**must contain the pattern**|The selected attribute **must contain the pattern** that is specified. Use .NET Framework regular expressions to specify the pattern.<br /><br /> For more information about regular expressions, see [Regular Expression Language Elements](/dotnet/standard/base-types/regular-expression-language-quick-reference) in the MSDN Library.<br /><br /> This action is valid for text and link values.|  
 |**must be unique**|The selected attribute **must be unique** independently or in combination with defined attributes.<br /><br /> **Best Practice:** Combine this action with a mandatory condition to ensure validity of index fields in subscribing systems.<br /><br /> This action is valid for text, number, date, and link values.<br /><br /> **NOTE**: If the first attribute is of type DateTime, then it cannot be used in combination with an attribute of type Numeric or Text attribute. If the first attribute is of type Numeric, then it cannot be used in combination with an attribute of type DateTime.|  
 |**must have one of the following values**|The selected attribute **must have one of the values** specified in a list.<br /><br /> This action is valid for text values.|  
 |**must be greater than**|The selected attribute **must be greater than** a specific attribute, a specific attribute value, or blank.<br /><br /> This action is valid for text, number, and date values.|  
@@ -63,11 +64,10 @@ ms.author: lle
   
 |Action Name|Description|  
 |-----------------|-----------------|  
-|**start workflow**|Initiates an external workflow. The data that caused this action to occur is passed to the workflow. For more information, see [SharePoint Workflow Integration with Master Data Services](https://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> This action is valid for text, number, date, and link values.|  
+|**start workflow**|Initiates an external workflow. The data that caused this action to occur is passed to the workflow. For more information, see [SharePoint Workflow Integration with Master Data Services](/previous-versions/sql/sql-server-2008-r2/gg690195(v=msdn.10)).<br /><br /> This action is valid for text, number, date, and link values.|  
   
 ## See Also  
  [Business Rule Conditions &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Create and Publish a Business Rule &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
-  
   

@@ -1,9 +1,10 @@
 ---
+description: "ALTER ASYMMETRIC KEY (Transact-SQL)"
 title: "ALTER ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.date: "04/12/2017"
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER_ASYMMETRIC_KEY_TSQL"
   - "ALTER ASYMMETRIC KEY"
@@ -19,17 +20,20 @@ helpviewer_keywords:
 ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
 ---
 # ALTER ASYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
 
   Changes the properties of an asymmetric key.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/\synapse-analytics-od-unsupported-syntax.md)]  
   
 ## Syntax  
   
-```  
+```syntaxsql
 ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>  
   
 <alter_option> ::=  
@@ -44,7 +48,9 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
     | DECRYPTION BY PASSWORD = 'oldPassword'  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Asym_Key_Name*  
  Is the name by which the asymmetric key is known in the database.  
   
@@ -83,7 +89,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
 ### A. Changing the password of the private key  
  The following example changes the password used to protect the private key of asymmetric key `PacificSales09`. The new password will be `<enterStrongPasswordHere>`.  
   
-```  
+```sql  
 ALTER ASYMMETRIC KEY PacificSales09   
     WITH PRIVATE KEY (  
     DECRYPTION BY PASSWORD = '<oldPassword>',  
@@ -94,7 +100,7 @@ GO
 ### B. Removing the private key from an asymmetric key  
  The following example removes the private key from `PacificSales19`, leaving only the public key.  
   
-```  
+```sql  
 ALTER ASYMMETRIC KEY PacificSales19 REMOVE PRIVATE KEY;  
 GO  
 ```  
@@ -102,7 +108,7 @@ GO
 ### C. Removing password protection from a private key  
  The following example removes the password protection from a private key and protects it with the database master key.  
   
-```  
+```sql  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '<database master key password>';  
 ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (  
     DECRYPTION BY PASSWORD = '<enterStrongPasswordHere>' );  

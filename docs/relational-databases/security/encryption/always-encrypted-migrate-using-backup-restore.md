@@ -1,4 +1,5 @@
 ---
+description: "Backup and restore databases using Always Encrypted"
 title: "Backup and restore databases using Always Encrypted | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/30/2019
@@ -9,10 +10,10 @@ ms.topic: conceptual
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Backup and restore databases using Always Encrypted 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 This article describes how to back up and restore a database containing columns protected with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
@@ -24,7 +25,7 @@ If you restored the database on a different server or under a different name, yo
 
 For detailed information about how to back up and restore a database, see:
 - [Backup Overview (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
-- [Restore a database to a Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore)
+- [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore)
 
 ## Next Steps
 - [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)

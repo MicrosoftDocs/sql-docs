@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_hadr_is_primary_replica (Transact-SQL)"
 title: "sys.fn_hadr_is_primary_replica (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.fn_hadr_is_primary_replica"
   - "fn_hadr_is_primary_replica_TSQL"
@@ -22,7 +23,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # sys.fn_hadr_is_primary_replica (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Used to determine if the current replica is the primary replica.  
   
@@ -30,8 +31,7 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 sys.fn_hadr_is_primary_replica ( 'dbname' )  
 ```  
   
@@ -40,18 +40,17 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
  Is the name of the database. *dbname* is type sysname.  
   
 ## Returns  
- Returns 1 if the database on the current instance is the primary replica. Otherwise returns 0.  
+ Returns data type **bool**: 1 if the database on the current instance is the primary replica, otherwise 0.  
   
 ## Remarks  
  Use this function to conveniently determine whether the local instance is hosting the primary replica of the specified availability database. Sample code could be similar to the following.  
   
-```  
+```sql
 If sys.fn_hadr_is_primary_replica ( @dbname ) <> 1   
 BEGIN  
 -- If this is not the primary replica, exit (probably without error).  
 END  
 -- If this is the primary replica, continue to do the backup.  
-  
 ```  
   
 ## Examples  
@@ -59,7 +58,7 @@ END
 ### A. Using sys.fn_hadr_is_primary_replica  
  The following example returns 1 if the specified database on the local instance is the primary replica.  
   
-```  
+```sql
 SELECT sys.fn_hadr_is_primary_replica ('TestDB');  
 GO  
 ```    

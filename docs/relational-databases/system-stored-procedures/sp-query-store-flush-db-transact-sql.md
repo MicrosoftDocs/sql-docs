@@ -1,4 +1,5 @@
 ---
+description: "sp_query_store_flush_db (Transact-SQL)"
 title: "sp_query_store_flush_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/24/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_query_store_flush_db_TSQL"
   - "sys.sp_query_store_flush_db_TSQL"
@@ -18,12 +19,13 @@ helpviewer_keywords:
   - "sys.sp_query_store_flush_db"
   - "sp_query_store_flush_db"
 ms.assetid: 580c03ae-57fc-4562-a6bb-5ec89521e38c
-author: stevestein
-ms.author: sstein
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_flush_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Flushes  the in-memory portion of the Query Store data to disk.  
   

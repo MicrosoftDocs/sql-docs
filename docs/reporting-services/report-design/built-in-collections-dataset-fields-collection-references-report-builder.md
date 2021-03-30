@@ -1,5 +1,6 @@
 ---
 title: "Dataset Fields Collection References (Report Builder) | Microsoft Docs"
+description: Create a dataset for display of individual or summarized values in the Report Data pane of Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

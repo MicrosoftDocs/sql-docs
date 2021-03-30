@@ -1,4 +1,5 @@
 ---
+description: "xp_sscanf (Transact-SQL)"
 title: "xp_sscanf (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "xp_sscanf_TSQL"
   - "xp_sscanf"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "xp_sscanf"
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # xp_sscanf (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reads data from the string into the argument locations specified by each format argument.  
   

@@ -1,12 +1,13 @@
 ---
+description: "SET ARITHABORT (Transact-SQL)"
 title: "SET ARITHABORT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/04/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ARITHABORT_TSQL"
   - "ARITHABORT"
@@ -24,32 +25,32 @@ helpviewer_keywords:
   - "ending queries [SQL Server]"
   - "stopping queries"
 ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ARITHABORT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Ends a query when an overflow or divide-by-zero error occurs during query execution.  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
-  
-```
--- Syntax for SQL Server and Azure SQL Database
-  
+
+### Syntax for [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] and [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)]
+```syntaxsql
 SET ARITHABORT { ON | OFF }
 ```
 
-```
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
-
+### Syntax for [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
+```syntaxsql
 SET ARITHABORT ON
 ```
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
 Always set ARITHABORT to ON in your logon sessions. Setting ARITHABORT to OFF can negatively impact query optimization, leading to performance issues.  
   
 > [!WARNING]  
@@ -64,7 +65,7 @@ If SET ARITHABORT and SET ANSI WARNINGS are OFF and one of these errors occurs, 
 > [!NOTE]  
 >  If neither SET ARITHABORT nor SET ARITHIGNORE is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns NULL and a warning message appears after the query runs.  
   
-When ANSI_WARNINGS has a value of ON and the database compatibility level is set to 90 or higher then ARITHABORT is implicitly ON regardless of it's value setting. If the database compatibility level is set to 80 or earlier, the ARITHABORT option must be explicitly set to ON.  
+When ANSI_WARNINGS has a value of ON and the database compatibility level is set to 90 or higher then ARITHABORT is implicitly ON regardless of its value setting. If the database compatibility level is set to 80 or earlier, the ARITHABORT option must be explicitly set to ON.  
   
 For expression evaluation, if SET ARITHABORT is OFF and an INSERT, UPDATE, or DELETE statement comes across an arithmetic, overflow, divide-by-zero, or domain error, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inserts or updates a NULL value. If the target column isn't nullable, the insert or update action fails and the user sees an error.  
   
@@ -78,7 +79,7 @@ The setting of SET ARITHABORT happens at execute or run time and not at parse ti
   
 To view the current setting for SET ARITHABORT, run the following query:
   
-```  
+```sql  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
 IF ( (64 & @@OPTIONS) = 64 ) SET @ARITHABORT = 'ON';  
 SELECT @ARITHABORT AS ARITHABORT;  
@@ -91,7 +92,7 @@ Requires membership in the **public** role.
 ## Examples  
 The following example demonstrates the divide-by-zero and overflow errors that have `SET ARITHABORT` settings.  
   
-```  
+```sql  
 -- SET ARITHABORT  
 -------------------------------------------------------------------------------  
 -- Create tables t1 and t2 and insert data values.  

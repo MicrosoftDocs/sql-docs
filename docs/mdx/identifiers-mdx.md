@@ -1,4 +1,5 @@
 ---
+description: "Identifiers (MDX)"
 title: "Identifiers (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -118,7 +119,6 @@ author: minewiskan
   
 ## See Also  
  [MDX Language Reference &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX Query Fundamentals &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [MDX Query Fundamentals &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
  [MDX Syntax Elements &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
-  
   

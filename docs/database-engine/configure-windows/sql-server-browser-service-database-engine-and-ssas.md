@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Browser Service (Database Engine and SSAS) | Microsoft Docs"
+description: Learn about SQL Server Browser. This service listens for requests for SQL Server resources and provides information about installed SQL Server instances.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,11 +14,11 @@ helpviewer_keywords:
   - "Browser Service"
   - "SQL Server Browser service"
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # SQL Server Browser Service (Database Engine and SSAS)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser program runs as a Windows service. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser listens for incoming requests for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources and provides information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances installed on the computer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser contributes to the following actions:  
   
 -   Browsing a list of available servers  
@@ -46,7 +47,7 @@ ms.author: mikeray
   
  Upon startup, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser starts and claims UDP port 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser reads the registry, identifies all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the computer, and notes the ports and named pipes that they use. When a server has two or more network cards, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser returns the first enabled port it encounters for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser support ipv6 and ipv4.  
   
- When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients request [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources, the client network library sends a UDP message to the server using port 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser responds with the TCP/IP port or named pipe of the requested instance. The network library on the client application then completes the connection by sending a request to the server using the port or named pipe of the desired instance. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser does not return port information for the default instance.  
+ When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients request [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources, the client network library sends a UDP message to the server using port 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser responds with the TCP/IP port or named pipe of the requested instance. The network library on the client application then completes the connection by sending a request to the server using the port or named pipe of the desired instance. 
   
  For information about starting and stopping the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   

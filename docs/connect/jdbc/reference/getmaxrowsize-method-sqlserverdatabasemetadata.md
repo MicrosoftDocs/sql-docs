@@ -1,4 +1,5 @@
 ---
+description: "getMaxRowSize Method (SQLServerDatabaseMetaData)"
 title: "getMaxRowSize Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerDatabaseMetaData.getMaxRowSize"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: abb5a204-76ff-4381-ab2b-896a19b202f3
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getMaxRowSize Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,22 +1,24 @@
 ---
 title: "Configure Azure VM as a secondary replica in an availability group"
-description: Use the Add Azure Replica Wizard to help you create a new Azure VM in hybrid IT and configure it as a secondary replica for a new or existing Always On availability group.
+description: Use the Add Azure Replica Wizard to create an Azure VM in hybrid IT and configure it as a secondary replica for a new or existing Always On availability group.
 ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.addreplicawizard.azurereplica.f1"
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Configure Azure VM as a secondary replica in an availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Use the Add Azure Replica Wizard to help you create a new Azure VM in hybrid IT and configure it as a secondary replica for a new or existing Always On availability group.  
-  
+
+>  [!IMPORTANT]  
+>  Azure has two different deployment models for creating and working with resources: Resource Manager and Classic. This article covers using the Classic deployment model. Microsoft recommends that most new deployments use the Resource Manager model. The steps in this article are not applicable if you are deploying the Azure Virtual Machine using Resource Manager model.   
 
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
  If you have never added any availability replica to an availability group, see the "Server instances" and "Availability groups and replicas" sections in [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
@@ -25,7 +27,7 @@ ms.author: mathoma
   
 -   You must be connected to the server instance that hosts the current primary replica.  
   
--   You must have a hybrid-IT environment where your on-premise subnet has a site-to-site VPN with Azure. For more information, see [Configure a Site-to-Site VPN in the Management Portal](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create).  
+-   You must have a hybrid-IT environment where your on-premise subnet has a site-to-site VPN with Azure. For more information, see [Configure a Site-to-Site VPN in the Management Portal](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-classic-portal).  
   
 -   Your availability group must contain on-premise availability replicas.  
   
@@ -41,6 +43,12 @@ ms.author: mathoma
  Also requires CONTROL ON ENDPOINT permission if you want to allow Add Replica to Availability Group Wizard to manage the database mirroring endpoint.  
   
 ##  <a name="SSMSProcedure"></a> Using the Add Azure Replica Wizard (SQL Server Management Studio)  
+
+>  [!IMPORTANT]  
+>  The Add Azure Replica Wizard only supports virtual machines created with the Classic deployment model. New Virtual Machine deployments should use the newer Resource Manager model. If you are using Virtual Machines with Resource Manager, then you must manually add the secondary Azure replica using Transact-SQL commands (not shown here). This wizard will not work in the Resource Manager scenario. 
+>
+>  The Add Azure Replica Wizard is not available in the latest releases (versions 18.x and 17.x) of SQL Server Management Studio.
+        
  The Add Azure Replica Wizard can be launched from the [Specify Replicas Page](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md). There are two ways to reach this page:  
   
 -   [Use the Availability Group Wizard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
@@ -51,7 +59,7 @@ ms.author: mathoma
   
 1.  First, download a management certificate for your Azure subscription. Click **Download** to open the sign-in page.  
   
-2.  Sign in to Microsoft Azure with your Microsoft account or your organizational account. Your Microsoft or organizational account is in the format of an email address, such as  HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. For more information about Azure credentials, see [Microsoft Account for Organizations FAQ](https://technet.microsoft.com/jj592903) and [Troubleshooting sign-in problems with your organizational account](https://support.microsoft.com/kb/2756852).  
+2.  Sign in to Microsoft Azure with your Microsoft account or your organizational account. Your Microsoft or organizational account is in the format of an email address, such as  HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. For more information about Azure credentials, see [Microsoft Account for Organizations FAQ](/previous-versions/jj592903(v=msdn.10)) and [Troubleshooting sign-in problems with your organizational account](http://web.archive.org/web/20121016005434/http://support.microsoft.com:80/kb/2756852).  
   
 3.  Next, connect to your subscription by clicking **Connect**. Once you are connected, the drop-down lists are populated with your Azure parameters, such as **Virtual Network** and **Virtual Network Subnet**.  
   
@@ -101,5 +109,4 @@ ms.author: mathoma
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Add a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: "Teradata data type support"
 title: "Teradata data type support | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/22/2019"
@@ -12,7 +13,7 @@ ms.author: chugu
 ---
 # Data type support
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 SSIS components use Teradata Parallel Transporter API (TPT API) to load and transfer data from and to Teradata Database, thus only TPT API supported data type can be used in SSIS.
 

@@ -1,4 +1,5 @@
 ---
+description: "supportsDifferentTableCorrelationNames Method (SQLServerDatabaseMetaData)"
 title: "supportsDifferentTableCorrelationNames Method | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerDatabaseMetaData.supportsDifferentTableCorrelationNames"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: b4f8db0c-2eaf-476b-b916-3e83355778f7
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # supportsDifferentTableCorrelationNames Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

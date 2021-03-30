@@ -1,23 +1,24 @@
 ---
-title: "CREATE FUNCTION (SQL Data Warehouse) | Microsoft Docs"
+description: "CREATE FUNCTION (Azure Synapse Analytics)"
+title: "CREATE FUNCTION (Azure Synapse Analytics) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "09/17/2020"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
-# CREATE FUNCTION (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# CREATE FUNCTION (Azure Synapse Analytics)
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Creates a user-defined function in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. The return value must be a scalar (single) value. Use this statement to create a reusable routine that can be used in these ways:  
+  Creates a user-defined function in [!INCLUDE[ssSDW](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the return value must be a scalar (single) value. In [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], CREATE FUNCTION can return a table by using the syntax for inline table-valued functions (preview) or it can return a single value by using the syntax for scalar functions. Use this statement to create a reusable routine that can be used in these ways:  
   
 -   In [!INCLUDE[tsql](../../includes/tsql-md.md)] statements such as SELECT  
   
@@ -29,12 +30,14 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 -   To replace a stored procedure  
   
+-   Use an inline function as a filter predicate for a security policy  
+  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
---Transact-SQL Scalar Function Syntax  
+```syntaxsql
+-- Transact-SQL Scalar Function Syntax  (in Azure Synapse Analytics and Parallel Data Warehouse)
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   
     [ = default ] }   
@@ -55,8 +58,24 @@ RETURNS return_data_type
     [ SCHEMABINDING ]  
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
 }  
-  
-```  
+```
+
+```syntaxsql
+-- Transact-SQL Inline Table-Valued Function Syntax (Preview in Azure Synapse Analytics only)
+CREATE FUNCTION [ schema_name. ] function_name
+( [ { @parameter_name [ AS ] parameter_data_type
+    [ = default ] }
+    [ ,...n ]
+  ]
+)
+RETURNS TABLE
+    [ WITH SCHEMABINDING ]
+    [ AS ]
+    RETURN [ ( ] select_stmt [ ) ]
+[ ; ]
+```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
  *schema_name*  
@@ -96,6 +115,14 @@ RETURNS return_data_type
   
  *scalar_expression*  
  Specifies the scalar value that the scalar function returns.  
+
+ *select_stmt* **APPLIES TO**: Azure Synapse Analytics  
+ Is the single SELECT statement that defines the return value of an inline table-valued function (preview).
+
+ TABLE **APPLIES TO**: Azure Synapse Analytics  
+ Specifies that the return value of the table-valued function (TVF) is a table. Only constants and @*local_variables* can be passed to TVFs.
+
+ In inline TVFs (preview), the TABLE return value is defined through a single SELECT statement. Inline functions do not have associated return variables.
   
  **\<function_option>::=** 
   
@@ -125,21 +152,23 @@ RETURNS return_data_type
  RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
  Specifies the **OnNULLCall** attribute of a scalar-valued function. If not specified, CALLED ON NULL INPUT is implied by default. This means that the function body executes even if NULL is passed as an argument.  
   
-## Best Practices  
+## Best practices  
  If a user-defined function is not created with the SCHEMABINDING clause, changes that are made to underlying objects can affect the definition of the function and produce unexpected results when it is invoked. We recommend that you implement one of the following methods to ensure that the function does not become outdated because of changes to its underlying objects:  
   
 -   Specify the WITH SCHEMABINDING clause when you are creating the function. This ensures that the objects referenced in the function definition cannot be modified unless the function is also modified.  
   
 ## Interoperability  
- The following statements are valid in a function:  
+ The following statements are valid in a scalar-valued function:  
   
 -   Assignment statements.  
   
 -   Control-of-Flow statements except TRY...CATCH statements.  
   
 -   DECLARE statements defining local data variables.  
+
+In an inline table-valued function (preview), only a single select statement is allowed.
   
-## Limitations and Restrictions  
+## Limitations and restrictions  
  User-defined functions cannot be used to perform actions that modify the database state.  
   
  User-defined functions can be nested; that is, one user-defined function can call another. The nesting level is incremented when the called function starts execution, and decremented when the called function finishes execution. User-defined functions can be nested up to 32 levels. Exceeding the maximum levels of nesting causes the whole calling function chain to fail.   
@@ -184,11 +213,49 @@ GO
   
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
-  
-## See Also  
- [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   
- [DROP FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
-  
-  
 
+## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+
+### A. Creating an inline table-valued function (preview)
+ The following example creates an inline table-valued function to return some key information on modules, filtering by the `objectType` parameter. It includes a default value to return all modules when the function is called with the DEFAULT parameter. This example makes use of some of the system catalog views mentioned in [Metadata](#metadata).
+
+```sql
+CREATE FUNCTION dbo.ModulesByType(@objectType CHAR(2) = '%%')
+RETURNS TABLE
+AS
+RETURN
+(
+	SELECT 
+		sm.object_id AS 'Object Id',
+		o.create_date AS 'Date Created',
+		OBJECT_NAME(sm.object_id) AS 'Name',
+		o.type AS 'Type',
+		o.type_desc AS 'Type Description', 
+		sm.definition AS 'Module Description'
+	FROM sys.sql_modules AS sm  
+	JOIN sys.objects AS o ON sm.object_id = o.object_id
+	WHERE o.type like '%' + @objectType + '%'
+);
+GO
+```
+The function can then be called to return all view (**V**) objects with:
+```sql
+select * from dbo.ModulesByType('V');
+```
+
+### B. Combining results of an inline table-valued function (preview)
+ This simple example uses the previously created inline TVF to demonstrate how its results can be combined with other tables using cross apply. Here, we select all columns from both sys.objects and the results of `ModulesByType` for all rows matching on the *type* column. For more details on using apply, see [FROM clause plus JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md).
+
+```sql
+SELECT * 
+FROM sys.objects o
+CROSS APPLY dbo.ModulesByType(o.type);
+GO
+```
+  
+## See also  
+ [ALTER FUNCTION (SQL Server PDW)](/previous-versions/sql/)   
+ [DROP FUNCTION (SQL Server PDW)](/previous-versions/sql/)  
+  
+  
 

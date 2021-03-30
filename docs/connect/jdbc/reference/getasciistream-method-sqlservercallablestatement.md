@@ -1,4 +1,5 @@
 ---
+description: "getAsciiStream Method (SQLServerCallableStatement)"
 title: "getAsciiStream Method (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerCallableStatement.getAsciiStream()"
 apilocation: 
   - "SQLServerCallableStatement.getAsciiStream()"
 apitype: "Assembly"
 ms.assetid: 2a3dde54-aace-42b1-97da-4b6a0918a346
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getAsciiStream Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

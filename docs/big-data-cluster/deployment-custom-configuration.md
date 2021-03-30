@@ -1,11 +1,11 @@
 ---
 title: Configure deployments
 titleSuffix: SQL Server big data clusters
-description: Learn how to customize a big data cluster deployment with configuration files.
+description: Learn how to customize a big data cluster deployment with configuration files that are built into the azdata management tool.
 author: MikeRayMSFT 
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.reviewer: rajmera3
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -14,9 +14,11 @@ ms.technology: big-data-cluster
 
 # Configure deployment settings for cluster resources and services
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+> [!Note]
+> Big Data Clusters version CU9+ have support for configuration management functionality. This feature enables post-deployment configurations and provides increased visibility and configurability of the cluster. Versions CU8 and lower do not have this functionality and configurations can only be done at deployment time.
 
-Starting from a pre-defined set of configuration profiles that are built into the `azdata` management tool, you can easily modify the default settings to better suit your BDC workload requirements. The structure of the configuration files enables you to granularly update settings for each service of the resource.
+Starting from a pre-defined set of configuration profiles that are built into the [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] management tool, you can easily modify the default settings to better suit your BDC workload requirements. The structure of the configuration files enables you to granularly update settings for each service of the resource.
 
 Watch this 13-minute video for an overview of big data cluster configuration:
 
@@ -24,6 +26,9 @@ Watch this 13-minute video for an overview of big data cluster configuration:
 
 > [!TIP]
 > Please reference the articles on how to configure **high availability** for mission critical components like [SQL Server master](deployment-high-availability.md) or [HDFS name node](deployment-high-availability-hdfs-spark.md),  for details on how to deploy highly available services.
+
+> [!TIP]
+> Reference the [SQL Server Big Data Clusters Configuration Properties](reference-config-bdc-overview.md) article to see what settings are configurable. For versions CU8 or lower, reference [SQL Server Master Instance Configuration Properties -  Pre CU9 Release](reference-config-master-instance.md) for configurations available for the SQL Server master instance and [Apache Spark & Apache Hadoop (HDFS) configuration properties](reference-config-spark-hadoop.md) for Apache Spark and Hadoop properties.
 
 You can also set resource level configurations or update the configurations for all services in a resource. Here is a summary of the structure for `bdc.json`:
 
@@ -167,7 +172,7 @@ To customize your cluster deployment configuration files, you can use any JSON f
 
 ## Prerequisites
 
-- [Install azdata](deploy-install-azdata.md).
+- [Install azdata](../azdata/install/deploy-install-azdata.md).
 
 - Each of the examples in this section assume that you have created a copy of one of the standard configurations. For more information, see [Create a custom configuration](deployment-guidance.md#customconfig). For example, the following command creates a directory called `custom-bdc` that contains two JSON deployment configuration files, `bdc.json` and `control.json`, based on the default `aks-dev-test` configuration:
 
@@ -303,58 +308,67 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 
 ## <a id="storage"></a> Configure storage
 
-You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage and data pools and updates the size of the persistent volume claim for storing data to 500 Gb for HDFS (storage pool) and 100 Gb for data pool. 
+You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage and data pools and updates the size of the persistent volume claim for storing data to 500 Gb for HDFS (storage pool) and 100 Gb for master and data pool. 
 
 > [!TIP]
 > For more information about storage configuration, see [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
 
-First create a patch.json file as below that includes the new *storage* section, in addition to *type* and *replicas*
+First create a patch.json file as below that adjust the *storage* settings
 
 ```json
 {
-  "patch": [
-    {
-      "op": "replace",
-      "path": "spec.resources.storage-0.spec",
-      "value": {
-        "type": "Storage",
-        "replicas": 2,
-        "storage": {
-          "data": {
-            "size": "500Gi",
-            "className": "myHDFSStorageClass",
-            "accessMode": "ReadWriteOnce"
-          },
-          "logs": {
-            "size": "32Gi",
-            "className": "myHDFSStorageClass",
-            "accessMode": "ReadWriteOnce"
-          }
-        }
-      }
-    },
-    {
-      "op": "replace",
-      "path": "spec.resources.data-0.spec",
-      "value": {
-        "type": "Data",
-        "replicas": 2,
-        "storage": {
-          "data": {
-            "size": "100Gi",
-            "className": "myDataStorageClass",
-            "accessMode": "ReadWriteOnce"
-          },
-          "logs": {
-            "size": "32Gi",
-            "className": "myDataStorageClass",
-            "accessMode": "ReadWriteOnce"
-          }
-        }
-      }
-    }
-  ]
+        "patch": [
+                {
+                        "op": "add",
+                        "path": "spec.resources.storage-0.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "500Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                },
+		{
+                        "op": "add",
+                        "path": "spec.resources.master.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "100Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                },
+                {
+                        "op": "add",
+                        "path": "spec.resources.data-0.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "100Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                }
+        ]
 }
+
 ```
 
 You can then use the `azdata bdc config patch` command to update the `bdc.json` configuration file.
@@ -462,6 +476,8 @@ azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.zookeeper.spec
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.gateway.spec.nodeLabel=bdc-shared"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.appproxy.spec.nodeLabel=bdc-shared"
 ```
+>[!NOTE]
+> Best practice avoids giving the Kubernetes master any of the above BDC roles. If you plan on assigning these roles to the Kubernetes master node anyway, you'll need to [remove its ``master:NoSchedule`` taint.](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/) Be aware that this could overload the master node and inhibit its ability to perform its Kubernetes management duties on larger clusters. It's normal to see some pods scheduled to the master on any deployment: they already tolerate the ``master:NoSchedule`` taint, and they're mostly used to help manage the cluster. 
 
 ## <a id="jsonpatch"></a> Other customizations using JSON patch files
 
@@ -633,7 +649,7 @@ For disabling the container that runs ElasticSearch to run in privileged mode, y
 }
 ```
 
-You can manually edit the `control.json` and add the above section to the `spec`, or you can create a patch file `elasticsearch-patch.json` like below and use `azdata` CLI to patch the `control.json` file:
+You can manually edit the `control.json` and add the above section to the `spec`, or you can create a patch file `elasticsearch-patch.json` like below and use [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] to patch the `control.json` file:
 
 ```json
 {
@@ -659,6 +675,16 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 > [!IMPORTANT]
 > We recommend as a best practice to manually update the `max_map_count` setting manually on each host in the Kubernetes cluster as per instructions in [this article](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html).
+
+## Turn pods and nodes metrics collection on/off
+
+SQL Server 2019 CU5 enabled two feature switches to control the collection of pods and nodes metrics. In case you are using different solutions for monitoring your Kubernetes infrastructure, you can turn off the built-in metrics collection for pods and host nodes by setting *allowNodeMetricsCollection* and *allowPodMetricsCollection* to *false* in *control.json* deployment configuration file. For OpenShift environments, these settings are set to *false* by default in the built-in deployment profiles, since collecting pod and node metrics requires privileged capabilities.
+Run this command to update the values of these settings in your custom configuration file using *azdata* CLI:
+
+```bash
+ azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"
+ azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowPodMetricsCollection=false"
+ ```
 
 ## Next steps
 

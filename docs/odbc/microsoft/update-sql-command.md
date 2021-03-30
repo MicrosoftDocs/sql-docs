@@ -1,4 +1,5 @@
 ---
+description: "UPDATE - SQL Command"
 title: "UPDATE - SQL Command | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,12 +7,12 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "update [ODBC]"
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # UPDATE - SQL Command
 Updates records in a table with new values.  

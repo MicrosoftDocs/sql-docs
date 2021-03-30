@@ -1,4 +1,5 @@
 ---
+description: "Querying Data in a System-Versioned Temporal Table"
 title: "Querying Data in a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"
@@ -8,13 +9,15 @@ ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
-author: "CarlRabeler"
-ms.author: "carlrab"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Querying data in a system-versioned temporal table
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 When you want to get latest (actual) state of data in a temporal table, you can query completely the same way as you query non-temporal table. If the PERIOD columns are not hidden, their values will appear in a SELECT \* query. If you specified **PERIOD** columns as hidden, their values won't appear in a SELECT \* query. When the **PERIOD** columns are hidden, reference the **PERIOD** columns specifically in the SELECT clause to return the values for these columns.
 
@@ -26,7 +29,7 @@ To perform any type of time-based analysis, use the new **FOR SYSTEM_TIME** clau
 - CONTAINED IN (<start_date_time> , <end_date_time>)
 - ALL
 
-**FOR SYSTEM_TIME** can be specified independently for each table in a query. It can be used inside common table expressions, table-valued functions and stored procedures.
+**FOR SYSTEM_TIME** can be specified independently for each table in a query. It can be used inside common table expressions, table-valued functions and stored procedures. When using a table alias with a temporal tables, the **FOR SYSTEM_TIME** clause must included between the temporal table name and the alias (see "Query for a specific time using the AS OF sub-clause" second example, below).
 
 ## Query for a specific time using the AS OF sub-clause
 

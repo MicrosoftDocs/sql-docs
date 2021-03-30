@@ -1,4 +1,5 @@
 ---
+description: "prepareStatement Method (SQLServerConnection)"
 title: "prepareStatement Method (SQLServerConnection) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerConnection.prepareStatement"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: bd4e4085-f704-4a73-b6a7-7d443d564728
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # prepareStatement Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

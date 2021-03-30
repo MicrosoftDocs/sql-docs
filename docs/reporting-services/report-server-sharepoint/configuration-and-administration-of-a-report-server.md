@@ -1,5 +1,6 @@
 ---
 title: "Configuration and administration of a report server | Microsoft Docs"
+description: With SQL Server Reporting Services, you can integrate your reporting environment with a SharePoint product to use collaboration provided by SharePoint sites.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -9,7 +10,7 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Configuration and administration of a SQL Server Reporting Services (SSRS) report server
 

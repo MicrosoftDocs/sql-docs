@@ -49,12 +49,12 @@ Use the following checklist to move each appliance rack from the pallet at the l
 ## <a name="AfterMoving"></a>Install Additional Components  
 Use the following checklist to install the additional components.  
   
-|Task|Description||  
-|--------|---------------|-|  
-|Unpack and rack network switches and PDUs|Use the rack diagrams to place the network switches and PDUs in the proper location in the rack.||  
-|Connect the Infiniband and Ethernet cables according to the cable labels|See the cabling diagram. Each cable has a label on each end that specifies where it needs to be connected.||  
-|Connect all power cables|See the cabling diagram.||  
-|Turn on the power supply to the racks and the PDUs|Connect the power supply to the racks and from the racks to the PDUs. **Do not power on any of the other appliance components at this time.**||  
+|Task|Description|
+|--------|---------------|
+|Unpack and rack network switches and PDUs|Use the rack diagrams to place the network switches and PDUs in the proper location in the rack.|
+|Connect the Infiniband and Ethernet cables according to the cable labels|See the cabling diagram. Each cable has a label on each end that specifies where it needs to be connected.|
+|Connect all power cables|See the cabling diagram.|
+|Turn on the power supply to the racks and the PDUs|Connect the power supply to the racks and from the racks to the PDUs. **Do not power on any of the other appliance components at this time.**|
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

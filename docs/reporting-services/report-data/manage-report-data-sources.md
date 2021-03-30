@@ -1,5 +1,6 @@
 ---
 title: "Manage Report Data Sources | Microsoft Docs"
+description: Learn about managing report data sources, including how to connect to external data sources that are referenced in a report.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -57,17 +58,17 @@ ms.author: maggies
 |----------|----------|----------|  
 |View examples of connection strings.||[Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Choose an approach for getting credentials to connect to a data source.||[Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)|  
-|Add data source connection properties to a report definition (.rdl) file.|Report Designer|[Create an Embedded or Shared Data Source &#40;SSRS&#41;](https://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
+|Add data source connection properties to a report definition (.rdl) file.|Report Designer|[Create an Embedded or Shared Data Source &#40;SSRS&#41;](/previous-versions/sql/)|  
 |Add and link to a shared data source (.rds) file in report project.|Report Designer|[Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |Create a predefined list of data sources that users can select at run time. When a user requests a report, the report provides a list of data sources. The user must select which data source to use prior to running the report. To add a data source selection list to a report, you use an expression.<br /><br /> This is known as a dynamic data source connection.|Report Designer|[Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Create a shared data source item on a report server.|[Create, Modify, and Delete Shared Data Sources](create-modify-and-delete-shared-data-sources-ssrs.md) |  
 |Store credentials as a prerequisite for creating subscriptions or report snapshots.|The web portal|[Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)|  
 |Edit data source connection properties on a published report.|The web portal|[Configure Data Source Properties for a Report](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
-|Create a shared data source item on a report server.|SharePoint site|[Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)|  
+|Create a shared data source item on a report server.|SharePoint site|[Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](/previous-versions/sql/)|  
 |Use existing .odc connection information with a report.|SharePoint site|[Use an Office Data Connection &#40;.odc&#41; with Reports &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
->  Managing data source connections to report data sources is not the same as managing the report server connection to the report server database. For more information about a report server connection to its internal data store, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+>  Managing data source connections to report data sources is not the same as managing the report server connection to the report server database. For more information about a report server connection to its internal data store, see [Configure a Report Server Database Connection  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## See Also  
  [Bind a Report or Model to a Shared Data Source &#40;SSRS&#41;](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
@@ -75,5 +76,4 @@ ms.author: maggies
  [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
  [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
-  
   

@@ -1,6 +1,6 @@
 ---
 title: "Install: PowerShell Desired State Configuration"
-description: "Learn how to install SQL Server by using PowerShell Desired State Configuration (DSC)."
+description: "Install SQL Server by using PowerShell DSC and learn about the initial setup of a standalone instance of SQL Server 2017 on Windows Server 2016."
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.devlang: PowerShell
@@ -10,7 +10,7 @@ ms.technology: install
 ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 
 # Install SQL Server with PowerShell Desired State Configuration
@@ -39,7 +39,7 @@ In most cases, DSC is used to handle the prerequisite requirements. But for the 
 
 ## Install the SqlServerDsc DSC resource
 
-Download the [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC resource from the [PowerShell Gallery](https://www.powershellgallery.com/) by using the [Install-Module](https://docs.microsoft.com/powershell/module/powershellget/Install-Module?view=powershell-5.1) cmdlet. 
+Download the [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC resource from the [PowerShell Gallery](https://www.powershellgallery.com/) by using the [Install-Module](/powershell/module/powershellget/Install-Module) cmdlet. 
 
 > [!NOTE]
 > Make sure PowerShell is running **As Administrator** to install the module.
@@ -66,7 +66,7 @@ Dismount-DiskImage -ImagePath 'C:\en_sql_server_2017_enterprise_x64_dvd_11293666
 
 ### Configuration
 
-Create the configuration function that will be called to generate the [Managed Object Format (MOF)](https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-) documents:
+Create the configuration function that will be called to generate the [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-) documents:
 
 ```PowerShell
 Configuration SQLInstall
@@ -175,7 +175,7 @@ As the configuration applies, the verbose output shows you what's happening. As 
 
 ### DSC
 
-The [Test-DscConfiguration](https://docs.microsoft.com/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) cmdlets can determine if the current state of the server meets the desired state. In this case, it's the SQL Server installation. The result of **Test-DscConfiguration** should be **True**:
+The [Test-DscConfiguration](/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) cmdlets can determine if the current state of the server meets the desired state. In this case, it's the SQL Server installation. The result of **Test-DscConfiguration** should be **True**:
 
 ```PowerShell
 PS C:\> Test-DscConfiguration

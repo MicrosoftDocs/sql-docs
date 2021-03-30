@@ -1,4 +1,5 @@
 ---
+description: "sp_check_for_sync_trigger (Transact-SQL)"
 title: "sp_check_for_sync_trigger (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "filter_TSQL"
   - "sp_check_for_sync_trigger"
 helpviewer_keywords: 
   - "sp_check_for_sync_trigger"
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_check_for_sync_trigger (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Determines whether a user-defined trigger or stored procedure is being called in the context of a replication trigger that is used for immediate updating subscriptions. This stored procedure is executed at the Publisher on the publication database or at the Subscriber on the subscription database.  
   
@@ -57,7 +58,9 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
   
  **sp_check_for_sync_trigger** is used to coordinate between replication and user-defined triggers. This stored procedure determines if it is being called within the context of a replication trigger. For example, you can call the procedure **sp_check_for_sync_trigger** in the body of a user-defined trigger. If **sp_check_for_sync_trigger** returns **0**, the user-defined trigger continues processing. If **sp_check_for_sync_trigger** returns **1**, the user-defined trigger exits. This ensures that the user-defined trigger does not fire when the replication trigger updates the table.  
   
-## Example  
+## Examples
+
+### A. Add code to a trigger on a Subscriber table
  The following example shows code that could be used in a trigger on a Subscriber table.  
   
 ```  
@@ -68,7 +71,7 @@ IF @retcode = 1
 RETURN  
 ```  
   
-## Example  
+### B. Add code to a trigger on a Publisher table
  The code can also be added to a trigger on a table at the Publisher; the code is similar, but the call to **sp_check_for_sync_trigger** includes an additional parameter.  
   
 ```  

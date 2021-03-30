@@ -1,5 +1,6 @@
 ---
 title: "Add a Gauge to a Report (Report Builder) | Microsoft Docs"
+description: Learn how to summarize data in a visual format by creating a gauge data region and dragging report dataset fields to a pane on the gauge in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

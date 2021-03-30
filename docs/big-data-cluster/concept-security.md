@@ -5,7 +5,7 @@ description: This article describes security concepts for SQL Server Big Data Cl
 author: nelgson 
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 10/23/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article will cover the key security-related concepts in the big data cluster
 
@@ -32,7 +32,7 @@ The external cluster endpoints support AD authentication. Use your AD identity t
 
 There are five entry points to the big data cluster
 
-* Master Instance - TDS endpoint for accessing SQL Server Master Instance in the cluster, using database tools and applications like SSMS or Azure Data Studio. When using HDFS or SQL Server commands from azdata, the tool will connect to the other endpoints, depending on the operation.
+* Master Instance - TDS endpoint for accessing SQL Server Master Instance in the cluster, using database tools and applications like SSMS or Azure Data Studio. When using HDFS or SQL Server commands from [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], the tool will connect to the other endpoints, depending on the operation.
 
 * Gateway to access HDFS files, Spark (Knox) - HTTPS endpoint for accessing services like webHDFS and Spark.
 
@@ -48,23 +48,30 @@ Currently, there is no option of opening up additional ports for accessing the c
 
 ## Authorization
 
-Throughout the cluster, integrated security between different components allows the original user’s identity to be passed through when issuing queries from Spark and SQL Server, all the way to HDFS. As mentioned above, the various external cluster endpoints support AD authentication.
+Throughout the cluster, integrated security between different components allows the original user's identity to be passed through when issuing queries from Spark and SQL Server, all the way to HDFS. As mentioned above, the various external cluster endpoints support AD authentication.
 
 There are two levels of authorization checks in the cluster for managing data access. Authorization in the context of big data is done in SQL Server, using the traditional SQL Server permissions on objects and in HDFS with control lists (ACLs), which associate user identities with specific permissions.
 
 A secure big data cluster implies consistent and coherent support for authentication and authorization scenarios, across both SQL Server and HDFS/Spark. Authentication is the process of verifying the identity of a user or service and ensuring they are who they are claiming to be. Authorization refers to granting or denying of access to specific resources based on the requesting user's identity. This step is performed after a user is identified through authentication.
 
-Authorization in Big Data context is usually performed through access control lists (ACLs), which associate user identities with specific permissions. HDFS supports authorization by limiting access to service APIs, HDFS files, and job execution.
+Authorization in Big Data context is performed through access control lists (ACLs), which associate user identities with specific permissions. HDFS supports authorization by limiting access to service APIs, HDFS files, and job execution.
 
-## Encryption and other security mechanisms
+## Encryption in flight and other security mechanisms
 
 Encryption of communication between clients to the external endpoints, as well as between components inside the cluster are secured with TLS/SSL, using certificates.
 
 All SQL Server to SQL Server communication, such as the SQL master instance communicating with a data pool, is secured using SQL logins.
 
 > [!IMPORTANT]
->  Big data clusters uses etcd to store credentials. As a best practice, you must ensure your Kubernetes cluster is configured to use etcd encryption at rest. By default, secrets stored in etcd are unencrypted. Kubernetes documentation provides details on this administrative task: https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ and 
+>  Big data clusters uses `etcd` to store credentials. As a best practice, you must ensure your Kubernetes cluster is configured to use `etcd` encryption at rest. By default, secrets stored in `etcd` are unencrypted. Kubernetes documentation provides details on this administrative task: https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ and 
 https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
+
+## Data encryption at rest
+
+SQL Server Big Data Clusters encryption at rest capability supports the core scenario of application level encryption for the SQL Server and HDFS components. Follow the [Encryption at rest concepts and configuration guide](encryption-at-rest-concepts-and-configuration.md) article for a comprehensive feature usage guide.
+
+> [!IMPORTANT]
+> Volume encryption is recommended for all SQL Server Big Data Cluster deployments. Customer provided storage volumes configured in Kubernetes clusters should be encrypted as well, as a comprehensive approach to data encryption at rest. SQL Server Big Data Cluster encryption at rest capability is an additional security layer, providing application level encryption of SQL Server data and log files and HDFS encryption zone support.
 
 
 ## Basic administrator login
@@ -79,17 +86,23 @@ Hadoop components do not support mixed mode authentication, which means that a b
 The login credentials you need to define during deployment include.
 
 Cluster admin username:
+
  + `AZDATA_USERNAME=<username>`
 
 Cluster admin password:  
  + `AZDATA_PASSWORD=<password>`
 
 > [!NOTE]
-> Note that in non-AD mode, the username "root" has to be used in combination with the above password, for authenticating to the Gateway (Knox) for access to HDFS/Spark.
+> Note that in non-AD mode, the username has to be used in combination with the above password, for authenticating to the Gateway (Knox) for access to HDFS/Spark. Prior to SQL Server 2019 CU5, the user name was `root`.
+> 
+> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ## Next steps
 
-To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following resources:
+[What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
 
-- [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
-- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+[Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/microsoft/sqlworkshops-bdc)
+
+[Kubernetes RBAC](kubernetes-rbac.md)  
+
+[Big Data Clusters FAQ](big-data-cluster-faq.yml)  

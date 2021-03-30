@@ -1,5 +1,6 @@
 ---
 title: "Specify Connections for Custom Data Processing Extensions | Microsoft Docs"
+description: Use this information to learn how to specify connections for third-party custom data processing extensions. 
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -47,7 +48,7 @@ ms.author: maggies
 |Integrated security|If your data provider supports it, you can use Windows integrated security. The request is sent using the credentials of the current user.<br /><br /> When defining the connection string, be sure to include arguments that specify integrated security (for example, a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source might include **Integrated Security=SSPI** on the connection string).|  
 |Windows Authentication|If your data provider supports it, you can use a Windows domain user account. The report server impersonates the user account before the data processing extension is called.<br /><br /> When defining the connection string, be sure to include arguments that specify integrated security (for example, a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source might include **Integrated Security=SSPI** on the connection string).|  
 |Database credentials|Database authentication is not supported for connections made through a custom .NET data provider. The report server will fail the connection in all cases.|  
-|No credentials|You can use the no credentials option with custom .NET data providers. If the unattended execution account is specified, the connection string determines the credentials that are used. The report server impersonates the unattended execution account to make the connection.<br /><br /> If the unattended execution account is not defined, the report server will fail the connection. For more information about defining the account, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
+|No credentials|You can use the no credentials option with custom .NET data providers. If the unattended execution account is specified, the connection string determines the credentials that are used. The report server impersonates the unattended execution account to make the connection.<br /><br /> If the unattended execution account is not defined, the report server will fail the connection. For more information about defining the account, see [Configure the Unattended Execution Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
   
 ## Connections for IDbConnection  
  If you are using a custom data processing extension that only supports <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, you must specify the connection in the following way:  
@@ -71,7 +72,7 @@ ms.author: maggies
 |No credentials|If the unattended execution account is specified, the connection string determines the credentials that are used.<br /><br /> If the unattended execution account is not defined, the report server will fail the connection.|  
   
 ## See Also  
- [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Configure the Unattended Execution Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   

@@ -1,4 +1,5 @@
 ---
+description: "ODBC Connection Manager"
 title: "ODBC Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,7 +21,7 @@ ms.author: chugu
 ---
 # ODBC Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   An ODBC connection manager enables a package to connect to a variety of database management systems using the Open Database Connectivity specification (ODBC).  
@@ -42,7 +43,7 @@ ms.author: chugu
   
  For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topic:  
   
--   [ODBC Connection Manager UI Reference](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)  
+-   [ODBC Connection Manager UI Reference]()  
   
  For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -65,5 +66,4 @@ ms.author: chugu
  Select a connection, and then delete it by using the **Delete** button.  
 ## See Also  
  [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

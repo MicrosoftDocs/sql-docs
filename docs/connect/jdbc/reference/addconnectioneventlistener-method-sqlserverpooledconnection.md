@@ -1,4 +1,5 @@
 ---
+description: "addConnectionEventListener Method (SQLServerPooledConnection)"
 title: "addConnectionEventListener Method (SQLServerPooledConnection) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerPooledConnection.addConnectionEventListener"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 142830a8-8d4e-48ca-911d-85bf195ca4fe
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # addConnectionEventListener Method (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

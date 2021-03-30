@@ -1,4 +1,5 @@
 ---
+description: "Using Scalar Expressions"
 title: "Using Scalar Expressions | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

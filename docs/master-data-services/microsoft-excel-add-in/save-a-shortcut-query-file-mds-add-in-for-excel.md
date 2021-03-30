@@ -1,4 +1,5 @@
 ---
+description: "Save a Shortcut Query File (MDS Add-in for Excel)"
 title: Save a Shortcut Query File
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Save a Shortcut Query File (MDS Add-in for Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], save a shortcut query file when you frequently need to access the same set of data.  
   

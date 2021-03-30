@@ -1,4 +1,5 @@
 ---
+description: "Excel Source"
 title: "Excel Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2018"
@@ -21,7 +22,7 @@ ms.author: chugu
 ---
 # Excel Source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Excel source extracts data from worksheets or ranges in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel workbooks.  
@@ -49,7 +50,7 @@ ms.author: chugu
   
  The **Advanced Editor** dialog box reflects all the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md)  
   
@@ -74,7 +75,7 @@ ms.author: chugu
 |Value|Description|  
 |-----------|-----------------|  
 |Table or view|Retrieve data from a worksheet or named range in the Excel file.|  
-|Table name or view name variable|Specify the worksheet or range name in a variable.<br /><br /> **Related information:** [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Table name or view name variable|Specify the worksheet or range name in a variable.<br /><br /> **Related information:** [Use Variables in Packages](../integration-services-ssis-variables.md)|  
 |SQL command|Retrieve data from the Excel file by using a SQL query. |  
 |SQL command from variable|Specify the SQL query text in a variable.|  
   

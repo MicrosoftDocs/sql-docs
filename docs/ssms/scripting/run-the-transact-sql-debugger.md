@@ -1,7 +1,8 @@
 ---
 title: Run the Transact-SQL Debugger
+description: Learn how customize the Transact-SQL debugger, and how to use it to debug your Transact-SQL code. You can run the debugger on an instance of the Database Engine that is on another computer.
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, sysadmin requirement"
@@ -21,12 +22,12 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Run the Transact-SQL Debugger
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 You can start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger after you open a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window. Then, you can run your [!INCLUDE[tsql](../../includes/tsql-md.md)] code in debug mode until you stop the debugger. You can set options to customize how the debugger runs.
 
@@ -36,7 +37,7 @@ You can start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger after you
 
 The requirements to start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger are as follows:
 
-- If your [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on another computer, you must have configured the debugger for remote debugging. For more information, see [Configure firewall rules before running the TSQL Debugger](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).
+- If your [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on another computer, you must have configured the debugger for remote debugging. For more information, see [Configure firewall rules before running the TSQL Debugger](./configure-firewall-rules-before-running-the-tsql-debugger.md).
   
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] must be running under a Windows account that is a member of the sysadmin fixed server roll.
 
@@ -108,8 +109,8 @@ The requirements to start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugg
   
 ## See Also
 
-- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Step Through Transact-SQL Code](../../relational-databases/scripting/step-through-transact-sql-code.md)
-- [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Transact-SQL Debugger](./transact-sql-debugger.md)
+- [Step Through Transact-SQL Code](./step-through-transact-sql-code.md)
+- [Transact-SQL Debugger Information](./transact-sql-debugger-information.md)
+- [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)
 - [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)

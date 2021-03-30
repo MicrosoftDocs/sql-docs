@@ -1,5 +1,6 @@
 ---
 title: "Assemblies (Database Engine) | Microsoft Docs"
+description: A SQL Server instance can host assemblies that deploy functions, procedures, triggers, and user-defined aggregates and types written in a CLR language.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Assemblies (Database Engine)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The topics in this section provide information to help you understand, design, and implement assemblies.  
   
  Assemblies are DLL files used in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to deploy functions, stored procedures, triggers, user-defined aggregates, and user-defined types that are written in one of the managed code languages hosted by the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR), instead of in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -24,7 +25,7 @@ ms.author: "jroth"
   
 -   CLR functions. For more information, see [Create CLR Functions](../../relational-databases/user-defined-functions/create-clr-functions.md).  
   
--   CLR stored procedures. For more information, see [CLR Stored Procedures](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33).  
+-   CLR stored procedures. For more information, see [CLR Stored Procedures](/dotnet/framework/data/adonet/sql/clr-stored-procedures).  
   
 -   CLR triggers. For more information, see [Create CLR Triggers](../../relational-databases/triggers/create-clr-triggers.md).  
   
@@ -52,5 +53,4 @@ ms.author: "jroth"
   
 ## See Also  
  [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

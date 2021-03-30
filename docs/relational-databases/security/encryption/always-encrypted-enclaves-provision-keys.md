@@ -1,7 +1,8 @@
 ---
+description: "Provision enclave-enabled keys"
 title: "Provision enclave-enabled keys | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/01/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.prod_service: "database-engine, sql-database"
@@ -9,10 +10,11 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-ver15"
 ---
 # Provision enclave-enabled keys
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 This article describes how to provision enclave-enabled keys that support computations inside server-side secure enclaves used for [Always Encrypted with secure enclaves](always-encrypted-enclaves.md). 
 
@@ -32,12 +34,17 @@ To create an enclave-enabled column encryption key, you need to ensure that you 
 The following sections provide more details on how to provision enclave-enabled keys using SSMS and PowerShell.
 
 ## Provision enclave-enabled keys using SQL Server Management Studio
-In SQL Server Management Studio 18.3 or higher, you can provision:
+In SQL Server Management Studio you can provision:
 - An enclave-enabled column master key using the **New Column Master Key** dialog.
 - An enclave-enabled column encryption key using the **New Column Encryption Key** dialog.
 
 > [!NOTE]
 > The [Always Encrypted wizard](always-encrypted-wizard.md) does not currently support generating enclave-enabled keys. You can, however, create enclave-enabled keys using the above dialogs first, and then when you run the wizard, select an already existing enclave-enabled column encryption for columns that you want to encrypt.
+
+Minimum SSMS version requirements:
+
+- SSMS 18.3 when using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+- SSMS 18.8 when using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ### Provision enclave-enabled column master keys with the New Column Master Key dialog
 To provision an enclave-enabled column master key, follow the steps in [Provision Column Master Keys with the New Column Master Key Dialog](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog). Make sure you select **Allow enclave computations**. See the below screenshot:
@@ -45,7 +52,7 @@ To provision an enclave-enabled column master key, follow the steps in [Provisio
 ![Allow enclave computations](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
 > [!NOTE]
-> The **Allow enclave computations** checkbox appears only if the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance contains a correctly initialized secure enclave. For more information, see [Configure the enclave type for Always Encrypted](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md).
+> The **Allow enclave computations** checkbox appears only if a secure enclave is  configured for your database. If you are using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md). If you are using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], see [Enable Intel SGX for your Azure SQL database](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx).
 
 > [!TIP]
 > To check if a column master key is enclave-enabled, right-click on it in Object Explorer and select **Properties**. If the key is enclave-enabled, **Enclave Computations: Allowed** appears in the window showing the properties of the key. Alternativelly, you can use the [sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md) view.
@@ -57,11 +64,11 @@ To provision an enclave-enabled column encryption key, follow the steps in [Prov
 > To check if a column encryption key is enclave-enabled, right-click on it in Object Explorer and select **Properties**. If the key is enclave-enabled, **Enclave Computations: Allowed** appears in the window showing the properties of the key.
 
 ## Provision enclave-enabled keys using PowerShell
-To provision enclave-enabled keys using PowerShell, you need the SqlServer Powershell module version 21.1.18179 or higher.
+To provision enclave-enabled keys using PowerShell, you need the SqlServer PowerShell module version 21.1.18179 or higher.
 
 In general, PowerShell key provisioning workflows (with and without role separation) for Always Encrypted, described in [Provision Always Encrypted Keys using PowerShell](configure-always-encrypted-keys-using-powershell.md) also apply to enclave-enabled keys. This section describes details specific to enclave-enabled keys.
 
-The SqlServer PowerShell module extends the  [**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) and [**New-SqlAzureKeyVaultColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) cmdlets with the `-AllowEnclaveComputations` parameter to allow you to specify a column master key that is enclave-enabled during the provisioning process. Either cmdlet creates a local object containing properties of a column master key (stored in Azure Key Vault or in the Windows Certificate Store). If specified, the `-AllowEnclaveComputations` property marks the key as enclave-enabled in the local object. It also causes the cmdlet to access the referenced column master key (in Azure Key Vault or in Windows Certificate Store) to digitally sign the properties of the key. Once you create a settings object for a new enclave-enabled column master key, you can use it in a subsequent invocation of the [**New-SqlColumnMasterKey**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcolumnmasterkey) cmdlet to create a metadata object describing the new key in the database.
+The SqlServer PowerShell module extends the  [**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) and [**New-SqlAzureKeyVaultColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) cmdlets with the `-AllowEnclaveComputations` parameter to allow you to specify a column master key that is enclave-enabled during the provisioning process. Either cmdlet creates a local object containing properties of a column master key (stored in Azure Key Vault or in the Windows Certificate Store). If specified, the `-AllowEnclaveComputations` property marks the key as enclave-enabled in the local object. It also causes the cmdlet to access the referenced column master key (in Azure Key Vault or in Windows Certificate Store) to digitally sign the properties of the key. Once you create a settings object for a new enclave-enabled column master key, you can use it in a subsequent invocation of the [**New-SqlColumnMasterKey**](/powershell/module/sqlserver/new-sqlcolumnmasterkey) cmdlet to create a metadata object describing the new key in the database.
 
 Provisioning enclave-enabled column encryption keys is no different from provisioning column encryption keys that are not enclave-enabled. You just need to make sure that a column master key used to encrypt the new column encryption key is enclave-enabled.
 
@@ -69,7 +76,7 @@ Provisioning enclave-enabled column encryption keys is no different from provisi
 > The SqlServer PowerShell module does not currently support provisioning enclave-enabled keys stored in hardware security modules (using CNG or CAPI).
 
 ### Example - provision enclave-enabled keys using Windows Certificate Store
-The below end-to-end example shows how to provision enclave-enabled keys, storing the column master key stored in Windows Certificate Store. The script is based on the example in [Windows Certificate Store without Role Separation (Example)](configure-always-encrypted-keys-using-powershell.md#windows-certificate-store-without-role-separation-example). Important to note is the use of the `-AllowEnclaveComputations` parameter in the [**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) cmdlet, which is the only difference between the workflows in the two examples.
+The below end-to-end example shows how to provision enclave-enabled keys, storing the column master key stored in Windows Certificate Store. The script is based on the example in [Windows Certificate Store without Role Separation (Example)](configure-always-encrypted-keys-using-powershell.md#windows-certificate-store-without-role-separation-example). Important to note is the use of the `-AllowEnclaveComputations` parameter in the [**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) cmdlet, which is the only difference between the workflows in the two examples.
 
 ```powershell
 # Create a column master key in Windows Certificate Store.
@@ -100,8 +107,8 @@ New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterK
 
 ### Example - provision enclave-enabled keys using Azure Key Vault
 The below end-to-end example shows how to provision enclave-enabled keys, storing the column master key in Azure Key Vault. The script is based on the example in [Azure Key Vault without Role Separation (Example)](configure-always-encrypted-keys-using-powershell.md#azure-key-vault-without-role-separation-example). It's important to note two differences between the workflow for enclave-enabled keys compared to the keys that are not enclave-enabled. 
-- In the below script, the [**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) uses the `-AllowEnclaveComputations` parameter to make the new column master key enclave-enabled. 
-- The below script calls the [**Add-SqlAzureAuthenticationContext**](https://docs.microsoft.com/powershell/module/sqlserver/add-sqlazureauthenticationcontext) cmdlet to sign in to Azure before calling the [**New-SqlAzureKeyVaultColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) cmdlet. Singing in to Azure first is necessary, because the `-AllowEnclaveComputations` parameter causes the **New-SqlAzureKeyVaultColumnMasterKeySettings** to call Azure Key Vault to sign the properties of the column master key.
+- In the below script, the [**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) uses the `-AllowEnclaveComputations` parameter to make the new column master key enclave-enabled. 
+- The below script calls the [**Add-SqlAzureAuthenticationContext**](/powershell/module/sqlserver/add-sqlazureauthenticationcontext) cmdlet to sign in to Azure before calling the [**New-SqlAzureKeyVaultColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) cmdlet. Singing in to Azure first is necessary, because the `-AllowEnclaveComputations` parameter causes the **New-SqlAzureKeyVaultColumnMasterKeySettings** to call Azure Key Vault to sign the properties of the column master key.
 
 ```powershell
 # Create a column master key in Azure Key Vault.
@@ -141,12 +148,13 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```
 
 ## Next Steps
-- [Query columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-query-columns.md)
+- [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md)
 - [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md)
 - [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md) 
 
 ## See Also  
-- [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 - [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)
-- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 
+- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

@@ -1,4 +1,5 @@
 ---
+description: "catalog.deploy_packages"
 title: "catalog.deploy_packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,17 +14,20 @@ ms.author: chugu
 ---
 # catalog.deploy_packages 
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deploys one or more packages to a folder in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog or updates an existing package that has been deployed previously.  
   
 ## Syntax  
   
 ```sql  
-[catalog].[deploy_packages]     [ @folder_name = ] folder_name,    [ @project_name = ] project_name,    [ @packages_table = ] packages_table,     [ @operation_id OUTPUT ] operation_id OUTPUT ]  
+catalog.deploy_packages [ @folder_name = ] folder_name
+    , [ @project_name = ] project_name
+    , [ @packages_table = ] packages_table
+    [, [ @operation_id OUTPUT = ] operation_id OUTPUT]
 ```  
   
 ## Arguments  

@@ -1,4 +1,5 @@
 ---
+description: "SOME | ANY (Transact-SQL)"
 title: "SOME | ANY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SOME"
   - "SOME_TSQL"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "SOME | ANY keyword"
   - "single-column set of values [SQL Server]"
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # SOME | ANY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Compares a scalar value with a single-column set of values. SOME and ANY are equivalent.  
   
@@ -31,17 +32,18 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
      { SOME | ANY } ( subquery )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *scalar_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- { = | <> | != | > | >= | !> | < | <= | !< }  
+ { = \| <> \| != \| > \| >= \| !> \| < \| <= \| !< }  
  Is any valid comparison operator.  
   
  SOME | ANY  
@@ -64,9 +66,9 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
 ### A. Running a simple example  
  The following statements create a simple table and add the values of `1`, `2`, `3`, and `4` to the `ID` column.  
   
-```  
+```sql  
 CREATE TABLE T1  
-(ID int) ;  
+(ID INT) ;  
 GO  
 INSERT T1 VALUES (1) ;  
 INSERT T1 VALUES (2) ;  
@@ -76,7 +78,7 @@ INSERT T1 VALUES (4) ;
   
  The following query returns `TRUE` because `3` is less than some of the values in the table.  
   
-```  
+```sql  
 IF 3 < SOME (SELECT ID FROM T1)  
 PRINT 'TRUE'   
 ELSE  
@@ -85,7 +87,7 @@ PRINT 'FALSE' ;
   
  The following query returns `FALSE` because `3` isn't less than all of the values in the table.  
   
-```  
+```sql  
 IF 3 < ALL (SELECT ID FROM T1)  
 PRINT 'TRUE'   
 ELSE  
@@ -95,10 +97,10 @@ PRINT 'FALSE' ;
 ### B. Running a practical example  
  The following example creates a stored procedure that determines whether all the components of a specified `SalesOrderID` in the `AdventureWorks2012` database can be manufactured in the specified number of days. The example uses a subquery to create a list of the number of `DaysToManufacture` value for all the components of the specific `SalesOrderID`, and then tests whether any of the values that are returned by the subquery are greater than the number of days specified. If every value of `DaysToManufacture` that is returned is less than the number provided, the condition is TRUE and the first message is printed.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-CREATE PROCEDURE ManyDaysToComplete @OrderID int, @NumberOfDays int  
+CREATE PROCEDURE ManyDaysToComplete @OrderID INT, @NumberOfDays INT  
 AS  
 IF   
 @NumberOfDays < SOME  
@@ -109,7 +111,7 @@ IF
     ON Sales.SalesOrderDetail.ProductID = Production.Product.ProductID   
     WHERE SalesOrderID = @OrderID  
    )  
-PRINT 'At least one item for this order can't be manufactured in specified number of days.'  
+PRINT 'At least one item for this order can''t be manufactured in specified number of days.'
 ELSE   
 PRINT 'All items for this order can be manufactured in the specified number of days or less.' ;  
   
@@ -117,7 +119,7 @@ PRINT 'All items for this order can be manufactured in the specified number of d
   
  To test the procedure, execute the procedure by using the `SalesOrderID``49080`, which has one component that requires `2` days and two components that require 0 days. The first statement meets the criteria. The second query doesn't.  
   
-```  
+```sql  
 EXECUTE ManyDaysToComplete 49080, 2 ;  
 ```  
   

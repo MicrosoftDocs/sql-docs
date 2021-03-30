@@ -1,21 +1,21 @@
 ---
-title: "Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver) | Microsoft Docs"
+title: "Formatting decimal strings and money values (PDO_SQLSRV driver)"
+description: "Learn how to use PDO::SQLSRV_ATTR_FORMAT_DECIMALS and SQLSRV_ATTR_DECIMAL_PLACES attributes to format decimal or money values when using the PDO_SQLSRV Driver"
 ms.custom: ""
-ms.date: "02/11/2019"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "formatting, decimal types, money values"
-author: "yitam"
-ms.author: "v-yitam"
-manager: v-mabarw
+author: David-Engel
+ms.author: v-daenge
 ---
 # Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-To preserve accuracy, [decimal or numeric types](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) are always fetched as strings with exact precisions and scales. If any value is less than 1, the leading zero is missing. It is the same with money and smallmoney fields as they are decimal fields with a fixed scale equal to 4.
+To preserve accuracy, [decimal or numeric types](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) are always fetched as strings with exact precisions and scales. If any value is less than 1, the leading zero is missing. It is the same with money and smallmoney fields as they are decimal fields with a fixed scale equal to 4.
 
 ## Add leading zeroes if missing
 Beginning with version 5.6.0, the connection or statement attribute `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` allows the user to format decimal strings. This attribute expects a boolean value (true or false) and only affects the formatting of the decimal or numeric values in the fetched results. In other words, this attribute has no effect on other operations like insertion or update.

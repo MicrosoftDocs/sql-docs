@@ -1,5 +1,6 @@
 ---
 title: "Install & configure DW WideWorldImporters sample database"
+description: Follow these instructions to download, install, and configure the WideWorldImportersDW sample database with SQL Server Management Studio.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -8,7 +9,7 @@ ms.reviewer: ""
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---
 # WideWorldImportersDW Installation and configuration
@@ -28,7 +29,7 @@ Download the sample WideWorldImportersDW database backup/bacpac that corresponds
 
 Source code to recreate the sample database is available from the following location. Note that data population is based on ETL from the OLTP database (WideWorldImporters):
 
-[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
 ## Install
 
@@ -49,7 +50,7 @@ To restore a backup to a SQL Server instance, you can use Management Studio.
 To import a bacpac into a new SQL Database, you can use Management Studio.
 
 1. (optional) If you do not yet have a SQL Server in Azure, navigate to the [Azure portal](https://portal.azure.com/) and create a new SQL Database. In the process of create a database, you will create a server. Make note of the server.
-   - See [this tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) to create a database in minutes
+   - See [this tutorial](/azure/azure-sql/database/single-database-create-quickstart) to create a database in minutes
 2. Open SQL Server Management Studio and connect to your server in Azure.
 3. Right-click on the **Databases** node, and select **Import Data-Tier Application**.
 4. In the **Import Settings** select **Import from local disk** and select the bacpac of the sample database from your file system.

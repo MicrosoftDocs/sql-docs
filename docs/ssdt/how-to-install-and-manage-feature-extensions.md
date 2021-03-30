@@ -1,12 +1,12 @@
 ---
 title: Install and Manage Feature Extensions
+description: Learn how to install feature extensions so that you can increase the functionality of SQL Server Data Tools. See where to install different types of extensions.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
@@ -32,7 +32,7 @@ Extensions can be run as part of our command-line services:
 |Extension Type|Command-Line Service|Install Folder|  
 |------------------|------------------------|------------------|  
 |Custom Test Condition for SQL Server Unit Tests|MSBuild / MSTest can be used to run unit tests from the Developer Command Prompt for Visual Studio 2013 and similar command-line tools.|Same as when running inside Visual Studio.|  
-|Build Contributors<br /><br />Deployment Contributors|[SqlPackage.exe](../tools/sqlpackage.md), or by using MSBuild Deploy or Publish targets when building a database project.|MSBuild: Same as when running inside Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage.md): If located inside Visual Studio directory, same as before.<br /><br />If SqlPackage.exe and other DacFx DLLs are located outside that directory, then extensions should either be placed in the same directory or in C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions.|  
+|Build Contributors<br /><br />Deployment Contributors|[SqlPackage.exe](../tools/sqlpackage/sqlpackage.md), or by using MSBuild Deploy or Publish targets when building a database project.|MSBuild: Same as when running inside Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage/sqlpackage.md): If located inside Visual Studio directory, same as before.<br /><br />If SqlPackage.exe and other DacFx DLLs are located outside that directory, then extensions should either be placed in the same directory or in C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions.|  
 |Static Code Analysis Rules|MSBuild can be used to build the project and run static code analysis.<br /><br />In addition, you can run code analysis using a CodeAnalysisService API from your own applications. The extension lookup rules function the same in this case as when SqlPackage.exe is used.|Same as for Build and Deployment Contributors|  
   
 > [!NOTE]  

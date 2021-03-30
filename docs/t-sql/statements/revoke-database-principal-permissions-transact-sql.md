@@ -8,7 +8,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -22,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # REVOKE Database Principal Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Revokes permissions granted or denied on a database user, database role, or application role.  
   
@@ -30,8 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]    
     ON   
     {  [ USER :: database_user ]  
@@ -53,7 +52,9 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
     | Database_user_with_no_login   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be revoked on the database principal. For a list of the permissions, see the Remarks section later in this topic.  
   
@@ -158,7 +159,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ### A. Revoking CONTROL permission on a user from another user  
  The following example revokes `CONTROL` permission on [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] user `Wanida` from user `RolandX`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE CONTROL ON USER::Wanida FROM RolandX;  
 GO  
@@ -167,7 +168,7 @@ GO
 ### B. Revoking VIEW DEFINITION permission on a role from a user to which it was granted WITH GRANT OPTION  
  The following example revokes `VIEW DEFINITION` permission on [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] role `SammamishParking` from database user `JinghaoLiu`. The `CASCADE` option is specified because the user `JinghaoLiu` was granted `VIEW DEFINITION` permission `WITH GRANT OPTION`.  
   
-```  
+```sql 
 USE AdventureWorks2012;  
 REVOKE VIEW DEFINITION ON ROLE::SammamishParking   
     FROM JinghaoLiu CASCADE;  
@@ -179,7 +180,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE IMPERSONATE ON USER::HamithaL FROM AccountsPayable17;  
 GO    

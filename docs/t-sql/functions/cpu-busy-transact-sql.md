@@ -1,12 +1,13 @@
 ---
-title: "@@CPU_BUSY (Transact-SQL) | Microsoft Docs"
+description: "&#x40;&#x40;CPU_BUSY (Transact-SQL)"
+title: CPU_BUSY (Transact-SQL)
 ms.custom: ""
 ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "@@CPU_BUSY_TSQL"
   - "@@CPU_BUSY"
@@ -21,11 +22,13 @@ helpviewer_keywords:
   - "statistical information [SQL Server], CPU"
   - "CPU [SQL Server], activity"
 ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
+
 # &#x40;&#x40;CPU_BUSY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This function returns the amount of time that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has spent in active operation since its latest start. `@@CPU_BUSY` returns a result measured in CPU time increments, or "ticks." This value is cumulative for all CPUs, so it may exceed the actual elapsed time. To convert to microseconds, multiply by [@@TIMETICKS](./timeticks-transact-sql.md).
   
@@ -36,10 +39,13 @@ This function returns the amount of time that [!INCLUDE[ssNoVersion](../../inclu
   
 ## Syntax  
   
-```
+```syntaxsql
 @@CPU_BUSY  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+
 ## Return types
 **integer**
   
@@ -50,7 +56,7 @@ To see a report containing several [!INCLUDE[ssNoVersion](../../includes/ssnover
 This example returns [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU activity, as of the current date and time. The example converts one of the values to the `float` data type. This avoids arithmetic overflow issues when calculating a value in microseconds.
   
 ```sql
-SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS float) AS 'CPU microseconds',   
+SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS FLOAT) AS 'CPU microseconds',   
    GETDATE() AS 'As of' ;  
 ```  
   

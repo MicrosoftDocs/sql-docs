@@ -11,7 +11,7 @@ ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ---
 # Walkthrough for the performance features of SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 If you are a Linux user who is new to SQL Server, the following tasks walk you through some of the performance features. These are not unique or specific to Linux, but it helps to give you an idea of areas to investigate further. In each example, a link is provided to the depth documentation for that area.
 
@@ -152,7 +152,7 @@ SQL Server supports natively compiled stored procedures that access memory-optim
 For more information about In-Memory OLTP, see the following topics:
 
 - [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
-- [Migrating to In-Memory OLTP](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
+- [Migrating to In-Memory OLTP](../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)
 - [Faster temp table and table variable by using memory optimization](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
 - [Monitor and Troubleshoot Memory Usage](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
 - [In-Memory OLTP (In-Memory Optimization)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)

@@ -1,4 +1,5 @@
 ---
+description: "Add or Delete a Task or a Container in a Control Flow"
 title: "Add or Delete a Task or a Container in a Control Flow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # Add or Delete a Task or a Container in a Control Flow
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   When you are working in the control flow designer, the Toolbox in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer lists the tasks that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides for building control flow in a package. For more information about the Toolbox, see [SSIS Toolbox](../../integration-services/ssis-toolbox.md).  
@@ -93,9 +94,9 @@ You can set most properties of tasks and containers by using the **Properties** 
   
 4.  On the design surface of the **Control Flow** tab, right-click the task or container, and then click **Edit** to open the corresponding task or container editor.  
   
-     For information about how to configure the For Loop container, see [Configure a For Loop Container](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
+     For information about how to configure the For Loop container, see [Configure a For Loop Container](./for-loop-container.md).  
   
-     For information about how to configure the Foreach Loop container, see [Configure a Foreach Loop Container](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+     For information about how to configure the Foreach Loop container, see [Configure a Foreach Loop Container](./foreach-loop-container.md).  
   
     > [!NOTE]  
     >  The Sequence container has no custom editor.  
@@ -112,5 +113,4 @@ You can set most properties of tasks and containers by using the **Properties** 
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)   
  [Control Flow](../../integration-services/control-flow/control-flow.md)  
-  
   

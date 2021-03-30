@@ -1,5 +1,6 @@
 ---
 title: "Performance improvement - in-memory OLTP"
+description: This code sample demonstrates the fast performance of memory-optimized tables with interpreted Transact-SQL and a natively compiled stored procedure.
 ms.custom: seo-dt-2019
 ms.date: "08/19/2016"
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
-author: "CarlRabeler"
-ms.author: "carlrab"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Demonstration: Performance Improvement of In-Memory OLTP
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   The code sample in this topic demonstrates the fast performance of memory-optimized tables. The performance improvement is evident when data in a memory-optimized table is accessed from traditional, interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)]. This performance improvement is even greater when data in a memory-optimized table is accessed from a natively compiled stored procedure (NCSProc).  
  
@@ -59,7 +60,7 @@ go
   
 2.  If you decide to create a new test database, use the [Azure portal](https://portal.azure.com) to create a database named **imoltp**.  
   
- If you would like instructions for using the Azure portal for this, see [Get Started with Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-get-started).  
+ If you would like instructions for using the Azure portal for this, see [Get Started with Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart).  
   
 ### Step 2: Create Memory-Optimized Tables, and NCSProc  
  This step creates memory-optimized tables, and a natively compiled stored procedure (NCSProc). Do the following:  
@@ -191,5 +192,4 @@ go
   
 ## See Also  
  [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
   

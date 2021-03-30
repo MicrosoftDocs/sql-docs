@@ -4,7 +4,7 @@ ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
+description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
 ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
@@ -16,7 +16,7 @@ ms.author: maggies
 
 The web portal of a Reporting Services report server is a web-based experience. In the portal, you can view reports, mobile reports, KPIs, and navigate through the elements in your report server instance. You can also use the web portal to administer a single report server instance.
 
-![ssRSPortal](../reporting-services/media/ssrsportal.png)
+![Screenshot showing SQL Server Reporting Services Portal.](../reporting-services/media/ssrsportal.png)
 
 ## What is the web portal
 
@@ -42,7 +42,7 @@ The web portal is used only for a report server that runs in native mode. It is 
 
 Some web portal features are only available in specified editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Reporting Services Features supported by the Editions of SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
-On a new installation, only local administrators have sufficient permissions to work with content and settings. To grant permissions to other users, a local administrator must create role assignments that provide access to the report server. The application pages and tasks that a user can subsequently access will depend on the role assignments for that user. For more information, see [Grant User Access to a Report Server](security/grant-user-access-to-a-report-server-report-manager.md)
+On a new installation, only local administrators have sufficient permissions to work with content and settings. To grant permissions to other users, a local administrator must create role assignments that provide access to the report server. The application pages and tasks that a user can subsequently access will depend on the role assignments for that user. For more information, see [Grant User Access to a Report Server](./security/grant-user-access-to-a-report-server.md)
 
 > [!NOTE]
 > If you are browsing to the web portal on the local machine that the server is running on, you may see a message indicating that you are not allowed to view this folder. This is due to Universal Access Control (UAC) and that you are not running the browser as an admin. You are not able to run Microsoft Edge as an admin. You will need to use Internet Explorer. You can either browser to the server remotely, or launch Internet Explorer as admin and browser to the web portal. If you want to use the web portal remotely, you will need to give your account content manager rights on the folder.  
@@ -80,15 +80,15 @@ The web portal will group items into different categories. The available categor
 
 You can control what is displayed by selecting **View** in the upper right. If you select Show Hidden, those items will be displayed in a lighter color.
 
-![ssRSWebPortal-view](../reporting-services/media/ssrswebportal-view.png)
+![Screenshot of the View dropdown with the Show hidden items option selected.](../reporting-services/media/ssrswebportal-view.png)
 
-![ssRSWebPortal-hidden](../reporting-services/media/ssrswebportal-hidden.png)
+![Screenshot showing the unavailable Paginated Reports option.](../reporting-services/media/ssrswebportal-hidden.png)
 
 ### Power BI Desktop Reports and Excel Workbooks
 
 You can upload, organize, and manage permissions for Power BI Desktop reports and Excel workbooks. They will be grouped together within the web portal.
 
-![ssRSWebPortal-view-pbi-and-excel](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
+![Screenshot showing the Power BI Desktop Reports section and the Excel Workbooks section.](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
 
 The files are stored within Reporting Services, similar to other resource files. Selecting one of these items will download them locally to your desktop. You can save changes you've made by reuploading them to the report server.
 
@@ -96,7 +96,7 @@ The files are stored within Reporting Services, similar to other resource files.
 
 Enter a search term, and see everything you can access. The results are categorized into KPIs, reports, datasets, and other items. You can then interact with the results and add them to your favorites.
 
-![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
+![Screenshot showing  the SQL Server Reporting Servers portal with the Search text box called out.](../reporting-services/media/ssrswebportal-search.png)
 
 ## Web portal tasks
 
@@ -109,7 +109,7 @@ Enter a search term, and see everything you can access. The results are categori
 ## See also
 
 [Create mobile reports with SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
-[Configure a URL (SSRS Configuration Manager)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+[Configure a URL (Report Server Configuration Manager)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Reporting Services Tools](../reporting-services/tools/reporting-services-tools.md)  
 [Planning for Reporting Services Browser Support](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Reporting Services Features supported by the Editions of SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  

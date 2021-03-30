@@ -1,4 +1,5 @@
 ---
+description: "Other Access Driver Programming Details"
 title: "Other Access Driver Programming Details | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "Jet-based ODBC drivers [ODBC], Access driver"
   - "desktop database drivers [ODBC], Access driver"
 ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Other Access Driver Programming Details
 > [!NOTE]  

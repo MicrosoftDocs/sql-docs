@@ -1,4 +1,5 @@
 ---
+description: "supportsUnionAll Method (SQLServerDatabaseMetaData)"
 title: "supportsUnionAll Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLServerDatabaseMetaData.supportsUnionAll"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: ed8344eb-4d1d-43d3-ade8-935ec677f73c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # supportsUnionAll Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Network Example"
 title: "Network Example | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "drivers [ODBC], examples"
 ms.assetid: e14ae90f-87b3-4bcf-b69a-1773e2c2a1c5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Network Example
 This illustration shows how each of the preceding configurations could appear in a single network.  

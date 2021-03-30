@@ -1,19 +1,22 @@
 ---
 title: "Managed backup - configure advanced options"
+description: This tutorial describes how to set advanced options for SQL Server Managed Backup to Microsoft Azure, in the event default options don't suit your needs.
 titleSuffix: "to Microsoft Azure"
-ms.custom: seo-lt-2019
-ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
+f1_keywords: 
+  - sql13.swb.managedbackup.configure.f1
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
+ms.reviewer: ""
 ---
 # Configure advanced options for SQL Server managed backup to Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The following tutorial describes how to set advanced options for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. These procedures are only necessary if you require the features they offer. Otherwise, you can enable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] and depend on the default behavior.  
   
  In each scenario, the backup is specified using the `database_name` parameter. When `database_name` is NULL or *, then the changes affect the default settings at an Instance level. Instance level settings also affect new databases created after the change.  

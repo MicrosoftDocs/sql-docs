@@ -1,12 +1,13 @@
 ---
+description: "STIntersects (geography Data Type)"
 title: "STIntersects (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
+ms.prod_service: "synapse-analytics, database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "STIntersects (geography Data Type)"
   - "STIntersects_TSQL"
@@ -17,26 +18,29 @@ helpviewer_keywords:
 ms.assetid: c9db8b42-83c7-48c6-8963-fce54eb34c05
 author: MladjoA
 ms.author: mlandzic 
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STIntersects (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Returns 1 if a **geography** instance intersects another **geography** instance. Returns 0 if it does not.  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 .STIntersects ( other_geography )  
 ```  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
   
-## Arguments  
- *other_geography*  
- Is another **geography** instance to compare to the instance on which `STIntersects()` is invoked.  
+## Arguments
+
+*other_geography*  
+Is another **geography** instance to compare to the instance on which `STIntersects()` is invoked.  
   
-## Return Types  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
+## Return Types
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
   
  CLR return type: **SqlBoolean**  
   

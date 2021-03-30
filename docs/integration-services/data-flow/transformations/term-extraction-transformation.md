@@ -1,4 +1,5 @@
 ---
+description: "Term Extraction Transformation"
 title: "Term Extraction Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -31,7 +32,7 @@ ms.author: chugu
 ---
 # Term Extraction Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Term Extraction transformation extracts terms from text in a transformation input column, and then writes the terms to a transformation output column. The transformation works only with English text and it uses its own English dictionary and linguistic information about English.  
@@ -174,7 +175,7 @@ ms.author: chugu
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -194,7 +195,7 @@ ms.author: chugu
  Provide a name for the output column that will contain the score for each extracted term.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
+ Use the [Configure Error Output](../error-handling-in-data.md) dialog box to specify error handling for rows that cause errors.  
   
 ## Term Extraction Transformation Editor (Exclusion Tab)
   Use the **Exclusion** tab of the **Term Extraction Transformation Editor** dialog box to set up a connection to an exclusion table and specify the columns that contain exclusion terms.  
@@ -216,7 +217,7 @@ ms.author: chugu
  Select the column in the table or view that contains the exclusion terms.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
+ Use the [Configure Error Output](../error-handling-in-data.md) dialog box to specify error handling for rows that cause errors.  
   
 ## Term Extraction Transformation Editor (Advanced Tab)
   Use the **Advanced** tab of the **Term Extraction Transformation Editor** dialog box to specify properties for the extraction such as frequency, length, and whether to extract words or phrases.  
@@ -247,9 +248,8 @@ ms.author: chugu
  Specify whether to make the extraction case-sensitive. The default is **False**.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
+ Use the [Configure Error Output](../error-handling-in-data.md) dialog box to specify error handling for rows that cause errors.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
-
+ [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)

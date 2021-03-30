@@ -1,4 +1,5 @@
 ---
+description: "Select Variables Page"
 title: "Select Variables Page | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # Select Variables Page
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Select variables** dialog box to select one or more variables for the **ReadOnlyVariables** and **ReadWriteVariables** properties when you configure a Script task or a Script component.  
@@ -36,6 +37,5 @@ ms.author: chugu
  Specifies the data type of a variable.  
   
 ## See Also  
- [Script Task Editor &#40;Script Page&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
-  
+ [Script Task Editor &#40;Script Page&#41;](./script-task.md)  
   

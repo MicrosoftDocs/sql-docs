@@ -178,7 +178,7 @@ SET
     { READ_ONLY | READ_WRITE }
 
 <db_user_access_option> ::=
-    { SINGLE_USER | RESTRICTED_USER | MULTI_USER }
+    { SINGLE_USER | RESTRICTED_USER | MULTI_USER } ---SINGLE_USER and RESTRICTED_USER not supported in SQL MI
 
 <delayed_durability_option> ::=
     DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
@@ -1578,7 +1578,7 @@ SET
   { READ_ONLY | READ_WRITE }
 
 <db_user_access_option> ::=
-  { RESTRICTED_USER | MULTI_USER }
+  { RESTRICTED_USER | MULTI_USER } --cannot set restricted_user for SQL MI nor Read_only
 
 <delayed_durability_option> ::= DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
 
@@ -2232,7 +2232,7 @@ Not all database options use the WITH \<termination> clause or can be specified 
 ## Examples
 
 ### A. Setting the database to READ_ONLY
-Changing the state of a database or file group to READ_ONLY or READ_WRITE requires exclusive access to the database. The following example sets the database to `RESTRICTED_USER` mode to limit access. The example then sets the state of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `READ_ONLY` and returns access to the database to all users.
+Changing the state of a database or file group to READ_ONLY or READ_WRITE requires exclusive access to the database. The following example sets the database to `RESTRICTED_USER` mode to limit access. The example then sets the state of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `READ_ONLY` and returns access to the database to all users. --We cannot set the database in READ_ONLY or RESTRICTED_USER mode in SQL MI
 
 ```sql
 USE master;

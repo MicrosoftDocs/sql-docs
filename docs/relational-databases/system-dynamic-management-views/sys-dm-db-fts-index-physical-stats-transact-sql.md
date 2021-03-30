@@ -27,9 +27,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   Returns a row for each full-text or semantic index in each table that has an associated full-text or semantic index.  
   
-||||  
-|-|-|-|  
 |**Column name**|**Type**|**Description**|  
+|-|-|-|  
 |**object_id**|int|Object ID of the table that contains the index.|  
 |**fulltext_index_page_count**|**bigint**|Logical size of the extraction in number of index pages.|  
 |**keyphrase_index_page_count**|**bigint**|Logical size of the extraction in number of index pages.|  

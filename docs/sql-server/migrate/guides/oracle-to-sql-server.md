@@ -104,7 +104,7 @@ To create an assessment, do the following:
 
    ![Screenshot of the Connect to Oracle pane.](./media/oracle-to-sql-server/connect-to-oracle.png)
 
- 1. On the **Filter objects** pane, select the Oracle schemas you want to migrate, and then select **OK**.
+1. On the **Filter objects** pane, select the Oracle schemas you want to migrate, and then select **OK**.
 
    ![Screenshot of the "Filter objects" pane for selecting the schemas to load.](./media/oracle-to-sql-server/select-schema.png)
 

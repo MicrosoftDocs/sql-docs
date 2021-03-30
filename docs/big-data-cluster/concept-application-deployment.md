@@ -6,7 +6,7 @@ author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 06/22/2020
+ms.date: 02/09/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -52,14 +52,16 @@ When an application is executed, the Kubernetes service for the application prox
 
 ## <a id="app-deploy-security"></a> Security considerations for applications deployments on OpenShift
 
-SQL Server 2019 CU5 enables support for Big Data Clusters deployment on Red Hat OpenShift as well as an updated security model for BDC so privileged containers no longer required. In addition to non-privileged, containers are running as non-root user by default for all new deployments using SQL Server 2019 CU5.
+SQL Server 2019 CU5 enables support for Big Data Clusters deployment on Red Hat OpenShift and an updated security model for BDC so privileged containers no longer required. In addition to non-privileged, containers are running as non-root user by default for all new deployments using SQL Server 2019 CU5.
 
-At the time of the CU5 release, the setup step of the applications deployed with [app deploy]() interfaces will still run as *root* user. This is required since during setup  additional packages that application will use are installed. Other user code deployed as part of the application will run as low privilege user. 
+At the time of the CU5 release, the setup step of the applications deployed with [app deploy](app-create.md) interfaces will still run as *root* user. This is required since during setup extra packages that application will use are installed. Other user code deployed as part of the application will run as low privilege user. 
 
-In addition, **CAP_AUDIT_WRITE** capability is an optional capability necessary to allow scheduling SSIS applications using cron jobs. When the application’s yaml specification file specifies a schedule, the application will be triggered via a cron job, which requires the additional capability.  Alternatively, the application can be triggered on demand with *azdata app run* through a web service call, which does not require the CAP_AUDIT_WRITE capability. 
+In addition, **CAP_AUDIT_WRITE** capability is an optional capability necessary to allow scheduling SSIS applications using cron jobs. When the application’s yaml specification file specifies a schedule, the application will be triggered via a cron job, which requires the extra capability.  Alternatively, the application can be triggered on demand with *azdata app run* through a web service call, which does not require the CAP_AUDIT_WRITE capability. Note that **CAP_AUDIT_WRITE** capability no longer needed for cronjob starting from SQL Server 2019 CU8 release. 
+
+
 
 > [!NOTE]
-> The custom SCC in the [OpenShift deployment article](deploy-openshift.md) does not include this capability since it is not required by a default deployment of big data cluster. To enable this capability, you must first update the custom SCC yaml file to include CAP_AUDIT_WRITE in the 
+> The custom SCC in the [OpenShift deployment article](deploy-openshift.md) does not include this capability since it is not required by a default deployment of big data cluster. To enable this capability, you must first update the custom SCC yaml file to include CAP_AUDIT_WRITE.
 
 ```yml
 ...

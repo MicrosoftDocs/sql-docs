@@ -120,7 +120,7 @@ In addition to the SET options and deterministic function requirements, the foll
    |`MIN`, `MAX`|`UNION`, `EXCEPT`, or `INTERSECT` operators|`TABLESAMPLE`|
    |Table variables|`OUTER APPLY` or `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |Sparse column sets|Inline (TVF) or multi-statement table-valued functions (MSTVF)|`OFFSET`|
-   |`CHECKSUM_AGG`|`STRING_AGG`|||
+   |`CHECKSUM_AGG`|`STRING_AGG`||
 
    <sup>1</sup> The indexed view can contain **float** columns; however, such columns cannot be included in the clustered index key.
 

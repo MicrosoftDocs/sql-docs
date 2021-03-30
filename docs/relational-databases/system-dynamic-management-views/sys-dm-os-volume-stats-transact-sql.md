@@ -42,9 +42,8 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ## Table Returned  
   
-||||  
-|-|-|-|  
 |**Column**|**Data type**|**Description**|  
+|-|-|-|  
 |**database_id**|**int**|ID of the database. Cannot be null.|  
 |**file_id**|**int**|ID of the file. Cannot be null.|  
 |**volume_mount_point**|**nvarchar(512)**|Mount point at which the volume is rooted. Can return an empty string. Returns null on Linux operating system.|  

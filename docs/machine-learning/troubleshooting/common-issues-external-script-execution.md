@@ -1,19 +1,19 @@
 ---
 title: Troubleshoot issues with Launchpad service
-description: This article provides troubleshooting guidance for many issues that prevent the SQL Server Trusted Launchpad service from starting, including configuration problems or changes, or missing network protocols.
+description: This article provides troubleshooting guidance for many issues that prevent the SQL Server Launchpad service from starting, including configuration problems or changes, or missing network protocols.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/30/2019
+ms.date: 03/31/2021
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
-# Troubleshoot issues with Launchpad service and external script execution in SQL Server
+# Troubleshoot issues with Launchpad service and external script execution in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This article provides troubleshooting guidance for issues involving the SQL Server Trusted Launchpad service. The Launchpad service supports external script execution for R and Python. Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols.  
+This article provides troubleshooting guidance for issues involving the [SQL Server Launchpad service](../security/sql-server-launchpad-service-account.md) used with [Machine Learning Services](../sql-server-machine-learning-services.md). The Launchpad service supports external script execution for R and Python. Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols.  
 
 ## Determine whether Launchpad is running
 

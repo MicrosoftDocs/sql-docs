@@ -364,7 +364,7 @@ You cannot use in an R script the following types of query results:
 
 Using string type variables as factors can greatly increase the amount of memory used for R operations. This is a known issue with R in general, and there are many articles on the subject. For example, see [Factors are not first-class citizens in R, by John Mount, in R-bloggers)](https://www.r-bloggers.com/factors-are-not-first-class-citizens-in-r/) or [stringsAsFactors: An unauthorized biography, by Roger Peng](https://simplystatistics.org/2015/07/24/stringsasfactors-an-unauthorized-biography/). 
 
-Although the issue is not specific to SQL Server, it can greatly affect performance of R code run in SQl Server. Strings are typically stored as varchar or nvarchar, and if a column of string data has many unique values, the process of internally converting these to integers and back to strings by R can even lead to memory allocation errors.
+Although the issue is not specific to SQL Server, it can greatly affect performance of R code run in SQL Server. Strings are typically stored as varchar or nvarchar, and if a column of string data has many unique values, the process of internally converting these to integers and back to strings by R can even lead to memory allocation errors.
 
 If you do not absolutely require a string data type for other operations, mapping the string values to a numeric (integer) data type as part of data preparation would be beneficial from a performance and scale perspective.
 

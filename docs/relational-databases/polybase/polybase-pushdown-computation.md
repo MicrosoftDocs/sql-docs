@@ -2,7 +2,7 @@
 description: "Pushdown computations in PolyBase"
 title: "Pushdown computations in PolyBase"
 dexcription: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
-ms.date: 03/09/2021
+ms.date: 03/31/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -103,6 +103,45 @@ SELECT * FROM customer
 WHERE customer.account_balance <= 200000 
     AND customer.zipcode BETWEEN 92656 AND 92677;
 ```
+### Supported functions in filter clause
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows the following functions in filter clause for predicate pushdown.
+
+String functions
+- `CONCAT`
+- `DATALENGTH`
+- `LEN`
+- `LIKE`
+- `LOWER`
+- `LTRIM`
+- `RTRIM`
+- `SUBSTRING`
+- `UPPER`
+
+Mathematical functions
+- `ABS`
+- `ACOS`
+- `ASIN`
+- `ATAN`
+- `CEILING`
+- `COS`
+- `EXP`
+- `FLOOR`
+- `POWER`
+- `SIGN`
+- `SIN`
+- `SQRT`
+- `TAN`
+
+General functions
+- `COALESCE`
+- `NULLIF`
+
+Date & time functions
+- `DATEADD`
+- `DATEDIFF`
+- `DATEPART`
+
 
 ## Examples
 
@@ -124,4 +163,4 @@ OPTION (DISABLE EXTERNALPUSHDOWN);
 
 ## Next steps
 
-For more information about PolyBase, see [What is PolyBase?](polybase-guide.md)
+For more information about PolyBase, see [Introducing data virtualization with PolyBase](polybase-guide.md)

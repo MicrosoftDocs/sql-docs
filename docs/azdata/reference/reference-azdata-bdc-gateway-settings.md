@@ -75,7 +75,7 @@ azdata bdc gateway settings show --settings gateway-site.gateway.httpclient.sock
 ```
 Show the pending settings changes for the Gateway resource.
 ```bash
-azdata bdc gateway settings show --filter-options=pending –-resource gateway
+azdata bdc gateway settings show --filter-options=pending –-resource gateway --include-details
 ```
 ### Optional Parameters
 #### `--resources -r`

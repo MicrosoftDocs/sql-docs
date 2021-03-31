@@ -67,7 +67,7 @@ azdata bdc gateway settings show [--resources -r]
 ### Examples
 Show the user configured Gateway resource-scope settings.
 ```bash
-azdata bdc gateway settings show
+azdata bdc gateway settings show --resource gateway
 ```
 Show the gateway timeout limit.
 ```bash

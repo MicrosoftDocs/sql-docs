@@ -1,8 +1,8 @@
 ---
-title: "Scalar UDF Inlining in Microsoft SQL Server | Microsoft Docs"
+title: "Scalar UDF Inlining in Microsoft SQL Server"
 description: "Scalar UDF Inlining feature to improve performance of queries that invoke scalar UDFs in SQL Server (starting with SQL Server 2019)."
 ms.custom: ""
-ms.date: 03/30/2021
+ms.date: 03/31/2021
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 
 author: "s-r-k"
 ms.author: "karam"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Scalar UDF Inlining
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 SQL Database](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
 This article introduces Scalar UDF Inlining, a feature under the [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md) suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql19](../../includes/sssql19-md.md)]).
 

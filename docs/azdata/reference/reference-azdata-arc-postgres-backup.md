@@ -131,13 +131,16 @@ azdata arc postgres backup restore --server-name -sn
 ### Examples
 Restore a backup by ID
 ```bash
-azdata arc postgres backup restore -sn pg -id 123e4567e89b12d3a456426655440000```
+azdata arc postgres backup restore -sn pg -id 123e4567e89b12d3a456426655440000
+```
 Restore a backup by time (point-in-time restore)
 ```bash
-azdata arc postgres backup restore -sn pg-dst -ssn pg-src --time "2020-11-18 17:25:34Z"```
+azdata arc postgres backup restore -sn pg-dst -ssn pg-src --time "2020-11-18 17:25:34Z"
+```
 Restore a backup by time span (point-in-time restore)
 ```bash
-azdata arc postgres backup restore -sn pg-dst -ssn pg-src --time 1d```
+azdata arc postgres backup restore -sn pg-dst -ssn pg-src --time 1d
+```
 ### Required Parameters
 #### `--server-name -sn`
 Name of the Azure Arc enabled PostgreSQL Hyperscale server group.

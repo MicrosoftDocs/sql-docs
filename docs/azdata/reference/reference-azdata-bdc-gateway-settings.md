@@ -73,7 +73,7 @@ Show the gateway timeout limit.
 ```bash
 azdata bdc gateway settings show --settings gateway-site.gateway.httpclient.socketTimeout --resources gateway
 ```
-Show the pending settings changes for the Gateway resource..
+Show the pending settings changes for the Gateway resource.
 ```bash
 azdata bdc gateway settings show --filter-options=pending –-resource gateway
 ```

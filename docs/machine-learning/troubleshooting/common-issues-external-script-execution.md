@@ -7,7 +7,7 @@ ms.date: 03/31/2021
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Troubleshoot issues with Launchpad service and external script execution in SQL Server Machine Learning Services

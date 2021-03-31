@@ -372,8 +372,6 @@ items:
     href: ../sql-server/sql-server-2014-release-notes.md?toc=../toc.json
   - name: Troubleshooting
     items:
-    - name: Troubleshooting overview
-      href: ../machine-learning/troubleshooting/machine-learning-troubleshooting-overview.md
     - name: Known issues
       href: ../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md
     - name: Collect data for troubleshooting

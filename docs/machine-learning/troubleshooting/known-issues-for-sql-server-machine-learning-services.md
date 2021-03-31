@@ -10,7 +10,7 @@ ms.author: davidph
 ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
-# Known issues in SQL Server Machine Learning Services
+# Known issues for Python and R in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 This article describes known problems or limitations with the Python and R components that are provided in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](../r/sql-server-r-services.md).
@@ -748,4 +748,4 @@ Revision 0.92 of the SQLite ODBC driver is incompatible with RevoScaleR. Revisio
 
 ## Next steps
 
-[Troubleshooting machine learning in SQL Server](machine-learning-troubleshooting-overview.md)
+[Collect data to troubleshoot SQL Server Machine Learning Services](data-collection-ml-troubleshooting-process.md)

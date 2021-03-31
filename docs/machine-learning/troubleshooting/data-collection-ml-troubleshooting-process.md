@@ -10,7 +10,7 @@ ms.author: davidph
 ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
-# Collect data to troubleshoot SQL machine learning
+# Collect data to troubleshoot SQL Server Machine Learning Services
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
@@ -297,4 +297,4 @@ Because it might not be possible to exclude all folders that are needed by the S
 
 ## See also
 
-[Troubleshoot machine learning in SQL Server](machine-learning-troubleshooting-overview.md)
+[Troubleshoot machine learning in SQL Server](common-issues-external-script-execution.md)

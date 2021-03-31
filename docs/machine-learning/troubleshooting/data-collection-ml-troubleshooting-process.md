@@ -1,5 +1,5 @@
 ---
-title: Collect data for troubleshooting
+title: Collect data for troubleshooting Python and R
 description: Learn how to collect the data you need when attempting to resolve problems in SQL Server Machine Learning Services on your own or with the help of Microsoft customer support.
 ms.prod: sql
 ms.technology: machine-learning-services
@@ -10,7 +10,7 @@ ms.author: davidph
 ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
-# Collect data to troubleshoot SQL Server Machine Learning Services
+# Collect data to troubleshoot Python and R scripts with SQL Server Machine Learning Services
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 

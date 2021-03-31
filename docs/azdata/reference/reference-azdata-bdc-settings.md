@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 Applies to [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
-The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
+The following article provides reference for the cluster-scoped **settings** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
 
@@ -192,4 +192,3 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
-

@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 Applies to [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
-The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
+The following article provides reference for the **gateway settings** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
 
@@ -67,15 +67,15 @@ azdata bdc gateway settings show [--resources -r]
 ### Examples
 Show the user configured Gateway resource-scope settings.
 ```bash
-azdata bdc gateway settings show
+azdata bdc gateway settings show --resource gateway
 ```
 Show the gateway timeout limit.
 ```bash
 azdata bdc gateway settings show --settings gateway-site.gateway.httpclient.socketTimeout --resources gateway
 ```
-Show the pending settings changes for the Gateway resource..
+Show the pending settings changes for the Gateway resource.
 ```bash
-azdata bdc gateway settings show --filter-options=pending –-resource gateway
+azdata bdc gateway settings show --filter-options=pending –-resource gateway --include-details
 ```
 ### Optional Parameters
 #### `--resources -r`
@@ -108,4 +108,3 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
-

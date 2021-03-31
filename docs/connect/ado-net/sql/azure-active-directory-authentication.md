@@ -1,7 +1,7 @@
 ---
-title: "Using Azure Active Directory authentication with SqlClient"
-description: "Describes how to use supported Azure Active Directory authentication modes to connect to Azure SQL data sources with SqlClient"
-ms.date: "11/20/2020"
+title: Using Azure Active Directory authentication with SqlClient
+description: Describes how to use supported Azure Active Directory authentication modes to connect to Azure SQL data sources with SqlClient
+ms.date: 03/30/2021
 dev_langs: 
   - "csharp"
 ms.prod: sql
@@ -249,7 +249,7 @@ The following example shows how to set an application client ID through a config
 
 ## Support for a custom SQL authentication provider
 
-Given more flexibility, the client application can also use its own provider for Active Directory authentication instead of using the `ActiveDirectoryAuthenticationProvider` class. The custom authentication provider needs to be a subclass of `SqlAuthenticationProvider` with overridden methods. 
+Given more flexibility, the client application can also use its own provider for Active Directory authentication instead of using the `ActiveDirectoryAuthenticationProvider` class. The custom authentication provider needs to be a subclass of `SqlAuthenticationProvider` with overridden methods. It then must register the custom provider, overriding one or more of the existing `Active Directory*` authentication methods.
 
 The following example shows how to use a new authentication provider for `Active Directory Device Code Flow` authentication.
 

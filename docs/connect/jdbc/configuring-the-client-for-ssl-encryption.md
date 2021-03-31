@@ -73,5 +73,5 @@ The example uses a file named "caCert.cer" as a certificate file. You must obtai
 
 ## See also
 
-- [Using encryption](using-ssl-encryption.md)
-- [Securing JDBC driver applications](securing-jdbc-driver-applications.md)
+[Using encryption](using-ssl-encryption.md)  
+[Securing JDBC driver applications](securing-jdbc-driver-applications.md)  

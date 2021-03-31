@@ -65,5 +65,5 @@ If the **encrypt** property is **true** and the **trustServerCertificate** prope
 
 ## See also
 
-- [Using encryption](using-ssl-encryption.md)
-- [Securing JDBC driver applications](securing-jdbc-driver-applications.md)
+[Using encryption](using-ssl-encryption.md)  
+[Securing JDBC driver applications](securing-jdbc-driver-applications.md)  

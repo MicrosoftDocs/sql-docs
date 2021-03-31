@@ -39,7 +39,8 @@ monikerRange: "= azuresqldb-current"
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|The secondary type, one of:<br /><br /> 0 = No. The secondary database is not accessible until failover.<br /><br /> 1 = ReadOnly. The secondary database is accessible only to client connections with ApplicationIntent=ReadOnly.<br /><br /> 2 = All. The secondary database is accessible to any client connection.|  
 |secondary_allow_connections _desc|**nvarchar(256)**|No<br /><br /> All<br /><br /> Read-Only|  
-  
+|percent_copied|**int**|0 to 100|
+
 ## Permissions
 
 This view is only available in the **master** database to the server-level principal login.  

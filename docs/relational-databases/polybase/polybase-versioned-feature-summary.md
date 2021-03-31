@@ -58,8 +58,8 @@ The following T-SQL functions or syntax will prevent pushdown computation:
 - `GREATEST`
 - `LEAST`
 - `PARSE`
-
-Pushdown support for the `FORMAT` and `TRIM` syntax was introduced in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] CU10.
+- `FORMAT` 
+- `TRIM`
 
 For more information, see [Pushdown computations in PolyBase](polybase-pushdown-computation.md).
 

@@ -86,7 +86,7 @@ It is also possible for an application to be executed using a RESTful web servic
 
 Application deployment enables the deployment of applications on a SQL Server BDC by providing interfaces to create, manage, and run applications.
 
-:::image type="content" source="media/concept-applicaiton-deployment/process-overview.png" alt-text="Identify sources (R, Python, SSIS (dtexec)", deploy with command line, Azure Data Studio, or Visual Studio Code, and consume them with an interactive, RESTful API schedule.:::
+:::image type="content" source="media/concept-applicaiton-deployment/process-overview.png" alt-text="Identify sources (R, Python, SSIS (dtexec), deploy with command line, Azure Data Studio, or Visual Studio Code, and consume them with an interactive, RESTful API schedule.":::
 
 The followings are the target scenarios for app deploy:
 

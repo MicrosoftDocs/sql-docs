@@ -56,7 +56,7 @@ SQL Server 2019 CU5 enables support for BDC deployment on Red Hat OpenShift and 
 
 At the time of the CU5 release, the setup step of the applications deployed with [app deploy](app-create.md) interfaces will still run as *root* user. This is required since during setup extra packages that application will use are installed. Other user code deployed as part of the application will run as low privilege user. 
 
-In addition, **CAP_AUDIT_WRITE** capability is an optional capability necessary to allow scheduling SSIS applications using cron jobs. When the application’s yaml specification file specifies a schedule, the application will be triggered via a cron job, which requires the extra capability. Alternatively, the application can be triggered on demand with *azdata app run* through a web service call, which does not require the CAP_AUDIT_WRITE capability. Note that **CAP_AUDIT_WRITE** capability no longer needed for cronjob starting from SQL Server 2019 CU8 release. 
+In addition, `CAP_AUDIT_WRITE` capability is an optional capability necessary to allow scheduling SSIS applications using cron jobs. When the application’s yaml specification file specifies a schedule, the application will be triggered via a cron job, which requires the extra capability. Alternatively, the application can be triggered on demand with `azdata app run` through a web service call, which does not require the `CAP_AUDIT_WRITE` capability. Note that `CAP_AUDIT_WRITE` capability no longer needed for `cronjob` starting from SQL Server 2019 CU8 release. 
 
 
 
@@ -110,7 +110,20 @@ In app deploy, `spec.yaml` is where you provide the information that controller 
 
 Aside from above you need to specify the input and output of your Python application. That generates a `spec.yaml` file similar to the following:
 
-:::image type="content" source="media/concept-applicaiton-deployment/example-yaml-python.png" alt-text="Example python yaml":::
+```yml
+name: addpy
+version: v1
+runtime: Python
+src: ./add.py
+entrypoint: add
+replicas: 1
+poolsize: 1
+inputs:
+  x: int
+  y: int
+output:
+  result: int
+```
 
 You can deploy a new python application using the following command:
 
@@ -140,7 +153,19 @@ In app deploy, `spec.yaml` is where you provide the information that controller 
 
 Aside from above you need to specify the input and output of your R application. That generates a `spec.yaml` file similar to the following:
 
-:::image type="content" source="media/concept-applicaiton-deployment/example-yaml-r.png" alt-text="Example yaml r script":::
+```yml
+name: roll-dice
+version: v1
+runtime: R
+src: ./roll-dice.R
+entrypoint: rollEm
+replicas: 1
+poolsize: 1
+inputs:
+  x: integer
+output:
+  result: data.fram
+```
 
 You can deploy a new R application using the following command:
 
@@ -213,7 +238,13 @@ In app deploy, `spec.yaml` is where you provide the information that controller 
 
 Aside from above you need to specify the `bundleFileName` of your MLeap application. That generates a `spec.yaml` file similar to the following:
 
-:::image type="content" source="media/concept-applicaiton-deployment/example-yaml-mleap.png" alt-text="Example mleap yaml":::
+```yml
+name: mleap-census
+version: v1
+runtime: Mleap
+bundleFileName: census-bundle.zip
+replicas: 1
+```
 
 You can deploy a new MLeap application using the following command:
 

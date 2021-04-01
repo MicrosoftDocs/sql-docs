@@ -2,7 +2,7 @@
 description: "CREATE TABLE (Azure Synapse Analytics)"
 title: "CREATE TABLE (Azure Synapse Analytics) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2019"
+ms.date: "03/30/2021"
 ms.service: sql-data-warehouse
 ms.reviewer: ""
 ms.topic: reference
@@ -42,20 +42,21 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 [;]  
 
 <column_options> ::=
-    [ COLLATE Windows_collation_name ]  
-    [ NULL | NOT NULL ] -- default is NULL  
+    [ COLLATE Windows_collation_name ]
+    [ NULL | NOT NULL ] -- default is NULL
+    [ IDENTITY [ ( seed, increment ) ]
     [ <column_constraint> ]
 
 <column_constraint>::=
     {
-        DEFAULT DEFAULT constant_expression
-        | PRIMARY KEY NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        DEFAULT constant_expression
+        | PRIMARY KEY NONCLUSTERED NOT ENFORCED -- Applies to Azure Synapse Analytics only
         | UNIQUE NOT ENFORCED -- Applies to Azure Synapse Analytics only
     }
 
 <table_option> ::=
     {
-       CLUSTERED COLUMNSTORE INDEX --default for Azure Synapse Analytics 
+       CLUSTERED COLUMNSTORE INDEX -- default for Azure Synapse Analytics 
       | CLUSTERED COLUMNSTORE INDEX ORDER (column [,...n])  
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC

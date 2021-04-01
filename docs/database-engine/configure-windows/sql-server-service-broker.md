@@ -2,7 +2,7 @@
 title: "SQL Server Service Broker | Microsoft Docs"
 description: Learn about Service Broker. See how it provides native support for messaging in the SQL Server Database Engine and Azure SQL  Managed Instance.
 ms.custom: ""
-ms.date: "09/07/2018"
+ms.date: "03/17/2021"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -80,7 +80,7 @@ FROM ExpenseQueue;
   Once you process all messages from the queue, you should close the conversation using the [END CONVERSATION](../../t-sql/statements/end-conversation-transact-sql.md) Transact-SQL statement.
 
 ## Where is the documentation for Service Broker?  
- The reference documentation for [!INCLUDE[ssSB](../../includes/sssb-md.md)] is included in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] documentation. This reference documentation includes the following sections:  
+ The reference documentation for [!INCLUDE[ssSB](../../includes/sssb-md.md)] is included in the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] documentation. This reference documentation includes the following sections:  
   
 -   [Data Definition Language &#40;DDL&#41; Statements &#40;Transact-SQL&#41;](../../t-sql/statements/statements.md) for CREATE, ALTER, and DROP statements  
   
@@ -92,18 +92,28 @@ FROM ExpenseQueue;
   
 -   [ssbdiagnose Utility &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
- See the [previously published documentation](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) for [!INCLUDE[ssSB](../../includes/sssb-md.md)] concepts and for development and management tasks. This documentation is not reproduced in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] documentation due to the small number of changes in [!INCLUDE[ssSB](../../includes/sssb-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ See the [previously published documentation](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) for [!INCLUDE[ssSB](../../includes/sssb-md.md)] concepts and for development and management tasks. This documentation is not reproduced in the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] documentation due to the small number of changes in [!INCLUDE[ssSB](../../includes/sssb-md.md)] in recent versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ## What's new in Service Broker  
- No significant changes are introduced in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  The following changes were introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
 
 ### Service broker and Azure SQL Managed Instance
 
-- Cross-instance service broker is not supported 
- - `sys.routes` - Prerequisite: select address from sys.routes. Address must be LOCAL on every route. See [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).
- - `CREATE ROUTE` - you cannot use `CREATE ROUTE` with `ADDRESS` other than `LOCAL`. See [CREATE ROUTE](../../t-sql/statements/create-route-transact-sql.md).
- - `ALTER ROUTE` cannot use `ALTER ROUTE` with `ADDRESS` other than `LOCAL`. See [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md).  
-  
+Cross-instance service broker message exchange is supported only between Azure SQL Managed Instances:
+
+- `CREATE ROUTE`: You can't use CREATE ROUTE with ADDRESS other than LOCAL or DNS name of another SQL Managed Instance. Port specified must be 4022. See [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
+- `ALTER ROUTE`: You can't use ALTER ROUTE with ADDRESS other than LOCAL or DNS name of another SQL Managed Instance. Port specified must be 4022. See See [ALTER ROUTE](https://docs.microsoft.com/sql/t-sql/statements/alter-route-transact-sql).
+
+Transport security is supported, dialog security is not:
+
+- `CREATE REMOTE SERVICE BINDING` is not supported.
+
+Service broker is enabled by default and cannot be disabled. The following ALTER DATABASE options are not supported:
+
+- `ENABLE_BROKER`
+- `DISABLE_BROKER`
+
+No significant changes were introduced in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  The following changes were introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. 
+
 ### Messages can be sent to multiple target services (multicast)  
  The syntax of the [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md) statement has been extended to enable multicast by supporting multiple conversation handles.  
   

@@ -35,15 +35,15 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 > For local installations, you must run Setup as an administrator. If you install SQL Server from a remote share, you must use a domain account that has read permissions on the remote share.  
   
 > [!NOTE]
-> When you add features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the existing usage report settings are applied to the newly-added features. To change these settings, use the **SQL Server Error and Usage Reporting** tool on the SQL Server **Configuration Tools** menu.
+> When you add features to an instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], the existing usage report settings are applied to the newly-added features. To change these settings, use the **SQL Server  Error and Usage Reporting** tool on the SQL Server **Configuration Tools** menu.
 
 ## Procedures
 
-#### To add features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+#### To add features to an instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]
 
-1. Insert the SQL Server installation media. From the root folder, double-click setup.exe. To install from a network share, navigate to the root folder on the share, and then double-click setup.exe. If the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Setup dialog box appears, select **OK** to install the prerequisites, then select **Cancel** to quit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation.  
+1. Insert the SQL Server installation media. From the root folder, double-click setup.exe. To install from a network share, navigate to the root folder on the share, and then double-click setup.exe. If the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Setup dialog box appears, select **OK** to install the prerequisites, then select **Cancel** to quit [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] installation.  
 
-2. The Installation Wizard will launch the SQL Server Installation Center. To add a new feature to an existing instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], select **Installation** in the left-hand navigation area, and then select **New SQL Server stand-alone installation or add features to an existing installation**.
+2. The Installation Wizard will launch the SQL Server Installation Center. To add a new feature to an existing instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], select **Installation** in the left-hand navigation area, and then select **New SQL Server stand-alone installation or add features to an existing installation**.
 
 3. The System Configuration Checker will run a discovery operation on your computer. To view the verification details, select **View Details**. To continue, select **OK**.
 
@@ -53,7 +53,7 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
 6. The System Configuration Checker will verify the system state of your computer before Setup continues.  
 
-7. On the Installation Type page, select the option **Add features to an existing instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, and select the instance you would like to update.
+7. On the Installation Type page, select the option **Add features to an existing instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]**, and select the instance you would like to update.
 
 8. On the Feature Selection page, select the components for your installation. A description for each component group appears in the right-hand pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) and [SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-version-15.md). Each component can be installed only once on a given instance of SQL Server. To install multiple components, you must install an additional instance of SQL Server.
 

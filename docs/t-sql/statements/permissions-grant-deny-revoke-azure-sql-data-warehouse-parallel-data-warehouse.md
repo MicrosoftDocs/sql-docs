@@ -5,7 +5,7 @@ titleSuffix: "Azure Synapse Analytics"
 ms.custom: "seo-lt-2019​"
 ms.date: "08/10/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -241,7 +241,6 @@ REVOKE
   
  ![APS security permissions poster](../../t-sql/statements/media/aps-security-perms-poster.png "APS security permissions poster")  
   
- To download a full size version of this poster, see [SQL Server PDW Permissions](https://go.microsoft.com/fwlink/?LinkId=244249)in the files section of the APS Yammer site (or request by e-mail from **apsdoc\@microsoft.com**.  
   
 ## Default Permissions  
  The following list describes the default permissions:  

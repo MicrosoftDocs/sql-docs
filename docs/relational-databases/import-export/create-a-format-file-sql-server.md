@@ -4,7 +4,7 @@ description: When you bulk import or export a SQL Server table, a format file al
 ms.custom: ""
 ms.date: "02/23/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual

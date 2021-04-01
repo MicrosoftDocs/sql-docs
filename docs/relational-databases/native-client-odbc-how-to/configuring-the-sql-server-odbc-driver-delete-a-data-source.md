@@ -4,7 +4,7 @@ description: Learn how to delete a data source by using ODBC Administrator, prog
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"

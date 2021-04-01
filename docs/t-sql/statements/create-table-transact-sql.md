@@ -267,7 +267,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 <partition_number_expression> TO <partition_number_expression>
 ```
 
-```
+## Syntax for memory optimized table
+
+```syntaxsql
 -- Memory optimized CREATE TABLE Syntax
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }

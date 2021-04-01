@@ -4,7 +4,7 @@ description: Use Unicode native format for bulk transfer of data between instanc
 ms.custom: ""
 ms.date: "09/30/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual

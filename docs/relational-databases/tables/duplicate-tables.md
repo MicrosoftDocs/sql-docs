@@ -4,7 +4,7 @@ title: "Duplicate tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/05/2020"
 ms.prod: sql
-ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual

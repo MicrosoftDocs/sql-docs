@@ -542,10 +542,12 @@ CREATE USER Sales1 WITHOUT LOGIN;
 CREATE USER Sales2 WITHOUT LOGIN;  
 ```
 
-Create a fact table to hold data.  
+Create a sample schema and a fact table to hold data.  
 
 ```sql
-CREATE TABLE dbo.Sales  
+CREATE SCHEMA Sample;
+
+CREATE TABLE Sample.Sales  
     (  
     OrderID int,  
     Product varchar(10),  
@@ -556,20 +558,20 @@ CREATE TABLE dbo.Sales
  Populate the fact table with six rows of data.  
 
 ```sql
-INSERT INTO dbo.Sales VALUES (1, 'Valve', 5);
-INSERT INTO dbo.Sales VALUES (2, 'Wheel', 2);
-INSERT INTO dbo.Sales VALUES (3, 'Valve', 4);
-INSERT INTO dbo.Sales VALUES (4, 'Bracket', 2);
-INSERT INTO dbo.Sales VALUES (5, 'Wheel', 5);
-INSERT INTO dbo.Sales VALUES (6, 'Seat', 5);
+INSERT INTO Sample.Sales VALUES (1, 'Valve', 5);
+INSERT INTO Sample.Sales VALUES (2, 'Wheel', 2);
+INSERT INTO Sample.Sales VALUES (3, 'Valve', 4);
+INSERT INTO Sample.Sales VALUES (4, 'Bracket', 2);
+INSERT INTO Sample.Sales VALUES (5, 'Wheel', 5);
+INSERT INTO Sample.Sales VALUES (6, 'Seat', 5);
 -- View the 6 rows in the table  
-SELECT * FROM dbo.Sales;
+SELECT * FROM Sample.Sales;
 ```
 
 Create a table to hold the lookup data – in this case a relationship between Salesrep and Product.  
 
 ```sql
-CREATE TABLE dbo.Lk_Salesman_Product
+CREATE TABLE Sample.Lk_Salesman_Product
   ( Salesrep sysname, 
     Product varchar(10)
   ) ;
@@ -578,18 +580,18 @@ CREATE TABLE dbo.Lk_Salesman_Product
  Populate the lookup table with sample data, linking one Product to each sales representative.  
 
 ```sql
-INSERT INTO dbo.Lk_Salesman_Product VALUES ('Sales1', 'Valve');
-INSERT INTO dbo.Lk_Salesman_Product VALUES ('Sales2', 'Wheel');
+INSERT INTO Sample.Lk_Salesman_Product VALUES ('Sales1', 'Valve');
+INSERT INTO Sample.Lk_Salesman_Product VALUES ('Sales2', 'Wheel');
 -- View the 2 rows in the table
-SELECT * FROM dbo.Lk_Salesman_Product;
+SELECT * FROM Sample.Lk_Salesman_Product;
 ```
 
 Grant read access on the fact table to each of the users.  
 
 ```sql
-GRANT SELECT ON Sales TO Manager;  
-GRANT SELECT ON Sales TO Sales1;  
-GRANT SELECT ON Sales TO Sales2;  
+GRANT SELECT ON Sample.Sales TO Manager;  
+GRANT SELECT ON Sample.Sales TO Sales1;  
+GRANT SELECT ON Sample.Sales TO Sales2;  
 ```
 
 Create a new schema, and an inline table-valued function. The function returns 1 when a user queries the fact table Sales and the SalesRep column of the table Lk_Salesman_Product is the same as the user executing the query (`@SalesRep = USER_NAME()`) when joined to the fact table on the Product column, or if the user executing the query is the Manager user (`USER_NAME() = 'Manager'`).
@@ -603,8 +605,8 @@ RETURNS TABLE
 WITH SCHEMABINDING
 AS 
            RETURN ( SELECT 1 as Result
-                     FROM dbo.Sales f
-            INNER JOIN dbo.Lk_Salesman_Product s
+                     FROM Sample.Sales f
+            INNER JOIN Sample.Lk_Salesman_Product s
                      ON s.Product = f.Product
             WHERE ( f.product = @Product
                     AND s.SalesRep = USER_NAME() )
@@ -618,7 +620,7 @@ Create a security policy adding the function as a filter predicate. The state mu
 ```sql
 CREATE SECURITY POLICY SalesFilter 
 ADD FILTER PREDICATE Security.fn_securitypredicate(Product)
-ON dbo.Sales
+ON Sample.Sales
 WITH (STATE = ON) ;
 ```
 
@@ -633,17 +635,17 @@ Now test the filtering predicate, by selected from the Sales table as each user.
 
 ```sql
 EXECUTE AS USER = 'Sales1'; 
-SELECT * FROM dbo.Sales;
+SELECT * FROM Sample.Sales;
 -- This will return just the rows for Product 'Valve' (as specified for ‘Sales1’ in the Lk_Salesman_Product table above)
 REVERT;
 
 EXECUTE AS USER = 'Sales2'; 
-SELECT * FROM dbo.Sales;
+SELECT * FROM Sample.Sales;
 -- This will return just the rows for Product 'Wheel' (as specified for ‘Sales2’ in the Lk_Salesman_Product table above)
 REVERT; 
 
 EXECUTE AS USER = 'Manager'; 
-SELECT * FROM dbo.Sales;
+SELECT * FROM Sample.Sales;
 -- This will return all rows with no restrictions
 REVERT;
 ```
@@ -668,9 +670,10 @@ DROP USER Manager;
 
 DROP SECURITY POLICY SalesFilter;
 DROP FUNCTION Security.fn_securitypredicate;
-DROP TABLE dbo.Sales;
-DROP TABLE dbo.Lk_Salesman_Product;
+DROP TABLE Sample.Sales;
+DROP TABLE Sample.Lk_Salesman_Product;
 DROP SCHEMA Security; 
+DROP SCHEMA Sample;
 ```
 
 ## See Also

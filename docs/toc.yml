@@ -10314,24 +10314,22 @@ items:
       href: sql-server/partner-dev-sql-server.md
 - name: Reference
   items:
-    - name: Azure Data CLI reference
+  - name: Azure Data CLI reference
+    items:
+    - name: Azure Data CLI
       items:
-      - name: Azure Data CLI
-        items:
-        - name: azdata
-          href: azdata/reference/reference-azdata.md
-        - name: notebook
-          href: azdata/reference/reference-azdata-notebook.md
-        - name: sql
-          href: azdata/reference/reference-azdata-sql.md
-      - name: App Deploy
+      - name: azdata
+        href: azdata/reference/reference-azdata.md
+      - name: notebook
+        href: azdata/reference/reference-azdata-notebook.md
+      - name: sql
+        href: azdata/reference/reference-azdata-sql.md
+      - name: Big data cluster 
         items:
         - name: app
           href: azdata/reference/reference-azdata-app.md
         - name: app template
           href: azdata/reference/reference-azdata-app-template.md
-      - name: Cluster
-        items:
         - name: bdc
           href: azdata/reference/reference-azdata-bdc.md
         - name: bdc app

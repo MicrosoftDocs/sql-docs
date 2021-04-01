@@ -79,7 +79,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
-## <a id="cu9"></a> CU9 (March 2021)
+## <a id="cu10"></a> CU10 (March 2021)
 
 Cumulative Update 10 (CU10) release for SQL Server 2019.
 

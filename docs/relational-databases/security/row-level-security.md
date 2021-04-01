@@ -530,6 +530,149 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
+### <a name="Lookup"></a> D. Scenario for using a lookup table for the security predicate
+
+This example uses a lookup table for the link between the user identifier and the value being filtered, rather than having to specify the user identifier in the fact table. It creates three users and creates and populates a fact table with six rows and a lookup table with two rows. It then creates an inline table-valued function that joins the fact table to the lookup to get the user identifier, and a security policy for the table. The example then shows how select statements are filtered for the various users.  
+  
+Create three user accounts that will demonstrate different access capabilities.  
+
+```sql  
+CREATE USER Manager WITHOUT LOGIN;  
+CREATE USER Sales1 WITHOUT LOGIN;  
+CREATE USER Sales2 WITHOUT LOGIN;  
+```
+
+Create a fact table to hold data.  
+
+```sql
+CREATE TABLE dbo.Sales  
+    (  
+    OrderID int,  
+    Product varchar(10),  
+    Qty int 
+    );    
+```
+
+ Populate the fact table with six rows of data.  
+
+```sql
+INSERT INTO dbo.Sales VALUES (1, 'Valve', 5);
+INSERT INTO dbo.Sales VALUES (2, 'Wheel', 2);
+INSERT INTO dbo.Sales VALUES (3, 'Valve', 4);
+INSERT INTO dbo.Sales VALUES (4, 'Bracket', 2);
+INSERT INTO dbo.Sales VALUES (5, 'Wheel', 5);
+INSERT INTO dbo.Sales VALUES (6, 'Seat', 5);
+-- View the 6 rows in the table  
+SELECT * FROM dbo.Sales;
+```
+
+Create a table to hold the lookup data – in this case a relationship between Salesrep and Product.  
+
+```sql
+CREATE TABLE dbo.Lk_Salesman_Product
+  ( Salesrep sysname, 
+    Product varchar(10)
+  ) ;
+```
+
+ Populate the lookup table with sample data, linking one Product to each sales representative.  
+
+```sql
+INSERT INTO dbo.Lk_Salesman_Product VALUES ('Sales1', 'Valve');
+INSERT INTO dbo.Lk_Salesman_Product VALUES ('Sales2', 'Wheel');
+-- View the 2 rows in the table
+SELECT * FROM dbo.Lk_Salesman_Product;
+```
+
+Grant read access on the fact table to each of the users.  
+
+```sql
+GRANT SELECT ON Sales TO Manager;  
+GRANT SELECT ON Sales TO Sales1;  
+GRANT SELECT ON Sales TO Sales2;  
+```
+
+Create a new schema, and an inline table-valued function. The function returns 1 when a user queries the fact table Sales and the SalesRep column of the table Lk_Salesman_Product is the same as the user executing the query (`@SalesRep = USER_NAME()`) when joined to the fact table on the Product column, or if the user executing the query is the Manager user (`USER_NAME() = 'Manager'`).
+
+```sql
+CREATE SCHEMA Security ;
+
+CREATE FUNCTION Security.fn_securitypredicate
+         (@Product AS varchar(10))
+RETURNS TABLE
+WITH SCHEMABINDING
+AS 
+           RETURN ( SELECT 1 as Result
+                     FROM dbo.Sales f
+            INNER JOIN dbo.Lk_Salesman_Product s
+                     ON s.Product = f.Product
+            WHERE ( f.product = @Product
+                    AND s.SalesRep = USER_NAME() )
+                 OR USER_NAME() = 'Manager'
+                   ) ;
+ 
+```
+
+Create a security policy adding the function as a filter predicate. The state must be set to ON to enable the policy.
+
+```sql
+CREATE SECURITY POLICY SalesFilter 
+ADD FILTER PREDICATE Security.fn_securitypredicate(Product)
+ON dbo.Sales
+WITH (STATE = ON) ;
+```
+
+Allow SELECT permissions to the fn_securitypredicate function 
+```sql
+GRANT SELECT ON security.fn_securitypredicate TO Manager;  
+GRANT SELECT ON security.fn_securitypredicate TO Sales1;  
+GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
+```
+
+Now test the filtering predicate, by selected from the Sales table as each user.
+
+```sql
+EXECUTE AS USER = 'Sales1'; 
+SELECT * FROM dbo.Sales;
+-- This will return just the rows for Product 'Valve' (as specified for ‘Sales1’ in the Lk_Salesman_Product table above)
+REVERT;
+
+EXECUTE AS USER = 'Sales2'; 
+SELECT * FROM dbo.Sales;
+-- This will return just the rows for Product 'Wheel' (as specified for ‘Sales2’ in the Lk_Salesman_Product table above)
+REVERT; 
+
+EXECUTE AS USER = 'Manager'; 
+SELECT * FROM dbo.Sales;
+-- This will return all rows with no restrictions
+REVERT;
+```
+
+The Manager should see all six rows. The Sales1 and Sales2 users should only see their own sales.
+
+Alter the security policy to disable the policy.
+
+```sql
+ALTER SECURITY POLICY SalesFilter  
+WITH (STATE = OFF);  
+```
+
+Now Sales1 and Sales2 users can see all six rows.
+
+Connect to the SQL database to clean up resources
+
+```sql
+DROP USER Sales1;
+DROP USER Sales2;
+DROP USER Manager;
+
+DROP SECURITY POLICY SalesFilter;
+DROP FUNCTION Security.fn_securitypredicate;
+DROP TABLE dbo.Sales;
+DROP TABLE dbo.Lk_Salesman_Product;
+DROP SCHEMA Security; 
+```
+
 ## See Also
 
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)</br>

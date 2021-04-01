@@ -38,11 +38,11 @@ The following table summarizes how the [!INCLUDE[jdbcNoVersion](../../includes/j
 > [!NOTE]
 > The same behavior applies for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user authentication and Windows integrated authentication.
 
-[!div class="mx-tdCol2BreakAll"]
-| Property Settings | Behavior |
-| ----------------- | -------- |
-| **encrypt** = false or blank<br/> **trustServerCertificate** = any<br/> **hostNameInCertificate** = any<br/> **trustStore** = any<br/> **trustStorePassword** = any<br/> | The driver won't force the server to support TLS encryption. If the server has a self-signed certificate, the driver initiates the TLS certificate exchange. The TLS certificate won't be validated and only the credentials (in the login packet) are encrypted.<br /><br /> If the server requires the client to support TLS encryption, the driver will initiate the TLS certificate exchange. The TLS certificate won't be validated, but the entire communication will be encrypted. |
-| **encrypt** = true<br/> **trustServerCertificate** = true<br/> **hostNameInCertificate** = any<br/> **trustStore** = any<br/> **trustStorePassword** = any<br/> | The driver requests to use TLS encryption with the server.<br /><br /> If the server requires the client to support TLS encryption or if the server supports encryption, the driver will initiate the TLS certificate exchange. If the **trustServerCertificate** property is set to "true", the driver won't validate the TLS certificate.<br /><br /> If the server isn't configured to support encryption, the driver will raise an error and terminate the connection. |
+> [!div class="mx-tdCol2BreakAll"]
+> | Property Settings | Behavior |
+> | ----------------- | -------- |
+> | **encrypt** = false or blank<br/> **trustServerCertificate** = any<br/> **hostNameInCertificate** = any<br/> **trustStore** = any<br/> **trustStorePassword** = any<br/> | The driver won't force the server to support TLS encryption. If the server has a self-signed certificate, the driver initiates the TLS certificate exchange. The TLS certificate won't be validated and only the credentials (in the login packet) are encrypted.<br /><br /> If the server requires the client to support TLS encryption, the driver will initiate the TLS certificate exchange. The TLS certificate won't be validated, but the entire communication will be encrypted. |
+> | **encrypt** = true<br/> **trustServerCertificate** = true<br/> **hostNameInCertificate** = any<br/> **trustStore** = any<br/> **trustStorePassword** = any<br/> | The driver requests to use TLS encryption with the server.<br /><br /> If the server requires the client to support TLS encryption or if the server supports encryption, the driver will initiate the TLS certificate exchange. If the **trustServerCertificate** property is set to "true", the driver won't validate the TLS certificate.<br /><br /> If the server isn't configured to support encryption, the driver will raise an error and terminate the connection. |
 
 | encrypt | trustServerCertificate | hostNameInCertificate | trustStore | trustStorePassword | Behavior |
 | ------- | ---------------------- | --------------------- | ---------- | ------------------ | -------- |

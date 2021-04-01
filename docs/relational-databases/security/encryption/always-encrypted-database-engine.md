@@ -65,7 +65,7 @@ For details of how to develop applications using Always Encrypted with particula
 ## Remarks
 
 Encryption and decryption occurs via the client driver. This means that some actions that occur only server-side will not work when using Always Encrypted. These actions include (but are not limited to): 
-- Copying data from one columng to another via an UPDATE, BULK INSERT(T-SQL), SELECT INTO, INSERT..SELECT. 
+- Copying data from one column to another via an UPDATE, BULK INSERT(T-SQL), SELECT INTO, INSERT..SELECT. 
 - Triggers, temporal tables, sparse columns, full-text, in-memory OLTP, and Change Data Capture (CDC). 
 
 

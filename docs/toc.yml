@@ -93,7 +93,7 @@ items:
         items:
         - name: Master instance
           href: big-data-cluster/deployment-high-availability.md
-        - name: HDFS node name and Spark
+        - name: HDFS name node and Spark
           href: big-data-cluster/deployment-high-availability-hdfs-spark.md
       - name: Kubernetes clusters
         items:
@@ -468,6 +468,8 @@ items:
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
       - name: Cluster troubleshooting notebooks
         href: big-data-cluster/cluster-troubleshooter-notebooks.md
+      - name: Big Data Clusters FAQ
+        href: big-data-cluster/big-data-cluster-faq.yml
   - name: Reference
     items:
     - name: Deployment
@@ -4755,8 +4757,6 @@ items:
         href: database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md
       - name: PH timeout
         href: database-engine/configure-windows/ph-timeout-server-configuration-option.md
-      - name: precompute rank
-        href: database-engine/configure-windows/precompute-rank-server-configuration-option.md
       - name: Configure the priority boost
         href: database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md
       - name: Configure the query governor cost limit
@@ -4925,6 +4925,8 @@ items:
   items:
   - name: Migration documentation
     href: sql-server/migrate/index.yml
+  - name: Compare migration tools
+    href: sql-server/migrate/dma-azure-migrate-compare-migration-tools.md
   - name: SQL Server Integration Services (SSIS) > 
     href: ./integration-services/sql-server-integration-services.md
   - name: Bulk Copy Utility (bcp)
@@ -4934,8 +4936,16 @@ items:
     href: /azure/dms/dms-overview
   - name: Migration guides
     items:
-    - name: From DB2
+    - name: From Access
+      href: sql-server/migrate/guides/access-to-sql-server.md
+    - name: From Db2
       href: sql-server/migrate/guides/db2-to-sql-server.md
+    - name: From MySQL
+      href: sql-server/migrate/guides/mysql-to-sql-server.md
+    - name: From Oracle
+      href: sql-server/migrate/guides/oracle-to-sql-server.md
+    - name: From SAP ASE
+      href: sql-server/migrate/guides/sap-ase-to-sql-server.md
   - name: Data Quality Services (DQS)
     items:
     - name: Overview
@@ -5572,7 +5582,7 @@ items:
           items:
           - name: Oracle
             href: relational-databases/replication/non-sql/oracle-subscribers.md
-          - name: IBM DB2
+          - name: IBM Db2
             href: relational-databases/replication/non-sql/ibm-db2-subscribers.md
           - name: Other Non-SQL Subscribers
             href: relational-databases/replication/non-sql/other-non-sql-server-subscribers.md
@@ -7350,7 +7360,9 @@ items:
     items:
     - name: Getting started
       items:
-      - name: Tracing
+      - name: Install and configure Master Data Services
+        href: master-data-services/master-data-services-installation-and-configuration.md 
+      - name: Tracing the Master Data Services web app
         href: master-data-services/tracing-master-data-services.md
       - name: Categorized Web Service Operations
         href: master-data-services/develop/categorized-web-service-operations-master-data-services.md

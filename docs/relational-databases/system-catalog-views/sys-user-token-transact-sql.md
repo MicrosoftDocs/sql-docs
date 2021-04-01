@@ -4,7 +4,7 @@ title: "sys.user_token (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/27/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"

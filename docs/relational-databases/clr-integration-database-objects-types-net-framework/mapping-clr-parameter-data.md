@@ -31,9 +31,8 @@ ms.author: "jroth"
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The following table lists [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, their equivalents in the common language runtime (CLR) for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the **System.Data.SqlTypes** namespace, and their native CLR equivalents in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
-||||  
-|-|-|-|  
 |**SQL Server data type**|Type (in System.Data.SqlTypes or Microsoft.SqlServer.Types)|**CLR data type (.NET Framework)**|  
+|-|-|-|  
 |**bigint**|**SqlInt64**|**Int64, Nullable\<Int64>**|  
 |**binary**|**SqlBytes, SqlBinary**|**Byte[]**|  
 |**bit**|**SqlBoolean**|**Boolean, Nullable\<Boolean>**|  
@@ -102,9 +101,8 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
   
  Not all CLR data types can be automatically converted to their equivalent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types through an out parameter, however. The following table lists these exceptions.  
   
-|||  
-|-|-|  
 |**CLR data type (SQL Server)**|**SQL Server data type**|  
+|-|-|  
 |**Decimal**|smallmoney|  
 |**SqlMoney**|smallmoney|  
 |**Decimal**|money|  

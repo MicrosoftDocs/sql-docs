@@ -4,7 +4,7 @@ title: "MERGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/27/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -227,7 +227,7 @@ Specifies the search conditions to specify \<merge_search_condition> or \<clause
 
 \<graph search pattern>  
 Specifies the graph match pattern. For more information about the arguments for this clause, see [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
-  
+   
 ## Remarks
 >[!NOTE]
 > In Azure Synapse Analytics, the MERGE command (preview) has following differences compared to SQL server and Azure SQL database.  
@@ -239,18 +239,21 @@ Specifies the graph match pattern. For more information about the arguments for 
 >|-----------------|---------------|-----------------|-----------|  
 >|**WHEN MATCHED**| All distribution types |All distribution types||  
 >|**NOT MATCHED BY TARGET**|HASH |All distribution types|Use UPDATE/DELETE FROM…JOIN to synchronize two tables. |
->|**NOT MATCHED BY SOURCE**|All distribution types|All distribution types|||  
+>|**NOT MATCHED BY SOURCE**|All distribution types|All distribution types||  
 
 >[!IMPORTANT]
-> In Azure Synapse Analytics the MERGE command, currently in preview,  may, under certain conditions, leave the target table in an inconsistent state, with rows placed in the wrong distribution, causing later queries to return wrong results in some cases. This problem may happen when these two conditions are met:
+> Preview features are meant for testing only and should not be used on production instances or production data. Please also keep a copy of your test data if the data is important.
 >
-> - The MERGE T-SQL statement was executed on a HASH distributed TARGET table in Azure Synapse SQL database.
+> In Azure Synapse Analytics the MERGE command, currently in preview, may, under certain conditions, leave the target table in an inconsistent state, with rows placed in the wrong distribution, causing later queries to return wrong results in some cases. This problem may happen when these two conditions are met:
+>
+> - The MERGE T-SQL statement was executed on a HASH distributed TARGET table in Azure Synapse SQL database AND
 > - The TARGET table of the merge has secondary indices or a UNIQUE constraint.
 >
-> Until the fix is available, avoid using the MERGE command on HASH distributed TARGET tables that have secondary indices or UNIQUE constraints.  The MERGE feature support may also be temporarily disabled on databases with HASH distributed tables that have UNIQUE constraints or secondary indices.      
->
-> An important reminder, preview features are meant for testing only and should not be used on production instances or production data. Please also keep a copy of your test data if the data is important.
-> 
+> The problem has been fixed in Synapse SQL version ***10.0.15563.0*** and higher.    
+> - To check, connect to the Synapse SQL database via SQL Server Management Studio (SSMS) and run ```SELECT @@VERSION```.  If the fix has not been applied, manually pause and resume your Synapse SQL pool to get the fix. 
+> - Until the fix has been verified applied to your Synapse SQL pool, avoid using the MERGE command on HASH distributed TARGET tables that have secondary indices or UNIQUE constraints.
+> - This fix doesn't repair tables already affected by the MERGE problem.  Use scripts below to identify and repair any affected tables manually.
+
 > To check which hash distributed tables in a database cannot work with MERGE due to this issue, run this statement
 >```sql
 > select a.name, c.distribution_policy_desc, b.type from sys.tables a join sys.indexes b

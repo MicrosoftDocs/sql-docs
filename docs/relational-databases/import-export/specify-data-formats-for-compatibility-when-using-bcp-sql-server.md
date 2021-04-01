@@ -3,7 +3,7 @@ title: "Specify compatibility data formats with bcp"
 description: For bulk exports in SQL Server with bcp, data formats might be incompatible with expected layout. A non-xml format file specifies compatibility data formats.
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual

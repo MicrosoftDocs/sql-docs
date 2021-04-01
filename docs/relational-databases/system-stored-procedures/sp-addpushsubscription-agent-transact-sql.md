@@ -2,7 +2,7 @@
 description: "sp_addpushsubscription_agent (Transact-SQL)"
 title: "sp_addpushsubscription_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/09/2020"
+ms.date: "03/29/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -70,8 +70,13 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 `[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber instance or the name of the AG listener if the subscriber database is a availability group. *subscriber* is **sysname**, with a default of NULL. 
 
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
+
 > [!NOTE]
-> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled.
+> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled. The use of custom port numbers for remote distributor applies to SQL Server 2019 only.
+
+::: moniker-end
 
 `[ @subscriber_db = ] 'subscriber_db'`
  Is the name of the subscription database. *subscriber_db* is **sysname**, with a default of NULL. For a non-SQL Server Subscriber, specify a value of **(default destination)** for *subscriber_db*.  

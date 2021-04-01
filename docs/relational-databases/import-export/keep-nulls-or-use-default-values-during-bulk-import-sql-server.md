@@ -3,7 +3,7 @@ title: "Keep nulls or default values during bulk import"
 description: For bulk import in SQL Server, both bcp and BULK INSERT load default values to replace null values. For both, you can choose to retain null values. 
 ms.date: "09/20/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual

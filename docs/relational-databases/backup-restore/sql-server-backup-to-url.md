@@ -2,7 +2,7 @@
 title: "SQL Server Backup to URL | Microsoft Docs"
 description: Learn about the concepts, requirements, and components necessary for SQL Server to use the Microsoft Azure Blob Storage as a backup destination.
 ms.custom: ""
-ms.date: "03/25/2019"
+ms.date: "03/19/2021"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -93,6 +93,9 @@ The following are security considerations and requirements when backing up to or
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires that either an Azure account name and access key authentication or a Shared Access Signature and access token be stored in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential. This information is used to authenticate to the Azure account when performing backup or restore operations.  
+
+    > [!WARNING]
+    > Azure Storage supports [disabling](https://docs.microsoft.com/azure/storage/common/shared-key-authorization-prevent) Shared Key authorization for a storage account. If Shared Key authorization is disabled, SQL Server Backup To URL will not work.
   
 - The user account that is used to issue BACKUP or RESTORE commands should be in the **db_backup operator** database role with **Alter any credential** permissions.   
 

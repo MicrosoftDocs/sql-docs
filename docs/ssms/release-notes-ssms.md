@@ -301,7 +301,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 | New Item | Details | Workaround |
 |----------|---------|------------|
 | General SSMS | There is a known bug with Diagram Design that causes your existing diagrams to get corrupted. For example, you create a Diagram Design with SSMS 17.9.1, then update/save it with SSMS 18.x, and then later try to open it with 17.9.1. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details. | N/A |
-| General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | N/A ||
+| General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | N/A |
 | SMO/Scripting | SSMS Extensions using SMO need to be recompiled targeting the new SMO v160. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. Workaround: | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
 
@@ -610,7 +610,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 | New Item | Details |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Accessibility | Improved accessibility of the Agent Job UI. |'
+| Accessibility | Improved accessibility of the Agent Job UI. |
 | Accessibility | Improved accessibility on the Stretch Monitor page by adding an accessible name for *Auto Refresh* button and also adding an intelligent Accessible Name that helps users know not only what button they're on but the impact of pressing it. |
 | ADS integration| Fixed a possible crash in SSMS when trying to use the ADS registered servers.|
 | Database designer | Added support for Latin1_General_100_BIN2_UTF8 collation (available in SQL Server 2019 CTP3.0) |
@@ -806,7 +806,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Backup/Restore/Attach/Detach DB|Fixed an issue where SSMS might not find a valid restore plan or might find one, which is suboptimal. For details, see [https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752). |
 |Backup/Restore/Attach/Detach DB|Fixed issue where the "Attach Database" wizard wasn't displaying secondary files that were renamed. Now, the file is displayed, and a comment about it is added (for example "Not Found"). For details, see [https://feedback.azure.com/forums/908035/suggestions/32897434](https://feedback.azure.com/forums/908035/suggestions/32897434). |
 |Copy Database Wizard|Generate scripts/Transfer/Copy Database Wizard try to create a table with an in memory table doesn't force ansi_padding on.|
-|Copy Database Wizard|Transfer Database task/Copy Database Wizard broken on SQL Server 2017 and SQL Server 2019.|""
+|Copy Database Wizard|Transfer Database task/Copy Database Wizard broken on SQL Server 2017 and SQL Server 2019.|
 |Copy Database Wizard|Generate scripts/Transfer/Copy Database Wizard script table creation before creation of associated external data source.|
 |Connection dialog|Enabled the removal of usernames from previous username list by pressing the DEL key. For details, see [Allow deletion of users from SSMS login window](https://feedback.azure.com/forums/908035/suggestions/32897632).|
 |DAC Import Wizard|Fixed an issue DAC Import Wizard wasn't working when connected using Azure Active Directory (Azure AD).|

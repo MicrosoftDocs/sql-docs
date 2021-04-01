@@ -4,7 +4,7 @@ title: "Use Sparse Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/22/2016"
 ms.prod: sql
-ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
@@ -56,12 +56,14 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
  The following data types cannot be specified as SPARSE:  
   
-|||  
-|-|-|  
-|**geography**|**text**|  
-|**geometry**|**timestamp**|  
-|**image**|**user-defined data types**|  
-|**ntext**||  
+:::row:::
+   :::column span="":::
+      **geography**<br>      **geometry**<br>      **image**<br>      **ntext**
+   :::column-end:::
+   :::column span="":::
+      **text**  <br>      **timestamp**  <br>      **user-defined data types**
+   :::column-end:::
+:::row-end:::
   
 ## Estimated Space Savings by Data Type  
  Sparse columns require more storage space for nonnull values than the space required for identical data that is not marked SPARSE. The following tables show the space usage for each data type. The **NULL Percentage** column indicates what percent of the data must be NULL for a net space savings of 40 percent.  

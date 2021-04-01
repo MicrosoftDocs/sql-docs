@@ -5,7 +5,7 @@ ms.custom: seo-dt-2019
 ms.date: "07/03/2019"
 ms.prod: sql
 ms.technology: data-warehouse
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 

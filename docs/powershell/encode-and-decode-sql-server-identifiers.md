@@ -27,9 +27,8 @@ The **Encode-SqlName** cmdlet takes as input a [!INCLUDE[ssNoVersion](../include
 
 The **Encode-Sqlname** and **Decode-Sqlname** cmdlets only encode or decode the characters that are allowed in SQL Server-delimited identifiers, but are not supported in PowerShell paths. The following are the characters encoded by **Encode-SqlName** and decoded by **Decode-SqlName**:
 
-|||||||||||||
-|-|-|-|-|-|-|-|-|-|-|-|-|
 |**Character**|\ |/|:|%|\<|>|*|?|[|]|&#124;|  
+|-|-|-|-|-|-|-|-|-|-|-|-|
 |**Hexadecimal Encoding**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|
 
 ## Encoding an Identifier  

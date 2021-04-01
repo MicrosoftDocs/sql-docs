@@ -65,10 +65,11 @@ This article outlines deployment steps that are specific to the OpenShift platfo
    oc new-project <namespaceName>
    ```
 
-4. Assign the custom SCC to the service accounts for users within the namespace where BDC is deployed:
+4. Bind the custom SCC with the service accounts in the namespace where BDC is deployed:
 
    ```console
-   oc create rolebinding bdc-rbac --clusterrole=system:scc:bdc-scc --group=system:serviceaccounts:<namespace>
+   oc create clusterrole bdc-role --verb=use --resource=scc --resource-name=bdc-scc -n <namespaceName>
+   oc create rolebinding bdc-rbac --clusterrole=bdc-role --group=system:serviceaccounts:mssql-bdc
    ```
 
 5. Assign appropriate permission to the user deploying BDC. Do one of the following. 
@@ -78,7 +79,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
    - If the user deploying BDC is a namespace admin, assign the user cluster-admin local role for the namespace created. This is the preferred option for the user deploying and managing the big data cluster to have namespace level admin permissions.
 
    ```console
-   oc adm policy add-role-to-user cluster-admin <deployingUser> -n <namespaceName>
+   oc create rolebinding bdc-user-rbac --clusterrole=cluster-admin --user=<userName> -n <namespaceName>
    ```
 
    The user deploying big data cluster must then log in to the OpenShift console:

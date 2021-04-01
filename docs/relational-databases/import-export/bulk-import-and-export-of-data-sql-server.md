@@ -4,7 +4,7 @@ description: SQL Server supports exporting data in bulk from a SQL Server table 
 ms.custom: ""
 ms.date: "09/25/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual

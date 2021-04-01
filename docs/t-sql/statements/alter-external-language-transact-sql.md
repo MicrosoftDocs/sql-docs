@@ -2,7 +2,7 @@
 description: "ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server"
 title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
-ms.date: 11/04/2019
+ms.date: 03/15/2021
 ms.prod: sql
 ms.technology: language-extensions
 ms.topic: language-reference
@@ -26,7 +26,7 @@ ALTER EXTERNAL LANGUAGE language_name
 {
     SET <file_spec>
     | ADD <file_spec>
-    | REMOVE <file_spec>
+    | REMOVE PLATFORM <platform> 
 }
 [ ; ]  
 

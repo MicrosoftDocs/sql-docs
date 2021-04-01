@@ -38,10 +38,7 @@ The following table summarizes how the [!INCLUDE[jdbcNoVersion](../../includes/j
 > [!NOTE]
 > The same behavior applies for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user authentication and Windows integrated authentication.
 
-<!--
-Note: The extra &nbsp; in the column1 heading keeps column1 from wrapping and improves readability of the table.
-They could be put in the column1 values themselves (replacing spaces), but just putting them in the heading improves readability of the source.
--->
+<!-- Do not remove the extra &nbsp;'s in the column1 heading. They keep column1 from wrapping and improve readability of the table. -->
 | Property&nbsp;settings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Behavior |
 | ----------------- | -------- |
 | **encrypt** = false or blank<br/> **trustServerCertificate** = any<br/> **hostNameInCertificate** = any<br/> **trustStore** = any<br/> **trustStorePassword** = any<br/> | The driver won't force the server to support TLS encryption. If the server has a self-signed certificate, the driver initiates the TLS certificate exchange. The TLS certificate won't be validated and only the credentials (in the login packet) are encrypted.<br /><br /> If the server requires the client to support TLS encryption, the driver will initiate the TLS certificate exchange. The TLS certificate won't be validated, but the entire communication will be encrypted. |

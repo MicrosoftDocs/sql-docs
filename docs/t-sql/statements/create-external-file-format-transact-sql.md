@@ -120,7 +120,7 @@ WITH (
     ]);  
 ```
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+[!INCLUDE[synapse-analytics-od-unsupported-json-syntax](../../includes/synapse-analytics-od-unsupported-json-syntax.md)]
 
 ---
   

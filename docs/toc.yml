@@ -10318,8 +10318,14 @@ items:
     items:
     - name: azdata
       href: azdata/reference/reference-azdata.md
+    - name: context
+      href: azdata/reference/reference-azdata-context.md
+    - name: extension
+      href: azdata/reference/reference-azdata-extension.md
     - name: notebook
       href: azdata/reference/reference-azdata-notebook.md
+    - name: postgres
+      href: azdata/reference/reference-azdata-postgres.md
     - name: sql
       href: azdata/reference/reference-azdata-sql.md
     - name: Big data cluster 

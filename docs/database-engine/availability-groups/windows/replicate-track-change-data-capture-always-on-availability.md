@@ -51,7 +51,7 @@ ms.author: chadam
   
 -   **Trace flag 1448**  
   
-     Trace flag 1448 enables the replication log reader to move forward even if the asynchronous secondary replicas have not acknowledged the reception of a change. Even with this trace flag enabled, the log reader always waits for the synchronous secondary replicas. The log reader will not go beyond the min ack of the synchronous secondary replicas. This trace flag applies to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], not just to an availability group, an availability database, or a log reader instance. This trace flag takes effect immediately without a restart. It can be activated ahead of time or when an asynchronous secondary replica fails.  
+     Trace flag 1448 enables the replication log reader to move forward even if the asynchronous secondary replicas have not acknowledged the reception of a change. Even with this trace flag enabled, the log reader always waits for the synchronous secondary replicas(They could become asynchronous commit mode as documented [here](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md), so log reader can move forward.). The log reader will not go beyond the min ack of the synchronous secondary replicas. This trace flag applies to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], not just to an availability group, an availability database, or a log reader instance. This trace flag takes effect immediately without a restart. It can be activated ahead of time or when an asynchronous secondary replica fails.  
   
 ###  <a name="StoredProcs"></a> Stored procedures supporting availability groups  
   

@@ -33,9 +33,9 @@ The following table defines the meaning of the various columns:
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime**|The time the operation was initiated.|
 |**completion_time**|**datetime**|The time the operation completed (null if ongoing).|  
-|**ag_id**|**uniqueidentifier**|Unique Id for each Availability Group.|  
-|**ag_db_id**|**uniqueidentifier**|Unique Id for each database in the Available Group.|  
-|**ag_remote_replica_id**|**uniqueidentifier**|Unique Id for the other replica this seeding operation involves.|
+|**ag_id**|**uniqueidentifier**|Unique ID for each Availability Group.|  
+|**ag_db_id**|**uniqueidentifier**|Unique ID for each database in the Available Group.|  
+|**ag_remote_replica_id**|**uniqueidentifier**|Unique ID for the other replica this seeding operation involves.|
 |**operation_id**|**uniqueidentifier**|Unique identifier for this seeding operation.|  
 |**is_source**|**bit**|Gets a value indicating whether this replica is the source (primary) of the seeding operation.|
 |**current_state**|**bit**|Gets the current seeding state the operation is in.|

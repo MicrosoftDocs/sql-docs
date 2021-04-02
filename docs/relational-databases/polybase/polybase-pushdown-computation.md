@@ -103,9 +103,9 @@ SELECT * FROM customer
 WHERE customer.account_balance <= 200000 
     AND customer.zipcode BETWEEN 92656 AND 92677;
 ```
-### Supported functions in filter clause
+### Supported functions for pushdown
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows the following functions in filter clause for predicate pushdown.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows the following functions for predicate pushdown.
 
 String functions
 - `CONCAT`

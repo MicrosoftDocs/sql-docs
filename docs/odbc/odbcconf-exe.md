@@ -1,4 +1,5 @@
 ---
+description: "ODBCCONF.EXE"
 title: "ODBCCONF.EXE | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "odbcconf.exe"
 ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ODBCCONF.EXE
 ODBCCONF.exe is a command-line tool that allows you to configure ODBC drivers and data source names.  
   
 > [!NOTE]  
->  ODBCCONF.exe will be removed in a future version of Windows Data Access Components. Avoid using this feature, and plan to modify applications that currently use this feature. You can use PowerShell commands to manage drivers and data sources. For more information about these PowerShell commands, see [Windows Data Access Components cmdlets](https://technet.microsoft.com/library/hh771019.aspx).  
+>  ODBCCONF.exe will be removed in a future version of Windows Data Access Components. Avoid using this feature, and plan to modify applications that currently use this feature. You can use PowerShell commands to manage drivers and data sources. For more information about these PowerShell commands, see [Windows Data Access Components cmdlets](/powershell/module/wdac).  
   
 ## Syntax  
   

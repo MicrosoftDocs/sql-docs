@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-3 - Adding Packages and Other Files"
 title: "Step 3: Adding Packages and Other Files | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 1-3 - Adding Packages and Other Files
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 In this task, you will add existing packages, ancillary files that support individual packages, and a Readme to the Deployment Tutorial project that you created in the previous task. For example, you will add an XML data file that contains the data for a package and a text file that provides Readme information about all the packages in the project.  

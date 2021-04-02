@@ -1,4 +1,5 @@
 ---
+description: "&amp;&amp; (Logical AND) (SSIS Expression)"
 title: "&amp;&amp; (Logical AND) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,12 +13,12 @@ helpviewer_keywords:
   - "AND, logical AND"
   - "logical AND (&&)"
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # &amp;&amp; (Logical AND) (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Performs a logical AND operation. The expression evaluates to TRUE if all conditions are TRUE.  

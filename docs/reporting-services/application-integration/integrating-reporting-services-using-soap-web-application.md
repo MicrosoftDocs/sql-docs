@@ -1,11 +1,12 @@
 ---
-title: "Using the SOAP API in a Web Application - Reporting Services | Microsoft Docs"
+title: "Use SOAP API in Web Applications"
+description: You can access the functionality of the report server through the Reporting Services SOAP API, which can be accessed to provide enterprise reporting features.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
 
-
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords: 
   - "SOAP [Reporting Services], Web applications"
@@ -37,13 +38,13 @@ ms.author: maggies
   
 ## Managing the Report Server using SOAP API  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
  You can also use your Web application to manage a report server and its contents. Report Manager, included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], is an example of a Web application that is completely built using [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] and the Reporting Services SOAP API. You can add the report management functionality of Report Manager to your custom Web applications. For example, you might want to return a list of available reports in the report server database and display them in a [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** control for your users to choose from. The following code connects to the report server database and returns a list of items in the report server database. The available reports are then added to a Listbox control, which displays the path of each report.  
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
  You can also use your Web application to manage a report server and its contents. The web portal, included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], is an example of a Web application that manages a majority of the tasks you would typically perform using Reporting Services. You can add the report management functionality of the web portal to your custom Web applications. For example, you might want to return a list of available reports in the report server database and display them in a [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** control for your users to choose from. The following code connects to the report server database and returns a list of items in the report server database. The available reports are then added to a Listbox control, which displays the path of each report.  
 

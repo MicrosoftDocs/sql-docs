@@ -1,5 +1,6 @@
 ---
-title: "Find the Report Definition Schema Version (SSRS) | Microsoft Docs"
+title: "Find the Report Definition Schema Version | Microsoft Docs"
+description: Learn how to identify the Report Definition Language (RDL) schema version of your report definition file.
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

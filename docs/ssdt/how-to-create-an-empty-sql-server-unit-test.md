@@ -1,19 +1,21 @@
 ---
-title: "How to: Create an Empty SQL Server Unit Test | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Create an Empty SQL Server Unit Test
+description: Learn how to create SQL Server unit tests. See how to use the same TestInitialize and TestCleanup scripts that other tests use and how to use different scripts.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.unittesting.createtest"
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Create an Empty SQL Server Unit Test
+
 Include unit tests in your database project to verify changes you make to database objects do not break existing functionality. The following procedures explain how to create SQL Server unit tests for any database object. SQL Server Data Tools includes some additional support for database functions, triggers, and stored procedures. For more information, see [How to: Create SQL Server Unit Tests for Functions, Triggers, and Stored Procedures](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
   
 When you create a SQL Server unit test using the first procedure, a test project is automatically created for you if no test project exists. If test projects already exist, you have the option of adding the new test to one of those projects or you can create a new test project. For more information about test projects, see [How to: Create a Test Project for SQL Server Database Unit Testing](../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md).  
@@ -89,10 +91,9 @@ After you have configured the test project and created the unit test, the next s
 -   Add test conditions or other assert statement to verify the script results.  
   
 > [!NOTE]  
-> The Inconclusive test condition is the default condition added to every test. This test condition is included to indicate that test verification has not been implemented. Delete this test condition from your test after you have added other test conditions. For more information, see [How to: Add Test Conditions to Database Unit Tests](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> The Inconclusive test condition is the default condition added to every test. This test condition is included to indicate that test verification has not been implemented. Delete this test condition from your test after you have added other test conditions. For more information, see [How to: Add Test Conditions to Database Unit Tests](/previous-versions/visualstudio/visual-studio-2010/aa833242(v=vs.100)).  
   
 ## See Also  
 [How to: Run SQL Server Unit Tests](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [Creating and Defining SQL Server Unit Tests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Creating Unit Tests](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
-  
+[Creating Unit Tests](/previous-versions/visualstudio/visual-studio-2008/ms182523(v=vs.90))  

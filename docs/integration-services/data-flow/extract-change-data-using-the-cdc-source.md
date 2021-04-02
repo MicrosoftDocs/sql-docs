@@ -1,4 +1,5 @@
 ---
+description: "Extract Change Data Using the CDC Source"
 title: "Extract Change Data Using the CDC Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Extract Change Data Using the CDC Source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To add and configure a CDC source, the package must already include at least one Data Flow task and a CDC Control task.  
@@ -69,8 +70,7 @@ ms.author: janinez
 15. Click **OK**.  
   
 ## See Also  
- [CDC Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
- [CDC Source Editor &#40;Columns Page&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
- [CDC Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
-  
+ [CDC Source Editor &#40;Connection Manager Page&#41;](./cdc-source.md)   
+ [CDC Source Editor &#40;Columns Page&#41;](./cdc-source.md)   
+ [CDC Source Editor &#40;Error Output Page&#41;](./cdc-source.md)  
   

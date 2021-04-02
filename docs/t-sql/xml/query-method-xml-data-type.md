@@ -1,11 +1,12 @@
 ---
-title: "query() Method (xml Data Type) | Microsoft Docs"
+description: "query() Method (xml Data Type)"
+title: query() Method (xml Data Type)
 ms.custom: ""
-ms.date: "07/26/2017"
+ms.date: 04/16/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -16,18 +17,19 @@ author: MightyPen
 ms.author: genemi
 ---
 # query() Method (xml Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies an XQuery against an instance of the **xml** data type. The result is of **xml** type. The method returns an instance of untyped XML.  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 query ('XQuery')  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 XQuery  
 Is a string, an XQuery expression, that queries for XML nodes, such as elements and attributes, in an XML instance.  
   
@@ -35,13 +37,13 @@ Is a string, an XQuery expression, that queries for XML nodes, such as elements 
 This section provides examples of using the query() method of the **xml** data type.  
   
 ### A. Using the query() method against an xml type variable  
-The following example declares a variable **@myDoc** of **xml** type and assigns an XML instance to it. The **query()** method is then used to specify an XQuery against the document.  
+The following example declares a variable **\@myDoc** of **xml** type and assigns an XML instance to it. The **query()** method is then used to specify an XQuery against the document.  
   
 The query retrieves the <`Features`> child element of the <`ProductDescription`> element:  
   
-```  
-declare @myDoc xml  
-set @myDoc = '<Root>  
+```sql
+DECLARE @myDoc XML  
+SET @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
   <Warranty>1 year parts and labor</Warranty>  
@@ -64,7 +66,7 @@ The following output shows the result:
 ### B. Using the query() method against an XML type column  
 In the following example, the **query()** method is used to specify an XQuery against the **CatalogDescription** column of **xml** type in the **AdventureWorks** database:  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
 declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 <Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />  
@@ -94,7 +96,7 @@ The following output shows the partial result:
   
 Note the query() and exist() methods both declare the PD prefix. In these cases, you can use WITH XMLNAMESPACES to first define the prefixes and use it in the query.  
   
-```  
+```sql
 WITH XMLNAMESPACES 
 (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  
@@ -104,7 +106,6 @@ SELECT CatalogDescription.query('<Product ProductModelID="{ /PD:ProductDescripti
        AS Result  
 FROM Production.ProductModel  
 WHERE CatalogDescription.exist('/PD:ProductDescription/PD:Features/WM:Warranty ') = 1;
-
 ```  
   
 ## See Also  

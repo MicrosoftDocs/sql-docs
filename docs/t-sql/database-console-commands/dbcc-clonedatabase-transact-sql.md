@@ -1,4 +1,5 @@
 ---
+description: "DBCC CLONEDATABASE (Transact-SQL)"
 title: "DBCC CLONEDATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 04/23/2019
@@ -39,7 +40,7 @@ ms.author: "pamela"
 manager: amitban
 ---
 # DBCC CLONEDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Generates a schema-only clone of a database by using DBCC CLONEDATABASE in order to investigate performance issues related to the query optimizer.
 
@@ -47,7 +48,7 @@ Generates a schema-only clone of a database by using DBCC CLONEDATABASE in order
   
 ## Syntax  
   
-```
+```syntaxsql
 DBCC CLONEDATABASE   
 (  
     source_database_name
@@ -56,7 +57,9 @@ DBCC CLONEDATABASE
     [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]     
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *source_database_name*  
 The name of the database to be copied. 
   
@@ -64,23 +67,23 @@ The name of the database to be copied.
 The name of the database the source database will be copied to. This database will be created by DBCC CLONEDATABASE and shouldn't already exist. 
   
 NO_STATISTICS  
-Specifies if table/index statistics need to be excluded from the clone. If this option is not specified, table/index statistics are automatically included. This option is available starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+Specifies if table/index statistics need to be excluded from the clone. If this option is not specified, table/index statistics are automatically included. This option is available starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 and [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1.
 
 NO_QUERYSTORE<br>
-Specifies if query store data needs to be excluded from the clone. If this option is not specified, query store data will be copied to the clone if the query store is enabled in the source database. This option is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+Specifies if query store data needs to be excluded from the clone. If this option is not specified, query store data will be copied to the clone if the query store is enabled in the source database. This option is available starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1.
 
 VERIFY_CLONEDB  
-Verifies the consistency of the new database.  This option is required if the cloned database is intended for production use.  Enabling VERIFY_CLONEDB also disables statistics and query store collection, thus it is equivalent to running WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE.  This option is available starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
+Verifies the consistency of the new database.  This option is required if the cloned database is intended for production use.  Enabling VERIFY_CLONEDB also disables statistics and query store collection, thus it is equivalent to running WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE.  This option is available starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2, and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
 
 > [!NOTE]  
 > The following command can be used to confirm that the cloned database is production-ready: <br/>`SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone')`
 
 
 SERVICEBROKER<br>
-Specifies if service broker related system catalogs should be included in the clone.  The SERVICEBROKER option cannot be used in combination with VERIFY_CLONEDB.  This option is available starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
+Specifies if service broker related system catalogs should be included in the clone.  The SERVICEBROKER option cannot be used in combination with VERIFY_CLONEDB.  This option is available starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2, and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
 
 BACKUP_CLONEDB  
-Creates and verifies a backup of the clone database.  If used in combination with VERIFY_CLONEDB, the clone database is verified before the backup is taken.  This option is available starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
+Creates and verifies a backup of the clone database.  If used in combination with VERIFY_CLONEDB, the clone database is verified before the backup is taken.  This option is available starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2, and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
   
 ## Remarks
 The following validations are performed by DBCC CLONEDATABASE. The command fails if any of the validations fail.
@@ -115,7 +118,7 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 
 ## Stats blob for columnstore indexes
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE` automatically captures the stats blobs for columnstore indexes, so no manual steps are required.`DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data. In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information.
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], `DBCC CLONEDATABASE` automatically captures the stats blobs for columnstore indexes, so no manual steps are required.`DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data. In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information.
 
 For information related to data security on cloned databases, see [Understanding data security in cloned databases](https://techcommunity.microsoft.com/t5/SQL-Server/Understanding-data-security-in-cloned-databases-created-using/ba-p/385287).
 
@@ -140,11 +143,11 @@ Only the following objects can be cloned in the destination database. Encrypted 
 - COLUMNSTORE INDEX
 - CDB
 - CDC
-- CLR (starting in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later versions)
+- CLR (starting in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 and later versions)
 - DATABASE PROPERTIES
 - DEFAULT
 - FILES AND FILEGROUPS
-- Full text (starting in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2)
+- Full text (starting in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU2)
 - FUNCTION
 - INDEX
 - LOGIN
@@ -152,9 +155,9 @@ Only the following objects can be cloned in the destination database. Encrypted 
 - PARTITION SCHEME
 - PROCEDURE   
 > [!NOTE]   
-> [!INCLUDE[tsql](../../includes/tsql-md.md)] procedures are supported in all releases starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2. CLR procedures are supported starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3. Natively compiled procedures are supported starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.  
+> [!INCLUDE[tsql](../../includes/tsql-md.md)] procedures are supported in all releases starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2. CLR procedures are supported starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3. Natively compiled procedures are supported starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1.  
 
-- QUERY STORE (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)   
+- QUERY STORE (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1)   
 > [!NOTE]   
 > Query store data is copied only if it is enabled on the source database. To copy the latest runtime statistics as part of the query store, execute sp_query_store_flush_db to flush the runtime statistics to the query store before executing DBCC CLONEDATABASE.  
 
@@ -166,8 +169,8 @@ Only the following objects can be cloned in the destination database. Encrypted 
 - STATISTICS
 - SYNONYM
 - TABLE
-- MEMORY OPTIMIZED TABLES (only in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later versions).
-- FILESTREAM AND FILETABLE OBJECTS (Starting in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later versions). 
+- MEMORY OPTIMIZED TABLES (only in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 and later versions).
+- FILESTREAM AND FILETABLE OBJECTS (Starting in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 and later versions). 
 - TRIGGER
 - TYPE
 - UPGRADED DB
@@ -206,7 +209,7 @@ The following messages are an example of the messages logged in the error log du
 ## Examples  
   
 ### A. Creating a clone of a database that includes schema, statistics and query store 
-The following example creates a clone of the AdventureWorks database that includes schema, statistics and query store data ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later versions)
+The following example creates a clone of the AdventureWorks database that includes schema, statistics and query store data ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 and later versions)
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone);    
@@ -222,7 +225,7 @@ GO
 ```  
 
 ### C. Creating a schema-only clone of a database without statistics and query store 
-The following example creates a clone of the AdventureWorks database that does not include statistics and query store data ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later versions)
+The following example creates a clone of the AdventureWorks database that does not include statistics and query store data ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 and later versions)
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH NO_STATISTICS, NO_QUERYSTORE;    
@@ -230,7 +233,7 @@ GO
 ```  
 
 ### D. Creating a clone of a database that is verified for production use
-The following example creates a schema-only clone of the AdventureWorks database without statistics and query store data that is verified for use as a production database ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later versions).
+The following example creates a schema-only clone of the AdventureWorks database without statistics and query store data that is verified for use as a production database ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later versions).
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB;    
@@ -238,7 +241,7 @@ GO
 ```  
   
 ### E. Creating a clone of a database that is verified for production use that includes a backup of the cloned database
-The following example creates a schema-only clone of the AdventureWorks database without statistics and query store data that is verified for use as a production database.  A verified backup of the cloned database will also be created ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later versions).
+The following example creates a schema-only clone of the AdventureWorks database without statistics and query store data that is verified for use as a production database.  A verified backup of the cloned database will also be created ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 and later versions).
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB, BACKUP_CLONEDB;    

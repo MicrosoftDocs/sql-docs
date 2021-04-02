@@ -1,5 +1,6 @@
 ---
-title: "Database Logins, Users, and Roles (Master Data Services) | Microsoft Docs"
+title: Database Logins, Users, and Roles
+description: Master Data Services includes logins, users, and roles installed on the SQL Server Database Engine instance that hosts the Master Data Services database.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -20,7 +21,7 @@ ms.author: lle
 ---
 # Database Logins, Users, and Roles (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] includes logins, users, and roles that are automatically installed on the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] instance that hosts the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. These logins, users, and roles should not be modified.  
   

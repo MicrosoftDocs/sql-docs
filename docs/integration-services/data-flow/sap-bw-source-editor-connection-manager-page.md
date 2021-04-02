@@ -1,4 +1,5 @@
 ---
+description: "SAP BW Source Editor (Connection Manager Page)"
 title: "SAP BW Source Editor (Connection Manager Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -10,12 +11,12 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sapbwsource.connection.f1"
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # SAP BW Source Editor (Connection Manager Page)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Connection Manager** page of the **SAP BW Source Editor** to select the SAP BW connection manager for the SAP BW source. On this page, you also select the execution mode and the parameters for extracting the data from the SAP Netweaver BW system.  
@@ -47,7 +48,7 @@ ms.author: janinez
  **New**  
  Create a new connection manager by using the **SAP BW Connection Manager** dialog box.  
   
- For more information about this dialog box, see [SAP BW Connection Manager Editor](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md).  
+ For more information about this dialog box, see [SAP BW Connection Manager Editor](../connection-manager/sap-bw-connection-manager.md).  
   
  **OHS destination**  
  Select the Open Hub Service (OHS) destination to use to extract data from the source.  
@@ -126,5 +127,4 @@ ms.author: janinez
  [SAP BW Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
  [SAP BW Source Editor &#40;Advanced Page&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 Help](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
-  
   

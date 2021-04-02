@@ -1,4 +1,5 @@
 ---
+description: "RECEIVE (Transact-SQL)"
 title: "RECEIVE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "RECEIVE_TSQL"
   - "RECEIVE"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "receiving messages"
   - "retrieving messages"
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
-author: CarlRabeler
-ms.author: carlrab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # RECEIVE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Retrieves one or more messages from a queue. Depending on the retention setting for the queue, either removes the message from the queue or updates the status of the message in the queue.  
   
@@ -31,8 +32,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 [ WAITFOR ( ]  
     RECEIVE [ TOP ( n ) ]   
         <column_specifier> [ ,...n ]  
@@ -53,7 +53,9 @@ ms.author: carlrab
 { database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WAITFOR  
  Specifies that the RECEIVE statement waits for a message to arrive on the queue, if no messages are currently present.  
   
@@ -174,14 +176,14 @@ ms.author: carlrab
 ### A. Receiving all columns for all messages in a conversation group  
  The following example receives all available messages for the next available conversation group from the `ExpenseQueue` queue. The statement returns the messages as a result set.  
   
-```  
+```sql  
 RECEIVE * FROM ExpenseQueue ;  
 ```  
   
 ### B. Receiving specified columns for all messages in a conversation group  
  The following example receives all available messages for the next available conversation group from the `ExpenseQueue` queue. The statement returns the messages as a result set that contains the columns `conversation_handle`, `message_type_name`, and `message_body`.  
   
-```  
+```sql  
 RECEIVE conversation_handle, message_type_name, message_body  
 FROM ExpenseQueue ;  
 ```  
@@ -189,14 +191,14 @@ FROM ExpenseQueue ;
 ### C. Receiving the first available message in the queue  
  The following example receives the first available message from the `ExpenseQueue` queue as a result set.  
   
-```  
+```sql  
 RECEIVE TOP (1) * FROM ExpenseQueue ;  
 ```  
   
 ### D. Receiving all messages for a specified conversation  
  The following example receives all available messages for the specified conversation from the `ExpenseQueue` queue as a result set.  
   
-```  
+```sql  
 DECLARE @conversation_handle UNIQUEIDENTIFIER ;  
   
 SET @conversation_handle = <retrieve conversation from database> ;  
@@ -209,7 +211,7 @@ WHERE conversation_handle = @conversation_handle ;
 ### E. Receiving messages for a specified conversation group  
  The following example receives all available messages for the specified conversation group from the `ExpenseQueue` queue as a result set.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 SET @conversation_group_id =   
@@ -223,7 +225,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ### F. Receiving into a table variable  
  The following example receives all available messages for a specified conversation group from the `ExpenseQueue` queue into a table variable.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 DECLARE @procTable TABLE(  
@@ -255,7 +257,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ### G. Receiving messages and waiting indefinitely  
  The following example receives all available messages for the next available conversation group in the `ExpenseQueue` queue. The statement waits until at least one message becomes available then returns a result set that contains all message columns.  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE *  
     FROM ExpenseQueue) ;  
@@ -264,7 +266,7 @@ WAITFOR (
 ### H. Receiving messages and waiting for a specified interval  
  The following example receives all available messages for the next available conversation group in the `ExpenseQueue` queue. The statement waits for 60 seconds or until at least one message becomes available, whichever occurs first. The statement returns a result set that contains all message columns if at least one message is available. Otherwise, the statement returns an empty result set.  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE *  
     FROM ExpenseQueue ),  
@@ -274,7 +276,7 @@ TIMEOUT 60000 ;
 ### I. Receiving messages, modifying the type of a column  
  The following example receives all available messages for the next available conversation group in the `ExpenseQueue` queue. When the message type states that the message contains an XML document, the statement converts the message body to XML.  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE message_type_name,  
         CASE  
@@ -288,7 +290,7 @@ TIMEOUT 60000 ;
 ### J. Receiving a message, extracting data from the message body, retrieving conversation state  
  The following example receives the next available message for the next available conversation group in the `ExpenseQueue` queue. When the message is of type `//Adventure-Works.com/Expenses/SubmitExpense`, the statement extracts the employee ID and a list of items from the message body. The statement also retrieves state for the conversation from the `ConversationState` table.  
   
-```  
+```sql  
 WAITFOR(  
     RECEIVE   
     TOP(1)  

@@ -1,11 +1,11 @@
 ---
 title: Deploy offline
 titleSuffix: SQL Server big data clusters
-description: Learn how to perform an offline deployment of a SQL Server big data cluster.
+description: Learn how to perform an offline deployment of a SQL Server 2019 Big Data Cluster and how to load container images into a private repository.
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,13 +13,11 @@ ms.technology: big-data-cluster
 
 # Perform an offline deployment of a SQL Server big data cluster
 
-This article describes how to perform an offline deployment of a SQL Server 2019 big data cluster (preview). Big data clusters must have access to a Docker repository from which to pull container images. An offline installation is one where the required images are placed into a private Docker repository. That private repository is then used as the image source for a new deployment.
+This article describes how to perform an offline deployment of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Big data clusters must have access to a Docker repository from which to pull container images. An offline installation is one where the required images are placed into a private Docker repository. That private repository is then used as the image source for a new deployment.
 
 ## Prerequisites
 
 - Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
-
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## Load images into a private repository
 
@@ -28,7 +26,7 @@ The following steps describe how to pull the big data cluster container images f
 > [!TIP]
 > The following steps explain the process. However, to simplify the task, you can use the [automated script](#automated) instead of manually running these commands.
 
-1. Pull the big data cluster container images by repeating the following command. Replace `<SOURCE_IMAGE_NAME>` with each [image name](#images). Replace `<SOURCE_DOCKER_TAG>` with the tag for the big data cluster release, such as **2019-CTP3.2-ubuntu**.  
+1. Pull the big data cluster container images by repeating the following command. Replace `<SOURCE_IMAGE_NAME>` with each [image name](#images). Replace `<SOURCE_DOCKER_TAG>` with the tag for the big data cluster release, such as **2019-GDR1-ubuntu-16.04**.  
 
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -51,31 +49,38 @@ The following steps describe how to pull the big data cluster container images f
    ```PowerShell
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
+ 
+> [!WARNING]
+> Do not modify the big data cluster images once they are pushed into your private repository. Performing a deployment with modified images will result in an unsupported big data cluster setup.
+
 
 ### <a id="images"></a> Big data cluster container images
 
 The following big data cluster container images are required for an offline installation:
+- **mssql-app-service-proxy**
+- **mssql-control-watchdog**
+- **mssql-controller**
+- **mssql-dns**
+- **mssql-hadoop**
+- **mssql-mleap-serving-runtime**
+- **mssql-mlserver-py-runtime**
+- **mssql-mlserver-r-runtime**
+- **mssql-monitor-collectd**
+- **mssql-monitor-elasticsearch**
+- **mssql-monitor-fluentbit**
+- **mssql-monitor-grafana**
+- **mssql-monitor-influxdb**
+- **mssql-monitor-kibana**
+- **mssql-monitor-telegraf**
+- **mssql-security-knox**
+- **mssql-security-support**
+- **mssql-server-controller**
+- **mssql-server-data**
+- **mssql-ha-operator**
+- **mssql-ha-supervisor**
+- **mssql-service-proxy**
+- **mssql-ssis-app-runtime**
 
- - **mssql-appdeploy-init**
- - **mssql-monitor-fluentbit**
- - **mssql-monitor-collectd**
- - **mssql-server-data**
- - **mssql-hadoop**
- - **mssql-monitor-elasticsearch**
- - **mssql-monitor-influxdb**
- - **mssql-security-knox**
- - **mssql-mlserver-r-runtime**
- - **mssql-mlserver-py-runtime**
- - **mssql-controller**
- - **mssql-server-controller**
- - **mssql-monitor-grafana**
- - **mssql-monitor-kibana**
- - **mssql-service-proxy**
- - **mssql-app-service-proxy**
- - **mssql-ssis-app-runtime**
- - **mssql-monitor-telegraf**
- - **mssql-mleap-serving-runtime**
- - **mssql-security-support**
 
 ## <a id="automated"></a> Automated script
 
@@ -95,20 +100,22 @@ You can use an automated python script that will automatically pull all required
    **Windows:**
 
    ```PowerShell
-   python deploy-sql-big-data-aks.py
+   python push-bdc-images-to-custom-private-repo.py
    ```
 
    **Linux:**
 
    ```bash
-   sudo python deploy-sql-big-data-aks.py
+   sudo python push-bdc-images-to-custom-private-repo.py
    ```
 
 1. Follow the prompts for entering the Microsoft repository and your private repository information. After the script completes, all required images should be located in your private repository.
 
+1. Follow the instructions [here](deployment-custom-configuration.md#docker) to learn how to customize the `control.json` deployment configuration file to make use of your container registry and repository. Note that you must set `DOCKER_USERNAME` and `DOCKER_PASSWORD` environment variables before deployment to enable access to your private repository.
+
 ## Install tools offline
 
-Big data cluster deployments require several tools, including **Python**, **azdata**, and **kubectl**. Use the following steps to install these tools on an offline server.
+Big data cluster deployments require several tools, including **Python**, [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], and **kubectl**. Use the following steps to install these tools on an offline server.
 
 ### <a id="python"></a> Install python offline
 
@@ -130,13 +137,13 @@ Big data cluster deployments require several tools, including **Python**, **azda
 
 ### <a id="azdata"></a> Install azdata offline
 
-1. On a machine with internet access and [Python](https://wiki.python.org/moin/BeginnersGuide/Download), run the following command to download all off the **azdata** packages to the current folder.
+1. On a machine with internet access and [Python](https://wiki.python.org/moin/BeginnersGuide/Download), run the following command to download all off the [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] packages to the current folder.
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
    ```
 
-1. Copy the downloaded packages and the **requirements.txt** file to the target machine.
+1. Copy the downloaded packages and the `requirements.txt` file to the target machine.
 
 1. Run the following command on the target machine, specifying the folder that you copied the previous files into.
 
@@ -154,7 +161,7 @@ To install **kubectl** to an offline machine, use the following steps.
 
 ## Deploy from private repository
 
-To deploy from the private repository, use the steps described in the [deployment guide](deployment-guidance.md), but use a custom deployment configuration file that specifies your private Docker repository information. The following **azdata** commands demonstrate how to change the Docker settings in a custom deployment configuration file named **control.json**:
+To deploy from the private repository, use the steps described in the [deployment guide](deployment-guidance.md), but use a custom deployment configuration file that specifies your private Docker repository information. The following [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] commands demonstrate how to change the Docker settings in a custom deployment configuration file named `control.json`:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"
@@ -162,8 +169,8 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
-The deployment prompts you for the docker username and password, or you can specify them in the **DOCKER_USERNAME** and **DOCKER_PASSWORD** environment variables.
+The deployment prompts you for the docker username and password, or you can specify them in the `DOCKER_USERNAME` and `DOCKER_PASSWORD` environment variables.
 
 ## Next steps
 
-For more information about big data cluster deployments, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md).
+For more information about big data cluster deployments, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md).

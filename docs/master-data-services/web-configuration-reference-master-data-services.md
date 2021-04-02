@@ -1,5 +1,6 @@
 ---
-title: "Web Configuration Reference (Master Data Services) | Microsoft Docs"
+description: "Web Configuration Reference (Master Data Services)"
+title: Web Configuration Reference
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: lle
 ---
 # Web Configuration Reference (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] uses a Web.config file to contain the configuration settings that enable Internet Information Services (IIS) to host the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web application and the Web service. This Web.config file is located in the WebApplication folder of the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] installation path. For more information about the path and permissions, see [Folder and File Permissions &#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md).  
   
@@ -25,16 +26,16 @@ ms.author: lle
 |Configuration Element|Description|  
 |---------------------------|-----------------|  
 |**masterDataServices**|Custom element. Connects the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web service to a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.|  
-|**connectionStrings**|ASP.NET element. For more information, see [connectionStrings Element (ASP.NET Settings Schema)](https://go.microsoft.com/fwlink/?LinkId=178347) in the MSDN Library.|  
-|**system.web**|ASP.NET element. For more information, see [system.web Element (ASP.NET Settings Schema)](https://go.microsoft.com/fwlink/?LinkId=178348) in the MSDN Library.|  
-|**startup**|.NET Framework element. For more information, see [\<startup> Element](https://go.microsoft.com/fwlink/?LinkId=178349) in the MSDN Library.|  
-|**runtime**|.NET Framework element. For more information, see [\<runtime> Element](https://go.microsoft.com/fwlink/?LinkId=178350) in the MSDN Library.|  
-|**system.codedom**|.NET Framework element. For more information, see [\<system.codedom> Element](https://go.microsoft.com/fwlink/?LinkId=178351) in the MSDN Library.|  
-|**system.web.extensions**|ASP.NET element. For more information, see [system.web.extensions Element (ASP.NET Settings Schema)](https://go.microsoft.com/fwlink/?LinkId=178352) in the MSDN Library.|  
-|**system.webServer**|Section group that contains IIS elements. For more information, see [system.webServer Section Group \[IIS 7 Settings Schema\]](https://go.microsoft.com/fwlink/?LinkId=178353) in the MSDN Library.|  
-|**system.serviceModel**|WCF element. For more information, see [\<system.serviceModel>](https://go.microsoft.com/fwlink/?LinkId=178354) in the MSDN Library.|  
-|**system.diagnostics**|.NET Framework element. For more information, see [\<system.diagnostics> Element](https://go.microsoft.com/fwlink/?LinkId=178355) in the MSDN Library.|  
-|**appSettings**|ASP.NET element. For more information, see [appSettings Element (General Settings Schema)](https://go.microsoft.com/fwlink/?LinkId=178356) in the MSDN Library.|  
+|**connectionStrings**|ASP.NET element. For more information, see [connectionStrings Element (ASP.NET Settings Schema)](/previous-versions/dotnet/netframework-4.0/bf7sd233(v=vs.100)) in the MSDN Library.|  
+|**system.web**|ASP.NET element. For more information, see [system.web Element (ASP.NET Settings Schema)](/previous-versions/dotnet/netframework-4.0/dayb112d(v=vs.100)) in the MSDN Library.|  
+|**startup**|.NET Framework element. For more information, see [\<startup> Element](/dotnet/framework/configure-apps/file-schema/startup/startup-element) in the MSDN Library.|  
+|**runtime**|.NET Framework element. For more information, see [\<runtime> Element](/dotnet/framework/configure-apps/file-schema/runtime/runtime-element) in the MSDN Library.|  
+|**system.codedom**|.NET Framework element. For more information, see [\<system.codedom> Element](/dotnet/framework/configure-apps/file-schema/compiler/system-codedom-element) in the MSDN Library.|  
+|**system.web.extensions**|ASP.NET element. For more information, see [system.web.extensions Element (ASP.NET Settings Schema)](/previous-versions/dotnet/netframework-4.0/bb546044(v=vs.100)) in the MSDN Library.|  
+|**system.webServer**|Section group that contains IIS elements. For more information, see [system.webServer Section Group \[IIS 7 Settings Schema\]](/previous-versions/iis/settings-schema/ms689429(v=vs.90)) in the MSDN Library.|  
+|**system.serviceModel**|WCF element. For more information, see [\<system.serviceModel>](/dotnet/framework/configure-apps/file-schema/wcf/system-servicemodel) in the MSDN Library.|  
+|**system.diagnostics**|.NET Framework element. For more information, see [\<system.diagnostics> Element](/dotnet/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element) in the MSDN Library.|  
+|**appSettings**|ASP.NET element. For more information, see [appSettings Element (General Settings Schema)](/previous-versions/dotnet/netframework-4.0/ms228154(v=vs.100)) in the MSDN Library.|  
   
 ## masterDataServices Element  
  The **\<masterDataServices>** element is a custom element that is used to connect a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web service to a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
@@ -65,5 +66,4 @@ ms.author: lle
    <instance virtualPath="/MDS" siteName="Contoso" connectionName="MDSDB" serviceName="MDS1" />  
 </masterDataServices>  
 ```  
-  
   

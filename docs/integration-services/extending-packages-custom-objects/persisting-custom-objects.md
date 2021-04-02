@@ -1,4 +1,5 @@
 ---
+description: "Persisting Custom Objects"
 title: "Persisting Custom Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -10,12 +11,12 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "custom objects [Integration Services], persisting"
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Persisting Custom Objects
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You do not need to implement custom persistence for the custom objects that you create as long as their properties use only simple data types such as **integer** and **string**. The default implementation of persistence saves the metadata for your object along with the values of all its properties.  

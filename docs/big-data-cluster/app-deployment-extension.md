@@ -1,26 +1,26 @@
 ---
 title: App deployment extension
 titleSuffix: SQL Server big data clusters
-description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster (preview). 
-author: jeroenterheerdt 
-ms.author: jterh
+description: Deploy a Python or R script as an application on SQL Server Big Data Clusters. 
+author: cloudmelon 
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# How to use VS Code to deploy applications to SQL Server big data clusters
+# How to use Visual Studio Code to deploy applications to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes how to deploy applications to a SQL Server big data cluster using Visual Studio Code with the App Deployment extension. This capability was introduced in CTP 2.3. 
+This article describes how to deploy applications to a SQL Server big data cluster using Microsoft Visual Studio Code with the App Deployment extension.
 
 ## Prerequisites
 
-- [Visual Studio Code](https://code.visualstudio.com/).
-- [SQL Server big data cluster](big-data-cluster-overview.md) CTP 2.3 or later.
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [SQL Server big data cluster](big-data-cluster-overview.md)
 
 ## Capabilities
 
@@ -39,11 +39,11 @@ The following sections walk though the installation process and provides an over
 
 ### Install
 
-First install the App Deployment extension in VS Code:
+First install the App Deployment extension in Visual Studio Code:
 
-1. Download [App Deploy Extension](https://aka.ms/app-deploy-vscode) to install the extension as part of VS Code.
+1. Download [App Deploy Extension](https://aka.ms/app-deploy-vscode) to install the extension as part of Visual Studio Code.
 
-1. Launch VS Code and navigate to the Extensions sidebar.
+1. Launch Visual Studio Code and navigate to the Extensions sidebar.
 
 1. Click the `…` context menu on the top of the side bar and select `Install from vsix`.
 
@@ -51,29 +51,48 @@ First install the App Deployment extension in VS Code:
 
 1. Find the `sqlservbdc-app-deploy.vsix` file you downloaded and choose that to install.
 
-After the SQL Server big data cluster app deploy extension has been installed, it prompts you to reload VS Code. You should now see the SQL Server BDC App Explorer in the VS Code sidebar.
+After the SQL Server big data cluster app deploy extension has been installed, it prompts you to reload Visual Studio Code. You should now see the SQL Server BDC App Explorer in the Visual Studio Code sidebar.
 
 ### App Explorer
 
 Click on the extension in the sidebar to load a side panel showing the App Explorer. The following sample screenshot of the App Explorer shows no apps or app specifications available:
 
-<img src="media/vs-extension/app_explorer.png" width=350px></img>
-<!--![App Explorer](media/vs-extension/app_explorer.png)-->
+![App Explorer](media/vs-extension/app_explorer.png)
 
-#### New Connection
+#### Connect to Cluster
 
 To connect to the cluster endpoint, use one of the following methods:
 
 - Click on the status bar at the bottom that says `SQL Server BDC Disconnected`.
-- Or click on the `New Connection` button at the top with the arrow pointing into a doorway.
+- Or click on the `Connect to Cluster` button at the top with the arrow pointing into a doorway.
 
-   ![New Connection](media/vs-extension/connect_to_cluster.png)
+Visual Studio Code prompts for the appropriate endpoint, username, and password.
 
-VS Code prompts for the appropriate endpoint, username, and password. If given the correct credentials and app endpoint, VS Code notifies that you've been connected to the cluster and you will see any deployed apps populated in the sidebar. If you successfully connect, your endpoint and username will be saved to `./sqldbc` as part of your user profile. No password or tokens will ever be saved. When logging in again, the prompt will pre-fill with your saved host and username but always require you to input a password. If you wish to connect to a different cluster endpoint, just click the `New Connection` again. The connection will automatically close if you close VS Code or if you open a different workspace and you will need to reconnect.
+The endpoint to connect is the `Cluster Management Service` endpoint with port 30080.
+
+You can also find this endpoint from the command line through 
+
+```
+azdata bdc endpoint list
+```
+
+One of the other ways to get this information is doing right-click **Manage** on the server in Azure Data Studio where you will find the endpoints of the services listed.
+
+![ADS End Point](media/vs-extension/ads_end_point.png)
+
+Once you have found the endpoint to use, then connect to the cluster.
+
+![New Connection](media/vs-extension/connect_to_cluster.png)
+
+ If given the correct credentials and app endpoint, Visual Studio Code notifies that you've been connected to the cluster and you will see any deployed apps populated in the sidebar. If you successfully connect, your endpoint and username will be saved to `./sqldbc` as part of your user profile. No password or tokens will ever be saved. When logging in again, the prompt will pre-fill with your saved host and username but always require you to input a password. If you wish to connect to a different cluster endpoint, just click the `New Connection` again. The connection will automatically close if you close Visual Studio Code or if you open a different workspace and you will need to reconnect.
 
 ### App Template
 
-To deploy a new app from one of our templates, click on the `New App Template` button on the `App Specifications` pane, where you will be prompted for the name, the runtime, and what location you would like to place the new app in on your local machine. It is advised that you place it in your current VS Code workspace so that you can use the full functionality of the extension, but you can place it anywhere in your local file system.
+You need to *Open Workspace* in Visual Studio Code where you are going to save the artifacts of the app.
+
+To deploy a new app from one of our templates, click on the `New App Template` button on the `App Specifications` pane, where you will be prompted for the name, the runtime, and what location you would like to place the new app in on your local machine. The name and version that you provide should be a DNS-1035 label and must consist of lower case alphanumeric characters or '-', start with an alphabetic character, and end with an alphanumeric character.
+
+It is advised that you place it in your current Visual Studio Code workspace so that you can use the full functionality of the extension, but you can place it anywhere in your local file system.
 
 ![New App Template](media/vs-extension/new_app_template.png)
 
@@ -81,13 +100,16 @@ Once completed, a new app template is scaffolded for you at the location you spe
 
 ![Loaded App Template](media/vs-extension/loading_app_template.png)
 
-The template is a simple `Hello World` app that is laid out as follows:
+The template is a simple `helloworld` app that is laid out as follows in the App Specifications pane:
 
 - **spec.yaml**
    - Tells the cluster how to deploy your app
 - **run-spec.yaml**
    - Tells the cluster how you'd like to call your app
-- **handler.py**
+
+The source code of the App would be in the Workspace folder.
+
+- **source file name**
    - This is your source code file as specified by `src` in `spec.yaml`
    - It has one function called `handler` that is considered the `entrypoint` of the app as shown in `spec.yaml`. It takes in a string input called `msg` and returns a string output called `out`. These are specified in `inputs` and `outputs` of the `spec.yaml`.
 
@@ -124,11 +146,11 @@ You may view all apps you have deployed in the side bar with the following infor
   - swagger
   - details
 
-If you click `Links`, you will see that you can access the `swagger.json` of your deployed app, so that you can write your own clients which call your app:
+If you click `Links`, you will see that you can access the `swagger.json` of your deployed app, so that you can write your own clients that call your app:
 
-![Swagger](media/vs-extension/swagger.png)
+![Screenshot of the VS Code UI showing the swagger.json file.](media/vs-extension/swagger.png)
 
-See [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information.
+See [Consume applications on big data clusters](app-consume.md) for more information.
 
 ### App Run
 
@@ -140,7 +162,7 @@ Specify any string you'd like in place of `hello` and then again run it through 
 
 ![Get Run Spec](media/vs-extension/get_run_spec.png)
 
-Once you have one and have edited it to your satisfaction, run it. VS Code returns the appropriate feedback when the app has finished running:
+Once you have one and have edited it to your satisfaction, run it. Visual Studio Code returns the appropriate feedback when the app has finished running:
 
 ![App Output](media/vs-extension/app_output.png)
 
@@ -172,9 +194,9 @@ To delete an app, just click the Trash can button next to the app in the `Deploy
 
 ## Next steps
 
-Explore how to integrate apps deployed on SQL Server big data clusters in your own applications at [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information. You can also refer to the additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy) to try with the extension.
+Explore how to integrate apps deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in your own applications at [Consume applications on big data clusters](app-consume.md) for more information. You can also refer to the additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy) to try with the extension.
 
-For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
 
 
 Our goal is to make this extension useful for you and we appreciate you feedback. Please send them to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](https://aka.ms/sqlfeedback).

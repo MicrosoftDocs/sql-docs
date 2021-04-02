@@ -1,4 +1,5 @@
 ---
+description: "ODBC Programmer&#39;s Reference"
 title: "ODBC Programmer&#39;s Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC [ODBC], reference"
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ODBC Programmer&#39;s Reference
 The *ODBC Programmer's Reference* contains the following sections.  

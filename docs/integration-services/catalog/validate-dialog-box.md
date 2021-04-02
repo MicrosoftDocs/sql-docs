@@ -1,4 +1,5 @@
 ---
+description: "Validate Dialog Box"
 title: "Validate Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -11,12 +12,12 @@ f1_keywords:
   - "sql13.ssis.ssms.isprojectvalidate.f1"
   - "sql13.ssis.ssms.ispackagevalidate.f1"
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Validate Dialog Box
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Validate** dialog box to check for common problems in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a project or package.  

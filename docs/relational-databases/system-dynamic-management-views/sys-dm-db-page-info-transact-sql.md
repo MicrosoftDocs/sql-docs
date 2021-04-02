@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_page_info (Transact-SQL)"
 title: "sys.dm_db_page_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2018"
@@ -19,13 +20,17 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: "pamela"
 manager: amitban
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15"
 ---
 # sys.dm_db_page_info (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ssver15-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 Returns information about a page in a database.  The function returns one row that contains the header information from the page, including the `object_id`, `index_id`, and `partition_id`.  This function replaces the need to use `DBCC PAGE` in most cases.
+
+> [!NOTE]
+> `sys.dm_db_page_info` is currently supported only in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later.
+
 
 ## Syntax   
 ```  
@@ -52,55 +57,56 @@ Determines the level of detail in the output of the function. 'LIMITED' will ret
 |database_id |int |Database ID |
 |file_id |int |File ID |
 |page_id |int |Page ID |
+|page_header_version |int |Page header version |
 |page_type |int |Page Type |
 |page_type_desc |nvarchar(64) |Description of the page type |
-|page_flag_bits |nvarchar(64) |Flag bits in page header |
-|page_flag_bits_desc |nvarchar(256) |Flag bits description in page header |
 |page_type_flag_bits |nvarchar(64) |Type Flag bits in page header |
 |page_type_flag_bits_desc |nvarchar(64) |Type flag bits description in page header |
+|page_flag_bits |nvarchar(64) |Flag bits in page header |
+|page_flag_bits_desc |nvarchar(256) |Flag bits description in page header |
+|page_lsn |nvarchar(64) |Log sequence number / timestamp |
+|page_level |int |Level of the page in index (leaf = 0) |
 |object_id |int |ID of the object owning the page |
 |index_id |int |ID of the index (0 for heap data pages) |
 |partition_id |bigint |ID of the partition |
 |alloc_unit_id |bigint |ID of the allocation unit |
-|page_level |int |Level of the page in index (leaf = 0) |
-|slot_count |smallint |Total number of slots (used and unused) <br> For a data page, this number is equivalent to the number of rows. |
-|ghost_rec_count |smallint |Number of records marked as ghost on the page <br> A ghosted record is one that has been marked for deletion but has yet to be removed. |
-|torn_bits |int |1 bit per sector for detecting torn writes. Used also to store checksum <br> This value is used to detect data corruption |
+|is_encrypted |bit |Bit to indicate whether or not the page is encrypted |
+|has_checksum |bit |Bit to indicate whether or not the page has a checksum value |
+|checksum |int |Stores the checksum value that is used to detect data corruption |
 |is_iam_pg |bit |Bit to indicate whether or not the page is an IAM page  |
 |is_mixed_ext |bit |Bit to indicate if allocated in a mixed extent |
-|pfs_file_id |smallint |File ID of corresponding PFS page |
+|has_ghost_records |bit |Bit to indicate if the page contains ghost records <br> A ghosted record is one that has been marked for deletion but has yet to be removed.|
+|has_version_records |bit |Bit to indicate if the page contains version records used for [Accelerated Database Recovery](../backup-restore/restore-and-recovery-overview-sql-server.md#adr) |
 |pfs_page_id |int |Page ID of corresponding PFS page |
-|pfs_alloc_percent |int |Allocation percent as indicated by PFS byte |
+|pfs_is_allocated |bit |Bit to indicate whether or not the page is marked as allocated in the corresponding PFS page |
+|pfs_alloc_percent |int |Allocation percent as indicated by the corresponding PFS byte |
 |pfs_status |nvarchar(64) |PFS byte |
 |pfs_status_desc |nvarchar(64) |Description of the PFS byte |
-|gam_file_id |smallint |File ID of the corresponding GAM page |
 |gam_page_id |int |Page ID of the corresponding GAM page |
 |gam_status |bit |Bit to indicate if allocated in GAM |
 |gam_status_desc |nvarchar(64) |Description of the GAM status bit |
-|sgam_file_id |smallint |File ID of the corresponding SGAM page |
 |sgam_page_id |int |Page ID of the corresponding SGAM page |
 |sgam_status |bit |Bit to indicate if allocated in SGAM |
 |sgam_status_desc |nvarchar(64) |Description of the SGAM status bit |
-|diff_map_file_id |smallint |File ID of the corresponding differential bitmap page |
 |diff_map_page_id |int |Page ID of the corresponding differential bitmap page |
 |diff_status |bit |Bit to indicate if diff status is changed |
 |diff_status_desc |nvarchar(64) |Description of the diff status bit |
-|ml_file_id |smallint |File ID of the corresponding minimal logging bitmap page |
-|ml_page_id |int |Page ID of the corresponding minimal logging bitmap page |
+|ml_map_page_id |int |Page ID of the corresponding minimal logging bitmap page |
 |ml_status |bit |Bit to indicate if the page is minimally logged |
 |ml_status_desc |nvarchar(64) |Description of the minimal logging status bit |
-|free_bytes |smallint |Number of free bytes on the page |
-|free_data_offset |int |Offset of free space at end of data area |
-|reserved_bytes |smallint |Number of free bytes reserved by all transactions (if heap) <br> Number of ghosted rows (if index leaf) |
-|reserved_xdes_id |smallint |Space contributed by m_xdesID to m_reservedCnt <br> For debugging purposes only |
-|xdes_id |nvarchar(64) |Latest transaction contributed by m_reserved <br> For debugging purposes only |
 |prev_page_file_id |smallint |Previous page file ID |
 |prev_page_page_id |int |Previous page page ID |
 |next_page_file_id |smallint |Next page file ID |
 |next_page_page_id |int |Next page page ID |
-|min_len |smallint |Length of fixed size rows |
-|lsn |nvarchar(64) |Log sequence number / timestamp |
-|header_version |int |Page header version |
+|fixed_length |smallint |Length of fixed size rows |
+|slot_count |smallint |Total number of slots (used and unused) <br> For a data page, this number is equivalent to the number of rows. |
+|ghost_rec_count |smallint |Number of records marked as ghost on the page <br> A ghosted record is one that has been marked for deletion but has yet to be removed. |
+|free_bytes |smallint |Number of free bytes on the page |
+|free_data_offset |int |Offset of free space at end of data area |
+|reserved_bytes |smallint |Number of free bytes reserved by all transactions (if heap) <br> Number of ghosted rows (if index leaf) |
+|reserved_bytes_by_xdes_id |smallint |Space contributed by m_xdesID to m_reservedCnt <br> For debugging purposes only |
+|xdes_id |nvarchar(64) |Latest transaction contributed by m_reserved <br> For debugging purposes only |
+||||
 
 ## Remarks
 The `sys.dm_db_page_info` dynamic management function returns page information like `page_id`, `file_id`, `index_id`, `object_id` etc. that are present in a page header. This information is useful for troubleshooting and debugging various performance (lock and latch contention) and corruption issues.

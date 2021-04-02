@@ -1,10 +1,10 @@
 ---
-title: "Customize the Amount of Information Displayed in Diagrams | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Customize the Amount of Information Displayed in Diagrams (Visual Database Tools)"
+title: Customize the Amount of Information Displayed in Diagrams
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,12 +13,13 @@ helpviewer_keywords:
   - "customizing database diagram information [SQL Server]"
   - "custom table views [SQL Server]"
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 
 ---
 # Customize the Amount of Information Displayed in Diagrams (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 When you add a table to a database diagram it appears with a set number of properties showing. You can choose from a menu of variations on how much information shows or you can create a custom set of properties.  
   
 The choices are:  

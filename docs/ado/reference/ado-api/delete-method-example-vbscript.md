@@ -1,19 +1,20 @@
 ---
+description: "Delete Method Example (VBScript)"
 title: "Delete Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Delete method [ADO], VBScript example"
 ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Delete Method Example (VBScript)
 This example uses the [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) method to remove a specified record from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

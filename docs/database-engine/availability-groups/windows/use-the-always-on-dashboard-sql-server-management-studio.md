@@ -1,10 +1,11 @@
 ---
-title: "Use the Always On Availability Group dashboard (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "Using the availability group dashboard in SSMS"
+description: "Describes how to use the Always On availability group dashboard to monitor the health of your availability group in SQL Server Management Studio (SSMS)."
+ms.custom: "seo-lt-2019"
 ms.date: "08/09/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.agdashboard.f1"
@@ -12,13 +13,13 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
   - "Availability Groups [SQL Server], dashboard"
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Use the Always On Availability Group dashboard (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  Database administrators use the Always On Availability Group dashboard to obtain an at-a-glance view the health of an availability group and its availability replicas and databases in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Some of the typical uses for the availability group dashboard are:  
+  Database administrators use the Always On Availability Group dashboard to obtain an at-a-glance view the health of an availability group and its availability replicas and databases in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Some of the typical uses for the availability group dashboard are:  
   
 -   Choosing a replica for a manual failover.    
 -   Estimating data loss if you force failover.  
@@ -325,7 +326,7 @@ The availability group latency report is a reporting tool built into the availab
 
 SQL Agent runs the data collection and must be enabled on both the primary replica, and at least one of the secondary replicas. View the report by right-clicking the availability group > Reports > Standard Reports in **Object Explorer** of SQL Server Management Studio.  
 
-For more information, please see [Always On Availability Group latency reports](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/).
+For more information, please see [Always On Availability Group latency reports](/archive/blogs/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports).
 
 ## Related Tasks  
   
@@ -334,5 +335,4 @@ For more information, please see [Always On Availability Group latency reports](
 ## See Also  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Monitoring of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

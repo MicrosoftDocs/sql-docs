@@ -1,5 +1,6 @@
 ---
-title: "Map Wizard and Map Layer Wizard (Report Builder and SSRS) | Microsoft Docs"
+title: "Map Wizard and Map Layer Wizard (Report Builder) | Microsoft Docs"
+description: Find out how to automate creating a map, adding a map layer, or changing map layer options with the Map Wizards or Map Layer Wizard in Report Builder.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -179,7 +180,7 @@ ms.author: maggies
   
 -   **Hybrid.** Display the combination of **Road** and **Aerial** views.  
   
- For more information about tiles, see [Bing Maps Tiles System](https://go.microsoft.com/fwlink/?LinkId=147315). For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](https://go.microsoft.com/fwlink/?LinkId=151371).  
+ For more information about tiles, see [Bing Maps Tiles System](/bingmaps/articles/bing-maps-tile-system). For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
  To see a tile background in Design view, you must have Internet access. To see the tile background in preview from a report on a report server, the report server must be configured to support Bing map tiles. For more information, see [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) and [Plan a Map Report](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
@@ -247,5 +248,4 @@ ms.author: maggies
  [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Plan a Map Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
-  
   

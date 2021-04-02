@@ -1,4 +1,5 @@
 ---
+description: "Global Settings (Logging)  (MySQLToSQL)"
 title: "Global Settings (Logging)  (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Global Settings (Logging)  (MySQLToSQL)
 Use the **Global Settings** dialog box to specify the logging settings for SSMA. Typically, you would change these settings only when working with product support.  
@@ -35,7 +36,7 @@ The following options are available under **Messages Level**:
   
 For each option under **Messages Level**, configure one of the following logging levels for SSMA:  
   
-|||  
+|Level|Description|  
 |-|-|  
 |**Fatal Error**|Write only fatal error messages to the log.|  
 |**Error**|Write error and fatal error messages to the log.|  

@@ -1,22 +1,20 @@
 ---
 title: "Run Packages in SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs"
-description: "This article describes how to run SSIS packages in Scale Out"
+description: "Learn how to run SQL Server Integration Services (SSIS) packages in Scale Out using a variety of methods."
 ms.custom: performance
 ms.date: "12/13/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
-author: "haoqian"
-ms.author: "haoqian"
+author: HaoQian-MS
+ms.author: haoqian
 ms.reviewer: maghan
 f1_keywords: 
   - "sql13.ssis.ssms.ispackageexecuteinscaleout.f1"
 ---
 # Run packages in Integration Services (SSIS) Scale Out
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 After you deploy packages to the Integration Services server, you can run them in Scale Out by using one of the following methods:
@@ -60,7 +58,7 @@ After you deploy packages to the Integration Services server, you can run them i
 
 1.  Create executions.
 
-    Call `[catalog].[create_execution]` for each package. Set the parameter **@runinscaleout** to `True`. If not all Scale Out Worker computers are allowed to run the package, set the parameter **@useanyworker** to `False`. For more info about this stored procedure and the **@useanyworker** parameter, see [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
+    Call `[catalog].[create_execution]` for each package. Set the parameter **\@runinscaleout** to `True`. If not all Scale Out Worker computers are allowed to run the package, set the parameter **\@useanyworker** to `False`. For more info about this stored procedure and the **\@useanyworker** parameter, see [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
 
 2. Set execution parameters.
 
@@ -72,7 +70,7 @@ After you deploy packages to the Integration Services server, you can run them i
 
 4. Start the executions.
 
-    Call `[catalog].[start_execution]`. Set the parameter **@retry_count** to set the number of times a package execution will retry if it fails.
+    Call `[catalog].[start_execution]`. Set the parameter **\@retry_count** to set the number of times a package execution will retry if it fails.
     
 ### Example
 The following example runs two packages, `package1.dtsx` and `package2.dtsx`, in Scale Out with one Scale Out Worker.  
@@ -113,7 +111,7 @@ To set the default execution mode for packages to **Scale Out**, do the followin
 
 2.  In the **Catalog Properties** dialog box, set **Server-wide Default execution mode** to **Scale Out**.
 
-After you set this default execution mode, you no longer have to specify the **@runinscaleout** parameter when you call the `[catalog].[create_execution]` stored procedure. Packages are run in Scale Out automatically. 
+After you set this default execution mode, you no longer have to specify the **\@runinscaleout** parameter when you call the `[catalog].[create_execution]` stored procedure. Packages are run in Scale Out automatically. 
 
 ![Exe mode](media/exe-mode.PNG)
 
@@ -121,6 +119,9 @@ To switch the default execution mode back so that packages no longer run by defa
 
 ## <a name="sql_agent"></a> Run package in SQL Server Agent job
 In a SQL Server Agent job, you can run an SSIS package as one step of the job. To run the package in Scale Out, set the default execution mode to **Scale Out**. After you set the default execution mode to **Scale Out**, packages in SQL Server Agent jobs run in Scale Out mode.
+
+> [!NOTE]
+> You can't stop Scale Out package execution by canceling the SQL Server Agent job. To stop Scale Out execution, we recommend that you use the catalog.stop_operation stored procedure or use the **Active Operations** pane. 
 
 ## Next steps
 -   [Troubleshoot Scale Out](troubleshooting-scale-out.md)

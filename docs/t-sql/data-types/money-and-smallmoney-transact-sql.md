@@ -1,12 +1,13 @@
 ---
+description: "money and smallmoney (Transact-SQL)"
 title: "money and smallmoney (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "money_TSQL"
   - "money"
@@ -23,10 +24,10 @@ helpviewer_keywords:
 ms.assetid: 57861137-89ea-4b89-b361-390597d7bccc
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # money and smallmoney (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Data types that represent monetary or currency values.
   
@@ -53,15 +54,15 @@ When you convert to **money** from integer data types, units are assumed to be i
 The following example converts **smallmoney** and **money** values to **varchar** and **decimal** data types, respectively.
   
 ```sql
-DECLARE @mymoney_sm smallmoney = 3148.29,  
-        @mymoney    money = 3148.29;  
-SELECT  CAST(@mymoney_sm AS varchar) AS 'SM_MONEY varchar',  
-        CAST(@mymoney AS decimal)    AS 'MONEY DECIMAL';  
+DECLARE @mymoney_sm SMALLMONEY = 3148.29,  
+        @mymoney    MONEY = 3148.29;  
+SELECT  CAST(@mymoney_sm AS VARCHAR) AS 'SM_MONEY varchar',  
+        CAST(@mymoney AS DECIMAL)    AS 'MONEY DECIMAL';  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 SM_MONEY VARCHAR               MONEY DECIMAL  
 ------------------------------ ----------------------  
 3148.29                        3148    

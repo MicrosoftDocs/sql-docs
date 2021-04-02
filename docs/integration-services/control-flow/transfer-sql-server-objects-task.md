@@ -1,4 +1,5 @@
 ---
+description: "Transfer SQL Server Objects Task"
 title: "Transfer SQL Server Objects Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer SQL Server Objects task [Integration Services]"
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Transfer SQL Server Objects Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Transfer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objects task transfers one or more types of objects in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, the task can copy tables and stored procedures. Depending on the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is used as a source, different types of objects are available to copy. For example, only a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database includes schemas and user-defined aggregates.  
@@ -79,7 +80,7 @@ ms.author: janinez
  The Transfer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objects task does not report incremental progress of the object transfer; it reports only 0% and 100 % completion.  
   
 ## Execution Value  
- The execution value, stored in the **ExecutionValue** property of the task, returns the number of objects transferred. By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer SQL Server Objects task, information about the object transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ The execution value, stored in the **ExecutionValue** property of the task, returns the number of objects transferred. By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer SQL Server Objects task, information about the object transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](../integration-services-ssis-variables.md).  
   
 ## Log Entries  
  The Transfer SQL Server Objects task includes the following custom log entries:  
@@ -110,7 +111,7 @@ ms.author: janinez
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## Programmatic Configuration of the Transfer SQL Server Objects Task  
  For more information about programmatically setting these properties, click the following topic:  
@@ -324,7 +325,7 @@ ms.author: janinez
 ## See Also  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
- [Transfer SQL Server Objects Task Editor &#40;General Page&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [Transfer SQL Server Objects Task Editor &#40;General Page&#41;]()   
  [Expressions Page](../../integration-services/expressions/expressions-page.md)   
  [Data Formats for Bulk Import or Bulk Export &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
- [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
+ [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)

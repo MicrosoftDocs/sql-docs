@@ -1,5 +1,6 @@
 ---
 title: "Getting Started with SSMA for Oracle (OracleToSQL) | Microsoft Docs"
+description: Learn about the SQL Server Migration Assistant (SSMA) for Oracle installation process, and familiarize yourself with the SSMA user interface.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,9 +11,9 @@ helpviewer_keywords:
   - "SSMA for Oracle, Metadata Explorers"
   - "SSMA for Oracle, Toolbars"
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Getting Started with SSMA for Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle lets you quickly convert Oracle database schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemas, upload the resulting schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and migrate data from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

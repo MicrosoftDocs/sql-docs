@@ -1,4 +1,5 @@
 ---
+description: "FileTableRootPath (Transact-SQL)"
 title: "FileTableRootPath (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "FileTableRootPath_TSQL"
   - "FileTableRootPath"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "FileTableRootPath function"
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # FileTableRootPath (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the root-level UNC path for a specific FileTable or for the current database.  
   
@@ -34,8 +35,8 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  *FileTable_name*  
  The name of the FileTable. *FileTable_name* is of type **nvarchar**. This is an optional parameter. The default value is the current database. Specifying *schema_name* is also optional. You can pass NULL for *FileTable_name* to use the default parameter value  
   
- *@option*  
- An integer expression that defines how the server component of the path should be formatted. *@option* can have one of the following values:  
+ *\@option*  
+ An integer expression that defines how the server component of the path should be formatted. *\@option* can have one of the following values:  
   
 |Value|Description|  
 |-----------|-----------------|  

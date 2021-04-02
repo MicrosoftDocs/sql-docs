@@ -1,4 +1,5 @@
 ---
+description: "Add Tables to a CDC Instance"
 title: "Add Tables to a CDC Instance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -10,12 +11,12 @@ ms.topic: conceptual
 f1_keywords: 
   - "addTabs"
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Add Tables to a CDC Instance
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the Table Selection dialog box to add additional tables from the Oracle source to the CDC instance. The tables selected are added to the list in the **Tables** tab of the Properties editor.  

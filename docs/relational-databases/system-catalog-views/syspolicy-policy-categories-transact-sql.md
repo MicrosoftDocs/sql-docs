@@ -1,4 +1,5 @@
 ---
+description: "syspolicy_policy_categories (Transact-SQL)"
 title: "syspolicy_policy_categories (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "syspolicy_policy_categories"
   - "syspolicy_policy_categories_TSQL"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # syspolicy_policy_categories (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays one row for each Policy-Based Management policy category in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Policy categories help you organize policies when you have many policies. The following table describes the columns in the syspolicy_policy_groups view.  
  

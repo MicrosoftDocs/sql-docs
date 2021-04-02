@@ -1,10 +1,10 @@
 ---
-title: "Rename a Database Diagram (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Rename a Database Diagram (Visual Database Tools)"
+title: Rename a Database Diagram
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,12 +13,13 @@ helpviewer_keywords:
   - "renaming database diagrams"
   - "database diagrams [SQL Server], renaming"
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 
 ---
 # Rename a Database Diagram (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can rename a database diagram in Object Explorer. Requires ALTER permission on the database.  
   
 ### To rename a database diagram  

@@ -1,4 +1,5 @@
 ---
+description: "Step 9: Test the Lesson 1 tutorial package"
 title: "Step 9: Test the Lesson 1 tutorial package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 1-9: Test the Lesson 1 package
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

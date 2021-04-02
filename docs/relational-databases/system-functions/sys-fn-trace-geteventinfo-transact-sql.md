@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_trace_geteventinfo (Transact-SQL)"
 title: "sys.fn_trace_geteventinfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "fn_trace_geteventinfo"
   - "fn_trace_geteventinfo_TSQL"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "sys.fn_trace_geteventinfo function"
   - "status information [SQL Server], events"
 ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_trace_geteventinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about an event being traced.  
   

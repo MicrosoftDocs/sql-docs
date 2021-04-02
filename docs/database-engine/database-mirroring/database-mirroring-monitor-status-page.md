@@ -1,11 +1,12 @@
 ---
 title: "Database Mirroring Monitor (Status Page) | Microsoft Docs"
+description: Use this read-only Database Mirroring Monitor page to view the mirroring status for the principal and mirror server instances of a selected database.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dbmmonitor.status.f1"
@@ -14,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Database Mirroring Monitor (Status Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This read-only page displays the most recent mirroring status for the principal and mirror server instances of the database currently selected in the navigation tree. If information about an instance is currently unavailable, some of the cells in the **Status** grid corresponding to that instance are grayed out and display **Unknown**.  
   
  **To use SQL Server Management Studio to monitor database mirroring**  
@@ -88,7 +89,7 @@ ms.author: mikeray
 -   **High safety with automatic failover (synchronous)**  
   
 ## Remarks  
- Members of the **dbm_monitor** fixed database role can view the existing mirroring status by using either Database Mirroring Monitor or the **sp_dbmmonitorresults** stored procedure. But these users cannot update the status table. They depend on the **Database Mirroring Monitor Job**to update the status table at regular intervals. To learn the age of the displayed status a user can look at the times in the **Principal log (***\<time>***)** and **Mirror log (***\<time>***)** labels.  
+ Members of the **dbm_monitor** fixed database role can view the existing mirroring status by using either Database Mirroring Monitor or the **sp_dbmmonitorresults** stored procedure. But these users cannot update the status table. They depend on the **Database Mirroring Monitor Job**to update the status table at regular intervals. To learn the age of the displayed status a user can look at the times in the **Principal log (**_\<time>_**)** and **Mirror log (**_\<time>_**)** labels.  
   
  If this job does not exist or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is stopped, the status becomes increasingly stale and may no longer reflect the configuration of the mirroring session. For example, after a failover, the partners might appear to share the same role-principal or mirror, or the current principal server might be shown as the mirror, while the current mirror server is shown as the principal.  
   

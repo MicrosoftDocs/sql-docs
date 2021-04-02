@@ -1,6 +1,7 @@
 ---
-title: "Transaction Isolation Levels | Microsoft Docs"
-ms.custom: ""
+description: "Transaction Isolation Levels (ODBC)"
+title: "Transaction Isolation Levels (ODBC) | Microsoft Docs"
+ms.custom: "seo-dt-2019"
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,10 +20,10 @@ helpviewer_keywords:
   - "repeatable reads [ODBC]"
   - "transactions [ODBC], isolation"
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
-# Transaction Isolation Levels
+# Transaction Isolation Levels (ODBC)
 *Transaction isolation levels* are a measure of the extent to which transaction isolation succeeds. In particular, transaction isolation levels are defined by the presence or absence of the following phenomena:  
   
 -   **Dirty Reads** A *dirty read* occurs when a transaction reads data that has not yet been committed. For example, suppose transaction 1 updates a row. Transaction 2 reads the updated row before transaction 1 commits the update. If transaction 1 rolls back the change, transaction 2 will have read data that is considered never to have existed.  

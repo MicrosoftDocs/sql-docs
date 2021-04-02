@@ -1,4 +1,5 @@
 ---
+description: "managed_backup.sp_backup_on_demand (Transact-SQL)"
 title: "managed_backup.sp_backup_on_demand (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "smart_admin.sp_backup_on_demand"
   - "smart_admin.sp_backup_on_demand_TSQL"
@@ -18,15 +19,15 @@ helpviewer_keywords:
   - "smart_admin.sp_backup_on_demand"
   - "sp_backup_on_demand"
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # managed_backup.sp_backup_on_demand (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Requests [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] to perform a backup of the specified database.  
   
- Use this stored procedure to perform ad hoc backups for a database configured with [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. This prevents any break in the backup chain and [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] processes are aware and the backup is stored in the same Windows Azure Blob storage container.  
+ Use this stored procedure to perform ad hoc backups for a database configured with [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. This prevents any break in the backup chain and [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] processes are aware and the backup is stored in the same Azure Blob storage container.  
   
  Upon successful completion of the backup the full backup file path is returned. This includes the name and location of the new backup file resulting from the backup operation.  
   

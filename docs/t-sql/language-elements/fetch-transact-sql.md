@@ -1,4 +1,5 @@
 ---
+description: "FETCH (Transact-SQL)"
 title: "FETCH (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FETCH"
   - "FETCH_TSQL"
@@ -21,11 +22,11 @@ helpviewer_keywords:
   - "SCROLL option"
   - "row fetching [SQL Server]"
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # FETCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retrieves a specific row from a [!INCLUDE[tsql](../../includes/tsql-md.md)] server cursor.  
   
@@ -33,7 +34,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql
 FETCH   
           [ [ NEXT | PRIOR | FIRST | LAST   
                     | ABSOLUTE { n | @nvar }   
@@ -45,7 +46,9 @@ FETCH
 [ INTO @variable_name [ ,...n ] ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  NEXT  
  Returns the result row immediately following the current row and increments the current row to the row returned. If `FETCH NEXT` is the first fetch against a cursor, it returns the first row in the result set. `NEXT` is the default cursor fetch option.  
   
@@ -58,11 +61,11 @@ FETCH
  LAST  
  Returns the last row in the cursor and makes it the current row.  
   
- ABSOLUTE { *n*| @*nvar*}  
- If *n* or @*nvar* is positive, returns the row *n* rows from the front of the cursor and makes the returned row the new current row. If *n* or @*nvar* is negative, returns the row *n* rows before the end of the cursor and makes the returned row the new current row. If *n* or @*nvar* is 0, no rows are returned. *n* must be an integer constant and @*nvar* must be **smallint**, **tinyint**, or **int**.  
+ ABSOLUTE { *n*| \@*nvar*}  
+ If *n* or \@*nvar* is positive, returns the row *n* rows from the front of the cursor and makes the returned row the new current row. If *n* or \@*nvar* is negative, returns the row *n* rows before the end of the cursor and makes the returned row the new current row. If *n* or \@*nvar* is 0, no rows are returned. *n* must be an integer constant and \@*nvar* must be **smallint**, **tinyint**, or **int**.  
   
- RELATIVE { *n*| @*nvar*}  
- If *n* or @*nvar* is positive, returns the row *n* rows beyond the current row and makes the returned row the new current row. If *n* or @*nvar* is negative, returns the row *n* rows prior to the current row and makes the returned row the new current row. If *n* or @*nvar* is 0, returns the current row. If `FETCH RELATIVE` is specified with *n* or @*nvar* set to negative numbers or 0 on the first fetch done against a cursor, no rows are returned. *n* must be an integer constant and @*nvar* must be **smallint**, **tinyint**, or **int**.  
+ RELATIVE { *n*| \@*nvar*}  
+ If *n* or \@*nvar* is positive, returns the row *n* rows beyond the current row and makes the returned row the new current row. If *n* or \@*nvar* is negative, returns the row *n* rows prior to the current row and makes the returned row the new current row. If *n* or \@*nvar* is 0, returns the current row. If `FETCH RELATIVE` is specified with *n* or \@*nvar* set to negative numbers or 0 on the first fetch done against a cursor, no rows are returned. *n* must be an integer constant and \@*nvar* must be **smallint**, **tinyint**, or **int**.  
   
  GLOBAL  
  Specifies that *cursor_name* refers to a global cursor.  
@@ -70,10 +73,10 @@ FETCH
  *cursor_name*  
  Is the name of the open cursor from which the fetch should be made. If both a global and a local cursor exist with *cursor_name* as their name, *cursor_name* to the global cursor if GLOBAL is specified and to the local cursor if GLOBAL is not specified.  
   
- @*cursor_variable_name*  
+ \@*cursor_variable_name*  
  Is the name of a cursor variable referencing the open cursor from which the fetch should be made.  
   
- INTO @*variable_name*[ ,...*n*]  
+ INTO \@*variable_name*[ ,...*n*]  
  Allows data from the columns of a fetch to be placed into local variables. Each variable in the list, from left to right, is associated with the corresponding column in the cursor result set. The data type of each variable must either match or be a supported implicit conversion of the data type of the corresponding result set column. The number of variables must match the number of columns in the cursor select list.  
   
 ## Remarks  
@@ -129,7 +132,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 -- Declare the variables to store the values returned by FETCH.  
-DECLARE @LastName varchar(50), @FirstName varchar(50);  
+DECLARE @LastName VARCHAR(50), @FirstName VARCHAR(50);  
   
 DECLARE contact_cursor CURSOR FOR  
 SELECT LastName, FirstName FROM Person.Person  

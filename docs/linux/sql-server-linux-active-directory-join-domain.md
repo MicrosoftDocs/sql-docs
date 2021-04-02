@@ -1,18 +1,18 @@
 ---
 title: Join SQL Server on Linux to Active Directory
 titleSuffix: SQL Server
-description: 
-author: Dylan-MSFT
-ms.author: dygray
+description: This article provides guidance joining a SQL Server Linux host machine to an AD domain. You can use a built-in SSSD package or use third-party AD providers.
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 04/01/2019
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ---
 # Join SQL Server on a Linux host to an Active Directory domain
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article provides general guidance on how to join a SQL Server Linux host machine to an Active Directory (AD) domain. There are two methods: use a built-in SSSD package or use third-party Active Directory providers. Examples of third-party domain join products are [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/), and [Centrify](https://www.centrify.com/). This guide includes steps to check your Active Directory configuration. However, it is not intended to provide instructions on how to join a machine to a domain when using third-party utilities.
 
@@ -21,23 +21,31 @@ This article provides general guidance on how to join a SQL Server Linux host ma
 Before you configure Active Directory authentication, you need to set up an Active Directory domain controller, Windows, on your network. Then join your SQL Server on Linux host to an Active Directory domain.
 
 > [!IMPORTANT]
-> The sample steps described in this article are for guidance only. Actual steps may slightly differ in your environment depending on how your overall environment is configured. Engage your system and domain administrators for your environment for specific configuration, customization, and any required troubleshooting.
+> The sample steps described in this article are for guidance only and refer to Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x and SUSE Enterprise Linux (SLES) 12 operating systems. Actual steps may slightly differ in your environment depending on how your overall environment is configured and operating system version. For example, Ubuntu 18.04 uses netplan while Red Hat Enterprise Linux (RHEL) 8.x uses nmcli among other tools to manage and configure network. It is recommended to engage your system and domain administrators for your environment for specific tooling, configuration, customization, and any required troubleshooting.
+
+### Reverse DNS (RDNS)
+
+When you set up a computer running Windows Server as a domain controller, you might not have a RDNS zone by default. Ensure that an applicable RDNS zone exists for both the domain controller and the IP address of the Linux machine that will be running SQL Server.
+
+Also ensure that a PTR record that points to your domain controllers exists.
 
 ## Check the connection to a domain controller
 
-Check that you can contact the domain controller with both the short and fully qualified names of the domain:
+Check that you can contact the domain controller by using both the short and the fully qualified names of the domain, and by using the hostname of the domain controller. The IP of the domain controller also should resolve to the FQDN of the domain controller:
 
 ```bash
 ping contoso
 ping contoso.com
+ping dc1.contoso.com
+nslookup <IP address of dc1.contoso.com>
 ```
 
 > [!TIP]
 > This tutorial uses **contoso.com** and **CONTOSO.COM** as example domain and realm names, respectively. It also uses **DC1.CONTOSO.COM** as the example fully qualified domain name of the domain controller. You must replace these names with your own values.
 
-If either of these name checks fail, update your domain search list. The following sections provide instructions for Ubuntu, Red Hat Enterprise Linux (RHEL), and SUSE Linux Enterprise Server (SLES) respectively.
+If any of these name checks fail, update your domain search list. The following sections provide instructions for Ubuntu, Red Hat Enterprise Linux (RHEL), and SUSE Linux Enterprise Server (SLES) respectively.
 
-### Ubuntu
+### Ubuntu 16.04
 
 1. Edit the **/etc/network/interfaces** file, so that your Active Directory domain is in the domain search list:
 
@@ -65,7 +73,40 @@ If either of these name checks fail, update your domain search list. The followi
    nameserver **<AD domain controller IP address>**
    ```
 
-### RHEL
+### Ubuntu 18.04
+
+1. Edit the [sudo vi /etc/netplan/******.yaml] file, so that your Active Directory domain is in the domain search list:
+
+   ```/etc/netplan/******.yaml
+   network:
+     ethernets:
+       eth0:
+               dhcp4: true
+
+               dhcp6: true
+               nameservers:
+                       addresses: [ **<AD domain controller IP address>**]
+                       search: [**<AD domain name>**]
+     version: 2
+   ```
+
+   > [!NOTE]
+   > The network interface, `eth0`, might differ for different machines. To find out which one you're using, run **ifconfig**. Then copy the interface that has an IP address and transmitted and received bytes.
+
+1. After editing this file, restart the network service:
+
+   ```bash
+   sudo netplan apply
+   ```
+
+1. Next, check that your **/etc/resolv.conf** file contains a line like the following example:
+
+   ```/etc/resolv.conf
+   search contoso.com com  
+   nameserver **<AD domain controller IP address>**
+   ```
+
+### RHEL 7.x
 
 1. Edit the **/etc/sysconfig/network-scripts/ifcfg-eth0** file, so that your Active Directory domain is in the domain search list. Or edit another interface config file as appropriate:
 
@@ -94,7 +135,7 @@ If either of these name checks fail, update your domain search list. The followi
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
    ```
 
-### SLES
+### SLES 12
 
 1. Edit the **/etc/sysconfig/network/config** file, so that your Active Directory domain controller IP is used for DNS queries and your Active Directory domain is in the domain search list:
 
@@ -139,22 +180,41 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
    ```base
    sudo yum install realmd krb5-workstation
    ```
-
-   **SUSE:**
+   
+   **SLES 12:**
+   
+   Note that these steps are specific for SLES 12, which is the only officially supported version of SUSE for Linux.
 
    ```bash
-   sudo zypper install realmd krb5-client
+   sudo zypper addrepo https://download.opensuse.org/repositories/network/SLE_12/network.repo
+   sudo zypper refresh
+   sudo zypper install realmd krb5-client sssd-ad
    ```
 
-   **Ubuntu:**
+   **Ubuntu 16.04:**
 
    ```bash
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
    ```
 
+   **Ubuntu 18.04:**
+
+   ```bash
+   sudo apt-get install realmd krb5-user software-properties-common python3-software-properties packagekit
+   sudo apt-get install adcli libpam-sss libnss-sss sssd sssd-tools
+   ```
+
 1. If the Kerberos client package installation prompts you for a realm name, enter your domain name in uppercase.
 
 1. After you confirm that your DNS is configured properly, join the domain by running the following command. You must authenticate using an AD account that has sufficient privileges in AD to join a new machine to the domain. This command creates a new computer account in AD, creates the **/etc/krb5.keytab** host keytab file, configures the domain in **/etc/sssd/sssd.conf**, and updates **/etc/krb5.conf**.
+
+   Because of an issue with **realmd**, first set the machine hostname to the FQDN instead of to the machine name. Otherwise, **realmd** might not create all required SPNs for the machine and DNS entries won't automatically update, even if your domain controller supports dynamic DNS updates.
+   
+   ```bash
+   sudo hostname <old hostname>.contoso.com
+   ```
+   
+   After running the above command, your /etc/hostname file should contain <old hostname>.contoso.com.
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
@@ -191,9 +251,9 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
    ```
 
    > [!NOTE]
-   > - If **id user@contoso.com** returns, `No such user`, make sure that the SSSD service started successfully by running the command `sudo systemctl status sssd`. If the service is running and you still see the error, try enabling verbose logging for SSSD. For more information, see the Red Hat documentation for [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
+   > - If **id user\@contoso.com** returns, `No such user`, make sure that the SSSD service started successfully by running the command `sudo systemctl status sssd`. If the service is running and you still see the error, try enabling verbose logging for SSSD. For more information, see the Red Hat documentation for [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
    >
-   > - If **kinit user@CONTOSO.COM** returns, `KDC reply did not match expectations while getting initial credentials`, make sure you specified the realm in uppercase.
+   > - If **kinit user\@CONTOSO.COM** returns, `KDC reply did not match expectations while getting initial credentials`, make sure you specified the realm in uppercase.
 
 For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
 

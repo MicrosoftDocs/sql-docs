@@ -1,4 +1,5 @@
 ---
+description: "Raw File Custom Properties"
 title: "Raw File Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Raw File Custom Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **Source Custom Properties**  
@@ -51,6 +52,5 @@ ms.author: janinez
  For more information, see [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md).  
   
 ## See Also  
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   

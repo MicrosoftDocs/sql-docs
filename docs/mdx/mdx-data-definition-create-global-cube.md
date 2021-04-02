@@ -1,4 +1,5 @@
 ---
+description: "MDX Data Definition - CREATE GLOBAL CUBE"
 title: "CREATE GLOBAL CUBE Statement  (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -12,7 +13,7 @@ author: minewiskan
 # MDX Data Definition - CREATE GLOBAL CUBE
 
 
-  Creates and populates a locally persisted cube, based on a subcube from a cube on the server. A connection to the server is not required to connect to the locally persisted cube. For more information about local cubes, see [Local Cubes &#40;Analysis Services - Multidimensional Data&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
+  Creates and populates a locally persisted cube, based on a subcube from a cube on the server. A connection to the server is not required to connect to the locally persisted cube. For more information about local cubes, see [Local Cubes &#40;Analysis Services - Multidimensional Data&#41;](/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data).  
   
 ## Syntax  
   
@@ -193,5 +194,4 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
 ## See Also  
  [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [CREATE SESSION CUBE Statement  &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
-  
   

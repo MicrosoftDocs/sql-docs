@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-1: Create a new Integration Services project"
 title: "Step 1: Create a new Integration Services project | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 1-1: Create a new Integration Services project
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

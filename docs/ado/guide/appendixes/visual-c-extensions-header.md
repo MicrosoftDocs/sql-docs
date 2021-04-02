@@ -1,8 +1,9 @@
 ---
+description: "Visual C++ Extensions Header"
 title: "Visual C++ Extensions Header | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "ADO, Visual C++"
   - "Visual C++ [ADO]"
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Visual C++ Extensions Header
 The following header, **icrsint.h**, details the interface that allow clients to retrieve fields from a **Recordset** into variables defined in a class derived from **CADORecordBinding**. You must specify an ADO binding macro for each field you intend to access.  
@@ -202,5 +203,5 @@ public:
 ```  
   
 ## See Also  
- [Visual C++ Extensions Example](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
- [Using Visual C++ Extensions](../../../ado/guide/appendixes/using-visual-c-extensions.md)
+ [Visual C++ Extensions Example](./visual-c-extensions-example.md)   
+ [Using Visual C++ Extensions](./using-visual-c-extensions.md)

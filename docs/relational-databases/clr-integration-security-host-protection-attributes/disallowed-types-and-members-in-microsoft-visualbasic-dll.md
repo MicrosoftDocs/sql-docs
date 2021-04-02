@@ -1,6 +1,7 @@
 ---
-title: "Disallowed Types and Members in Microsoft.VisualBasic.dll | Microsoft Docs"
-ms.custom: ""
+title: "Types and Members in Microsoft.VisualBasic.dll"
+description: Lists the members and types of the Microsoft.VisualBasic.dll assembly whose Host Protection Attribute (HPA) values are disallowed.
+ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -14,7 +15,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Disallowed Types and Members in Microsoft.VisualBasic.dll
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common language integration (CLR) programming disallows the use of a type or member that has a **HostProtectionAttribute** that specifies a **System.Security.Permissions.HostProtectionResource** enumeration with a value of **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**, or **UI**. The following table lists the members and types of the **Microsoft.VisualBasic.dll** assembly whose Host Protection Attribute (HPA) values are disallowed.  
   
 > [!NOTE]  

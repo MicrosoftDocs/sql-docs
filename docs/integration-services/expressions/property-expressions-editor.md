@@ -1,4 +1,5 @@
 ---
+description: "Property Expressions Editor"
 title: "Property Expressions Editor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords: 
   - "Property Expressions Editor dialog box"
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Property Expressions Editor
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Property Expressions Editor** dialog box to create, edit, or delete the property expressions that update property values.  

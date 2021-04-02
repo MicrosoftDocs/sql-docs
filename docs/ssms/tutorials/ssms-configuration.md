@@ -1,15 +1,15 @@
 ---
-title: "Tutorial: SQL Server Management Studio components and configuration"
+title: SSMS components and configuration"
 description: A tutorial that describes the components and basic configuration options for your SQL Server Management Studio environment. 
-keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.date: 03/16/2018
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
+ms.topic: tutorial
+keywords: SQL Server, SSMS, SQL Server Management Studio
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
+ms.date: 03/16/2018
 ---
 
 # SQL Server Management Studio components and configuration
@@ -28,7 +28,7 @@ This tutorial describes the various window components in SQL Server Management S
 
 To complete this tutorial, you need SQL Server Management Studio.  
 
-* Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Install [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 
 ## SQL Server Management Studio components
 
@@ -48,7 +48,7 @@ This section describes the various window components that are available in the w
 
 * **Properties** (F4): You can see the Properties view when the Query Window is open. The view displays basic properties of the query. For example, it shows the time that a query started, the number of rows returned, and connection details.  
 
-    ![Properties](media/ssms-configuration/properties.png)
+    ![Config Properties](media/ssms-configuration/properties.png)
 
 * **Template Browser** (Ctrl+Alt+T): Template Browser has various pre-built T-SQL templates. You can use these templates to perform various functions, such as creating or backing up a database. 
 
@@ -133,7 +133,7 @@ This section describes how to modify some basic settings in SSMS from the **Tool
 
 The best way to get acquainted with SSMS is through hands-on practice. These *tutorial* and *how-to* articles help you with various features available within SSMS.  These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
 
-* [Connect to and query an instance](connect-query-sql-server.md)
+* [Connect to and query an instance](../quickstarts/ssms-connect-query-sql-server.md)
 * [Scripting](scripting-ssms.md)
 * [Using Templates in SSMS](../template/templates-ssms.md)
 * [Additional Tips and Tricks for using SSMS](ssms-tricks.md)

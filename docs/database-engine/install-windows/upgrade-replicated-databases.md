@@ -1,5 +1,6 @@
 ---
 title: "Upgrade or patch replicated databases | Microsoft Docs"
+description: SQL Server supports upgrading replicated databases from previous versions of SQL Server without stopping activity on other nodes.
 ms.custom: ""
 ms.date: "07/24/2016"
 ms.prod: sql
@@ -13,13 +14,13 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], upgrading databases"
   - "upgrading replicated databases"
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Upgrade or patch replicated databases
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] supports upgrading replicated databases from previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; it is not required to stop activity at other nodes while a node is being upgraded. Ensure that you adhere to the rules regarding which versions are supported in a topology:  
   
@@ -98,7 +99,7 @@ These steps outline the order in which servers in a replication topology should 
 
 
 ## Steps for side-by-side migration of the Distributor to Windows Server 2012 R2
-If you are planning to upgrade your SQL Server instance to SQL 2016 (or greater), and your current OS is Windows 2008 (or 2008 R2), then you will need to perform a side-by side upgrade of the OS to Windows Server 2012 R2 or greater. The reason for this intermediate OS upgrade is that SQL Server 2016 cannot be installed on a Windows Server 2008/2008 R2, and Windows Server 2008/20008 R2 does not allow in-place upgrades for Failover Clusters. The following steps can be performed on either a standalone SQL Server instance, or one within an Always On Failover Cluster Instance (FCI).
+If you are planning to upgrade your SQL Server instance to SQL Server 2016 (or greater), and your current OS is Windows 2008 (or 2008 R2), then you will need to perform a side-by-side upgrade of the OS to Windows Server R2 or greater. The reason for this intermediate OS upgrade is that SQL Server 2016 cannot be installed on a Windows Server 2008/2008 R2, and Windows Server 2008/20008 R2 does not allow in-place upgrades directly to Windows Server 2016. While it's possible to perform an in-place upgrade from Windows Server 2008/2008 R2 to Windows Server 2012, and then to Windows Server 2016, doing so is generally not recommended due the downtime and added complexity preventing an easy roll-back path. A side-by-side upgrade is the only upgrade path available for SQL Server instances participating in a failover cluster.  The following steps can be performed on either a standalone SQL Server instance, or one within an Always On Failover Cluster Instance (FCI).
 
 1. Set up a new SQL Server instance (either standalone, or Always On Failover Cluster), edition, and version as your distributor on Windows Server 2012 R2/2016 with a different windows cluster and SQL Server FCI name or standalone host name. You will need to keep the directory structure same as the old distributor to ensure that the replication agents executables, replication folders, and database file paths are found at the same path on the new environment. This will reduce any post migration/upgrade steps required.
 1. Ensure that your replication is synchronized and then shut down all of the replication agents. 
@@ -128,4 +129,4 @@ If you are planning to upgrade your SQL Server instance to SQL 2016 (or greater)
  [Replication Backward Compatibility](../../relational-databases/replication/replication-backward-compatibility.md)   
  [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
- [Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)
+ [Upgrading a Replication Topology to SQL Server 2016](/archive/blogs/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016)

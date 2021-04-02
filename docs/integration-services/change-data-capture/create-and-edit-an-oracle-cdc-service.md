@@ -1,4 +1,5 @@
 ---
+description: "Create and Edit an Oracle CDC Service"
 title: "Create and Edit an Oracle CDC Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
@@ -10,12 +11,12 @@ ms.topic: conceptual
 f1_keywords: 
   - "createSrv"
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Create and Edit an Oracle CDC Service
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You create and edit a new Oracle CDC Windows Service from the CDC Service Configuration Console.  

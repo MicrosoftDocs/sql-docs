@@ -1,5 +1,6 @@
 ---
 title: "Custom Report Item Class Libraries | Microsoft Docs"
+description: Learn about the custom report item class libraries and use code samples to understand how to use these classes.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -28,7 +29,7 @@ ms.author: maggies
   
 #### Public Properties  
   
-|||  
+|Property|Description|  
 |-|-|  
 |**Name**|The name of the custom report item.|  
 |**Type**|The type of the custom report item.|  
@@ -45,7 +46,7 @@ ms.author: maggies
   
 #### Public Methods  
   
-|||  
+|Method|Description|  
 |-|-|  
 |**BeginEdit**|Activates interactive editing for the control.|  
 |**DoDefaultAction**|Called in response to double-clicking or pressing Return on the control.|  
@@ -61,7 +62,7 @@ ms.author: maggies
   
 #### Public Methods  
   
-|||  
+|Method|Description|  
 |-|-|  
 |**CustomReportItemAttribute**|Constructs the CustomReportItemAttribute object.|  
   
@@ -70,7 +71,7 @@ ms.author: maggies
   
 #### Public Methods  
   
-|||  
+|Method|Description|  
 |-|-|  
 |**LocalizedNameAttribute**|Constructs the LocalizedNameAttribute object.|  
   
@@ -79,7 +80,7 @@ ms.author: maggies
   
 #### Public Methods  
   
-|||  
+|Method|Description|  
 |-|-|  
 |**OnShow**|Called when the **Adornment** is activated.|  
 |**OnHide**|Called when the **Adornment** is deactivated.|  
@@ -91,7 +92,7 @@ ms.author: maggies
   
 #### Public Properties  
   
-|||  
+|Property|Description|  
 |-|-|  
 |**AdornerWindowBounds**|The bounds of the Adorner window.|  
 |**AdornerWindowRegion**|The region of the Adorner window.|  
@@ -99,7 +100,7 @@ ms.author: maggies
   
 #### Public Methods  
   
-|||  
+|Method|Description|  
 |-|-|  
 |**ComponentRectInDesignerFrame**|Returns the bounds of the component translated into designer frame coordinates.|  
 |**InvalidateAdorner**|Invalidates the Adorner window.|  
@@ -110,7 +111,7 @@ ms.author: maggies
   
 #### Public Methods  
   
-|||  
+|Method|Description|  
 |-|-|  
 |**EditValue**|Invokes the Expression Editor, initialized with the given object value.|  
   
@@ -119,7 +120,7 @@ ms.author: maggies
   
 #### Public Properties  
   
-|||  
+|Property|Description|  
 |-|-|  
 |**DataSetName**|The name of the dataset containing the fields to be dropped.|  
 |**Fields**|The collection of fields (**Microsoft.ReportDesigner.Field**) to be dropped.|  

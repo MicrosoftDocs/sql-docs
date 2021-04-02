@@ -1,4 +1,5 @@
 ---
+description: "Choose a Data Source (SQL Server Import and Export Wizard)"
 title: "Choose a Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/28/2019"
@@ -9,12 +10,12 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.chooseadatasource.f1"
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Choose a Data Source (SQL Server Import and Export Wizard)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   After the Welcome page, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard displays **Choose a Data Source**. On this page, you provide information about the source of your data and about how to connect to it.
@@ -22,7 +23,7 @@ ms.author: janinez
 For info about the data sources that you can use, see [What data sources and destinations can I use?](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
 > [!NOTE]
-> The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard utilizes SQL Serer Integration Services (SSIS). Therefore the same limitations that apply to SSIS, also apply to the wizard.  For example ErrorCode and ErrorColumn columns, which are added by default as described in [Error handling in data](../../integration-services/data-flow/error-handling-in-data.md).
+> The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard utilizes SQL Server Integration Services (SSIS). Therefore the same limitations that apply to SSIS, also apply to the wizard.  For example ErrorCode and ErrorColumn columns, which are added by default as described in [Error handling in data](../../integration-services/data-flow/error-handling-in-data.md).
 
 ## Screen shot of the Choose a Data Source page 
 The following image shows the first part of the **Choose a Data Source** page of the wizard. The rest of the  page has a variable number of options which depend on the data source that you choose here.

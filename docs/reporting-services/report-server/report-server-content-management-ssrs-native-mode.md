@@ -1,5 +1,6 @@
 ---
-title: "Report Server Content Management (SSRS Native Mode) | Microsoft Docs"
+title: "Report Server Content Management (Native Mode) | Microsoft Docs"
+description: Learn about the web portal and the new web portal experience for Reporting Services content management. Manage items through properties and security settings.
 ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,4 +1,5 @@
 ---
+description: "Run an SSIS package from Visual Studio Code with Transact-SQL"
 title: "Run an SSIS package with Transact-SQL (VS Code) | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart
@@ -6,17 +7,17 @@ ms.prod: sql
 ms.prod_service: "integration-services"
 ms.custom: ""
 ms.technology: integration-services
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Run an SSIS package from Visual Studio Code with Transact-SQL
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This quickstart demonstrates how to use Visual Studio Code to connect to the SSIS Catalog database, and then use Transact-SQL statements to run an SSIS package stored in the SSIS Catalog.
 
-Visual Studio Code is a code editor for Windows, macOS, and Linux that supports extensions, including the `mssql` extension for connecting to Microsoft SQL Server, Azure SQL Database, or Azure SQL Data Warehouse. For more info about VS Code, see [Visual Studio Code](https://code.visualstudio.com/).
+Visual Studio Code is a code editor for Windows, macOS, and Linux that supports extensions, including the `mssql` extension for connecting to Microsoft SQL Server, Azure SQL Database, or Azure Synapse Analytics. For more info about VS Code, see [Visual Studio Code](https://code.visualstudio.com/).
 
 ## Prerequisites
 

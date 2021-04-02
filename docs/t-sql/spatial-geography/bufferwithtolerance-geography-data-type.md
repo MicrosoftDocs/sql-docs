@@ -1,4 +1,5 @@
 ---
+description: "BufferWithTolerance (geography Data Type)"
 title: "BufferWithTolerance (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "BufferWithTolerance_TSQL"
   - "BufferWithTolerance"
@@ -19,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # BufferWithTolerance (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a geometric object representing the union of all point values whose distance from a **geography** instance is less than or equal to a specified value, allowing for a specified tolerance.  
   
@@ -32,7 +33,9 @@ This geography data type method supports **FullGlobe** instances or spatial inst
 .BufferWithTolerance ( distance, tolerance, relative )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 _distance_  
 Is a **float** expression specifying the distance from the **geography** instance around which to calculate the buffer.  
   
@@ -64,7 +67,7 @@ This method will throw an **ArgumentException** in **FullGlobe** instances where
   
 0.999 \* _π_ * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Earth's circumference)  
   
-The error between the theoretical and computed buffer is max(tolerance, extents \* 1.E-7) where tolerance is the value of the _tolerance_ parameter. For more information on extents, see [geography Data Type Method Reference](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+The error between the theoretical and computed buffer is max(tolerance, extents \* 1.E-7) where tolerance is the value of the _tolerance_ parameter. For more information on extents, see [geography Data Type Method Reference](./stequals-geography-data-type.md).  
   
 This method isn't precise.  
   
@@ -80,5 +83,4 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
 ## See Also  
 [STBuffer &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
 [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
   

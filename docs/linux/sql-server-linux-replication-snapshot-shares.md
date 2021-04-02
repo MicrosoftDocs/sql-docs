@@ -1,18 +1,20 @@
 ---
-title: Configure snapshot folder shares SQL Server Replication on Linux
-description: This article describes how to configure snapshot folder shares SQL Server replication on Linux.
-author: MikeRayMSFT
-ms.author: mikeray
+title: Configure snapshot folder shares 
+titleSuffix: SQL Server on Linux
+description: Learn to configure snapshot folder shares SQL Server replication on Linux.
+ms.custom: seo-lt-2019
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Configure replication snapshot folder with shares
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 The snapshot folder is a directory that you have designated as a share; agents that read from and write to this folder must have enough permissions to access it.
 

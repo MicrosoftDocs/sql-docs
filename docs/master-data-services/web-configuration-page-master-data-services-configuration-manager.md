@@ -1,5 +1,6 @@
 ---
-title: "Web Configuration Page (Master Data Services Configuration Manager) | Microsoft Docs"
+description: "Web Configuration Page (Master Data Services Configuration Manager)"
+title: Web Configuration Page
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: lle
 ---
 # Web Configuration Page (Master Data Services Configuration Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the **Web Configuration** page to configure a website and web application. You can also enable Data Quality Services.  
   

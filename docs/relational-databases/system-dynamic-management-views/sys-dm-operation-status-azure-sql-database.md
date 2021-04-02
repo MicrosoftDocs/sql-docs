@@ -1,10 +1,11 @@
 ---
-title: "sys.dm_operation_status (Azure SQL Database) | Microsoft Docs"
+description: "sys.dm_operation_status"
+title: "sys.dm_operation_status | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/05/2017"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_operation_status_TSQL"
   - "dm_operation_status"
@@ -16,12 +17,13 @@ helpviewer_keywords:
   - "dm_operation_status dynamic management view"
   - "sys.dm_operation_status dynamic management view"
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-author: stevestein
-ms.author: sstein
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
-# sys.dm_operation_status (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+# sys.dm_operation_status
+
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
   Returns information about operations performed on databases in a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server.  
   
@@ -38,7 +40,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 |percent_complete|**int**|Percentage of operation that has completed. Values are not continuous and the valid values are listed below. Not NULL.<br/><br/>0 = Operation not started<br/>50 = Operation in progress<br/>100 = Operation complete|  
 |error_code|**int**|Code indicating the error that occurred during a failed operation. If the value is 0, it indicates that the operation completed successfully.|  
 |error_desc|**nvarchar(2048)**|Description of the error that occurred during a failed operation.|  
-|error_severity|**int**|Severity level of the error that occurred during a failed operation. For more information about error severities, see [Database Engine Error Severities](https://go.microsoft.com/fwlink/?LinkId=251052).|  
+|error_severity|**int**|Severity level of the error that occurred during a failed operation. For more information about error severities, see [Database Engine Error Severities](../errors-events/database-engine-error-severities.md).|  
 |error_state|**int**|Reserved for future use. Future compatibility is not guaranteed.|  
 |start_time|**datetime**|Timestamp when the operation started.|  
 |last_modify_time|**datetime**|Timestamp when the record was last modified for a long running operation. In case of successfully completed operations, this field displays the timestamp when the operation completed.|  
@@ -66,12 +68,14 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 -   Restore database  
   
 -   Delete database  
-  
+
+The information in this view is retained for approximately 1 hour. Please use the [Azure Activity Log](/azure/azure-monitor/platform/activity-log) to view details of operations in the last 90 days. For retention more than 90 days, consider [sending Activity Log](/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) entries to a Log Analytics workspace.
+
 ## Example  
  Show most recent geo-replication operations associated with database 'mydb'.  
   
 ```  
-SELECT * FROM sys.dm_ operation_status   
+SELECT * FROM sys.dm_operation_status   
    WHERE major_resource_id = 'myddb'   
    ORDER BY start_time DESC;  
 ```  
@@ -80,6 +84,5 @@ SELECT * FROM sys.dm_ operation_status
  [Geo-Replication Dynamic Management Views and Functions &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
  [sys.dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
  [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
-  
+ [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   

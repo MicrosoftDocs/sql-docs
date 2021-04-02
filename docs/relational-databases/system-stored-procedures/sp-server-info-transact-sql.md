@@ -1,4 +1,5 @@
 ---
+description: "sp_server_info (Transact-SQL)"
 title: "sp_server_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_server_info"
   - "sp_server_info_TSQL"
@@ -15,11 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_server_info"
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_server_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a list of attribute names and matching values for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the database gateway, or the underlying data source.  
   
@@ -52,7 +54,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |ATTRIBUTE_ID|ATTRIBUTE_NAME Description|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
 |**1**|DBMS_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x.xx.xxxx*|  
+|**2**|DBMS_VER|Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] *xxxx* - *x.xx.xxxx*<br/><br> For example, `Microsoft SQL Server 2017 - 14.0.3257.3`|  
 |**10**|OWNER_TERM|owner|  
 |**11**|TABLE_TERM|table|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  

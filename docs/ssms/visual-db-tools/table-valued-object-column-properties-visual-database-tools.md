@@ -1,21 +1,22 @@
 ---
-title: "Table-Valued Object (Column) Properties (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Table-Valued Object (Column) Properties (Visual Database Tools)"
+title: Table-Valued Object (Column) Properties
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.designers.properties.QueryViewColumn"
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 
 ---
 # Table-Valued Object (Column) Properties (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 These properties appear when you select a column in a table-valued object in the **Diagram** pane of Query and View Designer.  
   
 > [!NOTE]  

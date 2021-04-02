@@ -1,28 +1,29 @@
 ---
-title: "Understanding Data Type Conversions | Microsoft Docs"
+title: "Understanding data type conversions"
+description: "Learn the specifics of how the JDBC Driver for SQL Server handles data type conversions between JDBC and database data types."
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
-# Understanding Data Type Conversions
+# Understanding data type conversions
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 To facilitate the conversion of Java programming language data types to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides data type conversions as required by the JDBC specification. For added flexibility, all types are convertible to and from **Object**, **String**, and **byte[]** data types.
 
-## Getter Method Conversions
+## Getter method conversions
 
 Based on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, the following chart contains the JDBC driver's conversion map for the get\<Type>() methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class, and the supported conversions for the get\<Type> methods of the [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) class.
 
-![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
+![JDBC to SQL Server type conversion matrix](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
 There are three categories of conversions that are supported by the JDBC driver's getter methods:
 
@@ -34,7 +35,7 @@ There are three categories of conversions that are supported by the JDBC driver'
 
 If getString is called on a **binary**, **varbinary**, **varbinary(max)**, or **image** column data type, the value is returned as a hexadecimal string value.
 
-## Updater Method Conversions
+## Updater method conversions
 
 For the Java typed data passed to the update\<Type>() methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class, the following conversions apply.
 
@@ -58,7 +59,7 @@ When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] column data t
 
 Note that a byte-order mark (BOM) is required if the XML characters are in specific character encodings.
 
-## Setter Method Conversions
+## Setter method conversions
 
 For the Java typed data passed to the set\<Type>() methods of the [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) class and the [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) class, the following conversions apply.
 
@@ -89,7 +90,7 @@ Note that a byte-order mark (BOM) is required if the XML characters are in speci
 ## Conversions on setObject
 
 > [!NOTE]  
-> Microsoft JDBC Drivers 4.2 (and higher) for SQL Server supports JDBC 4.1 and 4.2. For more detail on 4.1 and 4.2 datatype mappings and conversions see [JDBC 4.1 Compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md) and [JDBC 4.2 Compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md), in addition to the information below.
+> Microsoft JDBC Drivers 4.2 (and higher) for SQL Server supports JDBC 4.1 and 4.2. For more detail on 4.1 and 4.2 datatype mappings and conversions see [JDBC 4.1 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md) and [JDBC 4.2 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md), in addition to the information below.
 
 For the Java typed data passed to the setObject(\<Type>) methods of the [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) class, the following conversions apply.
 
@@ -115,6 +116,6 @@ When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] column data t
 
 Note that a byte-order mark (BOM) is required if the XML characters are in specific character encodings.
 
-## See Also
+## See also
 
-[Understanding the JDBC Driver Data Types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)
+[Understanding the JDBC driver data types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

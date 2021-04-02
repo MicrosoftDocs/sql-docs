@@ -1,4 +1,5 @@
 ---
+description: "OLE DB Command Transformation"
 title: "OLE DB Command Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,12 +14,12 @@ helpviewer_keywords:
   - "statements [Integration Services]"
   - "OLE DB Command transformation"
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # OLE DB Command Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The OLE DB Command transformation runs an SQL statement for each row in a data flow. For example, you can run an SQL statement that inserts, updates, or deletes rows in a database table.  

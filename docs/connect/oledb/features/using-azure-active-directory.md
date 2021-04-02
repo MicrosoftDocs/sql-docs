@@ -1,40 +1,46 @@
 ---
-title: "Using Azure Active Directory| Microsoft Docs for SQL Server"
+title: "Using Azure Active Directory"
+description: "Learn about the Azure Active Directory authentication methods available in the Microsoft OLE DB Driver for SQL Server that enable connecting to Azure SQL databases."
 ms.custom: ""
-ms.date: "01/28/2019"
+ms.date: "09/30/2020"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.technology: connectivity
-ms.topic: reference
+ms.topic: conceptual
 author: bazizi
 ms.author: v-beaziz
 ---
 # Using Azure Active Directory
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 ## Purpose
 
-Starting with version 18.2.1, Microsoft OLE DB Driver for SQL Server allows OLE DB applications to connect to an instance of Azure SQL Database using a federated identity. The new authentication methods include:
+
+Starting with version [18.2.1](../release-notes-for-oledb-driver-for-sql-server.md#1821), Microsoft OLE DB Driver for SQL Server allows OLE DB applications to connect to an instance of Azure SQL Database using a federated identity. The new authentication methods include:
 - Azure Active Directory login ID and password
 - Azure Active Directory access token
 - Azure Active Directory integrated authentication
 - SQL login ID and password
 
-> [!NOTE]  
-> When using the following Azure Active Directory options with the OLE DB driver, ensure that the [Active Directory Authentication Library for SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) has been installed:
-> - Azure Active Directory login ID and password
-> - Azure Active Directory integrated authentication
->
-> ADAL isn't  required for the other authentication methods or OLE DB operations.
+
+Version [18.3.0](../release-notes-for-oledb-driver-for-sql-server.md#1830) adds support for the following authentication methods:
+- Azure Active Directory interactive authentication
+- Azure Active Directory Managed Identity authentication
+
+Version [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850) adds support for the following authentication method:
+- Azure Active Directory service principal authentication
 
 > [!NOTE]
 > Using the following authentication modes with `DataTypeCompatibility` (or its corresponding property) set to `80` is **not** supported:
 > - Azure Active Directory authentication using login ID and password
 > - Azure Active Directory authentication using access token
 > - Azure Active Directory integrated authentication
+> - Azure Active Directory interactive authentication
+> - Azure Active Directory managed identities authentication
+> - Azure Active Directory service principal authentication
 
 ## Connection string keywords and properties
 The following connection string keywords have been introduced to support Azure Active Directory authentication:
@@ -83,7 +89,7 @@ This section shows examples of new and existing connection string keywords to be
     - Deprecated:
         > Server=[server];Database=[database];UID=[username];PWD=[password];Encrypt=yes
 
-### Integrated Windows authentication using Security Support Provider Interface  (SSPI)
+### Integrated Windows authentication using Security Support Provider Interface (SSPI)
 
 - Using `IDataInitialize::GetDataSource`:
     - New:
@@ -96,14 +102,14 @@ This section shows examples of new and existing connection string keywords to be
     - Deprecated:
         > Server=[server];Database=[database];**Trusted_Connection=yes**;Encrypt=yes
 
-### AAD username and password authentication using ADAL
+### Azure Active Directory username and password authentication
 
 - Using `IDataInitialize::GetDataSource`:
     > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryPassword**;User ID=[username];Password=[password];Use Encryption for Data=true
 - Using `DBPROP_INIT_PROVIDERSTRING`:
     > Server=[server];Database=[database];**Authentication=ActiveDirectoryPassword**;UID=[username];PWD=[password];Encrypt=yes
 
-### Integrated Azure Active Directory authentication using ADAL
+### Azure Active Directory integrated authentication
 
 - Using `IDataInitialize::GetDataSource`:
     > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryIntegrated**;Use Encryption for Data=true
@@ -116,6 +122,33 @@ This section shows examples of new and existing connection string keywords to be
     > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Access Token=[access token]**;Use Encryption for Data=true
 - Using `DBPROP_INIT_PROVIDERSTRING`:
     > Providing access token through `DBPROP_INIT_PROVIDERSTRING` isn't supported
+
+### Azure Active Directory interactive authentication
+
+- Using `IDataInitialize::GetDataSource`:
+    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryInteractive**;User ID=[username];Use Encryption for Data=true
+- Using `DBPROP_INIT_PROVIDERSTRING`:
+    > Server=[server];Database=[database];**Authentication=ActiveDirectoryInteractive**;UID=[username];Encrypt=yes
+
+### Azure Active Directory Managed Identity authentication
+
+- Using `IDataInitialize::GetDataSource`:
+    - User-assigned managed identity:
+        > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryMSI**;User ID=[Object ID];Use Encryption for Data=true
+    - System-assigned managed identity:
+        > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryMSI**;Use Encryption for Data=true
+- Using `DBPROP_INIT_PROVIDERSTRING`:
+    - User-assigned managed identity:
+        > Server=[server];Database=[database];**Authentication=ActiveDirectoryMSI**;UID=[Object ID];Encrypt=yes
+    - System-assigned managed identity:
+        > Server=[server];Database=[database];**Authentication=ActiveDirectoryMSI**;Encrypt=yes
+
+### Azure Active Directory service principal authentication
+
+- Using `IDataInitialize::GetDataSource`:
+    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryServicePrincipal**;User ID=[Application (client) ID];Password=[Application (client) secret];Use Encryption for Data=true
+- Using `DBPROP_INIT_PROVIDERSTRING`:
+    > Server=[server];Database=[database];**Authentication=ActiveDirectoryServicePrincipal**;UID=[Application (client) ID];PWD=[Application (client) secret];Encrypt=yes
 
 ## Code samples
 
@@ -233,8 +266,8 @@ Cleanup:
 ```
 
 ## Next steps
-- [Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](https://go.microsoft.com/fwlink/?linkid=2072672).
+- [Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](/azure/active-directory/azuread-dev/v1-protocols-oauth-code).
 
-- Learn about [Azure Active Directory Authentication](https://go.microsoft.com/fwlink/?linkid=2073783) to SQL Server.
+- Learn about [Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview) to SQL Server.
 
 - Configure driver connections using [connection string keywords](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md) the OLE DB driver supports.

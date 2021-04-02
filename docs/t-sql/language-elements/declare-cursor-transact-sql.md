@@ -1,4 +1,5 @@
 ---
+description: "DECLARE CURSOR (Transact-SQL)"
 title: "DECLARE CURSOR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DECLARE_CURSOR_TSQL"
   - "CURSOR_TSQL"
@@ -22,11 +23,11 @@ helpviewer_keywords:
   - "Transact-SQL cursors, attributes"
   - "global cursors [SQL Server]"
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # DECLARE CURSOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Defines the attributes of a [!INCLUDE[tsql](../../includes/tsql-md.md)] server cursor, such as its scrolling behavior and the query used to build the result set on which the cursor operates. `DECLARE CURSOR` accepts both a syntax based on the ISO standard and a syntax using a set of [!INCLUDE[tsql](../../includes/tsql-md.md)] extensions.  
   
@@ -34,7 +35,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql
 ISO Syntax  
 DECLARE cursor_name [ INSENSITIVE ] [ SCROLL ] CURSOR   
      FOR select_statement   
@@ -51,7 +52,9 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *cursor_name*  
  Is the name of the [!INCLUDE[tsql](../../includes/tsql-md.md)] server cursor defined. *cursor_name* must conform to the rules for identifiers.  
   
@@ -190,8 +193,8 @@ FETCH NEXT FROM vend_cursor;
 ```sql  
 SET NOCOUNT ON;  
   
-DECLARE @vendor_id int, @vendor_name nvarchar(50),  
-    @message varchar(80), @product nvarchar(50);  
+DECLARE @vendor_id INT, @vendor_name NVARCHAR(50),  
+    @message VARCHAR(80), @product NVARCHAR(50);  
   
 PRINT '-------- Vendor Products Report --------';  
   

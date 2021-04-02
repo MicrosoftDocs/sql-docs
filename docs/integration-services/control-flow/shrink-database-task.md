@@ -1,4 +1,5 @@
 ---
+description: "Shrink Database Task"
 title: "Shrink Database Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,12 +15,12 @@ helpviewer_keywords:
   - "database shrinking [Integration Services]"
   - "shrinking databases"
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Shrink Database Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Shrink Database task reduces the size of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database data and log files.  
@@ -51,6 +52,5 @@ ms.author: janinez
   
  For more information about setting these properties in the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
-  
+-   [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

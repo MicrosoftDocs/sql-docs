@@ -1,19 +1,19 @@
 ---
 title: Configure SQL Server Always On Availability Group on Windows and Linux
-description: Configure SQL Server Availability Group with replicas on Windows and Linux.
-author: MikeRayMSFT
-ms.author: mikeray
+description: Learn how to create a SQL Server Always On Availability Group (AG) with one replica on a Windows server and the other replica on a Linux server.
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 01/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-2017"
 ---
 # Configure SQL Server Always On Availability Group on Windows and Linux (cross-platform)
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/applies-to-version/sqlserver2017.md)]
 
 This article explains the steps to create an Always On Availability Group (AG) with one replica on a Windows server and the other replica on a Linux server. This configuration is cross-platform because the replicas are on different operating systems. Use this configuration for migration from one platform to the other or disaster recovery (DR). This configuration does not support high-availability because there is no cluster solution to manage a cross-platform configuration. 
 
@@ -49,7 +49,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
    **Set mixed mode authentication**
 
-   For instructions, see [Change server authentication mode](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure).
+   For instructions, see [Change server authentication mode](../database-engine/configure-windows/change-server-authentication-mode.md#change-authentication-mode-with-ssms).
 
 1. Install SQL Server 2017 on Linux. For instructions, see [Install SQL Server](sql-server-linux-setup.md). Enable `hadr` via mssql-conf.
 
@@ -63,7 +63,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
    The following image shows this complete step.
 
-   ![Enable Availability Groups Linux](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
+   ![Screenshot of a Git Bash window showing the command.](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
 
 1. Configure hosts file on both servers or register the server names with DNS.
 
@@ -104,7 +104,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
    In the following diagram, ownership and group are set correctly for the certificate and key.
 
-   ![Enable Availability Groups Linux](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
+   ![Screenshot of a Git Bash window showing the .cer and the .pvk in the /var/opt/mssql/data folder.](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
 
 
 1. On the secondary replica, create a database login and password and create a master key.

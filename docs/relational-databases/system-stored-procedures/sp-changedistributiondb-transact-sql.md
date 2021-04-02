@@ -1,4 +1,5 @@
 ---
+description: "sp_changedistributiondb (Transact-SQL)"
 title: "sp_changedistributiondb (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_changedistributiondb_TSQL"
   - "sp_changedistributiondb"
 helpviewer_keywords: 
   - "sp_changedistributiondb"
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_changedistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the properties of the distribution database. This stored procedure is executed at the Distributor on any database.  
   

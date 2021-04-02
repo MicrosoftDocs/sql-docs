@@ -1,5 +1,6 @@
 ---
-title: "Add Empty Points to a Chart (Report Builder and SSRS) | Microsoft Docs"
+title: "Add Empty Points to a Chart (Report Builder) | Microsoft Docs"
+description: Specify empty points on a chart. These points are calculated in Report Builder by taking the average of the previous and next data points that contain a value. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

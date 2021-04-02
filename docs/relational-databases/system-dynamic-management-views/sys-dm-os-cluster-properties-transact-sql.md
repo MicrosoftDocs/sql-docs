@@ -1,11 +1,12 @@
 ---
+description: "sys.dm_os_cluster_properties (Transact-SQL)"
 title: "sys.dm_os_cluster_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_os_cluster_properties_TSQL"
   - "sys.dm_os_cluster_properties"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "dm_os_cluster_properties"
   - "sys.dm_os_cluster_properties"
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_os_cluster_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns one row with the current settings for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster resource properties identified in this topic. No data is returned if this view is run on a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

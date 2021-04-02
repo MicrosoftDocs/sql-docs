@@ -1,4 +1,5 @@
 ---
+description: "MSagent_parameters (Transact-SQL)"
 title: "MSagent_parameters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "MSagent_parameters_TSQL"
   - "MSagent_parameters"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSagent_parameters system table"
 ms.assetid: be30abc9-c00d-446f-b1b4-1269772f37e6
-author: stevestein
-ms.author: sstein
+author: cawrites
+ms.author: chadam
 ---
 # MSagent_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSagent_parameters** table contains parameters associated with an agent profile. The parameter names are the same as those supported by the agent. This table is stored in the **msdb** database.  
   

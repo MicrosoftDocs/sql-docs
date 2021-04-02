@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-4: Add a Data Flow task to the package"
 title: "Step 4: Add a Data Flow task to the package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 1-4: Add a Data Flow task to the package
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

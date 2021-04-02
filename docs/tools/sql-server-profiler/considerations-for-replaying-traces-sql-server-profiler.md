@@ -1,21 +1,22 @@
 ---
-title: "Considerations for Replaying Traces (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
+title: Considerations for Replaying Traces
+titleSuffix: SQL Server Profiler
+description: Find out which operations, stored procedures, templates, and log activities prevent SQL Server Profiler from replaying traces.
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "traces [SQL Server], replaying"
-  - "replaying traces"
 ms.assetid: 73fa339f-b71a-4be4-97ca-d4ae84c8b90b
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/06/2017
 ---
+
 # Considerations for Replaying Traces (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] cannot replay the following kinds of traces:  
   
 -   Traces that contain transactional replication and other transaction log activity. These events are skipped. Other types of replication do not mark the transaction log so they are not affected.  

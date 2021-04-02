@@ -1,10 +1,11 @@
 ---
-title: "View the Log Shipping Report (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "View log shipping report (SSMS)"
+description: View the Transaction Log Shipping Status report in SQL Server Management Studio. Run a status report at a monitor server, primary server, or secondary server.
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: log-shipping
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing log shipping reports"
@@ -12,11 +13,11 @@ helpviewer_keywords:
   - "log shipping [SQL Server], monitoring"
   - "log shipping [SQL Server], viewing reports"
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # View the Log Shipping Report (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic explains how to view the Transaction Log Shipping Status report in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can run a status report at a monitor server, primary server, or secondary server. To see the  most complete information about your log shipping configuration, view the report at the monitor server instance.  
   
  The report displays the status of any log shipping activity whose status is available from the server instance to which you are connected. If that server instance is involved in multiple configurations in different roles (such as serving as a monitor for one database and a secondary for another database), the displayed results contain the information of every configuration from the perspective of each role. If the stored procedure can connect to the monitor server instance for a given log shipping configuration, the report displays additional status for that configuration.  

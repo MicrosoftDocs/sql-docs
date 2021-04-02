@@ -1,12 +1,13 @@
 ---
+description: "EXECUTE AS (Transact-SQL)"
 title: "EXECUTE AS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "08/27/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "EXECUTE AS"
   - "EXECUTE_AS_TSQL"
@@ -20,11 +21,12 @@ helpviewer_keywords:
   - "execution context [SQL Server]"
   - "switching execution context"
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
-author: VanMSFT
-ms.author: vanto
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # EXECUTE AS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Sets the execution context of a session.  
   
@@ -36,7 +38,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 { EXEC | EXECUTE } AS <context_specification>  
 [;]  
   
@@ -46,14 +48,16 @@ ms.author: vanto
 | CALLER  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  LOGIN  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Specifies the execution context to be impersonated is a login. The scope of impersonation is at the server level.  
   
 > [!NOTE]  
->  This option is not available in a contained database or in SQL Database.  
+>  This option is not available in a contained database, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], or [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
  USER  
  Specifies the context to be impersonated is a user in the current database. The scope of impersonation is restricted to the current database. A context switch to a database user does not inherit the server-level permissions of that user.  
@@ -61,7 +65,7 @@ ms.author: vanto
 > [!IMPORTANT]  
 >  While the context switch to the database user is active, any attempt to access resources outside of the database will cause the statement to fail. This includes USE *database* statements, distributed queries, and queries that reference another database that uses three- or four-part identifiers.  
   
- **'** _name_ **'**  
+ '*name*'
  Is a valid user or login name. *name* must be a member of the **sysadmin** fixed server role, or exist as a principal in [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) or [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), respectively.  
   
  *name* can be specified as a local variable.  
@@ -71,22 +75,23 @@ ms.author: vanto
  For more information, see [Specifying a User or Login Name](#_user) later in this topic.  
   
  NO REVERT  
- Specifies that the context switch cannot be reverted back to the previous context. The **NO REVERT** option can only be used at the adhoc level.
+ Specifies that the context switch cannot be reverted back to the previous context. The **NO REVERT** option can only be used at the adhoc level.  
   
  For more information about reverting to the previous context, see [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE INTO **@**_varbinary_variable_  
- Specifies the execution context can only be reverted back to the previous context if the calling REVERT WITH COOKIE statement contains the correct **@**_varbinary_variable_ value. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] passes the cookie to **@**_varbinary_variable_. The **COOKIE INTO** option can only be used at the adhoc level.  
+ COOKIE INTO @*varbinary_variable*  
+ Specifies the execution context can only be reverted back to the previous context if the calling REVERT WITH COOKIE statement contains the correct @*varbinary_variable* value. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] passes the cookie to @*varbinary_variable*. The **COOKIE INTO** option can only be used at the adhoc level.  
   
- **@** _varbinary_variable_ is **varbinary(8000)**.  
+ @*varbinary_variable* is **varbinary(8000)**.  
   
 > [!NOTE]  
 >  The cookie **OUTPUT** parameter for is currently documented as **varbinary(8000)** which is the correct maximum length. However the current implementation returns **varbinary(100)**. Applications should reserve **varbinary(8000)** so that the application continues to operate correctly if the cookie return size increases in a future release.  
   
  CALLER  
- When used inside a module, specifies the statements inside the module are executed in the context of the caller of the module.  
-  
- When used outside a module, the statement has no action.  
+ When used inside a module, specifies the statements inside the module are executed in the context of the caller of the module.
+ When used outside a module, the statement has no action.
+ > [!NOTE]  
+>  This option is not available in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
 ## Remarks  
  The change in execution context remains in effect until one of the following occurs:  
@@ -119,13 +124,11 @@ If the user is orphaned (the associated login no longer exists), and the user wa
 >  The EXECUTE AS statement can succeed as long as the [!INCLUDE[ssDE](../../includes/ssde-md.md)] can resolve the name. If a domain user exists, Windows might be able to resolve the user for the [!INCLUDE[ssDE](../../includes/ssde-md.md)], even though the Windows user does not have access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This can lead to a condition where a login with no access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appears to be logged in, though the impersonated login would only have the permissions granted to public or guest.  
   
 ## Using WITH NO REVERT  
- When the EXECUTE AS statement includes the optional WITH NO REVERT clause, the execution context of a session cannot be reset using REVERT or by executing another EXECUTE AS statement. The context set by the statement remains in affect until the session is dropped.   Note that if connection pooling is enabled, `sp_reset_connection` will fail and the connection will drop.  The error message in the event log will be:
- 
-> The connection has been dropped because the principal that opened it subsequently assumed a new security context, and then tried to reset the connection under its impersonated security context. This scenario is not supported. See "Impersonation Overview" in Books Online.
+ When the EXECUTE AS statement includes the optional WITH NO REVERT clause, the execution context of a session cannot be reset using REVERT or by executing another EXECUTE AS statement. The context set by the statement remains in affect until the session is dropped.  
   
- When the WITH NO REVERT COOKIE = @*varbinary_variable* clause is specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passes the cookie value to @*varbinary_variable*. The execution context set by that statement can only be reverted to the previous context if the calling REVERT WITH COOKIE = @*varbinary_variable* statement contains the same *@varbinary_variable* value.  
+ When the WITH NO REVERT COOKIE = @*varbinary_variabl*e clause is specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passes the cookie value to @*varbinary_variabl*e. The execution context set by that statement can only be reverted to the previous context if the calling REVERT WITH COOKIE = @*varbinary_variable* statement contains the same *\@varbinary_variable* value.  
   
- This option is useful in an environment in which connection pooling is used. Connection pooling is the maintenance of a group of database connections for reuse by applications on an application server. Because the value passed to *@varbinary_variable* is known only to the caller of the EXECUTE AS statement, the caller can guarantee that the execution context they establish cannot be changed by anyone else.  
+ This option is useful in an environment in which connection pooling is used. Connection pooling is the maintenance of a group of database connections for reuse by applications on an application server. Because the value passed to *\@varbinary_variable* is known only to the caller of the EXECUTE AS statement, the caller can guarantee that the execution context they establish cannot be changed by anyone else.  
   
 ## Determining the Original Login  
  Use the [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) function to return the name of the login that connected to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can use this function to return the identity of the original login in sessions in which there are many explicit or implicit context switches.  
@@ -138,7 +141,8 @@ If the user is orphaned (the associated login no longer exists), and the user wa
 ###  <a name="_exampleA"></a> A. Using EXECUTE AS and REVERT to switch context  
  The following example creates a context execution stack using multiple principals. The `REVERT` statement is then used to reset the execution context to the previous caller. The `REVERT` statement is executed multiple times moving up the stack until the execution context is set to the original caller.  
   
-```  
+
+```sql
 USE AdventureWorks2012;  
 GO  
 --Create two temporary principals  
@@ -180,10 +184,11 @@ GO
 ```  
   
 ### B. Using the WITH COOKIE clause  
- The following example sets the execution context of a session to a specified user and specifies the WITH NO REVERT COOKIE = @*varbinary_variable* clause. The `REVERT` statement must specify the value passed to the `@cookie` variable in the `EXECUTE AS` statement to successfully revert the context back to the caller. To run this example, the `login1` login and `user1` user created in example A must exist.  
+ The following example sets the execution context of a session to a specified user and specifies the WITH COOKIE INTO @*varbinary_variable* clause. The `REVERT` statement must specify the value passed to the `@cookie` variable in the `EXECUTE AS` statement to successfully revert the context back to the caller. To run this example, the `login1` login and `user1` user created in example A must exist.  
   
-```  
-DECLARE @cookie varbinary(8000);  
+
+```sql 
+DECLARE @cookie VARBINARY(8000);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie in a safe location in your application.  
 -- Verify the context switch.  
@@ -192,7 +197,7 @@ SELECT SUSER_NAME(), USER_NAME();
 SELECT @cookie;  
 GO  
 -- Use the cookie in the REVERT statement.  
-DECLARE @cookie varbinary(8000);  
+DECLARE @cookie VARBINARY(8000);  
 -- Set the cookie value to the one from the SELECT @cookie statement.  
 SET @cookie = <value from the SELECT @cookie statement>;  
 REVERT WITH COOKIE = @cookie;  

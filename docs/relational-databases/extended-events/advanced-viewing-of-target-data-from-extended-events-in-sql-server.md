@@ -1,6 +1,6 @@
 ---
-title: "Advanced Viewing of Target Data from Extended Events in SQL Server | Microsoft Docs"
-ms.custom: ""
+title: "Advanced view of target data from extended events"
+description: Use the advanced features of SQL Server Management Studio to view target data from extended events in rich detail. You can view, export, and manipulate data.
 ms.date: "05/24/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -10,11 +10,12 @@ ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: seo-lt-2019
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Advanced Viewing of Target Data from Extended Events in SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 This article illustrates how you can use the advanced features of SQL Server Management Studio (SSMS.exe) to view the target data from extended events in rich detail. The article explains how to:
@@ -59,7 +60,7 @@ The present article is written from the perspective of SQL Server. The article u
 
 For documentation about extended events that is specific to Azure SQL Database, see:
 
-- [Extended Events in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
+- [Extended Events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
 
 
 
@@ -175,8 +176,6 @@ After you have the target data in SSMS, you can export the data to various forma
 
 1. Give focus to the data display.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     - Suddenly a new toolbar and a new menu item for extended events both become visible.
 
 	![Export displayed data, Extended Events > Export to > (.csv, or .xel, or to a table)](../../relational-databases/extended-events/media/xevents-ssms-ui75-menuextevent-exportto-xel.png)
@@ -285,7 +284,7 @@ Grouping rows together by matching values in a given column, is the first step t
 
 On the extended events toolbar, the **Grouping** button starts a dialog you can use to group the displayed data by a given column. The next screenshot shows a dialog being used to group by the *name* column.
 
-![Toolbar > Grouping button, then the Grouping dialog](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
+![Screenshot showing the toolbar with Grouping selected and the Grouping dialog box.](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
 
 After the grouping is achieved, the display has a new look, as shown next.
 
@@ -298,11 +297,11 @@ After the grouping is achieved, the display has a new look, as shown next.
 
 After the displayed data has been grouped, you can proceed to aggregate data in other columns.  The next screenshot shows the grouped data is being aggregated by *count*.
 
-![Toolbar > Aggregation button, then the Aggregation dialog](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
+![Screenshot showing the toolbar with Aggregation selected and the Aggregation dialog box.](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
 
 After the aggregation is achieved, the display has a new look, as shown next.
 
-![Toolbar > Aggregation button, then the Aggregation dialog](../../relational-databases/extended-events/media/xevents-ssms-ui52-aggregnewdisplay.png)
+![Screenshot of the display showing that a COUNT value has been added.](../../relational-databases/extended-events/media/xevents-ssms-ui52-aggregnewdisplay.png)
 
 
 

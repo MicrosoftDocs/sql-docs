@@ -1,4 +1,5 @@
 ---
+description: "SQLGetDescField and SQLGetDescRec (Cursor Library)"
 title: "SQLGetDescField and SQLGetDescRec (Cursor Library) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,13 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLGetDescField function [ODBC], Cursor Library"
   - "SQLGetDescRec function [ODBC], Cursor Library"
 ms.assetid: 1a801f22-6fea-48aa-a723-3187a2ad852b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetDescField and SQLGetDescRec (Cursor Library)
 > [!IMPORTANT]  

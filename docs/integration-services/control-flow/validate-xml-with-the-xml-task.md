@@ -1,7 +1,8 @@
 ---
+description: "Validate XML with the XML Task"
 title: "Validate XML with the XML Task | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/08/2020"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -11,17 +12,17 @@ helpviewer_keywords:
   - "XML validation"
   - "XML, validating"
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Validate XML with the XML Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Validate XML documents and get rich error output by enabling the **ValidationDetails** property of the XML Task.  
   
- The following screen shot shows the **XML Task Editor** with the settings required for XML validation with rich error output.  
+ The following screenshot shows the **XML Task Editor** with the settings required for XML validation with rich error output.  
   
  ![XML task properties in the XML Task Editor](../../integration-services/control-flow/media/xmltaskproperties.jpg "XML task properties in the XML Task Editor")  
   
@@ -30,7 +31,7 @@ ms.author: janinez
  The XML validation functionality scales easily for large XML documents and large numbers of errors. Since the output file itself is in XML format, you can query and analyze the output. For example, if the output contains a large number of errors, you can group the errors by using a [!INCLUDE[tsql](../../includes/tsql-md.md)] query, as described in this topic.  
   
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ( [!INCLUDE[ssIS](../../includes/ssis-md.md)]) introduced the **ValidationDetails** property in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. The property is also available in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ( [!INCLUDE[ssIS](../../includes/ssis-md.md)]) introduced the **ValidationDetails** property in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. The property is also available in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].  
   
 ## Sample output for XML that's valid  
  Here is a sample output file with validation results for a valid XML file.  
@@ -114,10 +115,9 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  Here is the result in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] of the second sample query shown in the preceding text.  
   
- ![Query to group XML errors in Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Query to group XML errors in Management Studio")  
+ ![Query to group XML errors in Management Studio](../../integration-services/control-flow/media/query-for-xml-errors.png "Query to group XML errors in Management Studio")  
   
 ## See Also  
  [XML Task](../../integration-services/control-flow/xml-task.md)   
- [XML Task Editor &#40;General Page&#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
-  
+ [XML Task Editor &#40;General Page&#41;](./xml-task.md)  
   

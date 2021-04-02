@@ -1,4 +1,5 @@
 ---
+description: "Extract a DAC From a Database"
 title: "Extract a DAC From a Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2016"
@@ -21,7 +22,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Extract a DAC From a Database
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Use either the **Extract Data-tier Application Wizard** or a Windows PowerShell script to extract a data-tier application (DAC) package from an existing SQL Server database. The extraction process creates a DAC package file that contains definitions of the database objects and their related instance-level elements. For example, a DAC package file contains the database tables, stored procedures, views, and users, along with the logins that map to the database users.  
   
  
@@ -29,7 +30,7 @@ ms.author: "sstein"
  You can extract a DAC from databases residing on instances of [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 or later. If the extraction process is run against a database that was deployed from a DAC, only the definitions of the objects in the database are extracted. The process does not reference the DAC registered in **msdb** (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). The extraction process does not register the DAC definition in the current instance of the Database Engine. For more information about registering a DAC, see [Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md).  
   
 ##  <a name="LimitationsRestrictions"></a> Limitations and restrictions  
- A DAC can only be extracted from a database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later. You cannot extract a DAC if the database has objects that are not supported in a DAC, or contained users. For more information about the types of objects supported in a DAC, see [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
+ A DAC can only be extracted from a database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later. You cannot extract a DAC if the database has objects that are not supported in a DAC, or contained users. For more information about the types of objects supported in a DAC, see [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110)).  
   
 ##  <a name="Permissions"></a> Permissions  
  Extracting a DAC requires at least ALTER ANY LOGIN and database scope VIEW DEFINITION permissions, as well as SELECT permissions on **sys.sql_expression_dependencies**. Extracting a DAC can be done by members of the securityadmin fixed server role who are also members of the database_owner fixed database role in the database from which the DAC is extracted. Members of the sysadmin fixed server role or the built-in SQL Server system administrator account named **sa** can also extract a DAC.  
@@ -155,6 +156,5 @@ $extractionunit.Extract($dacpacPath)
 ```  
   
 ## See also  
- [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-  
-  
+ - [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md) 
+ - [SqlPackage in development pipelines](../../tools/sqlpackage/sqlpackage-pipelines.md)

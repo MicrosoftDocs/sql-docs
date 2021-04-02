@@ -1,5 +1,6 @@
 ---
-title: "Example: Online Restore of a Read-Only File (Simple Recovery Model) | Microsoft Docs"
+title: "Online restore: read-only file (simple recovery model)"
+description: This example shows an online restore in SQL Server of a read-only file for a database using the simple recovery model with multiple filegroups.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,11 +13,11 @@ helpviewer_keywords:
   - "online restores [SQL Server], simple recovery model"
   - "simple recovery model [SQL Server], RESTORE examples"
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Example: Online Restore of a Read-Only File (Simple Recovery Model)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic is relevant for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases under the simple recovery model that contain a read-only filegroup. Under the simple recovery model, a read-only file can be restored online if a file backup exists that was taken since the file became read-only for the last time.  
   

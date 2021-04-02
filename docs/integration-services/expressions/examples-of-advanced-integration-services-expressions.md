@@ -1,4 +1,5 @@
 ---
+description: "Examples of Advanced Integration Services Expressions"
 title: "Examples of Advanced Integration Services Expressions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,12 +14,12 @@ helpviewer_keywords:
   - "expressions [Integration Services], examples"
   - "examples [Integration Services]"
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Examples of Advanced Integration Services Expressions
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This section provides examples of advanced expressions that combine multiple operators and functions. If an expression is used in a precedence constraint or the Conditional Split transformation, it must evaluate to a Boolean. That restriction, however, does not apply to expressions used in property expressions, variables, the Derived Column transformation, or the For Loop container.  
@@ -98,9 +99,8 @@ ms.author: janinez
     ```  
   
 ## Related Tasks  
- [Use an Expression in a Data Flow Component](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Use an Expression in a Data Flow Component](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## Related Content  
  Technical article, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), on pragmaticworks.com  
-  
   

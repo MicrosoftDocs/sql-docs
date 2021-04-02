@@ -1,6 +1,7 @@
 ---
-title: "Faster temp table and table variable by using memory optimization | Microsoft Docs"
-ms.custom: ""
+title: "Memory optimization for faster temp table and table variables"
+description: Learn about converting temporary tables, table variables, or table-valued parameters to memory-optimized tables and table variables to improve performance.
+ms.custom: seo-dt-2019
 ms.date: "06/01/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
-author: Jodebrui
-ms.author: jodebrui
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: kevin-farlee
+ms.author: kfarlee
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Faster temp table and table variable by using memory optimization
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   
 If you use temporary tables, table variables, or table-valued parameters, consider conversions of them to leverage memory-optimized tables and table variables to improve performance. The code changes are usually minimal.  
@@ -118,7 +119,7 @@ CREATE TABLE #tempSessionC
   
   
   
-First, create the following table-value function to filter on **@@spid**. The function will be usable by all SCHEMA_ONLY tables that you convert from session temporary tables.  
+First, create the following table-value function to filter on **\@\@spid**. The function will be usable by all SCHEMA_ONLY tables that you convert from session temporary tables.  
   
   
   
@@ -292,7 +293,7 @@ go
 ```  
 
 
-The following script creates the filegroup for you and configures recommended database settings: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
+The following script creates the filegroup for you and configures recommended database settings: [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
   
 For more information about `ALTER DATABASE ... ADD` for FILE and FILEGROUP, see:  
   
@@ -422,11 +423,10 @@ If the memory-optimized table variable is accessed only with one exact key value
   
 ## H. See also  
   
-- [Memory-Optimized Tables.](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+- [Memory-Optimized Tables.](./sample-database-for-in-memory-oltp.md)
 
 - [Defining Durability for Memory-Optimized Objects.](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)
 
 - [Cumulative Update to eliminate chance of improper Out Of Memory errors, announced in blog September 2017.](https://support.microsoft.com/help/4025208/fix-memory-leak-occurs-when-you-use-memory-optimized-tables-in-microso)
     - [SQL Server 2016 build versions](https://support.microsoft.com/help/3177312/sql-server-2016-build-versions) provides full details of releases, service packs, and cumulative updates.
     - These occasional improper errors did not occur in the Enterprise edition of SQL Server.
-

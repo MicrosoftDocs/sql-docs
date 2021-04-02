@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_SHARED_NAME_TAKEN"
 title: "LOCALDB_ERROR_SHARED_NAME_TAKEN | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -7,16 +8,16 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: f679fe4e-0ed1-4e2c-8fe1-e6b3d55c8d42
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_SHARED_NAME_TAKEN
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| --------- | ----- |
 |Product Name|SQL Server|  
 |Event ID|281|  
 |Event Source|SQL Server Local Database Runtime 12.0|  

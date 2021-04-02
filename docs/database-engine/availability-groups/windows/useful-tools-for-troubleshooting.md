@@ -1,17 +1,18 @@
 ---
-title: "Useful tools for troubleshooting (Always On Availability Groups-SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "Availability group troubleshooting tools (content index)"
+description: A reference of articles describing tools that can be used to monitor and troubleshoot issues with availability groups.
+ms.custom: seo-lt-2019
 ms.date: "06/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: 57801bcc-4d51-4ffc-8454-b9cb6eddbfe0
 author: rothja
 ms.author: jroth
 ---
 # Useful tools for troubleshooting
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
  This article lists useful links to tools for troubleshooting and performance tuning for Always On Availability Groups.  
   

@@ -1,18 +1,19 @@
 ---
-title: "Using an SQL Statement to Modify Database Objects | Microsoft Docs"
+description: "Using an SQL statement to modify database objects"
+title: "Using an SQL statement to modify database objects | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f49ea499-df3c-4e85-9fc7-450fb99622a6
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
-# Using an SQL Statement to Modify Database Objects
+# Using an SQL statement to modify database objects
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -27,6 +28,6 @@ In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](
 
 [!code[JDBC#UsingSQLToModifyDBObjects1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-t_0_1.java)]
 
-## See Also
+## See also
 
-[Using Statements with SQL](../../connect/jdbc/using-statements-with-sql.md)
+[Using statements with SQL](../../connect/jdbc/using-statements-with-sql.md)

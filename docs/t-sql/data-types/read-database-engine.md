@@ -1,12 +1,13 @@
 ---
+description: "Read (Database Engine) by using CSharp"
 title: "Read (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/22/2017"
+ms.date: "04/16/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "Read_TSQL"
   - "Read"
@@ -18,18 +19,25 @@ ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# Read (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# Read (Database Engine) by using CSharp
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Read reads binary representation of **SqlHierarchyId** from the passed-in **BinaryReader** and sets the **SqlHierarchyId** object to that value. Read cannot be called by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use CAST or CONVERT instead.
   
 ## Syntax  
-  
-```sql
+
+<!--
+This is not T-SQL, despite the ```sql colorizer specified.
+Neither should this be ```syntaxsql.
+Rather, this is C# (or C# syntax).  Same for the later code blocks.
+I am making this fix now, from ```sql to ```cs, on 2020/04/16.  GeneMi.
+-->
+
+```csharp
 void Read( BinaryReader r )   
 ```  
-  
-## Arguments  
+
+## Arguments
 *r*  
  The **BinaryReader** object that produces a binary stream corresponding to a binary representation of a **hierarchyid** node.  
   
@@ -45,7 +53,7 @@ void Read( BinaryReader r )
   
 ## Examples  
   
-```sql
+```csharp
 Byte[] encoding = new byte[] { 0x58 };  
 MemoryStream stream = new MemoryStream(encoding, false /*not writable*/);  
 BinaryReader br = new BinaryReader(stream);  
@@ -57,6 +65,5 @@ hid.Read(br);
 [Write &#40;Database Engine&#41;](../../t-sql/data-types/write-database-engine.md)  
 [ToString &#40;Database Engine&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[hierarchyid Data Type Method Reference](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
-  
+[hierarchyid Data Type Method Reference](./hierarchyid-data-type-method-reference.md)
   

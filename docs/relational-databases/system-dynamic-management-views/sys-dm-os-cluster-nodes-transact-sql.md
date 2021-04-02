@@ -1,11 +1,12 @@
 ---
+description: "sys.dm_os_cluster_nodes (Transact-SQL)"
 title: "sys.dm_os_cluster_nodes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_os_cluster_nodes_TSQL"
   - "dm_os_cluster_nodes_TSQL"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_cluster_nodes dynamic management view"
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.dm_os_cluster_nodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns one row for each node in the failover cluster instance configuration. If the current instance is a failover clustered instance, it returns a list of nodes on which this failover cluster instance (formerly "virtual server") has been defined. If the current server instance is not a failover clustered instance, it returns an empty rowset.  
   
@@ -29,7 +30,7 @@ ms.author: sstein
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**NodeName**|**sysname**|Name of a node in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance (virtual server) configuration.|  
-|status|**int**|Status of the node in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance: 0, 1, 2, 3, -1. For more information, see [GetClusterNodeState Function](https://go.microsoft.com/fwlink/?LinkId=204794).|  
+|status|**int**|Status of the node in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance: 0, 1, 2, 3, -1. For more information, see [GetClusterNodeState Function](/windows/win32/api/clusapi/nf-clusapi-getclusternodestate).|  
 |status_description|**nvarchar(20)**|Description of the status of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster node.<br /><br /> 0 = up<br /><br /> 1 = down<br /><br /> 2 = paused<br /><br /> 3 = joining<br /><br /> -1 = unknown|  
 |is_current_owner|bit|1 means this node is the current owner of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster resource.|  
 |pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
@@ -64,7 +65,3 @@ FROM sys.dm_os_cluster_nodes;
  [sys.fn_virtualservernodes &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)   
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
-  
-
-
-

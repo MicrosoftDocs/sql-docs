@@ -1,4 +1,5 @@
 ---
+description: "Data Type Limitations"
 title: "Data Type Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,14 +7,14 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ODBC desktop database drivers [ODBC], data types"
   - "data types [ODBC], desktop database drivers"
   - "desktop database drivers [ODBC], data types"
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Data Type Limitations
 The Microsoft ODBC Desktop Database Drivers impose the following limitations on data types:  

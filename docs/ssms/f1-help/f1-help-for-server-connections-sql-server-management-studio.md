@@ -1,10 +1,8 @@
 ---
-title: "F1 Help for Server Connections (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "F1 Help for Server Connections (SQL Server Management Studio)"
+title: F1 Help for Server Connections
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,40 +12,45 @@ helpviewer_keywords:
   - "connections [SQL Server Management Studio]"
   - "Connect to Server dialog box"
 ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ---
+
 # F1 Help for Server Connections (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 This section contains the F1 Help for the **Connect to Server** dialog box pages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-[Browse for Servers &#40;Local Servers&#41;](../../ssms/f1-help/browse-for-servers-local-servers.md)  
+[Browse for Servers &#40;Local Servers&#41;](../../tools/configuration-manager/sql-server-browser-service.md)  
   
-[Browse for Servers &#40;Network Servers&#41;](../../ssms/f1-help/browse-for-servers-network-servers.md)  
+[Browse for Servers &#40;Network Servers&#41;](../../tools/configuration-manager/sql-server-browser-service.md)  
   
-[Connect to Server &#40;Analysis Services&#41;](../../ssms/f1-help/connect-to-server-analysis-services.md)  
+[Connect to Server &#40;Analysis Services&#41;](/analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15)  
   
-[Connect to Server &#40;Connection Properties Page&#41; Analysis Services](../../ssms/f1-help/connect-to-server-connection-properties-page-analysis-services.md)  
+[Connect to Server &#40;Connection Properties Page&#41; Analysis Services](/analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15)  
   
 [Connect to Server &#40;Connection Properties Page&#41; Database Engine](../../ssms/f1-help/connect-to-server-connection-properties-page-database-engine.md)  
   
-[Connect to Server &#40;Connection Properties Page&#41; Integration Services](../../ssms/f1-help/connect-to-server-connection-properties-page-integration-services.md)  
+[Connect to Server &#40;Connection Properties Page&#41; Integration Services](../../integration-services/service/integration-services-service-ssis-service.md)  
   
-[Connect to Server &#40;Connection Properties Page&#41; Reporting Services](../../ssms/f1-help/connect-to-server-connection-properties-page-reporting-services.md)  
+[Connect to Server &#40;Connection Properties Page&#41; Reporting Services](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
   
 [Connect to Server &#40;Database Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)  
   
-[Connect to Server &#40;Integration Services&#41;](../../ssms/f1-help/connect-to-server-integration-services.md)  
+[Connect to Server &#40;Integration Services&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
-[Connect to Server &#40;Login Page&#41; Analysis Services](../../ssms/f1-help/connect-to-server-login-page-analysis-services.md)  
+[Connect to Server &#40;Login Page&#41; Analysis Services](/analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15)  
   
 [Connect to Server &#40;Login Page&#41; Database Engine](../../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   
-[Connect to Server &#40;Login Page&#41; Integration Services](../../ssms/f1-help/connect-to-server-login-page-integration-services.md)  
+[Connect to Server &#40;Login Page&#41; Integration Services](../../integration-services/service/integration-services-service-ssis-service.md)  
   
-[Connect to Server &#40;Login Page&#41; Reporting Services](../../ssms/f1-help/connect-to-server-login-page-reporting-services.md)  
+[Connect to Server &#40;Login Page&#41; Reporting Services](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
   
-[Connect to Server &#40;Reporting Services&#41;](../../ssms/f1-help/connect-to-server-reporting-services.md)  
+[Connect to Server &#40;Reporting Services&#41;](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
   
-[Password Expired](../../ssms/f1-help/password-expired.md)  
-  
+[Password Expired](../../relational-databases/security/choose-an-authentication-mode.md)

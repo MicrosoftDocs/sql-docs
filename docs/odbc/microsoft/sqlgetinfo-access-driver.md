@@ -1,4 +1,5 @@
 ---
+description: "SQLGetInfo (Access Driver)"
 title: "SQLGetInfo (Access Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "SQLGetInfo function [ODBC], Access Driver"
   - "Access driver [ODBC], SQLGetInfo"
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetInfo (Access Driver)
 > [!NOTE]  

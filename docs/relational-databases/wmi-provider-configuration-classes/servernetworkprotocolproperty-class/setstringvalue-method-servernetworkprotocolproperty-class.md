@@ -1,6 +1,7 @@
 ---
-title: "SetStringValue Method (ServerNetworkProtocolProperty Class) | Microsoft Docs"
-ms.custom: ""
+description: "SetStringValue Method (ServerNetworkProtocolProperty Class)"
+title: "SetStringValue Method (ServerNetworkProtocolProperty)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetStringValue method"
 ms.assetid: 0911df30-55f7-4fca-a1fb-01d2c91c1467
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetStringValue Method (ServerNetworkProtocolProperty Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Sets the string value of the referenced property.  
   
 ## Syntax  

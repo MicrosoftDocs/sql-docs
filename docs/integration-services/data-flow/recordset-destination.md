@@ -1,4 +1,5 @@
 ---
+description: "Recordset Destination"
 title: "Recordset Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,12 +16,12 @@ helpviewer_keywords:
   - "destinations [Integration Services], Recordset"
   - "in-memory ADO recordsets [Integration Services]"
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Recordset Destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Recordset destination creates and populates an in-memory ADO recordset. The shape of the recordset is defined by the input to the Recordset destination at design time.  
@@ -36,7 +37,7 @@ ms.author: janinez
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Recordset Destination Custom Properties](../../integration-services/data-flow/recordset-destination-custom-properties.md)  
   
@@ -44,5 +45,4 @@ ms.author: janinez
   
 ## Related Tasks  
  [Use a Recordset Destination](../../integration-services/data-flow/use-a-recordset-destination.md)  
-  
   

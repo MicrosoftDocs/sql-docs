@@ -1,4 +1,5 @@
 ---
+description: "Microsoft Access Data Types"
 title: "Microsoft Access Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/19/2019
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ODBC desktop database drivers [ODBC], Access driver"
   - "Jet-based ODBC drivers [ODBC], Access driver"
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "access data types [ODBC]"
   - "data types [ODBC], Access driver"
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Microsoft Access Data Types
 The following table shows the Microsoft Access data types, data types used to create tables, and ODBC SQL data types.  

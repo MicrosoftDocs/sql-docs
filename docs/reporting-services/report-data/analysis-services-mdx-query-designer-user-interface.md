@@ -1,5 +1,7 @@
 ---
 title: "Analysis Services MDX Query Designer User Interface | Microsoft Docs"
+description: Learn about Reporting Services graphical query designers for building Multidimensional Expression (MDX) queries.
+
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

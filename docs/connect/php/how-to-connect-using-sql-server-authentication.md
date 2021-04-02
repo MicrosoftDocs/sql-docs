@@ -1,5 +1,6 @@
 ---
-title: "How to: Connect Using SQL Server Authentication | Microsoft Docs"
+title: "How to: Connect Using SQL Server Authentication"
+description: "Learn important considerations when using SQL Server Authentication to connect to your database."
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: sql
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "connecting to the server, SQL Server Authentication"
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # How to: Connect Using SQL Server Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +44,7 @@ The following precautions should be taken when you use SQL Server Authentication
 > [!NOTE]  
 > Connection attributes besides user ID and password can be set when you establish a connection. For a complete list of supported connection attributes, see [Connection Options](../../connect/php/connection-options.md).  
   
-## Example  
+## SQLSRV example  
 The following example uses the SQLSRV driver with SQL Server Authentication to connect to a local instance of SQL Server. The values for the required *UID* and *PWD* connection attributes are taken from application-specific text files, *uid.txt* and *pwd.txt*, in the *C:\AppData* directory. After the connection has been established, the server is queried to verify the user login.  
   
 The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the browser when the example is run from the browser.  
@@ -88,7 +89,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## Example  
+## PDO_SQLSRV example  
 This sample uses the PDO_SQLSRV driver to demonstrate how to connect with SQL Server Authentication.  
   
 ```  

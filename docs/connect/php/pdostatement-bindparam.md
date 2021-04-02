@@ -1,15 +1,16 @@
 ---
-title: "PDOStatement::bindParam | Microsoft Docs"
+title: "PDOStatement::bindParam"
+description: "API reference for the PDOStatement::bindParam function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
-ms.date: "05/22/2018"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +43,7 @@ When binding null data to server columns of type varbinary, binary, or varbinary
   
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 
-## Example  
+## Parameter example  
 This code sample shows that after $contact is bound to the parameter, changing the value does change the value passed in the query.  
   
 ```  
@@ -74,7 +75,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ?>  
 ```  
   
-## Example  
+## Output parameter example  
 This code sample shows how to access an output parameter.  
   
 ```  
@@ -95,7 +96,7 @@ echo $input1;
 > [!NOTE]
 > When binding an output parameter to a bigint type, if the value may end up outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), using PDO::PARAM_INT with PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE may result in a "value out of range" exception. Therefore, use the default PDO::PARAM_STR instead and provide the size of the resulting string, which is at most 21. It is the maximum number of digits, including the negative sign, of any bigint value. 
 
-## Example  
+## Input/Output example  
 This code sample shows how to use an input/output parameter.  
   
 ```  
@@ -117,7 +118,7 @@ This code sample shows how to use an input/output parameter.
 > [!NOTE]
 > It is recommended to use strings as inputs when binding values to a [decimal or numeric column](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](https://php.net/manual/en/language.types.float.php). The same applies to bigint columns, especially when the values are outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
-## Example  
+## Decimal input example  
 This code sample shows how to bind a decimal value as an input parameter.  
 
 ```
@@ -127,7 +128,7 @@ $server = "(local)";
 $conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
 
 // Assume TestTable exists with a decimal field 
-$input = 9223372036854.80000;
+$input = "9223372036854.80000";
 $stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
 // by default it is PDO::PARAM_STR, rounding of a large input value may
 // occur if PDO::PARAM_INT is specified

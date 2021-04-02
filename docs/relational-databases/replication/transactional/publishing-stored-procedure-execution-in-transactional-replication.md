@@ -1,6 +1,7 @@
 ---
-title: "Publishing Stored Procedure Execution in Transactional Replication | Microsoft Docs"
-ms.custom: ""
+title: "Publishing stored procedure execution (Transactional)"
+description: Learn how to include stored procedures that execute at the Publisher and affect published tables in your Transactional publication as stored procedure execution articles. 
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,9 +15,10 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publishing Stored Procedure Execution in Transactional Replication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   If you have one or more stored procedures that execute at the Publisher and affect published tables, consider including those stored procedures in your publication as stored procedure execution articles. The definition of the procedure (the CREATE PROCEDURE statement) is replicated to the Subscriber when the subscription is initialized; when the procedure is executed at the Publisher, replication executes the corresponding procedure at the Subscriber. This can provide significantly better performance for cases where large batch operations are performed, because only the procedure execution is replicated, bypassing the need to replicate the individual changes for each row. For example, assume you create the following stored procedure in the publication database:  
   
 ```  
@@ -47,7 +49,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio: [Publish the Execution of a Stored Procedure in a Transactional Publication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Replication Transact-SQL Programming: execute [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) and specify a value of 'serializable proc exec' (recommended) or 'proc exec' for the parameter **@type**. For more information about defining articles, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+-   Replication Transact-SQL Programming: execute [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) and specify a value of 'serializable proc exec' (recommended) or 'proc exec' for the parameter `@type`. For more information about defining articles, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ## Modifying the Procedure at the Subscriber  
  By default, the stored procedure definition at the Publisher is propagated to each Subscriber. However, you can also modify the stored procedure at the Subscriber. This is useful if you want different logic to be executed at the Publisher and Subscriber. For example, consider **sp_big_delete**, a stored procedure at the Publisher that has two functions: it deletes 1,000,000 rows from the replicated table **big_table1** and updates the nonreplicated table **big_table2**. To reduce the demand on network resources, you should propagate the 1 million row delete as a stored procedure by publishing **sp_big_delete**. At the Subscriber, you can modify **sp_big_delete** to delete only the 1 million rows and not perform the subsequent update to **big_table2**.  

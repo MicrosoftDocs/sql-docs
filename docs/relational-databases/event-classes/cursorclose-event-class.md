@@ -1,20 +1,21 @@
 ---
+description: "CursorClose Event Class"
 title: "CursorClose Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "CursorClose event class"
 ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CursorClose Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Cursor close events occur when the [!INCLUDE[ssDE](../../includes/ssde-md.md)] closes and deallocates a cursor. The **CursorClose** event class describes cursor close events that occur in application programming interface (API) cursors. This event class occurs when a [!INCLUDE[tsql](../../includes/tsql-md.md)] cursor statement by ODBC, OLE DB, or DB-Library is closed.  
   
  Include the **CursorClose** event class in traces that are recording the performance of cursors. The amount of overhead incurred depends on how frequently cursors are used against the database during the trace. If cursors are used extensively, the trace can significantly impede performance.  

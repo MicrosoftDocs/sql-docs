@@ -1,6 +1,7 @@
 ---
-title: "SetCurrentCertificate Method (SInstance Class) | Microsoft Docs"
-ms.custom: ""
+description: "SetCurrentCertificate Method (SInstance Class)"
+title: "SetCurrentCertificate Method (SInstance)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetCurrentCertificate method"
 ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetCurrentCertificate Method (SInstance Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Sets the current security certificate.  
   
 ## Syntax  

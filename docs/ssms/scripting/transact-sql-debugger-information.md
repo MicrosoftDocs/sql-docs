@@ -1,10 +1,9 @@
 ---
-title: "Transact-SQL Debugger Information | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: Transact-SQL Debugger Information
+description: Learn how to view Transact-SQL debugger output, which includes information such as call stacks, threads, breakpoints, code, variables, and commands.
+titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, Locals Window"
@@ -16,14 +15,23 @@ helpviewer_keywords:
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Transact-SQL Debugger - Information
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Every time that the debugger pauses execution on a specific [!INCLUDE[tsql](../../includes/tsql-md.md)] statement, you can use the various debugger windows to view the current execution state.  
-  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+Every time that the debugger pauses execution on a specific [!INCLUDE[tsql](../../includes/tsql-md.md)] statement, you can use the various debugger windows to view the current execution state. 
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## Debugger Windows  
- In debugger mode, the debugger opens two windows at the bottom of the main [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] window. The debugger displays all its information in these two windows. Each of the debugger windows has tabs that you can select to control which set of information is displayed in the window. The left debugger window contains the **Locals**, **Watch1**, **Watch2**, **Watch3**, and **Watch4** tabs. The right debugger window contains the **Call Stack**, **Threads**, **Breakpoints**, **Command Window**, and **Output** tabs.  
+
+In debugger mode, the debugger opens two windows at the bottom of the main [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] window. The debugger displays all its information in these two windows. Each of the debugger windows has tabs that you can select to control which set of information is displayed in the window. The left debugger window contains the **Locals**, **Watch1**, **Watch2**, **Watch3**, and **Watch4** tabs. The right debugger window contains the **Call Stack**, **Threads**, **Breakpoints**, **Command Window**, and **Output** tabs.  
   
 > [!NOTE]  
 >  The previous descriptions apply to the default locations of the debugger windows. You can drag a tab to move it from one window to another, or you can undock a tab to create a new window that you can put wherever you want.  
@@ -57,10 +65,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  You can set the data values for variables in the **Locals**, **Watch**, or **QuickWatch** windows by right-clicking the row and then selecting **Edit Value**. The **Value** columns in the **Locals** window, **Watch** window, and **QuickWatch** dialog box all support text, XML, and HTML data visualizers. The visualizers are represented by a magnifying glass data tip on the right side end of the **Values** column. You can use the visualizers to view text, XML, or HTML data values in displays that match the data types, for example, viewing XML files in a browser window.  
   
- In debug mode, when you move the mouse pointer over an identifier, a **Quick Info** pop up is displayed with the name of the expression and its current value. For more information, see [Quick Info &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md).  
+ In debug mode, when you move the mouse pointer over an identifier, a **Quick Info** pop up is displayed with the name of the expression and its current value. For more information, see [Quick Info &#40;IntelliSense&#41;](./quick-info-intellisense.md).  
   
 ## Breakpoints  
- You can use the **Breakpoints** window to view and manage the currently set breakpoints. For more information, see [Step Through Transact-SQL Code](../../relational-databases/scripting/step-through-transact-sql-code.md).  
+ You can use the **Breakpoints** window to view and manage the currently set breakpoints. For more information, see [Step Through Transact-SQL Code](./step-through-transact-sql-code.md).  
   
 ## Call Stacks  
  The **Call Stack** window displays the current execution location, and information about how execution passed from the original editor window through any [!INCLUDE[tsql](../../includes/tsql-md.md)] modules (functions, stored procedures, or triggers) to reach the current execution location. Each row in the **Call Stack** window is called a stack frame and represents any one of the following items:  
@@ -91,13 +99,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  While in debug mode, the **Results** and **Messages** tabs are still active in the Query Editor. The **Results** tab continues to display the result sets from the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that are executed during a debugging session. The **Messages** tab continues to display system messages, such as *xx* Rows Affected and the output of PRINT and RAISERROR statements.  
   
 ## See Also  
- [Locals Window](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [Watch Window](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [QuickWatch Dialog Box](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [Breakpoints Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)   
- [Call Stack Window](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [Threads Window](../../relational-databases/scripting/transact-sql-debugger-threads-window.md)   
- [Output Window](../../relational-databases/scripting/transact-sql-debugger-output-window.md)   
- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
+ [Locals Window](./transact-sql-debugger-locals-window.md)   
+ [Watch Window](./transact-sql-debugger-watch-window.md)   
+ [QuickWatch Dialog Box](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Breakpoints Window](./transact-sql-debugger-breakpoints-window.md)   
+ [Call Stack Window](./transact-sql-debugger-call-stack-window.md)   
+ [Threads Window](./transact-sql-debugger-threads-window.md)   
+ [Output Window](./transact-sql-debugger-output-window.md)   
+ [Transact-SQL Debugger](./transact-sql-debugger.md)  
   

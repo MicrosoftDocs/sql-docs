@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Deprecated Features Object | Microsoft Docs"
+description: Learn about the SQLServer:Deprecated Features object, which provides a counter to monitor the features designated as deprecated. 
 ms.custom: ""
 ms.date: "05/03/2016"
 ms.prod: sql
@@ -13,11 +14,11 @@ helpviewer_keywords:
   - "deprecation [SQL Server], performance counters"
   - "Deprecated Features object"
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Deprecated Features Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The SQLServer:Deprecated Features object in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a counter to monitor the features designated as deprecated. In each case the counter provides a usage count that lists the number of times the deprecated feature was encountered since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] last started.  
   
@@ -277,8 +278,7 @@ This following table describes the SQL Server **Deprecated Features** performanc
  [Deprecated Full-Text Search Features in SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement Event Class](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support Event Class](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
- [Discontinued Database Engine Functionality in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Discontinued Full-Text Search Features in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Discontinued Database Engine Functionality in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)   
+ [Discontinued Full-Text Search Features in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)   
  [Use SQL Server Objects](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
-  
   

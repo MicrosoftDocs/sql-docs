@@ -1,5 +1,7 @@
 ---
-title: "Enable and Disable Change Data Capture (SQL Server) | Microsoft Docs"
+description: "Enable and Disable Change Data Capture (SQL Server)"
+title: "Enable and Disable Change Data Capture"
+ms.custom: seo-dt-2019
 ms.date: "01/02/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -16,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Enable and Disable Change Data Capture (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how to enable and disable change data capture for a database and a table.  
   
 ## Enable Change Data Capture for a Database  
@@ -68,11 +70,11 @@ GO
   
  **Columns in the source table to be captured**.  
   
- By default, all of the columns in the source table are identified as captured columns. If only a subset of columns need to be tracked, such as for privacy or performance reasons, use the *@captured_column_list* parameter to specify the subset of columns.  
+ By default, all of the columns in the source table are identified as captured columns. If only a subset of columns need to be tracked, such as for privacy or performance reasons, use the *\@captured_column_list* parameter to specify the subset of columns.  
   
  **A filegroup to contain the change table.**  
   
- By default, the change table is located in the default filegroup of the database. Database owners who want to control the placement of individual change tables can use the *@filegroup_name* parameter to specify a particular filegroup for the change table associated with the capture instance. The named filegroup must already exist. Generally, it is recommended that change tables be placed in a filegroup separate from source tables. See the **Enable a Table Specifying Filegroup Option** template for an example showing use of the *@filegroup_name* parameter.  
+ By default, the change table is located in the default filegroup of the database. Database owners who want to control the placement of individual change tables can use the *\@filegroup_name* parameter to specify a particular filegroup for the change table associated with the capture instance. The named filegroup must already exist. Generally, it is recommended that change tables be placed in a filegroup separate from source tables. See the **Enable a Table Specifying Filegroup Option** template for an example showing use of the *\@filegroup_name* parameter.  
   
 ```sql  
 -- =========  
@@ -94,7 +96,7 @@ GO
   
  The purpose of the named role is to control access to the change data. The specified role can be an existing fixed server role or a database role. If the specified role does not already exist, a database role of that name is created automatically. Members of either the **sysadmin** or **db_owner** role have full access to the data in the change tables. All other users must have SELECT permission on all the captured columns of the source table. In addition, when a role is specified, users who are not members of either the **sysadmin** or **db_owner** role must also be members of the specified role.  
   
- If you do not want to use a gating role, explicitly set the *@role_name* parameter to NULL. See the **Enable a Table Without Using a Gating Role** template for an example of enabling a table without a gating role.  
+ If you do not want to use a gating role, explicitly set the *\@role_name* parameter to NULL. See the **Enable a Table Without Using a Gating Role** template for an example of enabling a table without a gating role.  
   
 ```sql  
 -- =========  
@@ -115,9 +117,9 @@ GO
   
  A capture instance will always include a table valued function for returning all change table entries that occurred within a defined interval. This function is named by appending the capture instance name to "cdc.fn_cdc_get_all_changes_". For more information, see [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md).  
   
- If the parameter *@supports_net_changes* is set to 1, a net changes function is also generated for the capture instance. This function returns only one change for each distinct row changed in the interval specified in the call. For more information, see [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
+ If the parameter *\@supports_net_changes* is set to 1, a net changes function is also generated for the capture instance. This function returns only one change for each distinct row changed in the interval specified in the call. For more information, see [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
- To support net changes queries, the source table must have a primary key or unique index to uniquely identify rows. If a unique index is used, the name of the index must be specified using the *@index_name* parameter. The columns defined in the primary key or unique index must be included in the list of source columns to be captured.  
+ To support net changes queries, the source table must have a primary key or unique index to uniquely identify rows. If a unique index is used, the name of the index must be specified using the *\@index_name* parameter. The columns defined in the primary key or unique index must be included in the list of source columns to be captured.  
   
  See the **Enable a Table for All and Net Changes Queries** template for an example demonstrating the creation of a capture instance with both query functions.  
   
@@ -136,7 +138,7 @@ GO
 ```  
   
 > [!NOTE]
->  If change data capture is enabled on a table with an existing primary key, and the *@index_name* parameter is not used to identify an alternative unique index, the change data capture feature will use the primary key. Subsequent changes to the primary key will not be allowed without first disabling change data capture for the table. This is true regardless of whether support for net changes queries was requested when change data capture was configured. If there is no primary key on a table at the time it is enabled for change data capture, the subsequent addition of a primary key is ignored by change data capture. Because change data capture will not use a primary key that is created after the table was enabled, the key and key columns can be removed without restrictions.  
+>  If change data capture is enabled on a table with an existing primary key, and the *\@index_name* parameter is not used to identify an alternative unique index, the change data capture feature will use the primary key. Subsequent changes to the primary key will not be allowed without first disabling change data capture for the table. This is true regardless of whether support for net changes queries was requested when change data capture was configured. If there is no primary key on a table at the time it is enabled for change data capture, the subsequent addition of a primary key is ignored by change data capture. Because change data capture will not use a primary key that is created after the table was enabled, the key and key columns can be removed without restrictions.  
   
 ## Disable Change Data Capture for a Table  
  Members of the **db_owner** fixed database role can remove a capture instance for individual source tables by using the stored procedure **sys.sp_cdc_disable_table**. To determine whether a source table is currently enabled for change data capture, examine the **is_tracked_by_cdc** column in the **sys.tables** catalog view. If there are no tables enabled for the database after the disabling takes place, the change data capture jobs are also removed.  

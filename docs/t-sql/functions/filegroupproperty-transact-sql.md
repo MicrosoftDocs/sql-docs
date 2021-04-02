@@ -1,4 +1,5 @@
 ---
+description: "FILEGROUPPROPERTY (Transact-SQL)"
 title: "FILEGROUPPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FILEGROUPPROPERTY_TSQL"
   - "FILEGROUPPROPERTY"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "viewing filegroup properties"
   - "displaying filegroup properties"
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # FILEGROUPPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This function returns the filegroup property value for a specified name  and filegroup value.  
   
@@ -30,11 +31,13 @@ This function returns the filegroup property value for a specified name  and fil
   
 ## Syntax  
   
-```  
+```syntaxsql  
 FILEGROUPPROPERTY ( filegroup_name, property )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *filegroup_name*  
 An expression of type **sysname** that represents the filegroup name for which `FILEGROUPPROPERTY` returns the named property information.  
   
@@ -56,12 +59,12 @@ An expression of type **varchar(128)** that returns the name of the filegroup pr
 ## Examples  
 This example returns the `IsDefault` property setting for the primary filegroup in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT FILEGROUPPROPERTY('PRIMARY', 'IsDefault') AS 'Default Filegroup';  
 GO  
 ```  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
+
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]   
 ```  
 Default Filegroup   
 ---------------------   

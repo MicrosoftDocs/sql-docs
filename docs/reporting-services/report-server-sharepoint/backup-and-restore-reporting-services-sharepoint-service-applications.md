@@ -1,5 +1,6 @@
 ---
 title: "Back up and restore Reporting Services SharePoint service applications | Microsoft Docs"
+description: Learn how to back up and restore a SQL Server Reporting Services service applications using SharePoint Central Administration or PowerShell.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -9,7 +10,7 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 # Back up and restore Reporting Services SharePoint service applications
 
@@ -67,9 +68,9 @@ To back up the Service Application, complete the following steps:
   
  For more information, see the following topics in the SharePoint documentation:  
   
- [Back up a service application (SharePoint Foundation 2010) in the SharePoint documenttation](https://msdn.microsoft.com/library/ee748601.aspx).  
+ [Back up a service application (SharePoint Foundation 2010) in the SharePoint documenttation](/previous-versions/office/sharepoint-foundation-2010/ee748601(v=office.14)).  
   
- [Back up a service application (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
+ [Back up a service application (SharePoint Server 2010)](/SharePoint/administration/back-up-a-service-application)  
   
 ### Verify execution account and database authentication
 
@@ -121,9 +122,9 @@ To back up the Service Application, complete the following steps:
   
  For more information, see the following topics in the SharePoint documentation:  
   
- [Restore a service application (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx).  
+ [Restore a service application (SharePoint Foundation 2010)](/previous-versions/office/sharepoint-foundation-2010/ee748615(v=office.14)).  
   
- [Restore a service application (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx).  
+ [Restore a service application (SharePoint Server 2010)](/SharePoint/administration/restore-a-service-application).  
 
 ### Restore the encryption keys using SharePoint Central Administration
 

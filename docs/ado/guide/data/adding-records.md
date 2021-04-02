@@ -1,8 +1,9 @@
 ---
+description: "Adding Records to a Recordset"
 title: "Adding Records | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "editing data [ADO], AddNew method"
   - "editing data [ADO], adding data"
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Adding Records to a Recordset
 Use the **AddNew** method to create and initialize a new record in an existing **Recordset**. You can use the **Supports** method with a **CursorOptionEnum** value of **adAddNew** to verify whether you can add records to the current **Recordset** object.
@@ -25,10 +26,10 @@ Use the **AddNew** method to create and initialize a new record in an existing *
 
  This section contains the following topics.
 
--   [Adding Records Using AddNew](../../../ado/guide/data/adding-records-using-addnew.md)
+-   [Adding Records Using AddNew](./adding-records-using-addnew.md)
 
--   [Adding Multiple Fields](../../../ado/guide/data/adding-multiple-fields.md)
+-   [Adding Multiple Fields](./adding-multiple-fields.md)
 
--   [Determining Edit Mode](../../../ado/guide/data/determining-edit-mode.md)
+-   [Determining Edit Mode](./determining-edit-mode.md)
 
--   [Using AddNew in Immediate and Batch Modes](../../../ado/guide/data/using-addnew-in-immediate-and-batch-modes.md)
+-   [Using AddNew in Immediate and Batch Modes](./using-addnew-in-immediate-and-batch-modes.md)

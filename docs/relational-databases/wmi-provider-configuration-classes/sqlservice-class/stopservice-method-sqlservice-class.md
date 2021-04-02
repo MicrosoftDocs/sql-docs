@@ -1,6 +1,7 @@
 ---
-title: "StopService Method (SqlService Class) | Microsoft Docs"
-ms.custom: ""
+description: "StopService Method (SqlService Class)"
+title: "StopService Method (SqlService)"
+ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "StopService method"
 ms.assetid: ef8e1856-4930-417a-8f52-be470fd3f15c
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # StopService Method (SqlService Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Attempts to place the service in the stopped state.  
   
 ## Syntax  

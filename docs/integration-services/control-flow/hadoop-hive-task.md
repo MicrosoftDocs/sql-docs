@@ -1,4 +1,5 @@
 ---
+description: "Hadoop Hive Task"
 title: "Hadoop Hive Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -10,12 +11,12 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.hadoophivetask.f1"
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Hadoop Hive Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the Hadoop Hive Task to run Hive script on a Hadoop cluster.  

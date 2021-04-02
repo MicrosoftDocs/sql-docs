@@ -1,5 +1,6 @@
 ---
-title: "Change the Order of Attributes | Microsoft Docs"
+description: "Change the Order of Attributes"
+title: Change the Order of Attributes
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Change the Order of Attributes
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the order of attributes.  
   

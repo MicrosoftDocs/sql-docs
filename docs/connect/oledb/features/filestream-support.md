@@ -1,21 +1,21 @@
 ---
 title: "FILESTREAM Support | Microsoft Docs"
-description: "FILESTREAM support in OLE DB Driver for SQL Server"
+description: SQL Server supports the enhanced FILESTREAM feature, which lets you store and access large binary values, either through SQL Server or the file system.
 ms.custom: ""
-ms.date: "06/12/2018"
+ms.date: "09/13/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], OLE DB Driver for SQL Server"
   - "OLE DB Driver for SQL Server [FILESTREAM support]"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
-# FILESTREAM Support
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# FILESTREAM Support in OLE DB Driver for SQL Server
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -23,7 +23,7 @@ Beginning with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], OLE DB Dr
 
 FILESTREAM provides a way to store and access large binary values, either through [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or by direct access to the Windows file system. A large binary value is a value larger than 2 gigabytes (GB). For more information about enhanced FILESTREAM support, see [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
   
-When a database connection is opened, **@@TEXTSIZE** will be set to -1 ("unlimited"), by default.  
+When a database connection is opened, **\@\@TEXTSIZE** will be set to -1 ("unlimited"), by default.  
   
 It is also possible to access and update FILESTREAM columns using Windows file system APIs.  
   
@@ -48,7 +48,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## Down-Level Compatibility  
-If your client was compiled using OLE DB Driver for SQL Server, and the application connects to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]), then **varbinary(max)** behavior will be compatible with the behavior introduced by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. That is, the maximum size of returned data will be limited to 2 GB. For result values larger that 2 GB, truncation will occur and a "string data right truncation" warning will be returned. 
+If your client was compiled using OLE DB Driver for SQL Server, and the application connects to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] or later), then **varbinary(max)** behavior will be compatible with the behavior introduced by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. That is, the maximum size of returned data will be limited to 2 GB. For result values larger that 2 GB, truncation will occur and a "string data right truncation" warning will be returned. 
   
 When data-type compatibility is set to 80, client behavior will be consistent with down-level client behavior.  
   

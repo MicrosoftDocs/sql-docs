@@ -1,4 +1,5 @@
 ---
+description: "Welcome to SQL Server Import and Export Wizard"
 title: "Welcome to SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/15/2017"
@@ -9,12 +10,12 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.welcome.f1"
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Welcome to SQL Server Import and Export Wizard
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   When you start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard, the first page is **Welcome to SQL Server Import and Export Wizard**. You don't have to take any action on this page.

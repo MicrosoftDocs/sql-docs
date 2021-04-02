@@ -1,5 +1,6 @@
 ---
 title: "WideWorldImporters OLTP database catalog - SQL | Microsoft Docs"
+description: Understand the schemas, tables, stored procedures, and design considerations for the WideWorldImporters sample database catalog.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -11,7 +12,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # WideWorldImporters database catalog
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 The WideWorldImporters database contains all the transaction information and daily data for sales and purchases, as well as sensor data for vehicles and cold rooms.
 
 ## Schemas
@@ -131,7 +132,7 @@ The database schema has been code-generated based on a series of metadata tables
 
 - All tables have single column primary keys for join simplicity.
 - All schemas, tables, columns, indexes, and check constraints have a Description extended property that can be used to identify the purpose of the object or column. Memory-optimized tables are an exception to this since they don't currently support extended properties.
-- All foreign keys are automatically indexed unless there is another non-clustered index that has the same left-hand component.
+- All foreign keys are automatically indexed unless there is another nonclustered index that has the same left-hand component.
 - Auto-numbering in tables is based on sequences. These sequences are easier to work with across linked servers and similar environments than IDENTITY columns. Memory-optimized tables use IDENTITY columns since they don't support in SQL Server 2016.
 - A single sequence (TransactionID) is used for these tables: CustomerTransactions, SupplierTransactions, and StockItemTransactions. This demonstrates how a set of tables can have a single sequence.
 - Some columns have appropriate default values.

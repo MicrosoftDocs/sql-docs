@@ -1,5 +1,6 @@
 ---
 title: "Write SQL Server Audit Events to the Security Log | Microsoft Docs"
+description: Learn how to write SQL Server audit events to the Windows Security log. Find out about the limitations and restrictions to using that log.
 ms.custom: ""
 ms.date: "09/21/2017"
 ms.prod: sql
@@ -17,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 ---  
 # Write SQL Server Audit Events to the Security Log  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 In a high security environment, the Windows Security log is the appropriate location to write events that record object access. Other audit locations are supported but are more subject to tampering.  
   
- There are two key requirements for writing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] server audits to the Windows Security log:  
+ There are three key requirements for writing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] server audits to the Windows Security log:  
   
 -   The audit object access setting must be configured to capture the events. The audit policy tool (`auditpol.exe`) exposes a variety of sub-policies settings in the **audit object access** category. To allow [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to audit object access, configure the **application generated** setting.  
 -   The account that the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service is running under must have the **generate security audits** permission to write to the Windows Security log. By default, the LOCAL SERVICE and the NETWORK SERVICE accounts have this permission. This step is not required if [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running under one of those accounts.  

@@ -1,4 +1,5 @@
 ---
+description: "Secure the Publisher"
 title: "Secure the Publisher | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Secure the Publisher
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  The following replication agents connect to the Publisher:  
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   
--   Log Reader Agent  
+The following replication agents connect to the Publisher:  
   
--   Snapshot Agent  
-  
+-   Log Reader Agents
+-   Snapshot Agent
 -   Queue Reader Agent  
-  
 -   Merge Agent  
   
  We recommend that you provide an appropriate login for these agents, follow the principle of granting the minimal rights that are required, and protect the storage of all passwords. For information about the permissions that are required for each agent, see [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  

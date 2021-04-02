@@ -1,4 +1,5 @@
 ---
+description: "Integration Services Language Reference"
 title: "Integration Services Language Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -8,15 +9,15 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: c67b72f1-0a1e-42f0-878a-84e85efc915b
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services Language Reference
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   This section describes the [!INCLUDE[tsql](../includes/tsql-md.md)] API for administering [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects that have been deployed to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -33,7 +34,6 @@ ms.author: janinez
  [Stored Procedures &#40;Integration Services Catalog&#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
  Call the stored procedures to add, remove, or modify [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] objects and settings.  
   
- [Functions &#40;Integration Services Catalog&#41;](https://msdn.microsoft.com/library/9f2aec85-3d4c-415f-b1f8-8328a60b1c7f)  
+ [Functions &#40;Integration Services Catalog&#41;](./functions-dm-execution-performance-counters.md)  
  Call the functions to administer [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects.  
-  
   

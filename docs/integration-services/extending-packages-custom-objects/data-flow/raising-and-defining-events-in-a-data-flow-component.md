@@ -1,4 +1,5 @@
 ---
+description: "Raising and Defining Events in a Data Flow Component"
 title: "Raising and Defining Events in a Data Flow Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,12 +19,12 @@ helpviewer_keywords:
   - "events [Integration Services], raising"
   - "predefined events [Integration Services]"
 ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Raising and Defining Events in a Data Flow Component
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Component developers can raise a subset of the events defined in the <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> interface by calling the methods exposed on the <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> property. You can also define custom events by using the <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A> collection, and raise them during execution by using the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> method. This section describes how to create and raise an event, and provides guidelines on when you should raise events at design time.  
@@ -90,6 +91,5 @@ End Sub
 
 ## See Also  
  [Integration Services &#40;SSIS&#41; Event Handlers](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
-  
+ [Add an Event Handler to a Package](../../integration-services-ssis-event-handlers.md)  
   

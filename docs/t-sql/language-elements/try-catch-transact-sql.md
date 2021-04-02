@@ -1,12 +1,13 @@
 ---
+description: "TRY...CATCH (Transact-SQL)"
 title: "TRY...CATCH (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "BEGIN_TRY_TSQL"
   - "BEGIN_CATCH_TSQL"
@@ -26,12 +27,12 @@ helpviewer_keywords:
   - "BEGIN TRY statement"
   - "CATCH block"
 ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRY...CATCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
   Implements error handling for [!INCLUDE[tsql](../../includes/tsql-md.md)] that is similar to the exception handling in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# and [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ languages. A group of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can be enclosed in a TRY block. If an error occurs in the TRY block, control is passed to another group of statements that is enclosed in a CATCH block.  
@@ -40,7 +41,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 BEGIN TRY  
      { sql_statement | statement_block }  
 END TRY  
@@ -50,7 +51,9 @@ END CATCH
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *sql_statement*  
  Is any [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
@@ -64,9 +67,14 @@ END CATCH
   
  A TRY...CATCH construct cannot span multiple batches. A TRY...CATCH construct cannot span multiple blocks of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. For example, a TRY...CATCH construct cannot span two BEGIN...END blocks of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and cannot span an IF...ELSE construct.  
   
- If there are no errors in the code that is enclosed in a TRY block, when the last statement in the TRY block has finished running, control passes to the statement immediately after the associated END CATCH statement. If there is an error in the code that is enclosed in a TRY block, control passes to the first statement in the associated CATCH block. If the END CATCH statement is the last statement in a stored procedure or trigger, control is passed back to the statement that called the stored procedure or fired the trigger.  
-  
- When the code in the CATCH block finishes, control passes to the statement immediately after the END CATCH statement. Errors trapped by a CATCH block are not returned to the calling application. If any part of the error information must be returned to the application, the code in the CATCH block must do so by using mechanisms such as SELECT result sets or the RAISERROR and PRINT statements.  
+ If there are no errors in the code that is enclosed in a TRY block, when the last statement in the TRY block has finished running, control passes to the statement immediately after the associated END CATCH statement.
+ 
+ If there is an error in the code that is enclosed in a TRY block, control passes to the first statement in the associated CATCH block. When the code in the CATCH block finishes, control passes to the statement immediately after the END CATCH statement. 
+ 
+ > [!NOTE] 
+ > If the END CATCH statement is the last statement in a stored procedure or trigger, control is passed back to the statement that called the stored procedure or fired the trigger. 
+ 
+ Errors trapped by a CATCH block are not returned to the calling application. If any part of the error information must be returned to the application, the code in the CATCH block must do so by using mechanisms such as SELECT result sets or the RAISERROR and PRINT statements.  
   
  TRY...CATCH constructs can be nested. Either a TRY block or a CATCH block can contain nested TRY...CATCH constructs. For example, a CATCH block can contain an embedded TRY...CATCH construct to handle errors encountered by the CATCH code.  
   
@@ -127,7 +135,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- The ERROR\_\* functions also work in a `CATCH` block inside a [natively compiled stored procedure](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ The ERROR\_\* functions also work in a `CATCH` block inside a [natively compiled stored procedure](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).  
   
 ## Errors Unaffected by a TRY...CATCH Construct  
  TRY...CATCH constructs do not trap the following conditions:  
@@ -305,7 +313,8 @@ BEGIN CATCH
         ROLLBACK TRANSACTION;  
     END;  
   
-    -- Test whether the transaction is committable.  
+    -- Test whether the transaction is committable.
+    -- You may want to commit a transaction in a catch block if you want to commit changes to statements that ran prior to the error.
     IF (XACT_STATE()) = 1  
     BEGIN  
         PRINT  
@@ -354,5 +363,3 @@ GO
  [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)   
  [SET XACT_ABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
-  
-

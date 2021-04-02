@@ -1,16 +1,17 @@
 ---
+description: "Data Types (DMX)"
 title: "Data Types (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # Data Types (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   When you use Data Mining Extensions (DMX) to define a new mining model in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you must provide a data type for each column in the model. The data type describes the data that the data mining algorithm will use when it builds the model.  
   
@@ -26,10 +27,10 @@ author: minewiskan
   
 -   Date  
   
- For more information about the data types that [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports, see [Data Types &#40;Data Mining&#41;](../analysis-services/data-mining/data-types-data-mining.md).  
+ For more information about the data types that [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports, see [Data Types &#40;Data Mining&#41;](/analysis-services/data-mining/data-types-data-mining).  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Data Mining Extensions &#40;DMX&#41; Reference](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md)   
@@ -39,5 +40,4 @@ author: minewiskan
  [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Structure and Usage of DMX Prediction Queries](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Understanding the DMX Select Statement](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

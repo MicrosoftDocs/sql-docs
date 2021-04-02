@@ -1,4 +1,5 @@
 ---
+description: "Replication to Memory-Optimized Table Subscribers"
 title: "Replication to Memory-Optimized Table Subscribers | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/21/2016"
@@ -10,17 +11,18 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication to Memory-Optimized Table Subscribers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Tables acting as snapshot and transactional replication subscribers, excluding Peer-to-peer transactional replication, can be configured as memory-optimized tables. Other replication configurations are not compatible with memory-optimized tables. This feature is available beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+  Tables acting as snapshot and transactional replication subscribers, excluding Peer-to-peer transactional replication, can be configured as memory-optimized tables. Other replication configurations are not compatible with memory-optimized tables. This feature is available beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].  
   
 ## Two configurations are required  
   
 -   **Configure the subscriber database to support replication to memory-optimized tables**  
   
-     Set the **@memory_optimized** property  to **true**, by using [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) or [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md).  
+     Set the **\@memory_optimized** property  to **true**, by using [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) or [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md).  
   
 -   **Configure the article to support replication to memory-optimized tables**  
   
@@ -32,7 +34,7 @@ ms.author: "mathoma"
   
 2.  Add articles to the publication. For more information, see [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-     If configuring by using [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** parameter of the **sp_addarticle** stored procedure to   
+     If configuring by using [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **\@schema_option** parameter of the **sp_addarticle** stored procedure to   
     **0x40000000000**.  
   
 3.  In the article properties window set **Enable Memory optimization** to **true**.  
@@ -41,24 +43,22 @@ ms.author: "mathoma"
   
 5.  Now create a new subscription. In the **New Subscription Wizard** set **Memory Optimized Subscription** to **true**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Memory-optimized tables should now start receiving updates from the publisher.  
   
 #### Reconfigure an existing transaction replication  
   
 1.  Go to subscription properties in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and set **Memory Optimized Subscription** to **true**. The changes are not applied until the subscription is reinitialized.  
   
-     If configuring by using [!INCLUDE[tsql](../../includes/tsql-md.md)] set the new **@memory_optimized** parameter of the **sp_addsubscription** stored procedure to true.  
+     If configuring by using [!INCLUDE[tsql](../../includes/tsql-md.md)] set the new **\@memory_optimized** parameter of the **sp_addsubscription** stored procedure to true.  
   
 2.  Go to the article properties  for a publication in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and set **Enable Memory** optimization to true.  
   
-     If configuring by using [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** parameter of the **sp_addarticle** stored procedure to   
+     If configuring by using [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **\@schema_option** parameter of the **sp_addarticle** stored procedure to   
     **0x40000000000**.  
   
 3.  Memory optimized tables do not support clustered indexes. To have replication handle this by converting it to nonclustered index on the destination, set **Convert clustered index to nonclustered for memory optimized article** to true.  
   
-     If configuring by using [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** parameter of the **sp_addarticle** stored procedure to  **0x0000080000000000**.  
+     If configuring by using [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **\@schema_option** parameter of the **sp_addarticle** stored procedure to  **0x0000080000000000**.  
   
 4.  Regenerate the snapshot.  
   

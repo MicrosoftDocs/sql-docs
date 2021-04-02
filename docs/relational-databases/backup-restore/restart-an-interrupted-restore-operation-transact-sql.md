@@ -1,7 +1,8 @@
 ---
-title: "Restart an Interrupted Restore Operation (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
+title: "Restart interrupted restore (Transact-SQL)"
+description: This example shows you how to restart an interrupted restore operation in SQL Server using Transact-SQL.
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -15,11 +16,11 @@ helpviewer_keywords:
   - "restarting interrupted restore operation"
   - "restoring interrupted operation [SQL Server]"
 ms.assetid: 6413a07d-fd90-448d-8f29-12c5a1972618
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Restart an Interrupted Restore Operation (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic explains how to restart an interrupted restore operation.  
   
 ### To restart an interrupted restore operation  

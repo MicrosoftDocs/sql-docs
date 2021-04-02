@@ -1,4 +1,5 @@
 ---
+description: "Setting Conversion and Migration Options (AccessToSQL)"
 title: "Setting Conversion and Migration Options (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "project settings"
   - "schemas"
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Setting Conversion and Migration Options (AccessToSQL)
 For each SSMA project, you can set project-level options. These options specify how objects are converted, how data is migrated, and how source data types map to target data types. Before you convert objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure or migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, verify that the configuration options are appropriate for the project.  
@@ -25,15 +26,15 @@ SSMA has four sets of configuration settings and four modes for configuring thes
   
 The settings are described in the "User Interface Reference" section of this documentation. For more information about the settings and how the settings are applied in each mode, see the following topics :  
   
--   [Project Settings (Conversion)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+-   [Project Settings (Conversion)](./project-settings-conversion-accesstosql.md)  
   
--   [Project Settings (Migration)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
+-   [Project Settings (Migration)](./project-settings-migration-accesstosql.md)  
   
--   [Project Settings (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [Project Settings (GUI)](../sybase/project-settings-gui-sybasetosql.md)  
   
--   [Project Settings (Type Mapping)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)  
+-   [Project Settings (Type Mapping)](./project-settings-type-mapping-accesstosql.md)  
   
--   [Project Settings (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
+-   [Project Settings (SQL Azure)](./project-settings-azure-sql-db-accesstosql.md)  
   
 ## Setting Project Options  
 In SSMA, you can configure default settings for all projects. These settings are saved to the SSMA configuration file and applied to any new project that you create.  
@@ -80,4 +81,3 @@ The next step in the migration depends on your project needs:
   
 ## See Also  
 [Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-  

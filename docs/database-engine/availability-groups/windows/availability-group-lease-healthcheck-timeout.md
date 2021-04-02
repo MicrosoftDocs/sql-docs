@@ -1,15 +1,15 @@
 ---
-title: "Mechanics of the availability group lease health check timeout"
+title: "Availability group lease health check timeout"
 description: "Mechanics and guidelines for the lease, cluster, and health check times for Always On availability groups."
-ms.custom: "seodec18"
+ms.custom: seo-lt-2019
 ms.date: "05/02/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: availability-groups
+ms.topic: how-to
 ms.assetid:
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Mechanics and guidelines of lease, cluster, and health check timeouts for Always On availability groups 
 
@@ -39,7 +39,7 @@ Unlike other failover mechanisms, the SQL Server instance plays an active role i
 
 The lease mechanism enforces synchronization between SQL Server and Windows Server Failover Cluster. When a failover command, is issued the cluster service makes an offline call to the resource DLL of the current primary replica. The resource DLL first attempts to take the AG offline  using a stored procedure. If this stored procedure fails or times-out, the failure is reported back to the cluster service, which then issues a terminate command. The terminate again attempts to execute the same stored procedure, but the cluster this time does not wait for the resource DLL to report success or failure before bringing the AG online on a new replica. If this second procedure call fails, then the resource host will have to rely on the lease mechanism to take the instance offline. When the resource DLL is called to take the AG offline, the resource DLL signals the lease stop event, waking up the SQL Server lease worker thread to take the AG offline. Even if this stop event is not signaled, the lease will expire, and the replica will transition to the resolving state. 
 
-The lease is primarily a synchronization mechanism between the primary instance and the cluster, but it can also create failure conditions where there was otherwise no need to fail over. For example, high CPU, out-of-memory conditions (low virtual memory, process paging), SQL process failing to respond while generating a memory dump, system-wide hang, cluster (WSFC) going offline  (e.g due to quorum loss) can prevent lease renewal from the SQL instance and causing a restart or failover. 
+The lease is primarily a synchronization mechanism between the primary instance and the cluster, but it can also create failure conditions where there was otherwise no need to fail over. For example, high CPU, out-of-memory conditions (low virtual memory, process paging), SQL process not responding while generating a memory dump, system not responding, cluster (WSFC) going offline  (e.g due to quorum loss) can prevent lease renewal from the SQL instance and causing a restart or failover. 
 
 ## Guidelines for cluster timeout values 
 
@@ -92,7 +92,7 @@ The delay values determine the wait time between heartbeats from the cluster ser
 To list all current cluster values, on any node in the target cluster open an elevated PowerShell terminal. Run the following command:
 
 ```PowerShell
- Get-Cluster | fl \
+ Get-Cluster | fl *
 ``` 
 
 To update any of these values, run the following command in an elevated PowerShell terminal:
@@ -119,6 +119,8 @@ The lease mechanism is controlled by a single value specific to each AG in a WSF
 
    Depending on the AG's configuration there may be additional resources for listeners, shared disks, file shares, etc., these resources do not require any additional configuration. 
 
+> [!NOTE]  
+>  The new value of property 'LeaseTimeout' will take effect after the resource is taken offline and brought online again.
    
 ### Health Check Values 
 
@@ -147,12 +149,11 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
   - SameSubnetDelay \<= CrossSubnetDelay 
   
- | Timeout setting | Purpose | Between | Uses | IsAlive & LooksAlive | Causes | Outcome 
+ | Timeout setting | Purpose | Between | Uses | IsAlive & LooksAlive | Causes | Outcome |
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
- | Lease timeout </br> **Default: 20000** | Prevent splitbrain | Primary to Cluster </br> (HADR) | [Windows event objects](/windows/desktop/Sync/event-objects)| Used in both | OS hang, low virtual memory, working set paging, generating dump, pegged CPU, WSFC down (loss of quorum) | AG resource offline-online, failover |  
- | Session timeout </br> **Default: 10000** | Inform of communication issue between Primary and Secondary | Secondary to Primary </br> (HADR) | [TCP Sockets (messages sent via DBM endpoint)](/windows/desktop/WinSock/windows-sockets-start-page-2) | Used in neither | Network communication, </br> Issues on secondary - down, OS hang, resource contention | Secondary - DISCONNECTED | 
- |HealthCheck timeout  </br> **Default: 30000** | Indicate timeout while trying to determine health of the Primary replica | Cluster to Primary </br> (FCI & HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Used in both | Failure conditions met, OS hang, low virtual memory, working set trim, generating dump, WSFC (loss of quroum), scheduler issues (dead locked schedulers)| AG resouce Offline-oline or Failover, FCI restart/failover |  
-  | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
+ | Lease timeout </br> **Default: 20000** | Prevent splitbrain | Primary to Cluster </br> (HADR) | [Windows event objects](/windows/desktop/Sync/event-objects)| Used in both | OS not responding, low virtual memory, working set paging, generating dump, pegged CPU, WSFC down (loss of quorum) | AG resource offline-online, failover |  
+ | Session timeout </br> **Default: 10000** | Inform of communication issue between Primary and Secondary | Secondary to Primary </br> (HADR) | [TCP Sockets (messages sent via DBM endpoint)](/windows/desktop/WinSock/windows-sockets-start-page-2) | Used in neither | Network communication, </br> Issues on secondary - down, OS not responding, resource contention | Secondary - DISCONNECTED | 
+ |HealthCheck timeout  </br> **Default: 30000** | Indicate timeout while trying to determine health of the Primary replica | Cluster to Primary </br> (FCI & HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Used in both | Failure conditions met, OS not responding, low virtual memory, working set trim, generating dump, WSFC (loss of quroum), scheduler issues (dead locked schedulers)| AG resouce Offline-online or Failover, FCI restart/failover |  
 
 ## See Also    
 

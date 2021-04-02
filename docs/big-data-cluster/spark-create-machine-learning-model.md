@@ -1,17 +1,18 @@
 ---
-title: Create and export Spark machine learning models with MLeap 
-titleSuffix: SQL Server big data clusters
-description: Use PySpark to train and create machine learning models with Spark on SQL Server big data clusters (preview). Export with MLeap, and then score the model with Java in SQL Server.
-author: lgongmsft
-ms.author: lgong
+title: "Create, export Spark ML models: MLeap"
+titleSuffix: SQL Server Big Data Clusters
+description: Use PySpark to train and create machine learning models with Spark on SQL Server Big Data Clusters. Export with MLeap, and then score the model with Java in SQL Server.
+author: RogPodge
+ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
+ms.technology: machine-learning-bdc
 ---
 
-# Create, export, and score Spark machine learning models on SQL Server big data clusters
+# Create, export, and score Spark machine learning models on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 The following sample shows how to build a model with [Spark ML](https://spark.apache.org/docs/latest/ml-guide.html), export the model to [MLeap](http://mleap-docs.combust.ml/), and score the model in SQL Server with its [Java Language Extension](../language-extensions/language-extensions-overview.md). This is done in the context of a SQL Server 2019 big data cluster.
 
@@ -36,7 +37,7 @@ To run the sample, you must also have the following prerequisites:
 
 For this sample, census data (**AdultCensusIncome.csv**) is used to build a Spark ML pipeline model.
 
-1. Use the [mleap_sql_test/setup.sh](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/setup.sh) file to download the data set from internet and put it on HDFS in your SQL Server big data cluster. This enables it to be accessed by Spark.
+1. Use the [mleap_sql_test/setup.sh](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/setup.sh) file to download the data set from internet and put it on HDFS in your SQL Server big data cluster. This enables it to be accessed by Spark.
 
 1. Then download the sample notebook [train_score_export_ml_models_with_spark.ipynb](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb). From a PowerShell or bash command line, run the following command to download the notebook:
 
@@ -46,21 +47,21 @@ For this sample, census data (**AdultCensusIncome.csv**) is used to build a Spar
 
    This notebook contains cells with the required commands for this section of the sample.
 
-1. Open the notebook in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).
+1. Open the notebook in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks with SQL Server](../azure-data-studio/notebooks/notebooks-guidance.md).
 
 The data is first read into Spark and split into training and testing data sets. Then the code trains a pipeline model with the training data. Finally, it exports the model to an MLeap bundle.
 
 > [!TIP]
-> You can also review or run the Python code associated with these steps outside of the notebook in the [mleap_sql_test/mleap_pyspark.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_pyspark.py) file.
+> You can also review or run the Python code associated with these steps outside of the notebook in the [mleap_sql_test/mleap_pyspark.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/mleap_pyspark.py) file.
 
 ## Model scoring with SQL Server
 
-Now that the Spark ML pipeline model is in a common serialization [MLeap bundle](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) format, you can score the model in Java without the presence of Spark. 
+Now that the Spark ML pipeline model is in a common serialization [MLeap bundle](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) format, you can score the model in Java without the presence of Spark.
 
-This sample uses the [Java Language Extension](../language-extensions/language-extensions-overview.md) in SQL Server. In order to score the model in SQL Server, you first need to build a Java application that can load the model into Java and score it. You can find the sample code for this Java application in the [mssql-mleap-app folder](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mssql-mleap-app).
+This sample uses the [Java Language Extension](../language-extensions/language-extensions-overview.md) in SQL Server. In order to score the model in SQL Server, you first need to build a Java application that can load the model into Java and score it. You can find the sample code for this Java application in the [mssql-mleap-app folder](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app).
 
-After building the sample, you can use Transact-SQL to call the Java application and score the model with a database table. This can be seen in thee [mleap_sql_test/mleap_sql_tests.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_sql_tests.py) source file.
+After building the sample, you can use Transact-SQL to call the Java application and score the model with a database table. This can be seen in thee [mleap_sql_test/mleap_sql_tests.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/mleap_sql_tests.py) source file.
 
 ## Next steps
 
-For more information about big data clusters, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md)
+For more information about big data clusters, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)

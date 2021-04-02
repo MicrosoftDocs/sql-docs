@@ -1,18 +1,20 @@
 ---
-title: "SQL Server Backup and Restore with Microsoft Azure Blob Storage Service | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/25/2019"
+description: "SQL Server Backup and Restore with Microsoft Azure Blob Storage Service"
+title: "Backup & restore with Azure Blob Storage"
+storage: Learn about SQL Server backup to and restore from Azure Blob storage, including the benefits of using Azure Blob storage to store SQL Server backups.
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # SQL Server Backup and Restore with Microsoft Azure Blob Storage Service
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   ![Backup to Azure blob graphic](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Backup to Azure blob graphic")  
   
@@ -20,7 +22,7 @@ ms.author: mikeray
   
  SQL Server supports storing backups to the Microsoft Azure Blob storage service in the following ways:  
   
--   **Manage your backups to Microsoft Azure:** Using the same methods used to backup to DISK and TAPE, you can now back up to Microsoft Azure storage by specifying URL as the backup destination. You can use this feature to manually backup or configure your own backup strategy like you would for a local storage or other off-site options. This feature is also referred to as **SQL Server Backup to URL**. For more information, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). This feature is available in SQL Server 2012 SP1 CU2 or later. This feature has been enhanced in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] to provide increased performance and functionality through the use of block blobs, Shared Access Signatures, and striping.  
+-   **Manage your backups to Microsoft Azure:** Using the same methods used to backup to DISK and TAPE, you can now back up to Microsoft Azure storage by specifying URL as the backup destination. You can use this feature to manually backup or configure your own backup strategy like you would for a local storage or other off-site options. This feature is also referred to as **SQL Server Backup to URL**. For more information, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). This feature is available in SQL Server 2012 SP1 CU2 or later. This feature has been enhanced in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] to provide increased performance and functionality through the use of block blobs, Shared Access Signatures, and striping.  
   
     > [!NOTE]  
     >  For SQL Server versions previous to SQL Server 2012 SP1 CU2, you can use the add-in SQL Server Backup to Microsoft Azure Tool to quickly and easily create backups to Microsoft Azure storage. For more information, see [download center](https://go.microsoft.com/fwlink/?LinkID=324399).  
@@ -34,7 +36,7 @@ ms.author: mikeray
 -   Flexible, reliable, and limitless off-site storage: Storing your backups on Microsoft Azure Blob service can be a convenient, flexible, and easy to access off-site option. Creating off-site storage for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups can be as easy as modifying your existing scripts/jobs. Off-site storage should typically be far enough from the production database location to prevent a single disaster that might impact both the off-site and production database locations. By choosing to geo replicate the Blob storage you have an extra layer of protection in the event of a disaster that could affect the whole region. In addition, backups are available from anywhere and at any time and can easily be accessed for restores.  
   
     > [!IMPORTANT]  
-    >  Through the use of block blobs in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can stripe your backup set to support backup files sizes up to 12.8 TB.  
+    >  Through the use of block blobs in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can stripe your backup set to support backup files sizes up to 12.8 TB.  
   
 -   Backup Archive: The Microsoft Azure Blob Storage service offers a better alternative to the often used tape option to archive backups. Tape storage might require physical transportation to an off-site facility and measures to protect the media. Storing your backups in Microsoft Azure Blob Storage provides an instant, highly available, and a durable archiving option.  
   

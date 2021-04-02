@@ -1,4 +1,5 @@
 ---
+description: "Index Properties F1 Help"
 title: "Index Properties F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
@@ -18,10 +19,10 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Index Properties F1 Help
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   The sections in this topic refer to various index properties that are available by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dialogs.  
   
@@ -127,7 +128,76 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  **Allow Nulls**  
  Displays **Yes** when the table definition allows null values for the column. Displays **No** when the table definition does not allow nulls for the column.  
+
+##  <a name="Options"></a> Options Page Options
+ Use this page to view or modify various index options.
+
+### General Options
+**Auto recompute statistics**<br>
+Specifies whether distribution statistics are recomputed automatically. The default is **True** which is equivalent to setting STATISTICS_NORECOMPUTE to OFF. Setting this to **False** sets STATISTICS_NORECOMPUTE to ON.
+
+**Ignore duplicate values** <br>
+Specifies the error response when an insert operation attempts to insert duplicate key values into a unique index.
+
+True<br>
+A warning message will occur when duplicate key values are inserted into a unique index. Only the rows violating the uniqueness constraint will fail.
+
+False<br>
+An error message will occur when duplicate key values are inserted into a unique index. The entire INSERT operation will be rolled back.
+
+### Locks Options
+
+**Allow row locks**<br>
+Specifies whether row locks are allowed.
+
+**Allow page locks**<br>
+Specifies whether page locks are allowed.
+
+### Operation Options
+
+ **Allow online DML processing**  
+ Allows users to access the underlying table or clustered index data and any associated nonclustered indexes during an index operation such as CREATE or ALTER. For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
+> [!NOTE]  
+>  This option is not available for XML indexes, or if the index is a disabled clustered index.  
+  
+ **Maximum degree of parallelism**  
+ Limits the number of processors to use during parallel plan execution. The default value, 0, uses the actual number of available CPUs. Setting the value to 1 suppresses parallel plan generation; setting the value to a number greater than 1 restricts the maximum number of processors used by a single query execution. This option only becomes available if the dialog box is in the **Rebuild** or **Recreate** state. For more information, see [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
+  
+> [!NOTE]  
+>  If a value greater than the number of available CPUs is specified, the actual number of available CPUs is used.  
+
+
+**Optimize for sequential key**<br>
+Specifies whether or not to optimize for last-page insert contention. For more information, see [Sequential Keys](../../t-sql/statements/create-index-transact-sql.md#sequential-keys).
+
+### Storage Options
+
+**Sort in tempdb**<br>
+Specifies whether to store temporary sort results in tempdb.
+
+True<br>
+The intermediate sort results that are used to build the index are stored in tempdb. This may reduce the time required to create an index if tempdb is on a different set of disks than the user database. However, this increases the amount of disk space that is used during the index build.
+
+False<br>
+The intermediate sort results are stored in the same database as the index. For more information, see [SORT_IN_TEMPDB Option For Indexes](./sort-in-tempdb-option-for-indexes.md).
+
+**Fill factor**<br>
+Specifies a percentage that indicates how full the Database Engine should make the leaf level of each index page during index creation or rebuild. fillfactor must be an integer value from 1 to 100. If fillfactor is 100, the Database Engine creates indexes with leaf pages filled to capacity.
+The FILLFACTOR setting applies only when the index is created or rebuilt. The Database Engine does not dynamically keep the specified percentage of empty space in the pages.
+
+For more information, see [Specify Fill Factor for an Index](./specify-fill-factor-for-an-index.md).
+
+**Pad index**<br>
+Specifies index padding.
+
+True<br>
+The percentage of free space that is specified by fillfactor is applied to the intermediate-level pages of the index.
+
+False or fillfactor is not specified<br>
+The intermediate-level pages are filled to near capacity, leaving sufficient space for at least one row of the maximum size the index can have, considering the set of keys on the intermediate pages.
+
+
 ##  <a name="Storage"></a> Storage Page Options  
  Use this page to view or modify filegroup or partition scheme properties for the selected index. Only shows options related to the type of index.  
   
@@ -158,18 +228,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 > [!NOTE]  
 >  If the table column is a computed column, **Column Data Type** displays "computed column."  
-  
- **Allow online processing of DML statements while moving the index**  
- Allows users to access the underlying table or clustered index data and any associated nonclustered indexes during the index operation. For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
-  
-> [!NOTE]  
->  This option is not available for XML indexes, or if the index is a disabled clustered index.  
-  
- **Set maximum degree of parallelism**  
- Limits the number of processors to use during parallel plan execution. The default value, 0, uses the actual number of available CPUs. Setting the value to 1 suppresses parallel plan generation; setting the value to a number greater than 1 restricts the maximum number of processors used by a single query execution. This option only becomes available if the dialog box is in the **Rebuild** or **Recreate** state. For more information, see [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
-  
-> [!NOTE]  
->  If a value greater than the number of available CPUs is specified, the actual number of available CPUs is used.  
   
 ##  <a name="Spatial"></a> Spatial Page Index Options  
  Use the **Spatial** page to view or specify the values of the spatial properties. For more information, see [Spatial Data &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  

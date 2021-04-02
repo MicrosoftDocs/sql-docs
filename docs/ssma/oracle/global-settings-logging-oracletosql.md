@@ -1,4 +1,5 @@
 ---
+description: "Global Settings (Logging) (OracleToSQL)"
 title: "Global Settings (Logging) (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,9 +8,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Global Settings (Logging) (OracleToSQL)
 Use the **Global Settings** dialog box to specify the logging settings for SSMA. Typically, you would change these settings only when working with product support.  
@@ -37,7 +38,7 @@ The following options are available under **Messages Level**:
   
 For each option under **Messages Level**, configure one of the following logging levels for SSMA:  
   
-|||  
+|Level|Description|  
 |-|-|  
 |**Fatal Error**|Write only fatal error messages to the log.|  
 |**Error**|Write error and fatal error messages to the log.|  

@@ -1,7 +1,8 @@
 ---
 title: "Install SQL Server Database Engine | Microsoft Docs"
+description: Learn about features that can be installed when you select SQL Server Database Engine from Components to Install of the SQL Server Installation Wizard.
 ms.custom: ""
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -9,13 +10,13 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server], installing"
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server Database Engine
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 ## Overview
 The [!INCLUDE[ssDE](../../includes/ssde-md.md)] component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is the core service for storing, processing, and securing data. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] provides controlled access and rapid transaction processing to meet the requirements of the most demanding data consuming applications in your enterprise.  
@@ -32,12 +33,16 @@ The following features are installed when you select **[!INCLUDE[ssNoVersion](..
   
 -   [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md) - is an optional component  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
--   [Machine Learning Services (In-Database) with R, Python and Java](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - is an optional component
+::: moniker range=">=sql-server-ver15"
+-   [Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R and Python) and [Language Extensions](../..//language-extensions/install/windows-java.md) (Java) - is an optional component
 ::: moniker-end
 
-::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
--   [Machine Learning Services (In-Database) with R, and Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - is an optional component
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
+-   [Machine Learning Services (In-Database)](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R and Python) - is an optional component
+::: moniker-end
+
+::: moniker range=">=sql-server-2016 <=sql-server-2016"
+-   [R Services (In-Database)](../../machine-learning/install/sql-r-services-windows-install.md) - is an optional component
 ::: moniker-end
 
 -   Full-Text Search - is an optional component  
@@ -62,13 +67,12 @@ The following features are installed when you select **[!INCLUDE[ssNoVersion](..
   
 
 > [!NOTE]  
->  By default, sample databases and sample code are not installed as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. To install sample databases and sample code, see [Microsoft SQL Server Samples](../../sample/microsoft-sql-server-samples.md). See older samples on [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
+>  By default, sample databases and sample code are not installed as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. To install sample databases and sample code, see [Microsoft SQL Server Samples](../../samples/sql-samples-where-are.md). See older samples on [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
 
   
 ## See also  
  [Editions and supported features of SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
- [High Availability Solutions &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
+ [High Availability Solutions &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md)   
  [Upgrade SQL Server Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
-  
   

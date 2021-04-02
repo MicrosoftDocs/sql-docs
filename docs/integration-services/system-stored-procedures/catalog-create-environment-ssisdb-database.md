@@ -1,4 +1,5 @@
 ---
+description: "catalog.create_environment (SSISDB Database)"
 title: "catalog.create_environment (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -8,24 +9,24 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.create_environment (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates an environment in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   
 ## Syntax  
   
 ```sql  
-catalog.create_environment [@folder_name =] folder_name  
-     , [@environment_name =] environment_name  
-  [  , [@environment_description =] environment_description ]  
+catalog.create_environment [ @folder_name = ] folder_name  
+     , [ @environment_name = ] environment_name  
+  [  , [ @environment_description = ] environment_description ]  
 ```  
   
 ## Arguments  

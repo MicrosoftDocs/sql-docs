@@ -1,17 +1,18 @@
 ---
-title: "Handling Errors | Microsoft Docs"
+title: "Handling errors"
+description: "Learn about error handling and what information the SQLServerException class provides in the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "01/21/2019"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8fd5b5ef-d939-4b78-b900-5b7b6ddb3eb9
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
-# Handling Errors
+# Handling errors
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   When using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], all database error conditions are returned to your Java application as exceptions using the [SQLServerException](../../connect/jdbc/reference/sqlserverexception-class.md) class. The following methods of the SQLServerException class are inherited from java.sql.SQLException and java.lang.Throwable; and they can be used to return specific information about the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error that has occurred:  
@@ -46,7 +47,7 @@ The following methods of the `SQLServerError` class can be used to obtain additi
   
  [!code[JDBC#HandlingErrors1](../../connect/jdbc/codesnippet/Java/handling-errors_1.java)]  
   
-## See Also  
- [Diagnosing Problems with the JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+## See also  
+ [Diagnosing problems with the JDBC driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

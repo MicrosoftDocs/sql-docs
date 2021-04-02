@@ -1,5 +1,6 @@
 ---
-title: "Bar Charts (Report Builder and SSRS) | Microsoft Docs"
+title: "Bar Charts (Report Builder) | Microsoft Docs"
+description: Display data horizontally with a bar chart to represent data with a finite start and end date in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -61,7 +62,6 @@ ms.author: maggies
  [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatting the Legend on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [Add Bevel, Emboss, and Texture Styles to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Tutorial: Adding a Bar Chart to a Report (Report Builder)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutorial: Adding a Bar Chart to a Report](https://go.microsoft.com/fwlink/?LinkId=198042)  
-  
+ [Tutorial: Adding a Bar Chart to a Report (Report Builder)](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [Tutorial: Adding a Bar Chart to a Report](/previous-versions/sql/sql-server-2008-r2/cc281302(v=sql.105))  
   

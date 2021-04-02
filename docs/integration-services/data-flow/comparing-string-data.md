@@ -1,4 +1,5 @@
 ---
+description: "Comparing String Data"
 title: "Comparing String Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,12 +15,12 @@ helpviewer_keywords:
   - "converting string data"
   - "string comparisons"
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Comparing String Data
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   String comparisons are an important part of many of the transformations performed by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], and string comparisons are also used in the evaluation of expressions in variables and property expressions. For example, the Sort transformation compares values in a dataset to sort data in ascending or descending order.  
@@ -80,7 +81,6 @@ ms.author: janinez
   
 ## See Also  
  [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)   
- [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
- [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
-  
+ [Fast Parse](./parsing-data.md)   
+ [Standard Parse](./parsing-data.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: "Replication tutorials | Microsoft Docs"
+description: Use these tutorials to help prepare your server for replication in SQL Server, and then learn to configure both transactional and merge replication.
 ms.custom: ""
 ms.date: "04/09/2018"
 ms.prod: sql
@@ -14,9 +15,10 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication tutorials
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 Replication is a powerful solution for moving data, or subsets of data, between servers. You can replicate data between servers that are fully connected by using transactional replication. You can also replicate data between servers and clients that are intermittently connected by using merge replication. In this article, you will find tutorials that help prepare your server for replication, and then teach you to configure both transactional and merge replication. 
   
 In the replication tutorials, "publisher" refers to the server that contains the source data that's being replicated. "Subscriber" refers to the destination server. The publisher and subscriber might share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but it is not a requirement. For more information, see the [overview of the replication publishing model](../../relational-databases/replication/publish/replication-publishing-model-overview.md).  
@@ -43,8 +45,7 @@ Learn how to configure merge replication to exchange data between a server and o
 ## See also  
 [View and modify replication security settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
 
-[Transactional replication overview](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
+[Transactional replication overview](./transactional/transactional-replication.md) 
 
-[Merge replication overview](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)
+[Merge replication overview](./merge/merge-replication.md)
 
-  

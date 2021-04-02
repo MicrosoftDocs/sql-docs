@@ -1,4 +1,5 @@
 ---
+description: "ISNULL (SSIS Expression)"
 title: "ISNULL (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -11,12 +12,12 @@ helpviewer_keywords:
   - "null values [Integration Services]"
   - "ISNULL function"
 ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # ISNULL (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns a Boolean result based on whether an expression is null.  

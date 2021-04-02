@@ -1,12 +1,13 @@
 ---
+description: "SELECT - ORDER BY Clause (Transact-SQL)"
 title: "ORDER BY Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/24/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ORDER_TSQL"
   - "BY"
@@ -38,11 +39,11 @@ helpviewer_keywords:
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - ORDER BY Clause (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Sorts data returned by a query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this clause to:  
   
@@ -57,7 +58,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 ## Syntax  
   
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -75,8 +76,8 @@ ORDER BY order_by_expression
 }  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 [ ORDER BY   
     {  
@@ -86,7 +87,9 @@ ORDER BY order_by_expression
 ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *order_by_expression*  
  Specifies a column or expression on which to sort the query result set. A sort column can be specified as a name or column alias, or a nonnegative integer representing the position of the column in the select list.  
   
@@ -110,7 +113,7 @@ ORDER BY SchemaName + ''; -- wrong
  OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  Specifies the number of rows to skip before it starts to return rows from the query expression. The value can be an integer constant or expression that is greater than or equal to zero.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
   
  *offset_row_count_expression* can be a variable, parameter, or constant scalar subquery. When a subquery is used, it cannot reference any columns defined in the outer query scope. That is, it cannot be correlated with the outer query.  
   
@@ -118,10 +121,10 @@ ORDER BY SchemaName + ''; -- wrong
   
  In query execution plans, the offset row count value is displayed in the **Offset** attribute of the TOP query operator.  
   
- FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
+ FETCH { FIRST \| NEXT } { *integer_constant* \| *fetch_row_count_expression* } { ROW \| ROWS } ONLY  
  Specifies the number of rows to return after the OFFSET clause has been processed. The value can be an integer constant or expression that is greater than or equal to one.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  *fetch_row_count_expression* can be a variable, parameter, or constant scalar subquery. When a subquery is used, it cannot reference any columns defined in the outer query scope. That is, it cannot be correlated with the outer query.  
   
@@ -137,7 +140,7 @@ ORDER BY SchemaName + ''; -- wrong
  In a SELECT TOP (*N*) statement, always use an ORDER BY clause. This is the only way to predictably indicate which rows are affected by TOP. For more information, see [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
 ## Interoperability  
- When used with a SELECT...INTO statement to insert rows from another source, the ORDER BY clause does not guarantee the rows are inserted in the specified order.  
+ When used with a SELECT...INTO or INSERT...SELECT statement to insert rows from another source, the ORDER BY clause does not guarantee the rows are inserted in the specified order.  
   
  Using OFFSET and FETCH in a view does not change the updateability property of the view.  
   
@@ -226,7 +229,6 @@ GO
 SELECT ProductID, Name, Color  
 FROM Production.Product  
 ORDER BY ListPrice;  
-  
 ```  
   
 #### C. Specifying an alias as the sort column  
@@ -239,7 +241,6 @@ SELECT name, SCHEMA_NAME(schema_id) AS SchemaName
 FROM sys.objects  
 WHERE type = 'U'  
 ORDER BY SchemaName;  
-  
 ```  
   
 #### D. Specifying an expression as the sort column  
@@ -251,7 +252,6 @@ GO
 SELECT BusinessEntityID, JobTitle, HireDate  
 FROM HumanResources.Employee  
 ORDER BY DATEPART(year, HireDate);  
-  
 ```  
   
 ###  <a name="SortOrder"></a> Specifying ascending and descending sort order  
@@ -265,7 +265,6 @@ GO
 SELECT ProductID, Name FROM Production.Product  
 WHERE Name LIKE 'Lock Washer%'  
 ORDER BY ProductID DESC;  
-  
 ```  
   
 #### B. Specifying an ascending order  
@@ -277,7 +276,6 @@ GO
 SELECT ProductID, Name FROM Production.Product  
 WHERE Name LIKE 'Lock Washer%'  
 ORDER BY Name ASC ;  
-  
 ```  
   
 #### C. Specifying both ascending and descending order  
@@ -289,7 +287,6 @@ GO
 SELECT LastName, FirstName FROM Person.Person  
 WHERE LastName LIKE 'R%'  
 ORDER BY FirstName ASC, LastName DESC ;  
-  
 ```  
   
 ###  <a name="Collation"></a> Specifying a collation  
@@ -298,7 +295,7 @@ ORDER BY FirstName ASC, LastName DESC ;
 ```sql
 USE tempdb;  
 GO  
-CREATE TABLE #t1 (name nvarchar(15) COLLATE Latin1_General_CI_AI)  
+CREATE TABLE #t1 (name NVARCHAR(15) COLLATE Latin1_General_CI_AI)  
 GO  
 INSERT INTO #t1 VALUES(N'Sánchez'),(N'Sanchez'),(N'sánchez'),(N'sanchez');  
   
@@ -310,7 +307,6 @@ ORDER BY name;
 SELECT name  
 FROM #t1  
 ORDER BY name COLLATE Latin1_General_CS_AS;  
-  
 ```  
   
 ###  <a name="Case"></a> Specifying a conditional order  
@@ -322,7 +318,6 @@ FROM HumanResources.Employee
 ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
         ,CASE WHEN SalariedFlag = 0 THEN BusinessEntityID END;  
 GO  
-  
 ```  
   
 ```sql
@@ -331,7 +326,6 @@ FROM Sales.vSalesPerson
 WHERE TerritoryName IS NOT NULL  
 ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName  
          ELSE CountryRegionName END;  
-  
 ```  
   
 ###  <a name="Rank"></a> Using ORDER BY in a ranking function  
@@ -352,13 +346,12 @@ FROM Sales.SalesPerson AS s
     INNER JOIN Person.Address AS a   
         ON a.AddressID = p.BusinessEntityID  
 WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;  
-  
 ```  
   
 ###  <a name="Offset"></a> Limiting the number of rows returned  
  The following examples use OFFSET and FETCH to limit the number of rows returned by a query.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 #### A. Specifying integer constants for OFFSET and FETCH values  
  The following example specifies an integer constant as the value for the OFFSET and FETCH clauses. The first query returns all rows sorted by the column `DepartmentID`. Compare the results returned by this query with the results of the two queries that follow it. The next query uses the clause `OFFSET 5 ROWS` to skip the first 5 rows and return all remaining rows. The final query uses the clause `OFFSET 0 ROWS` to start with the first row and then uses `FETCH NEXT 10 ROWS ONLY` to limit the rows returned to 10 rows from the sorted result set.  
@@ -382,24 +375,22 @@ FROM HumanResources.Department
 ORDER BY DepartmentID   
     OFFSET 0 ROWS  
     FETCH NEXT 10 ROWS ONLY;  
-  
 ```  
   
 #### B. Specifying variables for OFFSET and FETCH values  
- The following example declares the variables `@StartingRowNumber` and `@FetchRows` and specifies these variables in the OFFSET and FETCH clauses.  
+ The following example declares the variables `@RowsToSkip` and `@FetchRows` and specifies these variables in the OFFSET and FETCH clauses.  
   
 ```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
-DECLARE @StartingRowNumber tinyint = 1  
-      , @FetchRows tinyint = 8;  
+DECLARE @RowsToSkip TINYINT = 2
+      , @FetchRows TINYINT = 8;  
 SELECT DepartmentID, Name, GroupName  
 FROM HumanResources.Department  
 ORDER BY DepartmentID ASC   
-    OFFSET @StartingRowNumber ROWS   
+    OFFSET @RowsToSkip ROWS   
     FETCH NEXT @FetchRows ROWS ONLY;  
-  
 ```  
   
 #### C. Specifying expressions for OFFSET and FETCH values  
@@ -410,15 +401,14 @@ USE AdventureWorks2012;
 GO  
   
 -- Specifying expressions for OFFSET and FETCH values      
-DECLARE @StartingRowNumber tinyint = 1  
-      , @EndingRowNumber tinyint = 8;  
+DECLARE @StartingRowNumber TINYINT = 1  
+      , @EndingRowNumber TINYINT = 8;  
 SELECT DepartmentID, Name, GroupName  
 FROM HumanResources.Department  
 ORDER BY DepartmentID ASC   
     OFFSET @StartingRowNumber - 1 ROWS   
     FETCH NEXT @EndingRowNumber - @StartingRowNumber + 1 ROWS ONLY  
 OPTION ( OPTIMIZE FOR (@StartingRowNumber = 1, @EndingRowNumber = 20) );  
-  
 ```  
   
 #### D. Specifying a constant scalar subquery for OFFSET and FETCH values  
@@ -428,11 +418,11 @@ OPTION ( OPTIMIZE FOR (@StartingRowNumber = 1, @EndingRowNumber = 20) );
 -- Specifying a constant scalar subquery  
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE dbo.AppSettings (AppSettingID int NOT NULL, PageSize int NOT NULL);  
+CREATE TABLE dbo.AppSettings (AppSettingID INT NOT NULL, PageSize INT NOT NULL);  
 GO  
 INSERT INTO dbo.AppSettings VALUES(1, 10);  
 GO  
-DECLARE @StartingRowNumber tinyint = 1;  
+DECLARE @StartingRowNumber TINYINT = 1;  
 SELECT DepartmentID, Name, GroupName  
 FROM HumanResources.Department  
 ORDER BY DepartmentID ASC   
@@ -460,8 +450,8 @@ GO
 BEGIN TRANSACTION;  
 GO  
 -- Declare and set the variables for the OFFSET and FETCH values.  
-DECLARE @StartingRowNumber int = 1  
-      , @RowCountPerPage int = 3;  
+DECLARE @StartingRowNumber INT = 1  
+      , @RowCountPerPage INT = 3;  
   
 -- Create the condition to stop the transaction after all rows have been returned.  
 WHILE (SELECT COUNT(*) FROM HumanResources.Department) >= @StartingRowNumber  

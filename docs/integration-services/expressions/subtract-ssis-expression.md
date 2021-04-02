@@ -1,4 +1,5 @@
 ---
+description: "- (Subtract) (SSIS Expression)"
 title: "- (Subtract) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -11,12 +12,12 @@ helpviewer_keywords:
   - "- (subtract)"
   - "subtract operator (-)"
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # - (Subtract) (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Subtracts the second numeric expression from the first one.  
@@ -37,10 +38,9 @@ numeric_expression1 - numeric_expression2
  Determined by the data types of the two arguments. For more information, see [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
 ## Remarks  
- Enclose the minus unary expression in parenthesis to ensure that the expression is evaluated in the correct order  
-  
-## Remarks  
- If either operand is null, the result is null.  
+ - Enclose the minus unary expression in parenthesis to ensure that the expression is evaluated in the correct order  
+
+ - If either operand is null, the result is null.  
   
 ## Expression Examples  
  This example subtracts numeric literals.  

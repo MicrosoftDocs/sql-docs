@@ -1,4 +1,5 @@
 ---
+description: "Run an SSIS package with C# code in a .NET app"
 title: "Run an SSIS project with .NET code (C#) | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart
@@ -6,12 +7,12 @@ ms.prod: sql
 ms.prod_service: "integration-services"
 ms.custom: ""
 ms.technology: integration-services
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Run an SSIS package with C# code in a .NET app
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This quickstart demonstrates how to write C# code to connect to a database server and run an SSIS package.

@@ -1,4 +1,5 @@
 ---
+description: "Understanding the Script Component Object Model"
 title: "Understanding the Script Component Object Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -12,12 +13,12 @@ dev_langs:
 helpviewer_keywords: 
   - "Script component [Integration Services], object model"
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Understanding the Script Component Object Model
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   As discussed in [Coding and Debugging the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md), the Script component project contains three project items:  

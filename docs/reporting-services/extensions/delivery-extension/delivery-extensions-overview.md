@@ -1,5 +1,6 @@
 ---
 title: "Delivery Extensions Overview | Microsoft Docs"
+description: Read an overview of delivery extensions, which you can use to deliver Reporting Services reports in various ways, such as through email or file sharing.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,20 +1,19 @@
 ---
-title: "Creating and Defining SQL Server Unit Tests | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Creating and Defining SQL Server Unit Tests
+description: Learn about SQL Server unit tests. View sources of information on how to create and run unit tests, troubleshoot problems, and perform other related tasks.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "sql.data.tools.unittesting.DatabaseMethodNameDialog"
-  - "sql.data.tools.unittesting.designer"
 ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Creating and Defining SQL Server Unit Tests
+
 You can run SQL Server unit tests to verify whether changes to one or more database objects in a schema have broken existing functionality in a database application. These tests complement the unit tests that your software developers create. You must run both kinds of tests to verify the behavior of your application.  
   
 You can verify the behavior of any object in your schema by adding a SQL Server unit test and adding a Transact\-SQL script to test that object. As an alternative, you can automatically generate a stub of a Transact\-SQL script if you want to verify the behavior of a particular function, trigger, or stored procedure. After you generate the stub, you must customize it to obtain meaningful results.  
@@ -39,9 +38,8 @@ In the following table, you can find descriptions of common tasks that support t
 [Running SQL Server Unit Tests](../ssdt/running-sql-server-unit-tests.md)  
 After you create your SQL Server unit tests, you can run them from the Test View window, the SQL Server Unit Test Designer, or by using Team Foundation Build.  
   
-[Scenario: Define Custom Test Conditions for Database Unit Tests](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[Scenario: Define Custom Test Conditions for Database Unit Tests](/previous-versions/visualstudio/visual-studio-2010/dd193282(v=vs.100))  
 You can create a custom test condition to test a behavior that the default test conditions cannot verify.  
   
 ## See Also  
 [Verifying Database Code by Using SQL Server Unit Tests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

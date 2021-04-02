@@ -1,11 +1,12 @@
 ---
+description: "MSSQLSERVER_5515"
 title: "MSSQLSERVER_5515 | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "5515 (Database Engine error)"
 ms.assetid: ccd793bc-ba5d-4782-8d72-731fd01fc177
@@ -14,12 +15,12 @@ ms.author: mathoma
 robots: noindex,nofollow
 ---
 # MSSQLSERVER_5515
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|MSSQLSERVER|  
 |Event ID|5515|  
 |Event Source|MSSQLSERVER|  

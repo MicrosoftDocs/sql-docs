@@ -1,4 +1,5 @@
 ---
+description: "sp_fulltext_keymappings (Transact-SQL)"
 title: "sp_fulltext_keymappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_fulltext_keymappings_TSQL"
   - "sp_fulltext_keymappings"
@@ -17,12 +18,12 @@ helpviewer_keywords:
   - "sp_fulltext_keymappings"
   - "full-text indexes [SQL Server], troubleshooting"
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_fulltext_keymappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Returns mappings between document identifiers (DocIds) and full-text key values. The DocId column contains values for a **bigint** integer that maps to a particular full-text key value in a full-text indexed table. DocId values that satisfy a search condition are passed from the Full-Text Engine to the Database Engine, where they are mapped to full-text key values from the base table being queried. The full-text key column is a unique index that is required on one column of the table.  
   
@@ -43,7 +44,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  Is an internal document identifier (DocId) that corresponds to the key value. An invalid *docid* value returns no results.  
   
  *key*  
- Is the full-text key value from the specified table. An invalid *key* value returns no results. For information about full-text key values, see [Manage Full-Text Indexes](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ Is the full-text key value from the specified table. An invalid *key* value returns no results. For information about full-text key values, see [Manage Full-Text Indexes](../search/create-and-manage-full-text-indexes.md).  
   
 > [!IMPORTANT]  
 >  For information about using one, two, or three parameters, see "Remarks," later in this topic.  
@@ -102,9 +103,8 @@ GO
   
  This example returns all the DocIds and full-text keys from the table, as follows:  
   
-||||  
-|-|-|-|  
-||`docid`|`key`|  
+| TABLE | docid | key |
+| ----- | ----- | --- |
 |`1`|`1`|`1`|  
 |`2`|`2`|`2`|  
 |`3`|`3`|`3`|  
@@ -127,12 +127,10 @@ GO
   
  This example returns the following results.  
   
-||||  
-|-|-|-|  
-||`docid`|`key`|  
+| TABLE | docid | key |
+| ----- | ----- | --- |
 |`4`|`4`|`4`|  
   
 ## See Also  
  [Full-Text Search and Semantic Search Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
-  
   

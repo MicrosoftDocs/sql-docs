@@ -1,4 +1,5 @@
 ---
+description: "Data Profiling Task and Viewer"
 title: "Data Profiling Task and Viewer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -12,12 +13,12 @@ helpviewer_keywords:
   - "data profiling"
   - "profiling data"
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Data Profiling Task and Viewer
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Data Profiling task provides data profiling functionality inside the process of extracting, transforming, and loading data. By using the Data Profiling task, you can achieve the following benefits:  

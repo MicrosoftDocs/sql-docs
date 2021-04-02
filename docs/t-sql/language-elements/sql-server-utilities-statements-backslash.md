@@ -1,12 +1,13 @@
 ---
+description: "Backslash (Line Continuation) (Transact-SQL)"
 title: "Backslash (Line Continuation) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/09/2017"
+ms.date: "07/25/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "\\_TSQL"
   - "\\"
@@ -26,11 +27,12 @@ helpviewer_keywords:
   - "line continuation character"
   - "reverse solidus"
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # Backslash (Line Continuation) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 `\`  breaks a long string constant, character or binary, into two or more lines for readability.  
   
@@ -38,12 +40,14 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql  
 <first section of string> \  
 <continued section of string>  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  \<first section of string>  
  Is the start of a string.  
   
@@ -51,7 +55,7 @@ ms.author: jroth
  Is the continuation of a string.  
   
 ## Remarks  
- This command returns the first and continued sections of the string as one string, without the backslash.  
+This command returns the first and continued sections of the string as one string, without the backslash. The new line after the backslash must either be a line feed character (U+000A) or a combination of carriage return (U+000D) and line feed (U+000A) in that order. 
 
 ## Examples  
 
@@ -59,10 +63,9 @@ ms.author: jroth
 
 The following example uses a backslash and a carriage return to split a character string into two lines.  
   
-```  
+```sql  
 SELECT 'abc\  
 def' AS [ColumnResult];  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -77,10 +80,9 @@ def' AS [ColumnResult];
 
 The following example uses a backslash and a carriage return to split a binary string into two lines.  
 
-```  
-SELECT 0xabc\  
+```sql  
+SELECT 0xabc\
 def AS [ColumnResult];  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

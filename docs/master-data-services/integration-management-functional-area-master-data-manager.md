@@ -1,5 +1,6 @@
 ---
-title: "Integration Management Functional Area (Master Data Manager) | Microsoft Docs"
+description: "Integration Management Functional Area (Master Data Manager)"
+title: Integration Management Functional Area
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Integration Management Functional Area (Master Data Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the Integration Management functional area, administrators can import data from staging tables and create subscription views to be used for subscribing systems. For more information about administrators, see [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   

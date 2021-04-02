@@ -1,4 +1,5 @@
 ---
+description: "Publication Information, Agents (Merge Publication)"
 title: "Publication Information, Agents (Merge Publication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -14,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Publication Information, Agents (Merge Publication)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **Agents** tab displays summary information on the Snapshot Agent for the selected publication.  
   
 ## Options  

@@ -1,5 +1,6 @@
 ---
 title: "Publish Data and Database Objects | Microsoft Docs"
+description: This article summarizes the tables and other database objects you can publish for replication in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -41,9 +42,10 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Publish Data and Database Objects
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   When creating a publication, you choose the tables and other database objects that you want to publish. You can publish the following database objects using replication.  
   
 |Database object|Snapshot replication and transactional replication|Merge replication|  
@@ -108,7 +110,7 @@ ms.author: "mathoma"
 ## Publishing Views  
  All types of replication allow you to replicate views. The view (and its accompanying index, if it is an indexed view) can be copied to the Subscriber, but the base table must also be replicated.  
   
- For indexed views, transactional replication also allows you to replicate the indexed view as a table rather than a view, eliminating the need to also replicate the base table. To do this, specify one of the "indexed view logbased" options for the *@type* parameter of [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). For more information about using **sp_addarticle**, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+ For indexed views, transactional replication also allows you to replicate the indexed view as a table rather than a view, eliminating the need to also replicate the base table. To do this, specify one of the "indexed view logbased" options for the *\@type* parameter of [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). For more information about using **sp_addarticle**, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ## Publishing User-Defined Functions  
  The CREATE FUNCTION statements for CLR functions and [!INCLUDE[tsql](../../../includes/tsql-md.md)] functions are copied to each Subscriber. In the case of CLR functions, the associated assembly is also copied. Changes to functions are replicated to Subscribers; changes to associated assemblies are not.  
@@ -146,7 +148,7 @@ ms.author: "mathoma"
 -   If you are publishing a database object that depends on one or more other database objects, you must publish all referenced objects. For example, if you publish a view that depends on a table, you must publish the table also.  
   
     > [!NOTE]  
-    >  If you add an article to a merge publication and an existing article depends on the new article, you must specify a processing order for both articles using the **@processing_order** parameter of [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) and [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Consider the following scenario: you publish a table but you do not publish a function that the table references. If you do not publish the function, the table cannot be created at the Subscriber. When you add the function to the publication: specify a value of **1** for the **@processing_order** parameter of **sp_addmergearticle**; and specify a value of **2** for the **@processing_order** parameter of **sp_changemergearticle**, specifying the table name for the parameter **@article**. This processing order ensures that you create the function at the Subscriber before the table that depends on it. You can use different numbers for each article as long as the number for the function is lower than the number for the table.  
+    >  If you add an article to a merge publication and an existing article depends on the new article, you must specify a processing order for both articles using the **\@processing_order** parameter of [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) and [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Consider the following scenario: you publish a table but you do not publish a function that the table references. If you do not publish the function, the table cannot be created at the Subscriber. When you add the function to the publication: specify a value of **1** for the **\@processing_order** parameter of **sp_addmergearticle**; and specify a value of **2** for the **\@processing_order** parameter of **sp_changemergearticle**, specifying the table name for the parameter **\@article**. This processing order ensures that you create the function at the Subscriber before the table that depends on it. You can use different numbers for each article as long as the number for the function is lower than the number for the table.  
   
 -   Publication names cannot include the following characters: % * [ ] | : " ? \ / < >.  
   
@@ -162,7 +164,7 @@ ms.author: "mathoma"
   
 -   Bound defaults created with [sp_bindefault &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md) are not replicated (bound defaults are deprecated in favor of defaults created with the DEFAULT keyword of ALTER TABLE or CREATE TABLE).  
   
--   Functions containing the **NOEXPAND** hint on indexed views cannot be published in the same publication as the referenced tables and indexed views, due to the order in which the distribution agent delivers them. To work around this problem, place the table and indexed view creation in a first publication, and add functions containing the **NOEXPAND** hint on the indexed views to a second publication which you publish after the first publication completes. Or, create scripts for these functions and deliver the script by using the *@post_snapshot_script* parameter of **sp_addpublication**.  
+-   Functions containing the **NOEXPAND** hint on indexed views cannot be published in the same publication as the referenced tables and indexed views, due to the order in which the distribution agent delivers them. To work around this problem, place the table and indexed view creation in a first publication, and add functions containing the **NOEXPAND** hint on the indexed views to a second publication which you publish after the first publication completes. Or, create scripts for these functions and deliver the script by using the *\@post_snapshot_script* parameter of **sp_addpublication**.  
   
 ### Schemas and Object Ownership  
  Replication has the following default behavior in the New Publication Wizard with respect to schemas and object ownership:  
@@ -186,9 +188,9 @@ ms.author: "mathoma"
 ### Publishing Tables in More Than One Publication  
  Replication supports publishing articles in multiple publications (including republishing data) with the following restrictions:  
   
--   If an article is published in a transactional publication and a merge publication, ensure that the *@published_in_tran_pub* property is set to TRUE for the merge article. For more information about setting properties, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md) and [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+-   If an article is published in a transactional publication and a merge publication, ensure that the *\@published_in_tran_pub* property is set to TRUE for the merge article. For more information about setting properties, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md) and [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
-     You should also set the *@published_in_tran_pub* property if an article is part of a transactional subscription and is included in a merge publication. If this is the case, be aware that by default transactional replication expects tables at the Subscriber to be treated as read-only; if merge replication makes data changes to a table in a transactional subscription, non-convergence of data can occur. To avoid this possibility, we recommend that any such table be specified as download-only in the merge publication. This prevents a merge Subscriber from uploading data changes to the table. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+     You should also set the *\@published_in_tran_pub* property if an article is part of a transactional subscription and is included in a merge publication. If this is the case, be aware that by default transactional replication expects tables at the Subscriber to be treated as read-only; if merge replication makes data changes to a table in a transactional subscription, non-convergence of data can occur. To avoid this possibility, we recommend that any such table be specified as download-only in the merge publication. This prevents a merge Subscriber from uploading data changes to the table. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 -   An article cannot be published in both a merge publication and a transactional publication with queued updating subscriptions.  
   
@@ -198,10 +200,10 @@ ms.author: "mathoma"
   
     |Property|Parameter in sp_addarticle|  
     |--------------|---------------------------------|  
-    |Identity range management|**@auto_identity_range** (deprecated) and **@identityrangemangementoption**|  
-    |Publisher identity range|**@pub_identity_range**|  
-    |Identity range|**@identity_range**|  
-    |Identity range threshold|**@threshold**|  
+    |Identity range management|**\@auto_identity_range** (deprecated) and **\@identityrangemangementoption**|  
+    |Publisher identity range|**\@pub_identity_range**|  
+    |Identity range|**\@identity_range**|  
+    |Identity range threshold|**\@threshold**|  
   
      For more information about these parameters, see [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
@@ -209,19 +211,19 @@ ms.author: "mathoma"
   
     |Property|Parameter in sp_addmergearticle|  
     |--------------|--------------------------------------|  
-    |Column tracking|**@column_tracking**|  
-    |Schema options|**@schema_option**|  
-    |Column filtering|**@vertical_partition**|  
-    |Subscriber upload options|**@subscriber_upload_options**|  
-    |Conditional delete tracking|**@delete_tracking**|  
-    |Error compensation|**@compensate_for_errors**|  
-    |Identity range management|**@auto_identity_range** (deprecated) and **@identityrangemangementoption**|  
-    |Publisher identity range|**@pub_identity_range**|  
-    |Identity range|**@identity_range**|  
-    |Identity range threshold|**@threshold**|  
-    |Partition options|**@partition_options**|  
-    |Blob column streaming|**@stream_blob_columns**|  
-    |Filter type|**@filter_type** (parameter in **sp_addmergefilter**)|  
+    |Column tracking|**\@column_tracking**|  
+    |Schema options|**\@schema_option**|  
+    |Column filtering|**\@vertical_partition**|  
+    |Subscriber upload options|**\@subscriber_upload_options**|  
+    |Conditional delete tracking|**\@delete_tracking**|  
+    |Error compensation|**\@compensate_for_errors**|  
+    |Identity range management|**\@auto_identity_range** (deprecated) and **\@identityrangemangementoption**|  
+    |Publisher identity range|**\@pub_identity_range**|  
+    |Identity range|**\@identity_range**|  
+    |Identity range threshold|**\@threshold**|  
+    |Partition options|**\@partition_options**|  
+    |Blob column streaming|**\@stream_blob_columns**|  
+    |Filter type|**\@filter_type** (parameter in **sp_addmergefilter**)|  
   
      For more information about these parameters, see [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) and [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md).  
   

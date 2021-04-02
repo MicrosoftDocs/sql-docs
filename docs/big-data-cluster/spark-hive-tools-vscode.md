@@ -1,11 +1,12 @@
 ---
-title: Run Spark jobs with Spark & Hive Tools for VS Code on SQL Server big data cluster
-titleSuffix: SQL Server big data clusters
+title: "Run jobs: Spark & Hive Tools for VS Code"
+titleSuffix: SQL Server Big Data Clusters
 description: Submit spark job with the Spark & Hive Tools for Visual Studio Code on SQL Server big data cluster.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -22,11 +23,11 @@ Spark & Hive Tools can be installed on platforms that are supported by Visual St
 
 The following items are required for completing the steps in this article:
 
-- A SQL Server big data cluster. See [SQL Server big data clusters](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).
+- A SQL Server big data cluster. See [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview).
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Mono](https://www.mono-project.com/docs/getting-started/install/). Mono is only required for Linux and macOS.
-- [Set up PySpark interactive environment for Visual Studio Code](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment).
-- A local directory named **HDexample**.  This article uses  **C:\HD\HDexample**.
+- [Set up PySpark interactive environment for Visual Studio Code](/azure/hdinsight/set-up-pyspark-interactive-environment).
+- A local directory named **SQLBDCexample**.  This article uses  **C:\SQLBDC\SQLBDCexample**.
 
 ## Install Spark & Hive Tools
 
@@ -48,9 +49,9 @@ After you have completed the prerequisites, you can install  Spark & Hive Tools 
 
 Complete the following steps to open a work folder, and create a file in Visual Studio Code:
 
-1. From the menu bar, navigate to **File** > **Open Folder...** > **C:\HD\HDexample**, then select the **Select Folder** button. The folder appears in the **Explorer** view on the left.
+1. From the menu bar, navigate to **File** > **Open Folder...** > **C:\SQLBDC\SQLBDCexample**, then select the **Select Folder** button. The folder appears in the **Explorer** view on the left.
 
-2. From the **Explorer** view, select the folder, **HDexample**, and then the **New File** icon next to the work folder.
+2. From the **Explorer** view, select the folder, **SQLBDCexample**, and then the **New File** icon next to the work folder.
 
    ![New file](./media/spark-hive-tools-vscode/new-file.png)
 
@@ -111,7 +112,7 @@ Before you can submit scripts to your clusters from Visual Studio Code, you need
 
 ## Set default cluster
 
-1. Re-Open the folder **HDexample** created [earlier](#open-work-folder) if closed.  
+1. Re-Open the folder **SQLBDCexample** created [earlier](#open-work-folder) if closed.  
 
 2. Select the file **HelloWorld.py** created [earlier](#open-work-folder) and it will open in the script editor.
 
@@ -127,7 +128,7 @@ Before you can submit scripts to your clusters from Visual Studio Code, you need
 
 You can submit interactive PySpark queries by following the steps below:
 
-1. Reopen the folder **HDexample** created [earlier](#open-work-folder) if closed.  
+1. Reopen the folder **SQLBDCexample** created [earlier](#open-work-folder) if closed.  
 
 2. Select the file **HelloWorld.py** created [earlier](#open-work-folder) and it will open in the script editor.
 
@@ -154,7 +155,7 @@ You can submit interactive PySpark queries by following the steps below:
 
 ## Submit PySpark batch job
 
-1. Reopen the folder **HDexample** created [earlier](#open-work-folder) if closed.  
+1. Reopen the folder **SQLBDCexample** created [earlier](#open-work-folder) if closed.  
 
 2. Select the file **HelloWorld.py** created [earlier](#open-work-folder) and it will open in the script editor.
 
@@ -250,4 +251,4 @@ Spark & Hive for Visual Studio Code supports the following features:
 3. Review **OUTPUT** view for verification.  
 
 ## Next steps
-For more information on SQL Server big data cluster and related scenarios, See [SQL Server big data clusters](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).
+For more information on SQL Server big data cluster and related scenarios, See [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview).

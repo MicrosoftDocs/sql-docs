@@ -1,4 +1,5 @@
 ---
+description: "sp_browsesnapshotfolder (Transact-SQL)"
 title: "sp_browsesnapshotfolder (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_browsesnapshotfolder"
   - "sp_browsesnapshotfolder_TSQL"
 helpviewer_keywords: 
   - "sp_browsesnapshotfolder"
 ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_browsesnapshotfolder (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the complete path for the latest snapshot generated for a publication. This stored procedure is executed at the Publisher on the publication database.  
   

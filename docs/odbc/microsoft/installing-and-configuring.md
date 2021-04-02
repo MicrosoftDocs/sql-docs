@@ -1,4 +1,5 @@
 ---
+description: "Installing and Configuring"
 title: "Installing and Configuring | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -15,11 +16,11 @@ helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC], installing"
   - "FoxPro ODBC driver [ODBC], installing"
 ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Installing and Configuring
-To download the Visual FoxPro ODBC Driver, see [the Visual FoxPro ODBC Driver download site](https://go.microsoft.com/fwlink/?LinkId=121318).  
+To download the Visual FoxPro ODBC Driver, see [the Visual FoxPro ODBC Driver download site](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10)).  
   
  This section contains the following topics to help you install and configure the Microsoft Visual FoxPro ODBC Driver:  
   
@@ -31,4 +32,4 @@ To download the Visual FoxPro ODBC Driver, see [the Visual FoxPro ODBC Driver do
   
 -   [ODBC Visual FoxPro Setup Dialog Box](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)  
   
- To download the driver, see [the Visual FoxPro ODBC Driver download site](https://go.microsoft.com/fwlink/?LinkId=121318).
+ To download the driver, see [the Visual FoxPro ODBC Driver download site](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10)).

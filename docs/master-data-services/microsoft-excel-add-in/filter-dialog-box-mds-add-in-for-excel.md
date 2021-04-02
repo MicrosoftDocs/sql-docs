@@ -1,5 +1,6 @@
 ---
-title: "Filter Dialog Box (MDS Add-in for Excel) | Microsoft Docs"
+description: "Filter Dialog Box (MDS Add-in for Excel)"
+title: Filter Dialog Box
 ms.custom: microsoft-excel-add-in
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Filter Dialog Box (MDS Add-in for Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], use the **Filter** dialog box to narrow the list of MDS-managed data before loading it into Excel.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Create Database (SQL Server Import and Export Wizard)"
 title: "Create Database (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
@@ -9,12 +10,12 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.createdatabase.f1"
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Create Database (SQL Server Import and Export Wizard)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 If you select **New** on the **Choose a Destination** page to create a new SQL Server destination database, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows the **Create Database** dialog box. On this page, you provide a name for the new database. Optionally you can also change the settings for the initial size and the automatic growth of the new database and its log file. 
@@ -22,7 +23,7 @@ If you select **New** on the **Choose a Destination** page to create a new SQL S
 The **Create Database** dialog box in the wizard offers only the basic options that are available for creating a new SQL Server database. To see and configure all the options for a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to create the database, or to configure the database after the wizard creates it. 
 
 > [!NOTE]
-> If you're looking for info about the [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE statement, and not about the **Create Database** dialog box of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+> If you're looking for info about the [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE statement, and not about the **Create Database** dialog box of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
 
 ## Screen shot of the Create Database page  
 The following screen shot shows the **Create Database** dialog box of the wizard.  
@@ -82,8 +83,7 @@ For detailed info about these requirements, see [Database Identifiers](../../rel
  Specify a number of megabytes by which the log file can grow.  
 
 ### More info
-For more info about the file size options that you see on this page, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). 
+For more info about the file size options that you see on this page, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md). 
 
 ## What's next?  
- After you provide a name for the new database that the wizard will create and click **OK**, the **Create Database** dialog box returns you to the **Choose a Destination** page. For more info, see [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).  
-
+ After you provide a name for the new database that the wizard will create and click **OK**, the **Create Database** dialog box returns you to the **Choose a Destination** page. For more info, see [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).

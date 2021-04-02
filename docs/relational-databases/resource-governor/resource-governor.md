@@ -1,7 +1,8 @@
 ---
 title: "Resource Governor | Microsoft Docs"
+description: Learn about the SQL Server Resource Governor feature that limits the amount of CPU, physical I/O, and memory that incoming application requests can use.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "12/21/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: performance
@@ -10,17 +11,20 @@ helpviewer_keywords:
   - "Resource Governor, overview"
   - "Resource Governor"
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Resource Governor
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor is a feature than you can use to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] workload and system resource consumption. Resource Governor enables you to specify limits on the amount of CPU, physical IO, and memory that incoming application requests can use.  
+[!INCLUDE [SQL Server SQL MI](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor is a feature that you can use to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] workload and system resource consumption. Resource Governor enables you to specify limits on the amount of CPU, physical I/O, and memory that incoming application requests can use.  
   
+> [!NOTE]
+> While [Azure SQL Database leverages Resource Governor](https://azure.microsoft.com/blog/resource-governance-in-azure-sql-database/) (among other techniques) to manage resources, user configuration of custom resource pools and workload groups in Azure SQL Database is not supported. Azure Synapse Analytics has a different implementation of similar Resource Governor behavior via the [Workload Classification feature](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-classification).
+
 ## Benefits of Resource Governor  
  Resource Governor enables you to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] workloads and resources by specifying limits on resource consumption by incoming requests. In the Resource Governor context, workload is a set of similarly sized queries or requests that can, and should be, treated as a single entity. This is not a requirement, but the more uniform the resource usage pattern of a workload is, the more benefit you are likely to derive from Resource Governor. Resource limits can be reconfigured in real time with minimal impact on workloads that are executing.  
   
- In an environment where multiple distinct workloads are present on the same server, Resource Governor enables you to differentiate these workloads and allocate shared resources as they are requested, based on the limits that you specify. These resources are CPU, physical IO, and memory.  
+ In an environment where multiple distinct workloads are present on the same server, Resource Governor enables you to differentiate these workloads and allocate shared resources as they are requested, based on the limits that you specify. These resources are CPU, physical I/O, and memory.  
   
  By using Resource Governor, you can:  
   
@@ -28,22 +32,22 @@ ms.author: jrasnick
   
 -   Provide predictable performance and support SLAs for workload tenants in a multi-workload and multi-user environment.  
   
--   Isolate and limit runaway queries or throttle IO resources for operations such as DBCC CHECKDB that can saturate the IO subsystem and negatively impact other workloads.  
+-   Isolate and limit runaway queries or throttle I/O resources for operations such as DBCC CHECKDB that can saturate the I/O subsystem and negatively impact other workloads.  
   
 -   Add fine-grained resource tracking for resource usage chargebacks and provide predictable billing to the consumers of the server resources.  
   
 ## Resource Governor Constraints  
  This release of Resource Governor has the following constraints:  
   
--   Resource management is limited to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Resource Governor can not be used for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   Resource management is limited to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Resource Governor cannot be used for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
--   There is no workload monitoring or workload management between SQL Server instances.  
+-   There is no workload monitoring or workload management between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances.  
   
--   Resource Governor can manage OLTP workloads but these types of queries, which are typically very short in duration, are not always on the CPU long enough to apply bandwidth controls. This may skew in the statistics returned for CPU usage %.  
+-   Resource Governor can manage OLTP workloads but these types of queries, which are typically very short in duration, are not always on the CPU long enough to apply bandwidth controls. This may skew in the statistics returned for CPU usage percent.  
   
--   The ability to govern physical IO only applies to user operations and not system tasks. System tasks include write operations to the transaction log and Lazy Writer IO operations. The Resource Govenor applies primarily to user read operations because most write operations are typically performed by system tasks.  
+-   The ability to govern physical I/O only applies to user operations and not system tasks. System tasks include write operations to the transaction log and Lazy Writer I/O operations. The Resource Governor applies primarily to user read operations because most write operations are typically performed by system tasks.  
   
--   You cannot set IO thresholds on the internal resource pool.  
+-   You cannot set I/O thresholds on the internal resource pool.  
   
 ## Resource Concepts  
  The following three concepts are fundamental to understanding and using Resource Governor:  
@@ -54,8 +58,8 @@ ms.author: jrasnick
   
 -   **Classification.** The Classification process assigns incoming sessions to a workload group based on the characteristics of the session. You can tailor the classification logic by writing a user-defined function, called a classifier function. Resource Governor also supports a classifier user-defined function for implementing classification rules. For more information, see [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md).  
   
-> [!NOTE]  
->  Resource Governor does not impose any controls on a dedicated administrator connection (DAC). There is no need to classify DAC queries, which run in the internal workload group and resource pool.  
+> [!NOTE]
+> Resource Governor does not impose any controls on a dedicated administrator connection (DAC). There is no need to classify DAC queries, which run in the internal workload group and resource pool.  
   
  In the context of Resource Governor, you can treat the preceding concepts as components. The following illustration shows these components and their relationship with each other as they exist in the database engine environment. From a processing perspective, the simplified flow is as follows:  
   
@@ -85,5 +89,4 @@ ms.author: jrasnick
   
 ## See Also  
  [Database Engine Instances &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
-  
   

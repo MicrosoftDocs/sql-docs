@@ -1,5 +1,6 @@
 ---
 title: "Statistics for Memory-Optimized Tables | Microsoft Docs"
+description: Learn how the query optimizer uses statistics about columns in memory-optimized tables to create query plans that improve query performance for In-Memory OLTP.
 ms.custom: ""
 ms.date: "10/23/2016"
 ms.prod: sql
@@ -10,10 +11,10 @@ ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Statistics for Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   The query optimizer uses statistics about columns to create query plans that improve query performance. Statistics are collected from the tables in the database and stored in the database metadata.  
   
@@ -43,7 +44,7 @@ To enable automatic update of statistics for memory-optimized tables that were c
 
 3. Manually recompile the natively compiled stored procedures to benefit from the updated statistics.
 
-*One-time script for statistics:* For memory-optimized tables that were created under a lower compability level, you can run the following Transact-SQL script one time to update the statistics of all memory-optimized tables, and enable automatic update of statistics from then onward (assuming AUTO_UPDATE_STATISTICS is enabled for the database):
+*One-time script for statistics:* For memory-optimized tables that were created under a lower compatibility level, you can run the following Transact-SQL script one time to update the statistics of all memory-optimized tables, and enable automatic update of statistics from then onward (assuming AUTO_UPDATE_STATISTICS is enabled for the database):
 
 ```
 -- Assuming AUTO_UPDATE_STATISTICS is already ON for your database:
@@ -93,6 +94,5 @@ WHERE o.is_memory_optimized=1
  Creating natively compiled stored procedures after you load the data ensures that the optimizer has statistics available for the memory-optimized tables. This will ensure efficient query plans when the procedure is compiled.  
 
 ## See Also  
- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [Memory-Optimized Tables](./sample-database-for-in-memory-oltp.md)  
   

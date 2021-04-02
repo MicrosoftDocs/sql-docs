@@ -1,4 +1,5 @@
 ---
+description: "Saving a Package Programmatically"
 title: "Saving a Package Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,12 +12,12 @@ helpviewer_keywords:
   - "programmatically saving a package"
   - "saving a package programmatically"
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Saving a Package Programmatically
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   After building a new package programmatically, or modifying an existing one, you usually want to save your changes.  

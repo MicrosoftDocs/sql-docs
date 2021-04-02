@@ -1,22 +1,23 @@
 ---
-title: "Prepared Statement Metadata Caching for the JDBC Driver | Microsoft Docs"
+title: "Prepared statement metadata caching for the JDBC driver"
+description: "Learn how the JDBC Driver for SQL Server caches prepared statements to improve performance by minimizing calls to the database and how you can control its behavior."
 ms.custom: ""
-ms.date: "01/19/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
-# Prepared Statement Metadata Caching for the JDBC Driver
+# Prepared statement metadata caching for the JDBC driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 This article provides information on the two changes that are implemented to enhance the performance of the driver.
 
-## Batching of Unprepare for Prepared Statements
+## Batching of unprepare for prepared statements
 Since version 6.1.6-preview, an improvement in performance was implemented through minimizing server round trips to SQL Server. Previously, for every prepareStatement query, a call to unprepare was also sent. Now, the driver is batching unprepare queries up to the threshold "ServerPreparedStatementDiscardThreshold", which has a default value of 10.
 
 > [!NOTE]  
@@ -29,7 +30,7 @@ One more change introduced from 6.1.6-preview is that prior to this, driver woul
 >  Users can change the default behavior to the previous versions of always calling sp_prepexec by setting enablePrepareOnFirstPreparedStatementCall to **true** using the following method:
 >  setEnablePrepareOnFirstPreparedStatementCall(boolean value)
 
-### List of the New APIs Introduced With This Change, for Batching of Unprepare for Prepared Statements
+### List of the new APIs introduced with this change, for batching of unprepare for prepared statements
 
  **SQLServerConnection**
  
@@ -51,7 +52,7 @@ One more change introduced from 6.1.6-preview is that prior to this, driver woul
 |void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|This setting controls how many outstanding prepared statement discard actions (sp_unprepare) can be outstanding per connection before a call to clean up the outstanding handles on the server is executed. If the setting is <= 1 unprepare actions are executed immediately on prepared statement close. If it is set to {@literal >} 1 these calls are batched together to avoid overhead of calling sp_unprepare too often|
 |int getServerPreparedStatementDiscardThreshold()|This setting controls how many outstanding prepared statement discard actions (sp_unprepare) can be outstanding per connection before a call to clean up the outstanding handles on the server is executed. If the setting is <= 1 unprepare actions are executed immediately on prepared statement close. If it is set to {@literal >} 1 these calls are batched together to avoid overhead of calling sp_unprepare too often.|
 
-## Prepared Statement Metatada caching
+## Prepared statement metadata caching
 As of 6.3.0-preview version, Microsoft JDBC driver for SQL Server supports prepared statement caching. Prior to v6.3.0-preview, if one executes a query that has been already prepared and stored in the cache, calling the same query again will not result in preparing it. Now, the driver looks up the query in cache and find the handle and execute it with sp_execute.
 Prepared Statement Metadata caching is **disabled** by default. In order to enable it, you need to call the following method on the connection object:
 
@@ -62,7 +63,7 @@ For example:
 `connection.setStatementPoolingCacheSize(10)`
 `connection.setDisableStatementPooling(false)`
 
-### List of the New APIs Introduced With This Change, for Prepared Statement Metadata Caching
+### List of the new APIs introduced with this change, for prepared statement metadata caching
 
  **SQLServerConnection**
  
@@ -84,7 +85,7 @@ For example:
 |void setStatementPoolingCacheSize(int statementPoolingCacheSize)|Specifies the size of the prepared statement cache for this connection. A value less than 1 means no cache.|
 |int getStatementPoolingCacheSize()|Returns the size of the prepared statement cache for this connection. A value less than 1 means no cache.|
 
-## See Also  
- [Improving Performance and Reliability with the JDBC Driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
+## See also  
+ [Improving performance and reliability with the JDBC driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

@@ -1,18 +1,19 @@
 ---
-title: "Using an SQL Statement with Parameters | Microsoft Docs"
+title: "Using an SQL statement with parameters"
+description: "To work with an SQL statement that contains IN parameters, use the executeQuery method of the SQLServerPreparedStatement class to return a SQLServerResultSet."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3202b88f-ce13-44dd-982c-c6a3b0260378
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
-# Using an SQL Statement with Parameters
+# Using an SQL statement with parameters
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -26,6 +27,6 @@ In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](
 
 [!code[JDBC#UsingSQLWithParams1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-w_1_1.java)]
 
-## See Also
+## See also
 
-[Using Statements with SQL](../../connect/jdbc/using-statements-with-sql.md)
+[Using statements with SQL](../../connect/jdbc/using-statements-with-sql.md)

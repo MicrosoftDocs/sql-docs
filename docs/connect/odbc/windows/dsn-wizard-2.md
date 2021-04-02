@@ -1,15 +1,16 @@
 ---
-title: "Data Source Wizard Screen 2 (ODBC Driver for SQL Server) | Microsoft Docs"
+description: Learn how to select your authentication method in the Data Source Wizard to create a new ODBC connection to SQL Server.
+title: Data Source Wizard Screen 2 (ODBC Driver for SQL Server)
 ms.custom: ""
-ms.date: "03/21/2018"
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-author: MightyPen
-ms.author: "v-jizho2"
+author: David-Engel
+ms.author: v-daenge
 ---
 # Data Source Wizard Screen 2
 
@@ -37,15 +38,23 @@ Specifies that the driver authenticate to SQL Server using an Azure Active Direc
 
 ### With Active Directory Interactive authentication
 
-Specifies that the driver authenticate to SQL Server using Azure Active Directory Interactive mode by providing login ID. This will trigger the Windows Azure Authentication prompt dialog.
+Specifies that the driver authenticate to SQL Server using Azure Active Directory Interactive mode by providing login ID. This option will trigger the Azure Authentication prompt dialog.
+
+### With Managed Identity authentication
+
+Specifies that the driver authenticate to SQL Server using a Managed Identity.
+
+### With Active Directory Service Principal authentication
+
+Specifies that the driver authenticate to SQL Server using an Azure Active Directory Service Principal.
 
 ### Login ID
 
-Specifies the login ID the driver uses when connecting to SQL Server if **With SQL Server Authentication using a login ID and password entered by the user** or **With Active Directory Password authentication using a login ID and password entered by the user** or **With Active Directory Interactive authentication using a login ID entered by the user** is selected. This only applies to the connection made to determine the server default settings; it does not apply to subsequent connections made using the data source after it has been created.
+Specifies the login ID the driver uses when connecting to SQL Server if **With SQL Server Authentication using a login ID and password entered by the user** or **With Active Directory Password authentication using a login ID and password entered by the user** or **With Active Directory Interactive authentication using a login ID entered by the user** is selected. If **With Managed Identity authentication** is selected, specify the object ID of the managed identity or leave blank to use the default identity. This field only applies to the connection made to determine the server default settings; it does not apply to subsequent connections made using the data source after it has been created except if using Managed Identity authentication.
 
 ### Password
 
-Specifies the password the driver uses when connecting to SQL Server if **With SQL Server Authentication using a login ID and password entered by the user** or **With Active Directory Password authentication using a login ID and password entered by the user** is selected. This only applies to the connection made to determine the server default settings; it does not apply to subsequent connections made using the new data source.
+Specifies the password the driver uses when connecting to SQL Server if **With SQL Server Authentication using a login ID and password entered by the user** or **With Active Directory Password authentication using a login ID and password entered by the user** is selected. This field only applies to the connection made to determine the server default settings; it does not apply to subsequent connections made using the new data source.
 
 Both the **Login ID** and **Password** boxes are disabled if **With Integrated Windows authentication** or **With Active Directory Integrated authentication** is selected.
 
@@ -59,7 +68,5 @@ Returns to the previous screen of the wizard.
 
 ## Next steps
 
-[Data Source Wizard Screen 1](../../../connect/odbc/windows/dsn-wizard-1.md)
-
-[Data Source Wizard Screen 3](../../../connect/odbc/windows/dsn-wizard-3.md)
-
+[Data Source Wizard Screen 1](dsn-wizard-1.md)  
+[Data Source Wizard Screen 3](dsn-wizard-3.md)  

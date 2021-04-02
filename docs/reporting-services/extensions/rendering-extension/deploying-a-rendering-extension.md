@@ -1,5 +1,6 @@
 ---
 title: "Deploying a Rendering Extension | Microsoft Docs"
+description: Find out how to deploy a report rendering extension. See which configuration file entries to add so the report server and Report Designer locate the extension.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

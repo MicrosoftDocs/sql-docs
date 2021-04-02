@@ -1,17 +1,19 @@
 ---
-title: "Walkthrough: Creating and Running a SQL Server Unit Test | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Creating and Running a SQL Server Unit Test
+description: Learn how to create a SQL Server unit test. Walk through the steps of setting up a test that detects an error in a stored procedure.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Walkthrough: Creating and Running a SQL Server Unit Test
+
 In this walkthrough, you create a SQL Server unit test that verifies the behavior of several stored procedures. You create SQL Server unit tests to help identify code defects that might cause incorrect application behavior. You can run SQL Server unit tests and application tests as part of an automated suite of tests.  
   
 In this walkthrough, you perform the following tasks:  
@@ -33,7 +35,7 @@ In this walkthrough, you perform the following tasks:
 After one of the unit tests detects an error in a stored procedure, you correct that error and re-run your test.  
   
 ## Prerequisites  
-To complete this walkthrough, you must be able to connect to a database server (or LocalDB database) on which you have permissions to create and deploy a database. For more information, see [Required Permissions for Database Features of Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
+To complete this walkthrough, you must be able to connect to a database server (or LocalDB database) on which you have permissions to create and deploy a database. For more information, see [Required Permissions for Database Features of Visual Studio](/previous-versions/visualstudio/visual-studio-2010/aa833413(v=vs.100)).  
   
 ## <a name="CreateScript"></a>Create a Script that Contains a Database Schema  
   
@@ -115,12 +117,12 @@ To complete this walkthrough, you must be able to connect to a database server (
     PRINT N'Creating Sales.CK_Orders_FilledDate...';  
     GO  
     ALTER TABLE [Sales].[Orders]  
-        ADD CONSTRAINT [CK_Orders_FilledDate] CHECK ((FilledDate >= OrderDate) AND (FilledDate < '01/01/2020'));  
+        ADD CONSTRAINT [CK_Orders_FilledDate] CHECK ((FilledDate >= OrderDate) AND (FilledDate < '01/01/2030'));  
     GO  
     PRINT N'Creating Sales.CK_Orders_OrderDate...';  
     GO  
     ALTER TABLE [Sales].[Orders]  
-        ADD CONSTRAINT [CK_Orders_OrderDate] CHECK ((OrderDate > '01/01/2005') and (OrderDate < '01/01/2020'));  
+        ADD CONSTRAINT [CK_Orders_OrderDate] CHECK ((OrderDate > '01/01/2005') and (OrderDate < '01/01/2030'));  
     GO  
     PRINT N'Creating Sales.uspCancelOrder...';  
     GO  
@@ -174,7 +176,7 @@ To complete this walkthrough, you must be able to connect to a database server (
     AS  
     BEGIN  
     INSERT INTO [Sales].[Customer] (CustomerName) VALUES (@CustomerName);  
-    SELECT SCOPE_IDENTITY()  
+    RETURN SCOPE_IDENTITY()  
     END  
     GO  
     PRINT N'Creating Sales.uspPlaceNewOrder...';  
@@ -985,4 +987,3 @@ After you establish a baseline, you can create and modify database objects and t
 [Verifying Database Code by Using SQL Server Unit Tests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [How to: Create an Empty SQL Server Unit Test](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
 [How to: Configure SQL Server Unit Test Execution](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
-  

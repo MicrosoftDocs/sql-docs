@@ -1,17 +1,19 @@
 ---
-title: "Walkthrough: Extend Database Project Deployment to Analyze the Deployment Plan | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Extend Database Project Deployment to Analyze the Deployment Plan
+description: Create a DeploymentPlanExecutor deployment contributor. Set up a contributor that keeps a record of the events that occur when you deploy a database project.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Walkthrough: Extend Database Project Deployment to Analyze the Deployment Plan
+
 You can create deployment contributors to perform custom actions when you deploy a SQL project. You can create either a DeploymentPlanModifier or a DeploymentPlanExecutor. Use a DeploymentPlanModifier to change the plan before it is executed and a DeploymentPlanExecutor to perform operations while the plan is being executed. In this walkthrough, you create a DeploymentPlanExecutor named DeploymentUpdateReportContributor that creates a report about the actions that are performed when you deploy a database project. Because this build contributor accepts a parameter to control whether the report is generated, you must perform an additional required step.  
   
 In this walkthrough, you will accomplish the following major tasks:  
@@ -39,7 +41,7 @@ To create a deployment contributor, you must perform the following tasks:
   
 -   Create a class library project and add required references.  
   
--   Define a class named DeploymentUpdateReportContributor that inherits from [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx).  
+-   Define a class named DeploymentUpdateReportContributor that inherits from [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor).  
   
 -   Override the OnExecute method.  
   
@@ -98,7 +100,7 @@ To create a deployment contributor, you must perform the following tasks:
   
     ```  
   
-    Now you have defined your deployment contributor that inherits from DeploymentPlanExecutor. During the build and deployment processes, custom contributors are loaded from a standard extension directory. Deployment plan executor contributors are identified by an [ExportDeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute.aspx) attribute.  
+    Now you have defined your deployment contributor that inherits from DeploymentPlanExecutor. During the build and deployment processes, custom contributors are loaded from a standard extension directory. Deployment plan executor contributors are identified by an [ExportDeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute) attribute.  
   
     This attribute is required so that contributors can be discovered. It should look similar to the following:  
   
@@ -242,9 +244,9 @@ To create a deployment contributor, you must perform the following tasks:
             }  
     ```  
   
-    The OnExecute method is passed a [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) object that provides access to any specified arguments, the source and target database model, build properties, and extension files. In this example, we get the model, and then call helper functions to output information about the model. We use the PublishMessage helper method on the base class to report any errors that occur.  
+    The OnExecute method is passed a [DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext) object that provides access to any specified arguments, the source and target database model, build properties, and extension files. In this example, we get the model, and then call helper functions to output information about the model. We use the PublishMessage helper method on the base class to report any errors that occur.  
   
-    Additional types and methods of interest include: [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx), and [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
+    Additional types and methods of interest include: [TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel), [ModelComparisonResult](/dotnet/api/microsoft.sqlserver.dac.deployment.modelcomparisonresult), [DeploymentPlanHandle](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanhandle), and [SqlDeploymentOptions](/dotnet/api/microsoft.sqlserver.dac.deployment.sqldeploymentoptions).  
   
     Next, you define the helper class that digs into the details of the deployment plan.  
   
@@ -517,11 +519,11 @@ To create a deployment contributor, you must perform the following tasks:
   
     |**Code Area**|**Useful Types**|  
     |-----------------|--------------------|  
-    |Class members|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
+    |Class members|[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel), [ModelComparisonResult](/dotnet/api/microsoft.sqlserver.dac.deployment.modelcomparisonresult), [DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep)|  
     |WriteReport method|XmlWriter and XmlWriterSettings|  
-    |ReportPlanOperations method|Types of interest include the following: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />There are a number of other steps - see the API documentation for a full list of steps.|  
-    |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
-    |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
+    |ReportPlanOperations method|Types of interest include the following: [DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep), [SqlRenameStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlrenamestep), [SqlMoveSchemaStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlmoveschemastep), [SqlTableMigrationStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqltablemigrationstep), [CreateElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.createelementstep), [AlterElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.alterelementstep), [DropElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.dropelementstep).<br /><br />There are a number of other steps - see the API documentation for a full list of steps.|  
+    |GetElementCategory|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|  
+    |GetElementName|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|  
   
     Next, you build the class library.  
   
@@ -731,10 +733,9 @@ Your project can be published or deployed as normal inside Visual Studio. Simply
     By analyzing the deployment plan as it is executed, you can report on any information that is contained in the deployment and can take additional actions based on the steps in that plan.  
   
 ## Next Steps  
-You could create additional tools to perform processing of the output XML files. This is just one example of a [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). You could also create a [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) to change a deployment plan before it is executed.  
+You could create additional tools to perform processing of the output XML files. This is just one example of a [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor). You could also create a [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) to change a deployment plan before it is executed.  
   
 ## See Also  
-[Walkthrough: Extend Database Project Build to Generate Model Statistics](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[Walkthrough: Extend Database Project Deployment to Modify the Deployment Plan](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
-[Customize Database Build and Deployment by Using Build and Deployment Contributors](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
-  
+[Walkthrough: Extend Database Project Build to Generate Model Statistics](/previous-versions/visualstudio/visual-studio-2010/ee461508(v=vs.100))  
+[Walkthrough: Extend Database Project Deployment to Modify the Deployment Plan](/previous-versions/visualstudio/visual-studio-2010/ee461507(v=vs.100))  
+[Customize Database Build and Deployment by Using Build and Deployment Contributors](/previous-versions/visualstudio/visual-studio-2010/ee461505(v=vs.100))  

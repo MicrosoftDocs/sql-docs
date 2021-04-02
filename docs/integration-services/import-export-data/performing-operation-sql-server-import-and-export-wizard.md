@@ -1,4 +1,5 @@
 ---
+description: "Performing Operation (SQL Server Import and Export Wizard)"
 title: "Performing Operation (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2017"
@@ -9,12 +10,12 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.performingoperation.f1"
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Performing Operation (SQL Server Import and Export Wizard)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 After you review the choices that you made in the wizard and click **Finish** on the **Complete the Wizard** page, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Performing Operation**. On this page, you see the progress and the result of the operation that you configured on the preceding pages. You don't have to take any action on this page.
@@ -27,7 +28,7 @@ After you review the choices that you made in the wizard and click **Finish** on
 ## Screen shot - Operation completed 
  The following screen shot shows the **Performing Operation** page of the wizard after the operation is complete. Click on an item in the **Message** column to get more info about the corresponding step.  
   
- ![Performing operation page of the Import and Export Wizard](../../integration-services/import-export-data/media/performing-operation2.png "Performing operation page of the Import and Export Wizard")  
+ ![Screenshot of the Success page of the Import and Export Wizard.](../../integration-services/import-export-data/media/performing-operation2.png "Performing operation page of the Import and Export Wizard")  
   
 ## Watch the progress of the operation
  **Action**  

@@ -1,5 +1,6 @@
 ---
 title: "Save an Execution Plan in XML Format | Microsoft Docs"
+description: Learn how to use SQL Server Management Studio to save execution plans in XML format and to open them for viewing. You must have appropriate permissions.
 ms.custom: ""
 ms.date: "08/21/2017"
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
   - "execution plans [SQL Server], saving"
   - "saving execution plans"
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
-author: julieMSFT
-ms.author: jrasnick
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Save an Execution Plan in XML Format
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to save execution plans as an XML file, and to open them for viewing.  
   
  To use the execution plan feature in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], or to use the XML Showplan SET options, users must have the appropriate permissions to execute the [!INCLUDE[tsql](../../includes/tsql-md.md)] query for which an execution plan is being generated, and they must be granted the SHOWPLAN permission for all databases referenced by the query.  
@@ -65,9 +66,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 5.  In the **Save** \<Grid or Text> **Results** dialog box, in the **Save as type** box, click **All files (\*.\*)**.  
   
-6.  In the **File name** box provide a name, in the format \<name**>.sqlplan**, and then click **Save**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+6.  In the **File name** box provide a name, in the format \<name>**.sqlplan**, and then click **Save**.  
 
 ### To save an execution plan by using SQL Server Management Studio options  
   
@@ -79,7 +78,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  In the **Save As** dialog box, make sure that the **Save as type** is set to **Execution Plan Files (\*.sqlplan)**.  
   
-4.  In the **File name** box provide a name, in the format \<name**>.sqlplan**, and then click **Save**.  
+4.  In the **File name** box provide a name, in the format \<name>**.sqlplan**, and then click **Save**.  
   
 ### To open a saved XML query plan in SQL Server Management Studio  
   

@@ -1,11 +1,12 @@
 ---
+description: "sys.registered_search_property_lists (Transact-SQL)"
 title: "sys.registered_search_property_lists (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "registered_search_property_lists_TSQL"
   - "sys.registered_search_property_lists"
@@ -23,7 +24,7 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ---
 # sys.registered_search_property_lists (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains a row for each search property list on the current database.  
   

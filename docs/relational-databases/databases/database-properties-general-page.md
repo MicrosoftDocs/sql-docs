@@ -1,5 +1,6 @@
 ---
 title: "Database Properties (General Page) | Microsoft Docs"
+description: "Learn how to use the General tab in the Database Properties dialog box to view or modify the properties of a database."
 ms.custom: ""
 ms.date: "10/27/2015"
 ms.prod: sql
@@ -9,12 +10,13 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.general.f1"
   - "sql13.swb.databaseproperties.segments.f1"
+  - "sql13.swb.databaseproperties.databasecapabilities.f1"
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
 ---
 # Database Properties (General Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to view or modify properties for the selected database.  
   
 ## Options  
@@ -50,8 +52,7 @@ ms.author: sstein
   
 ## See Also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)  
-  
   

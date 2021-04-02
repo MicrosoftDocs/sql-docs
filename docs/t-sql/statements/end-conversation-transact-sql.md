@@ -1,4 +1,5 @@
 ---
+description: "END CONVERSATION (Transact-SQL)"
 title: "END CONVERSATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "END DIALOG"
   - "END CONVERSATION"
@@ -22,11 +23,11 @@ helpviewer_keywords:
   - "conversations [Service Broker], ending"
   - "ending conversations [SQL Server]"
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
-author: CarlRabeler
-ms.author: carlrab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # END CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Ends one side of an existing conversation.  
   
@@ -34,8 +35,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 END CONVERSATION conversation_handle  
    [   [ WITH ERROR = failure_code DESCRIPTION = 'failure_text' ]  
      | [ WITH CLEANUP ]  
@@ -43,7 +43,9 @@ END CONVERSATION conversation_handle
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *conversation_handle*  
  Is the conversation handle for the conversation to end.  
   
@@ -87,14 +89,14 @@ END CONVERSATION conversation_handle
 ### A. Ending a conversation  
  The following example ends the dialog specified by `@dialog_handle`.  
   
-```  
+```sql 
 END CONVERSATION @dialog_handle ;  
 ```  
   
 ### B. Ending a conversation with an error  
  The following example ends the dialog specified by `@dialog_handle` with an error if the processing statement reports an error. Notice that this is a simplistic approach to error handling, and may not be appropriate for some applications.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
         @ErrorSave INT,  
         @ErrorDesc NVARCHAR(100) ;  
@@ -119,7 +121,7 @@ COMMIT TRANSACTION ;
 ### C. Cleaning up a conversation that cannot complete normally  
  The following example ends the dialog specified by `@dialog_handle`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] immediately removes all messages from the service queue and the transmission queue, without notifying the remote service. Since ending a dialog with cleanup does not notify the remote service, you should only use this in cases where the remote service is not available to receive an **EndDialog** or **Error** message.  
   
-```  
+```sql  
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   

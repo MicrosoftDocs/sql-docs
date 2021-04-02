@@ -1,4 +1,5 @@
 ---
+description: "sp_polybase_join_group (Transact-SQL)"
 title: "sp_polybase_join_group | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2016"
@@ -12,11 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "PolyBase"
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
-author: rothja
-ms.author: jroth
+author: markingmyname
+ms.author: maghan
 ---
 # sp_polybase_join_group (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Adds a SQL Server instance as a compute node to a PolyBase group for scale-out computation.  
   
@@ -34,14 +35,14 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ```  
   
 ## Arguments  
- *@head_node_address* = N'*head_node_address*'  
- The name of the machine that hosts the SQL Server head node of the PolyBase scale-out group. *@head_node_address* is nvarchar(255).  
+ *\@head_node_address* = N'*head_node_address*'  
+ The name of the machine that hosts the SQL Server head node of the PolyBase scale-out group. *\@head_node_address* is nvarchar(255).  
   
- *@dms_control_channel_port* = dms_control_channel_port  
- The port where the control channel for the head node PolyBase Data Movement Service is running. *@dms_control_channel_port* is an unsigned __int16. The default is **16450**.  
+ *\@dms_control_channel_port* = dms_control_channel_port  
+ The port where the control channel for the head node PolyBase Data Movement Service is running. *\@dms_control_channel_port* is an unsigned __int16. The default is **16450**.  
   
- *@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- The name of the head node SQL Server instance in the PolyBase scale-out group. *@head_node_sql_server_instance_name* is nvarchar(16).  
+ *\@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
+ The name of the head node SQL Server instance in the PolyBase scale-out group. *\@head_node_sql_server_instance_name* is nvarchar(16).  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  
@@ -60,7 +61,6 @@ EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'
 ```  
   
 ## See Also  
- [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [Get started with PolyBase](../polybase/polybase-guide.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

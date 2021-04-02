@@ -1,4 +1,5 @@
 ---
+description: "CREATE ASYMMETRIC KEY (Transact-SQL)"
 title: "CREATE ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/23/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ASYMMETRIC_KEY_TSQL"
   - "CREATE ASYMMETRIC KEY"
@@ -23,19 +24,22 @@ helpviewer_keywords:
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest"
 ---
 # CREATE ASYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
 
   Creates an asymmetric key in the database.  
   
  This feature is incompatible with database export using Data Tier Application Framework (DACFx). You must drop all asymmetric keys before exporting.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/\synapse-analytics-od-unsupported-syntax.md)]  
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE ASYMMETRIC KEY asym_key_name   
    [ AUTHORIZATION database_principal_name ]  
    [ FROM <asym_key_source> ]  
@@ -63,7 +67,9 @@ CREATE ASYMMETRIC KEY asym_key_name
     PASSWORD = 'password'   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *asym_key_name*  
  Is the name for the asymmetric key in the database. Asymmetric key names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md) and must be unique within the database.  
 
@@ -123,7 +129,7 @@ CREATE ASYMMETRIC KEY asym_key_name
 ### A. Creating an asymmetric key  
  The following example creates an asymmetric key named `PacificSales09` by using the `RSA_2048` algorithm, and protects the private key with a password.  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY PacificSales09   
     WITH ALGORITHM = RSA_2048   
     ENCRYPTION BY PASSWORD = '<enterStrongPasswordHere>';   
@@ -133,7 +139,7 @@ GO
 ### B. Creating an asymmetric key from a file, giving authorization to a user  
  The following example creates the asymmetric key `PacificSales19` from a key pair stored in a file, and assigns ownership of the asymmetric key to user `Christina`. The private key is protected by the database master key, which must be created prior to creating the asymmetric key.  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY PacificSales19  
     AUTHORIZATION Christina  
     FROM FILE = 'c:\PacSales\Managers\ChristinaCerts.tmp';  
@@ -143,7 +149,7 @@ GO
 ### C. Creating an asymmetric key from an EKM provider  
  The following example creates the asymmetric key `EKM_askey1` from a key pair stored in an Extensible Key Management provider called `EKM_Provider1`, and a key on that provider called `key10_user1`.  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY EKM_askey1   
     FROM PROVIDER EKM_Provider1  
     WITH   

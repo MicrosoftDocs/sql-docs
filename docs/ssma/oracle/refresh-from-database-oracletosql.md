@@ -1,4 +1,5 @@
 ---
+description: "Refresh from Database (OracleToSQL)"
 title: "Refresh from Database (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,9 +8,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Refresh from Database (OracleToSQL)
 The **Refresh from Database** dialog box lets you select which objects to refresh from the Oracle database. Rows in the dialog box are color coded based on the state of the metadata:  

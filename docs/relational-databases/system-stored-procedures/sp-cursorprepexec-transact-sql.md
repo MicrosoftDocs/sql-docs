@@ -1,12 +1,13 @@
 ---
+description: "sp_cursorprepexec (Transact-SQL)"
 title: "sp_cursorprepexec (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/20/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_cursorprepexec_TSQL"
   - "sp_cursorprepexec"
@@ -15,15 +16,15 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursorprepexec"
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_cursorprepexec (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Compiles a plan for the submitted cursor statement or batch, then creates and populates the cursor. sp_cursorprepexec combines the functions of sp_cursorprepare and sp_cursorexecute. This procedures is invoked by specifying ID = 5 in a tabular data stream (TDS) packet.  
+  Compiles a plan for the submitted cursor statement or batch, then creates and populates the cursor. sp_cursorprepexec combines the functions of sp_cursorprepare and sp_cursorexecute. This procedure is invoked by specifying ID = 5 in a tabular data stream (TDS) packet.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -31,6 +32,7 @@ ms.author: sstein
   
 sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , options  
     [ , scrollopt [ , ccopt [ , rowcount ] ] ]  
+    [, '@parameter_name[,...n ]']
 ```  
   
 ## Arguments  
@@ -38,7 +40,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  Is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generated prepared *handle* identifier. *prepared handle* is required and returns **int**.  
   
  *cursor*  
- Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generated cursor identifier. *cursor* is a required parameter that must be supplied on all subsequent procedures which act upon this cursor, e.g. sp_cursorfetch.  
+ Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generated cursor identifier. *cursor* is a required parameter that must be supplied on all subsequent procedures that act upon this cursor, for example, sp_cursorfetch.  
   
  *params*  
  Identifies parameterized statements. The *params* definition of variables is substituted for parameter markers in the statement. *params* is a required parameter that calls for an **ntext**, **nchar**, or **nvarchar** input value.  
@@ -47,13 +49,13 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 >  Use an **ntext** string as the input value when *stmt* is parameterized and the *scrollopt* PARAMETERIZED_STMT value is ON.  
   
  *statement*  
- Defines the cursor result set. The *statement* parameter is required and calls for an **ntext**, **nchar** or **nvarchar** input value.  
+ Defines the cursor result set. The *statement* parameter is required and calls for an **ntext**, **nchar**, or **nvarchar** input value.  
   
 > [!NOTE]  
 >  The rules for specifying the stmt value are the same as those for sp_cursoropen, with the exception that the *stmt* string data type must be **ntext**.  
   
  *options*  
- An optional parameter that returns a description of the cursor result set columns. *options* requires the following **int** input value.  
+ An optional parameter that returns a description of the cursor result set columns. *options require the following **int** input value.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -106,9 +108,12 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |As input value|As return value|  
 |--------------------|---------------------|  
 |When AUTO_FETCH is specified with FAST_FORWARD cursors *rowcount* represents the number of rows to place into the fetch buffer.|Represents the number of rows in the result set. When the *scrollopt* AUTO_FETCH value is specified, *rowcount* returns the number of rows that were fetched into the fetch buffer.|  
+
+*parameter_name*
+Designate one or more parameter names as defined in the params argument.  There must be a parameter supplied for every parameter included in params. This argument is not required when the Transact-SQL statement or batch in params has no parameters defined.
   
 ## Return Code Values  
- If *params* returns a NULL value then the statement is not parameterized.  
+ If params returns a NULL value, then the statement is not parameterized.  
   
 ## See Also  
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
@@ -116,5 +121,3 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  [sp_cursorprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  

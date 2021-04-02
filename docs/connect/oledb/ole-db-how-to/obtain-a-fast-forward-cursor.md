@@ -1,20 +1,20 @@
 ---
-title: "Obtain a FAST_FORWARD Cursor | Microsoft Docs"
-description: "Obtain a FAST_FORWARD cursor using OLE DB Driver for SQL Server"
+title: Obtain a FAST_FORWARD cursor (OLE DB driver)
+description: Learn how to set the rowset properties to obtain a FAST_FORWARD cursor using OLE DB Driver for SQL Server with this example.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "fast forward-only cursors"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Obtain a FAST_FORWARD Cursor
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -23,7 +23,7 @@ ms.author: pelopes
  A complete sample shows how to set the rowset properties to obtain a FAST_FORWARD cursor. After the properties are set, a SELECT statement is executed to retrieve and display the **Name** column of the **Purchasing.Vendor** table in the **AdventureWorks** database.  
   
 > [!IMPORTANT]  
->  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference).  
   
 ### To obtain FAST_FORWARD cursor  
   
@@ -403,5 +403,4 @@ void Cleanup() {
    OleUninitialize();  
 }  
 ```  
-  
   

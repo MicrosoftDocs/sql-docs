@@ -1,17 +1,18 @@
 ---
-title: "SQLXML Interface | Microsoft Docs"
+description: "SQLXML interface"
+title: "SQLXML interface | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
-# SQLXML Interface
+# SQLXML interface
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -43,6 +44,6 @@ The SQLXML object becomes neither readable nor writable when the application cal
   
 The SQLXML object becomes neither writeable nor readable when the application calls any of the following setter methods: setResult, setCharacterStream, setBinaryStream, and setString.  
   
-## See Also  
+## See also  
 
-[Supporting XML Data](../../connect/jdbc/supporting-xml-data.md)  
+[Supporting XML data](../../connect/jdbc/supporting-xml-data.md)  

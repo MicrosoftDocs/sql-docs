@@ -1,4 +1,5 @@
 ---
+description: "Create a Publication from an Oracle Database"
 title: "Create a Publication from an Oracle Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Create a Publication from an Oracle Database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to create a publication from an Oracle database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  This topic describes how to create a publication from an Oracle database in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -72,8 +73,6 @@ ms.author: "mathoma"
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### To create a publication from an Oracle database  
   
 1.  Connect to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance that the Oracle Publisher will use as a Distributor, and then expand the server node.  
@@ -111,32 +110,32 @@ ms.author: "mathoma"
   
 2.  If a remote Distributor does not exist, configure the remote Distributor. For more information, see [Configure Publishing and Distribution](../../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
-3.  At the remote Distributor that the Oracle Publisher will use, execute [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md). Specify the Transparent Network Substrate (TNS) name of the Oracle database instance for **@publisher** and a value of **ORACLE** or **ORACLE GATEWAY** for **@publisher_type**. `Specify` the security mode used when connecting from the Oracle Publisher to the remote [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor as one of the following:  
+3.  At the remote Distributor that the Oracle Publisher will use, execute [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md). Specify the Transparent Network Substrate (TNS) name of the Oracle database instance for **\@publisher** and a value of **ORACLE** or **ORACLE GATEWAY** for **\@publisher_type**. `Specify` the security mode used when connecting from the Oracle Publisher to the remote [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor as one of the following:  
   
-    -   To use Oracle Standard Authentication, the default, specify a value of **0** for **@security_mode**, the login of the replication administrative user schema you created on the Oracle Publisher during configuration for **@login**, and the password for **@password**.  
+    -   To use Oracle Standard Authentication, the default, specify a value of **0** for **\@security_mode**, the login of the replication administrative user schema you created on the Oracle Publisher during configuration for **\@login**, and the password for **\@password**.  
   
         > [!IMPORTANT]  
         >  When possible, prompt users to enter security credentials at runtime. If you store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
-    -   To use Windows Authentication, specify a value of **1** for **@security_mode**.  
+    -   To use Windows Authentication, specify a value of **1** for **\@security_mode**.  
   
         > [!NOTE]  
         >  To use Windows Authentication, the Oracle server must be configured to allow connections using Windows credentials (for more information, see the Oracle documentation); and you must be currently logged in with the same Microsoft Windows account you specified for the replication administrative user schema..  
   
 4.  Create a Log Reader Agent job for the publication database.  
   
-    -   If you are unsure whether a Log Reader Agent job exists for a published database, execute [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) at the Distributor used by the Oracle Publisher on the distribution database. Specify the name of the Oracle Publisher for **@publisher**. If the result set is empty, then a Log Reader Agent job must be created.  
+    -   If you are unsure whether a Log Reader Agent job exists for a published database, execute [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) at the Distributor used by the Oracle Publisher on the distribution database. Specify the name of the Oracle Publisher for **\@publisher**. If the result set is empty, then a Log Reader Agent job must be created.  
   
     -   If a Log Reader Agent job already exists for the publication database, proceed to step 5.  
   
-    -   At the Distributor used by the Oracle Publisher on the distribution database, execute [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Specify the Windows credentials under which the agent runs for **@job_login** and **@job_password**.  
+    -   At the Distributor used by the Oracle Publisher on the distribution database, execute [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Specify the Windows credentials under which the agent runs for **\@job_login** and **\@job_password**.  
   
         > [!NOTE]  
-        >  The **@job_login** parameter must match the login supplied in step 3. Do not supply publisher security information. The Log Reader agent connects to the Publisher using the security information provided in step 3.  
+        >  The **\@job_login** parameter must match the login supplied in step 3. Do not supply publisher security information. The Log Reader agent connects to the Publisher using the security information provided in step 3.  
   
 5.  At the Distributor on the distribution database, execute [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) to create the publication. For more information, see [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
-6.  At the Distributor on the distribution database, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 4 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@job_name** and **@password**. To use Oracle Standard Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the Oracle login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication.  
+6.  At the Distributor on the distribution database, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 4 for **\@publication** and the Windows credentials under which the Snapshot Agent runs for **\@job_name** and **\@password**. To use Oracle Standard Authentication when connecting to the Publisher, you must also specify a value of **0** for **\@publisher_security_mode** and the Oracle login information for **\@publisher_login** and **\@publisher_password**. This creates a Snapshot Agent job for the publication.  
   
 ## See Also  
  [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

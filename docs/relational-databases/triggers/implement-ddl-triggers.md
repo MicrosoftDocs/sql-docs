@@ -1,4 +1,5 @@
 ---
+description: "Implement DDL Triggers"
 title: "Implement DDL Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: f44e5340-1d18-40e9-828e-0ffcca091ae3
 author: "rothja"
 ms.author: "jroth"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implement DDL Triggers
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic provides information to help you create DDL triggers, modify DDL triggers, and disable or drop DDL triggers.  
   
 ## Creating DDL Triggers  

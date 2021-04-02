@@ -1,4 +1,5 @@
 ---
+description: "SQLServerClob Members"
 title: "SQLServerClob Members | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,11 +7,11 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: "Assembly"
 ms.assetid: 7db785ca-edd5-4833-8053-17fdbf87279a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLServerClob Members
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

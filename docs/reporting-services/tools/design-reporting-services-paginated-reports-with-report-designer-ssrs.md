@@ -1,5 +1,6 @@
 ---
-title: "Design Reports with Report Designer (SSRS) | Microsoft Docs"
+title: "Design Reports with Report Designer | Microsoft Docs"
+description: Learn how to use the Report Designer in SQL Server Reporting Services to create full-featured paginated reports and reporting solutions. 
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -18,7 +19,7 @@ ms.author: maggies
 
 Use Report Designer to create full-featured [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports and reporting solutions. Report Designer provides a graphical interface in which you can define data sources, datasets and queries, report layout positions for data regions and fields, and interactive features such as parameters and sets of reports that work together.  
 
-Report Designer is a feature of  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a Microsoft Visual Studio environment for creating business intelligence solutions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is not included with SQL Server. Download [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714). 
+Report Designer is a feature of  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a Microsoft Visual Studio environment for creating business intelligence solutions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is not included with SQL Server. Download [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 
   
 ## Benefits of Report Projects  
 Report projects act as containers for report definitions and resources. Use projects to:  
@@ -41,7 +42,7 @@ Report projects act as containers for report definitions and resources. Use proj
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is a client tool. You can test your reporting solution locally on your computer, deploy it to a test environment for testing the server solution, and then deploy it to a production environment. After deployment, verify that the data source processing extensions and data source credentials are configured for the report server environment. You can use Configuration Manager to help manage the properties for different deployments. For more information, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
- For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ For more information, see [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
    
 ##  <a name="bkmk_SharedDatasets"></a> Shared Datasets  
  Use [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] to define and deploy shared datasets for a reporting solution. Shared datasets can be deployed independently from other items in a project by using the **OverwriteDatasets** and **TargetDatasetFolder** properties. For more information, see [Set Deployment Properties &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
@@ -66,7 +67,7 @@ Paginated reports are files that are stored in a report project. Reports can be 
   
 -   **Add an existing item.** An existing report definition (.rdl) opens in Report Designer. Opening a report or project from an earlier version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] might automatically upgrade the project to the current version and the report to the current schema. For more information, see [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
   
--   **Import a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access report.** Import all reports from an Access database (.mdb, .accdb) or project (.adp) file. Report Designer converts each report in a database or project file to RDL and saves it in the report project. Not all of the functionality of an Access report transfers to a report definition (.rdl) file. For more information, see [Import Reports from Microsoft Access &#40;Reporting Services&#41;](https://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) and [Supported Access Report Features &#40;SSRS&#41;](https://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44).  
+-   **Import a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access report.** Import all reports from an Access database (.mdb, .accdb) or project (.adp) file. Report Designer converts each report in a database or project file to RDL and saves it in the report project. Not all of the functionality of an Access report transfers to a report definition (.rdl) file. For more information, see [Import Reports from Microsoft Access &#40;Reporting Services&#41;](../reports/reporting-services-reports-ssrs.md) and [Supported Access Report Features &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md).  
   
     > [!NOTE]  
     >  You must have Access 2002 or a later version installed on the same computer that Report Designer is installed on in order to use the import feature. The data source for the Access reports must be available when the reports are imported.  
@@ -177,7 +178,7 @@ Paginated reports are files that are stored in a report project. Reports can be 
 
 ## Next steps
 
-[Download SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)  
+[Download SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Reporting Services in SQL Server Data Tools](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
 [Query Design Tools](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Deployment and Version Support in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  

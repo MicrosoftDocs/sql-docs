@@ -1,12 +1,11 @@
 ---
-title: "sys.dm_exec_describe_first_result_set (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
+title: sys.dm_exec_describe_first_result_set (Transact-SQL)
+description: "sys.dm_exec_describe_first_result_set (Transact-SQL)"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_exec_describe_first_result_set"
   - "sys.dm_exec_describe_first_result_set_TSQL"
@@ -15,14 +14,18 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_describe_first_result_set catalog view"
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-author: stevestein
-ms.author: sstein
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.custom: ""
+ms.date: "06/10/2016"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# sys.dm_exec_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  This dynamic management function takes a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement as a parameter and describes the metadata of the first result set for the statement.  
+# sys.dm_exec_describe_first_result_set (Transact-SQL)
+
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
+
+This dynamic management function takes a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement as a parameter and describes the metadata of the first result set for the statement.  
   
  **sys.dm_exec_describe_first_result_set** has the same result set definition as [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) and is similar to [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   

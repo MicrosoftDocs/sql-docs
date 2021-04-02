@@ -1,17 +1,18 @@
 ---
-title: "Using Connection Pooling | Microsoft Docs"
+title: "Using connection pooling"
+description: "Learn how the JDBC Driver for SQL Server provides JDBC compliant interfaces to support connection pooling in Java."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
-# Using Connection Pooling
+# Using connection pooling
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -34,6 +35,6 @@ The classes for the connection pooling implementation are as follows.
 > [!NOTE]  
 > The JDBC driver does not currently call the sp_reset_connection stored procedure when it returns the connection to the pool. Instead, the driver relies on third-party Java Application Servers to return the connections back to their original states.  
   
-## See Also
+## See also
 
-[Connecting to SQL Server with the JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+[Connecting to SQL Server with the JDBC driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

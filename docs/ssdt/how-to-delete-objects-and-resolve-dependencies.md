@@ -1,21 +1,23 @@
 ---
-title: "How to: Delete Objects and Resolve Dependencies | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Delete Objects and Resolve Dependencies
+description: Find out how to rename or delete database objects. See which dependent objects SSDT automatically updates, and which dependencies you need to update.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
   - "Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog"
   - "sql.data.tools.dropdatabaseconfirmation.dialog"
   - "sql.data.tools.dropmultipledatabasesconfirmation.dialog"
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Delete Objects and Resolve Dependencies
+
 When you rename or delete an object in **SQL Server Object Explorer**, SQL Server Data Tools automatically detects all its dependency objects, and will prepare an ALTER script to rename or drop the dependency as needed.  
   
 > [!WARNING]  

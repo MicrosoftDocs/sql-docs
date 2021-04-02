@@ -1,11 +1,12 @@
 ---
 title: "Database Mirroring Witness | Microsoft Docs"
+description: Learn about the function of a witness in automatic failover in SQL Server database mirroring. Unlike the partners, the witness does not serve the database.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords: 
   - "witness [SQL Server], about witness"
@@ -16,7 +17,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Database Mirroring Witness
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   To support automatic failover, a database mirroring session must be configured in high-safety mode and also possess a third server instance, known as the *witness*. The witness is an optional instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that enables the mirror server in a high-safety mode session to recognize whether to initiate an automatic failover. Unlike the two partners, the witness does not serve the database. Supporting automatic failover is the only role of the witness.  
   
 > [!NOTE]  
@@ -41,7 +42,7 @@ ms.author: mikeray
   
  ![Server instance that is a witness for 2 databases](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "Server instance that is a witness for 2 databases")  
   
- A single-server instance can also function at the same time as a witness in some sessions and a partner in other sessions. However, in practice, a server instance typically functions as either a witness or a partner. This is because the partners require sophisticated computers that have enough hardware to support a production database, whereas the witness can run on any available Windows system that supports [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ A single-server instance can also function at the same time as a witness in some sessions and a partner in other sessions. However, in practice, a server instance typically functions as either a witness or a partner. This is because the partners require sophisticated computers that have enough hardware to support a production database, whereas the witness can run on any available Windows system that supports [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="SwHwRecommendations"></a> Software and Hardware Recommendations  
  We strongly recommend that the witness reside on a separate computer from the partners. Database mirroring partners are supported only by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard edition and by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. Witnesses, in contrast, are also supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup and by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Except during an upgrade from an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the server instances in a mirroring session must all be running the same version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] witness is supported when you are upgrading from a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] mirroring configuration but cannot be added to an existing or new [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] or later mirroring configuration.  

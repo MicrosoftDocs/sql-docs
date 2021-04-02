@@ -1,6 +1,7 @@
 ---
-title: "Install PolyBase on Windows | Microsoft Docs"
-ms.date: 09/24/2018
+title: "Install PolyBase on Windows"
+description: Learn to install PolyBase as a single node or PolyBase scale-out group. You can use an installation wizard or a command prompt. Finally, enable PolyBase.
+ms.date: 02/05/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,12 +9,12 @@ helpviewer_keywords:
    - "PolyBase, installation"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
-monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
+ms.reviewer: ""
+monikerRange: ">= sql-server-2016"
 ---
 # Install PolyBase on Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only ](../../includes/applies-to-version/sql-windows-only.md)]
 
 To install a trial version of SQL Server, go to [SQL Server evaluations](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
    
@@ -22,8 +23,6 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
 - 64-bit SQL Server Evaluation edition.  
    
 - Microsoft .NET Framework 4.5.  
-
-- Oracle Java SE Runtime Environment (JRE). Versions 7 (starting from 7.51) and 8 are supported. [JRE](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) and [Server JRE](https://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) both work. Go to [Java SE downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html). If JRE isn't present, the installer fails. JRE9 and JRE10 aren't supported.
 
 - Minimum memory: 4 GB. 
    
@@ -67,6 +66,9 @@ After you install PolyBase either standalone or in a scale-out group, you can't 
 
    ![PolyBase services](../../relational-databases/polybase/media/install-wizard.png "PolyBase services")  
    
+   >[!NOTE]
+   >SQL Server 2019 PolyBase now includes an additional option **Java connector for HDFS data sources**. See [SQL Server preview features](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/) for more information about this feature.
+   
 4. On the Server Configuration page, configure the **SQL Server PolyBase Engine Service** and **SQL Server PolyBase Data Movement Service** to run under the same domain account.  
 
    >[!IMPORTANT]
@@ -83,8 +85,6 @@ After you install PolyBase either standalone or in a scale-out group, you can't 
      This option also enables Microsoft Distributed Transaction Coordinator (MSDTC) firewall connections and modifies MSDTC registry settings.  
    
 6. On the PolyBase Configuration page, specify a port range with at least six ports. SQL Server setup  allocates the first six available ports from the range.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    >[!IMPORTANT]
    > After installation, you must [enable the PolyBase feature](#enable).
@@ -111,7 +111,7 @@ Use the values in this table to create installation scripts. The SQL Server Poly
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-ver15 "
 
 |SQL Server component|Parameter and values|Description|  
 |--------------------------|--------------------------|-----------------|  
@@ -148,19 +148,19 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 
 ## <a id="enable"></a> Enable PolyBase
 
-After installation, PolyBase must be enabled to access its features. To connect to SQL Server 2019 CTP 2.0, you must enable PolyBase after installation. Use the following Transact-SQL command.
+After installation, PolyBase must be enabled to access its features. Use the following Transact-SQL command. SQL 2019 instances deployed during Big Data Cluster installation have this setting enabled by default.
 
 
 ```sql
 exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
-RECONFIGURE [ WITH OVERRIDE ]  ;
+RECONFIGURE;
 ```
-The instance then must be restarted.
-
-
 ## Post-installation notes  
 
 PolyBase installs three user databases, DWConfiguration, DWDiagnostics, and DWQueue. These databases are for PolyBase use. Don't alter or delete them.  
+
+> [!CAUTION]
+> Adding PolyBase to an existing installation of SQL Server will install the feature at the version level of the installation media, which may be behind the version level other features of SQL Server. This may result in unexpected behavior or errors. Always follow up installing the PolyBase feature by bringing the new feature up to the same version level. Install service packs (SPs), cumulative updates (CUs), and/or general distribution releases (GDRs) as needed. To determine the version of PolyBase, see [Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level#polybase).
    
 ### <a id="confirminstall"></a> How to confirm installation  
 

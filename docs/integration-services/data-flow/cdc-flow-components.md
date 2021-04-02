@@ -1,4 +1,5 @@
 ---
+description: "CDC Flow Components"
 title: "CDC Flow Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -8,19 +9,19 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # CDC Flow Components
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Change Data Capture Components by Attunity for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] help SSIS developers work with CDC and reduce the complexity of CDC packages.  
   
- The SSIS CDC components are designed to work with the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC feature where the source tables are either the same [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database or an Oracle database (when using the Oracle CDC Service for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Partitioned tables are supported.  
+ The SSIS CDC components are designed to work with the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC feature where the source tables are either the same [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] database or an Oracle database (when using the Oracle CDC Service for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]). Partitioned tables are supported.  
   
- The components include Control and Data Flow components that streamline the experience of reading and processing change data in SSIS packages. The components can be added to the component library in Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], but are installed separately.  
+ The components include Control and Data Flow components that streamline the experience of reading and processing change data in SSIS packages. The components can be added to the component library in Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], but are installed separately.  
   
  The following are the Change Data Capture Components by Attunity:  
   
@@ -37,7 +38,7 @@ ms.author: janinez
 ## Installation  
  This section describes the installation procedures for the CDC Components for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
- The CDC Components for SSIS are packaged with the MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ®. This download is part of the SQL Server Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ The CDC Components for SSIS are packaged with the MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ®. This download is part of the SQL Server Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](https://www.microsoft.com/download/details.aspx?id=56833).  
   
 ### Version Support
 
@@ -55,7 +56,7 @@ The CDC components for SSIS are supported on the following operating systems and
 -   Windows Server 2016
   
 ### Running the Installation Program  
- Before you run the installation wizard, be sure that the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is closed. Then follow the directions in the installation wizard.  
+ Before you run the installation wizard, be sure that the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is closed. Then follow the directions in the installation wizard.  
   
 ### Restart SSIS Service 
 After you install the CDC components, you must restart the SSIS service to be sure that the components work correctly when developing packages in the SQL [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -63,23 +64,23 @@ After you install the CDC components, you must restart the SSIS service to be su
 A message is displayed after you install the components. Click **Yes** when prompted.  
   
 ### Uninstalling the Microsoft CDC Components  
- You uninstall the CDC source, CDC splitter, or CDC Control task, by using the uninstall wizard. If you are using the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] for package development, make sure the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is closed before running the uninstall wizard.  
+ You uninstall the CDC source, CDC splitter, or CDC Control task, by using the uninstall wizard. If you are using the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] for package development, make sure the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is closed before running the uninstall wizard.  
   
 ## Benefits  
- The CDC Components for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components allow SSIS developers to easily build SSIS packages that process change data. These components enhance the ability of SSIS developers to deal with CDC and reduce the complexity of CDC packages.  
+ The CDC Components for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components allow SSIS developers to easily build SSIS packages that process change data. These components enhance the ability of SSIS developers to deal with CDC and reduce the complexity of CDC packages.  
   
  The SSIS CDC components are used to provide the change data in a way that is easy to further process it for replication, loading a data warehouse, updating slowly changing dimensions for OLAP, auditing changes, or for additional possible uses. The type of further processing used is determined by the SSIS developer.  
   
- The SSIS CDC components are designed to work with the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC feature with change tables that are in the same [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database.  
+ The SSIS CDC components are designed to work with the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC feature with change tables that are in the same [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] database.  
   
 ## Getting Started with the Change Data Capture Components  
  A typical CDC package processes changes to a group of tables. The basic control flow part of this type of CDC package is shown in the following figure. This package is called a trickle-feed processing package.  
   
  ![Trickle Feed Processing Package Control Flow](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Trickle Feed Processing Package Control Flow")  
   
- This [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Control Flow contains two CDC Control Tasks and the Data Flow task. The first task called **Get CDC Processing Range** establishes the LSN range for the changes that are processed in the data-flow task called **Process Changes**. This range is established based on what was processed during the last package run and was saved in a persistent store.  
+ This [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Control Flow contains two CDC Control Tasks and the Data Flow task. The first task called **Get CDC Processing Range** establishes the LSN range for the changes that are processed in the data-flow task called **Process Changes**. This range is established based on what was processed during the last package run and was saved in a persistent store.  
   
- For more information about using the CDC Control Task, see [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) and [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md).  
+ For more information about using the CDC Control Task, see [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) and [CDC Control Task Editor](../control-flow/cdc-control-task.md).  
   
  The following figure shows the **Process Changes** data flow, which conceptually shows how the changes are processes.  
   
@@ -97,11 +98,11 @@ A message is displayed after you install the components. Click **Yes** when prom
   
  [CDC Source](../../integration-services/data-flow/cdc-source.md)  
   
- [CDC Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+ [CDC Source Editor &#40;Connection Manager Page&#41;](./cdc-source.md)  
   
- [CDC Source Editor &#40;Columns Page&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+ [CDC Source Editor &#40;Columns Page&#41;](./cdc-source.md)  
   
- [CDC Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [CDC Source Editor &#40;Error Output Page&#41;](./cdc-source.md)  
   
  For more information about the CDC Splitter, see:  
   
@@ -135,13 +136,13 @@ A message is displayed after you install the components. Click **Yes** when prom
  This section lists some security considerations related to the use of the CDC components in SSIS.  
   
 ### Access Authorization to Change Data  
- Trickle-feed update packages need access to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC functions. Such access is granted, by default, to members of the **db_owner** fixed database role. Because the **db_owner** is a powerful role, when defining capture instances within [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] it is recommended to associate a gating security role to each capture instance that allows the SSIS CDC package to use a much more restricted user for processing the changes.  
+ Trickle-feed update packages need access to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC functions. Such access is granted, by default, to members of the **db_owner** fixed database role. Because the **db_owner** is a powerful role, when defining capture instances within [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] it is recommended to associate a gating security role to each capture instance that allows the SSIS CDC package to use a much more restricted user for processing the changes.  
   
 ### Access to CDC Database Current LSN  
- The CDC Control task operations for marking the start LSN for change processing must be able to find the CDC Database current LSN. The components find the LSN by using the procedure **sp_replincrementlsn** from the master database. Execute permission on this procedure must be given to the login used for connecting to the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC database.  
+ The CDC Control task operations for marking the start LSN for change processing must be able to find the CDC Database current LSN. The components find the LSN by using the procedure **sp_replincrementlsn** from the master database. Execute permission on this procedure must be given to the login used for connecting to the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC database.  
   
 ### Access to CDC States Table  
- The CDC States table is used for automatically persisting CDC States that need to be updatable by the login used for connecting to the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC database. As this table is created by the SSIS developer, set the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] system administrator as a user who is authorized to create [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] databases and perform administrative and maintenance tasks. In addition, a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] system administrator who works with CDC enabled databases must be knowledgeable about [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC technology and implementation.  
+ The CDC States table is used for automatically persisting CDC States that need to be updatable by the login used for connecting to the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC database. As this table is created by the SSIS developer, set the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] system administrator as a user who is authorized to create [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] databases and perform administrative and maintenance tasks. In addition, a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] system administrator who works with CDC enabled databases must be knowledgeable about [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC technology and implementation.  
   
 ## Grouping Tables for CDC Processing  
  Database projects range in size from several tables to many thousands of tables. When designing initial load and CDC packages, it is beneficial to group tables in much smaller groups for easier management and efficiency. This section lists various considerations that impact the sorting of tables into small groups, where the tables in each are initially loaded and then updated as a group.  
@@ -202,7 +203,7 @@ A message is displayed after you install the components. Click **Yes** when prom
   
 -   Blog entry, [CDC in SSIS for SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/), on mattmasson.com.  
   
--   Blog entry on setting up the CDC service, [CDC for Oracle in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827), on blogs.msdn.com.  
+-   Blog entry on setting up the CDC service, [CDC for Oracle in SQL Server 2012](https://sqlblog.iridule.net/index.php/2013/04/15/sql-server-2012-cdc-for-oracle-a-review-of-one-implementation/), on blogs.msdn.com.  
   
 -   Technical article, [Installing Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252958), on social.technet.microsoft.com.  
   
@@ -210,9 +211,8 @@ A message is displayed after you install the components. Click **Yes** when prom
   
 -   Technical article, [Troubleshoot CDC Instance Errors in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252961), on social.technet.microsoft.com.  
   
--   Video, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](https://technet.microsoft.com/sqlserver/jj218898), on technet.microsoft.com.  
+-   Video, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com.  
   
 ## See Also  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
-  
   

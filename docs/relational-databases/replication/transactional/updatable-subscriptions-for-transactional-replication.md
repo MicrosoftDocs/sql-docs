@@ -1,6 +1,7 @@
 ---
-title: "Updatable Subscriptions for Transactional Replication | Microsoft Docs"
-ms.custom: ""
+title: "Updatable Subscriptions (Transactional)"
+description: Describes the Updatable Subscriptions feature available for Transactional Replication in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: "07/21/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -19,7 +20,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Updatable Subscriptions - For Transactional Replication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
     
 > [!NOTE]  

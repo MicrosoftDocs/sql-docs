@@ -1,42 +1,40 @@
 ---
+description: "CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server"
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
-ms.date: 06/26/2019
+ms.date: 04/03/2020
 ms.prod: sql
-ms.reviewer: ""
-ms.technology: t-sql
+ms.technology: language-extensions
 ms.topic: language-reference
-author: nelgson
-ms.author: negust
-ms.reviewer: dphansen
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 
 # CREATE EXTERNAL LANGUAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-Registers external language extensions in the database from the specified file path or byte stream. This statement serves as a generic mechanism for the database administrator to register new external language extensions on any OS platform supported by SQL Server. For more information, see [Language Extensions](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
+Registers external language extensions in the database from the specified file path or byte stream. This statement serves as a generic mechanism for the database administrator to register new external language extensions on any OS platform supported by SQL Server. For more information, see [Language Extensions](../../language-extensions/language-extensions-overview.md).
 
 > [!NOTE]
-> Currently, only **Java** is supported as an external language. **R** and **Python** are reserved names and no external language can be created with those specific names. For more information on how to use **R** and **Python**, see [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/sql-server-machine-learning-services).
+> **R** and **Python** are reserved names and no external language can be created with those specific names. For more information on how to use **R** and **Python**, see [SQL Server Machine Learning Services](../../machine-learning/index.yml).
 
 ## Syntax
 
-```text
+```syntaxsql
 CREATE EXTERNAL LANGUAGE language_name  
 [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [ ,...2 ]  
-WITH (<option_spec>)
 [ ; ]  
 
 <file_spec> ::=  
 {
-    ( CONTENT = { <external_lang_specifier> | <content_bits>,
+    ( CONTENT = { <external_lang_specifier> | <content_bits> },
     FILE_NAME = <external_lang_file_name>
     [ , PLATFORM = <platform> ]
     [ , PARAMETERS = <external_lang_parameters> ]
-    [ , ENVIRONMENT_VARIABLES = <external_lang_env_variables> )
+    [ , ENVIRONMENT_VARIABLES = <external_lang_env_variables> ] )
 }
 
 <external_lang_specifier> :: =  
@@ -104,19 +102,15 @@ This provides a possibility to give a set of environment variables to the extern
 
 This parameter is needed for hybrid OS scenarios. In a hybrid architecture, the language needs to be registered once per platform. Platform and language name will be the unique key per external language. If no platform is specified, the current OS is assumed.
 
-## Remarks
-
-In CTP 3.0, **PARAMETERS** and **ENVIRONMENT_VARIABLES** are not supported.
-
 ## Permissions
 
-Requires the `CREATE EXTERNAL LANGUAGE` permission. By default, any user who has **dbo** who is a member of the **db_owner** role has permissions to create an external language. For all other users, you must explicitly give them permission using a [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) statement, specifying CREATE EXTERNAL LANGUAGE as the privilege.
+Requires the `CREATE EXTERNAL LANGUAGE` permission. By default, any user who has **dbo** who is a member of the **db_owner** role has permissions to create an external language. For all other users, you must explicitly give them permission using a [GRANT](./grant-database-permissions-transact-sql.md) statement, specifying CREATE EXTERNAL LANGUAGE as the privilege.
 
 To modify a library requires the separate permission, `ALTER ANY EXTERNAL LANGUAGE`.
 
 ### EXECUTE EXTERNAL SCRIPT permission
 
-In SQL Server 2019, we are introducing EXECUTE EXTERNAL SCRIPT permissions, so that external script execution can be granted on specific languages. Previously, we only had EXECUTE ANY EXTERNAL SCRIPT database permission, which did not allow granting execution permission on a specific language.
+You can use EXECUTE EXTERNAL SCRIPT permissions, so that external script execution can be granted on specific languages. This is different from EXECUTE ANY EXTERNAL SCRIPT database permission, which do not allow granting execution permission on a specific language.
 
 This means that non-**dbo** users need to be granted permission to execute a specific language:
 
@@ -152,10 +146,19 @@ FROM
 (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so', PLATFORM = LINUX);
 GO
 ```
+### C. Grant permissions to execute external script
+
+The following example grants the **mylogin** principal access to execute scripts using the **Java** external language.
+
+```sql
+GRANT EXECUTE EXTERNAL SCRIPT ON EXTERNAL LANGUAGE ::Java 
+TO mylogin;
+```
+
 
 ## See also
 
 [ALTER EXTERNAL LANGUAGE (Transact-SQL)](alter-external-language-transact-sql.md)  
 [DROP EXTERNAL LANGUAGE (Transact-SQL)](drop-external-language-transact-sql.md)  
 [sys.external_languages](../../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md)  
-[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)  
+[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)

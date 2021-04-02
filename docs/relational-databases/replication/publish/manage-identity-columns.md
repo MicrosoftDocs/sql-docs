@@ -1,4 +1,5 @@
 ---
+description: "Manage Identity Columns"
 title: "Manage Identity Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,10 +17,11 @@ helpviewer_keywords:
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Manage Identity Columns
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to manage identity columns in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. When Subscriber inserts are replicated back to the Publisher, identity columns must be managed to avoid assignment of the same identity value at both the Subscriber and Publisher. Replication can manage identity ranges automatically or you can choose to manually handle identity range management.  For information about the identity range management options provided by replication, see [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
+  This topic describes how to manage identity columns in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. When Subscriber inserts are replicated back to the Publisher, identity columns must be managed to avoid assignment of the same identity value at both the Subscriber and Publisher. Replication can manage identity ranges automatically or you can choose to manually handle identity range management.  For information about the identity range management options provided by replication, see [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
  **In This Topic**  
   
@@ -90,27 +92,27 @@ ms.author: "mathoma"
   
 #### To enable automatic identity range management when defining articles for a transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). If the source table being published has an identity column, specify a value of **auto** for **@identityrangemanagementoption**, the range of identity values assigned to the Publisher for **@pub_identity_range**, the range of identity values assigned to each Subscribers for **@identity_range**, and the percent of total identity values used before a new identity range is assigned for **@threshold**. For more information about defining articles, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  At the Publisher on the publication database, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). If the source table being published has an identity column, specify a value of **auto** for **\@identityrangemanagementoption**, the range of identity values assigned to the Publisher for **\@pub_identity_range**, the range of identity values assigned to each Subscribers for **\@identity_range**, and the percent of total identity values used before a new identity range is assigned for **\@threshold**. For more information about defining articles, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
     > [!NOTE]  
     >  Ensure that the data type of the identity column is large enough to support the total range of identities being assigned to all Subscribers.  
   
 #### To disable automatic identity range management when defining articles for a transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify a value of **manual** for **@identityrangemanagementoption**. For more information about defining articles, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  At the Publisher on the publication database, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify a value of **manual** for **\@identityrangemanagementoption**. For more information about defining articles, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Assign ranges to identity article columns at the Subscriber to avoid generating conflicts for updating Subscribers. For more information, see the section on assigning ranges for manual identity range management in the topic [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
 #### To enable automatic identity range management when defining articles for a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). If the source table being published has an identity column, specify a value of **auto** for **@identityrangemanagementoption**, the range of identity values assigned to a server subscription for **@pub_identity_range**, the range of identity values assigned to the Publisher and each client subscription for **@identity_range**, and the percent of total identity values used before a new identity range is assigned for **@threshold**. For more information on when new identity ranges are assigned, see Assigning Identity Ranges in the topic [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md). For more information about defining articles, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  At the Publisher on the publication database, execute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). If the source table being published has an identity column, specify a value of **auto** for **\@identityrangemanagementoption**, the range of identity values assigned to a server subscription for **\@pub_identity_range**, the range of identity values assigned to the Publisher and each client subscription for **\@identity_range**, and the percent of total identity values used before a new identity range is assigned for **\@threshold**. For more information on when new identity ranges are assigned, see Assigning Identity Ranges in the topic [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md). For more information about defining articles, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
     > [!NOTE]  
     >  Ensure that the data type of the identity column is large enough to support the total range of identities being assigned to all Subscribers, particularly for Subscribers with server subscriptions.  
   
 #### To disable automatic identity range management when defining articles for a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify one of the following values for **@identityrangemanagementoption**:  
+1.  At the Publisher on the publication database, execute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify one of the following values for **\@identityrangemanagementoption**:  
   
     -   **manual** - Identity ranges must be assigned manually for updating Subscribers.  
   
@@ -126,9 +128,9 @@ ms.author: "mathoma"
   
 2.  If the value of **identityrangemanagementoption** in the result set is **1**, change the settings as follows:  
   
-    -   To change the assigned identity ranges, execute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) at the Publisher on the publication database. Specify a value of **identity_range** or **pub_identity_range** for **@property** and the new range value for **@value**.  
+    -   To change the assigned identity ranges, execute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) at the Publisher on the publication database. Specify a value of **identity_range** or **pub_identity_range** for **\@property** and the new range value for **\@value**.  
   
-    -   To change the threshold at which new ranges are assigned, execute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) at the Publisher on the publication database. Specify a value of **threshold** for **@property** and the new threshold value for **@value**.  
+    -   To change the threshold at which new ranges are assigned, execute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) at the Publisher on the publication database. Specify a value of **threshold** for **\@property** and the new threshold value for **\@value**.  
   
 #### To change automatic identity range management settings for an existing article in a merge publication  
   
@@ -136,11 +138,11 @@ ms.author: "mathoma"
   
 2.  If the value of **identity_support** in the result set is **1**, change the settings as follows:  
   
-    -   To change the assigned identity ranges, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) at the Publisher on the publication database. Specify a value of **identity_range** or **pub_identity_range** for **@property** and the new range value for **@value**.  
+    -   To change the assigned identity ranges, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) at the Publisher on the publication database. Specify a value of **identity_range** or **pub_identity_range** for **\@property** and the new range value for **\@value**.  
   
-    -   To change the threshold at which new ranges are assigned, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) at the Publisher on the publication database. Specify a value of **threshold** for **@property** and the new threshold value for **@value**. For more information on when new identity ranges are assigned, see Assigning Identity Ranges in the topic [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
+    -   To change the threshold at which new ranges are assigned, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) at the Publisher on the publication database. Specify a value of **threshold** for **\@property** and the new threshold value for **\@value**. For more information on when new identity ranges are assigned, see Assigning Identity Ranges in the topic [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-    -   To disable automatic identity range management, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) at the Publisher on the publication database. Specify a value of **identityrangemanagementoption** for **@property** and either **manual** or **none** for **@value**.  
+    -   To disable automatic identity range management, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) at the Publisher on the publication database. Specify a value of **identityrangemanagementoption** for **\@property** and either **manual** or **none** for **\@value**.  
   
 ## See Also  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   

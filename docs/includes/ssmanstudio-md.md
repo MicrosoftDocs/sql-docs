@@ -1,1 +1,1 @@
- Management Studio 
+ Management Studio

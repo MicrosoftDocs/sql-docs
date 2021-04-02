@@ -1,4 +1,5 @@
 ---
+description: "SIGN (SSIS Expression)"
 title: "SIGN (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,12 +13,12 @@ helpviewer_keywords:
   - "SIGN function"
   - "negative values"
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # SIGN (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns the positive (+1), negative (-1), or zero (0) sign of a numeric expression.  

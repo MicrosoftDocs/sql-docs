@@ -1,10 +1,8 @@
 ---
-title: "Combine Conditions When AND Has Precedence (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Combine Conditions When AND Has Precedence (Visual Database Tools)"
+title: Combine Conditions When AND Has Precedence
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,12 +12,17 @@ helpviewer_keywords:
   - "combining search conditions"
   - "AND, Criteria pane"
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
-author: "markingmyname"
-ms.author: "maghan"
-
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ---
+
 # Combine Conditions When AND Has Precedence (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 To combine conditions with AND, you add the column to the query twice--once for each condition. To combine conditions with OR, you put the first one in the Filter column and additional conditions into an **Or...** column.  
   
 For example, imagine that you want to find either employees who have been with the company for more than five years in lower-level jobs or employees with middle-level jobs regardless of their hire date. This query requires three conditions, two of them linked with AND:  
@@ -30,7 +33,7 @@ For example, imagine that you want to find either employees who have been with t
   
 -   Employees with a job level of 200.  
   
-### To combine conditions when AND has precedence  
+## To combine conditions when AND has precedence  
   
 1.  In the [Criteria pane](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md), add the data columns you want to search. If you want to search the same column using two or more conditions linked with AND, you must add the data column name to the grid once for each value you want to search.  
   
@@ -53,9 +56,9 @@ For example, imagine that you want to find either employees who have been with t
       (job_lvl = 200)  
     ```  
   
-## See Also  
-[Combine Conditions When OR Has Precedence (Visual Database Tools)](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
-[Conventions for Combining Search Conditions in the Criteria Pane (Visual Database Tools)](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
-[Rules for Entering Search Values (Visual Database Tools)](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
-[Specify Search Criteria (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
-  
+## See Also
+
+[Combine Conditions When OR Has Precedence](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[Conventions for Combining Search Conditions in the Criteria Pane](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+[Rules for Entering Search Values](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
+[Specify Search Criteria](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)

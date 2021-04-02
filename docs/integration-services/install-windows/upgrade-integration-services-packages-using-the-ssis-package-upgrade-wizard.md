@@ -1,4 +1,5 @@
 ---
+description: "Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard"
 title: "Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,15 +12,15 @@ helpviewer_keywords:
   - "Integration Services packages, upgrading"
   - "upgrading Integration Services packages"
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  You can upgrade packages that were created in earlier versions of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] format that [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] uses. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Upgrade Wizard to help in this process. Because you can configure the wizard to backup up your original packages, you can continue to use the original packages if you experience upgrade difficulties.  
+  You can upgrade packages that were created in earlier versions of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] format that [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] uses. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Upgrade Wizard to help in this process. Because you can configure the wizard to backup up your original packages, you can continue to use the original packages if you experience upgrade difficulties.  
   
  The [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Upgrade Wizard is installed when [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is installed.  
   

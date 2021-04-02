@@ -1,5 +1,6 @@
 ---
-title: "Report and Group Variables Collections References (Report Builder and SSRS) | Microsoft Docs"
+title: "Report and Group Variables Collections References (Report Builder) | Microsoft Docs"
+description: Create a variable with a unique name when you have a complex calculation that you use in a report more than once. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

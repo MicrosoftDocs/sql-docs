@@ -1,9 +1,10 @@
 ---
 title: "Binding Parameters | Microsoft Docs"
+description: Find out how to bind each parameter marker in an SQL statement to a variable in the application before the statement can run.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
@@ -18,13 +19,12 @@ helpviewer_keywords:
   - "ODBC applications, parameters"
   - "bound parameter markers [SQL Server Native Client]"
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
-author: MightyPen
-ms.author: genemi
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Statement Parameters - Binding Parameters
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Each parameter marker in an SQL statement must be associated, or bound, to a variable in the application before the statement can be executed. This is done by calling the [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) function. **SQLBindParameter** describes the program variable (address, C data type, and so on) to the driver. It also identifies the parameter marker by indicating its ordinal value and then describes the characteristics of the SQL object it represents (SQL data type, precision, and so on).  
   
@@ -54,9 +54,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  Named parameters are only supported when using the [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** statement or the ODBC CALL escape sequence to execute a stored procedure.  
   
- If **SQL_DESC_NAME** is set for a stored procedure parameter, all stored procedure parameters in the query should also set **SQL_DESC_NAME**.  If literals are used in stored procedure calls, where parameters have **SQL_DESC_NAME** set, the literals should use the format *'name*=*value*', where *name* is the stored procedure parameter name (for example, @p1). For more information, see [Binding Parameters by Name (Named Parameters)](https://go.microsoft.com/fwlink/?LinkId=167215).  
+ If **SQL_DESC_NAME** is set for a stored procedure parameter, all stored procedure parameters in the query should also set **SQL_DESC_NAME**.  If literals are used in stored procedure calls, where parameters have **SQL_DESC_NAME** set, the literals should use the format *'name*=*value*', where *name* is the stored procedure parameter name (for example, @p1). For more information, see [Binding Parameters by Name (Named Parameters)](../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md).  
   
 ## See Also  
  [Using Statement Parameters](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
-  
   

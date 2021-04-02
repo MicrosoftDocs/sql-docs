@@ -1,4 +1,5 @@
 ---
+description: "GET_TRANSMISSION_STATUS (Transact-SQL)"
 title: "GET_TRANSMISSION_STATUS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "STATUS_TSQL"
   - "TRANSMISSION"
@@ -23,11 +24,11 @@ helpviewer_keywords:
   - "status information [SQL Server], conversations"
   - "GET_TRANSMISSION_STATUS statement"
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
-author: CarlRabeler
-ms.author: carlrab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # GET_TRANSMISSION_STATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the status for the last transmission for one side of a conversation.  
   
@@ -35,12 +36,13 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 GET_TRANSMISSION_STATUS ( conversation_handle )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *conversation_id*  
  Is the conversation handle for the conversation. This parameter is of type **uniqueidentifier**.  
   
@@ -58,7 +60,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 ## Examples  
  The following example reports the transmission status for the conversation with the conversation handle `58ef1d2d-c405-42eb-a762-23ff320bddf0`.  
   
-```  
+```sql  
 SELECT Status =  
     GET_TRANSMISSION_STATUS('58ef1d2d-c405-42eb-a762-23ff320bddf0') ;  
 ```  

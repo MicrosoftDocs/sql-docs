@@ -1,4 +1,5 @@
 ---
+description: "Calling Methods"
 title: "Calling Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
@@ -14,12 +15,12 @@ helpviewer_keywords:
   - "SQL Server Management Objects, method calling"
   - "SMO [SQL Server], method calling"
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
-author: "stevestein"
-ms.author: "sstein"
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: "markingmyname"
+ms.author: "maghan"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Calling Methods
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Methods perform specific tasks related to the object, such as issuing a **Checkpoint** on a database or requesting an enumerated list of logons for the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -58,9 +59,8 @@ Database db;
 db = new Database(srv, "Test_SMO_Database");   
 //Call the Create method to create the database on the instance of SQL Server.   
 db.Create();   
+}
 ```  
-  
- }  
   
 ## Using an SMO Method with a Parameter in Visual Basic  
  The <xref:Microsoft.SqlServer.Management.Smo.Table> object has a method called <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>. This method requires a numeric parameter that specifies the **FillFactor**.  

@@ -1,23 +1,21 @@
 ---
-title: Microsoft Extensibility SDK for Java for SQL Server
-description: How to implement a Java program for SQL Server using the Microsoft Extensibility SDK for Java.
+title: Microsoft Extensibility SDK for Java
+description: Learn how you can implement a Java program for SQL Server using the Microsoft Extensibility SDK for Java.
 ms.prod: sql
-ms.technology: machine-learning
-
-ms.date: 07/24/2019
+ms.technology: language-extensions
+ms.date: 11/05/2019
 ms.topic: conceptual
-author: nelgson
-ms.author: negust
-ms.reviewer: dphansen
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 
 # Microsoft Extensibility SDK for Java for SQL Server
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes how you can implement a Java program for SQL Server using the Microsoft Extensibility SDK for Java. The SDK is an interface for the Java language extension that is used to exchange data with SQL Server and to execute Java code from SQL Server.
+Learn how you can implement a Java program for SQL Server using the Microsoft Extensibility SDK for Java. The SDK is an interface for the Java language extension that is used to exchange data with SQL Server and to execute Java code from SQL Server.
 
-The SDK is installed as part of SQL Server 2019 CTP 3.0 and later on both Windows as Linux:
+The SDK is installed as part of SQL Server 2019 Release Candidate 1 on both Windows as Linux:
 
 + Default installation path on Windows: **[instance installation home directory]\MSSQL\Binn\mssql-java-lang-extension.jar**
 + Default installation path on Linux: **/opt/mssql/lib/mssql-java-lang-extension.jar**

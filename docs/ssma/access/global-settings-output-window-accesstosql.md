@@ -1,4 +1,5 @@
 ---
+description: "Global Settings (Output Window) (AccessToSQL)"
 title: "Global Settings (Output Window) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ca64f234-38f2-4607-a9d6-d4906e48e336
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Global Settings (Output Window) (AccessToSQL)
 Use the **Global Settings** dialog box to specify settings for SSMA.  

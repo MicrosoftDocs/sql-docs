@@ -1,10 +1,11 @@
 ---
+description: "Deploy Integration Services (SSIS) Projects and Packages"
 title: "Deploy Integration Services (SSIS) Projects and Packages | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/04/2018
+ms.date: 09/26/2019
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.reviewer: ""
+ms.reviewer: "vanto"
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
@@ -16,27 +17,27 @@ f1_keywords:
   - "sql13.ssis.ssms.isenvprop.variables.f1"
   - "sql13.ssis.migrationwizard.f1"
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Deploy Integration Services (SSIS) Projects and Packages
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports two deployment models, the project deployment model and the legacy package deployment model. The project deployment model enables you to deploy your projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
 For more information about the legacy package deployment model, see [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. With this deployment model, you were not able to deploy one or more packages without deploying the whole project. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduced the Incremental Package Deployment feature, which lets you deploy one or more packages without deploying the whole project.  
+>  The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. With this deployment model, you were not able to deploy one or more packages without deploying the whole project. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduced the Incremental Package Deployment feature, which lets you deploy one or more packages without deploying the whole project.
 
 > [!NOTE]
 > This article describes how to deploy SSIS packages in general, and how to deploy packages on premises. You can also deploy SSIS packages to the following platforms:
 > - **The Microsoft Azure cloud**. For more info, see [Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 > - **Linux**. For more info, see [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md).
 
-## Compare Project Deployment Model and legacy Package Deployment Model  
+## Compare Project Deployment Model and legacy Package Deployment Model
+
  The type of deployment model that you choose for a project determines which development and administrative options are available for that project. The following table shows the differences and similarities between using the project deployment model and using the package deployment model.  
   
 |When Using the Project Deployment Model|When Using the legacy Package Deployment Model|  
@@ -52,9 +53,8 @@ For more information about the legacy package deployment model, see [Legacy Pack
 |During execution, events that are produced by the package are captured automatically and saved to the catalog. You can query these events with Transact-SQL views.|During execution, events that are produced by a package are not captured automatically. A log provider must be added to the package to capture events.|  
 |Packages are run in a separate Windows process.|Packages are run in a separate Windows process.|  
 |SQL Server Agent is used to schedule package execution.|SQL Server Agent is used to schedule package execution.|  
-  
- The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. If you used this model, you were not able to deploy one or more packages without deploying the whole project. The [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduced the Incremental Package Deployment feature that allows you to deploy one or more packages without deploying the whole project.   
-  
+
+
 ## Features of Project Deployment Model  
  The following table lists the features that are available to projects developed only for the project deployment model.  
   
@@ -73,10 +73,10 @@ For more information about the legacy package deployment model, see [Legacy Pack
 
 If you change the SSIS service account from the default, you may have to give additional permissions to the non-default service account before you can deploy packages successfully. If the non-default service account doesn't have the required permissions, you may see the following error message.
 
-*A .NET Framework error occurred during execution of user-defined routine or aggregate "deploy_project_internal":
-System.ComponentModel.Win32Exception: A required privilege is not held by the client.*
+`A .NET Framework error occurred during execution of user-defined routine or aggregate "deploy_project_internal":
+System.ComponentModel.Win32Exception: A required privilege is not held by the client.`
 
-This error is typically the result of missing DCOM permissions. To fix the error, do the following things.
+This error is typically the result of missing DCOM permissions. To fix the error, do the following:
 
 1.  Open the **Component Services** console (or run Dcomcnfg.exe).
 2.  In the **Component Services** console, expand **Component Services** > **Computers** > **My Computer** > **DCOM Config**.
@@ -87,8 +87,9 @@ This error is typically the result of missing DCOM permissions. To fix the error
 7.  In the **Permission** dialog box, add the non-default service account and grant **Allow** permissions as required. Typically, an account has **Local Launch** and **Local Activation** permissions.
 8.  Click **OK** twice, then close the **Component Services** console.
 
-For more info about the error described in this section and about the permissions required by the SSIS service account, see the following blog post.  
-[System.ComponentModel.Win32Exception: A required privilege is not held by the client while Deploying SSIS Project](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+For more info about the error described in this section and about the permissions required by the SSIS service account, see the following blog post:
+ 
+- [System.ComponentModel.Win32Exception: A required privilege is not held by the client while Deploying SSIS Project](/archive/blogs/dataaccesstechnologies/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project)
 
 ## Deploy Projects to Integration Services Server
   In the current release of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you can deploy your projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server enables you to manage packages, run packages, and configure runtime values for packages by using environments.  
@@ -100,14 +101,14 @@ For more info about the error described in this section and about the permission
   
 1.  Create an SSISDB catalog, if you haven't already. For more information, see [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
-2.  Convert the project to the project deployment model by running the **Integration Services Project Conversion Wizard** . For more information, see the instructions below: [To convert a project to the project deployment model](#convert)  
+2.  Convert the project to the project deployment model by running the **Integration Services Project Conversion Wizard**. For more information, see the following instructions: [To convert a project to the project deployment model](#convert)  
   
     -   If you created the project in [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] or later, by default the project uses the project deployment model.  
   
     -   If you created the project in an earlier release of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], after you open the project file in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], convert the project to the project deployment model.  
   
         > [!NOTE]  
-        >  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that the packages in the project can share, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+        >  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that the packages in the project can share, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130)).  
   
          Depending on whether you run the **Integration Services Project Conversion Wizard** from [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] or from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the wizard performs different conversion tasks.  
   
@@ -139,17 +140,17 @@ For more info about the error described in this section and about the permission
   
 1.  Open the project in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], and then From the **Project** menu, select **Deploy** to launch the **Integration Services Deployment Wizard**.  
   
-     -or-  
+     or  
   
      In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > **SSISDB** node in Object Explorer, and locate the Projects folder for the project you want to deploy. Right-click the **Projects** folder, and then click **Deploy Project**.  
   
-     -or-  
+     or  
   
      From the command prompt, run **isdeploymentwizard.exe** from **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**. On 64-bit computers, there is also a 32-bit version of the tool in **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
 2.  On the **Select Source** page, click **Project deployment file** to select the deployment file for the project.  
   
-     -OR-  
+     or  
   
      Click **Integration Services catalog** to select a project that has already been deployed to the SSISDB catalog.  
   
@@ -162,7 +163,7 @@ For more info about the error described in this section and about the permission
   
 1.  From the command prompt, run **isdeploymentwizard.exe** from **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**. On 64-bit computers, there is also a 32-bit version of the tool in **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
-2.  On the **Select Source** page, switch to **Package Deployment model**. Then, select the folder which contains source packages and configure the packages.  
+2.  On the **Select Source** page, switch to **Package Deployment model**. Then, select the folder that contains source packages and configure the packages.  
   
 3.  Complete the wizard. Follow the remaining steps described in [Package Deployment Model](#PackageModel).  
   
@@ -174,7 +175,7 @@ For more info about the error described in this section and about the permission
   
 3.  If you see the **Introduction** page, click **Next** to continue.  
   
-4.  On the **Select Source** page, switch to **Package Deployment model**. Then, select the folder which contains source packages and configure the packages.  
+4.  On the **Select Source** page, switch to **Package Deployment model**. Then, select the folder that contains source packages and configure the packages.  
   
 5.  Complete the wizard. Follow the remaining steps described in [Package Deployment Model](#PackageModel).  
   
@@ -261,8 +262,7 @@ static void Main()
 
 ## Convert to Package Deployment Model Dialog Box
   The **Convert to Package Deployment Model** command allows you to convert a package to the package deployment model after checking the project and each package in the project for compatibility with that model. If a package uses features unique to the project deployment model, such as parameters, then the package cannot be converted.  
-  
-### Task List  
+
  Converting a package to the package deployment model requires two steps.  
   
 1.  When you select the **Convert to Package Deployment Model** command from the **Project** menu, the project and each package are checked for compatibility with this model. The results are displayed in the **Results** table.  
@@ -271,7 +271,8 @@ static void Main()
   
 2.  If the project and all packages pass the compatibility test, then click **OK** to convert the package.  
   
-> **NOTE:** To convert a project to the project deployment model, use the **Integration Services Project Conversion Wizard**. For more information, see [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
+> [!NOTE]
+> To convert a project to the project deployment model, use the **Integration Services Project Conversion Wizard**. For more information, see [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
 
 ## Integration Services Deployment Wizard
   The **Integration Services Deployment Wizard** supports two deployment models:
@@ -282,14 +283,15 @@ static void Main()
  
  The **Package Deployment model** allows you to deploy packages that you have updated to the SSIS Catalog without having to deploy the whole project. 
  
- > **NOTE:** The Wizard default deployment is the Project Deployment model.  
+ > [!NOTE]
+ > The Wizard default deployment is the Project Deployment model.  
   
 ### Launch the wizard
 Launch the wizard by either:
 
  - Typing **"SQL Server Deployment Wizard"** in Windows Search 
 
-**OR**
+ or
 
  - Search for the executable file **ISDeploymentWizard.exe** under the SQL Server installation folder; for example: "C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
@@ -299,61 +301,70 @@ Launch the wizard by either:
   
 ###  <a name="ProjectModel"></a> Project Deployment Model  
   
-#### Select Source  
+#### Select Source
+
  To deploy a project deployment file that you created, select **Project deployment file** and enter the path to the .ispac file. To deploy a project that resides in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog, select **Integration Services catalog**, and then enter the server name and the path to the project in the catalog. Click **Next** to see the **Select Destination** page.  
   
-#### Select Destination  
+#### Select Destination
+
  To select the destination folder for the project in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog, enter the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or click **Browse** to select from a list of servers. Enter the project path in SSISDB or click **Browse** to select it. Click **Next** to see the **Review** page.  
   
-#### Review (and deploy)  
+#### Review (and deploy)
+
  The page allows you to review the settings you have selected. You can change your selections by clicking **Previous**, or by clicking any of the steps in the left pane. Click **Deploy** to start the deployment process.  
   
-#### Results  
+#### Results
+
  After the deployment process is complete, you should see the **Results** page. This page displays the success or failure of each action. If the action fails, click the **Failed** in the **Result** column to display an explanation of the error. Click **Save Report...** to save the results to an XML file or Click **Close** to exit the wizard.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
-#### Select Source  
+#### Select Source
+
  The **Select Source** page in the **Integration Services Deployment Wizard** shows settings specific to the package deployment model when you selected the **Package Deployment** option for the **deployment model**.  
   
- To select the source packages, click **Browse...** button to select the **folder** that contains the packages or type the folder path in the **Packages folder path** textbox and click **Refresh** button at the bottom of the page. Now, you should see all the packages in the specified folder in the list box. By default, all the packages are selected. Click the **checkbox** in the first column to choose which packages you want to be deployed to server.  
+ To select the source packages, click the **Browse...** button to select the **folder** that contains the packages or type the folder path in the **Packages folder path** textbox and click **Refresh** button at the bottom of the page. Now, you should see all the packages in the specified folder in the list box. By default, all the packages are selected. Click the **checkbox** in the first column to choose which packages you want to be deployed to server.  
   
- Refer to the **Status** and **Message** columns to verify the status of package. If the status is set to **Ready** or **Warning**, the deployment wizard would not block the deployment process. Whereas, if the status is set to **Error**, the wizard would not proceed further to deploy selected packages. To view the detailed Warning/Error messages, click the link in the **Message** column.  
+ Refer to the **Status** and **Message** columns to verify the status of package. If the status is set to **Ready** or **Warning**, the deployment wizard would not block the deployment process. If the status is set to **Error**, the wizard wouldn't proceed to deploy the selected packages. To view the detailed Warning or Error messages, click the link in the **Message** column.  
   
- If the sensitive data or package data are encrypted with a password, type the password in the **Password** column and click the **Refresh** button to verify whether the password is accepted. If the password is correct, the status would change to **Ready** and the warning message will disappear. If there are multiple packages with the same password, select the packages with the same encryption password, type the password in the **Password** textbox and click **Apply** button. The password would be applied to the selected packages.  
+ If the sensitive data or package data are encrypted with a password, type the password in the **Password** column and click the **Refresh** button to verify whether the password is accepted. If the password is correct, the status would change to **Ready** and the warning message will disappear. If there are multiple packages with the same password, select the packages with the same encryption password, type the password in the **Password** textbox and select the **Apply** button. The password would be applied to the selected packages.  
   
  If the status of all the selected packages is not set to **Error**, the **Next** button will be enabled so that you can continue with the package deployment process.  
   
-#### Select Destination  
- After selecting package sources, click **Next** button to switch to the **Select Destination** page. Packages must be deployed to a project in the SSIS Catalog (SSISDB). Therefore, before deploying packages, please ensure the destination project already exists in the SSIS Catalog. , otherwise create an empty project.In the **Select Destination** page, type the server name in the **Server Name** textbox or click the **Browse...** button to select a server instance. Then click the **Browse...** button next to **Path** textbox to specify the destination project. If the project does not exist, click the **New project...** to create an empty project as the destination project. The project **MUST** be created under a folder.  
+#### Select Destination
+
+ After selecting package sources, click the **Next** button to switch to the **Select Destination** page. Packages must be deployed to a project in the SSIS Catalog (SSISDB). Before deploying packages, ensure the destination project already exists in the SSIS Catalog. Create an empty project if a project does not exist. In the **Select Destination** page, type the server name in the **Server Name** textbox or click the **Browse...** button to select a server instance. Then click the **Browse...** button next to the **Path** textbox to specify the destination project. If the project does not exist, click the **New project...** button to create an empty project as the destination project. The project must be created under a folder.  
   
-#### Review and deploy  
- Click **Next** on the **Select Destination** page to switch to the **Review** page in the **Integration Services Deployment Wizard**. In the review page, review the summary report about the deployment action. After the verification, click **Deploy** button to perform the deployment action.  
+#### Review and deploy
+
+ Click **Next** on the **Select Destination** page to switch to the **Review** page in the **Integration Services Deployment Wizard**. In the review page, review the summary report about the deployment action. After the verification, click the **Deploy** button to perform the deployment action.  
   
-#### Results  
- After the deployment is complete, you should see the **Results** page. In the **Results** page, review results from each step in the deployment process. On the **Results** page, click **Save Report** to save the deployment report or **Close** to the close the wizard.  
+#### Results
+
+ After the deployment is complete, you should see the **Results** page. On the **Results** page, review results from each step in the deployment process. Click **Save Report** to save the deployment report or **Close** to the close the wizard.  
 
 ## Create and Map a Server Environment
+
   You create a server environment to specify runtime values for packages contained in a project you've deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. You can then map the environment variables to parameters, for a specific package, for entry-point packages, or for all the packages in a given project. An entry-point package is typically a parent package that executes a child package.  
   
 > [!IMPORTANT]  
 >  For a given execution, a package can execute only with the values contained in a single server environment.  
   
- You can query views for a list of server environments, environment references, and environment variables. You can also call stored procedures to add, delete, and modify environments, environment references, and environment variables. For more information, see the **Server Environments, Server Variables and Server Environment References** section in [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
+ You can query views for a list of server environments, environment references, and environment variables. You can also call stored procedures to add, delete, and modify environments, environment references, and environment variables. For more information, see the **Server Environments, Server Variables, and Server Environment References** section in [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ### To create and use a server environment  
   
-1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expand the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Catalogs> **SSISDB** node in Object Explorer, and locate the **Environments** folder of the project for which you want to create an environment.  
+1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expand the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Catalogs  **SSISDB** node in Object Explorer, and locate the **Environments** folder of the project for which you want to create an environment.  
   
 2.  Right-click the **Environments** folder, and then click **Create Environment**.  
   
-3.  Type a name for the environment and optionally a description, and then click **OK**.  
+3.  Type a name for the environment and optionally add a description. Click **OK**.  
   
 4.  Right-click the new environment and then click **Properties**.  
   
 5.  On the **Variables** page, do the following to add a variable.  
   
-    1.  Select the **Type** for the variable. The name of the variable **does not** need to match the name of the project parameter that you map to the variable.  
+    1.  Select the **Type** for the variable. The name of the variable does not need to match the name of the project parameter that you map to the variable.  
   
     2.  Enter an optional **Description** for the variable.  
   
@@ -373,7 +384,7 @@ Launch the wizard by either:
   
     2.  In the **Logins or roles** area, select the user or role that you want to grant or deny permissions for.  
   
-    3.  In the **Explicit** area, click **Grant** or **Deny** next to each permission.  
+    3.  In the **Explicit** area, select **Grant** or **Deny** next to each permission.  
   
 7.  To script the environment, click **Script**. By default, the script displays in a new Query Editor window.  
   
@@ -388,7 +399,7 @@ Launch the wizard by either:
   
 11. Right-click the project again, and then click **Configure**.  
   
-12. To map the environment variable to a parameter that you added to the package at design-time or to a parameter that was generated when you converted the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project to the project deployment model, do the following.,  
+12. To map the environment variable to a parameter that you added to the package at design-time or to a parameter that was generated when you converted the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project to the project deployment model, do the following:
   
     1.  In the **Parameters** tab on the **Parameters** page, click the browse button next to the **Value** field.  
   
@@ -396,19 +407,20 @@ Launch the wizard by either:
   
 13. To map the environment variable to a connection manager property, do the following. Parameters are automatically generated on the SSIS server for the connection manager properties.  
   
-    1.  In the **Connection Managers** tab on the **Parameters** page, click the browse button next to the **Value** field.  
+    1.  In the **Connection Managers** tab on the **Parameters** page, click the **browse** button next to the **Value** field.  
   
     2.  Click **Use environment variable**, and then select the environment variable you created.  
   
 14. Click **OK** twice to save your changes.  
 
 ## Deploy and Execute SSIS Packages using Stored Procedures
-  When you configure an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project to use the project deployment model, you can use stored procedures in the [!INCLUDE[ssIS](../../includes/ssis-md.md)] catalog to deploy the project and execute the packages. For information about the project deployment model, see [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+
+  When you configure an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project to use the project deployment model, you can use stored procedures in the [!INCLUDE[ssIS](../../includes/ssis-md.md)] catalog to deploy the project and execute the packages. For information about the project deployment model, see [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md#compare-project-deployment-model-and-legacy-package-deployment-model).  
   
  You can also use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to deploy the project and execute the packages. For more information, see the topics in the **See Also** section.  
   
 > [!TIP]
->  You can easily generate the Transact-SQL statements for the stored procedures listed in the procedure below, with the exception of catalog.deploy_project, by doing the following:  
+>  You can easily generate the Transact-SQL statements for the stored procedures listed in the procedure below, with the exception of catalog.deploy_project, by doing the following:
 > 
 >  1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the **Integration Services Catalogs** node in Object Explorer and navigate to the package you want to execute.  
 > 2.  Right-click the package, and then click **Execute**.  
@@ -421,9 +433,9 @@ Launch the wizard by either:
   
 1.  Call [catalog.deploy_project &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) to deploy the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
-     To retrieve the binary contents of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project deployment file, for the *@project_stream* parameter, use a SELECT statement with the OPENROWSET function and the BULK rowset provider. The BULK rowset provider enables you to read data from a file. The SINGLE_BLOB argument for the BULK rowset provider returns the contents of the data file as a single-row, single-column rowset of type varbinary(max). For more information, see [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
+     To retrieve the binary contents of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project deployment file, for the _\@project_stream_ parameter_, use a SELECT statement with the OPENROWSET function and the BULK rowset provider. The BULK rowset provider enables you to read data from a file. The SINGLE_BLOB argument for the BULK rowset provider returns the contents of the data file as a single-row, single-column rowset of type varbinary(max). For more information, see [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
-     In the following example, the SSISPackages_ProjectDeployment project is deployed to the SSIS Packages folder on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. The binary data is read from the project file (SSISPackage_ProjectDeployment.ispac) and is stored in the *@ProjectBinary* parameter of type varbinary(max). The *@ProjectBinary* parameter value is assigned to the *@project_stream* parameter.  
+     In the following example, the SSISPackages_ProjectDeployment project is deployed to the SSIS Packages folder on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. The binary data is read from the project file (SSISPackage_ProjectDeployment.ispac) and is stored in the _\@ProjectBinary parameter of type varbinary(max). The _\@ProjectBinary_ parameter value is assigned to the _\@project_stream_ parameter.  
   
     ```sql
     DECLARE @ProjectBinary as varbinary(max)  
@@ -475,7 +487,8 @@ Launch the wizard by either:
   
     ```  
   
-### To deploy a project from server to server using stored procedures  
+### To deploy a project from server to server using stored procedures
+
  You can deploy a project from server to server by using the [catalog.get_project &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md) and [catalog.deploy_project &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) stored procedures.  
   
  You need to do the following before running the stored procedures.  
@@ -511,7 +524,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   The **Integration Services Project Conversion Wizard** converts a project to the project deployment model.  
   
 > [!NOTE]  
->  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that can be shared by the packages in the project, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+>  If the project contains one or more datasources, the datasources are removed when the project conversion is completed. To create a connection to a data source that can be shared by the packages in the project, add a connection manager at the project level. For more information, see [Add, Delete, or Share a Connection Manager in a Package](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130)).  
   
  **What do you want to do?**  
   
@@ -542,7 +555,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 -   Open the project in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], and then in Solution Explorer, right-click the project and click **Convert to Project Deployment Model**.  
   
--   From Object Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], right-click the **Projects** node and select **Import Packages**.  
+-   From Object Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], right-click the **Projects** node in the **Integration Services Catalog** and select **Import Packages**.  
   
  Depending on whether you run the **Integration Services Project Conversion Wizard** from [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] or from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the wizard performs different conversion tasks.   
   
@@ -636,7 +649,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  Type an optional project description.  
   
 ###  <a name="executePackage"></a> Set Options on the Update Execute Package Task Page  
- Update Execute Package Tasks contain in the packages, to use a project-based reference. For more information, see [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md).  
+ Update Execute Package Tasks contain in the packages, to use a project-based reference. For more information, see [Execute Package Task Editor](../control-flow/execute-package-task.md).  
   
  **Parent Package**  
  Lists the name of the package that executes the child package using the Execute Package task.  
@@ -727,4 +740,4 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  The project conversion is not saved until the project is saved in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
  **Save report**  
- Click to save a summary of the project conversion in an .xml file.  
+ Click to save a summary of the project conversion in an .xml file.

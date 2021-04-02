@@ -1,10 +1,10 @@
 ---
-title: "Use HAVING and WHERE Clauses in the Same Query | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Use HAVING and WHERE Clauses in the Same Query (Visual Database Tools)"
+title: Use HAVING and WHERE Clauses in the Same Query
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,11 +18,12 @@ helpviewer_keywords:
   - "WHERE clause, search criteria"
   - "excluding rows"
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 ---
 # Use HAVING and WHERE Clauses in the Same Query (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 In some instances, you might want to exclude individual rows from groups (using a WHERE clause) before applying a condition to groups as a whole (using a HAVING clause).  
   
 A HAVING clause is like a WHERE clause, but applies only to groups as a whole (that is, to the rows in the result set representing groups), whereas the WHERE clause applies to individual rows. A query can contain both a WHERE clause and a HAVING clause. In that case:  
@@ -50,7 +51,7 @@ You can create a WHERE clause and HAVING clause involving the same column. To do
   
 ### To specify a WHERE condition in an aggregate query  
   
-1.  Specify the groups for your query. For details, see [Group Rows in Query Results (Visual Database Tools)](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
+1.  Specify the groups for your query. For details, see [Group Rows in Query Results](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
   
 2.  If it is not already in the Criteria pane, add the column on which you want to base the WHERE condition.  
   
@@ -84,6 +85,6 @@ You can create a WHERE clause and HAVING clause involving the same column. To do
     ```  
   
 ## See Also  
-[Sort and Group Query Results (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
-[Summarize Query Results (Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[Sort and Group Query Results](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Summarize Query Results](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   

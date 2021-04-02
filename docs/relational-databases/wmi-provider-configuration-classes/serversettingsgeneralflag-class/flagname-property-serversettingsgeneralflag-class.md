@@ -1,6 +1,7 @@
 ---
-title: "FlagName Property (ServerSettingsGeneralFlag Class) | Microsoft Docs"
-ms.custom: ""
+description: "FlagName Property (ServerSettingsGeneralFlag Class)"
+title: "FlagName Property (ServerSettingsGeneralFlag)"
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "FlagName property"
 ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # FlagName Property (ServerSettingsGeneralFlag Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the name of the flag.  
   
 ## Syntax  

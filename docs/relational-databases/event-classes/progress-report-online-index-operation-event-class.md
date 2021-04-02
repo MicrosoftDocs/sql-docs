@@ -1,20 +1,21 @@
 ---
-title: "Progress Report: Online Index Operation Event Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+description: "Progress Report: Online Index Operation Event Class"
+title: "Progress Report: Online Index Operation Event Class"
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Progress Report: Online Index Operation event class [SQL Server]"
 ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
 # Progress Report: Online Index Operation Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The Progress Report: Online Index Operation event class indicates the progress of an online index build operation while the build process is running.  
   
 ## Progress Report: Online Index Operation Event Class Data Columns  
@@ -31,7 +32,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |EndTime|**datetime**|Time at which the online index operation completed.|15|Yes|  
 |EventClass|**int**|Type of event = 190.|27|No|  
 |EventSequence|**int**|Sequence of a given event within the request.|51|No|  
-|EventSubClass|**int**|Type of event subclass.<br /><br /> 1=Start<br /><br /> 2=Stage 1 execution begin<br /><br /> 3=Stage 1 execution end<br /><br /> 4=Stage 2 execution begin<br /><br /> 5=Stage 2 execution end<br /><br /> 6=Inserted row count<br /><br /> 7=Done<br /><br /> Stage 1 refers to the base object (clustered index or heap), or if the index operation involves one non-clustered index only. Stage 2 is used when an index build operation involves both the original rebuild plus additional non-clustered indexes.  For example, if an object has a clustered index and several non-clustered indexes, 'rebuild all' would rebuild all indexes. The base object (the clustered index) is rebuilt in stage 1, and then all the non-clustered indexes are rebuilt in stage 2.|21|Yes|  
+|EventSubClass|**int**|Type of event subclass.<br /><br /> 1=Start<br /><br /> 2=Stage 1 execution begin<br /><br /> 3=Stage 1 execution end<br /><br /> 4=Stage 2 execution begin<br /><br /> 5=Stage 2 execution end<br /><br /> 6=Inserted row count<br /><br /> 7=Done<br /><br /> Stage 1 refers to the base object (clustered index or heap), or if the index operation involves one nonclustered index only. Stage 2 is used when an index build operation involves both the original rebuild plus additional nonclustered indexes.  For example, if an object has a clustered index and several nonclustered indexes, 'rebuild all' would rebuild all indexes. The base object (the clustered index) is rebuilt in stage 1, and then all the nonclustered indexes are rebuilt in stage 2.|21|Yes|  
 |GroupID|**int**|ID of the workload group where the SQL Trace event fires.|66|Yes|  
 |HostName|**nvarchar**|Name of the computer on which the client is running. This data column is populated if the client provides the host name. To determine the host name, use the HOST_NAME function.|8|Yes|  
 |IndexID|**int**|ID for the index on the object affected by the event.|24|Yes|  

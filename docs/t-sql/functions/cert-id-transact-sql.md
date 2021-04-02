@@ -1,4 +1,5 @@
 ---
+description: "CERT_ID (Transact-SQL)"
 title: "CERT_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CERT_ID"
   - "CERT_ID_TSQL"
@@ -22,7 +23,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CERT_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns the ID value of a certificate.
   
@@ -30,11 +31,13 @@ This function returns the ID value of a certificate.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 Cert_ID ( 'cert_name' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 **'** *cert_name* **'**  
 
 The name of a certificate in the database.

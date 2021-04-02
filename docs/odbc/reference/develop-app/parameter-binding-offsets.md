@@ -1,4 +1,5 @@
 ---
+description: "Parameter Binding Offsets"
 title: "Parameter Binding Offsets | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "offsets of parameters [ODBC]"
   - "binding offsets of parameters [ODBC]"
 ms.assetid: 309339e9-9ccd-4a58-8aa4-b6dc88f4eb7c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Parameter Binding Offsets
 An application can specify that an offset is added to bound parameter buffer addresses and the corresponding length/indicator buffer addresses when **SQLExecDirect** or **SQLExecute** is called. The result of these additions determines the addresses used in these operations.  

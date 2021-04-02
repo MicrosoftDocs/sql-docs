@@ -1,5 +1,6 @@
 ---
-title: "Edit an Entity (Master Data Services) | Microsoft Docs"
+description: "Edit an Entity (Master Data Services)"
+title: Edit an Entity
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: lle
 ---
 # Edit an Entity (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can edit an entity.  
   

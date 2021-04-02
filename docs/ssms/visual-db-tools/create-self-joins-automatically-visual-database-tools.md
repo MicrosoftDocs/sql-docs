@@ -1,10 +1,10 @@
 ---
-title: "Create Self-Joins Automatically (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Create Self-Joins Automatically (Visual Database Tools)"
+title: Create Self-Joins Automatically
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -12,12 +12,13 @@ helpviewer_keywords:
   - "self-joins"
   - "joins [SQL Server], self"
 ms.assetid: f9ec90e8-3aad-415c-a5c4-8dfa9540e37f
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 
 ---
 # Create Self-Joins Automatically (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 If a table has a reflexive relationship in the database, you can join it to itself automatically.  
   
 ### To create a self-join automatically  

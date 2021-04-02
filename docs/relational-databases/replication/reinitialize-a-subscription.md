@@ -1,5 +1,6 @@
 ---
 title: "Reinitialize a Subscription | Microsoft Docs"
+description: Learn how to reinitialize a subscription in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,20 +15,15 @@ helpviewer_keywords:
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Reinitialize a Subscription
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to reinitialize a subscription in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO). Individual subscriptions can be marked for reinitialization so that a new snapshot is applied during the next synchronization.  
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
+  This topic describes how to reinitialize a subscription in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO). Individual subscriptions can be marked for reinitialization so that a new snapshot is applied during the next synchronization.  
   
- **In This Topic**  
-  
--   **To reinitialize a subscription, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [Replication Management Objects (RMO)](#RMOProcedure)  
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
+
+
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Reinitializing a subscription is a two-part process:  
@@ -102,19 +98,19 @@ ms.author: "mathoma"
   
 #### To reinitialize a pull subscription to a transactional publication  
   
-1.  At the Subscriber on the subscription database, execute [sp_reinitpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md). Specify **@publisher**, **@publisher_db**, and **@publication**. This marks the subscription for reinitialization the next time the Distribution Agent runs.  
+1.  At the Subscriber on the subscription database, execute [sp_reinitpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md). Specify **\@publisher**, **\@publisher_db**, and **\@publication**. This marks the subscription for reinitialization the next time the Distribution Agent runs.  
   
 2.  (Optional) Start the Distribution Agent at the Subscriber to synchronize the subscription. For more information, see [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 #### To reinitialize a push subscription to a transactional publication  
   
-1.  At the Publisher, execute [sp_reinitsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md). Specify **@publication**, **@subscriber**, and **@destination_db**. This marks the subscription for reinitialization the next time the Distribution Agent runs.  
+1.  At the Publisher, execute [sp_reinitsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md). Specify **\@publication**, **\@subscriber**, and **\@destination_db**. This marks the subscription for reinitialization the next time the Distribution Agent runs.  
   
 2.  (Optional) Start the Distribution Agent at the Distributor to synchronize the subscription. For more information, see [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
 #### To reinitialize a pull subscription to a merge publication  
   
-1.  At the Subscriber on the subscription database, execute [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md). Specify **@publisher**, **@publisher_db**, and **@publication**. To upload changes from the Subscriber before reinitialization occurs, specify a value of **true** for **@upload_first**. This marks the subscription for reinitialization the next time the Merge Agent runs.  
+1.  At the Subscriber on the subscription database, execute [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md). Specify **\@publisher**, **\@publisher_db**, and **\@publication**. To upload changes from the Subscriber before reinitialization occurs, specify a value of **true** for **\@upload_first**. This marks the subscription for reinitialization the next time the Merge Agent runs.  
   
     > [!IMPORTANT]  
     >  If you add, drop, or change a parameterized filter, pending changes at the Subscriber cannot be uploaded to the Publisher during reinitialization. If you want to upload pending changes, synchronize all subscriptions before changing the filter.  
@@ -123,7 +119,7 @@ ms.author: "mathoma"
   
 #### To reinitialize a push subscription to a merge publication  
   
-1.  At the Publisher, execute [sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md). Specify **@publication**, **@subscriber**, and **@subscriber_db**. To upload changes from the Subscriber before reinitialization occurs, specify a value of **true** for **@upload_first**. This marks the subscription for reinitialization the next time the Distribution Agent runs.  
+1.  At the Publisher, execute [sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md). Specify **\@publication**, **\@subscriber**, and **\@subscriber_db**. To upload changes from the Subscriber before reinitialization occurs, specify a value of **true** for **\@upload_first**. This marks the subscription for reinitialization the next time the Distribution Agent runs.  
   
     > [!IMPORTANT]  
     >  If you add, drop, or change a parameterized filter, pending changes at the Subscriber cannot be uploaded to the Publisher during reinitialization. If you want to upload pending changes, synchronize all subscriptions before changing the filter.  
@@ -132,7 +128,7 @@ ms.author: "mathoma"
   
 #### To set the reinitialization policy when creating a new merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), specifying one of the following values for **@automatic_reinitialization_policy**:  
+1.  At the Publisher on the publication database, execute [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), specifying one of the following values for **\@automatic_reinitialization_policy**:  
   
     -   **1** - changes are uploaded from the Subscriber before a subscription is automatically reinitialized as required by a change to the publication.  
   
@@ -145,7 +141,7 @@ ms.author: "mathoma"
   
 #### To change the reinitialization policy for an existing merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying **automatic_reinitialization_policy** for **@property** and one of the following values for **@value**:  
+1.  At the Publisher on the publication database, execute [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying **automatic_reinitialization_policy** for **\@property** and one of the following values for **\@value**:  
   
     -   **1** - changes are uploaded from the Subscriber before a subscription is automatically reinitialized as required by a change to the publication.  
   

@@ -1,4 +1,5 @@
 ---
+description: "MDX Data Manipulation - DRILLTHROUGH"
 title: "DRILLTHROUGH Statement (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -43,7 +44,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
   
  An MDX statement specifies the subject cell. The value specified by the **MAXROWS** argument indicates the maximum number of rows that should be returned by the resulting rowset.  
   
- By default, the maximum number of rows that are returned is 10,000 rows. This means that if you leave **MAXROWS** unspecified, you will get 10,000 rows or less. If this value is too low for your scenario, you can set **MAXROWS** to a higher number, such as `MAXROWS 20000`. If it is too low overall, you can increase the default by changing the **OLAP\Query\DefaultDrillthroughMaxRows** server property. For more information about changing this property, see [Server Properties in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+ By default, the maximum number of rows that are returned is 10,000 rows. This means that if you leave **MAXROWS** unspecified, you will get 10,000 rows or less. If this value is too low for your scenario, you can set **MAXROWS** to a higher number, such as `MAXROWS 20000`. If it is too low overall, you can increase the default by changing the **OLAP\Query\DefaultDrillthroughMaxRows** server property. For more information about changing this property, see [Server Properties in Analysis Services](/analysis-services/server-properties/server-properties-in-analysis-services).  
   
  Unless otherwise specified, the columns returned include all granularity attributes for all dimensions related to the measure group of the specified measure, other than many-to-many dimensions. Cube dimensions are preceded by $ to distinguish between dimensions and measure groups. The **RETURN** clause is used to specify the columns returned by the drillthrough query. The following functions can be applied to a single attribute or measure by the **RETURN** clause.  
   
@@ -92,5 +93,4 @@ RETURN
   
 ## See Also  
  [MDX Data Manipulation Statements &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
   

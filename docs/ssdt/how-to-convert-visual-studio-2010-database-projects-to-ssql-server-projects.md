@@ -1,20 +1,22 @@
 ---
-title: "How to: Convert a Visual Studio 2010 Database Projects to SQL Server Database Projects and Retarget to a Different Platform | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Convert Visual Studio 2010 Database Projects to SQL Server Database Projects
+description: Convert Visual Studio 2010 database projects to SQL Server projects, and retarget them to different platforms. View objects that SSDT can and cannot convert.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.projectconversion.dialog"
   - "sql.data.tools.ImportDAC"
 ms.assetid: 7e5acf94-5c46-44c7-9ff5-ca7926f5332a
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Convert a Visual Studio 2010 Database Projects to SQL Server Database Projects and Retarget to a Different Platform
+
 In SQL Server Data Tools (SSDT), you can convert existing SQL Server Database, CLR, and Data-Tier Application projects created in Visual Studio 2010 to the new SQL Server database project. By doing so, you can take advantage of the new database development experience that SSDT provides, such as an updated Transact\-SQL editing experience, and the ability to retarget your project to Microsoft SQL Server 2012 and SQL Azure with code validation. The conversion process converts objects (table, views, stored-procedures, property files, or scripts) that have an equivalent type in SSDT, including their permissions and DAC policy files. Artifacts that cannot be converted are highlighted in a conversion log report.  
   
 The following table lists all the project artifacts that can or cannot be converted by SSDT.  

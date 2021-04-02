@@ -1,4 +1,5 @@
 ---
+description: "Cache Transform"
 title: "Cache Transform | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -14,19 +15,19 @@ f1_keywords:
 helpviewer_keywords: 
   - "Cache transform"
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Cache Transform
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Cache Transform transformation generates a reference dataset for the Lookup Transformation by writing data from a connected data source in the data flow to a Cache connection manager. The Lookup transformation performs lookups by joining data in input columns from a connected data source with columns in the reference database.  
   
  You can use the Cache connection manager when you want to configure the Lookup Transformation to run in the full cache mode. In this mode, the reference dataset is loaded into cache before the Lookup Transformation runs.  
   
- For instructions on how to configure the Lookup transformation in full cache mode with the Cache connection manager and Cache Transform transformation, see [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md).  
+ For instructions on how to configure the Lookup transformation in full cache mode with the Cache connection manager and Cache Transform transformation, see [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md).  
   
  For more information on caching the reference dataset, see [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -35,7 +36,7 @@ ms.author: janinez
   
  In a single package, only one Cache Transform can write data to the same Cache connection manager. If the package contains multiple Cache Transforms, the first Cache Transform that is called when the package runs, writes the data to the connection manager. The write operations of subsequent Cache Transforms fail.  
   
- For more information, see [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ For more information, see [Cache Connection Manager](../../connection-manager/cache-connection-manager.md).  
   
 ## Configuration of the Cache Transform  
  You can configure the Cache connection manager to save the data to a cache file (.caw).  
@@ -58,7 +59,7 @@ ms.author: janinez
 ## Cache Transformation Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **Cache Transformation Editor** dialog box to select an existing Cache connection manager or create a new one.  
   
- To learn more about the Cache connection manager, see [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ To learn more about the Cache connection manager, see [Cache Connection Manager](../../connection-manager/cache-connection-manager.md).  
   
 ### Options  
  **Cache connection manager**  
@@ -73,5 +74,4 @@ ms.author: janinez
 ## See Also  
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Data Flow](../../../integration-services/data-flow/data-flow.md)  
-  
   

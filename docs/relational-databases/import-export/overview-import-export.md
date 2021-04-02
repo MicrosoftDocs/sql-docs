@@ -1,18 +1,19 @@
 ---
-title: "Import and export data from SQL Server and Azure SQL Database | Microsoft Docs"
-ms.custom: ""
+title: "Import & export data from SQL Server & Azure SQL Database"
+description: You can use Transact-SQL, command-line tools, and wizards to import and export data in SQL Server and Azure SQL Database in a variety of data formats.
 ms.date: "10/27/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
 # Import and export data from SQL Server and Azure SQL Database
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can use a variety of methods to import data to, and export data from, SQL Server and Azure SQL Database. These methods include Transact-SQL statements, command-line tools, and wizards.
 
 You can also import and export data in a variety of data formats. These formats include flat files, Excel, major relational databases, and various cloud services.
@@ -23,7 +24,7 @@ You can also import and export data in a variety of data formats. These formats 
 You can import data with the `BULK INSERT` or the `OPENROWSET(BULK...)` commands. Typically you run these commands in SQL Server Management Studio (SSMS). For more info, see [Import Bulk Data by Using BULK INSERT or OPENROWSET(BULK...)](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
 ### Use BCP from the command prompt
-You can import and export data with the BCP command-line utility. For more info, see [Import and Export Bulk Data by Using the bcp Utility](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
+You can import and export data with the BCP command-line utility. For more info, see [Import and Export Bulk Data by Using the bcp Utility](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).
 
 ### Use the Import Flat File Wizard
 If you don't need all the configuration options available in the Import and Export Wizard and other tools, you can import a text file into SQL Server by using the **Import Flat File Wizard** in SQL Server Management Studio (SSMS). For more info, see the following articles:
@@ -38,7 +39,7 @@ You can import data to, or export data from, a variety of sources and destinatio
 ### Design your own import or export
 If you want to design a custom data import, you can use one of the following features or services:
 -   SQL Server Integration Services. For more info, see [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md).
--   Azure Data Factory. For more info, see [Introduction to Azure Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-introduction).
+-   Azure Data Factory. For more info, see [Introduction to Azure Data Factory](/azure/data-factory/data-factory-introduction).
 
 ## Data formats for import and export
 
@@ -47,7 +48,7 @@ If you want to design a custom data import, you can use one of the following fea
 You can import data from, and export data to, flat files or a variety of other file formats, relational databases, and cloud services. To learn more about these options for specific tools, see the following topics
 -   For the SQL Server Import and Export Wizard, see [Connect to Data Sources with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md).
 -   For SQL Server Integration Services, see [Integration Services (SSIS) Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md).
--   For Azure Data Factory, see [Azure Data Factory Connectors](https://docs.microsoft.com/azure/data-factory/data-factory-amazon-redshift-connector).
+-   For Azure Data Factory, see [Azure Data Factory Connectors](/azure/data-factory/data-factory-amazon-redshift-connector).
 
 ### Commonly used data formats
 

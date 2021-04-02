@@ -1,8 +1,9 @@
 ---
-title: Configure failover cluster instance storage NFS - SQL Server on Linux
-description: 
-author: MikeRayMSFT
-ms.author: mikeray
+title: Configure NFS storage FCI - SQL Server on Linux
+description: Learn to configure a failover cluster instance (FCI) using NFS storage for SQL Server on Linux. 
+ms.custom: seo-lt-2019
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
@@ -11,7 +12,7 @@ ms.technology: linux
 ---
 # Configure failover cluster instance - NFS - SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article explains how to configure NFS storage for a failover cluster instance (FCI) on Linux. 
 
@@ -29,7 +30,7 @@ When configuring the folder(s) to be shared on the NFS server, make sure they fo
 
 Ensure that your security standards are enforced for accessing. When configuring the folder, make sure that only the servers participating in the FCI should see the NFS folder. An example of a modified /etc/exports on a Linux-based NFS solution is shown below where the folder is restricted to FCIN1 and FCIN2.
 
-![05-nfsacl][1]
+![Screenshot of an example of a modified /etc/exports on a Linux-based NFS solution is shown below where the folder is restricted to FCIN1 and FCIN2.][1]
 
 ## Instructions
 
@@ -125,7 +126,7 @@ Ensure that your security standards are enforced for accessing. When configuring
     mount
     ```
 
-    ![10-mountnoswitches][2]
+    ![Screenshot of the mount command and the response to the command showing no switches.][2]
 
    * Switch to the mssql user. You will not receive any acknowledgement if successful.
 
@@ -221,7 +222,7 @@ Ensure that your security standards are enforced for accessing. When configuring
 
    * To test, create a database in that folder. The following example uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
 
-    ![15-createtestdatabase][4]
+    ![Screenshot of the sqlcmd command and the response to the command.][4]
  
    * Unmount the share 
 

@@ -1,4 +1,5 @@
 ---
+description: "sp_dbmmonitorupdate (Transact-SQL)"
 title: "sp_dbmmonitorupdate (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_dbmmonitorupdate"
   - "sp_dbmmonitorupdate_TSQL"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "sp_dbmmonitorupdate"
   - "database mirroring [SQL Server], monitoring"
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dbmmonitorupdate (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates the database mirroring monitor status table by inserting a new table row for each mirrored database, and truncates rows older than the current retention period. The default retention period is 7 days (168 hours). When updating the table, **sp_dbmmonitorupdate** evaluates the performance metrics.  
   

@@ -1,6 +1,7 @@
 ---
 title: "Excel Device Information Settings | Microsoft Docs"
-ms.date: 03/16/2017
+description: Learn details about the various device information settings for rendering in Microsoft Excel format.
+ms.date: 01/23/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -21,7 +22,9 @@ ms.author: maggies
 |-------------|-----------|  
 |**OmitDocumentMap**|Indicates whether to omit the document map for reports that support it. The default value is **false**.|  
 |**OmitFormulas**|Indicates whether to omit formulas from the rendered report. The default value is **false**.|  
-|**SimplePageHeade**rs|Indicates whether the page header of the report is rendered to the Excel page header. A value of **false** indicates that the page header is rendered to the first row of the worksheet. The default value is **false**.|  
+|**SimplePageHeaders**|Indicates whether the page header of the report is rendered to the Excel page header. A value of **false** indicates that the page header is rendered to the first row of the worksheet. The default value is **false**.|  
+|**DynamicImageDpi**|The resolution of dynamic images like charts, gauges, and maps. The default value is **96**. (Available in Power BI Report Server (January 2020) and later)|  
+
   
 ## See Also  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

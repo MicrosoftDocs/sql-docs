@@ -1,9 +1,10 @@
 ---
+description: "Prepare and Execute a Statement (ODBC)"
 title: "Prepare and Execute a Statement (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
@@ -11,20 +12,19 @@ helpviewer_keywords:
   - "statement execution"
   - "statement preparation"
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
-author: MightyPen
-ms.author: genemi
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Prepare and Execute a Statement (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
     
 ### To prepare a statement once, and then execute it multiple times  
   
-1.  Call [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) to prepare the statement.  
+1.  Call [SQLPrepare Function](../../../odbc/reference/syntax/sqlprepare-function.md) to prepare the statement.  
   
-2.  Optionally, call [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) to determine the number of parameters in the prepared statement.  
+2.  Optionally, call [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) to determine the number of parameters in the prepared statement.  
   
 3.  Optionally, for each parameter in the prepared statement:  
   
@@ -36,9 +36,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
     -   If the statement has parameter markers, put the data values into the bound parameter buffer.  
   
-    -   Call [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) to execute the prepared statement.  
+    -   Call [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) to execute the prepared statement.  
   
-    -   If data-at-execution input parameters are used, [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+    -   If data-at-execution input parameters are used, [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md) and [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### To prepare a statement with column-wise parameter binding  
   
@@ -54,7 +54,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 2.  Call SQLPrepare to prepare the statement.  
   
-3.  Optionally, call [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) to determine the number of parameters in the prepared statement.  
+3.  Optionally, call [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) to determine the number of parameters in the prepared statement.  
   
 4.  Optionally, for each parameter in the prepared statement, call SQLDescribeParam to get parameter information.  
   
@@ -110,5 +110,4 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## See Also  
  [Executing Queries How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
   

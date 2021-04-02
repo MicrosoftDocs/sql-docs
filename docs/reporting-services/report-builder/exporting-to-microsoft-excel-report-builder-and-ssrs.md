@@ -1,6 +1,7 @@
 ---
-title: "Exporting to Microsoft Excel (Report Builder and SSRS) | Microsoft Docs"
-ms.date: 01/09/2017
+title: "Exporting to Microsoft Excel (Report Builder) | Microsoft Docs"
+description: In Report Builder, the Excel rendering extension renders a paginated report to the Office Open XML format to use with Microsoft Excel.
+ms.date: 12/23/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
@@ -42,7 +43,7 @@ ms.author: maggies
   
 -   If the report item that controls whether another item is toggled is not in the previous or next row or column of the item being toggled, the outline is disabled also.  
   
- For more details about Excel limitations, see [Excel specifications and limits](https://support.office.com/article/Excel-specifications-and-limits-CA36E2DC-1F09-4620-B726-67C00B05040F).  
+ For more details about Excel limitations, see [Excel specifications and limits](https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3).  
   
 ### Sizes of Excel 2003 (.xls) Files  
   

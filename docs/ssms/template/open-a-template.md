@@ -1,6 +1,7 @@
 ---
-title: "Open a Template | Microsoft Docs"
-ms.custom: ""
+description: "Open a Template"
+title: "Open a Template"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -15,7 +16,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Open a Template
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can open a template from Template Explorer.  
   
 ## To open a template from Template Explorer  

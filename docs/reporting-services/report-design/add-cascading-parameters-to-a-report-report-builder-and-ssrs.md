@@ -1,5 +1,6 @@
 ---
-title: "Add Cascading Parameters to a Report (Report Builder and SSRS) | Microsoft Docs"
+title: "Add Cascading Parameters to a Report (Report Builder) | Microsoft Docs"
+description: Find out how to use cascading parameters in your reports in Report Builder to manage large amounts of report data. 
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -21,7 +22,7 @@ ms.author: maggies
   
  Order is important for cascading parameters because the dataset query for a parameter later in the list includes a reference to each parameter that is earlier in the list. At run time, the order of the parameters in the Report Data pane determines the order in which the parameter queries appear in the report, and therefore, the order in which a user chooses each successive parameter value.  
   
- For information about creating cascading parameters with multiple values and including the Select All feature, see [How to have a Select All Multivalue Cascading Parameter](https://go.microsoft.com/fwlink/?LinkId=184757).  
+ For information about creating cascading parameters with multiple values and including the Select All feature, see [How to have a Select All Multivalue Cascading Parameter](/archive/blogs/psssql/).  
   
 ## To create the main dataset with a query that includes multiple related parameters  
   
@@ -115,7 +116,7 @@ ms.author: maggies
   
  Next, you will set the properties of the second parameter to use this dataset to populate its available values at run time.  
   
-## To set available values for a report parameter  
+## To set available values for the second parameter  
   
 1.  In the Report Data pane, in the Parameters folder, right-click the first parameter, and then click **Parameter Properties**.  
   
@@ -154,5 +155,4 @@ ms.author: maggies
  [Report Builder Tutorials](../../reporting-services/report-builder-tutorials.md)   
  [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
-  
   

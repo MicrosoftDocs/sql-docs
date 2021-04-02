@@ -1,11 +1,12 @@
 ---
+description: "MSSQLSERVER_18452"
 title: "MSSQLSERVER_18452 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "18456 (Database Engine error)"
   - "18452 (Database Engine error)"
@@ -14,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_18452
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|18452|  
 |Event Source|MSSQLSERVER|  

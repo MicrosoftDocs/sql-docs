@@ -1,21 +1,23 @@
 ---
-title: "GRANT-DENY-REVOKE Perms-Azure SQL Data and Parallel Data Warehouses | Microsoft Docs"
-ms.custom: ""
+description: "Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)"
+title: "GRANT-DENY-REVOKE permissions"
+titleSuffix: "Azure Synapse Analytics"
+ms.custom: "seo-lt-2019​"
 ms.date: "08/10/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
-# Permissions: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Use [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**GRANT** and **DENY** statements to grant or deny a permission (such as **UPDATE**) on a securable (such as a database, table, view, etc.) to a security principal (a login, a database user, or a database role). Use **REVOKE** to remove the grant or deny of a permission.  
   
@@ -33,8 +35,8 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## Syntax  
   
-```  
--- Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql
+-- Azure Synapse Analytics and Parallel Data Warehouse  
 GRANT   
     <permission> [ ,...n ]  
     [ ON [ <class_type> :: ] securable ]   
@@ -232,14 +234,13 @@ REVOKE
   
 -   REFERENCES  
   
- For a definition of each type of permission, see [Permissions (Database Engine)](https://msdn.microsoft.com/library/ms191291.aspx).  
+ For a definition of each type of permission, see [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md).  
   
 ### Chart of Permissions  
  All permissions are graphically represented on this poster. This is the easiest way to see nested hierarchy of permissions. For example the **ALTER ON LOGIN** permission can be granted by itself, but it is also included if a login is granted the **CONTROL** permission on that login, or if a login is granted the **ALTER ANY LOGIN** permission.  
   
  ![APS security permissions poster](../../t-sql/statements/media/aps-security-perms-poster.png "APS security permissions poster")  
   
- To download a full size version of this poster, see [SQL Server PDW Permissions](https://go.microsoft.com/fwlink/?LinkId=244249)in the files section of the APS Yammer site (or request by e-mail from **apsdoc@microsoft.com**.  
   
 ## Default Permissions  
  The following list describes the default permissions:  
@@ -263,57 +264,55 @@ REVOKE
 ### A. Granting a server level permission to a login  
  The following two statements grant a server level permission to a login.  
   
-```  
+```sql  
 GRANT CONTROL SERVER TO [Ted];  
 ```  
   
-```  
+```sql  
 GRANT ALTER ANY DATABASE TO Mary;  
 ```  
   
 ### B. Granting a server level permission to a login  
  The following example grants a server level permission on a login to a server principal (another login).  
   
-```  
+```sql  
 GRANT  VIEW DEFINITION ON LOGIN::Ted TO Mary;  
 ```  
   
 ### C. Granting a database level permission to a user  
  The following example grants a database level permission on a user to a database principal (another user).  
   
-```  
+```sql  
 GRANT VIEW DEFINITION ON USER::[Ted] TO Mary;  
 ```  
   
 ### D. Granting, denying, and revoking a schema permission  
  The following **GRANT** statement grants Yuen the ability to select data from any table or view in the dbo schema.  
   
-```  
+```sql  
 GRANT SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
  The following **DENY** statement prevents Yuen from selecting data from any table or view in the dbo schema. Yuen cannot read the data even if he has permission in some other way, such as through a role membership.  
   
-```  
+```sql  
 DENY SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
  The following **REVOKE** statement removes the **DENY** permission. Now Yuen's explicit permissions are neutral. Yuen might be able to select data from any table through some other implicit permission such as a role membership.  
   
-```  
+```sql  
 REVOKE SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
 ### E. Demonstrating the optional OBJECT:: clause  
  Because OBJECT is the default class for a permission statement, the following two statements are the same. The **OBJECT::** clause is optional.  
   
-```  
+```sql  
 GRANT UPDATE ON OBJECT::dbo.StatusTable TO [Ted];  
 ```  
   
-```  
+```sql  
 GRANT UPDATE ON dbo.StatusTable TO [Ted];  
 ```  
   
-  
-

@@ -1,4 +1,5 @@
 ---
+description: "PARSE (Transact-SQL)"
 title: "PARSE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/05/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "PARSE"
   - "PARSE_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "PARSE function"
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # PARSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the result of an expression, translated to the requested data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -27,12 +28,13 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 PARSE ( string_value AS data_type [ USING culture ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *string_value*  
  **nvarchar**(4000) value representing the formatted value to parse into the specified data type.  
   
@@ -101,7 +103,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |Nederlands|Dutch|1043|nl-NL|  
 |Norsk|Norwegian|2068|nn-NO|  
 |Português|Portuguese|2070|pt-PT|  
-|Suomi|Finnish|1035|fi|  
+|Suomi|Finnish|1035|fi-FI|  
 |Svenska|Swedish|1053|sv-SE|  
 |čeština|Czech|1029|Cs-CZ|  
 |magyar|Hungarian|1038|Hu-HU|  
@@ -129,7 +131,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 ### A. PARSE into datetime2  
   
-```  
+```sql  
 SELECT PARSE('Monday, 13 December 2010' AS datetime2 USING 'en-US') AS Result;  
 ```  
   
@@ -145,7 +147,7 @@ Result
   
 ### B. PARSE with currency symbol  
   
-```  
+```sql  
 SELECT PARSE('€345,98' AS money USING 'de-DE') AS Result;  
 ```  
   
@@ -161,7 +163,7 @@ Result
   
 ### C. PARSE with implicit setting of language  
   
-```  
+```sql  
 -- The English language is mapped to en-US specific culture  
 SET LANGUAGE 'English';  
 SELECT PARSE('12/16/2010' AS datetime2) AS Result;  

@@ -1,23 +1,24 @@
 ---
 title: "sp_dropsubscription (Transact-SQL) | Microsoft Docs"
+description: Drops subscriptions to an article, publication, or subscriptions on the Publisher. This stored procedure runs at the Publisher on the publication database.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_dropsubscription"
   - "sp_dropsubscription_TSQL"
 helpviewer_keywords: 
   - "sp_dropsubscription"
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dropsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops subscriptions to a particular article, publication, or set of subscriptions on the Publisher. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -42,16 +43,16 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 `[ @article = ] 'article'`
  Is the name of the article. *article* is **sysname**, with a default value of NULL. If **all**, subscriptions to all articles for each specified publication and Subscriber are dropped. Use **all** for publications that allow immediate updating.  
   
-`[ @subscriber = ] 'subscribe_r'`
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber that will have its subscriptions dropped. *subscriber* is **sysname**, with no default. If **all**, all subscriptions for all Subscribers are dropped.  
   
 `[ @destination_db = ] 'destination_db'`
  Is the name of the destination database. *destination_db* is **sysname**, with a default of NULL. If NULL, all the subscriptions from that Subscriber are dropped.  
   
-`[ @ignore_distributor = ] ignore_distributor`
+`[ @ignore_distributor = ] ignore_distributor`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @reserved = ] 'reserved'`
+`[ @reserved = ] 'reserved'`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

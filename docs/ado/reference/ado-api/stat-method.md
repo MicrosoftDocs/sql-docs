@@ -1,23 +1,24 @@
 ---
+description: "Stat Method"
 title: "Stat Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 apitype: "COM"
 f1_keywords: 
   - "_Stream::Stat"
 helpviewer_keywords: 
   - "Stat method [ADO]"
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Stat Method
-Retrieves information about a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  
+Retrieves information about a [Stream](./stream-object-ado.md) object.  
   
 ## Syntax  
   
@@ -64,4 +65,4 @@ Long stream.Stat(StatStg, StatFlag)
  If STATFLAG_NONAME was not specified in the StatFlag parameter, and there is no name available for the current stream, this value will be E_NOTIMPL.  
   
 ## Applies To  
- [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Stream Object (ADO)](./stream-object-ado.md)

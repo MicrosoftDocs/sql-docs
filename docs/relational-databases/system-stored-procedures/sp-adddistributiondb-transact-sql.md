@@ -1,4 +1,5 @@
 ---
+description: "sp_adddistributiondb (Transact-SQL)"
 title: "sp_adddistributiondb (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/30/2018"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_adddistributiondb_TSQL"
   - "sp_adddistributiondb"
@@ -17,7 +18,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 # sp_adddistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a new distribution database and installs the Distributor schema. The distribution database stores procedures, schema, and metadata used in replication. This stored procedure is executed at the Distributor on the master database in order to create the distribution database, and install the necessary tables and stored procedures required to enable the replication distribution.  
   

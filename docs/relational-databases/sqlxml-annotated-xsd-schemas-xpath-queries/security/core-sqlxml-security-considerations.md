@@ -1,5 +1,6 @@
 ---
-title: "Core SQLXML Security Considerations | Microsoft Docs"
+title: "Core SQLXML Security Considerations"
+description: Learn the core security guidelines for using SQLXML for data access.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Core SQLXML Security Considerations
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   The following are security guidelines for using SQLXML for data access.  
   
--   The SQLXMLOLEDB provider exposes a **StreamFlags** property which allows you to set flags indicating what SQLXML functionality should be enabled or disabled for each specific instance. You can use this property to customize your use of SQLXML and to make sure that only the components you want are enabled. For more information, see [SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
+-   The SQLXMLOLEDB provider exposes a **StreamFlags** property which allows you to set flags indicating what SQLXML functionality should be enabled or disabled for each specific instance. You can use this property to customize your use of SQLXML and to make sure that only the components you want are enabled. For more information, see [SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](../data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md).  
   
 -   When SQLXML errors occur and are returned, they can include information about the database schema such as table names, column names or type information. You should use care when handling these errors so that information about your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation is not easily discoverable by users where it is not intended or needed.  
   
@@ -46,5 +47,4 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ## See Also  
  [SQLXML 4.0 Security Considerations](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  
-  
   

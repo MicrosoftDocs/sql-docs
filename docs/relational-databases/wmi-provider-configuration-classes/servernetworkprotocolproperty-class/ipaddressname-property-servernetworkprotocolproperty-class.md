@@ -1,6 +1,7 @@
 ---
-title: "IPAddressName Property (ServerNetworkProtocolProperty Class) | Microsoft Docs"
-ms.custom: ""
+description: "IPAddressName Property (ServerNetworkProtocolProperty Class)"
+title: "IPAddressName Property (ServerNetworkProtocolProperty)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "IpAddressName property"
 ms.assetid: b27ea0fa-ab31-424b-80cf-aad1e87f3816
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # IPAddressName Property (ServerNetworkProtocolProperty Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the name of the IP address.  
   
 ## Syntax  

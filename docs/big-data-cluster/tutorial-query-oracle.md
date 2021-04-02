@@ -1,21 +1,21 @@
 ---
 title: Query external data in Oracle
 titleSuffix: SQL Server big data clusters
-description: This tutorial demonstrates how to query Oracle data from a SQL Server 2019 big data cluster (preview). You create an external table over data in Oracle and then run a query.
+description: This tutorial demonstrates how to query Oracle data from a SQL Server 2019 big data cluster. You create an external table over data in Oracle and then run a query.
 author: MikeRayMSFT 
-ms.author: mikeray
-ms.reviewer: aboke
-ms.date: 12/12/2018
+ms.author: dacoelho
+ms.reviewer: "mikeray"
+ms.date: 10/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Tutorial: Query Oracle from a SQL Server big data cluster
+# Tutorial: Query Oracle from SQL Server Big Data Cluster
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This tutorial demonstrates how to Query Oracle data from a SQL Server 2019 big data cluster. To run this tutorial, you will need to have access to an Oracle server. If you do not have access, this tutorial can give you a sense of how data virtualization works for external data sources in SQL Server big data cluster.
+This tutorial demonstrates how to Query Oracle data from a SQL Server 2019 big data cluster. To run this tutorial, you will need to have access to an Oracle server. An Oracle user account with read privileges to the external object is required. Oracle Proxy user authentication is supported. If you do not have access, this tutorial can give you a sense of how data virtualization works for external data sources in SQL Server big data cluster.
 
 In this tutorial, you learn how to:
 
@@ -85,6 +85,30 @@ The first step is to create an external data source that can access your Oracle 
    ```sql
    CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
    WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',CREDENTIAL = [OracleCredential]);
+   ```
+
+### Optional: Oracle proxy authentication
+
+Oracle supports proxy authentication to provide fine grain access control. A proxy user connects to the Oracle database using its credentials and impersonates another user in the database. 
+
+A proxy user can be configured to have limited access compared to the user being impersonated. For example, a proxy user can be allowed to connect using a specific database role of the user being impersonated. The identity of the user connecting to Oracle database through proxy user is preserved in the connection, even if multiple users are connecting using proxy authentication. This enables Oracle to enforce access control and to audit actions taken on behalf of the actual user.
+
+If your scenario requires the usage of an oracle proxy user, __replace the previous steps 4 and 5 with the following__.
+
+4. Create a database scoped credential to connect to the Oracle server. Provide appropriate oracle proxy user credentials to your Oracle server in the following statement.
+
+   ```sql
+   CREATE DATABASE SCOPED CREDENTIAL [OracleProxyCredential]
+   WITH IDENTITY = '<oracle_proxy_user,nvarchar(100),SYSTEM>', SECRET = '<oracle_proxy_user_password,nvarchar(100),manager>';
+   ```
+
+5. Create an external data source that points to the Oracle server.
+
+   ```sql
+   CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
+   WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',
+   CONNECTION_OPTIONS = 'ImpersonateUser=% CURRENT_USER',
+   CREDENTIAL = [OracleProxyCredential]);
    ```
 
 ## Create an external table

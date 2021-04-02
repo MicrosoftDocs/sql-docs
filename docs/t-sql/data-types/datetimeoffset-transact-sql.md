@@ -1,12 +1,13 @@
 ---
+description: "datetimeoffset (Transact-SQL)"
 title: "datetimeoffset (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "datetimeoffset_TSQL"
   - "datetimeoffset"
@@ -22,13 +23,14 @@ helpviewer_keywords:
 ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # datetimeoffset (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Defines a date that is combined with a time of a day that has time zone awareness and is based on a 24-hour clock.
-  
+
 ## datetimeoffset description
   
 |Property|Value|  
@@ -37,9 +39,9 @@ Defines a date that is combined with a time of a day that has time zone awarenes
 |Usage|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |Default string literal formats (used for down-level client)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> For more information, see the "Backward Compatibility for Down-level Clients" section that follows.|  
 |Date range|0001-01-01 through 9999-12-31<br /><br /> January 1, 1 CE through December 31, 9999 CE|  
-|Time range|00:00:00 through 23:59:59.9999999 (fractional seconds are not supported in Informatica)|  
-|Time zone offset range|-14:00 through +14:00 (the time zone offset is ignored in Informatica)|  
-|Element ranges|YYYY is four digits, ranging from 0001 through 9999, that represent a year.<br /><br /> MM is two digits, ranging from 01 to 12, that represent a month in the specified year.<br /><br /> DD is two digits, ranging from 01 to 31 depending on the month, that represent a day of the specified month.<br /><br /> hh is two digits, ranging from 00 to 23, that represent the hour.<br /><br /> mm is two digits, ranging from 00 to 59, that represent the minute.<br /><br /> ss is two digits, ranging from 00 to 59, that represent the second.<br /><br /> n* is zero to seven digits, ranging from 0 to 9999999, that represent the fractional seconds. Fractional seconds are not supported in Informatica.<br /><br /> hh is two digits that range from -14 to +14. The time zone offset is ignored in Informatica.<br /><br /> mm is two digits that range from 00 to 59. The time zone offset is ignored in Informatica.|  
+|Time range|00:00:00 through 23:59:59.9999999|  
+|Time zone offset range|-14:00 through +14:00|  
+|Element ranges|YYYY is four digits, ranging from 0001 through 9999, that represent a year.<br /><br /> MM is two digits, ranging from 01 to 12, that represent a month in the specified year.<br /><br /> DD is two digits, ranging from 01 to 31 depending on the month, that represent a day of the specified month.<br /><br /> hh is two digits, ranging from 00 to 23, that represent the hour.<br /><br /> mm is two digits, ranging from 00 to 59, that represent the minute.<br /><br /> ss is two digits, ranging from 00 to 59, that represent the second.<br /><br /> n* is zero to seven digits, ranging from 0 to 9999999, that represent the fractional seconds.<br /><br /> hh is two digits that range from -14 to +14. <br /><br /> mm is two digits that range from 00 to 59.|  
 |Character length|26 positions minimum (YYYY-MM-DD hh:mm:ss {+&#124;-}hh:mm) to 34 maximum (YYYY-MM-DD hh:mm:ss.nnnnnnn {+&#124;-}hh:mm)|  
 |Precision, scale|See the table below.|  
 |Storage size|10 bytes, fixed is the default with the default of 100ns fractional second precision.|  

@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INSTANCE_ALREADY_SHARED"
 title: "LOCALDB_ERROR_INSTANCE_ALREADY_SHARED | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -7,16 +8,16 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: 35b4d6fa-ebb9-49d3-aaab-d4e37b6f3760
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_INSTANCE_ALREADY_SHARED
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| --------- | ----- |
 |Product Name|SQL Server|  
 |Event ID|284|  
 |Event Source|SQL Server Local Database Runtime 12.0|  

@@ -1,12 +1,12 @@
 ---
 title: "FORMAT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the FORMAT function."
 ms.date: "08/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "FORMAT_TSQL"
   - "FORMAT"
@@ -15,24 +15,26 @@ dev_langs:
 helpviewer_keywords: 
   - "FORMAT function"
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # FORMAT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-Returns a value formatted with the specified format and optional culture in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Use the FORMAT function for locale-aware formatting of date/time and number values as strings. For general data type conversions, use CAST or CONVERT.  
+Returns a value formatted with the specified format and optional culture. Use the FORMAT function for locale-aware formatting of date/time and number values as strings. For general data type conversions, use CAST or CONVERT.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```sql
-FORMAT ( value, format [, culture ] )  
+```syntaxsql
+FORMAT( value, format [, culture ] )  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
  *value*  
@@ -41,7 +43,7 @@ FORMAT ( value, format [, culture ] )
  *format*  
  **nvarchar** format pattern.  
   
- The *format* argument must contain a valid .NET Framework format string, either as a standard format string (for example, "C" or "D"), or as a pattern of custom characters for dates and numeric values (for example, "MMMM DD, yyyy (dddd)"). Composite formatting is not supported. For a full explanation of these formatting patterns, consult the .NET Framework documentation on string formatting in general, custom date and time formats, and custom number formats. A good starting point is the topic, "[Formatting Types](https://go.microsoft.com/fwlink/?LinkId=211776)."  
+ The *format* argument must contain a valid .NET Framework format string, either as a standard format string (for example, "C" or "D"), or as a pattern of custom characters for dates and numeric values (for example, "MMMM DD, yyyy (dddd)"). Composite formatting is not supported. For a full explanation of these formatting patterns, consult the .NET Framework documentation on string formatting in general, custom date and time formats, and custom number formats. A good starting point is the topic, "[Formatting Types](/dotnet/standard/base-types/formatting-types)."  
   
  *culture*  
  Optional **nvarchar** argument specifying a culture.  
@@ -94,60 +96,56 @@ FORMAT ( value, format [, culture ] )
  The following example returns a simple date formatted for different cultures.  
   
 ```sql  
-DECLARE @d DATETIME = '10/01/2011';  
-SELECT FORMAT ( @d, 'd', 'en-US' ) AS 'US English Result'  
-      ,FORMAT ( @d, 'd', 'en-gb' ) AS 'Great Britain English Result'  
-      ,FORMAT ( @d, 'd', 'de-de' ) AS 'German Result'  
-      ,FORMAT ( @d, 'd', 'zh-cn' ) AS 'Simplified Chinese (PRC) Result';
+DECLARE @d DATE = '11/22/2020';
+SELECT FORMAT( @d, 'd', 'en-US' ) 'US English'  
+      ,FORMAT( @d, 'd', 'en-gb' ) 'Great Britain English'  
+      ,FORMAT( @d, 'd', 'de-de' ) 'German'  
+      ,FORMAT( @d, 'd', 'zh-cn' ) 'Simplified Chinese (PRC)';  
   
-SELECT FORMAT ( @d, 'D', 'en-US' ) AS 'US English Result'  
-      ,FORMAT ( @d, 'D', 'en-gb' ) AS 'Great Britain English Result'  
-      ,FORMAT ( @d, 'D', 'de-de' ) AS 'German Result'  
-      ,FORMAT ( @d, 'D', 'zh-cn' ) AS 'Chinese (Simplified PRC) Result';  
+SELECT FORMAT( @d, 'D', 'en-US' ) 'US English'  
+      ,FORMAT( @d, 'D', 'en-gb' ) 'Great Britain English'  
+      ,FORMAT( @d, 'D', 'de-de' ) 'German'  
+      ,FORMAT( @d, 'D', 'zh-cn' ) 'Chinese (Simplified PRC)';  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-US English Result Great Britain English Result  German Result Simplified Chinese (PRC) Result  
-----------------  ----------------------------- ------------- -------------------------------------  
-10/1/2011         01/10/2011                    01.10.2011    2011/10/1  
+US English  Great Britain English German     Simplified Chinese (PRC)  
+----------  --------------------- ---------- ------------------------  
+11/22/2020  22/11/2020            22.11.2020 2020/11/22 
   
-(1 row(s) affected)  
+US English                  Great Britain English  German                      Chinese (Simplified PRC)  
+--------------------------- ---------------------- --------------------------  ---------------------------------------  
+Sunday, November 22, 2020   22 November 2020       Sonntag, 22. November 2020  2020年11月22日  
   
-US English Result            Great Britain English Result  German Result                    Chinese (Simplified PRC) Result  
----------------------------- ----------------------------- -----------------------------  ---------------------------------------  
-Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2011        2011年10月1日  
-  
-(1 row(s) affected)  
 ```  
   
 ### B. FORMAT with custom formatting strings
 
- The following example shows formatting numeric values by specifying a custom format. The example assumes that the current date is September 27, 2012. For more information about these and other custom formats, see [Custom Numeric Format Strings](https://msdn.microsoft.com/library/0c899ak8.aspx).  
+ The following example shows formatting numeric values by specifying a custom format. The example assumes that the current date is September 27, 2012. For more information about these and other custom formats, see [Custom Numeric Format Strings](/dotnet/standard/base-types/custom-numeric-format-strings).  
   
 ```sql  
-DECLARE @d DATETIME = GETDATE();  
-SELECT FORMAT( @d, 'dd/MM/yyyy', 'en-US' ) AS 'DateTime Result'  
-       ,FORMAT(123456789,'###-##-####') AS 'Custom Number Result';  
+DECLARE @d DATE = GETDATE();  
+SELECT FORMAT( @d, 'dd/MM/yyyy', 'en-US' ) AS 'Date'  
+       ,FORMAT(123456789,'###-##-####') AS 'Custom Number';  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-DateTime Result  Custom Number Result  
---------------   --------------------  
-27/09/2012       123-45-6789  
+Date        Custom Number  
+----------  -------------  
+22/11/2020  123-45-6789  
   
-(1 row(s) affected)  
 ```  
   
 ### C. FORMAT with numeric types
 
- The following example returns 5 rows from the **Sales.CurrencyRate** table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The column **EndOfDateRate** is stored as type **money** in the table. In this example, the column is returned unformatted and then formatted by specifying the .NET Number format, General format, and Currency format types. For more information about these and other numeric formats, see [Standard Numeric Format Strings](https://msdn.microsoft.com/library/dwhawy9k.aspx).  
+ The following example returns 5 rows from the **Sales.CurrencyRate** table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The column **EndOfDateRate** is stored as type **money** in the table. In this example, the column is returned unformatted and then formatted by specifying the .NET Number format, General format, and Currency format types. For more information about these and other numeric formats, see [Standard Numeric Format Strings](/dotnet/standard/base-types/standard-numeric-format-strings).  
   
 ```sql  
-SELECT TOP(5)CurrencyRateID, EndOfDayRate  
+SELECT TOP(5) CurrencyRateID, EndOfDayRate  
             ,FORMAT(EndOfDayRate, 'N', 'en-us') AS 'Number Format'  
             ,FORMAT(EndOfDayRate, 'G', 'en-us') AS 'General Format'  
             ,FORMAT(EndOfDayRate, 'C', 'en-us') AS 'Currency Format'  
@@ -166,14 +164,12 @@ CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format
 4              1.4683        1.47            1.4683          $1.47  
 5              8.2784        8.28            8.2784          $8.28  
   
-(5 row(s) affected)  
-  
 ```  
   
  This example specifies the German culture (de-de).  
   
 ```sql  
-SELECT TOP(5)CurrencyRateID, EndOfDayRate  
+SELECT TOP(5) CurrencyRateID, EndOfDayRate  
       ,FORMAT(EndOfDayRate, 'N', 'de-de') AS 'Numeric Format'  
       ,FORMAT(EndOfDayRate, 'G', 'de-de') AS 'General Format'  
       ,FORMAT(EndOfDayRate, 'C', 'de-de') AS 'Currency Format'  
@@ -184,13 +180,12 @@ ORDER BY CurrencyRateID;
 ```
 CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format  
 -------------- ------------  --------------  --------------  ---------------  
-1              1.0002        1,00            1,0002          1,00 €  
-2              1.55          1,55            1,5500          1,55 €  
-3              1.9419        1,94            1,9419          1,94 €  
-4              1.4683        1,47            1,4683          1,47 €  
-5              8.2784        8,28            8,2784          8,28 €  
+1              1.0002        1,00            1,0002          1,00 &euro;  
+2              1.55          1,55            1,5500          1,55 &euro;  
+3              1.9419        1,94            1,9419          1,94 &euro;  
+4              1.4683        1,47            1,4683          1,47 &euro;  
+5              8.2784        8,28            8,2784          8,28 &euro;  
   
- (5 row(s) affected)  
 ```  
   
 ### <a name="ExampleD"></a> D. FORMAT with time data types
@@ -238,6 +233,6 @@ select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'HH:mm') -- returns 14:00
   
 ## See Also
 
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
- [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
- [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+- [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+- [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

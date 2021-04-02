@@ -1,6 +1,7 @@
 ---
-title: "Specify Data Type Mappings for an Oracle Publisher | Microsoft Docs"
-ms.custom: ""
+title: "Data type mappings for an Oracle Publisher"
+description: Describes how to specify data type mappings for an Oracle Publisher in SQL Server using SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -16,8 +17,8 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Specify Data Type Mappings for an Oracle Publisher
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to specify data type mappings for an Oracle Publisher in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Although a set of default data type mappings are provided for Oracle Publishers, it might be necessary to specify different mappings for a given publication.  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  This topic describes how to specify data type mappings for an Oracle Publisher in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Although a set of default data type mappings are provided for Oracle Publishers, it might be necessary to specify different mappings for a given publication.  
   
  **In This Topic**  
   
@@ -51,29 +52,29 @@ ms.author: "mathoma"
   
 1.  If one does not already exist, create an Oracle publication.  
   
-2.  At the Distributor, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify a value of **0** for **@use_default_datatypes**. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+2.  At the Distributor, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify a value of **0** for **\@use_default_datatypes**. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 3.  At the Distributor, execute [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) to view the existing mapping for a column in a published article.  
   
-4.  At the Distributor, execute [sp_changearticlecolumndatatype](../../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md). Specify the name of the Oracle Publisher for **@publisher**, as well as **@publication**, **@article**, and **@column** to define the published column. Specify the name of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type to map to for **@type**, as well as **@length**, **@precision**, and **@scale**, where applicable.  
+4.  At the Distributor, execute [sp_changearticlecolumndatatype](../../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md). Specify the name of the Oracle Publisher for **\@publisher**, as well as **\@publication**, **\@article**, and **\@column** to define the published column. Specify the name of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type to map to for **\@type**, as well as **\@length**, **\@precision**, and **\@scale**, where applicable.  
   
 5.  At the Distributor, execute [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). This creates the view used to generate the snapshot from the Oracle publication.  
   
 #### To specify a mapping as the default mapping for a data type  
   
-1.  (Optional) At the Distributor on any database, execute [sp_getdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md). Specify **@source_dbms**, **@source_type**, **@destination_dbms**, **@destination_version**, and any other parameters needed to identify the source DBMS. Information on the currently mapped data type in the destination DBMS is returned using the output parameters.  
+1.  (Optional) At the Distributor on any database, execute [sp_getdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md). Specify **\@source_dbms**, **\@source_type**, **\@destination_dbms**, **\@destination_version**, and any other parameters needed to identify the source DBMS. Information on the currently mapped data type in the destination DBMS is returned using the output parameters.  
   
-2.  (Optional) At the Distributor on any database, execute [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md). Specify **@source_dbms** and any other parameters needed to filter the result set. Note the value of **mapping_id** for the desired mapping in the result set.  
+2.  (Optional) At the Distributor on any database, execute [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md). Specify **\@source_dbms** and any other parameters needed to filter the result set. Note the value of **mapping_id** for the desired mapping in the result set.  
   
 3.  At the Distributor on any database, execute [sp_setdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md).  
   
-    -   If you know the desired value of **mapping_id** obtained in step 2, specify it for **@mapping_id**.  
+    -   If you know the desired value of **mapping_id** obtained in step 2, specify it for **\@mapping_id**.  
   
-    -   If you do not know the **mapping_id**, specify the parameters **@source_dbms**, **@source_type**, **@destination_dbms**, **@destination_type**, and any other parameters required to identify an existing mapping.  
+    -   If you do not know the **mapping_id**, specify the parameters **\@source_dbms**, **\@source_type**, **\@destination_dbms**, **\@destination_type**, and any other parameters required to identify an existing mapping.  
   
 #### To find valid data types for a given Oracle data type  
   
-1.  At the Distributor on any database, execute [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md). Specify a value of **ORACLE** for **@source_dbms** and any other parameters needed to filter the result set.  
+1.  At the Distributor on any database, execute [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md). Specify a value of **ORACLE** for **\@source_dbms** and any other parameters needed to filter the result set.  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example changes a column with an Oracle data type of NUMBER so it is mapped to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type **numeric**(38,38), instead of the default data type **float**.  

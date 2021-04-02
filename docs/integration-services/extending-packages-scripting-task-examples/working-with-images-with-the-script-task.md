@@ -1,4 +1,5 @@
 ---
+description: "Working with Images with the Script Task"
 title: "Working with Images with the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -21,12 +22,12 @@ helpviewer_keywords:
   - "JPEG format [Integration Services]"
   - ".jpeg files"
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Working with Images with the Script Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   A database of products or users frequently includes images in addition to text and numeric data. The **System.Drawing** namespace in the Microsoft .NET Framework provides classes for manipulating images.  

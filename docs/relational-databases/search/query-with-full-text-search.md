@@ -1,4 +1,5 @@
 ---
+description: "Query with Full-Text Search"
 title: "Query with Full-Text Search | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,10 +17,10 @@ ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query with Full-Text Search
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Write full-text queries by using the predicates **CONTAINS** and **FREETEXT** and the rowset-valued functions **CONTAINSTABLE** and **FREETEXTTABLE** with a **SELECT** statement. This article provides examples of each predicate and function and helps you choose the best one to use.
 
 -   To match words and phrases, use **CONTAINS** and **CONTAINSTABLE**.
@@ -27,7 +28,7 @@ Write full-text queries by using the predicates **CONTAINS** and **FREETEXT** an
 
 ## <a name="examples_simple"></a> Examples of each predicate and function
 
-The following examples use the AdventureWorks sample database. For the final release of AdventureWorks, see [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502). To run the sample queries, you also have to set up Full-Text Search. For more info, see [Get Started with Full-Text Search](get-started-with-full-text-search.md). 
+The following examples use the AdventureWorks sample database. For the final release of AdventureWorks, see [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks). To run the sample queries, you also have to set up Full-Text Search. For more info, see [Get Started with Full-Text Search](get-started-with-full-text-search.md). 
 
 ### Example - CONTAINS  
 The following example finds all products with a price of `$80.99` that contain the word `"Mountain"`:
@@ -334,6 +335,5 @@ After you apply a given word breaker, thesaurus, and stoplist combination in a q
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   
  [Improve the Performance of Full-Text Queries](../../relational-databases/search/improve-the-performance-of-full-text-queries.md)
- 

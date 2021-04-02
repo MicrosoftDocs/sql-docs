@@ -1,39 +1,34 @@
 ---
 title: "Availability group is offline"
-description: "Identify possible causes for why an Always On availability group is offline."
+description: "Learn how to identify times when and possible reasons why an Always On availability group may go offline."
 ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: availability-groups
+ms.topic: end-user-help
 f1_keywords: 
   - "sql13.swb.agdashboard.agp2online.issues.f1"
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Always On Availability group is offline
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|Availability Group Online State|  
-|**Issue**|Availability group is offline.|  
-|**Category**|**Critical**|  
-|**Facet**|Availability group|  
+- **Policy Name**: Availability Group Online State
+- **Issue**: Availability group is offline.
+- **Category**: **Critical**
+- **Facet**: Availability group  
   
 ## Description  
  This policy checks the online or offline state of the availability group. The policy is in an unhealthy state and an alert is raised when the cluster resource of the availability group is offline or the availability group does not have a primary replica.  
   
- The policy state is healthy when the cluster resource of the availability group is online and the availability group has a primary replica.  
-  
-> [!NOTE]  
->  For this release of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [Availability group is offline](https://go.microsoft.com/fwlink/p/?LinkId=220850) on the TechNet Wiki.  
+ The policy state is healthy when the cluster resource of the availability group is online and the availability group has a primary replica.
   
 ## Possible Causes  
  This issue can be caused by a failure in the server instance that hosts the primary replica or by the Windows Server Failover Cluster (WSFC) availability group resource going offline. Following are possible causes for the availability group to be offline:  

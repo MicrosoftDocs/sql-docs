@@ -1,5 +1,6 @@
 ---
-title: "Page Layout and Rendering (Report Builder and SSRS) | Microsoft Docs"
+title: "Page Layout and Rendering (Report Builder) | Microsoft Docs"
+description: Design or improve your paginated reports with rendering extensions for page layout, page breaks, and paper size in Report Builder.  
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -16,7 +17,7 @@ Read about [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] renderi
 
  When you view reports in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server or the preview pane of Report Builder or Report Designer, the report is first rendered by the HTML renderer. You can then export the report to different formats such as Excel or comma-delimited (CSV) files. The exported report can then be used for further analysis in Excel or as a data source for applications that can import and use CSV files.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes a set of renderers for exporting reports to different formats. Each renderer has applies rules when rendering reports. When you export a report to a different file format, especially for renderers such as the Adobe Acrobat (PDF) renderer that uses pagination based on the physical page size, you might need to change the layout of your report to have the exported report look and print correctly after the rendering rules are applied.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes a set of renderers for exporting reports to different formats. Each renderer applies rules when rendering reports. When you export a report to a different file format, especially for renderers such as the Adobe Acrobat (PDF) renderer that uses pagination based on the physical page size, you might need to change the layout of your report to have the exported report look and print correctly after the rendering rules are applied.  
   
  Getting the best results for exported reports is often an iterative process; you author and preview the report in Report Builder or Report Designer, export the report to the preferred format, review the exported report, and then make changes to the report.  
     

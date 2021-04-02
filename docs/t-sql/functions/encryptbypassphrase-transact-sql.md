@@ -1,4 +1,5 @@
 ---
+description: "ENCRYPTBYPASSPHRASE (Transact-SQL)"
 title: "ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ENCRYPTBYPASSPHRASE"
   - "ENCRYPTBYPASSPHRASE_TSQL"
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ENCRYPTBYPASSPHRASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Encrypt data with a passphrase using the TRIPLE DES algorithm with a 128 key bit length.  
   
@@ -29,15 +30,16 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 EncryptByPassPhrase ( { 'passphrase' | @passphrase }   
     , { 'cleartext' | @cleartext }  
   [ , { add_authenticator | @add_authenticator }  
     , { authenticator | @authenticator } ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *passphrase*  
  A passphrase from which to generate a symmetric key.  
   
@@ -73,15 +75,15 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 ## Examples  
  The following example updates a record in the `SalesCreditCard` table and encrypts the value of the credit card number stored in column `CardNumber_EncryptedbyPassphrase`, using the primary key as an authenticator.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Create a column in which to store the encrypted data.  
 ALTER TABLE Sales.CreditCard   
-    ADD CardNumber_EncryptedbyPassphrase varbinary(256);   
+    ADD CardNumber_EncryptedbyPassphrase VARBINARY(256);   
 GO  
 -- First get the passphrase from the user.  
-DECLARE @PassphraseEnteredByUser nvarchar(128);  
+DECLARE @PassphraseEnteredByUser NVARCHAR(128);  
 SET @PassphraseEnteredByUser   
     = 'A little learning is a dangerous thing!';  
   
@@ -89,7 +91,7 @@ SET @PassphraseEnteredByUser
 -- In this case, the record is number 3681.  
 UPDATE Sales.CreditCard  
 SET CardNumber_EncryptedbyPassphrase = EncryptByPassPhrase(@PassphraseEnteredByUser  
-    , CardNumber, 1, CONVERT( varbinary, CreditCardID))  
+    , CardNumber, 1, CONVERT(varbinary, CreditCardID))  
 WHERE CreditCardID = '3681';  
 GO  
 ```  

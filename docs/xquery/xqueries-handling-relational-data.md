@@ -1,5 +1,6 @@
 ---
 title: "XQueries Handling Relational Data | Microsoft Docs"
+description: Learn how to bind non-XML relational data to XML by using the XQuery extensions sql:column() and sql:variable().
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # XQueries Handling Relational Data
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   You specify XQuery against an **xml** type column or variable by using one of the [XML Data Type Methods](../t-sql/xml/xml-data-type-methods.md). These include **query()**, **value()**, **exist()**, or **modify()**. The XQuery is executed against the XML instance identified in the query generating the XML.  
   
@@ -29,7 +30,7 @@ ms.author: "jroth"
   
  You can use these XQuery extensions when specifying an XQuery in the **query()** method of the **xml** data type. As a result, the **query()** method can produce XML that combines data from XML and non-**xml** data types.  
   
- You can also use these functions when you use the **xml** data type methods **modify()**, **value()**, **query()**, and **exist()**to expose a relational value inside XML.  
+ You can also use these functions when you use the **xml** data type methods **modify()**, **value()**, **query()**, and **exist()** to expose a relational value inside XML.  
   
  For more information, see [sql:column() function (XQuery)](../xquery/xquery-extension-functions-sql-column.md) and [sql:variable() function (XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
   

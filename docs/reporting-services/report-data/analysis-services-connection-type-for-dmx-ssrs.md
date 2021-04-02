@@ -1,5 +1,6 @@
 ---
-title: "Analysis Services Connection Type for DMX (SSRS) | Microsoft Docs"
+title: "Analysis Services Connection Type for DMX | Microsoft Docs"
+description: Learn about the Analysis Services connection type for DMX and learn to use the DMX Query Designer to build a DMX query using graphical elements.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -23,7 +24,7 @@ ms.author: maggies
   When you create a dataset using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source, Report Designer displays the Multidimensional Expression (MDX) query designer if it detects a valid cube. If no cube is detected, but a data mining model is available, Report Designer displays the Data Mining Extensions (DMX) query designer. To switch between the MDX and DMX designers, click the **Command Type DMX** (![Change to DMX query language view](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")) button on the toolbar. Use the DMX Query Designer to interactively build a DMX query using graphical elements. To use DMX Query Designer, the data source that you specify must already have a data mining model that provides the data. Query results are converted to a flattened rowset for use in the report.  
   
 > [!NOTE]  
->  You must train your model before designing your report. For more information, see [Data Mining Solutions](../../analysis-services/data-mining/data-mining-solutions.md).  
+>  You must train your model before designing your report. For more information, see [Data Mining Solutions](/analysis-services/data-mining/data-mining-solutions).  
   
 ## Design Mode  
  The DMX query designer opens in Design mode. Design mode includes a graphical design surface used for selecting a single data mining model and input table, and a grid used for specifying the prediction query. There are two other modes in DMX query designer: Query mode and Result mode. In Query mode, the grid from Design mode is replaced with a Query pane, which you can use to type DMX queries. In Result mode, the result set returned by the query appears in a data grid.  
@@ -41,8 +42,7 @@ ms.author: maggies
  For more information about how to manage the relationship between report parameters and query parameters, see [Associate a Query Parameter with a Report Parameter &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md). For more information about parameters, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## See Also  
- [Data Mining Solutions](../../analysis-services/data-mining/data-mining-solutions.md)   
+ [Data Mining Solutions](/analysis-services/data-mining/data-mining-solutions)   
  [Query Design Tools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
- [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
-  
+ [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   

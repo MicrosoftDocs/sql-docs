@@ -1,5 +1,6 @@
 ---
-title: "Formatting Ranges on a Gauge (Report Builder and SSRS) | Microsoft Docs"
+title: "Formatting Ranges on a Gauge (Report Builder) | Microsoft Docs"
+description: Visually indicate with a gauge range when the pointer value has gone into a certain span of values in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

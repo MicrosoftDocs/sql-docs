@@ -1,4 +1,5 @@
 ---
+description: "SMO Object Model"
 title: "SMO Object Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,12 +14,12 @@ helpviewer_keywords:
   - "SMO [SQL Server], object model"
   - "SQL Server Management Objects, object model"
 ms.assetid: bd6e59b6-ca46-42c0-adb2-c9d64cf6e00b
-author: "stevestein"
-ms.author: "sstein"
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: "markingmyname"
+ms.author: "maghan"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SMO Object Model
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The SMO object model is made up of a hierarchy of objects. The <xref:Microsoft.SqlServer.Management.Smo.Server> object is the top level object and all instance class objects reside under the <xref:Microsoft.SqlServer.Management.Smo.Server> object.  
   

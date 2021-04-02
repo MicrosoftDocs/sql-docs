@@ -1,4 +1,5 @@
 ---
+description: "Lesson 3-1: Copy the Lesson 2 package"
 title: "Step 1: Copy the Lesson 2 package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2019"
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 3-1: Copy the Lesson 2 package
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

@@ -1,12 +1,13 @@
 ---
+description: "PRINT (Transact-SQL)"
 title: "PRINT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "PRINT_TSQL"
   - "PRINT"
@@ -20,13 +21,13 @@ helpviewer_keywords:
   - "viewing user-defined messages"
   - "conditionally returning messages [SQL Server]"
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # PRINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a user-defined message to the client.  
   
@@ -34,11 +35,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 PRINT msg_str | @local_variable | string_expr  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *msg_str*  
  Is a character string or Unicode string constant. For more information, see [Constants &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).  
   
@@ -64,7 +67,7 @@ PRINT msg_str | @local_variable | string_expr
 ### A. Conditionally executing print (IF EXISTS)  
  The following example uses the `PRINT` statement to conditionally return a message.  
   
-```  
+```sql  
 IF @@OPTIONS & 512 <> 0  
     PRINT N'This user has SET NOCOUNT turned ON.';  
 ELSE  
@@ -75,19 +78,19 @@ GO
 ### B. Building and displaying a string  
  The following example converts the results of the `GETDATE` function to a `nvarchar` data type and concatenates it with literal text to be returned by `PRINT`.  
   
-```  
+```sql  
 -- Build the message text by concatenating  
 -- strings and expressions.  
 PRINT N'This message was printed on '  
-    + RTRIM(CAST(GETDATE() AS nvarchar(30)))  
+    + RTRIM(CAST(GETDATE() AS NVARCHAR(30)))  
     + N'.';  
 GO  
 -- This example shows building the message text  
 -- in a variable and then passing it to PRINT.  
 -- This was required in SQL Server 7.0 or earlier.  
-DECLARE @PrintMessage nvarchar(50);  
+DECLARE @PrintMessage NVARCHAR(50);  
 SET @PrintMessage = N'This message was printed on '  
-    + RTRIM(CAST(GETDATE() AS nvarchar(30)))  
+    + RTRIM(CAST(GETDATE() AS NVARCHAR(30)))  
     + N'.';  
 PRINT @PrintMessage;  
 GO  
@@ -98,7 +101,7 @@ GO
 ### C. Conditionally executing print  
  The following example uses the `PRINT` statement to conditionally return a message.  
   
-```  
+```sql  
 IF DB_ID() = 1  
     PRINT N'The current database is master.';  
 ELSE  

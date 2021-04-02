@@ -1,6 +1,7 @@
 ---
-title: "Create an Updatable Subscription to a Transactional Publication | Microsoft Docs"
-ms.custom: ""
+title: "Create an Updatable Subscription (Transactional)"
+description: Learn how to create an Updatable Subscription to a Transactional Publication for SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "11/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,7 +16,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Create an Updatable Subscription to a Transactional Publication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 > [!NOTE]  
 >  This feature remains supported in versions of [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] from 2012 through 2016.  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
 
@@ -47,8 +48,6 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
     For information about the permissions required by the linked server account, see the **Queued Updating Subscriptions** of [enter link description here](../../../relational-databases/replication/security/secure-the-subscriber.md).
 
 8. Complete the wizard.
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Configure an updatable subscription from the Subscriber
 
@@ -96,7 +95,7 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
     * `sync tran` - enables the subscription for immediate updating.
     * `failover` - enables the subscription for immediate updating with queued updating as a failover option.
     > [!NOTE]  
->  `failover` requires that the publication also be enabled for queued updating subscriptions. 
+    >  `failover` requires that the publication also be enabled for queued updating subscriptions. 
  
 4. At the Subscriber, execute [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specify the following:
 
@@ -145,7 +144,7 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
     * The Windows credentials under which the Distribution Agent at the Distributor runs for `@job_login` and `@job_password`. 
 
     > [!NOTE]  
->  Connections made using Windows Integrated Authentication are always made using the Windows credentials specified by `@job_login` and `@job_password`. The Distribution Agent always makes the local connection to the Distributor using Windows Integrated Authentication. By default, the agent will connect to the Subscriber using Windows Integrated Authentication. 
+    >  Connections made using Windows Integrated Authentication are always made using the Windows credentials specified by `@job_login` and `@job_password`. The Distribution Agent always makes the local connection to the Distributor using Windows Integrated Authentication. By default, the agent will connect to the Subscriber using Windows Integrated Authentication. 
 
     * (Optional) A value of `0` for `@subscriber_security_mode` and the SQL Server login information for `@subscriber_login` and `@subscriber_password`, if you need to use SQL Server Authentication when connecting to the Subscriber. 
     * A schedule for the Distribution Agent job for this subscription.
@@ -175,7 +174,7 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
     * `queued failover` - enables support for queued updating with immediate updating as a failover option.
 
     > [!NOTE]  
->  `queued failover` requires that the publication also be enabled for immediate updating subscriptions. To fail over to immediate updating, you must use [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) to define the credentials under which changes at the Subscriber are replicated to the Publisher.
+    >  `queued failover` requires that the publication also be enabled for immediate updating subscriptions. To fail over to immediate updating, you must use [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) to define the credentials under which changes at the Subscriber are replicated to the Publisher.
  
 4. At the Subscriber, execute [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specify the following parameters:
 

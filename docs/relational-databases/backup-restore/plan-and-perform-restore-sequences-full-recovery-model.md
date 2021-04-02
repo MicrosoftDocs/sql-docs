@@ -1,7 +1,8 @@
 ---
-title: "Plan and Perform Restore Sequences (Full Recovery Model) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Restore sequences (Full Recovery Model) | Microsoft Docs"
+description: Learn how to plan and perform a restore sequence, consisting of RESTORE statements, for a SQL Server database that ordinarily uses the full recovery model.
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -11,11 +12,11 @@ helpviewer_keywords:
   - "restore sequences [SQL Server], planning for"
   - "full recovery model [SQL Server], planning restore sequences"
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Plan and Perform Restore Sequences (Full Recovery Model)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic explains how to plan and perform a restore sequence for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases that ordinarily uses the full recovery model. A *restore sequence* is a sequence of one or more [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statements. Typically, a restore sequences initializes the contents of the database, files, and/or pages being restored (the data-copy phase), rolls forward logged transactions (the redo phase), and rolls back uncommitted transactions (the undo phase).  
   

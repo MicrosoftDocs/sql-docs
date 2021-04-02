@@ -1,5 +1,6 @@
 ---
-title: Discontinued functionality
+title: Discontinued functionality in SQL Server 2016 Reporting Services (SSRS)
+description: Learn details about SQL Server Reporting Services features that are no longer available in SQL Server 2016.
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -11,19 +12,19 @@ ms.custom: seodec18
 ms.date: 04/26/2019
 ---
 
-# Discontinued Functionality in SQL Server Reporting Services (SSRS)
+# Discontinued Functionality in SQL Server 2016 Reporting Services (SSRS)
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-This topic describes SQL Server Reporting Services features that are no longer available in SQL Server 2016. It does not include announcements about discontinued support for specific versions of the operating system or Microsoft Internet Information Services (IIS). For more information about system prerequisites, see [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+This article describes SQL Server Reporting Services features that are no longer available in SQL Server 2016. It doesn't include announcements about discontinued support for specific versions of the operating system or Microsoft Internet Information Services (IIS). For more information about system prerequisites, see [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
 A *discontinued feature* is one that is no longer supported. It might also be physically removed from the product. The following features are discontinued.
 
-|Feature|Replacment or workaround|
+|Feature|Replacement or workaround|
 |-|-|
-|Customize style sheets for HTML Viewer and Report Manager|You can still [brand the web portal](branding-the-web-portal.md).|
+|Customized style sheets for HTML Viewer and Report Manager|You can still [brand the web portal](branding-the-web-portal.md).|
 
 ## Next steps
 

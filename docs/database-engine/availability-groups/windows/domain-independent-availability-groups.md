@@ -5,25 +5,25 @@ ms.custom: "seodec18"
 ms.date: "09/25/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: availability-groups
+ms.topic: how-to
 helpviewer_keywords: 
 - "Availability Groups [SQL Server], domain independent"
 ms.assetid: 
-author: "MashaMSFT"
-ms.author: mathoma
+author: "cawrites"
+ms.author: chadam
 ---
 # Create a domain-independent availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-Always On Availability Groups (AGs) require an underlying Windows Server failover cluster (WSFC). Deploying a WSFC through Windows Server 2012 R2 has always required that the servers participating in a WSFC, also known as nodes, are joined to the same domain. For more information on Active Directory Domain Services (AD DS), see [here](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
+Always On availability groups (AGs) require an underlying Windows Server failover cluster (WSFC). Deploying a WSFC through Windows Server 2012 R2 has always required that the servers participating in a WSFC, also known as nodes, are joined to the same domain. For more information on Active Directory Domain Services (AD DS), see [here](/previous-versions/windows/it-pro/windows-server-2003/cc759073(v=ws.10)).
 
 The AD DS and WSFC dependency is more complex than what has been previously deployed with a Database Mirroring (DBM) configuration, since DBM can be deployed across multiple data centers using certificates, without any such dependencies.  A traditional availability group spanning more than one data center requires that all servers must be joined to the same Active Directory domain -- different domains, even trusted domains, do not work. All the servers must be nodes of the same WSFC. The following figure shows this configuration. SQL Server 2016 also has distributed availability groups which can also achieve this goal in a different way.
 
 
 ![WSFC spanning two data centers connected to the same domain][1]
 
-Windows Server 2012 R2 introduced an [Active Directory-Detached Cluster](https://technet.microsoft.com/library/dn265970.aspx), a specialized form of a Windows Server failover cluster which can be used with availability groups. This type of WSFC still requires the nodes to be domain-joined to the same Active Directory domain, but in this case the WSFC is using DNS, but not using the domain. Since a domain is still involved, an Active Directory-Detached Cluster still does not provide a completely domain-free experience.
+Windows Server 2012 R2 introduced an [Active Directory-Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970(v=ws.11)), a specialized form of a Windows Server failover cluster which can be used with availability groups. This type of WSFC still requires the nodes to be domain-joined to the same Active Directory domain, but in this case the WSFC is using DNS, but not using the domain. Since a domain is still involved, an Active Directory-Detached Cluster still does not provide a completely domain-free experience.
 
 Windows Server 2016 introduced a new kind of Windows Server failover cluster based on the foundation of the Active Directory-Detached Cluster -- a Workgroup Cluster. A Workgroup Cluster allows SQL Server 2016 to deploy an availability group on top of a WSFC that does not require AD DS. SQL Server requires the use of certificates for endpoint security, just as the database mirroring scenario requires certificates.  This type of an availability group is called a Domain Independent Availability Group. Deploying an availability group with an underlying Workgroup Cluster supports the following combinations for the nodes that will make up the WSFC:
 - No nodes are joined to a domain.
@@ -41,7 +41,7 @@ A Domain Independent Availability Group is not just for multi-site or disaster r
 ![High-level view of an AG in Standard Edition][3]
 
 Deploying a Domain Independent Availability Group has some known caveats:
-- The only witness types available for use with quorum are disk and [cloud](https://technet.microsoft.com/windows-server-docs/failover-clustering/deploy-cloud-witness), which is new in Windows Server 2016. Disk is problematic since there is most likely no use of shared disk by the availability group.
+- The only witness types available for use with quorum are disk and [cloud](/windows-server/failover-clustering/deploy-cloud-witness), which is new in Windows Server 2016. Disk is problematic since there is most likely no use of shared disk by the availability group.
 - The underlying Workgroup Cluster variant of a WSFC can only be created using PowerShell, but it can then be administered using the Failover Cluster Manager.
 - If Kerberos is required, you must deploy a standard WSFC that is attached to an Active Directory domain, and a Domain Independent Availability Group is probably not an option.
 - While a listener can be configured, it must be registered in DNS to be usable. As noted above, there is no Kerberos support for the listener.
@@ -74,7 +74,7 @@ A common DNS suffix is necessary for a Domain Independent Availability Group's W
 Creating a Domain Independent Availability Group cannot currently be achieved completely using SQL Server Management Studio. While creating the Domain Independent Availability Group is basically the same as the creation of a normal availability group, certain aspects (such as creating the certificates) are only possible with Transact-SQL. The example below assumes an availability group configuration with two replicas: one primary and one secondary. 
 
 1. [Using the instructions at this link](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059), deploy a Workgroup Cluster composed of all servers that will participate in the availability group. Ensure that the common DNS suffix is already configured before configuring the Workgroup Cluster.
-2. [Enable the Always On Availability Groups feature](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) on each instance that will be participating in the availability group. This will require a restart of each SQL Server instance.
+2. [Enable the Always On Availability Groups feature](./enable-and-disable-always-on-availability-groups-sql-server.md) on each instance that will be participating in the availability group. This will require a restart of each SQL Server instance.
 3. Each instance that will host the primary replica requires a database master key. If a master key does not exist already, run the following command:
 
    ```sql
@@ -144,10 +144,10 @@ Creating a Domain Independent Availability Group cannot currently be achieved co
          )
    ```
 
-13. Assign rights to each user created on that instance in Step 9 to be able to connect to the endpoint. 
+13. Assign rights to each login created on that instance in Step 8 to be able to connect to the endpoint. 
 
    ```sql
-   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_User];
+   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_Login];
    GO
    ```
 
@@ -166,4 +166,4 @@ Creating a Domain Independent Availability Group cannot currently be achieved co
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png
 [2]: ./media/diag-workgroup-cluster-two-nodes-joined.png
 [3]: ./media/diag-high-level-view-ag-standard-edition.png
-[4]: ./media/diag-successful-dns-suffix.png 
+[4]: ./media/diag-successful-dns-suffix.png

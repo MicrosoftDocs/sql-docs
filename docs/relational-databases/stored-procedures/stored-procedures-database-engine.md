@@ -1,5 +1,6 @@
 ---
 title: "Stored Procedures (Database Engine) | Microsoft Docs"
+description: Learn how a stored procedure in SQL Server is a group of one or more Transact-SQL statements or a reference to a .NET Framework common runtime language method.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Stored Procedures (Database Engine)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   A stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a group of one or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements or a reference to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common runtime language (CLR) method. Procedures resemble constructs in other programming languages because they can:  
   
 -   Accept input parameters and return multiple values in the form of output parameters to the calling program.  
@@ -53,18 +54,19 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  If there has been significant change to the tables or data referenced by the procedure, the precompiled plan may actually cause the procedure to perform slower. In this case, recompiling the procedure and forcing a new execution plan can improve performance.  
   
 ## Types of Stored Procedures  
- User-defined  
+
+ **User-defined**  
  A user-defined procedure can be created in a user-defined database or in all system databases except the **Resource** database. The procedure can be developed in either [!INCLUDE[tsql](../../includes/tsql-md.md)] or as a reference to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common runtime language (CLR) method.  
   
- Temporary  
+ **Temporary**  
  Temporary procedures are a form of user-defined procedures. The temporary procedures are like a permanent procedure, except temporary procedures are stored in **tempdb**. There are two types of temporary procedures: local and global. They differ from each other in their names, their visibility, and their availability. Local temporary procedures have a single number sign (#) as the first character of their names; they are visible only to the current user connection, and they are deleted when the connection is closed. Global temporary procedures have two number signs (##) as the first two characters of their names; they are visible to any user after they are created, and they are deleted at the end of the last session using the procedure.  
   
- System  
+ **System**  
  System procedures are included with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They are physically stored in the internal, hidden **Resource** database and logically appear in the **sys** schema of every system- and user-defined database. In addition, the **msdb** database also contains system stored procedures in the **dbo** schema that are used for scheduling alerts and jobs. Because system procedures start with the prefix **sp_**, we recommend that you do not use this prefix when naming user-defined procedures. For a complete list of system procedures, see [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the system procedures that provide an interface from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to external programs for various maintenance activities. These extended procedures use the xp_ prefix. For a complete list of extended procedures, see [General Extended Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md).  
   
- Extended User-Defined  
+ **Extended User-Defined**  
  Extended procedures enable creating external routines in a programming language such as C. These procedures are DLLs that an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can dynamically load and run.  
   
 > [!NOTE]  
@@ -72,9 +74,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Related Tasks  
   
-|||  
-|-|-|  
-|**Task Description**|**Topic**|  
+| Task Description | Topic |
+| ---------------- | ----- |
 |Describes how to create a stored procedure.|[Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)|  
 |Describes how to modify a stored procedure.|[Modify a Stored Procedure](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)|  
 |Describes how to delete a stored procedure.|[Delete a Stored Procedure](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)|  
@@ -88,6 +89,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Describes how Parameters are used in a stored procedure.|[Parameters](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## Related Content  
- [CLR Stored Procedures](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
-  
-  
+ [CLR Stored Procedures](/dotnet/framework/data/adonet/sql/clr-stored-procedures)  
+ [Deferred name resolution](../../t-sql/statements/create-trigger-transact-sql.md#deferred-name-resolution)

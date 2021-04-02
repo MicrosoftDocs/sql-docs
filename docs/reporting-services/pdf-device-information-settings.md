@@ -1,5 +1,6 @@
 ---
 title: "PDF Device Information Settings | Microsoft Docs"
+description: Learn about the device information settings that are available for rendering reports in PDF format.
 ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

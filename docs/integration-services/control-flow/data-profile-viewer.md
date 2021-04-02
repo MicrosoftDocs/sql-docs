@@ -1,4 +1,5 @@
 ---
+description: "Data Profile Viewer"
 title: "Data Profile Viewer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,12 +14,12 @@ helpviewer_keywords:
   - "Data Profile Viewer [Integration Services]"
   - "Data Profiling task [Integration Services], output viewer"
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Data Profile Viewer
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Viewing and analyzing the data profiles is the next step in the data profiling process. You can view these profiles after you have run the Data Profiling task inside an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package and computed the data profiles. For more information about how to set up and run the Data Profiling tasks, see [Setup of the Data Profiling Task](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
@@ -62,7 +63,7 @@ ms.author: janinez
 >   
 >  If you drill down from an output file that was not created recently, the drilldown queries might return a different set of rows than those on which the original output was calculated.  
   
- For more information about the user interface of the Data Profile Viewer, see [Data Profile Viewer F1 Help](../../integration-services/control-flow/data-profile-viewer-f1-help.md).  
+ For more information about the user interface of the Data Profile Viewer, see [Data Profile Viewer F1 Help]().  
   
 ## Data Profile Viewer F1 Help
   Use the Data Profile Viewer to view the output of the Data Profiling task.  
@@ -239,4 +240,3 @@ ms.author: janinez
   
  **Count**  
  Displays the number of rows in which the specified column has the value shown in the first column.  
-  

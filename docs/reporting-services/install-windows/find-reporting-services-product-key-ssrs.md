@@ -1,49 +1,36 @@
 ---
-title: "Find the product key for SQL Server 2017 Reporting Services (SSRS) | Microsoft Docs"
-ms.date: 12/20/2017
+title: "Find the product key for SQL Server Reporting Services | Microsoft Docs"
+description: "Learn how to find the  product key for SQL Server Reporting Services (SSRS) 2017 and 2019 so you can install your server in a production environment."
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
+ms.custom: seo-lt-2019​, seo-mmd-2019
 
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-2017"
 ---
-# How to find the product key for SQL Server 2017 Reporting Services
+# Find the product key for SQL Server Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-Learn how to find your SQL Server 2017 Reporting Services (SSRS) product key so you can install your server in a production environment.
+Learn how to find the  product key for SQL Server Reporting Services (SSRS) 2017 and 2019 so you can install your server in a production environment.
 
-To find your product key, you start by downloading and running setup for SQL Server 2017.
+To find your product key, you start by downloading and running setup for SQL Server.
 
-1. Download SQL Server 2017 from one of these sources:
+1. [Download SQL Server](../../database-engine/install-windows/install-sql-server.md).
+1. Run SQL Server setup and copy the pre-populated key:
 
-    - Volume Licensing Service Center
-    - MSDN subscription
-    - Retail (download from Microsoft Store)
+    ![Copy the SQL Server product key](media/find-reporting-services-product-key-ssrs/ssrs-ss2017-copy-product-key.png)
 
-1. Run SQL Server 2017 setup and copy the pre-populated key:
-
-    ![Copy the SQL Server 2017 product key](media/find-reporting-services-product-key-ssrs/ssrs-ss2017-copy-product-key.png)
-
-1. [Run Reporting Services setup](install-reporting-services.md) and paste the key:
+1. [Download Reporting Services](install-reporting-services.md), run setup, and paste the key:
 
      ![Paste the product key](media/find-reporting-services-product-key-ssrs/ssrs-ssrs2017-paste-product-key.png)
 
-You should only have to do this step the first time you install SSRS 2017. Servicing updates shouldn't require you to enter the key.
-
-## Related information
-
-- For information on installing SQL Server Reporting Services native mode, see [Install Reporting Services native mode report server](install-reporting-services-native-mode-report-server.md). 
-
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-
-- For information on installing SQL Server 2016 Reporting Services (and earlier) in SharePoint integration mode, see [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md).
-
-::: moniker-end
+You should only have to do this step the first time you install Reporting Services. Servicing updates shouldn't require you to enter the key.
 
 ## Next steps
 
-- [Install SQL Server 2017 Reporting Services](install-reporting-services.md)
+- [Install SQL Server Reporting Services](install-reporting-services.md)
 - More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

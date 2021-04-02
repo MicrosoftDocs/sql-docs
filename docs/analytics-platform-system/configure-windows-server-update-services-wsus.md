@@ -1,5 +1,5 @@
 ---
-title: Configure WSUS - Analytics Platform System | Microsoft Docs
+title: Configure WSUS
 description: These instructions walk you through the steps for using the Windows Server Update Services (WSUS) Configuration Wizard to configure WSUS for Analytics Platform System.   
 author: mzaman1 
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Configure Windows Server Update Services (WSUS) in Analytics Platform System
 These instructions walk you through the steps for using the Windows Server Update Services (WSUS) Configuration Wizard to configure WSUS for Analytics Platform System. You need to configure WSUS before you can apply software updates to the appliance. WSUS is already installed on the VMM virtual machine of the appliance.  
   
-For more information about configuring WSUS, see the [WSUS Step-by-Step Installation Guide](https://go.microsoft.com/fwlink/?LinkId=202417) on the WSUS website. After configuring WSUS, see [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) to initiate an update.  
+For more information about configuring WSUS, see the [WSUS Step-by-Step Installation Guide](/windows/deployment/deploy-whats-new) on the WSUS website. After configuring WSUS, see [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) to initiate an update.  
   
 > [!WARNING]  
 > If you encounter any errors during this configuration process, stop and contact support for assistance. Do not ignore errors or continue in the process after errors are received.  
@@ -132,11 +133,14 @@ To configure WSUS, you need to:
 8.  Choose products.  
   
     > [!NOTE]  
-    > If you are using an Upstream Server, you may not be able to Choose Products. If this option is not available, skip this step.  
+    > If you are using an Upstream Server, you may not be able to Choose Products. If this option is not available, skip this step.
+
+    > [!WARNING]  
+    > Please exclude any SQL Server 2016 updates.
   
     Unselect all selected updates.  
   
-    Select **Windows Server 2012 R2**, and **System Center 2012 R2 - Virtual Machine Manager**, and then click **Next**.  
+    Select **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**, **System Center 2012 R2 - Virtual Machine Manager**, **Windows Server 2016**,  and **System Center 2016 - Virtual Machine Manager** and then click **Next**.  
   
 9. Choose classifications.  
   
@@ -145,9 +149,9 @@ To configure WSUS, you need to:
   
     Unselect all previously selected updates.  
   
-    Select **Critical Updates** and **Security Updates** for the updates that will be synchronized for the Analytics Platform System appliance, and then click **Next**.  
+    Select **Critical Updates**, **Security Updates** and **Update Rollups** for the updates that will be synchronized for the Analytics Platform System appliance, and then click **Next**.  
   
-    ![Choose classifications](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
+    ![Choose classifications](./media/configure-windows-server-update-services-wsus/sql-server-pdw-wsus-choose-classifications.png "sql-server-pdw-wsus-choose-classifications")  
   
 10. Configure the synchronization schedule.  
   
@@ -194,4 +198,3 @@ After configuring WSUS for Analytics Platform System, the next step is to group 
 6.  Select the new computer group, change its **Status** to **Any**, and then click **Refresh**. All computers should now be assigned to this group and listed in the right pane. It is generally safe to continue when nodes show warnings such as **This node has not reported status yet**.  
   
     ![Change Status to Any and click Refresh.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeStatusAnyRefresh.png "SQL_Server_PDW_WSUSChangeStatusAnyRefresh")  
-  

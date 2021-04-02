@@ -1,5 +1,6 @@
 ---
 title: "Use Full-Text Search with XML Columns | Microsoft Docs"
+description: Learn how to create a full-text index of XML columns and perform a full-text search of XML values using SQL.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: genemi
 ---
 # Use Full-Text Search with XML Columns
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   You can create a full-text index on XML columns that indexes the content of the XML values, but ignores the XML markup. Element tags are used as token boundaries. The following items are indexed:  
   
@@ -29,8 +30,6 @@ ms.author: genemi
 1.  First, filter the XML values of interest by using SQL full-text search.  
   
 2.  Next, query those XML values that use XML index on the XML column.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Example: Combining Full-text Search with XML Querying  
  After the full-text index has been created on the XML column, the following query checks that an XML value contains the word "custom" in the title of a book:  

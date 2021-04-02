@@ -1,4 +1,5 @@
 ---
+description: "DBCC INPUTBUFFER (Transact-SQL)"
 title: "DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2018"
@@ -25,7 +26,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC INPUTBUFFER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Displays the last statement sent from a client to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -33,12 +34,14 @@ Displays the last statement sent from a client to an instance of [!INCLUDE[msCoN
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC INPUTBUFFER ( session_id [ , request_id ])  
 [WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *session_id*  
 Is the session ID associated with each active primary connection.  
   
@@ -97,14 +100,14 @@ On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium and Business Critical t
 The following example runs `DBCC INPUTBUFFER` on a second connection while a long transaction is running on a previous connection.
   
 ```sql
-CREATE TABLE dbo.T1 (Col1 int, Col2 char(3));  
+CREATE TABLE dbo.T1 (Col1 INT, Col2 CHAR(3));  
 GO  
-DECLARE @i int = 0;  
+DECLARE @i INT = 0;  
 BEGIN TRAN  
 SET @i = 0;  
 WHILE (@i < 100000)  
 BEGIN  
-INSERT INTO dbo.T1 VALUES (@i, CAST(@i AS char(3)));  
+INSERT INTO dbo.T1 VALUES (@i, CAST(@i AS CHAR(3)));  
 SET @i += 1;  
 END;  
 COMMIT TRAN;  

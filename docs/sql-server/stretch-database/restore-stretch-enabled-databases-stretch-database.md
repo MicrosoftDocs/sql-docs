@@ -1,5 +1,6 @@
 ---
-title: "Restore Stretch-enabled databases (Stretch Database) | Microsoft Docs"
+description: "Restore Stretch-enabled databases (Stretch Database)"
+title: "Restore Stretch-enabled databases"
 ms.date: "07/06/2016"
 ms.service: sql-server-stretch-database
 ms.reviewer: ""
@@ -7,9 +8,10 @@ ms.topic: conceptual
 ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: rothja
 ms.author: jroth
+ms.custom: seo-dt-2019
 ---
 # Restore Stretch-enabled databases (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Restore a backed up database when necessary to recover from many types of failures, errors, and disasters.

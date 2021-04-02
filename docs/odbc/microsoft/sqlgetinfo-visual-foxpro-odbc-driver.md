@@ -1,4 +1,5 @@
 ---
+description: "SQLGetInfo (Visual FoxPro ODBC Driver)"
 title: "SQLGetInfo (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetInfo function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetInfo (Visual FoxPro ODBC Driver)
 > [!NOTE]  

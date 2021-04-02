@@ -1,11 +1,12 @@
 ---
+description: "MSSQLSERVER_10509"
 title: "MSSQLSERVER_10509 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "10509 (Database Engine error)"
 ms.assetid: e9dd5357-ee3d-420a-9a89-d12ab5404e73
@@ -13,21 +14,21 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_10509
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|10509|  
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|PG_INVALID_STMT|  
-|Message Text|Cannot create plan guide '%.\*ls' because the statement specified by **@stmt** or **@statement_start_offset** either contains a syntax error or is ineligible for use in a plan guide. Provide a single valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or a valid starting position of the statement within the batch. To obtain a valid starting position, query the statement_start_offset column in the sys.dm_exec_query_stats dynamic management function.|  
+|Message Text|Cannot create plan guide '%.\*ls' because the statement specified by **\@stmt** or **\@statement_start_offset** either contains a syntax error or is ineligible for use in a plan guide. Provide a single valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or a valid starting position of the statement within the batch. To obtain a valid starting position, query the statement_start_offset column in the sys.dm_exec_query_stats dynamic management function.|  
   
 ## Explanation  
-The statement specified by **@stmt** or **@statement_start_offset** either contains a syntax error or is ineligible for use in a plan guide.  
+The statement specified by **\@stmt** or **\@statement_start_offset** either contains a syntax error or is ineligible for use in a plan guide.  
   
 ## User Action  
 Provide a single valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or a valid starting position of the statement within the batch. To obtain a valid starting position, query the statement_start_offset column in the sys.dm_exec_query_stats dynamic management function.  

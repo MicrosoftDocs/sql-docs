@@ -1,23 +1,24 @@
 ---
+description: "sp_addpushsubscription_agent (Transact-SQL)"
 title: "sp_addpushsubscription_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/15/2018"
+ms.date: "03/29/2021"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_addpushsubscription_agent_TSQL"
   - "sp_addpushsubscription_agent"
 helpviewer_keywords: 
   - "sp_addpushsubscription_agent"
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addpushsubscription_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adds a new scheduled agent job used to synchronize a push subscription to a transactional publication. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -67,8 +68,16 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 `[ @subscriber = ] 'subscriber'`
- Is the name of the Subscriber. *subscriber* is **sysname**, with a default of NULL.  
-  
+ Is the name of the Subscriber instance or the name of the AG listener if the subscriber database is a availability group. *subscriber* is **sysname**, with a default of NULL. 
+
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
+
+> [!NOTE]
+> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled. The use of custom port numbers for remote distributor applies to SQL Server 2019 only.
+
+::: moniker-end
+
 `[ @subscriber_db = ] 'subscriber_db'`
  Is the name of the subscription database. *subscriber_db* is **sysname**, with a default of NULL. For a non-SQL Server Subscriber, specify a value of **(default destination)** for *subscriber_db*.  
   
@@ -88,7 +97,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 >  Do not use a blank password. Use a strong password. When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
 `[ @job_login = ] 'job_login'`
- Is the login for the account under which the agent runs. On Azure SQL Database Managed Instance use a SQL Server account. *job_login* is **nvarchar(257)**, with a default value of NULL. This Windows account is always used for agent connections to the Distributor and for connections to the Subscriber when using Windows Integrated authentication.  
+ Is the login for the account under which the agent runs. On Azure SQL Managed Instance use a SQL Server account. *job_login* is **nvarchar(257)**, with a default value of NULL. This Windows account is always used for agent connections to the Distributor and for connections to the Subscriber when using Windows Integrated authentication.  
   
 `[ @job_password = ] 'job_password'`
  Is the password for the account under which the agent runs. *job_password* is **sysname**, with no default.  

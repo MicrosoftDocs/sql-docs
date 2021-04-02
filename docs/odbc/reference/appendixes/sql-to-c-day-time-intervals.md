@@ -1,4 +1,5 @@
 ---
+description: "SQL to C: Day-Time Intervals"
 title: "SQL to C: Day-Time Intervals | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2019"
@@ -6,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "converting data from SQL to C types [ODBC], day-time intervals"
   - "day-time intervals [ODBC]"
   - "data conversions from SQL to C types [ODBC], day-time intervals"
   - "intervals [ODBC], converting"
 ms.assetid: 8ea84d69-2292-4128-89a0-f184f68abb98
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQL to C: Day-Time Intervals
 

@@ -1,12 +1,13 @@
 ---
+description: "time (Transact-SQL)"
 title: "time (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/07/2017
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "time_TSQL"
   - "time"
@@ -21,10 +22,11 @@ helpviewer_keywords:
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # time (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Defines a time of a day. The time is without time zone awareness and is based on a 24-hour clock.  
   
@@ -100,7 +102,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  When the conversion is to **time(n)**, the hour, minute, and seconds are copied. When the destination precision is less than the source precision, the fractional seconds is rounded up to fit the destination precision. The following example shows the results of converting a `time(4)` value to a `time(3)` value.  
   
-```  
+```sql
 DECLARE @timeFrom time(4) = '12:34:54.1237';  
 DECLARE @timeTo time(3) = @timeFrom;  
   
@@ -118,7 +120,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
   
  When the conversion is to **datetime**, hour, minute, and second values are copied; and the date component is set to '1900-01-01'. When the fractional seconds precision of the **time(n)** value is greater than three digits, the **datetime** result will be truncated. The following code shows the results of converting a `time(4)` value to a `datetime` value.  
   
-```  
+```sql
 DECLARE @time time(4) = '12:15:04.1237';  
 DECLARE @datetime datetime= @time;  
 SELECT @time AS '@time', @datetime AS '@datetime';  
@@ -134,7 +136,7 @@ SELECT @time AS '@time', @datetime AS '@datetime';
   
  When the conversion is to **smalldatetime**, the date is set to '1900-01-01', and the hour and minute values are rounded up. The seconds and fractional seconds are set to 0. The following code shows the results of converting a `time(4)` value to a `smalldatetime` value.  
   
-```  
+```sql
 -- Shows rounding up of the minute value.  
 DECLARE @time time(4) = '12:15:59.9999';   
 DECLARE @smalldatetime smalldatetime= @time;    
@@ -161,7 +163,7 @@ SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
   
  If the conversion is to **datetimeoffset(n)**, the date is set to '1900-01-01', and the time is copied. The time zone offset is set to +00:00. When the fractional seconds precision of the **time(n)** value is greater than the precision of the **datetimeoffset(n)** value, the value is rounded up to fit. The following example shows the results of converting a `time(4)` value to a `datetimeoffset(3)` type.  
   
-```  
+```sql
 DECLARE @time time(4) = '12:15:04.1237';  
 DECLARE @datetimeoffset datetimeoffset(3) = @time;  
   
@@ -178,7 +180,7 @@ SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
   
  When converting to **datetime2(n)**, the date is set to '1900-01-01', the time component is copied, and the time zone offset is set to 00:00. When the fractional seconds precision of the **datetime2(n)** value is greater than the **time(n)** value, the value will be rounded up to fit.  The following example shows the results of converting a `time(4)` value to a `datetime2(2)` value.  
   
-```  
+```sql
 DECLARE @time time(4) = '12:15:04.1237';  
 DECLARE @datetime2 datetime2(3) = @time;  
   
@@ -213,7 +215,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 ### A. Comparing date and time Data Types  
  The following example compares the results of casting a string to each **date** and **time** data type.  
   
-```  
+```sql
 SELECT   
      CAST('2007-05-08 12:35:29. 1234567 +12:15' AS time(7)) AS 'time'   
     ,CAST('2007-05-08 12:35:29. 1234567 +12:15' AS date) AS 'date'   

@@ -1,4 +1,5 @@
 ---
+description: "Value (MDX)"
 title: "Value (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -26,7 +27,7 @@ Member_Expression[.Value]
  A valid Multidimensional Expressions (MDX) expression that returns a member.  
   
 ## Remarks  
- The **Value** function returns the value of the specified member as a string. The **Value** argument is optional because the value of a member is the default property of a member, and is value that is returned for a member if no other value is specified. For more information about properties of members, see [Intrinsic Member Properties &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) and [User-Defined Member Properties &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ The **Value** function returns the value of the specified member as a string. The **Value** argument is optional because the value of a member is the default property of a member, and is value that is returned for a member if no other value is specified. For more information about properties of members, see [Intrinsic Member Properties &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) and [User-Defined Member Properties &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
   
 ## Examples  
  The following example returns the value of a member as well explicitly returning the name of the member.  
@@ -52,5 +53,4 @@ from [Adventure Works]
  [Name &#40;MDX&#41;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
  [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

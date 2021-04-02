@@ -1,4 +1,5 @@
 ---
+description: "sys.sysprotects (Transact-SQL)"
 title: "sys.sysprotects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysprotects"
   - "sys.sysprotects_TSQL"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "sys.sysprotects compatibility view"
   - "sysprotects system table"
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysprotects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains information about permissions that have been applied to security accounts in the database by using the GRANT and DENY statements.  
   

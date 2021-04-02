@@ -1,20 +1,22 @@
 ---
-title: "Using Test Conditions in SQL Server Unit Tests | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Using Test Conditions in SQL Server Unit Tests
+description: Learn about test conditions in SQL Server unit tests. See how to use predefined conditions and negative testing, and view information on custom conditions.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.unittesting.testconditions"
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Using Test Conditions in SQL Server Unit Tests
-In a SQL Server unit test, one or more Transact\-SQL test scripts are executed. The results can be evaluated within the Transact\-SQL script and THROW or RAISERROR used to return an error and fail the test, or test conditions can be defined in the test to evaluate the results. The test returns an instance of the [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) class. The instance of this class contains one or more DataSets, the execution time, and the rows affected by the script. All of this information is collected during execution of the script. These results can be evaluated by using test conditions. SQL Server Data Tools provides a set of predefined test conditions. You can also create and use custom conditions; see [Custom Test Conditions  for SQL Server Unit Tests](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
+
+In a SQL Server unit test, one or more Transact\-SQL test scripts are executed. The results can be evaluated within the Transact\-SQL script and THROW or RAISERROR used to return an error and fail the test, or test conditions can be defined in the test to evaluate the results. The test returns an instance of the [SqlExecutionResult](/previous-versions/sql/sql-server-data-tools/jj856590(v=vs.103)) class. The instance of this class contains one or more DataSets, the execution time, and the rows affected by the script. All of this information is collected during execution of the script. These results can be evaluated by using test conditions. SQL Server Data Tools provides a set of predefined test conditions. You can also create and use custom conditions; see [Custom Test Conditions  for SQL Server Unit Tests](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
   
 ## Predefined Test Conditions  
 The following table lists the predefined test conditions that you can add by using the Test Conditions pane in the SQL Server Unit Test Designer.  
@@ -85,7 +87,7 @@ After you add a Data Checksum test condition to your database unit test, you mus
   
     The **Configuration for TestConditionName** dialog box appears.  
   
-5.  Specify a connection to the database that you want to test. For more information, see [How to: Create a Database Connection](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Specify a connection to the database that you want to test. For more information, see [How to: Create a Database Connection](/previous-versions/visualstudio/visual-studio-2010/aa833420(v=vs.100)).  
   
 6.  By default, the Transact\-SQL body of your test appears in the edit pane. You can modify the code, if necessary, to produce the expected results. For example, if your test has code in the pre-test, you might have to add that code.  
   
@@ -115,7 +117,7 @@ After you add an Expected Schema test condition to your SQL Server unit test, yo
   
     The **Configuration for TestConditionName** dialog box appears.  
   
-5.  Specify a connection to the database that you want to test. For more information, see [How to: Create a Database Connection](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Specify a connection to the database that you want to test. For more information, see [How to: Create a Database Connection](/previous-versions/visualstudio/visual-studio-2010/aa833420(v=vs.100)).  
   
 6.  By default, the Transact\-SQL body of your test appears in the edit pane. You can modify the code, if necessary, to produce the expected results. For example, if your test has code in the pre-test, you might have to add that code.  
   
@@ -137,4 +139,3 @@ In addition to the six predefined test conditions, you can write new test condit
 [Creating and Defining SQL Server Unit Tests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Using Transact-SQL Assertions in SQL Server Unit Tests](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md)  
 [Scripts in SQL Server Unit Tests](../ssdt/scripts-in-sql-server-unit-tests.md)  
-  

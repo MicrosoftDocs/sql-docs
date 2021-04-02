@@ -1,5 +1,6 @@
 ---
 title: "Install SQL Server Servicing Updates | Microsoft Docs"
+description: This article provides information about installing updates for SQL Server during a new installation or after SQL Server has been installed.
 ms.custom: ""
 ms.date: "09/05/2017"
 ms.prod: sql
@@ -7,13 +8,13 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server Servicing Updates
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 This article provides information about installing updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]. This section provides information about the following:
   
@@ -37,12 +38,12 @@ Install the latest [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upd
 After Setup finds the latest versions of the applicable updates, it downloads and integrates them with the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup process. Product Update can include a cumulative update, service pack, or service pack plus cumulative update.  
   
 ## Installing Updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] after it has already been installed  
-On an installed instance of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], we recommend that you apply the latest security updates and critical updates including general distribution releases (GDRs), service packs (SPs), and cumulative updates (CUs). For additional information, see the [March, 2016 announcement on the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/).
+On an installed instance of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], we recommend that you apply the latest security updates and critical updates including general distribution releases (GDRs), service packs (SPs), and cumulative updates (CUs). For additional information, see the [March, 2016 announcement on the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism).
 
 > [!NOTE]
 > Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] we are adopting a simplified, predictable mainstream servicing lifecycle and service packs (SPs) will no longer be available. 
 > Only cumulative updates (CUs), and general distribution releases (GDRs) when needed.
-> For additional information, see the [September, 2017 announcement on the Modern Servicing Model for SQL Server (MSM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/).
+> For additional information, see the [September, 2017 announcement on the Modern Servicing Model for SQL Server (MSM)](/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server).
   
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates are available through [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update (MU), Windows Server Update Services (WSUS) and the Microsoft Download Center. Security and Critical updates for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are available through [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, and to be able to see these updates you need to opt-into MU through the Windows Update applet in Control panel.  
   
@@ -50,6 +51,5 @@ When you receive an update through [!INCLUDE[msCoName](../../includes/msconame-m
   
 ## See Also  
 [Install SQL Server from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)        
-[Add Features to an Instance of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)         
-[Repair a Failed SQL Server Installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
-
+[Add Features to an Instance of SQL Server &#40;Setup&#41;](./add-features-to-an-instance-of-sql-server-setup.md)         
+[Repair a Failed SQL Server Installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)

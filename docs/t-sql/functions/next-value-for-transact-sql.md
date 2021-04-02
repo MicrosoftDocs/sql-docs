@@ -1,4 +1,5 @@
 ---
+description: "NEXT VALUE FOR (Transact-SQL)"
 title: "NEXT VALUE FOR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/19/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "NEXT_VALUE_TSQL"
   - "NEXT"
@@ -20,11 +21,11 @@ helpviewer_keywords:
   - "NEXT VALUE FOR function"
   - "sequence number object, NEXT VALUE FOR function"
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # NEXT VALUE FOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Generates a sequence number from the specified sequence object.  
   
@@ -34,13 +35,14 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name  
    [ OVER (<over_order_by_clause>) ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name*  
  The name of the database that contains the sequence object.  
   
@@ -126,7 +128,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 -   In the case of an `INSERT ... SELECT` or `INSERT ... EXEC` statement where the data being inserted comes from a query using an **ORDER BY** clause, the values being returned by the **NEXT VALUE FOR** function will be generated in the order specified by the **ORDER BY** clause.  
   
 ## Using a Sequence Object with an OVER ORDER BY Clause  
- The **NEXT VALUE FOR** function supports generating sorted sequence values by applying the **OVER** clause to the **NEXT VALUE FOR** call. By using the **OVER** clause, a user is guaranteed that the values being returned are generated in the order of the **OVER** clause's **ORDER B**Y subclause. The following additional rules apply when using the **NEXT VALUE FOR** function with the **OVER** clause:  
+ The **NEXT VALUE FOR** function supports generating sorted sequence values by applying the **OVER** clause to the **NEXT VALUE FOR** call. By using the **OVER** clause, a user is guaranteed that the values being returned are generated in the order of the **OVER** clause's **ORDER BY** subclause. The following additional rules apply when using the **NEXT VALUE FOR** function with the **OVER** clause:  
   
 -   Multiple calls to the **NEXT VALUE FOR** function for the same sequence generator in a single statement must all use the same **OVER** clause definition.  
   
@@ -165,7 +167,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
  The following examples use a sequence named `CountBy1` in a schema named `Test`. Execute the following statement to create the `Test.CountBy1` sequence. Examples C and E use the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, so the `CountBy1` sequence is created in that database.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
   
@@ -181,7 +183,7 @@ GO
 ### A. Using a sequence in a select statement  
  The following example creates a sequence named `CountBy1` that increases by one every time that it is used.  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1 AS FirstUse;  
 SELECT NEXT VALUE FOR Test.CountBy1 AS SecondUse;  
 ```  
@@ -199,10 +201,10 @@ SecondUse
 ### B. Setting a variable to the next sequence value  
  The following example demonstrates three ways to set a variable to the next value of a sequence number.  
   
-```  
-DECLARE @myvar1 bigint = NEXT VALUE FOR Test.CountBy1  
-DECLARE @myvar2 bigint ;  
-DECLARE @myvar3 bigint ;  
+```sql  
+DECLARE @myvar1 BIGINT = NEXT VALUE FOR Test.CountBy1  
+DECLARE @myvar2 BIGINT ;  
+DECLARE @myvar3 BIGINT ;  
 SET @myvar2 = NEXT VALUE FOR Test.CountBy1 ;  
 SELECT @myvar3 = NEXT VALUE FOR Test.CountBy1 ;  
 SELECT @myvar1 AS myvar1, @myvar2 AS myvar2, @myvar3 AS myvar3 ;  
@@ -211,7 +213,7 @@ GO
   
 ### C. Using a sequence with a ranking window function  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
   
@@ -224,16 +226,16 @@ GO
 ### D. Using the NEXT VALUE FOR function in the definition of a default constraint  
  Using the **NEXT VALUE FOR** function in the definition of a default constraint is supported. For an example of using **NEXT VALUE FOR** in a **CREATE TABLE** statement, see Example C[Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md). The following example uses `ALTER TABLE` to add a sequence as a default to a current table.  
   
-```  
+```sql
 CREATE TABLE Test.MyTable  
 (  
-    IDColumn nvarchar(25) PRIMARY KEY,  
-    name varchar(25) NOT NULL  
+    IDColumn NVARCHAR(25) PRIMARY KEY,  
+    name VARCHAR(25) NOT NULL  
 ) ;  
 GO  
   
 CREATE SEQUENCE Test.CounterSeq  
-    AS int  
+    AS INT  
     START WITH 1  
     INCREMENT BY 1 ;  
 GO  
@@ -256,10 +258,10 @@ GO
 ### E. Using the NEXT VALUE FOR function in an INSERT statement  
  The following example creates a table named `TestTable` and then uses the `NEXT VALUE FOR` function to insert a row.  
   
-```  
+```sql  
 CREATE TABLE Test.TestTable  
-     (CounterColumn int PRIMARY KEY,  
-    Name nvarchar(25) NOT NULL) ;   
+     (CounterColumn INT PRIMARY KEY,  
+    Name NVARCHAR(25) NOT NULL) ;   
 GO  
   
 INSERT Test.TestTable (CounterColumn,Name)  
@@ -268,13 +270,12 @@ GO
   
 SELECT * FROM Test.TestTable;   
 GO  
-  
 ```  
   
 ### E. Using the NEXT VALUE FOR function with SELECT ... INTO  
  The following example uses the `SELECT ... INTO` statement to create a table named `Production.NewLocation` and uses the `NEXT VALUE FOR` function to number each row.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;   
 GO  
   
@@ -290,7 +291,7 @@ GO
 ### F. Granting permission to execute NEXT VALUE FOR  
  The following example grants **UPDATE** permission to a user named `AdventureWorks\Larry` permission to execute `NEXT VALUE FOR` using the `Test.CounterSeq` sequence.  
   
-```  
+```sql  
 GRANT UPDATE ON OBJECT::Test.CounterSeq TO [AdventureWorks\Larry] ;  
 ```  
   

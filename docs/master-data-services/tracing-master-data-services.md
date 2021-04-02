@@ -1,5 +1,6 @@
 ---
-title: "Tracing (Master Data Services) | Microsoft Docs"
+title: Tracing
+description: The Web.config file contains a tracing section, new in SQL Server 2016 Master Data Services. Learn about default tracing behavior.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,9 +15,9 @@ manager: erikre
 ---
 # Tracing (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  The Web.config file contains a tracing section, as shown below. This section is new in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
+  The Web.config file contains a tracing section, as shown below. This section is new in [!INCLUDE[sssql15-md](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
   
 ```  
 <sources>  
@@ -44,7 +45,7 @@ manager: erikre
   
 -   Tracing is enabled for Warning and ActivityTracing messages.  
   
-     For more information, see [SourceLevels Enumeration](https://msdn.microsoft.com/library/system.diagnostics.sourcelevels).  
+     For more information, see [SourceLevels Enumeration](/dotnet/api/system.diagnostics.sourcelevels).  
   
 -   The logs are saved in the Logs folder under the WebApplication folder. The default location is C:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs.  
   
@@ -63,6 +64,5 @@ manager: erikre
     |Message|Message body of the trace|  
   
 ## External Resources  
- Blog post, [Troubleshooting Logging Improvement](https://go.microsoft.com/fwlink/p/?LinkId=615377), on msdn.com.  
-  
+ Blog post, [Troubleshooting Logging Improvement](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214), on msdn.com.  
   

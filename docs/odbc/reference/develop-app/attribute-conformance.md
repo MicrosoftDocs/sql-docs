@@ -1,4 +1,5 @@
 ---
+description: "Attribute Conformance"
 title: "Attribute Conformance | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "conformance levels [ODBC], attribute"
   - "attribute conformance levels [ODBC]"
 ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Attribute Conformance
 The following table indicates the conformance level of each ODBC environment attribute, where this is well defined.  

@@ -1,4 +1,5 @@
 ---
+description: "sp_grant_login_to_proxy (Transact-SQL)"
 title: "sp_grant_login_to_proxy (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_grant_login_to_proxy"
   - "sp_grant_login_to_proxy_TSQL"
@@ -20,7 +21,7 @@ author: VanMSFT
 ---
 # sp_grant_login_to_proxy (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Grants a security principal access to a proxy.  
 
@@ -39,19 +40,19 @@ sp_grant_login_to_proxy
   
 ## Arguments  
 `[ @login_name = ] 'login_name'`
- The login name to grant access to. The *login_name* is **nvarchar(256)**, with a default of NULL. One of **@login_name**, **@fixed_server_role**, or **@msdb_role** must be specified, or the stored procedure fails.  
+ The login name to grant access to. The *login_name* is **nvarchar(256)**, with a default of NULL. One of **\@login_name**, **\@fixed_server_role**, or **\@msdb_role** must be specified, or the stored procedure fails.  
   
 `[ @fixed_server_role = ] 'fixed_server_role'`
- The fixed server role to grant access to. The *fixed_server_role* is **nvarchar(256)**, with a default of NULL. One of **@login_name**, **@fixed_server_role**, or **@msdb_role** must be specified, or the stored procedure fails.  
+ The fixed server role to grant access to. The *fixed_server_role* is **nvarchar(256)**, with a default of NULL. One of **\@login_name**, **\@fixed_server_role**, or **\@msdb_role** must be specified, or the stored procedure fails.  
   
 `[ @msdb_role = ] 'msdb_role'`
- The database role in the **msdb** database to grant access to. The *msdb_role* is **nvarchar(256)**, with a default of NULL. One of **@login_name**, **@fixed_server_role**, or **@msdb_role** must be specified, or the stored procedure fails.  
+ The database role in the **msdb** database to grant access to. The *msdb_role* is **nvarchar(256)**, with a default of NULL. One of **\@login_name**, **\@fixed_server_role**, or **\@msdb_role** must be specified, or the stored procedure fails.  
   
 `[ @proxy_id = ] id`
- The identifier for the proxy to grant access for. The *id* is **int**, with a default of NULL. One of **@proxy_id** or **@proxy_name** must be specified, or the stored procedure fails.  
+ The identifier for the proxy to grant access for. The *id* is **int**, with a default of NULL. One of **\@proxy_id** or **\@proxy_name** must be specified, or the stored procedure fails.  
   
 `[ @proxy_name = ] 'proxy_name'`
- The name of the proxy to grant access for. The *proxy_name* is **nvarchar(256)**, with a default of NULL. One of **@proxy_id** or **@proxy_name** must be specified, or the stored procedure fails.  
+ The name of the proxy to grant access for. The *proxy_name* is **nvarchar(256)**, with a default of NULL. One of **\@proxy_id** or **\@proxy_name** must be specified, or the stored procedure fails.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

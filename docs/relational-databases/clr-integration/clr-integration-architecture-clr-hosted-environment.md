@@ -1,5 +1,6 @@
 ---
 title: "CLR Hosted Environment | Microsoft Docs"
+description: This article describes how CLR and SQL Server are integrated to manage system resources uniformly and how CAS and SQL Server security are integrated.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -28,7 +29,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # CLR Integration Architecture - CLR Hosted Environment
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integration with the .NET Framework common language runtime (CLR) enables database programmers to use languages such as Visual C#, Visual Basic .NET, and Visual C++. Functions, stored procedures, triggers, data types, and aggregates are among the kinds of business logic that programmers can write with these languages.  
   
   The CLR features garbage-collected memory, preemptive threading, metadata services (type reflection), code verifiability, and code access security. The CLR uses metadata to locate and load classes, lay out instances in memory, resolve method invocations, generate native code, enforce security, and set run-time context boundaries.  
@@ -71,7 +72,7 @@ ms.author: "jroth"
  Type-safe code is code that accesses memory structures only in well-defined ways. For example, given a valid object reference, type-safe code can access memory at fixed offsets corresponding to actual field members. However, if the code accesses memory at arbitrary offsets inside or outside the range of memory that belongs to the object, then it is not type-safe. When assemblies are loaded in the CLR, prior to the MSIL being compiled using just-in-time (JIT) compilation, the runtime performs a verification phase that examines code to determine its type-safety. Code that successfully passes this verification is called verifiably type-safe code.  
   
 ###### Application domains  
- The CLR supports the notion of application domains as execution zones within a host process where managed code assemblies can be loaded and executed. The application domain boundary provides isolation between assemblies. The assemblies are isolated in terms of visibility of static variables and data members and the ability to call code dynamically. Application domains are also the mechanism for loading and unloading code. Code can be unloaded from memory only by unloading the application domain. For more information, see [Application Domains and CLR Integration Security](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473).  
+ The CLR supports the notion of application domains as execution zones within a host process where managed code assemblies can be loaded and executed. The application domain boundary provides isolation between assemblies. The assemblies are isolated in terms of visibility of static variables and data members and the ability to call code dynamically. Application domains are also the mechanism for loading and unloading code. Code can be unloaded from memory only by unloading the application domain. For more information, see [Application Domains and CLR Integration Security](/previous-versions/sql/2014/database-engine/dev-guide/application-domains-and-clr-integration-security?view=sql-server-2014&preserve-view=true).  
   
 ###### Code Access Security (CAS)  
  The CLR security system provides a way to control what kinds of operations managed code can perform by assigning permissions to code. Code access permissions are assigned based on code identity (for example, the signature of the assembly or the origin of the code).  
@@ -147,9 +148,8 @@ Thread.EndThreadAffinity();
 ###### Security: Permission sets  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows users to specify the reliability and security requirements for code deployed into the database. When assemblies are uploaded into the database, the author of the assembly can specify one of three permission sets for that assembly: SAFE, EXTERNAL_ACCESS, and UNSAFE.  
   
-|||||  
+|Functionality|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |-|-|-|-|  
-|Permission set|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Code Access Security|Execute only|Execute + access to external resources|Unrestricted|  
 |Programming model restrictions|Yes|Yes|No restrictions|  
 |Verifiability requirement|Yes|Yes|No|  
@@ -168,10 +168,9 @@ Thread.EndThreadAffinity();
   
  Given these considerations, we discourage the use of static variables and static data members of classes used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For SAFE and EXTERNAL_ACCESS assemblies, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] examines the metadata of the assembly at CREATE ASSEMBLY time and fails the creation of such assemblies if it finds the use of static data members and variables.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also disallows calls to .NET Framework APIs that are annotated with the **SharedState**, **Synchronization, and **ExternalProcessMgmt** host protection attributes. This prevents SAFE and EXTERNAL_ACCESS assemblies from calling any APIs that enable sharing state, performing synchronization, and affecting the integrity of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. For more information, see [CLR Integration Programming Model Restrictions](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also disallows calls to .NET Framework APIs that are annotated with the **SharedState**, **Synchronization**, and **ExternalProcessMgmt** host protection attributes. This prevents SAFE and EXTERNAL_ACCESS assemblies from calling any APIs that enable sharing state, performing synchronization, and affecting the integrity of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. For more information, see [CLR Integration Programming Model Restrictions](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
 ## See Also  
  [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Performance of CLR Integration](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
-  
   

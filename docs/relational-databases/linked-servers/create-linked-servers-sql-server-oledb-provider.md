@@ -1,6 +1,6 @@
 ---
-title: "Create linked server provider (SQL Server Database Engine) | Microsoft Docs"
-ms.custom: ""
+description: "Microsoft SQL Server Distributed Queries: OLE DB Connectivity"
+title: "Create linked server provider"
 ms.date: "07/01/2019"
 ms.prod: sql
 ms.technology: 
@@ -10,6 +10,7 @@ ms.topic: conceptual
 author: pmasl
 ms.author: pelopes
 manager: rothj
+ms.custom: seo-dt-2019
 ---
 
 # Microsoft SQL Server Distributed Queries: OLE DB Connectivity
@@ -474,7 +475,7 @@ The following are the higher-level steps against the provider in the remote quer
 
 1. SQL Server creates a `Command` object from the `Session` object by using `IDBCreateCommand::CreateCommand`.
 
-9. If the `Remote Query Timeout` server configuration option is set to a value >` 0, SQL Server sets the DBPROP_COMMANDTIMEOUT property on the `Command` object to the same value by using `ICommandProperties::SetProperties`; `ICommand::SetCommandText` must be called to set the command text to the generated Transact-SQL string.
+9. If the `Remote Query Timeout` server configuration option is set to a value > 0, SQL Server sets the `DBPROP_COMMANDTIMEOUT` property on the `Command` object to the same value by using `ICommandProperties::SetProperties`; `ICommand::SetCommandText` must be called to set the command text to the generated Transact-SQL string.
 
 10. SQL Server calls `ICommandPrepare::Prepare` to prepare the command. If the provider does not support this interface, SQL Server continues with Step 4.
 

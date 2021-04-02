@@ -1,5 +1,6 @@
 ---
 title: "Programmatically Monitor Replication | Microsoft Docs"
+description: Replication Monitor is a graphical tool. Use Replication Monitor to monitor a replication topology in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -28,9 +29,10 @@ helpviewer_keywords:
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Programmatically Monitor Replication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Replication Monitor is a graphical tool that allows you to monitor a replication topology. You can access the same monitoring data programmatically by using [!INCLUDE[tsql](../../../includes/tsql-md.md)] replication stored procedures or replication management objects (RMO). These objects enable you to program the following tasks:  
   
 -   Monitor the state of Publishers, publications, and subscriptions.  
@@ -53,51 +55,51 @@ ms.author: "mathoma"
   
 #### To monitor Publishers, publications, and subscriptions from the Distributor  
   
-1.  At the Distributor on the distribution database, execute [sp_replmonitorhelppublisher](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md). This returns monitoring information for all Publishers using this Distributor. To limit the result set to a single Publisher, specify **@publisher**.  
+1.  At the Distributor on the distribution database, execute [sp_replmonitorhelppublisher](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md). This returns monitoring information for all Publishers using this Distributor. To limit the result set to a single Publisher, specify **\@publisher**.  
   
-2.  At the Distributor on the distribution database, execute [sp_replmonitorhelppublication](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md). This returns monitoring information for all publications using this Distributor. To limit the result set to a single Publisher, publication, or published database, specify **@publisher**, **@publication**, or **@publisher_db**, respectively.  
+2.  At the Distributor on the distribution database, execute [sp_replmonitorhelppublication](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md). This returns monitoring information for all publications using this Distributor. To limit the result set to a single Publisher, publication, or published database, specify **\@publisher**, **\@publication**, or **\@publisher_db**, respectively.  
   
-3.  At the Distributor on the distribution database, execute [sp_replmonitorhelpsubscription](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md). This returns monitoring information for all subscriptions using this Distributor. To limit the result set to subscriptions belonging to a single Publisher, publication, or published database, specify **@publisher**, **@publication**, or **@publisher_db**, respectively.  
+3.  At the Distributor on the distribution database, execute [sp_replmonitorhelpsubscription](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md). This returns monitoring information for all subscriptions using this Distributor. To limit the result set to subscriptions belonging to a single Publisher, publication, or published database, specify **\@publisher**, **\@publication**, or **\@publisher_db**, respectively.  
   
 #### To monitor transactional commands waiting to be applied at the Subscriber  
   
-1.  At the Distributor on the distribution database, execute [sp_replmonitorsubscriptionpendingcmds](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md). This returns monitoring information for all commands pending for all subscriptions using this Distributor. To limit the result set to commands pending for subscriptions belonging to a single Publisher, Subscriber, publication, or published database, specify **@publisher**, **@subscriber**, **@publication**, or **@publisher_db**, respectively.  
+1.  At the Distributor on the distribution database, execute [sp_replmonitorsubscriptionpendingcmds](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md). This returns monitoring information for all commands pending for all subscriptions using this Distributor. To limit the result set to commands pending for subscriptions belonging to a single Publisher, Subscriber, publication, or published database, specify **\@publisher**, **\@subscriber**, **\@publication**, or **\@publisher_db**, respectively.  
   
 #### To monitor merge changes waiting to be uploaded or downloaded  
   
-1.  At the Publisher on the publication database, execute [sp_showpendingchanges](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md). This returns a result set showing information on changes that are waiting to be replicated to Subscribers. To limit the result set to changes that belong to a single publication or article, specify **@publication** or **@article**, respectively.  
+1.  At the Publisher on the publication database, execute [sp_showpendingchanges](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md). This returns a result set showing information on changes that are waiting to be replicated to Subscribers. To limit the result set to changes that belong to a single publication or article, specify **\@publication** or **\@article**, respectively.  
   
-2.  At a Subscriber on the subscription database, execute [sp_showpendingchanges](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md). This returns a result set showing information on changes that are waiting to be replicated to the Publisher. To limit the result set to changes that belong to a single publication or article, specify **@publication** or **@article**, respectively.  
+2.  At a Subscriber on the subscription database, execute [sp_showpendingchanges](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md). This returns a result set showing information on changes that are waiting to be replicated to the Publisher. To limit the result set to changes that belong to a single publication or article, specify **\@publication** or **\@article**, respectively.  
   
 #### To monitor Merge Agent sessions  
   
 1.  At the Distributor on the distribution database, execute [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md). This returns monitoring information, including **Session_id**, on all Merge Agent sessions for all subscriptions using this Distributor. You can also obtain **Session_id** by querying the [MSmerge_sessions](../../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) system table.  
   
-2.  At the Distributor on the distribution database, execute [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md). Specify a **Session_id** value from step 1 for **@session_id**. This displays detailed monitor information about the session.  
+2.  At the Distributor on the distribution database, execute [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md). Specify a **Session_id** value from step 1 for **\@session_id**. This displays detailed monitor information about the session.  
   
 3.  Repeat step 2 for each session of interest.  
   
 #### To monitor Merge Agent sessions for pull subscriptions from the Subscriber  
   
-1.  At the Subscriber on the subscription database, execute [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md). For a given subscription, specify **@publisher**, **@publication**, and the name of the publication database for **@publisher_db**. This returns monitoring information for the last five Merge Agent sessions for this subscription. Note the value of **Session_id** for sessions of interest in the result set.  
+1.  At the Subscriber on the subscription database, execute [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md). For a given subscription, specify **\@publisher**, **\@publication**, and the name of the publication database for **\@publisher_db**. This returns monitoring information for the last five Merge Agent sessions for this subscription. Note the value of **Session_id** for sessions of interest in the result set.  
   
-2.  At the Subscriber on the subscription database, execute [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md). Specify a **Session_id** value from step 1 for **@session_id**. This displays detailed monitoring information about the session.  
+2.  At the Subscriber on the subscription database, execute [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md). Specify a **Session_id** value from step 1 for **\@session_id**. This displays detailed monitoring information about the session.  
   
 3.  Repeat step 2 for each session of interest.  
   
 #### To view and modify the monitor threshold metrics for a publication  
   
-1.  At the Distributor on the distribution database, execute [sp_replmonitorhelppublicationthresholds](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md). This returns the monitoring thresholds set for all publications using this Distributor. To limit the result set to monitor thresholds to publications belonging to a single Publisher or published database or to a single publication, specify **@publisher**, **@publisher_db**, or **@publication**, respectively. Note the value of **Metric_id** for any thresholds that must be changed. For more information, see [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
+1.  At the Distributor on the distribution database, execute [sp_replmonitorhelppublicationthresholds](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md). This returns the monitoring thresholds set for all publications using this Distributor. To limit the result set to monitor thresholds to publications belonging to a single Publisher or published database or to a single publication, specify **\@publisher**, **\@publisher_db**, or **\@publication**, respectively. Note the value of **Metric_id** for any thresholds that must be changed. For more information, see [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
 2.  At the Distributor on the distribution database, execute [sp_replmonitorchangepublicationthreshold](../../../relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql.md). Specify the following as needed:  
   
-    -   The **Metric_id** value obtained in step 1 for **@metric_id**.  
+    -   The **Metric_id** value obtained in step 1 for **\@metric_id**.  
   
-    -   A new value for the monitor threshold metric for **@value**.  
+    -   A new value for the monitor threshold metric for **\@value**.  
   
-    -   A value of **1** for **@shouldalert** for an alert to be logged when this threshold is reached, or a value of **0** if an alert is not needed.  
+    -   A value of **1** for **\@shouldalert** for an alert to be logged when this threshold is reached, or a value of **0** if an alert is not needed.  
   
-    -   A value of **1** for **@mode** to enable the monitor threshold metric or a value of **2** to disable it.  
+    -   A value of **1** for **\@mode** to enable the monitor threshold metric or a value of **2** to disable it.  
   
 ##  <a name="RMO"></a> Replication Management Objects (RMO)  
   

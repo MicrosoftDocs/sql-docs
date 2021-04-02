@@ -1,25 +1,26 @@
 ---
-title: "STEndpoint (geography Data Type) | Microsoft Docs"
+description: "STEndPoint (geography Data Type)"
+title: "STEndPoint (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
-  - "STEndpoint (geography Data Type)"
-  - "STEndpoint_TSQL"
+  - "STEndPoint (geography Data Type)"
+  - "STEndPoint_TSQL"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
-  - "STEndpoint method"
+  - "STEndPoint method"
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic 
 ---
-# STEndpoint (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# STEndPoint (geography Data Type)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the end point of a **geography** instance.  
   
@@ -30,7 +31,9 @@ ms.author: mlandzic
 .STEndPoint ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geography**  
   
  CLR return type: **SqlGeography**  
@@ -43,7 +46,7 @@ ms.author: mlandzic
  This method returns null if called on an empty **geography** instance.  
   
 ## Examples  
- The following example creates a `LineString` instance with `STGeomFromText()` and uses `STEndpoint()` to retrieve the end point of the `LineString`.  
+ The following example creates a `LineString` instance with `STGeomFromText()` and uses `STEndPoint()` to retrieve the end point of the `LineString`.  
   
 ```  
 DECLARE @g geography;  

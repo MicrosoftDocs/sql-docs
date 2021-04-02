@@ -1,4 +1,5 @@
 ---
+description: "Lesson 3-3: Test the Lesson 3 tutorial package"
 title: "Step 3: Test the Lesson 3 tutorial package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2019"
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 3-3: Test the Lesson 3 tutorial package
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

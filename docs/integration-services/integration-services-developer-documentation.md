@@ -1,4 +1,5 @@
 ---
+description: "Integration Services Developer Documentation"
 title: "Integration Services Developer Documentation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "SQL Server Integration Services, programming"
   - "packages [Integration Services], programming"
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services Developer Documentation
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes a completely rewritten object model, which has been enhanced with many features that make extending and programming packages easier, more flexible, and more powerful. Developers can extend and program almost every aspect of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages.  

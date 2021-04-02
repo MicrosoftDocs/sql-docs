@@ -1,16 +1,17 @@
 ---
+description: "Functions (DMX)"
 title: "Functions (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # Functions (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   When you use Data Mining Extensions (DMX) to query objects in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you can use functions to return more information than just the values in the columns in the data mining model or input dataset. For example, you can use DMX queries to return not only the prediction value of a column, but also the probability that the prediction is correct. You can use not only DMX functions, but also functions from Microsoft Visual Basic for Applications (VBA), Microsoft Excel, and stored procedures.  
   
@@ -42,7 +43,7 @@ FROM [TM_Decision_Tree].CONTENT
 ## Stored Procedures  
  You can use common language runtime programming languages to create stored procedures that extend the functionality of DMX. For example, a regression tree mining model returns coefficients, such as A, B, and so on, that describe the regression equation, but the model does not return the equation itself, such as A+Bx = y. However, you can write a stored procedure that uses the data mining model object to navigate the content schema, and to return the regression equation as an output. Therefore, a DMX statement can return a list of the regression equations as part of a query result.  
   
- **For More Information:** [Multidimensional Model Assemblies Management](../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
+ **For More Information:** [Multidimensional Model Assemblies Management](/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
   
 ## See Also  
  [Data Mining Extensions &#40;DMX&#41; Reference](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -54,5 +55,4 @@ FROM [TM_Decision_Tree].CONTENT
  [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Structure and Usage of DMX Prediction Queries](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Understanding the DMX Select Statement](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

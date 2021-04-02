@@ -1,20 +1,22 @@
 ---
-title: " SQL Server Options page - Environment - Startup | Microsoft Docs"
-ms.date: 11/05/2018
+title: " SQL Server Options page - Environment - Startup"
+description: "Options (Environment - Startup page)"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: 11/05/2018
 ---
+
 # Options (Environment - Startup page)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Use the **Options** dialog box to configure [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] startup actions, general window management options, and other general settings. On the **Tools** menu, click **Options**, expand the **Environment** folder, and then click **Startup**.
 
-## UIElement List
+## UI element list
 
 **At startup**
 

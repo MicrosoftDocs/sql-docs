@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_xtp_merge_checkpoint_files (Transact-SQL)"
 title: "sys.sp_xtp_merge_checkpoint_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/28/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.sp_xtp_merge_checkpoint_files_TSQL"
   - "sys.sp_xtp_merge_checkpoint_files"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_xtp_merge_checkpoint_files"
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   **sys.sp_xtp_merge_checkpoint_files** merges all data and delta files in the transaction range specified.  
   
@@ -29,7 +30,7 @@ ms.author: "sstein"
   
 ||  
 |-|  
-|**Note**: This stored procedure is deprecated in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. It is no longer needed, and cannot be used, starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
+|**Note**: This stored procedure is deprecated in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. It is no longer needed, and cannot be used, starting [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].|  
   
 ## Syntax  
   

@@ -1,4 +1,5 @@
 ---
+description: "Implement Event Notifications"
 title: "Implement Event Notifications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,7 +17,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Implement Event Notifications
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   To implement an event notification, you must first create a target service to receive event notifications, and then create the event notification.  
   
 > [!IMPORTANT]  
@@ -36,7 +37,7 @@ https://schemas.microsoft.com/SQL/Notifications/PostEventNotification
 1.  Create a queue to receive messages.  
   
     > [!NOTE]  
-    >  The queue receives the following message type: `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
+    >  The queue receives the following message type: `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
   
 2.  Create a service on the queue that references the event notifications contract.  
   
@@ -53,7 +54,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  

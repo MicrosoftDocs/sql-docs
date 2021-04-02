@@ -1,5 +1,6 @@
 ---
 title: "Back Up Database (Media Options Page) | Microsoft Docs"
+description: In SQL Server, use Media Options in the Back Up Database dialog box to view/modify media options, including Overwrite media, Reliability, and Transaction log.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -11,11 +12,11 @@ f1_keywords:
   - "swb.backupdatabase.mediaoptions.f1"
   - "sql13.swb.backupdatabase.mediaoptions.f1"
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Back Up Database (Media Options Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the  **Media Options** page of the **Back Up Database** dialog box to view or modify database media options.  
   
  **To create a backup by using SQL Server Management Studio**  
@@ -33,7 +34,7 @@ ms.author: mikeray
 ## Options  
   
 ### Overwrite media  
- The options of the **Overwrite media** panel control how the backup is written to the media. IF you selected URL (Windows Azure Storage) as the backup destination on the General page of the Back Up Database dialog box, the options under the Overwrite media section are disabled. You can overwrite a backup using the **BACKUP TO URL.. WITH FORMAT** Transact-SQL statement. For more information, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+ The options of the **Overwrite media** panel control how the backup is written to the media. IF you selected URL (Azure Storage) as the backup destination on the General page of the Back Up Database dialog box, the options under the Overwrite media section are disabled. You can overwrite a backup using the **BACKUP TO URL.. WITH FORMAT** Transact-SQL statement. For more information, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
 
  The **Overwrite media** option is disabled if you selected **URL** as the backup destination in the **General** page.
   

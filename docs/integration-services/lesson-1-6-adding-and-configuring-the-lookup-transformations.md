@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-6: Add and configure the Lookup transformations"
 title: "Step 6: Add and configure the Lookup transformations | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/19/2019
@@ -6,13 +7,13 @@ ms.prod: sql
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ms.reviewer: ""
 ---
 # Lesson 1-6: Add and configure the Lookup transformations
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -52,8 +53,8 @@ In both cases, the Lookup transformation uses the OLE DB connection manager you 
     2.  Select **Use results of an SQL query**, and then enter or paste the following SQL statement:  
   
         ```sql
-        SELECT * FROM [dbo].[DimCurrency]
-        WHERE [CurrencyAlternateKey]
+        SELECT * FROM [Sales].[Currency]
+        WHERE [CurrencyCode]
         IN ('ARS', 'AUD', 'BRL', 'CAD', 'CNY',
             'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
 	        'MXN', 'SAR', 'USD', 'VEB')

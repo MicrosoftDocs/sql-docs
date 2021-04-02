@@ -1,5 +1,6 @@
 ---
 title: "Detail Property | Microsoft Docs"
+description: Learn about the Detail property of the Reporting Services SoapException class, specifically about the XML elements that define the property.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

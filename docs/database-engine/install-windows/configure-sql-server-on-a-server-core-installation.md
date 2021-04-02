@@ -1,7 +1,8 @@
 ---
-title: "Configure SQL Server on a Server Core Installation | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/05/2017"
+title: "Configure Server Core Installation"
+description: This article covers details about configuring SQL Server on a Server Core installation, including troubleshooting tools.
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -10,13 +11,13 @@ helpviewer_keywords:
   - "IsHadrEnabled server property"
   - "Server Core Installation [SQL Server]"
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Configure SQL Server on a Server Core Installation
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 This article covers details about configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation.  
 
@@ -27,15 +28,15 @@ Not all features of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] ar
   
 For more information about configuring and managing a Server Core installation remotely, see the following articles:  
   
-- [Install Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
+- [Install Server Core](/windows-server/get-started/getting-started-with-server-core)  
   
-- [Configure a Server Core installation of Windows Server 2016 with Sconfig.cmd](https://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
+- [Configure a Server Core installation of Windows Server 2016 with Sconfig.cmd](/windows-server/get-started/sconfig-on-ws2016)  
   
-- [Install Server Roles and Features on a Server Core Server Windows Server 2012 R2](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
+- [Install Server Roles and Features on a Server Core Server Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11))
   
-- [Managing a Server Core installation: Overview](https://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Managing a Server Core installation: Overview](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee441255(v=ws.10))  
   
-- [Administering a Server Core installation](https://go.microsoft.com/fwlink/?LinkId=245963)
+- [Administering a Server Core installation](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee441258(v=ws.10))
   
 ##  <a name="BKMK_InstallSQLUpdates"></a> Install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Updates  
 This section provides information about installing updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] on a Windows Server Core machine. We recommend that customers evaluate and install latest [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates in a timely manner to make sure that systems are up-to-date with the most recent security updates. For more information about installing [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] on a Windows Server Core machine, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
@@ -47,7 +48,7 @@ The following are the two scenarios for installing product updates:
 - [Installing Updates for SQL Server After It Has Been Installed](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#bkmk_alreadyInstall)  
   
 ###  <a name="bkmk_NewInstall"></a> Installing Updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] During a New Installation  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup supports only command prompt installations on Server Core operating system. For more information, see [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup supports only command prompt installations on Server Core operating system. For more information, see [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md).  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup integrates the latest product updates with the main product installation so that the main product and its applicable updates are installed at the same time.  
   
@@ -223,6 +224,5 @@ $Tcp
   
 ## See Also  
  [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [Installation How-to articles](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
-  
+ [Installation How-to articles](/previous-versions/sql/)  
   

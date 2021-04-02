@@ -1,23 +1,24 @@
 ---
+description: "CancelUpdate Method Example (VBScript)"
 title: "CancelUpdate Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "CancelUpdate method [ADO], VBScript example"
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # CancelUpdate Method Example (VBScript)
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](/dotnet/framework/wcf/).  
   
  To test this example, cut and paste this code between the \<Body> and \</Body> tags in a normal HTML document and name it **CancelUpdateVBS.asp**. ASP script will identify your internet server. You will need to edit the name of the server to reflect your own setup. Simply change the value in the connect string from MyServer to the name of your SQL Server installation.  
   
@@ -112,7 +113,4 @@ End Sub
 ```  
   
 ## See Also  
- [CancelUpdate Method (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)
-
-
-
+ [CancelUpdate Method (ADO)](../ado-api/cancelupdate-method-ado.md)

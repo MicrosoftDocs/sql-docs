@@ -1,11 +1,12 @@
 ---
+description: "MSSQLSERVER_1222"
 title: "MSSQLSERVER_1222 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "1222 (Database Engine error)"
 ms.assetid: c5b1c2f4-f591-4cc1-aa17-204636a27f29
@@ -13,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_1222
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|1222|  
 |Event Source|MSSQLSERVER|  
@@ -37,8 +38,6 @@ Perform the following tasks to alleviate the problem:
 2.  If the transaction is still holding the lock, terminate that transaction if appropriate.  
   
 3.  Execute the query again.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 If this error occurs frequently change the lock time-out period or modify the offending transactions so that they hold the lock for less time.  
   

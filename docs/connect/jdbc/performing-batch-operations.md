@@ -1,17 +1,18 @@
 ---
-title: "Performing Batch Operations | Microsoft Docs"
+title: "Performing batch operations"
+description: "Learn how to use batch operations to improve performance using the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
-# Performing Batch Operations
+# Performing batch operations
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   To improve performance when multiple updates to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database are occurring, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides the ability to submit multiple updates as a single unit of work, also referred to as a batch.  
@@ -50,7 +51,7 @@ public static void executeBatchUpdate(Connection con) {
 }  
 ```  
   
-## See Also  
- [Using Statements with the JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+## See also  
+ [Using statements with the JDBC driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

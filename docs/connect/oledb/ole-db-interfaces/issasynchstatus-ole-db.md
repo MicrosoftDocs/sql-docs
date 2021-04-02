@@ -1,23 +1,23 @@
 ---
-title: "ISSAsynchStatus (OLE DB) | Microsoft Docs"
-description: "ISSAsynchStatus (OLE DB)"
+title: "ISSAsynchStatus (OLE DB driver) | Microsoft Docs"
+description: Learn how OLE DB Driver for SQL Server uses the ISSAsynchStatus interface to support SQL Server asynchronous operations.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: "reference"
+ms.topic: reference
 apiname: 
   - "ISSAsynchStatus (OLE DB)"
 apitype: "COM"
 helpviewer_keywords: 
   - "ISSAsynchStatus interface"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # ISSAsynchStatus (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

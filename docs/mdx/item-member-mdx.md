@@ -1,4 +1,5 @@
 ---
+description: "Item (Member) (MDX)"
 title: "Item (Member) (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

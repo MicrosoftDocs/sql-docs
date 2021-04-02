@@ -1,4 +1,5 @@
 ---
+description: "Lookup Transformation Full Cache Mode - Cache Connection Manager"
 title: "Lookup Transformation Full Cache Mode - Cache Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -10,18 +11,18 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Lookup transformation [Integration Services]"
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Lookup Transformation Full Cache Mode - Cache Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You can configure the Lookup transformation to use full cache mode and a Cache connection manager. In full cache mode, the reference dataset is loaded into cache before the Lookup transformation runs.  
   
 > [!NOTE]  
->  The Cache connection manager does not support the Binary Large Object (BLOB) data types DT_TEXT, DT_NTEXT, and DT_IMAGE. If the reference dataset contains a BLOB data type, the component will fail when you run the package. You can use the **Cache Connection Manager Editor** to modify column data types. For more information, see [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+>  The Cache connection manager does not support the Binary Large Object (BLOB) data types DT_TEXT, DT_NTEXT, and DT_IMAGE. If the reference dataset contains a BLOB data type, the component will fail when you run the package. You can use the **Cache Connection Manager Editor** to modify column data types. For more information, see [Cache Connection Manager Editor](./cache-connection-manager.md).  
   
  The Lookup transformation performs lookups by joining data in input columns from a connected data source with columns in a reference dataset. For more information, see [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -59,7 +60,7 @@ ms.author: janinez
   
 -   [Sequence Container](../../integration-services/control-flow/sequence-container.md)  
   
- For a video that demonstrates how to implement a Lookup transformation in Full Cache mode using the Cache connection manager, see [How to: Implement a Lookup Transformation in Full Cache Mode (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ For a video that demonstrates how to implement a Lookup transformation in Full Cache mode using the Cache connection manager, see [How to: Implement a Lookup Transformation in Full Cache Mode (SQL Server Video)](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100)).  
   
 ### To implement a Lookup transformation in full cache mode in one package by using Cache connection manager and a data source in the data flow  
   
@@ -78,7 +79,7 @@ ms.author: janinez
      For non-index columns, the index position is 0. For index columns, the index position is a sequential, positive number.  
   
     > [!NOTE]  
-    >  When the Lookup transformation is configured to use a Cache connection manager, only index columns in the reference dataset can be mapped to input columns. Also, all index columns must be mapped. For more information, see [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  When the Lookup transformation is configured to use a Cache connection manager, only index columns in the reference dataset can be mapped to input columns. Also, all index columns must be mapped. For more information, see [Cache Connection Manager Editor](./cache-connection-manager.md).  
   
 6.  To save the cache to a file, in the **Cache Connection Manager Editor**, on the **General** tab, configure the Cache connection manager by setting the following options:  
   
@@ -91,7 +92,7 @@ ms.author: janinez
     > [!NOTE]  
     >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../integration-services/security/security-overview-integration-services.md#files).  
   
-7.  Configure the Cache Transform as needed. For more information, see [Cache Transformation Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) and [Cache Transformation Editor &#40;Mappings Page&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+7.  Configure the Cache Transform as needed. For more information, see [Cache Transformation Editor &#40;Connection Manager Page&#41;](../data-flow/transformations/cache-transform.md) and [Cache Transformation Editor &#40;Mappings Page&#41;](../data-flow/transformations/cache-transform.md).  
   
 8.  In the second data flow, add a Lookup transformation, and then configure the transformation by doing the following tasks:  
   
@@ -120,7 +121,7 @@ ms.author: janinez
   
     8.  In the **Available Lookup Columns** list, select columns. Then in the **Lookup Operation** list, specify whether the values from the lookup columns replace values in the input column or are written to a new column.  
   
-    9. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Click **OK** to save your changes to the Lookup transformation.  
   
@@ -154,9 +155,9 @@ ms.author: janinez
      For non-index columns, the index position is 0. For index columns, the index position is a sequential, positive number.  
   
     > [!NOTE]  
-    >  When the Lookup transformation is configured to use a Cache connection manager, only index columns in the reference dataset can be mapped to input columns. Also, all index columns must be mapped. For more information, see [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  When the Lookup transformation is configured to use a Cache connection manager, only index columns in the reference dataset can be mapped to input columns. Also, all index columns must be mapped. For more information, see [Cache Connection Manager Editor](./cache-connection-manager.md).  
   
-7.  Configure the Cache Transform as needed. For more information, see [Cache Transformation Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) and [Cache Transformation Editor &#40;Mappings Page&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+7.  Configure the Cache Transform as needed. For more information, see [Cache Transformation Editor &#40;Connection Manager Page&#41;](../data-flow/transformations/cache-transform.md) and [Cache Transformation Editor &#40;Mappings Page&#41;](../data-flow/transformations/cache-transform.md).  
   
 8.  Do one of the following to populate the Cache connection manager that is used in the second package:  
   
@@ -206,7 +207,7 @@ ms.author: janinez
   
     8.  In the **Available Lookup Columns** list, select columns. Then in the **Lookup Operation** list, specify whether the values from the lookup columns replace values in the input column or are written to a new column.  
   
-    9. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Click **OK** to save your changes to the Lookup transformation.  
   
@@ -240,7 +241,7 @@ ms.author: janinez
      For non-index columns, the index position is 0. For index columns, the index position is a sequential, positive number.  
   
     > [!NOTE]  
-    >  When the Lookup transformation is configured to use a Cache connection manager, only index columns in the reference dataset can be mapped to input columns. Also, all index columns must be mapped. For more information, see [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  When the Lookup transformation is configured to use a Cache connection manager, only index columns in the reference dataset can be mapped to input columns. Also, all index columns must be mapped. For more information, see [Cache Connection Manager Editor](./cache-connection-manager.md).  
   
 7.  On the **Control Flow** tab, add a Data Flow task to the package, and then add a Lookup transformation to the data flow.  
   
@@ -271,7 +272,7 @@ ms.author: janinez
   
     8.  In the **Available Lookup Columns** list, select columns. Then in the **Lookup Operation** list, specify whether the values from the lookup columns replace values in the input column or are written to a new column.  
   
-    9. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Click **OK** to save your changes to the Lookup transformation.  
   
@@ -281,5 +282,4 @@ ms.author: janinez
  [Implement a Lookup Transformation in Full Cache Mode Using the OLE DB Connection Manager](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implement a Lookup in No Cache or Partial Cache Mode](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services Transformations](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

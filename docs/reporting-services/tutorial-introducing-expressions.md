@@ -1,5 +1,6 @@
 ---
 title: "Tutorial: Introducing Expressions | Microsoft Docs"
+description: Learn to use expressions with common functions and operators to create powerful and flexible Reporting Services paginated reports.
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -19,7 +20,7 @@ The report is a banded report with alternating rows in white and a color. The re
   
 This illustration shows a report similar to the one you will create.  
   
-![report-builder-expression-tutorial-in-browser](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
+![Screenshot of a report builder report that uses expressions.](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
 Estimated time to complete this tutorial: 30 minutes.  
   
@@ -86,7 +87,7 @@ In this section, you create a table report, a data source, and a dataset. When y
   
 10. On the query designer toolbar, click **Run** (**!**). The result set displays 23 rows of data in the following columns: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase, and LastPurchase.  
 
-    ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
+    ![Screenshot of the Design a query step of the New Table or Matrix wizard.](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
 11. Click **Next**.  
   
@@ -107,13 +108,13 @@ In this section, you create a table report, a data source, and a dataset. When y
   
     Sum is no longer applied to YTDPurchase.  
     
-    ![report-builder-expression-not-sum](../reporting-services/media/report-builder-expression-not-sum.png)
+    ![Screenshot of of the Values list showing the Sum option ready to be cleared.](../reporting-services/media/report-builder-expression-not-sum.png)
   
 15. Click **Next**.  
   
 16. On the **Choose the layout** page, keep all the default settings and click **Next**.  
 
-    ![report-builder-expression-tutorial-choose-layout](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
+    ![Screenshot of the Choose the layout step of the New Table or Matrix wizard.](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
   
 17. Click **Finish**.  
   
@@ -133,9 +134,9 @@ In this section, you create a table report, a data source, and a dataset. When y
   
 1.  In the Report Data pane, expand the **Datasets** folder.  
   
-2.  Right-click **DataSet1** and click **Dataset Properties.**  
+2.  Right-click **DataSet1** and click **Dataset Properties**.  
 
-    ![report-builder-expression-tutorial-rename-dataset](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
+    ![Screenshot showing how access the Dataset Properties in report builder.](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
   
 3.  In the **Name** box, type **Expressions**  
   
@@ -148,13 +149,13 @@ In this section, you use the **Left** function and the **Concatenate** (**&**) o
   
     A new column is added to the left of the **StateProvince** column. 
     
-    ![report-builder-expression-tutorial-insert-column](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
+    ![Screenshot showing how to insert a left column into a report.](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
   
 2.  Click the header of the new column and type **Name**.  
   
 3.  Right-click the data cell for the **Name** column and click **Expression**.  
 
-    ![report-builder-expression-tutorial-insert-expression](../reporting-services/media/report-builder-expression-tutorial-insert-expression.png)
+    ![Screenshot showing how to insert an expression into a report.](../reporting-services/media/report-builder-expression-tutorial-insert-expression.png)
   
 4.  In the **Expression** dialog box, expand **Common Functions**, and then click **Text**.  
   
@@ -162,7 +163,7 @@ In this section, you use the **Left** function and the **Concatenate** (**&**) o
   
     The **Left** function is added to the expression.  
     
-    ![report-builder-expression-tutorial-left-function](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
+    ![Screenshot showing how to add a Left function to an expression.](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
   
 6.  In the **Category** list, click **Fields (Expressions)**.  
   
@@ -180,7 +181,7 @@ In this section, you use the **Left** function and the **Concatenate** (**&**) o
   
     The completed expression is: `=Left(Fields!FirstName.Value, 1) &". "& Fields!LastName.Value`  
     
-    ![report-builder-expression-tutorial-complete-name-expression](../reporting-services/media/report-builder-expression-tutorial-complete-name-expression.png)
+    ![Screenshot showing how to add a LastName value to an expression.](../reporting-services/media/report-builder-expression-tutorial-complete-name-expression.png)
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -195,11 +196,11 @@ In this section, you format the **Last Purchase** column, which contains dates, 
   
 2.  Select the data cell in the **Last Purchase** column, and on the **Home** tab > **Number** section, select **Date**.  
 
-    ![report-builder-expression-tutorial-date-format](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
+    ![Screenshot showing how to set the Last Purchase column to Date.](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
   
 3.  Also in the **Number** section, click the arrow next to **Placeholder Styles** and select **Sample Values**. 
 
-    ![report-builder-expression-tutorial-sample-values](../reporting-services/media/report-builder-expression-tutorial-sample-values.png)
+    ![Screenshot showing the Sample Values option in report builder.](../reporting-services/media/report-builder-expression-tutorial-sample-values.png)
 
     Now you can see an example of the formatting you selected. 
   
@@ -213,13 +214,13 @@ In this section, you format the **Last Purchase** column, which contains dates, 
 
 2. On the **Home** tab > **Paragraph** section, select **Left**. 
 
-    ![report-builder-expression-tutorial-format-headings](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
+    ![Screenshot showing how to format headings in report builder.](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
 
 3. Click **Run** to preview the report. 
 
 Here's the report so far, with formatted dates, currency, and column headers.
 
-![report-builder-expression-tutorial-preview-formatted](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
+![Screenshot showing the preview of the formatted report.](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
 
   
 ## <a name="Gender"></a>4. Use Color to Display Gender  
@@ -242,11 +243,11 @@ To keep the color you've applied in that table cell when you make the report a b
   
      A rectangle is added to the cell.  
      
-     ![report-builder-expression-tutorial-insert-rectangle](../reporting-services/media/report-builder-expression-tutorial-insert-rectangle.png)
+     ![Screenshot showing how to insert a rectangle.](../reporting-services/media/report-builder-expression-tutorial-insert-rectangle.png)
   
 2. Drag the column divider between the **M/F** and the **Name** to make the **M/F** column narrower.
 
-    ![report-builder-expression-tutorial-narrow-column](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
+    ![Screenshot showing how to make a column narrower.](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
   
 ### To use color to show gender  
   
@@ -266,7 +267,7 @@ To keep the color you've applied in that table cell when you make the report a b
 
 8. In the **Category** list, click **Constants**, and in the **Values** box, click **Cornflower Blue**.
 
-    ![report-builder-expression-tutorial-color-expression-cornflower-blue](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
+    ![Screenshot showing how to use a color to show a gender.](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
 
 9. Type a comma after it. 
   
@@ -281,13 +282,13 @@ To keep the color you've applied in that table cell when you make the report a b
     The completed expression is: 
     `=Switch(Fields!Gender.Value ="Male", "CornflowerBlue",Fields!Gender.Value ="Female","Tomato")`  
     
-    ![report-builder-expression-tutorial-color-expression-complete](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
+    ![Screenshot showing the complete expression in the Expression dialog box.](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
   
 12. Click **OK**, then click **OK** again to close the **Rectangle Properties** dialog box.  
   
 14. Click **Run** to preview the report.  
 
-    ![report-builder-expression-tutorial-preview-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
+    ![Screenshot showing the preview with the M/F column.](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
 
 ### To format the color rectangles
 
@@ -299,11 +300,11 @@ To keep the color you've applied in that table cell when you make the report a b
     - BorderStyle = Solid
     - BorderWidth = 5pt
     
-    ![report-builder-expression-tutorial-format-m-f-column](../reporting-services/media/report-builder-expression-tutorial-format-m-f-column.png)
+    ![Screenshot showing how to format the color rectangles in the M/F column.](../reporting-services/media/report-builder-expression-tutorial-format-m-f-column.png)
 
 18. Click **Run** to preview the report again. This time the color blocks have white space around them.
 
-    ![report-builder-expression-tutorial-preview-formatted-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
+    ![Screenshot showing the preview with the rectangles formatted in the M/F column.](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
 ## <a name="Lookup"></a>5. Look Up the CountryRegion Name  
 In this section, you create the CountryRegion dataset and use the **Lookup** function to display the name of a country/region instead of the identifier of the country/region.  
@@ -314,7 +315,7 @@ In this section, you create the CountryRegion dataset and use the **Lookup** fun
   
 2.  In the Report Data pane, click **New** and then click **Dataset**.  
   
-3.  In **Dataset Properties, click **Use a dataset embedded in my report**.  
+3.  In **Dataset Properties**, click **Use a dataset embedded in my report**.  
   
 4.  In the **Data source** list, select ExpressionsDataSource.  
   
@@ -409,7 +410,7 @@ In this section, you add a column and then use the **Now** function or the `Exec
   
     The completed expression is: `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
     
-    ![report-builder-expression-tutorial-date-since-last-purchase](../reporting-services/media/report-builder-expression-tutorial-date-since-last-purchase.png)
+    ![Screenshot showing the complete expression for the date since last purchase.](../reporting-services/media/report-builder-expression-tutorial-date-since-last-purchase.png)
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
@@ -436,7 +437,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
   
 2.  In the **Directional** group of icon sets, click the set of three gray arrows.  
 
-    ![report-builder-expression-tutorial-select-indicator](../reporting-services/media/report-builder-expression-tutorial-select-indicator.png)
+    ![Screenshot showing how to add an indicator.](../reporting-services/media/report-builder-expression-tutorial-select-indicator.png)
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -468,7 +469,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
   
 17. In the row with the down-pointing arrow, click the **fx** button to the right of the text box for the **Start** value.  
 
-    ![report-builder-expression-tutorial-indicator-start](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
+    ![Screenshot showing how to select the fx button next to the Start text box.](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
   
 18. In the **Expression** dialog box, expand **Common Functions**, and then click **Math**.  
   
@@ -492,7 +493,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
   
 32. Click the row with the horizontal-pointing arrow and click **Delete**.  
 
-    ![report-builder-expression-tutorial-delete-indicator-state](../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png)
+    ![Screenshot showing how to Delete an indicator.](../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png)
     
     Now there are only two arrows, either up or down.
   
@@ -508,7 +509,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
   
 38. Click **Run** to preview the report.  
 
-    ![report-builder-expression-tutorial-preview-indicator](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
+    ![Screenshot showing the preview with the + or - AVG Sales column including all of the new indicators.](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
   
 ## <a name="GreenBar"></a>8. Make a Banded Report  
 Create a parameter so report readers can specify the color to apply to alternating rows in the report, making it a banded report.  
@@ -519,7 +520,7 @@ Create a parameter so report readers can specify the color to apply to alternati
   
 2.  In the **Report Data** pane, right-click **Parameters** and click **Add Parameter**.  
 
-    ![report-builder-expression-tutorial-add-parameter](../reporting-services/media/report-builder-expression-tutorial-add-parameter.png)
+    ![Screenshot showing how to add a parameter.](../reporting-services/media/report-builder-expression-tutorial-add-parameter.png)
   
     The **Report Parameter Properties** dialog box opens.  
   
@@ -553,7 +554,7 @@ Create a parameter so report readers can specify the color to apply to alternati
   
 18. In the **Value** box, type **Pink**  
 
-    ![report-builder-expression-tutorial-parameter-available](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
+    ![Screenshot of the Report Parameter Properties dialog box showing the Choose the available values for this parameter step.](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -561,7 +562,7 @@ Create a parameter so report readers can specify the color to apply to alternati
   
 1.   Select all the cell in the data row except the cell in the **M/F** column, which has its own background color.  
 
-     ![report-builder-expression-tutorial-select-banded](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
+     ![Screenshot showing cells selected in a data row.](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
   
 4.  In the Properties pane, click **BackgroundColor**. 
 
@@ -571,7 +572,7 @@ Create a parameter so report readers can specify the color to apply to alternati
   
 5.  Click the down arrow and then click **Expression**.  
 
-    ![report-builder-expression-tutorial-banded-color-property](../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png)
+    ![Screenshot of the Properties box showing how to associate an expression with a BackgroundColor.](../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png)
   
 6.  In the **Expression** dialog box, expand **Common Functions**, and then click **Program Flow**.  
   
@@ -587,7 +588,7 @@ Create a parameter so report readers can specify the color to apply to alternati
   
     The completed expression is: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`  
     
-    ![report-builder-expression-tutorial-banded-color-expressn](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
+    ![Screenshot showing the complete banded color expression.](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -599,13 +600,13 @@ Create a parameter so report readers can specify the color to apply to alternati
   
 3.  In the **Choose color** list, select a color for the non-white bands in the report.  
     
-    ![report-builder-expression-tutorial-select-color](../reporting-services/media/report-builder-expression-tutorial-select-color.png)
+    ![Screenshot showing how to choose a color for non-white bands.](../reporting-services/media/report-builder-expression-tutorial-select-color.png)
   
 4.  Click **View Report**.  
   
     The report renders and alternating rows have the background that you chose. 
     
-    ![report-builder-expression-tutorial-preview-banded](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
+    ![Screenshot showing the preview with rows with the alternating colors.](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
   
 ## <a name="Title"></a>(optional) Add a Report Title  
 Add a title to the report.  
@@ -647,7 +648,7 @@ The report is saved to the report server. The name of report server that you are
 
 Now your report readers can view your report in the [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] web portal.
 
-![report-builder-expression-tutorial-final-in-browser](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
+![Screenshot of the new report complete with each expression visible.](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
 
    
 ## See Also  

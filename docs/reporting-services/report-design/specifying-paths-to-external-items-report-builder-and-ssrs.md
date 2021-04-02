@@ -1,5 +1,6 @@
 ---
-title: "Specifying Paths to External Items (Report Builder and SSRS) | Microsoft Docs"
+title: "Specifying Paths to External Items (Report Builder) | Microsoft Docs"
+description: Find out how to specify paths in report item properties to reference items that are external to the report definition file in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

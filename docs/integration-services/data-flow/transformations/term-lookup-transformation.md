@@ -1,4 +1,5 @@
 ---
+description: "Term Lookup Transformation"
 title: "Term Lookup Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -21,12 +22,12 @@ helpviewer_keywords:
   - "counting extracted items"
   - "Term Lookup transformation"
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Term Lookup Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Term Lookup transformation matches terms extracted from text in a transformation input column with terms in a reference table. It then counts the number of times a term in the lookup table occurs in the input data set, and writes the count together with the term from the reference table to columns in the transformation output. This transformation is useful for creating a custom word list based on the input text, complete with word frequency statistics.  
@@ -95,7 +96,7 @@ ms.author: janinez
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -118,7 +119,7 @@ ms.author: janinez
  Type an alias for each output column. The default is the name of the column; however, you can choose any unique, descriptive name.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling options for rows that cause errors.  
+ Use the [Configure Error Output](../error-handling-in-data.md) dialog box to specify error handling options for rows that cause errors.  
   
 ## Term Lookup Transformation Editor (Reference Table Tab)
   Use the **Reference Table** tab of the **Term Lookup Transformation Editor** dialog box to specify the connection to the reference (lookup) table.  
@@ -134,7 +135,7 @@ ms.author: janinez
  Select a lookup table or view from the database by selecting an item from the list. The table or view should contain a column with an existing list of terms that the text in the source column can be compared to.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling options for rows that cause errors.  
+ Use the [Configure Error Output](../error-handling-in-data.md) dialog box to specify error handling options for rows that cause errors.  
   
 ## Term Lookup Transformation Editor (Advanced Tab)
   Use the **Advanced** tab of the **Term Lookup Transformation Editor** dialog box to specify whether lookup should be case-sensitive.  
@@ -144,9 +145,8 @@ ms.author: janinez
  Indicate whether the lookup is case-sensitive. The default is **False**.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling options for rows that cause errors.  
+ Use the [Configure Error Output](../error-handling-in-data.md) dialog box to specify error handling options for rows that cause errors.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Term Extraction Transformation](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
-  

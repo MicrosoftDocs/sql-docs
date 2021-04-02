@@ -1,1 +1,0 @@
-New Availability Group Wizard

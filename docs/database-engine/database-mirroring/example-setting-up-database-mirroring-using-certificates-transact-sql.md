@@ -1,11 +1,12 @@
 ---
-title: "Example: Setting Up Database Mirroring Using Certificates (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Example: Database mirroring with certificates (T-SQL)"
+description: This article contains an example of configuring SQL Server database mirroring with certificate-based authentication by using Transact-SQL in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], deployment"
@@ -17,7 +18,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Example: Setting Up Database Mirroring Using Certificates (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This example shows all the stages required to create a database mirroring session using certificate-based authentication. The examples in this topic use [!INCLUDE[tsql](../../includes/tsql-md.md)]. Unless you can guarantee that your network is secure, we recommend that you use encryption for database mirroring connections.  
   
  When copying a certificate to another system, use a secure copy method. Be extremely careful to keep all of your certificates secure.  
@@ -256,7 +257,7 @@ ms.author: mikeray
     ```  
   
     > [!NOTE]  
-    >  If you intend to run in high-safety mode with automatic failover, leave transaction safety set to FULL (the default setting) and add the witness as soon as possible after executing the second SET PARTNER **'***partner_server***'** statement. Note that the witness must first be configured for outbound and inbound connections.  
+    >  If you intend to run in high-safety mode with automatic failover, leave transaction safety set to FULL (the default setting) and add the witness as soon as possible after executing the second SET PARTNER **'**_partner_server_**'** statement. Note that the witness must first be configured for outbound and inbound connections.  
   
  [&#91;Top of Example&#93;](#ExampleH2)  
   

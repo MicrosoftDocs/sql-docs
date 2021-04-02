@@ -1,5 +1,6 @@
 ---
-title: "Find Property Set GUIDs and Property Integer IDs for Search Properties | Microsoft Docs"
+description: "Find property set GUIDs and property integer IDs for Search properties"
+title: "Find property set GUIDs & property integer IDs for Search properties"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
@@ -12,10 +13,11 @@ ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
-# Find Property Set GUIDs and Property Integer IDs for Search Properties
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# Find property set GUIDs and property integer IDs for Search properties
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic discusses how to obtain the values that are required before you can add a property to a search property list and make it searchable by full-text search. These values include the property set GUID and property integer identifier of a document property.  
   
  Document properties that are extracted by IFilters from binary data - that is, from data stored in a **varbinary**, **varbinary(max)** (including **FILESTREAM**), or **image** data type column - can be made available for full-text search. To make an extracted property searchable, the property must be manually added to a search property list. The search property list must also be associated with one or more full-text indexes. For more information, see [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
@@ -40,7 +42,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Type|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Perceived file type based on its canonical type.|  
 |Title|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Title of the item. For example, the title of a document, the subject of a message, the caption of a photo, or the name of a music track.|  
   
- To encourage consistency among file formats, Microsoft has identified subsets of frequently used, high-priority document properties for several categories of documents. These include communications, contacts, documents, music files, pictures, and videos. For more information about the top-ranked properties for each category, see [system-defined properties for custom file formats](https://go.microsoft.com/fwlink/?LinkId=144336) in the Windows Search documentation.  
+ To encourage consistency among file formats, Microsoft has identified subsets of frequently used, high-priority document properties for several categories of documents. These include communications, contacts, documents, music files, pictures, and videos. For more information about the top-ranked properties for each category, see [system-defined properties for custom file formats](/windows/win32/search/-shell-systemdefinedpropertiesforfileformats) in the Windows Search documentation.  
   
  A specific file format might implement properties of three types:  
   
@@ -55,7 +57,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  You run **filtdump.exe** from the command prompt and provide a single argument. This argument is the name of an individual file that has a file type for which an IFilter is installed. The utility displays a list of all the properties discovered by the IFilter in the document, with their property set GUIDs, integer IDs, and additional information.  
   
- For information about installing this software, see [Microsoft Windows SDK for Windows 7 and .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=212980). After you download and install the SDK, look in the following folders for the filtdump.exe utility.  
+ For information about installing this software, see [Microsoft Windows SDK for Windows 7 and .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=8279). After you download and install the SDK, look in the following folders for the filtdump.exe utility.  
   
 -   For the 64-bit version, look in `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`.  
   
@@ -76,9 +78,9 @@ propID = 4
 ...  
 ```  
   
- For the complete description of this property, see [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) in the Windows Search documentation.  
+ For the complete description of this property, see [System.Author](/windows/win32/properties/props-system-author) in the Windows Search documentation.  
   
- For a complete list of Windows properties, see [Windows Properties](https://go.microsoft.com/fwlink/?LinkId=215013), also in the Windows Search documentation.  
+ For a complete list of Windows properties, see [Windows Properties](/windows/win32/properties/props), also in the Windows Search documentation.  
   
 ##  <a name="examples"></a> Adding a Property to a Search Property List  
  The following example shows how to add a property to a search property list. The example uses an [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) statement to add the `System.Author` property to a search property list named `PropertyList1`, and provides a user friendly name for the property, `Author`.  
@@ -99,5 +101,4 @@ GO
 ## See Also  
  [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [Configure and Manage Filters for Search](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

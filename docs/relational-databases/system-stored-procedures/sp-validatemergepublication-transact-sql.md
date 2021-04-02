@@ -1,4 +1,5 @@
 ---
+description: "sp_validatemergepublication (Transact-SQL)"
 title: "sp_validatemergepublication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,18 +7,18 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_validatemergepublication"
   - "sp_validatemergepublication_TSQL"
 helpviewer_keywords: 
   - "sp_validatemergepublication"
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_validatemergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Performs a publication-wide validation for which all subscriptions (push, pull, and anonymous) will be validated once. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -32,7 +33,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## Arguments  
- [**@publication=**] **'***publication***'**  
+ [**\@publication=**] **'***publication***'**  
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 `[ @level = ] level`

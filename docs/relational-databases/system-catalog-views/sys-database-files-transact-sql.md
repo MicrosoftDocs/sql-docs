@@ -1,12 +1,13 @@
 ---
+description: "sys.database_files (Transact-SQL)"
 title: "sys.database_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/19/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.database_files"
   - "sys.database_files_TSQL"
@@ -17,21 +18,21 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.database_files catalog view"
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
-author: stevestein
-ms.author: sstein
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Contains a row per file of a database as stored in the database itself. This is a per-database view.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|ID of the file within database.|  
-|**file_guid**|**uniqueidentifier**|GUID for the file.<br /><br /> NULL = Database was upgraded from an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**type**|**tinyint**|File type:<br /><br /> 0 = Rows (Includes files of full-text catalogs that are upgraded to or created in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].)<br /><br /> 1 = Log<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Full-text (Full-text catalogs earlier than [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; full-text catalogs that are upgraded to or created in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] will report a file type 0.)|  
-|**type_desc**|**nvarchar(60)**|Description of the file type:<br /><br /> ROWS (Includes files of full-text catalogs that are upgraded to or created in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].)<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (Full-text catalogs earlier than [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].)|  
+|**file_guid**|**uniqueidentifier**|GUID for the file.<br /><br /> NULL = Database was upgraded from an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Valid for SQL Server 2005 and earlier).|  
+|**type**|**tinyint**|File type:<br/><br /> 0 = Rows<br /><br/> 1 = Log<br/><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Full-text|  
+|**type_desc**|**nvarchar(60)**|Description of the file type:<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|Value can be 0 or greater than 0. A value of 0 represents the database log file, and a value greater than 0 represents the ID of the filegroup where this data file is stored.|  
 |**name**|**sysname**|Logical name of the file in the database.|  
 |**physical_name**|**nvarchar(260)**|Operating-system file name. If the database is hosted by an AlwaysOn [readable secondary replica](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), **physical_name** indicates the file location of the primary replica database. For the correct file location of a readable secondary database, query [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
@@ -73,7 +74,7 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-For more information when using [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], see [Determining Database Size in Azure SQL Database V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) on the SQL Customer Advisory Team blog.
+For more information when using [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], see [Determining Database Size in Azure SQL Database V12](/archive/blogs/sqlcat/determining-database-size-in-azure-sql-database-v12) on the SQL Customer Advisory Team blog.
   
 ## See Also  
  [Databases and Files Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
@@ -82,5 +83,4 @@ For more information when using [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
-  
   

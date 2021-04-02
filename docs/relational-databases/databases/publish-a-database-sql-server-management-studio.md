@@ -1,4 +1,5 @@
 ---
+description: "Publish a Database (SQL Server Management Studio)"
 title: "Publish a Database (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,7 +13,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Publish a Database (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You can use the **Generate and Publish Scripts Wizard** to publish an entire database or individual database objects to a Web hosting provider.  
   
 > [!NOTE]  
@@ -39,10 +40,7 @@ ms.author: "sstein"
   
 5.  On the **Save or Publish Scripts** page, monitor the progress of the publication.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## See Also  
- [Generate Scripts &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)   
+ [Generate Scripts &#40;SQL Server Management Studio&#41;](../../ssms/scripting/generate-scripts-sql-server-management-studio.md)   
  [Copy Databases to Other Servers](../../relational-databases/databases/copy-databases-to-other-servers.md)  
-  
   

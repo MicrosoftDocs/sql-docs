@@ -1,6 +1,7 @@
 ---
-title: "Change the Default Location for Projects | Microsoft Docs"
-ms.custom: ""
+description: "Change the Default Location for Projects"
+title: "Change the Default Location for Projects"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -15,7 +16,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Change the Default Location for Projects
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The default location for files and projects is the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Projects folder in your My Documents folder.  
   
 ### To change the default location for projects  

@@ -1,10 +1,11 @@
 ---
-title: "Windows Server Failover Clustering with SQL Server | Microsoft Docs"
-ms.custom: ""
+title: "Windows Server Failover Cluster with SQL Server"
+description: Learn about using the Windows Server Failover Cluster service with SQL Server and failover cluster instances. 
+ms.custom: seo-lt-2019
 ms.date: "01/18/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
@@ -13,12 +14,12 @@ helpviewer_keywords:
   - "quorum [SQL Server]"
   - "failover clustering [SQL Server], Always On Availability Groups"
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Windows Server Failover Clustering with SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  A *Windows Server Failover Cluster* (WSFC) is a group of independent servers that work together to increase the availability of applications and services. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] takes advantage of WSFC services and capabilities to support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster Instances.  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  A *Windows Server Failover Cluster* (WSFC) is a group of independent servers that work together to increase the availability of applications and services. [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] takes advantage of WSFC services and capabilities to support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster Instances.  
   
    
 ##  <a name="TermsAndDefs"></a> Terms and Definitions  
@@ -67,10 +68,10 @@ ms.author: mathoma
   
 -   **Failover coordination.** Each resource is configured to be hosted on a primary node, and each can be automatically or manually transferred to one or more secondary nodes. A health-based failover policy controls automatic transfer of resource ownership between nodes. Nodes and hosted applications are notified when failover occurs so that they may react appropriately.  
   
- For more information, see: [Failover Clustering Overview - Windows Server](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)  
+ For more information, see: [Failover Clustering Overview - Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11))  
   
 ##  <a name="AlwaysOnWsfcTech"></a> SQL Server Always On Technologies and WSFC  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *Always On* is a high availability and disaster recovery solution that takes advantage of WSFC. The Always On features provide integrated, flexible solutions that increase application availability, provide better returns on hardware investments, and simplify high availability deployment and management.  
+ [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] *Always On* is a high availability and disaster recovery solution that takes advantage of WSFC. The Always On features provide integrated, flexible solutions that increase application availability, provide better returns on hardware investments, and simplify high availability deployment and management.  
   
  Both [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and Always On Failover Cluster Instances use WSFC as a platform technology, registering components as WSFC cluster resources.  Related resources are combined into a *role*, which can be made dependent upon other WSFC cluster resources. The WSFC can then sense and signal the need to restart the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance or automatically fail it over to a different server node in the WSFC.  
   
@@ -79,7 +80,7 @@ ms.author: mathoma
 >  For more information, see: [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
 ### Instance-level High Availability with Always On Failover Cluster Instances  
- An Always On *Failover Cluster Instance* (FCI) is a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance that is installed across nodes in a WSFC. This type of instance depends on resources for storage and virtual network name. The storage can use Fibre Channel, iSCSI, FCoE, or SAS for shared disk storage, or use locally attached storage with [Storage Spaces Direct (S2D)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview). The virtual network name resource depends on one or more virtual IP addresses, each in a different subnet. The SQL Server service and the SQL Server Agent service are also resources, and both are dependent upon the storage and virtual network name resources.  
+ An Always On *Failover Cluster Instance* (FCI) is a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance that is installed across nodes in a WSFC. This type of instance depends on resources for storage and virtual network name. The storage can use Fibre Channel, iSCSI, FCoE, or SAS for shared disk storage, or use locally attached storage with [Storage Spaces Direct (S2D)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview). The virtual network name resource depends on one or more virtual IP addresses, each in a different subnet. The SQL Server service and the SQL Server Agent service are also resources, and both are dependent upon the storage and virtual network name resources.  
   
  In the event of a failover, the WSFC service transfers ownership of instance's resources to a designated failover node. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance is then re-started on the failover node, and databases are recovered as usual. At any given moment, only a single node in the cluster can host the FCI and underlying resources.  
   
@@ -169,13 +170,13 @@ ms.author: mathoma
   
 -   [Windows Server Technologies:  Failover Clusters](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
 
--   [Storage Spaces Direct \(S2D\) Overview](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
+-   [Storage Spaces Direct \(S2D\) Overview](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 
 -   [Failover Clusters in Windows Server 2008 R2](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
 -   [View Events and Logs for a Failover Cluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog Failover Cluster Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog Failover Cluster Cmdlet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))  
   
 ## See Also  
  [Always On Failover Cluster Instances (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
@@ -184,4 +185,3 @@ ms.author: mathoma
  [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [WSFC Disaster Recovery through Forced Quorum (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
  [SQL Server 2016 Supports Windows Server 2016 Storage Spaces Direct](https://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/)
-  

@@ -1,4 +1,5 @@
 ---
+description: "Scrollable Cursors and Transaction Isolation"
 title: "Scrollable Cursors and Transaction Isolation | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "transaction isolation [ODBC]"
   - "transactions [ODBC], isolation"
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Scrollable Cursors and Transaction Isolation
 The following table lists the factors governing the visibility of changes.  

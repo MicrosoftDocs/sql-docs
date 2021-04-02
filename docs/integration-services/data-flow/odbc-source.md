@@ -1,4 +1,5 @@
 ---
+description: "ODBC Source"
 title: "ODBC Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,12 +14,12 @@ f1_keywords:
   - "sql13.ssis.designer.odbcsource.columns.f1"
   - "sql13.ssis.designer.odbcsource.errorhandling.f1"
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # ODBC Source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The ODBC source extracts data from ODBC-supported database by using a database table, a view, or an SQL statement.  
@@ -44,7 +45,7 @@ ms.author: janinez
   
 -   The standard output data columns.  
   
- Depending on the error behavior setting, the ODBC source supports returning errors (data conversion, truncation) that occur during the extraction process in the error output. For more information, see [ODBC Destination Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md).  
+ Depending on the error behavior setting, the ODBC source supports returning errors (data conversion, truncation) that occur during the extraction process in the error output. For more information, see [ODBC Destination Editor &#40;Connection Manager Page&#41;](./odbc-destination.md).  
   
 ## Data Type Support  
  For information about the data types supported by the ODBC source, see Connector for Open Database Connectivity (ODBC).  
@@ -188,5 +189,4 @@ ms.author: janinez
   
 #### Redirect Flow  
  The row that is causing the error or the truncation is directed to the error output of the ODBC source.  
-  
   

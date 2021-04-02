@@ -1,12 +1,13 @@
 ---
+description: "Set Operators - EXCEPT and INTERSECT (Transact-SQL)"
 title: "EXCEPT and INTERSECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "INTERSECT_TSQL"
   - "EXCEPT_TSQL"
@@ -20,12 +21,12 @@ helpviewer_keywords:
   - "comparing queries"
   - "INTERSECT operator"
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set Operators - EXCEPT and INTERSECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Returns distinct rows by comparing the results of two queries.  
   
@@ -43,13 +44,15 @@ To combine the result sets of two queries that use EXCEPT or INTERSECT, the basi
   
 ## Syntax  
   
-```  
+```syntaxsql
 { <query_specification> | ( <query_expression> ) }   
 { EXCEPT | INTERSECT }  
 { <query_specification> | ( <query_expression> ) }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 \<_query\_specification_> | ( \<_query\_expression_> )  
 Is a query specification or query expression that returns data to be compared with the data from another query specification or query expression. The definitions of the columns that are part of an EXCEPT or INTERSECT operation don't have to be the same. But, they must be comparable through implicit conversion. When data types differ, the rules for [data type precedence](../../t-sql/data-types/data-type-precedence-transact-sql.md) determine the data type that is run for comparison.  
   
@@ -95,7 +98,7 @@ When an EXCEPT operation is displayed by using the Graphical Showplan feature in
 ## Examples  
 The following examples show using the `INTERSECT` and `EXCEPT` operators. The first query returns all values from the `Production.Product` table for comparison to the results with `INTERSECT` and `EXCEPT`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -105,7 +108,7 @@ FROM Production.Product ;
   
 The following query returns any distinct values that are returned by both the query on the left and right sides of the `INTERSECT` operator.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -118,7 +121,7 @@ FROM Production.WorkOrder ;
   
 The following query returns any distinct values from the query left of the `EXCEPT` operator that aren't also found on the right query.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -131,7 +134,7 @@ FROM Production.WorkOrder ;
   
 The following query returns any distinct values from the query left of the `EXCEPT` operator that aren't also found on the right query. The tables are reversed from the previous example.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -145,7 +148,7 @@ FROM Production.Product ;
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 The following examples show how to use the `INTERSECT` and `EXCEPT` operators. The first query returns all values from the `FactInternetSales` table for comparison to the results with `INTERSECT` and `EXCEPT`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -155,7 +158,7 @@ FROM FactInternetSales;
   
 The following query returns any distinct values that are returned by both the query on the left and right sides of the `INTERSECT` operator.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -170,7 +173,7 @@ ORDER BY CustomerKey;
   
 The following query returns any distinct values from the query left of the `EXCEPT` operator that aren't also found on the right query.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   

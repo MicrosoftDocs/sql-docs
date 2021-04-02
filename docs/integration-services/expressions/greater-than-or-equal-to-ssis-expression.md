@@ -1,4 +1,5 @@
 ---
+description: "&gt;= (Greater Than or Equal To) (SSIS Expression)"
 title: "&gt;= (Greater Than or Equal To) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -11,12 +12,12 @@ helpviewer_keywords:
   - "<= (less than or equal to operator)"
   - "greater than or equal to (>=)"
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # &gt;= (Greater Than or Equal To) (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Performs a comparison to determine if the first expression is greater than or equal to the second one. The expression evaluator automatically converts many data types before it performs the comparison.  

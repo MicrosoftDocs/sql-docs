@@ -1,6 +1,6 @@
 ---
-title: "Configure DQS to Use Reference Data | Microsoft Docs"
-ms.custom: ""
+description: "Configure DQS to Use Reference Data"
+title: "Configure DQS to Use Reference Data"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -12,14 +12,14 @@ f1_keywords:
   - "sql13.dqs.administration.configuration.createDirectRDS.f1"
   - "sql13.dqs.admin.config.rds.f1"
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Configure DQS to Use Reference Data
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
-  This topic describes how to configure [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) to use reference data for cleansing your data. You could either use reference data from Windows Azure Marketplace or from direct online third-party reference data providers.  
+  This topic describes how to configure [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) to use reference data for cleansing your data. You could either use reference data from Azure Marketplace or from direct online third-party reference data providers.  
 
 > [!IMPORTANT]
 > This article mentions third-party reference data services that were previously available from the Azure DataMarket. DataMarket and Data Services - including Melissa address data, for example - were discontinued after 12/31/2016. As a result, you can no longer run the examples in this article with the specified services from DataMarket. You can still use reference data services that are available directly online from third-party reference data providers.
@@ -27,7 +27,7 @@ ms.author: lle
 ## Before You Begin  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
- To use reference data from Marketplace, you must have a valid Marketplace account key. For detailed information about creating a Marketplace account key, see [Create Your Account](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936). You can also create a Marketplace account key from within [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] by clicking **Configuration** under **Administration** in the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] home screen, and then clicking **Create a DataMarket Account ID** under the **Reference Data** tab.  
+ To use reference data from Marketplace, you must have a valid Marketplace account key. For detailed information about creating a Marketplace account key, see [Create Your Account](/previous-versions/azure/ff717655(v=azure.100)) (https://go.microsoft.com/fwlink/?LinkId=212936). You can also create a Marketplace account key from within [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] by clicking **Configuration** under **Administration** in the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] home screen, and then clicking **Create a DataMarket Account ID** under the **Reference Data** tab.  
   
 ###  <a name="Security"></a> Security  
   
@@ -78,5 +78,4 @@ ms.author: lle
   
 ##  <a name="FollowUp"></a> Follow Up: After Configuring DQS to use Reference Data  
  You must now map the required knowledge base domains to the reference data available from the data providers you just configured. To do so, see [Attach Domain or Composite Domain to Reference Data](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
-  
   

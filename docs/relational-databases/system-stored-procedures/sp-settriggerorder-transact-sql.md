@@ -1,4 +1,5 @@
 ---
+description: "sp_settriggerorder (Transact-SQL)"
 title: "sp_settriggerorder (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_settriggerorder"
   - "sp_settriggerorder_TSQL"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_settriggerorder"
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-author: stevestein
-ms.author: sstein
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_settriggerorder (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Specifies the AFTER triggers that are fired first or last. The AFTER triggers that are fired between the first and last triggers are executed in undefined order.  
   
@@ -57,12 +58,10 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  A trigger can be designated as the **First** or **Last** trigger for a statement type only after that trigger has been defined as a trigger for that statement type. For example, trigger **TR1** can be designated **First** for INSERT on table **T1** if **TR1** is defined as an INSERT trigger. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] returns an error if **TR1**, which has been defined only as an INSERT trigger, is set as a **First**, or **Last**, trigger for an UPDATE statement. For more information, see the Remarks section.  
   
- **@namespace=** { **'DATABASE'** | **'SERVER'** | NULL }  
- When *triggername* is a DDL trigger, **@namespace** specifies whether *triggername* was created with database scope or server scope. If *triggername* is a logon trigger, SERVER must be specified. For more information about DDL trigger scope, see [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md). If not specified, or if NULL is specified, *triggername* is a DML trigger.  
+ **\@namespace=** { **'DATABASE'** | **'SERVER'** | NULL }  
+ When *triggername* is a DDL trigger, **\@namespace** specifies whether *triggername* was created with database scope or server scope. If *triggername* is a logon trigger, SERVER must be specified. For more information about DDL trigger scope, see [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md). If not specified, or if NULL is specified, *triggername* is a DML trigger.  
   
-||  
-|-|  
-|SERVER applies to: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+* SERVER applies to: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
   
 ## Return Code Values  
  0 (success) and 1 (failure)  

@@ -1,12 +1,13 @@
 ---
+description: "DROP COLUMN MASTER KEY (Transact-SQL)"
 title: "DROP COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/20/2016"
+ms.date: "10/15/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP COLUMN MASTER KEY"
   - "DROP_COLUMN_MASTER_KEY_TSQL"
@@ -17,11 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.column_master_keys catalog view"
 ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 ---
 # DROP COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Drops a column master key from a database. This is a metadata operation.  
   
@@ -29,16 +31,15 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP COLUMN MASTER KEY key_name;  
 ```  
-  
-## Arguments  
+
+## Arguments
  *key_name*  
  The name of the column master key.  
   
-## Remarks  
+## Remarks
  The column master key can only be dropped if there are no column encryption key values encrypted with the column master key. To drop column encryption key values, use the [DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md) statement.  
   
 ## Permissions  
@@ -49,7 +50,7 @@ DROP COLUMN MASTER KEY key_name;
 ### A. Dropping a column master key  
  The following example drops a column master key called `MyCMK`.  
   
-```  
+```sql  
 DROP COLUMN MASTER KEY MyCMK;  
 GO  
 ```  
@@ -58,7 +59,10 @@ GO
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
  [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
- [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_master_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+ [Overview of Key Management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [Manage keys for Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

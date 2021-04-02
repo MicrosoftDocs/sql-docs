@@ -1,5 +1,6 @@
 ---
-title: "Register a Standard .NET Framework Data Provider (SSRS) | Microsoft Docs"
+title: "Register a Standard .NET Framework Data Provider | Microsoft Docs"
+description: Register a standard .NET Framework data provider to use a third-party .NET Framework data provider to retrieve data for a Reporting Services report dataset.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -32,7 +33,7 @@ ms.author: maggies
   
 1.  Navigate to the default location of the bin directory on the report server on which you want to use the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider. The default location of the report server bin directory is *\<drive>*:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
   
-2.  Copy your assembly from your staging location to the bin directory of the report server. Alternatively, you can load your assembly in the global assembly cache (GAC). For more information, see [Working with Assemblies and the Global Assembly Cache](https://go.microsoft.com/fwlink/?linkid=63912) in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK documentation on MSDN.  
+2.  Copy your assembly from your staging location to the bin directory of the report server. Alternatively, you can load your assembly in the global assembly cache (GAC). For more information, see [Working with Assemblies and the Global Assembly Cache](/dotnet/framework/app-domains/working-with-assemblies-and-the-gac) in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK documentation on MSDN.  
   
 #### To register a .NET data provider on the report server  
   
@@ -105,7 +106,7 @@ ms.author: maggies
   
 1.  Navigate to the default location of the PrivateAssemblies directory on the Report Designer client on which you want to use the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider. The default location of the PrivateAssemblies directory is *\<drive>*:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
-2.  Copy your assembly from your staging location to the PrivateAssemblies directory of the Report Designer client. Alternatively, you can load your assembly in the global assembly cache (GAC). For more information, see [Working with Assemblies and the Global Assembly Cache](https://go.microsoft.com/fwlink/?linkid=63912) in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK documentation on MSDN.  
+2.  Copy your assembly from your staging location to the PrivateAssemblies directory of the Report Designer client. Alternatively, you can load your assembly in the global assembly cache (GAC). For more information, see [Working with Assemblies and the Global Assembly Cache](/dotnet/framework/app-domains/working-with-assemblies-and-the-gac) in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK documentation on MSDN.  
   
 #### To register a .NET data provider on the Report Designer client  
   
@@ -199,5 +200,4 @@ ms.author: maggies
  [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Code Access Security in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)  
-  
   

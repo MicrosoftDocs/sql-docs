@@ -1,4 +1,5 @@
 ---
+description: "Deploy an SSIS project from SSMS with Transact-SQL"
 title: "Deploy an SSIS project with Transact-SQL (SSMS) | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart
@@ -6,12 +7,12 @@ ms.prod: sql
 ms.prod_service: "integration-services"
 ms.custom: ""
 ms.technology: integration-services
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Deploy an SSIS project from SSMS with Transact-SQL
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -21,7 +22,7 @@ SQL Server Management Studio is an integrated environment for managing any SQL i
 
 ## Prerequisites
 
-Before you start, make sure you have the latest version of SQL Server Management Studio. To download SSMS, see [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Before you start, make sure you have the latest version of SQL Server Management Studio. To download SSMS, see [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
 ## Supported platforms
 
@@ -32,6 +33,10 @@ You can use the information in this quickstart to deploy an SSIS project to the 
 You cannot use the information in this quickstart to deploy an SSIS package to Azure SQL Database. The `catalog.deploy_project` stored procedure expects path to the `.ispac` file in the local (on premises) file system. For more info about deploying and running packages in Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 You cannot use the information in this quickstart to deploy an SSIS package to SQL Server on Linux. For more info about running packages on Linux, see [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md).
+
+## Supported authentication method
+
+Refer to [authentication methods for deployment](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## Connect to the SSIS Catalog database
 
@@ -52,6 +57,7 @@ Use SQL Server Management Studio to establish a connection to the SSIS Catalog.
 3. Click **Connect**. The Object Explorer window opens in SSMS. 
 
 4. In Object Explorer, expand **Integration Services Catalogs** and then expand **SSISDB** to view the objects in the SSIS Catalog database.
+
 
 ## Run the T-SQL code
 Run the following Transact-SQL code to deploy an SSIS project.
@@ -91,4 +97,4 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
     - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md)
     - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md)
-    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) 
+    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md)

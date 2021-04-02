@@ -1,15 +1,16 @@
 ---
-title: "SQL Server Login Dialog Box (ODBC) | Microsoft Docs"
+title: "SQL Server Login Dialog Box (ODBC)"
+description: "The SQL Server Login dialog may appear when an application makes an ODBC connection without specifying enough information to connect to the database."
 ms.custom: ""
-ms.date: "03/21/2018"
+ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-author: MightyPen
-ms.author: "v-jizho2"
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQL Server Login Dialog Box (ODBC)
 
@@ -33,6 +34,8 @@ Selects the authentication mode from one of the following:
 - **Active Directory Password** with login ID and password
 - **Active Directory Integrated** authentication using the currently logged-in user's account
 - **Active Directory Interactive** authentication with login ID
+- **Managed Service Identity** authentication with Managed Identity
+- **Active Directory Service Principal** authentication with Azure Active Directory service principal
 
 See [Data Source Wizard Screen 2](../../../connect/odbc/windows/dsn-wizard-2.md) for more information on the authentication modes.
 
@@ -42,7 +45,7 @@ If you use a trusted connection, you can specify a service principal name (SPN) 
 
 ### Login ID
 
-Specifies the SQL Server or Azure Active Directory login ID to use for the connection if **Authentication Mode** is set to **SQL Server** or **Active Directory Password** or **Active Directory Interactive**. Otherwise, the **Login ID** box is disabled.
+Specifies the SQL Server or Azure Active Directory login ID to use for the connection if **Authentication Mode** is set to **SQL Server**, **Active Directory Password**, **Active Directory Interactive**, **Managed Service Identity**, or **Active Directory Service Principal**. Otherwise, the **Login ID** box is disabled.
 
 ### Password
 

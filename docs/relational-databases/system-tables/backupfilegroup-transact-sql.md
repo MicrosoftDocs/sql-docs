@@ -1,4 +1,5 @@
 ---
+description: "backupfilegroup (Transact-SQL)"
 title: "backupfilegroup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "backupfilegroup_TSQL"
   - "backupfilegroup"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "filegroups [SQL Server], backupfilegroup system table"
   - "backupfilegroup system table"
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
-author: "stevestein"
-ms.author: "sstein"
+author: cawrites
+ms.author: chadam
 ---
 # backupfilegroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each filegroup in a database at the time of backup. **backupfilegroup** is stored in the **msdb** database.  
   

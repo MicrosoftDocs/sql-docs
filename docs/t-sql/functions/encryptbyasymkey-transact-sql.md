@@ -1,4 +1,5 @@
 ---
+description: "ENCRYPTBYASYMKEY (Transact-SQL)"
 title: "ENCRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ENCRYPTBYASYMKEY"
   - "ENCRYPTBYASYMKEY_TSQL"
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ENCRYPTBYASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function encrypts data with an asymmetric key.  
   
@@ -29,11 +30,13 @@ This function encrypts data with an asymmetric key.
   
 ## Syntax  
   
-```  
+```syntaxsql
 EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *asym_key_ID*  
 The ID of an asymmetric key in the database. *asym_key_ID* has an **int** data type.  
   
@@ -52,8 +55,8 @@ or
  
 data type.  
   
-**@plaintext**  
-A variable holding a value that `ENCRYPTBYASYMKEY` will encrypt with the asymmetric key. **@plaintext** can have a
+**\@plaintext**  
+A variable holding a value that `ENCRYPTBYASYMKEY` will encrypt with the asymmetric key. **\@plaintext** can have a
   
 + **binary**
 + **char**
@@ -84,7 +87,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], both certificates 
 ## Examples  
 This example encrypts the text stored in `@cleartext` with the asymmetric key `JanainaAsymKey02`. The statement inserts the encrypted data into the `ProtectedData04` table.  
   
-```  
+```sql  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   
     VALUES( N'Data encrypted by asymmetric key ''JanainaAsymKey02''',  
     EncryptByAsymKey(AsymKey_ID('JanainaAsymKey02'), @cleartext) );  

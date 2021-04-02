@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_num_fields"
 title: "sqlsrv_num_fields | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/23/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "sqlsrv_num_fields"
 apitype: "NA"
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "sqlsrv_num_fields"
   - "API Reference, sqlsrv_num_fields"
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

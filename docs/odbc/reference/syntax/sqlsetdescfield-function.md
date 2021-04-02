@@ -1,4 +1,5 @@
 ---
+description: "SQLSetDescField Function"
 title: "SQLSetDescField Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLSetDescField"
 apilocation: 
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetDescField function [ODBC]"
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetDescField Function
 

@@ -1,6 +1,7 @@
 ---
-title: "Frequently Asked Questions for Replication Administrators | Microsoft Docs"
-ms.custom: ""
+title: "Frequently asked questions for replication administrators"
+description: A list of frequently asked questions relevant to replication administrators for SQL Server.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,9 +14,10 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Frequently Asked Questions for Replication Administrators
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   The following questions and answers provide guidance on a variety of tasks faced by administrators of replicated databases.  
   
 ## Configuring Replication  
@@ -105,18 +107,21 @@ ms.author: "mathoma"
   
 ### Does replication work over low bandwidth connections? Does it use compression?  
  Yes, replication does work over low bandwidth connections. For connections over TCP/IP, it uses the compression provided by the protocol but does not provide additional compression. For Web synchronization connections over HTTPS, it uses the compression provided by the protocol and also additional compression of the XML files used to replicate changes.  
-  
+
+### Can I configure replication if I connect to the server by using the IP address? 
+No, replication works only when you use the actual server name. Beginning in SQL Server Management Studio (SSMS) 18.0 (and later versions), replication can be configured by using the actual server name and port number. 
+
 ## Logins and Object Ownership  
   
 ### Are logins and passwords replicated?  
- No. You could create a DTS package to transfer logins and passwords from a Publisher to one or more Subscribers.  
+ No. You could create an SSIS package to transfer logins and passwords from a Publisher to one or more Subscribers.  
   
 ### What are schemas and how are they replicated?  
  Beginning with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *schema* has two meanings:  
   
--   The definition of an object, such as a CREATE TABLE statement. By default, replication copies the definitions of all replicated objects to the Subscriber.  
+-   The definition of an object, such as a `CREATE TABLE` statement. By default, replication copies the definitions of all replicated objects to the Subscriber.  
   
--   The namespace within which an object is created: \<Database>.\<Schema>.\<Object>. Schemas are defined using the CREATE SCHEMA statement.  
+-   The namespace within which an object is created: \<Database>.\<Schema>.\<Object>. Schemas are defined using the `CREATE SCHEMA` statement.  
   
 -   Replication has the following default behavior in the New Publication Wizard with respect to schemas and object ownership:  
   
@@ -128,7 +133,7 @@ ms.author: "mathoma"
   
 -   For articles in publications that use character mode snapshots (which are used for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers and [!INCLUDE[ssEW](../../../includes/ssew-md.md)] Subscribers): by default, the owner is left blank. The owner defaults to the owner associated with the account used by the Distribution Agent or Merge Agent to connect to the Subscriber.  
   
- The object owner can be changed through the **Article Properties - \<***Article***>** dialog box and through the following stored procedures: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, and **sp_changemergearticle**. For more information, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Define an Article](../../../relational-databases/replication/publish/define-an-article.md), and [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ The object owner can be changed through the **Article Properties - \<**_Article_**>** dialog box and through the following stored procedures: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, and **sp_changemergearticle**. For more information, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Define an Article](../../../relational-databases/replication/publish/define-an-article.md), and [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### How can grants on the subscription database be configured to match grants on the publication database?  
  By default, replication does not execute GRANT statements on the subscription database. If you want the permissions on the subscription database to match those on the publication database, use one of the following methods:  
@@ -147,7 +152,7 @@ ms.author: "mathoma"
   
 -   Specify that objects should not be dropped when the subscription is reinitialized. Prior to reinitialization, either:  
   
-    -   Execute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) or [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of 'pre_creation_cmd' (**sp_changearticle**) or 'pre_creation_command' (**sp_changemergearticle**) for the parameter **@property** and a value of 'none', 'delete' or 'truncate' for the parameter **@value**.  
+    -   Execute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) or [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of 'pre_creation_cmd' (**sp_changearticle**) or 'pre_creation_command' (**sp_changemergearticle**) for the parameter `@property` and a value of 'none', 'delete' or 'truncate' for the parameter `@value`.  
   
     -   In the **Article Properties - \<Article>** dialog box in the **Destination Object** section, select a value of **Keep existing object unchanged**, **Delete data. If article has a row filter, delete only data that matches the filter.** or **Truncate all data in the existing object** for the option **Action if name is in use**. For more information on accessing this dialog box, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
@@ -171,7 +176,7 @@ ms.author: "mathoma"
  There are a variety of mechanisms for rebuilding indexes. They can all be used with no special considerations for replication, with the following exception: primary keys are required on tables in transactional publications, so you cannot drop and recreate primary keys on these tables.  
   
 ### How do I add or change indexes on publication and subscription databases?  
- Indexes can be added at the Publisher or Subscribers with no special considerations for replication (be aware that indexes can affect performance). CREATE INDEX and ALTER INDEX are not replicated, so if you add or change an index at, for example, the Publisher, you must make the same addition or change at the Subscriber if you want it reflected there.  
+ Indexes can be added at the Publisher or Subscribers with no special considerations for replication (be aware that indexes can affect performance). `CREATE INDEX` and `ALTER INDEX` are not replicated, so if you add or change an index at, for example, the Publisher, you must make the same addition or change at the Subscriber if you want it reflected there.  
   
 ### How do I move or rename files for databases involved in replication?  
  In versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], moving or renaming database files required detaching and reattaching the database. Because a replicated database cannot be detached, replication had to be removed from these databases first. Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], you can move or rename files without detaching and re-attaching the database, with no effect on replication. For more information about moving and renaming files, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
@@ -180,7 +185,7 @@ ms.author: "mathoma"
  First drop the article from the publication using [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md), or the **Publication Properties - \<Publication>** dialog box, and then drop it from the database using `DROP <Object>`. You cannot drop articles from snapshot or transactional publications after subscriptions have been added; you must drop the subscriptions first. For more information, see [Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### How do I add or drop columns on a published table?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports a wide variety of schema changes on published objects, including adding and dropping columns. For example, execute ALTER TABLE … DROP COLUMN at the Publisher, and the statement is replicated to Subscribers and then executed to drop the column. Subscribers running versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] support adding and dropping columns through the stored procedures [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) and [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). For more information, see [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports a wide variety of schema changes on published objects, including adding and dropping columns. For example, execute `ALTER TABLE … DROP COLUMN` at the Publisher, and the statement is replicated to Subscribers and then executed to drop the column. Subscribers running versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] support adding and dropping columns through the stored procedures [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) and [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). For more information, see [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## Replication Maintenance  
   

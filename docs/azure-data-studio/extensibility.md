@@ -1,20 +1,19 @@
 ---
-title: Adding additional functionality thru extensibility
-titleSuffix: Azure Data Studio
+title: Adding additional functionality through extensibility
 description: Learn about the extensibility model and key extensibility areas for extending the functionality of Azure Data Studio
-ms.prod: sql
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "alayu, maghan, sstein"
 ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ---
 
-# Getting started with [!INCLUDE[name-sos](../includes/name-sos-short.md)] extensibility
+# Azure Data Studio extensibility
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] has several extensibility mechanisms to customize the user experience and make those customizations available to the entire user community. The core [!INCLUDE[name-sos](../includes/name-sos.md)] platform is built upon Visual Studio Code, so most of the Visual Studio Code extensibility APIs are available. Additionally, we've provided additional extensibility points for data management-specific activities.
+Azure Data Studio has several extensibility mechanisms to customize the user experience and make those customizations available to the entire user community. The core Azure Data Studio platform is built upon Visual Studio Code, so most of the Visual Studio Code extensibility APIs are available. Additionally, we've provided additional extensibility points for data management-specific activities.
 
 Some of the key extensibility points are:
 
@@ -27,7 +26,10 @@ Some of the key extensibility points are:
 
 ## Visual Studio Code extensibility APIs
 
-Because the core [!INCLUDE[name-sos](../includes/name-sos.md)] platform is built upon Visual Studio Code, details about the Visual Studio Code extensibility APIs are found in the [Extension Authoring](https://code.visualstudio.com/docs/extensions/overview) and [Extension API](https://code.visualstudio.com/docs/extensionAPI/overview) documentation on the Visual Studio Code website.
+Because the core Azure Data Studio platform is built upon Visual Studio Code, details about the Visual Studio Code extensibility APIs are found in the [Extension Authoring](https://code.visualstudio.com/docs/extensions/overview) and [Extension API](https://code.visualstudio.com/docs/extensionAPI/overview) documentation on the Visual Studio Code website.
+
+> [!NOTE]
+>  Azure Data Studio releases are aligned with a recent version of VS Code, however the included VS Code engine may not be the current VS Code release. For example, in November 2020 the VS Code engine in Azure Data Studio is 1.48 and the current VS Code version is 1.51.  The error message "Unable to install extension '<name>' as it is not compatible with VS Code <version>" when installing an extension is caused by an extension that has a later VS Code engine version defined in the package manifest (`package.json`). You can verify the VS Code engine version in your Azure Data Studio through the **Help** menu under **About**.
 
 ## Manage Dashboard tab panel contributions
 
@@ -44,9 +46,9 @@ This section covers the various contribution points that are defined in the pack
 
 The IntelliSense is supported inside azuredatastudio.
 
-## Contributes dashboard
+### Dashboard contribution points
 
-Contribute tab, container, insight widget to the dashboard.
+Contribute a tab, container, and/or insight widget to the dashboard.
 
 ![Dashboard](media/extensibility/dashboard-page.png)
 
@@ -107,7 +109,7 @@ To refer to registered container, specify the id of the container
 
 `dashboard.insights`
 
-You can register insights using dashboard.insights. This is similar to [Tutorial: Build a custom insight widget](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+You can register insights using dashboard.insights. This is similar to [Tutorial: Build a custom insight widget](./tutorial-build-custom-insight-sql-server.md)
 
 ```json
 "dashboard.insights": {
@@ -234,7 +236,7 @@ There are currently four supported container types:
 				"icon": {
 					"light": "./icons/tab1Icon.svg",
 					"dark": "./icons/tab1Icon_dark.svg"
-				}
+				},
 				"container": {
 					...
 				}
@@ -245,7 +247,7 @@ There are currently four supported container types:
 				"icon": {
 					"light": "./icons/tab2Icon.svg",
 					"dark": "./icons/tab2Icon_dark.svg"
-				}
+				},
 				"container": {
 					...
 				}
@@ -272,4 +274,4 @@ In dashboard, we provide the following context variables:
 |`serverName`|A string of the server name of the current connection. Ex. `serverName == 'localhost'`.|
 |`databaseName` | A string of the database name of the current connection. Ex. `databaseName == 'master'`.|
 |`connection` | The full connection profile object for the current connection (IConnectionProfile)|
-|`dashboardContext` | A string of the context of the page of the dashboard is currently on. Either 'database' or 'server'. Ex. `dashboardContext == 'database'`|
+|`dashboardContext` | A string of the context of the page the dashboard is currently on. Either 'database' or 'server'. Ex. `dashboardContext == 'database'`|

@@ -1,18 +1,19 @@
 ---
-title: "Using an SQL Statement with No Parameters | Microsoft Docs"
+description: "Using an SQL statement with no parameters"
+title: "Using an SQL statement with no parameters | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4b0728bd-059b-4b71-895c-999335bc7427
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
-# Using an SQL Statement with No Parameters
+# Using an SQL statement with no parameters
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -22,8 +23,8 @@ In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](
 
 [!code[JDBC#UsingSQLWithNoParams1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-w_0_1.java)]
 
-For more information about using result sets, see [Managing Result Sets with the JDBC Driver](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).
+For more information about using result sets, see [Managing result sets with the JDBC driver](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).
 
-## See Also
+## See also
 
-[Using Statements with SQL](../../connect/jdbc/using-statements-with-sql.md)
+[Using statements with SQL](../../connect/jdbc/using-statements-with-sql.md)

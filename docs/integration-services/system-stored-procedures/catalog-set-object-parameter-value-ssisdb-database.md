@@ -1,4 +1,5 @@
 ---
+description: "catalog.set_object_parameter_value (SSISDB Database)"
 title: "catalog.set_object_parameter_value (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -8,28 +9,28 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.set_object_parameter_value (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Sets the value of a parameter in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog. Associates the value to an environment variable or assigns a literal value that is used by default when no other values are assigned.  
   
 ## Syntax  
   
 ```sql  
-catalog.set_object_parameter_value [@object_type =] object_type   
-    , [@folder_name =] folder_name   
-    , [@project_name =] project_name   
-    , [@parameter_name =] parameter_name   
-    , [@parameter_value =] parameter_value   
- [  , [@object_name =] object_name ]  
- [  , [@value_type =] value_type ]  
+catalog.set_object_parameter_value [ @object_type = ] object_type   
+    , [ @folder_name = ] folder_name   
+    , [ @project_name = ] project_name   
+    , [ @parameter_name = ] parameter_name   
+    , [ @parameter_value = ] parameter_value   
+ [  , [ @object_name = ] object_name ]  
+ [  , [ @value_type = ] value_type ]  
 ```  
   
 ## Arguments  

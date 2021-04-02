@@ -1,5 +1,6 @@
 ---
 title: "Report and Snapshot Size Limits | Microsoft Docs"
+description: Learn about report size limits when a report is published in Report Server, rendered at run time, and saved to the file system. 
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -46,7 +47,7 @@ ms.author: maggies
  The only hard limit on report size is when rendering to Excel format. Worksheets cannot exceed 65536 rows or 256 columns. Other rendering formats do not have these limits so size is limited only by the amount of resources on your server.  
   
 > [!NOTE]  
->  Report processing and rendering occur in memory. If you have large reports or large number of users, be sure to do some kind of capacity planning to make sure your report server deployment performs at a level that is satisfactory for your users. For more information about tools and guidelines, see the following publications on MSDN: [Planning for Scalability and Performance with Reporting Services](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) and [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
+>  Report processing and rendering occur in memory. If you have large reports or large number of users, be sure to do some kind of capacity planning to make sure your report server deployment performs at a level that is satisfactory for your users. For more information about tools and guidelines, see the following publications on MSDN: [Planning for Scalability and Performance with Reporting Services](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) and [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](/previous-versions/sql/sql-server-2005/administrator/aa964139(v=sql.90)).  
   
 ## Measuring Snapshot Storage  
  The size of any given snapshot is directly proportional to the amount of data in the report. Snapshots are typically much larger than other items that are stored on a report server. Snapshot size can typically range from a few megabytes to tens of megabytes. If you have very large reports, you can expect to see snapshots that are even larger. Depending on how frequently you use snapshots and how you configure report history, the amount of disk space that the report server database requires can increase rapidly over a short period of time.  
@@ -77,5 +78,4 @@ EXEC sp_spaceused
  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Report Server Database &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Process Large Reports](../../reporting-services/report-server/process-large-reports.md)  
-  
   

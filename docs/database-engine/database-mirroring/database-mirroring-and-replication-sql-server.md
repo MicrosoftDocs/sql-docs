@@ -1,11 +1,12 @@
 ---
 title: "Database Mirroring and Replication (SQL Server) | Microsoft Docs"
+description: Learn how to use database mirroring in conjunction with replication to improve availability for the publication database in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], interoperability"
@@ -15,7 +16,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Database Mirroring and Replication (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Database mirroring can be used in conjunction with replication to improve availability for the publication database. Database mirroring involves two copies of a single database that typically reside on different computers. At any given time, only one copy of the database is currently available to clients. This copy is known as the principal database. Updates made by clients to the principal database are applied on the other copy of the database, known as the mirror database. Mirroring involves applying the transaction log from every insertion, update, or deletion made on the principal database onto the mirror database.  
   
  Replication failover to a mirror is fully supported for publication databases, with limited support for subscription databases. Database mirroring is not supported for the distribution database. For information about recovering a distribution database or subscription database without any need to reconfigure replication, see [Back Up and Restore Replicated Databases](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).   
@@ -66,9 +67,9 @@ ms.author: mikeray
   
 3.  Configure distribution for the mirror. Specify the mirror name as the Publisher, and specify the same Distributor and snapshot folder that the principal uses. For example, if you are configuring replication with stored procedures, execute [sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) at the Distributor; and then execute [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) at the mirror. For **sp_adddistpublisher**:  
   
-    -   Set the value of the **@publisher** parameter to the network name of the mirror.  
+    -   Set the value of the **\@publisher** parameter to the network name of the mirror.  
   
-    -   Set the value of the **@working_directory** parameter to the snapshot folder used by the principal.  
+    -   Set the value of the **\@working_directory** parameter to the snapshot folder used by the principal.  
   
 4.  Specify the mirror name for the **-PublisherFailoverPartner** agent parameter. Agent This parameter is required for the following agents to identify the mirror after failover:  
   
@@ -128,12 +129,12 @@ ms.author: mikeray
   
 -   When using stored procedures or Replication Management Objects (RMO) to administer replication at the mirror, for cases in which you specify the Publisher name, you must specify the name of the instance on which the database was enabled for replication. To determine the appropriate name, use the function [publishingservername](../../t-sql/functions/replication-functions-publishingservername.md).  
   
-     When a publication database is mirrored, the replication metadata stored in the mirrored database is identical to the metadata stored in the principal database. Consequently, for publication databases enabled for replication at the principal, the Publisher instance name stored in system tables at the mirror is the name of the principal, not the mirror. This affects replication configuration and maintenance if the publication database fails over to the mirror. For example, if you are configuring replication with stored procedures on the mirror after a failover, and you want to add a pull subscription to a publication database that was enabled at the principal, you must specify the principal name rather than the mirror name for the **@publisher** parameter of **sp_addpullsubscription** or **sp_addmergepullsubscription**.  
+     When a publication database is mirrored, the replication metadata stored in the mirrored database is identical to the metadata stored in the principal database. Consequently, for publication databases enabled for replication at the principal, the Publisher instance name stored in system tables at the mirror is the name of the principal, not the mirror. This affects replication configuration and maintenance if the publication database fails over to the mirror. For example, if you are configuring replication with stored procedures on the mirror after a failover, and you want to add a pull subscription to a publication database that was enabled at the principal, you must specify the principal name rather than the mirror name for the **\@publisher** parameter of **sp_addpullsubscription** or **sp_addmergepullsubscription**.  
   
-     If you enable a publication database at the mirror after failover to the mirror, the Publisher instance name stored in system tables is the name of the mirror; in this case, you would use the name of the mirror for the **@publisher** parameter.  
+     If you enable a publication database at the mirror after failover to the mirror, the Publisher instance name stored in system tables is the name of the mirror; in this case, you would use the name of the mirror for the **\@publisher** parameter.  
   
     > [!NOTE]  
-    >  In some cases, such as **sp_addpublication**, the **@publisher** parameter is supported only for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers; in these cases, it is not relevant for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database mirroring.  
+    >  In some cases, such as **sp_addpublication**, the **\@publisher** parameter is supported only for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers; in these cases, it is not relevant for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database mirroring.  
   
 -   To synchronize a subscription in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] after a failover: synchronize pull subscriptions from the Subscriber; and synchronize push subscriptions from the active Publisher.  
   

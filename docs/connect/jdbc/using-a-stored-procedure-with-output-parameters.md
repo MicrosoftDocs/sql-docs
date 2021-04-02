@@ -1,18 +1,19 @@
 ---
-title: "Using a Stored Procedure with Output Parameters | Microsoft Docs"
+description: "Using a stored procedure with output parameters"
+title: "Using a stored procedure with output parameters | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
-# Using a Stored Procedure with Output Parameters
+# Using a stored procedure with output parameters
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -23,11 +24,11 @@ When you call this kind of stored procedure by using the JDBC driver, you must u
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> For more information about the SQL escape sequences, see [Using SQL Escape Sequences](../../connect/jdbc/using-sql-escape-sequences.md).
+> For more information about the SQL escape sequences, see [Using SQL escape sequences](../../connect/jdbc/using-sql-escape-sequences.md).
 
 When you construct the `call` escape sequence, specify the OUT parameters by using the ? (question mark) character. This character acts as a placeholder for the parameter values that will be returned from the stored procedure. To specify a value for an OUT parameter, you must specify the data type of each parameter by using the [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) method of the SQLServerCallableStatement class before you run the stored procedure.
 
-The value that you specify for the OUT parameter in the registerOutParameter method must be one of the JDBC data types contained in java.sql.Types, which in turn maps to one of the native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types. For more information about the JDBC and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, see [Understanding the JDBC Driver Data Types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
+The value that you specify for the OUT parameter in the registerOutParameter method must be one of the JDBC data types contained in java.sql.Types, which in turn maps to one of the native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types. For more information about the JDBC and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, see [Understanding the JDBC Driver data types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
 
 When you pass a value to the registerOutParameter method for an OUT parameter, you must specify not only the data type to be used for the parameter, but also the parameter's ordinal placement or the parameter's name in the stored procedure. For example, if your stored procedure contains a single OUT parameter, its ordinal value will be 1; if the stored procedure contains two parameters, the first ordinal value will be 1, and the second ordinal value will be 2.
 
@@ -79,8 +80,8 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 > [!NOTE]  
 > These examples use the execute method of the SQLServerCallableStatement class to run the stored procedure. This is used because the stored procedure did not also return a result set. If it did, the [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) method would be used.
 
-Stored procedures can return update counts and multiple result sets. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] follows the JDBC 3.0 specification, which states that multiple result sets and update counts should be retrieved before the OUT parameters are retrieved. That is, the application should retrieve all of the ResultSet objects and update counts before retrieving the OUT parameters by using the CallableStatement.getter methods. Otherwise, the ResultSet objects and update counts that haven't already been retrieved will be lost when the OUT parameters are retrieved. For more information about update counts and multiple result sets, see [Using a Stored Procedure with an Update Count](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) and [Using Multiple Result Sets](../../connect/jdbc/using-multiple-result-sets.md).
+Stored procedures can return update counts and multiple result sets. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] follows the JDBC 3.0 specification, which states that multiple result sets and update counts should be retrieved before the OUT parameters are retrieved. That is, the application should retrieve all of the ResultSet objects and update counts before retrieving the OUT parameters by using the CallableStatement.getter methods. Otherwise, the ResultSet objects and update counts that haven't already been retrieved will be lost when the OUT parameters are retrieved. For more information about update counts and multiple result sets, see [Using a stored procedure with an update count](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) and [Using Multiple Result Sets](../../connect/jdbc/using-multiple-result-sets.md).
 
-## See Also
+## See also
 
-[Using Statements with Stored Procedures](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[Using statements with stored procedures](../../connect/jdbc/using-statements-with-stored-procedures.md)

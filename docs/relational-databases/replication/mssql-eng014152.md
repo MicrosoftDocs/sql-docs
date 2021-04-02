@@ -1,4 +1,5 @@
 ---
+description: "MSSQL_ENG014152"
 title: "MSSQL_ENG014152 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -6,19 +7,20 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "MSSQL_ENG014152 error"
 ms.assetid: 4215e2b1-cd30-441f-9671-9afc742adf6e
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # MSSQL_ENG014152
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## Message Details  
   
-|||  
+|Attribute|Value|  
 |-|-|  
 |Product Name|SQL Server|  
 |Event ID|14152|  
@@ -41,7 +43,7 @@ ms.author: "mathoma"
 ## User Action  
  If the retry message is infrequent, no user action is required.  
   
- Use [sp_help_jobstep](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md) to view the current setting for the maximum number of times the **Run agent** step for the specified replication agent will retry. You can use the **@retry_attempts** parameter of the [sp_update_jobstep](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md) stored procedure to adjust the number of times a job step retries.  
+ Use [sp_help_jobstep](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md) to view the current setting for the maximum number of times the **Run agent** step for the specified replication agent will retry. You can use the `@retry_attempts` parameter of the [sp_update_jobstep](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md) stored procedure to adjust the number of times a job step retries.  
   
  If the retry message recurs frequently, troubleshoot the issue based on the message that is causing the retry. Check the agent's history for messages that indicate why the retry had to be scheduled. In some cases you may have to enable more detailed logging for your replication agent. For more information about how to configure logging for replication, see the Microsoft Knowledge Base article [312292](https://support.microsoft.com/kb/312292).  
   

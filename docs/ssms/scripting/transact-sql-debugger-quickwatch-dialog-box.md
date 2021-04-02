@@ -1,10 +1,9 @@
 ---
-title: "QuickWatch Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: QuickWatch Dialog Box
+description: Learn how to use the QuickWatch dialog box as you debug code, to quickly view the data type and value of one Transact-SQL expression (such as a variable). 
+titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vs.debug.quickwatch"
@@ -13,13 +12,23 @@ helpviewer_keywords:
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+
 ---
+
 # Transact-SQL Debugger - QuickWatch Dialog Box
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Use the **QuickWatch** dialog box to quickly view the data type and value of one [!INCLUDE[tsql](../../includes/tsql-md.md)] expression, such as a variable or parameter, when you are debugging [!INCLUDE[tsql](../../includes/tsql-md.md)] code. To watch multiple expressions, you can also add the expression to a **Watch** window.  
-  
-## Task List  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+Use the **QuickWatch** dialog box to quickly view the data type and value of one [!INCLUDE[tsql](../../includes/tsql-md.md)] expression, such as a variable or parameter, when you are debugging [!INCLUDE[tsql](../../includes/tsql-md.md)] code. To watch multiple expressions, you can also add the expression to a **Watch** window.  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## Task List
+
  **To access the QuickWatch dialog box**  
   
 -   On the **Debug** menu, click **QuickWatch**.  
@@ -69,11 +78,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Displays the data type of the expression.  
   
 ## See Also  
- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [Watch Window](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [Locals Window](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [Call Stack Window](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
+ [Transact-SQL Debugger](./transact-sql-debugger.md)   
+ [Transact-SQL Debugger Information](./transact-sql-debugger-information.md)   
+ [Watch Window](./transact-sql-debugger-watch-window.md)   
+ [Locals Window](./transact-sql-debugger-locals-window.md)   
+ [Call Stack Window](./transact-sql-debugger-call-stack-window.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-  
   

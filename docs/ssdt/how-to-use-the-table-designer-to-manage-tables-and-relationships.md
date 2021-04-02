@@ -1,21 +1,23 @@
 ---
-title: "How to: Use the Table Designer to Manage Tables and Relationships | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Using Table Designer to Manage Tables and Relationships
+description: Become familiar with Table Designer. See how to use this tool to create and edit database table structure and to view relationships among database objects.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.design.table.columnspecification.index.dialog"
   - "sql.data.tools.design.table.columnsgrid.view"
   - "sql.data.tools.design.table.scriptpanel"
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Use the Table Designer to Manage Tables and Relationships
+
 The Table Designer provides a visual experience alongside the Transact\-SQL Editor for creating and editing table structure, including table-specific programming objects, for SQL Server databases.  It is launched when you create a new table for a connected database or a project, or when you double-click to edit a table in either SQL Server Object Explorer or Solution Explorer.  
   
 The designer consists of the Columns Grid, Script Pane and Context Pane. The Columns Grid lists all the columns in the table. You can add, edit and delete columns in this grid.  The Context Pane gives you a logical view of the table definition (Keys, Indices, Constraints, Triggers, etc.), and enables you to select an object to highlight its relationships to individual columns. You can also add new objects to the table in this pane, and edit the properties of a selected object in the Properties Grid. Script Pane shows you the definition of the table structure, and highlights the script of the selected object in the Context Pane or Columns Grid. You can edit the script side-by-side with the Columns Grid and Context Pane in view. Any changes from any of the three panes will propagate to the other two immediately.  

@@ -1,4 +1,5 @@
 ---
+description: "sp_fulltext_catalog (Transact-SQL)"
 title: "sp_fulltext_catalog (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_fulltext_catalog_TSQL"
   - "sp_fulltext_catalog"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_fulltext_catalog"
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
-author: MikeRayMSFT
-ms.author: mikeray
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_fulltext_catalog (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates and drops a full-text catalog, and starts and stops the indexing action for a catalog. Multiple full-text catalogs can be created for each database.  
   
@@ -60,7 +61,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 `[ @path = ] 'root_directory'`
  Is the root directory (not the complete physical path) for a **create** action. *root_directory* is **nvarchar(100)** and has a default value of NULL, which indicates the use of the default location specified at setup. This is the Ftdata subdirectory in the Mssql directory; for example, C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\FTData. The specified root directory must reside on a drive on the same computer, consist of more than just the drive letter, and cannot be a relative path. Network drives, removable drives, floppy disks, and UNC paths are not supported. Full-text catalogs must be created on a local hard drive associated with an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **@path** is valid only when *action* is **create**. For actions other than **create** (**stop**, **rebuild**, and so on), **@path** must be NULL or omitted.  
+ **\@path** is valid only when *action* is **create**. For actions other than **create** (**stop**, **rebuild**, and so on), **\@path** must be NULL or omitted.  
   
  If the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a virtual server in a cluster, the catalog directory specified needs to be on a shared disk drive on which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource depends. If @path is not specified, the location of default catalog directory is on the shared disk drive, in the directory that was specified when the virtual server was installed.  
   
@@ -73,7 +74,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## Remarks  
  The **start_full** action is used to create a complete snapshot of the full-text data in *fulltext_catalog_name*. The **start_incremental** action is used to re-index only the changed rows in the database. Incremental population can be applied only if the table has a column of the type **timestamp**. If a table in the full-text catalog does not contain a column of the type **timestamp**, the table undergoes a full population.  
   
- Full-text catalog and index data is stored in files created in a full-text catalog directory. The full-text catalog directory is created as a sub-directory of the directory specified in **@path** or in the server default full-text catalog directory if **@path** is not specified. The name of the full-text catalog directory is built in a way that guarantees it will be unique on the server. Therefore, all full-text catalog directories on a server can share the same path.  
+ Full-text catalog and index data is stored in files created in a full-text catalog directory. The full-text catalog directory is created as a sub-directory of the directory specified in **\@path** or in the server default full-text catalog directory if **\@path** is not specified. The name of the full-text catalog directory is built in a way that guarantees it will be unique on the server. Therefore, all full-text catalog directories on a server can share the same path.  
   
 ## Permissions  
  The caller is required to be member of the **db_owner** role. Depending on the action requested, the caller should not be denied ALTER or CONTROL permissions (which **db_owner** has) on the target full-text catalog.  

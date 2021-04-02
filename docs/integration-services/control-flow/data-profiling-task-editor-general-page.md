@@ -1,4 +1,5 @@
 ---
+description: "Data Profiling Task Editor (General Page)"
 title: "Data Profiling Task Editor (General Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords: 
   - "Data Profiling Task Editor"
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Data Profiling Task Editor (General Page)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **General** page of the **Data Profiling Task Editor** to configure the following options:  

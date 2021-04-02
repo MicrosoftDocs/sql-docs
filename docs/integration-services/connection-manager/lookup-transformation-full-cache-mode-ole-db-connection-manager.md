@@ -1,4 +1,5 @@
 ---
+description: "Lookup Transformation Full Cache Mode - OLE DB Connection Manager"
 title: "Lookup Transformation Full Cache Mode - OLE DB Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -10,12 +11,12 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Lookup transformation [Integration Services]"
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Lookup Transformation Full Cache Mode - OLE DB Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You can configure the Lookup transformation to use full cache mode and an OLE DB connection manager. In the full cache mode, the reference dataset is loaded into cache before the Lookup transformation runs.  
@@ -75,7 +76,7 @@ ms.author: janinez
   
     2.  In **Lookup Operation** list, specify whether the values from the lookup columns replace values in the input column or are written to a new column.  
   
-12. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+12. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../data-flow/transformations/lookup-transformation.md).  
   
 13. Click **OK** to save your changes to the Lookup transformation, and then run the package.  
   
@@ -83,5 +84,4 @@ ms.author: janinez
  [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
  [Implement a Lookup in No Cache or Partial Cache Mode](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services Transformations](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

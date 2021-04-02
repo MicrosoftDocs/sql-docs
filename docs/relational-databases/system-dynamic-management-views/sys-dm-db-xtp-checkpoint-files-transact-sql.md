@@ -1,12 +1,13 @@
 ---
 title: "sys.dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs"
+description: Displays information about checkpoint files, including file size, physical location, and transaction ID. Learn how this view differs for versions of SQL Server.
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.custom: ""
 ms.technology: in-memory-oltp
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_db_xtp_checkpoint_files"
   - "sys.dm_db_xtp_checkpoint_files_TSQL"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_xtp_checkpoint_files dynamic management view"
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
-author: stevestein
-ms.author: sstein
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_checkpoint_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Displays information about checkpoint files, including file size, physical location and the transaction ID.  
   
@@ -34,8 +35,8 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversio
   
  For more information, see [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
-##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later  
- The following table describes the columns for `sys.dm_db_xtp_checkpoint_files`, beginning with **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
+##  <a name="bkmk_2016"></a> [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later  
+ The following table describes the columns for `sys.dm_db_xtp_checkpoint_files`, beginning with **[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]**.  
   
 |Column name|Type|Description|  
 |-----------------|----------|-----------------|  
@@ -58,7 +59,7 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversio
 |end_checkpoint_id|**bigint**|ID of the end checkpoint.|  
 |last_updated_checkpoint_id|**bigint**|ID of the last checkpoint that updated this file.|  
 |encryption_status|**smallint**|0, 1, 2|  
-|encryption_status_desc|**nvarchar(60)**|0 => UNENCRTPTED<br /><br /> 1 => ENCRYPTED WITH KEY 1<br /><br /> 2 => ENCRYPTED WITH KEY 2. Valid only for active files.|  
+|encryption_status_desc|**nvarchar(60)**|0 => UNENCRYPTED<br /><br /> 1 => ENCRYPTED WITH KEY 1<br /><br /> 2 => ENCRYPTED WITH KEY 2. Valid only for active files.|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  The following table describes the columns for `sys.dm_db_xtp_checkpoint_files`, for **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  

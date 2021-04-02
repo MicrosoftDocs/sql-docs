@@ -1,4 +1,5 @@
 ---
+description: "Find Databases Wizard (Verify Selection) (AccessToSQL)"
 title: "Find Databases Wizard (Verify Selection) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -9,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Find Databases Wizard"
 ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Find Databases Wizard (Verify Selection) (AccessToSQL)
 The Verify Selection page of the Find Databases Wizard lists the files to be added to SSMA. If the list of files is incorrect, click **Back** to modify the list. Otherwise, click **Finish** to add the files.  
@@ -28,5 +29,4 @@ Shows the path of the Access database file.
 Shows the owner of the file.  
   
 ## See Also  
-[User Interface Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[User Interface Reference(Access)](./user-interface-reference-accesstosql.md)  

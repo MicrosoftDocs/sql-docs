@@ -1,12 +1,12 @@
 ---
 title: "decimal and numeric (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/23/2017"
+description: "Transact-SQL reference for the decimal and numeric data types. Decimal and numeric are synonyms for numeric data types that have a fixed precision and scale."
+ms.date: "09/10/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "decimal"
   - "decimal_TSQL"
@@ -22,14 +22,14 @@ helpviewer_keywords:
 ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # decimal and numeric (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Numeric data types that have fixed precision and scale. Decimal and numeric are synonyms and can be used interchangeably.
   
-## Arguments  
+## Arguments
 **decimal**[ **(**_p_[ **,**_s_] **)**] and **numeric**[ **(**_p_[ **,**_s_] **)**]  
 Fixed precision and scale numbers. When maximum precision is used, valid values are from - 10^38 +1 through 10^38 - 1. The ISO synonyms for **decimal** are **dec** and **dec(**_p_, _s_**)**. **numeric** is functionally identical to **decimal**.
   
@@ -61,7 +61,7 @@ Converting from **decimal** or **numeric** to **float** or **real** can cause so
   
 By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses rounding when converting a number to a **decimal** or **numeric** value with a lower precision and scale. Conversely, if the SET ARITHABORT option is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] raises an error when overflow occurs. Loss of only precision and scale isn't sufficient to raise an error.
   
-When converting float or real values to decimal or numeric, the decimal value will never have more than 17 decimals. Any float value < 5E-18 will always convert as 0.
+Prior to [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)], conversion of **float** values to **decimal** or **numeric** is restricted to values of precision 17 digits only. Any **float** value less than 5E-18 (when set using either the scientific notation of 5E-18 or the decimal notation of 0.0000000000000000050000000000000005) rounds down to 0. This is no longer a restriction as of [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)].
   
 ## Examples  
 The following example creates a table using the **decimal** and **numeric** data types.  Values are inserted into each column. The results are returned by using a SELECT statement.
@@ -69,8 +69,8 @@ The following example creates a table using the **decimal** and **numeric** data
 ```sql
 CREATE TABLE dbo.MyTable  
 (  
-  MyDecimalColumn decimal(5,2)  
-,MyNumericColumn numeric(10,5)
+  MyDecimalColumn DECIMAL(5,2)  
+,MyNumericColumn NUMERIC(10,5)
   
 );  
   

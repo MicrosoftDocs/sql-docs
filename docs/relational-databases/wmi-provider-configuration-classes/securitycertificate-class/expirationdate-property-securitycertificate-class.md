@@ -1,6 +1,7 @@
 ---
-title: "ExpirationDate Property (SecurityCertificate Class) | Microsoft Docs"
-ms.custom: ""
+description: "ExpirationDate Property (SecurityCertificate Class)"
+title: "ExpirationDate Property (SecurityCertificate)"
+ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ExpirationDate property"
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ExpirationDate Property (SecurityCertificate Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the date when the security certificate ceases to be in effect.  
   
 ## Syntax  

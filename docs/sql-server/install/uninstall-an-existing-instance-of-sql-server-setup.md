@@ -1,7 +1,8 @@
 ---
-title: "Uninstall an Existing Instance of SQL Server (Setup) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/27/2017"
+title: "Uninstall existing instance"
+description: This article describes how to uninstall a stand-alone instance of SQL Server, which also prepares the system so that you can reinstall SQL Server.
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -13,93 +14,108 @@ helpviewer_keywords:
   - "instances of SQL Server, uninstalling"
   - "uninstalling SQL Server"
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Uninstall an Existing Instance of SQL Server (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This article describes how to uninstall a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By following the steps in this article, you also prepare the system so that you can reinstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-  >[!IMPORTANT]
-  > To uninstall an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must be a local administrator with permission to log on as a service.  
-  
  > [!NOTE]
  > To uninstall a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster, use the Remove Node functionality provided by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup to remove each node individually. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
+
+## Considerations
+
+- To uninstall SQL Server, you must be a local administrator with permissions to log on as a service. 
+- If your computer has the *minimum* required amount of physical memory, increase the size of the page file to two times the amount of physical memory. Insufficient virtual memory can result in an incomplete removal of SQL Server. 
+- On a system with multiple instances of SQL Server, the SQL Server browser service is uninstalled only once the last instance of SQL Server is removed. The SQL Server Browser service can be removed manually from **Programs and Features** in the **Control Panel**. 
+- Uninstalling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deletes tempdb data files that were added during the install process. Files with tempdb_mssql_*.ndf name pattern are deleted if they exist in the system database directory. 
   
- Note the following important scenarios before you uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+
   
--   Before you remove [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components from a computer that has the minimum required amount of physical memory, make sure that the page file size is sufficient. The page file size must be equal to two times the amount of physical memory. Insufficient virtual memory can cause an incomplete removal of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## Prepare  
   
--   If you have multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser uninstalls automatically when the last instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is uninstalled.  
+1.  **Back up your data.** Either create [full backups](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) of all databases, including system databases, or manually copy the .mdf and .ldf files to a separate location. The **master** database contains all system level information for the server, such as logins, and schemas. The **msdb** database contains job information such as SQL Server agent jobs, backup history, and maintenance plans. For more information about system databases see [System databases](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md). 
   
-     If you want to uninstall all components of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you must uninstall the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser component manually from **Programs and Features** in **Control Panel**.  
+    The files that you must save include the following database files:  
+
+    * master.mdf
+    * msdbdata.mdf
+    * Tempdb.mdf
+    * mastlog.ldf
+    * msdblog.ldf
+    * Templog.ldf
+    * model.mdf
+    * Mssqlsystemresource.mdf
+    * ReportServer[$InstanceName]
+    * modellog.ldf
+    * Mssqlsustemresource.ldf
+    * ReportServer[$InstanceName]TempDB
+
+    > [!NOTE]
+    > The ReportServer databases are included with SQL Server Reporting Services.   
+
+ 
+1.  **Stop all**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **services.** We recommend that you stop all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services before you uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components. Active connections can prevent successful uninstallation.  
   
-1.  Uninstalling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deletes tempdb data files that were added during the install process. Files with tempdb_mssql_*.ndf name pattern are deleted if they exist in the system database directory.  
+1.  **Use an account that has the appropriate permissions.** Log on to the server by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account or by using an account that has equivalent permissions. For example, you can log on to the server by using an account that is a member of the local Administrators group.  
   
-### Before You Uninstall  
+## Uninstall 
+
+# [Windows 10 / 2016 +](#tab/Windows10)
+
+To uninstall SQL Server from Windows 10, Windows Server 2016, Windows Server 2019, and greater, follow these steps: 
+
+1. To begin the removal process navigate to **Settings** from the Start menu and then choose **Apps**. 
+1. Search for `sql` in the search box. 
+1. Select **Microsoft SQL Server (Version) (Bit)**. For example, `Microsoft SQL Server 2017 (64-bit)`.
+1. Select **Uninstall**.
+ 
+    ![Uninstall SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-10.png)
+
+1. Select **Remove** on the SQL Server dialog pop-up to launch the Microsoft SQL Server installation wizard. 
+
+    ![Remove SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/remove-sql-2017.png)
   
-1.  **Back up your data.** Although this is not a required step, you might have databases that you want to save in their present state. You might also want to save changes that were made to the system databases. If either situation is true, make sure that back up the data before you uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Alternatively, save a copy of all the data and log files in a folder other than the MSSQL folder. The MSSQL folder is deleted during uninstallation.  
+1.  On the **Select Instance** page, use the drop-down box to specify an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to remove, or specify the option to remove only the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared features and management tools. To continue, select **Next**.  
   
-     The files that you must save include the following database files:  
+1.  On the **Select Features** page, specify the features to remove from the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    -   Master.mdf  
+1.  On the **Ready to Remove** page, review the list of components and features that will be uninstalled. Click **Remove** to begin uninstalling  
+ 
+1. Refresh the **Apps and Features** window to verify the SQL Server instance has been removed successfully, and determine which, if any, SQL Server components still exist. Remove these components from this window as well, if you so choose. 
+
+# [Windows 2008 - 2012 R2](#tab/windows2012)
+
+To uninstall SQL Server from Windows Server 2008, Windows Server 2012 and Windows 2012 R2, follow these steps: 
+
+1. To begin the removal process, navigate to the **Control Panel** and then select **Programs and Features**.
+1. Right-click **Microsoft SQL Server (Version) (Bit)** and select **Uninstall**. For example, `Microsoft SQL Server 2012 (64-bit)`.  
   
-    -   Mastlog.ldf  
+    ![Uninstall SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-2012.png)
+
+1. Select **Remove** on the SQL Server dialog pop-up to launch the Microsoft SQL Server installation wizard. 
+
+    ![Remove SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/remove-sql-2012.png)
   
-    -   Model.mdf  
+1.  On the **Select Instance** page, use the drop-down box to specify an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to remove, or specify the option to remove only the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared features and management tools. To continue, select **Next**.  
   
-    -   Modellog.ldf  
+1.  On the **Select Features** page, specify the features to remove from the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    -   Msdbdata.mdf  
+1.  On the **Ready to Remove** page, review the list of components and features that will be uninstalled. Click **Remove** to begin uninstalling  
+ 
+1. Refresh the **Programs and Features** window to verify the SQL Server instance has been removed successfully, and determine which, if any, SQL Server components still exist. Remove these components from this window as well, if you so choose. 
+
+---
+
   
-    -   Msdblog.ldf  
-  
-    -   Mssqlsystemresource.mdf  
-  
-    -   Mssqlsustemresource.ldf  
-  
-    -   Tempdb.mdf  
-  
-    -   Templog.ldf  
-  
-    -   ReportServer[$InstanceName] This is the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] default database.  
-  
-    -   ReportServer[$InstanceName]TempDB This is the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] default temporary database.  
-  
-2.  **Delete the local security groups.** Before you uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], delete the local security groups for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components.  
-  
-3.  **Stop all**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **services.** We recommend that you stop all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services before you uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components. Active connections can prevent successful uninstallation.  
-  
-4.  **Use an account that has the appropriate permissions.** Log on to the server by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account or by using an account that has equivalent permissions. For example, you can log on to the server by using an account that is a member of the local Administrators group.  
-  
-### To Uninstall an Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
-  
-1.  To begin the uninstall process, go to **Control Panel** and then **Programs and Features**.  
-  
-2.  Right click **SQL Server 2016** and select **Uninstall**. Then click **Remove**. This starts the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard.  
-  
-     Setup Support Rules runs to verify your computer configuration. To continue, click **Next**.  
-  
-3.  On the Select Instance page, use the drop-down box to specify an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to remove, or specify the option to remove only the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared features and management tools. To continue, click **Next**.  
-  
-4.  On the Select Features page, specify the features to remove from the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-     Removal rules runs to verify that the operation can complete successfully.  
-  
-5.  On the **Ready to Remove** page, review the list of components and features that will be uninstalled. Click **Remove** to begin uninstalling  
-  
-6.  Immediately after you uninstall the last [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, the other programs associated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will still be visible in the list of programs in **Programs and Features**. However, if you close **Programs and Features**, the next time you open **Programs and Features**, it will refresh the list of programs, to show only the ones that are actually still installed.  
-  
-### If the Uninstallation Fails  
-  
-1.  If the uninstallation process does not complete successfully, attempt to fix the problem that caused the uninstallation to fail. The following articles can help you understand the cause of the failed uninstallation:  
-  
-    -   [How to identify SQL Server 2008 setup issues in the setup log files](https://support.microsoft.com/kb/955396/en-us)  
-  
-    -   [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
-2.  If you are unable to fix the cause of the uninstallation failure, you can contact [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support. In some cases, such as unintentional deletion of important files, reinstalling the operating system may be required before reinstalling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the computer.  
+## In the event of failure  
+
+If the removal process fails, review the [SQL Server setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) to determine the root cause. 
+
+The KB article [How to identify SQL Server setup issues in the setup log files](https://support.microsoft.com/kb/955396/en-us) can assist in the investigation. Though it is for SQL Server 2008, the methodology described is applicable to every version of SQL Server. 
+
   
 ## See Also  
  [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

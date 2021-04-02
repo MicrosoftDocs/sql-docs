@@ -1,4 +1,5 @@
 ---
+description: "SAP BW Destination Editor (Advanced Page)"
 title: "SAP BW Destination Editor (Advanced Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -10,12 +11,12 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sapbwdestination.advanced.f1"
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # SAP BW Destination Editor (Advanced Page)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Advanced** page of the **SAP BW Destination Editor** to set advanced settings such as package size and time-out information.  

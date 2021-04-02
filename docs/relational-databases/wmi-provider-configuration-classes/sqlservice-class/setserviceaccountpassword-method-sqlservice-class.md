@@ -1,6 +1,7 @@
 ---
-title: "SetServiceAccountPassword Method (SqlService Class) | Microsoft Docs"
-ms.custom: ""
+description: "SetServiceAccountPassword Method (SqlService Class)"
+title: "SetServiceAccountPassword Method (SqlService)"
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetServiceAccountPassword method"
 ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetServiceAccountPassword Method (SqlService Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Modifies the password for the account that the referenced service runs under.  
   
 ## Syntax  

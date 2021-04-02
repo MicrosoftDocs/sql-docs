@@ -1,4 +1,5 @@
 ---
+description: "sp_db_increased_partitions"
 title: "sp_db_increased_partitions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_db_increased_partitions_TSQL"
   - "sp_db_increased_partitions"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_db_increased_partitions"
 ms.assetid: a8c043ec-b504-4929-ac0e-8babaa99d989
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_db_increased_partitions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Enables or disables support for up to 15,000 partitions for the specified database.  
   

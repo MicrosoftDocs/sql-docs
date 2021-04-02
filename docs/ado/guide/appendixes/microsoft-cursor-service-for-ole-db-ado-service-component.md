@@ -1,8 +1,9 @@
 ---
+description: "Microsoft Cursor Service for OLE DB (ADO Service Component)"
 title: "Microsoft Cursor Service for OLE DB (ADO Service Component) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""
@@ -11,18 +12,18 @@ helpviewer_keywords:
   - "providers [ADO], cursor service for OLE DB"
   - "cursor service for OLE DB [ADO]"
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Microsoft Cursor Service for OLE DB Overview
 The Microsoft Cursor Service for OLE DB supplements the cursor support functions of data providers. As a result, the user perceives relatively uniform functionality from all data providers.
 
- The Cursor Service makes dynamic properties available and enhances the behavior of certain methods. For example, the [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) dynamic property enables the creation of temporary indexes to facilitate certain operations, such as the [Find](../../../ado/reference/ado-api/find-method-ado.md) method.
+ The Cursor Service makes dynamic properties available and enhances the behavior of certain methods. For example, the [Optimize](../../reference/ado-api/optimize-property-dynamic-ado.md) dynamic property enables the creation of temporary indexes to facilitate certain operations, such as the [Find](../../reference/ado-api/find-method-ado.md) method.
 
  The Cursor Service enables support for batch updating in all cases. It also simulates more capable cursor types, such as dynamic cursors, when a data provider can only supply less capable cursors, such as static cursors.
 
 ## Keyword
- To invoke this service component, set the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) or [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object's [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) property to **adUseClient**.
+ To invoke this service component, set the [Recordset](../../reference/ado-api/recordset-object-ado.md) or [Connection](../../reference/ado-api/connection-object-ado.md) object's [CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md) property to **adUseClient**.
 
 ```vb
 connection.CursorLocation=adUseClient
@@ -30,7 +31,7 @@ recordset.CursorLocation=adUseClient
 ```
 
 ## Dynamic Properties
- When the Cursor Service for OLE DB is invoked, the following dynamic properties are added to the **Recordset** object's [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection. The full list of **Connection** and **Recordset** object dynamic properties is listed in the [ADO Dynamic Property Index](../../../ado/reference/ado-api/ado-dynamic-property-index.md). The associated OLE DB property names, where appropriate, are included in parentheses after the ADO property name.
+ When the Cursor Service for OLE DB is invoked, the following dynamic properties are added to the **Recordset** object's [Properties](../../reference/ado-api/properties-collection-ado.md) collection. The full list of **Connection** and **Recordset** object dynamic properties is listed in the [ADO Dynamic Property Index](../../reference/ado-api/ado-dynamic-property-index.md). The associated OLE DB property names, where appropriate, are included in parentheses after the ADO property name.
 
  Changes to some dynamic properties are not visible to the underlying data source after the Cursor Service has been invoked. For example, setting the *Command Time out* property on a **Recordset** will not be visible to the underlying data provider.
 
@@ -57,16 +58,16 @@ Recordset1.Properties.Item("Command Time out") = 50
 |Cache Child Rows (DBPROP_ADC_CACHECHILDROWS)|For recordsets created with the Data Shaping Service, this value indicates whether child recordsets are stored in a cache for later use.|
 |Cursor Engine Version (DBPROP_ADC_CEVER)|Indicates the version of the Cursor Service being used.|
 |Maintain Change Status (DBPROP_ADC_MAINTAINCHANGESTATUS)|Indicates the text of the command used for resynchronizing a one or more rows in a multiple table join.|
-|[Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Indicates whether an index should be created. When set to **True**, authorizes the temporary creation of indexes to improve the execution of certain operations.|
-|[Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Indicates the name of the **Recordset**. Can be referenced within the current, or subsequent, data shaping commands.|
-|[Resync Command](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Indicates a custom command string that is used by the [Resync](../../../ado/reference/ado-api/resync-method.md) method when the [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) property is in effect.|
-|[Unique Catalog](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indicates the name of the database containing the table referenced in the **Unique Table** property.|
-|[Unique Schema](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indicates the name of the owner of the table referenced in the **Unique Table** property.|
-|[Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indicates the name of the one table in a **Recordset** created from multiple tables that can be modified by insertions, updates, or deletions.|
+|[Optimize](../../reference/ado-api/optimize-property-dynamic-ado.md)|Indicates whether an index should be created. When set to **True**, authorizes the temporary creation of indexes to improve the execution of certain operations.|
+|[Reshape Name](../../reference/ado-api/reshape-name-property-dynamic-ado.md)|Indicates the name of the **Recordset**. Can be referenced within the current, or subsequent, data shaping commands.|
+|[Resync Command](../../reference/ado-api/resync-command-property-dynamic-ado.md)|Indicates a custom command string that is used by the [Resync](../../reference/ado-api/resync-method.md) method when the [Unique Table](../../reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) property is in effect.|
+|[Unique Catalog](../../reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indicates the name of the database containing the table referenced in the **Unique Table** property.|
+|[Unique Schema](../../reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indicates the name of the owner of the table referenced in the **Unique Table** property.|
+|[Unique Table](../../reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indicates the name of the one table in a **Recordset** created from multiple tables that can be modified by insertions, updates, or deletions.|
 |Update Criteria (DBPROP_ADC_UPDATECRITERIA)|Indicates which fields in the **WHERE** clause are used to handle collisions occurring during an update.|
-|[Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) (DBPROP_ADC_UPDATERESYNC)|Indicates whether the **Resync** method is implicitly invoked after the [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) method (and its behavior), when the **Unique Table** property is in effect.|
+|[Update Resync](../../reference/ado-api/update-resync-property-dynamic-ado.md) (DBPROP_ADC_UPDATERESYNC)|Indicates whether the **Resync** method is implicitly invoked after the [UpdateBatch](../../reference/ado-api/updatebatch-method.md) method (and its behavior), when the **Unique Table** property is in effect.|
 
- You can also set or retrieve a dynamic property by specifying its name as the index to the **Properties** collection. For example, get and print the current value of the [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) dynamic property, then set a new value, as follows:
+ You can also set or retrieve a dynamic property by specifying its name as the index to the **Properties** collection. For example, get and print the current value of the [Optimize](../../reference/ado-api/optimize-property-dynamic-ado.md) dynamic property, then set a new value, as follows:
 
 ```vb
 Debug.Print rs.Properties("Optimize")
@@ -78,9 +79,9 @@ rs.Properties("Optimize") = True
 
 |Property Name|Description|
 |-------------------|-----------------|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Supplements the types of cursors that are available for a **Recordset**.|
-|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Supplements the types of locks available for a **Recordset**. Enables batch updates.|
-|[Sort](../../../ado/reference/ado-api/sort-property.md)|Specifies one or more field names that the **Recordset** is sorted on, and whether each field is sorted in ascending or descending order.|
+|[CursorType](../../reference/ado-api/cursortype-property-ado.md)|Supplements the types of cursors that are available for a **Recordset**.|
+|[LockType](../../reference/ado-api/locktype-property-ado.md)|Supplements the types of locks available for a **Recordset**. Enables batch updates.|
+|[Sort](../../reference/ado-api/sort-property.md)|Specifies one or more field names that the **Recordset** is sorted on, and whether each field is sorted in ascending or descending order.|
 
 ## Method Behavior
- The Cursor Service for OLE DB enables or affects the behavior of the [Field](../../../ado/reference/ado-api/field-object.md) object's [Append](../../../ado/reference/ado-api/append-method-ado.md) method; and the **Recordset** object's [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), and [Save](../../../ado/reference/ado-api/save-method.md) methods.
+ The Cursor Service for OLE DB enables or affects the behavior of the [Field](../../reference/ado-api/field-object.md) object's [Append](../../reference/ado-api/append-method-ado.md) method; and the **Recordset** object's [Open](../../reference/ado-api/open-method-ado-recordset.md), [Resync](../../reference/ado-api/resync-method.md), [UpdateBatch](../../reference/ado-api/updatebatch-method.md), and [Save](../../reference/ado-api/save-method.md) methods.

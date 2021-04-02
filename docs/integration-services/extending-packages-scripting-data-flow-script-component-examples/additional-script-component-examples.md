@@ -1,4 +1,5 @@
 ---
+description: "Additional Script Component Examples"
 title: "Additional Script Component Examples | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -12,12 +13,12 @@ dev_langs:
 helpviewer_keywords: 
   - "Script component [Integration Services], examples"
 ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Additional Script Component Examples
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Script component is a configurable tool that you can use in the data flow of a package to fill almost any requirement that is not met by the sources, transformations, and destinations that are included with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. This section contains Script component code samples that demonstrate the various types of functionality that are available.  

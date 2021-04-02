@@ -1,6 +1,6 @@
 ---
 title: Configure usage and diagnostic data collection for SQL Server (CEIP) | Microsoft Docs
-description: 
+description: Learn about the information that SQL Server collects from users to improve products. See how to configure SQL Server not to send this information.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 03/27/2019
@@ -11,7 +11,7 @@ ms.technology: configuration
 ---
 # Configure usage and diagnostic data collection for SQL Server (CEIP)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 ## Summary
 
@@ -45,7 +45,7 @@ SQL Server 2017 always collects and sends information about the installation exp
 - By using the Error and Usage Reporting application
 - By setting registry subkeys on the server
 
-For SQL Server on Linux refer to [Customer Feedback for SQL Server on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-customer-feedback)
+For SQL Server on Linux refer to [Customer Feedback for SQL Server on Linux](../linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md)
 
 > [!NOTE]
 > You can disable the sending of information to Microsoft only in paid versions of SQL Server.
@@ -61,7 +61,7 @@ To opt out of the data collection, see [Turning local audit on or off](usage-and
 After setup, the usage and diagnostic data collection setting for SQL Server components and instances can be changed through the Error and Usage Reporting application. This application is available as part of SQL Server installation. This tool lets each SQL Server instance configure its own Usage Reports setting.
 
 > [!NOTE]
-> The Error and Usage Reporting application is listed under the Configuration Tools of SQL Server. You can use this tool to manage your preference for Error Reporting and Usage and Diagnostic Data collection in the same manner as in SQL Server 2017. Error Reporting is separate from Usage and Diagnostic Data collection, therefore can be turned on or off independently from Usage and Diagnostic Data collection. Error Reporting collects crash dumps that are sent to Microsoft and that may contain sensitive information as outlined in the [Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=868444).
+> The Error and Usage Reporting application is listed under the Configuration Tools of SQL Server. You can use this tool to manage your preference for Error Reporting and Usage and Diagnostic Data collection in the same manner as in SQL Server 2017. Error Reporting is separate from Usage and Diagnostic Data collection, therefore can be turned on or off independently from Usage and Diagnostic Data collection. Error Reporting collects crash dumps that are sent to Microsoft and that may contain sensitive information as outlined in the [Privacy Statement](./sql-server-privacy.md).
 
 To start SQL Server Error and Usage Reporting, click or tap **Start**, and then search on "Error" in the search box. The SQL Server Error and Usage Reporting item will be displayed. After you start the tool, you can manage usage and diagnostic data as well as serious errors that are collected for instances and components that are installed on that computer.
 
@@ -139,7 +139,7 @@ The procedure to turn this feature on or off is dependent on the OS version. To 
  
 - Windows Server 2016 and Windows 10
 
-    [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+    [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 - Windows Server 2008 R2 and Windows 7
 
     [WER Settings](/windows/desktop/wer/wer-settings)

@@ -1,10 +1,11 @@
 ---
+description: "sys.external_library_files (Transact-SQL)"
 title: "sys.external_library_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/05/2017"
+ms.date: "06/25/2020"
 ms.prod: sql
-ms.technology: system-objects
-ms.topic: "language-reference"
+ms.technology: machine-learning
+ms.topic: "reference"
 f1_keywords: 
   - "external_library_files"
   - "external_library_files_TSQL"
@@ -14,13 +15,13 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.external_library_files catalog view"
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # sys.external_library_files (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Lists a row for each file that makes up an external library.
 
@@ -35,4 +36,3 @@ Lists a row for each file that makes up an external library.
 
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)  
-[Package management for SQL Server Machine Learning Service](../../advanced-analytics/r/installing-and-managing-r-packages.md)  

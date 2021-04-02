@@ -1,18 +1,19 @@
 ---
-title: "Using Multiple Result Sets | Microsoft Docs"
+title: "Using multiple result sets"
+description: "Learn how to query and retrieve multiple result sets from a single execute using the JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
-# Using Multiple Result Sets
+# Using multiple result sets
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -23,17 +24,17 @@ If the execute method returns **true**, the statement that was run has returned 
 If the execute method returns **false**, the statement that was run has returned an update count value, which you can retrieve by calling the [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) method.
 
 > [!NOTE]  
-> For more information about update counts, see [Using a Stored Procedure with an Update Count](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md).
+> For more information about update counts, see [Using a stored procedure with an update count](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md).
 
 In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, and an SQL statement is constructed that, when run, returns two result sets:
 
 [!code[JDBC#UsingMultipleResultSets1](../../connect/jdbc/codesnippet/Java/using-multiple-result-sets_1.java)]
 
-In this case, the number of result sets returned is known to be two. However, the code is written so that if an unknown number of result sets were returned, such as when calling a stored procedure, they would all be processed. To see an example of calling a stored procedure that returns multiple result sets along with update values, see [Handling Complex Statements](../../connect/jdbc/handling-complex-statements.md).
+In this case, the number of result sets returned is known to be two. However, the code is written so that if an unknown number of result sets were returned, such as when calling a stored procedure, they would all be processed. To see an example of calling a stored procedure that returns multiple result sets along with update values, see [Handling complex statements](../../connect/jdbc/handling-complex-statements.md).
 
 > [!NOTE]  
 > When you make the call to the getMoreResults method of the SQLServerStatement class, the previously returned result set is implicitly closed.
 
-## See Also
+## See also
 
-[Using Statements with the JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)
+[Using statements with the JDBC driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)

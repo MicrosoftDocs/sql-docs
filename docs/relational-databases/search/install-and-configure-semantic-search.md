@@ -1,4 +1,5 @@
 ---
+description: "Install and Configure Semantic Search"
 title: "Install and Configure Semantic Search | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ---
 # Install and Configure Semantic Search
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes the prerequisites for statistical semantic search and how to install or check them.  
   
 ## Install Semantic Search  
@@ -71,7 +72,7 @@ GO
   
  **2. Attach the semantic language statistics database.**
    
- Attach the database to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or by calling [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) with the **FOR ATTACH** syntax. For more information, see [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
+ Attach the database to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or by calling [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) with the **FOR ATTACH** syntax. For more information, see [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
  By default, the name of the database is **semanticsdb**. You can optionally give the database a different name when you attach it. You have to provide this name when you register the database in the subsequent step.  
   
@@ -138,6 +139,5 @@ GO
 ## Install optional support for newer document types  
   
 ###  <a name="office"></a> Install the latest filters for Microsoft Office and other Microsoft document types  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installs the latest [!INCLUDE[msCoName](../../includes/msconame-md.md)] word breakers and stemmers, but does not install the latest filters for [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office documents and other [!INCLUDE[msCoName](../../includes/msconame-md.md)] document types. These filters are required for indexing documents created with recent versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office and other [!INCLUDE[msCoName](../../includes/msconame-md.md)] applications. To download the latest filters, see [Microsoft Office 2010 Filter Packs](https://go.microsoft.com/fwlink/?LinkId=218293). (There does not appear to be a Filter Pack release for Office 2013 or Office 2016.)
-  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installs the latest [!INCLUDE[msCoName](../../includes/msconame-md.md)] word breakers and stemmers, but does not install the latest filters for [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office documents and other [!INCLUDE[msCoName](../../includes/msconame-md.md)] document types. These filters are required for indexing documents created with recent versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office and other [!INCLUDE[msCoName](../../includes/msconame-md.md)] applications. To download the latest filters, see [Microsoft Office 2010 Filter Packs](https://www.microsoft.com/download/details.aspx?id=17062). (There does not appear to be a Filter Pack release for Office 2013 or Office 2016.)
   

@@ -1,12 +1,13 @@
 ---
-title: "CREATE VIEW (Transact-SQL) | Microsoft Docs"
+description: "CREATE VIEW (Transact-SQL)"
+title: CREATE VIEW (Transact-SQL)
 ms.custom: ""
-ms.date: "10/10/2018"
+ms.date: 04/16/2020
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CREATE VIEW"
   - "VIEW_TSQL"
@@ -34,12 +35,14 @@ helpviewer_keywords:
   - "views [SQL Server], indexed views"
   - "maximum number of columns per view"
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # CREATE VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Creates a virtual table whose contents (columns and rows) are defined by a query. Use this statement to create a view of the data in one or more tables in the database. For example, a view can be used for the following purposes:  
   
@@ -53,25 +56,25 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
-CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]   
-[ WITH <view_attribute> [ ,...n ] ]   
-AS select_statement   
-[ WITH CHECK OPTION ]   
+CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]
+[ WITH <view_attribute> [ ,...n ] ]
+AS select_statement
+[ WITH CHECK OPTION ]
 [ ; ]  
   
-<view_attribute> ::=   
+<view_attribute> ::=
 {  
     [ ENCRYPTION ]  
     [ SCHEMABINDING ]  
-    [ VIEW_METADATA ]       
-}   
+    [ VIEW_METADATA ]
+}
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 AS <select_statement>   
@@ -82,9 +85,12 @@ AS <select_statement>
     SELECT <select_criteria>  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
+
 OR ALTER  
- **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).   
+ **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1).   
   
  Conditionally alters the view only if it already exists. 
  
@@ -132,11 +138,11 @@ OR ALTER
  CHECK OPTION  
  Forces all data modification statements executed against the view to follow the criteria set within *select_statement*. When a row is modified through a view, the WITH CHECK OPTION makes sure the data remains visible through the view after the modification is committed.  
   
-> [!NOTE]  
->  Any updates performed directly to a view's underlying tables are not verified against the view, even if CHECK OPTION is specified.  
+> [!NOTE]
+>  The CHECK OPTION only applies to updates made through the view. It has no applicability to any updates performed directly to a view's underlying tables.  
   
  ENCRYPTION  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Encrypts the entries in [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) that contain the text of the CREATE VIEW statement. Using WITH ENCRYPTION prevents the view from being published as part of SQL Server replication.  
   
@@ -159,7 +165,7 @@ OR ALTER
   
  If a view depends on a table or view that was dropped, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] produces an error message when anyone tries to use the view. If a new table or view is created and the table structure does not change from the previous base table to replace the one dropped, the view again becomes usable. If the new table or view structure changes, the view must be dropped and re-created.  
   
- If a view is not created with the SCHEMABINDING clause, [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) should be run when changes are made to the objects underlying the view that affect the definition of the view. Otherwise, the view might produce unexpected results when it is queried.  
+ If a view is not created with the SCHEMABINDING clause, run [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) when changes are made to the objects underlying the view that affect the definition of the view. Otherwise, the view might produce unexpected results when it is queried.  
   
  When a view is created, information about the view is stored in the following catalog views: [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), and [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md). The text of the CREATE VIEW statement is stored in the [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) catalog view.  
   
@@ -204,7 +210,7 @@ OR ALTER
   
  A partitioned view on `Server1` is defined in the following way:  
   
-```  
+```sql
 --Partitioned view as defined on Server1  
 CREATE VIEW Customers  
 AS  
@@ -223,7 +229,7 @@ FROM Server3.CompanyData.dbo.Customers_99;
   
  Generally, a view is said to be a partitioned view if it is of the following form:  
   
-```  
+```syntaxsql
 SELECT <select_list1>  
 FROM T1  
 UNION ALL  
@@ -239,15 +245,15 @@ FROM Tn;
   
 1.  The select `list`  
   
-    -   All columns in the member tables should be selected in the column list of the view definition.  
+    -   In the column list of the view definition, select all columns in the member tables.  
   
-    -   The columns in the same ordinal position of each `select list` should be of the same type, including collations. It is not sufficient for the columns to be implicitly convertible types, as is generally the case for UNION.  
+    -   Ensure that the columns in the same ordinal position of each `select list` are of the same type, including collations. It is not sufficient for the columns to be implicitly convertible types, as is generally the case for UNION.  
   
-         Also, at least one column (for example `<col>`) must appear in all the select lists in the same ordinal position. This `<col>` should be defined in a way that the member tables `T1, ..., Tn` have CHECK constraints `C1, ..., Cn` defined on `<col>`, respectively.  
+         Also, at least one column (for example `<col>`) must appear in all the select lists in the same ordinal position. Define `<col>` in a way that the member tables `T1, ..., Tn` have CHECK constraints `C1, ..., Cn` defined on `<col>`, respectively.  
   
          Constraint `C1` defined on table `T1` must be of the following form:  
   
-        ```  
+        ```syntaxsql
         C1 ::= < simple_interval > [ OR < simple_interval > OR ...]  
         < simple_interval > :: =   
         < col > { < | > | \<= | >= | = < value >}   
@@ -255,13 +261,13 @@ FROM Tn;
         | < col > IN ( value_list )  
         | < col > { > | >= } < value1 > AND  
         < col > { < | <= } < value2 >  
-        ```  
+        ```
   
-    -   The constraints should be in such a way that any specified value of `<col>` can satisfy, at most, one of the constraints `C1, ..., Cn` so that the constraints should form a set of disjointed or nonoverlapping intervals. The column `<col>` on which the disjointed constraints are defined is called the partitioning column. Note that the partitioning column may have different names in the underlying tables. The constraints should be in an enabled and trusted state for them to meet the previously mentioned conditions of the partitioning column. If the constraints are disabled, re-enable constraint checking by using the CHECK CONSTRAINT *constraint_name* option of ALTER TABLE, and using the WITH CHECK option to validate them.  
+    -   The constraints must be in such a way that any specified value of `<col>` can satisfy, at most, one of the constraints `C1, ..., Cn` so that the constraints form a set of disjointed or nonoverlapping intervals. The column `<col>` on which the disjointed constraints are defined is called the partitioning column. Note that the partitioning column may have different names in the underlying tables. The constraints must be in an enabled and trusted state for them to meet the previously mentioned conditions of the partitioning column. If the constraints are disabled, re-enable constraint checking by using the CHECK CONSTRAINT *constraint_name* option of ALTER TABLE, and using the WITH CHECK option to validate them.  
   
          The following examples show valid sets of constraints:  
   
-        ```  
+        ```syntaxsql
         { [col < 10], [col between 11 and 20] , [col > 20] }  
         { [col between 11 and 20], [col between 21 and 30], [col between 31 and 100] }  
         ```  
@@ -274,7 +280,7 @@ FROM Tn;
   
     -   It cannot be a computed, identity, default, or **timestamp** column.  
   
-    -   If there is more than one constraint on the same column in a member table, the Database Engine ignores all the constraints and does not consider them when determining whether the view is a partitioned view. To meet the conditions of the partitioned view, there should be only one partitioning constraint on the partitioning column.  
+    -   If there is more than one constraint on the same column in a member table, the Database Engine ignores all the constraints and does not consider them when determining whether the view is a partitioned view. To meet the conditions of the partitioned view, ensure that there is only one partitioning constraint on the partitioning column.  
   
     -   There are no restrictions on the updatability of the partitioning column.  
   
@@ -288,16 +294,16 @@ FROM Tn;
   
     -   The member tables cannot have indexes created on computed columns in the table.  
   
-    -   The member tables should have all PRIMARY KEY constraints on the same number of columns.  
+    -   The member tables have all PRIMARY KEY constraints on the same number of columns.  
   
-    -   All member tables in the view should have the same ANSI padding setting. This can be set by using either the **user options** option in **sp_configure** or the SET statement.  
+    -   All member tables in the view have the same ANSI padding setting. This can be set by using either the **user options** option in **sp_configure** or the SET statement.  
   
 ## Conditions for Modifying Data in Partitioned Views  
  The following restrictions apply to statements that modify data in partitioned views:  
   
--   The INSERT statement must supply values for all the columns in the view, even if the underlying member tables have a DEFAULT constraint for those columns or if they allow for null values. For those member table columns that have DEFAULT definitions, the statements cannot explicitly use the keyword DEFAULT.  
+-   The INSERT statement supplies values for all the columns in the view, even if the underlying member tables have a DEFAULT constraint for those columns or if they allow for null values. For those member table columns that have DEFAULT definitions, the statements cannot explicitly use the keyword DEFAULT.  
   
--   The value being inserted into the partitioning column should satisfy at least one of the underlying constraints; otherwise, the insert action will fail with a constraint violation.  
+-   The value being inserted into the partitioning column satisfies at least one of the underlying constraints; otherwise, the insert action will fail with a constraint violation.  
   
 -   UPDATE statements cannot specify the DEFAULT keyword as a value in the SET clause, even if the column has a DEFAULT value defined in the corresponding member table.  
   
@@ -319,7 +325,7 @@ FROM Tn;
   
 -   A distributed transaction will be started to guarantee atomicity across all nodes affected by the update.  
   
--   The XACT_ABORT SET option should be set to ON for INSERT, UPDATE, or DELETE statements to work.  
+-   Set the XACT_ABORT SET option to ON for INSERT, UPDATE, or DELETE statements to work.  
   
 -   Any columns in remote tables of type **smallmoney** that are referenced in a partitioned view are mapped as **money**. Therefore, the corresponding columns (in the same ordinal position in the select list) in the local tables must also be of type **money**.  
   
@@ -334,7 +340,7 @@ FROM Tn;
 ## Considerations for Replication  
  To create partitioned views on member tables that are involved in replication, the following considerations apply:  
   
--   If the underlying tables are involved in merge replication or transactional replication with updating subscriptions, the **uniqueidentifier** column should also be included in the select list.  
+-   If the underlying tables are involved in merge replication or transactional replication with updating subscriptions, ensure that the **uniqueidentifier** column is also included in the select list. 
   
      Any INSERT actions into the partitioned view must provide a NEWID() value for the **uniqueidentifier** column. Any UPDATE actions against the **uniqueidentifier** column must supply NEWID() as the value because the DEFAULT keyword cannot be used.  
   
@@ -350,7 +356,7 @@ The following examples use the AdventureWorks 2012 or AdventureWorksDW database.
 ### A. Using a simple CREATE VIEW  
  The following example creates a view by using a simple `SELECT` statement. A simple view is helpful when a combination of columns is queried frequently. The data from this view comes from the `HumanResources.Employee` and `Person.Person` tables of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The data provides name and hire date information for the employees of [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. The view could be created for the person in charge of tracking work anniversaries but without giving this person access to all the data in these tables.  
   
-```  
+```sql
 CREATE VIEW hiredate_view  
 AS   
 SELECT p.FirstName, p.LastName, e.BusinessEntityID, e.HireDate  
@@ -363,9 +369,9 @@ GO
 ### B. Using WITH ENCRYPTION  
  The following example uses the `WITH ENCRYPTION` option and shows computed columns, renamed columns, and multiple columns.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```  
+```sql
 CREATE VIEW Purchasing.PurchaseOrderReject  
 WITH ENCRYPTION  
 AS  
@@ -381,7 +387,7 @@ GO
 ### C. Using WITH CHECK OPTION  
  The following example shows a view named `SeattleOnly` that references five tables and allows for data modifications to apply only to employees who live in Seattle.  
   
-```  
+```sql
 CREATE VIEW dbo.SeattleOnly  
 AS  
 SELECT p.LastName, p.FirstName, e.JobTitle, a.City, sp.StateProvinceCode  
@@ -402,7 +408,7 @@ GO
 ### D. Using built-in functions within a view  
  The following example shows a view definition that includes a built-in function. When you use functions, you must specify a column name for the derived column.  
   
-```  
+```sql
 CREATE VIEW Sales.SalesPersonPerform  
 AS  
 SELECT TOP (100) SalesPersonID, SUM(TotalDue) AS TotalSales  
@@ -416,7 +422,7 @@ GO
 ### E. Using partitioned data  
  The following example uses tables named `SUPPLY1`, `SUPPLY2`, `SUPPLY3`, and `SUPPLY4`. These tables correspond to the supplier tables from four offices, located in different countries/regions.  
   
-```  
+```sql
 --Create the tables and insert the values.  
 CREATE TABLE dbo.SUPPLY1 (  
 supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 1 and 150),  
@@ -463,7 +469,7 @@ GO
 ### F. Creating a simple view  
  The following example creates a view by selecting only some of the columns from the source table.  
   
-```  
+```sql
 CREATE VIEW DimEmployeeBirthDates AS  
 SELECT FirstName, LastName, BirthDate   
 FROM DimEmployee;  
@@ -472,7 +478,7 @@ FROM DimEmployee;
 ### G. Create a view by joining two tables  
  The following example creates a view by using a `SELECT` statement with an `OUTER JOIN`. The results of the join query populate the view.  
   
-```  
+```sql
 CREATE VIEW view1  
 AS 
 SELECT fis.CustomerKey, fis.ProductKey, fis.OrderDateKey, 

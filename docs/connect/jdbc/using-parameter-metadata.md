@@ -1,18 +1,19 @@
 ---
-title: "Using Parameter Metadata | Microsoft Docs"
+description: "Using parameter metadata"
+title: "Using parameter metadata | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
-# Using Parameter Metadata
+# Using parameter metadata
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 

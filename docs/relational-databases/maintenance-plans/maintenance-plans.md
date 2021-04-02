@@ -1,5 +1,6 @@
 ---
 title: "Maintenance Plans | Microsoft Docs"
+description: Learn about maintenance plans, which create a workflow to ensure that your SQL Server database is optimized, regularly backed up, and free of inconsistencies.
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql
@@ -18,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Maintenance Plans
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Maintenance plans create a workflow of the tasks required to make sure that your database is optimized, regularly backed up, and free of inconsistencies. The Maintenance Plan Wizard also creates core maintenance plans, but creating plans manually gives you much more flexibility.  
   
 ## Benefits of Maintenance Plans  
  In [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)], maintenance plans create an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, which is run by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job. Maintenance plans can be run manually or automatically at scheduled intervals.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] maintenance plans provide the following features:  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] maintenance plans provide the following features:  
   
 -   Workflow creation using a variety of typical maintenance tasks. You can also create your own custom [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts.  
   
@@ -56,9 +57,8 @@ ms.author: mikeray
 ## Related Tasks  
  Use the following topics to get started with maintenance plans.  
   
-|||  
+|Description|Topic|  
 |-|-|  
-|**Description**|**Topic**|  
 |Configure the **Agent XPs** server configuration option to enable the SQL Server Agent extended stored procedures.|[Agent XPs Server Configuration Option](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |Describes how to create a maintenance plan by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Create a Maintenance Plan](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |Describes how to create a maintenance plan by using the Maintenance Plan Design Surface.|[Create a Maintenance Plan &#40;Maintenance Plan Design Surface&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  

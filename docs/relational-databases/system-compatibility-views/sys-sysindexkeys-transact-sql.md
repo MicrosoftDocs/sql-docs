@@ -1,4 +1,5 @@
 ---
+description: "sys.sysindexkeys (Transact-SQL)"
 title: "sys.sysindexkeys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysindexkeys"
   - "sys.sysindexkeys_TSQL"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "sysindexkeys system table"
   - "sys.sysindexkeys compatibility view"
 ms.assetid: 53a33c8d-e5f0-430d-a712-b65f43d64318
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysindexkeys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains information about the keys or columns in an index of the database.  
   

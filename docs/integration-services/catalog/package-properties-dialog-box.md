@@ -1,4 +1,5 @@
 ---
+description: "Package Properties Dialog Box"
 title: "Package Properties Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2016"
@@ -11,12 +12,12 @@ f1_keywords:
   - "sql13.ssis.ssms.ispackageprop.general.f1"
   - "sql13.ssis.ssms.packageproperties.f1"
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Package Properties Dialog Box
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Package Properties** dialog box to view properties for packages that are stored on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  

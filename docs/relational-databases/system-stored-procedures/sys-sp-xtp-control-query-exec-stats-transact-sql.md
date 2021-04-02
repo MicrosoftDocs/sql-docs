@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_xtp_control_query_exec_stats (Transact-SQL)"
 title: "sys.sp_xtp_control_query_exec_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/13/2015"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.sp_xtp_control_query_exec_stats_TSQL"
   - "sys.sp_xtp_control_query_exec_stats"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_xtp_control_query_exec_stats"
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_xtp_control_query_exec_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Enables per query statistics collection for all natively compiled stored procedures for the instance, or specific natively compiled stored procedures.  
   

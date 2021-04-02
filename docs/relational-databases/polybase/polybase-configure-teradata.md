@@ -1,17 +1,19 @@
 ---
-title: "Configure PolyBase to access external data in Teradata | Microsoft Docs"
-ms.date: 04/23/2019
+title: "Access external data: Teradata - PolyBase"
+description: Learn how to use PolyBase on a SQL Server instance to query external data in Teradata. Create external tables to reference the external data.
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
-monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15"
 ---
 # Configure PolyBase to access external data in Teradata
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This article explains how to use PolyBase on a SQL Server instance to query external data in Teradata.
 
@@ -44,6 +46,9 @@ The following Transact-SQL commands are used in this section:
     */
     CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
     ```
+
+   > [!IMPORTANT] 
+   > The Teradata ODBC Connector for PolyBase supports only basic authentication, not Kerberos authentication.
 
 1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 

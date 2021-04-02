@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_upload_collection_set (Transact-SQL)"
 title: "sp_syscollector_upload_collection_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_syscollector_upload_collection_set"
   - "sp_syscollector_upload_collection_set_TSQL"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "sp_syscollector_upload_collection_set"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_upload_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Starts an upload of collection set data if the collection set is enabled.  
   

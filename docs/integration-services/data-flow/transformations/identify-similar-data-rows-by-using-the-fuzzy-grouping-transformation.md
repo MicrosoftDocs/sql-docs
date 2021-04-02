@@ -1,5 +1,6 @@
 ---
-title: "Identify Similar Data Rows by Using the Fuzzy Grouping Transformation | Microsoft Docs"
+description: "Identify Similar Data Rows with the Fuzzy Grouping Transformation"
+title: "Identify Similar Data Rows with the Fuzzy Grouping Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
   - "similar data rows [Integration Services]"
   - "fuzzy matches"
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
-# Identify Similar Data Rows by Using the Fuzzy Grouping Transformation
+# Identify Similar Data Rows with the Fuzzy Grouping Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To add and configure a Fuzzy Grouping transformation, the package must already include at least one Data Flow task and a source.  

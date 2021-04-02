@@ -1,10 +1,8 @@
 ---
+description: "bcp_bind"
 title: "bcp_bind | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.reviewer: ""
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: native-client
 ms.topic: "reference"
 apiname: 
@@ -15,22 +13,26 @@ apitype: "DLLExport"
 helpviewer_keywords: 
   - "bcp_bind function"
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-author: MightyPen
-ms.author: genemi
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+ms.custom: ""
+ms.reviewer: ""
+ms.date: "03/14/2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # bcp_bind
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Binds data from a program variable to a table column for bulk copy into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-## Syntax  
-  
+
+## Syntax
+
 ```  
   
 RETCODE bcp_bind (  
-        HDBC hdbc,   
+        HDBC hdbc,
         LPCBYTE pData,  
         INT cbIndicator,  
         DBINT cbData,  
@@ -40,19 +42,20 @@ RETCODE bcp_bind (
         INT idxServerCol);  
 ```  
   
-## Arguments  
+## Arguments
+
  *hdbc*  
  Is the bulk copy-enabled ODBC connection handle.  
   
  *pData*  
- Is a pointer to the data copied. If *eDataType* is SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR or SQLIMAGE, *pData* can be NULL. A NULL *pData* indicates that long data values will be sent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in chunks using [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md). The user should only set *pData* to NULL if the column corresponding to the user bound field is a BLOB column otherwise **bcp_bind** will fail.  
+ Is a pointer to the data copied. If *eDataType* is SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR, or SQLIMAGE, *pData* can be NULL. A NULL *pData* indicates that long data values will be sent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in chunks using [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md). The user should only set *pData* to NULL if the column corresponding to the user bound field is a BLOB column otherwise **bcp_bind** will fail.  
   
  If indicators are present in the data, they appear in memory directly before the data. The *pData* parameter points to the indicator variable in this case, and the width of the indicator, the *cbIndicator* parameter, is used by bulk copy to address user data correctly.  
   
  *cbIndicator*  
  Is the length, in bytes, of a length or null indicator for the column's data. Valid indicator length values are 0 (when using no indicator), 1, 2, 4, or 8. Indicators appear in memory directly before any data. For example, the following structure type definition could be used to insert integer values into an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table using bulk copy:  
   
-```  
+```
 typedef struct tagBCPBOUNDINT  
     {  
     int iIndicator;  
@@ -84,23 +87,23 @@ typedef struct tagBCPBOUNDINT
   
  You can use an empty string ("") to designate the C null terminator as the program-variable terminator. Because the null-terminated empty string constitutes a single byte (the terminator byte itself), set *cbTerm* to 1. For example, to indicate that the string in *szName* is null-terminated and that the terminator should be used to indicate the length:  
   
-```  
+```
 bcp_bind(hdbc, szName, 0,  
    SQL_VARLEN_DATA, "", 1,  
    SQLCHARACTER, 2)  
-```  
-  
+```
+
  A nonterminated form of this example could indicate that 15 characters be copied from the *szName* variable to the second column of the bound table:  
-  
-```  
-bcp_bind(hdbc, szName, 0, 15,   
+
+```
+bcp_bind(hdbc, szName, 0, 15,
    NULL, 0, SQLCHARACTER, 2)  
-```  
-  
+```
+
  The bulk copy API performs Unicode-to-MBCS character conversion as required. Make sure that both the terminator byte string and the length of the byte string are set correctly. For example, to indicate that the string in *szName* is a Unicode wide character string, terminated by the Unicode null terminator value:  
   
 ```  
-bcp_bind(hdbc, szName, 0,   
+bcp_bind(hdbc, szName, 0,
    SQL_VARLEN_DATA, L"",  
    sizeof(WCHAR), SQLNCHAR, 2)  
 ```  
@@ -109,17 +112,17 @@ bcp_bind(hdbc, szName, 0,
   
  *cbTerm*  
  Is the count of bytes present in the terminator for the program variable, if any. If there is no terminator for the variable, set *cbTerm* to 0.  
-  
- *eDataType*  
- Is the C data type of the program variable. The data in the program variable is converted to the type of the database column. If this parameter is 0, no conversion is performed.  
-  
- The *eDataType* parameter is enumerated by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type tokens in sqlncli.h, not the ODBC C data type enumerators. For example, you can specify a two-byte integer, ODBC type SQL_C_SHORT, using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific type SQLINT2.  
-  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced support for SQLXML and SQLUDT data type tokens in the **_eDataType_** paramenter.  
- 
- The following table lists valid enumerated data types and the corresponding ODBC C data types.
-  
-|eDataType|C type|  
+
+*eDataType*
+Is the C data type of the program variable. The data in the program variable is converted to the type of the database column. If this parameter is 0, no conversion is performed.  
+
+The *eDataType* parameter is enumerated by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type tokens in sqlncli.h, not the ODBC C data type enumerators. For example, you can specify a two-byte integer, ODBC type SQL_C_SHORT, using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific type SQLINT2.  
+
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced support for SQLXML and SQLUDT data type tokens in the **_eDataType_** parameter.  
+
+The following table lists valid enumerated data types and the corresponding ODBC C data types.
+
+|eDataType|C type|
 |-----------------------|------------|  
 |SQLTEXT|char *|  
 |SQLNTEXT|wchar_t *|  
@@ -160,58 +163,61 @@ bcp_bind(hdbc, szName, 0,
 |SQLUNIQUEID|SQLGUID|  
 |SQLVARIANT|*Any data type except:*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
 |SQLXML|*Supported C data types:*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
+
+*idxServerCol*
+Is the ordinal position of the column in the database table to which the data is copied. The first column in a table is column 1. The ordinal position of a column is reported by [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
   
- *idxServerCol*  
- Is the ordinal position of the column in the database table to which the data is copied. The first column in a table is column 1. The ordinal position of a column is reported by [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
-  
-## Returns  
- SUCCEED or FAIL.  
-  
-## Remarks  
- Use **bcp_bind** for a fast, efficient way to copy data from a program variable into a table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- Call [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) before calling this or any other bulk-copy function. Calling **bcp_init** sets the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] target table for bulk copy. When calling **bcp_init** for use with **bcp_bind** and [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), the **bcp_init** _szDataFile_ parameter, indicating the data file, is set to NULL; the **bcp_init**_eDirection_ parameter is set to DB_IN.  
-  
- Make a separate **bcp_bind** call for every column in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table into which you want to copy. After the necessary **bcp_bind** calls have been made, then call **bcp_sendrow** to send a row of data from your program variables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Rebinding a column is not supported.  
-  
- Whenever you want [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to commit the rows already received, call [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md). For example, call **bcp_batch** once for every 1000 rows inserted or at any other interval.  
-  
- When there are no more rows to be inserted, call [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md). Failure to do so results in an error.  
-  
- Control parameter settings, specified with [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), have no effect on **bcp_bind** row transfers.  
-  
- If *pData* for a column is set to NULL because its value will be supplied by calls to [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md), any subsequent columns with *eDataType* set to SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR, or SQLIMAGE must also be bound with *pData* set to NULL, and their values must also be supplied by calls to **bcp_moretext**.  
-  
- For new large value types, such as **varchar(max)**, **varbinary(max)**, or **nvarchar(max)**, you can use SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, and SQLNCHAR as type indicators in the *eDataType* parameter.  
-  
- If *cbTerm* is not 0, any value (1, 2, 4, or 8) is valid for the prefix (*cbIndicator*). In this situation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client will search for the terminator, calculate data length with respect to the terminator (*i*), and set the *cbData* to the smaller value of i and the value of prefix.  
-  
- If *cbTerm* is 0 and *cbIndicator* (the prefix) is not 0, *cbIndicator* must be 8. The 8 byte prefix can take the following values:  
-  
--   0xFFFFFFFFFFFFFFFF means a null value for the field  
-  
--   0xFFFFFFFFFFFFFFFE is treated as a special prefix value which is used for efficiently sending data in chunks to the server. The format of data with this special prefix is:  
-  
--   <SPECIAL_PREFIX> \<0 or more  DATA CHUNKS> <ZERO_CHUNK> where:  
-  
--   SPECIAL_PREFIX is 0xFFFFFFFFFFFFFFFE  
-  
--   DATA_CHUNK is a 4 byte prefix containing length of the chunk,followed by the actual data whose length is specified in the 4 byte prefix.  
-  
--   ZERO_CHUNK is a 4 byte value containing all zeros (00000000) indicating the end of data.  
-  
--   Any other valid 8 byte length is treated as a regular data length.  
-  
+## Returns
+
+ SUCCEED or FAIL.
+
+## Remarks
+
+Use **bcp_bind** for a fast, efficient way to copy data from a program variable into a table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+Call [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) before calling this or any other bulk-copy function. Calling **bcp_init** sets the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] target table for bulk copy. When calling **bcp_init** for use with **bcp_bind** and [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), the **bcp_init** _szDataFile_ parameter, indicating the data file, is set to NULL; the **bcp_init**_eDirection_ parameter is set to DB_IN.  
+
+Make a separate **bcp_bind** call for every column in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table into which you want to copy. After the necessary **bcp_bind** calls have been made, then call **bcp_sendrow** to send a row of data from your program variables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Rebinding a column is not supported.
+
+Whenever you want [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to commit the rows already received, call [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md). For example, call **bcp_batch** once for every 1000 rows inserted or at any other interval.  
+
+When there are no more rows to be inserted, call [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md). Failure to do so results in an error.
+
+Control parameter settings, specified with [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), have no effect on **bcp_bind** row transfers.  
+
+If *pData* for a column is set to NULL because its value will be supplied by calls to [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md), any subsequent columns with *eDataType* set to SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR, or SQLIMAGE must also be bound with *pData* set to NULL, and their values must also be supplied by calls to **bcp_moretext**.  
+
+For new large value types, such as **varchar(max)**, **varbinary(max)**, or **nvarchar(max)**, you can use SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, and SQLNCHAR as type indicators in the *eDataType* parameter.  
+
+If *cbTerm* is not 0, any value (1, 2, 4, or 8) is valid for the prefix (*cbIndicator*). In this situation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client will search for the terminator, calculate data length with respect to the terminator (*i*), and set the *cbData* to the smaller value of i and the value of prefix.  
+
+If *cbTerm* is 0 and *cbIndicator* (the prefix) is not 0, *cbIndicator* must be 8. The 8-byte prefix can take the following values:  
+
+- 0xFFFFFFFFFFFFFFFF means a null value for the field  
+
+- 0xFFFFFFFFFFFFFFFE is treated as a special prefix value, which is used for efficiently sending data in chunks to the server. The format of data with this special prefix is:  
+
+- <SPECIAL_PREFIX> \<0 or more  DATA CHUNKS> <ZERO_CHUNK> where:  
+
+- SPECIAL_PREFIX is 0xFFFFFFFFFFFFFFFE  
+
+- DATA_CHUNK is a 4-byte prefix containing length of the chunk, followed by the actual data whose length is specified in the 4-byte prefix.  
+
+- ZERO_CHUNK is a 4-byte value containing all zeros (00000000) indicating the end of data.  
+
+- Any other valid 8-byte length is treated as a regular data length.  
+
  Calling [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) when using **bcp_bind** results in an error.  
   
-## bcp_bind Support for Enhanced Date and Time Features  
- For information about the types used with the *eDataType* parameter for date/time types, see [Bulk Copy Changes for Enhanced Date and Time Types &#40;OLE DB and ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+## bcp_bind Support for Enhanced Date and Time Features
+
+For information about the types used with the *eDataType* parameter for date/time types, see [Bulk Copy Changes for Enhanced Date and Time Types &#40;OLE DB and ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+
+For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+
+## Example
   
- For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
-  
-## Example  
-  
-```  
+```
 #include sql.h  
 #include sqlext.h  
 #include odbcss.h  
@@ -225,7 +231,7 @@ char*      pTerm = "\t\t";
   
 // Application initiation, get an ODBC environment handle, allocate the  
 // hdbc, and so on.  
-...   
+...
   
 // Enable bulk copy prior to connecting on allocated hdbc.  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_BCP, (SQLPOINTER) SQL_BCP_ON,  
@@ -239,7 +245,7 @@ if (!SQL_SUCCEEDED(SQLConnect(hdbc, _T("myDSN"), SQL_NTS,
    return;  
    }  
   
-// Initialize bcp.   
+// Initialize bcp.
 if (bcp_init(hdbc, "comdb..accounts_info", NULL, NULL  
    DB_IN) == FAIL)  
    {  
@@ -247,7 +253,7 @@ if (bcp_init(hdbc, "comdb..accounts_info", NULL, NULL
    return;  
    }  
   
-// Bind program variables to table columns.   
+// Bind program variables to table columns.
 if (bcp_bind(hdbc, (LPCBYTE) &idCompany, 0, sizeof(DBINT), NULL, 0,  
    SQLINT4, 1)    == FAIL)  
    {  
@@ -263,10 +269,10 @@ if (bcp_bind(hdbc, (LPCBYTE) szCompanyName, 0, SQL_VARLEN_DATA,
   
 while (TRUE)  
    {  
-   // Retrieve and process program data.   
+   // Retrieve and process program data.
    if ((bMoreData = getdata(&idCompany, szCompanyName)) == TRUE)  
       {  
-      // Send the data.   
+      // Send the data.
       if (bcp_sendrow(hdbc) == FAIL)  
          {  
          // Raise error and return.  
@@ -290,7 +296,6 @@ if ((nRowsProcessed = bcp_done(hdbc)) == -1)
 printf_s("%ld rows copied.\n", nRowsProcessed);  
 ```  
   
-## See Also  
- [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
-  
-  
+## See Also
+
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)

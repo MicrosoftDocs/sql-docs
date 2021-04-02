@@ -1,4 +1,5 @@
 ---
+description: "sp_change_log_shipping_secondary_database (Transact-SQL)"
 title: "sp_change_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_change_log_shipping_secondary_database"
   - "sp_change_log_shipping_secondary_database_TSQL"
@@ -19,7 +20,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # sp_change_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes secondary database settings.  
   
@@ -76,7 +77,7 @@ sp_change_log_shipping_secondary_database
  The number of minutes allowed to elapse between restore operations before an alert is generated. *restore_threshold* is **int** and cannot be NULL.  
   
 `[ @threshold_alert = ] 'threshold_alert'`
- Is the alert to be raised when the restore threshold is exceeded. *threshold_alert* is **int**, with a default of 14420.  
+ Is the alert to be raised when the restore threshold is exceeded. *threshold_alert* is **int**, with a default of 14421.  
   
 `[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`
  Specifies whether an alert will be raised when *restore_threshold*is exceeded. 1 = enabled; 0 = disabled. *threshold_alert_enabled* is **bit** and cannot be NULL.  
@@ -96,8 +97,6 @@ sp_change_log_shipping_secondary_database
 1.  Changes the settings in the **log_shipping_secondary_database** records as necessary.  
   
 2.  Changes the local monitor record in **log_shipping_monitor_secondary** on the secondary server using supplied arguments, if necessary.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Permissions  
  Only members of the **sysadmin** fixed server role can run this procedure.  

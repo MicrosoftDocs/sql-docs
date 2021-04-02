@@ -1,5 +1,6 @@
 ---
 title: "Error Handling (XQuery) | Microsoft Docs"
+description: Learn about error handling in XQuery and view examples of handling dynamic errors.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -19,7 +20,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Error Handling (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   The W3C specification allows type errors to be raised statically or dynamically, and defines static, dynamic, and type errors.  
   

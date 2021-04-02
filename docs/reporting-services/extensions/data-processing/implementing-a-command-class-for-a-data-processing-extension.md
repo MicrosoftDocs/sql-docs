@@ -1,5 +1,6 @@
 ---
 title: "Implementing a Command Class for a Data Processing Extension | Microsoft Docs"
+description: Learn how to implement a Command class for a data processing extension so that the extension can formulate requests and pass them on to the data source.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,4 +1,5 @@
 ---
+description: "sysmail_delete_mailitems_sp (Transact-SQL)"
 title: "sysmail_delete_mailitems_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysmail_delete_mailitems_sp_TSQL"
   - "sysmail_delete_mailitems_sp"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_delete_mailitems_sp"
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sysmail_delete_mailitems_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Permanently deletes e-mail messages from the Database Mail internal tables.  
   
@@ -34,17 +35,17 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## Arguments  
-`[ @sent_before = ] 'sent_before'`
+`[ \@sent_before = ] 'sent_before'`
  Deletes e-mails up to the date and time provided as the *sent_before* argument. *sent_before* is **datetime** with NULL as default. NULL indicates all dates.  
   
-`[ @sent_status = ] 'sent_status'`
+`[ \@sent_status = ] 'sent_status'`
  Deletes e-mails of the type specified by *sent_status*. *sent_status* is **varchar(8)** with no default. Valid entries are **sent**, **unsent**, **retrying**, and **failed**. NULL indicates all statuses.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  
   
 ## Remarks  
- Database Mail messages and their attachments are stored in the **msdb** database. Messages should be periodically deleted to prevent **msdb** from growing larger than expected and to comply with your organizations document retention program. Use the **sysmail_delete_mailitems_sp** stored procedure to permanently delete e-mail messages from the Database Mail tables. An optional argument allows you to delete only older e-mails by providing a date and time. E-mails older than that argument will be deleted. Another optional argument allows you to delete only e-mails of a certain type, specified as the **sent_status** argument. You must provide an argument either for **@sent_before** or **@sent_status**. To delete all messages, use **@sent_before = getdate()**.  
+ Database Mail messages and their attachments are stored in the **msdb** database. Messages should be periodically deleted to prevent **msdb** from growing larger than expected and to comply with your organizations document retention program. Use the **sysmail_delete_mailitems_sp** stored procedure to permanently delete e-mail messages from the Database Mail tables. An optional argument allows you to delete only older e-mails by providing a date and time. E-mails older than that argument will be deleted. Another optional argument allows you to delete only e-mails of a certain type, specified as the **sent_status** argument. You must provide an argument either for **\@sent_before** or **\@sent_status**. To delete all messages, use **\@sent_before = getdate()**.  
   
  Deleting e-mail also deletes attachments related to those messages. Deleting e-mail does not delete the corresponding entries in **sysmail_event_log**. Use [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) to delete items from the log.  
   

@@ -1,6 +1,7 @@
 ---
-title: "Add an Expand or Collapse Action to an Item (Report Builder and SSRS) | Microsoft Docs"
-ms.date: 03/01/2017
+title: "Add an Expand or Collapse Action (Report Builder & SSRS) | Microsoft Docs"
+description: Enable a user to expand or collapse items, rows, and columns associated with a group for a table or matrix in a report in Report Builder.
+ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design
@@ -11,8 +12,8 @@ ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Add an Expand or Collapse Action to an Item (Report Builder and SSRS)
-  You can enable a user to interactively expand or collapse report items, or expand or collapse rows and columns associated with a group for a table or matrix. To allow users to expand or collapse an item, you set the visibility properties for that item. Setting visibility works in an HTML report viewer, and is sometimes called a *drilldown* action.  
+# Add an Expand or Collapse Action to an Item (Report Builder & SSRS)
+  You can enable a user to interactively expand or collapse items in a paginated report, or expand or collapse rows and columns associated with a group for a table or matrix. To allow users to expand or collapse an item, you set the visibility properties for that item. Setting visibility works in an HTML report viewer, and is sometimes called a *drilldown* action.  
   
  In report design view, you specify the name of the text box where you want to display the expand and collapse toggle icons. In the rendered report, the text box displays a plus (+) or minus (-) sign in addition to its contents. When the user clicks the toggle, the report display is refreshed to show or hide the report item, based on the current visibility settings for items in the report.  
   

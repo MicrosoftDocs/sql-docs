@@ -1,5 +1,6 @@
 ---
 title: "Export a Report Using URL Access | Microsoft Docs"
+description: "Learn how to export a report using URL access by specifying the format in which to render a report by using the rs:Format URL parameter."
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -23,7 +24,7 @@ ms.author: maggies
 https://myrshost/ReportServer?/myreport&rs:Format=PDF  
 ```  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  And, from a SharePoint integrated mode report server:  
   

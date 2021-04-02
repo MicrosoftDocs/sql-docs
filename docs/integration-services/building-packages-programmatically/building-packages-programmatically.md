@@ -1,4 +1,5 @@
 ---
+description: "Building Packages Programmatically"
 title: "Building Packages Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: integration-services 
 ms.topic: "reference"
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Building Packages Programmatically
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   If you need to create packages dynamically, or to manage and execute [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages outside the development environment, you can manipulate packages programmatically. In this approach, you have a continuous range of options:  
@@ -91,7 +92,7 @@ ms.author: janinez
   
 -   CodePlex samples, [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204), on www.codeplex.com/MSFTISProdSamples  
   
--   Blog entry, [Performance profiling your custom extensions](https://go.microsoft.com/fwlink/?LinkId=238831), on blogs.msdn.com.  
+-   Blog entry, [Performance profiling your custom extensions](https://techcommunity.microsoft.com/t5/sql-server-integration-services/performance-profiling-your-custom-extensions/ba-p/387490), on blogs.msdn.com.  
 
 ## See Also  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

@@ -1,7 +1,8 @@
 ---
-title: "Supported Features for Natively Compiled T-SQL Modules | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/23/2017"
+title: "Features for natively compiled T-SQL modules"
+description: Learn about T-SQL surface area and supported features in the body of natively compiled T-SQL modules, like stored procedures and scalar user-defined functions.
+ms.custom: seo-dt-2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -10,61 +11,45 @@ ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Supported Features for Natively Compiled T-SQL Modules
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   This topic contains a list of T-SQL surface area and supported features in the body of natively compiled T-SQL modules, such as stored procedures ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), scalar user-defined functions, inline table-valued functions, and triggers.  
 
  For supported features around the definition of native modules, see [Supported DDL for Natively Compiled T-SQL modules](../../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md).  
 
--   [Query Surface Area in Native Modules](#qsancsp)  
-
--   [Data Modification](#dml)  
-
--   [Control-of-flow language](#cof)  
-
--   [Supported Operators](#so)  
-
--   [Built-in Functions in Natively Compiled Modules](#bfncsp)  
-
--   [Auditing](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#auditing)  
-
--   [Table and Query Hints](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#tqh)  
-
--   [Limitations on Sorting](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#los)  
-
- For complete information about unsupported constructs, and for information about how to work around some of the unsupported features in natively compiled modules, see [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md). For more information about unsupported features, see [Transact-SQL Constructs Not Supported by In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
+ For complete information about unsupported constructs, and for information about how to work around some of the unsupported features in natively compiled modules, see [Migration Issues for Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md). For more information about unsupported features, see [Transact-SQL Constructs Not Supported by In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
 
 ##  <a name="qsancsp"></a> Query Surface Area in Native Modules  
 
 The following query constructs are supported:  
 
 CASE expression: CASE can be used in any statement or clause that allows a valid expression.
-   - **Applies to:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-    Beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], CASE statements are now supported for natively compiled T-SQL modules.
+   - **Applies to:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)].  
+    Beginning with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], CASE statements are now supported for natively compiled T-SQL modules.
 
 SELECT clause:  
 
 -   Columns and  name aliases (using either AS or = syntax).  
 
 -   Scalar subqueries
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], scalar subqueries are now supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], scalar subqueries are now supported in natively compiled modules.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the DISTINCT operator is supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], the DISTINCT operator is supported in natively compiled modules.
 
-              DISTINCT aggregates are not supported.  
+        - DISTINCT aggregates are not supported.  
 
 -   UNION and UNION ALL
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], UNION and UNION ALL operators are now supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], UNION and UNION ALL operators are now supported in natively compiled modules.
 
 -   Variable assignments  
 
@@ -75,12 +60,12 @@ FROM clause:
 -   FROM \<natively compiled inline TVF>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN and INNER JOIN.
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], JOINS are now supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], JOINS are now supported in natively compiled modules.
 
 -   Subqueries `[AS] table_alias`. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], Subqueries are now supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], Subqueries are now supported in natively compiled modules.
 
 WHERE clause:  
 
@@ -88,8 +73,8 @@ WHERE clause:
 
 -   AND, BETWEEN  
 -   OR, NOT, IN, EXISTS
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], OR/NOT/IN/EXISTS operators are now supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], OR/NOT/IN/EXISTS operators are now supported in natively compiled modules.
 
 
 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) clause:
@@ -163,7 +148,7 @@ The following DML statements are supported.
 
 -   [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
 
-               To achieve optimal performance, use a single TRY/CATCH block for an entire natively compiled T-SQL module.  
+    - To achieve optimal performance, use a single TRY/CATCH block for an entire natively compiled T-SQL module.  
 
 -   [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  
 
@@ -178,15 +163,15 @@ The following DML statements are supported.
 
 -   Binary operators (*, /, +, -, % (modulo)).  
 
-               The plus operator (+) is supported on both numbers and strings.  
+    - The plus operator (+) is supported on both numbers and strings.  
 
 -   Logical operators (AND, OR, NOT).  
 
 -   Bitwise operators ~, &, |, and ^  
 
 -   APPLY operator
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the APPLY operator is supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].  
+      Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the APPLY operator is supported in natively compiled modules.
 
 ##  <a name="bfncsp"></a> Built-in Functions in Natively Compiled Modules  
  The following functions are supported in constraints on memory-optimized tables and in natively compiled T-SQL modules.  
@@ -196,8 +181,8 @@ The following DML statements are supported.
 -   Date functions: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME, and YEAR.  
 
 -   String functions: LEN, LTRIM, RTRIM, and SUBSTRING.  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the following built-in functions are also supported: TRIM, TRANSLATE, and CONCAT_WS.  
+    - **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].  
+      Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the following built-in functions are also supported: TRIM, TRANSLATE, and CONCAT_WS.  
 
 -   Identity functions: SCOPE_IDENTITY  
 
@@ -206,8 +191,8 @@ The following DML statements are supported.
 -   Uniqueidentifier functions: NEWID and NEWSEQUENTIALID  
 
 -   JSON functions  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the JSON functions are supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].  
+      Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the JSON functions are supported in natively compiled modules.
 
 -   Error functions: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, and ERROR_STATE  
 
@@ -295,7 +280,5 @@ GO
  The formula to calculate a worst case maximum supported N in TOP N is: `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`.  
 
 ## See Also  
- [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
- [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-
-
+ [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)   
+ [Migration Issues for Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)

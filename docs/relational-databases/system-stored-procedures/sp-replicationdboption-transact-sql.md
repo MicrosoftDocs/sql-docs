@@ -1,4 +1,5 @@
 ---
+description: "sp_replicationdboption (Transact-SQL)"
 title: "sp_replicationdboption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: replication
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_replicationdboption_TSQL"
   - "sp_replicationdboption"
@@ -17,7 +18,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # sp_replicationdboption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Sets a replication database option for the specified database. This stored procedure is executed at the Publisher or Subscriber on any database.  
   
@@ -35,10 +36,10 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## Arguments  
- [**@dbname=**] **'***dbname***'**  
+`[ @dbname = ] 'dbname'`
  Is the database for which the replication database option is being set. *db_name* is **sysname**, with no default.  
   
- [**@optname=**] **'***optname***'**  
+`[ @optname = ] 'optname'`
  Is the replication database option to enable or disable. *optname* is **sysname**, and can be one of these values.  
   
 |Value|Description|  
@@ -63,7 +64,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## Remarks  
  **sp_replicationdboption** is used in snapshot replication, transactional replication, and merge replication.  
   
- This procedure creates or drops specific replication system tables, security accounts, and so on, depending on the options given. Sets the corresponding category bit in the **master.sysdatabases** system table and creates the necessary system tables.  
+ This procedure creates or drops specific replication system tables, security accounts, and so on, depending on the options given. Sets the corresponding **is_published** (transacational or snapshot replication), **is_merge_published** (merge replication), or **is_distributor** bits in the **master.databases** system table and creates the necessary system tables.  
   
  To disable publishing, the publication database must be online. If a database snapshot exists for the publication database, it must be dropped before disabling publishing. A database snapshot is a read-only offline copy of a database, and is not related to a replication snapshot. For more information, see [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
@@ -75,7 +76,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Delete a Publication](../../relational-databases/replication/publish/delete-a-publication.md)   
  [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Replication Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

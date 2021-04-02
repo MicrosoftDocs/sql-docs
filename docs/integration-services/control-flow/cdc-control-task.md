@@ -1,4 +1,5 @@
 ---
+description: "CDC Control Task"
 title: "CDC Control Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -11,12 +12,12 @@ f1_keywords:
   - "sql13.ssis.designer.cdccontroltask.f1"
   - "sql13.ssis.designer.cdccontroltask.config.f1"
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # CDC Control Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The CDC Control task is used to control the life cycle of change data capture (CDC) packages. It handles CDC package synchronization with the initial load package, the management of Log Sequence Number (LSN) ranges that are processed in a run of a CDC package. In addition, the CDC Control task deals with error scenarios and recovery.  
@@ -30,9 +31,9 @@ ms.author: janinez
 |Operation|Description|  
 |---------------|-----------------|  
 |ResetCdcState|This operation is used to reset the persistent CDC state associated with the current CDC context. After this operation is run, the current maximum LSN from the LSN-timestamp `sys.fn_cdc_get_max_lsn` table becomes the start of the range for the next processing range. This operation requires a connection to the source database.|  
-|MarkInitialLoadStart|This operation is used at the beginning of an initial-load package to record the current LSN in the source database before the initial-load package starts reading the source tables. This requires a connection to the source database to call `sys.fn_cdc_get_max_lsn`.<br /><br /> If you select MarkInitialLoadStart when working on [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (that is, not Oracle) the user specified in the connection manager must be either  db_owner or sysadmin.|  
-|MarkInitialLoadEnd|This operation is used at the end of an initial-load package to record the current LSN in the source database after the initial-load package finished reading the source tables. This LSN is determined by recording the current time when this operation occurred and then querying the `cdc.lsn_time_`mapping table in the CDC database looking for a change that occurred after that time.<br /><br /> If you select MarkInitialLoadEnd when working on [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (that is , not Oracle) the user specified in the connection manager must be either  db_owner or sysadmin.|  
-|MarkCdcStart|This operation is used when then the initial load is made from a snapshot database. In this case, the change processing should start immediately after the snapshot LSN. You can specify the name of the snapshot database to use and the CDC Control task queries [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for the snapshot LSN. You also have the option to directly specify the snapshot LSN.<br /><br /> If you select MarkCdcStart when working on [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (that is , not Oracle) the user specified in the connection manager must be either  db_owner or sysadmin.|  
+|MarkInitialLoadStart|This operation is used at the beginning of an initial-load package to record the current LSN in the source database before the initial-load package starts reading the source tables. This requires a connection to the source database to call `sys.fn_cdc_get_max_lsn`.<br /><br /> If you select MarkInitialLoadStart when working on [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC (that is, not Oracle) the user specified in the connection manager must be either  db_owner or sysadmin.|  
+|MarkInitialLoadEnd|This operation is used at the end of an initial-load package to record the current LSN in the source database after the initial-load package finished reading the source tables. This LSN is determined by recording the current time when this operation occurred and then querying the `cdc.lsn_time_`mapping table in the CDC database looking for a change that occurred after that time.<br /><br /> If you select MarkInitialLoadEnd when working on [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC (that is , not Oracle) the user specified in the connection manager must be either  db_owner or sysadmin.|  
+|MarkCdcStart|This operation is used when then the initial load is made from a snapshot database. In this case, the change processing should start immediately after the snapshot LSN. You can specify the name of the snapshot database to use and the CDC Control task queries [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] for the snapshot LSN. You also have the option to directly specify the snapshot LSN.<br /><br /> If you select MarkCdcStart when working on [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC (that is , not Oracle) the user specified in the connection manager must be either  db_owner or sysadmin.|  
   
  The following operations are used to manage the processing range:  
   
@@ -101,17 +102,17 @@ ms.author: janinez
   
 -   **Mark initial load start**: This operation is used when executing an initial load from an active database without a snapshot. It is invoked at the beginning of an initial-load package to record the current LSN in the source database before the initial-load package starts reading the source tables. This requires a connection to the source database.  
   
-     If you select **Mark Initial Load Start** when working on [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (that is, not Oracle) the user specified in the connection manager must be either  **db_owner** or **sysadmin**.  
+     If you select **Mark Initial Load Start** when working on [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC (that is, not Oracle) the user specified in the connection manager must be either  **db_owner** or **sysadmin**.  
   
 -   **Mark initial load end**: This operation is used when executing an initial load from an active database without a snapshot. It is invoked at the end of an initial-load package to record the current LSN in the source database after the initial-load package finished reading the source tables. This LSN is determined by recording nthe current time when this operation occurred and then querying the `cdc.lsn_time_`mapping table in the CDC database looking for a change that occurred after that time  
   
-     If you select **Mark Initial Load End** when working on [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (that is, not Oracle) the user specified in the connection manager must be either  **db_owner** or **sysadmin**.  
+     If you select **Mark Initial Load End** when working on [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC (that is, not Oracle) the user specified in the connection manager must be either  **db_owner** or **sysadmin**.  
   
 -   **Mark CDC start**: This operation is used when then the initial load is made from a snapshot database or from a quiescence database. It is invoked at any point within the initial load package. The operation accepts a parameter that can be a snapshot LSN, a name of a snapshot database (from which the snapshot LSN will be derived automatically) or it can be left empty, in which case the current database LSN is used as the start LSN for the change processing package.  
   
      This operation is used instead of the Mark Initial Load Start/End operations.  
   
-     If you select **Mark CDC Start** when working on [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (that is, not Oracle) the user specified in the connection manager must be either  **db_owner** or **sysadmin**.  
+     If you select **Mark CDC Start** when working on [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] CDC (that is, not Oracle) the user specified in the connection manager must be either  **db_owner** or **sysadmin**.  
   
 -   **Get processing range**: This operation is used in a change processing package before invoking the data flow that uses the CDC Source data flow. It establishes a range of LSNs that the CDC Source data flow reads when invoked. The range is stored in an SSIS package variable that is used by the CDC Source during data-flow processing.  
   

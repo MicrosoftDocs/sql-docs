@@ -1,4 +1,5 @@
 ---
+description: "Properties (MDX)"
 title: "Properties (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -29,7 +30,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  A valid string expression of a member property name.  
   
 ## Remarks  
- The **Properties** function returns the value of the specified member for the specified member property. The member property can be any of the intrinsic member properties, such as **NAME**, **ID**, **KEY**, or **CAPTION**, or it can be a user-defined member property. For more information, see [Intrinsic Member Properties &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) and [User-Defined Member Properties &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ The **Properties** function returns the value of the specified member for the specified member property. The member property can be any of the intrinsic member properties, such as **NAME**, **ID**, **KEY**, or **CAPTION**, or it can be a user-defined member property. For more information, see [Intrinsic Member Properties &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) and [User-Defined Member Properties &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
   
  By default, the value is coerced to be a string. If **TYPED** is specified, the return value is strongly typed.  
   
@@ -99,7 +100,6 @@ FROM [Adventure Works]
 ```  
   
 ## See Also  
- [Using Member Properties &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Using Member Properties &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
  [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

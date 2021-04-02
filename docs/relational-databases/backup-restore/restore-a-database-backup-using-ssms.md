@@ -1,5 +1,6 @@
 ---
 title: "Restore a Database Backup Using SSMS | Microsoft Docs"
+description: This article explains how to restore a full SQL Server database backup using SQL Server Management Studio.
 ms.custom: ""
 ms.date: "11/16/2016"
 ms.prod: sql
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "database backups [SQL Server], full backups"
   - "restoring databases [SQL Server], full backups"
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Restore a Database Backup Using SSMS
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic explains how to restore a full database backup using SQL Server Management Studio.    
        
@@ -102,27 +103,27 @@ For information on SQL Server restore from the Microsoft Azure Blob storage serv
     
 8. To view or select the advanced options, on the **Options** page, in the **Restore options** panel, you can select any of the following options, if appropriate for your situation:    
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    1.  **WITH** options (not required):    
+   1. **WITH** options (not required):    
     
-        -   **Overwrite the existing database (WITH REPLACE)**    
+     - **Overwrite the existing database (WITH REPLACE)**    
     
-        -   **Preserve the replication settings (WITH KEEP_REPLICATION)**    
+     - **Preserve the replication settings (WITH KEEP_REPLICATION)**    
     
-        -   **Restrict access to the restored database (WITH RESTRICTED_USER)**    
+     - **Restrict access to the restored database (WITH RESTRICTED_USER)**    
     
-    2.  Select an option for the **Recovery state** box. This box determines the state of the database after the restore operation.    
+   2. Select an option for the **Recovery state** box. This box determines the state of the database after the restore operation.    
     
-        -   **RESTORE WITH RECOVERY** is the default behavior which leaves the database ready for use by rolling back the uncommitted transactions. Additional transaction logs cannot be restored. Select this option if you are restoring all of the necessary backups now.    
+     - **RESTORE WITH RECOVERY** is the default behavior which leaves the database ready for use by rolling back the uncommitted transactions. Additional transaction logs cannot be restored. Select this option if you are restoring all of the necessary backups now.    
     
-        -   **RESTORE WITH NORECOVERY** which leaves the database non-operational, and does not roll back the uncommitted transactions. Additional transaction logs can be restored. The database cannot be used until it is recovered.    
+     - **RESTORE WITH NORECOVERY** which leaves the database non-operational, and does not roll back the uncommitted transactions. Additional transaction logs can be restored. The database cannot be used until it is recovered.    
     
-        -   **RESTORE WITH STANDBY** which leaves the database in read-only mode. It undoes uncommitted transactions, but saves the undo actions in a standby file so that recovery effects can be reverted.    
+     - **RESTORE WITH STANDBY** which leaves the database in read-only mode. It undoes uncommitted transactions, but saves the undo actions in a standby file so that recovery effects can be reverted.    
     
-    3.  **Take tail-log backup before restore.** Not all restore scenarios require a tail-log backup.  For more information, see **Scenarios That Require a Tail-Log Backup** from [Tail-Log Backups (SQL Server).](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
-    4.  Restore operations may fail if there are active connections to the database. Check the **Close existing connections option** to ensure that all active connections between [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and the database are closed. This check box sets the database to single user mode before performing the restore operations, and sets the database to multi-user mode when complete.    
-    5.  Select **Prompt before restoring each backup** if you wish to be prompted between each restore operation. This is not usually necessary unless the database is large and you wish to monitor the status of the restore operation.    
+   3. **Take tail-log backup before restore.** Not all restore scenarios require a tail-log backup.  For more information, see **Scenarios That Require a Tail-Log Backup** from [Tail-Log Backups (SQL Server).](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
+  
+   4. Restore operations may fail if there are active connections to the database. Check the **Close existing connections option** to ensure that all active connections between [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and the database are closed. This check box sets the database to single user mode before performing the restore operations, and sets the database to multi-user mode when complete.    
+  
+   5. Select **Prompt before restoring each backup** if you wish to be prompted between each restore operation. This is not usually necessary unless the database is large and you wish to monitor the status of the restore operation.    
     
 For more information about these restore options, see [Restore Database &#40;Options Page&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).    
     
@@ -206,29 +207,29 @@ The two examples below perform a restore of `Sales` from a backup located in the
 
 #### E1.   Restore a striped backup over an existing database and a shared access signature exists.
 A stored access policy has been created with read, write, delete, and list rights.  A shared access signature that is associated with the stored access policy was created for the container `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.  The steps are mostly the same if a SQL Server credential already exists.  The database `Sales` currently exists on the server.  The backup files are `Sales_stripe1of2_20160601.bak` and `Sales_stripe2of2_20160601.bak`.  
-*  
-7.	Select `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` from the **Azure storage container:** drop-down list if the SQL Server credential already exists, else manually enter the name of the container, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`. 
-8.	Enter the shared access signature in the **Shared Access Signature:** rich-text box.
-9.	Click **OK** and the **Locate Backup File in Microsoft Azure** dialog box opens.
-10.	Expand **Containers** and navigate to `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-11.	Hold ctrl and select files `Sales_stripe1of2_20160601.bak` and `Sales_stripe2of2_20160601.bak`.
-12.	Click **OK**.
-13.	Click **OK** to return to the **General** page.
-14.	Click **Options** in the **Select a page** pane.
-15.	Under the **Restore** options section, check **Overwrite the existing database (WITH REPLACE)**.
-16.	Under the **Tail-log backup** section, uncheck **Take tail-log backup before restore**.
-17.	Under the **Server connections** section, check **Close existing connections to destination database**.
-18.	Click **OK**.
+
+1.	Select `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` from the **Azure storage container:** drop-down list if the SQL Server credential already exists, else manually enter the name of the container, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`. 
+1. Enter the shared access signature in the **Shared Access Signature:** rich-text box.
+1. Click **OK** and the **Locate Backup File in Microsoft Azure** dialog box opens.
+1. Expand **Containers** and navigate to `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+1. Hold ctrl and select files `Sales_stripe1of2_20160601.bak` and `Sales_stripe2of2_20160601.bak`.
+1. Click **OK**.
+1. Click **OK** to return to the **General** page.
+1. Click **Options** in the **Select a page** pane.
+1. Under the **Restore** options section, check **Overwrite the existing database (WITH REPLACE)**.
+1. Under the **Tail-log backup** section, uncheck **Take tail-log backup before restore**.
+1. Under the **Server connections** section, check **Close existing connections to destination database**.
+1. Click **OK**.
 
 #### E2.   A shared access signature does not exist
 In this example the `Sales` database does not currently exist on the server.
-7.	Click **Add** and the **Connect to a Microsoft Subscription** dialog box will open.  
-8.	Complete the **Connect to a Microsoft Subscription** dialog box and then click **OK** to return the **Select a Backup File Location** dialog box.  See [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) for additional information.
-9.	Click **OK** in the **Select a Backup File Location** dialog box and the **Locate Backup File in Microsoft Azure** dialog box opens.
-10.	Expand **Containers** and navigate to `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-11.	Select the backup file and then click **OK**.
-12.	Click **OK** to return to the **General** page.
-13.	Click **OK**.
+1. Click **Add** and the **Connect to a Microsoft Subscription** dialog box will open.  
+1. Complete the **Connect to a Microsoft Subscription** dialog box and then click **OK** to return the **Select a Backup File Location** dialog box.  See [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) for additional information.
+1. Click **OK** in the **Select a Backup File Location** dialog box and the **Locate Backup File in Microsoft Azure** dialog box opens.
+1. Expand **Containers** and navigate to `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+1. Select the backup file and then click **OK**.
+1. Click **OK** to return to the **General** page.
+1. Click **OK**.
 
 #### F.	Restore local backup to Microsoft Azure storage (URL)
 The `Sales` database will be restored to the Microsoft Azure storage container `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` from a backup located at `E:\MSSQL\BAK`.  The SQL Server credential for the Azure container has already been created.  A SQL Server credential for the destination container must already exist as it cannot be created through the **Restore** task.  The `Sales` database does not currently exist on the server.

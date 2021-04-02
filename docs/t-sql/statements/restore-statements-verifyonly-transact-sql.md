@@ -1,4 +1,5 @@
 ---
+description: "RESTORE Statements - VERIFYONLY (Transact-SQL)"
 title: "RESTORE VERIFYONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "VERIFYONLY"
   - "RESTORE VERIFYONLY"
@@ -22,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # RESTORE Statements - VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -38,8 +39,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 RESTORE VERIFYONLY  
 FROM <backup_device> [ ,...n ]  
 [ WITH    
@@ -76,12 +76,14 @@ FROM <backup_device> [ ,...n ]
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
-   | { DISK | TAPE } = { 'physical_backup_device_name' |  
+   | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
        @physical_backup_device_name_var }   
 }  
   
 ```  
-  
+ > [!NOTE] 
+> URL is the format used to specify the location and the file name for  Microsoft Azure Blob Storage and is supported starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seamless restore experience for all the three devices.
+ 
 ## Arguments  
  For descriptions of the RESTORE VERIFYONLY arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
@@ -102,7 +104,7 @@ FROM <backup_device> [ ,...n ]
 >  RESTORE VERIFYONLY does not work on a database snapshot. To verify a database snapshot before a revert operation, you can run DBCC CHECKDB.  
   
 > [!NOTE]  
->  With snapshot backups, RESTORE VERIFYONLY confirms the existence of the snapshots in the locations specified in the backup file. Snapshot backups are a new feature in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. For more information about Snapshot Backups, see [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+>  With snapshot backups, RESTORE VERIFYONLY confirms the existence of the snapshots in the locations specified in the backup file. Snapshot backups are a new feature in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. For more information about Snapshot Backups, see [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 ## Security  
  A backup operation may optionally specify passwords for a media set, a backup set, or both. When a password has been defined on a media set or backup set, you must specify the correct password or passwords in the RESTORE statement. These passwords prevent unauthorized restore operations and unauthorized appends of backup sets to media using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools. However, a password does not prevent overwrite of media using the BACKUP statement's FORMAT option.  
@@ -116,7 +118,7 @@ FROM <backup_device> [ ,...n ]
 ## Examples  
  The following example verifies the backup from disk.
   
-```  
+```sql  
 RESTORE VERIFYONLY FROM DISK = 'D:\AdventureWorks.bak';
 GO
 ```  

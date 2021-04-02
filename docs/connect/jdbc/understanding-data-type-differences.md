@@ -1,23 +1,24 @@
 ---
-title: "Understanding Data Type Differences | Microsoft Docs"
+title: "Understanding data type differences"
+description: "Learn the differences between Java programming language data types and SQL Server data types and how the JDBC Driver for SQL Server helps with conversions."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
-# Understanding Data Type Differences
+# Understanding data type differences
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 There are a number of differences between the Java programming language data types and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] helps to facilitate those differences through various types of conversions.  
 
-## Character Types
+## Character types
 
 The JDBC character string data types are **CHAR**, **VARCHAR**, and **LONGVARCHAR**. The JDBC driver provides support for the JDBC 4.0 API. In the JDBC 4.0, the JDBC character string data types can also be **NCHAR**, **NVARCHAR**, and **LONGNVARCHAR**. These new character string types maintain Java native character types in Unicode format and remove the need to perform any ANSI-to-Unicode or Unicode-to-ANSI conversion.  
   
@@ -27,7 +28,7 @@ The JDBC character string data types are **CHAR**, **VARCHAR**, and **LONGVARCHA
 | Variable-length | The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **varchar** and **nvarchar** types map directly to the JDBC **VARCHAR** and **NVARCHAR** types, respectively.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Long            | The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **text** and **ntext** types map to the JDBC **LONGVARCHAR** and **LONGNVARCHAR** type, respectively. These are deprecated types beginning in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], so you should use large value types, **varchar(max)** or **nvarchar(max)**, instead.<br /><br /> Using the update\<Numeric Type> and [updateObject (int, java.lang.Object)](../../connect/jdbc/reference/updateobject-method-int-java-lang-object.md) methods will fail against **text** and **ntext** server columns. However, using the [setObject](../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) method with a specified character conversion type is supported against **text** and **ntext** server columns. |
   
-## Binary String Types
+## Binary string types
 
 The JDBC binary-string types are **BINARY**, **VARBINARY**, and **LONGVARBINARY**.  
   
@@ -37,7 +38,7 @@ The JDBC binary-string types are **BINARY**, **VARBINARY**, and **LONGVARBINARY*
 | Variable-length | The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **varbinary** type maps to the JDBC **VARBINARY** type.<br /><br /> The **udt** type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maps to JDBC as a **VARBINARY** type.                                                                                                                                                                                                                                 |
 | Long            | The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **image** type maps to the JDBC **LONGVARBINARY** type. This type is deprecated beginning in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], so you should use a large value type, **varbinary(max)** instead.                                                                                                                                                                                           |
   
-## Exact Numeric Types
+## Exact numeric types
 
 The JDBC exact numeric types map directly to their corresponding SQL Server types.  
   
@@ -51,7 +52,7 @@ The JDBC exact numeric types map directly to their corresponding SQL Server type
 | NUMERIC  | The JDBC **NUMERIC** type represents a fixed-precision decimal value that holds values of identical precision. The **NUMERIC** type maps to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **numeric** type.                                                                                                                                                                                                                                                                   |
 | DECIMAL  | The JDBC **DECIMAL** type represents a fixed-precision decimal value that holds values of at least the specified precision. The **DECIMAL** type maps to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal** type.<br /><br /> The JDBC **DECIMAL** type also maps to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **money** and **smallmoney** types, which are specific fixed-precision decimal types that are stored in 8 and 4 bytes, respectively. |
   
-## Approximate Numeric Types
+## Approximate numeric types
 
 The JDBC approximate numeric types are **REAL**, **DOUBLE**, and **FLOAT**.  
   
@@ -67,10 +68,10 @@ The JDBC **TIMESTAMP** type maps to the [!INCLUDE[ssNoVersion](../../includes/ss
 > [!NOTE]  
 > The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp** type is a fixed-length binary-string type. It does not map to any of the JDBC time types: **DATE**, **TIME**, or **TIMESTAMP**.  
   
-## Custom Type Mapping
+## Custom type mapping
 
 The custom type mapping feature of JDBC that uses the SQLData interfaces for the JDBC advanced types (UDTs, Struct, and so on). is not implemented in the JDBC driver.  
   
-## See Also
+## See also
 
-[Understanding the JDBC Driver Data Types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Understanding the JDBC driver data types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

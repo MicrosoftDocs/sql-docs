@@ -1,4 +1,5 @@
 ---
+description: "Logical Functions - IIF (Transact-SQL)"
 title: "IIF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "IIF_TSQL"
   - "IIF"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "IIF function"
 ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Logical Functions - IIF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns one of two values, depending on whether the Boolean expression evaluates to true or false in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -27,16 +28,17 @@ ms.author: mikeray
   
 ## Syntax  
   
+```syntaxsql
+IIF( boolean_expression, true_value, false_value )
 ```  
   
-IIF ( boolean_expression, true_value, false_value )  
-```  
-  
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *boolean_expression*  
  A valid Boolean expression.  
   
- If this argument is not a Boolean expression, then a syntax error is raised.  
+ If this argument is not a Boolean expression then a syntax error is raised.  
   
  *true_value*  
  Value to return if *boolean_expression* evaluates to true.  
@@ -56,9 +58,9 @@ IIF ( boolean_expression, true_value, false_value )
   
 ### A. Simple IIF example  
   
-```  
-DECLARE @a int = 45, @b int = 40;  
-SELECT IIF ( @a > @b, 'TRUE', 'FALSE' ) AS Result;  
+```sql  
+DECLARE @a INT = 45, @b INT = 40;
+SELECT [Result] = IIF( @a > @b, 'TRUE', 'FALSE' );
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -67,23 +69,21 @@ SELECT IIF ( @a > @b, 'TRUE', 'FALSE' ) AS Result;
 Result  
 --------  
 TRUE  
-  
-(1 row(s) affected)  
 ```  
   
 ### B. IIF with NULL constants  
   
-```  
-SELECT IIF ( 45 > 30, NULL, NULL ) AS Result;  
+```sql 
+SELECT [Result] = IIF( 45 > 30, NULL, NULL );
 ```  
   
  The result of this statement is an error.  
   
 ### C. IIF with NULL parameters  
   
-```  
+```sql  
 DECLARE @P INT = NULL, @S INT = NULL;  
-SELECT IIF ( 45 > 30, @p, @s ) AS Result;  
+SELECT [Result] = IIF( 45 > 30, @P, @S );
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -92,8 +92,6 @@ SELECT IIF ( 45 > 30, @p, @s ) AS Result;
 Result  
 --------  
 NULL  
-  
-(1 row(s) affected)  
 ```  
   
 ## See Also  

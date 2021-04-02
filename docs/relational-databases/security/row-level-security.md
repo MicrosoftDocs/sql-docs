@@ -1,9 +1,10 @@
 ---
-title: "Row-Level Security | Microsoft Docs"
+title: "Row-Level Security"
+description: Learn how Row-Level Security uses group membership or execution context to control access to rows in a database table in SQL Server.
 ms.custom: ""
-ms.date: "05/14/2019"
+ms.date: "09/01/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: "security"
 ms.topic: conceptual
@@ -13,15 +14,14 @@ helpviewer_keywords:
   - "security [SQL Server], predicate based access control"
   - "row level security described"
   - "predicate based security"
-ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Row-Level Security
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   ![Row level security graphic](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
   
@@ -33,10 +33,10 @@ The access restriction logic is located in the database tier rather than away fr
   
 Implement RLS by using the [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement, and predicates created as [inline table-valued functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   
 > [!NOTE]
-> Azure SQL Data Warehouse supports filter predicates only. Block predicates aren't currently supported in Azure SQL Data Warehouse.
+> Azure Synapse supports filter predicates only. Block predicates aren't currently supported in Azure Synapse.
 
 ## <a name="Description"></a> Description
 
@@ -58,7 +58,7 @@ RLS supports two types of security predicates.
   
  Both filter and block predicates and security policies have the following behavior:  
   
-- You may define a predicate function that joins with another table and/or invokes a function. If the security policy is created with `SCHEMABINDING = ON`, then the join or function is accessible from the query and works as expected without any additional permission checks. If the security policy is created with `SCHEMABINDING = OFF`, then users will need **SELECT** or **EXECUTE** permissions on these additional tables and functions to query the target table.
+- You may define a predicate function that joins with another table and/or invokes a function. If the security policy is created with `SCHEMABINDING = ON` (the default), then the join or function is accessible from the query and works as expected without any additional permission checks. If the security policy is created with `SCHEMABINDING = OFF`, then users will need **SELECT** permissions on these additional tables and functions to query the target table. If the predicate function invokes a CLR scalar-valued function, the **EXECUTE** permission is needed in addition.
   
 - You may issue a query against a table that has a security predicate defined but disabled. Any rows that are filtered or blocked aren't affected.  
   
@@ -116,7 +116,7 @@ RLS supports two types of security predicates.
   
 ## <a name="Best"></a> Best Practices  
   
-- It's highly recommended to create a separate schema for the RLS objects, predicate function, and security policy.  
+- It's highly recommended to create a separate schema for the RLS objects: predicate functions, and security policies. This helps to separate the permissions that are required on these special objects from the target tables. Additional separation for different policies and predicate functions may be needed in multi-tenant-databases, but not as a standard for every case.
   
 - The **ALTER ANY SECURITY POLICY** permission is intended for highly privileged users (such as a security policy manager). The security policy manager doesn't require **SELECT** permission on the tables they protect.  
   
@@ -154,7 +154,7 @@ It is possible to cause information leakage through the use of carefully crafted
   
 - **Filestream:** RLS is incompatible with Filestream.  
   
-- **PolyBase:** RLS is supported with Polybase external tables for Azure SQL Data Warehouse only.
+- **PolyBase:** RLS is supported with external tables in Azure Synapse and SQL Server 2019 CU7 or higher. 
 
 - **Memory-Optimized Tables:** The inline table-valued function used as a security predicate on a memory-optimized table must be defined using the `WITH NATIVE_COMPILATION` option. With this option, language features not supported by memory-optimized tables will be banned and the appropriate error will be issued at creation time. For more information, see the **Row-Level Security in Memory Optimized Tables** section in [Introduction to Memory-Optimized Tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -166,7 +166,7 @@ It is possible to cause information leakage through the use of carefully crafted
   
 - **Full-Text Search:** A performance hit is expected for queries using the following Full-Text Search and Semantic Search functions, because of an extra join introduced to apply row-level security and avoid leaking the primary keys of rows that should be filtered: **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
   
-- **Columnstore Indexes:** RLS is compatible with both clustered and non-clustered columnstore indexes. However, because row-level security applies a function, it is possible that the optimizer may modify the query plan so that it doesn't use batch mode.  
+- **Columnstore Indexes:** RLS is compatible with both clustered and nonclustered columnstore indexes. However, because row-level security applies a function, it is possible that the optimizer may modify the query plan so that it doesn't use batch mode.  
   
 - **Partitioned Views:** Block predicates cannot be defined on partitioned views, and partitioned views cannot be created on top of tables that use block predicates. Filter predicates are compatible with partitioned views.  
   
@@ -180,8 +180,6 @@ It is possible to cause information leakage through the use of carefully crafted
   
  Create three user accounts that will demonstrate different access capabilities.  
 
-> [!NOTE]
-> Azure SQL Data Warehouse doesn't support EXECUTE AS USER, so you must CREATE LOGIN for each user beforehand. Later, you will log in as the appropriate user to test this behavior.
 
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
@@ -252,7 +250,6 @@ GRANT SELECT ON security.fn_securitypredicate TO Sales1;
 GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
 ```
 
-
 Now test the filtering predicate, by selected from the Sales table as each user.
 
 ```sql
@@ -268,9 +265,6 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
-
-> [!NOTE]
-> Azure SQL Data Warehouse doesn't support EXECUTE AS USER, so log in as the appropriate user to test the above behavior.
 
 The Manager should see all six rows. The Sales1 and Sales2 users should only see their own sales.
 
@@ -296,20 +290,28 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="external"></a> B. Scenarios for using Row Level Security on an Azure SQL Data Warehouse external table
+### <a name="external"></a> B. Scenarios for using Row Level Security on an Azure Synapse external table
 
-This short example creates three users and an external table with six rows. It then creates an inline table-valued function and a security policy for the external table. The example shows how select statements are filtered for the various users.
+This short example creates three users and an external table with six rows. It then creates an inline table-valued function and a security policy for the external table. The example shows how select statements are filtered for the various users. 
 
-Create three user accounts that will demonstrate different access capabilities.
+### Prerequisites
+
+1. You must have a dedicated SQL pool. See [Create a dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
+1. The server hosting your dedicated SQL pool must be registered with AAD and you must have an Azure storage account with Storage Blog Data Contributor permissions. Follow the steps [here](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
+1. Create a file system for your Azure Storage account. Use Storage Explorer to view your storage account. Right click on containers and select *Create file system*.  
+
+Once you have the prerequisites in place, create three user accounts that will demonstrate different access capabilities.
 
 ```sql
-CREATE LOGIN Manager WITH PASSWORD = 'somepassword'
+--run in master
+CREATE LOGIN Manager WITH PASSWORD = '<user_password>'
 GO
-CREATE LOGIN Sales1 WITH PASSWORD = 'somepassword'
+CREATE LOGIN Sales1 WITH PASSWORD = '<user_password>'
 GO
-CREATE LOGIN Sales2 WITH PASSWORD = 'somepassword'
+CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
+--run in master and your dedicated SQL pool database
 CREATE USER Manager FOR LOGIN Manager;  
 CREATE USER Sales1  FOR LOGIN Sales1;  
 CREATE USER Sales2  FOR LOGIN Sales2 ;
@@ -330,32 +332,32 @@ CREATE TABLE Sales
 Populate the table with six rows of data, showing three orders for each sales representative.  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
+INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
+INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
+INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
+INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
+INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 -- View the 6 rows in the table  
 SELECT * FROM Sales;
 ```
 
-Create an Azure SQL Data Warehouse external table from the Sales table created.
+Create an Azure Synapse external table from the Sales table you just created.
 
 ```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<user_password>';
 
 CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Service Identity';
 
-CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://myfile@mystorageaccount.dfs.core.windows.net', CREDENTIAL = msi_cred);
+CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://<file_system_name@storage_account>.dfs.core.windows.net', CREDENTIAL = msi_cred);
 
 CREATE EXTERNAL FILE FORMAT MSIFormat  WITH (FORMAT_TYPE=DELIMITEDTEXT);
   
-CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='RLSExtTabletest.tbl', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
+CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='<your_table_name>', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
 AS SELECT * FROM sales;
 ```
 
-Grant SELECT for the three users external table.
+Grant SELECT for the three users on the external table Sales_ext that you created.
 
 ```sql
 GRANT SELECT ON Sales_ext TO Sales1;  
@@ -363,7 +365,21 @@ GRANT SELECT ON Sales_ext TO Sales2;
 GRANT SELECT ON Sales_ext TO Manager;
 ```
 
-Create a security policy on external table using the function in session A as a filter predicate. The state must be set to ON to enable the policy.
+Create a new schema, and an inline table-valued function, you may have completed this in example A. The function returns 1 when a row in the SalesRep column is the same as the user executing the query (`@SalesRep = USER_NAME()`) or if the user executing the query is the Manager user (`USER_NAME() = 'Manager'`).
+
+```sql
+CREATE SCHEMA Security;  
+GO  
+  
+CREATE FUNCTION Security.fn_securitypredicate(@SalesRep AS sysname)  
+    RETURNS TABLE  
+WITH SCHEMABINDING  
+AS  
+    RETURN SELECT 1 AS fn_securitypredicate_result
+WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
+```
+
+Create a security policy on your external table using the inline table-valued function as a filter predicate. The state must be set to ON to enable the policy.
 
 ```sql
 CREATE SECURITY POLICY SalesFilter_ext
@@ -389,7 +405,7 @@ WITH (STATE = OFF);
 
 Now the Sales1 and Sales2 users can see all six rows.
 
-Connect to the SQL Data Warehouse database to clean up resources
+Connect to the Azure Synapse database to clean up resources
 
 ```sql
 DROP USER Sales1;
@@ -416,7 +432,7 @@ DROP LOGIN Manager;
 ### <a name="MidTier"></a> C. Scenario for users who connect to the database through a middle-tier application
 
 > [!NOTE]
-> In this example block predicates functionality isn't currently supported for Azure SQL Data Warehouse, hence inserting rows for the wrong user ID isn't blocked with Azure SQL Data Warehouse.
+> In this example block predicates functionality isn't currently supported for Azure Synapse, hence inserting rows for the wrong user ID isn't blocked with Azure Synapse.
 
 This example shows how a middle-tier application can implement connection filtering, where application users (or tenants) share the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user (the application). The application sets the current application user ID in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) after connecting to the database, and then security policies transparently filter rows that shouldn't be visible to this ID, and also block the user from inserting rows for the wrong user ID. No other app changes are necessary.  
   
@@ -512,6 +528,152 @@ DROP SECURITY POLICY Security.SalesFilter;
 DROP TABLE Sales;
 DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
+```
+
+### <a name="Lookup"></a> D. Scenario for using a lookup table for the security predicate
+
+This example uses a lookup table for the link between the user identifier and the value being filtered, rather than having to specify the user identifier in the fact table. It creates three users and creates and populates a fact table with six rows and a lookup table with two rows. It then creates an inline table-valued function that joins the fact table to the lookup to get the user identifier, and a security policy for the table. The example then shows how select statements are filtered for the various users.  
+  
+Create three user accounts that will demonstrate different access capabilities.  
+
+```sql  
+CREATE USER Manager WITHOUT LOGIN;  
+CREATE USER Sales1 WITHOUT LOGIN;  
+CREATE USER Sales2 WITHOUT LOGIN;  
+```
+
+Create a sample schema and a fact table to hold data.  
+
+```sql
+CREATE SCHEMA Sample;
+
+CREATE TABLE Sample.Sales  
+    (  
+    OrderID int,  
+    Product varchar(10),  
+    Qty int 
+    );    
+```
+
+ Populate the fact table with six rows of data.  
+
+```sql
+INSERT INTO Sample.Sales VALUES (1, 'Valve', 5);
+INSERT INTO Sample.Sales VALUES (2, 'Wheel', 2);
+INSERT INTO Sample.Sales VALUES (3, 'Valve', 4);
+INSERT INTO Sample.Sales VALUES (4, 'Bracket', 2);
+INSERT INTO Sample.Sales VALUES (5, 'Wheel', 5);
+INSERT INTO Sample.Sales VALUES (6, 'Seat', 5);
+-- View the 6 rows in the table  
+SELECT * FROM Sample.Sales;
+```
+
+Create a table to hold the lookup data – in this case a relationship between Salesrep and Product.  
+
+```sql
+CREATE TABLE Sample.Lk_Salesman_Product
+  ( Salesrep sysname, 
+    Product varchar(10)
+  ) ;
+```
+
+ Populate the lookup table with sample data, linking one Product to each sales representative.  
+
+```sql
+INSERT INTO Sample.Lk_Salesman_Product VALUES ('Sales1', 'Valve');
+INSERT INTO Sample.Lk_Salesman_Product VALUES ('Sales2', 'Wheel');
+-- View the 2 rows in the table
+SELECT * FROM Sample.Lk_Salesman_Product;
+```
+
+Grant read access on the fact table to each of the users.  
+
+```sql
+GRANT SELECT ON Sample.Sales TO Manager;  
+GRANT SELECT ON Sample.Sales TO Sales1;  
+GRANT SELECT ON Sample.Sales TO Sales2;  
+```
+
+Create a new schema, and an inline table-valued function. The function returns 1 when a user queries the fact table Sales and the SalesRep column of the table Lk_Salesman_Product is the same as the user executing the query (`@SalesRep = USER_NAME()`) when joined to the fact table on the Product column, or if the user executing the query is the Manager user (`USER_NAME() = 'Manager'`).
+
+```sql
+CREATE SCHEMA Security ;
+
+CREATE FUNCTION Security.fn_securitypredicate
+         (@Product AS varchar(10))
+RETURNS TABLE
+WITH SCHEMABINDING
+AS 
+           RETURN ( SELECT 1 as Result
+                     FROM Sample.Sales f
+            INNER JOIN Sample.Lk_Salesman_Product s
+                     ON s.Product = f.Product
+            WHERE ( f.product = @Product
+                    AND s.SalesRep = USER_NAME() )
+                 OR USER_NAME() = 'Manager'
+                   ) ;
+ 
+```
+
+Create a security policy adding the function as a filter predicate. The state must be set to ON to enable the policy.
+
+```sql
+CREATE SECURITY POLICY SalesFilter 
+ADD FILTER PREDICATE Security.fn_securitypredicate(Product)
+ON Sample.Sales
+WITH (STATE = ON) ;
+```
+
+Allow SELECT permissions to the fn_securitypredicate function 
+```sql
+GRANT SELECT ON security.fn_securitypredicate TO Manager;  
+GRANT SELECT ON security.fn_securitypredicate TO Sales1;  
+GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
+```
+
+Now test the filtering predicate, by selected from the Sales table as each user.
+
+```sql
+EXECUTE AS USER = 'Sales1'; 
+SELECT * FROM Sample.Sales;
+-- This will return just the rows for Product 'Valve' (as specified for ‘Sales1’ in the Lk_Salesman_Product table above)
+REVERT;
+
+EXECUTE AS USER = 'Sales2'; 
+SELECT * FROM Sample.Sales;
+-- This will return just the rows for Product 'Wheel' (as specified for ‘Sales2’ in the Lk_Salesman_Product table above)
+REVERT; 
+
+EXECUTE AS USER = 'Manager'; 
+SELECT * FROM Sample.Sales;
+-- This will return all rows with no restrictions
+REVERT;
+```
+
+The Manager should see all six rows. The Sales1 and Sales2 users should only see their own sales.
+
+Alter the security policy to disable the policy.
+
+```sql
+ALTER SECURITY POLICY SalesFilter  
+WITH (STATE = OFF);  
+```
+
+Now Sales1 and Sales2 users can see all six rows.
+
+Connect to the SQL database to clean up resources
+
+```sql
+DROP USER Sales1;
+DROP USER Sales2;
+DROP USER Manager;
+
+DROP SECURITY POLICY SalesFilter;
+DROP FUNCTION Security.fn_securitypredicate;
+DROP TABLE Sample.Sales;
+DROP TABLE Sample.Lk_Salesman_Product;
+DROP SCHEMA Security; 
+DROP SCHEMA Sample;
 ```
 
 ## See Also

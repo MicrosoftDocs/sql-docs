@@ -1,5 +1,6 @@
 ---
 title: "Add, Change, or Delete Default Values for a Report Parameter | Microsoft Docs"
+description: Use these steps to customize your reports with added, changed, or deleted  default values for report parameters.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

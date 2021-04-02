@@ -1,11 +1,12 @@
 ---
+description: "MSSQLSERVER_10532"
 title: "MSSQLSERVER_10532 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "10532 (Database Engine error)"
 ms.assetid: 01da29ee-bf67-433f-8148-587a7e8d1d76
@@ -13,24 +14,24 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_10532
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|10532|  
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|PG_NO_ELIGIBLE_STMT|  
-|Message Text|Cannot create plan guide '%.\*ls' because the batch or module specified by **@plan_handle** does not contain a statement that is eligible for a plan guide. Specify a different value for **@plan_handle**.|  
+|Message Text|Cannot create plan guide '%.\*ls' because the batch or module specified by **\@plan_handle** does not contain a statement that is eligible for a plan guide. Specify a different value for **\@plan_handle**.|  
   
 ## Explanation  
-The batch or module specified by **@plan_handle** does not contain a statement that is eligible for a plan guide.  
+The batch or module specified by **\@plan_handle** does not contain a statement that is eligible for a plan guide.  
   
 ## User Action  
-Specify a different value for **@plan_handle**.  
+Specify a different value for **\@plan_handle**.  
   
 ## See Also  
 [Plan Guides](~/relational-databases/performance/plan-guides.md)  

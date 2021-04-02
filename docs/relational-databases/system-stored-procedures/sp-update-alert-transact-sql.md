@@ -1,4 +1,5 @@
 ---
+description: "sp_update_alert (Transact-SQL)"
 title: "sp_update_alert (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_update_alert_TSQL"
   - "sp_update_alert"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_alert"
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_update_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates the settings of an existing alert.  
   
@@ -125,7 +126,7 @@ sp_update_alert
  Reserved.  
   
 `[ @performance_condition = ] 'performance_condition'`
- A value expressed in the format **'***itemcomparatorvalue***'**. *performance_condition* is **nvarchar(512)**, with a default of NULL, and consists of these elements.  
+ A value expressed in the format **'**_itemcomparatorvalue_**'**. *performance_condition* is **nvarchar(512)**, with a default of NULL, and consists of these elements.  
   
 |Format element|Description|  
 |--------------------|-----------------|  

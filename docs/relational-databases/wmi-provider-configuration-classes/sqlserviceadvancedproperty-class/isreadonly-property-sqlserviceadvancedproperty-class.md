@@ -1,6 +1,7 @@
 ---
-title: "IsReadOnly Property (SqlServiceAdvancedProperty Class) | Microsoft Docs"
-ms.custom: ""
+description: "IsReadOnly Property (SqlServiceAdvancedProperty Class)"
+title: "IsReadOnly Property (SqlServiceAdvancedProperty)"
+ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "IsReadOnly property"
 ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # IsReadOnly Property (SqlServiceAdvancedProperty Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets or sets the Boolean property that specifies whether the advanced property is read-only or not.  
   
 ## Syntax  

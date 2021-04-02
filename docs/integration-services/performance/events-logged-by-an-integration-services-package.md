@@ -1,4 +1,5 @@
 ---
+description: "Events Logged by an Integration Services Package"
 title: "Events Logged by an Integration Services Package | Microsoft Docs"
 ms.custom: supportability
 ms.date: "03/14/2017"
@@ -11,12 +12,12 @@ helpviewer_keywords:
   - "package [Integration Services], events"
   - "events [Integration Services], package"
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Events Logged by an Integration Services Package
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   An [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package logs various event messages to the Windows Application event log. A package logs these messages when the package starts, when the package stops, and when certain problems occur.  

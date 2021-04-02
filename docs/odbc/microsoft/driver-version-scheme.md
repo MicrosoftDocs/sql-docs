@@ -1,4 +1,5 @@
 ---
+description: "Driver Version Scheme"
 title: "Driver Version Scheme | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC driver for Oracle [ODBC], versions"
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Driver Version Scheme
 > [!IMPORTANT]  

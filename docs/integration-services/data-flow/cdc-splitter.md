@@ -1,4 +1,5 @@
 ---
+description: "CDC Splitter"
 title: "CDC Splitter | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -10,15 +11,15 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.cdcsplitter.f1"
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # CDC Splitter
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  The CDC splitter splits a single flow of change rows from a CDC source data flow into different data flows for Insert, Update and Delete operations. The data flow is split based on the required column `__$operation` and its standard values in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] change tables.  
+  The CDC splitter splits a single flow of change rows from a CDC source data flow into different data flows for Insert, Update and Delete operations. The data flow is split based on the required column `__$operation` and its standard values in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] change tables.  
   
 |Value of Operation|Output|Description|  
 |------------------------|------------|-----------------|  

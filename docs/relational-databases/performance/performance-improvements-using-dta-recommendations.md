@@ -1,6 +1,7 @@
 ---
-title: "Performance Improvements using DTA recommendations | Microsoft Docs"
-ms.custom: ""
+title: "DTA recommended performance improvements"
+description: Learn how Database Engine Tuning Advisor can recommend a combination of rowstore and columnstore indexes by analyzing a database workload in SQL Server.
+ms.custom: seo-dt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -9,11 +10,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine Tuning Advisor, performance improvements"
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
-# Performance Improvements using DTA recommendations
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# Performance Improvements using Database Engine Tuning Advisor (DTA) recommendations
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
 ---
@@ -30,7 +31,7 @@ To demonstrate the benefits of DTA's recommendations on workload performance, we
 In each case, we then implemented the recommended indexes. We report the CPU Time (in milliseconds) averaged over multiple runs of the query or the workload. The figure below plots the CPU time in milliseconds for workloads across two different customer databases. Note that the y-axis (CPU Time) uses a logarithmic scale.   
 
 
-![DTA-columnstore-rowstore-performance](../../relational-databases/performance/media/dta-columnstore-rowstore-performance.gif)
+![Screenshot of a bar graph showing DTA columnstore rowstore performance.](../../relational-databases/performance/media/dta-columnstore-rowstore-performance.gif)
 
 
 

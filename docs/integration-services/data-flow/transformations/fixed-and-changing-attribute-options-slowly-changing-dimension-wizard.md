@@ -1,4 +1,5 @@
 ---
+description: "Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard"
 title: "Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -10,12 +11,12 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.loaddimwizard.attriboption.f1"
 ms.assetid: c841345c-7d03-452f-9379-1c8c464f029c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Fixed and Changing Attribute Options** dialog box to specify how to respond to changes in fixed and changing attributes.  

@@ -1,19 +1,20 @@
 ---
-title: "sys.pdw_replicated_table_cache_state (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "sys.pdw_replicated_table_cache_state (Transact-SQL)"
+title: "sys.pdw_replicated_table_cache_state (Transact-SQL)"
+ms.custom: seo-dt-2019
 ms.date: "07/03/2017"
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 author: "ronortloff"
 ms.author: "rortloff"
-monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azure-sqldw-latest"
 ---
 # sys.pdw_replicated_table_cache_state (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   Returns the state of the cache associated with a replicated table by **object_id**.  
   
@@ -34,5 +35,5 @@ SELECT t.[name], p.[object_id], p.[state]
 
 
 ## Next steps  
- For a list of all the catalog views for SQL Data Warehouse and Parallel Data Warehouse, see [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md).   
+ For a list of all the catalog views for Azure Synapse Analytics and Parallel Data Warehouse, see [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md).   
   

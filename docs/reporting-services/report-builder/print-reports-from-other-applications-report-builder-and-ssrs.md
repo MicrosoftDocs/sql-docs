@@ -1,5 +1,6 @@
 ---
-title: "Print Reports from Other Applications (Report Builder and SSRS) | Microsoft Docs"
+title: "Print Reports from Other Applications (Report Builder) | Microsoft Docs"
+description: Report Builder lets you export to view a report in other applications. For printing, export a report if the application has print features that you want to use.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -25,7 +26,6 @@ ms.author: maggies
  [Print a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)   
  [Print Reports from a Browser with the Print Control &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
  [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Export a Report as Another File Type &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)   
+ [Export a Report as Another File Type &#40;Report Builder and SSRS&#41;](/previous-versions/sql/)   
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
-  
   

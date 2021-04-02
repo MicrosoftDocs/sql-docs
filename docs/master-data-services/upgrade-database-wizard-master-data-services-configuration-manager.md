@@ -1,5 +1,6 @@
 ---
-title: "Upgrade Database Wizard (Master Data Services Configuration Manager) | Microsoft Docs"
+description: "Upgrade Database Wizard (Master Data Services Configuration Manager)"
+title: Upgrade Database Wizard
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Upgrade Database Wizard (Master Data Services Configuration Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the **Upgrade Database Wizard** to upgrade a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   

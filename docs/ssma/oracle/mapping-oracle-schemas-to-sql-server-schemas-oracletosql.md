@@ -1,5 +1,6 @@
 ---
 title: "Mapping Oracle Schemas to SQL Server Schemas (OracleToSQL) | Microsoft Docs"
+description: Learn how to customize SSMA for Oracle mappings between Oracle schemas and SQL Server or accept the default.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -7,9 +8,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Mapping Oracle Schemas to SQL Server Schemas (OracleToSQL)
 In Oracle, each database has one or more schemas. By default, SSMA migrates all objects in an Oracle schema to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database named for the schema. However, you can customize the mapping between Oracle schemas and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
@@ -17,7 +18,7 @@ In Oracle, each database has one or more schemas. By default, SSMA migrates all 
 ## Oracle and SQL Server Schemas  
 An Oracle database contains schemas. An instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contains multiple databases, each of which can have multiple schemas.  
   
-The Oracle concept of a schema maps to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concept of a database and one of its schemas. For example, Oracle might have a schema named **HR**. An instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might have a database named **HR**, and within that database are schemas. One schema is the **dbo** (or database owner) schema. By default, the Oracle schema **HR** will be mapped to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database and schema **HR.dbo**. SSMA refers to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combination of database and schema as a schema.  
+The Oracle concept of a schema maps to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concept of a database and one of its schemas. For example, Oracle might have a schema named **HR**. An instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might have a database named **SampleDatabase**, and within that database are multiple schemas. By default, the Oracle schema **HR** will be mapped to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database and schema **SampleDatabase.HR**. SSMA refers to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combination of database and schema as a schema.  
   
 You can modify the mapping between Oracle and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemas.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Use of SQL Server features and capabilities | Microsoft Docs"
+description: Learn about SQL Server features and capabilities, and their use in the WideWorldImporters sample database.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -13,7 +14,7 @@ ms.author: mathoma
 ---
 # Use of SQL Server features and capabilities
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 WideWorldImporters use of SQL Server features and capabilities in the OLTP database.
 
@@ -26,7 +27,7 @@ WideWorldImporters is designed to showcase many of the key features of SQL Serve
 |AJAX calls for JSON|The application frequently uses AJAX calls to query these tables: Persons, Customers, Suppliers, and StockItems. The calls return the data in JSON format. For example, see the stored procedure `Website.SearchForCustomers`.|
 |JSON property/value bags|A number of tables have columns that hold JSON data to extend the relational data in the table. For example, `Application.SystemParameters` has a column for application settings and `Application.People` has a column to record user preferences. These tables use an `nvarchar(max)` column to record the JSON data, along with a CHECK constraint using the built-in function `ISJSON` to ensure the column values are valid JSON.|
 |Row-level security (RLS)|Row Level Security (RLS) is used to limit access to the Customers table, based on role membership. Each sales territory has a role and a user. To see an RLS access limit in action, use the corresponding script in sample-script.zip, which is part of the [release of the sample](https://go.microsoft.com/fwlink/?LinkID=800630).|
-|Real-time Operational Analytics|(Full version of the database) The core transactional tables `Sales.InvoiceLines` and `Sales.OrderLines` both have a non-clustered columnstore index to support efficient execution of analytical queries in the transactional database with minimal impact on the operational workload. Running transactions and analytics in the same database is also referred to as [Hybrid Transactional/Analytical Processing (HTAP)](https://wikipedia.org/wiki/Hybrid_Transactional/Analytical_Processing_(HTAP)). To see this in action, use the corresponding script in sample-script.zip, which is part of the [release of the sample](https://go.microsoft.com/fwlink/?LinkID=800630).|
+|Real-time Operational Analytics|(Full version of the database) The core transactional tables `Sales.InvoiceLines` and `Sales.OrderLines` both have a nonclustered columnstore index to support efficient execution of analytical queries in the transactional database with minimal impact on the operational workload. Running transactions and analytics in the same database is also referred to as [Hybrid Transactional/Analytical Processing (HTAP)](https://wikipedia.org/wiki/Hybrid_Transactional/Analytical_Processing_(HTAP)). To see this in action, use the corresponding script in sample-script.zip, which is part of the [release of the sample](https://go.microsoft.com/fwlink/?LinkID=800630).|
 |PolyBase|To see this PolyBase in action, using an external table with a public data set hosted in Azure blog storage, use the corresponding script in sample-script.zip, which is part of the [release of the sample](https://go.microsoft.com/fwlink/?LinkID=800630).|
 |In-Memory OLTP|(Full version of the database) The table types are all memory-optimized, such that table-valued parameters (TVPs) all benefit from memory-optimization.<br/><br/>The two monitoring tables, `Warehouse.VehicleTemperatures` and `Warehouse.ColdRoomTemperatures`, are memory-optimized. The memory-optimization allows the ColdRoomTemperatures table to be populated at higher speed than a traditional disk-based table. The VehicleTemperatures table holds the JSON payload and lends itself to extension towards IoT scenarios. The VehicleTemperatures table further lends itself to scenarios involving EventHubs, Stream Analytics, and Power BI.<br/><br/>The stored procedure `Website.RecordColdRoomTemperatures` is natively compiled to further improve the performance of recording cold room temperatures.<br/><br/>To see an example of In-Memory OLTP in action, see the vehicle-locations workload driver in workload-drivers.zip, which is part of the [release of the sample](https://go.microsoft.com/fwlink/?LinkID=800630).|
 |Clustered columnstore index|(Full version of the database) The table `Warehouse.StockItemTransactions` uses a clustered columnstore index. The number of rows in this table is expected to grow large, and the clustered columnstore index significantly reduces the on-disk size of the table, and improves query performance. The modification on this table are insert-only - there is no update/delete on this table in the online workload - and clustered columnstore index performs well for insert workloads.|

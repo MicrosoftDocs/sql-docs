@@ -1,6 +1,7 @@
 ---
-title: "Rename Solutions and Project Items | Microsoft Docs"
-ms.custom: ""
+description: "Rename Solutions and Project Items"
+title: "Rename Solutions and Project Items"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -17,7 +18,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Rename Solutions and Project Items
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can rename a solution and its project items in Solution Explorer.  
   
 > [!NOTE]  

@@ -1,17 +1,19 @@
 ---
-title: "How to: Create SQL Server Unit Tests for Functions, Triggers, and Stored Procedures | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Create SQL Server Unit Tests for Functions, Triggers, and Stored Procedures
+description: Learn how to use SQL Server Object Explorer to create a SQL Server unit test from a database function, trigger, or stored procedure.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: bda57c10-a1ab-4a1a-8a71-42085a3cb793
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Create SQL Server Unit Tests for Functions, Triggers, and Stored Procedures
+
 You can write unit tests that evaluate changes to any database object. However SQL Server Data Tools includes additional support for creating tests for database functions, triggers, and stored procedures from a database project node in SQL Server Object Explorer. Transact\-SQL code stubs can be automatically generated for you to customize.  
   
 ### To create a SQL Server unit test from a function, trigger, or stored procedure  

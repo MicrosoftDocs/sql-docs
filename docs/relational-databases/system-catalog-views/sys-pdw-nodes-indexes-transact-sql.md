@@ -1,20 +1,21 @@
 ---
+description: "sys.pdw_nodes_indexes (Transact-SQL)"
 title: "sys.pdw_nodes_indexes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
 author: ronortloff
 ms.author: rortloff
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest"
 ---
 # sys.pdw_nodes_indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Returns indexes for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
@@ -22,8 +23,8 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|id of the object to which this index belongs.||  
 |name|**sysname**|Name of the index. Name is unique only within the object. NULL = Heap||  
-|index_id|**int**|id of the index. index_id is unique only within the object.<br /><br /> 0 = Heap<br /><br /> 1 = Clustered index<br /><br /> > 1 = Non-clustered index||  
-|type|**tinyint**|Type of index:<br /><br /> 0 = Heap<br /><br /> 1 = Clustered<br /><br /> 2 = Non-clustered<br /><br /> 5 = Clustered xVelocity memory optimized columnstore index|  
+|index_id|**int**|id of the index. index_id is unique only within the object.<br /><br /> 0 = Heap<br /><br /> 1 = Clustered index<br /><br /> > 1 = Nonclustered index||  
+|type|**tinyint**|Type of index:<br /><br /> 0 = Heap<br /><br /> 1 = Clustered<br /><br /> 2 = Nonclustered<br /><br /> 5 = Clustered xVelocity memory optimized columnstore index|  
 |type_desc|**nvarchar(60)**|Description of index type:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> CLUSTERED   COLUMNSTORE||  
 |is_unique|**bit**|0 = Index is not unique.|Always 0.|  
 |data_space_id|**int**|id of the data space for this index. Data space is either a filegroup or partition scheme.<br /><br /> 0 = object_id is a table-valued function.||  
@@ -44,6 +45,6 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
  Requires CONTROL SERVER permission.  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

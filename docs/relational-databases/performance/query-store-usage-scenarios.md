@@ -1,5 +1,6 @@
 ---
 title: "Query Store Usage Scenarios | Microsoft Docs"
+description: Learn how Query Store can be used to track and ensure predictable workload performance. Consider several examples in SQL Server.
 ms.custom: ""
 ms.date: "11/29/2018"
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store, usage scenarios"
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
-author: julieMSFT
-ms.author: jrasnick
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query Store Usage Scenarios
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Query Store can be used in wide set of scenarios when tracking and ensuring predictable workload performance is critical. Here are some examples you can consider:  
   
@@ -36,7 +37,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   Force the previous plan from the history, if it proved to be better. Use **Force Plan** button in **Regressed Queries** to force selected plan for the query.  
   
- ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
+ ![Screenshot of the Query Store showing a plan summary.](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
  For detailed description of the scenario refer to [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) blog.  
   
@@ -45,7 +46,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  The easiest way to start exploration is to open **Top Resource Consuming Queries** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. User interface is separated into three panes: A histogram representing top resource consuming queries (left), a plan summary for selected query (right) and visual query plan for selected plan (bottom). Click the **Configure** button to control how many queries you want to analyze and the time interval of interest. Additionally, you can choose between different resource consumption dimensions (duration, CPU, memory, IO, number of executions) and the baseline (Average, Min, Max, Total, Standard Deviation).  
   
- ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
+ ![Screenshot of the Query Store showing that you can identify and tune top resource consuming queries.](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
  Look at the plan summary on the right to analyze the execution history and learn about the different plans and their runtime statistics. Use the bottom pane to examine the different plans or to compare them visually, rendered side by side (use the Compare button).  
   
@@ -61,8 +62,6 @@ When you identify a query with suboptimal performance, your action depends on th
   
 5.  Consider rewriting expensive query. For example, take advantages of query parameterization and reduce usage of dynamic SQL. Implement optimal logic when read the data (apply data filtering on database side, not on application side).  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## A/B testing  
  Use Query Store to compare workload performance before and after the application change you plan to introduce. The following list contains several examples where you can use Query Store to assess impact of the environment or application change to the workload performance:  
   
@@ -72,7 +71,7 @@ When you identify a query with suboptimal performance, your action depends on th
   
 -   Creating missing indexes on tables referenced by expensive queries.  
   
--   Applying filtering policy for row-level security. For more information, see [Optimizing Row Level Security with Query Store](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx).  
+-   Applying filtering policy for row-level security. For more information, see [Optimizing Row Level Security with Query Store](/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store).  
   
 -   Adding temporal system-versioning to tables that are frequently modified by your OLTP applications.  
   
@@ -94,11 +93,11 @@ In any of these scenarios apply the following workflow:
   
 The following illustration shows Query Store analysis (step 4) in case of missing index creation. Open **Top Resource Consuming Queries** / Plan summary pane to get this view for the query that should be impacted by the index creation:  
   
-![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
+![Screenshot showing the Query Store analysis (step 4) in case of missing index creation.](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
 Additionally, you can compare plans before and after index creation by rendering them side by side. ("Compare the plans for the selected query in a separate window" toolbar option, which is marked with red square on the toolbar.)  
   
-![query-store-usage-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
+![Screenshot showing the Query Store and the Compare the plans for the selected query in a separate window toolbar option.](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
   
 Plan before index creation (plan_id  = 1, above) has missing index hint and you can inspect that Clustered Index Scan was the most expensive operator in the query (red rectangle).  
   
@@ -111,7 +110,7 @@ Prior to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], users were exposed t
   
 Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] all Query Optimizer changes are tied to the latest [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), so plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` to the latest one. This capability, in combination with Query Store gives you a great level of control over the query performance in the upgrade process. Recommended upgrade workflow is shown in the following picture:  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![Diagram showing the recommended upgrade workflow.](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
 1.  Upgrade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] without changing the database compatibility level. It doesn't expose the latest Query Optimizer changes but still provides newer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features including Query Store.  
   
@@ -128,14 +127,14 @@ Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] all Query Optimi
     b.  If there are query plans that fail to force, or if performance is still insufficient, consider reverting the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) to the prior setting, and then engaging Microsoft Customer Support.  
     
 > [!TIP]
-> Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] *Upgrade Database* task to upgrade the [database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades) of the database. See [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md) for details.
+> Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] *Upgrade Database* task to upgrade the [database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) of the database. See [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md) for details.
   
 ## Identify and improve ad hoc workloads  
 Some workloads do not have dominant queries that you can tune to improve overall application performance. Those workloads are typically characterized with relatively large number of different queries each of them consuming portion of system resources. Being unique, those queries are executed very rarely (usually only once, thus name ad hoc), so their runtime consumption is not critical. On the other hand, given that application is generating net new queries all the time, significant portion of system resources is spent on query compilation, which is not optimal. This is not ideal situation for Query Store either given that large number of queries and plans flood the space you have reserved which means that Query Store will likely end up in the read-only mode very quickly. If you activated **Size Based Cleanup Policy** ([highly recommended](best-practice-with-the-query-store.md) to keep Query Store always up and running), then background process will be cleaning Query Store structures most of the time also taking significant system resources.  
   
  **Top Resource Consuming Queries** view gives you first indication of the ad hoc nature of your workload:  
   
-![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
+![Screenshot of the Top Resource Consuming Queries view showing that the majority of top resources consuming queries is only executed once.](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
   
 Use **Execution Count** metric to analyze whether your top queries are ad hoc (this requires you to run Query Store with `QUERY_CAPTURE_MODE = ALL`). From the diagram above, you can see that 90% of your **Top Resource Consuming Queries** are executed only once.  
   
@@ -152,7 +151,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
 This is one potential result you can get in case of workload with ad hoc queries:  
   
-![query-store-usage-7](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
+![Screenshot of the potential result you can get in case of workload with ad hoc queries.](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
   
 Query result shows that despite the large number of queries and plans in the Query Store their query_hash and query_plan_hash are actually not different. A ratio between unique query texts and unique query hashes, which is much bigger than 1, is an indication that workload is a good candidate for parameterization, as the only difference between the queries is literal constant (parameter) provided as part of the query text.  
   
@@ -194,7 +193,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;
 
 After you apply any of these steps, **Top Resource Consuming Queries** will show you different picture of your workload.  
   
-![query-store-usage-8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
+![Screenshot of the Top Resource Consuming Queries view showing a different picture of your workload.](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
   
 In some cases, your application may generate lots of different queries which are not good candidates for auto-parameterization. In that case, you see large number of queries in the system but the ratio between unique queries and unique `query_hash` is likely close to 1.  
   
@@ -217,5 +216,3 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)         
  [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
-  
-  

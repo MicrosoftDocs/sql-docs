@@ -1,5 +1,6 @@
 ---
-title: "Level Function (Report Builder and SSRS) | Microsoft Docs"
+title: "Level Function (Report Builder) | Microsoft Docs"
+description: Discover the Level function in Report Builder. This function returns the current level of depth in a recursive hierarchy.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,4 +1,5 @@
 ---
+description: "DBCC CHECKFILEGROUP (Transact-SQL)"
 title: "DBCC CHECKFILEGROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2017"
@@ -27,14 +28,13 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Checks the allocation and structural integrity of all tables and indexed views in the specified filegroup of the current database.
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```sql
-  
+```syntaxsql
 DBCC CHECKFILEGROUP   
 [  
     [ ( { filegroup_name | filegroup_id | 0 }   
@@ -52,7 +52,9 @@ DBCC CHECKFILEGROUP
 ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *filegroup_name*  
  Is the name of the filegroup in the current database for which to check table allocation and structural integrity. If not specified, or if 0 is specified, the default is the primary filegroup. Filegroup names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
  *filegroup_name* cannot be a FILESTREAM filegroup.  
@@ -86,7 +88,7 @@ DBCC CHECKFILEGROUP
 >  Specifying PHYSICAL_ONLY causes DBCC CHECKFILEGROUP to skip all checks of FILESTREAM data.  
   
  MAXDOP  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 through [current version](/troubleshoot/sql/general/determine-version-edition-update-level).  
   
  Overrides the **max degree of parallelism** configuration option of **sp_configure** for the statement. The MAXDOP can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the Database Engine uses the Resource Governor MAXDOP value, described in ALTER WORKLOAD GROUP (Transact-SQL). All semantic rules used with the max degree of parallelism configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
@@ -147,7 +149,7 @@ DBCC CHECKFILEGROUP returns the following result set (values may vary):
 -   Except when ESTIMATEONLY or NO_INFOMSGS is specified.  
 -   For the current database, if no database is specified, whether or not any options (except NOINDEX) are specified.  
   
-```sql
+```
 DBCC results for 'master'.  
 DBCC results for 'sys.sysrowsetcolumns'.  
 There are 630 rows in 7 pages for object 'sys.sysrowsetcolumns'.  
@@ -165,12 +167,12 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 If NO_INFOMSGS is specified, DBCC CHECKFILEGROUP returns:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
  If ESTIMATEONLY is specified, DBCC CHECKFILEGROUP returns (values may vary):  
 
-```sql
+```
 Estimated TEMPDB space needed for CHECKALLOC (KB)
 -------------------------------------------------   
 15  
@@ -193,8 +195,7 @@ Requires membership in the **sysadmin** fixed server role or the **db_owner** fi
 ### A. Checking the PRIMARY filegroup in the a database  
 The following example checks the primary filegroup of the current database.
   
-```sql  
-  
+```sql
 DBCC CHECKFILEGROUP;  
 GO  
 ```  
@@ -202,7 +203,7 @@ GO
 ### B. Checking the AdventureWorks PRIMARY filegroup without nonclustered indexes  
 The following example checks the `AdventureWorks2012` database primary filegroup (excluding nonclustered indexes) by specifying the identification number of the primary filegroup, and by specifying `NOINDEX`.
   
-```sql  
+```sql
 USE AdventureWorks2012;  
 GO  
 DBCC CHECKFILEGROUP (1, NOINDEX);  
@@ -212,7 +213,7 @@ GO
 ### C. Checking the PRIMARY filegroup with options  
 The following example checks the `master` database primary filegroup and specifies the option `ESTIMATEONLY`.
   
-```sql  
+```sql
 USE master;  
 GO  
 DBCC CHECKFILEGROUP (1)  
@@ -228,5 +229,4 @@ WITH ESTIMATEONLY;
 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [DBCC CHECKALLOC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)  
 [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)
-  
   

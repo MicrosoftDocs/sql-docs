@@ -1,8 +1,7 @@
 ---
-title: "Migrate SQL Server logins with Data Migration Assistant | Microsoft Docs"
-description: Learn how to migrate SQL Server logins with Data Migration Assistant
-ms.custom: ""
-ms.date: "03/12/2019"
+title: "Migrate SQL Server logins with Data Migration Assistant"
+description: Migrate SQL Server logins with Data Migration Assistant, including SQL Server upgrades to later versions of the on-premises product or to SQL Server on Azure VMs.
+ms.date: "10/22/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,13 +11,17 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, login migration"
 ms.assetid: ""
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
+ms.custom: "seo-lt-2019"
 ---
 
 # Migrate SQL Server logins with Data Migration Assistant
 
-This article provides an overview of migrating SQL Server logins using Data Migration Assistant. 
+This article provides an overview of migrating SQL Server logins using Data Migration Assistant.
+
+> [!IMPORTANT]
+> This topic applies to scenarios involving SQL Server upgrades to later versions of the on-premises product or to SQL Server on Azure Virtual Machines.
 
 ## Which logins are migrated
 
@@ -28,7 +31,7 @@ This article provides an overview of migrating SQL Server logins using Data Migr
 
 - Data Migration Assistant doesn't move the **sa** login and server principles with names enclosed by double hash marks (\#\#), which are for internal use only.
 
-- By default, Data Migration Assistant selects all the qualified logins to migrate. Optionally, you can select specific logins to migrate. When Data Migration Assistant migrates all qualified logins, the login-user mapping remains intact in the databases that are migrated. 
+- By default, Data Migration Assistant selects all the qualified logins to migrate. Optionally, you can select specific logins to migrate. When Data Migration Assistant migrates all qualified logins, the login-user mapping remains intact in the databases that are migrated.
 
   If you plan to migrate specific logins, make sure to select the logins that are mapped to one or more users in the databases selected for migration.
 
@@ -36,7 +39,7 @@ This article provides an overview of migrating SQL Server logins using Data Migr
 
 ## During and after migration
 
-- As part of login migration, Data Migration Assistant assigns the permissions to securables on the target SQL Server as they exist on the source SQL Server. 
+- As part of login migration, Data Migration Assistant assigns the permissions to securables on the target SQL Server as they exist on the source SQL Server.
 
   If the login already exists on the target SQL Server, Data Migration Assistant migrates only the permissions assigned to securables and won't re-create the whole login.
 

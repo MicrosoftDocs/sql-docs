@@ -1,11 +1,12 @@
 ---
-title: "TCP/IP Properties (IP Addresses Tab) | Microsoft Docs"
-ms.custom: ""
+title: "TCP/IP Properties (IP Addresses Tab)"
+description: Learn how to use the IP Addresses tab of the TCP/IP Properties dialog box to configure the TCP/IP protocol options for a specific IP address in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: "08/24/2016"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ports [SQL Server], listening on"
@@ -15,7 +16,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # TCP/IP Properties (IP Addresses Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Use the **TCP/IP Properties (IP Addresses Tab)** dialog box to configure the TCP/IP protocol options for a specific IP address. Only **TCP Dynamic Ports** and **TCP Port** can be configured for all addresses at once by selecting **IP All**.  
   
  Changes take effect when SQL Server SQL Server is restarted. For information about starting and stopping the SQL Server Browser service, see [Start and Stop the SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
@@ -55,8 +56,7 @@ ms.author: maghan
  Search MSDN for topics such as **Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)** and **Configure the Database Engine to Listen on Multiple TCP Ports**.  
   
 ## See Also  
- [Choosing a Network Protocol](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
+ [Choosing a Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [Creating a Valid Connection String Using TCP IP](creating-a-valid-connection-string-using-tcp-ip.md)   
  [SQL Server Browser Service](sql-server-browser-service.md)  
-  
   

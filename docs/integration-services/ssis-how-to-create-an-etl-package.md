@@ -1,4 +1,5 @@
 ---
+description: "SSIS How to Create an ETL Package"
 title: "SSIS How to Create an ETL Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/20/2018"
@@ -15,12 +16,12 @@ helpviewer_keywords:
   - "logs [Integration Services], tutorials"
   - "walkthroughs [Integration Services]"
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # SSIS How to Create an ETL Package
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

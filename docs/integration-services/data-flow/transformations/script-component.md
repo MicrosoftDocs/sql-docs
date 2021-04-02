@@ -1,4 +1,5 @@
 ---
+description: "Script Component"
 title: "Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,12 +21,12 @@ helpviewer_keywords:
   - "Script component [Integration Services], about Script component"
   - "Script component [Integration Services]"
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Script Component
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Script component hosts script and enables a package to include and run custom script code. You can use the Script component in packages for the following purposes:  
@@ -59,7 +60,7 @@ ms.author: janinez
  In the [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, the Script component has two modes: metadata-design mode and code-design mode. In metadata-design mode, you can add and modify the Script component inputs and outputs, but you cannot write code. After all the inputs and outputs are configured, you switch to code-design mode to write the script. The Script component automatically generates base code from the metadata of the inputs and outputs. If you change the metadata after the Script component generates the base code, your code may no longer compile because the updated base code may be incompatible with your code.  
   
 ## Writing the Script that the Component Uses  
- The Script component uses [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) as the environment in which you write the scripts. You access VSTA from the **Script Transformation Editor**. For more information, see [Script Transformation Editor &#40;Script Page&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ The Script component uses [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) as the environment in which you write the scripts. You access VSTA from the **Script Transformation Editor**. For more information, see [Script Transformation Editor &#40;Script Page&#41;]().  
   
  The Script component provides a VSTA project that includes an auto-generated class, named ScriptMain, that represents the component metadata. For example, if the Script component is used as a transformation that has three outputs, ScriptMain includes a method for each output. ScriptMain is the entry point to the script.  
   
@@ -98,7 +99,7 @@ ms.author: janinez
 ### Configuring the Script Component Programmatically  
  For more information about the properties that you can set in the **Properties** window or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -174,7 +175,7 @@ ms.author: janinez
  **Inputs and outputs**  
  Select an input or output on the left to view its properties in the table on the right. Properties available for editing vary according to the selection. Many of the properties displayed are read-only. For more information on the individual properties, see the following topics.  
   
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
  [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -217,5 +218,4 @@ ms.author: janinez
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
  [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
-  
   

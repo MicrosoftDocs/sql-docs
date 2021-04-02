@@ -1,5 +1,6 @@
 ---
 title: "PPTX Device Information Settings | Microsoft Docs"
+description: Learn details about the device information settings for rendering Reporting Services reports in the PPTX format. 
 ms.date: 09/11/2015
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

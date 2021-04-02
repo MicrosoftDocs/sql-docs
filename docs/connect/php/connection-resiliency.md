@@ -1,14 +1,14 @@
 ---
 title: "Idle Connection Resiliency"
-ms.date: "07/13/2017"
+description: "Learn what idle connection resiliency is and how it behaves within the Microsoft Drivers for PHP for SQL Server."
+ms.date: "03/04/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: "david-puglielli"
-ms.author: "v-dapugl"
-manager: v-mabarw
+author: "David-Engel"
+ms.author: "v-daenge"
 ---
 # Idle Connection Resiliency
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -20,7 +20,7 @@ Connection resiliency is implemented with two connection keywords that can be ad
 |Keyword|Values|Default|Description|
 |-|-|-|-|
 |**ConnectRetryCount**| Integer between 0 and 255 (inclusive)|1|The maximum number of attempts to reestablish a broken connection before giving up. By default, a single attempt is made to reestablish a connection when broken. A value of 0 means that no reconnection will be attempted.|
-|**ConnectRetryInterval**| Integer between 1 and 60 (inclusive)|1| The time, in seconds, between attempts to reestablish a connection. The application will attempt to reconnect immediately upon detecting a broken connection, and will then wait **ConnectRetryInterval** seconds before trying again. This keyword is ignored if **ConnectRetryCount** is equal to 0.
+|**ConnectRetryInterval**| Integer between 1 and 60 (inclusive)|10| The time, in seconds, between attempts to reestablish a connection. The application will attempt to reconnect immediately upon detecting a broken connection, and will then wait **ConnectRetryInterval** seconds before trying again. This keyword is ignored if **ConnectRetryCount** is equal to 0.
 
 If the product of **ConnectRetryCount** multiplied by **ConnectRetryInterval** is larger than **LoginTimeout**, then the client will cease attempting to connect once **LoginTimeout** is reached; otherwise, it will continue to try to reconnect until **ConnectRetryCount** is reached.
 
@@ -39,7 +39,7 @@ Connection resiliency applies when the connection is idle. Failures that occur w
 
 ## Example
 
-The following code connects to a database and executes a query. The connection is interrupted by killing the session and a new query is attempted using the broken connection. This example uses the [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx) sample database.
+The following code connects to a database and executes a query. The connection is interrupted by killing the session and a new query is attempted using the broken connection. This example uses the [AdventureWorks](/previous-versions/sql/sql-server-2008/ms124501(v=sql.100)) sample database.
 
 In this example, we specify a buffered cursor before breaking the connection. If we do not specify a buffered cursor, the connection would not be reestablished because there would be an active server-side cursor and thus the connection would not be idle when broken. However, in that case we could call sqlsrv_free_stmt() before breaking the connection to vacate the cursor, and the connection would be successfully reestablished.
 

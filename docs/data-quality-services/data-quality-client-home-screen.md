@@ -1,6 +1,6 @@
 ---
-title: "Data Quality Client Home Screen | Microsoft Docs"
-ms.custom: ""
+description: "Data Quality Client Home Screen"
+title: "Data Quality Client Home Screen"
 ms.date: "02/29/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -10,12 +10,12 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.clienthome.f1"
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Data Quality Client Home Screen
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   Use this screen to gain access to the user interfaces for each the three major [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) groups of tasks: knowledge base management, data quality projects, and administration.  
   
@@ -54,7 +54,7 @@ ms.author: lle
  Display a view of the status of all activities (both current and historical) that are related to the connected [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. The types of activities monitored include Knowledge Management, Data Quality Project, and SSIS-based data correction.  
   
  **Configuration**  
- Display the configuration properties for reference data service accounts (both through Windows Azure Marketplace and directly to reference data services), general settings (interactive cleansing, matching, and profiling) and log severity settings.  
+ Display the configuration properties for reference data service accounts (both through Azure Marketplace and directly to reference data services), general settings (interactive cleansing, matching, and profiling) and log severity settings.  
   
 ## See Also  
  [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)   

@@ -1,4 +1,5 @@
 ---
+description: "sp_addtype (Transact-SQL)"
 title: "sp_addtype (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_addtype"
   - "sp_addtype_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addtype"
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addtype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates an alias data type.  
   
@@ -44,17 +45,18 @@ sp_addtype [ @typename = ] type,
 `[ @phystype = ] system_data_type`
  Is the physical, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplied, data type on which the alias data type is based.*system_data_type* is **sysname**, with no default, and can be one of these values:  
   
-||||  
-|-|-|-|  
-|**bigint**|**binary(n)**|**bit**|  
-|**char(n)**|**datetime**|**decimal**|  
-|**float**|**image**|**int**|  
-|**money**|**nchar(n)**|**ntext**|  
-|**numeric**|**nvarchar(n)**|**real**|  
-|**smalldatetime**|**smallint**|**smallmoney**|  
-|**sql_variant**|**text**|**tinyint**|  
-|**uniqueidentifier**|**varbinary(n)**|**varchar(n)**|  
-  
+:::row:::
+   :::column span="":::
+      **bigint**<br>      **char(n)**<br>      **float**<br>      **money**<br>      **numeric**<br>      **smalldatetime**<br>      **sql_variant**<br>      **uniqueidentifier**
+   :::column-end:::
+   :::column span="":::
+      **binary(n)**<br>      **datetime**<br>      **image**<br>      **nchar(n)**<br>      **nvarchar(n)**<br>      **smallint**<br>      **text**<br>      **varbinary(n)**
+   :::column-end:::
+   :::column span="":::
+      **bit**<br>      **decimal**<br>      **int**<br>      **ntext**<br>      **real**<br>      **smallmoney**<br>      **tinyint**<br>      **varchar(n)**
+    :::column-end:::
+:::row-end:::
+ 
  Quotation marks are required around all parameters that have embedded blank spaces or punctuation marks. For more information about available data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
  *n*  
@@ -67,7 +69,7 @@ sp_addtype [ @typename = ] type,
  Is a nonnegative integer that indicates the maximum number of decimal digits that can be stored to the right of the decimal point, and it must be less than or equal to the precision. For more information, see [decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
 `[ @nulltype = ] 'null_type'`
- Indicates the way the alias data type handles null values. *null_type* is **varchar(**8**)**, with a default of NULL, and must be enclosed in single quotation marks ('NULL', 'NOT NULL', or 'NONULL'). If *null_type* is not explicitly defined by **sp_addtype**, it is set to the current default nullability. Use the GETANSINULL system function to determine the current default nullability. This can be adjusted by using the SET statement or ALTER DATABASE. Nullability should be explicitly defined. If **@phystype** is **bit**, and **@nulltype** is not specified, the default is NOT NULL.  
+ Indicates the way the alias data type handles null values. *null_type* is **varchar(**8**)**, with a default of NULL, and must be enclosed in single quotation marks ('NULL', 'NOT NULL', or 'NONULL'). If *null_type* is not explicitly defined by **sp_addtype**, it is set to the current default nullability. Use the GETANSINULL system function to determine the current default nullability. This can be adjusted by using the SET statement or ALTER DATABASE. Nullability should be explicitly defined. If **\@phystype** is **bit**, and **\@nulltype** is not specified, the default is NOT NULL.  
   
 > [!NOTE]  
 >  The *null_type* parameter only defines the default nullability for this data type. If nullability is explicitly defined when the alias data type is used during table creation, it takes precedence over the defined nullability. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) and [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  

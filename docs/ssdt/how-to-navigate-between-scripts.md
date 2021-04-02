@@ -1,19 +1,21 @@
 ---
-title: "How to: Navigate Between Scripts | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Navigate Between Scripts
+description: Find out how to navigate between scripts in the Transact-SQL Editor. View examples that show how to use tools such as Go To Definition and Find All References.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.editor.howto.navigate"
 ms.assetid: 8664bde5-86ff-4e8b-b5a6-af003316f6ad
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Navigate Between Scripts
+
 The Transact\-SQL Editor for offline development provides two useful navigation tools that are familiar to Visual Studio users: Go To Definition and Find All References. For example, you can right-click a table name and use "Find All References" to list all references to the table in the project. You can double-click a search result to go to the specific code file. In this file, you can right-click the table name again, and choose "Go to Definition" to go back to the table definition.  
   
 > [!WARNING]  

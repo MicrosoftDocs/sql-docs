@@ -1,5 +1,6 @@
 ---
 title: "PolyBase Transact-SQL reference | Microsoft Docs"
+description: To use PolyBase, create external tables for your external data in Hadoop, Azure blob storage, Azure Data Lake Store, SQL Server, Oracle, Teradata, and MongoDB.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -10,12 +11,12 @@ helpviewer_keywords:
   - "PolyBase, SQL objects"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
-monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions"
+ms.reviewer: ""
+monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016"
 ---
 # PolyBase Transact-SQL reference
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 To use  PolyBase, you must create external tables to reference your external data.  
   
@@ -114,7 +115,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## Create external tables for Azure blob storage  
-Applies to: SQL Server (starting with 2016), Azure SQL Data Warehouse, Parallel Data Warehouse
+Applies to: SQL Server (starting with 2016), Azure Synapse Analytics, Parallel Data Warehouse
 
 **1. Create Database Scoped Credential**  
 
@@ -189,9 +190,9 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## Create external tables for Azure Data Lake Store
-Applies to: Azure SQL Data Warehouse
+Applies to: Azure Synapse Analytics
 
-For more information, see [Load with Azure Data Lake Store](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
+For more information, see [Load with Azure Data Lake Store](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
 
 **1. Create Database Scoped Credential**   
 
@@ -214,19 +215,32 @@ WITH
 ;
 ```  
 
-**2. Create External Data Source**  
+**2. Create External Data Source to reference Azure Data Lake Store Gen 1 or 2 **  
 
 ```sql  
--- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Store.
--- LOCATION: Provide Azure storage account name and blob container name.
+-- For Gen 1 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 1 account name and URI
 -- CREDENTIAL: Provide the credential created in the previous step.
 
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH (
     TYPE = HADOOP,
-    LOCATION = 'adl://<AzureDataLake account_name>.azuredatalake.net,
+    LOCATION = 'adl://<AzureDataLake account_name>.azuredatalakestore.net',
     CREDENTIAL = AzureStorageCredential
 );
+
+-- For Gen 2 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 2 account name and URI
+-- CREDENTIAL: Provide the credential created in the previous step
+CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
+WITH
+  -- Please note the abfss endpoint when your account has secure transfer enabled
+  ( LOCATION = 'abfss://<file-system-name>@<storage-account-name>.dfs.core.windows.net/' , 
+    CREDENTIAL = ADLS_credential ,
+    TYPE = HADOOP
+  ) ;
 ```  
 
 **3. Create External File Format**  
@@ -547,5 +561,5 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 For examples of queries, see [PolyBase Queries](../../relational-databases/polybase/polybase-queries.md).  
   
 ## See Also  
-[Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+[Get started with PolyBase](./polybase-guide.md)   
 [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)

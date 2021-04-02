@@ -1,20 +1,21 @@
 ---
+description: "QN:Template Event Class"
 title: "QN:Template Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "event classes [SQL Server], QN:Template"
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # QN:Template Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The QN:Template event reports information on the internal use of query templates. Query templates are the mechanism that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses to share definitions of a query for notification. These templates are created along with parameter tables. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates an event of this type when a query template is created, used, or destroyed.  
   
 ## QN:Template Event Class Data Columns  

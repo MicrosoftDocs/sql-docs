@@ -1,4 +1,5 @@
 ---
+description: "Slowly Changing Dimension Wizard F1 Help"
 title: "Slowly Changing Dimension Wizard F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -10,12 +11,12 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "Slowly Changing Dimension Wizard"
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Slowly Changing Dimension Wizard F1 Help
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Slowly Changing Dimension Wizard** to configure the loading of data into various types of slowly changing dimensions. This section provides F1 Help for the pages of the **Slowly Changing Dimension Wizard**. The following table describes the topics in this section.  

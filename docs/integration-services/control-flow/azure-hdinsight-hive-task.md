@@ -1,4 +1,5 @@
 ---
+description: "Azure HDInsight Hive Task"
 title: "Azure HDInsight Hive Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2017"
@@ -11,12 +12,12 @@ f1_keywords:
   - "sql13.dts.designer.afphivetask.f1"
   - "sql14.dts.designer.afphivetask.f1"
 ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Azure HDInsight Hive Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Use the **Azure HDInsight Hive Task** to run Hive script on an Azure HDInsight cluster.

@@ -1,13 +1,13 @@
 ---
-title: "Install non-English language versions of SQL Server Management Studio (SSMS) | Microsoft Docs"
-description: "Install non-English language versions of SQL Server Management Studio (SSMS)"
+title: Install non-English language versions
+description: Install non-English language versions of SQL Server Management Studio (SSMS). This article applies to SSMS 17.x.
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 04/25/2019
 ---
 
@@ -48,4 +48,4 @@ The following directions differ depending on your version of Windows. The follow
 
 ## Next steps
 
-- [Tutorial: SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)
+- [Tutorial: SQL Server Management Studio](./quickstarts/ssms-connect-query-sql-server.md)

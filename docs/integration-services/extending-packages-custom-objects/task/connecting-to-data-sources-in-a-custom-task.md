@@ -1,4 +1,5 @@
 ---
+description: "Connecting to Data Sources in a Custom Task"
 title: "Connecting to Data Sources in a Custom Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -19,12 +20,12 @@ helpviewer_keywords:
   - "connections [Integration Services], external data sources"
   - "SSIS custom tasks, external data sources"
 ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Connecting to Data Sources in a Custom Task
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Tasks connect to external data sources to retrieve or save data by using a connection manager. At design time, a connection manager represents a logical connection, and describes key information such as the server name and any authentication properties. At run time, tasks call the <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> method of the connection manager to establish the physical connection to the data source.  
@@ -135,6 +136,5 @@ End Function
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Connections](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Create Connection Managers](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
-  
+ [Create Connection Managers](../../connection-manager/integration-services-ssis-connections.md)  
   

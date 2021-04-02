@@ -1,5 +1,6 @@
 ---
-title: "Lookup Function (Report Builder and SSRS) | Microsoft Docs"
+title: "Lookup Function (Report Builder) | Microsoft Docs"
+description:  Use the Lookup function to return the first matching value for the specified name from a dataset that contains name or value pairs.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

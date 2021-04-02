@@ -1,4 +1,5 @@
 ---
+description: "sp_add_operator (Transact-SQL)"
 title: "sp_add_operator (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_add_operator"
   - "sp_add_operator_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_operator"
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_add_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates an operator (notification recipient) for use with alerts and jobs.  
   
@@ -57,13 +58,13 @@ sp_add_operator [ @name = ] 'name'
   
  You can specify either a physical e-mail address or an alias for *email_address*. For example:  
   
- '**jdoe**' or '**jdoe@xyz.com**'  
+ '**jdoe**' or '**jdoe\@xyz.com**'  
   
 > [!NOTE]  
 >  You must use the e-mail address for Database Mail.  
   
 `[ @pager_address = ] 'pager_address'`
- The pager address of the operator. This string is passed directly to the e-mail system. *pager_address* is **narchar(100)**, with a default of NULL.  
+ The pager address of the operator. This string is passed directly to the e-mail system. *pager_address* is **nvarchar(100)**, with a default of NULL.  
   
 `[ @weekday_pager_start_time = ] weekday_pager_start_time`
  The time after which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sends pager notification to the specified operator on the weekdays, from Monday through Friday. *weekday_pager_start_time*is **int**, with a default of **090000**, which indicates 9:00 A.M. on a 24-hour clock, and must be entered using the form HHMMSS.  

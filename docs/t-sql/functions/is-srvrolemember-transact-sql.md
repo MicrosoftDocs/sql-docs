@@ -1,12 +1,13 @@
 ---
-title: "IS_SRVROLEMEMBER (Transact-SQL) | Microsoft Docs"
+description: "IS_SRVROLEMEMBER (Transact-SQL)"
+title: IS_SRVROLEMEMBER (Transact-SQL)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "IS_SRVROLEMEMBER_TSQL"
   - "IS_SRVROLEMEMBER"
@@ -20,8 +21,10 @@ ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
 ---
+
 # IS_SRVROLEMEMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Indicates whether a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is a member of the specified server role.  
   
@@ -29,24 +32,27 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *role* **'**  
  Is the name of the server role that is being checked. *role* is **sysname**.  
   
  Valid values for *role* are user-defined server roles, and the following fixed server roles:  
-  
-|||  
-|-|-|  
-|sysadmin|serveradmin|  
-|dbcreator|setupadmin|  
-|bulkadmin|securityadmin|  
-|diskadmin|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> public|  
-|processadmin||  
+
+- sysadmin
+- serveradmin
+- dbcreator
+- setupadmin  
+- bulkadmin
+- securityadmin  
+- diskadmin
+- public  
+- processadmin
   
  **'** *login* **'**  
  Is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to check. *login* is **sysname**, with a default of NULL. If no value is specified, the result is based on the current Execution context. If the parameter contains the word NULL will return NULL.  
@@ -88,7 +94,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## Examples  
  The following example indicates whether the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for the current user is a member of the `sysadmin` fixed server role.  
   
-```  
+```sql  
 IF IS_SRVROLEMEMBER ('sysadmin') = 1  
    print 'Current user''s login is a member of the sysadmin role'  
 ELSE IF IS_SRVROLEMEMBER ('sysadmin') = 0  
@@ -99,7 +105,7 @@ ELSE IF IS_SRVROLEMEMBER ('sysadmin') IS NULL
   
  The following example indicates whether the domain login Pat is a member of the **diskadmin** fixed server role.  
   
-```  
+```sql  
 SELECT IS_SRVROLEMEMBER('diskadmin', 'Contoso\Pat');  
 ```  
   

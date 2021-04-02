@@ -1,4 +1,5 @@
 ---
+description: "Configure Custom or Forms Authentication on the Report Server"
 title: "Configure Custom or Forms Authentication on the Report Server | Microsoft Docs"
 ms.date: 04/18/2017
 ms.prod: reporting-services
@@ -23,7 +24,7 @@ In practice, deploying a custom authentication extension requires multiple steps
 > [!NOTE]
 >  Creating a custom authentication extension requires custom code and expertise in [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] security. If you do not want to create a custom authentication extension, you can use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory groups and accounts, but you should greatly reduce the scope of a report server deployment. For more information about custom authentication, see [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md).
 
-Additionally, if you want to use Forms authentication or a custom authentication extension in a SQL Server Reporting Services environment that is integrated with a SharePoint product, you must configure the SharePoint site to use the authentication method that you choose. For more information about configuring authentication in SharePoint, see [Authentication Samples](https://go.microsoft.com/fwlink/?LinkId=115575) on [!INCLUDE[msCoName](../../includes/msconame-md.md)] Developer Network (MSDN).
+Additionally, if you want to use Forms authentication or a custom authentication extension in a SQL Server Reporting Services environment that is integrated with a SharePoint product, you must configure the SharePoint site to use the authentication method that you choose. For more information about configuring authentication in SharePoint, see [Authentication Samples](/previous-versions/office/sharepoint-2007-products-and-technologies/cc262069(v=office.12)) on [!INCLUDE[msCoName](../../includes/msconame-md.md)] Developer Network (MSDN).
 
 
 

@@ -1,4 +1,5 @@
 ---
+description: "Configuring the Script Component in the Script Component Editor"
 title: "Configuring the Script Component in the Script Component Editor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -15,12 +16,12 @@ helpviewer_keywords:
   - "SSIS Script component, configuring"
   - "Script component [Integration Services], configuring"
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Configuring the Script Component in the Script Component Editor
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Before you write custom code in the Script component, you must select the type of data flow component that you want to create-source, transformation, or destination-and then configure the component's metadata and properties in the **Script Transformation Editor**.  

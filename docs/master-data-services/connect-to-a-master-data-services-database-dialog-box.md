@@ -1,6 +1,7 @@
 ---
-title: "Connect to a Master Data Services Database Dialog Box | Microsoft Docs"
-ms.custom: ""
+description: "Connect to a Master Data Services Database Dialog Box"
+title: Connect to a MDS Database Dialog Box
+ms.custom: "seo-lt-2019"
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "mds"
@@ -15,7 +16,7 @@ ms.author: lle
 ---
 # Connect to a Master Data Services Database Dialog Box
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the **Connect to a Master Data Services Database** dialog box to select a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   

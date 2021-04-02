@@ -1,8 +1,9 @@
 ---
+description: "XML Persistence Format"
 title: "XML Persistence Format | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "XML persistence [ADO], persistence format"
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # XML Persistence Format
 ADO uses UTF-8 encoding for the XML stream it persists.  
@@ -65,4 +66,4 @@ xmlns:z="#RowsetSchema">
  The data section has three rows containing information about shippers. For an empty rowset, the data section may be empty, but the \<rs:data> tags must be present. With no data, you could write the tag shorthand as simply \<rs:data/>. Any tag prefixed with "rs" indicates that it is in the namespace defined by urn:schemas-microsoft-com:rowset.  
   
 ## See Also  
- [Persisting Records in XML Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Persisting Records in XML Format](./persisting-records-in-xml-format.md)

@@ -1,7 +1,8 @@
 ---
+description: "Graph edge constraints"
 title: "Graph edge constraints | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/21/2019
+ms.date: 09/09/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -15,11 +16,11 @@ helpviewer_keywords:
   - "SQL Graph" 
 author: "shkale-msft"
 ms.author: "shkale"
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # Edge constraints
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
 Edge constraints can be used to enforce data integrity and specific semantics on the edge tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] graph database.
 
@@ -40,9 +41,17 @@ Consider that you have `Product` and `Customer` nodes in your graph and you use 
 - Users may specify multiple edge constraint clauses per edge constraint, which will be applied as a disjunction.
 - If multiple edge constraints are created on a single edge table, edges must satisfy ALL constraints to be allowed.
 
-### Indexes on Edge Constraints
+### Indexes on edge constraints
 
 Creating an edge constraint does not automatically create a corresponding index on `$from_id` and `$to_id` columns in the edge table. Manually creating an index on a `$from_id`, `$to_id` pair is recommended if you have point lookup queries or OLTP workload.
+
+### ON DELETE referential actions on edge constraints
+Cascading actions on an edge constraint let users define the actions that the database engine takes when a user deletes the node(s), which the given edge connects. The following referential actions can be defined:  
+*NO ACTION*   
+The database engine raises an error when you try to delete a node that has connecting edge(s).  
+
+*CASCADE*   
+When a node is delete from the database, connecting edge(s) are deleted.  
 
 ## Working with edge constraints
 
@@ -75,7 +84,35 @@ GO
 CREATE TABLE bought
    (
       PurchaseCount INT
-         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product)
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE NO ACTION
+   )
+   AS EDGE;
+   ```
+
+#### Defining referential actions on a new edge table 
+
+The following example creates an edge constraint on the **bought** edge table and defines ON DELETE CASCADE referential action. 
+
+```sql
+-- CREATE node and edge tables
+CREATE TABLE Customer
+   (
+      ID INTEGER PRIMARY KEY
+      ,CustomerName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE Product
+   (
+      ID INTEGER PRIMARY KEY
+      ,ProductName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE bought
+   (
+      PurchaseCount INT
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE CASCADE
    )
    AS EDGE;
    ```
@@ -243,6 +280,7 @@ DROP CONSTRAINT EC_BOUGHT;
 
 To modify an edge constraint using Transact-SQL, you must first delete the existing edge constraint and then re-create it with the new definition.
 
+
 ### View edge constraints
 
 [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
@@ -297,4 +335,7 @@ WHERE EC.parent_object_id = object_id('bought');
 
 ## Related tasks
 
-For information about graph technology in SQL Server, see [Graph processing with SQL Server and Azure SQL Database](../graphs/sql-graph-overview.md?view=sql-server-2017).
+[CREATE TABLE (SQL Graph)](../../t-sql/statements/create-table-sql-graph.md)  
+[ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
+
+For information about graph technology in SQL Server, see [Graph processing with SQL Server and Azure SQL Database](../graphs/sql-graph-overview.md).

@@ -1,5 +1,6 @@
 ---
-title: "Add a Border Frame to a Chart (Report Builder and SSRS) | Microsoft Docs"
+title: "Add a Border Frame to a Chart (Report Builder) | Microsoft Docs"
+description: Learn how to give a chart more visual impact using a border frame around the outside of the chart in Report Builder. 
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,17 +1,18 @@
 ---
-title: "Handling Metadata with the JDBC Driver | Microsoft Docs"
+description: "Handling metadata with the JDBC driver"
+title: "Handling metadata with the JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5cfb35d4-ddcd-40a2-8091-f29cddc32552
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
-# Handling Metadata with the JDBC Driver
+# Handling metadata with the JDBC driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] can be used to work with metadata in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database in a variety of ways. The JDBC driver can be used to get metadata about the database, a result set, or parameters.  
@@ -29,15 +30,15 @@ ms.author: genemi
 > [!NOTE]  
 >  The metadata methods discussed in this section are generally expensive in terms of application performance, so care should be taken with their usage.  
   
-## In This Section  
+## In this section  
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Using Database Metadata](../../connect/jdbc/using-database-metadata.md)|Describes how to retrieve metadata information about the currently connected database.|  
-|[Using Result Set Metadata](../../connect/jdbc/using-result-set-metadata.md)|Describes how to retrieve metadata information about the current result set.|  
-|[Using Parameter Metadata](../../connect/jdbc/using-parameter-metadata.md)|Describes how to retrieve metadata information about the parameters of prepared and callable statements.|  
+|[Using database metadata](../../connect/jdbc/using-database-metadata.md)|Describes how to retrieve metadata information about the currently connected database.|  
+|[Using result set metadata](../../connect/jdbc/using-result-set-metadata.md)|Describes how to retrieve metadata information about the current result set.|  
+|[Using parameter metadata](../../connect/jdbc/using-parameter-metadata.md)|Describes how to retrieve metadata information about the parameters of prepared and callable statements.|  
   
-## See Also  
- [Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## See also  
+ [Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

@@ -1,12 +1,13 @@
 ---
+description: "- (Negative) (Transact-SQL)"
 title: "- (Negative) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "negative"
 dev_langs: 
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "negative operator (-)"
   - "negative values"
 ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Unary Operators - Negative
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the negative of the value of a numeric expression (a unary operator). Unary operators perform an operation on only one expression of any one of the data types of the numeric data type category.   
   
@@ -37,11 +38,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 - numeric_expression  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *numeric_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any one of the data types of the numeric data type category, except the date and time category.  
   
@@ -53,10 +56,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### A. Setting a variable to a negative value  
  The following example sets a variable to a negative value.  
   
-```  
+```sql 
 USE tempdb;  
 GO  
-DECLARE @MyNumber decimal(10,2);  
+DECLARE @MyNumber DECIMAL(10,2);  
 SET @MyNumber = -123.45;  
 SELECT @MyNumber AS NegativeValue;  
 GO  
@@ -76,14 +79,13 @@ NegativeValue
 ### B. Changing a variable to a negative value  
  The following example changes a variable to a negative value.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
-DECLARE @Num1 int;  
+DECLARE @Num1 INT;  
 SET @Num1 = 5;  
 SELECT @Num1 AS VariableValue, -@Num1 AS NegativeValue;  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -102,7 +104,7 @@ VariableValue NegativeValue
 ### C. Returning the negative of a positive constant  
  The following example returns the negative of a positive constant.  
   
-```  
+```sql  
 USE ssawPDW;  
   
 SELECT TOP (1) - 17 FROM DimEmployee;  
@@ -117,7 +119,7 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 ### D. Returning the positive of a negative constant  
  The following example returns the positive of a negative constant.  
   
-```  
+```sql  
 USE ssawPDW;  
   
 SELECT TOP (1) - ( - 17) FROM DimEmployee;  
@@ -132,7 +134,7 @@ SELECT TOP (1) - ( - 17) FROM DimEmployee;
 ### E. Returning the negative of a column  
  The following example returns the negative of the `BaseRate` value for each employee in the `dimEmployee` table.  
   
-```  
+```sql  
 USE ssawPDW;  
   
 SELECT - BaseRate FROM DimEmployee;  

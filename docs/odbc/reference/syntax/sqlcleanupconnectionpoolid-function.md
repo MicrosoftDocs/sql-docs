@@ -1,4 +1,5 @@
 ---
+description: "SQLCleanupConnectionPoolID Function"
 title: "SQLCleanupConnectionPoolID Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLCleanupConnectionPoolID function [ODBC]"
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLCleanupConnectionPoolID Function
 **Conformance**  
  Version Introduced: ODBC 3.81 Standards Compliance: ODBC  
   
  **Summary**  
- **SQLCleanupConnectionPoolID** informs a driver that a pool ID was timed out. A pool ID can timeout whenever all connections in a pool associated with that pool ID were timed out. See [Pooling in the Microsoft Data Access Components](https://msdn.microsoft.com/library/ms810829.aspx) for more information about connection timeout.  
+ **SQLCleanupConnectionPoolID** informs a driver that a pool ID was timed out. A pool ID can timeout whenever all connections in a pool associated with that pool ID were timed out. See [Pooling in the Microsoft Data Access Components](/previous-versions/ms810829(v=msdn.10)) for more information about connection timeout.  
   
 ## Syntax  
   

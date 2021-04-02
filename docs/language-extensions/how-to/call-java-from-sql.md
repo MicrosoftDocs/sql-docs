@@ -1,19 +1,19 @@
 ---
-title: Call Java from SQL Server
+title: Call Java runtime
 titleSuffix: SQL Server Language Extensions
-description: Learn how to call Java classes from SQL Server stored procedures using the Java programming language extension in SQL Server 2019.
+description: Learn how to call Java classes from a SQL Server stored procedures using SQL Server Language Extensions.
 author: dphansen
 ms.author: davidph 
-ms.date: 07/24/2019
-ms.topic: conceptual
+ms.date: 06/25/2020
+ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
-# How to call Java from SQL Server
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# How to call the Java runtime in SQL Server Language Extensions
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-[SQL Server Language Extensions](../language-extensions-overview.md) uses the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure as the interface to call the Java runtime. 
+[SQL Server Language Extensions](../language-extensions-overview.md) uses the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) system stored procedure as the interface to call the Java runtime. 
 
 This how-to article explains implementation details for Java classes and methods that execute on SQL Server.
 
@@ -45,15 +45,12 @@ The following are some basic principles when executing Java on SQL Server.
 * **params** is used to pass parameters to a Java class. Calling a method that requires arguments is not supported. Therefore, parameters the only way to pass argument values to your method. 
 
 > [!NOTE]
-> This note restates supported and unsupported operations specific to Java in CTP 3.2.
+> This note restates supported and unsupported operations specific to Java in SQL Server 2019 Release Candidate 1.
 > * On the stored procedure, input parameters are supported. Output parameters are not.
-> * Streaming using the sp_execute_external_script parameter @r_rowsPerRead is not supported.
-> * Partitioning using @input_data_1_partition_by_columns is not supported.
-> * Parallel processing using @parallel=1 is supported.
 
 ### Call Java class
 
-The [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. The following example shows an `sp_execute_external_script` using the Java extension, and parameters for specifying path, script, and your custom code.
+The [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) system stored procedure is the interface used to call the Java runtime. The following example shows an `sp_execute_external_script` using the Java extension, and parameters for specifying path, script, and your custom code.
 
 > [!NOTE]
 > Note that you don't need to define which method to call. By default, a method called **execute** is called. This means that you need to follow the [Extensibility SDK for Java in SQL Server](extensibility-sdk-java-sql-server.md) and implement an execute method in your Java class.
@@ -87,7 +84,7 @@ Once you have compiled your Java class or classes and created a jar file in your
 
 ## Use external library
 
-In SQL Server 2019 CTP 3.2, you can use external libraries for the Java language on Windows and Linux. You can compile your classes into a .jar file and upload the .jar file and other dependencies into the database using the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
+In SQL Server 2019 Release Candidate 1, you can use external libraries for the Java language on Windows and Linux. You can compile your classes into a .jar file and upload the .jar file and other dependencies into the database using the [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) DDL.
 
 Example of how to upload a .jar file with external library:
 
@@ -110,7 +107,21 @@ EXEC sp_execute_external_script
 with result sets ((column1 int))
 ```
 
-For more information, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+For more information, see [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
+
+## Loopback connection to SQL Server
+
+Use a loopback connection to connect back to SQL Server over JDBC to read or write data from Java executed from `sp_execute_external_script`. You can use this when using the **InputDataSet** and **OutputDataSet** arguments of `sp_execute_external_script` are not possible.
+To make a loopback connection in Windows use the following example:
+
+```
+jdbc:sqlserver://localhost:1433;databaseName=Adventureworks;integratedSecurity=true;
+``` 
+
+To make a loopback connection in Linux the JDBC driver requires three connection properties defined in the following Certificate:
+
+[Client-Certificate-Authenication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
+
 
 ## Next steps
 

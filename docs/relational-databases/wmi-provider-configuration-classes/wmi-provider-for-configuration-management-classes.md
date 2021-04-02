@@ -1,5 +1,6 @@
 ---
-title: "WMI Provider for Configuration Management Classes | Microsoft Docs"
+title: "WMI Provider for Configuration Management Classes"
+description: Discover and implement the functionality that Windows Management Instrumentation provides. Choose from these classes for Configuration Manager.  
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -15,11 +16,11 @@ helpviewer_keywords:
   - "WMI Provider for Configuration Management, classes"
   - "classes [WMI]"
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # WMI Provider for Configuration Management Classes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The Windows Management Instrumentation (WMI) provider for Configuration Management provides functionality for the following classes:  
   
  [CInstance Class](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md)  

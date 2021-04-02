@@ -1,4 +1,5 @@
 ---
+description: "ODBC Source Custom Properties"
 title: "ODBC Source Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # ODBC Source Custom Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The following table describes the custom properties of the ODBC source. All properties can be set from SSIS property expressions.  
@@ -36,6 +37,5 @@ ms.author: janinez
   
 ## See Also  
  [ODBC Source](../../integration-services/data-flow/odbc-source.md)   
- [ODBC Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
-  
+ [ODBC Source Editor &#40;Connection Manager Page&#41;](./odbc-source.md)  
   

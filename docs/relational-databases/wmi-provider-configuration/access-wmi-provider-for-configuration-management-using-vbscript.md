@@ -1,6 +1,7 @@
 ---
-title: "Modify SQL Server Service Advanced Properties using VBScript | Microsoft Docs"
-ms.custom: ""
+title: "Access the WMI Provider with VBScript"
+description: Learn how to create a VBScript program that lists the version of installed instances of SQL Server that are running on a computer.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,11 +15,11 @@ helpviewer_keywords:
   - "modifying SQL Server Service properties"
   - "WMI Provider for Configuration Management, VBScript"
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Access WMI Provider for Configuration Management using VBScript
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This section describes how to create a VBScript program that lists the version of installed instances of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are running on a computer.  
   
  The code example lists the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on the computer and its version.  
@@ -36,8 +37,6 @@ ms.author: "carlrab"
 5.  Save the file.  
   
 6.  Run the script by typing **cscript test.vbs** at the command prompt.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Example  
   

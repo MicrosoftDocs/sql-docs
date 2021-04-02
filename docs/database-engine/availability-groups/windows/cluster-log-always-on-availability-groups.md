@@ -1,28 +1,26 @@
 ---
-title: "Generate and analyze the CLUSTER.LOG for an availability group"
-description: "Describes how to generate and analyze the cluster log for an Always On availability group. "
-ms.custom: "ag-guide, seodec18"
+title: "Generate & analyze CLUSTER.LOG for availability groups"
+description: "Learn details about how to generate and analyze the cluster log for an Always On availability group."
+ms.custom: seo-lt-2019
 ms.date: "06/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: availability-groups
+ms.topic: how-to
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 ---
 # Generate and analyze the CLUSTER.LOG for an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  As a failover cluster resource, there are external interactions between SQL Server, the Windows Server Failover Cluster service (WSFC) cluster, and the SQL Server resource DLL (hadrres.dll), that cannot be monitored within SQL Server. The WSFC log, CLUSTER.LOG, can diagnose issues in the WSFC cluster or in the SQL Server resource DLL.  
-  
- The following diagram demonstrates the relationship between applications like SQL Server and Windows Cluster Manager that initiate availability group resource creation, destruction, or state changes.  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  As a failover cluster resource, there are external interactions between SQL Server, the Windows Server Failover Cluster service (WSFC) cluster, and the SQL Server resource DLL (hadrres.dll), that cannot be monitored within SQL Server. The WSFC log, CLUSTER.LOG, can diagnose issues in the WSFC cluster or in the SQL Server resource DLL. 
   
 ## Generate cluster log  
  You can generate the cluster logs in two ways:  
   
-1.  Use the `cluster /log /g` command at the command prompt. This command generates the cluster logs to the \windows\cluster\reports directory on each WSFC node. The advantage of this method is that you can specify the level of detail in the generated logs by using the `/level` option. The disadvantage is that you cannot specify the destination directory for the generated cluster logs. For more information, see [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx).  
+1.  Use the `cluster /log /g` command at the command prompt. This command generates the cluster logs to the \windows\cluster\reports directory on each WSFC node. The advantage of this method is that you can specify the level of detail in the generated logs by using the `/level` option. The disadvantage is that you cannot specify the destination directory for the generated cluster logs. For more information, see [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283).  
   
-2.  Use the [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx) PowerShell cmdlet. The advantage of this method is that you can generate the cluster log from all nodes to one destination directory on the node that you run the cmdlet. The disadvantage is that you cannot specify the level of detail in the generated logs.  
+2.  Use the [Get-ClusterLog](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10)) PowerShell cmdlet. The advantage of this method is that you can generate the cluster log from all nodes to one destination directory on the node that you run the cmdlet. The disadvantage is that you cannot specify the level of detail in the generated logs.  
   
  The following PowerShell commands generate the cluster logs from all cluster nodes from the last 15 minutes and place them in the current directory. Run the commands in a PowerShell window with Administrative privileges.  
   
@@ -51,7 +49,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 8.  Right-click the availability group resource again and click **Bring this resource online**.  
   
 ## Availability group resource events  
- The table below shows the different kinds of events you can see in CLUSTER.LOG that pertain to the availability group resource. For more information on the Resource Hosting Subsystem (RHS) and Resource Control Monitor (RCM) in WSFC, see [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx).  
+ The table below shows the different kinds of events you can see in CLUSTER.LOG that pertain to the availability group resource. For more information on the Resource Hosting Subsystem (RHS) and Resource Control Monitor (RCM) in WSFC, see [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](/archive/blogs/askcore/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters).  
   
 |Identifier|Source|Example from CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
@@ -72,5 +70,4 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 3.  Change the **SeparateMonitor** value to **1**.  
   
 4.  Restart the clustered service for your availability group in the WSFC cluster.  
-  
   

@@ -1,6 +1,7 @@
 ---
-title: "Run DQSInstaller.exe to Complete Data Quality Server Installation | Microsoft Docs"
-ms.custom: ""
+title: "Run DQSInstaller.exe to complete Data Quality Server installation"
+description: Learn how to run the DQSInstaller.exe to complete an installation of SQL Server Data Quality Services (DQS). 
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,14 +9,14 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Run DQSInstaller.exe to Complete Data Quality Server Installation
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
 
-  To complete the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installation, you must run the DQSInstaller.exe file after installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. This topic describes how to run the DQSInstaller.exe from the **Start** screen, **Start** menu, Windows Explorer, or Command Prompt; you can choose any of the ways to run the DQSInstaller.exe file.  
+  To complete the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installation, you must run the DQSInstaller.exe file after installing [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. This topic describes how to run the DQSInstaller.exe from the **Start** screen, **Start** menu, Windows Explorer, or Command Prompt; you can choose any of the ways to run the DQSInstaller.exe file.  
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   
@@ -66,7 +67,7 @@ ms.author: lle
 |DQSInstaller.exe Parameter|Description|Sample Syntax|  
 |--------------------------------|-----------------|-------------------|  
 |-collation|The server collation to be used for installing [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].<br /><br /> DQS supports only case-insensitive collation. If you specify a case-sensitive collation, the installer attempts to use the case-insensitive version of the specified collation. If there is no case-insensitive version, or if the collation is unsupported by SQL, the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installation fails.<br /><br /> If a server collation is not specified, the default collation, SQL_Latin1_General_CP1_CI_AS, is used.|`dqsinstaller.exe -collation <collation_name>`|  
-|-upgradedlls|Skips recreating the DQS databases (DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA), and only updates the SQL Common Language Runtime (SQLCLR) assemblies used by DQS in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database.<br /><br /> For more information, see [Upgrade SQLCLR Assemblies After .NET Framework Update](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)|`dqsinstaller.exe -upgradedlls`|  
+|-upgradedlls|Skips recreating the DQS databases (DQS_MAIN, DQS_PROJECTS, and DQS_STAGING_DATA), and only updates the SQL Common Language Runtime (SQLCLR) assemblies used by DQS in the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] database.<br /><br /> For more information, see [Upgrade SQLCLR Assemblies After .NET Framework Update](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)|`dqsinstaller.exe -upgradedlls`|  
 |-exportkbs|Export all the knowledge bases to a DQS backup file (.dqsb). You must also specify the full path and file name where you want to export all the knowledge bases.<br /><br /> For more information, see [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).|`dqsinstaller.exe -exportkbs <path><filename>`<br /><br /> For example, `dqsinstaller.exe -exportkbs c:\DQSBackup.dqsb`|  
 |-importkbs|Import all the knowledge bases from a DQS backup file (.dqsb) after completing the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installation. You must also specify the full path and file name from where you want to import all the knowledge bases.<br /><br /> For more information, see [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).|`dqsinstaller.exe -importkbs <path><filename>`<br /><br /> For example, `dqsinstaller.exe -importkbs c:\DQSBackup.dqsb`|  
 |-upgrade|Upgrades DQS databases schema. You must use this parameter after you have installed a SQL Server update on a previously configured DQS instance. For more information, see [Upgrade DQS Databases Schema After Installing SQL Server Update](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md).|`dqsinstaller.exe -upgrade`|  

@@ -1,5 +1,6 @@
 ---
 title: "Contained Databases | Microsoft Docs"
+description: "Learn about contained databases, the benefits and limitations of partially contained databases, and how SQL Server 2019 works to isolate databases."
 ms.custom: ""
 ms.date: "08/24/2016"
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Contained Databases
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  A *contained database* is a database that is isolated from other databases and from the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the database.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] helps user to isolate their database from the instance in 4 ways.  
+  A *contained database* is a database that is isolated from other databases and from the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the database.  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] helps user to isolate their database from the instance in 4 ways.  
   
 -   Much of the metadata that describes a database is maintained in the database. (In addition to, or instead of, maintaining metadata in the master database.)  
   
@@ -30,7 +31,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment (DMV's, XEvents, etc.) reports and can act upon containment information.  
   
- Some features of partially contained databases, such as storing metadata in the database, apply to all [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] databases. Some benefits of partially contained databases, such as database level authentication and catalog collation, must be enabled before they are available. Partial containment is enabled using the **CREATE DATABASE** and **ALTER DATABASE** statements or by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about how to enable partial database containment, see [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
+ Some features of partially contained databases, such as storing metadata in the database, apply to all [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] databases. Some benefits of partially contained databases, such as database level authentication and catalog collation, must be enabled before they are available. Partial containment is enabled using the **CREATE DATABASE** and **ALTER DATABASE** statements or by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about how to enable partial database containment, see [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
   
 ##  <a name="Concepts"></a> Partially Contained Database Concepts  
  A fully contained database includes all the settings and metadata required to define the database and has no configuration dependencies on the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] where the database is installed. In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], separating a database from the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] could be time consuming and required detailed knowledge of the relationship between the database and the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Partially contained databases make it easier to separate a database from the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and other databases.  
@@ -121,15 +122,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ##  <a name="Limitations"></a> Limitations  
  Partially contained databases do not allow the following features.  
   
--   Partially contained databases cannot use replication, change data capture, or change tracking.  
+-   Replication, change data capture, or change tracking.  
   
 -   Numbered procedures  
   
 -   Schema-bound objects that depend on built-in functions with collation changes  
   
--   Binding change resulting from collation changes, including references to objects, columns, symbols, or types.  
-  
--   Replication, change data capture, and change tracking.  
+-   Binding change resulting from collation changes, including references to objects, columns, symbols, or types.
   
 > [!WARNING]  
 >  Temporary stored procedures are currently permitted. Because temporary stored procedures breach containment, they are not expected to be supported in future versions of contained database.  

@@ -1,5 +1,6 @@
 ---
 title: "rsAccessedDenied - Reporting Services Error | Microsoft Docs"
+description: "In this error reference, learn about 'rsAccessedDenied': The permissions granted to user 'mydomain\\myAccount' are insufficient for performing this operation."
 ms.date: 05/22/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -28,7 +29,7 @@ ms.author: maggies
   
 ## Details  
   
-|||  
+|Detail|Value|  
 |-|-|  
 |**Product Name**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**Event ID**|rsAccessedDenied|  

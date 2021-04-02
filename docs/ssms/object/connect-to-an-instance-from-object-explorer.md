@@ -1,6 +1,7 @@
 ---
-title: "Connect to a SQL Server or Azure SQL Database | Microsoft Docs"
-ms.custom: ""
+description: "Connect to a SQL Server or Azure SQL Database"
+title: "Connect to a SQL Server or Azure SQL Database"
+ms.custom: seo-lt-2019
 ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -13,7 +14,7 @@ ms.author: "maghan"
 ---
 # Connect to a SQL Server or Azure SQL Database
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 To work with servers and databases, you must first connect to the server. You can connect to multiple servers at the same time.
 
 [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) supports several types of connections. This article provides details for connecting to SQL Server and Azure SQL Database (connecting to an Azure SQL single database or elastic pool). For information on the other connection options, see the [links](#see-also) at the bottom of this page.
@@ -30,17 +31,17 @@ To work with servers and databases, you must first connect to the server. You ca
 
 1. If you're connecting to an Azure SQL Server, you might get prompted to sign in to create a firewall rule. Click **Sign In...** (if not, skip to step 6 below)
 
-   ![firewall](../media/connect-to-server/firewall-rule-sign-in.png)
+   ![Screenshot of the New Firewall Rule dialog box with the Sign in option called out.](../media/connect-to-server/firewall-rule-sign-in.png)
 
 1. After successfully signing in, the form is pre-populated with your specific IP address. If your IP address changes often, it might be easier to grant access to a range, so select the option that's best for your environment. 
 
-   ![firewall](../media/connect-to-server/new-firewall-rule.png)
+   ![Screenshot of the New Firewall Rule dialog box with the Add my client IP address option selected and the OK option called out.](../media/connect-to-server/new-firewall-rule.png)
 
 1. To create the firewall rule and connect to the server, click **OK**.
 
 1. The server appears in **Object Explorer** after successfully connecting:
 
-   ![connected](../media/connect-to-server/connected.png)
+   ![Screenshot of the Object Explorer showing that the server is successfully connected.](../media/connect-to-server/connected.png)
 
 ## Next Steps
 
@@ -51,7 +52,7 @@ To work with servers and databases, you must first connect to the server. You ca
 [SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
 [Download SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
 
-[Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
-[Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
-[Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
-[Azure Storage](../f1-help/connect-to-microsoft-azure-storage.md)  
+[Analysis Services](/analysis-services/instances/connect-from-client-applications-analysis-services)  
+[Integration Services](../../integration-services/sql-server-integration-services.md)  
+[Reporting Services](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
+[Azure Storage](../f1-help/connect-to-microsoft-azure-storage.md)

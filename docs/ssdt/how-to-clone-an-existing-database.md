@@ -1,17 +1,19 @@
 ---
-title: "How to: Clone an Existing Database | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Clone an Existing Database
+description: Learn how to clone a database. View the steps that are involved with creating a new database, duplicating its schema, and replicating its data.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Clone an Existing Database
+
 This task uses some of the steps you learned in previous procedures to create a new database and port existing data over. In addition, it uses the steps discussed in [How to: Use Schema Compare to Compare Different Database Definitions](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) to synchronize the schema of a source and project database.  
   
 By using these steps, you can easily create a development or test database from a production database with identical schema and data. You can then continue to develop the test database in a connected mode, or create a database project for offline development and testing, all without disrupting the operation of the production database.  

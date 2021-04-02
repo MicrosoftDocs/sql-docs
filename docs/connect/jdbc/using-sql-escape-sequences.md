@@ -1,17 +1,18 @@
 ---
-title: "Using SQL Escape Sequences | Microsoft Docs"
+title: "Using SQL escape sequences in JDBC"
+description: "The Microsoft JDBC Driver for SQL Server supports the use of SQL escape sequences, as defined by the JDBC API."
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
-# Using SQL Escape Sequences
+# Using SQL escape sequences
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -35,7 +36,7 @@ The escape sequence syntax used by the JDBC driver is the following:
   
 The following sections describe the five types of escape sequences and how they are supported by the JDBC driver.  
   
-## LIKE Wildcard Literals
+## LIKE wildcard literals
 
 The JDBC driver supports the `{escape 'escape character'}` syntax for using LIKE clause wildcards as literals. For example, the following code will return values for col3, where the value of col2 literally begins with an underscore (and not its wildcard usage).  
 
@@ -47,7 +48,7 @@ LIKE '\\_%' {escape '\\'}");
 > [!NOTE]  
 > The escape sequence must be at the end of the SQL statement. For multiple SQL statements in a command string, the escape sequence needs to be at the end of each relevant SQL statement.  
 
-## Function Handling
+## Function handling
 
 The JDBC driver supports function escape sequences in SQL statements with the following syntax:  
 
@@ -70,7 +71,7 @@ The following table lists the various functions that are supported by the JDBC d
 > [!NOTE]  
 > If you try to use a function that the database does not support, an error will occur.  
 
-## Date and Time Literals
+## Date and time literals
 
 The escape syntax for date, time, and timestamp literals is the following:  
 
@@ -93,7 +94,7 @@ UPDATE Orders SET OpenDate={d '2005-01-31'}
 WHERE OrderID=1025  
 ```
 
-## Stored Procedure Calls
+## Stored procedure calls
 
 The JDBC driver supports the `{? = call proc_name(?,...)}` and `{call proc_name(?,...)}` escape syntax for stored procedure calls, depending on whether you need to process a return parameter.  
   
@@ -107,7 +108,7 @@ where `procedure-name` specifies the name of a stored procedure and `parameter` 
   
 For more information about using the `call` escape sequence with stored procedures, see [Using Statements with Stored Procedures](../../connect/jdbc/using-statements-with-stored-procedures.md).  
 
-## Outer Joins
+## Outer joins
 
 The JDBC driver supports the SQL92 left, right, and full outer join syntax. The escape sequence for outer joins is the following:  
 
@@ -140,7 +141,7 @@ The following outer join escape sequences are supported by the JDBC driver:
 - Full outer joins
 - Nested outer joins
 
-## Limit Escape Syntax  
+## Limit escape syntax  
 
 > [!NOTE]  
 > The LIMIT escape syntax is only supported by Microsoft JDBC Driver 4.2 (or higher) for SQL Server when using JDBC 4.1 or higher.  
@@ -153,6 +154,6 @@ LIMIT <rows> [OFFSET <row offset>]
 
 The escape syntax has two parts: \<*rows*> is mandatory and specifies the number of rows to return. OFFSET and \<*row offset*> are optional and specify the number of rows to skip before beginning to return rows. The JDBC driver supports only the mandatory part by transforming the query to use TOP instead of LIMIT. SQL Server does not support the LIMIT clause. **The JDBC driver does not support the optional \<row offset> and the driver will throw an exception if it is used**.  
   
-## See Also
+## See also
 
-[Using Statements with the JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+[Using statements with the JDBC driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

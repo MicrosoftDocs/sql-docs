@@ -1,5 +1,6 @@
 ---
-title: "Reactivate a Member or Collection (Master Data Services) | Microsoft Docs"
+description: "Reactivate a Member or Collection (Master Data Services)"
+title: Reactivate a Member or Collection
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql
@@ -20,7 +21,7 @@ ms.author: lle
 ---
 # Reactivate a Member or Collection (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can reactivate a member that was either:  
   

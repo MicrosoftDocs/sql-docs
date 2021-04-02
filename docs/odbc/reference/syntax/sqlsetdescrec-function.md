@@ -1,4 +1,5 @@
 ---
+description: "SQLSetDescRec Function"
 title: "SQLSetDescRec Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "SQLSetDescRec"
 apilocation: 
@@ -18,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetDescRec function [ODBC]"
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetDescRec Function
 **Conformance**  

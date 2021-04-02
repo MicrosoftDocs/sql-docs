@@ -1,4 +1,5 @@
 ---
+description: "GETDATE (SSIS Expression)"
 title: "GETDATE (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,12 +13,12 @@ helpviewer_keywords:
   - "GETDATE function"
   - "dates [Integration Services], GETDATE"
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # GETDATE (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns the current date of the system in a DT_DBTIMESTAMP format. The GETDATE function takes no arguments.  

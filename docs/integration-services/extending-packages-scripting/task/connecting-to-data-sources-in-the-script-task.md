@@ -1,4 +1,5 @@
 ---
+description: "Connecting to Data Sources in the Script Task"
 title: "Connecting to Data Sources in the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -21,12 +22,12 @@ helpviewer_keywords:
   - "SQL Server Integration Services packages, connections"
   - "SSIS Script task, connections"
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Connecting to Data Sources in the Script Task
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Connection managers provide access to data sources that have been configured in the package. For more information, see [Integration Services &#40;SSIS&#41; Connections](../../../integration-services/connection-manager/integration-services-ssis-connections.md).  
@@ -86,6 +87,5 @@ ms.author: janinez
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Connections](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Create Connection Managers](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
-  
+ [Create Connection Managers](../../connection-manager/integration-services-ssis-connections.md)  
   

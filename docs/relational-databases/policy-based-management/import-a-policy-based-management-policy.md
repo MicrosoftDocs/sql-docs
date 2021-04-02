@@ -1,7 +1,8 @@
 ---
+description: "Import a Policy-Based Management Policy"
 title: "Import a Policy-Based Management Policy | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -14,34 +15,16 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Import a Policy-Based Management Policy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to import a Policy-Based Management policy instance in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  This topic describes how to import a Policy-Based Management policy instance in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **In This Topic**  
+## Permissions
+ Requires membership in the PolicyAdministratorRole role in the msdb database.
+
   
--   **Before you begin:**  
+##  Using SQL Server Management Studio  
   
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Security](#Security)  
-  
--   **To import a policy instance, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ships with policies that can be used to monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By default, these policies are not installed on the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], but they can be imported from the default location of C:\Program Files\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 or C:\Program Files (x86)\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 on 64-bit installs.
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
- Requires membership in the PolicyAdministratorRole role in the msdb database.  
-  
-##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
-  
-#### To import a policy instance  
+### To import a policy instance  
   
 1.  In **Object Explorer**, click the plus sign to expand the server where the newly-imported policy instance will reside.  
   
@@ -55,5 +38,6 @@ ms.author: vanto
   
 6.  When finished, click **OK**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
+## Example policies
+ Example policies are available in the [SQL Server Samples code repository](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies). These policies can be imported and used as a basis for your own policy-based management policies.

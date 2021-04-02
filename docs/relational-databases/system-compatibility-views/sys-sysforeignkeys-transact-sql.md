@@ -1,4 +1,5 @@
 ---
+description: "sys.sysforeignkeys (Transact-SQL)"
 title: "sys.sysforeignkeys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysforeignkeys"
   - "sys.sysforeignkeys"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "sysforeignkeys system table"
   - "sys.sysforeignkeys compatibility view"
 ms.assetid: 41544236-1c46-4501-be88-18c06963b6e8
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysforeignkeys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains information about the FOREIGN KEY constraints that are in the definitions of tables in the database.  
   

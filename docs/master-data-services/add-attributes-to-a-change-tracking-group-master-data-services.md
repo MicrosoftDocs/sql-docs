@@ -1,6 +1,7 @@
 ---
-title: "Add Attributes to a Change Tracking Group (Master Data Services) | Microsoft Docs"
-ms.custom: ""
+description: "Add Attributes to a Change Tracking Group (Master Data Services)"
+title: Add Attributes to Change Tracking Group
+ms.custom: "seo-lt-2019"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
@@ -17,7 +18,7 @@ ms.author: lle
 ---
 # Add Attributes to a Change Tracking Group (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], add attributes to a change tracking group when you want to track changes to the attribute's values.  
   

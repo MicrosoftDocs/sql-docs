@@ -1,5 +1,6 @@
 ---
-title: "Integration Services (SSIS) Catalog Transact-SQL Reference | Microsoft Docs"
+description: "Integration Services (SSIS) Catalog Transact-SQL Reference"
+title: "Integration Services Catalog Transact-SQL Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -8,16 +9,16 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9553cef4-36aa-4088-a9db-eee45a4502df
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services (SSIS) Catalog Transact-SQL Reference
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [Views &#40;Integration Services Catalog&#41;](../../integration-services/system-views/views-integration-services-catalog.md)  
   
  [Stored Procedures &#40;Integration Services Catalog&#41;](../../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
   
- [Functions &#40;Integration Services Catalog&#41;](https://msdn.microsoft.com/library/9f2aec85-3d4c-415f-b1f8-8328a60b1c7f) 
+ [Functions &#40;Integration Services Catalog&#41;](../functions-dm-execution-performance-counters.md)

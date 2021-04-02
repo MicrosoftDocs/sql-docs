@@ -1,4 +1,5 @@
 ---
+description: "Create a Trace (Transact-SQL)"
 title: "Create a Trace (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Create a Trace (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to use stored procedures to create a trace.  
   
 ### To create a trace  
@@ -26,16 +27,16 @@ ms.author: "mathoma"
   
 3.  Optionally, execute **sp_trace_setfilter** to set any or a combination of filters.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
      **sp_trace_setevent** and **sp_trace_setfilter** can be executed only on existing traces that are stopped.  
   
     > [!IMPORTANT]  
     >  Unlike regular stored procedures, parameters of all SQL Server Profiler stored procedures (<strong>sp_trace_*xx*</strong>) are strictly typed and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.  
   
-## Example  
+## Examples
+
  The following code demonstrates creating a trace using [!INCLUDE[tsql](../../includes/tsql-md.md)]. It is in three sections: creating the trace, populating the trace file, and stopping the trace. Customize the trace by adding the events that you want to trace. For the list of events and columns, see [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
+### A. Create a trace
  The following code creates a trace, adds events to the trace, and then starts the trace:  
   
 ```  
@@ -68,7 +69,7 @@ GO
   
 ```  
   
-## Example  
+### B. Populate the trace file
  Now that the trace has been created and started, execute the following code to populate the trace with activity.  
   
 ```  
@@ -79,7 +80,7 @@ GO
   
 ```  
   
-## Example  
+### C. Stop the trace
  The trace can be stopped and restarted at any time. In this example, execute the following code to stop the trace, close the trace, and delete the trace definition.  
   
 ```  
@@ -95,7 +96,7 @@ EXEC sp_trace_setstatus @TraceID, 2
   
 ```  
   
-## Example  
+### D. Examine the trace file
  To examine the trace file, open the SampleTrace.trc file using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ## See Also  

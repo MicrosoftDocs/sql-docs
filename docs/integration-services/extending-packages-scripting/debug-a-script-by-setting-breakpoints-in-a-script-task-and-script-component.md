@@ -1,4 +1,5 @@
 ---
+description: "Debug a Script by Setting Breakpoints in a Script Task and Script Component"
 title: "Debug a Script by Setting Breakpoints in a Script Task and Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -11,12 +12,12 @@ helpviewer_keywords:
   - "breakpoints [Integration Services]"
   - "scripts [Integration Services], breakpoints"
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Debug a Script by Setting Breakpoints in a Script Task and Script Component
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This procedure describes how to set breakpoints in the scripts that are used in the Script task and Script component.  

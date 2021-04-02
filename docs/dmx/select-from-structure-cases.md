@@ -1,16 +1,17 @@
 ---
+description: "SELECT FROM &lt;structure&gt;.CASES"
 title: "SELECT FROM &lt;structure&gt;.CASES | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # SELECT FROM &lt;structure&gt;.CASES
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Returns the cases that were used to create the mining structure.  
   
@@ -59,7 +60,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  Therefore, to protect sensitive data or personal information, you should construct your data source view to mask personal information, and grant **AllowDrillthrough** permission on a mining structure or mining model only when necessary.  
   
 ## Examples  
- The following examples are based on the mining structure, Targeted Mailing, which is based on the [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] database, and the associated mining models. For more information, see [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ The following examples are based on the mining structure, Targeted Mailing, which is based on the [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] database, and the associated mining models. For more information, see [Basic Data Mining Tutorial](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)).  
   
 ### Example 1: Drill through to Structure Cases  
  The following example returns a list of the 500 oldest customers in the mining structure, Targeted Mailing. The query returns all the columns in the mining model, but restricts the rows to those who purchased a bike, and orders them by age. You can also edit the expression list to return only the columns that you need.  
@@ -87,5 +88,4 @@ WHERE IsTestCase();
  [Data Mining Extensions &#40;DMX&#41; Data Definition Statements](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

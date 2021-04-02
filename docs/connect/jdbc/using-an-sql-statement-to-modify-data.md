@@ -1,18 +1,19 @@
 ---
-title: "Using an SQL Statement to Modify Data | Microsoft Docs"
+description: "Using an SQL statement to modify data"
+title: "Using an SQL statement to modify data | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4704199b-c0ae-4c77-8a2e-6963715b4ffb
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
-# Using an SQL Statement to Modify Data
+# Using an SQL statement to modify data
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -29,8 +30,8 @@ In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](
 >
 > If the column that you are trying to insert data into contains special characters such as spaces, you must provide the values to be inserted, even if they are default values. If you do not, the insert operation will fail.
 >
-> If you want the JDBC driver to return all update counts, including update counts returned by any triggers that may have fired, set the lastUpdateCount connection string property to "false". For more information about the lastUpdateCount property, see [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md).
+> If you want the JDBC driver to return all update counts, including update counts returned by any triggers that may have fired, set the lastUpdateCount connection string property to "false". For more information about the lastUpdateCount property, see [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md).
 
-## See Also
+## See also
 
-[Using Statements with SQL](../../connect/jdbc/using-statements-with-sql.md)
+[Using statements with SQL](../../connect/jdbc/using-statements-with-sql.md)

@@ -1,5 +1,6 @@
 ---
 title: "Server Properties (General Page) | Microsoft Docs"
+description: Learn about the options on the Report Server Properties page.
 ms.date: 06/08/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -37,7 +38,7 @@ ms.author: maggies
  This property is read-only. It identifies the types of authentication requests accepted by the report server instance. To change the authentication mode, you must edit the **RSReportServer.config** file. For more information, see [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md).  
   
  **URL**  
- This property is read-only. Specifies the URL to the Report Server Web service. This value is specified in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. For more information, see [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+ This property is read-only. Specifies the URL to the Report Server Web service. This value is specified in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. For more information, see [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
  **Enable a My Reports folder for each user**  
  Make **My Reports** available to users. This option is only available for native mode report servers.  

@@ -1,5 +1,6 @@
 ---
-title: "Add a Subreport and Parameters (Report Builder and SSRS) | Microsoft Docs"
+title: "Add a Subreport and Parameters (Report Builder) | Microsoft Docs"
+description: Learn how to add a subreport. Use subreports when you want to create a main report as a container for multiple related reports in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

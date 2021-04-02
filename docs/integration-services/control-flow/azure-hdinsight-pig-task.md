@@ -1,4 +1,5 @@
 ---
+description: "Azure HDInsight Pig Task"
 title: "Azure HDInsight Pig Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2017"
@@ -11,12 +12,12 @@ f1_keywords:
   - "sql13.dts.designer.afppigtask.f1"
   - "sql14.dts.designer.afppigtask.f1"
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Azure HDInsight Pig Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Use the **Azure HDInsight Pig Task** to run Pig script on an Azure HDInsight cluster.

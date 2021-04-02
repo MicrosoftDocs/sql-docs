@@ -1,5 +1,6 @@
 ---
 title: "View Offline Log Files | Microsoft Docs"
+description: Learn how to view SQL Server log files from a local or remote instance of SQL Server when the target instance is offline or cannot start.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # View Offline Log Files
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Beginning in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], you can view [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log files from a local or remote instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when the target instance is offline or cannot start.  
   
  You can access the offline log files from Registered Servers, or programmatically through WMI and WQL (WMI Query Language) queries.  
@@ -28,11 +29,11 @@ ms.author: "mathoma"
   
  If you are using Registered Servers, the instance that you want to connect to must be registered under **Local Server Groups** or under **Central Management Servers**. (The instance can be registered on its own or be a member of a server group.) For more information about how to add an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to Registered Servers, see the following topics:  
   
--   [Create or Edit a Server Group &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
+-   [Create or Edit a Server Group &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
--   [Register a Connected Server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md)  
+-   [Register a Connected Server &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md)  
   
--   [Create a Central Management Server and Server Group &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)  
+-   [Create a Central Management Server and Server Group &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/create-a-central-management-server-and-server-group.md)  
   
  For more information about how to view offline log files programmatically through WMI and WQL queries, see the following topics:  
   
@@ -69,7 +70,7 @@ ms.author: "mathoma"
   
     3.  Enter the remote computer name, and then click **OK**.  
   
-3.  Right-click **WMI Control (Local)** or **WMI Control (***RemoteComputerName***)**, and then click **Properties**.  
+3.  Right-click **WMI Control (Local)** or **WMI Control (**_RemoteComputerName_**)**, and then click **Properties**.  
   
 4.  In the **WMI Control Properties** dialog box, click the **Security** tab.  
   
@@ -80,8 +81,6 @@ ms.author: "mathoma"
 6.  Click **Security**.  
   
 7.  Make sure that the account that will be used has the **Enable Account** permission. This permission allows Read access to WMI objects.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### View Log Files  
  The following procedure shows how to view offline log files through Registered Servers. The procedure assumes the following:  
@@ -117,5 +116,4 @@ ms.author: "mathoma"
   
 ## See Also  
  [Log File Viewer](../../relational-databases/logs/log-file-viewer.md)  
-  
   

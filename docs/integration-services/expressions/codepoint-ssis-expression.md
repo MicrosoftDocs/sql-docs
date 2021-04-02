@@ -1,4 +1,5 @@
 ---
+description: "CODEPOINT (SSIS Expression)"
 title: "CODEPOINT (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -11,12 +12,12 @@ helpviewer_keywords:
   - "CODEPOINT function"
   - "leftmost character of expression"
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # CODEPOINT (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns the Unicode code point of the leftmost character of a character expression.  

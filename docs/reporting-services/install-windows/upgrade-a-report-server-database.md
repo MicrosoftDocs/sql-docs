@@ -1,4 +1,5 @@
 ---
+description: "Upgrade a Report Server Database"
 title: "Upgrade a Report Server Database | Microsoft Docs"
 ms.date: 08/17/2018
 ms.prod: reporting-services
@@ -21,7 +22,7 @@ The report server database provides storage for one or more report server instan
   
  **Native Mode:** In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode, the report server database actually comprises two databases that have default names of ReportServer and ReportServerTempDB.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **SharePoint mode:** In SQL Server 2016 Reporting Services SharePoint mode, the report server database is actually a collection of databases that is created for each instance of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.  
 
@@ -57,7 +58,7 @@ The report server database provides storage for one or more report server instan
   
  However, if you do not have **sysadmin** permission to the database on the remote computer, the connection will be refused with the following error:  
   
- `"Setup was not able to upgrade the report server database schema. You must update the database schema manually after setup is finished. To update the schema, run the Reporting Services Configuration Manager, open the Database Setup page, re-select the database, and click Apply. The database will be upgraded automatically."`  
+ `"Setup was not able to upgrade the report server database schema. You must update the database schema manually after setup is finished. To update the schema, run the Report Server Configuration Manager, open the Database Setup page, re-select the database, and click Apply. The database will be upgraded automatically."`  
   
  At this point, the report server program files will be upgraded, but the report server database will be in the format of the previous version. The report server will be unavailable until you finish the upgrade process by upgrading the database manually.  
   
@@ -66,7 +67,7 @@ The report server database provides storage for one or more report server instan
   
 ## Next steps
 
-[Reporting Services Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[Report Server Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [Create a Report Server Database](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Migrate a Reporting Services Installation](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  

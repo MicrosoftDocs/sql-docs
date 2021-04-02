@@ -1,4 +1,5 @@
 ---
+description: "Move System Databases"
 title: "Move System Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2016"
@@ -29,7 +30,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Move System Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to move system databases in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Moving system databases may be useful in the following situations:  
   
@@ -47,7 +48,7 @@ ms.author: "sstein"
 >  If you move a system database and later rebuild the master database, you must move the system database again because the rebuild operation installs all system databases to their default location.  
 
 > [!IMPORTANT]  
->  After moving files, the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] service account must have permission to access the files in new file folder location.
+>  After moving files, the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] service account must have permission to access the files in the new file folder location. For more information, see [Configure File System Permissions for Database Engine Access](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md).
     
   
 ##  <a name="Planned"></a> Planned Relocation and Scheduled Disk Maintenance Procedure  
@@ -61,7 +62,7 @@ ms.author: "sstein"
   
 2.  Stop the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or shut down the system to perform maintenance. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  Move the file or files to the new location.  
+3.  Move the file or files to the new location and verify the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] service account still has permission to access it.
 
 4.  Restart the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or the server. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
@@ -117,7 +118,7 @@ ms.author: "sstein"
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-     For more information about using the **sqlcmd** utility, see [Use the sqlcmd Utility](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
+     For more information about using the **sqlcmd** utility, see [Use the sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md).  
   
 4.  Exit the **sqlcmd** utility or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -144,14 +145,10 @@ ms.author: "sstein"
   
 3.  In the **SQL Server (**_instance_name_**) Properties** dialog box, click the **Startup Parameters** tab.  
   
-4.  In the **Existing parameters** box, select the -d parameter to move the master data file. Click **Update** to save the change.  
+4.  In the **Existing parameters** box, select the -d parameter. In the **Specify a startup parameter** box, change the parameter to the new path of the master *data* file. Click **Update** to save the change.
   
-     In the **Specify a startup parameter** box, change the parameter to the new path of the master database.  
-  
-5.  In the **Existing parameters** box, select the -l parameter to move the master log file. Click **Update** to save the change.  
-  
-     In the **Specify a startup parameter** box, change the parameter to the new path of the master database.  
-  
+5.  In the **Existing parameters** box, select the -l parameter. In the **Specify a startup parameter** box, change the parameter to the new path of the master *log* file. Click **Update** to save the change.
+
      The parameter value for the data file must follow the `-d` parameter and the value for the log file must follow the `-l` parameter. The following example shows the parameter values for the default location of the master data file.  
   
      `-dC:\Program Files\Microsoft SQL Server\MSSQL<version>.MSSQLSERVER\MSSQL\DATA\master.mdf`  
@@ -163,14 +160,16 @@ ms.author: "sstein"
      `-dE:\SQLData\master.mdf`  
   
      `-lE:\SQLData\mastlog.ldf`  
+
+6.  Click **OK** to save the changes permanently and close the **SQL Server (**_instance_name_**) Properties** dialog box.
+
+7.  Stop the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by right-clicking the instance name and choosing **Stop**.  
   
-6.  Stop the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by right-clicking the instance name and choosing **Stop**.  
+8.  Move the master.mdf and mastlog.ldf files to the new location.  
   
-7.  Move the master.mdf and mastlog.ldf files to the new location.  
+9.  Restart the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-8.  Restart the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-9. Verify the file change for the master database by running the following query.  
+10. Verify the file change for the master database by running the following query.  
   
     ```  
     SELECT name, physical_name AS CurrentLocation, state_desc  
@@ -179,7 +178,7 @@ ms.author: "sstein"
     GO  
     ```  
 
-10. At this point SQL Server should run normally. However Microsoft recommends also adjusting the registry entry at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`, where *instance_ID* is like `MSSQL13.MSSQLSERVER`. In that hive, change the `SQLDataRoot` value to the new path. Failure to update the registry can cause patching and upgrading to fail.
+11. At this point SQL Server should run normally. However Microsoft recommends also adjusting the registry entry at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`, where *instance_ID* is like `MSSQL13.MSSQLSERVER`. In that hive, change the `SQLDataRoot` value to the new path. Failure to update the registry can cause patching and upgrading to fail.
 
   
 ##  <a name="Resource"></a> Moving the Resource Database  
@@ -263,5 +262,4 @@ ms.author: "sstein"
  [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Rebuild System Databases](../../relational-databases/databases/rebuild-system-databases.md)  
-  
   

@@ -1,19 +1,19 @@
 ---
-title: "Check for Updates Dialog Box | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Check for Updates Dialog Box
+description: "Find out how to install the most recent SQL Server Data Tools (SSDT) version on your computer. Become familiar with the Check for Updates dialog box."
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "sql.data.tools.checkforupdates.dialog"
 ms.assetid: 40f942cc-8c87-45de-9456-44bd53b519e7
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Check for Updates Dialog Box
+
 Beginning in the November 2012 release of SQL Server Data Tools, you see a **Check for Updates** menu option under the **SQL** menu.  
   
 The **Check for Updates** dialog box displays the version of SQL Server Data Tools that is installed on your computer, and the released version. An **Update** displays if the released version is later than the installed version. Click the **Update** button to see a description of the available updates, and, if you choose, install the most recent SQL Server Data Tools version on your computer.  

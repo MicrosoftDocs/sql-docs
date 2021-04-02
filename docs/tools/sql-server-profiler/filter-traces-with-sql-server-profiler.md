@@ -1,25 +1,21 @@
 ---
-title: "Filter Traces with SQL Server Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+title: Filter Traces
+titleSuffix: SQL Server Profiler
+description: Find out how to define a filter so that SQL Server Profiler gathers the information you need during traces. Read about other advantages of trace filters.
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "Profiler [SQL Server Profiler], filters"
-  - "filters [SQL Server], events"
-  - "events [SQL Server], filters"
-  - "SQL Server Profiler, filters"
-  - "filters [SQL Server], traces"
-  - "traces [SQL Server], filters"
 ms.assetid: 34577136-a0ed-4822-94de-4a0d5f98265f
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # Filter Traces with SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You can define filters on data columns for [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace events so that information is captured only for those events that you are interested in. Trace filters reduce the impact of tracing on system performance because fewer events are captured in the trace. Filtering also makes trace output easier to read because there are fewer events to search through.  
   
  **To filter traces with SQL Server Profiler**  

@@ -1,18 +1,19 @@
 ---
-title: "Using Adaptive Buffering | Microsoft Docs"
+title: "Using adaptive buffering"
+description: "Learn how using adaptive buffering eliminates the overhead of server cursors when retrieving large-value data using the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
-# Using Adaptive Buffering
+# Using adaptive buffering
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -29,23 +30,23 @@ In order to allow applications to handle very large results, the [!INCLUDE[jdbcN
 > [!NOTE]  
 > With adaptive buffering, the JDBC driver buffers only the amount of data that it has to. The driver does not provide any public method to control or limit the size of the buffer.
 
-## Setting Adaptive Buffering
+## Setting adaptive buffering
 
 Starting with the JDBC driver version 2.0, the default behavior of the driver is "**adaptive**". In other words, in order to get the adaptive buffering behavior, your application does not have to request the adaptive behavior explicitly. In the version 1.2 release, however, the buffering mode was "**full**" by default and the application had to request the adaptive buffering mode explicitly.
 
 There are three ways that an application can request that statement execution should use adaptive buffering:
 
-- The application can set the connection property **responseBuffering** to "adaptive". For more information on setting the connection properties, see [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md).
+- The application can set the connection property **responseBuffering** to "adaptive". For more information on setting the connection properties, see [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md).
 
 - The application can use the [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md) method of the [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) object to set the response buffering mode for all connections created through that [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) object.
 
 - The application can use the [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) method of the [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) class to set the response buffering mode for a particular statement object.
 
-When using the JDBC Driver version 1.2, applications needed to cast the statement object to a [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) class to use the [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) method. The code examples in the [Reading Large Data Sample](../../connect/jdbc/reading-large-data-sample.md) and [Reading Large Data with Stored Procedures Sample](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) demonstrate this old usage.
+When using the JDBC Driver version 1.2, applications needed to cast the statement object to a [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) class to use the [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) method. The code examples in the [Reading large data sample](../../connect/jdbc/reading-large-data-sample.md) and [Reading large data with stored procedures sample](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) demonstrate this old usage.
 
-However, with the JDBC driver version 2.0, applications can use the [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) method and the [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) method to access the vendor-specific functionality without any assumption about the implementation class hierarchy. For example code, see the [Updating Large Data Sample](../../connect/jdbc/updating-large-data-sample.md) topic.
+However, with the JDBC driver version 2.0, applications can use the [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) method and the [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) method to access the vendor-specific functionality without any assumption about the implementation class hierarchy. For example code, see the [Updating large data sample](../../connect/jdbc/updating-large-data-sample.md) topic.
 
-## Retrieving Large Data with Adaptive Buffering
+## Retrieving large data with adaptive buffering
 
 When large values are read once by using the get\<Type>Stream methods, and the ResultSet columns and the CallableStatement OUT parameters are accessed in the order returned by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], adaptive buffering minimizes the application memory usage when processing the results. When using adaptive buffering:
 
@@ -58,7 +59,7 @@ When the application uses adaptive buffering, the values retrieved by the get\<T
 > [!NOTE]
 > A call to ResultSet.close() in the middle of processing a ResultSet would require the Microsoft JDBC Driver for SQL Server to read and discard all remaining packets. This may take substantial time if the query returned a large data set and especially if the network connection is slow.
 
-## Guidelines for Using Adaptive Buffering
+## Guidelines for using adaptive buffering
 
 Developers should follow these important guidelines to minimize memory usage by the application:
 
@@ -86,6 +87,6 @@ In addition, the following list provides some recommendations for scrollable and
 
 - For forward-only updatable result sets, when fetching a block of rows the driver normally reads into memory the number of rows indicated by the [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) method of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) object, even when the adaptive buffering is enabled on the connection. If calling the [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) method of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) object results in an OutOfMemoryError, you can reduce the number of rows fetched by calling the [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) method of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) object to set the fetch size to a smaller number of rows, even down to 1 row, if necessary. You can also force the driver not to buffer any rows by calling the [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) method of the [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) object with "**adaptive**" parameter before executing the statement. Because the result set is not scrollable, if the application accesses a large column value by using one of the get\<Type>Stream methods, the driver discards the value as soon as the application reads it just as it does for the forward-only read-only result sets.
 
-## See Also
+## See also
 
-[Improving Performance and Reliability with the JDBC Driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[Improving performance and reliability with the JDBC driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

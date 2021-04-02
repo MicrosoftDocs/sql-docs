@@ -1,4 +1,5 @@
 ---
+description: "catalog.create_environment_variable (SSISDB Database)"
 title: "catalog.create_environment_variable (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -8,28 +9,28 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.create_environment_variable (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Create an environment variable in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   
 ## Syntax  
   
 ```sql  
-catalog.create_environment_variable [@folder_name =] folder_name  
-    , [@environment_name =] environment_name  
-    , [@variable_name =] variable_name  
-    , [@data_type =] data_type  
-    , [@sensitive =] sensitive  
-    , [@value =] value  
-    , [@description =] description  
+catalog.create_environment_variable [ @folder_name = ] folder_name  
+    , [ @environment_name = ] environment_name  
+    , [ @variable_name = ] variable_name  
+    , [ @data_type = ] data_type  
+    , [ @sensitive = ] sensitive  
+    , [ @value = ] value  
+    , [ @description = ] description  
 ```  
   
 ## Arguments  

@@ -1,6 +1,7 @@
 ---
-title: "Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure | Microsoft Docs"
-ms.custom: ""
+title: "Memory-optimized table and a natively compiled stored procedure"
+description: This sample introduces you to the syntax for In-Memory OLTP to create a memory-optimized table and a natively compiled stored procedure.
+ms.custom: seo-dt-2019
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic contains a sample that introduces you to the syntax for In-Memory OLTP.  
 
@@ -35,7 +36,7 @@ For information on how to use [!INCLUDE[ssManStudioFull](../../includes/ssmanstu
 
 ### Natively compiled stored procedures
 
-Natively compiled stored procedures are [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures compiled to native code, and that access memory-optimized tables. Natively compiled stored procedures allow for efficient execution of the queries and business logic in the stored procedure. For more details about the native compilation process, see [Native Compilation of Tables and Stored Procedures](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md). For more information about migrating disk-based stored procedures to natively compiled stored procedures, see [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md).
+Natively compiled stored procedures are [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures compiled to native code, and that access memory-optimized tables. Natively compiled stored procedures allow for efficient execution of the queries and business logic in the stored procedure. For more details about the native compilation process, see [Native Compilation of Tables and Stored Procedures](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md). For more information about migrating disk-based stored procedures to natively compiled stored procedures, see [Migration Issues for Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md).
 
 > [!NOTE]
 > One difference between interpreted (disk-based) stored procedures and natively compiled stored procedures is that an interpreted stored procedure is compiled at first execution, whereas a natively compiled stored procedure is compiled when it is created. With natively compiled stored procedures, many error conditions can be detected at create time and will cause creation of the natively compiled stored procedure to fail (such as arithmetic overflow, type conversion, and some divide-by-zero conditions). With interpreted stored procedures, these error conditions typically do not cause a failure when the stored procedure is created, but all executions will fail.
@@ -284,6 +285,5 @@ ORDER BY so.so_id, sod.lineitem_id
 ```  
   
 ## See Also  
- [In-Memory OLTP Code Samples](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
-  
+ [In-Memory OLTP Code Samples](./sample-database-for-in-memory-oltp.md)  
   

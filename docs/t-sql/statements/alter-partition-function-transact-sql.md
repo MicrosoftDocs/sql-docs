@@ -1,4 +1,5 @@
 ---
+description: "ALTER PARTITION FUNCTION (Transact-SQL)"
 title: "ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER PARTITION FUNCTION"
   - "ALTER_PARTITION_FUNCTION_TSQL"
@@ -23,11 +24,11 @@ helpviewer_keywords:
   - "partition functions [SQL Server], modifying"
   - "partitioned tables [SQL Server], merging"
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
-author: CarlRabeler
-ms.author: carlrab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Alters a partition function by splitting or merging its boundary values. Running an ALTER PARTITION FUNCTION statement can split one table partition or index that uses the partition function into two partitions. The statement can also merge two partitions into one less partition.  
   
@@ -38,7 +39,7 @@ Alters a partition function by splitting or merging its boundary values. Running
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER PARTITION FUNCTION partition_function_name()  
 {   
@@ -47,7 +48,10 @@ ALTER PARTITION FUNCTION partition_function_name()
 } [ ; ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *partition_function_name*  
 Is the name of the partition function to be modified.  
   
@@ -64,7 +68,7 @@ If you create all the partitions in the same filegroup, that filegroup is initia
 >  Limitations with columnstore index: Only empty partitions can be split in when a columnstore index exists on the table. You will need to drop or disable the columnstore index before performing this operation.  
   
 MERGE [ RANGE ( *boundary_value*) ]  
-Drops a partition and merges any values that exist in the partition into a remaining partition. RANGE (*boundary_value*) must be an existing boundary value, into which the values from the dropped partition are merged. This argument removes the filegroup that originally held *boundary_value* from the partition scheme unless a remaining partition uses it, or marks it with the NEXT USED property. The merged partition exists in the filegroup that didn't hold *boundary_value* at first. *boundary_value* is a constant expression that can reference variables (including user-defined type variables) or functions (including user-defined functions). It can't reference a [!INCLUDE[tsql](../../includes/tsql-md.md)] expression. *boundary_value* must either match or be implicitly convertible to the data type of its corresponding partitioning column. You also can't truncate *boundary_value* during implicit conversion in a way that the size and scale of the value doesn't match that of its corresponding *input_parameter_type*.  
+Drops a partition and merges any values that exist in the partition into a remaining partition. RANGE (*boundary_value*) must be an existing boundary value, of the partition to be dropped. This argument removes the filegroup that originally held *boundary_value* from the partition scheme unless a remaining partition uses it, or marks it with the NEXT USED property. The merged partition exists in the filegroup that didn't hold *boundary_value* at first. *boundary_value* is a constant expression that can reference variables (including user-defined type variables) or functions (including user-defined functions). It can't reference a [!INCLUDE[tsql](../../includes/tsql-md.md)] expression. *boundary_value* must either match or be implicitly convertible to the data type of its corresponding partitioning column. You also can't truncate *boundary_value* during implicit conversion in a way that the size and scale of the value doesn't match that of its corresponding *input_parameter_type*.  
   
 > [!NOTE]  
 >  Limitations with columnstore index: Two nonempty partitions containing a columnstore index can't be merged. You will need to drop or disable the columnstore index before performing this operation  

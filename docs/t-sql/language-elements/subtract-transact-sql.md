@@ -1,12 +1,13 @@
 ---
+description: "- (Subtraction) (Transact-SQL)"
 title: "- (Subtraction) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "subtract"
   - "-"
@@ -19,13 +20,13 @@ helpviewer_keywords:
   - "minus operator (-)"
   - "subtracting numbers"
 ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
-author: rothja
-ms.author: jroth
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # - (Subtraction) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Subtracts two numbers (an arithmetic subtraction operator). Can also subtract a number, in days, from a date.  
   
@@ -33,11 +34,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 expression - expression  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any one of the data types of the numeric data type category, except the **bit** data type. Cannot be used with **date**, **time**, **datetime2**, or **datetimeoffset** data types.  
   
@@ -51,7 +54,7 @@ expression - expression
   
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT MAX(TaxRate) - MIN(TaxRate) AS 'Tax Rate Difference'  
@@ -67,10 +70,10 @@ GO
   
  Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @altstartdate datetime;  
+DECLARE @altstartdate DATETIME;  
 SET @altstartdate = CONVERT(DATETIME, ''January 10, 1900 3:00 AM', 101);  
 SELECT @altstartdate - 1.5 AS 'Subtract Date';  
 ```  
@@ -90,7 +93,7 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
 ### C: Using subtraction in a SELECT statement  
  The following example calculates the difference in a base rate between the employee with the highest base rate and the employee with the lowest tax rate, from the `dimEmployee` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT MAX(BaseRate) - MIN(BaseRate) AS BaseRateDifference  

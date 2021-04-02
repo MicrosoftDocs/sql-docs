@@ -1,5 +1,6 @@
 ---
-title: "Upgrade Reports (SSRS) | Microsoft Docs"
+description: "Upgrade Reports (SSRS)"
+title: "Upgrade Reports | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -133,8 +134,8 @@ Report definition (.rdl) files are automatically upgraded in the following ways:
 ## Next steps
 
 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Breaking Changes in SQL Server Reporting Services in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[Behavior Changes to SQL Server Reporting Services  in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[Breaking Changes in SQL Server Reporting Services in SQL Server 2016](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)   
+[Behavior Changes to SQL Server Reporting Services  in SQL Server 2016](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Custom Report Items](../../reporting-services/custom-report-items/custom-report-items.md)   
 [Upgrade a Report Server Database](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  

@@ -1,6 +1,7 @@
 ---
-title: "View or Change the Properties of a Connection in a Project | Microsoft Docs"
-ms.custom: ""
+description: "View or Change the Properties of a Connection in a Project"
+title: "View or Change the Properties of a Connection in a Project"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -18,7 +19,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # View or Change the Properties of a Connection in a Project
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The properties of a connection saved in a project can be viewed and some can be modified.  
   
 ### To change the properties of a connection in a project  

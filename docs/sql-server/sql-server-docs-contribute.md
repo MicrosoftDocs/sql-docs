@@ -1,13 +1,15 @@
 ---
+description: "How to contribute to SQL Server Documentation"
 title: How to Contribute to SQL Server Documentation | Microsoft Docs
 ms.date: "08/13/2018"
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: ""
 ms.custom: ""
 ms.topic: conceptual
-author: "rothja"
-ms.author: "jroth"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+author: MikeRayMSFT
+ms.author: mikeray
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 
 # How to contribute to SQL Server Documentation
@@ -18,7 +20,7 @@ Anyone can contribute to SQL Server documentation. This includes correcting typo
 
 There are two main workflows you can use to contribute:
 
-|||
+|Workflow|Description|
 |---|---|
 | [Edit in your browser](#githubui) | Good for small, quick edits of any article. |
 | [Edit locally with tools](#tools) | Good for more complex edits, edits involving multiple articles, and frequent contributions to docs.microsoft.com. |
@@ -27,14 +29,24 @@ All public contributions are validated by the SQL content team for technical acc
 
 ## <a id="githubui"></a> Edit in your browser
 
-You can make simple edits to SQL Server content in your browser and then submit them to Microsoft. The complete process is documented in the article, [Microsoft Docs contributor guide overview](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). The following video demonstrates the end-to-end process for submitting changes in your browser:
+You can make simple edits to SQL Server content in your browser and then submit them to Microsoft. For more information, you can see the [Microsoft Docs contributor guide overview](/contribute/#quick-edits-to-existing-documents). 
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE23pxh]
+The following steps summarize the process: 
 
-> [!TIP]
-> Note that the location of **Edit** button is slightly different than what is shown in the video, but the process is the same.
->
-> ![Edit button](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
+1. On the page you have feedback about, select the **Edit** link at the top right.
+1. On the next page, select the **Pencil** icon at the top right.
+1. On the next page, in the **Edit file** text window, make your edits directly to the text you want to change.
+    If you need help with formatting the new or changed text, see the [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+1. After you've made your edits, under **Commit changes**:
+    1. In the first text box, enter a brief description of the change you've made.
+    1. In the **Add an optional extended description** box, provide a brief explanation of your change.
+1. Select **Propose file change**.
+1. On the **Comparing changes** page, select **Create pull request**. 
+1. On the **Open a pull request** page, select **Create pull request**. 
+
+The following GIF demonstrates the end-to-end process for submitting changes in your browser:
+
+![Edit SQL Docs](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
 ## <a id="tools"></a> Edit locally with tools
 
@@ -42,10 +54,10 @@ Another editing option is to fork the **sql-docs** or **azure-docs** repositorie
 
 To contribute with this method, see the following articles:
 
-- [Create a GitHub account](https://docs.microsoft.com/contribute/get-started-setup-github)
-- [Install content authoring tools](https://docs.microsoft.com/contribute/get-started-setup-tools)
-- [Set up a Git repository locally](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [Use tools to contribute](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
+- [Create a GitHub account](/contribute/get-started-setup-github)
+- [Install content authoring tools](/contribute/get-started-setup-tools)
+- [Set up a Git repository locally](/contribute/get-started-setup-local)
+- [Use tools to contribute](/contribute/how-to-write-workflows-major)
 
 If you submit a pull request with significant changes to documentation, you will get a comment in GitHub asking you to submit an online **Contribution License Agreement (CLA)**. You must complete the online form before your pull request can be accepted.
 
@@ -78,7 +90,7 @@ Each SQL Server article contains an **applies-to** include file after the title.
 Consider the following Markdown example that pulls in the **appliesto-ss-asdb-asdw-pdw-md.md** include file.
 
 ```Markdown
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 ```
 
 This adds the following text at the top of the article:
@@ -90,13 +102,13 @@ To find the correct applies-to include file for your article, use the following 
 - For a list of commonly used includes, see [SQL Server version and applies-to include files](applies-to-includes.md).
 - Look at other articles that cover the same feature or a related task. If you edit that article, you can copy the Markdown for the applies-to include link (you can cancel the edit without submitting it).
 - Search the [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) directory for files containing the text "applies-to". You can use the **Find** button in github to quickly filter. Click on the file to see how it is rendered.
-- Pay attention to the naming convention. If there are x's in the name, they are usually placeholders indicating the lack of support for a service. For example, **appliesto-xx-xxxx-asdw-xxx-md.md** indicates support for only Azure SQL Data Warehouse, because only **asdw** is spelled out, whereas the other fields have x's.
+- Pay attention to the naming convention. If there are x's in the name, they are usually placeholders indicating the lack of support for a service. For example, **appliesto-xx-xxxx-asdw-xxx-md.md** indicates support for only Azure Synapse Analytics, because only **asdw** is spelled out, whereas the other fields have x's.
 - Some includes specify a version number, such as **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**. Only use these includes when you know the feature was introduced with a specific version of SQL Server.
 
 ## Contributor resources
 
-- [Contributor guide for docs.microsoft.com](https://docs.microsoft.com/contribute/)
-- [Microsoft Style Guide](https://docs.microsoft.com/teamblog/style-guide)
+- [Contributor guide for docs.microsoft.com](/contribute/)
+- [Microsoft Style Guide](/teamblog/style-guide)
 - [Markdown basics](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 
 > [!TIP]

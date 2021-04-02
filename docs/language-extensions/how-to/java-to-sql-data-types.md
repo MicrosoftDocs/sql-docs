@@ -1,82 +1,50 @@
 ---
-title: Java data types supported in SQL Server 2019 
+title: Java data types
 titleSuffix: SQL Server Language Extensions
 description: Map data types from Java to SQL Server for input and output data structures, and for input parameters on the sp_execute_external_script.
 author: dphansen
 ms.author: davidph 
-ms.date: 07/16/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Java and SQL Server supported data types
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-This article maps SQL Server data types to Java data types for data structures and parameters on [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
+This article maps SQL Server data types to Java data types for data structures and parameters on [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-## Data types for data sets
+The following SQL and Java data types are currently supported for Input/Output data sets and Input/Output parameters.
 
-The following SQL and Java data types are currently supported for Input and Output data sets.
+| SQL data type        | Java data type | Comment |
+| ------------- |-------------|-|
+| Bit      | boolean | |
+| Tinyint      | short      | |
+| Smallint | short      | |
+| Int | int      | |
+| Real | float      | |
+| Bigint | long      | |
+| float | double      | |
+| nchar(n) | String      | |
+| nvarchar(n) | String      | |
+| binary(n) | byte[]      | |
+| varbinary(n) | byte[]      | |
+| nvarchar(max) | String      | |
+| varbinary(max) | byte[]      | |
+| uniqueidentifier | String | |
+| char(n) | String | Only UTF8 Strings supported |
+| varchar(n) | String | Only UTF8 Strings supported |
+| varchar(max) | String | Only UTF8 Strings supported |
+| date | java.sql.date  | |
+| numeric | java.math.BigDecimal  | |
+| decimal | java.math.BigDecimal  | |
+| money | java.math.BigDecimal  | |
+| smallmoney | java.math.BigDecimal  | |
+| smalldatetime | java.sql.timestamp  | |
+| datetime | java.sql.timestamp  | |
+| datetime2 | java.sql.timestamp  | |
 
-| SQL data type        | Java data type | Comment | |
-| ------------- |-------------|-|-|
-| Bit      | boolean | | |
-| Tinyint      | short      | | |
-| Smallint | short      | | |
-| Int | int      | | |
-| Real | float      | | |
-| Bigint | long      | | |
-| float | double      | | |
-| nchar(n) | String      | | |
-| nvarchar(n) | String      | | |
-| binary(n) | byte[]      | | |
-| varbinary(n) | byte[]      | | |
-| nvarchar(max) | String      | | |
-| varbinary(max) | byte[]      | | |
-| uniqueidentifier | String | | |
-| char(n) | String | Only UTF8 Strings supported | |
-| varchar(n) | String | Only UTF8 Strings supported | |
-| varchar(max) | String | Only UTF8 Strings supported | |
-
-## Data types for input parameters
-
-The following SQL and Java data types are currently supported for input parameters.
-
-| SQL data type        | Java data type | Comment | |
-| ------------- |-------------|-|-|
-| Bit      | boolean | | |
-| Tinyint      | short      | | |
-| Smallint | short      | | |
-| Int | int      | | |
-| Real | float      | | |
-| Bigint | long      | | |
-| float | double      | | |
-| nchar(n) | String      | | |
-| nvarchar(n) | String      | | |
-| binary(n) | byte[]      | | |
-| varbinary(n) | byte[]      | | |
-| nvarchar(max) | String      | | |
-| varbinary(max) | byte[]      | | |
-| uniqueidentifier | String | | |
-| char(n) | String | Only UTF8 Strings supported | |
-| varchar(n) | String | Only UTF8 Strings supported | |
-| varchar(max) | String | Only UTF8 Strings supported | |
-
-## Data types for output parameters
-
-The following SQL and Java data types are currently supported for output parameters.
-
-| SQL data type        | Java data type | Comment | |
-| ------------- |-------------|-|-|
-| Bit      | boolean | | |
-| Tinyint      | short      | | |
-| Smallint | short      | | |
-| Int | int      | | |
-| Real | float      | | |
-| Bigint | long      | | |
-| float | double      | | |
-| uniqueidentifier | String | | |
 
 ## Next steps
 

@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-3: Add and configure an OLE DB connection manager"
 title: "Step 3: Add and configure an OLE DB connection manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 1-3: Add and configure an OLE DB connection manager
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

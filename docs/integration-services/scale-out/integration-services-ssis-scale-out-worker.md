@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Integration Services (SSIS) Scale Out Worker | Microsoft Docs"
-description: "This article describes the Scale Out Master component of SSIS Scale Out"
+description: "Learn details about the Scale Out Master component of SQL Server Integration Services (SSIS) Scale Out."
 ms.custom: performance
 ms.date: 01/19/2019
 ms.prod: sql
@@ -13,7 +13,7 @@ ms.author: "haoqian"
 ---
 # Integration Services (SSIS) Scale Out Worker
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -27,7 +27,7 @@ You can configure the Scale Out Worker service by using the `\<drive\>:\Program 
 |DisplayName|The display name of the Scale Out Worker. **NOT in use in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Machine name|
 |Description|The description of the Scale Out Worker. **NOT in use in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Empty|
 |MasterEndpoint|The endpoint to connect to Scale Out Master.|The endpoint set during the Scale Out Worker installation|
-|MasterHttpsCertThumbprint|The thumbprint of the client SSL certificate used to authenticate Scale Out Master|The thumbprint of the client certificate specified during the Scale Out Worker installation.|
+|MasterHttpsCertThumbprint|The thumbprint of the client TLS/SSL certificate used to authenticate Scale Out Master|The thumbprint of the client certificate specified during the Scale Out Worker installation.|
 |WorkerHttpsCertThumbprint|The thumbprint of the certificate for Scale Out Master used to authenticate the Scale Out Worker.|The thumbprint of a certificate created and installed automatically during the Scale Out Worker installation|
 |StoreLocation|The store location of worker certificate.|LocalMachine|
 |StoreName|The store name that worker certificate is in.|My|

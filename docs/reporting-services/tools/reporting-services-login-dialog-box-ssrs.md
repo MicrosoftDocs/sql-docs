@@ -1,5 +1,6 @@
 ---
-title: "Reporting Services Login Dialog Box (SSRS) | Microsoft Docs"
+title: "Reporting Services Login Dialog Box | Microsoft Docs"
+description: Learn how to use the Reporting Services Login dialog box to provide credentials to publish reports to the report server. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -29,7 +30,7 @@ ms.author: maggies
  Type the password to log in to the Web service.  
   
 ## See Also  
- [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Report Designer F1 Help](../../reporting-services/tools/report-designer-f1-help.md)  
   

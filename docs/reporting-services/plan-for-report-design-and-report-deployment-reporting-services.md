@@ -1,5 +1,6 @@
 ---
 title: "Plan for report design and report deployment | Reporting Services | Microsoft Docs"
+description:  Learn how to plan a report authoring and report server environment that work together using Reporting Services.
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -33,11 +34,11 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
   
 -   [Microsoft SQL Server XML Schemas](https://go.microsoft.com/fwlink/?LinkId=31850)  
   
--   [Report Definition Language Specifications](https://go.microsoft.com/fwlink/?linkid=116865)  
+-   [Report Definition Language Specifications](/openspecs/sql_server_protocols/ms-rdl/53287204-7cd0-4bc9-a5cd-d42a5925dca1)  
   
 -   [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
- For more information about ReportViewer controls, see [ReportViewer Controls (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx).  
+ For more information about ReportViewer controls, see [ReportViewer Controls (Visual Studio)](/previous-versions/ms251671(v=vs.140)).  
   
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> Report Server and RDL Schema Support  
  A report definition file can be deployed to a [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] report server in the following ways:  
@@ -48,7 +49,7 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
   
 -   **Web Portal:** Upload a report to a native mode report server from the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 -   **SharePoint:** Upload a report to a SharePoint site that is configured with a SharePoint mode report server.  
 
@@ -68,7 +69,7 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
   
  You can extract from the report server a read-only copy of the report definition file (.rdl). On a native mode report server, browse to the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select the report and click **Download**. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 In a SharePoint mode deployment, browse to the document library, select the report and click **Download a Copy**.  
 
@@ -107,15 +108,14 @@ In a SharePoint mode deployment, browse to the document library, select the repo
   
  For more information, see the following:  
   
--   [Converting RDLC Files to RDL Files](https://msdn.microsoft.com/library/ms252109.aspx)  
+-   [Converting RDLC Files to RDL Files](/previous-versions/ms252109(v=vs.140))  
   
--   [ReportViewer Controls (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)  
+-   [ReportViewer Controls (Visual Studio)](/previous-versions/ms251671(v=vs.140))  
   
--   [Adding and Configuring the ReportViewer Controls](https://msdn.microsoft.com/library/ms252104.aspx)  
+-   [Adding and Configuring the ReportViewer Controls](/previous-versions/ms252104(v=vs.140))  
   
 ## See Also  
  [Reports, Report Parts, and Report Definitions &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services Tools](../reporting-services/tools/reporting-services-tools.md)   
  [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
-  
   

@@ -1,9 +1,10 @@
 ---
+description: "Uses of ODBC Table-Valued Parameters"
 title: "Uses of ODBC Table-Valued Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), scenarios"
   - "ODBC, table-valued parameters"
 ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
-author: MightyPen
-ms.author: genemi
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Uses of ODBC Table-Valued Parameters
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic discusses the primary user scenarios for using table-valued parameters with ODBC:  
   
@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Table-Valued Parameter with Fully Bound Multirow Buffers (Send Data as a TVP with All Values in Memory)  
  When used with fully bound multirow buffers, all parameter values are available in memory. This is typical, for example, of an OLTP transaction, in which table-valued parameters can be packaged into a single stored procedure. Without table-valued parameters, this would involve either generating a complex multi-statement batch dynamically, or making multiple calls to the server.  
   
- The table-valued parameter itself is bound by using [SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328) along with the other parameters. After all parameters have been bound, the application sets the parameter focus attribute, SQL_SOPT_SS_PARAM_FOCUS, on each table-valued parameter and calls SQLBindParameter for the columns of the table-valued parameter.  
+ The table-valued parameter itself is bound by using [SQLBindParameter](../../odbc/reference/syntax/sqlbindparameter-function.md) along with the other parameters. After all parameters have been bound, the application sets the parameter focus attribute, SQL_SOPT_SS_PARAM_FOCUS, on each table-valued parameter and calls SQLBindParameter for the columns of the table-valued parameter.  
   
  The server type for a table-valued parameter is a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific type, SQL_SS_TABLE. The binding C type for SQL_SS_TABLE must always be SQL_C_DEFAULT. No data is transferred for the table-valued parameter bound parameter; it is used to pass table metadata and to control how to pass data in the constituent columns of the table-valued parameter.  
   
@@ -83,5 +83,4 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## See Also  
  [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
-  
   

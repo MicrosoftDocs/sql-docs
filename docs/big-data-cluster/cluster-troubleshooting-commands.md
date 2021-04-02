@@ -1,21 +1,24 @@
 ---
-title: Monitor and troubleshoot
+title: Troubleshoot Kubernetes
 titleSuffix: SQL Server big data clusters
-description: This article provides useful commands for monitoring and troubleshooting a SQL Server 2019 big data cluster (preview).
+description: This article provides useful commands for monitoring and troubleshooting a SQL Server 2019 big data cluster.
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Monitoring and troubleshoot SQL Server big data clusters
+# Troubleshoot [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes several useful Kubernetes commands that you can use to monitor and troubleshoot a SQL Server 2019 big data cluster (preview). It shows how to view in-depth details of a pod or other Kubernetes artifacts that are located in the big data cluster. This article also covers common tasks, such as copying files to or from a container running one of the SQL Server big data cluster services.
+This article describes several useful Kubernetes commands that you can use to monitor and troubleshoot a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. It shows how to view in-depth details of a pod or other Kubernetes artifacts that are located in the big data cluster. This article also covers common tasks, such as copying files to or from a container running one of the SQL Server big data cluster services.
+
+> [!TIP]
+> For monitoring status of big data clusters components you can use [**azdata bdc status**](deployment-guidance.md#status) commands or the built-in [troubleshooting notebooks](notebooks-manage-bdc.md) in provided with Azure Data Studio.
 
 > [!TIP]
 > Run the following **kubectl** commands on either a Windows (cmd or PS) or Linux (bash) client machine. They require previous authentication in the cluster and a cluster context to run against. For example, for a previously created AKS cluster you can run `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` to download the Kubernetes cluster configuration file and set the cluster context.
@@ -87,7 +90,7 @@ If any errors have occurred, you can sometimes see the error in the recent event
 You can retrieve the logs for containers running in a pod. The following command retrieves the logs for all containers running in the pod named `master-0` and outputs them to a file name `master-0-pod-logs.txt`:
 
 ```bash
-kubectl logs master-0 --all-containers=true -n mssql-cluser > master-0-pod-logs.txt
+kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
 ## <a id="services"></a> Get status of services
@@ -110,8 +113,10 @@ The following services support external connections to the big data cluster:
 |---|---|
 | **master-svc-external** | Provides access to the master instance.<br/>(**EXTERNAL-IP,31433** and the **SA** user) |
 | **controller-svc-external** | Supports tools and clients that manage the cluster. |
-| **gateway-svc-external** | Provides access to the HDFS/Spark gateway.<br/>(**EXTERNAL-IP** and the **root** user) |
+| **gateway-svc-external** | Provides access to the HDFS/Spark gateway.<br/>(**EXTERNAL-IP** and the `<AZDATA_USERNAME>` user)<sup>1</sup>|
 | **appproxy-svc-external** | Support application deployment scenarios. |
+
+<sup>1</sup> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 > [!TIP]
 > This is a way of viewing the services with **kubectl**, but it is also possible to use `azdata bdc endpoint list` command to view these endpoints. For more information, see [Get big data cluster endpoints](deployment-guidance.md#endpoints).
@@ -128,36 +133,6 @@ The following example retrieves details for the **master-svc-external** service:
 
 ```bash
 kubectl describe service master-svc-external -n mssql-cluster
-```
-
-## Run commands in a container
-
-If existing tools or the infrastructure does not enable you to perform a certain task without actually being in the context of the container, you can log in to the container using `kubectl exec` command. For example, you might need to check if a specific file exists, or you might need to restart services in the container. 
-
-To use the `kubectl exec` command, use the following syntax:
-
-```bash
-kubectl exec -it <pod_name>  -c <container_name> -n <namespace_name> -- /bin/bash <command name> 
-```
-
-The following two sections provide two examples of running a command in a specific container.
-
-### <a id="restartsql"></a> Log in to a specific container and restart SQL Server process
-
-The following example shows how to restart the SQL Server process in the `mssql-server` container in the `master-0` pod:
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl restart mssql
-```
-
-### <a id="restartservices"></a> Log in to a specific container and restart services in a container
- 
-The following example shows how to restart all services managed by **supervisord**: 
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl -c /opt/supervisor/supervisord.conf reload
 ```
 
 ## <a id="copy"></a> Copy files
@@ -249,4 +224,4 @@ kubectl proxy
 
 ## Next steps
 
-For more information about big data clusters, see [What are SQL Server big data clusters](big-data-cluster-overview.md).
+For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

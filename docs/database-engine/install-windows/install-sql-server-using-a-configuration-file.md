@@ -1,22 +1,23 @@
 ---
 title: "Install SQL Server Using a Configuration File | Microsoft Docs"
-ms.date: "09/07/2017"
+description: You can use SQL Server Setup to generate a configuration file to deploy SQL Server across your organization using a uniform configuration.
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Install SQL Server using a configuration file
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup provides the ability to generate a configuration file based upon the system default and run-time inputs. You can use the configuration file to deploy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] throughout the enterprise with the same configuration. You can also standardize manual installations throughout the enterprise, by creating a batch file that launches Setup.exe. 
  
-This article is maintained for SQL Server versions 2016 and later. For older versions of SQL Server, see [Install SQL Server 2014 Using a Configuration File](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014).
+This article is maintained for SQL Server versions 2016 and later. For older versions of SQL Server, see [Install SQL Server 2014 Using a Configuration File](/previous-versions/sql/2014/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014&preserve-view=true).
  
 Setup supports the use of the configuration file only through the command prompt. The processing order of the parameters while using the configuration file is outlined below:  
   
@@ -59,7 +60,7 @@ FEATURES=SQL,Tools
 3. Cancel the setup without actually completing the installation, to generate the INI file. 
   
     > [!NOTE]  
-    >  The setup infrastructure writes out all the appropriate parameters for the actions that were run, with the exception of sensitive information such as passwords. The /IAcceptSQLServerLicenseTerms parameter is also not written out to the configuration file and requires either a modification of the configuration file or a value to be supplied at the command prompt. For more information, see [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). In addition, a value is included for Boolean parameters where a value is usually not supplied through the command prompt. 
+    >  The setup infrastructure writes out all the appropriate parameters for the actions that were run, with the exception of sensitive information such as passwords. The /IAcceptSQLServerLicenseTerms parameter is also not written out to the configuration file and requires either a modification of the configuration file or a value to be supplied at the command prompt. For more information, see [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md). In addition, a value is included for Boolean parameters where a value is usually not supplied through the command prompt. 
   
 ## Using the configuration file to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
@@ -138,8 +139,7 @@ Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPA
 ```  
   
 ## See also  
- [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md)   
  [SQL Server Failover Cluster Installation](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [Upgrade a SQL Server Failover Cluster Instance](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
-  
   

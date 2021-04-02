@@ -1,4 +1,5 @@
 ---
+description: "Polygon"
 title: "Polygon | Microsoft Docs"
 ms.date: "03/07/2017"
 ms.prod: sql
@@ -12,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Polygon
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   A **Polygon** is a two-dimensional surface stored as a sequence of points defining an exterior bounding ring and zero or more interior rings.  
   
@@ -37,15 +38,13 @@ As shown in the illustration:
   
 3.  Figure 3 is a valid **Polygon** instance because its interior rings intersect at a single tangent point.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### Accepted instances  
  Accepted **Polygon** instances are instances that can be stored in a **geometry** or **geography** variable without throwing an exception. The following are accepted **Polygon** instances:  
   
 -   An Empty **Polygon** instance  
--   A **Polygon** instance that has an acceptable exterior ring and zero or more acceptable interior rings  
+-   A **Polygon** instance that has an acceptable exterior ring (**LineString**) and zero or more acceptable interior rings (**LineString**s)  
   
-The following criteria are needed for a ring to be acceptable.  
+The following criteria are needed for a ring (**LineString**) to be acceptable.  
   
 -   The **LineString** instance must be accepted.  
 -   The **LineString** instance must have at least four points.  

@@ -1,4 +1,5 @@
 ---
+description: "sys.memory_optimized_tables_internal_attributes (Transact-SQL)"
 title: "sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.memory_optimized_tables_internal_attributes"
   - "sys.memory_optimized_tables_internal_attributes_TSQL"
@@ -17,12 +18,13 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.memory_optimized_tables_internal_attributes catalog view"
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
-author: "jodebrui"
-ms.author: "jodebrui"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: "kevin-farlee"
+ms.author: "kfarlee"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.memory_optimized_tables_internal_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Contains a row for each internal memory-optimized table used for storing user memory-optimized tables. Each user table corresponds to one or more internal tables. A single table is used for the core data storage. Additional internal tables are used to support features such as temporal, columnstore index and off-row (LOB) storage for memory-optimized tables.
  

@@ -1,4 +1,5 @@
 ---
+description: "sp_manage_jobs_by_login (Transact-SQL)"
 title: "sp_manage_jobs_by_login (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_manage_jobs_by_login"
   - "sp_manage_jobs_by_login_TSQL"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_manage_jobs_by_login"
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_manage_jobs_by_login (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes or reassigns jobs that belong to the specified login.  
   

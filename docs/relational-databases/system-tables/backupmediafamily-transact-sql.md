@@ -1,12 +1,13 @@
 ---
 title: "backupmediafamily (Transact-SQL) | Microsoft Docs"
+description: Reference for backupmediafamily, which contains one row for each media family.
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "backupmediafamily"
   - "backupmediafamily_TSQL"
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords: 
   - "backupmediafamily system table"
   - "backup media [SQL Server], backupmediafamily system table"
-ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
-author: "stevestein"
-ms.author: "sstein"
+author: cawrites
+ms.author: chadam
 ---
 # backupmediafamily (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contains one row for each media family. If a media family resides in a mirrored media set, the family has a separate row for each mirror in the media set. This table is stored in the **msdb** database.  
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+Contains one row for each media family. If a media family resides in a mirrored media set, the family has a separate row for each mirror in the media set. This table is stored in the **msdb** database.  
     
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

@@ -1,15 +1,17 @@
 ---
-title: "Upgrade SQL Server instances running on Windows Server 2008/2008 R2/2012 clusters | Microsoft Docs"
-ms.date: 01/25/2018
-ms.prod: sql  
-ms.technology: high-availability
-ms.topic: conceptual
+title: "Upgrade SQL Server instances: Windows Server 2012 & older clusters"
+description: Describes how to upgrade your SQL Server failover cluster instances running on Windows Server 2008, Windows Server 2008 R2, and Windows Server 2012. 
+ms.date: "06/15/2020"
+ms.custom: seo-lt-2019
+ms.prod: sql
+ms.technology: failover-cluster-instance
+ms.topic: how-to
 helpviewer_keywords: 
   - "upgrading failover clusters"
   - "clusters [SQL Server], upgrading"
   - "failover clustering [SQL Server], upgrading"
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 
 # Upgrade SQL Server instances running on Windows Server 2008/2008 R2/2012 clusters
@@ -23,7 +25,7 @@ ms.author: mathoma
 
 -   The parallel cluster should have no [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)] installed prior to migration.
 
--   Downtime when migrating a cluster that uses strictly Availability Groups (with or without SQL FCIs) can be greatly limited by using Distributed Availability Groups, but this does require that all instances run [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] RTM (or above) versions.
+-   Downtime when migrating a cluster that uses strictly Availability Groups (with or without SQL FCIs) can be greatly limited by using Distributed Availability Groups, but this does require that all instances run [!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] RTM (or above) versions.
 
 -   All migration strategies require [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sysadmin role. All Windows users used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services (i.e. Windows account running replication agents) must have the OS level permissions on each machine in the new environment.
 
@@ -47,11 +49,11 @@ The proper migration strategy depends on certain parameters of the original [!IN
 \* Excluding Availability Group listener names
 
 ## Scenario 1: Windows Cluster with SQL Server Availability Groups and no Failover Cluster Instances (FCIs)
-If you have a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup that uses Availability Groups (AGs) and no failover cluster instances, you can migrate to a new cluster by creating a parallel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deployment on a different Windows Cluster with Windows Server 2016/2012 R2. After this, you can create a distributed AG where the target cluster is the secondary to the current production cluster. This does require that the user upgrade to [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] or above.
+If you have a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup that uses Availability Groups (AGs) and no failover cluster instances, you can migrate to a new cluster by creating a parallel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deployment on a different Windows Cluster with Windows Server 2016/2012 R2. After this, you can create a distributed AG where the target cluster is the secondary to the current production cluster. This does require that the user upgrade to [!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] or above.
 
 ###  To perform the upgrade
 
-1.  If needed, upgrade all instances to [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] or above. Parallel instances should be running the same version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+1.  If needed, upgrade all instances to [!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] or above. Parallel instances should be running the same version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 2.  Create an Availability Group for the target cluster. If the primary node of the target cluster is not an FCI, create a listener.
 
@@ -314,7 +316,7 @@ Migrating a cluster that uses Availability Groups with standalone replicas is si
 ## Next steps
 - [Complete the Database Engine Upgrade](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [Change the Database Compatibility Mode and Use the Query Store](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
-- [Take Advantage of New SQL Server 2016 Features](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
+- [Take Advantage of New SQL Server 2016 Features](../../what-s-new-in-sql-server-2017.md)
 - [Upgrade a SQL Server Failover Cluster Instance](upgrade-a-sql-server-failover-cluster-instance.md)
 - [View and Read SQL Server Setup Log Files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
-- [Add Features to an Instance of SQL Server 2016 (Setup)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
+- [Add Features to an Instance of SQL Server 2016 (Setup)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)

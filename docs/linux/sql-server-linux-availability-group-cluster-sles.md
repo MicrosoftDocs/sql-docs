@@ -1,9 +1,9 @@
 ---
-title: Configure SLES Cluster for SQL Server Availability Group
+title: "SUSE: Configure availability group for SQL Server on Linux" 
 titleSuffix: SQL Server
-description: Learn how to create availability group clusters for SQL Server on SUSE Linux Enterprise Server (SLES)
-author: MikeRayMSFT
-ms.author: mikeray
+description: Learn how to create availability group clusters for SQL Server on SUSE Linux Enterprise Server (SLES).
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 04/30/2018
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ---
 # Configure SLES Cluster for SQL Server Availability Group
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This guide provides instructions to create a three-node cluster for SQL Server on SUSE Linux Enterprise Server (SLES) 12 SP2. For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). The clustering layer is based on SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) built on top of [Pacemaker](https://clusterlabs.org/). 
 
@@ -22,6 +22,7 @@ For more information on cluster configuration, resource agent options, managemen
 >[!NOTE]
 >At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. SQL Server service on Linux is not cluster aware. Pacemaker controls all of the orchestration of the cluster resources, including the availability group resource. On Linux, you should not rely on Always On Availability Group Dynamic Management Views (DMVs) that provide cluster information like sys.dm_hadr_cluster. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the DNS server with the IP used to create the virtual IP resource (as explained in the following sections).
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 ## Roadmap
 
@@ -215,7 +216,11 @@ Resource level fencing ensures mainly that there is no data corruption during an
 
 Node level fencing ensures that a node does not run any resources. This is done by resetting the node and the Pacemaker implementation of it is called STONITH (which stands for "shoot the other node in the head"). Pacemaker supports a great variety of fencing devices, such as an uninterruptible power supply or management interface cards for servers.
 
-For more information, see [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/), [Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html) and [SUSE HA documentation: Fencing and STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+For more information, see:
+
+- [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)
+- [Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html)
+- [SUSE HA documentation: Fencing and STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)
 
 At cluster initialization time, STONITH is disabled if no configuration is detected. It can be enabled later by running following command:
 
@@ -225,7 +230,6 @@ sudo crm configure property stonith-enabled=true
   
 >[!IMPORTANT]
 >Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. SUSE does not provide fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor does not offer support for running production clusters in these environments. We are working on a solution for this gap that will be available in future releases.
-
 
 ## Configure the cluster resources for SQL Server
 
@@ -305,14 +309,14 @@ The colocation constraint has an implicit ordering constraint. It moves the virt
 1. User issues resource migrate to the availability group master from node1 to node2.
 2. The virtual IP resource stops on node 1.
 3. The virtual IP resource starts on node 2. At this point, the IP address temporarily points to node 2 while node 2 is still a pre-failover secondary. 
-4. The availability group master on node 1 is demoted to slave.
-5. The availability group slave on node 2 is promoted to master. 
+4. The availability group master on node 1 is demoted.
+5. The availability group on node 2 is promoted to master. 
 
 To prevent the IP address from temporarily pointing to the node with the pre-failover secondary, add an ordering constraint. 
 To add an ordering constraint, run the following command on one node: 
 
 ```bash
-crm crm configure \
+sudo crm configure \
    order ag_first inf: ms-ag_cluster:promote admin_addr:start
 ```
 

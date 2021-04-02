@@ -1,4 +1,5 @@
 ---
+description: "catalog.deploy_project (SSISDB Database)"
 title: "catalog.deploy_project (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
@@ -8,15 +9,15 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.deploy_project (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deploys a project to a folder in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog or updates an existing project that has been deployed previously.  
   
@@ -24,9 +25,9 @@ ms.author: janinez
   
 ```sql  
 catalog.deploy_project [@folder_name =] folder_name   
-      , [@project_name =] project_name   
-      , [@project_stream =] projectstream   
-    [ , [@operation_id ] = operation_id OUTPUT ]   
+      , [ @project_name = ] project_name   
+      , [ @project_stream = ] projectstream   
+    [ , [ @operation_id = ] operation_id OUTPUT ]   
 ```  
   
 ## Arguments  
@@ -66,7 +67,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   A parameter refers to an object that does not exist, a parameter tries to create an object that already exists, or a parameter is invalid in some other way  
   
--   The value of the parameter *@project_name* does not match the name of the project in the deployment file  
+-   The value of the parameter *\@project_name* does not match the name of the project in the deployment file  
   
 -   The user does not have sufficient permissions  
   

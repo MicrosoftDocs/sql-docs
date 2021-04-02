@@ -1,5 +1,6 @@
 ---
 title: "Understanding Security Policies | Microsoft Docs"
+description: Learn about Reporting Services security policies, which specify permissions for assemblies, extensions, and report expressions based on code groups.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,4 +1,5 @@
 ---
+description: "ConfigDSN Function"
 title: "ConfigDSN Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname: 
   - "ConfigDSN"
 apilocation: 
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ConfigDSN [ODBC]"
 ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ConfigDSN Function
 **Conformance**  
@@ -109,6 +110,9 @@ DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0
   
 ## Deleting a Data Source  
  To delete a data source, a data source name must be passed to **ConfigDSN** in *lpszAttributes*. **ConfigDSN** checks that the data source name is in the Odbc.ini file (or registry). It then calls **SQLRemoveDSNFromIni** in the installer DLL to remove the data source.  
+  
+## Note
+ If writing a Unicode version of this routine, it must be called **ConfigDSNW**, with LPCWSTR arguments instead of LPCSTR.
   
 ## Related Functions  
   

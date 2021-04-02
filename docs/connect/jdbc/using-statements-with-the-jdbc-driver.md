@@ -1,17 +1,18 @@
 ---
-title: "Using Statements with the JDBC Driver | Microsoft Docs"
+title: "Using statements with the JDBC driver"
+description: "Learn how the Microsoft JDBC Driver for SQL Server can be used to execute SQL statements and stored procedures to perform database operations."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
-# Using Statements with the JDBC Driver
+# Using statements with the JDBC driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -27,18 +28,18 @@ The JDBC driver provides three classes for retrieving data from a [!INCLUDE[ssNo
   
  The topics in this section discuss how you can use each of the three statement classes to work with data in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
-## In This Section  
+## In this section  
 
 | Topic                                                                                                    | Description                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Using Statements with SQL](../../connect/jdbc/using-statements-with-sql.md)                             | Describes how to use SQL statements with the JDBC driver to work with data in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.    |
-| [Using Statements with Stored Procedures](../../connect/jdbc/using-statements-with-stored-procedures.md) | Describes how to use stored procedures with the JDBC driver to work with data in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. |
-| [Using Multiple Result Sets](../../connect/jdbc/using-multiple-result-sets.md)                           | Describes how to use the JDBC driver to retrieve data from multiple result sets.                                                                       |
-| [Using SQL Escape Sequences](../../connect/jdbc/using-sql-escape-sequences.md)                           | Describes how to use SQL escape sequences, such as date and time literals and functions.                                                               |
-| [Using Auto Generated Keys](../../connect/jdbc/using-auto-generated-keys.md)                             | Describes how to use automatically generated keys.                                                                                                     |
-| [Performing Batch Operations](../../connect/jdbc/performing-batch-operations.md)                         | Describes how to use the JDBC driver to perform batch operations.                                                                                      |
-| [Handling Complex Statements](../../connect/jdbc/handling-complex-statements.md)                         | Describes how to use the JDBC driver to run complex statements that perform a variety of tasks and might return different types of data.               |
+| [Using statements with SQL](../../connect/jdbc/using-statements-with-sql.md)                             | Describes how to use SQL statements with the JDBC driver to work with data in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.    |
+| [Using statements with stored procedures](../../connect/jdbc/using-statements-with-stored-procedures.md) | Describes how to use stored procedures with the JDBC driver to work with data in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. |
+| [Using multiple result sets](../../connect/jdbc/using-multiple-result-sets.md)                           | Describes how to use the JDBC driver to retrieve data from multiple result sets.                                                                       |
+| [Using SQL escape sequences](../../connect/jdbc/using-sql-escape-sequences.md)                           | Describes how to use SQL escape sequences, such as date and time literals and functions.                                                               |
+| [Using auto generated keys](../../connect/jdbc/using-auto-generated-keys.md)                             | Describes how to use automatically generated keys.                                                                                                     |
+| [Performing batch operations](../../connect/jdbc/performing-batch-operations.md)                         | Describes how to use the JDBC driver to perform batch operations.                                                                                      |
+| [Handling complex statements](../../connect/jdbc/handling-complex-statements.md)                         | Describes how to use the JDBC driver to run complex statements that perform a variety of tasks and might return different types of data.               |
   
-## See Also
+## See also
 
-[Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

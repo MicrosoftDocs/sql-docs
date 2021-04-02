@@ -1,6 +1,7 @@
 ---
-title: "Implement a Business Logic Handler for a Merge Article | Microsoft Docs"
-ms.custom: ""
+title: "Set up a business logic handler for Merge article"
+description: Use replication programming or Replication Management Objects to configure a business logic handler for merge replication synchronization. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -20,8 +21,8 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Implement a Business Logic Handler for a Merge Article
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to implement a business logic handler for a merge article in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using replication programming or Replication Management Objects (RMO).  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  This topic describes how to implement a business logic handler for a merge article in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using replication programming or Replication Management Objects (RMO).  
   
  The <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> namespace implements an interface that enables you to write complex business logic to handle events that occur during the merge replication synchronization process. Methods in the business logic handler can be invoked by the replication process for each changed row that is replicated during synchronization.  
   
@@ -94,18 +95,18 @@ ms.author: "mathoma"
   
 1.  At the Publisher, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) to verify that the assembly has not already been registered as a business logic handler.  
   
-2.  At the Distributor, execute [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md), specifying a friendly name for the business logic handler for **@article_resolver**, a value of **true** for **@is_dotnet_assembly**, the name of the assembly for **@dotnet_assembly_name**, and the fully-qualified name of the class that overrides <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> for **@dotnet_class_name**.  
+2.  At the Distributor, execute [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md), specifying a friendly name for the business logic handler for **\@article_resolver**, a value of **true** for **\@is_dotnet_assembly**, the name of the assembly for **\@dotnet_assembly_name**, and the fully-qualified name of the class that overrides <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> for **\@dotnet_class_name**.  
   
     > [!NOTE]  
-    >  If the assembly is not deployed in the same directory as the Merge Agent executable, in the same directory as the application that synchronously starts the Merge Agent, or in the global assembly cache (GAC), you need to specify the full path with the assembly name for **@dotnet_assembly_name**. When using Web synchronization, you must specify the location of assembly at the Web server.  
+    >  If the assembly is not deployed in the same directory as the Merge Agent executable, in the same directory as the application that synchronously starts the Merge Agent, or in the global assembly cache (GAC), you need to specify the full path with the assembly name for **\@dotnet_assembly_name**. When using Web synchronization, you must specify the location of assembly at the Web server.  
   
 #### To use a business logic handler with a new table article  
   
-1.  Execute [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to define an article, specifying the friendly name of the business logic handler for **@article_resolver**. For more information, see [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
+1.  Execute [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to define an article, specifying the friendly name of the business logic handler for **\@article_resolver**. For more information, see [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
 #### To use a business logic handler with an existing table article  
   
-1.  Execute [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying **@publication**, **@article**, a value of **article_resolver** for **@property**, and the friendly name of the business logic handler for **@value**.  
+1.  Execute [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying **\@publication**, **\@article**, a value of **article_resolver** for **\@property**, and the friendly name of the business logic handler for **\@value**.  
   
 ###  <a name="TsqlExample"></a> Examples (Replication Programming)  
  This example shows a business logic handler that creates an audit log.  

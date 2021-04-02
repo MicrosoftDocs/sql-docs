@@ -1,4 +1,5 @@
 ---
+description: "COMPRESS (Transact-SQL)"
 title: "COMPRESS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/11/2018"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "COMPRESS function"
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # COMPRESS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 This function compresses the input expression, using the GZIP algorithm. The function returns a byte array of type **varbinary(max)**.
   
@@ -25,11 +26,11 @@ This function compresses the input expression, using the GZIP algorithm. The fun
   
 ## Syntax  
   
-```sql
+```syntaxsql
 COMPRESS ( expression )  
 ```  
   
-## Arguments  
+## Arguments
 *expression*  
 A
 

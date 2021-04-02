@@ -1,5 +1,6 @@
 ---
-title: "Administer and Monitor Change Data Capture (SQL Server) | Microsoft Docs"
+description: "Administer and Monitor Change Data Capture (SQL Server)"
+title: "Administer and Monitor Change Data Capture"
 ms.date: "01/02/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,10 +14,11 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
+ms.custom: seo-dt-2019
 ---
 # Administer and Monitor Change Data Capture (SQL Server)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how to administer and monitor change data capture.  
   
 ## <a name="Capture"></a> Capture Job
@@ -168,8 +170,6 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data collector let
 3. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Management**, and then expand **Data Collection**. Right-click **CDC Performance Data Collector**, and then click **Start Data Collection Set**.  
   
 4. In the data warehouse you configured in step 1, locate the table custom_snapshots.cdc_log_scan_data. This table provides a historical snapshot of data from log scan sessions. This data can be used to analyze latency, throughput, and other performance measures over time.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="ScriptUpgrade"></a> Script upgrade mode
 

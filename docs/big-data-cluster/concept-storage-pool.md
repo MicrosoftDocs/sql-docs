@@ -1,39 +1,64 @@
 ---
 title: What is the storage pool?
 titleSuffix: SQL Server big data clusters
-description: This article describes the storage pool in a SQL Server 2019 big data cluster.
+description: Learn the role of the SQL Server storage pool in a SQL Server 2019 Big Data Cluster, as well as the architecture and functionality of a SQL storage pool.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# What is the storage pool (SQL Server big data clusters)?
+# What is the storage pool in a SQL Server big data cluster?
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes the role of the *SQL Server storage pool* in a SQL Server 2019 big data cluster (preview). The following sections describe the architecture and functionality of a SQL storage pool.
+This article describes the role of the *SQL Server storage pool* in a SQL Server big data cluster. The following sections describe the architecture and functionality of a storage pool.
 
 ## Storage pool architecture
 
-The storage pool consists of storage nodes comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL big data cluster are members of an HDFS cluster.
+The storage pool is the local HDFS (Hadoop) cluster in a SQL Server big data cluster. It provides persistent storage for unstructured and semi-structured data. Data files, such as Parquet or delimited text, can be stored in the storage pool. To persist storage each pod in the pool has a persistent volume attached to it. The storage pool files are accessible via [PolyBase](../relational-databases/polybase/polybase-guide.md) through SQL Server or directly using an Apache Knox Gateway.
 
-![Storage pool architecture](media/concept-storage-pool/scale-big-data-on-demand.png)
+A classical HDFS setup consists of a set of commodity-hardware computers with storage attached. The data is spread in blocks across the nodes for fault tolerance and leveraging of parallel processing. One of the nodes in the cluster functions as the name node and contains the metadata information about the files located in the data nodes.
+
+![Classic HDFS setup](media/concept-storage-pool/classic-hdfs-setup.png)
+
+The storage pool consists of storage nodes that are members of a HDFS cluster. It runs one or more Kubernetes pods with each pod hosting the following containers:
+
+- A Hadoop container linked to a persistent volume (storage). All containers of this type together form the Hadoop cluster. Within the Hadoop container is a YARN node manager process that can create on-demand Apache Spark worker processes. The Spark head node hosts the hive metastore, spark history, and YARN job history containers.
+- A SQL Server instance to read data from HDFS using OpenRowSet technology.
+- `collectd` for collecting of metrics data.
+- `fluentbit` for collecting of log data.
+
+![storage pool architecture](media/concept-storage-pool/scale-big-data-on-demand.png)
 
 ## Responsibilities
 
 Storage nodes are responsible for:
 
-- Data ingestion through Spark.
-- Data storage in HDFS (Parquet format). HDFS also provides data persistency, as HDFS data is spread across all the storage nodes in the SQL big data cluster.
+- Data ingestion through Apache Spark.
+- Data storage in HDFS (Parquet and delimited text format). HDFS also provides data persistency, as HDFS data is spread across all the storage nodes in the SQL BDC.
 - Data access through HDFS and SQL Server endpoints.
+
+## Accessing data
+
+The main methods for accessing the data in the storage pool are:
+
+- Spark jobs.
+- Utilization of SQL Server external tables to allow querying of the data using PolyBase compute nodes and the SQL Server instances running in the HDFS nodes.
+
+You can also interact with HDFS using:
+
+- Azure Data Studio.
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
+- kubectl to issue commands to the Hadoop container.
+- HDFS http gateway.
 
 ## Next steps
 
-To learn more about the SQL Server big data clusters, see the following resources:
+To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following resources:
 
-- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
-- [Workshop: Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/microsoft/sqlworkshops-bdc)

@@ -1,4 +1,5 @@
 ---
+description: "Integration Services Service (SSIS Service)"
 title: "Integration Services Service (SSIS Service) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,12 +21,12 @@ helpviewer_keywords:
   - "service [Integration Services]"
   - "SQL Server Integration Services, service"
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services Service (SSIS Service)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The topics in this section discuss the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service, a Windows service for managing [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. This service is not required to create, save, and run Integration Services packages. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] supports the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service for backward compatibility with earlier releases of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -79,7 +80,7 @@ ms.author: janinez
   
  If the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is stopped, you can continue to run packages using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard, the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, the Execute Package Utility, and the **dtexec** command prompt utility (dtexec.exe). However, you cannot monitor the running packages.  
   
- By default, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service runs in the context of the NETWORK SERVICE account.  
+ By default, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service runs in the context of the NETWORK SERVICE account. It is recommended to run the SQL Server Integration Services service under an account that has limited permissions such as the NETWORK SERVICE account. Running the SQL Server Integration Services service under a highly-priveleged account represents a potential security risk. 
   
  The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service writes to the Windows event log. You can view service events in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can also view service events by using the Windows Event Viewer.  
   
@@ -267,7 +268,7 @@ When you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 
 ```  
   
 ### Modify the Configuration File Location  
- The Registry key **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** specifies the location and name for the configuration file that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service uses. The default value of the Registry key is **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**. You can update the value of the Registry key to use a different name and location for the configuration file. Note that the version number in the path (120 for SQL Server  [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], 130 for  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], etc.) will vary depending on the SQL Server version.
+ The Registry key **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** specifies the location and name for the configuration file that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service uses. The default value of the Registry key is **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**. You can update the value of the Registry key to use a different name and location for the configuration file. Note that the version number in the path (120 for SQL Server  [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], 130 for  [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], etc.) will vary depending on the SQL Server version.
   
 > [!CAUTION]  
 >  Incorrectly editing the Registry can cause serious problems that may require you to reinstall your operating system. [!INCLUDE[msCoName](../../includes/msconame-md.md)] cannot guarantee that problems resulting from editing the Registry incorrectly can be resolved. Before editing the Registry, back up any valuable data. For information about how to back up, restore, and edit the Registry, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base article, [Description of the Microsoft Windows registry](https://support.microsoft.com/kb/256986).  
@@ -361,16 +362,14 @@ When you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 
   
 6.  Restart the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service.  
   
-### Connecting by using a Local Account  
- If you are working in a local Windows account on a client computer, you can connect to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on a remote computer only if a local account that has the same name and password and the appropriate rights exists on the remote computer.  
+### Connecting by using a Local Account
+
+If you are working in a local Windows account on a client computer, you can connect to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on a remote computer only if a local account that has the same name and password and the appropriate rights exists on the remote computer.  
   
-### By default the SSIS service does not support delegation  
-By default the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service does not support the delegation of credentials, or what is sometimes referred to as a double hop. In this scenario, you are working on a client computer, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is running on a second computer, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running on a third computer. First, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] successfully passes your credentials from the client computer to the second computer on which the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is running. Then, however, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service cannot delegate your credentials from the second computer to the third computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running.
+### SSIS Windows service doesn't support delegation
 
-You can enable delegation of credentials by granting the **Trust this user for delegation to any service (Kerberos Only)** right to the SQL Server service account, which launches the Integration Services service (ISServerExec.exe) as a child process. Before you grant this right, consider whether it meets the security requirements of your organization.
+SSIS doesn't support the delegation of credentials, sometimes referred to as a double hop. In this scenario, you're working on a client computer, SSIS is installed on a second computer, and SQL Server is installed on a third computer. Although SSMS successfully passes your credentials from the client computer to the second computer (where SSIS is running), SSIS can't delegate your credentials from the second computer to the third computer (where SQL Server is running).
 
-For more info, see [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/).
- 
 ## Configure the firewall
   
  The Windows firewall system helps prevent unauthorized access to computer resources over a network connection. To access [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] through this firewall, you have to configure the firewall to enable access.  

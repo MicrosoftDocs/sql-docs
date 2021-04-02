@@ -5,17 +5,17 @@ ms.custom: "ag-guide, seodec18"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
-ms.topic: conceptual
+ms.technology: availability-groups
+ms.topic: how-to
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
 ---
 # Identify waits associated with availability groups
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   When troubleshooting Always On Availability Groups latency, wait statistics can be monitored for accumulation using the availability groups-specific wait types in the dynamic management view (DMV) [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
   
- For general information on using wait statistics, see [SQL Server 2005 Waits and Queues](https://technet.microsoft.com/library/cc966413.aspx). That document was written for SQL Server 2005, but its information can be applied to later SQL Server versions.  
+ For general information on using wait statistics, see [SQL Server 2005 Waits and Queues](/previous-versions/sql/sql-server-2005/administrator/cc966413(v=technet.10)). That document was written for SQL Server 2005, but its information can be applied to later SQL Server versions.  
   
 ## Query for availability groups wait types  
  Use the T-SQL query below to retrieve all wait statistics with the availability groups wait types:  
@@ -47,5 +47,4 @@ ORDER BY map_key ASC
   
 ## Next steps  
  [Types of waits](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md#WaitTypes)  
-  
   

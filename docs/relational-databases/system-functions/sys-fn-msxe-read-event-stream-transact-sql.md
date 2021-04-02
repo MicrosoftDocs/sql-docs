@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_MSxe_read_event_stream (Transact-SQL)"
 title: "sys.fn_MSxe_read_event_stream (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "fn_MSxe_read_event_stream_TSQL"
   - "sys.fn_MSxe_read_event_stream_TSQL"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "sys.fn_MSxe_read_event_stream"
   - "fn_MSxe_read_event_stream"
 ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.fn_MSxe_read_event_stream (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Extended Events provides a table valued function (TVF) for internal use by the Extended Events user interface (UI). The table does not provide customer usable data.  
   

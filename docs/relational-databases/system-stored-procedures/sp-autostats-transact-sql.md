@@ -1,4 +1,5 @@
 ---
+description: "sp_autostats (Transact-SQL)"
 title: "sp_autostats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_autostats_TSQL"
   - "sp_autostats"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_autostats"
 ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
-author: "stevestein"
-ms.author: "sstein"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_autostats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Displays or changes the automatic statistics update option, AUTO_UPDATE_STATISTICS, for an index, a statistics object, a table, or an indexed view.  
   
@@ -33,7 +34,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ```  
   
 sp_autostats [ @tblname = ] 'table_or_indexed_view_name'   
-    [ , [ @flagc = ] 'stats_value' ]   
+    [ , [ @flagc = ] 'stats_flag' ]   
     [ , [ @indname = ] 'statistics_name' ]  
 ```  
   
@@ -41,14 +42,14 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 `[ @tblname = ] 'table_or_indexed_view_name'`
  Is the name of the table or indexed view to display the AUTO_UPDATE_STATISTICS option on. *table_or_indexed_view_name* is **nvarchar(776)**, with no default.  
   
-`[ @flagc = ] 'stats_value'`
+`[ @flagc = ] 'stats_flag'`
  Updates the AUTO_UPDATE_STATISTICS option to one of these values:  
   
  **ON** = ON  
   
  **OFF** = OFF  
   
- When *stats_flag* is not specified, display the current AUTO_UPDATE_STATISTICS setting. *stats_value* is **varchar(10)**, with a default of NULL.  
+ When *stats_flag* is not specified, display the current AUTO_UPDATE_STATISTICS setting. *stats_flag* is **varchar(10)**, with a default of NULL.  
   
 `[ @indname = ] 'statistics_name'`
  Is the name of the statistics to display or update the AUTO_UPDATE_STATISTICS option on. To display the statistics for an index, you can use the name of the index; an index and its corresponding statistics object have the same name.  
@@ -65,7 +66,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**Index Name**|**varchar(60)**|Name of the index or statistics.|  
+|**Index Name**|**sysname**|Name of the index or statistics.|  
 |**AUTOSTATS**|**varchar(3)**|Current value for the AUTO_UPDATE_STATISTICS option.|  
 |**Last Updated**|**datetime**|Date of the most recent statistics update.|  
   

@@ -1,15 +1,16 @@
 ---
+description: "Programming with SQLXML"
 title: "Programming with SQLXML | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Programming with SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -18,7 +19,7 @@ ms.author: genemi
   
  This section also contains information about the types of SQLXML objects and provides a list of important guidelines and limitations when using SQLXML objects.  
   
-## Reading and Writing XML Data with SQLXML Objects  
+## Reading and writing XML data with SQLXML objects  
  The following list describes how to use the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] API methods to read and write XML data with SQLXML objects:  
   
 -   To create a SQLXML object, use the [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) method of the [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) class. Note that this method creates a SQLXML object without any data. To add **xml** data to SQLXML object, call one of the following methods that are specified in the SQLXML interface: setResult, setCharacterStream, setBinaryStream, or setString.  
@@ -31,9 +32,9 @@ ms.author: genemi
   
 -   To store a SQLXML object in a database table column of type **xml**, use the setSQLXML methods of the [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) class or the [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) class.  
   
- The example code in [SQLXML Data Type Sample](../../connect/jdbc/sqlxml-data-type-sample.md) demonstrates how to perform these common API tasks.  
+ The example code in [SQLXML data type sample](../../connect/jdbc/sqlxml-data-type-sample.md) demonstrates how to perform these common API tasks.  
   
-## Readable and Writable SQLXML Objects  
+## Readable and writable SQLXML objects  
  The following table lists which types of SQLXML objects are supported by the setter, getter, and updater methods provided by the JDBC API. The columns in the table refer to the following:  
   
 -   The **Method Name** column lists the supported getter, setter, and updater methods in the JDBC API.  
@@ -57,7 +58,7 @@ ms.author: genemi
   
  If the application invokes the setObject method by specifying a scale or a length parameter with a SQLXML object, the scale or length parameter is ignored.  
   
-## Guidelines and Limitations when Using SQLXML Objects  
+## Guidelines and limitations when using SQLXML objects  
  Applications can use SQLXML objects to read and write the XML data from and to the database. The following list provides information about specific limitations and guidance when using SQLXML objects:  
   
 -   A SQLXML object can be valid only for the duration of the transaction in which it was created.  
@@ -90,10 +91,10 @@ ms.author: genemi
   
  XML parsers cannot handle empty values. However, SQL Server allows applications to retrieve and store empty values from and to database columns of the XML data type. That means that when parsing the XML data, if the underlying value is empty, an exception is thrown by the parser. For DOM outputs, the JDBC driver catches that exception and throws an error. For SAX and Stax outputs, the error comes from the parser directly.  
   
-## Adaptive Buffering and SQLXML Support  
+## Adaptive buffering and SQLXML support  
  The binary and character streams returned by the SQLXML object obey the adaptive or full buffering modes. On the other hand, if the XML parsers are not streams, they will not obey the adaptive or full settings. For more information about adaptive buffering, see [Using Adaptive Buffering](../../connect/jdbc/using-adaptive-buffering.md).  
   
-## See Also  
- [Supporting XML Data](../../connect/jdbc/supporting-xml-data.md)  
+## See also  
+ [Supporting XML data](../../connect/jdbc/supporting-xml-data.md)  
   
   

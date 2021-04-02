@@ -1,5 +1,6 @@
 ---
 title: "Manage Subscription Owners and Run Subscription - PowerShell | Microsoft Docs"
+description: Learn how to programmatically transfer the ownership of a Reporting Services subscription from one user to another.
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: subscriptions
@@ -8,7 +9,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 04/26/2019
+ms.date: 01/16/2020
 ---
 
 # Manage Subscription Owners and Run Subscription - PowerShell
@@ -17,7 +18,7 @@ ms.date: 04/26/2019
 
 Starting with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] you can programmatically transfer the ownership of a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription from one user to another. This topic provides several Windows PowerShell scripts you can use to change or simply list subscription ownership. Each sample includes sample syntax for both Native mode and SharePoint mode. After you change the subscription owner, the subscription will then execute in the security context of the new owner, and the User!UserID field in the report will display the value of new owner. For more information on the object model the PowerShell samples call, see <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
 
-![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")
+![PowerShell related content](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")
 
 ##  <a name="bkmk_top"></a> In this topic:
   
@@ -41,17 +42,17 @@ Starting with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INC
 
 This section summarizes the permission levels required to use each of the methods for both Native and SharePoint mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The scripts in this topic use the following [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] methods:  
   
-- [ReportingService2010.ListSubscriptions Method](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+- [ReportingService2010.ListSubscriptions Method](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)  
   
-- [ReportingService2010.ChangeSubscriptionOwner Method](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
+- [ReportingService2010.ChangeSubscriptionOwner Method](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)  
   
-- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- [ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)  
   
-- The method [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) is only used in the last script to trigger a specific subscription to run. If you don't plan to use that script, you can ignore the permission requirements for the FireEvent method.  
+- The method [ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent) is only used in the last script to trigger a specific subscription to run. If you don't plan to use that script, you can ignore the permission requirements for the FireEvent method.  
   
 **Native mode:**
   
-- List Subscriptions: [ReportOperation Enumeration](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) on the report AND the user is the subscription owner) OR ReadAnySubscription.  
+- List Subscriptions: [ReportOperation Enumeration](/dotnet/api/microsoft.reportingservices.interfaces.reportoperation) on the report AND the user is the subscription owner) OR ReadAnySubscription.  
   
 - Change Subscriptions: The user must be a member of the BUILTIN\Administrators group  
   
@@ -61,7 +62,7 @@ This section summarizes the permission levels required to use each of the method
   
  **SharePoint mode:**
   
-- List Subscriptions: ManageAlerts OR [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) on the report AND the user is the subscription owner and the subscription is a timed subscription).  
+- List Subscriptions: ManageAlerts OR [CreateAlerts](/previous-versions/office/sharepoint-server/ms412690(v=office.15)) on the report AND the user is the subscription owner and the subscription is a timed subscription).  
   
 - Change Subscriptions: ManageWeb  
   
@@ -211,7 +212,7 @@ ForEach ($item in $items)
         $curRepSubs = $rs2010.ListSubscriptions($item.Path);  
         ForEach ($curRepSub in $curRepSubs)  
         {  
-            if ($curRepSub.Owner -eq $previousOwner)  
+            if ($curRepSub.Owner -eq $currentOwner)  
             {  
                 $subscriptions += $curRepSub;  
             }  
@@ -381,10 +382,10 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
 
 ## See also  
 
-- [ReportingService2010.ListSubscriptions Method](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+- [ReportingService2010.ListSubscriptions Method](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)  
 
-- [ReportingService2010.ChangeSubscriptionOwner Method](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
+- [ReportingService2010.ChangeSubscriptionOwner Method](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)   
 
-- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- [ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)  
 
-- [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
+- [ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent)

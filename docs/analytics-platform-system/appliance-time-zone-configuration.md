@@ -1,5 +1,5 @@
 ---
-title: Configure time zone - Analytics Platform System | Microsoft Docs
+title: Configure time zone
 description: The Time Zone page enables you to set the time zone for all nodes on your Analytics Platform System (APS) appliance. 
 author: mzaman1 
 ms.prod: sql

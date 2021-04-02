@@ -1,5 +1,6 @@
 ---
 title: "Enhance Transactional Replication Performance | Microsoft Docs"
+description: In addition to general performance tips to enhance replication performance in SQL Server, learn about additional techniques for transactional replication.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
@@ -21,9 +22,10 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Enhance Transactional Replication Performance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   After considering the general performance tips described in [Enhancing General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), consider these additional areas specific to transactional replication.  
   
 ## Database Design  
@@ -76,7 +78,7 @@ The findings:
     - Increasing **SubscriptionStreams** value does help in the overall throughput of the Distribution Agent, since multiple connections to the Subscriber apply batches of changes in parallel. However, depending on the number of processors and other metadata conditions (such as primary key, foreign keys, unique constraints, and indexes) the higher value of SubscriptionStreams might actually have an adverse effect. Additionally, if a stream fails to execute or commit, the Distribution Agent falls back to using a single stream to retry the failed batches.
 
 
-For more information about this testing, see the blog [Optimizing replication agent profile parameters for better performance](https://blogs.msdn.microsoft.com/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance/).
+For more information about this testing, see the blog [Optimizing replication agent profile parameters for better performance](/archive/blogs/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance).
 
 
 ### Log Reader Agent
@@ -109,7 +111,7 @@ The **–MaxCmdsInTran** parameter specifies the maximum number of statements gr
   
 The **–SubscriptionStreams** parameter can greatly improve aggregate replication throughput. It allows multiple connections to a Subscriber to apply batches of changes in parallel, while maintaining many of the transactional characteristics present when using a single thread. If one of the connections fails to execute or commit, all connections will abort the current batch, and the agent will use a single stream to retry the failed batches. Before this retry phase completes, there can be temporary transactional inconsistencies at the Subscriber. After the failed batches are successfully committed, the Subscriber is brought back to a state of transactional consistency.  
   
-A value for this agent parameter can be specified using the **@subscriptionstreams** of [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
+A value for this agent parameter can be specified using the `@subscriptionstreams` of [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
 
 For more information on implementing subscription streams, see [Navigating SQL replication subscriptionStream setting](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting).
   
@@ -156,5 +158,4 @@ Committing a set of transactions has a fixed overhead; by committing a larger nu
 [Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
 [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
-  
   

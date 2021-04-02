@@ -1,5 +1,6 @@
 ---
 title: "Replicate Identity Columns | Microsoft Docs"
+description: In SQL Server, replication handles identity columns across all publication and subscription types. Manage columns manually or have replication manage them.
 ms.custom: ""
 ms.date: "10/04/2016"
 ms.prod: sql
@@ -17,9 +18,10 @@ helpviewer_keywords:
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replicate Identity Columns
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   When you assign an IDENTITY property to a column, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] automatically generates sequential numbers for new rows inserted in the table containing the identity column. For more information, see [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Because identity columns might be included as a part of the primary key, it is important to avoid duplicate values in the identity columns. To use identity columns in a replication topology that has updates at more than one node, each node in the replication topology must use a different range of identity values, so that duplicates do not occur.  
   
  For example, the Publisher could be assigned the range 1-100, Subscriber A the range 101-200, and Subscriber B the range 201-300. If a row is inserted at the Publisher and the identity value is, for example, 65, that value is replicated to each Subscriber. When replication inserts data at each Subscriber, it does not increment the identity column value in the Subscriber table; instead, the literal value 65 is inserted. Only user inserts, but not replication agent inserts cause the identity column value to be incremented.  
@@ -67,16 +69,16 @@ ms.author: "mathoma"
 ### Merge Replication  
  Identity ranges are managed by the Publisher and propagated to Subscribers by the Merge Agent (in a republishing hierarchy, ranges are managed by the root Publisher and the republishers). The identity values are assigned from a pool at the Publisher. When you add an article with an identity column to a publication in the New Publication Wizard or by using [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), you specify values for:  
   
--   The **@identity_range** parameter, which controls the identity range size initially allocated both to the Publisher and to Subscribers with client subscriptions.  
+-   The `@identity_range` parameter, which controls the identity range size initially allocated both to the Publisher and to Subscribers with client subscriptions.  
   
     > [!NOTE]  
-    >  For Subscribers running previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], this parameter (rather than the **@pub_identity_range** parameter) also controls the identity range size at republishing Subscribers.  
+    >  For Subscribers running previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], this parameter (rather than the `@pub_identity_range` parameter) also controls the identity range size at republishing Subscribers.  
   
--   The **@pub_identity_range** parameter, which controls the identity range size for republishing allocated to Subscribers with server subscriptions (required for republishing data). All Subscribers with server subscriptions receive a range for republishing, even if they don't actually republish data.  
+-   The `@pub_identity_range` parameter, which controls the identity range size for republishing allocated to Subscribers with server subscriptions (required for republishing data). All Subscribers with server subscriptions receive a range for republishing, even if they don't actually republish data.  
   
--   The **@threshold** parameter, which is used to determine when a new range of identities is required for a subscription to [!INCLUDE[ssEW](../../../includes/ssew-md.md)] or a previous version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   The `@threshold` parameter, which is used to determine when a new range of identities is required for a subscription to [!INCLUDE[ssEW](../../../includes/ssew-md.md)] or a previous version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- For example, you could specify 10000 for **@identity_range** and 500000 for **@pub_identity_range**. The Publisher and all Subscribers running [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or a later version, including the Subscriber with the server subscription, are assigned a primary range of 10000. The Subscriber with the server subscription is also assigned a primary range of 500000, which can be used by Subscribers that synchronize with the republishing Subscriber (you must also specify **@identity_range**, **@pub_identity_range**, and **@threshold** for the articles in the publication at the republishing Subscriber).  
+ For example, you could specify 10000 for `@identity_range` and 500000 for `@pub_identity_range`. The Publisher and all Subscribers running [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or a later version, including the Subscriber with the server subscription, are assigned a primary range of 10000. The Subscriber with the server subscription is also assigned a primary range of 500000, which can be used by Subscribers that synchronize with the republishing Subscriber (you must also specify `@identity_range`, `@pub_identity_range`, and `@threshold` for the articles in the publication at the republishing Subscriber).  
   
  Each Subscriber running [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or a later version also receives a secondary identity range. The secondary range is equal in size to the primary range; when the primary range is exhausted, the secondary range is used, and the Merge Agent assigns a new range to the Subscriber. The new range becomes the secondary range, and the process continues as the Subscriber uses identity values.  
   
@@ -84,13 +86,13 @@ ms.author: "mathoma"
 ### Transactional Replication with Queued Updating Subscriptions  
  Identity ranges are managed by the Distributor and propagated to Subscribers by the Distribution Agent. The identity values are assigned from a pool at the Distributor. The pool size is based on the size of the data type and the increment used for the identity column. When you add an article with an identity column to a publication in the New Publication Wizard or by using [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), you specify values for:  
   
--   The **@identity_range** parameter, which controls the identity range size initially allocated to all Subscribers.  
+-   The `@identity_range` parameter, which controls the identity range size initially allocated to all Subscribers.  
   
--   The **@pub_identity_range** parameter, which controls the identity range size allocated to the Publisher.  
+-   The `@pub_identity_range` parameter, which controls the identity range size allocated to the Publisher.  
   
--   The **@threshold** parameter, which is used to determine when a new range of identities is required for a subscription.  
+-   The `@threshold` parameter, which is used to determine when a new range of identities is required for a subscription.  
   
- For example, you could specify 10000 for **@pub_identity_range**, 1000 for **@identity_range** (assuming fewer updates at the Subscriber), and 80 percent for **@threshold**. After 800 inserts at a Subscriber (80 percent of 1000), a Subscriber is assigned a new range. After 8000 inserts at the Publisher, the Publisher is assigned a new range. When a new range is assigned, there will be a gap in the identity range values in the table. Specifying a higher threshold results in smaller gaps, but the system is less fault-tolerant: if the Distribution Agent cannot run for some reason, a Subscriber could more easily run out of identities.  
+ For example, you could specify 10000 for `@pub_identity_range`, 1000 for `@identity_range` (assuming fewer updates at the Subscriber), and 80 percent for `@threshold`. After 800 inserts at a Subscriber (80 percent of 1000), a Subscriber is assigned a new range. After 8000 inserts at the Publisher, the Publisher is assigned a new range. When a new range is assigned, there will be a gap in the identity range values in the table. Specifying a higher threshold results in smaller gaps, but the system is less fault-tolerant: if the Distribution Agent cannot run for some reason, a Subscriber could more easily run out of identities.  
   
 ## Assigning ranges for manual identity range management  
  If you specify manual identity range management, you must ensure that the Publisher and each Subscriber use different identity ranges. For example, consider a table at the Publisher with an identity column defined as `IDENTITY(1,1)`: the identity column starts at 1 and is incremented by 1 each time a row is inserted. If the table at the Publisher has 5,000 rows, and you expect some growth in the table over the life of the application, the Publisher could use the range 1-10,000. Given two Subscribers, Subscriber A could use 10,001-20,000, and Subscriber B could use 20,001-30,000.  
@@ -105,8 +107,6 @@ ms.author: "mathoma"
 1.  Stop all activity on all Subscribers.  
   
 2.  For each published table that includes an identity column:  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  In the subscription database at each Subscriber, execute `IDENT_CURRENT('<TableName>')`.  
   

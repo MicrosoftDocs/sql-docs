@@ -1,19 +1,22 @@
 ---
-title: "Configure PolyBase to access external data in Azure Blob Storage | Microsoft Docs"
-ms.date: 04/23/2019
+title: "Access external data: Azure Blob Storage - PolyBase"
+description: The article uses PolyBase on a SQL Server instance with Azure Blob Storage. PolyBase is suited for ad-hoc queries of external tables and data import/export.
+ms.date: 12/02/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
-monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
+ms.reviewer: ""
+monikerRange: ">= sql-server-2016"
+ms.custom: seo-dt-2019, seo-lt-2019
+
 ---
 # Configure PolyBase to access external data in Azure Blob Storage
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The article explains how to use PolyBase on a SQL Server instance to query external data in Hadoop.
+The article explains how to use PolyBase on a SQL Server instance to query external data in Azure Blob Storage.
 
 ## Prerequisites
 
@@ -36,7 +39,7 @@ First, configure SQL Server PolyBase to use Azure blob storage.
    GO
    ```  
 
-2. You must restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
+2. Restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
 
    - SQL Server PolyBase Data Movement Service  
    - SQL Server PolyBase Engine  
@@ -47,7 +50,7 @@ First, configure SQL Server PolyBase to use Azure blob storage.
 
 To query the data in your Hadoop data source, you must define an external table to use in Transact-SQL queries. The following steps describe how to configure the external table.
 
-1. Create a master key on the database. This is required to encrypt the credential secret.
+1. Create a master key on the database. The master key is required to encrypt the credential secret.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -84,7 +87,7 @@ To query the data in your Hadoop data source, you must define an external table 
                USE_TYPE_DEFAULT = TRUE))  
    ```
 
-1. Create an external table pointing to data stored in Azure storage with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car senor data.
+1. Create an external table pointing to data stored in Azure storage with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car sensor data.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -111,15 +114,15 @@ To query the data in your Hadoop data source, you must define an external table 
 
 There are three functions that PolyBase is suited for:  
   
-- Ad-hoc queries against external tables.  
+- Ad hoc queries against external tables.  
 - Importing data.  
 - Exporting data.  
 
 The following queries provide example with fictional car sensor data.
 
-### Ad-hoc queries  
+### Ad hoc queries  
 
-The following ad-hoc query joins relational with Hadoop data. It selects customers who drive faster than 35 mph,joining structured customer data stored in SQL Server with car sensor data stored in Hadoop.  
+The following ad hoc query joins relational with Hadoop data. It selects customers who drive faster than 35 mph, and joins to structured customer data stored in SQL Server with car sensor data stored in Hadoop.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -150,7 +153,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 ### Exporting data  
 
-The following query exports data from SQL Server to Azure Blob Storage. To do this, you first have to enable PolyBase export. The create an external table for the destination before exporting data to it.
+The following query exports data from SQL Server to Azure Blob Storage. First enable PolyBase export. Then, create an external table for the destination before exporting data to it.
 
 ```sql
 -- Enable INSERT into external table  
@@ -178,6 +181,8 @@ SELECT T.* FROM Insured_Customers T1 JOIN CarSensor_Data T2
 ON (T1.CustomerKey = T2.CustomerKey)  
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
+
+PolyBase export with this method may create multiple files.
 
 ## View PolyBase objects in SSMS  
 

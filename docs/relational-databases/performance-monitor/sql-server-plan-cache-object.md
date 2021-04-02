@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Plan Cache Object | Microsoft Docs"
+description: Learn about the Plan Cache object, which provides counters to monitor how SQL Server uses memory to store objects such as stored procedures and triggers.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -11,11 +12,11 @@ helpviewer_keywords:
   - "Plan Cache object"
   - "SQLServer:Plan Cache"
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Plan Cache Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **Plan Cache** object provides counters to monitor how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses memory to store objects such as stored procedures, ad hoc and prepared [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, and triggers. Multiple instances of the **Plan Cache** object can be monitored at the same time, with each instance representing a different type of plan to monitor.  
   
  This table describes are the **SQLServer:Plan Cache**counters.  

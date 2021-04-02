@@ -1,4 +1,5 @@
 ---
+description: "ALTER REMOTE SERVICE BINDING (Transact-SQL)"
 title: "ALTER REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -6,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "ALTER REMOTE SERVICE BINDING"
   - "ALTER_REMOTE_SERVICE_BINDING_TSQL"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "ALTER REMOTE SERVICE BINDING statement"
   - "modifying remote service bindings"
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
-author: CarlRabeler
-ms.author: carlrab
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # ALTER REMOTE SERVICE BINDING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the user associated with a remote service binding, or changes the anonymous authentication setting for the binding.  
   
@@ -29,14 +30,16 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 ALTER REMOTE SERVICE BINDING binding_name   
    WITH [ USER = <user_name> ] [ , ANONYMOUS = { ON | OFF } ]   
 [ ; ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *binding_name*  
  The name of the remote service binding to change. Server, database, and schema names cannot be specified.  
   
@@ -59,7 +62,7 @@ ALTER REMOTE SERVICE BINDING binding_name
 ## Examples  
  The following example changes the remote service binding `APBinding` to encrypt messages by using the certificates from the account `SecurityAccount`.  
   
-```  
+```sql  
 ALTER REMOTE SERVICE BINDING APBinding  
     WITH USER = SecurityAccount ;  
 ```  

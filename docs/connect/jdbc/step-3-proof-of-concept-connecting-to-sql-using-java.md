@@ -1,21 +1,22 @@
 ---
-title: "Step 3: Proof of concept connecting to SQL using Java | Microsoft Docs"
+title: "Step 3: Connecting to SQL using Java"
+description: "Step 3 is a proof of concept, which shows how you can connect to SQL Server using Java and JDBC. The basic examples demonstrate selecting and inserting data."
 ms.custom: ""
-ms.date: "01/21/2019"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Step 3: Proof of concept connecting to SQL using Java
   
 This example should be considered a proof of concept only. The sample code is simplified for clarity, and doesn't necessarily represent best practices recommended by Microsoft.  
   
-## Step 1:  Connect  
+## Step 1: Connect  
   
 Use the connection class to connect to SQL Database.   
   
@@ -142,5 +143,5 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## Additional Samples  
-[Sample JDBC Driver Applications](../../connect/jdbc/sample-jdbc-driver-applications.md)
+## Additional samples  
+[Sample JDBC driver applications](../../connect/jdbc/sample-jdbc-driver-applications.md)

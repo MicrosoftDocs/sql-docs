@@ -1,4 +1,5 @@
 ---
+description: "Vertical Applications"
 title: "Vertical Applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "vertical applications [ODBC]"
   - "interoperability [ODBC], levels"
 ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Vertical Applications
 Vertical applications typically perform a well-defined task against a single DBMS. For example, an order entry application tracks the orders in a company. What these types of applications have in common is that the database schema is usually designed by the application developer and, while the application might work with a number of different DBMSs, it works with a single DBMS for a single customer.  

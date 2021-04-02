@@ -1,6 +1,6 @@
 ---
 title: Manage SQL Server on Linux with PowerShell Core
-description: This article provides an overview of using PowerShell Core with SQL Server on Linux.
+description: Learn about SQL Server PowerShell by walking through a couple of examples on how to use SQL Server PowerShell with PowerShell Core (PS Core) on macOS and Linux.
 ms.date: 04/22/2019
 ms.prod: sql
 ms.technology: linux
@@ -15,16 +15,16 @@ This article introduces [SQL Server PowerShell](../powershell/sql-server-powersh
 
 ## Cross-platform editor options
 
-All of the steps PowerShell Core below will work in a regular terminal, or you can run them from a terminal within VS Code or Azure Data Studio.  Both VS Code and Azure Data Studio are available on macOS and Linux.  For more information on Azure Data Studio, see [this quickstart](https://docs.microsoft.com/sql/azure-data-studio/quickstart-sql-server).  You may also want to consider using the [PowerShell extension](https://docs.microsoft.com/sql/azure-data-studio/powershell-extension) for it.
+All of the steps PowerShell Core below will work in a regular terminal, or you can run them from a terminal within VS Code or Azure Data Studio.  Both VS Code and Azure Data Studio are available on macOS and Linux.  For more information on Azure Data Studio, see [this quickstart](../azure-data-studio/quickstart-sql-server.md).  You may also want to consider using the [PowerShell extension](../azure-data-studio/extensions/powershell-extension.md) for it.
 
 ## Installing PowerShell Core
 
 For more information on installing PowerShell Core on various supported and experimental platforms, see the following articles:
 
-- [Installing PowerShell Core on Windows](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
-- [Installing PowerShell Core on Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [Installing PowerShell Core on macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
-- [Installing PowerShell Core on ARM](https://docs.microsoft.com/powershell/scripting/install/powershell-core-on-arm?view=powershell-6)
+- [Installing PowerShell Core on Windows](/powershell/scripting/install/installing-powershell-core-on-windows)
+- [Installing PowerShell Core on Linux](/powershell/scripting/install/installing-powershell-core-on-linux)
+- [Installing PowerShell Core on macOS](/powershell/scripting/install/installing-powershell-core-on-macos)
+- [Installing PowerShell Core on ARM](/powershell/scripting/install/powershell-core-on-arm)
 
 ## Install the SqlServer module
 
@@ -102,7 +102,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## Using the SQL Server PowerShell Provider
 
-Another option for connecting to your SQL Server instance is to use the [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).  Using the provider allows you to navigate SQL Server instance similar to as if you were navigating the tree structure in Object Explorer, but at the cmdline.  By default this provider is presented as a PSDrive named `SQLSERVER:\` which you can use to connect & navigate SQL Server instances that your domain account has access to.  See [Configuration steps](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps) for information on how to setup Active Directory authentication for SQL Server on Linux.
+Another option for connecting to your SQL Server instance is to use the [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md).  Using the provider allows you to navigate SQL Server instance similar to as if you were navigating the tree structure in Object Explorer, but at the cmdline.  By default this provider is presented as a PSDrive named `SQLSERVER:\` which you can use to connect & navigate SQL Server instances that your domain account has access to.  See [Configuration steps](./sql-server-linux-active-directory-auth-overview.md#configuration-steps) for information on how to setup Active Directory authentication for SQL Server on Linux.
 
 You can also use SQL authentication with the SQL Server PowerShell Provider. To do this, use the `New-PSDrive` cmdlet to create a new PSDrive and supply the proper credentials to connect.
 
@@ -192,13 +192,13 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## Explore cmdlets currently available in PS Core
-While the SqlServer module currently has 106 cmdlets available in Windows PowerShell, only 59 of the 106 are available in PSCore. A full list of 59 cmdlets currently available is included below.  For in-depth documentation of all cmdlets in the SqlServer module, see the SqlServer [cmdlet reference](https://docs.microsoft.com/powershell/module/sqlserver/).
+While the SqlServer module currently has 109 cmdlets available in Windows PowerShell, only 62 of the 109 are available in PSCore. A full list of 62 cmdlets currently available is included below.  For in-depth documentation of all cmdlets in the SqlServer module, see the SqlServer [cmdlet reference](/powershell/module/sqlserver/).
 
 The following command will show you all of the cmdlets available on the version of PowerShell you are using.
 
 ```powershell
 Get-Command -Module SqlServer -CommandType Cmdlet |
-SORT -Property Noun |
+Sort-Object -Property Noun |
 SELECT Name
 ```
 
@@ -210,6 +210,8 @@ SELECT Name
 - Get-SqlAgentJobSchedule
 - Get-SqlAgentJobStep
 - Get-SqlAgentSchedule
+- Invoke-SqlAssessment
+- Get-SqlAssessmentItem
 - Remove-SqlAvailabilityDatabase
 - Resume-SqlAvailabilityDatabase
 - Add-SqlAvailabilityDatabase
@@ -260,7 +262,8 @@ SELECT Name
 - Read-SqlTableData
 - Write-SqlTableData
 - Read-SqlViewData
+- Read-SqlXEvent
 - Convert-UrnToPath
 
 ## See also
-- [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
+- [SQL Server PowerShell](../powershell/sql-server-powershell.md)

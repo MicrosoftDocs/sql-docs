@@ -1,17 +1,19 @@
 ---
-title: "Scripts in SQL Server Unit Tests | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Scripts in SQL Server Unit Tests
+description: Become familiar with SQL Server unit test scripts. Learn about pre-test, test, and post-test scripts and the common scripts TestInitialize and TestCleanup.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Scripts in SQL Server Unit Tests
+
 Each SQL Server unit test contains a single pre-test action, test action, and post-test action. Each of these actions in turn contains the following:  
   
 -   A Transact\-SQL script that executes on a database.  

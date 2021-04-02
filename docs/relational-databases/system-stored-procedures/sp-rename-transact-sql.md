@@ -1,12 +1,13 @@
 ---
+description: "sp_rename (Transact-SQL)"
 title: "sp_rename (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/09/2018"
+ms.date: "10/14/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_rename_TSQL"
   - "sp_rename"
@@ -18,15 +19,18 @@ helpviewer_keywords:
   - "sp_rename"
   - "renaming tables"
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-author: stevestein
-ms.author: sstein
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: markingmyname
+ms.author: maghan
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # sp_rename (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
 
   Changes the name of a user-created object in the current database. This object can be a table, index, column, alias data type, or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) user-defined type.  
   
+> [!NOTE]
+> In [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)], sp_rename is in **Preview** and can only be used to rename a COLUMN in a user object in the **dbo** schema.
+
 > [!CAUTION]  
 >  Changing any part of an object name can break scripts and stored procedures. We recommend you do not use this statement to rename stored procedures, triggers, user-defined functions, or views; instead, drop the object and re-create it with the new name.  
   
@@ -34,11 +38,17 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ## Syntax  
   
-```  
-  
+```sql  
+-- Transact-SQL Syntax for sp_rename in SQL Server and Azure SQL Database
 sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'   
     [ , [ @objtype = ] 'object_type' ]   
 ```  
+
+```sql  
+-- Transact-SQL Syntax for sp_rename (preview) in Azure Synapse Analytics
+sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'   
+    , [ @objtype = ] 'COLUMN'   
+``` 
   
 ## Arguments  
  [ @objname = ] '*object_name*'  
@@ -61,22 +71,30 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 |DATABASE|A user-defined database. This object type is required when renaming a database.|  
 |INDEX|A user-defined index. Renaming an index with statistics, also automatically renames the statistics.|  
 |OBJECT|An item of a type tracked in [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). For example, OBJECT could be used to rename objects including constraints (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), user tables, and rules.|  
-|STATISTICS|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Statistics created explicitly by a user or created implicitly with an index. Renaming the statistics of an index automatically renames the index as well.|  
+|STATISTICS|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Statistics created explicitly by a user or created implicitly with an index. Renaming the statistics of an index automatically renames the index as well.|  
 |USERDATATYPE|A [CLR User-defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) added by executing [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) or [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
   
+[ @objtype = ] '*COLUMN*' **Applies to**: Azure Synapse Analytics  
+In sp_rename (preview) for [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)], *COLUMN* is a mandatory parameter specifying that the object type to be renamed is a column. It is a **varchar(13)** with no default value and must always be included in the sp_rename (preview) statement. A column can only be renamed if it is a non-distribution column.
+
 ## Return Code Values  
  0 (success) or a nonzero number (failure)  
   
 ## Remarks  
- You can change the name of an object or data type in the current database only. The names of most system data types and system objects cannot be changed.  
-  
+**Applies to** SQL Server (all supported versions) and Azure SQL Database  
  sp_rename automatically renames the associated index whenever a PRIMARY KEY or UNIQUE constraint is renamed. If a renamed index is tied to a PRIMARY KEY constraint, the PRIMARY KEY constraint is also automatically renamed by sp_rename.  
-  
+
+**Applies to** SQL Server (all supported versions) and Azure SQL Database  
  sp_rename can be used to rename primary and secondary XML indexes.  
   
+**Applies to** SQL Server (all supported versions) and Azure SQL Database  
  Renaming a stored procedure, function, view, or trigger will not change the name of the corresponding object either in the definition column of the [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) catalog view or obtained using the [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) built-in function. Therefore, we recommend that sp_rename not be used to rename these object types. Instead, drop and re-create the object with its new name.  
-  
+
+**Applies to** SQL Server (all supported versions), Azure SQL Database, and Azure Synapse Analytics  
  Renaming an object such as a table or column will not automatically rename references to that object. You must modify any objects that reference the renamed object manually. For example, if you rename a table column and that column is referenced in a trigger, you must modify the trigger to reflect the new column name. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) to list dependencies on the object before renaming it.  
+
+**Applies to** SQL Server (all supported versions), Azure SQL Database, and Azure Synapse Analytics  
+ You can change the name of an object or data type in the current database only. The names of most system data types and system objects cannot be changed.  
   
 ## Permissions  
  To rename objects, columns, and indexes, requires ALTER permission on the object. To rename user types, requires CONTROL permission on the type. To rename a database, requires membership in the sysadmin or dbcreator fixed server roles  
@@ -86,7 +104,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ### A. Renaming a table  
  The following example renames the `SalesTerritory` table to `SalesTerr` in the `Sales` schema.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';  
@@ -96,7 +114,7 @@ GO
 ### B. Renaming a column  
  The following example renames the `TerritoryID` column in the `SalesTerritory` table to `TerrID`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_rename 'Sales.SalesTerritory.TerritoryID', 'TerrID', 'COLUMN';  
@@ -106,7 +124,7 @@ GO
 ### C. Renaming an index  
  The following example renames the `IX_ProductVendor_VendorID` index to `IX_VendorID`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_rename N'Purchasing.ProductVendor.IX_ProductVendor_VendorID', N'IX_VendorID', N'INDEX';  
@@ -116,7 +134,7 @@ GO
 ### D. Renaming an alias data type  
  The following example renames the `Phone` alias data type to `Telephone`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_rename N'Phone', N'Telephone', N'USERDATATYPE';  
@@ -126,7 +144,7 @@ GO
 ### E. Renaming constraints  
  The following examples rename a PRIMARY KEY constraint, a CHECK constraint and a FOREIGN KEY constraint. When renaming a constraint, the schema to which the constraint belongs must be specified.  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GO  
 -- Return the current Primary Key, Foreign Key and Check constraints for the Employee table.  
@@ -188,13 +206,26 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
 ### F. Renaming statistics  
  The following example creates a statistics object named contactMail1 and then renames the statistic to NewContact by using sp_rename. When renaming statistics, the object must be specified in the format schema.table.statistics_name.  
   
-```  
+```sql  
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  
     WITH SAMPLE 5 PERCENT;  
   
 sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';  
   
+```  
+
+## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
+### G. Renaming a column  
+ The following example renames the `c1` column in the `table1` table to `col1`. 
+
+> [!NOTE]
+> This [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)] feature is still in preview and is currently available only for objects in the **dbo** schema. 
+  
+```sql  
+CREATE TABLE table1 (c1 INT, c2 INT);
+EXEC sp_rename 'table1.c1', 'col1', 'COLUMN';
+GO  
 ```  
   
 ## See Also  

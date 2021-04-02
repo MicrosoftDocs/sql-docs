@@ -1,10 +1,10 @@
 ---
-title: "Post-Save Notifications Dialog Box (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Post-Save Notifications Dialog Box (Visual Database Tools)"
+title: Post-Save Notifications Dialog Box
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
@@ -12,12 +12,13 @@ f1_keywords:
   - "vdt.dlgbox.saveincomplete"
   - "vdtsql.chm:98831"
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 
 ---
 # Post-Save Notifications Dialog Box (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 This dialog box appears when errors are encountered while trying to save changes to a table. This dialog box lists the objects that were successfully saved in the database, the objects that were not saved, and the errors that were encountered.  
   
 ## Options  

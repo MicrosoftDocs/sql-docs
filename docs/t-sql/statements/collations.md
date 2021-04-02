@@ -1,12 +1,13 @@
 ---
+description: "COLLATE (Transact-SQL)"
 title: "COLLATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "08/30/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "COLLATE"
   - "COLLATE_TSQL"
@@ -16,13 +17,13 @@ helpviewer_keywords:
   - "collations [SQL Server], COLLATE clause"
   - "COLLATE clause"
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
-author: CarlRabeler
-ms.author: carlrab
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COLLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Defines a collation of a database or table column, or a collation cast operation when applied to character string expression. Collation name can be either a Windows collation name or a SQL collation name. If not specified during database creation, the database is assigned the default collation of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If not specified during table column creation, the column is assigned the default collation of the database.
 
@@ -30,11 +31,13 @@ Defines a collation of a database or table column, or a collation cast operation
 
 ## Syntax
 
-```
+```syntaxsql
 COLLATE { <collation_name> | database_default }
 <collation_name> :: =
     { Windows_collation_name } | { SQL_collation_name }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -93,8 +96,6 @@ FROM fn_helpcollations();
 - When restoring or attaching a database, the default collation of the database and the collation of any **char**, **varchar**, and **text** columns or parameters in the database must be supported by the operating system.
 
 > [!NOTE]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance server collation is **SQL_Latin1_General_CP1_CI_AS** and cannot be changed.
->
 > Code page translations are supported for **char** and **varchar** data types, but not for **text** data type. Data loss during code page translations is not reported.
 >
 > If the collation specified or the collation used by the referenced object uses a code page not supported by Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] displays an error.
@@ -126,7 +127,7 @@ GO
 
 Here are the results from the first query.
 
-```
+```output
 Place
 -------------
 California
@@ -137,7 +138,7 @@ Colima
 
 Here are the results from the second query.
 
-```
+```output
 Place
 -------------
 California
@@ -148,7 +149,7 @@ Chiapas
 
 ### B. Additional examples
 
-For additional examples that use **COLLATE**, see [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) example **G. Creating a database and specifying a collation name and options**, and [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) example **V. Changing column collation**.
+For additional examples that use **COLLATE**, see [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md#examples) example **G. Creating a database and specifying a collation name and options**, and [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) example **V. Changing column collation**.
 
 ## See Also
 
@@ -156,7 +157,7 @@ For additional examples that use **COLLATE**, see [CREATE DATABASE](../../t-sql/
 - [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
 - [Collation Precedence](../../t-sql/statements/collation-precedence-transact-sql.md)
 - [Constants](../../t-sql/data-types/constants-transact-sql.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
 - [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
 - [Table data type](../../t-sql/data-types/table-transact-sql.md)

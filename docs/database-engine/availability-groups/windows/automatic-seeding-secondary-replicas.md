@@ -2,7 +2,7 @@
 title: "Automatic seeding for secondary replicas"
 description: "Learn about how automatic seeding can initialize secondary replicas as part of an Always On availability group with SQL 2016 and greater."
 ms.custom: seo-lt-2019 
-ms.date: "11/27/2018"
+ms.date: "03/05/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: availability-groups

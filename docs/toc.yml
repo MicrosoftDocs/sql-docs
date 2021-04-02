@@ -12288,6 +12288,8 @@ items:
       items:
       - name: sys.dm_hadr_auto_page_repair
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md
+      - name: sys.dm_hadr_automatic_seeding
+        href: relational-databases/system-dynamic-management-views/sys-dm-hadr-automatic-seeding.md
       - name: sys.dm_hadr_availability_group_states
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md
       - name: sys.dm_hadr_availability_replica_cluster_nodes
@@ -12314,6 +12316,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-instance-node-map-transact-sql.md
       - name: sys.dm_hadr_name_id_map
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md
+      - name: sys.dm_hadr_physical_seeding_stats
+        href: relational-databases/system-dynamic-management-views/sys-dm-hadr-physical-seeding-stats.md
       - name: sys.dm_tcp_listener_states
         href: relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md
 

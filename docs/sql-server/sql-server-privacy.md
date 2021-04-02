@@ -25,7 +25,7 @@ This article serves as an addendum to the overall [Microsoft Privacy Statement](
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
 - Database Migration Assistant
-- SQL Server Migration Assistant
+- [SQL Server Migration Assistant](../ssma/ssma-diagnostic-data-collection.md)
 - MS-SQL Extension
 
 Definition of *Permitted usage Scenarios*. For the context of this article, Microsoft defines "Permitted Usages Scenarios" as actions or activities that are initiated by Microsoft.

@@ -133,7 +133,7 @@ Before starting the following steps, make sure that you have selected your prefe
 
    | Parameter | Description |
    |-----|-----|
-   | **-e "ACCEPT_EULA=Y"** |  Set the **ACCEPT_EULA** variable to any value to confirm your acceptance of the [End-User Licensing Agreement](https://go.microsoft.com/fwlink/?linkid=857698). Required setting for the SQL Server image. |
+   | **-e "ACCEPT_EULA=Y"** |  Set the **ACCEPT_EULA** variable to any value to confirm your acceptance of the End-User Licensing Agreement. Required setting for the SQL Server image. |
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least 8 characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1433, on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you cannot reuse this same name. |
@@ -259,7 +259,7 @@ Before starting the following steps, make sure that you have selected your prefe
 
    | Parameter | Description |
    |-----|-----|
-   | **-e "ACCEPT_EULA=Y"** |  Set the **ACCEPT_EULA** variable to any value to confirm your acceptance of the [End-User Licensing Agreement](https://go.microsoft.com/fwlink/?LinkId=746388). Required setting for the SQL Server image. |
+   | **-e "ACCEPT_EULA=Y"** |  Set the **ACCEPT_EULA** variable to any value to confirm your acceptance of the End-User Licensing Agreement. Required setting for the SQL Server image. |
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least 8 characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1433, on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you cannot reuse this same name. |

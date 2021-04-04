@@ -18,6 +18,7 @@ For the macOS platform, you can install the `azdata-cli` with Homebrew package m
 - 10.13 High Sierra
 - 10.14 Mojave
 - 10.15 Catalina
+- 11.x  Big Sur ?
 
 ## Install with Homebrew
 

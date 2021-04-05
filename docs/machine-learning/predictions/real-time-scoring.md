@@ -15,11 +15,11 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 Learn how to perform real-time scoring with the [sp_rxPredict](../../relational-databases/system-stored-procedures/sp-rxpredict-transact-sql.md) system stored procedure in SQL Server for high-performance predictions or scores in forecasting workloads.
 
-Real-time scoring with `sp_rxPredict` is language-agnostic and executes with no dependencies on the R or Python runtimes in [Machine Learning Services](../sql-server-machine-learning-services.md) or [R Services](../r/sql-server-r-services.md). Assuming a model created and trained using Microsoft functions, and then serialized to a binary format in SQL Server, you can use real-time scoring to generate predicted outcomes on new data inputs on SQL Server instances that do not have the R or Python add-on installed.
+Real-time scoring with `sp_rxPredict` is language-agnostic and executes with no dependencies on the R or Python runtimes in [Machine Learning Services](../sql-server-machine-learning-services.md) or [Machine Learning Server](../r/r-server-standalone.md). Using a model created and trained using Microsoft functions and serialized to a binary format in SQL Server, you can use real-time scoring to generate predicted outcomes on new data inputs on SQL Server instances that do not have the R or Python add-on installed.
 
 ## How real-time scoring works
 
-Real-time scoring is supported on specific model types based on functions in [RevoScaleR](../r/ref-r-revoscaler.md) or [MicrosoftML](../r/ref-r-microsoftml.md) in R, or [revoscalepy](../python/ref-py-revoscalepy.md) or [microsoftml](../python/ref-py-microsoftml.md) in Python. It uses native C++ libraries to generate scores, based on user input provided to a machine learning model stored in a special binary format.
+Real-time scoring is supported on specific model types based on functions in [RevoScaleR](../r/ref-r-revoscaler.md) or [MicrosoftML](../r/ref-r-microsoftml.md) in R, or [revoscalepy](../python/ref-py-revoscalepy.md) or [microsoftml](../python/ref-py-microsoftml.md) in Python. It uses native C++ libraries to generate scores based on user input provided to a machine learning model stored in a special binary format.
 
 Because a trained model can be used for scoring without having to call an external language runtime in [Machine Learning Services](../sql-server-machine-learning-services.md) or [Machine Learning Server](../r/r-server-standalone.md), the overhead of multiple processes is reduced.
 
@@ -49,7 +49,7 @@ Real-time scoring is a multi-step process:
 
 ## Enable real-time scoring
 
-You must enable this feature for each database that you want to use for scoring. The server administrator should run the command-line utility, RegisterRExt.exe, which is included with the RevoScaleR package.
+Enable this feature for each database that you want to use for scoring. The server administrator should run the command-line utility, RegisterRExt.exe, which is included with the RevoScaleR package.
 
 > [!NOTE]
 > In order for real-time scoring to work, SQL CLR functionality needs to be enabled in the instance and the database needs to be marked trustworthy. When you run the script, these actions are performed for you. However, consider carefully the additional security implications before doing this.
@@ -66,7 +66,7 @@ You must enable this feature for each database that you want to use for scoring.
 
     `RegisterRExt.exe /installRts /database:CLRPRedict`
 
-    The instance name is optional if the database is on the default instance. If you are using a named instance, you must specify the instance name.
+    The instance name is optional if the database is on the default instance. If you're using a named instance, specify the instance name.
 
 3. RegisterRExt.exe creates the following objects:
 
@@ -100,7 +100,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 You call `sp_rxPredict` as you would any other stored procedure. In the current release, the stored procedure takes only two parameters: _\@model_ for the model in binary format, and _\@inputData_ for the data to use in scoring, defined as a valid SQL query.
 
-Because the binary format is the same that is used by the PREDICT function, you can use the models and data table from the preceding example.
+Because the binary format is the same as that used by the PREDICT function, you can use the models and data table from the preceding example.
 
 ```sql
 DECLARE @irismodel varbinary(max)

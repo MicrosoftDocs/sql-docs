@@ -1,5 +1,6 @@
 ---
-description: Learn how Dynamic SQL can affect the performance of your application and how prepared statements in ODBC may be a faster solution.
+description: Learn how Dynamic SQL can affect the performance of your application, and how prepared statements in ODBC may be a faster solution.
+
 title: Dynamic SQL performance in ODBC
 ms.custom: ""
 ms.date: 04/02/2020

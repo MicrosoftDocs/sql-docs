@@ -298,6 +298,7 @@ curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
 EOF
 ```
 
+
 ## Monitoring Spark jobs
 
 The [`azdata bdc spark batch` commands](../azdata/reference/reference-azdata-bdc-spark.md) contains management actions for Spark batch jobs.
@@ -358,6 +359,7 @@ This is the `curl` command using Livy.
 curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches/<BATCH_ID>/log
 ```
 
+
 ## Next steps
 
 For more information on troubleshooting Spark code, see [Troubleshoot pyspark notebook](troubleshoot-pyspark-notebook.md).
@@ -365,3 +367,4 @@ For more information on troubleshooting Spark code, see [Troubleshoot pyspark no
 A comprehensive set of Spark sample code is available on [SQL Server big data clusters Spark samples](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark) on Github.
 
 For more information on SQL Server big data cluster and related scenarios, see [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
+

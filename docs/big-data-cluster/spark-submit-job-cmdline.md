@@ -297,6 +297,7 @@ curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
 }
 EOF
 ```
+---
 
 ## Monitoring Spark jobs
 

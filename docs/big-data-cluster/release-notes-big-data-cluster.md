@@ -59,7 +59,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release <sup>1</sup> | BDC Version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date |
 |--|--|--|--|
-| [CU10](#cu10) |  15.0.4123.1 | 20.3.2    | 2021-04-06 |
+| [CU10](#cu10) |  15.0.4123.17 | 20.3.2    | 2021-04-06 |
 | [CU9](#cu9) |  15.0.4102.2 | 20.3.0    | 2021-02-11 |
 | [CU8-GDR](#cu8-gdr) | 15.0.4083.2  | 20.2.6    | 2021-01-12 |
 | [CU8](#cu8)     | 15.0.4073.23 | 20.2.2    | 2020-10-19 |
@@ -79,13 +79,13 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
-## <a id="cu10"></a> CU10 (March 2021)
+## <a id="cu10"></a> CU10 (April 2021)
 
 Cumulative Update 10 (CU10) release for SQL Server 2019.
 
 |Package version | Image tag |
 |-----|-----|
-|15.0.4123.1|[2019-CU10-ubuntu-16.04]|
+|15.0.4123.1|[2019-CU10-ubuntu-20.04]|
 
 SQL Server 2019 CU10 for SQL Server Big Data Clusters, includes important capabilities:
 

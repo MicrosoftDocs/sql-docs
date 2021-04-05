@@ -5,7 +5,7 @@ description: Reference article for azdata bdc config commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -51,7 +51,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--path -p`
 File path of where you would like the config profile placed, defaults to <cwd>/custom.
 #### `--source -s`
-Config profile source: ['openshift-prod', 'aks-dev-test-ha', 'aro-dev-test-ha', 'aks-dev-test', 'kubeadm-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test']
+Config profile source: ['aro-dev-test-ha', 'openshift-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test-ha', 'aks-dev-test']
 #### `--force -f`
 Force overwrite of the target file.
 #### `--accept-eula -a`
@@ -86,7 +86,7 @@ azdata bdc config list --config-profile aks-dev-test
 ```
 ### Optional Parameters
 #### `--config-profile -c`
-Default config profile: ['openshift-prod', 'aks-dev-test-ha', 'aro-dev-test-ha', 'aks-dev-test', 'kubeadm-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test']
+Default config profile: ['aro-dev-test-ha', 'openshift-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test-ha', 'aks-dev-test']
 #### `--type -t`
 What config type you would like to see.
 #### `--accept-eula -a`

@@ -442,7 +442,10 @@ VALUES (N'FT', N'Feet', '20080414');
 ```  
   
 #### B. Inserting multiple rows of data  
- The following example uses the [table value constructor](../../t-sql/queries/table-value-constructor-transact-sql.md) to insert three rows into the `Production.UnitMeasure` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database in a single INSERT statement. Because values for all columns are supplied and are listed in the same order as the columns in the table, the column names do not have to be specified in the column list.  
+ The following example uses the [table value constructor](../../t-sql/queries/table-value-constructor-transact-sql.md) to insert three rows into the `Production.UnitMeasure` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database in a single INSERT statement. Because values for all columns are supplied and are listed in the same order as the columns in the table, the column names do not have to be specified in the column list.
+
+>[!NOTE]
+> The table vaule constructor is not supported in Azure Synapse Analytics.  
   
 ```sql
 INSERT INTO Production.UnitMeasure  

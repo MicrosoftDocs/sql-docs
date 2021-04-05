@@ -43,11 +43,13 @@ ms.author: maggies
   
 ## Use Administrative Tools  
 
-1. In Administrative Tools, open Services
-2. Right-click **SQL Server Reporting Services (MSSQLSERVER)**, **SQL Server Reporting Services**, or **Power BI Report Server**
-3. Select **Stop** or **Restart**
+1. In Administrative Tools, open **Services**.
+2. Right-click **SQL Server Reporting Services (MSSQLSERVER)**, **SQL Server Reporting Services**, or **Power BI Report Server**.
+3. Select **Stop** or **Restart**.
+
   
-- For Reporting Services 2016 and earlier versions, if you are running multiple instances or if the report server is running as a named instance, verify that the instance name in parentheses corresponds to the report server instance you want to stop or restart.  
+For Reporting Services 2016 and earlier versions, if you are running multiple instances or if the report server is running as a named instance, verify that the instance name in parentheses corresponds to the report server instance you want to stop or restart.  
+
   
 ## See also  
  [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

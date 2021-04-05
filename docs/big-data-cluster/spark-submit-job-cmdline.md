@@ -35,7 +35,7 @@ If direct integration to a REST API is desired, use standard Livy calls to submi
 
 This application exemplifies a common Data Engineering pattern, loading tabular data from a HDFS landing zone path and then writing using a table format to a HDFS processed zone path. The dataset used in this sample application can be downloaded [here](https://ailab.criteo.com/download-criteo-1tb-click-logs-dataset/).
 
-### [PySpark](#tab/pyspark)
+### [PySpark](#tab/pyspark/)
 
 In this example we will use the following PySpark application saved as a python file named ```parquet_etl_sample.py``` in the local machine.
 
@@ -114,7 +114,8 @@ curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
 EOF
 ```
 
-### [Spark Scala](#tab/scala)
+
+### [Spark Scala](#tab/scala/)
 
 In this example we will use the following Spark application written in Scala Spark.
 
@@ -195,7 +196,8 @@ curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
 EOF
 ```
 
-### [Spark SQL](#tab/sql)
+
+### [Spark SQL](#tab/sql/)
 
 This example uses Spark SQL to perform the ingestion logic using tables and views to provide a SQL centric approach to ETL.
 
@@ -297,6 +299,8 @@ curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
 }
 EOF
 ```
+---
+---
 
 
 ## Monitoring Spark jobs

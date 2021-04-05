@@ -14,8 +14,11 @@ ms.author: "alexiva"
 
 # SSMA usage and diagnostic data collection
 
-SQL Server Migration Assistant (SSMA) contains Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SSMA may collect standard computer information and information about use and performance that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of SSMA. We do not collect your name, address, or other contact information. For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](../sql-server/sql-server-privacy.md).
+SQL Server Migration Assistant (SSMA) contains Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft.
 
+## Collected data
+
+SSMA may collect standard computer information and information about use and performance that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of SSMA. We do not collect your name, address, or other contact information. For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](../sql-server/sql-server-privacy.md).
 ## Enable or disable usage and diagnostic data collection in SSMA
 
 Following registry entry allows you to opt in or out of data collection:

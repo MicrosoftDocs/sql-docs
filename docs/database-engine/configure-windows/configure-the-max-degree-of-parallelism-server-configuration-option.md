@@ -1,7 +1,7 @@
 ---
-title: "Configure the max degree of parallelism Server Configuration Option | Microsoft Docs"
+title: "Configure the max degree of parallelism Server Configuration Option"
 description: Learn about the max degree of parallelism (MAXDOP) option. See how to use it to limit the number of processors that SQL Server uses in parallel plan execution.
-ms.date: "02/12/2020"
+ms.date: "03/27/2021"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "number of processors for parallel queries"
   - "max degree of parallelism option"
   - "MaxDop"
-ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: contperf-fy20q4
 ---
 # Configure the max degree of parallelism Server Configuration Option
@@ -24,7 +23,8 @@ ms.custom: contperf-fy20q4
   This topic describes how to configure the **max degree of parallelism (MAXDOP)** server configuration option in SQL Server by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. When an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on a computer that has more than one microprocessor or CPU, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects whether parallelism can be used. The degree of parallelism sets the number of processors employed to run a single statement, for each parallel plan execution. You can use the **max degree of parallelism** option to limit the number of processors to use in parallel plan execution. For more detail on the limit set by **max degree of parallelism (MAXDOP)**, see the [Considerations](#Considerations) section in this page. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers parallel execution plans for queries, index data definition language (DDL) operations, parallel inserts, online alter column, parallel stats collection, and static and keyset-driven cursor population.
 
 > [!NOTE]
-> [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] introduces automatic recommendations for setting the MAXDOP server configuration option during the installation process based on the number of processors available. The setup user interface allows you to either accept the recommended settings or enter your own value. For more information, see [Database Engine Configuration - MaxDOP page](../../sql-server/install/instance-configuration.md#maxdop).
+> [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] introduces automatic recommendations for setting the MAXDOP server configuration option during the installation process based on the number of processors available. The setup user interface allows you to either accept the recommended settings or enter your own value. For more information, see [Database Engine Configuration - MaxDOP page](../../sql-server/install/instance-configuration.md#maxdop).<BR>
+However, in Azure SQL, the default MAXDOP setting for each new single database and elastic pool database is 8. For more on MAXDOP in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism).
 
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   

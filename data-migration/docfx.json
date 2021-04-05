@@ -24,7 +24,9 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -41,7 +43,8 @@
     "globalMetadata": {
       "breadcrumb_path": "/data-migration/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "None",
+      "uhfHeaderId": "data-migration"
     },
     "fileMetadata": {},
     "template": [],

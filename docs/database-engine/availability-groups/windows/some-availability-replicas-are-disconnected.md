@@ -20,12 +20,10 @@ ms.author: chadam
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|Availability Replicas Connection State|  
-|**Issue**|Some availability replicas are disconnected.|  
-|**Category**|**Warning**|  
-|**Facet**|Availability group|  
+- **Policy Name**: Availability Replicas Connection State
+- **Issue**: Some availability replicas are disconnected.
+- **Category**: **Warning**
+- **Facet**: Availability group  
   
 ## Description  
  This policy rolls up the connection state of all availability replicas and checks for any availability replicas that are DISCONENCTED. The policy is in an unhealthy state when any availability replica is DISCONNECTED. The policy is otherwise in a healthy state.  

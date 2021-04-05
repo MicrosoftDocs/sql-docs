@@ -4,7 +4,7 @@ description: Learn how to configure contained user access for contained database
 ms.custom: seo-lt-2019
 ms.date: "01/28/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual

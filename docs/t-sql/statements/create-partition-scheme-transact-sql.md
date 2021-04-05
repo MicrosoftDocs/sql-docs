@@ -95,13 +95,14 @@ AS PARTITION myRangePF1
 TO (test1fg, test2fg, test3fg, test4fg);  
 ```  
   
- The partitions of a table that uses partition function `myRangePF1` on partitioning column **col1** would be assigned as shown in the following table.  
-  
-||||||  
-|-|-|-|-|-|  
-|**Filegroup**|`test1fg`|`test2fg`|`test3fg`|`test4fg`|  
-|**Partition**|1|2|3|4|  
-|**Values**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
+The partitions of a table that uses partition function `myRangePF1` on partitioning column **col1** would be assigned as shown in the following table.  
+
+|Filegroup|Partition|Values|
+|-|-|-|
+|`test1fg`|1|**col1** <= `1`|
+|`test2fg`|2|**col1** > `1` AND **col1** <= `100`|
+|`test3fg`|3|**col1** > `100` AND **col1** <= `1000`|
+|`test4fg`|4|**col1** > `1000`|
   
 ### B. Creating a partition scheme that maps multiple partitions to the same filegroup  
  If all the partitions map to the same filegroup, use the ALL keyword. But if multiple, but not all, partitions are mapped to the same filegroup, the filegroup name must be repeated, as shown in the following example.  
@@ -117,12 +118,13 @@ TO ( test1fg, test1fg, test1fg, test2fg );
   
  The partitions of a table that uses partition function `myRangePF2` on partitioning column **col1** would be assigned as shown in the following table.  
   
-||||||  
-|-|-|-|-|-|  
-|**Filegroup**|`test1fg`|`test1fg`|`test1fg`|`test2fg`|  
-|**Partition**|1|2|3|4|  
-|**Values**|**col1** <= `1`|**col1** > 1 AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
-  
+|Filegroup|Partition|Values|
+|-|-|-|
+|`test1fg`|1|**col1** <= `1`|
+|`test1fg`|2|**col1** > `1` AND **col1** <= `100`|
+|`test1fg`|3|**col1** > `100` AND **col1** <= `1000`|
+|`test2fg`|4|**col1** > `1000`|
+
 ### C. Creating a partition scheme that maps all partitions to the same filegroup  
  The following example creates the same partition function as in the previous examples, and a partition scheme is created that maps all partitions to the same filegroup.  
   

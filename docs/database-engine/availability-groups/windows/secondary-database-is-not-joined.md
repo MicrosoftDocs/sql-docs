@@ -20,12 +20,10 @@ ms.author: chadam
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|Availability Database Join State|  
-|**Issue**|Secondary database is not joined.|  
-|**Category**|**Warning**|  
-|**Facet**|Availability database|  
+- **Policy Name**: Availability Database Join State
+- **Issue**: Secondary database is not joined.
+- **Category**: **Warning**
+- **Facet**: Availability database  
   
 ## Description  
  This policy checks the join state of the secondary database (also known as a "secondary database replica"). The policy is in an unhealthy state when the dataset replica is not joined. The policy is otherwise in a healthy state.  

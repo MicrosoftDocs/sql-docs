@@ -66,7 +66,7 @@ The new BCP supports Azure AD authentication, including Multi-Factor Authenticat
 **System Requirements**
 Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008 - 2019.
 
-This component requires both [Windows Installer 4.5](https://windows-installer.soft32.com/) and [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
+This component requires both the built-in [Windows Installer 5](https://docs.microsoft.com/windows/win32/msi/what-s-new-in-windows-installer-5-0) and the [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
  
 To check the SQLCMD version execute `sqlcmd -?` command and confirm that 15.0.2000.5 version or higher is in use.
 
@@ -611,17 +611,78 @@ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any 
 ## sqlcmd Commands  
  In addition to Transact-SQL statements within **sqlcmd**, the following commands are also available:  
   
-|||  
-|-|-|  
-|**GO** [*count*]|**:List**|  
-|[**:**] **RESET**|**:Error**|  
-|[**:**] **ED**|**:Out**|  
-|[**:**] **!!**|**:Perftrace**|  
-|[**:**] **QUIT**|**:Connect**|  
-|[**:**] **EXIT**|**:On Error**|  
-|**:r**|**:Help**|  
-|**:ServerList**|**:XML** [**ON** &#124; **OFF**]|  
-|**:Setvar**|**:Listvar**|  
+:::row:::
+   :::column span="":::
+      **GO** [*count*]
+   :::column-end:::
+   :::column span="":::
+      **:List**
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **RESET**
+   :::column-end:::
+   :::column span="":::
+      **:Error**  
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **ED**
+   :::column-end:::
+   :::column span="":::
+      **:Out**  
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **!!**
+   :::column-end:::
+   :::column span="":::
+      **:Perftrace**
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **QUIT**
+   :::column-end:::
+   :::column span="":::
+      **:Connect**  
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **EXIT**
+   :::column-end:::
+   :::column span="":::
+      **:On Error**
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **:r**
+   :::column-end:::
+   :::column span="":::
+      **:Help**
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **:ServerList**
+   :::column-end:::
+   :::column span="":::
+      **:XML** [**ON** &#124; **OFF**]
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **:Setvar**
+   :::column-end:::
+   :::column span="":::
+      **:Listvar** 
+   :::column-end:::
+:::row-end:::
   
  Be aware of the following when you use **sqlcmd** commands:  
   

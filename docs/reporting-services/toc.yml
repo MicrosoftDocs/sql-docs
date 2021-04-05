@@ -441,6 +441,8 @@
     items:
     - name: Set default options for Report Builder
       href: ../reporting-services/report-builder/set-default-options-for-report-builder.md
+    - name: Configure Report Builder Access
+      href: ../reporting-services/report-server/configure-report-builder-access.md
   - name: Report Design View
     href: ../reporting-services/report-builder/report-design-view-report-builder.md
     items:

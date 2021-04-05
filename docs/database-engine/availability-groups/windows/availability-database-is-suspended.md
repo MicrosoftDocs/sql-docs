@@ -20,12 +20,10 @@ ms.author: chadam
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|Availability Database Suspension State|  
-|**Issue**|Availability database is suspended.|  
-|**Category**|**Warning**|  
-|**Facet**|Availability database|  
+- **Policy Name**: Availability Database Suspension State
+- **Issue**: Availability database is suspended.
+- **Category**: **Warning**
+- **Facet**: Availability database  
   
 ## Description  
  This policy checks the state of data movement of the secondary database (also known as a "secondary database replica"). The policy is in an unhealthy state when the data movement is suspended. The policy is otherwise in a healthy state.  

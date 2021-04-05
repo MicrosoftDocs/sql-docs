@@ -4,7 +4,7 @@ description: Use this guidance to choose an encryption algorithm to help secure 
 ms.custom: ""
 ms.date: "08/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual

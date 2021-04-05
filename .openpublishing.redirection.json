@@ -8516,6 +8516,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/database-engine/configure-windows/precompute-rank-server-configuration-option.md",
+      "redirect_url": "/docs/database-engine/discontinued-database-engine-functionality-in-sql-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md",
       "redirect_url": "/previous-versions/sql/2014/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections",
       "redirect_document_id": false
@@ -42913,6 +42918,16 @@
     {
       "source_path": "docs/machine-learning/predictions/how-to-do-realtime-scoring.md",
       "redirect_url": "/sql/machine-learning/predictions/native-scoring-predict-transact-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/data-science-scenarios-and-solution-templates.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-tutorials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/troubleshooting/machine-learning-troubleshooting-overview.md",
+      "redirect_url": "/sql/machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services",
       "redirect_document_id": false
     },
     {

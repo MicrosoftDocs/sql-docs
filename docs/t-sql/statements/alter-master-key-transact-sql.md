@@ -4,7 +4,7 @@ title: "ALTER MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: "fasttrack-edit"
 ms.date: "02/21/2019"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
+ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference

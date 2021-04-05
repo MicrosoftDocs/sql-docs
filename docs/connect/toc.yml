@@ -2662,11 +2662,11 @@
   - name: Securing applications
     href: ../connect/jdbc/securing-jdbc-driver-applications.md
     items:
-    - name: Securing Connection Strings
+    - name: Securing connection strings
       href: ../connect/jdbc/securing-connection-strings.md
-    - name: Validating User Input
+    - name: Validating user input
       href: ../connect/jdbc/validating-user-input.md
-    - name: Application Security
+    - name: Application security
       href: ../connect/jdbc/application-security.md
     - name: Using encryption
       href: ../connect/jdbc/using-ssl-encryption.md
@@ -2677,7 +2677,7 @@
         href: ../connect/jdbc/connecting-with-ssl-encryption.md
       - name: Configuring the client for encryption
         href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
-    - name: FIPS Mode
+    - name: FIPS mode
       href: ../connect/jdbc/fips-mode.md
   - name: Improving performance and reliability
     href: ../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md

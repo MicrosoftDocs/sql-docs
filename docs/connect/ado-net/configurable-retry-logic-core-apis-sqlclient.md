@@ -21,7 +21,7 @@ If the built-in retry logic providers don't cover your needs, you can create you
 The built-in providers are designed around three interfaces that can be used to implement custom providers. Custom retry providers can then be used the same as internal retry providers on a <xref:Microsoft.Data.SqlClient.SqlConnection> or <xref:Microsoft.Data.SqlClient.SqlCommand>:
 
 1. `Microsoft.Data.SqlClient.SqlRetryIntervalBaseEnumerator`: Generates a sequence of time intervals.
-2. `Microsoft.Data.SqlClient.SqlRetryLogicBase`: Retrieves the next time interval for a given enumerator, considering the number of retries when a transient condition occurs.
+2. `Microsoft.Data.SqlClient.SqlRetryLogicBase`: Retrieves the next time interval for a given enumerator, if the number of retries has not been exceeded and a transient condition is met.
 3. `Microsoft.Data.SqlClient.SqlRetryLogicBaseProvider`: Applies retry logic to connection and command operations.
 
 > [!CAUTION]

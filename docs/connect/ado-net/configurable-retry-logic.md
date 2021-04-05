@@ -23,7 +23,7 @@ An application that communicates with elements running in the cloud has to be se
 
 ## Retry pattern
 
-Attempting to complete an operation despite transient errors instead of throwing an exception and letting a user decide the next action is an intelligent decision called a retry pattern. For more information, see [Retry pattern](/azure/architecture/patterns/retry).
+Attempting to complete an operation despite transient errors, instead of throwing an exception and letting a user decide the next action, is an intelligent decision called a retry pattern. For more information, see [Retry pattern](/azure/architecture/patterns/retry).
 
 ## Transient faults
 

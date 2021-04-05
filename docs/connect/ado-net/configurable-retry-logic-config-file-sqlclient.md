@@ -16,7 +16,7 @@ ms.reviewer: v-deshtehari
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-The default retry method when the safety switch is enabled, is the `Microsoft.Data.SqlClient.SqlConnection.SqlConfigurableRetryFactory.CreateNoneRetryProvider` for both <xref:Microsoft.Data.SqlClient.SqlConnection> and <xref:Microsoft.Data.SqlClient.SqlCommand>. You can specify a different retry method by using a configuration file.
+The default retry method when the safety switch is enabled is the `Microsoft.Data.SqlClient.SqlConnection.SqlConfigurableRetryFactory.CreateNoneRetryProvider` for both <xref:Microsoft.Data.SqlClient.SqlConnection> and <xref:Microsoft.Data.SqlClient.SqlCommand>. You can specify a different retry method by using a configuration file.
 
 ## Configuration sections
 
@@ -72,7 +72,7 @@ The following attributes can be used to specify the default retry logic for all 
 
 - **deltaTime**: sets the gap time interval as a `System.TimeSpan` object.
 
-- **minTime**: sets the minimum allowed gap time interval as a `System.TimeSpan` object.
+- **minTime**: sets the allowed minimum gap time interval as a `System.TimeSpan` object.
 
 - **maxTime**: sets the allowed maximum gap time interval as a `System.TimeSpan` object.
 
@@ -80,7 +80,7 @@ The following attributes can be used to specify the default retry logic for all 
 
 - **retryMethod**: specifies a retry method creator that receives the retry configuration via a `Microsoft.Data.SqlClient.SqlRetryLogicOption` parameter and returns a `Microsoft.Data.SqlClient.SqlRetryLogicBaseProvider` object.
 
-- **retryLogicType**: sets custom the retry logic `fully qualified type name`, which contains the retry method creators that provide the `retryMethod`. These methods should meet the criteria for `retryMethod`. For more information, see [Specifying fully qualified type names](/dotnet/framework/reflection-and-codedom/specifying-fully-qualified-type-names).
+- **retryLogicType**: sets a custom retry logic provider, which contains the retry method creators that provide the `retryMethod`. These methods should meet the criteria for `retryMethod`. The fully qualified type name of the provider should be used. For more information, see [Specifying fully qualified type names](/dotnet/framework/reflection-and-codedom/specifying-fully-qualified-type-names).
 
 > [!NOTE]
 > It's not required to specify the `retryLogicType` if you use the built-in retry providers. To find the built-in retry providers, see [Internal retry logic providers in SqlClient](internal-retry-logic-providers-sqlclient.md).
@@ -96,7 +96,7 @@ The following attribute can also be set for all <xref:Microsoft.Data.SqlClient.S
 
 ### Examples
 
-- Attempts to establish a connection up to three times with about a 1-second delay between tries by using the `Microsoft.Data.SqlClient.SqlConfigurableRetryFactory.CreateFixedRetryProvider` method and the default transient error list:
+- Attempts to establish a connection up to three times with an approximate 1-second delay between tries by using the `Microsoft.Data.SqlClient.SqlConfigurableRetryFactory.CreateFixedRetryProvider` method and the default transient error list:
 
     ```csharp
     <SqlConfigurableRetryLogicConnection retryMethod ="CreateFixedRetryProvider" 

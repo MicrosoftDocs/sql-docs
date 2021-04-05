@@ -36,9 +36,9 @@ Real-time scoring is a multi-step process:
 
 + [Enable real-time scoring](#bkmk_enableRtScoring).
 
-+ The model must be trained in advance using one of the supported **rx** algorithms. For details, see [Supported algorithms](../../relational-databases/system-stored-procedures/sp-rxpredict-transact-sql.md?view=sql-server-ver15#supported-algorithms) in the [sp_rxPredict reference](../../relational-databases/system-stored-procedures/sp-rxpredict-transact-sql.md).
++ The model must be trained in advance using one of the supported **rx** algorithms. For details, see [Supported algorithms](../../relational-databases/system-stored-procedures/sp-rxpredict-transact-sql.md?view=sql-server-ver15#supported-algorithms) for `sp_rxPredict`.
 
-+ Serialize the model using [rxSerialize](/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R, and [rx_serialize_model](/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
++ Serialize the model using [rxSerialize](/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R or [rx_serialize_model](/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
 
 + Save the model to the database engine instance from which you want to call it. This instance is not required to have the R or Python runtime extension.
 
@@ -51,7 +51,7 @@ Real-time scoring is a multi-step process:
 
 Enable this feature for each database that you want to use for scoring. The server administrator should run the command-line utility, RegisterRExt.exe, which is included with the RevoScaleR package.
 
-> [!NOTE]
+> [!CAUTION]
 > In order for real-time scoring to work, SQL CLR functionality needs to be enabled in the instance and the database needs to be marked trustworthy. When you run the script, these actions are performed for you. However, consider carefully the additional security implications before doing this.
 
 1. Open an elevated command prompt, and navigate to the folder where RegisterRExt.exe is located. The following path can be used in a default installation:
@@ -86,7 +86,7 @@ To disable real-time scoring functionality, open an elevated command prompt, and
 
 ## Example
 
-This section describes the steps required to prepare and save a model for **real-time** prediction, and provides an example in R of how to call the function from T-SQL.
+This example describes the steps required to prepare and save a model for **real-time** prediction, and provides an example in R of how to call the function from T-SQL.
 
 ### Step 1. Prepare and save the model
 

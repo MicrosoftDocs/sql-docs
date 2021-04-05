@@ -113,6 +113,7 @@ curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
 }
 EOF
 ```
+---
 
 ### [Spark Scala](#tab/scala)
 
@@ -194,6 +195,7 @@ curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
 }
 EOF
 ```
+---
 
 ### [Spark SQL](#tab/sql)
 
@@ -297,6 +299,7 @@ curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
 }
 EOF
 ```
+---
 ---
 
 ## Monitoring Spark jobs

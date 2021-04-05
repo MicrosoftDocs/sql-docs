@@ -35,7 +35,7 @@ If direct integration to a REST API is desired, use standard Livy calls to submi
 
 This application exemplifies a common Data Engineering pattern, loading tabular data from an HDFS landing zone path and then writing using a table format to an HDFS processed zone path. The dataset used in this sample application can be downloaded [here](https://ailab.criteo.com/download-criteo-1tb-click-logs-dataset/).
 
-### [PySpark](#tab/pyspark)
+### [PySpark](#tab/pyspark/)
 
 In this example, we will use the following PySpark application saved as a python file named ```parquet_etl_sample.py``` in the local machine.
 
@@ -77,11 +77,7 @@ Run the following command to upload __`parquet_etl_sample.py`__ from the local d
 azdata bdc hdfs cp --from-path parquet_etl_sample.py  --to-path "hdfs:/apps/ETL-Pipelines/parquet_etl_sample.py"
 ```
 
-#### Execute the PySpark application
-
-Use the following command to submit the application to SQL Server BDC Spark for execution.
-
-### [Spark Scala](#tab/scala)
+### [Spark Scala](#tab/scala/)
 
 In this example, we will use the following Spark application written in Scala Spark.
 
@@ -123,11 +119,7 @@ This example assumes that an application jar bundle named `parquet-etl-sample.ja
 azdata bdc hdfs cp --from-path parquet-etl-sample.jar  --to-path "hdfs:/apps/ETL-Pipelines/parquet-etl-sample.jar"
 ```
 
-#### Execute the Spark Scala application
-
-Use the following command to submit the application to SQL Server BDC Spark for execution.
-
-### [Spark SQL](#tab/sql)
+### [Spark SQL](#tab/sql/)
 
 This example uses Spark SQL to perform the ingestion logic using tables and views to provide a SQL centric approach to ETL.
 
@@ -193,11 +185,11 @@ Run the following command to upload the __```parquet-etl-sample.sql```__ from th
 azdata bdc hdfs cp --from-path parquet-etl-sample.sql --to-path "hdfs:/apps/ETL-Pipelines/parquet-etl-sample.sql"
 ```
 
-#### Execute the Spark SQL application
+---
+
+#### Execute the Spark Scala application
 
 Use the following command to submit the application to SQL Server BDC Spark for execution.
-
----
 
 
 ##### [azdata](#tab/pyspark/azdata)

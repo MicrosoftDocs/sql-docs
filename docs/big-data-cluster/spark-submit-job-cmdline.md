@@ -109,28 +109,31 @@ EOF
 In this example we will use the same application from the last section, but implemented using Scala.
 
 ```scala
-spark = SparkSession.builder.getOrCreate()
+import org.apache.spark.sql.SparkSession
 
-val df = spark.read.
-    option("inferSchema", "true").
-    option("header", "false").
-    option("delimiter", "\t").
-    csv("/securelake/landing/criteo/test.txt").
-    toDF("feat1","feat2","feat3","feat4","feat5","feat6","feat7","feat8","feat9","feat10","feat11","feat12","feat13","catfeat1","catfeat2","catfeat3","catfeat4","catfeat5","catfeat6","catfeat7","catfeat8","catfeat9","catfeat10","catfeat11","catfeat12","catfeat13","catfeat14","catfeat15","catfeat16","catfeat17","catfeat18","catfeat19","catfeat20","catfeat21","catfeat22","catfeat23","catfeat24","catfeat25","catfeat26")
+object ParquetETLSample {
+    def main(args: Array[String]) {
+        val spark = SparkSession.builder.getOrCreate()
+        
+        val df = spark.read.
+            option("inferSchema", "true").
+            option("header", "false").
+            option("delimiter", "\t").
+            csv("/securelake/landing/criteo/test.txt").
+            toDF("feat1","feat2","feat3","feat4","feat5","feat6","feat7","feat8","feat9","feat10","feat11","feat12","feat13","catfeat1","catfeat2","catfeat3","catfeat4","catfeat5","catfeat6","catfeat7","catfeat8","catfeat9","catfeat10","catfeat11","catfeat12","catfeat13","catfeat14","catfeat15","catfeat16","catfeat17","catfeat18","catfeat19","catfeat20","catfeat21","catfeat22","catfeat23","catfeat24","catfeat25","catfeat26")
+        
+        val tot_rows = df.count()
+        println(s"Number of rows: $tot_rows")
 
-// Prints the data frame inferred schema:
-df.printSchema()
+        spark.sql("DROP TABLE dl_clickstream")
 
-val tot_rows = df.count()
-println(s"Number of rows: $tot_rows")
+        df.write.format("parquet").mode("overwrite").saveAsTable("dl_clickstream")
 
-// Drop the managed table
-spark.sql("DROP TABLE dl_clickstream")
-
-// Write data frame to HDFS managed table using optimized Delta Lake table format
-df.write.format("parquet").mode("overwrite").saveAsTable("dl_clickstream")
-
-println("Sample ETL pipeline completed")
+        println("Sample ETL pipeline completed")
+        
+        spark.stop()
+    }
+}
 ```
 
 ### Bundle and Copy the Spark application to HDFS
@@ -140,7 +143,7 @@ The Spark documentation recommends creating an __assembly JAR__ (or bundle) cont
 This example assumes that an application jar bundle named `parquet-etl-sample.jar` is compiled and available. Run the following command to upload the bundle from the local development or staging machine to the HDFS cluster.
 
 ```bash
-azdata bdc hdfs cp --from-path parquet_etl_sample.jar  --to-path "hdfs:/apps/ETL-Pipelines/parquet-etl-sample.jar"
+azdata bdc hdfs cp --from-path parquet-etl-sample.jar  --to-path "hdfs:/apps/ETL-Pipelines/parquet-etl-sample.jar"
 ```
 
 ### Execute the Spark Scala application
@@ -151,6 +154,7 @@ Like the PySpark example, this application also requires the `spark.sql.legacy.a
 
 ```bash
 azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet-etl-sample.jar \
+--class "ParquetETLSample" \
 --config '{"spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation":"true"}' \
 -n MyETLPipeline --executor-count 2 --executor-cores 2 --executor-memory 1664m
 ```
@@ -163,6 +167,7 @@ curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
 --data-binary @- << EOF
 {
     "file": "/apps/ETL-Pipelines/parquet-etl-sample.jar",
+    "class": "ParquetETLSample",
     "name": "MyETLPipeline",
     "numExecutors": 2,
     "executorCores": 2,

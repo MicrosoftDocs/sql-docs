@@ -49,11 +49,11 @@ The implementation in this sample is as simple as possible to demonstrate step-b
 
     [!code-csharp[SqlConfigurableRetryLogic_StepByStep_CustomProvider#4](~/../sqlclient/doc/samples/SqlConfigurableRetryLogic_StepByStep_CustomProvider.cs#4)]
 
-3. The following function will evaluate an exception by using the given list of retryable exceptions and the special <xref:System.TimeoutException> exception to determine if it's retryable:
+    - The following function will evaluate an exception by using the given list of retryable exceptions and the special <xref:System.TimeoutException> exception to determine if it's retryable:
 
     [!code-csharp[SqlConfigurableRetryLogic_StepByStep_CustomProvider#5](~/../sqlclient/doc/samples/SqlConfigurableRetryLogic_StepByStep_CustomProvider.cs#5)]
 
-4. How to use it?
+3. Use the customized retry logic:
 
     - Define the retry logic parameters:
 

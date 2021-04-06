@@ -8,7 +8,7 @@ ms.author: anmunde
 ---
 ## Known issues
 
-If you're using the R runtime provided as part of [SQL Server Machine Learning Services](../../sql-server-machine-learning-services.md) by setting `R_HOME` to `C:\Program Files\Microsoft SQL Server\MSSQL15.<INSTANCE_NAME>\R_SERVICES` when you register the language extension, you might run into the following error upon executing any external custom R script with [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+If you're using the R runtime provided as part of [SQL Server Machine Learning Services](../../sql-server-machine-learning-services.md) by setting `R_HOME` to `C:\Program Files\Microsoft SQL Server\MSSQL15.<INSTANCE_NAME>\R_SERVICES` when you register the language extension, you might run into the following error upon executing any external custom R script with [sp_execute_external script](../../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 *Error: cons memory exhausted (limit reached?)*
 

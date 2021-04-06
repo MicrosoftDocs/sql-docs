@@ -4,7 +4,7 @@ description: Configure on-demand SQL Assessment on an Azure Arc enabled SQL Serv
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 03/19/2021
+ms.date: 04/06/2021
 ms.topic: conceptual
 ms.prod: sql
 ---

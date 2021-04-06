@@ -19,7 +19,7 @@ ms.reviewer: v-deshtehari
 An application that communicates with elements running in the cloud has to be sensitive to the transient faults that can occur in this environment. These faults are typically self-correcting. If the action that triggered a fault is repeated after a suitable delay, it's likely to be successful.
 
 > [!NOTE]
-> This feature is available starting with version 3.0.0 preview 1.
+> This feature is available starting with Microsoft.Data.SqlClient version 3.0.0 preview 1.
 
 ## Retry pattern
 

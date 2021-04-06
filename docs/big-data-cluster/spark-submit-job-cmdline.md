@@ -192,7 +192,7 @@ azdata bdc hdfs cp --from-path parquet-etl-sample.sql --to-path "hdfs:/apps/ETL-
 Use the following command to submit the application to SQL Server BDC Spark for execution.
 
 
-# [azdata](#tab/pyspark/azdata)
+# [azdata](#tab/azdata/pyspark)
 
 This is the __`azdata`__ command that executes this application using commonly specified parameters. For complete parameter options for `azdata bdc spark batch create`, see [`azdata bdc spark`](../azdata/reference/reference-azdata-bdc-spark.md).
 
@@ -204,7 +204,7 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet_etl_sample.py 
 -n MyETLPipelinePySpark --executor-count 2 --executor-cores 2 --executor-memory 1664m
 ```
 
-# [curl using Livy](#tab/pyspark/curl)
+# [curl using Livy](#tab/curl/pyspark)
 
 This is the __`curl`__ command that executes this application using Livy. Make sure to replace USER, PASSWORD, and LIVY_ENDPOINT to reflect your environment.
 
@@ -225,7 +225,7 @@ curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
 EOF
 ```
 
-# [azdata](#tab/scala/azdata)
+# [azdata](#tab/azdata/scala)
 
 This is the __`azdata`__ command that executes this application using commonly specified parameters. For complete parameter options for `azdata bdc spark batch create`, see [`azdata bdc spark`](../azdata/reference/reference-azdata-bdc-spark.md).
 
@@ -238,7 +238,7 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet-etl-sample.jar
 -n MyETLPipeline --executor-count 2 --executor-cores 2 --executor-memory 1664m
 ```
 
-# [curl using Livy](#tab/scala/curl)
+# [curl using Livy](#tab/curl/scala)
 
 This is the __`curl`__ command that executes this application using Livy. Make sure to replace USER, PASSWORD, and LIVY_ENDPOINT to reflect your environment.
 
@@ -260,7 +260,7 @@ curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
 EOF
 ```
 
-# [azdata](#tab/sql/azdata)
+# [azdata](#tab/azdata/sql)
 
 This is the __`azdata`__ command that executes this application using commonly specified parameters. For complete parameter options for `azdata bdc spark batch create`, see [`azdata bdc spark`](../azdata/reference/reference-azdata-bdc-spark.md).
 
@@ -272,7 +272,7 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet_etl_sample.sql
 -n MyETLPipelineSQL --executor-count 2 --executor-cores 2 --executor-memory 1664m
 ```
 
-# [curl using Livy](#tab/sql/curl)
+# [curl using Livy](#tab/curl/sql)
 
 This is the __`curl`__ command that executes this application using Livy. Make sure to replace USER, PASSWORD, and LIVY_ENDPOINT to reflect your environment.
 

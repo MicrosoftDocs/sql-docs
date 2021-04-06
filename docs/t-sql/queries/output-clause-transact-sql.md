@@ -601,7 +601,8 @@ GO
 ```
   
 ### J. Using OUTPUT and OUTPUT INTO in a single statement  
- The following example deletes rows in the `ProductProductPhoto` table based on search criteria defined in the `FROM` clause of `DELETE` statement. The `OUTPUT INTO` clause returns columns from the table being deleted (`deleted.ProductID`, `deleted.ProductPhotoID`) and columns from the `Product` table to the `@MyTableVar` `table` variable. The `Product` table is used in the `FROM` clause to specify the rows to delete. The `OUTPUT` clause returns the `deleted.ProductID`, `deleted.ProductPhotoID` columns and the date and time the row was deleted from the `ProductProductPhoto` table to the calling application.  
+ The following example deletes rows in the `ProductProductPhoto` table based on search criteria defined in the `FROM` clause of `DELETE` statement. The `OUTPUT INTO` clause returns columns from the table being deleted (`deleted.ProductID`, `deleted.ProductPhotoID`) and columns from the `Product` table to the `@MyTableVar` table variable. The `Product` table is used in the `FROM` clause to specify the rows to delete. The `OUTPUT` clause returns the `deleted.ProductID`, `deleted.ProductPhotoID` columns and the date and time the row was deleted from the `ProductProductPhoto` table to the calling application.  
+
   
 ```sql
 USE AdventureWorks2012;

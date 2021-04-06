@@ -29,8 +29,8 @@ A more comprehensive example of deploying R code into production by using stored
 
 Converting your R code in SQL is easier if some optimizations are done beforehand in the R or Python code. These include avoiding data types that cause problems, avoiding unnecessary data conversions, and rewriting the R code as a single function call that can be easily parameterized. For more information, see:
 
-+ [R libraries and data types](r-libraries-and-data-types.md)
-+ [Use sqlrutils helper functions](ref-r-sqlrutils.md)
++ [R libraries and data types](../r/r-libraries-and-data-types.md)
++ [Use sqlrutils helper functions](../r/ref-r-sqlrutils.md)
 
 ## Integrate R and Python with applications
 
@@ -54,7 +54,7 @@ The following tutorial provides an example of scoring using a stored procedure i
 
 ## Boost performance and scale
 
-Although the open-source R language has known limitations with regards to large data sets, the [RevoScaleR package APIs](ref-r-revoscaler.md) included with SQL Server Machine Learning Service can operate on large datasets and benefit from multi-threaded, multi-core, multi-process in-database computations.
+Although the open-source R language has known limitations with regards to large data sets, the [RevoScaleR package APIs](../r/ref-r-revoscaler.md) included with SQL Server Machine Learning Service can operate on large datasets and benefit from multi-threaded, multi-core, multi-process in-database computations.
 
 If your R solution uses complex aggregations or involves large datasets, you can leverage SQL Server's highly efficient in-memory aggregations and columnstore indexes, and let the R code handle the statistical computations and scoring.
 

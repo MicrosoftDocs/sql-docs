@@ -5,7 +5,7 @@ description: Reference article for azdata bdc config commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -51,7 +51,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--path -p`
 File path of where you would like the config profile placed, defaults to <cwd>/custom.
 #### `--source -s`
-Config profile source: ['openshift-prod', 'aks-dev-test-ha', 'aro-dev-test-ha', 'aks-dev-test', 'kubeadm-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test']
+Config profile source: ['aro-dev-test-ha', 'openshift-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test-ha', 'aks-dev-test']
 #### `--force -f`
 Force overwrite of the target file.
 #### `--accept-eula -a`
@@ -86,7 +86,7 @@ azdata bdc config list --config-profile aks-dev-test
 ```
 ### Optional Parameters
 #### `--config-profile -c`
-Default config profile: ['openshift-prod', 'aks-dev-test-ha', 'aro-dev-test-ha', 'aks-dev-test', 'kubeadm-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test']
+Default config profile: ['aro-dev-test-ha', 'openshift-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test-ha', 'aks-dev-test']
 #### `--type -t`
 What config type you would like to see.
 #### `--accept-eula -a`
@@ -127,7 +127,7 @@ azdata bdc config show --config-file custom-config/bdc.json --json-path "$.spec.
 ```
 ### Optional Parameters
 #### `--config-file -c`
-Big data cluster config file path if you don't want the config of the cluster you are currentlylogged in to, i.e. custom/bdc.json
+Big data cluster config file path if you don't want the config of the cluster you are currently logged in to, i.e. custom/bdc.json
 #### `--target -t`
 Output file to store the result in. Default: directed to stdout.
 #### `--json-path -j`
@@ -146,7 +146,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more 
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc config add
-Adds the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escapequotations appropriately.  Alternatively, you may use the patch file functionality.
+Adds the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escape quotations appropriately.  Alternatively, you may use the patch file functionality.
 ```bash
 azdata bdc config add --path -p 
                       --json-values -j
@@ -173,7 +173,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more 
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc config remove
-Removes the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escapequotations appropriately.  Alternatively, you may use the patch file functionality.
+Removes the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escape quotations appropriately.  Alternatively, you may use the patch file functionality.
 ```bash
 azdata bdc config remove --path -p 
                          --json-path -j
@@ -200,7 +200,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more 
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc config replace
-Replaces the value at the json path in the config file.  All examplesbelow are given in Bash.  If using another command line, please be aware that you may need to escapequotations appropriately.  Alternatively, you may use the patch file functionality.
+Replaces the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escape quotations appropriately.  Alternatively, you may use the patch file functionality.
 ```bash
 azdata bdc config replace --path -p 
                           --json-values -j

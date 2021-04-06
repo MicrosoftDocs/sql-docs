@@ -75,7 +75,7 @@ azdata app template pull --name ssis
 ```
 ### Optional Parameters
 #### `--name -n`
-Template name. For a full list off supported template namesrun `azdata app template list`
+Template name. For a full list off supported template names, run `azdata app template list`
 #### `--url -u`
 Specify a different template repository location. Default: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 #### `--destination -d`

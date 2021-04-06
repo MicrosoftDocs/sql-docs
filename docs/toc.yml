@@ -115,7 +115,7 @@ items:
           href: big-data-cluster/notebooks-deploy.md
   - name: Concepts
     items:
-    - name: Application deployment
+    - name: App Pool
       href: big-data-cluster/concept-application-deployment.md
     - name: Controller
       href: big-data-cluster/concept-controller.md

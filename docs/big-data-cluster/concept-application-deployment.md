@@ -16,7 +16,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Application deployment enables the deployment of applications on a SQL Server big data cluster (BDC) by providing interfaces to create, manage, and run applications. Applications deployed on a BDC benefit from the computational power of the cluster and can access the data that is available on the cluster. This increases scalability and performance of the applications, while managing the applications where the data lives. The supported application runtimes on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] are R, Python, dtexec, MLeap.
+Application deployment enables the deployment of applications on a SQL Server big data cluster (BDC) by providing interfaces to create, manage, and run applications. Applications deployed on a BDC benefit from the computational power of the cluster and can access the data that is available on the cluster. This increases scalability and performance of the applications, while managing the applications where the data lives. The supported application runtimes on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] are: R, Python, dtexec, and MLeap.
 
 The following sections describe the architecture and functionality of application deployment.
 
@@ -56,7 +56,7 @@ SQL Server 2019 CU5 enables support for BDC deployment on Red Hat OpenShift and 
 
 At the time of the CU5 release, the setup step of the applications deployed with [app deploy](app-create.md) interfaces will still run as *root* user. This is required since during setup extra packages that application will use are installed. Other user code deployed as part of the application will run as low privilege user. 
 
-In addition, `CAP_AUDIT_WRITE` capability is an optional capability necessary to allow scheduling SSIS applications using cron jobs. When the application’s yaml specification file specifies a schedule, the application will be triggered via a cron job, which requires the extra capability. Alternatively, the application can be triggered on demand with `azdata app run` through a web service call, which does not require the `CAP_AUDIT_WRITE` capability. Note that `CAP_AUDIT_WRITE` capability no longer needed for `cronjob` starting from SQL Server 2019 CU8 release. 
+In addition, `CAP_AUDIT_WRITE` capability is an optional capability necessary to allow scheduling SSIS applications using cron jobs. When the application's yaml specification file specifies a schedule, the application will be triggered via a cron job, which requires the extra capability. Alternatively, the application can be triggered on demand with `azdata app run` through a web service call, which does not require the `CAP_AUDIT_WRITE` capability. Note that `CAP_AUDIT_WRITE` capability no longer needed for `cronjob` starting from SQL Server 2019 CU8 release. 
 
 
 
@@ -77,6 +77,7 @@ allowedCapabilities:
 ## How to work with Application Deployment
 
 The two main interfaces for application deployment are: 
+
 - [Command line interface [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](app-create.md)
 - [Visual Studio Code and Azure Data Studio extension](app-deployment-extension.md)
 
@@ -86,7 +87,7 @@ It is also possible for an application to be executed using a RESTful web servic
 
 Application deployment enables the deployment of applications on a SQL Server BDC by providing interfaces to create, manage, and run applications.
 
-:::image type="content" source="media/concept-applicaiton-deployment/process-overview.png" alt-text="Identify sources (R, Python, SSIS (dtexec), deploy with command line, Azure Data Studio, or Visual Studio Code, and consume them with an interactive, RESTful API schedule.":::
+:::image type="content" source="media/concept-application-deployment/big-data-cluster-app-pool-process-overview.png" alt-text="Identify sources (R, Python, SSIS (dtexec), deploy with command line, Azure Data Studio, or Visual Studio Code, and consume them with an interactive, RESTful API schedule.":::
 
 The followings are the target scenarios for app deploy:
 
@@ -133,7 +134,7 @@ azdata app init --template python --name hello-py --version v1
 
 #### App deploy Python runtime limitations
 
-App deploy Python runtime doesn’t support scheduling scenario, once Python app is deployed, then up and running in BDC, a RESTful endpoint is configured to listen for incoming requests.
+App deploy Python runtime doesn't support scheduling scenario, once Python app is deployed, then up and running in BDC, a RESTful endpoint is configured to listen for incoming requests.
 
 ### Use app deploy R runtime
 

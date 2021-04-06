@@ -26,7 +26,7 @@ Built-in, internal retry providers have been implemented for the most common ret
 > [!NOTE]
 > All of the internal retry providers slightly randomize interval gap times before each retry. This randomization avoids hitting the database at the same time when multiple clients are trying to connect or execute a command with the same configuration.
 
-> [!CAUTION]
+> [!WARNING]
 > Internal retry providers don't support retrying on a command that executes in an open transaction. That operation will execute without retry logic. You can override this behavior by using custom retry logic. For more information, see [Configurable retry logic core APIs in SqlClient](configurable-retry-logic-core-apis-sqlclient.md).
 
 <!-- These links won't be live until after the feature is released in a GA version.

@@ -14,6 +14,24 @@ ms.prod: sql
 > [!NOTE]
 > As a preview feature, the technology presented in this article is subject to [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
 
+## April 2021
+
+### Breaking change
+
+No breaking changes
+
+### Other changes
+
+The new property *LicenseType* has been added to the **SQL Server - Azure Arc** resource type. This property indicates if your SQL Server instance requires a license or not. The property has one of the following values:
+| **Value** | **Description** |
+|:--|:--|
+|Paid|Indicates that the SQL instance uses Enterprise, Standard or Web edition of SQL Server|
+|Free|Indicates that the SQL instance uses Express or Developer edition of SQL Server|
+|HADR|Indicates that the SQL instance is a replica in an availability group. If it is covered by Software assurance, it may not require a license. For details, see [New high availability and disaster recovery benefits for SQL Server](https://cloudblogs.microsoft.com/sqlserver/2019/10/30/new-high-availability-and-disaster-recovery-benefits-for-sql-server/).
+
+> [!NOTE]
+> For the  existing **SQL Server - Azure Arc** resources, this property will show a Null value. It will be automatically updated with the correct value after Azure Arc enabled SQL Server becomes generally available.
+
 ## December 2020
 
 ### Breaking change

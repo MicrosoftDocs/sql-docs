@@ -1045,7 +1045,7 @@ Specifies the maximum size of the database. MAXSIZE must be valid for the specif
 |500 GB|N/A|N/A|√|√ (D)|√|
 |750 GB|N/A|N/A|√|√|√|
 |1024 GB|N/A|N/A|√|√|√ (D)|
-|From 1024 GB up to 4096 GB in increments of 256 GB* |N/A|N/A|N/A|N/A|√|√|
+|From 1024 GB up to 4096 GB in increments of 256 GB* |N/A|N/A|N/A|N/A|√|
 
 \* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size. P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For additional details regarding resource limitations for the DTU model, see [DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits).
 

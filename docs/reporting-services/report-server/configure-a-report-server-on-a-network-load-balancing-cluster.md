@@ -7,7 +7,7 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 03/09/2021
+ms.date: 03/23/2021
 ---
 
 # Configure a Report Server on a Network Load Balancing Cluster
@@ -57,7 +57,7 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
     The following example provides an illustration of the value you must obtain. Do not copy the example into your configuration files; the key values are not valid.  
   
     ```xml
-    <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
     ```  
   
 2. Open the Web.config file for Reportserver, and in the <`system.web`> section paste the <`machineKey`> element that you generated. By default, the Web.config file is located in \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  

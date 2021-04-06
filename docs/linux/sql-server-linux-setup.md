@@ -64,7 +64,7 @@ Microsoft also supports deploying and managing SQL Server containers by using Op
 
 SQL Server has the following system requirements for Linux:
 
-|||
+||Requirement|
 |-----|-----|
 | **Memory** | 2 GB |
 | **File System** | **XFS** or **EXT4** (other file systems, such as **BTRFS**, are unsupported) |

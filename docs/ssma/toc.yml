@@ -1,5 +1,7 @@
 - name: SQL Server Migration Assistant (SSMA)
   href: sql-server-migration-assistant.md
+- name: Usage and Diagnostic Data
+  href: ssma-diagnostic-data-collection.md
 - name: Access
   href: access/toc.yml
 - name: DB2

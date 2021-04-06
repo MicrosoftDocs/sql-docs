@@ -164,7 +164,9 @@ To view examples of how R and Python solutions can be deployed in SQL Server, se
 ### R tutorials
 
 + [Develop a predictive model in R with SQL machine learning](../tutorials/r-predictive-model-introduction.md)
+
 + [Predict NYC taxi fares with binary classification](../tutorials/r-taxi-classification-introduction.md)
+
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + [SQL development for R data scientists](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 ::: moniker-end
@@ -172,4 +174,5 @@ To view examples of how R and Python solutions can be deployed in SQL Server, se
 ### Python tutorials
 
 + [Predict ski rental with linear regression with SQL machine learning](../tutorials/python-ski-rental-linear-regression.md)
+
 + [Predict NYC taxi fares with binary classification](../tutorials/python-taxi-classification-introduction.md)

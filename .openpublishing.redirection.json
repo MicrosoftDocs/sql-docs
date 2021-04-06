@@ -42353,6 +42353,11 @@
     {
       "source_path": "docs/advanced-analytics/r/converting-r-code-for-use-in-sql-server.md",
       "redirect_url": "/sql/machine-learning/r/converting-r-code-for-use-in-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/advanced-analytics/r/converting-r-code-for-use-in-sql-server.md",
+      "redirect_url": "/sql/machine-learning/deploy/modify-r-python-code-to-run-in-sql-server",
       "redirect_document_id": true
     },
     {
@@ -42403,6 +42408,11 @@
     {
       "source_path": "docs/advanced-analytics/r/operationalizing-your-r-code.md",
       "redirect_url": "/sql/machine-learning/r/operationalizing-your-r-code",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/r/operationalizing-your-r-code.md",
+      "redirect_url": "/sql/machine-learning/deploy/operationalizing-your-r-code",
       "redirect_document_id": true
     },
     {

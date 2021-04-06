@@ -488,7 +488,8 @@ GO
 ```
   
 ### G. Using OUTPUT INTO with a large object data type  
- The following example updates a partial value in `DocumentSummary`, an `nvarchar(max)` column in the `Production.Document` table, by using the `.WRITE` clause. The word `components` is replaced by the word `features` by specifying the replacement word, the beginning location (offset) of the word to be replaced in the existing data, and the number of characters to be replaced (length). The example uses the `OUTPUT` clause to return the before and after images of the `DocumentSummary` column to the `@MyTableVar` `table` variable. Note that the full before and after images of the `DocumentSummary` column are returned.  
+ The following example updates a partial value in `DocumentSummary`, an `nvarchar(max)` column in the `Production.Document` table, by using the `.WRITE` clause. The word `components` is replaced by the word `features` by specifying the replacement word, the beginning location (offset) of the word to be replaced in the existing data, and the number of characters to be replaced (length). The example uses the `OUTPUT` clause to return the before and after images of the `DocumentSummary` column to the `@MyTableVar` table variable. Note that the full before and after images of the `DocumentSummary` column are returned.  
+
   
 ```sql
 USE AdventureWorks2012;

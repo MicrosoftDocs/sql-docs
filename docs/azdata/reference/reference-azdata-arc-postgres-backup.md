@@ -150,7 +150,7 @@ ID of the backup. If not specified, the most recent backup taken will be restore
 #### `--source-server-name -ssn`
 Name of the source Azure Arc enabled PostgreSQL Hyperscale server group. If not provided, the backup will be restored in place on the server group identified by --server-name.
 #### `--time -t`
-The point in time to restore to, given either as a timestamp or a number and suffix (m for minutes, h for hours, d for days, and w for weeks). E.g. 1.5h goes back 90 minutes. If specifed, --source-server-name must be given to restore the backup from a separate Azure Arc enabled PostgreSQL Hyperscale server group.
+The point in time to restore to, given either as a timestamp or a number and suffix (m for minutes, h for hours, d for days, and w for weeks). E.g. 1.5h goes back 90 minutes. If specified, --source-server-name must be given to restore the backup from a separate Azure Arc enabled PostgreSQL Hyperscale server group.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

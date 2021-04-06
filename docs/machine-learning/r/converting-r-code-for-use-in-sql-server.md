@@ -137,7 +137,7 @@ How much you change your code depends on whether you intend to submit the code f
 
 ### Package your R/Python code in a stored procedure
 
-+ Create a T-SQL user-defined function, embedding your code using the [sp-execute-external-script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) statement.
++ Create a T-SQL user-defined function, embedding your code using the [sp-execute-external-script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) statement.
 
 + If you have complex R code, use the R package **sqlrutils** to convert your code. This package is designed to help experienced R users write good stored procedure code.
   You rewrite your R code as a single function with clearly defined inputs and outputs, then use the **sqlrutils** package to generate the input and outputs in the correct format. The **sqlrutils** package generates the complete stored procedure code for you, and can also register the stored procedure in the database. 

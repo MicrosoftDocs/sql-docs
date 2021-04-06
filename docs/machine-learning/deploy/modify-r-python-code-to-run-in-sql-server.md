@@ -11,7 +11,7 @@ ms.author: davidph
 ms.custom: seo-lt-2019, contperf-fy21q3 
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
-# Convert R code for execution in SQL Server (In-Database) instances
+# Modify R/Python code to run in SQL Server (In-Database) instances
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 This article provides high-level guidance on how to modify R or Python code to run as a SQL Server stored procedure to improve performance when accessing SQL data.

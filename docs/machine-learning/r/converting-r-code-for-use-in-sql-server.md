@@ -123,9 +123,9 @@ How much you change your code depends on whether you intend to submit the code f
   For example, this R solution shows how user-defined T-SQL functions and R can perform the same feature engineering task: [Data Science End-to-End Walkthrough](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md).
   ::: moniker-end
 
-+ Consult with a database developer to determine ways to improve performance by using SQL Server features such as [memory-optimized tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md), or, if you have Enterprise Edition, [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)).
++ Consult with a database developer to determine ways to improve performance by using SQL Server features such as [memory-optimized tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md), or, if you have Enterprise Edition, [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).
 
-+ If you're using R, then if possible replace conventional R functions with **ScaleR** functions that support distributed execution. For more information, see [Comparison of Base R and Scale R Functions](/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r).
++ If you're using R, then if possible replace conventional R functions with **RevoScaleR** functions that support distributed execution. For more information, see [Comparison of Base R and RevoScaleR Functions](/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r).
 
 ## Step 3. Prepare for deployment
 
@@ -140,7 +140,7 @@ How much you change your code depends on whether you intend to submit the code f
 + Create a T-SQL user-defined function, embedding your code using the [sp-execute-external-script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) statement.
 
 + If you have complex R code, use the R package **sqlrutils** to convert your code. This package is designed to help experienced R users write good stored procedure code.
-  You rewrite your R code as a single function with clearly defined inputs and outputs, then use the **sqlrutils** package to generate the input and outputs in the correct format. The **sqlrutils** package generates the complete stored procedure code for you, and can also register the stored procedure in the database. 
+  You rewrite your R code as a single function with clearly defined inputs and outputs, then use the **sqlrutils** package to generate the input and outputs in the correct format. The **sqlrutils** package generates the complete stored procedure code for you, and can also register the stored procedure in the database.
 
   For more information and examples, see [sqlrutils (SQL)](ref-r-sqlrutils.md).
 
@@ -164,9 +164,9 @@ To view examples of how R and Python solutions can be deployed in SQL Server, se
 + R:
   + [Develop a predictive model in R with SQL machine learning](../tutorials/r-predictive-model-introduction.md)
   + [Predict NYC taxi fares with binary classification](../tutorials/r-taxi-classification-introduction.md)
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
+    ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
   + [SQL development for R data scientists](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
-::: moniker-end
+    ::: moniker-end
 
 + Python:
   + [Predict ski rental with linear regression with SQL machine learning](../tutorials/python-ski-rental-linear-regression.md)

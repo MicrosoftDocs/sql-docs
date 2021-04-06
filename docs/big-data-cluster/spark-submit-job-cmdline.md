@@ -187,7 +187,7 @@ azdata bdc hdfs cp --from-path parquet-etl-sample.sql --to-path "hdfs:/apps/ETL-
 
 ---
 
-#### Execute the Spark Scala application
+#### Execute the Spark application
 
 Use the following command to submit the application to SQL Server BDC Spark for execution.
 

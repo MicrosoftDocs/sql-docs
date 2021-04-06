@@ -52,7 +52,7 @@ When an application is executed, the Kubernetes service for the application prox
 
 ## <a id="app-deploy-security"></a> Security considerations for applications deployments on OpenShift
 
-SQL Server 2019 CU5 enables support for BDC deployment on Red Hat OpenShift and an updated security model for BDC so privileged containers no longer required. In addition to non-privileged, containers are running as non-root user by default for all new deployments using SQL Server 2019 CU5.
+SQL Server 2019 CU5 enables support for BDC deployment on Red Hat OpenShift and an updated security model for BDC so privileged containers no longer required. In addition to non-privileged, containers are running as non-root user by default for all new deployments using [SQL Server 2019 CU5](release-notes-big-data-cluster.md#cu5).
 
 At the time of the CU5 release, the setup step of the applications deployed with [app deploy](app-create.md) interfaces will still run as *root* user. This is required since during setup extra packages that application will use are installed. Other user code deployed as part of the application will run as low privilege user. 
 
@@ -74,7 +74,7 @@ allowedCapabilities:
 ...
 ```
 
-## How to work with Application Deployment
+## How to work with App Deploy inside Big Data Cluster
 
 The two main interfaces for application deployment are: 
 
@@ -126,11 +126,13 @@ output:
   result: int
 ```
 
-You can deploy a new python application using the following command:
+You can create the basic folder and file structure needed to deploy a Python app running on BDC cluster:
 
 ```console
 azdata app init --template python --name hello-py --version v1
 ```
+
+For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
 
 #### App deploy Python runtime limitations
 
@@ -142,7 +144,7 @@ In app deploy, BDC Python runtime allows R application inside the BDC cluster to
 
 The app deploy R runtime supports Microsoft R Open (MRO) 3.5.2.
 
-#### How to use it? 
+#### How to use it?
 
 In app deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields which can be specified:
 
@@ -168,11 +170,13 @@ output:
   result: data.fram
 ```
 
-You can deploy a new R application using the following command:
+You can create the basic folder and file structure needed to deploy a new R application using the following command:
 
 ```console
 azdata app init --template r --name hello-r --version v1
 ```
+
+For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
 
 #### More details on limitations
 
@@ -200,7 +204,7 @@ In app deploy, `spec.yaml` is where you provide the information that controller 
 
 - `schedule`: specify how often the job needs to be executed, for instances, when using cron expression to specify this value specifies as  "*/1 * * * *" meaning  the job is being executed on minute basis.
 
-You can deploy a new SSIS application using the following command:
+You can create the basic folder and file structure needed to deploy a new SSIS application using the following command:
 
 ```console
 azdata app init --name hello-is –version v1 --template ssis                                 
@@ -222,6 +226,8 @@ version: v1
 The example also creates a sample `hello.dtsx` package.
 
 All of your app files are in the same directory as your `spec.yaml`. The `spec.yaml` must be at the root level of your app source code directory including the dtsx file.
+
+For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
 
 #### Limitations of dtsx utility
 
@@ -247,11 +253,13 @@ bundleFileName: census-bundle.zip
 replicas: 1
 ```
 
-You can deploy a new MLeap application using the following command:
+You can create the basic folder and file structure needed to deploy a new MLeap application using the following command:
 
 ```console
 azdata app init --template mleap --name hello-mleap --version v1
 ```
+
+For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
 
 #### MLeap limitations
 

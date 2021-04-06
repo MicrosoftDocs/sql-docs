@@ -18,7 +18,9 @@ ms.technology: big-data-cluster
 
 Applications deployed on SQL Server Big Data Clusters (BDC) not only benefit from many advantages such as the computational power of the cluster but also access massive data that is available on the cluster. It dramatically improve the performance since your app sits in the same cluster where the data lives.
 
-This article describes how to deploy and manage R and Python script as an application inside a SQL Server Big Data Cluster.
+Applications are deployed and managed using [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. 
+
+This article provides examples of how to deploy apps from the command line inside a SQL Server Big Data Cluster. To learn how to use this in Visual Studio Code refer to [Visual Studio Code Extension](app-deployment-extension.md).
 
 ## What's new and improved
 

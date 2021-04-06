@@ -56,7 +56,7 @@ Use your own version of the R runtime with SQL Server, instead of the default ru
 
 ## Enable external script
 
-You can execute a Python external script with the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+You can execute an R external script with the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 To enable external scripts, use [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to execute the statement below.
 
@@ -78,6 +78,10 @@ print(file.path(R.home("bin"), "R"));
 print(R.version);
 print("Hello RExtension!");'
 ```
+
+::: zone pivot="platform-windows"
+[!INCLUDE [R custom runtime - Windows - known issues](includes/custom-runtime-r-windows-known-issues.md)]
+::: zone-end
 
 ::: zone pivot="platform-linux-rhel"
 [!INCLUDE [R custom runtime - Linux - RHEL known issues](includes/custom-runtime-r-linux-known-issues-rhel.md)]

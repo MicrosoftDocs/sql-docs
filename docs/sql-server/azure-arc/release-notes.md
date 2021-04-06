@@ -23,6 +23,7 @@ No breaking changes
 ### Other changes
 
 A new property *LicenseType* has been added to the **SQL Server - Azure Arc** resource type. It indicates if your SQL Server instance requires a license. The property can have one of the following values:
+
 | **Value** | **Description** |
 |:--|:--|
 | Paid | Indicates that the SQL instance uses Enterprise, Standard, or Web edition of SQL Server. |

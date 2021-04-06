@@ -388,7 +388,8 @@ GO
 ```
 
 ### D. Using OUTPUT INTO to return an expression  
- The following example builds on example C by defining an expression in the `OUTPUT` clause as the difference between the updated `VacationHours` value and the `VacationHours` value before the update was applied. The value of this expression is returned to the `@MyTableVar` `table` variable in the column `VacationHoursDifference`.  
+ The following example builds on example C by defining an expression in the `OUTPUT` clause as the difference between the updated `VacationHours` value and the `VacationHours` value before the update was applied. The value of this expression is returned to the `@MyTableVar` table variable in the column `VacationHoursDifference`.  
+
   
 ```sql
 USE AdventureWorks2012;  

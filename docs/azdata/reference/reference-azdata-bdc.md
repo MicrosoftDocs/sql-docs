@@ -5,7 +5,7 @@ description: Reference article for azdata bdc commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -21,8 +21,6 @@ The following article provides reference for the **sql** commands in the **azdat
 
 |Command|Description|
 | --- | --- |
-[azdata bdc spark](reference-azdata-bdc-spark.md) | The Spark commands allow the user to interact with the Spark system by creating and managing sessions, statements, and batches.
-[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | The HDFS module provides commands to access an HDFS file system.
 [azdata bdc create](#azdata-bdc-create) | Create Big Data Cluster.
 [azdata bdc delete](#azdata-bdc-delete) | Delete Big Data Cluster.
 [azdata bdc upgrade](#azdata-bdc-upgrade) | Update the images deployed in each container in the SQL Server Big Data Cluster.
@@ -36,6 +34,9 @@ The following article provides reference for the **sql** commands in the **azdat
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Spark service commands.
 [azdata bdc gateway](reference-azdata-bdc-gateway.md) | Gateway service commands.
 [azdata bdc app](reference-azdata-bdc-app.md) | App service commands.
+[azdata bdc settings](reference-azdata-bdc-settings.md) | BDC settings commands.
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | The HDFS module provides commands to access an HDFS file system.
+[azdata bdc spark](reference-azdata-bdc-spark.md) | The Spark commands allow the user to interact with the Spark system by creating and managing sessions, statements, and batches.
 ## azdata bdc create
 Create a SQL Server Big Data Cluster - Kubernetes configuration is required on your system along with the following environment variables ['AZDATA_USERNAME', 'AZDATA_PASSWORD'].
 ```bash
@@ -69,7 +70,7 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 Big data cluster name, used for kubernetes namespaces.
 #### `--config-profile -c`
-Big data cluster config profile, used for deploying the cluster: ['openshift-prod', 'aks-dev-test-ha', 'aro-dev-test-ha', 'aks-dev-test', 'kubeadm-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test']
+Big data cluster config profile, used for deploying the cluster: ['aro-dev-test-ha', 'openshift-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test-ha', 'aks-dev-test']
 #### `--accept-eula -a`
 Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for azdata can be viewed at https://aka.ms/eula-azdata-en.
 #### `--node-label -l`
@@ -127,7 +128,9 @@ azdata bdc upgrade --name -n
                    
 [--stability-threshold -s]  
                    
-[--component-timeout -p]
+[--component-timeout -p]  
+                   
+[--force -f]
 ```
 ### Examples
 BDC upgrade to a new image tag "cu2" from the same repository.
@@ -156,6 +159,8 @@ The number of minutes to wait for the controller or controller database to upgra
 The number of minutes to wait after an upgrade before marking it as stable.
 #### `--component-timeout -p`
 The number of minutes to wait for each phase of the upgrade (after controller upgrade) to complete before pausing the upgrade.
+#### `--force -f`
+If present, ignores the cluster health check before starting the upgrade
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

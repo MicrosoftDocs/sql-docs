@@ -90,6 +90,8 @@ Cumulative Update 10 (CU10) release for SQL Server 2019.
 SQL Server 2019 CU10 for SQL Server Big Data Clusters, includes important capabilities:
 
 - Upgraded base images from Ubuntu 16.04 to Ubuntu 20.04.
+   > [!CAUTION]
+   > Ubuntu 20.04 has stricter security requirements and you may see issues when using BDC to connect to SQL Server instances before SQL Server 2017. For more information, see [Failed to connect to remote instance of SQL Server 2016 or older](#failed-to-connect-to-remote-instance-of-sql-server-2016-or-older).
 - High availability support for Hadoop KMS components.
 - Additional configuration settings for SQL Server networking and process affinity at the resource-scope. See [Master Pool resource-scope settings](reference-config-bdc-overview.md#master-pool-resource-scope-settings).
 - Resource management for Spark-related containers through [BDC cluster-scope settings](reference-config-bdc-overview.md#bdc-cluster-scope-settings).
@@ -232,6 +234,19 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 ## Known issues
 
+### Failed to connect to remote instance of SQL Server 2016 or older
+
+- **Affected releases**: CU10
+- **Issue and customer impact**: When using PolyBase in BDC CU10 to connect to an existing SQL Server instance that is using a certificate for channel encryption that was created using the SHA1 algorithm, you may observe the following error:     
+
+> `Msg 105082, Level 16, State 1, Line 1`
+> `105082;Generic ODBC error: [Microsoft][ODBC Driver 17 for SQL Server]SSL Provider: An existing connection was forcibly closed by the remote host.`
+> `Additional error <2>: ErrorMsg: [Microsoft][ODBC Driver 17 for SQL Server]Client unable to establish connection, SqlState: 08001, NativeError: 10054 Additional error <3>: ErrorMsg: [Microsoft][ODBC Driver 17 for SQL Server]`
+> `Invalid connection string attribute, SqlState: 01S00, NativeError: 0 .`
+
+- **Solution**: Due to the heightened security requirements of Ubuntu 20.04 over the previous base image version, the remote connection is not allowed for a certificate using the SHA1 algorithm. The default self-signed certificate of SQL Server releases 2005-2016 used the SHA1 algorithm. Refer to this blog post for more information on [changes made to self-signed certificates in SQL Server 2017](https://techcommunity.microsoft.com/t5/sql-server-support/changes-to-hashing-algorithm-for-self-signed-certificate-in-sql/ba-p/319026). In the remote SQL Server instance, use a certificate that is created with an algorithm that uses at least 112 bits of security (for example, SHA256). For production environments, it is recommended to obtain a trusted certificate from a Certificate Authority. For testing purposes, self-signed certificate can also be used. To create a self-signed certificate, see the [Powershell Cmdlet New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) or [certreq command](/windows-server/administration/windows-commands/certreq_1). For instructions to install a new certificate it on the remote SQL Server instance, see [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)
+
+
 ### Partial loss of logs collected in ElasticSearch upon rollback
 
 - **Affected releases**: Existing clusters when a failed upgrade to CU9 results in a rollback or user issues a downgrade to an older release.
@@ -252,7 +267,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 - **Affected releases**: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version *20.0.0*
 
-- **Issue and customer impact**: Implementation of *copy-logs* command is assuming `kubectl` client tool version 1.15 or higher is installed on the client machine from which the command is issued. If `kubectl` version 1.14 is used, the *azdata bdc debug copy-logs* command will complete with no failures, but logs are not copied. When run with *--debug* flag, you can see this error in the output: *source ‘.’ is invalid*.
+- **Issue and customer impact**: Implementation of *copy-logs* command is assuming `kubectl` client tool version 1.15 or higher is installed on the client machine from which the command is issued. If `kubectl` version 1.14 is used, the *azdata bdc debug copy-logs* command will complete with no failures, but logs are not copied. When run with *--debug* flag, you can see this error in the output: *source '.' is invalid*.
 
 - **Workaround**: Install `kubectl` version 1.15 or higher  tool on the same client machine and re-issue the `azdata bdc copy-logs` command. See instructions [here](deploy-big-data-tools.md) how to install `kubectl`.
 
@@ -300,7 +315,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 - **Issue and customer impact**: During big data cluster deployment, the workflow generates a set of [service accounts](active-directory-objects.md).Depending on the password expiration policy set in the Domain Controller, passwords for these accounts can expire (default is 42 days). At this time, there is no mechanism to rotate credentials for all accounts in BDC, so the cluster will become inoperable once the expiration period is met.
 
-- **Workaround**: Update the expiration policy for the BDC service accounts to “Password never expires” in the Domain Controller. For a complete list of these accounts see [Auto generated Active Directory objects](active-directory-objects.md). This action can be done before or after the expiration time. In the latter case, Active Directory will reactivate the expired passwords.
+- **Workaround**: Update the expiration policy for the BDC service accounts to "Password never expires" in the Domain Controller. For a complete list of these accounts see [Auto generated Active Directory objects](active-directory-objects.md). This action can be done before or after the expiration time. In the latter case, Active Directory will reactivate the expired passwords.
 
 ### Credentials for accessing services through gateway endpoint
 
@@ -444,10 +459,9 @@ Upgrading using different repositories for current and target builds is not supp
 
 - **Issue and customer impact**: When SQL Server master instance is in Active Directory authentication mode, a query that selects only from external tables, where at least one of the external tables is in a storage pool, and inserts into another external table, the query returns:
 
-   ```
-   Msg 7320, Level 16, State 102, Line 1
-   Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "SQLNCLI11". Only domain logins can be used to query Kerberized storage pool.
-   ```
+> `Msg 7320, Level 16, State 102, Line 1`
+> `Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "SQLNCLI11". Only domain logins can be used to query Kerberized storage pool.`
+   
 
 - **Workaround**: Modify the query in one of the following ways. Either join the storage pool table to a local table, or insert into the local table first, then read from the local table to insert into the data pool.
 
@@ -456,6 +470,7 @@ Upgrading using different repositories for current and target builds is not supp
 - **Issue and customer impact**: In an HA configuration, databases that have encryption enabled can't be used after a failover since the master key used for encryption is different on each replica. 
 
 - **Workaround**: There is no workaround for this issue. We recommend to not enable encryption in this configuration until a fix is in place.
+
 
 ## Next steps
 

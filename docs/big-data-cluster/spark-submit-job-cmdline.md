@@ -35,7 +35,7 @@ If direct integration to a REST API is desired, use standard Livy calls to submi
 
 This application exemplifies a common Data Engineering pattern, loading tabular data from an HDFS landing zone path and then writing using a table format to an HDFS processed zone path. The dataset used in this sample application can be downloaded [here](https://ailab.criteo.com/download-criteo-1tb-click-logs-dataset/).
 
-# [PySpark](#tab/pyspark)
+### [PySpark](#tab/pyspark)
 
 In this example, we will use the following PySpark application saved as a python file named ```parquet_etl_sample.py``` in the local machine.
 
@@ -77,7 +77,7 @@ Run the following command to upload __`parquet_etl_sample.py`__ from the local d
 azdata bdc hdfs cp --from-path parquet_etl_sample.py  --to-path "hdfs:/apps/ETL-Pipelines/parquet_etl_sample.py"
 ```
 
-# [Spark Scala](#tab/scala)
+### [Spark Scala](#tab/scala)
 
 In this example, we will use the following Spark application written in Scala Spark.
 
@@ -119,7 +119,7 @@ This example assumes that an application jar bundle named `parquet-etl-sample.ja
 azdata bdc hdfs cp --from-path parquet-etl-sample.jar  --to-path "hdfs:/apps/ETL-Pipelines/parquet-etl-sample.jar"
 ```
 
-# [Spark SQL](#tab/sql)
+### [Spark SQL](#tab/sql)
 
 This example uses Spark SQL to perform the ingestion logic using tables and views to provide a SQL centric approach to ETL.
 
@@ -192,7 +192,7 @@ azdata bdc hdfs cp --from-path parquet-etl-sample.sql --to-path "hdfs:/apps/ETL-
 Use the following command to submit the application to SQL Server BDC Spark for execution.
 
 
-# [azdata](#tab/azdata/pyspark)
+# [PySpark and azdata](#tab/azdata/pyspark)
 
 This is the __`azdata`__ command that executes this application using commonly specified parameters. For complete parameter options for `azdata bdc spark batch create`, see [`azdata bdc spark`](../azdata/reference/reference-azdata-bdc-spark.md).
 
@@ -204,7 +204,7 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet_etl_sample.py 
 -n MyETLPipelinePySpark --executor-count 2 --executor-cores 2 --executor-memory 1664m
 ```
 
-# [curl using Livy](#tab/curl/pyspark)
+# [PySpark and curl using Livy](#tab/curl/pyspark)
 
 This is the __`curl`__ command that executes this application using Livy. Make sure to replace USER, PASSWORD, and LIVY_ENDPOINT to reflect your environment.
 
@@ -225,7 +225,7 @@ curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
 EOF
 ```
 
-# [azdata](#tab/azdata/scala)
+# [Scala and azdata](#tab/azdata/scala)
 
 This is the __`azdata`__ command that executes this application using commonly specified parameters. For complete parameter options for `azdata bdc spark batch create`, see [`azdata bdc spark`](../azdata/reference/reference-azdata-bdc-spark.md).
 
@@ -238,7 +238,7 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet-etl-sample.jar
 -n MyETLPipeline --executor-count 2 --executor-cores 2 --executor-memory 1664m
 ```
 
-# [curl using Livy](#tab/curl/scala)
+# [Scala and curl using Livy](#tab/curl/scala)
 
 This is the __`curl`__ command that executes this application using Livy. Make sure to replace USER, PASSWORD, and LIVY_ENDPOINT to reflect your environment.
 
@@ -260,7 +260,7 @@ curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
 EOF
 ```
 
-# [azdata](#tab/azdata/sql)
+# [SQL and azdata](#tab/azdata/sql)
 
 This is the __`azdata`__ command that executes this application using commonly specified parameters. For complete parameter options for `azdata bdc spark batch create`, see [`azdata bdc spark`](../azdata/reference/reference-azdata-bdc-spark.md).
 
@@ -272,7 +272,7 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet_etl_sample.sql
 -n MyETLPipelineSQL --executor-count 2 --executor-cores 2 --executor-memory 1664m
 ```
 
-# [curl using Livy](#tab/curl/sql)
+# [SQL and curl using Livy](#tab/curl/sql)
 
 This is the __`curl`__ command that executes this application using Livy. Make sure to replace USER, PASSWORD, and LIVY_ENDPOINT to reflect your environment.
 

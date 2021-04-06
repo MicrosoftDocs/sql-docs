@@ -5,7 +5,7 @@ description: Connect an instance of SQL Server to Azure Arc
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 09/10/2020
+ms.date: 04/06/2021
 ms.topic: conceptual
 ms.prod: sql
 ---

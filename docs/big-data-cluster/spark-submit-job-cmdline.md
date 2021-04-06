@@ -27,17 +27,17 @@ This article provides guidance on how to use command line tools to execute Spark
 
 This article provides usage examples of command line patterns to submit Spark applications to SQL Server Big Data Clusters.
 
-The Azure Data CLI [`azdata bdc spark` commands](../azdata/reference/reference-azdata-bdc-spark.md) surfaces all capabilities of SQL Server Big Data Clusters Spark on the command line. Whilst this guide focus on job submission, `azdata bdc spark` also support interactive modes for Python, Scala, SQL and R through the `azdata bdc spark session` command.
+The Azure Data CLI [`azdata bdc spark` commands](../azdata/reference/reference-azdata-bdc-spark.md) surfaces all capabilities of SQL Server Big Data Clusters Spark on the command line. Whilst this guide focus on job submission, `azdata bdc spark` also support interactive modes for Python, Scala, SQL, and R through the `azdata bdc spark session` command.
 
-If direct integration to a REST API is desired, use standard Livy calls to submit jobs. We will use the `curl` command line tool in the Livy examples to execute the REST API call. For a detailed example on how to interact with the Spark Livy endpoint using Python code, see ["Using Spark from Livy end point"](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/restful-api-access/accessing_spark_via_livy.ipynb) on Github.
+If direct integration to a REST API is desired, use standard Livy calls to submit jobs. We will use the `curl` command line tool in the Livy examples to execute the REST API call. For a detailed example on how to interact with the Spark Livy endpoint using Python code, see ["Using Spark from Livy end point"](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/restful-api-access/accessing_spark_via_livy.ipynb) on GitHub.
 
 ## Simple ETL using SQL Server BDC Spark
 
-This application exemplifies a common Data Engineering pattern, loading tabular data from a HDFS landing zone path and then writing using a table format to a HDFS processed zone path. The dataset used in this sample application can be downloaded [here](https://ailab.criteo.com/download-criteo-1tb-click-logs-dataset/).
+This application exemplifies a common Data Engineering pattern, loading tabular data from an HDFS landing zone path and then writing using a table format to an HDFS processed zone path. The dataset used in this sample application can be downloaded [here](https://ailab.criteo.com/download-criteo-1tb-click-logs-dataset/).
 
-### [PySpark](#tab/pyspark/)
+### [PySpark](#tab/pyspark)
 
-In this example we will use the following PySpark application saved as a python file named ```parquet_etl_sample.py``` in the local machine.
+In this example, we will use the following PySpark application saved as a python file named ```parquet_etl_sample.py``` in the local machine.
 
 ```python
 from pyspark.sql import SparkSession
@@ -77,47 +77,9 @@ Run the following command to upload __`parquet_etl_sample.py`__ from the local d
 azdata bdc hdfs cp --from-path parquet_etl_sample.py  --to-path "hdfs:/apps/ETL-Pipelines/parquet_etl_sample.py"
 ```
 
-#### Execute the PySpark application
+### [Spark Scala](#tab/scala)
 
-Use the following command to submit the application to SQL Server BDC Spark for execution.
-
-##### [azdata](#tab/pyspark/azdata)
-
-This is the __`azdata`__ command that executes this application using commonly specified parameters. For complete parameter options for `azdata bdc spark batch create`, see [`azdata bdc spark`](../azdata/reference/reference-azdata-bdc-spark.md).
-
-This application requires the `spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation` Spark config parameter, so the command is using the `--config` option. This was deliberate to exemplify how to pass configurations into the Spark session. You may use the `--config` option to specify multiple configuration parameters. This could also be achieved inside the application session setting the configuration in the SparkSession object.
-
-```bash
-azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet_etl_sample.py \
---config '{"spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation":"true"}' \
--n MyETLPipelinePySpark --executor-count 2 --executor-cores 2 --executor-memory 1664m
-```
-
-##### [curl using Livy](#tab/pyspark/curl)
-
-This is the __`curl`__ command that executes this application using Livy. Make sure to replace USER, PASSWORD and LIVY_ENDPOINT to reflect your environment.
-
-```bash
-curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
--H 'Content-Type: application/json; charset=utf-8' \
---data-binary @- << EOF
-{
-    "file": "/apps/ETL-Pipelines/parquet_etl_sample.py",
-    "name": "MyETLPipelinePySpark",
-    "numExecutors": 2,
-    "executorCores": 2,
-    "executorMemory": "1664m",
-    "conf": {
-        "spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation":"true"
-    }
-}
-EOF
-```
-
-
-### [Spark Scala](#tab/scala/)
-
-In this example we will use the following Spark application written in Scala Spark.
+In this example, we will use the following Spark application written in Scala Spark.
 
 ```scala
 import org.apache.spark.sql.SparkSession
@@ -157,47 +119,7 @@ This example assumes that an application jar bundle named `parquet-etl-sample.ja
 azdata bdc hdfs cp --from-path parquet-etl-sample.jar  --to-path "hdfs:/apps/ETL-Pipelines/parquet-etl-sample.jar"
 ```
 
-#### Execute the Spark Scala application
-
-Use the following command to submit the application to SQL Server BDC Spark for execution.
-
-##### [azdata](#tab/scala/azdata)
-
-This is the __`azdata`__ command that executes this application using commonly specified parameters. For complete parameter options for `azdata bdc spark batch create`, see [`azdata bdc spark`](../azdata/reference/reference-azdata-bdc-spark.md).
-
-This application requires the `spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation` Spark config parameter, so the command is using the `--config` option. This was deliberate to exemplify how to pass configurations into the Spark session. You may use the `--config` option to specify multiple configuration parameters. This could also be achieved inside the application session setting the configuration in the SparkSession object.
-
-```bash
-azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet-etl-sample.jar \
---class "ParquetETLSample" \
---config '{"spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation":"true"}' \
--n MyETLPipeline --executor-count 2 --executor-cores 2 --executor-memory 1664m
-```
-
-##### [curl using Livy](#tab/scala/curl)
-
-This is the __`curl`__ command that executes this application using Livy. Make sure to replace USER, PASSWORD and LIVY_ENDPOINT to reflect your environment.
-
-```bash
-curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
--H 'Content-Type: application/json; charset=utf-8' \
---data-binary @- << EOF
-{
-    "file": "/apps/ETL-Pipelines/parquet-etl-sample.jar",
-    "class": "ParquetETLSample",
-    "name": "MyETLPipeline",
-    "numExecutors": 2,
-    "executorCores": 2,
-    "executorMemory": "1664m",
-    "conf": {
-        "spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation":"true"
-    }
-}
-EOF
-```
-
-
-### [Spark SQL](#tab/sql/)
+### [Spark SQL](#tab/sql)
 
 This example uses Spark SQL to perform the ingestion logic using tables and views to provide a SQL centric approach to ETL.
 
@@ -263,11 +185,82 @@ Run the following command to upload the __```parquet-etl-sample.sql```__ from th
 azdata bdc hdfs cp --from-path parquet-etl-sample.sql --to-path "hdfs:/apps/ETL-Pipelines/parquet-etl-sample.sql"
 ```
 
-#### Execute the Spark SQL application
+---
+
+#### Execute the Spark Scala application
 
 Use the following command to submit the application to SQL Server BDC Spark for execution.
 
-##### [azdata](#tab/sql/azdata)
+
+# [PySpark and azdata](#tab/azdata/pyspark)
+
+This is the __`azdata`__ command that executes this application using commonly specified parameters. For complete parameter options for `azdata bdc spark batch create`, see [`azdata bdc spark`](../azdata/reference/reference-azdata-bdc-spark.md).
+
+This application requires the `spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation` Spark config parameter, so the command is using the `--config` option. This was deliberate to exemplify how to pass configurations into the Spark session. You may use the `--config` option to specify multiple configuration parameters. This could also be achieved inside the application session setting the configuration in the SparkSession object.
+
+```bash
+azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet_etl_sample.py \
+--config '{"spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation":"true"}' \
+-n MyETLPipelinePySpark --executor-count 2 --executor-cores 2 --executor-memory 1664m
+```
+
+# [PySpark and curl using Livy](#tab/curl/pyspark)
+
+This is the __`curl`__ command that executes this application using Livy. Make sure to replace USER, PASSWORD, and LIVY_ENDPOINT to reflect your environment.
+
+```bash
+curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
+-H 'Content-Type: application/json; charset=utf-8' \
+--data-binary @- << EOF
+{
+    "file": "/apps/ETL-Pipelines/parquet_etl_sample.py",
+    "name": "MyETLPipelinePySpark",
+    "numExecutors": 2,
+    "executorCores": 2,
+    "executorMemory": "1664m",
+    "conf": {
+        "spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation":"true"
+    }
+}
+EOF
+```
+
+# [Scala and azdata](#tab/azdata/scala)
+
+This is the __`azdata`__ command that executes this application using commonly specified parameters. For complete parameter options for `azdata bdc spark batch create`, see [`azdata bdc spark`](../azdata/reference/reference-azdata-bdc-spark.md).
+
+This application requires the `spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation` Spark config parameter, so the command is using the `--config` option. This was deliberate to exemplify how to pass configurations into the Spark session. You may use the `--config` option to specify multiple configuration parameters. This could also be achieved inside the application session setting the configuration in the SparkSession object.
+
+```bash
+azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet-etl-sample.jar \
+--class "ParquetETLSample" \
+--config '{"spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation":"true"}' \
+-n MyETLPipeline --executor-count 2 --executor-cores 2 --executor-memory 1664m
+```
+
+# [Scala and curl using Livy](#tab/curl/scala)
+
+This is the __`curl`__ command that executes this application using Livy. Make sure to replace USER, PASSWORD, and LIVY_ENDPOINT to reflect your environment.
+
+```bash
+curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
+-H 'Content-Type: application/json; charset=utf-8' \
+--data-binary @- << EOF
+{
+    "file": "/apps/ETL-Pipelines/parquet-etl-sample.jar",
+    "class": "ParquetETLSample",
+    "name": "MyETLPipeline",
+    "numExecutors": 2,
+    "executorCores": 2,
+    "executorMemory": "1664m",
+    "conf": {
+        "spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation":"true"
+    }
+}
+EOF
+```
+
+# [SQL and azdata](#tab/azdata/sql)
 
 This is the __`azdata`__ command that executes this application using commonly specified parameters. For complete parameter options for `azdata bdc spark batch create`, see [`azdata bdc spark`](../azdata/reference/reference-azdata-bdc-spark.md).
 
@@ -279,9 +272,9 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet_etl_sample.sql
 -n MyETLPipelineSQL --executor-count 2 --executor-cores 2 --executor-memory 1664m
 ```
 
-##### [curl using Livy](#tab/sql/curl)
+# [SQL and curl using Livy](#tab/curl/sql)
 
-This is the __`curl`__ command that executes this application using Livy. Make sure to replace USER, PASSWORD and LIVY_ENDPOINT to reflect your environment.
+This is the __`curl`__ command that executes this application using Livy. Make sure to replace USER, PASSWORD, and LIVY_ENDPOINT to reflect your environment.
 
 ```bash
 curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
@@ -299,9 +292,8 @@ curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches \
 }
 EOF
 ```
----
----
 
+---
 
 ## Monitoring Spark jobs
 
@@ -321,7 +313,7 @@ This is the `curl` command using Livy.
 curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches
 ```
 
-In order to __get information__ for a Spark batch with the given ID execute the following command. The batch id is returned from 'spark batch create'.
+In order to __get information__ for a Spark batch with the given ID execute the following command. The `batch id` is returned from 'spark batch create'.
 
 This is the `azdata` command:
 
@@ -335,7 +327,7 @@ This is the `curl` command using Livy.
 curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches/<BATCH_ID>
 ```
 
-In order to __get state information__ for a Spark batch with the given ID execute the following command.
+In order to __get state information__ for a Spark batch with the given ID, execute the following command.
 
 This is the `azdata` command:
 
@@ -363,12 +355,10 @@ This is the `curl` command using Livy.
 curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches/<BATCH_ID>/log
 ```
 
-
 ## Next steps
 
 For more information on troubleshooting Spark code, see [Troubleshoot pyspark notebook](troubleshoot-pyspark-notebook.md).
 
-A comprehensive set of Spark sample code is available on [SQL Server big data clusters Spark samples](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark) on Github.
+A comprehensive set of Spark sample code is available on [SQL Server big data clusters Spark samples](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark) on GitHub.
 
 For more information on SQL Server big data cluster and related scenarios, see [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
-

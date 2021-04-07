@@ -108,7 +108,7 @@ For more assistance with completing this migration scenario, see the following r
 | [Optimization Guide for Mainframe App/Data recompiled to .NET & SQL Server](https://aka.ms/dmj-wp-mainframe-optimize) | This guide offers optimization advice for executing point-lookups against SQL Server from .NET as efficiently as possible. Customers who want to migrate from mainframe databases to SQL Server might want to migrate existing mainframe-optimized design patterns, especially when they use third-party tools (such as Raincode Compiler) to automatically migrate mainframe code (such as COBOL/JCL) to T-SQL and C# .NET. |
 
 > [!NOTE]
-> This resource was developed as part of the Data Migration Jumpstart Program (DM Jumpstart), which is sponsored by the Azure Data Group engineering team. The core charter of DM Jumpstart is to unblock and accelerate complex modernization and complete data platform migration opportunities to the Microsoft Azure Data platform. If you think your organization would be interested in participating in the DM Jumpstart program, contact your account team and ask that they submit a nomination.
+> The Data SQL Engineering team developed these resources. This team's core charter is to unblock and accelerate complex modernization for data platform migration projects to Microsoft's Azure data platform.
 
 ## Next steps
 

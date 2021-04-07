@@ -5,7 +5,7 @@ description: Reference article for azdata notebook commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -34,7 +34,7 @@ View notebook.  This shows all cells.
 ```bash
 azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb"
 ```
-View notebook.  This shows all cells unless a cell with error in its output is encountered.  In that case the output stops.
+View notebook.  This shows all cells unless a cell with error in it's output is encountered.  In that case the output stops.
 ```bash
 azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb" --stop-on-error
 ```
@@ -43,7 +43,7 @@ azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb" --stop-on-e
 The path to the notebook to view.
 ### Optional Parameters
 #### `--continue-on-error -c`
-Continue displaying additional cells ignoring any cell errors found in the notebook output.  The default behavior is to stop on error.  Stopping makes seeing the first cell that encountered an error easier.
+Continue displaying additional cells ignoring any cell errors found in the notebook output. The default behavior is to stop on error.  Stopping makes seeing the first cell that encountered an error easier.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -69,7 +69,9 @@ azdata notebook run --path -p
                     
 [--clear -c]  
                     
-[--timeout -t]
+[--timeout -t]  
+                    
+[--env -e]
 ```
 ### Examples
 Run notebook.
@@ -93,6 +95,9 @@ In interactive mode clear the console before rendering a cell.
 #### `--timeout -t`
 Seconds to wait for the execution to complete. The value -1 indicates wait forever.
 `600`
+#### `--env -e`
+Name of environment.
+`base`
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

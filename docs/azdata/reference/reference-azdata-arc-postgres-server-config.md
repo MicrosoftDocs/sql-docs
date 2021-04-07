@@ -5,7 +5,7 @@ description: Reference article for azdata arc postgres server config commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -21,27 +21,27 @@ The following article provides reference for the **sql** commands in the **azdat
 
 |Command|Description|
 | --- | --- |
-[azdata arc postgres server config init](#azdata-arc-postgres-server-config-init) | Initializes the CRD and specification files for a PostgreSQL server group.
+[azdata arc postgres server config init](#azdata-arc-postgres-server-config-init) | Initializes the CRD and specification files for an Azure Arc enabled PostgreSQL Hyperscale server group.
 [azdata arc postgres server config add](#azdata-arc-postgres-server-config-add) | Add a value for a json path in a config file.
 [azdata arc postgres server config remove](#azdata-arc-postgres-server-config-remove) | Remove a value for a json path in a config file.
 [azdata arc postgres server config replace](#azdata-arc-postgres-server-config-replace) | Replace a value for a json path in a config file.
 [azdata arc postgres server config patch](#azdata-arc-postgres-server-config-patch) | Patches a config file based on a json patch file.
 ## azdata arc postgres server config init
-Initializes the CRD and specification files for a PostgreSQL server group.
+Initializes the CRD and specification files for an Azure Arc enabled PostgreSQL Hyperscale server group.
 ```bash
 azdata arc postgres server config init --path -p 
-                                       [--engine-version -ev]
+                                       []
 ```
 ### Examples
-Initializes the CRD and specification files for a PostgreSQL server group.
+Initializes the CRD and specification files for an Azure Arc enabled PostgreSQL Hyperscale server group.
 ```bash
 azdata arc postgres server config init --path ./template
 ```
 ### Required Parameters
 #### `--path -p`
-A path where the CRD and specification for the PostgreSQL server group should be written.
+A path where the CRD and specification for the Azure Arc enabled PostgreSQL Hyperscale server group should be written.
 ### Optional Parameters
-#### `--engine-version -ev`
+#### ``
 Must be 11 or 12. The default value is 12.
 ### Global Arguments
 #### `--debug`
@@ -55,7 +55,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more 
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata arc postgres server config add
-Adds the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escapequotations appropriately.  Alternatively, you may use the patch file functionality.
+Adds the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escape quotations appropriately.  Alternatively, you may use the patch file functionality.
 ```bash
 azdata arc postgres server config add --path -p 
                                       --json-values -j
@@ -82,7 +82,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more 
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata arc postgres server config remove
-Removes the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escapequotations appropriately.  Alternatively, you may use the patch file functionality.
+Removes the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escape quotations appropriately.  Alternatively, you may use the patch file functionality.
 ```bash
 azdata arc postgres server config remove --path -p 
                                          --json-path -j
@@ -109,7 +109,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more 
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata arc postgres server config replace
-Replaces the value at the json path in the config file.  All examplesbelow are given in Bash.  If using another command line, please be aware that you may need to escapequotations appropriately.  Alternatively, you may use the patch file functionality.
+Replaces the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escape quotations appropriately.  Alternatively, you may use the patch file functionality.
 ```bash
 azdata arc postgres server config replace --path -p 
                                           --json-values -j

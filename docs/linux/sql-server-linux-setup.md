@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios. 
 author: VanMSFT 
 ms.author: vanto
-ms.date: 06/22/2020
+ms.date: 04/07/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sqlfreshmay19"

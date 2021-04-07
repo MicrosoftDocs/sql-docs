@@ -7,7 +7,7 @@ ms.date: 02/08/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperf-fy21q3
 zone_pivot_groups: sqlml-platforms
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---

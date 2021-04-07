@@ -2,7 +2,7 @@
 description: "PolyBase features and limitations"
 title: "PolyBase features and limitations"
 descriptions: This article summarizes PolyBase features available for SQL Server products and services. It lists T-SQL operators supported for pushdown and known limitations.
-ms.date: 03/23/2021
+ms.date: 04/06/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -58,8 +58,8 @@ The following T-SQL functions or syntax will prevent pushdown computation:
 - `GREATEST`
 - `LEAST`
 - `PARSE`
-- `FORMAT` 
-- `TRIM`
+
+Pushdown support for the `FORMAT` and `TRIM` syntax was introduced in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] CU10.
 
 For more information, see [Pushdown computations in PolyBase](polybase-pushdown-computation.md).
 

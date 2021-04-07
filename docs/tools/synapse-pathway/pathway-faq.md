@@ -59,15 +59,8 @@ A. Since you can run Synapse Pathway in your local environment, there is no data
 
 A. Azure Synapse Pathway is currently in **Preview**.   Support for Synapse Pathway is available through Microsoft support channel. You can raise the ticket either in the Azure portal or standard (typically on-prem support) portals.
 
-
 > [!NOTE] 
 > Like any other Azure Service, all preview services are eligible for support, just without SLA's in place.
-
-<!-- ### Troubleshooting and optimization
-
-#### Q. Why do I see slow performance while running the code conversion?
-
-#### Q. Translation of errors or unexpected results? -->
 
 ## Next steps
 

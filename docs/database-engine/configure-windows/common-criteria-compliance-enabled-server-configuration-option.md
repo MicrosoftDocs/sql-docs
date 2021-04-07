@@ -1,6 +1,6 @@
 ---
 title: Common Criteria Compliance Enabled Configuration
-description: Learn which criteria the common criteria compliance option enables in SQL Server. See how to comply with Common Criteria Evaluation Assurance Level. EUCC certification process.
+description: Learn which criteria the common criteria compliance option enables in SQL Server. See how to comply with Common Criteria Evaluation Assurance Level. For EUCC certification approval. A world-wide compliance obligation across regulated industries and authorities.
 ms.prod: sql
 ms.prod_service: high-availability
 ms.technology: configuration
@@ -23,7 +23,7 @@ ms.date: 04/07/2021
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-The common criteria compliance option enables the following elements that are required for the [Common Criteria for Information Technology Security Evaluation](https://www.commoncriteriaportal.org/products/#DB). A requirement for countries that require a certification to offer SQL Server.
+The common criteria compliance option enables the following elements that are required for the [Common Criteria for Information Technology Security Evaluation](https://www.commoncriteriaportal.org). A requirement for a world-wide compliance obligation across regulated industries and authorities.
 
 | Criteria | Description |
 |----------|-------------|

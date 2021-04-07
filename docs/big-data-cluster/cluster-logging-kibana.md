@@ -12,9 +12,15 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Check out cluster logs  with Kibana Dashboard
+# Check out cluster logs with Kibana Dashboard
 
-This article describes how to monitor an application inside [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)].
+This article describes how to virtualise the logs an application inside [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]. SQL Server Big Data Cluster uses Fluentbit which is an open source log Processor and forwarder, it fetches the logs from BDC components in the cluster and stores them in ElasticSearch. From Kibana Dashboard, you can virtualise and search the log of your interest.
+
+# BDC logs stored in Elastic Search
+
+BDC related logs stored in Elastic Search are categorised as the following : 
+- Kubernetes host related logs, including all the logs by pods, by namespace, per namespace.
+- BDC workloads related logs : those metrics are the metrics related to SQL Server, Spark and HDFS are collected by CollectD, including such as SQL Server DMV metrics. 
 
 ## Prerequisites
 
@@ -47,6 +53,10 @@ The link to a Kibana dashboard:
 
 > [!NOTE]
 > The older Microsoft Edge browser is incompatible with Kibana, you must use the Edge chromium-based browser for the dashboard to display correctly. You will see a blank page when loading the dashboards using an unsupported browser, see [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
+
+
+From Kibana Dashboard, you can use filters such as 'Kubernetes_container_name', 'kubernetes_pod_name', 'log_filename' and 'service_name' to help you quickly virtualise all the logs such as logs from BDC controller, from SQL Server or any logs from different pods, services and more. 
+
 
 ## Next steps
 

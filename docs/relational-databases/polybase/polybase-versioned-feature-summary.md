@@ -107,6 +107,8 @@ PolyBase has the following limitations:
 
 - If you use Hive tables with transactional = true, PolyBase can't access the data in the Hive table's directory.
 
+- PolyBase services require SQL Server service to have TCP/IP network protocol enabled to function correctly. Additionally, TCP/IP Protocol configuration setting **Listen All** must be set to **Yes**.
+
 <!--SQL Server 2016-->
 ::: moniker range="= sql-server-2016 "
 

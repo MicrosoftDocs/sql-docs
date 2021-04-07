@@ -86,6 +86,8 @@ WHERE is_masked = 1;
  
  Adding a dynamic data mask is implemented as a schema change on the underlying table, and therefore cannot be performed on a column with dependencies. To work around this restriction, you can first remove the dependency, then add the dynamic data mask and then re-create the dependency. For example, if the dependency is due to an index dependent on that column, you can drop the index, then add the mask, and then re-create the dependent index.
  
+Whenever you project an expression referencing a column for which a data masking function is defined, the expression will also be masked. Regardless of the function (default, email, random, custom string) used to mask the referenced column, the resulting expression will always be masked with the default function.
+ 
 
 ## Security Note: Bypassing masking using inference or brute-force techniques
 

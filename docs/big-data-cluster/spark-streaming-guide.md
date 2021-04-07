@@ -152,8 +152,8 @@ from pyspark.sql import SparkSession
 from pyspark.sql.types import *
 from pyspark.sql.functions import *
 
-# Sets up batch size to 5 seconds
-duration_ms = 5000
+# Sets up batch size to 15 seconds
+duration_ms = 15000
 # Changes Spark Session into a Structured Streaming context
 sc = SparkContext.getOrCreate()
 ssc = StreamingContext(sc, duration_ms)
@@ -196,16 +196,20 @@ def foreach_batch_function(df, epoch_id):
         #  |-- sensor: string (nullable = true)
         #  |-- measure1: double (nullable = true)
         #  |-- measure2: double (nullable = true)
+        sensor_df.persist()
         # Write to HDFS:
         sensor_df.write.format('parquet').mode('append').saveAsTable('sensor_data')
-        sensor_count_df = (sensor_df.groupBy(col('sensor')).count().withColumn('ts', current_timestamp()).withColumnRenamed('count', 'tot'))
+        # Create a summarization dataframe
+        sensor_stats_df = (sensor_df.groupBy('sensor').agg({'measure1':'avg', 'measure2':'avg', 'sensor':'count'}).withColumn('ts', current_timestamp()).withColumnRenamed('avg(measure1)', 'measure1_avg').withColumnRenamed('avg(measure2)', 'measure2_avg').withColumnRenamed('avg(measure1)', 'measure1_avg').withColumnRenamed('count(sensor)', 'count_sensor'))
         # root
-        #  |-- sensor: string (nullable = true)
-        #  |-- count: long (nullable = false)
-        #  |-- ts: timestamp (nullable = false)
-        sensor_count_df.write.format('parquet').mode('append').saveAsTable('sensor_data_counts')
+        # |-- sensor: string (nullable = true)
+        # |-- measure2_avg: double (nullable = true)
+        # |-- measure1_avg: double (nullable = true)
+        # |-- count_sensor: long (nullable = false)
+        # |-- ts: timestamp (nullable = false)
+        sensor_stats_df.write.format('parquet').mode('append').saveAsTable('sensor_data_stats')
         # Group by and send metrics to an output kafka topic:
-        sensor_count_df.writeStream
+        sensor_stats_df.writeStream
             .format("kafka")
             .option("topic", topic_to)
             .option("kafka.bootstrap.servers", bootstrap_servers)
@@ -214,19 +218,20 @@ def foreach_batch_function(df, epoch_id):
             .option("kafka.sasl.jaas.config", sasl)
             .save()
         # For example, you could write to SQL Server
-        # df.write.format('com.microsoft.sqlserver.jdbc.spark').mode('append').option('url', url).option('dbtable', sql_table).save()
+        # df.write.format('com.microsoft.sqlserver.jdbc.spark').mode('append').option('url', url).option('dbtable', datapool_table).save()
+        sensor_df.unpersist()
 
 
 writer = streaming_input_df.writeStream.foreachBatch(foreach_batch_function).start().awaitAnyTermination()
 
 ```
 
-Here are the tables that need to be create using __Spark SQL on Hive__:
+Here are the tables that need to be created using __Spark SQL__:
 ```sql
 CREATE TABLE IF NOT EXISTS sensor_data (sensor string, measure1 double, measure2 double)
 USING PARQUET;
 
-CREATE TABLE IF NOT EXISTS sensor_data_counts (sensor string, tot long, ts timestamp)
+CREATE TABLE IF NOT EXISTS sensor_data_stats (sensor string, measure2_avg double, measure1_avg double, count_sensor long, ts timestamp)
 USING PARQUET;
 ```
 
@@ -254,7 +259,7 @@ Both libraries must comply with the following requirements:
 > [!CAUTION]
    > As a general rule use the most recent compatible library. The code provided in this guide was tested using Apache Kafka for Azure Event Hubs and is provided as-is, not as a supportability statement. Apache Kafka offers Bidirectional Client Compatibility by design, but library implementations vary across programming languages. Always refer to your Kafka platform documentation to correctly map compatibility.
 
-#### Standardized Kafka Cluster Version
+#### Shared library locations for jobs on HDFS
 
 If multiple applications connect to the same Kafka cluster or your organization has a single versioned Kafka cluster, copy the appropriate library jar files to a shared location on HDFS. Then all jobs should reference the same library files.
 

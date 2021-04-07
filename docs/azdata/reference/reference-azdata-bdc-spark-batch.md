@@ -5,7 +5,7 @@ description: Reference article for azdata bdc spark batch commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -62,7 +62,7 @@ azdata bdc spark batch create --file -f
 ### Examples
 Create a new Spark batch.
 ```bash
-azdata bdc spark batch create --code "2+2"
+azdata spark batch create --code "2+2"
 ```
 ### Required Parameters
 #### `--file -f`
@@ -115,7 +115,7 @@ azdata bdc spark batch list
 ### Examples
 List all the active batches.
 ```bash
-azdata bdc spark batch list
+azdata spark batch list
 ```
 ### Global Arguments
 #### `--debug`
@@ -137,7 +137,7 @@ azdata bdc spark batch info --batch-id -i
 ### Examples
 Get batch info for batch with ID of 0.
 ```bash
-azdata bdc spark batch info --batch-id 0
+azdata spark batch info --batch-id 0
 ```
 ### Required Parameters
 #### `--batch-id -i`
@@ -162,7 +162,7 @@ azdata bdc spark batch log --batch-id -i
 ### Examples
 Get batch log for batch with ID of 0.
 ```bash
-azdata bdc spark batch log --batch-id 0
+azdata spark batch log --batch-id 0
 ```
 ### Required Parameters
 #### `--batch-id -i`
@@ -187,7 +187,7 @@ azdata bdc spark batch state --batch-id -i
 ### Examples
 Get batch state for batch with ID of 0.
 ```bash
-azdata bdc spark batch state --batch-id 0
+azdata spark batch state --batch-id 0
 ```
 ### Required Parameters
 #### `--batch-id -i`
@@ -212,7 +212,7 @@ azdata bdc spark batch delete --batch-id -i
 ### Examples
 Delete a batch.
 ```bash
-azdata bdc spark batch delete --batch-id 0
+azdata spark batch delete --batch-id 0
 ```
 ### Required Parameters
 #### `--batch-id -i`

@@ -5,7 +5,7 @@ description: Reference article for azdata arc resource-kind commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -47,21 +47,13 @@ Increase logging verbosity. Use --debug for full debug logs.
 ## azdata arc resource-kind get
 Gets the Arc resource-kind's template file.
 ```bash
-azdata arc resource-kind get --kind -k 
-                             [--dest -d]
+azdata arc resource-kind get 
 ```
 ### Examples
 Example command for getting an Arc resource-kind's CRD template file.
 ```bash
 azdata arc resource-kind get --kind sqldb
 ```
-### Required Parameters
-#### `--kind -k`
-The kind of arc resource you want the template file for.
-### Optional Parameters
-#### `--dest -d`
-The directory where you"d like to place the template files.
-`template`
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

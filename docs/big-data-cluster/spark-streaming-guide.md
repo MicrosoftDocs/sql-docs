@@ -222,7 +222,7 @@ def foreach_batch_function(df, epoch_id):
         sensor_df.unpersist()
 
 
-writer = streaming_input_df.writeStream.foreachBatch(foreach_batch_function).start().awaitAnyTermination()
+writer = streaming_input_df.writeStream.foreachBatch(foreach_batch_function).start().awaitTermination()
 
 ```
 

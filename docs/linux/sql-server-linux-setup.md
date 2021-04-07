@@ -39,12 +39,12 @@ SQL Server is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterpris
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| Platform | Supported version(s) | Get
-|-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8  | [Get RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | v12 SP2 | [Get SLES v12 SP2](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04, 18.04 | [Get Ubuntu 18.04](https://releases.ubuntu.com/bionic/)
-| **Docker Engine** | 1.8+ | [Get Docker](https://www.docker.com/get-started)
+| Platform | Supported version(s) | Get |
+|-----|-----|----- |
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8  | [Get RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation) |
+| **SUSE Linux Enterprise Server** | v12 SP2 | [Get SLES v12 SP2](https://www.suse.com/products/server) |
+| **Ubuntu** | 16.04, 18.04 | [Get Ubuntu 18.04](https://releases.ubuntu.com/bionic/) |
+| **Docker Engine** | 1.8+ | [Get Docker](https://www.docker.com/get-started) |
 
 ::: moniker-end
 

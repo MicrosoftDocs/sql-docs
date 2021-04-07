@@ -54,7 +54,7 @@ The following tutorial provides an example of scoring using a stored procedure i
 
 ## Boost performance and scale
 
-Although the open-source R language has known limitations with regards to large data sets, the [RevoScaleR package APIs](../r/ref-r-revoscaler.md) included with SQL Server Machine Learning Service can operate on large datasets and benefit from multi-threaded, multi-core, multi-process in-database computations.
+Although the open-source R language has known limitations with regard to large data sets, the [RevoScaleR package APIs](../r/ref-r-revoscaler.md) included with SQL Server Machine Learning Service can operate on large datasets and benefit from multi-threaded, multi-core, multi-process in-database computations.
 
 If your R solution uses complex aggregations or involves large datasets, you can leverage SQL Server's highly efficient in-memory aggregations and columnstore indexes, and let the R code handle the statistical computations and scoring.
 

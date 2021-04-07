@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "RIP (Residual Information Protection)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.reviewer: wopeter
 ms.custom: ""
 ms.date: 04/07/2021
 ---

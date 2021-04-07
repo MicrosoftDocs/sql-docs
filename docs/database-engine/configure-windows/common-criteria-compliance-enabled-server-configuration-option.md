@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "common criteria compliance [Database Engine]"
   - "Risidual Information Protection [Database Engine]"
   - "RIP (Residual Information Protection)"
-author: rothja
-ms.author: jroth
+author: markingmyname
+ms.author: maghan
 ms.reviewer: ""
 ms.custom: ""
 ms.date: 04/07/2021

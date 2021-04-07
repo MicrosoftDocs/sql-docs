@@ -1,7 +1,7 @@
 ---
-title: "AppContext switches in SqlClient"
-description: "Describes how to use AppContext switches that are available in SqlClient."
-ms.date: "06/15/2020"
+title: AppContext switches in SqlClient
+description: Learn about the AppContext switches available in SqlClient and how to use them to modify some default behaviors.
+ms.date: 03/24/2021
 dev_langs: 
   - "csharp"
 ms.prod: sql
@@ -47,7 +47,8 @@ This switch will toggle the driver's behavior to use a managed networking implem
 
 [!INCLUDE [appliesto-netfx-xxxx-xxxx-md](../../includes/appliesto-netfx-xxxx-xxxx-md.md)]
 
-Transparent Network IP Resolution (TNIR) is a revision of the existing MultiSubnetFailover feature. TNIR affects the connection sequence of the driver in the case where the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname. TNIR interacts with MultiSubnetFailover to provide the following three connection sequences:<br />
+Transparent Network IP Resolution (TNIR) is a revision of the existing MultiSubnetFailover feature. TNIR affects the connection sequence of the driver in the case where the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname. TNIR interacts with MultiSubnetFailover to provide the following three connection sequences:
+
 * 0: One IP is attempted, followed by all IPs in parallel
 * 1: All IPs are attempted in parallel
 * 2: All IPs are attempted one after another
@@ -65,7 +66,7 @@ TransparentNetworkIPResolution is enabled by default. MultiSubnetFailover is dis
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.DisableTNIRByDefaultInConnectionString", true);
 ```
 
-For more information about setting these properties, see the documentation for [SqlConnection.ConnectionString Property](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring). 
+For more information about setting these properties, see the documentation for [SqlConnection.ConnectionString Property](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring).
 
 ## Enable a minimum timeout during login
 
@@ -86,6 +87,18 @@ By default, ReadAsync runs synchronously and blocks the calling thread on .NET F
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking", false);
 ```
+
+## Enable configurable retry logic
+
+[!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
+
+By default, configurable retry logic is disabled. To enable this feature, set the AppContext switch **Switch.Microsoft.Data.SqlClient.EnableRetryLogic** to `true` at application startup. This switch is required, even if a retry provider is assigned to a connection or command.
+
+```csharp
+AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.EnableRetryLogic", false);
+```
+
+* For information on how to enable the switch by using a configuration file see [Enable safety switch](configurable-retry-logic-config-file-sqlclient.md#enable-safety-switch).
 
 ## See also
 

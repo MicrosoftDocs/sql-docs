@@ -1,10 +1,11 @@
 ---
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/06/2021
+ms.date: 04/07/2021
 ms.topic: include
 author: anmunde
 ms.author: anmunde
+ms.reviewer: dphansen
 ---
 ## Known issues
 
@@ -12,4 +13,6 @@ If you're using the R runtime provided as part of [SQL Server Machine Learning S
 
 *Error: cons memory exhausted (limit reached?)*
 
-To resolve this issue, set the environment variable `R_NSIZE` indicating the number of fixed sized objects(`cons cells`) to a reasonable value for example, `200000`. Then, restart the launchpad service and retry.
+To resolve this issue:
+ 1. Set the environment variable `R_NSIZE` indicating the number of fixed sized objects (`cons cells`) to a reasonable value, for example, `200000`.
+ 1. Restart the **Launchpad** service and retry the execution of the script.

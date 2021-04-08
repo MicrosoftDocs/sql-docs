@@ -129,7 +129,7 @@ python producer.py <my-sample-topic>
 
 ## Streaming scenarios
 
-|Streaming Pattern             |Scenario Description and Implementation         |
+|Streaming pattern             |Scenario description and implementation         |
 |------------------------------|------------------------------------------------|
 |Pull from Kafka or Event Hubs |Create a Spark streaming job that pulls data continuously from the streaming engine, performing optional transformations and analytics logic.|
 |Sink streaming data into HDFS |In general this correlates with the previous pattern; after the streaming pull and transformation logic, data may be written to a multitude of data locations in order to achieve with the desired data persistence requirement.|

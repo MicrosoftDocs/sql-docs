@@ -140,7 +140,7 @@ python producer.py <my-sample-topic>
 This sample application implements all three streaming patterns described in the previous section. The application goes about the following:
 
 1. Sets up configuration variables for connecting to the streaming service
-1. Creates a spark streaming data frame to pull data
+1. Creates a Spark streaming data frame to pull data
 1. Writes aggregated data locally to HDFS
 1. Writes aggregated data to a different topic in the streaming service
 

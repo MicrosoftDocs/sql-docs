@@ -9,7 +9,7 @@ ms.author: vanto
 
 ## Supported platforms
 
-| Platform | File System | Installation Guide | Get |
+| Platform | File System | Installation Guide | Get | 
 |-----|-----|-----|-----|
 | Red Hat Enterprise Linux 7.3 - 7.8, or 8.0 - 8.3 Server | XFS or EXT4 | [Installation guide](../linux/quickstart-install-connect-red-hat.md) | [Get RHEL 8.0](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation) |
 | SUSE Enterprise Linux Server v12 SP2 - SP5 | XFS or EXT4 | [Installation guide](../linux/quickstart-install-connect-suse.md) | [Get SLES v12](https://www.suse.com/products/server) |

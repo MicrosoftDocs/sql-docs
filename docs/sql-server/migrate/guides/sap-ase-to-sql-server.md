@@ -22,7 +22,7 @@ For other migration guides, see [Azure Database Migration Guides](https://docs.m
 
 ## Prerequisites
 
-Before you begin migrating your SAP SE database to SQL Server:
+Before you begin migrating your SAP ASE database to SQL Server:
 
 - Verify that your source environment is supported.
 - Get [SQL Server Migration Assistant for SAP Adaptive Server Enterprise (formerly SAP Sybase ASE)](https://www.microsoft.com/download/details.aspx?id=54256).
@@ -60,7 +60,7 @@ To convert the schema:
 1. Right-click the database or object you want to migrate in **SAP ASE Metadata Explorer**, and select **Migrate Data**. Alternatively, you can select the **Migrate Data** tab. To migrate data for an entire database, select the check box next to the database name. To migrate data from individual tables, expand the database, expand **Tables**, and then select the check boxes next to the tables. To omit data from individual tables, clear the check boxes.
 1. Compare and review the structure of the schema to identify potential problems.
 
-   After the schema conversion completes, you can save this project locally for an offline schema remediation exercise. On the **File** menu, select **Save Project**. This step gives you an opportunity to evaluate the source and target schemas offline and perform remediation before you publish the schema to SQL Server.
+   After the schema conversion finishes, you can save this project locally for an offline schema remediation exercise. On the **File** menu, select **Save Project**. This step gives you an opportunity to evaluate the source and target schemas offline and perform remediation before you publish the schema to SQL Server.
 
 To learn more, see [Convert schema](../../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md).
 
@@ -72,7 +72,7 @@ To publish your schema and migrate the data:
 
 1. Publish the schema by right-clicking the database in **SQL Server Metadata Explorer** and selecting **Synchronize with Database**. This action publishes the SAP ASE schema to the SQL Server instance.
 1. Migrate the data by right-clicking the database or object you want to migrate in **SAP ASE Metadata Explorer** and selecting **Migrate Data**. Alternatively, you can select the **Migrate Data** tab. To migrate data for an entire database, select the check box next to the database name. To migrate data from individual tables, expand the database, expand **Tables**, and then select the check boxes next to the tables. To omit data from individual tables, clear the check boxes.
-1. After the migration completes, view the **Data Migration Report**.
+1. After the migration finishes, view the **Data Migration Report**.
 1. Connect to your SQL Server instance by using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), and validate the migration by reviewing the data and schema.
 
 ## Post-migration

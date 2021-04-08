@@ -295,6 +295,6 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/sample-spark-streaming
 
 ## Next steps
 
-To learn how to submit Spark jobs to SQL Server big data cluster using azdata or Livy endpoints, see [Submit Spark jobs using command-line tools](spark-submit-job-cmdline.md).
+To learn how to submit Spark jobs to SQL Server big data cluster using azdata or Livy endpoints, see [Submit Spark jobs using command-line tools](spark-submit-job-command-line.md).
 
 For more information on SQL Server big data cluster and related scenarios, See [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

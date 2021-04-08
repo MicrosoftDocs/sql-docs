@@ -34,7 +34,8 @@ In this quickstart, you use Docker to pull and run the SQL Server 2017 container
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 > [!NOTE]
-> Starting with SQL Server 2019 CU3, Ubuntu 18.04 is supported.
+> - Starting with SQL Server 2019 CU3, Ubuntu 18.04 is supported.
+> - Starting with SQL Server 2019 CU10, Ubuntu 20.04 is supported.
 
 In this quickstart, you use Docker to pull and run the SQL Server 2019 container image, [mssql-server](https://hub.docker.com/r/microsoft/mssql-server). Then connect with **sqlcmd** to create your first database and run queries.
 
@@ -43,7 +44,7 @@ In this quickstart, you use Docker to pull and run the SQL Server 2019 container
 
 ::: moniker-end
 
-This image consists of SQL Server running on Linux based on Ubuntu 18.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows. This quickstart specifically focuses on using the SQL Server on **Linux** image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows-developer Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
+This image consists of SQL Server running on Linux based on Ubuntu 20.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows. This quickstart specifically focuses on using the SQL Server on **Linux** image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows-developer Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
 ## <a id="requirements"></a> Prerequisites
 

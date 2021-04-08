@@ -441,7 +441,7 @@ items:
       - name: Submit Spark jobs in Azure Data Studio
         href: big-data-cluster/spark-submit-job.md
       - name: Submit Spark jobs using the command line
-        href: big-data-cluster/spark-submit-job-cmdline.md
+        href: big-data-cluster/spark-submit-job-command-line.md
       - name: Submit Spark jobs in Visual Studio Code
         href: big-data-cluster/spark-hive-tools-vscode.md
       - name: Submit Spark jobs in IntelliJ

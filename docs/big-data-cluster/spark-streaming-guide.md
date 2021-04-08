@@ -1,5 +1,5 @@
 ---
-title: SQL Server Big Data Clusters Spark Streaming Guide
+title: SQL Server Big Data Clusters Spark streaming guide
 titleSuffix: SQL Server Big Data Clusters
 description: This guide covers streaming use cases and how to implement it using SQL Server Big Data Clusters capabilities.
 author: dacoelho 
@@ -12,11 +12,11 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# SQL Server Big Data Clusters Spark Streaming Guide
+# SQL Server Big Data Clusters Spark streaming guide
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This guide covers streaming use cases and how to implement it using SQL Server Big Data Clusters Spark. 
+This guide covers streaming use cases and how to implement it using SQL Server Big Data Clusters Spark.
 
 In this guide, you'll learn how to:
 
@@ -34,9 +34,9 @@ In this guide, you'll learn how to:
 This guide assumes good level of understanding of streaming technology concepts and architectures.
 The following articles provide excellent conceptual baselines:
 
-* [Data Architecture Guide - Real time processing](https://docs.microsoft.com/azure/architecture/data-guide/big-data/real-time-processing)
-* [Use Azure Event Hubs from Apache Kafka applications](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview)
-* [Data Architecture Guide - Choosing a real-time message ingestion technology in Azure](https://docs.microsoft.com/azure/architecture/data-guide/technology-choices/real-time-ingestion)
+* [Data Architecture Guide - Real time processing](/azure/architecture/data-guide/big-data/real-time-processing)
+* [Use Azure Event Hubs from Apache Kafka applications](/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview)
+* [Data Architecture Guide - Choosing a real-time message ingestion technology in Azure](/azure/architecture/data-guide/technology-choices/real-time-ingestion)
 
 ### Apache Kafka and Azure Event Hub conceptual mapping
 
@@ -50,7 +50,7 @@ The following articles provide excellent conceptual baselines:
 
 ### Reproducibility
 
-This guide leverages the producer application provided by the [Quickstart: Data streaming with Event Hubs using the Kafka protocol](https://docs.microsoft.com/azure/event-hubs/event-hubs-quickstart-kafka-enabled-event-hubs). Furthermore, there are sample applications in many programming languages on [Azure Event Hubs for Apache Kafka GitHub](https://github.com/Azure/azure-event-hubs-for-kafka) page to help you jumpstart streaming scenarios.
+This guide leverages the producer application provided by the [Quickstart: Data streaming with Event Hubs using the Kafka protocol](/azure/event-hubs/event-hubs-quickstart-kafka-enabled-event-hubs). Furthermore, there are sample applications in many programming languages on [Azure Event Hubs for Apache Kafka GitHub](https://github.com/Azure/azure-event-hubs-for-kafka) page to help you jumpstart streaming scenarios.
 
 Here is a modified `producer.py` that streams simulated sensor JSON data into Streaming engine using a Kafka compatible client. It is important to notice that Azure Event Hubs is Kafka protocol compatible. Follow the setup instructions in the [GitHub repository](https://github.com/Azure/azure-event-hubs-for-kafka/tree/master/quickstart/python) to get the sample to work for you. The `conf` dictionary is where all connection information takes place and your mileage may vary depending on your environment. Make sure you replace at least `bootstrap.servers` and `sasl.password` as it is the most relevant configuration in the code sample bellow.
 

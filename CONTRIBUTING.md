@@ -13,12 +13,6 @@ For more information, see the [Code of Conduct FAQ](https://opensource.microsoft
 
 There are many ways to contribute to the documentation, review the sections below to find out which one is right for you.
 
-### Reporting Bugs and Suggesting Enhancements
-
-Please use the Feedback tool at the bottom of any article to submit bugs and suggestions.
-
-![Feedback Tool](media/feedback-tool.png)
-
 ### Editing in GitHub
 
 Anyone can submit edits to our documentation. For more information, see [Quick edits to existing documents](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents) in our contributors guide.
@@ -26,3 +20,9 @@ Anyone can submit edits to our documentation. For more information, see [Quick e
 ### Pull Request
 
 Review the guidance for [Pull Requests](https://docs.microsoft.com/contribute/how-to-write-workflows-major#pull-request-processing) in our contributors guide.
+
+### Reporting Bugs and Suggesting Enhancements
+
+Please use the Feedback tool at the bottom of any article to submit bugs and suggestions.
+
+![Feedback Tool](media/feedback-tool.png)

@@ -23,6 +23,9 @@ This example shows how to create and debug a Transact\-SQL stored procedure by s
 > [!WARNING]  
 > The following procedure uses entities created in procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
   
+> [!IMPORTANT]
+> This article is not applicable to [Azure SQL Managed Instance](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance), and [Azure SQL Database](https://docs.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview). Due to specificities of Azure SQL cloud architecture Transact\-SQL debugger is not supported for these products.
+
 ### To debug stored procedures  
   
 1.  In **Solution Explorer**, right-click the **TradeDev** project and select **Add**, then **Stored Procedure**. Name this new stored procedure **AddProduct** and click **Add**.  

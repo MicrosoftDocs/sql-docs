@@ -135,7 +135,7 @@ python producer.py <my-sample-topic>
 |Sink streaming data into HDFS |In general this correlates with the previous pattern; after the streaming pull and transformation logic, data may be written to a multitude of data locations in order to achieve with the desired data persistence requirement.|
 |Push from Spark into Kafka or Event Hubs |After processing by Spark, data may be pushed back into the external streaming engine. There are many scenarios where this is desired, such as real time product recommendation, micro batch fraud and anomaly detection, etc.|
 
-## Sample Spark Streaming application
+## Sample Spark streaming application
 
 This sample application implements all three streaming patterns described in the previous section. The application goes about the following:
 

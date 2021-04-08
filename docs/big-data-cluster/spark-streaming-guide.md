@@ -127,7 +127,7 @@ Execute the sample producer application using the following command, replacing `
 python producer.py <my-sample-topic>
 ```
 
-## Streaming Scenarios
+## Streaming scenarios
 
 |Streaming Pattern             |Scenario Description and Implementation         |
 |------------------------------|------------------------------------------------|

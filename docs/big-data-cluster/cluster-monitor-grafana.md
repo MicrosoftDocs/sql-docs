@@ -16,7 +16,7 @@ ms.technology: big-data-cluster
 
 This article describes how to monitor an application inside a SQL Server Big Data Cluster. SQL Server Big Data Cluster exposes Grafana Dashboard for monitoring, those metrics are stored in influxDB. Those metrics are categorised as the following : 
 - Kubernetes host related metrics, it's collected by Telegraf which is an agent for collecting, processing, aggregating, and writing metrics.
-- BDC workloads related metrics : those metrics are the metrics related to SQL Server, Spark and HDFS are collected by CollectD, including such as SQL Server DMV metrics. 
+- BDC workloads related metrics : those metrics are the metrics related to SQL Server, Spark and HDFS are collected by CollectD, including such as SQL Server DMV metrics and [SQL server extended events (XEvents)](../relational-databases/extended-events/extended-events.md). 
 
 # Available Metrics 
 
@@ -26,7 +26,7 @@ The following metrics are available in SQL Server Big Data Clusters :
 |---|---|---|
 |Hosted Node Metrics|Metrics related to Kubernetes host | Those metrics including : CPU, RAM usage, Disk IOPS, Load averages etc.   |
 |Pods and Containers Metrics|Metrics related to Kubernetes pods and containers, Grafana provides filter allows to filter those metrics by pods or even specific container. | Those metrics including : CPU, RAM, Disk and network usage.   |
-|Apps Metrics|Metrics related to the [Apps deployed](concept-application-deployment.md)on BDC cluster, Grafana provides filter allows to filter those metrics by specific app and app version. | Those metrics including : CPU, RAM usage and HTTP requests status   |
+|Apps Metrics|Metrics related to the [Apps deployed](concept-application-deployment.md) on BDC cluster, Grafana provides filter allows to filter those metrics by specific app and app version. | Those metrics including : CPU, RAM usage and HTTP requests status   |
 |SQL Server Metrics|Metrics related to SQL Server | Those metrics including : Transaction/sec, Batch Requests/sec, Database Activity, SQL Server Activity etc, in particular, when ContainerAG is enabled, you can also monitor the alwaysOn from here.   |
 |Spark Metrics |Metrics related to Spark apps. | Those metrics including : Executor hdfs writes, JVM GC time, JVM heap usage etc.   |
 

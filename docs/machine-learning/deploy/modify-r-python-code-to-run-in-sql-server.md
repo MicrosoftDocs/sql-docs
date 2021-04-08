@@ -80,8 +80,7 @@ How much you change your code depends on whether you intend to submit the code f
 	,@script = N'R code here'
   ```
 
-+ Any variables that you pass in as parameters of the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) must be mapped to variables in the code. By default, variables are mapped by name. 
-  All columns in the input dataset must also be mapped to variables in the script.
++ Any variables that you pass in as parameters of the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) must be mapped to variables in the code. By default, variables are mapped by name. All columns in the input dataset must also be mapped to variables in the script.
   
   For example, assume your R script contains a formula like this one:
 

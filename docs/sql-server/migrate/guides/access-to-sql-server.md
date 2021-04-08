@@ -81,7 +81,7 @@ To convert database objects:
 
    ![Screenshot that shows Convert Schema.](./media/access-to-sql-server/convert-schema.png)
 
-1. After the conversion completes, compare and review the converted objects to the original objects to identify potential problems and address them based on the recommendations.
+1. After the conversion finishes, compare and review the converted objects to the original objects to identify potential problems and address them based on the recommendations.
 
    ![Screenshot that shows comparing converted queries.](./media/access-to-sql-server/query-comparison.png)
 

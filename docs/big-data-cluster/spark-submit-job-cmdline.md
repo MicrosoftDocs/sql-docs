@@ -33,7 +33,7 @@ If direct integration to a REST API is desired, use standard Livy calls to submi
 
 ## Simple ETL using SQL Server BDC Spark
 
-This application exemplifies a common Data Engineering pattern, loading tabular data from an HDFS landing zone path and then writing using a table format to an HDFS processed zone path. The dataset used in this sample application can be downloaded [here](https://ailab.criteo.com/download-criteo-1tb-click-logs-dataset/).
+This application exemplifies a common Data Engineering pattern, loading tabular data from an HDFS landing zone path and then writing using a table format to an HDFS processed zone path. The dataset used in this sample application can be downloaded [here](https://ailab.criteo.com/download-criteo-1tb-click-logs-dataset/). You can create PySpark applications using PySpark, Spark Scala, or Spark SQL, and the following examples provide sample exercises in each solution. Use the tabs below to select your platform of choice, and later, to execute the application with `azdata` or `curl`.
 
 ### [PySpark](#tab/pyspark)
 

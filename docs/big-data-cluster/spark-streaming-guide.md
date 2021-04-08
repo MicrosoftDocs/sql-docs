@@ -50,7 +50,7 @@ The following articles provide excellent conceptual baselines:
 
 ### Reproducibility
 
-This guide leverages the producer application provided by the [Quickstart: Data streaming with Event Hubs using the Kafka protocol](https://docs.microsoft.com/azure/event-hubs/event-hubs-quickstart-kafka-enabled-event-hubs). Furthermore, there are sample applications in many programming languages on [Azure Event Hubs for Apache Kafka Github](https://github.com/Azure/azure-event-hubs-for-kafka) page to help you jumpstart streaming scenarios.
+This guide leverages the producer application provided by the [Quickstart: Data streaming with Event Hubs using the Kafka protocol](https://docs.microsoft.com/azure/event-hubs/event-hubs-quickstart-kafka-enabled-event-hubs). Furthermore, there are sample applications in many programming languages on [Azure Event Hubs for Apache Kafka GitHub](https://github.com/Azure/azure-event-hubs-for-kafka) page to help you jumpstart streaming scenarios.
 
 Here is a modified `producer.py` that streams simulated sensor JSON data into Streaming engine using a Kafka compatible client. It is important to notice that Azure Event Hubs is Kafka protocol compatible. Follow the setup instructions in the [Github repository](https://github.com/Azure/azure-event-hubs-for-kafka/tree/master/quickstart/python) to get the sample to work for you. The `conf` dictionary is where all connection information takes place and your mileage may vary depending on your environment. Make sure you replace at least `bootstrap.servers` and `sasl.password` as it is the most relevant configuration in the code sample bellow.
 

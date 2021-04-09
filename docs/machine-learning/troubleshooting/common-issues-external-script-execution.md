@@ -29,7 +29,7 @@ This article provides troubleshooting guidance for issues involving the [SQL Ser
 
 ## Check the Launchpad service account
 
-The default service account might be "NT Service\$SQL2016" or "NT Service\$SQL2017". The final part might vary, depending on your SQL instance name.
+The default service account might be "NT Service\$SQL2016", "NT Service\$SQL2017", or "NT Service\$SQL2019". The final part might vary, depending on your SQL instance name.
 
 The Launchpad service (Launchpad.exe) runs by using a low-privilege service account. However, to start R and Python and communicate with the database instance, the Launchpad service account requires the following user rights:
 

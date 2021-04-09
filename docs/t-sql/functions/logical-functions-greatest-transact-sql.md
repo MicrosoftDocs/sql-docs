@@ -1,6 +1,6 @@
 ---
 description: "Logical Functions - GREATEST (Transact-SQL)"
-title: "GREATEST (Transact-SQL) | Microsoft Docs"
+title: "GREATEST (Transact-SQL)"
 ms.custom: ""
 ms.date: "04/09/2021"
 ms.prod: sql
@@ -15,16 +15,17 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "GREATEST function"
-ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: jmsteen
 ms.author: josteen
+ms.reviewer: wiassaf
 ---
 # Logical Functions - GREATEST (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
-
-**_NOTE:_**  GREATEST is currently available for Azure SQL Database, Azure SQL Managed Instance and serverless SQL pools in Azure Synapse Analytics.
+[!INCLUDE [sql-asdb-asdbmi-asa-svrless-poolonly](../../includes/applies-to-version/sql-asdb-asdbmi-asa-svrless-poolonly.md)]
 
  This function returns the maximum value from a list of one or more expressions. 
+
+> [!Note]
+> `GREATEST` is currently available for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], and serverless SQL pools in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,7 +39,7 @@ GREATEST ( expression1 [ ,...expressionN ] )
  *expression1, expressionN*  
  A list of comma-separated expressions of any comparable data type. The `GREATEST` function requires at least one argument and supports no more than 254 arguments.  
  
- Each expression can be a constant, variable, column name or function, as well as any combination of arithmetic, bitwise and string operators. Aggregate functions and scalar subqueries are permitted.  
+ Each expression can be a constant, variable, column name or function, and any combination of arithmetic, bitwise, and string operators. Aggregate functions and scalar subqueries are permitted.  
   
 ## Return Types  
  Returns the data type with the highest precedence from the set of types passed to the function. For more information, see [Data Type Precedence &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
@@ -56,15 +57,15 @@ GREATEST ( expression1 [ ,...expressionN ] )
 
  If implicit type conversion between the arguments is not supported, the function will fail and return an error. 
 
- See [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md) for further details on implicit and explicit conversion. 
+ For more information on implicit and explicit conversion, see [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md). 
 
- If one or more arguments are not null, then null arguments will be ignored during comparison. If all arguments are null, then `GREATEST` will return null. 
+ If one or more arguments are not `NULL`, then `NULL` arguments will be ignored during comparison. If all arguments are `NULL`, then `GREATEST` will return `NULL`. 
 
  Comparison of character arguments follows the rules of [Collation Precedence &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md). 
 
- The following types are **not** supported for comparison in `GREATEST`: **varchar(max), varbinary(max) or nvarchar(max) exceeding 8,000 bytes, cursor, geometry, geography, image, non-byte-ordered user-defined types, ntext, table, text** and **xml**. 
+ The following types are **not** supported for comparison in `GREATEST`: **varchar(max), varbinary(max) or nvarchar(max) exceeding 8,000 bytes, cursor, geometry, geography, image, non-byte-ordered user-defined types, ntext, table, text**, and **xml**. 
 
- The varchar(max), varbinary(max) and nvarchar(max) data types are supported for arguments that are 8,000 bytes or below, and will be implicitly converted to varchar(n), varbinary(n) and nvarchar(n), respectively, prior to comparison. 
+ The varchar(max), varbinary(max), and nvarchar(max) data types are supported for arguments that are 8,000 bytes or below, and will be implicitly converted to varchar(n), varbinary(n), and nvarchar(n), respectively, prior to comparison. 
 
  For example, varchar(max) can support up to 8,000 characters if using a single-byte encoding character set, and nvarchar(max) can support up to 4,000 byte-pairs (assuming UTF-16 character encoding). 
   
@@ -74,7 +75,7 @@ GREATEST ( expression1 [ ,...expressionN ] )
 
  The following example returns the maximum value from the list of constants that is provided. 
 
- The scale of the return type is determined by that of the argument with the highest precedence data type. 
+ The scale of the return type is determined by the scale of the argument with the highest precedence data type. 
  
 ```sql 
 SELECT GREATEST ( '6.62', 3.1415, N'7' ) AS Greatest; 
@@ -180,9 +181,9 @@ Var2              .825
 (1 rows affected)  
 ```  
 
-### E. Using `GREATEST` with columns, constants and variables
+### E. Using `GREATEST` with columns, constants, and variables
 
- This example uses `GREATEST` to determine the maximum value of a list that includes columns, constants and variables. 
+ This example uses `GREATEST` to determine the maximum value of a list that includes columns, constants, and variables. 
   
 ```sql  
 CREATE TABLE products (    

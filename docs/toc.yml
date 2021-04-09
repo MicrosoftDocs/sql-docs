@@ -440,10 +440,14 @@ items:
       items:
       - name: Submit Spark jobs in Azure Data Studio
         href: big-data-cluster/spark-submit-job.md
-      - name: Submit Spark jobs in IntelliJ
-        href: big-data-cluster/spark-submit-job-intellij-tool-plugin.md
+      - name: Submit Spark jobs using the command line
+        href: big-data-cluster/spark-submit-job-command-line.md
       - name: Submit Spark jobs in Visual Studio Code
         href: big-data-cluster/spark-hive-tools-vscode.md
+      - name: Submit Spark jobs in IntelliJ
+        href: big-data-cluster/spark-submit-job-intellij-tool-plugin.md
+      - name: Spark streaming guide
+        href: big-data-cluster/spark-streaming-guide.md
       - name: Use extended Spark History Server
         href: big-data-cluster/spark-history-server.md
       - name: Manage libraries

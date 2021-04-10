@@ -23,9 +23,6 @@ ms.reviewer: wiassaf
 
  This function returns the minimum value from a list of one or more expressions. 
 
-> [!Note]
-> `LEAST` is currently available for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], and serverless SQL pools in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
-  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  

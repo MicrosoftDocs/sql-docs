@@ -38,7 +38,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
  Is the Publisher to drop. *publisher* is **sysname**, with no default.  
  
 > [!NOTE]
-> If the SQL Server publisher is configured with a custom port and the SQL Browser service is disabled, then when dropping such a publisher on the distributor, supply the publisher server name instead of `<Hostname>,<PortNumber>`. 
+> If the SQL Server publisher is configured with a custom port, then when dropping such a publisher on the distributor, supply the publisher server name instead of `<Hostname>,<PortNumber>`. 
   
 `[ @no_checks = ] no_checks`
  Specifies whether **sp_dropdistpublisher** checks that the Publisher has uninstalled the server as the Distributor. *no_checks* is **bit**, with a default of **0**.  

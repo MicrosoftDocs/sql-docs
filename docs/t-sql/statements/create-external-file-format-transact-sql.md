@@ -32,11 +32,11 @@ The following file formats are supported:
   
 - Hive RCFile  - Does not apply to Azure Synapse Analytics.
   
-- Hive ORC
+- Hive ORC - Does not apply to Azure Synapse Analytics.
   
 - Parquet
 
-- JSON - Applies to Azure SQL Edge only.
+- JSON - Applies to Azure SQL Edge only. Check following links for [Synapse Serverless](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/query-json-files) and for [SQL Server & Azure SQL](../../relational-databases/json/import-json-documents-into-sql-server.md)
 
 To create an External Table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
   

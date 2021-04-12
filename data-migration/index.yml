@@ -114,6 +114,9 @@ conceptualContent:
           itemType: how-to-guide
     - title: "Resources"
       links:
+        - text: Getting Started video overview
+          url: https://youtu.be/jd9IqV8HGI4?WT.mc_id=dataexposed-c9-niner-mighub
+          itemType: video
         - text: Azure Migration Center
           url: https://azure.microsoft.com/migration/
           itemType: reference

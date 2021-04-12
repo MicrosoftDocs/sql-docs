@@ -14,7 +14,7 @@ ms.technology: big-data-cluster
 
 # Monitor cluster with azdata and Grafana Dashboard
 
-This article describes how to monitor an application inside a SQL Server Big Data Cluster. SQL Server Big Data Cluster exposes Grafana Dashboard for monitoring, those metrics are stored in influxDB. Those metrics are categorised as the following : 
+This article describes how to monitor an application inside a SQL Server Big Data Cluster. SQL Server Big Data Cluster exposes Grafana Dashboard for monitoring, those metrics are stored in influxDB. Those metrics are categorized as the following : 
 - Kubernetes host related metrics, it's collected by Telegraf which is an agent for collecting, processing, aggregating, and writing metrics.
 - BDC workloads related metrics : those metrics are the metrics related to SQL Server, Spark and HDFS are collected by CollectD, including such as SQL Server DMV metrics and [SQL server extended events (XEvents)](../relational-databases/extended-events/extended-events.md). 
 

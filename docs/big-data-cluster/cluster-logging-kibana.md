@@ -18,9 +18,7 @@ This article describes how to virtualise the logs an application inside [!INCLUD
 
 # BDC logs stored in Elastic Search
 
-BDC related logs stored in Elastic Search are categorised as the following : 
-- Kubernetes host related logs, including all the logs by pods, by namespace, per namespace.
-- BDC workloads related logs : those metrics are the metrics related to SQL Server, Spark and HDFS are collected by CollectD, including such as SQL Server DMV metrics. 
+BDC related logs stored in Elastic Search includes the standard output and error logs of all BDC services, e.g. SQL Server, Spark, HDFS and platform services.
 
 ## Prerequisites
 

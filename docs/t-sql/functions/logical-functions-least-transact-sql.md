@@ -19,7 +19,7 @@ ms.author: josteen
 ms.reviewer: wiassaf
 ---
 # Logical Functions - LEAST (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-svrless-poolonly](../../includes/applies-to-version/sql-asdb-asdbmi-asa-svrless-poolonly.md)]
+[!INCLUDE [asdb-asdbmi](../../includes/applies-to-version/asdb-asdbmi.md)]
 
  This function returns the minimum value from a list of one or more expressions. 
 
@@ -37,7 +37,7 @@ LEAST ( expression1 [ ,...expressionN ] )
  
  Each expression can be a constant, variable, column name or function, and any combination of arithmetic, bitwise, and string operators. Aggregate functions and scalar subqueries are permitted.  
   
-## Return Types  
+## Return types  
  Returns the data type with the highest precedence from the set of types passed to the function. For more information, see [Data Type Precedence &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
 
  If all arguments have the same data type and the type is supported for comparison, `LEAST` will return that type. 
@@ -210,7 +210,7 @@ LeastPrice
 ```  
 
   
-## See Also  
+## See also  
  [GREATEST &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-greatest-transact-sql.md)  
  [MAX &#40;Transact-SQL&#41;](../../t-sql/functions/max-transact-sql.md)  
  [MIN &#40;Transact-SQL&#41;](../../t-sql/functions/min-transact-sql.md)  

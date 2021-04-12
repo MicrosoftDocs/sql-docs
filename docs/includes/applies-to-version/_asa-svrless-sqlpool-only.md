@@ -6,5 +6,5 @@ ms.date: 04/09/2021
 ms.author: wiassaf
 ---
 
-<Token>![yes](../media/yes-icon.png)[!INCLUDE [ssazuresynapse_sqlpool_only](../ssazuresynapse_svrless_sqlpool_only.md)]</Token>
+<Token>![yes](../media/yes-icon.png)[!INCLUDE [ssazuresynapse_sqlpool_only](../ssazuresynapse-svrless-sqlpool-only.md)]</Token>
 

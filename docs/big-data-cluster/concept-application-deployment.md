@@ -6,7 +6,7 @@ author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 04/01/2021
+ms.date: 04/12/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -112,7 +112,8 @@ In app deploy, `spec.yaml` is where you provide the information that controller 
 Aside from above you need to specify the input and output of your Python application. That generates a `spec.yaml` file similar to the following:
 
 ```yml
-name: addpy
+#spec.yaml
+name: add-app
 version: v1
 runtime: Python
 src: ./add.py
@@ -157,6 +158,7 @@ In app deploy, `spec.yaml` is where you provide the information that controller 
 Aside from above you need to specify the input and output of your R application. That generates a `spec.yaml` file similar to the following:
 
 ```yml
+#spec.yaml
 name: roll-dice
 version: v1
 runtime: R
@@ -213,6 +215,7 @@ azdata app init --name hello-is –version v1 --template ssis
 That generates a `spec.yaml` file to the following:
 
 ```yml
+#spec.yaml
 entrypoint: ./hello.dtsx
 name: hello-is
 options: /REP V
@@ -246,6 +249,7 @@ In app deploy, `spec.yaml` is where you provide the information that controller 
 Aside from above you need to specify the `bundleFileName` of your MLeap application. That generates a `spec.yaml` file similar to the following:
 
 ```yml
+#spec.yaml
 name: mleap-census
 version: v1
 runtime: Mleap

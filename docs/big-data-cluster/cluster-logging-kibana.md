@@ -14,7 +14,7 @@ ms.technology: big-data-cluster
 
 # Check out cluster logs with Kibana Dashboard
 
-This article describes how to virtualise the logs an application inside [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]. SQL Server Big Data Cluster uses Fluentbit which is an open source log Processor and forwarder, it fetches the logs from BDC components in the cluster and stores them in ElasticSearch. From Kibana Dashboard, you can virtualise and search the log of your interest.
+This article describes how to virtualise the logs an application inside [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]. SQL Server Big Data Cluster uses Fluent Bit which is an open source log processor and forwarder, it fetches the logs from BDC components in the cluster and stores them in ElasticSearch. From Kibana Dashboard, you can virtualise and search the log of your interest.
 
 # BDC logs stored in Elastic Search
 

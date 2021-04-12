@@ -45,7 +45,7 @@ output: #output parameter the app expects and the type
 
 The controller inspects the `runtime` specified in the `spec.yaml` file and calls the corresponding runtime handler. The runtime handler creates the application. First, a Kubernetes ReplicaSet is created containing one or more pods, each of which contains the application to be deployed. The number of pods is defined by the `replicas` parameter set in the `spec.yaml` file for the application. Each pod can have one of more pools. The number of pools is defined by the `poolsize` parameter set in the `spec.yaml` file.
 
-These settings have an impact on the amount of requests the deployment can handle in parallel. The maximum number of requests at one given time is equals to `replicas` times `poolsize`. If you have 5 replicas and 2 pools per replica the deployment can handle 10 requests in parallel. See the image below for a graphical representation of `replicas` and `poolsize`:
+These settings determine the amount of requests the deployment can handle in parallel. The maximum number of requests at one given time is equals to `replicas` times `poolsize`. If you have 5 replicas and 2 pools per replica the deployment can handle 10 requests in parallel. See the image below for a graphical representation of `replicas` and `poolsize`:
 
 ![Poolsize and replicas](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
@@ -59,7 +59,7 @@ SQL Server 2019 CU5 enables support for BDC deployment on Red Hat OpenShift and 
 
 At the time of the CU5 release, the setup step of the applications deployed with [app deploy](app-create.md) interfaces will still run as *root* user. This is required since during setup extra packages that application will use are installed. Other user code deployed as part of the application will run as low privilege user. 
 
-In addition, `CAP_AUDIT_WRITE` capability is an optional capability necessary to allow scheduling SSIS applications using cron jobs. When the application's yaml specification file specifies a schedule, the application will be triggered via a cron job, which requires the extra capability. Alternatively, the application can be triggered on demand with `azdata app run` through a web service call, which does not require the `CAP_AUDIT_WRITE` capability. Note that `CAP_AUDIT_WRITE` capability no longer needed for `cronjob` starting from SQL Server 2019 CU8 release. 
+In addition, `CAP_AUDIT_WRITE` capability is an optional capability necessary to allow scheduling SQL Server Integration Services (SSIS) applications using cron jobs. When the application's yaml specification file specifies a schedule, the application will be triggered via a cron job, which requires the extra capability. Alternatively, the application can be triggered on demand with `azdata app run` through a web service call, which does not require the `CAP_AUDIT_WRITE` capability. Note that `CAP_AUDIT_WRITE` capability no longer needed for `cronjob` starting from SQL Server 2019 CU8 release. 
 
 
 
@@ -77,7 +77,7 @@ allowedCapabilities:
 ...
 ```
 
-## How to work with App Deploy inside Big Data Cluster
+## How to work with app deploy inside big data cluster
 
 The two main interfaces for application deployment are: 
 
@@ -104,7 +104,7 @@ In app deploy, BDC python runtime allows Python application inside the BDC clust
 
 Python 3.5 for Ubuntu 16.04 and Python 3.8 for Ubuntu 20.04.
 
-In app deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields which can be specified:
+In app deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields that can be specified:
 
 - `name`: the application name
 - `version`: the application version, for instance, such as `v1`
@@ -136,7 +136,7 @@ You can create the basic folder and file structure needed to deploy a Python app
 azdata app init --template python --name hello-py --version v1
 ```
 
-For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
+For next steps, see [How to deploy an app on SQL Server big data clusters](app-create.md).
 
 #### App deploy Python runtime limitations
 
@@ -150,7 +150,7 @@ The app deploy R runtime supports Microsoft R Open (MRO) 3.5.2.
 
 #### How to use it?
 
-In app deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields which can be specified:
+In app deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields that can be specified:
 
 - `name`: the application name
 - `version`: the application version, for instance, such as `v1`
@@ -181,7 +181,7 @@ You can create the basic folder and file structure needed to deploy a new R appl
 azdata app init --template r --name hello-r --version v1
 ```
 
-For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
+For next steps, see [How to deploy an app on SQL Server big data clusters](app-create.md).
 
 #### More details on limitations
 
@@ -189,11 +189,11 @@ The limitation aligns with the [Microsoft R Application Network](https://mran.mi
 
 ### Using app deploy dtexec runtime
 
-In app deploy, BDC runtime integrated dtexec utility which is from SQL Server Integration Services on Linux (mssql-server-is) . App deploy uses dtexec utility to load packages from *.dtsx files. It supports running SSIS packages on cron-style schedule or on-demand through web service requests.
+In app deploy, BDC runtime integrated dtexec utility which is from SSIS on Linux (mssql-server-is) . App deploy uses dtexec utility to load packages from *.dtsx files. It supports running SSIS packages on cron-style schedule or on-demand through web service requests.
 
 This feature uses `/opt/ssis/bin/dtexec /FILE` from SQL Server 2019 Integration Service on Linux, it supports dtsx format for [SQL Server 2019 Integration Service on Linux (mssql-server-is 15.0.2)](../linux/sql-server-linux-setup-ssis.md). To learn more about dtexec utility, see [dtexec Utility](../integration-services/packages/dtexec-utility.md).
 
-In app deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields which can be specified:
+In app deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields that can be specified:
 
 - `name`: the application `name`
 - `version`: the application version, for instance, such as `v1`
@@ -233,7 +233,7 @@ The example also creates a sample `hello.dtsx` package.
 
 All of your app files are in the same directory as your `spec.yaml`. The `spec.yaml` must be at the root level of your app source code directory including the dtsx file.
 
-For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
+For next steps, see [How to deploy an app on SQL Server big data clusters](app-create.md).
 
 #### Limitations of dtsx utility
 
@@ -243,7 +243,7 @@ All limitations and known issue for SQL Server Integration Services (SSIS) on Li
 
 The app deploy MLeap runtime supports MLeap Serving v0.13.0.
 
-In app deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields which can be specified:
+In app deploy, `spec.yaml` is where you provide the information that controller needs to know to deploy your application. The following are the fields that can be specified:
 
 - `name`: the application name 
 - `version`: the application version, for instance, such as `v1` 
@@ -266,7 +266,7 @@ You can create the basic folder and file structure needed to deploy a new MLeap 
 azdata app init --template mleap --name hello-mleap --version v1
 ```
 
-For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
+For next steps, see [How to deploy an app on SQL Server big data clusters](app-create.md).
 
 #### MLeap limitations
 

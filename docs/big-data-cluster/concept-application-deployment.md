@@ -9,6 +9,9 @@ ms.metadata: seo-lt-2019
 ms.date: 04/12/2021
 ms.topic: conceptual
 ms.prod: sql
+dev_langs: 
+- "yaml"
+- "console"
 ms.technology: big-data-cluster
 ---
 
@@ -63,7 +66,7 @@ In addition, `CAP_AUDIT_WRITE` capability is an optional capability necessary to
 > [!NOTE]
 > The custom SCC in the [OpenShift deployment article](deploy-openshift.md) does not include this capability since it is not required by a default deployment of BDC. To enable this capability, you must first update the custom SCC yaml file to include CAP_AUDIT_WRITE.
 
-```yml
+```yaml
 ...
 allowedCapabilities:
 - SETUID
@@ -111,7 +114,7 @@ In app deploy, `spec.yaml` is where you provide the information that controller 
 
 Aside from above you need to specify the input and output of your Python application. That generates a `spec.yaml` file similar to the following:
 
-```yml
+```yaml
 #spec.yaml
 name: add-app
 version: v1
@@ -157,7 +160,7 @@ In app deploy, `spec.yaml` is where you provide the information that controller 
 
 Aside from above you need to specify the input and output of your R application. That generates a `spec.yaml` file similar to the following:
 
-```yml
+```yaml
 #spec.yaml
 name: roll-dice
 version: v1
@@ -214,7 +217,7 @@ azdata app init --name hello-is –version v1 --template ssis
 
 That generates a `spec.yaml` file to the following:
 
-```yml
+```yaml
 #spec.yaml
 entrypoint: ./hello.dtsx
 name: hello-is
@@ -248,7 +251,7 @@ In app deploy, `spec.yaml` is where you provide the information that controller 
 
 Aside from above you need to specify the `bundleFileName` of your MLeap application. That generates a `spec.yaml` file similar to the following:
 
-```yml
+```yaml
 #spec.yaml
 name: mleap-census
 version: v1

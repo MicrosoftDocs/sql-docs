@@ -5,7 +5,7 @@ description: In this article, you learn how to connect SQL Server instances as A
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 09/10/2020
+ms.date: 04/06/2021
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -72,7 +72,7 @@ Each machine must have [Azure PowerShell](/powershell/azure/install-az-ps) insta
 
 ## Connecting multiple SQL Server instances on Linux using Azure CLI
 
-Each target machine must have the [Azure CLI installed](/cli/azure/install-azure-cli). The registration script will automatically sign in to azure with the service principal credentials if they’re provided and no other user is already signed in. Use the following steps to connect SQL Server instances on multiple Linux machines.
+Each target machine must have the [Azure CLI installed](/cli/azure/install-azure-cli). The registration script will automatically sign in to Azure with the service principal credentials if they’re provided and no other user is already signed in. Use the following steps to connect SQL Server instances on multiple Linux machines.
 
 1. Create the service principal using the ['az ad sp create-for-rbac'](/cli/azure/ad/sp#az_ad_sp_create_for_rbac) command.
 

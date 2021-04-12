@@ -1,7 +1,7 @@
 ---
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/08/2021
+ms.date: 04/07/2021
 ms.topic: include
 author: dphansen
 ms.author: davidph
@@ -87,7 +87,7 @@ Follow these steps to install the **Rcpp** package.
 1. Run the following script to install the Rcpp package in the `\library` folder in your R installation path. For example, `C:\Program Files\R\R-4.0.3\library`.
 
     ```R
-    install.packages("Rcpp", lib="C:\Program Files\R\R-4.0.3\library");
+    install.packages("Rcpp", lib="C:\\Program Files\\R\\R-4.0.3\\library");
     ```
 
 ## Grant access to R folder

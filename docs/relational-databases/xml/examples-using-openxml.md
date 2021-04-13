@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "element-centric mapping [SQL Server]"
   - "edge tables"
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Examples: Using OPENXML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

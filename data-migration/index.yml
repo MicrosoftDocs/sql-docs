@@ -114,6 +114,9 @@ conceptualContent:
           itemType: how-to-guide
     - title: "Resources"
       links:
+        - text: Getting started video overview
+          url: https://channel9.msdn.com/Shows/Data-Exposed/Get-Started-with-the-New-Database-Migration-Guides-to-Migrate-Your-Databases-to-Azure?WT.mc_id=dataexposed-c9-niner-mighub
+          itemType: video
         - text: Azure Migration Center
           url: https://azure.microsoft.com/migration/
           itemType: reference

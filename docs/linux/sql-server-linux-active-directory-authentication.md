@@ -49,12 +49,12 @@ Join your SQL Server Linux host with an Active Directory domain controller. For 
 > [!NOTE]
 > The following steps use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you must **[create one](/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed.
 
-1. On your domain controller, run the [New-ADUser](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617253(v=technet.10)) PowerShell command to create a new AD user with a password that never expires. The following example names the account `mssql`, but the account name can be anything you like. You'll be prompted to enter a new password for the account.
+1. On your domain controller, run the [New-ADUser](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617253(v=technet.10)) PowerShell command to create a new AD user with a password that never expires. The following example names the account `sqlsvc`, but the account name can be anything you like. You'll be prompted to enter a new password for the account.
 
    ```PowerShell
    Import-Module ActiveDirectory
 
-   New-ADUser mssql -AccountPassword (Read-Host -AsSecureString "Enter Password") -PasswordNeverExpires $true -Enabled $true
+   New-ADUser sqlsvc -AccountPassword (Read-Host -AsSecureString "Enter Password") -PasswordNeverExpires $true -Enabled $true
    ```
 
    > [!NOTE]
@@ -67,8 +67,8 @@ Join your SQL Server Linux host with an Active Directory domain controller. For 
 2. Set the ServicePrincipalName (SPN) for this account using the **setspn.exe** tool. The SPN must be formatted exactly as specified in the following example. You can find the fully qualified domain name of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine by running `hostname --all-fqdns` on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host. The TCP port should be 1433 unless you have configured [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use a different port number.
 
    ```PowerShell
-   setspn -A MSSQLSvc/<fully qualified domain name of host machine>:<tcp port> mssql
-   setspn -A MSSQLSvc/<netbios name of the host machine>:<tcp port> mssql
+   setspn -A MSSQLSvc/<fully qualified domain name of host machine>:<tcp port> sqlsvc
+   setspn -A MSSQLSvc/<netbios name of the host machine>:<tcp port> sqlsvc
    ```
 
    > [!NOTE]

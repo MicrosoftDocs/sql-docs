@@ -15947,8 +15947,12 @@ items:
         items:
         - name: CHOOSE
           href: t-sql/functions/logical-functions-choose-transact-sql.md
+        - name: GREATEST
+          href: t-sql/functions/logical-functions-greatest-transact-sql.md          
         - name: IIF
           href: t-sql/functions/logical-functions-iif-transact-sql.md
+        - name: LEAST
+          href: t-sql/functions/logical-functions-least-transact-sql.md          
       - name: Metadata
         href: t-sql/functions/metadata-functions-transact-sql.md
         items:

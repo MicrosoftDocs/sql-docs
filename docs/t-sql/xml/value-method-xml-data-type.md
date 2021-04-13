@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "value method"
   - "value() method"
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # value() Method (xml Data Type)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -2,7 +2,7 @@
 description: "Logical Functions - GREATEST (Transact-SQL)"
 title: "GREATEST (Transact-SQL)"
 ms.custom: ""
-ms.date: "04/09/2021"
+ms.date: "04/14/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
@@ -74,14 +74,14 @@ GREATEST ( expression1 [ ,...expressionN ] )
  The scale of the return type is determined by the scale of the argument with the highest precedence data type. 
  
 ```sql 
-SELECT GREATEST ( '6.62', 3.1415, N'7' ) AS Greatest; 
+SELECT GREATEST ( '6.62', 3.1415, N'7' ) AS GreatestVal; 
 GO 
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-Greatest 
+GreatestVal 
 -------- 
   7.0000 
 
@@ -93,14 +93,14 @@ Greatest
  The following example returns the maximum value from the list of character constants that is provided.  
   
 ```sql  
-SELECT GREATEST ('Glacier', N'Joshua Tree', 'Mount Rainier') AS Greatest;  
+SELECT GREATEST ('Glacier', N'Joshua Tree', 'Mount Rainier') AS GreatestString;  
 GO  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-Greatest 
+GreatestString 
 ------------- 
 Mount Rainier 
 
@@ -116,7 +116,7 @@ USE AdventureWorks2019;
 GO 
 
 SELECT sp.SalesQuota, sp.SalesYTD, sp.SalesLastYear 
-      , GREATEST(sp.SalesQuota, sp.SalesYTD, sp.SalesLastYear) AS Greatest 
+      , GREATEST(sp.SalesQuota, sp.SalesYTD, sp.SalesLastYear) AS Sales 
 FROM Sales.SalesPerson AS sp 
 WHERE sp.SalesYTD < 3000000; 
 GO  
@@ -126,7 +126,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-SalesQuota            SalesYTD              SalesLastYear         Greatest 
+SalesQuota            SalesYTD              SalesLastYear         Sales 
 
 --------------------- --------------------- --------------------- --------------------- 
                  NULL           559697.5639                 .0000           559697.5639 
@@ -200,7 +200,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-GreatestPrice
+Price
 -------------
       19.9900
       49.9900

@@ -2,7 +2,7 @@
 description: "Logical Functions - LEAST (Transact-SQL)"
 title: "LEAST (Transact-SQL)"
 ms.custom: ""
-ms.date: "04/09/2021"
+ms.date: "04/14/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
@@ -74,14 +74,14 @@ LEAST ( expression1 [ ,...expressionN ] )
  The scale of the return type is determined by the scale of the argument with the highest precedence data type. 
  
 ```sql 
-SELECT LEAST ( '6.62', 3.1415, N'7' ) AS Least; 
+SELECT LEAST ( '6.62', 3.1415, N'7' ) AS LeastVal; 
 GO 
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-Least 
+LeastVal 
 ------- 
  3.1415 
 
@@ -93,14 +93,14 @@ Least
  The following example returns the minimum value from the list of character constants that is provided.  
   
 ```sql  
-SELECT LEAST ('Glacier', N'Joshua Tree', 'Mount Rainier') AS Least;  
+SELECT LEAST ('Glacier', N'Joshua Tree', 'Mount Rainier') AS LeastString;  
 GO  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-Least 
+LeastString 
 ------------- 
 Glacier 
 
@@ -116,7 +116,7 @@ USE AdventureWorks2019;
 GO 
 
 SELECT sp.SalesQuota, sp.SalesYTD, sp.SalesLastYear 
-      , LEAST(sp.SalesQuota, sp.SalesYTD, sp.SalesLastYear) AS Least 
+      , LEAST(sp.SalesQuota, sp.SalesYTD, sp.SalesLastYear) AS Sales 
 FROM Sales.SalesPerson AS sp 
 WHERE sp.SalesYTD < 3000000; 
 GO  
@@ -126,7 +126,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-SalesQuota            SalesYTD              SalesLastYear         Least 
+SalesQuota            SalesYTD              SalesLastYear         Sales 
 --------------------- --------------------- --------------------- --------------------- 
                  NULL           559697.5639                 .0000                 .0000 
           250000.0000          1453719.4653          1620276.8966           250000.0000 

@@ -18,7 +18,7 @@ This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in e
 
 ## SSMA v8.18
 
-The v8.18 release of SSMA for Oracle contains the following changes: 
+The v8.18 release of SSMA for Oracle contains the following changes:
 
 * Fix sequences loading for Oracle 12c Release 1 (12.1)
 

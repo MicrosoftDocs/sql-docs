@@ -36,6 +36,12 @@ The **New Column Master Key** dialog allows you to generate a column master key 
     - **Certificate Store - Current User** - indicates the Current User certificate store location in the Windows Certificate Store, which is your personal store. 
     - **Certificate Store - Local computer** - indicates the Local computer certificate store location in the Windows Certificate Store. 
     - **Azure Key Vault** -  you'll need to sign in to Azure (click **Sign in**). Once you sign in, you'll be able to pick one of your Azure subscriptions and a key vault or a managed HSM (requires SSMS 18.9 or later).
+        > [!NOTE]
+        > The **New Column Master Key** dialog does not currently support key vaults using role permissions for authorization. Only key vaults using access policies are supported.
+
+        > [!NOTE]
+        > Using column master keys stored in a [managed HSM](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview) in Azure Key Vault requires SSMS 18.9 or a later version.
+
     - **Key Store Provider (KSP)** - indicates a key store that is accessible via a key store provider (KSP) that implements the Cryptography Next Generation (CNG) API. Typically, this type of a store is a hardware security module (HSM). After you select this option, you'll need to pick a KSP. **Microsoft Software Key Store Provider** is selected by default. If you want to use a column master key stored in an HSM, select a KSP for your device (it must be installed and configured on the computer before you open the dialog).
     -	**Cryptographic Service Provider (CSP)** - a key store that is accessible via a cryptographic service provider (CSP) that implements the Cryptography API (CAPI). Typically, such a store is a hardware security module (HSM). After you select this option, you'll need to pick a CSP.  If you want to use a column master key stored in an HSM, select a CSP for your device (it must be installed and configured on the computer before you open the dialog).
     
@@ -63,13 +69,6 @@ If you're configuring an enclave-enabled column master key, SSMS also signs the 
 ### Permissions for provisioning a column master key
 
 You need the *ALTER ANY COLUMN MASTER KEY* database permission in the database for the dialog to create a column master key. You also need key store permissions to access and use your key column master key. For detailed information on key store permissions required for key management operations, go to [Create and store column master keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md) and find a section relevant for your key store.
-
-> [!NOTE]
-> The **New Column Master Key** dialog does not currently support key vaults in Azure Key Vault using role permissions for authorization. Only key vaults using access policies are supported.
-
-> [!NOTE]
-> Using column master keys stored in a [managed HSM](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview) in Azure Key Vault requires SSMS 18.9 or a later version.
-
 
 <a name="provisioncek"></a> 
 ## Provision Column Encryption Keys with the New Column Encryption Key Dialog

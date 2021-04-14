@@ -34,7 +34,7 @@ In this guide, you'll learn how to:
 This guide assumes a good level of understanding about streaming technology concepts and architectures.
 The following articles provide excellent conceptual baselines:
 
-* [Data architecture guide - Real time processing](/azure/architecture/data-guide/big-data/real-time-processing)
+* [Data architecture guide - Real-time processing](/azure/architecture/data-guide/big-data/real-time-processing)
 * [Use Azure Event Hubs from Apache Kafka applications](/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview)
 * [Data architecture guide - Choose a real-time message ingestion technology in Azure](/azure/architecture/data-guide/technology-choices/real-time-ingestion)
 

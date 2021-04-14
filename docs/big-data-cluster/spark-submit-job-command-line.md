@@ -214,7 +214,7 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet_etl_sample.py 
 -n MyETLPipelinePySpark --executor-count 2 --executor-cores 2 --executor-memory 1664m
 ```
 
-# [PySpark and curl using Livy](#tab/curl/pyspark)
+# [PySpark and curl, using Livy](#tab/curl/pyspark)
 
 The `curl` command runs the application by using Livy. Replace `USER`, `PASSWORD`, and `LIVY_ENDPOINT` to reflect your environment.
 
@@ -250,7 +250,7 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet-etl-sample.jar
 -n MyETLPipeline --executor-count 2 --executor-cores 2 --executor-memory 1664m
 ```
 
-# [Scala and curl using Livy](#tab/curl/scala)
+# [Scala and curl, using Livy](#tab/curl/scala)
 
 The `curl` command runs the application by using Livy. Replace `USER`, `PASSWORD`, and `LIVY_ENDPOINT` to reflect your environment.
 
@@ -286,7 +286,7 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet_etl_sample.sql
 -n MyETLPipelineSQL --executor-count 2 --executor-cores 2 --executor-memory 1664m
 ```
 
-# [SQL and curl using Livy](#tab/curl/sql)
+# [SQL and curl, using Livy](#tab/curl/sql)
 
 The `curl` command runs the application by using Livy. Replace `USER`, `PASSWORD`, and `LIVY_ENDPOINT` to reflect your environment.
 

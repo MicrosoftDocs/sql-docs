@@ -151,7 +151,7 @@ SalesQuota            SalesYTD              SalesLastYear         Sales
   
 ```sql  
 CREATE TABLE dbo.studies (    
-    Variable varchar(10) NOT NULL,    
+    VarX varchar(10) NOT NULL,    
     Correlation decimal(4, 3) NULL 
 ); 
 
@@ -161,7 +161,7 @@ GO
 DECLARE @PredictionA DECIMAL(2,1) = 0.7;  
 DECLARE @PredictionB DECIMAL(3,1) = 0.65;  
 
-SELECT Variable, Correlation  
+SELECT VarX, Correlation  
 FROM dbo.studies 
 WHERE Correlation > GREATEST(@PredictionA, @PredictionB); 
 GO 
@@ -170,7 +170,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-Variable   Correlation 
+VarX   Correlation 
 ---------- ----------- 
 Var2              .825 
 

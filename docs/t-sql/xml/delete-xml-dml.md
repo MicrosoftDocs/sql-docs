@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "delete statement [XML DML]"
   - "deleting nodes"
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # delete (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,7 +1,12 @@
 - name: Oracle
   href: sql-server-migration-assistant-for-oracle-oracletosql.md
-- name: What's New in SSMA
-  href: what-s-new-in-ssma-for-oracle-oracletosql.md
+  items:
+  - name: What's new
+    items:
+    - name: What's New in SSMA  
+      href: what-s-new-in-ssma-for-oracle-oracletosql.md
+    - name: New GUI features in SSMA
+      href: new-gui-features-in-ssma-for-oracle-oracletosql.md
 - name: Installing SSMA
   href: installing-ssma-for-oracle-oracletosql.md
 - name: Getting Started
@@ -12,8 +17,7 @@
   href: legal-notice-ssma-for-oracle.md
 - name: Installing SSMA for Oracle client
   href: installing-ssma-for-oracle-client-oracletosql.md
-- name: New GUI features in SSMA
-  href: new-gui-features-in-ssma-for-oracle-oracletosql.md
+
 - name: Running Test Cases
   href: running-test-cases-oracletosql.md
 - name: Menu commands & other shortcut keys

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "updategrams [SQLXML], ADO"
   - "executing updategrams [SQLXML]"
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

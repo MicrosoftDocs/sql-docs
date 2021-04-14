@@ -2,7 +2,7 @@
 description: "Logical Functions - GREATEST (Transact-SQL)"
 title: "GREATEST (Transact-SQL)"
 ms.custom: ""
-ms.date: "04/09/2021"
+ms.date: "04/14/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.technology: t-sql
@@ -74,14 +74,14 @@ GREATEST ( expression1 [ ,...expressionN ] )
  The scale of the return type is determined by the scale of the argument with the highest precedence data type. 
  
 ```sql 
-SELECT GREATEST ( '6.62', 3.1415, N'7' ) AS Greatest; 
+SELECT GREATEST ( '6.62', 3.1415, N'7' ) AS GreatestVal; 
 GO 
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-Greatest 
+GreatestVal 
 -------- 
   7.0000 
 
@@ -93,14 +93,14 @@ Greatest
  The following example returns the maximum value from the list of character constants that is provided.  
   
 ```sql  
-SELECT GREATEST ('Glacier', N'Joshua Tree', 'Mount Rainier') AS Greatest;  
+SELECT GREATEST ('Glacier', N'Joshua Tree', 'Mount Rainier') AS GreatestString;  
 GO  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-Greatest 
+GreatestString 
 ------------- 
 Mount Rainier 
 
@@ -116,8 +116,8 @@ USE AdventureWorks2019;
 GO 
 
 SELECT sp.SalesQuota, sp.SalesYTD, sp.SalesLastYear 
-      , GREATEST(sp.SalesQuota, sp.SalesYTD, sp.SalesLastYear) AS Greatest 
-FROM sales.SalesPerson AS sp 
+      , GREATEST(sp.SalesQuota, sp.SalesYTD, sp.SalesLastYear) AS Sales 
+FROM Sales.SalesPerson AS sp 
 WHERE sp.SalesYTD < 3000000; 
 GO  
   
@@ -126,7 +126,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-SalesQuota            SalesYTD              SalesLastYear         Greatest 
+SalesQuota            SalesYTD              SalesLastYear         Sales 
 
 --------------------- --------------------- --------------------- --------------------- 
                  NULL           559697.5639                 .0000           559697.5639 
@@ -150,19 +150,19 @@ SalesQuota            SalesYTD              SalesLastYear         Greatest
  This example uses `GREATEST` to determine the maximum value of a list of local variables within the predicate of a `WHERE` clause. 
   
 ```sql  
-CREATE TABLE studies (    
-    Variable varchar(10) NOT NULL,    
+CREATE TABLE dbo.studies (    
+    VarX varchar(10) NOT NULL,    
     Correlation decimal(4, 3) NULL 
 ); 
 
-INSERT INTO studies VALUES ('Var1', 0.2), ('Var2', 0.825), ('Var3', 0.61); 
+INSERT INTO dbo.studies VALUES ('Var1', 0.2), ('Var2', 0.825), ('Var3', 0.61); 
 GO 
 
 DECLARE @PredictionA DECIMAL(2,1) = 0.7;  
 DECLARE @PredictionB DECIMAL(3,1) = 0.65;  
 
-SELECT Variable, Correlation  
-FROM studies 
+SELECT VarX, Correlation  
+FROM dbo.studies 
 WHERE Correlation > GREATEST(@PredictionA, @PredictionB); 
 GO 
 ```  
@@ -170,7 +170,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-Variable   Correlation 
+VarX   Correlation 
 ---------- ----------- 
 Var2              .825 
 
@@ -182,18 +182,18 @@ Var2              .825
  This example uses `GREATEST` to determine the maximum value of a list that includes columns, constants, and variables. 
   
 ```sql  
-CREATE TABLE products (    
+CREATE TABLE dbo.products (    
     prod_id int IDENTITY(1,1),    
     listprice smallmoney NULL 
 ); 
 
-INSERT INTO products VALUES (14.99), (49.99), (24.99); 
+INSERT INTO dbo.products VALUES (14.99), (49.99), (24.99); 
 GO 
 
 DECLARE @PriceX smallmoney = 19.99;  
 
 SELECT GREATEST(listprice, 0, @PriceX) as GreatestPrice  
-FROM products;
+FROM dbo.products;
 GO 
 ```  
   

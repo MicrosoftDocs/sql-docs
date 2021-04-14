@@ -192,7 +192,7 @@ GO
 
 DECLARE @PriceX smallmoney = 19.99;  
 
-SELECT GREATEST(listprice, 0, @PriceX) as Price  
+SELECT GREATEST(listprice, 0, @PriceX) as GreatestPrice  
 FROM dbo.products;
 GO 
 ```  
@@ -200,7 +200,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-Price
+GreatestPrice
 -------------
       19.9900
       49.9900

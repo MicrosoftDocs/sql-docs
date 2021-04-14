@@ -62,7 +62,7 @@ The following data providers in the SQL Server Import and Export Wizard support 
 
 ## Permissions for encrypting or decrypting data during migration
 
-To encrypt or decrypt data stored in a SQL Server source or destination database, you need the *VIEW ANY COLUMN MASTER KEY DEFINITION* and *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* permissions in the source database. You also need key store permissions to access and use your key. For detailed information on key store permissions required for key management operations, go to [Create and store column master keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md) and find a section relevant for your key store.
+To encrypt or decrypt data stored in a SQL Server source or destination database, you need the *VIEW ANY COLUMN MASTER KEY DEFINITION* and *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* permissions in the source database. You also need key store permissions to access and use your column master key. For detailed information on key store permissions required for key management operations, go to [Create and store column master keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md) and find a section relevant for your key store.
 
 ## Next Steps
 - [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)

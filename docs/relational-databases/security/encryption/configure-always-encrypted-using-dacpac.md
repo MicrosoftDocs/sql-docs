@@ -45,7 +45,7 @@ To publish DAC package if Always Encrypted is set up in the DACPAC or/and in the
 
 *ALTER ANY COLUMN MASTER KEY*, *ALTER ANY COLUMN ENCRYPTION KEY*, *VIEW ANY COLUMN MASTER KEY DEFINITION*, *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION*
 
-If the upgrade operation triggers a data encryption operation, you also need key store permissions to access and use your column master key key. For detailed information on key store permissions, go to [Create and store column master keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md) and find a section relevant for your key store.
+If the upgrade operation triggers a data encryption operation, you also need key store permissions to access and use your column master key. For detailed information on key store permissions, go to [Create and store column master keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md) and find a section relevant for your key store.
 
  
 ## Next Steps

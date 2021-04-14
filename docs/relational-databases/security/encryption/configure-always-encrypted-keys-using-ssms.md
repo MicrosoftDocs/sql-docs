@@ -62,7 +62,14 @@ If you're configuring an enclave-enabled column master key, SSMS also signs the 
 
 ### Permissions for provisioning a column master key
 
-You need the *ALTER ANY COLUMN MASTER KEY* database permission in the database for the dialog to create a column master key. You also need key store permissions to access and use your key. For detailed information on key store permissions required for key management operations, go to [Create and store column master keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md) and find a section relevant for your key store.
+You need the *ALTER ANY COLUMN MASTER KEY* database permission in the database for the dialog to create a column master key. You also need key store permissions to access and use your key column master key. For detailed information on key store permissions required for key management operations, go to [Create and store column master keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md) and find a section relevant for your key store.
+
+> [!NOTE]
+> The **New Column Master Key** dialog does not currently support key vaults in Azure Key Vault using role permissions for authorization. Only key vaults using access policies are supported.
+
+> [!NOTE]
+> Using column master keys stored in a [managed HSM](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview) in Azure Key Vault requires SSMS 18.9 or a later version.
+
 
 <a name="provisioncek"></a> 
 ## Provision Column Encryption Keys with the New Column Encryption Key Dialog
@@ -76,6 +83,9 @@ The **New Column Encryption Key** dialog allows you to generate a column encrypt
 5.	Click **OK**. 
 
 Once you complete the dialog, SQL Server Management Studio generates a new column encryption key and then it retrieves the metadata for the column master key you selected from the database. SSMS then uses the column master key metadata to contact the key store containing your column master key and encrypt the column encryption key. Finally, SSMS creates the metadata data for the new column encryption in the database by generating and issuing a [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) statement.
+
+> [!NOTE]
+> Using column master keys stored in a [managed HSM](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview) in Azure Key Vault requires SSMS 18.9 or a later version.
 
 ### Permissions for provisioning a column encryption key
 

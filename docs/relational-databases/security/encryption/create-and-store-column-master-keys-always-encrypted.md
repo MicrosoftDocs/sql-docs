@@ -105,7 +105,7 @@ To grant a user the *Read* permission for a certificate stored in the local mach
 
 ## Creating Column Master Keys in Azure Key Vault
 
-Azure Key Vault helps safeguard cryptographic keys and secrets, and it is a convenient option for storing column master keys for Always Encrypted, especially if your applications are hosted in Azure. To create a key in [Azure Key Vault](/azure/key-vault/general/overview), you need an [Azure subscription](https://azure.microsoft.com/free/) and an Azure Key Vault. A key can be stored in a key vault or in a [managed HSM](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview). To be a valid column master key, a kay managed in Azure Key Vault must be an RSA key.
+Azure Key Vault helps safeguard cryptographic keys and secrets, and it is a convenient option for storing column master keys for Always Encrypted, especially if your applications are hosted in Azure. To create a key in [Azure Key Vault](/azure/key-vault/general/overview), you need an [Azure subscription](https://azure.microsoft.com/free/) and an Azure Key Vault. A key can be stored in a key vault or in a [managed HSM](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview). To be a valid column master key, the key managed in Azure Key Vault must be an RSA key.
 
 ### Using Azure CLI, Portal or PowerShell
 
@@ -133,7 +133,7 @@ To manage keys for Always Encrypted, you need permissions to list and create col
 If you store your column master keys in a key vault and you are using role permissions for authorization:
 
 * Your application's identity needs to be a member of roles that permit the following data plane actions on the key vault: Microsoft.KeyVault/vaults/keys/decrypt/action, Microsoft.KeyVault/vaults/keys/read, Microsoft.KeyVault/vaults/keys/verify/action. The easiest way to grant the application the required permission is to add its identity to the [Key Vault Crypto User](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#key-vault-crypto-user) role. You can also create a custom role with the required permissions.
-* A user managing keys for Always Encrypted needs to be a member or roles that permit the following data plane actions on the key vault: Microsoft.KeyVault/vaults/keys/create/action, Microsoft.KeyVault/vaults/keys/decrypt/action, Microsoft.KeyVault/vaults/keys/encrypt/action, Microsoft.KeyVault/vaults/keys/read, Microsoft.KeyVault/vaults/keys/sign/action, Microsoft.KeyVault/vaults/keys/verify/action. The easiest way to grant the application the required permission is to add the user to the [Key Vault Crypto User](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#key-vault-crypto-user) role.  You can also create a custom role with the required permissions.
+* A user managing keys for Always Encrypted needs to be a member or roles that permit the following data plane actions on the key vault: Microsoft.KeyVault/vaults/keys/create/action, Microsoft.KeyVault/vaults/keys/decrypt/action, Microsoft.KeyVault/vaults/keys/encrypt/action, Microsoft.KeyVault/vaults/keys/read, Microsoft.KeyVault/vaults/keys/sign/action, Microsoft.KeyVault/vaults/keys/verify/action. The easiest way to grant the user the required permission is to add the user to the [Key Vault Crypto User](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#key-vault-crypto-user) role.  You can also create a custom role with the required permissions.
 
 If you store your column master keys in a key vault and you are using access policies for authorization:
 
@@ -144,11 +144,27 @@ For general information on how to configure authentication and authorization for
 
 #### Managed HSMs
 
-Your application's identity needs to be a member of roles that permit the following data plane actions on your managed HSM: Microsoft.KeyVault/managedHsm/keys/decrypt/action, Microsoft.KeyVault/managedHsm/keys/read/action, Microsoft.KeyVault/managedHsm/keys/verify/action. Microsoft recommends you create a custom role containing just these three permissions.
+Your application's identity needs to be a member of roles that permit the following data plane actions on your managed HSM: 
 
-A user managing keys for Always Encrypted needs to be a member or roles that permit the following data plane actions on the key: Microsoft.KeyVault/managedHsm/keys/create/action, Microsoft.KeyVault/managedHsm/keys/decrypt/action, Microsoft.KeyVault/managedHsm/keys/encrypt/action, Microsoft.KeyVault/managedHsm/keys/read, MMicrosoft.KeyVault/managedHsm/keys/sign/action, Microsoft.KeyVault/managedHsm/keys/verify/action. The easiest way to grant the application the required permission is to add the user to the Managed HSM Crypto User role. You can also create a custom role with the required permissions.
+- Microsoft.KeyVault/managedHsm/keys/decrypt/action
+- Microsoft.KeyVault/managedHsm/keys/read/action
+- Microsoft.KeyVault/managedHsm/keys/verify/action
+
+Microsoft recommends you create a custom role containing just the above permissions.
+
+A user managing keys for Always Encrypted needs to be a member or roles that permit the following data plane actions on the key: 
+
+- Microsoft.KeyVault/managedHsm/keys/create/action
+- Microsoft.KeyVault/managedHsm/keys/decrypt/action
+- Microsoft.KeyVault/managedHsm/keys/encrypt/action
+- Microsoft.KeyVault/managedHsm/keys/read
+- icrosoft.KeyVault/managedHsm/keys/sign/action
+- Microsoft.KeyVault/managedHsm/keys/verify/action
+
+The easiest way to grant the user the above permissions is to add the user to the Managed HSM Crypto User role. You can also create a custom role with the required permissions.
 
 For more information about access control for managed HSMs, see:
+
 - [Managed HSM access control](https://docs.microsoft.com/azure/key-vault/managed-hsm/access-control)
 - [Managed HSM local RBAC built-in roles](https://docs.microsoft.com/azure/key-vault/managed-hsm/built-in-roles#permitted-operations).
 

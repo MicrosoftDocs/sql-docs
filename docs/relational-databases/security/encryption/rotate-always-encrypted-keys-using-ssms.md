@@ -24,6 +24,9 @@ This article describes tasks for rotating Always Encrypted column master keys an
 
 For an overview of Always Encrypted key management, including best practice recommendations and important security considerations, see [Overview of key management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 
+> [!NOTE]
+> Using column master keys stored in a [managed HSM](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview) in Azure Key Vault requires SSMS 18.9 or a later version.
+
 <a name="rotatecmk"></a>
 ## Rotate Column Master Keys 
 

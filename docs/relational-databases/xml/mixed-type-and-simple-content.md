@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "mixed types [SQL Server]"
 ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Mixed Type and Simple Content
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

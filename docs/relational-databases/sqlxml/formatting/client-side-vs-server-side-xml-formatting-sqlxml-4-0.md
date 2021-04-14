@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "AUTO mode"
   - "client-side XPath"
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

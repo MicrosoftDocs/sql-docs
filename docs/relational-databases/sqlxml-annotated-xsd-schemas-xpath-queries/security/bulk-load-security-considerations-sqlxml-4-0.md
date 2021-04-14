@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "security [SQLXML], XML Bulk Load"
   - "XML Bulk Load [SQLXML], security"
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

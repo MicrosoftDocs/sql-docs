@@ -66,7 +66,7 @@ To upgrade the SQL Server Connector (Version: 1.0.5.0 with a date of September 2
 
 **System Requirements** - Supported SQL Server versions:
 
-- SQL Server 2019 RTM Enterprise 64-bit
+- SQL Server 2019 RTM Enterprise or Standard 64-bit
 - SQL Server 2017 RTM Enterprise 64-bit
 - SQL Server 2016 RTM Enterprise 64-bit
 - SQL Server 2014 RTM Enterprise 64-bit

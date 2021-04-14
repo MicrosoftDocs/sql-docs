@@ -71,12 +71,7 @@ Assuming `SSN` is an encrypted `char(11)` column in the `Patients` table, the be
 
 To run any queries against encrypted columns, including queries that retrieve data in ciphertext,  you need the **VIEW ANY COLUMN MASTER KEY DEFINITION** and **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** permissions in the database.
 
-In addition to the above permissions, to decrypt any query results or to encrypt any query parameters (produced by parameterizing Transact-SQL variables), you also need access to the column master key protecting the target columns:
-
-- **Certificate Store - Local computer:** You must have **Read** access to the certificate that is used as a column master key, or be the administrator on the computer.   
-- **Azure Key Vault:** You need the **get**, **unwrapKey**, and **verify** permissions on the key vault containing the column master key.
-
-For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+In addition to the above permissions, to decrypt any query results or to encrypt any query parameters (produced by parameterizing Transact-SQL variables), you also need access to the column master key protecting the target columns. You also need key store permissions to access and use your key column master key. For detailed information on key store permissions, go to [Create and store column master keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md) and find a section relevant for your key store.
 
 ## Enabling and disabling Always Encrypted for a database connection   
 

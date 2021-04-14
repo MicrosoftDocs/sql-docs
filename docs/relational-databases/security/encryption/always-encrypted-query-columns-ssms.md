@@ -63,14 +63,7 @@ Assuming `SSN` is an encrypted `char(11)` column in the `Patients` table, the be
 
 To run any queries against encrypted columns, including queries that retrieve data in ciphertext,  you need the `VIEW ANY COLUMN MASTER KEY DEFINITION` and `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` permissions in the database.
 
-In addition to the above permissions, to decrypt any query results or to encrypt any query parameters (produced by parameterizing Transact-SQL variables), you also need access to the column master key protecting the target columns:
-
-- **Certificate Store - Local computer** You must have `Read` access to the certificate that is used a column master key, or be the administrator on the computer.   
-- **Azure Key Vault** You need the `get`, `unwrapKey`, and `verify` permissions on the vault containing the column master key.
-- **Key Store Provider (KSP)** The required permission and credentials, you might be prompted for when using a key store or a key, depend on the store and the KSP configuration.   
-- **Cryptographic Service Provider (CSP)** The required permission and credentials, you might be prompted for when using a key store or a key, depend on the store and the CSP configuration.
-
-For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+In addition to the above permissions, to decrypt any query results or to encrypt any query parameters (produced by parameterizing Transact-SQL variables), you also need key store permissions to access and use your column master key. For detailed information on key store permissions required for key management operations, go to [Create and store column master keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md) and find a section relevant for your key store.
 
 ## <a name="en-dis"></a> Enabling and disabling Always Encrypted for a database connection   
 When you connect to a database in SSMS, you can either enable or disable Always Encrypted for the database connection. By default, Always Encrypted is disabled. 

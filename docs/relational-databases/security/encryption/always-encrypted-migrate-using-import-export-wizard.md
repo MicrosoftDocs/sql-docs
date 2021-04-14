@@ -62,15 +62,7 @@ The following data providers in the SQL Server Import and Export Wizard support 
 
 ## Permissions for encrypting or decrypting data during migration
 
-To encrypt or decrypt data stored in a SQL Server source or destination database, you need the *VIEW ANY COLUMN MASTER KEY DEFINITION* and *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* permissions in the source database.
-
-You also need access to column master keys configured for the columns storing data you're encrypting or decrypting:
-
-- **Certificate Store - Local computer** - you must have Read access to the certificate that is used a column master key, or be the administrator on the computer.
-- **Azure Key Vault** - you need the _get_, _unwrapKey_, and _verify_ permissions on the vault containing the column master key.
-- **Key Store Provider (CNG)** - the required permission and credentials; you might be prompted when using a key store or a key, depending on the store and the KSP configuration.
-- **Cryptographic Service Provider (CAPI)** - the required permission and credentials; you might be prompted when using a key store or a key, depending on the store and the CSP configuration.
-For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+To encrypt or decrypt data stored in a SQL Server source or destination database, you need the *VIEW ANY COLUMN MASTER KEY DEFINITION* and *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* permissions in the source database. You also need key store permissions to access and use your key. For detailed information on key store permissions required for key management operations, go to [Create and store column master keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md) and find a section relevant for your key store.
 
 ## Next Steps
 - [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)

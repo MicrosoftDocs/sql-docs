@@ -45,14 +45,7 @@ To publish DAC package if Always Encrypted is set up in the DACPAC or/and in the
 
 *ALTER ANY COLUMN MASTER KEY*, *ALTER ANY COLUMN ENCRYPTION KEY*, *VIEW ANY COLUMN MASTER KEY DEFINITION*, *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION*
 
-If the upgrade operation triggers a data encryption operation, you also need to be able to access column master keys configured for the impacted columns:
-
-- **Certificate Store - Local computer** - you must have Read access to the certificate that is used a column master key, or be the administrator on the computer.
-- **Azure Key Vault** - you need the *create*, *get*, *unwrapKey*, *wrapKey*, *sign*, and *verify* permissions on the vault containing the column master key.
-- **Key Store Provider (CNG)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the KSP configuration.
-- **Cryptographic Service Provider (CAPI)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the CSP configuration.
-
-For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md). 
+If the upgrade operation triggers a data encryption operation, you also need key store permissions to access and use your column master key key. For detailed information on key store permissions, go to [Create and store column master keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md) and find a section relevant for your key store.
 
  
 ## Next Steps

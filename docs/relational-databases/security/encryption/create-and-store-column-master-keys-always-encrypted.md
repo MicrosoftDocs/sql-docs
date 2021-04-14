@@ -39,7 +39,14 @@ Always Encrypted enabled client drivers are SQL Server client drivers that have 
 The available built-in providers depend on which driver, driver version, and operating system is selected.  Please consult Always Encrypted documentation for your specific driver to determine which key stores are supported out-of-the-box and if your driver supports custom key store providers - [Develop applications using Always Encrypted](always-encrypted-client-development.md).
 
 ### Which Key Stores are Supported in SQL Tools?
-SQL Server Management Studio and the SqlServer PowerShell module only support column master keys stored in Azure Key Vault, Windows Certificate Store and key stores that provide Cryptography Next Generation (CNG) API or Cryptography API (CAPI). 
+SQL Server Management Studio, Azure Data Studio and the SqlServer PowerShell module support column master keys stored in:
+
+- Key vaults and [managed HSMs](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview) in Azure Key Vault.
+  > [!NOTE]
+  > Managed HSMs require SSMS 18.9 or later and the SqlServer PowerShell module verion 21.1.18235 or later. Azure Data Studio currently does not support managed HSMs.
+
+- Windows Certificate Store.
+- Key stores, such as hardware security module, that provide Cryptography Next Generation (CNG) API or Cryptography API (CAPI).
 
 ## Creating Column Master Keys in Windows Certificate Store    
 
@@ -98,53 +105,52 @@ To grant a user the *Read* permission for a certificate stored in the local mach
 
 ## Creating Column Master Keys in Azure Key Vault
 
-Azure Key Vault helps safeguard cryptographic keys and secrets, and is a convenient option for storing column master keys for Always Encrypted, especially if your applications are hosted in Azure. To create a key in [Azure Key Vault](/azure/key-vault/general/overview), you need an [Azure subscription](https://azure.microsoft.com/free/) and an Azure Key Vault.
+Azure Key Vault helps safeguard cryptographic keys and secrets, and it is a convenient option for storing column master keys for Always Encrypted, especially if your applications are hosted in Azure. To create a key in [Azure Key Vault](/azure/key-vault/general/overview), you need an [Azure subscription](https://azure.microsoft.com/free/) and an Azure Key Vault. A key can be stored in a key vault or in a [managed HSM](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview). To be a valid column master key, a kay managed in Azure Key Vault must be an RSA key.
 
-### Using PowerShell
+### Using Azure CLI, Portal or PowerShell
 
-The following example creates a new Azure Key Vault and key, and then grants permissions to the desired user.
+For information on how to create a key in a key vault, see:
+- [Quickstart: Set and retrieve a key from Azure Key Vault using Azure CLI](https://docs.microsoft.com/azure/key-vault/keys/quick-create-cli)
+- [Quickstart: Set and retrieve a key from Azure Key Vault using Azure PowerShell](https://docs.microsoft.com/azure/key-vault/keys/quick-create-powershell)
+- [Quickstart: Set and retrieve a key from Azure Key Vault using the Azure portal](https://docs.microsoft.com/azure/key-vault/keys/quick-create-portal)
 
-```
-# Create a column master key in Azure Key Vault.
-Connect-AzAccount
-$SubscriptionId = "<Azure subscription ID>"
-$resourceGroup = "<resource group name>"
-$azureLocation = "<key vault location>"
-$akvName = "<key vault name>"
-$akvKeyName = "<column master key name>"
-$azureCtx = Set-AzContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
-New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
-Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
-$akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
-```
+For information on how to create a key in a managed HSM, see:
+- [Manage a Managed HSM using the Azure CLI](https://docs.microsoft.com/azure/key-vault/managed-hsm/key-management)
 
-### Using SQL Server Management Studio (SSMS)
+### SQL Server Management Studio (SSMS)
 
-For details on how to create a column master key in Azure Key Vault using SSMS, see [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
-For a step-by-step tutorial that uses SSMS and stores Always Encrypted keys in an Azure Key Vault, see [Always Encrypted Wizard tutorial (Azure Key Vault)](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
+For details on how to create a column master key in a key vault or a managed HSM in Azure Key Vault using SSMS, see [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
+For a step-by-step tutorial that uses SSMS and stores Always Encrypted keys in a key vault, see [Always Encrypted Wizard tutorial (Azure Key Vault)](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
 
 ### Making Azure Key Vault Keys Available to Applications and Users
 
-When using an Azure Key Vault key as a column master key, your application needs to authenticate to Azure and your application's identity needs to have the following permissions on the key vault: *get*, *unwrapKey*, and *verify*. 
+To access an encrypted column, your application needs to be able to access Azure Key Vault and it also needs specific permissions on the column master key to decrypt the column encryption key protecting the column.
 
-To provision column encryption keys that are protected with a column master key stored in Azure Key Vault, you need the *get*, *unwrapKey*, *wrapKey*, *sign*, and *verify* permissions. Additionally, to create a new key in an Azure Key Vault you need the *create* permission; to list the key vault contents, you need the *list* permission.
+To manage keys for Always Encrypted, you need permissions to list and create column master keys in Azure Key Vault, and to perform cryptographic operations using the keys.
 
-#### Using PowerShell
+#### Key Vaults
 
-To enable users and applications access to the actual keys in the Azure Key Vault, you must set the vault access policy ([Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
+If you store your column master keys in a key vault and you are using role permissions for authorization:
 
-```
-$vaultName = "<vault name>"
-$resourceGroupName = "<resource group name>"
-$userPrincipalName = "<user to grant access to>"
-$clientId = "<client Id>"
+* Your application's identity needs to be a member of roles that permit the following data plane actions on the key vault: Microsoft.KeyVault/vaults/keys/decrypt/action, Microsoft.KeyVault/vaults/keys/read, Microsoft.KeyVault/vaults/keys/verify/action. The easiest way to grant the application the required permission is to add its identity to the [Key Vault Crypto User](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#key-vault-crypto-user) role. You can also create a custom role with the required permissions.
+* A user managing keys for Always Encrypted needs to be a member or roles that permit the following data plane actions on the key vault: Microsoft.KeyVault/vaults/keys/create/action, Microsoft.KeyVault/vaults/keys/decrypt/action, Microsoft.KeyVault/vaults/keys/encrypt/action, Microsoft.KeyVault/vaults/keys/read, Microsoft.KeyVault/vaults/keys/sign/action, Microsoft.KeyVault/vaults/keys/verify/action. The easiest way to grant the application the required permission is to add the user to the [Key Vault Crypto User](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#key-vault-crypto-user) role.  You can also create a custom role with the required permissions.
 
-# grant users permissions to the keys:
-Set-AzKeyVaultAccessPolicy -VaultName $vaultName -ResourceGroupName $resourceGroupName -PermissionsToKeys create,get,wrapKey,unwrapKey,sign,verify,list -UserPrincipalName $userPrincipalName
-# grant applications permissions to the keys:
-Set-AzKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $resourceGroupName -ServicePrincipalName $clientId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
-```
+If you store your column master keys in a key vault and you are using access policies for authorization:
+
+* Your application's identity needs the following access policy permissions on the key vault: *get*, *unwrapKey*, and *verify*.
+* A user managing keys for Always Encrypted needs the following access policy permissions on the key vault: *create*, *get*, *list*, *sign*, *unwrapKey*, *wrapKey*, *verify*.
+
+For general information on how to configure authentication and authorization for key vaults, see [Authorize a security principal to access Key Vault](https://docs.microsoft.com/azure/key-vault/general/authentication#authorize-a-security-principal-to-access-key-vault).
+
+#### Managed HSMs
+
+Your application's identity needs to be a member of roles that permit the following data plane actions on your managed HSM: Microsoft.KeyVault/managedHsm/keys/decrypt/action, Microsoft.KeyVault/managedHsm/keys/read/action, Microsoft.KeyVault/managedHsm/keys/verify/action. Microsoft recommends you create a custom role containing just these three permissions.
+
+A user managing keys for Always Encrypted needs to be a member or roles that permit the following data plane actions on the key: Microsoft.KeyVault/managedHsm/keys/create/action, Microsoft.KeyVault/managedHsm/keys/decrypt/action, Microsoft.KeyVault/managedHsm/keys/encrypt/action, Microsoft.KeyVault/managedHsm/keys/read, MMicrosoft.KeyVault/managedHsm/keys/sign/action, Microsoft.KeyVault/managedHsm/keys/verify/action. The easiest way to grant the application the required permission is to add the user to the Managed HSM Crypto User role. You can also create a custom role with the required permissions.
+
+For more information about access control for managed HSMs, see:
+- [Managed HSM access control](https://docs.microsoft.com/azure/key-vault/managed-hsm/access-control)
+- [Managed HSM local RBAC built-in roles](https://docs.microsoft.com/azure/key-vault/managed-hsm/built-in-roles#permitted-operations).
 
 ## Creating Column Master Keys in Hardware Security Modules using CNG
 

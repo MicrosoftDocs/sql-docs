@@ -150,19 +150,19 @@ SalesQuota            SalesYTD              SalesLastYear         Greatest
  This example uses `GREATEST` to determine the maximum value of a list of local variables within the predicate of a `WHERE` clause. 
   
 ```sql  
-CREATE TABLE studies (    
+CREATE TABLE dbo.studies (    
     Variable varchar(10) NOT NULL,    
     Correlation decimal(4, 3) NULL 
 ); 
 
-INSERT INTO studies VALUES ('Var1', 0.2), ('Var2', 0.825), ('Var3', 0.61); 
+INSERT INTO dbo.studies VALUES ('Var1', 0.2), ('Var2', 0.825), ('Var3', 0.61); 
 GO 
 
 DECLARE @PredictionA DECIMAL(2,1) = 0.7;  
 DECLARE @PredictionB DECIMAL(3,1) = 0.65;  
 
 SELECT Variable, Correlation  
-FROM studies 
+FROM dbo.studies 
 WHERE Correlation > GREATEST(@PredictionA, @PredictionB); 
 GO 
 ```  
@@ -182,18 +182,18 @@ Var2              .825
  This example uses `GREATEST` to determine the maximum value of a list that includes columns, constants, and variables. 
   
 ```sql  
-CREATE TABLE products (    
+CREATE TABLE dbo.products (    
     prod_id int IDENTITY(1,1),    
     listprice smallmoney NULL 
 ); 
 
-INSERT INTO products VALUES (14.99), (49.99), (24.99); 
+INSERT INTO dbo.products VALUES (14.99), (49.99), (24.99); 
 GO 
 
 DECLARE @PriceX smallmoney = 19.99;  
 
-SELECT GREATEST(listprice, 0, @PriceX) as GreatestPrice  
-FROM products;
+SELECT GREATEST(listprice, 0, @PriceX) as Price  
+FROM dbo.products;
 GO 
 ```  
   

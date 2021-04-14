@@ -149,19 +149,19 @@ SalesQuota            SalesYTD              SalesLastYear         Least
  This example uses `LEAST` to determine the minimum value of a list of local variables within the predicate of a `WHERE` clause. 
   
 ```sql  
-CREATE TABLE studies (    
+CREATE TABLE dbo.studies (    
     Variable varchar(10) NOT NULL,    
     Correlation decimal(4, 3) NULL 
 ); 
 
-INSERT INTO studies VALUES ('Var1', 0.2), ('Var2', 0.825), ('Var3', 0.61); 
+INSERT INTO dbo.studies VALUES ('Var1', 0.2), ('Var2', 0.825), ('Var3', 0.61); 
 GO 
 
 DECLARE @PredictionA DECIMAL(2,1) = 0.7;  
 DECLARE @PredictionB DECIMAL(3,1) = 0.65;  
 
 SELECT Variable, Correlation  
-FROM studies 
+FROM dbo.studies 
 WHERE Correlation < LEAST(@PredictionA, @PredictionB); 
 GO 
 ```  
@@ -182,18 +182,18 @@ Var3              .610
  This example uses `LEAST` to determine the minimum value of a list that includes columns, constants, and variables. 
   
 ```sql  
-CREATE TABLE products (    
-    prod_id int IDENTITY(1,1),    
+CREATE TABLE dbo.products (    
+    prod_id INT IDENTITY(1,1),    
     listprice smallmoney NULL 
 ); 
 
-INSERT INTO products VALUES (14.99), (49.99), (24.99); 
+INSERT INTO dbo.products VALUES (14.99), (49.99), (24.99); 
 GO 
 
 DECLARE @PriceX smallmoney = 19.99;  
 
 SELECT LEAST(listprice, 40, @PriceX) as LeastPrice  
-FROM products;
+FROM dbo.products;
 GO 
 ```  
   

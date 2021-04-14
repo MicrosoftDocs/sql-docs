@@ -33,7 +33,7 @@ If you need direct integration with a REST API, use standard Livy calls to submi
 
 ## Simple ETL that uses Big Data Clusters Spark
 
-This extract, transform, load (ETL) application exemplifies a common data engineering pattern. It loads tabular data from an Apache Hadoop Distributed File System (HDFS) landing zone path. It then uses a table format to write to an HDFS-processed zone path. 
+This extract, transform, and load (ETL) application follows a common data engineering pattern. It loads tabular data from an Apache Hadoop Distributed File System (HDFS) landing zone path. It then uses a table format to write to an HDFS-processed zone path. 
 
 Download the [sample application's dataset](https://ailab.criteo.com/download-criteo-1tb-click-logs-dataset/). Then create PySpark applications by using PySpark, Spark Scala, or Spark SQL. 
 
@@ -75,7 +75,7 @@ print("Sample ETL pipeline completed")
 
 Store the application in HDFS so the cluster can access it for execution. As a best practice, standardize and govern application locations within the cluster to streamline administration. 
 
-In this example use case, all ETL pipeline applications are stored on the `hdfs:/apps/ETL-Pipelines` path. The sample application is stored at `hdfs:/apps/ETL-Pipelines/parquet_etl_sample.py`.
+In this example use case, all ETL pipeline applications are stored on the *hdfs:/apps/ETL-Pipelines* path. The sample application is stored at *hdfs:/apps/ETL-Pipelines/parquet_etl_sample.py*.
 
 Run the following command to upload *parquet_etl_sample.py* from the local development or staging machine to the HDFS cluster. 
 
@@ -206,7 +206,7 @@ The `azdata` command runs the application by using commonly specified parameters
 
 This application requires the `spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation` configuration parameter. So the command uses the `--config` option. This setup shows how to pass configurations into the Spark session. 
 
-You can use the `--config` option to specify multiple configuration parameters. You could also do this inside the application session by setting the configuration in the `SparkSession` object.
+You can use the `--config` option to specify multiple configuration parameters. You could also specify them inside the application session by setting the configuration in the `SparkSession` object.
 
 ```bash
 azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet_etl_sample.py \
@@ -239,9 +239,9 @@ EOF
 
 The `azdata` command runs the application by using commonly specified parameters. For complete parameter options for `azdata bdc spark batch create`, see [`azdata bdc spark`](../azdata/reference/reference-azdata-bdc-spark.md).
 
-This application requires the `spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation` configuration parameter. So the command uses the `--config` option. This setup shows how to pass configurations into the Spark session. 
+The application requires the `spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation` configuration parameter. So the command uses the `--config` option. This setup shows how to pass configurations into the Spark session. 
 
-You can use the `--config` option to specify multiple configuration parameters. You could also do this inside the application session by setting the configuration in the `SparkSession` object.
+You can use the `--config` option to specify multiple configuration parameters. You could also specify them inside the application session by setting the configuration in the `SparkSession` object.
 
 ```bash
 azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet-etl-sample.jar \
@@ -278,7 +278,7 @@ The `azdata` command runs the application by using commonly specified parameters
 
 Like the PySpark example, this application also requires the `spark.sql.legacy.allowCreatingManagedTableUsingNonemptyLocation` configuration parameter. So the command uses the `--config` option. This setup shows how to pass configurations into the Spark session. 
 
-You can use the `--config` option to specify multiple configuration parameters. You could also do this inside the application session by setting the configuration in the `SparkSession` object.
+You can use the `--config` option to specify multiple configuration parameters. You could also specify them inside the application session by setting the configuration in the `SparkSession` object.
 
 ```bash
 azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/parquet_etl_sample.sql \
@@ -311,64 +311,64 @@ EOF
 
 ## Monitor Spark jobs
 
-The [`azdata bdc spark batch` commands](../azdata/reference/reference-azdata-bdc-spark.md) provide management actions for Spark batch jobs.
+The [`azdata bdc spark batch` commands](../azdata/reference/reference-azdata-bdc-spark.md) provide management actions for Spark batch jobs. 
 
 To _list all running jobs_, run the following command.
 
-This is the `azdata` command:
+* The `azdata` command:
 
-```bash
-azdata bdc spark batch list -o table
-```
+    ```bash
+    azdata bdc spark batch list -o table
+    ```
+    
+* The `curl` command, using Livy:
 
-This `curl` command uses Livy:
-
-```bash
-curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches
-```
-
+    ```bash
+    curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches
+    ```
+    
 To _get information_ for a Spark batch with the given ID, run the following command. The `batch id` is returned from `spark batch create`.
 
-This is the `azdata` command:
+* The `azdata` command:
 
-```bash
-azdata bdc spark batch info --batch-id 0
-```
+    ```bash
+    azdata bdc spark batch info --batch-id 0
+    ```
+    
+* The `curl` command, using Livy:
 
-This `curl` command uses Livy:
-
-```bash
-curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches/<BATCH_ID>
-```
-
+    ```bash
+    curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches/<BATCH_ID>
+    ```
+    
 To _get state information_ for a Spark batch with the given ID, run the following command.
 
-This is the `azdata` command:
+* The `azdata` command:
 
-```bash
-azdata bdc spark batch state --batch-id 0
-```
+    ```bash
+    azdata bdc spark batch state --batch-id 0
+    ```
+    
+* The `curl` command, using Livy:
 
-This `curl` command uses Livy:
-
-```bash
-curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches/<BATCH_ID>/state
-```
-
+    ```bash
+    curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches/<BATCH_ID>/state
+    ```
+    
 To _get the logs_ for a Spark batch with the given ID, run the following command.
 
-This is the `azdata` command:
+* The `azdata` command:
 
-```bash
-azdata bdc spark batch log --batch-id 0
-```
+    ```bash
+    azdata bdc spark batch log --batch-id 0
+    ```
+    
+* The `curl` command, using Livy:
 
-This `curl` command uses Livy:
-
-```bash
-curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches/<BATCH_ID>/log
-```
-
+    ```bash
+    curl -k -u <USER>:<PASSWORD> -X POST <LIVY_ENDPOINT>/batches/<BATCH_ID>/log
+    ```
+    
 ## Next steps
 
 For information about troubleshooting Spark code, see [Troubleshoot a PySpark notebook](troubleshoot-pyspark-notebook.md).

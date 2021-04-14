@@ -117,7 +117,7 @@ GO
 
 SELECT sp.SalesQuota, sp.SalesYTD, sp.SalesLastYear 
       , GREATEST(sp.SalesQuota, sp.SalesYTD, sp.SalesLastYear) AS Greatest 
-FROM sales.SalesPerson AS sp 
+FROM Sales.SalesPerson AS sp 
 WHERE sp.SalesYTD < 3000000; 
 GO  
   

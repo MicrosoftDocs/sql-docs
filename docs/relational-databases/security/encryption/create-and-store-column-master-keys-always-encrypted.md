@@ -132,8 +132,22 @@ To manage keys for Always Encrypted, you need permissions to list and create col
 
 If you store your column master keys in a key vault and you are using role permissions for authorization:
 
-* Your application's identity needs to be a member of roles that permit the following data plane actions on the key vault: Microsoft.KeyVault/vaults/keys/decrypt/action, Microsoft.KeyVault/vaults/keys/read, Microsoft.KeyVault/vaults/keys/verify/action. The easiest way to grant the application the required permission is to add its identity to the [Key Vault Crypto User](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#key-vault-crypto-user) role. You can also create a custom role with the required permissions.
-* A user managing keys for Always Encrypted needs to be a member or roles that permit the following data plane actions on the key vault: Microsoft.KeyVault/vaults/keys/create/action, Microsoft.KeyVault/vaults/keys/decrypt/action, Microsoft.KeyVault/vaults/keys/encrypt/action, Microsoft.KeyVault/vaults/keys/read, Microsoft.KeyVault/vaults/keys/sign/action, Microsoft.KeyVault/vaults/keys/verify/action. The easiest way to grant the user the required permission is to add the user to the [Key Vault Crypto User](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#key-vault-crypto-user) role.  You can also create a custom role with the required permissions.
+* Your application's identity needs to be a member of roles that permit the following data plane actions on the key vault: 
+
+  - Microsoft.KeyVault/vaults/keys/decrypt/action
+  - Microsoft.KeyVault/vaults/keys/read
+  - Microsoft.KeyVault/vaults/keys/verify/action 
+  
+  The easiest way to grant the application the required permission is to add its identity to the [Key Vault Crypto User](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#key-vault-crypto-user) role. You can also create a custom role with the required permissions.
+* A user managing keys for Always Encrypted needs to be a member or roles that permit the following data plane actions on the key vault: 
+  - Microsoft.KeyVault/vaults/keys/create/action
+  - Microsoft.KeyVault/vaults/keys/decrypt/action
+  - Microsoft.KeyVault/vaults/keys/encrypt/action
+  - Microsoft.KeyVault/vaults/keys/read
+  - Microsoft.KeyVault/vaults/keys/sign/action
+  - Microsoft.KeyVault/vaults/keys/verify/action
+  
+  The easiest way to grant the user the required permission is to add the user to the [Key Vault Crypto User](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#key-vault-crypto-user) role.  You can also create a custom role with the required permissions.
 
 If you store your column master keys in a key vault and you are using access policies for authorization:
 

@@ -45,7 +45,9 @@ sp_databases
 |**REMARKS**|**varchar(254)**|For the [!INCLUDE[ssDE](../../includes/ssde-md.md)], this field always returns NULL.|  
   
 ## Remarks  
- Database names that are returned can be used as parameters in the USE statement to change the current database context.  
+ Database names that are returned can be used as parameters in the USE statement to change the current database context.
+ 
+ DATABASE_SIZE will return NULL for databases larger than 2.15TB.
   
  **sp_databases** has no equivalent in Open Database Connectivity (ODBC).  
   

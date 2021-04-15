@@ -9,7 +9,6 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-
 ms.date: 04/15/2021
 ---
 
@@ -31,7 +30,7 @@ This article provides details about updates, improvements, and bug fixes for the
 - Build number: 15.0.18382.0
 - Release date: April 15, 2021
 
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2160964&clcid=0x40a)
 
 SSMS 18.9 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 

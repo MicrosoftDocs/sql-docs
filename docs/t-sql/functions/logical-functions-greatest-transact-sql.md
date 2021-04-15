@@ -19,7 +19,8 @@ ms.author: josteen
 ms.reviewer: wiassaf
 ---
 # Logical Functions - GREATEST (Transact-SQL)
-[!INCLUDE [asdb-asdbmi](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-svrless-poolonly](../../includes/applies-to-version/sql-asdb-asdbmi-asa-svrless-poolonly.md)]
+
 
  This function returns the maximum value from a list of one or more expressions. 
   

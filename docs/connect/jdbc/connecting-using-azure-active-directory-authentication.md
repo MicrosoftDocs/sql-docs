@@ -55,11 +55,11 @@ For **ActiveDirectoryMSI** authentication, the below components must be installe
 For other authentication modes, the below components must be installed on the client machine:
 * Java 8 or above
 * Microsoft JDBC Driver 6.0 (or higher) for SQL Server
-* If you're using the access token-based authentication mode, you need [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies to run the examples from this article. For more information, see the [Connecting using access token](#connecting-using-access-token) section.
-* If you're using the **ActiveDirectoryPassword** authentication mode, you need [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies. For more information, see the [Connecting using ActiveDirectoryPassword authentication mode](#connecting-using-activedirectorypassword-authentication-mode) section.
-* If you're using the **ActiveDirectoryIntegrated** mode, you need [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies. For more information, see the [Connecting using ActiveDirectoryIntegrated authentication mode](#connecting-using-activedirectoryintegrated-authentication-mode) section.
-* If you're using the **ActiveDirectoryInteractive** mode, you need [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies. For more information, see the [Connecting using ActiveDirectoryInteractive authentication mode](#connecting-using-activedirectoryinteractive-authentication-mode) section.
-* If you're using the **ActiveDirectoryServicePrincipal** mode, you need [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies. For more information, see the [Connecting using ActiveDirectoryServicePrincipal authentication mode](#connecting-using-activedirectoryserviceprincipal-authentication-mode) section.
+* If you're using the access token-based authentication mode, you need either [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies for driver versions prior to JDBC Driver 9.1, to run the examples from this article . For more information, see the [Connecting using access token](#connecting-using-access-token) section.
+* If you're using the **ActiveDirectoryPassword** authentication mode, you need either [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies for driver versions prior to JDBC Driver 9.1. For more information, see the [Connecting using ActiveDirectoryPassword authentication mode](#connecting-using-activedirectorypassword-authentication-mode) section.
+* If you're using the **ActiveDirectoryIntegrated** mode, you need either [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies for driver versions prior to JDBC Driver 9.1. For more information, see the [Connecting using ActiveDirectoryIntegrated authentication mode](#connecting-using-activedirectoryintegrated-authentication-mode) section.
+* If you're using the **ActiveDirectoryInteractive** mode, you need either [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies for driver versions prior to JDBC Driver 9.1. For more information, see the [Connecting using ActiveDirectoryInteractive authentication mode](#connecting-using-activedirectoryinteractive-authentication-mode) section.
+* If you're using the **ActiveDirectoryServicePrincipal** mode, you need either [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies. For more information, see the [Connecting using ActiveDirectoryServicePrincipal authentication mode](#connecting-using-activedirectoryserviceprincipal-authentication-mode) section.
 
 
 ## Connecting using ActiveDirectoryMSI authentication mode
@@ -119,7 +119,7 @@ For more information, see [Set Kerberos ticket on Windows, Linux And macOS](#set
 
 The following example shows how to use `authentication=ActiveDirectoryIntegrated` mode. Run this example on a domain joined machine that is federated with Azure Active Directory. A contained database user representing your Azure AD user, or one of the groups you belong to, must exist in the database and must have the CONNECT permission. 
 
-Before building and running the example, on the client machine (on which, you want to run the example), download the [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies, and include them in the Java build path
+Before building and running the example, on the client machine (on which, you want to run the example), download the [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies for driver versions prior to JDBC Driver 9.1, and include them in the Java build path
 
 Replace the server/database name with your server/database name in the following lines before executing the example:
 
@@ -222,7 +222,7 @@ Access to a Windows domain-joined machine to query your Kerberos Domain Controll
 The following example shows how to use `authentication=ActiveDirectoryPassword` mode.
 
 Before building and running the example:
-1.	On the client machine (on which, you want to run the example), download the [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies, and include them in the Java build path
+1.	On the client machine (on which, you want to run the example), download the [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies for driver versions prior to JDBC Driver 9.1, and include them in the Java build path
 2.	Locate the following lines of code and replace the server/database name with your server/database name.
 	```java
 	ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
@@ -275,7 +275,7 @@ You have successfully logged on as: <your user name>
 The following example shows how to use `authentication=ActiveDirectoryInteractive` mode.
 
 Before building and running the example:
-1.	On the client machine (on which, you want to run the example), download the [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies, and include them in the Java build path
+1.	On the client machine (on which, you want to run the example), download the [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies for driver versions prior to JDBC Driver 9.1, and include them in the Java build path
 2.	Locate the following lines of code and replace the server/database name with your server/database name.
 	```java
 	ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
@@ -337,7 +337,7 @@ You have successfully logged on as: <your user name>
 The following example shows how to use `authentication=ActiveDirectoryServicePrincipal` mode.
 
 Before building and running the example:
-1.	On the client machine (on which, you want to run the example), download the [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies, and include them in the Java build path
+1.	On the client machine (on which, you want to run the example), download the [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies for driver versions prior to JDBC Driver 9.1, and include them in the Java build path
 2.	Locate the following lines of code and replace the server/database name with your server/database name.
 	```java
 	ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
@@ -418,7 +418,7 @@ provision a contained database user for your application principal. For more inf
 	CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
 	```
 
-3.	On the client machine (on which, you want to run the example), download the [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) library and its dependencies, and include them in the Java build path. Note that the microsoft-authentication-library-for-java is only needed to run this specific example. The example uses the APIs from this library to retrieve the access token from Azure Azure AD. If you already have an access token, you can skip this step. Note that you also need to remove the section in the example that retrieves access token.
+3.	On the client machine (on which, you want to run the example), download the [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) library and its dependencies for JDBC Driver 9.1 and above, or [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies for driver versions prior to JDBC Driver 9.1, and include them in the Java build path. Note that the microsoft-authentication-library-for-java is only needed to run this specific example. The example uses the APIs from this library to retrieve the access token from Azure Azure AD. If you already have an access token, you can skip this step. Note that you also need to remove the section in the example that retrieves access token.
 
 In the following example, replace the STS URL, Client ID, Client Secret, server and database name with your values.
 
@@ -487,5 +487,3 @@ If the connection is successful, you should see the following message as output:
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>	
 ```
-
-

@@ -2,7 +2,7 @@
 title: "Connecting using Azure Active Directory authentication"
 description: "Learn how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "04/09/2021"
+ms.date: "04/14/2021"
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity

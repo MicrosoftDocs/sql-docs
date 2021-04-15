@@ -75,7 +75,7 @@ RECONFIGURE
   
 -   Option 7: Azure blob storage (WASB[S])  
 
-   <sup>*</sup> Hortonworks 3.1 requires SQL Server 2019 (15.x).
+   <sup>*</sup> Hortonworks 3.1 requires SQL Server 2019 CU9 (15.0.4102) or later.
 
  **RECONFIGURE**  
  Updates the run value (run_value) to match the configuration value (config_value). See [Result Sets](#ResultSets) for definitions of run_value and config_value. The new configuration value that is set by sp_configure does not become effective until the run value is set by the RECONFIGURE statement.  

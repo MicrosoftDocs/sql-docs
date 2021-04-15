@@ -88,7 +88,7 @@ Specific projects that require either of the preceding features need to explicit
 
 ### Working with the Azure Key Vault provider:
 
-- JDBC driver version 9.2.1 - Dependency versions: Azure-keyvault(version 1.2.4), and Azure-identity(version 1.1.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
+- JDBC driver version 9.2.1 - Dependency versions: Azure-security-keyvault-keys (version 4.2.1), and Azure-identity(version 1.1.3), and their dependencies ([sample application](azure-key-vault-sample-version-9.2.md))
 - JDBC driver version 8.4.1 - Dependency versions: Azure-Keyvault (version 1.2.4), Adal4j (version 1.6.5), Client-Runtime-for-AutoRest (1.7.4), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
 - JDBC driver version 8.2.2 - Dependency versions: Azure-Keyvault (version 1.2.2), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.7.0), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))
 - JDBC driver version 7.4.1 - Dependency versions: Azure-Keyvault (version 1.2.1), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.6.10), and their dependencies ([sample application](azure-key-vault-sample-version-7.0.md))

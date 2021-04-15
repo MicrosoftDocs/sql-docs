@@ -10,7 +10,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 
-ms.date: 12/17/2020
+ms.date: 04/15/2021
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
@@ -18,6 +18,8 @@ ms.date: 12/17/2020
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS.
+
+[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
 
 ## Current SSMS release
 
@@ -27,7 +29,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 - Release number: 18.9
 - Build number: 15.0.18382.0
-- Release date: December 17, 2020
+- Release date: April 15, 2021
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x40a)
 
@@ -70,7 +72,7 @@ SSMS 18.9 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | Fixed an issue where Object Explorer can lock up the UI thread, and ultimately cause the UI to freeze (and the user to have to hard close the SSMS. |
 | General SSMS | Addressed issue where there is no option available in SSMS to rebuild a clustered columnstore index online. SSMS offers an online ON checkbox on the UI, where we can select if the particular index has to be built online.  |
 | General SSMS | Fixed the logic to page the user to a proper page in most error dialogs originating from exception at the SQLClient (driver) level. Previously, for almost all the error/exceptions, the help button was always tasking the user to a non-existing page. |
-| General SSMS | Fixed issues around the "Server Properties / Processor" UI where SSMS is SSMS shows incorrect CPU Processor information or an error similar to "An item with the same key has already been added." See [SQL Server user feedback 1](https://feedback.azure.com/forums/908035/suggestions/39349960) and [SQL Server user feedback 2](https://feedback.azure.com/forums/908035/suggestions/40604089). |
+| General SSMS | Fixed issues around the "Server Properties / Processor" UI where SSMS is SSMS shows incorrect CPU Processor information or an error similar to "An item with the same key has already been added." See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/39349960) and another [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40604089). |
 | General SSMS | Fixed errors that may show up while resetting settings. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/42595579). |
 | General SSMS | Fixed an issue that was causing SSMS to throw an error message when trying to use the "PresentOn" feature in QuickLaunch. Also, added back the "PresentOff " functionality, which resets the UI to its regular size. |
 | General SSMS | Fixed the logic that prevents the creation of a (clustered) columnstore index, which was overly restrictive for newer versions of SQL Server. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37061617). |
@@ -88,6 +90,7 @@ SSMS 18.9 is the latest general availability (GA) release of SSMS. If you need a
 | SMO/Scripting | Fixed script generation for DW databases where it only worked if the object explorer was connected to logical master instead of the user database. |
 | SSMS Setup | Fixed an issue where SSMS Setup was not properly executing the Post-Install Custom Action, thus not running "ssms.exe /setup". This is believe to be the cause for some sporadic issues when SSMS is started after an upgrade (see known issue session for AS). |
 | Vulnerability Assessment | Disabling menu options "Tasks -> Vulnerability Assessment" for Azure SQL databases and adding collapsible message tip for better user experience for Azure SQL VM users. |
+| XEvent UI | Fixed capability to filter Extended Events using the event name instead of id. Supports the use of map_value column instead of map_key in wait_type filter predicate as the key value is subjected to change during version upgrade. Originally added in [SSMS 18.8](#whats-new-in-187). |
 
 
 #### Known issues (18.9)
@@ -103,8 +106,6 @@ SSMS 18.9 is the latest general availability (GA) release of SSMS. If you need a
 You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
 ## Previous SSMS releases
-
-[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
 
 Download previous SSMS versions by selecting the download link in the related section.
 

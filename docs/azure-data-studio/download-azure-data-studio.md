@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 4/15/2021
+ms.date: 4/16/2021
 ---
 
 # Download and install Azure Data Studio

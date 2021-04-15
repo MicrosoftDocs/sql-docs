@@ -18,7 +18,13 @@ This article describes how to virtualise the logs an application inside [!INCLUD
 
 # BDC logs stored in Elastic Search
 
-BDC related logs stored in Elastic Search includes the standard output and error logs of all BDC services, e.g. SQL Server, Spark, HDFS and platform services.
+BDC related logs stored in Elastic Search includes the standard output and error logs of all BDC services, e.g. SQL Server, Spark, HDFS and platform services. 
+
+Those logs can be searched by components From Kibana Dashboard, for instance, you can use filters such as 'kubernetes_container_name', 'kubernetes_pod_name', 'log_filename' and 'service_name' to help you quickly virtualise all the logs such as logs from BDC controller, from SQL Server or any logs from different pods, services and more. 
+
+Specifically for the controller log including the cluster events ...
+
+
 
 ## Prerequisites
 
@@ -52,8 +58,6 @@ The link to a Kibana dashboard:
 > [!NOTE]
 > The older Microsoft Edge browser is incompatible with Kibana, you must use the Edge chromium-based browser for the dashboard to display correctly. You will see a blank page when loading the dashboards using an unsupported browser, see [supported browsers for Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
 
-
-From Kibana Dashboard, you can use filters such as 'kubernetes_container_name', 'kubernetes_pod_name', 'log_filename' and 'service_name' to help you quickly virtualise all the logs such as logs from BDC controller, from SQL Server or any logs from different pods, services and more. 
 
 
 ## Next steps

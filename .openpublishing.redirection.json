@@ -56451,6 +56451,16 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/ssma/oracle/legal-notice-ssma-for-oracle.md",
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant#legal-notice-ssma",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssma/oracle/shortcut-keys-oracle-to-sql.md",
+      "redirect_url": "/sql/ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/2014/analysis-services/data-mining/index.md",
       "redirect_url": "/sql/analysis-services/data-mining/data-mining-ssas?view=sql-server-2014",
       "redirect_document_id": false

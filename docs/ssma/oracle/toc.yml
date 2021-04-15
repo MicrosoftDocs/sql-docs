@@ -154,9 +154,3 @@
     href: emulate-records-collections-via-clr.md
   - name: Menu commands & other shortcut keys
     href: menu-commands-and-other-shortcut-keys-oracle-to-sql.md
-- name: Remove this
-  items:
-  - name: Legal Notice
-    href: legal-notice-ssma-for-oracle.md
-  - name: Shortcut Keys
-    href: shortcut-keys-oracle-to-sql.md

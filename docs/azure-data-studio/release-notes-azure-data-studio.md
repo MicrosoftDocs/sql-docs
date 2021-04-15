@@ -23,7 +23,7 @@ April 16, 2021 &nbsp; / &nbsp; version: 1.28.0
 
 | Change | Details |
 | ------ | ------- |
-| Extension(s) update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) </br> [SchemaCompare](extensions/schema-compare-extension.md) |
+| Extension(s) update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) </br> [SchemaCompare](extensions/schema-compare-extension.md) <br/> [Kusto (KQL)](extensions/kusto-extension.md) </br> [MachineLearning](extensions/machine-learning-extension.md)|
 | New Notebook features | Added Add Notebook and Remove Notebook commands |
 | Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2021+Release%22). |
 

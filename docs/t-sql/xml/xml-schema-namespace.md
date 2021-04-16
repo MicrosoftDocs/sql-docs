@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "schemas [SQL Server], XML"
   - "schema collections [SQL Server], reconstructing schemas"
 ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # xml_schema_namespace
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

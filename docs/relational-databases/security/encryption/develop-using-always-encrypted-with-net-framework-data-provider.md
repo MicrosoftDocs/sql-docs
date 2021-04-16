@@ -309,7 +309,10 @@ You do not need to make any application code changes to use these providers but 
 
 ### Using Azure Key Vault provider
 
-Azure Key Vault is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The .NET Framework Data Provider for SQL Server does not include a built-in column master key store provider for Azure Key Vault, but it is available as a NuGet package, that you can easily integrate with your application. For details, see [Always Encrypted - Protect sensitive data in SQL Database with data encryption and store your encryption keys in the Azure Key Vault](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
+Azure Key Vault is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The .NET Framework Data Provider for SQL Server does not include a built-in column master key store provider for Azure Key Vault, but it is available as a NuGet package, that you can easily integrate with your application. For details, see:
+
+- [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider/)
+- [Always Encrypted - Protect sensitive data in SQL Database with data encryption and store your encryption keys in the Azure Key Vault](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)
 
 ### Implementing a custom column master key store provider
 

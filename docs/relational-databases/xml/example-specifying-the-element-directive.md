@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ELEMENT directive"
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Example: Specifying the ELEMENT Directive
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

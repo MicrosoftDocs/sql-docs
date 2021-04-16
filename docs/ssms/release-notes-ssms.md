@@ -49,7 +49,6 @@ SSMS 18.9 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | Updated MSODBC and OLEDB drivers installed with SSMS. The updated version to MSODBC notably adds a workaround to connection error *AADSTS530000* (AAD configuration with Conditional Access policies that would require Windows Account Manager). See [Using Azure Active Directory](../connect/odbc/using-azure-active-directory.md) for more information. |
 | IntelliSense/Editor | Added support for [greatest](../t-sql/functions/logical-functions-greatest-transact-sql.md) and [least](../t-sql/functions/logical-functions-least-transact-sql.md) in IntelliSense |
 | IntelliSense/Editor | Added support for BACKUP_STORAGE_REDUNDANCY syntax (CREATE/ALTER DATABASE). |
-| IntelliSense/Editor | Added support for [Named Replicas](https://docs.microsoft.com/azure/azure-sql/database/service-tier-hyperscale-replicas) syntax. |
 | ShowPlan | Always show Estimated Number of Rows for All Executions property |
 
 

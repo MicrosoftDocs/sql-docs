@@ -1,8 +1,8 @@
 ---
-title: "Detecting and resolving fragmented indexes | Microsoft Docs"
+title: "Detecting and resolving fragmented indexes"
 description: This article describes how index fragmentation occurs, detect how much fragmentation exists, and determine to best option to resolve index fragmentation using T-SQL and SQL Server Management Studio.
 ms.custom: ""
-ms.date: "03/19/2020"
+ms.date: "04/15/2021"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.technology: table-view-index
@@ -27,16 +27,18 @@ helpviewer_keywords:
   - "index defragmenting [SQL Server]"
   - "LOB data [SQL Server], defragmenting"
   - "clustered indexes, defragmenting"
-ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Resolve index fragmentation by reorganizing or rebuilding indexes
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 
 This article describes how index defragmentation occurs and discusses its impact on query performance. Once you determine the [amount of fragmentation that exists for an index](#detecting-the-amount-of-fragmentation), you can defragment an index by either [reorganizing an index](#reorganize-an-index) or [rebuilding an index](#rebuild-an-index) by running Transact-SQL commands in your tool of choice or by using SQL Server Management Studio.
+
+> [!Note]
+> The information in this article does not apply to a dedicated SQL pool in Azure Synapse Analytics. For information on index maintenance for a dedicated SQL pool in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md), see [Indexing dedicated SQL pool tables in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index).
 
 ## Index fragmentation overview
 
@@ -409,10 +411,6 @@ An index cannot be reorganized when `ALLOW_PAGE_LOCKS` is set to OFF.
 
 Up to [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], rebuilding a clustered columnstore index is an offline operation. The database engine has to acquire an exclusive lock on the table or partition while the rebuild occurs. The data is offline and unavailable during the rebuild even when using `NOLOCK`, Read-committed Snapshot Isolation (RCSI), or Snapshot Isolation.
 Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], a clustered columnstore index can be rebuilt using the `ONLINE = ON` option.
-
-For an Azure Synapse Analytics (formerly [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]) table with an ordered clustered columnstore index, `ALTER INDEX REBUILD` will re-sort the data using TempDB. Monitor TempDB during rebuild operations. If you need more TempDB space, scale up the data warehouse. Scale back down once the index rebuild is complete.
-
-For an Azure Synapse Analytics (formerly [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]) table with an ordered clustered columnstore index, `ALTER INDEX REORGANIZE` does not re-sort the data. To resort the data use `ALTER INDEX REBUILD`.
 
 ## Using INDEX REBUILD to recover from hardware failures
 

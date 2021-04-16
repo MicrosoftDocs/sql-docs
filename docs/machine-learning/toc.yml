@@ -260,8 +260,6 @@ items:
       href: ../machine-learning/r/r-libraries-and-data-types.md
   - name: Deploy
     items:
-    - name: Operationalize using stored procedures
-      href: ../machine-learning/deploy/operationalizing-your-r-code.md
     - name: Modify R/Python code for SQL Server
       href: ../machine-learning/deploy/modify-r-python-code-to-run-in-sql-server.md
   - name: Predictions

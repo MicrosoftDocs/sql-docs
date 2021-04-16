@@ -34,9 +34,10 @@ This article provides details about updates, improvements, and bug fixes for the
 
 SSMS 18.9 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 
-#### What's new in 18.9
+> [!IMPORTANT]
+> SSMS 18.9 includes a known issue related to IntelliSense, where column names are omitted from suggestions and error indicators are falsely displayed under the column names. 
 
-[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
+#### What's new in 18.9
 
 | New item | Details |
 |----------|---------|
@@ -99,6 +100,7 @@ SSMS 18.9 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | A fix is coming for .Net Framework 4.8 for Windows 10 version > 1809 on July 21. Earlier versions will be updated the second Tuesday of August.  |
 | General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
+| IntelliSense | Column names are omitted from suggestions and error indicators are falsely displayed under the column names. |
 
 
 You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.

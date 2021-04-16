@@ -37,7 +37,7 @@ ms.author: wiassaf
  
 ## Remarks
 
-For partitioned tables, the **partition_scheme_id** column is equal to the **data_space_id** column in the DMV **sys.partition_schemes** for the partition scheme used by the table. For a given partition boundary value, the **destination_id** column is equal to the **boundary_id** column in the DMV **sys.partition_range_values**
+For partitioned tables, the **partition_scheme_id** column is equal to the **data_space_id** column in the DMV **sys.partition_schemes** for the partition scheme used by the table. For a given partition scheme and partition boundary value, the **destination_id** column is equal to the **boundary_id** column in the DMV **sys.partition_range_values**
   
 ## See Also  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  

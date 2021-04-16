@@ -23,7 +23,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 4/15/2021
+ms.date: 4/16/2021
 ---
 
 # Download SQL Server Management Studio (SSMS)
@@ -36,12 +36,13 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 ## Download SSMS
 
-:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.8](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.9 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.9 upgrades it to 18.9.
 
 > [!IMPORTANT]
-> SSMS 18.9 includes a known issue related to IntelliSense, where column names are omitted from suggestions and error indicators are falsely displayed under the column names. 
+> SSMS 18.9 includes a known issue related to IntelliSense, where column names are omitted from suggestions and error indicators are falsely displayed under the column names. A hotfix release will be available soon and the default installation version of SSMS remains SSMS 18.8 (15.0.18369.0). If you are interested in downloading SSMS 18.9 it is available below.
+
+SSMS 18.9 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.9 upgrades it to 18.9.
 
 - Release number: 18.9
 - Build number: 15.0.18382.0

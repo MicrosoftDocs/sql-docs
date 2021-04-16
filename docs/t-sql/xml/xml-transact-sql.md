@@ -13,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "xml data type [SQL Server], about xml data type"
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.reviewer: ""
 ms.custom: ""
 ms.date: "07/26/2017"

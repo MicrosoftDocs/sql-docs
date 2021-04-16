@@ -7,8 +7,8 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: jukoesma
 ms.technology: xevents
 ms.topic: reference
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System objects that support extended events

@@ -6,13 +6,13 @@ helpviewer_keywords:
   - "troublshooting, tde akv"
   - "tde akv configuration, troubleshooting"
   - "tde troubleshooting"
-author: jaszymas
+author: shohamMSFT
+ms.author: shohamd
 ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
-ms.author: jaszymas
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 # Common errors for transparent data encryption with customer-managed keys in Azure Key Vault
@@ -159,7 +159,7 @@ Confirm that the logical SQL Server instance has permissions to the key vault an
 
 ## Getting TDE status from the Activity log
 
-To allow for monitoring of the database status due to Azure Key Vault key access issues, the following events will be logged to the [Activity Log](/azure/service-health/alerts-activity-log-service-notifications) for the resource ID based on the Azure Resource Manager URL and Subscription+Resourcegroup+ServerName+DatabaseName: 
+To allow for monitoring of the database status due to Azure Key Vault key access issues, the following events will be logged to the [Activity Log](/azure/service-health/alerts-activity-log-service-notifications) for the resource ID based on the Azure Resource Manager URL and Subscription+ResourceGroup+ServerName+DatabaseName: 
 
 **Event when the service loses access to the Azure Key Vault key**
 

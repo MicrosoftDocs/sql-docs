@@ -165,7 +165,7 @@ For more information about managed identities, see [About managed identities for
 
 Since **Microsoft.Data.SqlClient** 2.1.0, the driver supports authentication to Azure SQL Database, Azure Synapse Analytics, and Azure SQL Managed Instance by acquiring access tokens via managed identity. To use this authentication, specify either `Active Directory Managed Identity` or `Active Directory MSI` in the connection string, and no password is required. 
 
-You can't set the `Credential` property of `SqlConnection` in this mode either. For a user-assigned managed identity, username must be provided. 
+You can't set the `Credential` property of `SqlConnection` in this mode either. For a user-assigned managed identity, the object id of the managed identity must be provided. 
 
 The following example shows how to use `Active Directory Managed Identity` authentication with a system-assigned managed identity.
 
@@ -189,7 +189,7 @@ The following example demonstrates `Active Directory Managed Identity` authentic
 
 ```c#
 // For user-assigned managed identity
-// Use your own server, database, and user ID.
+// Use your own values for Server, Database, and User Id.
 string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; User Id=ObjectIdOfManagedIdentity; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {

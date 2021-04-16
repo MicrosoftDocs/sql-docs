@@ -40,7 +40,8 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 SSMS 18.9 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.9 upgrades it to 18.9.
 
-[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
+> [!IMPORTANT]
+> SSMS 18.9 includes a known issue related to IntelliSense, where column names are omitted from suggestions and error indicators are falsely displayed under the column names. 
 
 - Release number: 18.9
 - Build number: 15.0.18382.0
@@ -52,6 +53,7 @@ The SSMS 18.x installation doesn't upgrade or replace SSMS versions 17.x or earl
 
 If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**
 
+[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
 ## Available languages
 

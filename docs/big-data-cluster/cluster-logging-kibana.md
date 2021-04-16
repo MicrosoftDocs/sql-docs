@@ -22,7 +22,7 @@ BDC related logs stored in Elastic Search includes the standard output and error
 
 Those logs can be searched by components From Kibana Dashboard, for instance, you can use filters such as 'kubernetes_container_name', 'kubernetes_pod_name', 'log_filename' and 'service_name' to help you quickly virtualise all the logs such as logs from BDC controller, from SQL Server or any logs from different pods, services and more. 
 
-Specifically for the controller log including the cluster events ...
+Specifically, the controller log records the status and process of the cluster deployments and cluster events by filtering 'service_name: controller'. For those who look into BDC in AD mode, you may find the security-support log to be quite useful,  it records the events during the process BDC obtains AD tokens from the on-premises Active Directory(AD) domain controller. 
 
 
 

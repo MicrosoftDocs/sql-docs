@@ -9,7 +9,7 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.date: 04/15/2021
+ms.date: 04/16/2021
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
@@ -22,9 +22,12 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## Current SSMS release
 
-### 18.9
+:::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS) 18.8](https://aka.ms/ssmsfullsetup)**
 
-![download](media/download-icon.png) [Download SSMS 18.9](download-sql-server-management-studio-ssms.md)
+> [!IMPORTANT]
+> SSMS 18.9 includes a known issue related to IntelliSense, where column names are omitted from suggestions and error indicators are falsely displayed under the column names. A hotfix release will be available soon and the default installation version of SSMS remains SSMS 18.8 (15.0.18369.0). If you are interested in downloading SSMS 18.9 it is available below.
+
+### 18.9
 
 - Release number: 18.9
 - Build number: 15.0.18382.0
@@ -34,8 +37,6 @@ This article provides details about updates, improvements, and bug fixes for the
 
 SSMS 18.9 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 
-> [!IMPORTANT]
-> SSMS 18.9 includes a known issue related to IntelliSense, where column names are omitted from suggestions and error indicators are falsely displayed under the column names. 
 
 #### What's new in 18.9
 

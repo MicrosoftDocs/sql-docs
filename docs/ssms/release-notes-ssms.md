@@ -29,8 +29,6 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ### 18.9
 
-![download](media/download-icon.png) [Download SSMS 18.9](download-sql-server-management-studio-ssms.md)
-
 - Release number: 18.9
 - Build number: 15.0.18382.0
 - Release date: April 15, 2021

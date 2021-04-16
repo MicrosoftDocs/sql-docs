@@ -39,8 +39,6 @@ SSMS 18.9 is the latest general availability (GA) release of SSMS. If you need a
 
 #### What's new in 18.9
 
-[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
-
 | New item | Details |
 |----------|---------|
 | Always Encrypted | Updated the New Column Master Key and New Column Encryption Key dialogs to support provisioning and managing column master keys stored in [Azure Key Vault Managed HSMs](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview). |

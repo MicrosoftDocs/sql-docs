@@ -29,7 +29,7 @@ helpviewer_keywords:
   - "clustered indexes, defragmenting"
 author: pmasl
 ms.author: mikeray
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Resolve index fragmentation by reorganizing or rebuilding indexes
 
@@ -38,7 +38,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 This article describes how index defragmentation occurs and discusses its impact on query performance. Once you determine the [amount of fragmentation that exists for an index](#detecting-the-amount-of-fragmentation), you can defragment an index by either [reorganizing an index](#reorganize-an-index) or [rebuilding an index](#rebuild-an-index) by running Transact-SQL commands in your tool of choice or by using SQL Server Management Studio.
 
 > [!Note]
-> The information in this article does not apply to a dedicated SQL pool in Azure Synapse Analytics. For information on index maintenance for a dedicated SQL pool in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md), see [Indexing dedicated SQL pool tables in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index).
+> The information in this article does not apply to a dedicated SQL pool in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)]. For information on index maintenance for a dedicated SQL pool in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], see [Indexing dedicated SQL pool tables in [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)]](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index).
 
 ## Index fragmentation overview
 

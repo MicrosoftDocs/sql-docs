@@ -3,7 +3,7 @@ title: Use SSMS to Manage SQL Server on Linux
 description: This article introduces SQL Server Management Studio, an integrated environment to access, configure, manage, administer, and develop components of SQL Server.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 05/21/2018
+ms.date: 04/16/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -53,9 +53,11 @@ Use the following basic steps to get connected:
    |-----|-----|
    | **Server type** | The default is database engine; do not change this value. |
    | **Server name** | Enter the name of the target Linux SQL Server machine, or its IP address and port in the format `IP,port`. |
-   | **Authentication** | For SQL Server on Linux, use **SQL Server Authentication**. |
-   | **Login** | Enter the name of a user with access to a database on the server (for example, the default **SA** account created during setup). |
-   | **Password** | Enter the password for the specified user (for the **SA** account, you created this during setup). |
+   | **Authentication** | For SQL Server on Linux, use the authentication method that is set up for your environment. **SQL Authentication** is setup by default. |
+   | **Login**<sup>1</sup> | Enter the name of a user with access to a database on the server (for example, the default **SA** account created during setup). |
+   | **Password**<sup>1</sup> | Enter the password for the specified user (for the **SA** account, you created this during setup). |
+
+   <sup>1</sup> **Login** and **Password** only available with **SQL Authentication**
 
     ![SQL Server Management Studio: Connect to SQL Database server](./media/sql-server-linux-manage-ssms/connect.png)
 

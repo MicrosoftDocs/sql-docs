@@ -129,7 +129,7 @@
       - name: Output Window
         href: global-settings-output-window-oracletosql.md
     - name: New Project
-      href: new-project-oracletosql
+      href: new-project-oracletosql.md
     - name: Project Settings
       items:
       - name: Conversion

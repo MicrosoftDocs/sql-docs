@@ -18,7 +18,7 @@ This article describes how to monitor an application inside [!INCLUDE[ssbigdatac
 - Kubernetes host-related metrics collected by Telegraf, an agent for collecting, processing, aggregating, and writing metrics.
 - Workload-related metrics: those metrics related to SQL Server, Spark and HDFS are collected by CollectD, including such as SQL Server DMV metrics and [SQL server extended events (XEvents)](../relational-databases/extended-events/extended-events.md). 
 
-# Available Metrics 
+## Available metrics 
 
 The following metrics are available in [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]:
 

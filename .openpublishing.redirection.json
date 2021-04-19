@@ -42411,11 +42411,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/machine-learning/r/operationalizing-your-r-code.md",
-      "redirect_url": "/sql/machine-learning/deploy/operationalizing-your-r-code",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "docs/advanced-analytics/r/performance-case-study-r-services.md",
       "redirect_url": "/sql/machine-learning/r/performance-case-study-r-services",
       "redirect_document_id": true
@@ -42938,6 +42933,16 @@
     {
       "source_path": "docs/machine-learning/troubleshooting/machine-learning-troubleshooting-overview.md",
       "redirect_url": "/sql/machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/r/operationalizing-your-r-code.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/deploy/operationalizing-your-r-code.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model",
       "redirect_document_id": false
     },
     {
@@ -56448,6 +56453,16 @@
     {
       "source_path": "docs/linux/sql-server-linux-develop-use-vscode.md",
       "redirect_url": "/sql/visual-studio-code/sql-server-develop-use-vscode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssma/oracle/legal-notice-ssma-for-oracle.md",
+      "redirect_url": "/sql/ssma/sql-server-migration-assistant#legal-notice-ssma",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssma/oracle/shortcut-keys-oracle-to-sql.md",
+      "redirect_url": "/sql/ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql",
       "redirect_document_id": true
     },
     {

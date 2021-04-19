@@ -44,7 +44,7 @@ We are "standardizing" all our 'Release Notes' style articles:
     - Use the '=' operator on the moniker, not the '>=' operator.
     - In contrast, in our 'Whats New' articles we do use the '>=', rather than '='.
 
-GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2021/04/19
+GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 ## SQL Server 2019 Reporting Services
 

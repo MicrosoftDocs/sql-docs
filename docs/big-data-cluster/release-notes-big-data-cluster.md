@@ -34,7 +34,7 @@ This section explains platforms that are supported with BDC.
 
 |Platform|Host OS|Supported versions|
 |---------|---------|---------|
-|Kubernetes|Ubuntu|16.04,20.04<sup>*</sup>|
+|Kubernetes|Ubuntu|16.04, 20.04<sup>*</sup>|
 |Kubernetes|Red Hat Enterprise Linux|7.3, 7.4, 7.5, 7.6|
 |OpenShift|Red Hat Enterprise Linux / CoreOS |See [OpenShift release notes](https://docs.openshift.com/container-platform/4.3/release_notes/ocp-4-3-release-notes.html#ocp-4-3-about-this-release)|
 

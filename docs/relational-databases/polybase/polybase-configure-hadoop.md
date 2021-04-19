@@ -31,8 +31,10 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 - PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). Hadoop follows the "Major.Minor.Version" pattern for its new releases, and all versions within a supported Major and Minor release are supported. The following Hadoop providers are supported:
 
   - Hortonworks HDP 1.3, 2.1-2.6, 3.0 on Linux
-  - Hortonworks HDP 1.3, 2.1-2.3 on Window Server
+  - Hortonworks HDP 1.3, 2.1-2.3, 3.1<sup>*</sup> on Window Server
   - Cloudera CDH 4.3, 5.1 - 5.5, 5.9 - 5.13 on Linux
+
+   <sup>*</sup> Hortonworks HDB 3.1 requires SQL Server 2019 CU9 (15.0.4102) or later.
 
 > [!NOTE]
 > PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017 CU3. If you are using [PolyBase scale-out groups](polybase-scale-out-groups.md), all compute nodes must also be on a build that includes support for Hadoop encryption zones.

@@ -260,10 +260,8 @@ items:
       href: ../machine-learning/r/r-libraries-and-data-types.md
   - name: Deploy
     items:
-    - name: Operationalize using stored procedures
-      href: ../machine-learning/r/operationalizing-your-r-code.md
-    - name: Convert R code for SQL Server
-      href: ../machine-learning/r/converting-r-code-for-use-in-sql-server.md
+    - name: Modify R/Python code for SQL Server
+      href: ../machine-learning/deploy/modify-r-python-code-to-run-in-sql-server.md
   - name: Predictions
     items:
     - name: Native scoring with PREDICT T-SQL

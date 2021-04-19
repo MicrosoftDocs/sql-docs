@@ -8,12 +8,24 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 3/17/2021
+ms.date: 4/16/2021
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](./download-azure-data-studio.md)**
+
+## April 2021
+
+April 16, 2021 &nbsp; / &nbsp; version: 1.28.0
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| Extension(s) update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) </br> [SchemaCompare](extensions/schema-compare-extension.md) <br/> [Kusto (KQL)](extensions/kusto-extension.md) </br> [MachineLearning](extensions/machine-learning-extension.md)|
+| New Notebook features | Added Add Notebook and Remove Notebook commands |
+| Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2021+Release%22). |
 
 ## March 2021
 

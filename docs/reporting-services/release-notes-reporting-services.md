@@ -48,7 +48,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 ## SQL Server 2019 Reporting Services
 
-## 15.0.7545.4810, 2020/04/7 
+## 15.0.7545.4810, 2021/04/7 
 *(Product Version: 15.0.1102.896)*
 
 | Fixed issue | Details |

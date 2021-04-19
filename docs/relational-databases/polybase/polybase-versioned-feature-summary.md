@@ -37,36 +37,6 @@ This table lists the key features for PolyBase and the products in which they're
 <sup>*</sup> Introduced in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], see [Examples of bulk access to data in Azure Blob storage](../import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 
-## Pushdown computation supported by T-SQL operators
-
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and APS, not all T-SQL operators can be pushed down to the Hadoop cluster. This table lists all the supported operators and a subset of the unsupported operators.
-
-|**Operator type** |**Pushable to Hadoop** |**Pushable to Blob storage** | 
-|---------|---------|---------|
-|Column projections|Yes|No|
-|Predicates|Yes|No|
-|Aggregates|Partial\*|No|
-|Joins between external tables|No|No|
-|Joins between external tables and local tables|No|No|
-|Sorts|No|No|
-
-\* Partial aggregation means that a final aggregation must occur after the data reaches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. But a portion of the aggregation occurs in Hadoop. This method is common in computing aggregations in massively parallel processing systems.  
-
-
-#### Hadoop pushdown support
-
-Hadoop providers support the following:
-
-| **Aggregations**                  | **Filters (binary comparison)** | 
-|-----------------------------------|---------------------------------| 
-| Count_Big                         | NotEqual                        | 
-| Sum                               | LessThan                        | 
-| Avg                               | LessOrEqual                     | 
-| Max                               | GreaterOrEqual                  | 
-| Min                               | GreaterThan                     | 
-| Approx_Count_Distinct             | Is                              | 
-|                                   | IsNot                           | 
-|                                   |                                 | 
 
 ## Known limitations
 

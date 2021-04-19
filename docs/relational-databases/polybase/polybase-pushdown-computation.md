@@ -39,14 +39,29 @@ This table summarizes pushdown computation support on different external data so
 | **Teradata**     | Yes    | Yes         | Yes          | Yes       | Yes        |  
 | **MongoDB**      | **No** | Yes         | Yes          | Yes       | Yes        |
 | **Hadoop\***     | **No** | Yes         | Some\*\*     | Some\*\*  | Yes        |  
+| **Azure Blob Storage** | No | No | No | No | Yes |
 |                  |
 
 \* PolyBase currently supports two Hadoop providers: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). There are no differences between the two features in terms of pushdown computation.
 
-\*\* For more information Hadoop pushdown feature support, see [Pushdown computation supported by T-SQL operators](polybase-versioned-feature-summary.md#pushdown-computation-supported-by-t-sql-operators).
+**Hadoop providers support the following:
+
+| **Aggregations**                  | **Filters (binary comparison)** | 
+|-----------------------------------|---------------------------------| 
+| Count_Big                         | NotEqual                        | 
+| Sum                               | LessThan                        | 
+| Avg                               | LessOrEqual                     | 
+| Max                               | GreaterOrEqual                  | 
+| Min                               | GreaterThan                     | 
+| Approx_Count_Distinct             | Is                              | 
+|                                   | IsNot                           | 
+|                                   |                                 | 
+
+Some aggregation must occur after the data reaches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. But a portion of the aggregation occurs in Hadoop. This method is common in computing aggregations in massively parallel processing systems.  
+
 
 > [!NOTE]
-> Pushdown computation can be blocked by some T-SQL syntax. For more information, review [Syntax that prevents pushdown](polybase-versioned-feature-summary.md#syntax-that-prevents-pushdown).
+> Pushdown computation can be blocked by some T-SQL syntax. For more information, review [Syntax that prevents pushdown](polybase-pushdown-computation.md#syntax-that-prevents-pushdown).
 
 ## Key beneficial scenarios of pushdown computation
 

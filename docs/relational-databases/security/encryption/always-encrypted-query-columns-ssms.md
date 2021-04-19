@@ -23,7 +23,7 @@ This article describes how to query columns, encrypted with [Always Encrypted](.
 - Send plaintext values targeting encrypted columns (for example, in `INSERT` or `UPDATE` statements and as a lookup parameter of the `WHERE` clauses in `SELECT` statements).
 
 > [!NOTE]
-> Using column master keys stored in a [managed HSM](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview) in Azure Key Vault requires SSMS 18.9 or a later version.
+> Using column master keys stored in a [managed HSM](/azure/key-vault/managed-hsm/overview) in Azure Key Vault requires SSMS 18.9 or a later version.
 
 ## Retrieving ciphertext values stored in encrypted columns    
 Running SELECT queries that retrieve ciphertext of data stored in encrypted columns (without decrypting the data) does not require you to have access to column master keys protecting the data. To retrieve values from an encrypted column as ciphertext in SSMS:

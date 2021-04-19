@@ -65,7 +65,7 @@ SQL Server Management Studio 18.9:
 
 
 > [!TIP]
-> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](https://aka.ms/downloadssmsusenglish). You can download different languages from the US-English version site by selecting [available languages](#available-languages).
+> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](/sql/ssms/download-sql-server-management-studio-ssms). You can download different languages from the US-English version site by selecting [available languages](#available-languages).
 
 > [!NOTE]
 > The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](../powershell/download-sql-server-ps-module.md).

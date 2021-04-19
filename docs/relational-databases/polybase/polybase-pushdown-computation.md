@@ -142,6 +142,29 @@ Date & time functions
 - `DATEDIFF`
 - `DATEPART`
 
+## Syntax that prevents pushdown
+
+The following T-SQL functions or syntax will prevent pushdown computation:
+
+- `AT TIME ZONE`
+- `CONCAT_WS`
+- `TRANSLATE`
+- `RAND`
+- `CHECKSUM`
+- `BINARY_CHECKSUM`
+- `ISJSON`
+- `JSON_VALUE`
+- `JSON_QUERY`
+- `JSON_MODIFY`
+- `NEWID`
+- `STRING_ESCAPE`
+- `COMPRESS`
+- `DECOMPRESS`
+- `GREATEST`
+- `LEAST`
+- `PARSE`
+
+Pushdown support for the `FORMAT` and `TRIM` syntax was introduced in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] CU10.
 
 ## Examples
 

@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: xevents
 ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: seo-lt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

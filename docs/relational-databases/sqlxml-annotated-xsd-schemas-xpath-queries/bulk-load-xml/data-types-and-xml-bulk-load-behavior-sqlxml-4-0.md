@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "data types [SQLXML], XML Bulk Load"
   - "XML Bulk Load [SQLXML], data types"
 ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

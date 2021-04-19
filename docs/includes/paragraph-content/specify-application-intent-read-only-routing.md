@@ -2,11 +2,11 @@
  title: include file
  description: include file
  services: sql-database
- author: MightyPen
+ author: rothja
  ms.service: sql-database
  ms.topic: include
  ms.date: 04/05/2018
- ms.author: genemi
+ ms.author: jroth
  ms.custom: include file
 ---
 ## Specifying Application Intent

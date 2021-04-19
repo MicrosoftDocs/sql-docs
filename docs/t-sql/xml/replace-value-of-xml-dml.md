@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "updating node values"
   - "replace value of XML DML statement"
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # replace value of (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

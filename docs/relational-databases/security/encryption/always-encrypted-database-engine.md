@@ -112,7 +112,7 @@ For details on Always Encrypted cryptographic algorithms, see [Always Encrypted 
 |Encrypting existing data in selected database columns|Yes|Yes|No|
 
 > [!NOTE]
-> [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), introduced in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], does support encrypting existing data using Transact-SQL. It also eliminates the need to move the data outside of the data for cryptographic operations.
+> [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), introduced in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], does support encrypting existing data using Transact-SQL. It also eliminates the need to move the data outside of the database for cryptographic operations.
 
 > [!NOTE]
 > Make sure you run key provisioning or data encryption tools in a secure environment, on a computer that is different from the computer hosting your database. Otherwise, sensitive data or the keys could leak to the server environment, which would reduce the benefits of the using Always Encrypted.  

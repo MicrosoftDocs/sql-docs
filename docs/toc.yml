@@ -115,7 +115,7 @@ items:
           href: big-data-cluster/notebooks-deploy.md
   - name: Concepts
     items:
-    - name: Application deployment
+    - name: App Pool
       href: big-data-cluster/concept-application-deployment.md
     - name: Controller
       href: big-data-cluster/concept-controller.md
@@ -440,10 +440,14 @@ items:
       items:
       - name: Submit Spark jobs in Azure Data Studio
         href: big-data-cluster/spark-submit-job.md
-      - name: Submit Spark jobs in IntelliJ
-        href: big-data-cluster/spark-submit-job-intellij-tool-plugin.md
+      - name: Submit Spark jobs using the command line
+        href: big-data-cluster/spark-submit-job-command-line.md
       - name: Submit Spark jobs in Visual Studio Code
         href: big-data-cluster/spark-hive-tools-vscode.md
+      - name: Submit Spark jobs in IntelliJ
+        href: big-data-cluster/spark-submit-job-intellij-tool-plugin.md
+      - name: Spark streaming guide
+        href: big-data-cluster/spark-streaming-guide.md
       - name: Use extended Spark History Server
         href: big-data-cluster/spark-history-server.md
       - name: Manage libraries
@@ -478,8 +482,8 @@ items:
         href: big-data-cluster/reference-open-source-software.md
       - name: Deployed resources
         href: big-data-cluster/concept-architecture-pods.md
-    - name: BDC partners
-      href: sql-server/partner-big-data-cluster.md
+      - name: BDC partners
+        href: sql-server/partner-big-data-cluster.md
     - name: Deployment reference
       items:
       - name: Deployment configuration file
@@ -492,78 +496,6 @@ items:
         href: big-data-cluster/reference-config-master-instance.md
       - name: Apache Spark & Apache Hadoop
         href: big-data-cluster/reference-config-spark-hadoop.md
-    - name: Azure Data CLI reference
-      items:
-      - name: Azure Data CLI
-        items:
-        - name: azdata
-          href: azdata/reference/reference-azdata.md
-        - name: notebook
-          href: azdata/reference/reference-azdata-notebook.md
-        - name: sql
-          href: azdata/reference/reference-azdata-sql.md
-      - name: App Deploy
-        items:
-        - name: app
-          href: azdata/reference/reference-azdata-app.md
-        - name: app template
-          href: azdata/reference/reference-azdata-app-template.md
-      - name: Cluster
-        items:
-        - name: bdc
-          href: azdata/reference/reference-azdata-bdc.md
-        - name: bdc app
-          href: azdata/reference/reference-azdata-bdc-app.md
-        - name: bdc app status
-          href: azdata/reference/reference-azdata-bdc-app-status.md
-        - name: bdc config
-          href: azdata/reference/reference-azdata-bdc-config.md
-        - name: bdc control
-          href: azdata/reference/reference-azdata-bdc-control.md
-        - name: bdc control status
-          href: azdata/reference/reference-azdata-bdc-control-status.md          
-        - name: bdc debug
-          href: azdata/reference/reference-azdata-bdc-debug.md
-        - name: bdc endpoint
-          href: azdata/reference/reference-azdata-bdc-endpoint.md
-        - name: bdc gateway
-          href: azdata/reference/reference-azdata-bdc-gateway.md
-        - name: bdc gateway settings
-          href: azdata/reference/reference-azdata-bdc-gateway-settings.md
-        - name: bdc gateway status
-          href: azdata/reference/reference-azdata-bdc-gateway-status.md
-        - name: bdc hdfs
-          href: azdata/reference/reference-azdata-bdc-hdfs.md
-        - name: bdc hdfs encryption zone
-          href: azdata/reference/reference-azdata-bdc-hdfs-encryption-zone.md
-        - name: bdc hdfs key
-          href: azdata/reference/reference-azdata-bdc-hdfs-key.md
-        - name: bdc hdfs mount
-          href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
-        - name: bdc hdfs settings
-          href: azdata/reference/reference-azdata-bdc-hdfs-settings.md
-        - name: bdc hdfs status
-          href: azdata/reference/reference-azdata-bdc-hdfs-status.md
-        - name: bdc settings
-          href: azdata/reference/reference-azdata-bdc-settings.md
-        - name: bdc spark
-          href: azdata/reference/reference-azdata-bdc-spark.md        
-        - name: bdc spark batch
-          href: azdata/reference/reference-azdata-bdc-spark-batch.md        
-        - name: bdc spark session
-          href: azdata/reference/reference-azdata-bdc-spark-session.md        
-        - name: bdc spark settings
-          href: azdata/reference/reference-azdata-bdc-spark-settings.md        
-        - name: bdc spark statement
-          href: azdata/reference/reference-azdata-bdc-spark-statement.md        
-        - name: bdc spark status
-          href: azdata/reference/reference-azdata-bdc-spark-status.md        
-        - name: bdc sql
-          href: azdata/reference/reference-azdata-bdc-sql.md
-        - name: bdc sql settings
-          href: azdata/reference/reference-azdata-bdc-sql-settings.md
-        - name: bdc status
-          href: azdata/reference/reference-azdata-bdc-status.md
 - name: Business continuity
   items:
   - name: Overview
@@ -10386,6 +10318,118 @@ items:
       href: sql-server/partner-dev-sql-server.md
 - name: Reference
   items:
+  - name: Azure Data CLI azcli
+    items:
+    - name: azdata
+      href: azdata/reference/reference-azdata.md
+    - name: context
+      href: azdata/reference/reference-azdata-context.md
+    - name: extension
+      href: azdata/reference/reference-azdata-extension.md
+    - name: notebook
+      href: azdata/reference/reference-azdata-notebook.md
+    - name: postgres
+      href: azdata/reference/reference-azdata-postgres.md
+    - name: sql
+      href: azdata/reference/reference-azdata-sql.md
+    - name: Big data cluster 
+      items:
+      - name: app
+        href: azdata/reference/reference-azdata-app.md
+      - name: app template
+        href: azdata/reference/reference-azdata-app-template.md
+      - name: bdc
+        href: azdata/reference/reference-azdata-bdc.md
+      - name: bdc app
+        href: azdata/reference/reference-azdata-bdc-app.md
+      - name: bdc app status
+        href: azdata/reference/reference-azdata-bdc-app-status.md
+      - name: bdc config
+        href: azdata/reference/reference-azdata-bdc-config.md
+      - name: bdc control
+        href: azdata/reference/reference-azdata-bdc-control.md
+      - name: bdc control status
+        href: azdata/reference/reference-azdata-bdc-control-status.md          
+      - name: bdc debug
+        href: azdata/reference/reference-azdata-bdc-debug.md
+      - name: bdc endpoint
+        href: azdata/reference/reference-azdata-bdc-endpoint.md
+      - name: bdc gateway
+        href: azdata/reference/reference-azdata-bdc-gateway.md
+      - name: bdc gateway settings
+        href: azdata/reference/reference-azdata-bdc-gateway-settings.md
+      - name: bdc gateway status
+        href: azdata/reference/reference-azdata-bdc-gateway-status.md
+      - name: bdc hdfs
+        href: azdata/reference/reference-azdata-bdc-hdfs.md
+      - name: bdc hdfs encryption zone
+        href: azdata/reference/reference-azdata-bdc-hdfs-encryption-zone.md
+      - name: bdc hdfs key
+        href: azdata/reference/reference-azdata-bdc-hdfs-key.md
+      - name: bdc hdfs mount
+        href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
+      - name: bdc hdfs settings
+        href: azdata/reference/reference-azdata-bdc-hdfs-settings.md
+      - name: bdc hdfs status
+        href: azdata/reference/reference-azdata-bdc-hdfs-status.md
+      - name: bdc settings
+        href: azdata/reference/reference-azdata-bdc-settings.md
+      - name: bdc spark
+        href: azdata/reference/reference-azdata-bdc-spark.md        
+      - name: bdc spark batch
+        href: azdata/reference/reference-azdata-bdc-spark-batch.md        
+      - name: bdc spark session
+        href: azdata/reference/reference-azdata-bdc-spark-session.md        
+      - name: bdc spark settings
+        href: azdata/reference/reference-azdata-bdc-spark-settings.md        
+      - name: bdc spark statement
+        href: azdata/reference/reference-azdata-bdc-spark-statement.md        
+      - name: bdc spark status
+        href: azdata/reference/reference-azdata-bdc-spark-status.md        
+      - name: bdc sql
+        href: azdata/reference/reference-azdata-bdc-sql.md
+      - name: bdc sql settings
+        href: azdata/reference/reference-azdata-bdc-sql-settings.md
+      - name: bdc status
+        href: azdata/reference/reference-azdata-bdc-status.md
+    - name: Azure Arc enabled data services
+      items:
+      - name: arc
+        href: azdata/reference/reference-azdata-arc.md
+      - name: arc dc
+        href: azdata/reference/reference-azdata-arc-dc.md
+      - name: arc dc config
+        href: azdata/reference/reference-azdata-arc-dc-config.md
+      - name: arc dc debug
+        href: azdata/reference/reference-azdata-arc-dc-debug.md
+      - name: arc dc endpoint
+        href: azdata/reference/reference-azdata-arc-dc-endpoint.md
+      - name: arc dc status
+        href: azdata/reference/reference-azdata-arc-dc-status.md
+      - name: arc postgres
+        href: azdata/reference/reference-azdata-arc-postgres.md
+      - name: arc postgres backup
+        href: azdata/reference/reference-azdata-arc-postgres-backup.md
+      - name: arc postgres endpoint
+        href: azdata/reference/reference-azdata-arc-postgres-endpoint.md
+      - name: arc postgres server
+        href: azdata/reference/reference-azdata-arc-postgres-server.md
+      - name: arc postgres server backup
+        href: azdata/reference/reference-azdata-arc-postgres-server-backup.md
+      - name: arc postgres server config
+        href: azdata/reference/reference-azdata-arc-postgres-server-config.md
+      - name: arc resource
+        href: azdata/reference/reference-azdata-arc-resource.md
+      - name: arc resource kind
+        href: azdata/reference/reference-azdata-arc-resource-kind.md
+      - name: arc sql
+        href: azdata/reference/reference-azdata-arc-sql.md
+      - name: arc sql endpoint
+        href: azdata/reference/reference-azdata-arc-sql-endpoint.md
+      - name: arc sql mi
+        href: azdata/reference/reference-azdata-arc-sql-mi.md
+      - name: arc sql mi config
+        href: azdata/reference/reference-azdata-arc-sql-mi-config.md
   - name: Database samples
     items:
     - name: Overview
@@ -12288,6 +12332,8 @@ items:
       items:
       - name: sys.dm_hadr_auto_page_repair
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md
+      - name: sys.dm_hadr_automatic_seeding
+        href: relational-databases/system-dynamic-management-views/sys-dm-hadr-automatic-seeding.md
       - name: sys.dm_hadr_availability_group_states
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md
       - name: sys.dm_hadr_availability_replica_cluster_nodes
@@ -12314,6 +12360,8 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-instance-node-map-transact-sql.md
       - name: sys.dm_hadr_name_id_map
         href: relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md
+      - name: sys.dm_hadr_physical_seeding_stats
+        href: relational-databases/system-dynamic-management-views/sys-dm-hadr-physical-seeding-stats.md
       - name: sys.dm_tcp_listener_states
         href: relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md
 
@@ -15890,8 +15938,12 @@ items:
         items:
         - name: CHOOSE
           href: t-sql/functions/logical-functions-choose-transact-sql.md
+        - name: GREATEST
+          href: t-sql/functions/logical-functions-greatest-transact-sql.md          
         - name: IIF
           href: t-sql/functions/logical-functions-iif-transact-sql.md
+        - name: LEAST
+          href: t-sql/functions/logical-functions-least-transact-sql.md          
       - name: Metadata
         href: t-sql/functions/metadata-functions-transact-sql.md
         items:

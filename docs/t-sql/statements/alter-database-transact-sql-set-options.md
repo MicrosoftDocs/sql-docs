@@ -1219,7 +1219,7 @@ For more information about indirect checkpoints, see [Database Checkpoints](../.
 Specifies when to roll back incomplete transactions when the database is transitioned from one state to another. If the termination clause is omitted, the ALTER DATABASE statement waits indefinitely if there's any lock on the database. Only one termination clause can be specified, and it follows the SET clauses.
 
 > [!NOTE]
-> Not all database options use the WITH \<termination> clause. For more information, see the table under "[Setting options](#SettingOptions) of the "Remarks" section of this article.
+> Not all database options use the WITH \<termination> clause. For more information, see the table under [Setting options](#SettingOptions) of the "Remarks" section of this article.
 
 ROLLBACK AFTER *number* [SECONDS] | ROLLBACK IMMEDIATE     
 Specifies whether to roll back after the specified number of seconds or immediately. *number* is type **int**.

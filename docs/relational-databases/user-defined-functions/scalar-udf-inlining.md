@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 
 author: "s-r-k"
 ms.author: "karam"
-monikerRange: "=azuresqldb-current||>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Scalar UDF Inlining
 
-[!INCLUDE [SQL Server 2019 SQL Database](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
+[!INCLUDE [SQL Server 2019 SQL Database](../../includes/applies-to-version/sqlserver2019-asdb.md)]
 
 This article introduces Scalar UDF Inlining, a feature under the [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md) suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql19](../../includes/sssql19-md.md)]).
 
@@ -134,7 +134,7 @@ Depending upon the complexity of the logic in the UDF, the resulting query plan 
     - `DECLARE`, `SET`: Variable declaration and assignments.
     - `SELECT`: SQL query with single/multiple variable assignments <sup>1</sup>.
     - `IF`/`ELSE`: Branching with arbitrary levels of nesting.
-    - `RETURN`: Single or multiple return statements.
+    - `RETURN`: Single or multiple return statements. Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU5, the UDF can only contain a single RETURN statement to be considered for inlining <sup>6</sup>.
     - `UDF`: Nested/recursive function calls <sup>2</sup>.
     - Others: Relational operations such as `EXISTS`, `ISNULL`.
 - The UDF does not invoke any intrinsic function that is either time-dependent (such as `GETDATE()`) or has side effects <sup>3</sup> (such as `NEWSEQUENTIALID()`).

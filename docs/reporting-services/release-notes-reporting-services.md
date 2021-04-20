@@ -1,7 +1,7 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
 description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
-ms.date: 04/19/2021
+ms.date: 04/20/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -48,7 +48,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 ## SQL Server 2019 Reporting Services
 
-## 15.0.7545.4810, 2021/04/7 
+## 15.0.7765.17516, 2021/04/7 
 *(Product Version: 15.0.1102.896)*
 
 | Fixed issue | Details |

@@ -169,7 +169,9 @@ SSIS Deploy Task doesn't support the following scenarios currently:
 
 ## SSIS Deploy task version 1.* (Preview)
 
-Support protection level EncryptionWithPassword and EncryptionAllWithPassword.
+Enhancements in version 1.*:
+
+- Support protection level EncryptionWithPassword and EncryptionAllWithPassword.
 
 ### Version 1.* only properties
 
@@ -374,7 +376,11 @@ The configuration JSON schema has three layers:
 Release Date: April 21, 2021
 
 - SSIS Build task version 1.* (Preview)
+    - Remove the dependency on Visual Studio and SSIS designer. Build task can run on Microsoft-hosted agent or self-hosted agent with Windows OS and .NET framework 4.6.2 or higher.
+    - No need of installing out-of-box components.
+    - Support protection level EncryptionWithPassword and EncryptionAllWithPassword.
 - SSIS Deploy task version 1.* (Preview)
+    - Support protection level EncryptionWithPassword and EncryptionAllWithPassword.
 
 ### Version 1.0.3
 

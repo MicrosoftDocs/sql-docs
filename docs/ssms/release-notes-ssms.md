@@ -46,7 +46,7 @@ SSMS 18.9.1 is the latest general availability (GA) release of SSMS. If you need
 
 | New Item | Details |
 |----------|---------|
-| IntelliSense | Fixed issue where column names were omitted from suggestions and error indicators are falsely displayed under the column names. |
+| IntelliSense | Fixed issue where column names were omitted from suggestions and error indicators are falsely displayed under the column names. [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/43176843) |
 
 
 #### Known issues (18.9.1)

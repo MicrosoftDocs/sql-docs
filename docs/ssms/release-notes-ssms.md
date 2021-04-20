@@ -87,6 +87,10 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ![download](media/download-icon.png) [Download SSMS 18.9](https://go.microsoft.com/fwlink/?linkid=2160964)
 
+> [!IMPORTANT]
+> SSMS 18.9 includes a known issue related to IntelliSense, where column names are omitted from suggestions and error indicators are falsely displayed under the column names. A hotfix release is available (18.9.1). If you are interested in downloading SSMS 18.9 it is available below.
+
+
 - Release number: 18.9
 - Build number: 15.0.18382.0
 - Release date: April 15, 2021

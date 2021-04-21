@@ -1,8 +1,8 @@
 ---
-title: "Reading large data with stored procedures sample"
-description: "This JDBC Driver sample demonstrates how to retrieve a large OUT parameter from a stored procedure."
+title: Reading large data with stored procedures sample
+description: This JDBC Driver sample demonstrates how to retrieve a large OUT parameter from a stored procedure.
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: 04/20/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -27,7 +27,7 @@ The code file for this sample is named ExecuteStoredProcedure.java, and can be f
 
 ## Requirements
 
-To run this sample application, you'll need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. You must also set the classpath to include the mssql-jdbc jar file. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
+To run this sample application, you'll need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. Set the classpath to include the mssql-jdbc jar file. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
 
 > [!NOTE]
 > The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](system-requirements-for-the-jdbc-driver.md).
@@ -36,7 +36,10 @@ The sample would create the required stored procedure in the [!INCLUDE[ssSampleD
 
 ## Example
 
-In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database. Next, the sample code creates sample data and updates the Production.Document table by using a parameterized query. Then, the sample code gets the adaptive buffering mode by using the [getResponseBuffering](reference/getresponsebuffering-method-sqlserverstatement.md) method of the [SQLServerStatement](./reference/sqlserverstatement-class.md) class and executes the GetLargeDataValue stored procedure. Starting with the JDBC driver version 2.0 release, the responseBuffering connection property is set to "adaptive" by default.
+This sample code:
+
+1. Makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database.
+1. Creates sample data and updates the `Production.Document` table by using a parameterized query. Finally, the sample code gets the adaptive buffering mode by using the [getResponseBuffering](reference/getresponsebuffering-method-sqlserverstatement.md) method of the [SQLServerStatement](reference/sqlserverstatement-class.md) class and executes the `GetLargeDataValue` stored procedure. Starting with the JDBC driver version 2.0 release, the `responseBuffering` connection property is set to "adaptive" by default.
 
 Finally, the sample code displays the data returned with the OUT parameters and also demonstrates how to use the `mark` and `reset` methods on the stream to re-read any portion of the data.
 

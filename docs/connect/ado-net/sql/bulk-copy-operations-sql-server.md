@@ -28,19 +28,19 @@ Using the <xref:Microsoft.Data.SqlClient.SqlBulkCopy> class, you can perform:
 
 ## In this section
 
-[Bulk copy example setup](bulk-copy-example-setup.md)  
+[Bulk copy example setup](bulk-copy-example-setup.md):  
 Describes the tables used in the bulk copy examples and provides SQL scripts for creating the tables in the AdventureWorks database.
 
-[Single bulk copy operations](single-bulk-copy-operations.md)  
-Describes how to do a single bulk copy of data into an instance of SQL Server using the <xref:Microsoft.Data.SqlClient.SqlBulkCopy> class, and how to do the bulk copy operation using Transact-SQL statements and the <xref:Microsoft.Data.SqlClient.SqlCommand> class.
+[Single bulk copy operations](single-bulk-copy-operations.md):  
+Describes how to do a single bulk copy of data into a database instance using the <xref:Microsoft.Data.SqlClient.SqlBulkCopy> class. It includes how to do the bulk copy operation using Transact-SQL statements and the <xref:Microsoft.Data.SqlClient.SqlCommand> class.
 
-[Multiple bulk copy operations](multiple-bulk-copy-operations.md)  
-Describes how to do multiple bulk copy operations of data into an instance of SQL Server using the <xref:Microsoft.Data.SqlClient.SqlBulkCopy> class.
+[Multiple bulk copy operations](multiple-bulk-copy-operations.md):  
+Describes how to do multiple bulk copy operations of data into a database instance using the <xref:Microsoft.Data.SqlClient.SqlBulkCopy> class.
 
-[Transaction and bulk copy operations](transaction-bulk-copy-operations.md)  
+[Transaction and bulk copy operations](transaction-bulk-copy-operations.md):  
 Describes how to do a bulk copy operation within a transaction, including how to commit or roll back the transaction.
 
-[Order hints for bulk copy operations](bulk-copy-order-hints.md)  
+[Order hints for bulk copy operations](bulk-copy-order-hints.md):  
 Describes how to use order hints to improve bulk copy performance.
 
 ## Next steps

@@ -64,7 +64,7 @@ Use the following cmdlet or command to ensure that an identity has been assigned
 
 - Azure PowerShell: [Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer) 
 
-- Azure CLI: [az-sql-server-show](/cli/azure/sql/server#az-sql-server-show)
+- Azure CLI: [az-sql-server-show](/cli/azure/sql/server#az_sql_server_show)
 
 **Mitigation**
 
@@ -72,7 +72,7 @@ Use the following cmdlet or command to configure an Azure AD identity (an AppId)
 
 - Azure PowerShell: [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver) with the `-AssignIdentity` option.
 
-- Azure CLI: [az sql server update](/cli/azure/sql/server#az-sql-server-update) with the `--assign_identity` option.
+- Azure CLI: [az sql server update](/cli/azure/sql/server#az_sql_server_update) with the `--assign_identity` option.
 
 In the Azure portal, go to the key vault, and then go to **Access policies**. Complete these steps: 
 
@@ -99,7 +99,7 @@ To identify the key URI and the key vault:
 
     - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey)
 
-    - Azure CLI: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key#az-sql-server-tde-key-show) 
+    - Azure CLI: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key#az_sql_server_tdekey_show) 
 
 1. Use the key URI to identify the key vault:
 

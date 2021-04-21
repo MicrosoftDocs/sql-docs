@@ -108,8 +108,10 @@ When increasing the Delay \* Threshold product to make the cluster timeout more 
 The lease mechanism is controlled by a single value specific to each AG in a WSFC cluster. A lease timeout may result in the following errors: 
 
 ``` 
-Error 35201: A connection timeout has occurred while attempting to establish a connection to availability replica 'replicaname'
-Error 35206:  A connection timeout has occurred on a previously established connection to availability replica 'replicaname'
+Error 35201:
+A connection timeout has occurred while attempting to establish a connection to availability replica 'replicaname'
+Error 35206:
+A connection timeout has occurred on a previously established connection to availability replica 'replicaname'
 ```
 
 To modify the lease time out value, use the Failover Cluster Manager and follow these steps: 

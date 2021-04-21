@@ -4,21 +4,21 @@ description: The RevoScaleR package includes serialization and deserialization f
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 04/15/2018  
+ms.date: 04/21/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperf-fy21q4
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
-# Save and load R objects from SQL Server using ODBC
+# Use ODBC to save and load R objects in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-SQL Server R Services can store serialized R objects in a table and then load the object from the table as needed, without you having to re-run the R code or retrain the model. This ability to save R objects in a database is critical for scenarios such as training and saving a model, and then using it later for scoring or analysis.
+Learn how to use the **RevoScaleR** package to store serialized R objects in a table and then load the object from the table as needed with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). This can be used when training and saving a model, and then use it later for scoring or analysis.
 
-To improve performance of this critical step, the **RevoScaleR** package now includes new serialization and deserialization functions that greatly improve performance, and store the object more compactly. This article describes these functions and how to use them.
+To improve performance, the **RevoScaleR** package now includes new serialization and deserialization functions that improve performance and store the object more compactly. 
 
-## Overview
+## RevoScaleR package
 
 The **RevoScaleR** package now includes new functions that make it easier to save R objects to SQL Server and then read the objects from the SQL Server table. In general, each function call uses a simple key value store, in which the key is the name of the object, and the value associated with the key is the varbinary R object to be moved in or out of a table.
 
@@ -40,7 +40,7 @@ By default, any object that you call from R to move to SQL Server is serialized 
 
 - `rxListKeys` lists as key-value pairs all the available objects. This helps you determine the names and versions of the R objects.
 
-For detailed help on the syntax of each function, use R help. Details are also available in the [ScaleR reference](/r-server/r-reference/revoscaler/revoscaler).
+For detailed help on the syntax of each function, use R help. Details are also available in the [ScaleR reference](/machine-learning-server/r-reference/revoscaler/revoscaler).
 
 ## How to store R objects in SQL Server using ODBC
 
@@ -110,3 +110,7 @@ This procedure demonstrates how you can use the new functions to load a model fr
    ```R
     infertLogit2 <- rxReadObject(ds, "logit.model")
    ```
+
+## Next steps
+
++ [What is SQL Server Machine Learning Services?](../sql-server-machine-learning-services.md)

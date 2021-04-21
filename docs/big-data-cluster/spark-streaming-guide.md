@@ -1,7 +1,7 @@
 ---
-title: SQL Server Big Data Clusters Spark streaming guide
+title: SQL Server Big Data Clusters Spark Streaming guide
 titleSuffix: SQL Server Big Data Clusters
-description: This guide covers streaming use cases and how to implement it using SQL Server Big Data Clusters capabilities.
+description: This guide covers streaming use cases and how to stream by using SQL Server Big Data Clusters capabilities.
 author: dacoelho 
 ms.author: dacoelho
 ms.reviewer: mikeray
@@ -12,47 +12,49 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# SQL Server Big Data Clusters Spark streaming guide
+# SQL Server Big Data Clusters Spark Streaming guide
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This guide covers streaming use cases and how to implement it using SQL Server Big Data Clusters Spark.
+This guide covers streaming use cases and how to implement them by using SQL Server Big Data Clusters Spark.
 
 In this guide, you'll learn how to:
 
 > [!div class="checklist"]
 > * Load streaming libraries to use with PySpark and Scala Spark.
-> * Implement three common streaming patterns using SQL Server Big Data Clusters.
+> * Implement three common streaming patterns by using SQL Server Big Data Clusters.
 
 ## Prerequisites
 
-* SQL Server Big Data Clusters deployment
-* One of these two options:
-    * Apache Kafka cluster 2.0+
-    * Azure Event Hubs - Namespace and Event Hub
+* A SQL Server Big Data Clusters deployment
+* One of these options:
+    * Apache Kafka cluster 2.0 or later
+    * An Azure Event Hubs namespace and event hub
 
-This guide assumes good level of understanding of streaming technology concepts and architectures.
+This guide assumes a good level of understanding about streaming technology concepts and architectures.
 The following articles provide excellent conceptual baselines:
 
-* [Data Architecture Guide - Real time processing](/azure/architecture/data-guide/big-data/real-time-processing)
+* [Data architecture guide - Real-time processing](/azure/architecture/data-guide/big-data/real-time-processing)
 * [Use Azure Event Hubs from Apache Kafka applications](/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview)
-* [Data Architecture Guide - Choosing a real-time message ingestion technology in Azure](/azure/architecture/data-guide/technology-choices/real-time-ingestion)
+* [Data architecture guide - Choose a real-time message ingestion technology in Azure](/azure/architecture/data-guide/technology-choices/real-time-ingestion)
 
-### Apache Kafka and Azure Event Hub conceptual mapping
+### Apache Kafka and Azure Event Hubs conceptual mapping
 
-|Apache Kafka Concept|Event Hubs Concept|
+|Apache Kafka concept|Event Hubs concept|
 |--------------------|------------------|
 |Cluster|Namespace|
-|Topic|Event Hub|
+|Topic|Event hub|
 |Partition|Partition|
-|Consumer Group|Consumer Group|
+|Consumer group|Consumer group|
 |Offset|Offset|
 
 ### Reproducibility
 
-This guide leverages the producer application provided by the [Quickstart: Data streaming with Event Hubs using the Kafka protocol](/azure/event-hubs/event-hubs-quickstart-kafka-enabled-event-hubs). Furthermore, there are sample applications in many programming languages on [Azure Event Hubs for Apache Kafka GitHub](https://github.com/Azure/azure-event-hubs-for-kafka) page to help you jumpstart streaming scenarios.
+This guide uses the producer application provided in [Quickstart: Data streaming with Event Hubs by using the Kafka protocol](/azure/event-hubs/event-hubs-quickstart-kafka-enabled-event-hubs). You can find sample applications in many programming languages at [Azure Event Hubs for Apache Kafka](https://github.com/Azure/azure-event-hubs-for-kafka) on GitHub. Use these applications to jump-start streaming scenarios.
 
-Here is a modified `producer.py` that streams simulated sensor JSON data into Streaming engine using a Kafka compatible client. It is important to notice that Azure Event Hubs is Kafka protocol compatible. Follow the setup instructions in the [GitHub repository](https://github.com/Azure/azure-event-hubs-for-kafka/tree/master/quickstart/python) to get the sample to work for you. The `conf` dictionary is where all connection information takes place and your mileage may vary depending on your environment. Make sure you replace at least `bootstrap.servers` and `sasl.password` as it is the most relevant configuration in the code sample bellow.
+The following modified `producer.py` code streams simulated sensor JSON data into the streaming engine by using a Kafka-compatible client. Notice that Azure Event Hubs is compatible with the Kafka protocol. Follow the [setup instructions](https://github.com/Azure/azure-event-hubs-for-kafka/tree/master/quickstart/python) in GitHub to make the sample work for you. 
+
+All connection information is in the `conf` dictionary. Your setup might differ depending on your environment. Replace at least `bootstrap.servers` and `sasl.password`. These settings are the most relevant in the following code sample.
 
 ```python
 #!/usr/bin/env python
@@ -60,9 +62,9 @@ Here is a modified `producer.py` that streams simulated sensor JSON data into St
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Copyright 2016 Confluent Inc.
 # Licensed under the MIT License.
-# Licensed under the Apache License, Version 2.0
+# Licensed under the Apache License, version 2.0.
 #
-# Original Confluent sample modified for use with Azure Event Hubs for Apache Kafka Ecosystems
+# Original Confluent sample modified for use with Azure Event Hubs for Apache Kafka ecosystems.
 
 from confluent_kafka import Producer
 import sys
@@ -121,7 +123,7 @@ if __name__ == '__main__':
 
 ```
 
-Execute the sample producer application using the following command, replacing `<my-sample-topic>` with your environment information.
+Run the sample producer application by using the following command. Replace `<my-sample-topic>` with your environment information.
 
 ```bash
 python producer.py <my-sample-topic>
@@ -131,20 +133,20 @@ python producer.py <my-sample-topic>
 
 |Streaming pattern             |Scenario description and implementation         |
 |------------------------------|------------------------------------------------|
-|Pull from Kafka or Event Hubs |Create a Spark streaming job that pulls data continuously from the streaming engine, performing optional transformations and analytics logic.|
-|Sink streaming data into HDFS |In general this correlates with the previous pattern; after the streaming pull and transformation logic, data may be written to a multitude of data locations in order to achieve with the desired data persistence requirement.|
-|Push from Spark into Kafka or Event Hubs |After processing by Spark, data may be pushed back into the external streaming engine. There are many scenarios where this is desired, such as real time product recommendation, micro batch fraud and anomaly detection, etc.|
+|Pull from Kafka or Event Hubs |Create a Spark Streaming job that pulls data continuously from the streaming engine, performing optional transformations and analytics logic.|
+|Sink streaming data into Apache Hadoop Distributed File System (HDFS) |In general, this pattern correlates with the previous pattern. After the streaming pull and transformation logic, data can be written to many locations to achieve the desired data persistence requirement.|
+|Push from Spark into Kafka or Event Hubs |After processing by Spark, data can be pushed back into the external streaming engine. This pattern is desirable in many scenarios, such as real-time product recommendations and micro-batch fraud and anomaly detection.|
 
-## Sample Spark streaming application
+## Sample Spark Streaming application
 
-This sample application implements all three streaming patterns described in the previous section. The application goes about the following:
+This sample application implements the three streaming patterns described in the previous section. The application:
 
-1. Sets up configuration variables for connecting to the streaming service
-1. Creates a Spark streaming data frame to pull data
-1. Writes aggregated data locally to HDFS
-1. Writes aggregated data to a different topic in the streaming service
+1. Sets up configuration variables to connect to the streaming service.
+1. Creates a Spark Streaming data frame to pull data.
+1. Writes aggregated data locally to HDFS.
+1. Writes aggregated data to a different topic in the streaming service.
 
-Here is the complete `sample-spark-streaming-python.py` code:
+Here's the complete `sample-spark-streaming-python.py` code:
 ```python
 from pyspark import SparkContext, SparkConf
 from pyspark.streaming import StreamingContext
@@ -154,17 +156,17 @@ from pyspark.sql.functions import *
 
 # Sets up batch size to 15 seconds
 duration_ms = 15000
-# Changes Spark Session into a Structured Streaming context
+# Changes Spark session into a structured streaming context
 sc = SparkContext.getOrCreate()
 ssc = StreamingContext(sc, duration_ms)
 spark = SparkSession(sc)
 
-# Connection Information
+# Connection information
 bootstrap_servers = "" # Replace!
 sasl = "" # Replace!
 # Topic we will consume from
 topic = "sample-topic"
-# Topic we will write toa
+# Topic we will write to
 topic_to = "sample-topic-processed"
 
 # Define the schema to speed up processing
@@ -197,9 +199,9 @@ def foreach_batch_function(df, epoch_id):
         #  |-- measure1: double (nullable = true)
         #  |-- measure2: double (nullable = true)
         sensor_df.persist()
-        # Write to HDFS:
+        # Write to HDFS
         sensor_df.write.format('parquet').mode('append').saveAsTable('sensor_data')
-        # Create a summarization dataframe
+        # Create a summarization data frame
         sensor_stats_df = (sensor_df.groupBy('sensor').agg({'measure1':'avg', 'measure2':'avg', 'sensor':'count'}).withColumn('ts', current_timestamp()).withColumnRenamed('avg(measure1)', 'measure1_avg').withColumnRenamed('avg(measure2)', 'measure2_avg').withColumnRenamed('avg(measure1)', 'measure1_avg').withColumnRenamed('count(sensor)', 'count_sensor'))
         # root
         # |-- sensor: string (nullable = true)
@@ -208,7 +210,7 @@ def foreach_batch_function(df, epoch_id):
         # |-- count_sensor: long (nullable = false)
         # |-- ts: timestamp (nullable = false)
         sensor_stats_df.write.format('parquet').mode('append').saveAsTable('sensor_data_stats')
-        # Group by and send metrics to an output kafka topic:
+        # Group by and send metrics to an output Kafka topic
         sensor_stats_df.writeStream
             .format("kafka")
             .option("topic", topic_to)
@@ -226,7 +228,7 @@ writer = streaming_input_df.writeStream.foreachBatch(foreach_batch_function).sta
 
 ```
 
-Here are the tables that need to be created using __Spark SQL__:
+Create the following tables by using _Spark SQL_.
 ```sql
 CREATE TABLE IF NOT EXISTS sensor_data (sensor string, measure1 double, measure2 double)
 USING PARQUET;
@@ -242,26 +244,26 @@ USING PARQUET;
 azdata bdc hdfs cp --from-path sample-spark-streaming-python.py --to-path "hdfs:/apps/ETL-Pipelines/sample-spark-streaming-python.py"
 ```
 
-### Configuring Kafka libraries
+### Configure Kafka libraries
 
-The most important step is setting up your Kafka client libraries to your application before submission.
+Set up your Kafka client libraries with your application before you submit the jobs. Two libraries are required:
 
-There are __two required libraries__:
+* [kafka-clients](https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients) - This core library enables Kafka protocol support and connectivity.
+* [spark-sql-kafka](https://mvnrepository.com/artifact/org.apache.spark/spark-sql-kafka-0-10) - This library enables the Spark SQL data frame functionality on Kafka streams.
 
-* [kafka-clients](https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients) - Core library that enables Kafka protocol support and connectivity.
-* [spark-sql-kafka](https://mvnrepository.com/artifact/org.apache.spark/spark-sql-kafka-0-10) - Enables the Spark SQL data frame functionality on Kafka streams.
+Both libraries must:
 
-Both libraries must comply with the following requirements:
-
-* Target Scala 2.11 and Spark 2.4.7. This is a SQL Server BDC requirement as per CU9 or greater.
+* Target Scala 2.11 and Spark 2.4.7. This SQL Server Big Data Cluster requirement is for Cumulative Update package 9 (CU9) or later.
 * Be compatible with your Streaming server.
 
 > [!CAUTION]
-   > As a general rule use the most recent compatible library. The code provided in this guide was tested using Apache Kafka for Azure Event Hubs and is provided as-is, not as a supportability statement. Apache Kafka offers Bidirectional Client Compatibility by design, but library implementations vary across programming languages. Always refer to your Kafka platform documentation to correctly map compatibility.
+   > As a general rule, use the most recent compatible library. The code in this guide was tested by using Apache Kafka for Azure Event Hubs. The code is provided as-is, not as a statement of supportability. 
+   > 
+   > Apache Kafka offers bidirectional client compatibility by design. But library implementations vary across programming languages. Always refer to your Kafka platform documentation to correctly map compatibility.
 
-#### Shared library locations for jobs on HDFS
+#### Share library locations for jobs on HDFS
 
-If multiple applications connect to the same Kafka cluster or your organization has a single versioned Kafka cluster, copy the appropriate library jar files to a shared location on HDFS. Then all jobs should reference the same library files.
+If multiple applications connect to the same Kafka cluster, or if your organization has a single versioned Kafka cluster, copy the appropriate library JAR files to a shared location on HDFS. Then all jobs should reference the same library files.
 
 Copy the libraries to the common location:
 
@@ -272,11 +274,11 @@ azdata bdc hdfs cp --from-path spark-sql-kafka-0-10_2.11-2.4.7.jar --to-path "hd
 
 #### Dynamically install the libraries
 
-It is possible to dynamically install the packages on job submission using the [package management features](spark-install-packages.md) of SQL Server Big Data Clusters. There is a job startup time penalty due to the recurrent downloads of the library files on each job submission.
+You can dynamically install packages when you submit a job by using the [package management features](spark-install-packages.md) of SQL Server Big Data Clusters. There's a job startup time penalty because of the recurrent downloads of the library files on each job submission.
 
-### Submit the Spark streaming job using `azdata`
+### Submit the Spark Streaming job by using azdata
 
-The first example uses the shared library jar files on HDFS:
+The following example uses the shared library JAR files on HDFS:
 
 ```bash
 azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/sample-spark-streaming-python.py \
@@ -285,7 +287,7 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/sample-spark-streaming
 -n MyStreamingETLPipelinePySpark --executor-count 2 --executor-cores 2 --executor-memory 1664m
 ```
 
-This example uses the dynamic package management to install the dependencies:
+This example uses dynamic package management to install the dependencies:
 
 ```bash
 azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/sample-spark-streaming-python.py \
@@ -295,6 +297,6 @@ azdata bdc spark batch create -f hdfs:/apps/ETL-Pipelines/sample-spark-streaming
 
 ## Next steps
 
-To learn how to submit Spark jobs to SQL Server big data cluster using azdata or Livy endpoints, see [Submit Spark jobs using command-line tools](spark-submit-job-command-line.md).
+To submit Spark jobs to SQL Server Big Data Clusters by using `azdata` or Livy endpoints, see [Submit Spark jobs by using command-line tools](spark-submit-job-command-line.md).
 
-For more information on SQL Server big data cluster and related scenarios, See [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
+For more information about SQL Server Big Data Clusters and related scenarios, see [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

@@ -29,7 +29,8 @@ For more information about table-valued parameters, see the following resources.
 |Resource|Description|
 |--------------|-----------------|
 |[Use Table-Valued Parameters (Database Engine)](../../../relational-databases/tables/use-table-valued-parameters-database-engine.md)|Describes how to create and use table-valued parameters.|
-|[Use Table-Valued Parameters (Database Engine)](../../../relational-databases/tables/use-table-valued-parameters-database-engine.md)|Describes user-defined table types that are used to declare table-valued parameters.|
+|[Creating a user-defined table type](../../../t-sql/statements/create-type-transact-sql.md#c-creating-a-user-defined-table-type)|Describes user-defined table types that are used to declare table-valued parameters.|
+|[User-Defined Table Types](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|Describes user-defined table types that are used to declare table-valued parameters.|
 
 ## Passing multiple rows in previous versions of SQL Server
 

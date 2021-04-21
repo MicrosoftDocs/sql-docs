@@ -24,7 +24,7 @@ When you know the type of object or data that's returned, you can use either the
 
 In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, a complex statement is constructed that combines a stored procedure call with a SQL statement, the statements are run, and then a `do` loop is used to process all the result sets and updated counts that are returned.
 
-[!code[JDBC#HandlingComplexStatements1](codesnippet/Java/handling-complex-statements_1.java)]
+:::code language="java" source="codesnippet/Java/handling-complex-statements_1.java":::
 
 ## See also
 

@@ -54,7 +54,7 @@ The showSetters method demonstrates how to set the **xml** column by using the S
 
 The showTransformer method demonstrates how to get XML data from one table and insert that XML data into another table by using the SAX and the Transformer. First, it retrieves the source SQLXML object from the TestTable1. Then, it creates an empty destination SQLXML object by using the [createSQLXML](reference/createsqlxml-method-sqlserverconnection.md) method of the Connection class. Next, it updates the destination SQLXML object and writes the XML data to TestTable2. Finally, the sample code iterates through the rows of data that are in the result set, and uses the [getSQLXML](reference/getsqlxml-method-sqlserverresultset.md) method to read the XML data in TestTable2.
 
-[!code[JDBC#UsingSQLXML1](codesnippet/Java/sqlxml-data-type-sample_1.java)]
+:::code language="java" source="codesnippet/Java/sqlxml-data-type-sample_1.java":::
 
 ## See also
 

@@ -21,7 +21,7 @@ To work with data in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database is passed in to the function, an SQL statement is constructed and run, and then the results are read from the result set.
 
-[!code[JDBC#UsingSQLWithNoParams1](codesnippet/Java/using-an-sql-statement-w_0_1.java)]
+:::code language="java" source="codesnippet/Java/using-an-sql-statement-w_0_1.java":::
 
 For more information about using result sets, see [Managing result sets with the JDBC driver](managing-result-sets-with-the-jdbc-driver.md).
 

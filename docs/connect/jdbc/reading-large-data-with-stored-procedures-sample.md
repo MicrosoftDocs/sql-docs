@@ -43,7 +43,7 @@ This sample code:
 
 Finally, the sample code displays the data returned with the OUT parameters and also demonstrates how to use the `mark` and `reset` methods on the stream to re-read any portion of the data.
 
-[!code[JDBC#UsingAdaptiveBuffering2](codesnippet/Java/reading-large-data-with-_1_1.java)]
+:::code language="java" source="codesnippet/Java/reading-large-data-with-_1_1.java":::
 
 ## See also
 

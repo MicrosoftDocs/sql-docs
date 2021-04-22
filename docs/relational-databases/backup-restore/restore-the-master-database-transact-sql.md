@@ -17,7 +17,10 @@ ms.author: chadam
 # Restore the master Database (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  This topic explains how to restore the **master** database from a full database backup.  
+  This topic explains how to restore the **master** database from a full database backup.
+
+> [!WARNING]
+> In the event of disaster recovery, the instance to which the Master database is being restored should be as close to an exact match to the original as possible.  At minimum, the instance Master is being restored to should be the same version, edition, and patch levels of SQL Server, the same selection of features installed, and the same external configuration (hostname, cluster membership, etc). Doing otherwise may result in an undefined SQL Server Instance behavior with inconsistent feature support, and is not guaranteed to be viable. 
   
 ### To restore the master database  
   

@@ -36,7 +36,9 @@ In order to disable telemetry collection when using DMA GUI you need to comment 
 
    :::image type="content" source="media/dma-diagnostic-data-collection/dmacmd-disable-telemetry.png" alt-text="Dma.exe.config file you modify to disable telemetry":::
 
-This value is uncommented and thus enabled by default. Commenting out the value disables telemetry. To re-enable telemetry, remove the comment around the line.
+This value is uncommented and thus enabled by default. Commenting out the value disables telemetry.
+
+To re-enable telemetry, remove the comment around the line.
 
 ## Data Migration Assistant Command Line
 
@@ -52,9 +54,10 @@ In order to disable telemetry collection when using the DMA command line tool yo
 
    :::image type="content" source="media/dma-diagnostic-data-collection/dmacmd-disable-telemetry.png" alt-text="DMACMD.exe.config file you modify to disable telemetry":::
 
-This value is uncommented and thus enabled by default. Commenting out the value disables telemetry. To re-enable telemetry, remove the comment around the line.
+This value is uncommented and thus enabled by default. Commenting out the value disables telemetry. 
+
+To re-enable telemetry, remove the comment around the line.
 
 ## Next steps
  
 Now that you have modified your telemetry setting you can get started by creating a [DMA assessment project](dma-assesssqlonprem.md).
-

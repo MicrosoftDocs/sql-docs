@@ -1,13 +1,13 @@
 ---
 description: "sys.filegroups (Transact-SQL)"
-title: "sys.filegroups (Transact-SQL) | Microsoft Docs"
+title: "sys.filegroups (Transact-SQL)"
 ms.custom: ""
 ms.date: "05/24/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.filegroups_TSQL"
   - "filegroups"
@@ -17,10 +17,9 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.filegroups catalog view"
-ms.assetid: 9e851f72-1f8e-4515-a25d-152ebc12ed56
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.filegroups (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**filegroup_guid**|**uniqueidentifier**|GUID for the filegroup.<br /><br /> NULL = PRIMARY filegroup|  
 |**log_filegroup_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the value is NULL.|  
 |**is_read_only**|**bit**|1 = Filegroup is read-only.<br /><br /> 0 = Filegroup is read/write.|  
-|**is_autogrow_all_files**|**bit**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](../../sql-server/what-s-new-in-sql-server-2016.md)).<br /><br /> 1 = When a file in the filegroup meets the autogrow threshold, all files in the filegroup grow.<br /><br /> 0 = When a file in the filegroup meets the autogrow threshold, only that file grows. This is the default.|  
+|**is_autogrow_all_files**|**bit**|[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)].<br /><br /> 1 = When a file in the filegroup meets the autogrow threshold, all files in the filegroup grow.<br /><br /> 0 = When a file in the filegroup meets the autogrow threshold, only that file grows. This is the default.|  
   
 ## Permissions  
  Requires membership in the **public** role. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

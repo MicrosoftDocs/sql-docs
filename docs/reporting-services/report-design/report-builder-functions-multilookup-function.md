@@ -80,7 +80,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  For more information, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) and [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## Example  
+## Examples
+
+### A. Use MultiLookup function
  Assume a dataset called "Category" contains the field CategoryList, which is a field that contains a comma-separated list of category identifers, for example, "2, 4, 2, 1".  
   
  The dataset CategoryNames contains the category identifier and category name, as shown in the following table.  
@@ -102,7 +104,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
    ", ")  
 ```  
   
-## Example  
+### B. Use MultiLookup with multivalue parameter  
  Assume a dataset ProductColors contains a color identifier field ColorID and a color value field Color, as shown in the following table.  
   
 |ColorID|Color|  

@@ -5,7 +5,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "clusters [SQL Server], removing failover cluster instance"
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "uninstalling failover cluster instances"
   - "removing failover cluster instances"
 ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 
 # Remove a failover cluster instance (Setup)

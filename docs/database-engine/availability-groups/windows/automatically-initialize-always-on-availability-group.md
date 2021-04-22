@@ -5,11 +5,11 @@ ms.custom: seo-lt-2019
 ms.date: "03/26/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-author: MashaMSFT
-ms.author: "mathoma"
+author: cawrites
+ms.author: "chadam"
 ---
 # Use automatic seeding to initialize an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

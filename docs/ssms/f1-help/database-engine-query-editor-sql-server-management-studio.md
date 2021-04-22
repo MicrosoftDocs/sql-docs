@@ -13,7 +13,6 @@ f1_keywords:
   - sql13.swb.sqleditors.multiserverresultssettings
   - sql13.swb.tsqlquery.f1
   - sql13.swb.tsqlresults.f1
-  - VS.CommandWindow
 dev_langs: 
   - TSQL
 helpviewer_keywords: 
@@ -42,7 +41,7 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-ms.custom: seo-lt-2019, contperfq1
+ms.custom: seo-lt-2019, contperf-fy21q1
 ms.date: 08/28/2020
 ---
 

@@ -5,7 +5,7 @@ description: Reference article for azdata arc postgres commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 09/22/2020
+ms.date: 04/06/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -21,9 +21,9 @@ The following article provides reference for the **sql** commands in the **azdat
 
 |Command|Description|
 | --- | --- |
-[azdata arc postgres server](reference-azdata-arc-postgres-server.md) | Manage PostgreSQL server groups.
-[azdata arc postgres backup](reference-azdata-arc-postgres-backup.md) | Manage PostgreSQL server group backups.
-[azdata arc postgres endpoint](reference-azdata-arc-postgres-endpoint.md) | Manage PostgreSQL server group endpoints.
+[azdata arc postgres server](reference-azdata-arc-postgres-server.md) | Manage Azure Arc enabled PostgreSQL Hyperscale server groups.
+[azdata arc postgres endpoint](reference-azdata-arc-postgres-endpoint.md) | Manage Azure Arc enabled PostgreSQL Hyperscale server group endpoints.
+[azdata arc postgres backup](reference-azdata-arc-postgres-backup.md) | Manage Azure Arc enabled PostgreSQL Hyperscale server group backups.
 
 ## Next steps
 

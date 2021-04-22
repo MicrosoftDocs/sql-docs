@@ -4,7 +4,7 @@ description: Learn how SQL injection attacks work. Mitigate such attacks by vali
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "security, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Injection
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -88,7 +88,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |---------------------|------------------------------|  
 |**;**|Query delimiter.|  
 |**'**|Character data string delimiter.|  
-|**--**|Character data string delimiter.<br />.|  
+|**--**|Single-line comment delimiter. Text following **--** until the end of that line is not evaluated by the server.|  
 |**/\*** ... **\*/**|Comment delimiters. Text between **/\*** and **\*/** is not evaluated by the server.|  
 |**xp_**|Used at the start of the name of catalog-extended stored procedures, such as `xp_cmdshell`.|  
   

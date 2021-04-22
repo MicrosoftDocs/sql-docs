@@ -101,7 +101,7 @@ The syntax that SPNs use in the connection string or connection attributes is as
   
 ## Authenticating a Linux or macOS Computer with Active Directory
 
-To configure Kerberos, enter data into the `krb5.conf` file. `krb5.conf` is in `/etc/` but you can refer to another file using the syntax e.g. `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. The following is an example `krb5.conf` file:  
+<a name="configure-kerberos"></a>To configure Kerberos, enter data into the `krb5.conf` file. `krb5.conf` is in `/etc/` but you can refer to another file using the syntax e.g. `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. The following is an example `krb5.conf` file:  
   
 ```  
 [libdefaults]  

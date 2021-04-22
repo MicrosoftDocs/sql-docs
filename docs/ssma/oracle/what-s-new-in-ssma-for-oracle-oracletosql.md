@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "10/28/2020"
+ms.date: "12/17/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,28 @@ ms.author: alexiva
 # What's New in SSMA for Oracle (OracleToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
+
+## SSMA v8.18
+
+The v8.18 release of SSMA for Oracle contains the following changes:
+
+* Fix sequences loading for Oracle 12c Release 1 (12.1)
+
+## SSMA v8.17
+
+The v8.17 release of SSMA for Oracle contains the following changes:
+
+* Add support for computed columns
+* Fix parser issues when culture-specific operator characters are used in expressions
+* Update HTML assessment reports to use modern editor to display SQL text
+
+## SSMA v8.16
+
+The v8.16 release of SSMA for Oracle contains the following changes:
+
+* Add support for identity columns
+* Remove support for legacy parser
+* Fix issue with objects not refreshing from database
 
 ## SSMA v8.15
 

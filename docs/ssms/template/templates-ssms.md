@@ -114,7 +114,7 @@ You can also create a new template in Template Browser. The following steps show
 
 The best way to get acquainted with SSMS is through hands-on practice. These *tutorial* and *how-to* articles help you with various features available within SSMS.  These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
 
-* [Connect to and query an instance](../quickstarts/connect-query-sql-server.md)
+* [Connect to and query an instance](../quickstarts/ssms-connect-query-sql-server.md)
 * [Scripting](../tutorials/scripting-ssms.md)
 * [SSMS Configuration](../tutorials/ssms-configuration.md)
 * [Additional Tips and Tricks for using SSMS](../tutorials/ssms-tricks.md)

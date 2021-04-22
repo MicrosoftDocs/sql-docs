@@ -22,9 +22,9 @@ In this quickstart, you install SQL Server 2017 or SQL Server 2019 on Red Hat En
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-In this quickstart, you install SQL Server 2019 on Red Hat Enterprise Linux (RHEL) 8. You then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2019 on Red Hat Enterprise Linux (RHEL) 7/8. You then connect with **sqlcmd** to create your first database and run queries.
 
 ::: moniker-end
 
@@ -34,16 +34,16 @@ In this quickstart, you install SQL Server 2019 on Red Hat Enterprise Linux (RHE
 ## Prerequisites
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-You must have a RHEL 7.3 - 7.8, or 8.0 - 8.2 machine with **at least 2 GB** of memory.
+You must have a RHEL 7.3 - 7.8, or 8.0 - 8.3 machine with **at least 2 GB** of memory.
 
 ::: moniker-end
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-You must have a RHEL 7.3, 7.4, 7.5, 7.6, or 8.0 machine with **at least 2 GB** of memory.
+You must have a RHEL 7.3 - 7.8, or 8.0 - 8.3 machine with **at least 2 GB** of memory.
 
 ::: moniker-end
 
@@ -71,18 +71,33 @@ For other system requirements, see [System requirements for SQL Server on Linux]
 > ```
 > For more information, see the following blog on installing python2 and configuring it as the default interpreter: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
 >
-> If you are using RHEL 7, change the path below to `/rhel/7` instead of `/rhel/8`.
 
 To configure SQL Server on RHEL, run the following commands in a terminal to install the **mssql-server** package:
 
 1. Download the Microsoft SQL Server 2017 Red Hat repository configuration file:
 
+   For RHEL7:
+   
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
+   ```
+   
+   For RHEL8:
+   
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo
    ```
 
    > [!TIP]
    > If you want to install SQL Server 2019 , you must instead register the SQL Server 2019 repository. Use the following command for SQL Server 2019 installations:
+   >
+   > For RHEL7:
+   >
+   > ```bash
+   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   > ```
+   >
+   > For RHEL8:
    >
    > ```bash
    > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
@@ -123,7 +138,7 @@ At this point, SQL Server is running on your RHEL machine and is ready to use!
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a id="install"></a>Install SQL Server
 
@@ -138,14 +153,22 @@ At this point, SQL Server is running on your RHEL machine and is ready to use!
 > # Configure python2 as the default interpreter using this command: 
 > sudo alternatives --config python
 > ``` 
+> 
 > For more information about these steps, see the following blog on installing python2 and configuring it as the default interpreter: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
 > 
-> If you are using RHEL 7, change the path below to `/rhel/7` instead of `/rhel/8`.
 
 To configure SQL Server on RHEL, run the following commands in a terminal to install the **mssql-server** package:
 
 1. Download the Microsoft SQL Server 2019 Red Hat repository configuration file:
-
+   
+   For RHEL7:
+   
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   ```
+   
+   For RHEL8:
+   
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
    ```
@@ -188,6 +211,14 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
 
 1. Download the Microsoft Red Hat repository configuration file.
 
+   For RHEL7:
+   
+   ```bash
+   sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
+   ```
+   
+   For RHEL8:
+   
    ```bash
    sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
    ```

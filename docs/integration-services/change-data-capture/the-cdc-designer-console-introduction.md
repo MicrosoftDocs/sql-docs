@@ -22,7 +22,7 @@ ms.author: chugu
 ## Installation  
  The section describes the installation procedures for the Change Data Capture Designer for Oracle by Attunity.  
   
- The MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ® 2016 are part of the SQL Server 2016 Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ The MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ® 2016 are part of the SQL Server 2016 Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](https://www.microsoft.com/download/details.aspx?id=56833).  
   
 ## Supported Windows Environments  
  The CDC Designer Console can run in the following Windows environments:  
@@ -37,13 +37,15 @@ ms.author: chugu
   
 ### Source Oracle Database
   
--   Oracle Database 10g Release 2
--   Oracle Database 11g Release 1 and Release 2
--   Oracle Database 12c in classic installation. (Multitenant installation is not supported.)  
+- Oracle Database 10g Release 2
+- Oracle Database 11g Release 1 and Release 2
+- Oracle Database 12c in classic installation (Multitenant installation is not supported.)  
+- Oracle Database 18c in classic installation (Multitenant installation is not supported.)
+- Oracle Database 19c in classic installation (Multitenant installation is not supported.)
 
 ### Target SQL Server Database
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] edition with support for SQL Server CDC  
+-   [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] edition with support for SQL Server CDC  
   
 ## Software Prerequisites  
  You have to use the 32-bit or 64-bit version of the Oracle client software according to the version of the Oracle CDC Designer console installed.  
@@ -58,6 +60,6 @@ ms.author: chugu
  Double-click the CDC Designer Console installation kit and follow the directions in the installation wizard.  
   
 ## Uninstalling the CDC Designer Console  
- Uninstall the CDC Designer Console by using Control Panel, Programs and Features.  
+ Uninstall the CDC Designer Console by using Control Panel, Programs, and Features.  
   
   

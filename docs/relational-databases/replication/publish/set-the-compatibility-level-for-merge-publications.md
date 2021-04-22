@@ -18,7 +18,7 @@ ms.author: "mathoma"
 ---
 # Set the Compatibility Level for Merge Publications
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  This topic describes how to set the compatibility level for merge publications in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Merge replication uses the publication compatibility level to determine which features can be used by publications in a given database.  
+  This topic describes how to set the compatibility level for merge publications in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Merge replication uses the publication compatibility level to determine which features can be used by publications in a given database.  
   
  **In This Topic**  
   

@@ -250,6 +250,7 @@ BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL=SNAPSHOT, LANGUAGE=N'English')
                         @productId
                        ,@locationId
                        ,@quantityIncrement
+                   )
         END
 END;
 ```
@@ -518,7 +519,7 @@ AS
 ;WITH History
 AS
 (
-        /* Order historical rows by tehir age in DESC order*/
+        /* Order historical rows by their age in DESC order*/
         SELECT ROW_NUMBER () OVER (PARTITION BY EmployeeID ORDER BY [ValidTo] DESC) AS RN, *
         FROM Employee FOR SYSTEM_TIME ALL WHERE YEAR (ValidTo) < 9999 AND Employee.EmployeeID = @EmployeeID
 )

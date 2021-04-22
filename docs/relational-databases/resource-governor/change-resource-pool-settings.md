@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Resource Governor, resource pool alter"
   - "resource pools [SQL Server], alter"
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Change Resource Pool Settings
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "07/31/2020"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 
@@ -38,7 +38,7 @@ clientKey=<file_location>
 ```
 Specifies location of the private key file. In case if private key file is password protected then password keyword is required. File location can be either relative or absolute.
 
-* clientKeyPassword – optional password string provided to access the clientKey file’s private key.
+* clientKeyPassword – optional password string provided to access the clientKey file's private key.
 
 This feature is only officially supported for loopback authentication scenarios against Linux SQL Server 2019 and up.
 

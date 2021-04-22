@@ -22,7 +22,7 @@ The report server e-mail delivery extension is not configured by default. You mu
 
 ## Configuration Requirements
 
-- Report server e-mail delivery is implemented on Collaboration Data Objects (CDO) and requires a local or remote Simple Mail Transfer Protocol (SMTP) server or SMTP forwarder. SMTP is not supported on all Windows operating systems. If you are using the Itanium-based edition of Windows Server 2008, SMTP is not supported. For more information about configuration options provided through CDO, see [Configuration CoClass](https://go.microsoft.com/fwlink/?LinkId=98237) on MSDN.
+- Report server e-mail delivery is implemented on Collaboration Data Objects (CDO) and requires a local or remote Simple Mail Transfer Protocol (SMTP) server or SMTP forwarder. SMTP is not supported on all Windows operating systems. If you are using the Itanium-based edition of Windows Server 2008, SMTP is not supported. For more information about configuration options provided through CDO, see [Configuration CoClass](/previous-versions/exchange-server/exchange-10/ms526939(v=exchg.10)) on MSDN.
 
 The configured authentication account must have permission on the SMTP server to send mail.
 
@@ -220,5 +220,4 @@ The connection between the report server and a local SMTP server or forwarder is
 [Report Server Configuration Manager (Native Mode)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Rsreportserver.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
-  
   

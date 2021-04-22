@@ -4,16 +4,16 @@ description: Collect useful information to improve performance and get faster re
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 12/12/2018  
+ms.date: 10/30/2020 
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Use R code profiling functions to improve performance
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-In addition to using SQL Server resources and tools to monitor R script execution, you can use performance tools provided by other R packages to get more information about internal function calls. 
+This article describes performance tools provided by R packages to get information about internal function calls. You can use this information to improve the performance of your code.
 
 > [!TIP]
 > This article provides basic resources to get you started. For expert guidance, we recommend the *Performance* section in ["Advanced R" by Hadley Wickham](http://adv-r.had.co.nz).
@@ -54,9 +54,11 @@ help("Sys.time")
 
 ## Debugging and Profiling in R
 
-The documentation for Microsoft R Open, which is installed by default, includes a manual on developing extensions for the R language that discusses [profiling and debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging) in detail. You can find the same documentation on your computer at C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual.
+The documentation for Microsoft R Open, which is installed by default, includes a manual on developing extensions for the R language that discusses [profiling and debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging) in detail.
 
-## See also
+## Next steps
 
-+ [utils R package](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
-+ ["Advanced R" by Hadley Wickham](http://adv-r.had.co.nz)
++ For more information about optimizing R scripts in SQL Server, see [Performance tuning and data optimization for R](r-and-data-optimization-r-services.md).
++ For more complete information about performance tuning on SQL Server, see [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md).
++ For more information on the utils package, see [The R Utils Package](https://www.rdocumentation.org/packages/utils/versions/3.5.1).
++ For in-depth discussions of R programming, see ["Advanced R" by Hadley Wickham](http://adv-r.had.co.nz).

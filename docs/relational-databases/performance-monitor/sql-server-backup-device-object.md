@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQLServer:Backup Device"
   - "Backup Device object"
 ms.assetid: 52e7febf-d5e0-4674-945b-aacc40a9ad6e
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Backup Device Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

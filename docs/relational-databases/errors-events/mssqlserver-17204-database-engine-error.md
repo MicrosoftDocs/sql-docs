@@ -6,7 +6,7 @@ ms.date: 07/25/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "17204 (Database Engine error)"
 ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
@@ -73,12 +73,14 @@ The operating system error information printed in these error messages is the ro
 1. Resolving error 17204 involves understanding the associated operating system error code and diagnosing that error. Once the operating system error condition is resolved, then you can attempt to restart the database (using ALTER DATABASE SET ONLINE for example) or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to bring the affected database online. In some cases, you may not be able to resolve the operating system error. Then, you have to take specific corrective actions. We'll discuss these actions in this section.
 1. If the 17204 error message contains only an error code and not an error description, then you can try resolving the error code using the command from an operating system shell: net helpmsg <error code> . If you are getting an 8-digit status code as the error code, then you can refer to the information sources like [How do I convert an HRESULT to a Win32 error code?](https://devblogs.microsoft.com/oldnewthing/20061103-07/?p=29133) to decode what these status codes into OS errors.
 1. If you are getting the `Access is Denied` operating system error = 5, consider these methods:
-   -  Check the permissions that are set of the file by looking at the properties of the file in Windows Explorer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses Windows groups to provision Access Control on the various file resources. Make sure the appropriate group [with names like SQLServerMSSQLUser$ComputerName$MSSQLSERVER or SQLServerMSSQLUser$ComputerName$InstanceName] has the required permissions on the database file that is mentioned in the error message. Review [Configure File System Permissions for Database Engine Access](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014) for more details. Ensure that the Windows group actually includes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account or the service SID.
+   -  Check the permissions that are set of the file by looking at the properties of the file in Windows Explorer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses Windows groups to provision Access Control on the various file resources. Make sure the appropriate group [with names like SQLServerMSSQLUser$ComputerName$MSSQLSERVER or SQLServerMSSQLUser$ComputerName$InstanceName] has the required permissions on the database file that is mentioned in the error message. Review [Configure File System Permissions for Database Engine Access](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access) for more details. Ensure that the Windows group actually includes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account or the service SID.
    -  Review the user account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is currently running. You can use the Windows Task Manager to get this information. Look for the "User Name" value for the executable "sqlservr.exe". Also if you recently changed the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account, know that the supported way to do this operation is through the SQL Server Configuration Manager utility. More information on this is available at [SQL Server Configuration Manager](../sql-server-configuration-manager.md). 
    -  Depending on the type of operation - opening databases during server startup, attaching a database, database restore, etc. - the account that is used for impersonation and accessing the database file may vary. Review the topic [Securing Data and Log Files](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)) to understand which operation sets what permission and to which accounts. Use a tool like Windows SysInternals [Process Monitor](/sysinternals/downloads/procmon) to understand if the file access is happening under the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance service startup account [or Service SID] or an impersonated account.
 
       If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is impersonating the credentials of the user that executes the ALTER DATABASE or CREATE DATABASE operation, you will notice the following information in the Process Monitor tool (an example):
-        ```Date & Time:      3/27/2010 8:26:08 PM
+        
+        ```output
+        Date & Time:      3/27/2010 8:26:08 PM
         Event Class:        File System
         Operation:          CreateFile
         Result:                ACCESS DENIED
@@ -91,7 +93,8 @@ The operating system error information printed in these error messages is the ro
         Attributes:          N
         ShareMode:       Read
         AllocationSize:   n/a
-        Impersonating: DomainName\UserName```
+        Impersonating: DomainName\UserName
+        ```
   
 1. If you are getting `The system cannot find the file specified` OS error = 3:
    - Review the complete path from the error message

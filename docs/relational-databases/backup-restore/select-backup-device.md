@@ -11,8 +11,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.selectbackupdevice.f1"
 ms.assetid: 7887c9fd-15ce-4cc8-b069-845c1d09088c
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Select Backup Device
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

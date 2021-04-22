@@ -23,7 +23,7 @@ ms.author: maggies
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-Looking for Power BI Report Server? See [What is Power BI Report Server?](https://docs.microsoft.com/power-bi/report-server/get-started).
+Looking for Power BI Report Server? See [What is Power BI Report Server?](/power-bi/report-server/get-started).
 
 SQL Server Reporting Services (SSRS) provides a set of on-premises tools and services that create, deploy, and manage mobile and paginated reports.
 
@@ -46,7 +46,7 @@ Read on for more about each.
 These sources will keep you up to date on new features in SQL Server Reporting Services.
 
 * [What's New in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
-* [SQL Server Reporting Services Team Blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/)
+* [SQL Server Reporting Services Team Blog](/archive/blogs/sqlrsteamblog/)
 * The [Guy in a Cube YouTube channel](https://www.youtube.com/channel/UCFp1vaKzpfvoGai0vE5VJ0w)
 
 ## Paginated reports
@@ -97,7 +97,7 @@ And you can still schedule report processing, access reports on demand, and subs
 
 More about the [Web portal](../reporting-services/web-portal-ssrs-native-mode.md).
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## Reporting Services in SharePoint integrated mode
 
@@ -116,7 +116,7 @@ More [Reporting Services Developer Documentation](../reporting-services/reportin
 ## Next steps
 
 * [Install Reporting Services](../reporting-services/install-windows/install-reporting-services.md)
-* [Download SQL Server Data Tools (SSDT)](https://go.microsoft.com/fwlink/?LinkID=616714)
+* [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 * [Install Report Builder](../reporting-services/install-windows/install-report-builder.md)
 
 * More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

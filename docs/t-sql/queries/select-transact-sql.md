@@ -1,13 +1,11 @@
 ---
-description: "SELECT (Transact-SQL)"
-title: "SELECT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2017"
+title: SELECT (Transact-SQL)
+description: SELECT (Transact-SQL)
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "SELECT_TSQL"
   - "SELECT"
@@ -22,10 +20,11 @@ helpviewer_keywords:
   - "data manipulation language [SQL Server], SELECT statement"
   - "row retrieval [SQL Server]"
   - "queries [SQL Server], results"
-ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: ""
+ms.date: "10/24/2017"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

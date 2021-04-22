@@ -50,4 +50,4 @@ When you first start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md
 
 ## Next steps  
  [SQL Server Profiler overview](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md?view=sql-server-ver15)
+ [Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)

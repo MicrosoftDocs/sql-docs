@@ -61,7 +61,7 @@ To install the **mssql-server-is** package on Ubuntu, follow these steps:
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Import the public repository GPG keys.
 
@@ -145,7 +145,7 @@ To install the **mssql-server-is** package on RHEL, follow these steps:
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Download the SQL Server Red Hat repository configuration file.
 

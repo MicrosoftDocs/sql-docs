@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tutorial: Signing Stored Procedures with a Certificate
 [!INCLUDE [SQL Server Azure SQL Database SQL Managed Instance](../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -40,7 +40,7 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
 For instructions on restoring a database in SQL Server Management Studio, see [Restore a database](./backup-restore/restore-a-database-backup-using-ssms.md).   
   
 ## 1. Configure the Environment  
-To set the initial context of the example, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] open a new Query and run the following code to open the Adventureworks2017 database. This code changes the database context to `AdventureWorks2012` and creates a new server login and database user account (`TestCreditRatingUser`), using a password.  
+To set the initial context of the example, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] open a new Query and run the following code to open the Adventureworks2017 database. This code changes the database context to `AdventureWorks2017` and creates a new server login and database user account (`TestCreditRatingUser`), using a password.  
   
 ```sql  
 USE AdventureWorks2017;  
@@ -65,7 +65,7 @@ Run this code to create a database certificate and secure it using a password.
 CREATE CERTIFICATE TestCreditRatingCer  
    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
       WITH SUBJECT = 'Credit Rating Records Access',   
-      EXPIRY_DATE = '12/05/2020';  -- Error 3701 will occur if this date is not in the future
+      EXPIRY_DATE = '12/31/2021';  -- Error 3701 will occur if this date is not in the future
 GO  
 ```  
   
@@ -199,11 +199,11 @@ CREATE USER TestCreditRatingUser
 FOR LOGIN TestCreditRatingUser;  
 GO  
   
-/* Step 2 - Create a certificate in the AdventureWorks2012 database */  
+/* Step 2 - Create a certificate in the AdventureWorks2017 database */  
 CREATE CERTIFICATE TestCreditRatingCer  
    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
       WITH SUBJECT = 'Credit Rating Records Access',   
-      EXPIRY_DATE = '12/05/2020';   -- Error 3701 will occur if this date is not in the future
+      EXPIRY_DATE = '12/31/2021';   -- Error 3701 will occur if this date is not in the future
 GO  
   
 /* Step 3 - Create a stored procedure and  
@@ -233,7 +233,7 @@ GO
   
 /* Step 4 - Create a database user for the certificate.   
 This user has the ownership chain associated with it. */  
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 CREATE USER TestCreditRatingcertificateAccount  
    FROM CERTIFICATE TestCreditRatingCer;  

@@ -204,6 +204,7 @@ For info about the Integration Services (SSIS) features supported by the edition
 |Planar and geodetic datatypes|Yes|Yes|Yes|Yes| 
 |Advanced spatial libraries|Yes|Yes|Yes|Yes|   
 |Import/export of industry-standard spatial data formats|Yes|Yes|Yes|Yes|   
+
 ## <a name="Unsupported"></a> Unsupported features & services
 
 The following features and services are not available SQL Server 2017 on Linux. The support of these features will be increasingly enabled over time.
@@ -219,14 +220,15 @@ The following features and services are not available SQL Server 2017 on Linux. 
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
 | &nbsp; | Buffer Pool Extension |
+| &nbsp; | Backup to URL - page blob <sup>1</sup>|
 | **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alerts |
 | &nbsp; | Log Reader Agent |
 | &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
 | **Security** | Extensible Key Management |
-| &nbsp; | AD Authentication for Linked Servers | 
-| &nbsp; | AD Authentication for Availability Groups (AGs) | 
+| &nbsp; | AD Authentication for Linked Servers |
+| &nbsp; | AD Authentication for Availability Group (AG) Endpoints |
 | **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
@@ -235,6 +237,8 @@ The following features and services are not available SQL Server 2017 on Linux. 
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
   
+<sup>1</sup> Backup to URL is supported for block blobs, using the [Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
+
 ## Next steps
  [Editions and supported features for SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Editions and supported features for SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  

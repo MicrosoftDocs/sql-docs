@@ -1,7 +1,7 @@
 ---
 description: "Tasks and Permissions - Item-Level Tasks"
 title: "Item-Level Tasks | Microsoft Docs"
-ms.date: 03/01/2017
+ms.date: 02/04/2021
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: security
@@ -15,6 +15,9 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Tasks and Permissions - Item-Level Tasks
+  
+  [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+  
   An item-level task is a collection of permissions that relate to a report, folder, report model, resource, or shared data source. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] also includes system-level tasks that apply to the report server site as a whole. For more information, see [System-Level Tasks](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). For more information about tasks and permissions in general, see [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
   
 > [!NOTE]  
@@ -27,10 +30,12 @@ ms.author: maggies
   
 |Task|Applies to Item|Permissions|  
 |----------|---------------------|-----------------|  
+|Comment on reports<br />(SSRS 2017 and later, Power BI Report Server)|Reports|Read Properties<br /><br /> Create Comments<br /><br /> Delete Comments<br /><br /> Read Comments<br /><br /> Update Comments|  
 |Consume reports|Reports|Read Content<br /><br /> Read Report Definitions<br /><br /> Read Properties|  
 |Consume reports|Shared Datasets|Read Content<br /><br /> Read Report Definitions<br /><br /> Read Properties|  
 |Create linked reports|Reports|Create Link<br /><br /> Read Properties|  
 |Manage all subscriptions|Reports|Read Properties<br /><br /> Read Any Subscription<br /><br /> Create Any Subscription<br /><br /> Delete Any Subscription<br /><br /> Update Any Subscription|  
+|Manage comments<br />(SSRS 2017 and later, Power BI Report Server)|Reports|Read Properties<br /><br />Delete Any Comments|  
 |Manage data sources|Folders|Create Data Source|  
 |Manage data sources|Data Sources|Update Properties<br /><br /> Delete Update Content<br /><br /> Read Properties|  
 |Manage folders|Folders|Create Folder<br /><br /> Delete Update Properties<br /><br /> Read Properties|  

@@ -9,9 +9,9 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sample Database for In-Memory OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  This sample showcases the In-Memory OLTP feature. It shows  memory-optimized tables and natively compiled stored procedures, and can be used to demonstrate performance benefits of In-Memory OLTP.  
   
 > [!NOTE]  
->  To view this topic for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], see [Extensions to AdventureWorks to Demonstrate In-Memory OLTP](./overview-and-usage-scenarios.md?view=sql-server-ver15#in-memory-oltp-overview).  
+>  To view this topic for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], see [Extensions to AdventureWorks to Demonstrate In-Memory OLTP](./overview-and-usage-scenarios.md#in-memory-oltp-overview).  
   
  The sample migrates five tables in the AdventureWorks database to memory-optimized, and it includes a demo workload for sales order processing. You can use this demo workload to see the performance benefit of using In-Memory OLTP on your server.  
   
@@ -40,7 +40,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+-   [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]  
   
 -   For performance testing, a server with specifications similar to your production environment. For this particular sample, you should have at least 16 GB of memory available to SQL Server. For general guidelines on hardware for In-Memory OLTP, see the following blog post: [Hardware considerations for In-Memory OLTP in SQL Server 2014](blog-hardware-in-memory-oltp.md)
 
@@ -136,25 +136,25 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   *Default constraints* are supported for memory-optimized tables, and most default constraints we migrated as is. However, the original table Sales.SalesOrderHeader contains two default constraints that retrieve the current date, for the columns OrderDate and ModifiedDate. In a high throughput order processing workload with much concurrency, any global resource can become a point of contention. System time is such a global resource, and we have observed that it can become a bottleneck when running an In-Memory OLTP workload that inserts sales orders, in particular if the system time needs to be retrieved for multiple columns in the sales order header, as well as the sales order details. The problem is addressed in this sample by retrieving the system time only once for each sales order that is inserted, and use that value for the datetime columns in SalesOrderHeader_inmem and SalesOrderDetail_inmem, in the stored procedure Sales.usp_InsertSalesOrder_inmem.  
   
--   *Alias user-defined data types (UDTs)* - The original table uses two alias UDTs dbo.OrderNumber and dbo.AccountNumber, for the columns PurchaseOrderNumber and AccountNumber, respectively. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] does not support alias UDT for memory-optimized tables, thus the new tables use system data types nvarchar(25) and nvarchar(15), respectively.  
+-   *Alias user-defined data types (UDTs)* - The original table uses two alias UDTs dbo.OrderNumber and dbo.AccountNumber, for the columns PurchaseOrderNumber and AccountNumber, respectively. [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] does not support alias UDT for memory-optimized tables, thus the new tables use system data types nvarchar(25) and nvarchar(15), respectively.  
   
 -   *Nullable columns in index keys* - In the original table, the column SalesPersonID is nullable, while in the new tables the column is not nullable and has a default constraint with value (-1). This circumstance is because indexes on memory-optimized tables cannot have nullable columns in the index key; -1 is a surrogate for NULL in this case.  
   
--   *Computed columns* - The computed columns SalesOrderNumber and TotalDue are omitted, as [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] does not support computed columns in memory-optimized tables. The new view Sales.vSalesOrderHeader_extended_inmem reflects the columns SalesOrderNumber and TotalDue. Therefore, you can use this view if these columns are needed.  
+-   *Computed columns* - The computed columns SalesOrderNumber and TotalDue are omitted, as [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] does not support computed columns in memory-optimized tables. The new view Sales.vSalesOrderHeader_extended_inmem reflects the columns SalesOrderNumber and TotalDue. Therefore, you can use this view if these columns are needed.  
 
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, computed columns are supported in memory-optimized tables and indexes.
+    - **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.  
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, computed columns are supported in memory-optimized tables and indexes.
 
   
--   *Foreign key constraints* are supported for memory-optimized tables in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], but only if the referenced tables are also memory-optimized. Foreign keys that reference tables that are also migrated to memory-optimized are kept in the migrated tables, while other foreign keys are omitted.  In addition, SalesOrderHeader_inmem is a hot table in the example workload, and foreign keys constraints require additional processing for all DML operations, as it requires lookups in all the other tables referenced in these constraints. Therefore, the assumption is that the app ensures referential integrity for the Sales.SalesOrderHeader_inmem table, and referential integrity is not validated when rows are inserted.  
+-   *Foreign key constraints* are supported for memory-optimized tables in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], but only if the referenced tables are also memory-optimized. Foreign keys that reference tables that are also migrated to memory-optimized are kept in the migrated tables, while other foreign keys are omitted.  In addition, SalesOrderHeader_inmem is a hot table in the example workload, and foreign keys constraints require additional processing for all DML operations, as it requires lookups in all the other tables referenced in these constraints. Therefore, the assumption is that the app ensures referential integrity for the Sales.SalesOrderHeader_inmem table, and referential integrity is not validated when rows are inserted.  
   
--   *Rowguid* - The rowguid column is omitted. While uniqueidentifier is support for memory-optimized tables, the option ROWGUIDCOL is not supported in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Columns of this kind are typically used for either merge replication or tables that have filestream columns. This sample includes neither.  
+-   *Rowguid* - The rowguid column is omitted. While uniqueidentifier is support for memory-optimized tables, the option ROWGUIDCOL is not supported in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Columns of this kind are typically used for either merge replication or tables that have filestream columns. This sample includes neither.  
   
  Sales.SalesOrderDetail  
   
 -   *Default constraints* - similar to SalesOrderHeader, the default constraint requiring the system date/time is not migrated, instead the stored procedure inserting sales orders takes care of inserting the current system date/time on first insert.  
   
--   *Computed columns* - the computed column LineTotal was not migrated as computed columns are not supported with memory-optimized tables in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. To access this column, use the view Sales.vSalesOrderDetail_extended_inmem.  
+-   *Computed columns* - the computed column LineTotal was not migrated as computed columns are not supported with memory-optimized tables in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. To access this column, use the view Sales.vSalesOrderDetail_extended_inmem.  
   
 -   *Rowguid* - The rowguid column is omitted. For details see the description for the table SalesOrderHeader.  
   
@@ -177,10 +177,10 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, c
   
  HASH indexes are can be used to further optimize the workload. They are particularly optimized for point lookups and row inserts. However, one must consider that they do not support range scans, ordered scans, or search on leading index key columns. Therefore, care needs to be taken when using these indexes. In addition, it is necessary to specify the bucket_count at create time. It should usually be set at between one and two times the number of index key values, but overestimating is usually not a problem.  
   
-For more information, see Books Online for more details about [index guidelines](/sql/relational-databases/indexes/guidelines-for-online-index-operations) and guidelines for [choosing the right bucket_count](https://sqlserver-help.com/tag/bucket_count/).  
+For more information, see Books Online for more details about [index guidelines](../indexes/guidelines-for-online-index-operations.md) and guidelines for [choosing the right bucket_count](https://sqlserver-help.com/tag/bucket_count/).  
 
 The Books Online provide more information about the following topics:
-- [Index guidelines](/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
+- [Index guidelines](./indexes-for-memory-optimized-tables.md) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
 
  The indexes on the migrated tables have been tuned for the demo sales order processing workload. The workload relies on inserts and point lookups in the tables Sales.SalesOrderHeader_inmem and Sales.SalesOrderDetail_inmem, and it also relies on point lookups on the primary key columns in the tables Production.Product_inmem and Sales.SpecialOffer_inmem.  
   

@@ -50,7 +50,7 @@ ms.author: "jroth"
   
  Discusses issues that arise when a managed method invokes a method in a class contained in another assembly.  
   
- [Application Domains and CLR Integration Security](/previous-versions/sql/2014/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
+ [Application Domains and CLR Integration Security](/previous-versions/sql/2014/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014&preserve-view=true)  
  Describes how assemblies are loaded into application domains.  
   
 ## See Also  

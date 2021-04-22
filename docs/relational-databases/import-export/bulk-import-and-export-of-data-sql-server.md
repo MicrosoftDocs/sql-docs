@@ -4,7 +4,7 @@ description: SQL Server supports exporting data in bulk from a SQL Server table 
 ms.custom: ""
 ms.date: "09/25/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
@@ -25,7 +25,7 @@ helpviewer_keywords:
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Import and Export of Data (SQL Server)
 
@@ -51,7 +51,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 > For rules about using a comma-separated value (CSV) file as the data file for a bulk import of data into SQL Server, see [Prepare Data for Bulk Export or Import (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
 > [!NOTE]
-> Only the bcp utility is supported by Azure SQL DW for importing and exporting delimited files.
+> Only the bcp utility is supported by Azure Synapse Analytics for importing and exporting delimited files.
 
 ## <a name="FFs"></a> Format files
 

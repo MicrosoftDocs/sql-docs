@@ -75,6 +75,5 @@ rs.CursorLocation = adUseClient
  [Customization File SQL Section](./customization-file-sql-section.md)   
  [Customization File UserList Section](./customization-file-userlist-section.md)   
  [DataFactory Customization](./datafactory-customization.md)   
- [Required Client Settings]()   
  [Understanding the Customization File](./understanding-the-customization-file.md)   
  [Writing Your Own Customized Handler](./writing-your-own-customized-handler.md)

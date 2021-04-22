@@ -9,9 +9,9 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
-author: MightyPen
-ms.author: genemi
-monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
+author: rothja
+ms.author: jroth
+monikerRange: "=sql-server-2016"
 ---
 # Migrating Computed Columns
 
@@ -19,7 +19,7 @@ monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 
 Computed columns are not supported in memory-optimized tables. However, you can simulate a computed column.
 
-Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], computed columns are supported in memory-optimized tables and indexes.
+Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], computed columns are supported in memory-optimized tables and indexes.
 
 You should consider the need to persist your computed columns when you migrate your disk-based tables to memory-optimized tables. The different performance characteristics of memory-optimized tables and natively compiled stored procedures may negate the need for persistence.  
   

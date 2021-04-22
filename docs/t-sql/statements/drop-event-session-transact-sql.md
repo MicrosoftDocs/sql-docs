@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DROP_EVENT_SESSION_TSQL"
   - "DROP EVENT SESSION"
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "event sessions [SQL Server]"
   - "DROP EVENT SESSION statement"
 ms.assetid: 92eabe4b-24e2-43b1-978c-31a199964b90
-author: MightyPen
-ms.author: genemi
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # DROP EVENT SESSION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

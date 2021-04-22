@@ -5,33 +5,28 @@ ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: troubleshooting
 f1_keywords: 
   - "sql13.swb.agdashboard.arp2connected.issues.f1"
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Availability replica is disconnected within an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|Availability Replica Connection State|  
-|**Issue**|Availability replica is disconnected.|  
-|**Category**|**Critical**|  
-|**Facet**|Availability replica|  
+- **Policy Name**: Availability Replica Connection State
+- **Issue**: Availability replica is disconnected.
+- **Category**: **Critical**
+- **Facet**: Availability replica  
   
 ## Description  
  This policy checks the connection state between availability replicas. The policy is in an unhealthy state when the connection state of the availability replica is DISCONNECTED. The policy is otherwise in a healthy state.  
-  
-> [!NOTE]  
->  For this release of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [Availability replica is disconnected](https://go.microsoft.com/fwlink/p/?LinkId=220857) on the TechNet Wiki.  
   
 ## Possible Causes  
  The secondary replica is not connected to the primary replica. The connected state is DISCONNECTED. This issue can be caused by the following:  

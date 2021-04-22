@@ -1,7 +1,7 @@
 ---
 title: "Connect to SQL Server when system administrators are locked out | Microsoft Docs"
 description: Learn how to regain access to SQL Server as a system administrator if you've been mistakenly locked out. 
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 ms.date: 05/20/2020
 ms.prod: sql
 ms.prod_service: high-availability

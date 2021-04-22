@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "06/05/2017"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_operation_status_TSQL"
   - "dm_operation_status"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "dm_operation_status dynamic management view"
   - "sys.dm_operation_status dynamic management view"
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-author: markingmyname
-ms.author: maghan
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 # sys.dm_operation_status
 

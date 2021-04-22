@@ -7,9 +7,9 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
-ms.custom: contperfq1, seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+ms.custom: contperf-fy21q1, seo-lt-2019
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Security architecture for the extensibility framework in SQL Server Machine Learning Services
 
@@ -68,7 +68,7 @@ Therefore, all external scripts that are initiated from a remote client must spe
 
 <a name="launchpad"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## Services used in external processing (launchpad)
 
@@ -84,7 +84,7 @@ SQL Server also maintains a mapping of the identity of the calling user to the l
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## Services used in external processing (launchpad)
 
@@ -100,7 +100,7 @@ SQL Server also maintains a mapping of the identity of the calling user to the l
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## Services used in external processing
 
@@ -114,7 +114,7 @@ For more information, see [Extensibility architecture in SQL Server Machine Lear
 
 <a name="sqlrusergroup"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## Identities used in processing (SQLRUserGroup)
 
@@ -144,7 +144,7 @@ During execution, launchpad creates temporary folders to store session data, del
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## AppContainer isolation
 
@@ -161,7 +161,7 @@ When a session is started, launchpad maps the identity of the calling user to an
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## Identity mapping
 
@@ -185,7 +185,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 <a name="implied-authentication"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## Implied authentication (loopback requests)
 
@@ -205,7 +205,7 @@ The following diagram shows the interaction of SQL Server components with the la
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## Implied authentication (loopback requests)
 
@@ -223,7 +223,7 @@ The following diagram shows the interaction of SQL Server components with the la
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## Implied authentication (loopback requests)
 

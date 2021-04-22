@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "ADO MD code examples"
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
@@ -24,7 +24,7 @@ Use the following code examples to learn how to use the ADO MD objects, methods,
 -   [ADO MD Code Examples in Visual Basic, Scripting Edition](./ado-md-code-examples-in-visual-basic-scripting-edition.md)  
   
 ## See Also  
- [ADO MD API Reference](./ado-md-object-model.md?view=sql-server-ver15)   
+ [ADO MD API Reference](./ado-md-object-model.md)   
  [ADO MD Collections](./ado-md-collections.md)   
  [ADO MD Enumerated Constants](./ado-md-enumerated-constants.md)   
  [ADO MD Methods](./ado-md-methods.md)   

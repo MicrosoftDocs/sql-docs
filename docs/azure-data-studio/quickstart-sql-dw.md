@@ -6,7 +6,7 @@ ms.technology: azure-data-studio
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.reviewer: alayu, jrasnick
+ms.reviewer: maghan, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
 ---
@@ -134,6 +134,6 @@ The query editor is still connected to the *master* database, but we want to cre
 If you don't plan to continue working with the sample databases created in this article, then [delete the resource group](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources).
 
 ## Next steps
-For more information, visit [Connecting to Synapse SQL with Azure Data Studio](https://docs.microsoft.com/azure/synapse-analytics/sql/get-started-azure-data-studio).
+For more information, visit [Connecting to Synapse SQL with Azure Data Studio](/azure/synapse-analytics/sql/get-started-azure-data-studio).
 
 Now that you've successfully connected to an Azure Synapse Analytics and ran a query, try out the [Code editor tutorial](tutorial-sql-editor.md).

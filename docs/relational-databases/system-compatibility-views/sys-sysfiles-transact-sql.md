@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysfiles"
   - "sys.sysfiles_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sysfiles system table"
   - "sys.sysfiles compatibility view"
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysfiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

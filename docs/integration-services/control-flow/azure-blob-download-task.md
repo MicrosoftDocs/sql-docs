@@ -20,7 +20,7 @@ ms.author: chugu
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-The Azure Blob Download Task enables an SSIS package to download files from an Azure blob storage.
+The Azure Blob Download Task enables an SSIS package to download files from Azure Blob Storage.
 
 To add an **Azure Blob Download Task**, drag-drop it to the SSIS Designer, and double-click or right-click and click **Edit** to see the following **Azure Blob Download Task Editor** dialog box.  
   

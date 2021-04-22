@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "3314 (Database Engine error)"
 ms.assetid: f3a5ca6a-b502-4cab-b3b1-4bc753763fa9

@@ -86,7 +86,7 @@ There are three types of credentials that can be used in a connection to a repor
   
 If the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is configured for Windows Authentication and is in the same domain or a trusted domain with the report server computer, you can configure the connection to use the service account or a domain user account that you manage as a connection property through the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. If the database server is in a different domain or if you are using workgroup security, you must configure the connection to use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database login. In this case, be sure to encrypt the connection.  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > When using Azure SQL Managed Instance to host report server databases, SQL Server authentication is the only supported credential type. In addition, please note that Managed Instance cannot host report server instance.

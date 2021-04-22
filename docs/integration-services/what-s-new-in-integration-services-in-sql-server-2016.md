@@ -282,7 +282,7 @@ The Incremental Package Deployment feature lets you deploy one or more packages 
  The Excel Connection Manager, the Excel Source, and the Excel Destination now provide explicit support for Excel 2016 data sources.  
 
 ####  <a name="SAPBW"></a> Connector for SAP BW for SQL Server 2016 released  
- The MicrosoftÂ® Connector for SAP BW for Microsoft SQL ServerÂ® 2016 has been released as part of the SQL Server 2016 Feature Pack. To download components of the Feature Pack, see [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).
+ The MicrosoftÂ® Connector for SAP BW for Microsoft SQL ServerÂ® 2016 has been released as part of the SQL Server 2016 Feature Pack. To download components of the Feature Pack, see [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833).
  
 #### <a name="oracleteradata"></a> Connectors v4.0 for Oracle and Teradata released
 The Microsoft Connectors v4.0 for Oracle and Teradata have been released. To download the connectors, see [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
@@ -343,7 +343,7 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
  The SQL Server Import and Export Wizard can now import data from, and save data to, Azure Blob Storage. For more info, see [Choose a Data Source &#40;SQL Server Import and Export Wizard&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) and [Choose a Destination &#40;SQL Server Import and Export Wizard&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
 
 ####  <a name="CDCOracle"></a> Change Data Capture Designer and Service for Oracle for Microsoft SQL Server 2016 released  
- The MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ® 2016 have been released as part of the SQL Server 2016 Feature Pack.  These components now support Oracle 12c in classic installation. (Multitenant installation is not supported) To download components of the Feature Pack, see [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).  
+ The MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ® 2016 have been released as part of the SQL Server 2016 Feature Pack.  These components now support Oracle 12c in classic installation. (Multitenant installation is not supported) To download components of the Feature Pack, see [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833).  
   
 ####  <a name="cdc2016"></a> CDC components updated for SQL Server 2016  
  The CDC (Change Data Capture) Control Task, Source, and Splitter Transformation components have been updated to provide full compatibility with SQL Server 2016. There is no new functionality and there are no changes in behavior.  
@@ -362,7 +362,7 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
 ####  <a name="ValidateXML"></a> Rich XML validation output in the XML Task  
  Validate XML documents and get rich error output by enabling the **ValidationDetails** property of the XML Task. Before the **ValidationDetails** property was available, XML validation by the XML Task returned only a true or false result, with no information about errors or their locations. Now, when you set **ValidationDetails** to true, the output file contains detailed information about every error including the line number and the position. You can use this information to understand, locate, and fix errors in XML documents. For more info, see [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md).  
   
- [!INCLUDE[ssIS](../includes/ssis-md.md)] introduced the **ValidationDetails** property in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2. This new property was not announced or documented at that time. The **ValidationDetails** property is also available in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].   
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] introduced the **ValidationDetails** property in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2. This new property was not announced or documented at that time. The **ValidationDetails** property is also available in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and in [!INCLUDE[sssql15-md](../includes/sssql16-md.md)].   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

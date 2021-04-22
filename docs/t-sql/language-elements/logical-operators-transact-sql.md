@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "FALSE"
   - "logical operators [SQL Server], Transact-SQL"
 ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # Logical Operators (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

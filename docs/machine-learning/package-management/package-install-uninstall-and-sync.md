@@ -8,8 +8,8 @@ ms.date: 06/13/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
-monikerRange: "=sql-server-2017||=sqlallproducts-allversions"
+
+monikerRange: "=sql-server-2017"
 ---
 
 # R package synchronization for SQL Server

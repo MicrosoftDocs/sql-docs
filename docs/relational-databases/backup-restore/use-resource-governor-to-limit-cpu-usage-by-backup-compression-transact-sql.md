@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "backups [SQL Server], compression"
   - "Resource Governor, backup compression"
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Use Resource Governor to Limit CPU Usage by Backup Compression (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

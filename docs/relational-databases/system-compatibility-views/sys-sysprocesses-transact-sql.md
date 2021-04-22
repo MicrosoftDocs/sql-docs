@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sysprocesses_TSQL"
   - "sys.sysprocesses_TSQL"
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.sysprocesses compatibility view"
   - "sysprocesses system table"
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
-author: "rothja"
-ms.author: "jroth"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # sys.sysprocesses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ ms.author: "jroth"
 |stmt_start|**int**|Starting offset of the current SQL statement for the specified sql_handle.|  
 |stmt_end|**int**|Ending offset of the current SQL statement for the specified sql_handle.<br /><br /> -1 = Current statement runs to the end of the results returned by the fn_get_sql function for the specified sql_handle.|  
 |request_id|**int**|ID of request. Used to identify requests running in a specific session.|
-|page_resource |**binary(8)** |**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> An 8-byte hexadecimal representation of the page resource if the `waitresource` column contains a page. |  
+|page_resource |**binary(8)** |**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] <br /><br /> An 8-byte hexadecimal representation of the page resource if the `waitresource` column contains a page. |  
   
 ## Remarks  
  If a user has VIEW SERVER STATE permission on the server, the user will see all executing sessions in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; otherwise, the user will see only the current session.  

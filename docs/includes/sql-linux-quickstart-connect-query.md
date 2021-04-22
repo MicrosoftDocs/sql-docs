@@ -135,7 +135,7 @@ For other installation scenarios, see the following resources:
 * [Offline install](../linux/sql-server-linux-setup.md#offline): Learn how to manually download the packages for offline installation
 
 > [!TIP]
-> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.md).
+> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.yml).
 
 ## Next steps
 

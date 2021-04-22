@@ -1,11 +1,11 @@
 ---
 description: "sys.dm_db_wait_stats (Azure SQL Database)"
-title: "sys.dm_db_wait_stats (Azure SQL Database) | Microsoft Docs"
+title: "sys.dm_db_wait_stats (Azure SQL Database)"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/12/2021"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "dm_db_wait_stats_TSQL"
   - "dm_db_wait_stats"
@@ -16,10 +16,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_wait_stats dynamic management view"
   - "dm_db_wait_stats"
-ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-author: markingmyname
-ms.author: maghan
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "= azuresqldb-current"
 ---
 # sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -52,7 +51,9 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
   
     -   An external process finishes.  
   
--   These statistics are not persisted across SQL Database failover events, and all data are cumulative since the last time the statistics were reset.  
+
+> [!NOTE]
+> These statistics are not persisted after SQL Database failover events, and all data is cumulative since the last time the statistics were reset or the database engine started. Use the `sqlserver_start_time` column in [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) to find the last database engine startup time.   
   
 ## Permissions  
  Requires VIEW DATABASE STATE permission on the server.  
@@ -85,7 +86,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |AUDIT_ON_DEMAND_TARGET_LOCK|Occurs when there is a wait on a lock that is used to ensure single initialization of audit related Extended Event targets.|  
 |AUDIT_XE_SESSION_MGR|Occurs when there is a wait on a lock that is used to synchronize the starting and stopping of audit related Extended Events sessions.|  
 |BACKUP|Occurs when a task is blocked as part of backup processing.|  
-|BACKUP_OPERATOR|Occurs when a task is waiting for a tape mount. To view the tape status, query [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md). If a mount operation is not pending, this wait type may indicate a hardware problem with the tape drive.|  
+|BACKUP_OPERATOR|Occurs when a task is waiting for a tape mount.|  
 |BACKUPBUFFER|Occurs when a backup task is waiting for data, or is waiting for a buffer in which to store data. This type is not typical, except when a task is waiting for a tape mount.|  
 |BACKUPIO|Occurs when a backup task is waiting for data, or is waiting for a buffer in which to store data. This type is not typical, except when a task is waiting for a tape mount.|  
 |BACKUPTHREAD|Occurs when a task is waiting for a backup task to finish. Wait times may be long, from several minutes to several hours. If the task that is being waited on is in an I/O process, this type does not indicate a problem.|  
@@ -128,8 +129,8 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |DBMIRROR_SEND|Occurs when a task is waiting for a communications backlog at the network layer to clear to be able to send messages. Indicates that the communications layer is starting to become overloaded and affect the database mirroring data throughput.|  
 |DBMIRROR_WORKER_QUEUE|Indicates that the database mirroring worker task is waiting for more work.|  
 |DBMIRRORING_CMD|Occurs when a task is waiting for log records to be flushed to disk. This wait state is expected to be held for long periods of time.|  
-|DEADLOCK_ENUM_MUTEX|Occurs when the deadlock monitor and sys.dm_os_waiting_tasks try to make sure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not running multiple deadlock searches at the same time.|  
-|DEADLOCK_TASK_SEARCH|Large waiting time on this resource indicates that the server is executing queries on top of sys.dm_os_waiting_tasks, and these queries are blocking deadlock monitor from running deadlock search. This wait type is used by deadlock monitor only. Queries on top of sys.dm_os_waiting_tasks use DEADLOCK_ENUM_MUTEX.|  
+|DEADLOCK_ENUM_MUTEX|Occurs when the deadlock monitor and `sys.dm_os_waiting_tasks` try to make sure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not running multiple deadlock searches at the same time.|  
+|DEADLOCK_TASK_SEARCH|Large waiting time on this resource indicates that the server is executing queries on top of `sys.dm_os_waiting_tasks`, and these queries are blocking deadlock monitor from running deadlock search. This wait type is used by deadlock monitor only. Queries on top of `sys.dm_os_waiting_tasks` use DEADLOCK_ENUM_MUTEX.|  
 |DEBUG|Occurs during [!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR debugging for internal synchronization.|  
 |DISABLE_VERSIONING|Occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] polls the version transaction manager to see whether the timestamp of the earliest active transaction is later than the timestamp of when the state started changing. If this is this case, all the snapshot transactions that were started before the ALTER DATABASE statement was run have finished. This wait state is used when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disables versioning by using the ALTER DATABASE statement.|  
 |DISKIO_SUSPEND|Occurs when a task is waiting to access a file when an external backup is active. This is reported for each waiting user process. A count larger than five per user process may indicate that the external backup is taking too much time to finish.|  
@@ -180,12 +181,12 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |KTM_ENLISTMENT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |KTM_RECOVERY_MANAGER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |KTM_RECOVERY_RESOLUTION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|LATCH_DT|Occurs when waiting for a DT (destroy) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH_* waits is available in sys.dm_os_latch_stats. Note that sys.dm_os_latch_stats groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.|  
-|LATCH_EX|Occurs when waiting for an EX (exclusive) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH_* waits is available in sys.dm_os_latch_stats. Note that sys.dm_os_latch_stats groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.|  
-|LATCH_KP|Occurs when waiting for a KP (keep) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH_* waits is available in sys.dm_os_latch_stats. Note that sys.dm_os_latch_stats groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.|  
+|LATCH_DT|Occurs when waiting for a DT (destroy) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH_* waits is available in `sys.dm_os_latch_stats`. Note that `sys.dm_os_latch_stats` groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.|  
+|LATCH_EX|Occurs when waiting for an EX (exclusive) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH_* waits is available in `sys.dm_os_latch_stats`. Note that `sys.dm_os_latch_stats` groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.|  
+|LATCH_KP|Occurs when waiting for a KP (keep) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH_* waits is available in `sys.dm_os_latch_stats`. Note that `sys.dm_os_latch_stats` groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.|  
 |LATCH_NL|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|LATCH_SH|Occurs when waiting for an SH (share) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH_* waits is available in sys.dm_os_latch_stats. Note that sys.dm_os_latch_stats groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.|  
-|LATCH_UP|Occurs when waiting for an UP (update) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH_* waits is available in sys.dm_os_latch_stats. Note that sys.dm_os_latch_stats groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.|  
+|LATCH_SH|Occurs when waiting for an SH (share) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH_* waits is available in `sys.dm_os_latch_stats`. Note that `sys.dm_os_latch_stats` groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.|  
+|LATCH_UP|Occurs when waiting for an UP (update) latch. This does not include buffer latches or transaction mark latches. A listing of LATCH_* waits is available in `sys.dm_os_latch_stats`. Note that `sys.dm_os_latch_stats` groups LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX, and LATCH_DT waits together.|  
 |LAZYWRITER_SLEEP|Occurs when lazywriter tasks are suspended. This is a measure of the time spent by background tasks that are waiting. Do not consider this state when you are looking for user stalls.|  
 |LCK_M_BU|Occurs when a task is waiting to acquire a Bulk Update (BU) lock. For a lock compatibility matrix, see [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
 |LCK_M_IS|Occurs when a task is waiting to acquire an Intent Shared (IS) lock. For a lock compatibility matrix, see [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
@@ -287,9 +288,9 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |RESOURCE_SEMAPHORE_QUERY_COMPILE|Occurs when the number of concurrent query compilations reaches a throttling limit. High waits and wait times may indicate excessive compilations, recompiles, or uncachable plans.|  
 |RESOURCE_SEMAPHORE_SMALL_QUERY|Occurs when memory request by a small query cannot be granted immediately due to other concurrent queries. Wait time should not exceed more than a few seconds, because the server transfers the request to the main query memory pool if it fails to grant the requested memory within a few seconds. High waits may indicate an excessive number of concurrent small queries while the main memory pool is blocked by waiting queries.|  
 |SE_REPL_CATCHUP_THROTTLE|Occurs when the transaction is waiting for one of the database secondaries to make progress.|  
-|SE_REPL_COMMIT_ACK|Occurs when the transaction is waiting for quorum commit acknowledgement from secondary replicas.|  
-|SE_REPL_COMMIT_TURN|Occurs when the transaction is waiting for commit after receiving quorum commit acknowledgements.|  
-|SE_REPL_ROLLBACK_ACK|Occurs when the transaction is waiting for quorum rollback acknowledgement from secondary replicas.|  
+|SE_REPL_COMMIT_ACK|Occurs when the transaction is waiting for quorum commit acknowledgment from secondary replicas.|  
+|SE_REPL_COMMIT_TURN|Occurs when the transaction is waiting for commit after receiving quorum commit acknowledgments.|  
+|SE_REPL_ROLLBACK_ACK|Occurs when the transaction is waiting for quorum rollback acknowledgment from secondary replicas.|  
 |SE_REPL_SLOW_SECONDARY_THROTTLE|Occurs when the thread is waiting for one of the database secondary replicas.|  
 |SEC_DROP_TEMP_KEY|Occurs after a failed attempt to drop a temporary security key before a retry attempt.|  
 |SECURITY_MUTEX|Occurs when there is a wait for mutexes that control access to the global list of Extensible Key Management (EKM) cryptographic providers and the session-scoped list of EKM sessions.|  
@@ -357,7 +358,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |WAIT_FOR_RESULTS|Occurs when waiting for a query notification to be triggered.|  
 |WAITFOR|Occurs as a result of a WAITFOR [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. The duration of the wait is determined by the parameters to the statement. This is a user-initiated wait.|  
 |WAITFOR_TASKSHUTDOWN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|WAITSTAT_MUTEX|Occurs during synchronization of access to the collection of statistics used to populate sys.dm_os_wait_stats.|  
+|WAITSTAT_MUTEX|Occurs during synchronization of access to the collection of statistics used to populate `sys.dm_os_wait_stats`.|  
 |WCC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |WORKTBL_DROP|Occurs while pausing before retrying, after a failed worktable drop.|  
 |WRITE_COMPLETION|Occurs when a write operation is in progress.|  
@@ -382,3 +383,8 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |FT_MASTER_MERGE|Full-text is waiting on master merge operation. Documented for informational purposes only. Not supported. Future compatibility is not guaranteed.|  
   
   
+## See also
+
+ [sys.dm_os_sys_info  &#40;Transact-SQL&#41;](sys-dm-os-sys-info-transact-sql.md)    
+ [sys.dm_tran_locks &#40;Transact-SQL&#41;](sys-dm-tran-locks-transact-sql.md)    
+ [sys.dm_os_waiting_tasks &#40;Transact-SQL&#41;](sys-dm-os-waiting-tasks-transact-sql.md)    

@@ -4,15 +4,15 @@ description: "Steps to enable enhanced database failover, which triggers a failo
 ms.custom: "seodec18"
 ms.date: 06/03/2020
 ms.prod: sql
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords: 
 - "Availability Groups [SQL Server], enhanced database failover"
 - "Availability Groups [SQL Server], failover"
 ms.assetid: 
-author: "MashaMSFT"
+author: "cawrites"
 ms.reviewer: "mikeray"
-ms.author: mathoma
+ms.author: chadam
 ---
 # Enable enhanced database failover to a database in an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

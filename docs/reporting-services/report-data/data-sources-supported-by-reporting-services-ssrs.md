@@ -1,7 +1,7 @@
 ---
 title: "Data Sources Supported by Reporting Services | Microsoft Docs"
 description: Learn about the various data sources that are supported by Reporting Services, including Microsoft SQL Server, Oracle, and ODBC.
-ms.date: 05/21/2020
+ms.date: 11/10/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-data
@@ -169,6 +169,8 @@ This data source has been deprecated. Use the SQL Server data source type to con
  
  For Azure Analysis Services and Power BI Premium dataset data sources, please note you must have multi-factor authentication disabled for the credentials being used to connect to the data source. If you need multi-factor authentication enabled for your environment, review <a href="/azure/active-directory/conditional-access/overview">Azure Active Directory Conditional Access</a> as an option to disable multi-factor authentication for the credentials used in the data source.
   
+ When using a Power BI Premium dataset as a data source, only Import mode and DirectQuery are supported.
+  
  When connecting to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data processing extension supports multivalue parameters and maps cell and member properties to extended properties supported by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. For more information, see [Extended Field Properties for an Analysis Services Database &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
  You can also create models from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data sources.  
@@ -176,7 +178,7 @@ This data source has been deprecated. Use the SQL Server data source type to con
 ###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  The OLE DB data processing extension requires the choice of an additional data provider layer based on the version of the data source you want to use in your report. If you do not select a specific data provider, a default is provided. Choose a specific data provider through the **Connection Properties** dialog box, accessed through the **Edit** button on the Data Source or Shared Data Source dialog boxes.  
   
- For more information about the OLE DB associated query designer, see [Graphical Query Designer User Interface](../../reporting-services/report-data/graphical-query-designer-user-interface.md). For more information about specific support for OLE DB providers, see [Visual Studio .NET Designer Tool Supports Specific OLE DB Providers](https://support.microsoft.com/default.aspx/kb/811241) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ For more information about the OLE DB associated query designer, see [Graphical Query Designer User Interface](../../reporting-services/report-data/graphical-query-designer-user-interface.md). For more information about specific support for OLE DB providers, see [Visual Studio .NET Designer Tool Supports Specific OLE DB Providers](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/811241) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
  [Return to Data sources table](#DataSourcesTable)  
   
@@ -197,7 +199,7 @@ This data source has been deprecated. Use the SQL Server data source type to con
   
  Unnamed parameters that are position-dependent are supported. Named parameters are not supported by this extension. To use named parameters, use the [Oracle](#OracleClient) data processing extension.  
   
- For more information about configuring Oracle as a data source, see [How to use Reporting Services to configure and to access an Oracle data source](https://support.microsoft.com/kb/834305). For more information about additional permissions configuration, see [How to add permissions for the NETWORK SERVICE security principal](https://support.microsoft.com/kb/870668) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ For more information about configuring Oracle as a data source, see [How to use Reporting Services to configure and to access an Oracle data source](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/834305). For more information about additional permissions configuration, see [How to add permissions for the NETWORK SERVICE security principal](https://mskb.pkisolutions.com/kb/870668) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
  [Return to Data sources table](#DataSourcesTable)  
   
@@ -234,7 +236,7 @@ To install the Oracle Client tools you can do the following.
 2.	Download ODAC 12c Release 4 (12.1.0.2.4) for Windows (64bit for server, 32bit for tools)
 3.	Install the Data Provider for .NET 4
   
- Named parameters are supported by this extension. For Oracle version 11g or later, multivalue parameters are supported. For unnamed parameters that are position-dependent, use the OLE DB data processing extension with the data provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle. For more information about configuring Oracle as a data source, see [How to use Reporting Services to configure and to access an Oracle data source](https://support.microsoft.com/kb/834305). For more information about additional permissions configuration, see [How to add permissions for the NETWORK SERVICE security principal](https://support.microsoft.com/kb/870668) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ Named parameters are supported by this extension. For Oracle version 11g or later, multivalue parameters are supported. For unnamed parameters that are position-dependent, use the OLE DB data processing extension with the data provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle. For more information about configuring Oracle as a data source, see [How to use Reporting Services to configure and to access an Oracle data source](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/834305). For more information about additional permissions configuration, see [How to add permissions for the NETWORK SERVICE security principal](https://mskb.pkisolutions.com/kb/870668) in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
  You can retrieve data from stored procedures with multiple input parameters, but the stored procedure must return only one output cursor. For more information, see [Returning results with Oracle REF CURSORs](/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) in "Retrieve data using a DataReader."
   

@@ -3,10 +3,10 @@ title: "CAST and CONVERT (Transact-SQL) | Microsoft Docs"
 description: "Reference for the CAST and CONVERT Transact-SQL functions. These functions convert expressions from one data type to another."
 ms.date: "08/23/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "CAST_TSQL"
   - "CONVERT_TSQL"
@@ -32,9 +32,9 @@ helpviewer_keywords:
   - "time zones [SQL Server]"
   - "roundtrip conversions"
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: markingmyname
-ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CAST and CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -132,7 +132,7 @@ For a **float** or **real** *expression*, *style* can have one of the values sho
 |**0** (default)|A maximum of 6 digits. Use in scientific notation, when appropriate.|  
 |**1**|Always 8 digits. Always use in scientific notation.|  
 |**2**|Always 16 digits. Always use in scientific notation.|  
-|**3**|Always 17 digits. Use for lossless conversion. With this style, every distinct float or real value is guaranteed to convert to a distinct character string.<br /><br /> **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**3**|Always 17 digits. Use for lossless conversion. With this style, every distinct float or real value is guaranteed to convert to a distinct character string.<br /><br /> **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**126, 128, 129**|Included for legacy reasons; a future release could deprecate these values.|  
   
 ## money and smallmoney styles
@@ -161,7 +161,7 @@ For a **binary(n)**, **char(n)**, **varbinary(n)**, or **varchar(n)** *expressio
 |Value|Output|  
 |---|---|
 |**0** (default)|Translates ASCII characters to binary bytes, or binary bytes to ASCII characters. Each character or byte is converted 1:1.<br /><br /> For a binary *data_type*, the characters 0x are added to the left of the result.|  
-|**1**, **2**|For a binary *data_type*, the expression must be a character expression. The *expression* must have an **even** number of hexadecimal digits (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). If the *style* is set to 1, the expression must have 0x as the first two characters. If the expression contains an odd number of characters, or if any of the characters is invalid, an error is raised.<br /><br /> If the length of the converted expression exceeds the length of the *data_type*, the result is right truncated.<br /><br /> Fixed length *data_type*s larger than the converted result have zeros added to the right of the result.<br /><br /> A *data_type* of type character requires a binary expression. Each binary character is converted into two hexadecimal characters. If the length of the converted expression exceeds the length of the *data_type*, it will be right truncated.<br /><br /> For a fixed size character type *data_type*, if the length of the converted result is less than its length of the *data_type*, spaces are added to the right of the converted expression, to maintain an even number of hexadecimal digits.<br /><br /> The characters 0x will be added to the left of the converted result for *style* 2.|  
+|**1**, **2**|For a binary *data_type*, the expression must be a character expression. The *expression* must have an **even** number of hexadecimal digits (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). If the *style* is set to 1, the expression must have 0x as the first two characters. If the expression contains an odd number of characters, or if any of the characters is invalid, an error is raised.<br /><br /> If the length of the converted expression exceeds the length of the *data_type*, the result is right truncated.<br /><br /> Fixed length *data_type*s larger than the converted result has zeros added to the right of the result.<br /><br /> A *data_type* of type character requires a binary expression. Each binary character is converted into two hexadecimal characters. Suppose the length of the converted expression exceeds the length of the *data_type*. In that case, it's truncated.<br /><br /> For a fixed size character type *data_type*, if the length of the converted result is less than its length of the *data_type*, spaces are added to the right of the converted expression to maintain an even number of hexadecimal digits.<br /><br /> The characters 0x are not added to the left of the converted result for *style* 2.|  
   
 ## Implicit conversions
 Implicit conversions do not require specification of either the CAST function or the CONVERT function. Explicit conversions require specification of the CAST function or the CONVERT function. The following illustration shows all explicit and implicit data type conversions allowed for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system-supplied data types. These include **bigint**, and **sql_variant**, and **xml**. There is no implicit conversion on assignment from the **sql_variant** data type, but there is implicit conversion to **sql_variant**.

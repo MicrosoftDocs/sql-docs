@@ -124,6 +124,8 @@
       href: notebooks/notebooks-kusto-kernel.md
     - name: Use Kqlmagic
       href: notebooks/notebooks-kqlmagic.md
+    - name: Use Parameterization
+      href: notebooks/notebooks-parameterization.md
   - name: Deployment
     items:
     - name: Deploy Azure SQL Database
@@ -155,7 +157,9 @@
 - name: Resources
   items:
   - name: FAQ
-    href: faq.md
+    href: faq.yml
+  - name: Troubleshooting
+    href: troubleshooting.md
   - name: Azure Data Studio GitHub repo >
     href: https://www.github.com/Microsoft/azuredatastudio
   - name: Report issues & make suggestions >

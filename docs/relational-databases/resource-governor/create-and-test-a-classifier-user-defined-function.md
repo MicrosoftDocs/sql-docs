@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "classifier function [SQL Server], create"
   - "Resource Governor, classifier function test"
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Create and Test a Classifier User-Defined Function
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

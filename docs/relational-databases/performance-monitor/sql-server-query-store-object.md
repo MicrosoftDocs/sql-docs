@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Query Store object"
   - "SQL Server:Query Store"
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Query Store Object
 

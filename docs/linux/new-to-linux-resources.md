@@ -59,4 +59,4 @@ Introduce yourself to the [frequently used commands](https://www.linux.org/threa
 
 After you've familiarized yourself with the Linux environment, review the [editions and components](sql-server-linux-editions-and-components-2019.md) for SQL Server on Linux, as well as the [supported Linux platforms](sql-server-linux-release-notes-2019.md). 
 
-To learn more, see the [other Linux tutorials](https://www.linux.org/forums/linux-beginner-tutorials.123/) as well as the [frequently asked questions](sql-server-linux-faq.md).
+To learn more, see the [other Linux tutorials](https://www.linux.org/forums/linux-beginner-tutorials.123/) as well as the [frequently asked questions](sql-server-linux-faq.yml).

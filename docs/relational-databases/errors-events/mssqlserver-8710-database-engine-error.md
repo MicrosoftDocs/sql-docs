@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "8710 (Database Engine error)"
 ms.assetid: 78b9f9da-5489-4be0-94df-f065d86ed18c

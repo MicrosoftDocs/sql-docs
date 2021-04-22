@@ -5,7 +5,7 @@ titleSuffix: Azure SQL Database
 ms.date: "03/03/2017"
 ms.service: sql-database
 ms.reviewer: ""
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_db_objects_impacted_on_version_change_TSQL"
   - "dm_db_objects_impacted_on_version_change"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "dm_db_objects_impacted_on_version_change"
   - "sys.dm_db_objects_impacted_on_version_change"
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-author: markingmyname
-ms.author: maghan
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "= azuresqldb-current"
 ms.custom: seo-dt-2019
 ---
 # sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)

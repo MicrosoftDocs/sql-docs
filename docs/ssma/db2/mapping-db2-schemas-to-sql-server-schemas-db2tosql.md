@@ -57,5 +57,5 @@ If you customize the mapping between an DB2 schema and a [!INCLUDE[ssNoVersion](
 If you want to analyze the conversion of DB2 objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects, you can [Data Migration Report (SSMA Common)](../sybase/data-migration-report-sybasetosql.md).  
   
 ## See Also  
-[Connecting to SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
+[Connecting to SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md)  
 [Migrating DB2 Databases to SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

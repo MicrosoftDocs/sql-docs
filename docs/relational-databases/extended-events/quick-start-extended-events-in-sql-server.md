@@ -11,11 +11,11 @@ f1_keywords:
 - sql11.ssms.XeNewEventSession.Targets.f1
 - sql11.ssms.XeNewEventSession.Advanced.f1
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.reviewer: maghan
 ms.date: "04/16/2020"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Quickstart: Extended events in SQL Server
@@ -105,13 +105,16 @@ The text and supporting screenshots can become slightly inexact when the SSMS UI
    - For **Value** type in **%SELECT%HAVING%**.
 
    > [!NOTE]
-   > In this two part name, *sqlserver* is the package name, and *sql_text* is the field name. The event we chose earlier, *sql_statement_completed* must be in the same package as the field we choose.
+   > In this two-part name, *sqlserver* is the package name and *sql_text* is the field name. The event we chose earlier, *sql_statement_completed*, must be in the same package as the field we choose.
 
 9. In the upper-left, click the **Data Storage** page.
 
 10. In the **Targets** area, click **Click here to add a target**.
     - In the **Type** drop-down list, choose **event_file**.
     - This means the event data will be stored in a file that we can view.
+    
+    > [!NOTE]
+    > You can't use Azure Blob Storage as a data storage target in an on-premises instance of SQL Server.
 
     ![New Session > Data Storage > Targets > Type > event_file](../../relational-databases/extended-events/media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png)
 

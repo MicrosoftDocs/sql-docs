@@ -33,7 +33,7 @@ To uninstall `azdata` with Windows Installer, follow the instructions for the ap
 | Windows 10| Start > Settings > Apps                                |
 | Windows 8     | Start > Control Panel > Programs > Uninstall a program |
 
-The program to uninstall is called `Azdata CLI` . Select this application, then click the `Uninstall` button.
+The program to uninstall is called `Azure Data CLI` . Select this application, then click the `Uninstall` button.
 
 ## Next steps
 

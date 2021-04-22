@@ -43,20 +43,148 @@
       href: ../connect/ado-net/enable-eventsource-tracing.md
     - name: AppContext switches
       href: ../connect/ado-net/appcontext-switches.md
+    - name: Troubleshooting guide
+      href: ../connect/ado-net/sqlclient-troubleshooting-guide.md
     - name: Finding additional information
       href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
+  - name: Data Type Mappings In ADO.NET
+    href: ../connect/ado-net/data-type-mappings-ado-net.md
+    items:
+    - name: SQL Server Data Type Mappings
+      href: ../connect/ado-net/sql-server-data-type-mappings.md
+    - name: Floating-Point Numbers
+      href: ../connect/ado-net/floating-point-numbers.md
+  - name: Retrieving and Modifying Data In ADO.NET
+    href: ../connect/ado-net/retrieving-modifying-data.md
+    items:
+    - name: Connecting To Data Source
+      href: ../connect/ado-net/connecting-to-data-source.md
+      items:
+      - name: Establishing Connection
+        href: ../connect/ado-net/establishing-connection.md
+      - name: Connection Events
+        href: ../connect/ado-net/connection-events.md
+    - name: Connection Strings
+      href: ../connect/ado-net/connection-strings.md
+      items:
+      - name: Connection String Builders
+        href: ../connect/ado-net/connection-string-builders.md
+      - name: Connection Strings And Configuration Files
+        href: ../connect/ado-net/connection-strings-and-configuration-files.md
+      - name: Connection String Syntax
+        href: ../connect/ado-net/connection-string-syntax.md
+      - name: Protecting Connection Information
+        href: ../connect/ado-net/protecting-connection-information.md
+    - name: Connection Pooling
+      href: ../connect/ado-net/connection-pooling.md
+      items:
+        - name: SQL Server Connection Pooling (ADO.NET)
+          href: ../connect/ado-net/sql-server-connection-pooling.md
+    - name: Commands and Parameters
+      href: ../connect/ado-net/commands-parameters.md
+      items:
+      - name: Executing a Command
+        href: ../connect/ado-net/execute-command.md
+      - name: Configuring Parameters
+        href: ../connect/ado-net/configure-parameters.md
+      - name: Generating Commands with CommandBuilders
+        href: ../connect/ado-net/generate-commands-with-commandbuilders.md
+      - name: Obtaining a Single Value from a Database
+        href: ../connect/ado-net/obtain-single-value-from-database.md
+      - name: Using Commands to Modify Data
+        href: ../connect/ado-net/use-commands-to-modify-data.md
+        items:
+        - name: Updating Data in a Data Source
+          href: ../connect/ado-net/update-data-inside-data-source.md
+        - name: Performing Catalog Operations
+          href: ../connect/ado-net/perform-catalog-operations.md
+    - name: DataAdapters and DataReaders
+      href: ../connect/ado-net/dataadapters-datareaders.md
+      items: 
+      - name: Retrieve data by a DataReader
+        href: ../connect/ado-net/retrieve-data-by-datareader.md
+      - name: Populate a DataSet from a DataAdapter
+        href: ../connect/ado-net/populate-dataset-from-dataadapter.md
+      - name: DataAdapter parameters
+        href: ../connect/ado-net/dataadapter-parameters.md
+      - name: Add existing constraints to a DataSet
+        href: ../connect/ado-net/add-existing-constraints-to-dataset.md
+      - name: DataAdapter, DataTable, and DataColumn mappings
+        href: ../connect/ado-net/dataadapter-datatable-datacolumn-mappings.md
+      - name: Paging through a query result
+        href: ../connect/ado-net/paging-through-query-result.md
+      - name: Update data sources with DataAdapters
+        href: ../connect/ado-net/update-data-sources-with-dataadapters.md
+      - name: Handle DataAdapter events
+        href: ../connect/ado-net/handle-dataadapter-events.md
+      - name: Batch operations using DataAdapters
+        href: ../connect/ado-net/batch-operations-using-dataadapters.md
+    - name: Transactions and concurrency
+      href: ../connect/ado-net/transactions-and-concurrency.md
+      items:
+      - name: Local transactions
+        href: ../connect/ado-net/local-transactions.md
+      - name: Distributed transactions
+        href: ../connect/ado-net/distributed-transactions.md
+      - name: System.Transactions integration with SQL Server
+        href: ../connect/ado-net/system-transactions-integration-with-sql-server.md
+      - name: Optimistic concurrency
+        href: ../connect/ado-net/optimistic-concurrency.md
+    - name: Retrieving database schema information
+      href: ../connect/ado-net/retrieving-database-schema-information.md
+      items:
+      - name: GetSchema and schema collections
+        href: ../connect/ado-net/getschema-and-schema-collections.md
+      - name: Schema restrictions
+        href: ../connect/ado-net/schema-restrictions.md
+      - name: Common schema collections
+        href: ../connect/ado-net/common-schema-collections.md
+      - name: SQL Server schema collections
+        href: ../connect/ado-net/sql-server-schema-collections.md
+    - name: Configurable retry logic
+      href: ../connect/ado-net/configurable-retry-logic.md
+      items:
+      - name: Introduction
+        href: ../connect/ado-net/configurable-retry-logic-sqlclient-introduction.md
+      - name: Internal providers
+        href: ../connect/ado-net/internal-retry-logic-providers-sqlclient.md
+      - name: Core APIs
+        href: ../connect/ado-net/configurable-retry-logic-core-apis-sqlclient.md
+      - name: Configuration file
+        href: ../connect/ado-net/configurable-retry-logic-config-file-sqlclient.md
+    - name: DbProviderFactories
+      href: ../connect/ado-net/dbproviderfactories.md
+      items:
+      - name: Obtain a SqlClientFactory
+        href: ../connect/ado-net/obtain-sqlclientfactory.md
+    - name: Retrieve identity or autonumber values
+      href: ../connect/ado-net/retrieve-identity-or-autonumber-values.md
+    - name: Retrieve binary data
+      href: ../connect/ado-net/retrieve-binary-data.md
+    - name: Modify data with stored procedures
+      href: ../connect/ado-net/modify-data-with-stored-procedures.md
+    - name: Data tracing in SqlClient
+      href: ../connect/ado-net/data-tracing.md
+    - name: Performance counters in SqlClient
+      href: ../connect/ado-net/performance-counters.md
+    - name: Asynchronous programming
+      href: ../connect/ado-net/asynchronous-programming.md
+    - name: SqlClient streaming support
+      href: ../connect/ado-net/sqlclient-streaming-support.md
   - name: SQL Server and ADO.NET
     href: ../connect/ado-net/sql/index.md
     items:
     - name: SQL Server security
       href: ../connect/ado-net/sql/sql-server-security.md
       items:
-      - name: Authentication in SQL Server
+      - name: Authentication
         href: ../connect/ado-net/sql/authentication-sql-server.md
-      - name: Application security scenarios in SQL Server
+      - name: Azure Active Directory authentication
+        href: ../connect/ado-net/sql/azure-active-directory-authentication.md
+      - name: Application security scenarios
         href: ../connect/ado-net/sql/application-security-scenarios-sql-server.md
         items:
-        - name: Writing secure dynamic SQL in SQL Server
+        - name: Writing secure dynamic SQL
           href: ../connect/ado-net/sql/writing-secure-dynamic-sql.md
       - name: SQL Server Express security
         href: ../connect/ado-net/sql/sql-server-express-security.md
@@ -160,7 +288,7 @@
           href: ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
         - name: Using Azure Key Vault with Always Encrypted
           href: ado-net/sql/azure-key-vault-example.md
-        - name: Using Azure Key Vault with Always Encrypted with Secure Enclaves
+        - name: Using Azure Key Vault with Always Encrypted with secure enclaves
           href: ado-net/sql/azure-key-vault-enclave-example.md
       - name: Data Discovery and Classification in SqlClient
         href: ../connect/ado-net/sql/data-classification.md
@@ -204,7 +332,7 @@
     - name: Finding additional information
       href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
     - name: Frequently asked questions (FAQ)
-      href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md
+      href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.yml
     - name: Feature dependencies
       href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
   - name: API reference
@@ -2545,11 +2673,11 @@
   - name: Securing applications
     href: ../connect/jdbc/securing-jdbc-driver-applications.md
     items:
-    - name: Securing Connection Strings
+    - name: Securing connection strings
       href: ../connect/jdbc/securing-connection-strings.md
-    - name: Validating User Input
+    - name: Validating user input
       href: ../connect/jdbc/validating-user-input.md
-    - name: Application Security
+    - name: Application security
       href: ../connect/jdbc/application-security.md
     - name: Using encryption
       href: ../connect/jdbc/using-ssl-encryption.md
@@ -2560,7 +2688,7 @@
         href: ../connect/jdbc/connecting-with-ssl-encryption.md
       - name: Configuring the client for encryption
         href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
-    - name: FIPS Mode
+    - name: FIPS mode
       href: ../connect/jdbc/fips-mode.md
   - name: Improving performance and reliability
     href: ../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md
@@ -2816,7 +2944,7 @@
       href: ../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
     - name: Feature guides
       items:
-      - name: Connection String Keywords and Data Source Names (DSNs)
+      - name: Connecting from Linux or macOS
         href: ../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md
       - name: Data Access Tracing with the ODBC Driver on Linux and macOS
         href: ../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md
@@ -2839,7 +2967,7 @@
     - name: Known issues
       href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
     - name: Frequently asked questions (FAQ)
-      href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md
+      href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.yml
   - name: Windows
     items:
     - name: Microsoft ODBC Driver for SQL Server on Windows
@@ -5144,6 +5272,8 @@
       href: ../connect/oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md
     - name: Using Azure Active Directory
       href: ../connect/oledb/features/using-azure-active-directory.md
+    - name: Using Data Classification
+      href: ../connect/oledb/features/using-data-classification.md
     - name: Using Database Mirroring
       href: ../connect/oledb/features/using-database-mirroring.md
     - name: Using Encryption Without Validation
@@ -5414,6 +5544,12 @@
           href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md
         - name: ISSCommandWithParameters::SetParameterProperties
           href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md
+        - name: ISSDataClassification
+          items:
+          - name: ISSDataClassification
+            href: oledb/ole-db-interfaces/issdataclassification-ole-db.md
+          - name: ISSDataClassification::GetSensitivityClassification
+            href: oledb/ole-db-interfaces/issdataclassification-getsensitivityclassification-ole-db.md
       - name: How to
         href: ../connect/oledb/ole-db-how-to/ole-db-how-to-topics.md
         items:
@@ -5636,7 +5772,7 @@
       href: ../connect/php/logging-activity.md
     - name: Using Always Encrypted with the PHP Drivers for SQL Server
       href: ../connect/php/using-always-encrypted-php-drivers.md
-    - name: Always Encrypted with Secure Enclaves with the PHP Drivers for SQL Server
+    - name: Always Encrypted with secure enclaves with the PHP Drivers for SQL Server
       href: ../connect/php/always-encrypted-secure-enclaves.md
     - name: Non-System Locale Settings
       href: ../connect/php/non-system-locale-settings.md

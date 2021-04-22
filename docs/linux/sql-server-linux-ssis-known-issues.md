@@ -88,7 +88,7 @@ The following maintenance plan tasks are supported on Linux:
 | Component | Limitations |
 |------------|---|
 | ADO.NET source and destination | Only support the SQLClient data provider. |
-| Flat File source and destination | Only support Windows-style file paths, to which the default path mapping rule is applied. For example `D:\home\ssis\travel.csv` becomes `/home/ssis/travel.csv`. |
+| Flat File source and destination | 1. Only support Windows-style file paths, to which the default path mapping rule is applied. For example `D:\home\ssis\travel.csv` becomes `/home/ssis/travel.csv`. 2. Azure File share that mounted on Red Hat 7 is not supported. |
 | OData source | Only supports Basic authentication. |
 | ODBC source and destination | Supports 64-bit Unicode ODBC drivers on Linux. Depends on the UnixODBC driver manager on Linux. |
 | OLE DB source and destination | Only support SQL Server Native Client 11.0 and Microsoft OLE DB Provider for SQL Server. |

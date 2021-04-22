@@ -15,9 +15,9 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article explains the updates to SQL server 2019 CU 5 that enable de capability for multiple SQL Server 2019 Big Data Clusters to be deployed and integrated with the same Active Directory Domain.
+This article explains the updates to SQL Server 2019 CU5 that enables the capability for multiple SQL Server 2019 Big Data Clusters to be deployed and integrated with the same Active Directory Domain.
 
-Prior to CU5 there were two issues preventing deployment of multiple BDCs in an AD domain.
+Prior to SQL 2019 CU5 there were two issues preventing deployment of multiple BDCs in an AD domain.
 
 - Naming conflict for service principal names and DNS domain
 - Domain account principal names
@@ -30,11 +30,11 @@ The domain name provided at deployment time is used as AD DNS domain. This means
 
 ### Domain account principal names
 
-During a deployment of BDC with an Active Directory domain, multiple account principals are generated for services running inside the BDC. These are essentially AD user accounts. Prior to CU5 the names for these account would not be unique between clusters. This manifests in an attempt to create the same user account name for a particular service in BDC in two different clusters. The cluster that is being deployed second will run into a conflict in AD and cannot create their account.
+During a deployment of BDC with an Active Directory domain, multiple account principals are generated for services running inside the BDC. These are essentially AD user accounts. Prior to SQL 2019 CU5 the names for these account would not be unique between clusters. This manifests in an attempt to create the same user account name for a particular service in BDC in two different clusters. The cluster that is being deployed second will run into a conflict in AD and cannot create their account.
 
 ## Resolution for collisions
 
-### Solution to solve the problem with SPNs and DNS domain - CU5
+### Solution to solve the problem with SPNs and DNS domain - SQL 2019 CU5
 
 Since SPNs must differ in any two clusters, the DNS domain name passed in at deployment time must be different. You can specify different DNS names using the newly introduced setting in the deployment configuration file: `subdomain`. If the subdomain differs between two clusters and internal communication can happen over this subdomain, the SPNs will include the subdomain achieving the required uniqueness.
 
@@ -58,7 +58,7 @@ The subdomain only applies to DNS. Hence the new LDAP user account name is `bdc-
 
 ## Semantics
 
-In summary, these are the semantics of the parameters added in CU5 for multiple clusters in a domain:
+In summary, these are the semantics of the parameters added in SQL 2019 CU5 for multiple clusters in a domain:
 
 ### `subdomain`
 
@@ -133,7 +133,7 @@ Below is an example of endpoint spec for control plane endpoints. You can use an
 
 It is not required, but is recommended. Providing separate OUs for separate clusters helps you manage the generated user accounts.
 
-### How to revert back to the pre-CU5 behavior?
+### How to revert back to the pre-CU5 behavior in SQL 2019?
 
 There might be scenarios where you can't accommodate the newly introduced `subdomain` parameter. For example you must deploy a pre-CU5 release and you already upgraded [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. This is highly unlikely, but if you need to revert to the pre-CU5 behavior you can set `useSubdomain` parameter to `false` in the active directory section of `control.json`.
 

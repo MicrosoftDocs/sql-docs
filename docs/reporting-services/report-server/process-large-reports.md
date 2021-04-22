@@ -28,7 +28,7 @@ ms.author: maggies
   
  For reports that contain volatile data, report size can change dramatically from one report run to the next. In this case, you should monitor the data source to determine how data volatility affects your report and whether you need to follow the steps prescribed in this topic.  
   
- For more information and tips on how to diagnose time-out errors and out-of-memory errors, see the article [How to diagnose issues when running reports in the report server](https://go.microsoft.com/fwlink/?LinkId=85634) on blogs.msdn.microsoft.com.  
+ For more information and tips on how to diagnose time-out errors and out-of-memory errors, see the article [How to diagnose issues when running reports in the report server](/archive/blogs/lukaszp/) on blogs.msdn.microsoft.com.  
   
 ## Configuration recommendations  
  Recommendations for report execution, report rendering, and report access include the following items:  
@@ -68,4 +68,4 @@ ms.author: maggies
  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Preload the Cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
+ [Preload the Cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)

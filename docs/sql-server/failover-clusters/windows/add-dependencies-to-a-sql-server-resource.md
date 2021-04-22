@@ -6,7 +6,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "resource dependencies [SQL Server]"
@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "clusters [SQL Server], dependencies"
   - "dependencies [SQL Server], clustering"
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Add Dependencies to a SQL Server Resource
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

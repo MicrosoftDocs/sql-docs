@@ -91,7 +91,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 |-------------|----------------|--------------|---------|------------------------|  
 |Log shipping|Yes|Yes|Yes|No|  
 |Backup compression|Yes|Yes|No|No| 
-|Database snapshot|Yes|No|No|No|
+|Database snapshot|Yes|Yes|No|No|
 |Always On failover cluster instance<sup>1</sup>|Yes|Yes|No|No| 
 |Always On availability groups<sup>2</sup>|Yes|No|No|No|
 |Basic availability groups <sup>3</sup>|No|Yes|No|No|
@@ -219,13 +219,14 @@ The following features and services are not available for SQL Server 2019 on Lin
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
 | &nbsp; | Buffer Pool Extension |
+| &nbsp; | Backup to URL - page blob<sup>2</sup> |
 | **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alerts |
 | &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
 | **Security** | Extensible Key Management |
-| &nbsp; | AD Authentication for Linked Servers | 
-| &nbsp; | AD Authentication for Availability Groups (AGs) | 
+| &nbsp; | AD Authentication for Linked Servers |
+| &nbsp; | AD Authentication for Availability Group (AG) Endpoints |
 | **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services<sup>1</sup> |
 | &nbsp; | StreamInsight |
@@ -235,7 +236,9 @@ The following features and services are not available for SQL Server 2019 on Lin
 | &nbsp; | Master Data Services |
 
 <sup>1</sup> SQL Server R is supported within SQL Server, but SQL Server R services as a separate package is not supported.
-  
+
+<sup>2</sup> Backup to URL is supported for block blobs, using the [Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
+
 ## Next steps
  [Editions and supported features for SQL Server 2017 - Linux](sql-server-linux-editions-and-components-2017.md)  
  [Editions and supported features for SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  

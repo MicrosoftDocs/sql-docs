@@ -1,22 +1,22 @@
 ---
 description: "SQL Server privacy supplement"
 title: "SQL Server privacy supplement | Microsoft Docs"
-ms.date: 09/30/2020
+ms.date: 11/11/2020
 ms.prod: sql
 ms.technology: release-landing
-ms.reviewer: "mikeray"
+ms.reviewer: "wopeter"
 ms.custom: ""
 ms.topic: conceptual
 f1_keywords: 
 helpviewer_keywords: 
-author: jaszymas
-ms.author: jaszymas
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # SQL Server privacy supplement
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-This article summarizes Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SQL Server may collect standard computer information and data about usage and performance may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of the product.
+This article summarizes Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SQL Server may collect standard computer information and data about usage and performance may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of the product. If you install SQL Server in a virtual machine on the Microsoft Azure service, environment information may be sent to Microsoft so that Microsoft can install the SQL Server IaaS Agent Extension on your virtual machine and register your SQL virtual machine resource with the SQL VM resource provider, as described [here](/azure/azure-sql/virtual-machines/windows/sql-vm-resource-provider-register).
 
 This article serves as an addendum to the overall [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839). The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the items:
 
@@ -25,7 +25,7 @@ This article serves as an addendum to the overall [Microsoft Privacy Statement](
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
 - Database Migration Assistant
-- SQL Server Migration Assistant
+- [SQL Server Migration Assistant](../ssma/ssma-diagnostic-data-collection.md)
 - MS-SQL Extension
 
 Definition of *Permitted usage Scenarios*. For the context of this article, Microsoft defines "Permitted Usages Scenarios" as actions or activities that are initiated by Microsoft.

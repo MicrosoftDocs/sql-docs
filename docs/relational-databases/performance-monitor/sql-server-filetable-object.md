@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:FileTable"
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, FileTable Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

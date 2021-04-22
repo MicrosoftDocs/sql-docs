@@ -1,7 +1,7 @@
 ---
 title: AD mode deployment hangs - unhealthy `sparkhead` pods
 titleSuffix: SQL Server Big Data Cluster
-description: Troubleshooting hung deployment of a SQL Server Big Data Cluster in an Active Directory domain with unhealthy `sparkhead` pods.
+description: Troubleshooting unresponsive deployment of a SQL Server Big Data Cluster in an Active Directory domain with unhealthy `sparkhead` pods.
 author: macarv-ms
 ms.author: macarv
 ms.reviewer: mikeray
@@ -216,4 +216,4 @@ Add the missing reverse DNS entry (PTR record) for the zone referred in the logs
 
 ## Next steps
 
-[Verify reverse DNS entry (PTR record) for domain controller](deploy-active-directory.md#verify-reverse-dns-entry-for-domain-controller).
+[Verify reverse DNS entry (PTR record) for domain controller](active-directory-deploy.md#verify-reverse-dns-entry-for-domain-controller).

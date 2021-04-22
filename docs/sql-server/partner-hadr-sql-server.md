@@ -1,6 +1,6 @@
 ---
 title: SQL Server high availability & disaster recovery partners
-description: Lists of third-party partners with solutions to monitor Server.
+description: Lists of third-party partners with solutions to  provide high availability and disaster recovery for your SQL Server services.
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.date: 09/17/2017    

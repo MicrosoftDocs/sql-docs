@@ -2,19 +2,19 @@
 description: "Query columns using Always Encrypted with Azure Data Studio"
 title: "Query columns using Always Encrypted with Azure Data Studio | Microsoft Docs"
 ms.custom: ""
-ms.date: 5/19/2020
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query columns using Always Encrypted with Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-This article describes how to query columns, encrypted with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) using [Azure Data Studio](../../../azure-data-studio/what-is.md). With Azure Data Studio, you can:
+This article describes how to query columns, encrypted with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) using [Azure Data Studio](../../../azure-data-studio/what-is-azure-data-studio.md). With Azure Data Studio, you can:
 - Retrieve ciphertext values stored in encrypted columns. 
 - Retrieve plaintext values stored in encrypted columns.  
 - Send plaintext values targeting encrypted columns (for example, in `INSERT` or `UPDATE` statements and as a lookup parameter of the `WHERE` clauses in `SELECT` statements). 
@@ -37,7 +37,7 @@ This section describes how to retrieve data stored in encrypted columns as ciphe
 ### Prerequisites
 - Azure Data Studio version 17.1 or later.
 - You need to have access to the column master key(s) and the metadata about the key(s) protecting the columns that you are running your query against. For details, see [Permissions for querying encrypted columns](#permissions-for-querying-encrypted-columns) below.
-- Your column master key(s) must be stored in Azure Key Vault or Windows Certificate Store. Azure Data Studio does not support other key stores.
+- Your column master key(s) must be stored in a key vault in Azure Key Vault or Windows Certificate Store. Azure Data Studio does not support other key stores and it does not support column master keys stored in [managed HSMs](/azure/key-vault/managed-hsm/overview) in Azure Key Vault.
 
 ### Steps
 1.	Enable Always Encrypted for the database connection for the query window, from which you will run a `SELECT` query retrieving and decrypting your data. This will instruct the [Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) (used by Azure Data Studio) to decrypt the encrypted columns in the query result set. See [Enabling and disabling Always Encrypted for a database connection](#enabling-and-disabling-always-encrypted-for-a-database-connection) below.
@@ -54,7 +54,7 @@ This section describes how to run a query that sends values that target an encry
 ### Prerequisites
 - Azure Data Studio version 18.1 or later.
 - You need to have access to the column master key(s) and the metadata about the key(s) protecting the columns you are running your query against. For details, see [Permissions for querying encrypted columns](#permissions-for-querying-encrypted-columns) below.
-- Your column master key(s) must be stored in Azure Key Vault or Windows Certificate Store. Azure Data Studio does not support other key stores.
+- Your column master key(s) must be stored in a key vault in Azure Key Vault or Windows Certificate Store. Azure Data Studio does not support other key stores and it does not support column master keys stored in [managed HSMs](/azure/key-vault/managed-hsm/overview) in Azure Key Vault.
 
 ### Steps
 1. Enable Always Encrypted for the database connection for the query window, from which you will run a `SELECT` query retrieving and decrypting your data. This will instruct the [Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) (used by Azure Data Studio) to encrypt query parameters targeting encrypted columns and decrypt the results retrieved from encrypted columns. See [Enabling and disabling Always Encrypted for a database connection](#enabling-and-disabling-always-encrypted-for-a-database-connection) below. 
@@ -71,14 +71,10 @@ Assuming `SSN` is an encrypted `char(11)` column in the `Patients` table, the be
 
 To run any queries against encrypted columns, including queries that retrieve data in ciphertext,  you need the **VIEW ANY COLUMN MASTER KEY DEFINITION** and **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** permissions in the database.
 
-In addition to the above permissions, to decrypt any query results or to encrypt any query parameters (produced by parameterizing Transact-SQL variables), you also need access to the column master key protecting the target columns:
-
-- **Certificate Store - Local computer:** You must have **Read** access to the certificate that is used as a column master key, or be the administrator on the computer.   
-- **Azure Key Vault:** You need the **get**, **unwrapKey**, and **verify** permissions on the key vault containing the column master key.
-
-For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+In addition to the above permissions, to decrypt any query results or to encrypt any query parameters (produced by parameterizing Transact-SQL variables), you also need key store permissions to access and use to the column master key protecting the target columns. For detailed information on key store permissions, go to [Create and store column master keys for Always Encrypted](create-and-store-column-master-keys-always-encrypted.md) and find a section relevant for your key store.
 
 ## Enabling and disabling Always Encrypted for a database connection   
+
 When you connect to a database in Azure Data Studio, you can either enable or disable Always Encrypted for the database connection. By default, Always Encrypted is disabled. 
 
 Enabling Always Encrypted for a database connection instructs the [Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md), used by Azure Data Studio, to attempt to transparently:   
@@ -94,10 +90,11 @@ You can enable or disable Always Encrypted when you connect to a database. For g
 To enable (disable) Always Encrypted:
 1. In the **Connection** dialog, click **Advanced...**.
 2. To enable Always Encrypted for the connection, set the **Always Encrypted** field to **Enabled**. To disable Always Encrypted, either leave the value of the **Always Encrypted** field blank or set it to **Disabled**.
-3. If you're using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can specify an enclave protocol and enclave attestation url. If your SQL Server instance doesn't use a secure enclave, make sure you leave the **Attestation Protocol** and **Enclave Attestation URL** fields blank. For more information, see [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
-4. Click **OK** to close **Advanced Properties**.
+3. Click **OK** to close **Advanced Properties**.
 
 ![Short video showing the steps to enable Always Encrypted for the connection.](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
+
+To run statements that leverage a server-side secure enclave when you're using [Always Encrypted with secure enclaves](always-encrypted-enclaves.md), you need to specify an enclave attestation protocol and an enclave attestation URL, in addition to enabling Always Encrypted for the connection. For detailed information, see [Prerequisites for running T-SQL statements using enclaves in Azure Data Studio](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-t-sql-statements-using-enclaves-in-azure-data-studio).
 
 > [!TIP]
 > To toggle between Always Encrypted being enabled and disabled for an existing query window, click **Disconnect** and then click **Connnect** and complete the above steps to reconnect to your database with the desired values of the **Always Encrypted** field. 

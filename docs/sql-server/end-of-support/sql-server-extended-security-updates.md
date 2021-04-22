@@ -2,14 +2,14 @@
 title: "What are Extended Security Updates?"
 description: Learn how to use the SQL Server registry to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, and SQL Server 2008 R2. 
 ms.custom: ""
-ms.date: "12/09/2019"
+ms.date: "11/24/2020"
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: pmasl
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016"
 ---
 # What are Extended Security Updates for SQL Server?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -202,6 +202,39 @@ To download ESUs, follow these steps:
 
 1. Download security updates from here, if and when they are made available. 
 
+## Supported regions and data residency
+
+The **SQL Server registry** service (Preview) is available in a subset of the Azure regions. The following table shows the supported regions and the data residency type in each.
+
+| **Region** | **Data residency** |
+|:--|:--|
+|Australia East|Geo|
+|Australia Southeast|Geo|
+|Canada Central|Geo|
+|France Central|Geo|
+|Japan East|Geo|
+|Japan West|Geo|
+|Korea Central|Geo|
+|Korea South|Geo|
+|North Central US|Geo|
+|North Europe|Geo|
+|South Central US|Geo|
+|Southeast Asia|Single region|
+|South India|Geo|
+|South Africa North|Geo|
+|UK South|Geo|
+|UK West|Geo|
+|West US|Geo|
+|East US|Geo|
+|Central US|Geo|
+|East Asia|Geo|
+|West Europe|Geo|
+|West Central US|Geo|
+|West US 2|Geo|
+|East US 2|Geo|
+
+In the regions with geopgraphic residency, the SQL registry service maintains data backups in a geo-redundant storage account (GRS).  In the regions with the single region residency, the SQL registry service maintains data backups in a zone-redundant storage account (ZRS). For more information, see the [Trust Center](https://azuredatacentermap.azurewebsites.net/).
+
 ## Configure regional redundancy 
 
 Customers that require regional redundancy for their **SQL Server registry** can create registration data in two distinct regions. Customers can then download security updates from either region based on **SQL Server registry** service availability. 
@@ -284,7 +317,7 @@ Azure SQL Managed Instance is a service in Azure providing nearly 100% compatibi
 
 Customers can move legacy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environments to Azure SQL Managed Instance, a fully managed data platform service (PaaS) that offers a "version-free" option to eliminate concerns with End of Support dates, or to Azure Virtual Machines to have access to Security Updates. The migrated databases will retain their compatibility with the legacy system. For more information, see [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
 
-Extended Security Updates will be available for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] in Azure Virtual Machines after the End of Support date of July 9, 2019, for the next three years. For customers looking to upgrade from [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)], all subsequent versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will be supported. For [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  through [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], customers are required to be on the latest supported Service Pack. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], customers are advised to be on the latest Cumulative Update. Note that Service Packs will not be available starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], only Cumulative Updates and General Distribution Releases (GDRs).
+Extended Security Updates will be available for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] in Azure Virtual Machines after the End of Support date of July 9, 2019, for the next three years. For customers looking to upgrade from [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)], all subsequent versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will be supported. For [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  through [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], customers are required to be on the latest supported Service Pack. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], customers are advised to be on the latest Cumulative Update. Note that Service Packs will not be available starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], only Cumulative Updates and General Distribution Releases (GDRs).
 
 Azure SQL Managed Instance is an instance-scoped deployment option in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] that provides the broadest [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] engine compatibility and native virtual network (VNET) support, so you can migrate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases to Managed Instance without changing apps. It combines the rich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] surface area with the operational and financial benefits of an intelligent, fully managed service. Leverage the new Azure Database Migration Service to move [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] to Azure SQL Managed Instance with few or no application code changes.
 
@@ -315,7 +348,7 @@ For advice on how to optimize performance for [!INCLUDE[ssNoVersion](../../inclu
 ## See also
 
 - [SQL Server 2008 / 2008 R2 lifecycle page](https://support.microsoft.com/lifecycle/search?alpha=sql%20server%202008)
-- [SQL Server 2008 / 2008 R2 end of support page](https://aka.ms/sqleos)
+- [SQL Server 2008 / 2008 R2 end of support page](./sql-server-end-of-life-overview.md?WT.mc_id=akamseos)
 - [Extended Security Updates frequently asked questions (FAQ)](https://aka.ms/sqleosfaq)
 - [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
 - [Manage Windows updates by using Azure Automation](/azure/automation/update-management/overview)
@@ -324,4 +357,3 @@ For advice on how to optimize performance for [!INCLUDE[ssNoVersion](../../inclu
 - [Azure migrate: lift-and-shift options to move your current SQL Server 2008 / 2008 R2 into an Azure VM](https://azure.microsoft.com/services/azure-migrate/)
 - [Cloud adoption framework for SQL migration](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
 - [ESU-related scripts on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-server-extended-security-updates/scripts)
-

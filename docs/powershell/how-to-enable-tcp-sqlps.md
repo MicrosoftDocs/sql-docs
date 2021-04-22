@@ -4,7 +4,6 @@ description: Learn how to enable TCP protocols using SQLPS
 ms.prod: sql
 ms.technology: sql-server-powershell
 ms.topic: conceptual
-ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot

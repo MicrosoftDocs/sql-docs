@@ -6,7 +6,7 @@ ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
-ms.topic: "language-reference"
+ms.topic: "reference"
 helpviewer_keywords: 
   - "2593 (Database Engine error)"
 ms.assetid: 2e25bc43-606a-40de-8b87-3b55b96f4a91

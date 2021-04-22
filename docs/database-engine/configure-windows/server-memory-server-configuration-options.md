@@ -1,6 +1,6 @@
 ---
 title: "Server memory configuration options | Microsoft Docs"
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 ms.date: "08/14/2019"
 ms.prod: sql
 ms.prod_service: high-availability

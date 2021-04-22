@@ -7,7 +7,7 @@ ms.date: "02/15/2017"
 ms.reviewer: 
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: "COM"
 helpviewer_keywords: 
   - "syntax indexes [ADO], ADO/WFC"

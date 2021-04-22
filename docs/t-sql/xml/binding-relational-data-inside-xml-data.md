@@ -6,7 +6,7 @@ ms.date: "07/26/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "variables [XML in SQL Server], relational data binding"
   - "columns [XML in SQL Server], relational data binding"
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Binding Relational Data Inside XML Data
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

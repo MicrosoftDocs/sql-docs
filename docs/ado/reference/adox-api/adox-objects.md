@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "objects [ADOX]"
   - "ADOX, objects"
@@ -35,7 +35,7 @@ ms.author: jroth
  Each object can be contained in its corresponding collection. For example, a **Table** object can be contained in a [Tables](./tables-collection-adox.md) collection. For more information, see [ADOX Collections](./adox-collections.md) or a specific collection topic.  
   
 ## See Also  
- [ADOX API Reference](./adox-object-model.md?view=sql-server-ver15)   
+ [ADOX API Reference](./adox-object-model.md)   
  [ADOX Collections](./adox-collections.md)   
  [ADOX Object Model](./adox-object-model.md)   
  [ADO Extensions for Data Definition Language and Security (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

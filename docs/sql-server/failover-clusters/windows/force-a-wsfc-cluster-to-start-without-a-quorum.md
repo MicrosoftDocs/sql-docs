@@ -5,14 +5,14 @@ ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Force a WSFC Cluster to Start Without a Quorum
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ms.author: mathoma
   
 4.  Use `Start-ClusterNode` with `-FixQuorum` to force the cluster service to start.  
   
-5.  Use `Get-ClusterNode` with `-Propery NodeWieght = 1` to set the value the guarantees that the node is a voting member of the quorum.  
+5.  Use `Get-ClusterNode` with `-Property NodeWeight = 1` to set the value the guarantees that the node is a voting member of the quorum.  
   
 6.  Output the cluster node properties in a readable format.  
   

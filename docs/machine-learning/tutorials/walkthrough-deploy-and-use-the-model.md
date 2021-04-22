@@ -9,7 +9,7 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # Deploy the R model and use it in SQL Server (walkthrough)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -222,7 +222,7 @@ Now that you have learned how to work with [!INCLUDE[ssNoVersion](../../includes
 
 You might also want to explore these additional samples and resources:
 
-+ [Data science scenarios and solution templates](data-science-scenarios-and-solution-templates.md)
++ [Data science scenarios and solution templates](/sql/machine-learning/tutorials/python-tutorials)
 + [In-database advanced analytics](r-taxi-classification-introduction.md)
 + [Machine Learning Server How-to guides](/machine-learning-server/r/how-to-introduction)
 + [Machine Learning Server Additional Resources](/machine-learning-server/resources-more)

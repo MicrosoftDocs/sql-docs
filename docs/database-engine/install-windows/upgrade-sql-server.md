@@ -10,14 +10,14 @@ ms.topic: quickstart
 helpviewer_keywords: 
   - "upgrading SQL Server"
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
-author: MashaMSFT
-ms.author: mathoma
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+author: cawrites
+ms.author: chadam
+monikerRange: ">=sql-server-2016"
 ---
 # Upgrade SQL Server
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
  
- You can upgrade instances of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ss2016](../../includes/sssql15-md.md)], or [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] directly to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], and [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], you'll either need to do a side-by-side upgrade, or a migration, to move to SQL Server 2019 as there is no common overlap between a supported mainstream operating system. Before running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup to upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], review the following articles about the upgrade process and the release notes.  
+ You can upgrade instances of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ss2016](../../includes/sssql16-md.md)], or [!INCLUDE[sssql17](../../includes/sssql17-md.md)] directly to [!INCLUDE[sssql19](../../includes/sssql19-md.md)]. For [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], and [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], you'll either need to do a side-by-side upgrade, or a migration, to move to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] as there is no common overlap between a supported mainstream operating system. Before running setup to upgrade, review the following articles about the upgrade process and the release notes.  
   
    - For information about upgrading from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], see [Are you upgrading from SQL Server 2005?](../../sql-server/end-of-support/sql-server-end-of-life-overview.md).  
    - [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) 

@@ -61,7 +61,7 @@ For an example of how to use expected exceptions and a negative SQL Server unit 
   
 You can directly use Transact\-SQL assertions on the server by using the RAISERROR statement in your Transact\-SQL script. Its syntax is:  
   
-**RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState)**  
+**RAISERROR (\@ErrorMessage, \@ErrorSeverity, \@ErrorState)**  
   
 where:  
   

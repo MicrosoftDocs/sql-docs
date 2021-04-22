@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Buffer Manager object"
   - "SQLServer:Buffer Manager"
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Buffer Manager Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

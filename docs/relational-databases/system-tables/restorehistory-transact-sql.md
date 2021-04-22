@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "restorehistory"
   - "restorehistory_TSQL"
@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "restorehistory system table"
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # restorehistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

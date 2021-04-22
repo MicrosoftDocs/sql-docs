@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "performance (SQL Database)"
   - "database performance (SQL Database)"
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Performance Center for SQL Server Database Engine and Azure SQL Database
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.author: jrasnick
 ## Configuration Options for Performance  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the ability to affect database engine performance  through a number of configuration options at the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] level. With [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], Microsoft performs most, but not all, of these optimizations for you.  
   
-|||  
+|Options|Description|  
 |-|-|  
 |**Disk configuration options**|:::image type="icon" source="../../relational-databases/performance/media/security-center-sqlserver.png"::: [Disk striping and RAID](https://technet.microsoft.com/library/ms190764\(v=sql.105\).aspx)|  
 |**Data and log file configuration options**|:::image type="icon" source="../../relational-databases/performance/media/security-center-sqlserver.png"::: [Place Data and Log Files on Separate Drives](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)<br />:::image type="icon" source="../../relational-databases/performance/media/security-center-sqlserver.png"::: [View or Change the Default Locations for Data and Log Files &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)|  
@@ -50,7 +50,7 @@ ms.author: jrasnick
 
 ## Query Performance Options  
   
-|||  
+|Option|Description|  
 |-|-|  
 |:::image type="icon" source="../../relational-databases/performance/media/security-center-both.png"::: **[Indexes](../../relational-databases/indexes/indexes.md)**|[Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)<br />[Specify Fill Factor for an Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)<br />[Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md)<br />[SORT_IN_TEMPDB Option For Indexes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)<br />[Improve the Performance of Full-Text Indexes](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)<br />[Configure the min memory per query Server Configuration Option](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)<br />[Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)|  
 |:::image type="icon" source="../../relational-databases/performance/media/security-center-both.png"::: **[Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)**|[Benefits of Partitioning](../partitions/partitioned-tables-and-indexes.md)|  

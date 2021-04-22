@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -70,7 +70,7 @@ PRIVILEGES
  Specifies the name of a column in a table, view, or table-valued function on which the permission is being denied. The parentheses **( )** are required. Only SELECT, REFERENCES, and UPDATE permissions can be denied on a column. *column* can be specified in the permissions clause or after the securable name.  
   
 > [!CAUTION]  
->  A table-level DENY does not take precedence over a column-level GRANT. This inconsistency in the permissions hierarchy has been preserved for backward compatibility.  
+>  A table-level DENY does not take precedence over a column-level GRANT. This inconsistency in the permissions hierarchy has been preserved for backward compatibility. In SQL Server this behavior is different if the Server is configured to run with the [Common Criteria Compliance Enabled Server Configuration](/../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md). However, this should generally only be used with caution and not as a general practice.
   
  ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
  Specifies the object on which the permission is being denied. The OBJECT phrase is optional if *schema_name* is specified. If the OBJECT phrase is used, the scope qualifier (**::**) is required. If *schema_name* is not specified, the default schema is used. If *schema_name* is specified, the schema scope qualifier (**.**) is required.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sp_change_log_shipping_secondary_primary"
   - "sp_change_log_shipping_secondary_primary_TSQL"
@@ -55,7 +55,7 @@ sp_change_log_shipping_secondary_primary
  The directory on the secondary server where backup files are copied to. *backup_destination_directory* is **nvarchar(500)** and cannot be NULL.  
   
 `[ @file_retention_period = ] 'file_retention_period'`
- Is the length of time in minutes in which the history will be retained. *history_retention_period* is **int**, with a default of NULL. A value of 14420 will be used if none is specified.  
+ Is the length of time in minutes in which the backup files will be retained. *file_retention_period* is **int**, with a default of NULL. A value of 14420 will be used if none is specified.  
   
 `[ @monitor_server_security_mode = ] 'monitor_server_security_mode'`
  The security mode used to connect to the monitor server.  

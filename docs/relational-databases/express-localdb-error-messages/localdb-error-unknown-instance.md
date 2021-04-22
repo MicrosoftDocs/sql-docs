@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: 67bca4f1-915d-46d4-9293-3742c16930a1
-author: stevestein
-ms.author: sstein
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_UNKNOWN_INSTANCE
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

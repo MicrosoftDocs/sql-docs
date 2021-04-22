@@ -7,7 +7,7 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 12/11/2019
+ms.date: 03/23/2021
 ---
 
 # Configure a Report Server on a Network Load Balancing Cluster
@@ -38,11 +38,11 @@ ms.date: 12/11/2019
   
 ## <a name="ViewState"></a> How to Configure View State Validation
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 To run a scale-out deployment on an NLB cluster, you must configure view state validation so that users can view interactive HTML reports.  You must do this for the Report Server Web Service.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 To run a scale-out deployment on an NLB cluster, you must configure view state validation so that users can view interactive HTML reports.
 ::: moniker-end
   
@@ -50,27 +50,26 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
   
  To work around this issue, you can generate an arbitrary validation key to support view state validation, and then manually configure each report server node to use the same key. You can use any randomly generated hexadecimal sequence. The validation algorithm (such as SHA1) determines how long the hexadecimal sequence must be.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
 
 1. Generate a validation key and decryption key by using the autogenerate functionality provided by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In the end, you must have a single <`machineKey`> entry that you can paste into the Web.config file for each Report Server instance in the scale-out deployment.  
   
     The following example provides an illustration of the value you must obtain. Do not copy the example into your configuration files; the key values are not valid.  
   
     ```xml
-    <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
     ```  
   
-2. Open the Web.config file for Reportserver, and in the <`system.web`> section paste the <`machineKey`> element that you generated. By default, the Report Manager Web.config file is located in \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
+2. Open the Web.config file for Reportserver, and in the <`system.web`> section paste the <`machineKey`> element that you generated. By default, the Web.config file is located in \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
   
 3. Save the file.  
   
 4. Repeat the previous step for each report server in the scale-out deployment.  
   
-5. Verify that all Web.Config files in the \Reporting Services\Reportserver folders contain identical <`machineKey`> elements in the <`system.web`> section.  
+5. Verify that all Web.Config files for all report servers in the scale-out deployment contain identical <`machineKey`> elements in the <`system.web`> section.  
 
-::: moniker-end
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
 1. Generate a validation key and decryption key by using the autogenerate functionality provided by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In the end, you must have a single \<**MachineKey**> entry that you can paste into the RSReportServer.config file for each report server instance in the scale-out deployment.
 
@@ -80,13 +79,13 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
     <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
-2. Save the file.
+2. Open the RSReportServer.config file for Reportserver, and in the <`Configuration`> section paste the \<**MachineKey**> element that you generated. By default, the RSReportServer.config file is located in \Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer\RSReportServer.config for Reporting Services and \Program Files\Microsoft Power BI Report Server\PBIRS\ReportServer\RSReportServer.config for Power BI Report Server.  
 
-3. Repeat the previous step for each report server in the scale-out deployment.  
+3. Save the file.
 
-4. Verify that all RSReportServer.config files in the \Reporting Services\Report Server folders contain identical \<**MachineKey**> elements.
+4. Repeat the previous step for each report server in the scale-out deployment.  
 
-::: moniker-end
+5. Verify that all RSReportServer.config files for all report servers in the scale-out deployment contain identical \<**MachineKey**> elements in the <`Configuration`> section.
 
 ## <a name="SpecifyingVirtualServerName"></a> How to Configure Hostname and UrlRoot
 

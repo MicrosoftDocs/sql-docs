@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "hobt [SQL Server]"
   - "base tables"
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # System Base Tables
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,4 +94,4 @@ Msg 3859: Warning: The system catalog was updated directly in database ID 17, mo
 ### Executing the DBCC_CHECKDB command after a system table is manually updated
 Msg 3859: Warning: The system catalog was updated directly in database ID 17, most recently at date_time.
 
-If you perform manual updates to a system table and encounter a problem, you might be asked to restore from a backup or copy out the data from the affected database to a new database. Learn more about [user action error messages](../errors-events/mssqlserver-8992-database-engine-error.md?view=sql-server-ver15#user-action).
+If you perform manual updates to a system table and encounter a problem, you might be asked to restore from a backup or copy out the data from the affected database to a new database. Learn more about [user action error messages](../errors-events/mssqlserver-8992-database-engine-error.md#user-action).

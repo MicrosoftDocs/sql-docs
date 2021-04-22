@@ -3,7 +3,7 @@ title: "Display data & log space info for a database"
 description: Learn how to display the data and log space information for a database in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.date: "08/01/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
 author: "stevestein"
 ms.author: "sstein"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: "seo-lt-2019"
 ---
 # Display Data and Log Space Information for a Database
@@ -34,40 +34,69 @@ ms.custom: "seo-lt-2019"
 ####  <a name="Permissions"></a> Permissions  
  Permission to execute **sp_spaceused** is granted to the **public** role. Only members of the **db_owner** fixed database role can specify the **\@updateusage** parameter.  
   
-##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
+## <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### To display data and log space information for a database  
   
-1.  In Object Explorer, connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and then expand that instance.  
+1. In Object Explorer, connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and then expand that instance.  
   
-2.  Expand **Databases**.  
+2. Expand **Databases**.  
   
-3.  Right-click a database, point to **Reports**, point to **Standard Reports,**, and then click **Disk Usage**.  
+3. Right-click a database, point to **Reports**, point to **Standard Reports,**, and then click **Disk Usage**.  
 
-##  <a name="TsqlProcedure"></a> Using Transact-SQL  
+## <a name="TsqlProcedure"></a> Using Transact-SQL
+
+#### To display data and log space information for a database by using sp_spaceused
   
-#### To display data and log space information for a database by using sp_spaceused  
+1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+2. From the Standard bar, click **New Query**.  
   
-2.  From the Standard bar, click **New Query**.  
-  
-3.  Copy and paste the following example into the query window and click **Execute**. This example uses the [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) system stored procedure to report disk space information for the `Vendor` table and its indexes.  
+3. Copy and paste the following example into the query window and click **Execute**. This example uses the [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) system stored procedure to report disk space information for the entire database - tables and indexes.  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-EXEC sp_spaceused N'Purchasing.Vendor';  
+EXEC sp_spaceused;  
 GO  
 ```  
+
+#### To display data space used by object and allocation unit for a database
   
+1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2. From the Standard bar, click **New Query**.  
+  
+3. Copy and paste the following example into the query window and click **Execute**. This example queries [object catalog views](../system-catalog-views/object-catalog-views-transact-sql.md) to report disk space usage per table and within each table per [allocation unit](../pages-and-extents-architecture-guide.md#IAM).  
+  
+```sql  
+SELECT
+  t.object_id,
+  OBJECT_NAME(t.object_id) ObjectName,
+  sum(u.total_pages) * 8 Total_Reserved_kb,
+  sum(u.used_pages) * 8 Used_Space_kb,
+  u.type_desc,
+  max(p.rows) RowsCount
+FROM
+  sys.allocation_units u
+  join sys.partitions p on u.container_id = p.hobt_id
+  join sys.tables t on p.object_id = t.object_id
+GROUP BY
+  t.object_id,
+  OBJECT_NAME(t.object_id),
+  u.type_desc
+ORDER BY
+  Used_Space_kb desc,
+  ObjectName
+```  
+
 #### To display data and log space information for a database by querying sys.database_files  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  From the Standard bar, click **New Query**.  
+2. From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) catalog view to return specific information about the data and log files in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
+3. Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) catalog view to return specific information about the data and log files in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -78,11 +107,10 @@ GO
   
 ```  
   
-## See Also  
+## See Also
+
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)   
  [Delete Data or Log Files from a Database](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)  
-  
-  

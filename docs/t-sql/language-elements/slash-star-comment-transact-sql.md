@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "/*...*/_TSQL"
   - "Comment"
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "remarks [SQL Server]"
   - "comments [SQL Server]"
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 
 # Slash Star (Block Comment) (Transact-SQL)

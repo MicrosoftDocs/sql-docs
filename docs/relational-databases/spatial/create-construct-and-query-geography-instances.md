@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create, Construct, and Query geography Instances
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -57,7 +57,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  [STMPointFromText &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stmpointfromtext-geography-data-type.md)  
   
  **To construct a geography LineString instance from WKT input**  
- STLineFromText (geography Data Type)  
+ [STLineFromText &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stlinefromtext-geography-data-type.md) 
   
  **To construct a geography MultiLineString instance from WKT input**  
  [STMLineFromText &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stmlinefromtext-geography-data-type.md)  

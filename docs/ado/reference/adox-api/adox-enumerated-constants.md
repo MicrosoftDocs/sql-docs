@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "enumerated constants [ADOX]"
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
@@ -33,5 +33,5 @@ To assist debugging, the ADOX enumerated constants list a value for each constan
 |[SortOrderEnum](./sortorderenum.md)|Specifies the sort sequence for an indexed column.|  
   
 ## See Also  
- [ADOX API Reference](./adox-object-model.md?view=sql-server-ver15)   
+ [ADOX API Reference](./adox-object-model.md)   
  [ADO Extensions for Data Definition Language and Security (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

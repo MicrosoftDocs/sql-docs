@@ -4,8 +4,8 @@ titleSuffix: SQL Server big data clusters
 description: Learn how to customize a big data cluster deployment with configuration files that are built into the azdata management tool.
 author: MikeRayMSFT 
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: rajmera3
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,6 +15,8 @@ ms.technology: big-data-cluster
 # Configure deployment settings for cluster resources and services
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+> [!Note]
+> Big Data Clusters version CU9+ have support for configuration management functionality. This feature enables post-deployment configurations and provides increased visibility and configurability of the cluster. Versions CU8 and lower do not have this functionality and configurations can only be done at deployment time.
 
 Starting from a pre-defined set of configuration profiles that are built into the [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] management tool, you can easily modify the default settings to better suit your BDC workload requirements. The structure of the configuration files enables you to granularly update settings for each service of the resource.
 
@@ -24,6 +26,9 @@ Watch this 13-minute video for an overview of big data cluster configuration:
 
 > [!TIP]
 > Please reference the articles on how to configure **high availability** for mission critical components like [SQL Server master](deployment-high-availability.md) or [HDFS name node](deployment-high-availability-hdfs-spark.md),  for details on how to deploy highly available services.
+
+> [!TIP]
+> Reference the [SQL Server Big Data Clusters Configuration Properties](reference-config-bdc-overview.md) article to see what settings are configurable. For versions CU8 or lower, reference [SQL Server Master Instance Configuration Properties -  Pre CU9 Release](reference-config-master-instance.md) for configurations available for the SQL Server master instance and [Apache Spark & Apache Hadoop (HDFS) configuration properties](reference-config-spark-hadoop.md) for Apache Spark and Hadoop properties.
 
 You can also set resource level configurations or update the configurations for all services in a resource. Here is a summary of the structure for `bdc.json`:
 

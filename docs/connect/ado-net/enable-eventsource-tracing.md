@@ -1,7 +1,7 @@
 ---
-title: "Enabling event tracing in SqlClient"
+title: "Enable event tracing in SqlClient"
 description: "Describes how to enable event tracing in SqlClient by implementing an event listener and how to access the event data."
-ms.date: "06/15/2020"
+ms.date: "11/23/2020"
 dev_langs: 
   - "csharp"
 ms.prod: sql
@@ -10,9 +10,9 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
-ms.reviewer: 
+ms.reviewer: v-daenge
 ---
-# Enabling event tracing in SqlClient
+# Enable event tracing in SqlClient
 
 [!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -44,14 +44,104 @@ The current implementation supports the following Event Keywords:
 |||
 
 ## Example
+
 The following example enables event tracing for a data operation on the **AdventureWorks** sample database and displays the events in the console window.
 
 [!code-csharp [SqlClientEventSource#1](~/../sqlclient/doc/samples/SqlClientEventSource.cs#1)]
 
+## Event tracing support in Native SNI
+
+**Microsoft.Data.SqlClient** v2.1.0 extends event tracing support in **Microsoft.Data.SqlClient.SNI** and **Microsoft.Data.SqlClient.SNI.runtime**. By sending an EventCommand to `SqlClientEventSource`, events in native SNI.dll can be collected using [Xperf](/windows-hardware/test/wpt/) and [PerfView](https://github.com/microsoft/perfview) tools. The valid EventCommand values are listed as below:
+
+```cs
+// Enables trace events:
+EventSource.SendCommand(eventSource, (EventCommand)8192, null);
+
+// Enables flow events:
+EventSource.SendCommand(eventSource, (EventCommand)16384, null);
+
+// Enables both trace and flow events:
+EventSource.SendCommand(eventSource, (EventCommand)(8192 | 16384), null);
+```
+
+The following example enables event tracing in native SNI.dll when the application targets .NET Framework. 
+
+```cs
+// Native SNI tracing example
+// .NET Framework application
+using System;
+using System.Diagnostics.Tracing;
+using Microsoft.Data.SqlClient;
+
+public class SqlClientListener : EventListener
+{
+    protected override void OnEventSourceCreated(EventSource eventSource)
+    {
+        if (eventSource.Name.Equals("Microsoft.Data.SqlClient.EventSource"))
+        {
+            // Enables both trace and flow events
+            EventSource.SendCommand(eventSource, (EventCommand)(8192 | 16384), null);
+        }
+    }
+}
+
+class Program
+{
+    static string connectionString = @"Data Source = localhost; Initial Catalog = AdventureWorks;Integrated Security=true;";
+
+    static void Main(string[] args)
+    {
+        using (SqlClientListener listener = new SqlClientListener())
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+        }        
+    }
+}
+```
+
+### Use Xperf to collect trace log
+
+1. Start tracing using the following command line.
+
+   ```
+   xperf -start trace -f myTrace.etl -on *Microsoft.Data.SqlClient.EventSource
+   ```
+
+2. Run the native SNI tracing example to connect to SQL Server.
+
+3. Stop tracing using the following command line.
+
+   ```
+   xperf -stop trace
+   ```
+
+4. Use PerfView to open the myTrace.etl file specified in Step 1. The SNI tracing log can be found with `Microsoft.Data.SqlClient.EventSource/SNIScope` and `Microsoft.Data.SqlClient.EventSource/SNITrace` event names.
+
+   ![Use PerfView to view SNI trace file](media/view-event-trace-native-sni.png)
+
+
+### Use PerfView to collect trace log
+
+1. Start PerfView and run `Collect > Collect` from menu bar.
+
+2. Configure trace file name, output path, and provider name.
+
+   ![Configure Prefview before collection](media/collect-event-trace-native-sni.png)
+
+3. Start collection.
+
+4. Run the native SNI tracing example to connect to SQL Server.
+
+5. Stop collection from PerfView. It will take a while to generate PerfViewData.etl file according to configuration in Step 2.
+
+6. Open the `etl` file in PerfView. The SNI tracing log can be found with `Microsoft.Data.SqlClient.EventSource/SNIScope` and `Microsoft.Data.SqlClient.EventSource/SNITrace` event names.
+
 ## External resources  
+
 For more information, see the following resources.  
   
 |Resource|Description|  
 |--------------|-----------------|  
-|[EventSource Class](/dotnet/api/system.diagnostics.tracing.eventsource)|Provides the ability to create ETW events.| 
+|[EventSource Class](/dotnet/api/system.diagnostics.tracing.eventsource)|Used to create ETW events.|
 |[EventListener Class](/dotnet/api/system.diagnostics.tracing.eventlistener)|Provides methods for enabling and disabling events from event sources.|

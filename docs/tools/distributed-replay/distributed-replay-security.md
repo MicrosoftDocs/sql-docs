@@ -1,15 +1,13 @@
 ---
 title: Distributed Replay security
-titleSuffix: SQL Server Distributed Replay
 description: This article describes security configuration steps for SQL Server Distributed Replay and important considerations for data protection and removal steps.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ---
@@ -78,9 +76,9 @@ Before you install and use the [!INCLUDE[msCoName](../../includes/msconame-md.md
   
     3.  Press ENTER.  
   
-2.  **Configure computer-wide DCOM permissions**: Grant the corresponding computer-wide DCOM permissions for each account listed in the following table. For more information about how to set computer-wide permissions, see [Checklist: Manage DCOM Applications](https://go.microsoft.com/fwlink/?LinkId=185842).  
+2.  **Configure computer-wide DCOM permissions**: Grant the corresponding computer-wide DCOM permissions for each account listed in the following table. For more information about how to set computer-wide permissions, see [Checklist: Manage DCOM Applications](/windows/win32/com/setting-machine-wide-security-using-dcomcnfg).  
   
-3.  **Configure application-specific DCOM permissions**: Grant the corresponding application-specific DCOM permissions for each account listed in the following table. The DCOM application name for the controller service is **DReplayController**. For more information about how to set application-specific permissions, see [Checklist: Manage DCOM Applications](https://go.microsoft.com/fwlink/?LinkId=185842).  
+3.  **Configure application-specific DCOM permissions**: Grant the corresponding application-specific DCOM permissions for each account listed in the following table. The DCOM application name for the controller service is **DReplayController**. For more information about how to set application-specific permissions, see [Checklist: Manage DCOM Applications](/windows/win32/com/setting-processwide-security-using-dcomcnfg).  
   
  The following table describes which DCOM permissions are required for the administration tool interactive user account and the client service accounts:  
   
@@ -131,5 +129,4 @@ Before you install and use the [!INCLUDE[msCoName](../../includes/msconame-md.md
 ## See Also  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)  
-  
   

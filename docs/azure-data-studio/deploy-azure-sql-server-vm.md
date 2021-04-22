@@ -42,7 +42,7 @@ Next, enter all of the required parameters in the Azure SQL VM wizard.
 
 3. Enter a unique Virtual Machine name and your username and password credentials.
 
-4. Select your preferred image, SKU, and version, and then select your preferred VM size. You can learn more about [available VM sizes](https://docs.microsoft.com/azure/virtual-machines/sizes) to help you make your selection. Then select **Next**.
+4. Select your preferred image, SKU, and version, and then select your preferred VM size. You can learn more about [available VM sizes](/azure/virtual-machines/sizes) to help you make your selection. Then select **Next**.
 
 5. Either select an existing virtual network from the dropdown, or check the **New virtual network** checkbox to enter a name for a new virtual network.
 
@@ -70,6 +70,6 @@ The last step is to select **Run all** to run all cells in the Notebook. Once th
 To learn more about how to migrate your data to the new SQL VM, see the following article.
 
 > [!div class="nextstepaction"]
-> [Migrate a database to a SQL VM](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server)
+> [Migrate a database to a SQL VM](/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server)
 
-For other information about using SQL Server in Azure, see [SQL Server on Azure Virtual Machines](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview) and the [Frequently Asked Questions](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/frequently-asked-questions-faq).
+For other information about using SQL Server in Azure, see [SQL Server on Azure Virtual Machines](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview) and the [Frequently Asked Questions](/azure/azure-sql/virtual-machines/windows/frequently-asked-questions-faq).

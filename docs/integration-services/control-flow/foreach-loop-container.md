@@ -455,7 +455,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
 ####  <a name="ForeachAzureBlob"></a> Enumerator = Foreach Azure Blob Enumerator  
  The  **Azure Blob Enumerator** enables an SSIS package to enumerate blob files in the specified blob location. You can store the name of the enumerated blob file in a variable and use it in tasks inside the Foreach Loop Container.  
   
- The **Azure Blob Enumerator** is a component of the SQL Server Integration Services (SSIS) Feature Pack for Azure for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Download the Feature Pack [here](https://go.microsoft.com/fwlink/?LinkID=626967).  
+ The **Azure Blob Enumerator** is a component of the SQL Server Integration Services (SSIS) Feature Pack for Azure for [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Download the Feature Pack [here](https://go.microsoft.com/fwlink/?LinkID=626967).  
   
  **Azure storage connection manager**  
  Select an existing Azure Storage Connection Manager or create a new one that refers to an Azure Storage Account.  

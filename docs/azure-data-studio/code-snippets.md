@@ -84,7 +84,7 @@ You can define your own snippets. To open up the SQL snippet file for editing:
        "description": "User-defined snippet example 2"
        }
        }
-       ```
+    ```
 
 4. Save the sql.json file.
 

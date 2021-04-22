@@ -7,7 +7,7 @@ ms.date: 07/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # sqlrutils (R package in SQL Server Machine Learning Services)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -29,7 +29,7 @@ You can also execute the stored procedure from an R environment, by passing well
   
 ## Full reference documentation
 
-The **sqlrutils** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, [documentation for individual sqlrutils functions](/machine-learning-server/r-reference/revoscaler/revoscaler) is published to just one location under the [R reference](/machine-learning-server/r-reference/introducing-r-server-r-package-reference) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
+The **sqlrutils** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, documentation for individual sqlrutils functions is published to just one location under the [sqlrutils package reference](/machine-learning-server/r-reference/sqlrutils/sqlrutils) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
 
 ## Functions list
 
@@ -100,4 +100,4 @@ The stored procedure object typically does not have any data or values associate
 
 ## See also
 
-[How to create a stored procedure using sqlrutils](how-to-create-a-stored-procedure-using-sqlrutils.md)
+[How to create a stored procedure using sqlrutils](/machine-learning-server/r-reference/sqlrutils/how-to-create-a-stored-procedure-from-r)

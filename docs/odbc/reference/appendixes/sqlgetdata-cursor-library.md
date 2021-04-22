@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "SQLGetData function [ODBC], Cursor Library"
 ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872

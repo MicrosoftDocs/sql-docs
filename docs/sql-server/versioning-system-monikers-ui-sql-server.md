@@ -5,9 +5,9 @@ ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016"
 ---
 
 # Versioning system for SQL documentation
@@ -110,7 +110,7 @@ The following article was added new for SQL Server 2017. The article describes f
 | Attribute | Value |
 | :-------- | :---- |
 | Title | What's new in SQL Server 2017 |
-| moniker range | `>= sql-server-2017 || = sqlallproducts-allversions` |
+| moniker range | `=">= sql-server-2017"` |
 | `https` address | `https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017` |
 | &nbsp; | &nbsp; |
 

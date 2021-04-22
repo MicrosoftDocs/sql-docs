@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "DELETE TAG command [ODBC]"
 ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221

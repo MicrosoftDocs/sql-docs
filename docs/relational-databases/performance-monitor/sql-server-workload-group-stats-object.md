@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Workload Group Stats object"
   - "SQLServer: Workload Group Stats"
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Workload Group Stats Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

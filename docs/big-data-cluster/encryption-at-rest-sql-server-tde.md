@@ -21,8 +21,6 @@ Experience is in general the same as SQL Server on Linux and [standard TDE docum
 
 __Unsupported features:__
 * Data pool encryption
-* Encryption key rotation for databases in a contained availability group in an [HA deployment](deployment-high-availability.md).
-
 
 ## <a id="prereqs"></a> Prerequisites
 

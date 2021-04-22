@@ -9,7 +9,7 @@ ms.custom: ""
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
 ---
 
 # SQL Server help and feedback

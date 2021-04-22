@@ -6,7 +6,6 @@ ms.prod: sql
 ms.reviewer:
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
@@ -55,5 +54,5 @@ dreplay status -m localhost -f 60
   
 ## See Also  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Transact-SQL Debugger](../../ssms/scripting/transact-sql-debugger.md?view=sql-server-ver15)  
+ [Transact-SQL Debugger](../../ssms/scripting/transact-sql-debugger.md)  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: system-objects
-ms.topic: "language-reference"
+ms.topic: "reference"
 f1_keywords: 
   - "sys.dm_database_encryption_keys"
   - "sys.dm_database_encryption_keys_TSQL"
@@ -18,9 +18,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_database_encryption_keys dynamic management view"
 ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
-author: markingmyname
-ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,17 +39,17 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |key_algorithm|**nvarchar(32)**|Displays the algorithm that is used for the key.|  
 |key_length|**int**|Displays the length of the key.|  
 |encryptor_thumbprint|**varbinary(20)**|Shows the thumbprint of the encryptor.|  
-|encryptor_type|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](../../sql-server/what-s-new-in-sql-server-2016.md)).<br /><br /> Describes the encryptor.|  
+|encryptor_type|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level)).<br /><br /> Describes the encryptor.|  
 |percent_complete|**real**|Percent complete of the database encryption state change. This will be 0 if there is no state change.|
-|encryption_state_desc|**nvarchar(32)**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.<br><br> String that indicates whether the database is encrypted or not encrypted.<br><br>NONE<br><br>UNENCRYPTED<br><br>ENCRYPTED<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
-|encryption_scan_state|**int**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.<br><br>Indicates the current state of the encryption scan. <br><br>0 = No scan has been initiated, TDE is not enabled<br><br>1 = Scan is in progress.<br><br>2 = Scan is in progress but has been suspended, user can resume.<br><br>3 = Scan was aborted for some reason, manual intervention is required. Contact Microsoft Support for more assistance.<br><br>4 = Scan has been successfully completed, TDE is enabled and encryption is complete.|
-|encryption_scan_state_desc|**nvarchar(32)**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.<br><br>String that indicates the current state of the encryption scan.<br><br> NONE<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>COMPLETE|
-|encryption_scan_modify_date|**datetime**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.<br><br> Displays the date (in UTC) the encryption scan state was last modified.|
+|encryption_state_desc|**nvarchar(32)**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later.<br><br> String that indicates whether the database is encrypted or not encrypted.<br><br>NONE<br><br>UNENCRYPTED<br><br>ENCRYPTED<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_scan_state|**int**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later.<br><br>Indicates the current state of the encryption scan. <br><br>0 = No scan has been initiated, TDE is not enabled<br><br>1 = Scan is in progress.<br><br>2 = Scan is in progress but has been suspended, user can resume.<br><br>3 = Scan was aborted for some reason, manual intervention is required. Contact Microsoft Support for more assistance.<br><br>4 = Scan has been successfully completed, TDE is enabled and encryption is complete.|
+|encryption_scan_state_desc|**nvarchar(32)**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later.<br><br>String that indicates the current state of the encryption scan.<br><br> NONE<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>COMPLETE|
+|encryption_scan_modify_date|**datetime**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later.<br><br> Displays the date (in UTC) the encryption scan state was last modified.|
   
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
+On SQL Database Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other SQL Database service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
 
 ## See Also  
 
@@ -62,4 +62,3 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
  [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
-  

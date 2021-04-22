@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ""
 ms.date: "02/15/2017"
 ms.reviewer: ""
-ms.topic: conceptual
+ms.topic: reference
 apitype: "COM"
 helpviewer_keywords: 
   - "Field collection [ADO], ADO/WFC syntax"

@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: markingmyname
 ms.author: maghan
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Estimate Memory Requirements for Memory-Optimized Tables
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -24,7 +24,7 @@ If you are contemplating migrating from disk-based tables to memory-optimized ta
   
 ## Basic Guidance for Estimating Memory Requirements
 
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], there is no limit on the size of memory-optimized tables, though the tables do need to fit in memory.  In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] the supported data size is 256GB for SCHEMA_AND_DATA tables.
+Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], there is no limit on the size of memory-optimized tables, though the tables do need to fit in memory.  In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] the supported data size is 256GB for SCHEMA_AND_DATA tables.
 
 The size of a memory-optimized table corresponds to the size of data plus some overhead for row headers. When migrating a disk-based table to memory-optimized, the size of the memory-optimized table will roughly correspond to the size of the clustered index or heap of the original disk-based table.
 
@@ -156,7 +156,7 @@ Memory needed by nonclustered indexes can be computed as follows:
  Nonclustered indexes are best when used for range lookups, as exemplified by the following query:  
   
 ```sql  
-SELECT * FRON t_hk  
+SELECT * FROM t_hk  
    WHERE c2 > 5;  
 ```  
   

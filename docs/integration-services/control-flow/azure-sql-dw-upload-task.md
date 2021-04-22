@@ -26,6 +26,11 @@ The task leverages PolyBase to improve performance, as described in the article 
 The currently supported source data file format is delimited text in UTF8 encoding.
 When copying from file system, data will first be uploaded to Azure Blob Storage for staging, and then to Azure SQL DW. Therefore, an Azure Blob Storage account is needed.
 
+> [!NOTE]
+> Azure Storage connection manager with Data Lake Gen2 service type is not supported.
+>
+> To use Azure Data Lake Gen2 for staging or source, you can connect via Azure Storage connection manager with Blob Storage service type.
+
 The **Azure SQL DW Upload Task** is a component of the [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
 To add an **Azure SQL DW Upload Task**, drag-drop it from SSIS Toolbox to the designer canvas, and double-click or right-click and click **Edit** to see the task editor dialog box.

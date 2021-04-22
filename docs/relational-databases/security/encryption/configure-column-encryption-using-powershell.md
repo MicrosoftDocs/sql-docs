@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure column encryption using Always Encrypted with PowerShell
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 This article provides the steps for setting the target Always Encrypted configuration for database columns using the [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) cmdlet (in the *SqlServer* PowerShell module). The **Set-SqlColumnEncryption** cmdlet modifies both the schema of the target database as well as the data stored in the selected columns. The data stored in a column can be encrypted, re-encrypted, or decrypted, depending on the specified target encryption settings for the columns and the current encryption configuration.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
-> If you are using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can run cryptographic operations in-place, without moving data out of the database. See [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md). Note that the PowerShell does not support in-place encryption.
+> If you are using [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] and your SQL Server instance is configured with a secure enclave, you can run cryptographic operations in-place, without moving data out of the database. See [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md). Note that the PowerShell does not support in-place encryption.
 
 ::: moniker-end
 For more information about Always Encrypted support in the SqlServer PowerShell module, see [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
@@ -40,7 +40,7 @@ The **Set-SqlColumnEncryption** cmdlet supports two approaches for setting up th
 
 With the offline approach, the target tables (and any tables related to the target tables, for example, any tables a target table have foreign key relationships with) are unavailable to write transactions throughout the duration of the operation. The semantics of foreign key constraints (**CHECK** or **NOCHECK**) are always preserved when using the offline approach.
 
-With the online approach (requires the SqlServer PowerShell module version 21.x or later), the operation of copying and encrypting, decrypting, or re-encrypting the data is performed incrementally. Applications can read and write data from and to the target tables throughout the data movement operation, except the last iteration, the duration of which is limited by the **MaxDownTimeInSeconds** parameter (which you can define). To detect and process the changes applications can make while the data is being copied, the cmdlet enables [Change Tracking](../../track-changes/enable-and-disable-change-tracking-sql-server.md) in the target database. Because of that, the online approach is likely to consume more resources on the server side than the online approach. The operation may also take much more time with the online approach, especially if a write-heavy workload is running against the database. The online approach can be used to encrypt one table at a time and the table must have a primary key. By default, foreign key constraints are recreated with the **NOCHECK** option to minimize the impact on applications. You can enforce preserving the semantics of foreign key constraints by specifying the **KeepCheckForeignKeyConstraints** option. 
+With the online approach (requires the SqlServer PowerShell module version 21.x or later), the operation of copying and encrypting, decrypting, or re-encrypting the data is performed incrementally. Applications can read and write data from and to the target tables throughout the data movement operation, except the last iteration, the duration of which is limited by the **MaxDownTimeInSeconds** parameter (which you can define). To detect and process the changes applications can make while the data is being copied, the cmdlet enables [Change Tracking](../../track-changes/enable-and-disable-change-tracking-sql-server.md) in the target database. Because of that, the online approach is likely to consume more resources on the server side than the offline approach. The operation may also take much more time with the online approach, especially if a write-heavy workload is running against the database. The online approach can be used to encrypt one table at a time and the table must have a primary key. By default, foreign key constraints are recreated with the **NOCHECK** option to minimize the impact on applications. You can enforce preserving the semantics of foreign key constraints by specifying the **KeepCheckForeignKeyConstraints** option. 
 
 Here are the guidelines for choosing between the offline and online approaches:
 

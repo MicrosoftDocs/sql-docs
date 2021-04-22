@@ -4,10 +4,10 @@ description: Learn how OLE DB Driver for SQL Server uses the ISSAsynchStatus int
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
-ms.topic: "reference"
+ms.topic: reference
 apiname: 
   - "ISSAsynchStatus (OLE DB)"
 apitype: "COM"

@@ -70,7 +70,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   When you use reserved words for object names or parts of object names.  
   
-     We recommend that you do not use reserved keywords as object names. Databases that you upgrade from earlier versions of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] may contain identifiers that include words that were not reserved in the earlier version of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] but that are reserved words for[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. You can use a delimited identifier to refer to such an object until you can change the object's name.  
+     We recommend that you do not use reserved keywords as object names. Databases that you upgrade from earlier versions of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] may contain identifiers that include words that were not reserved in the earlier version of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] but that are reserved words for[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. You can use a delimited identifier to refer to such an object until you can change the object's name.  
   
 -   When you use characters that are not listed as qualified identifiers.  
   

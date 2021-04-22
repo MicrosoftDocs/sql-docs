@@ -23,7 +23,7 @@ ms.author: maggies
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ##  <a name="bkmk_sharepointmode"></a> Verify SharePoint Mode Installation  
   

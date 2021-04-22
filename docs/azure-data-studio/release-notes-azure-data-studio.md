@@ -8,12 +8,92 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 10/14/2020
+ms.date: 4/16/2021
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](./download-azure-data-studio.md)**
+
+## April 2021
+
+April 16, 2021 &nbsp; / &nbsp; version: 1.28.0
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| Extension(s) update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) </br> [SchemaCompare](extensions/schema-compare-extension.md) <br/> [Kusto (KQL)](extensions/kusto-extension.md) </br> [MachineLearning](extensions/machine-learning-extension.md)|
+| New Notebook features | Added Add Notebook and Remove Notebook commands |
+| Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2021+Release%22). |
+
+## March 2021
+
+March 17, 2021 &nbsp; / &nbsp; version: 1.27.0
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22March+2021+Release%22). |
+| Extension(s) update | [Dacpac](extensions/sql-server-dacpac-extension.md) </br> [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
+| New Notebook features | Added create book dialog |
+
+## February 2021
+
+February 18, 2021 &nbsp; / &nbsp; version: 1.26.0
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22February+2021+Release%22+is%3Aclosed). |
+| Extension(s) update | [Dacpac](extensions/sql-server-dacpac-extension.md) <br/> [Kusto (KQL)](extensions/kusto-extension.md) </br> [MachineLearning](extensions/machine-learning-extension.md) </br> [Profiler](extensions/sql-server-profiler-extension.md) </br> [SchemaCompare](extensions/schema-compare-extension.md) </br> [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
+| New Azure Arc features | Multiple data controllers now supported <br/> New connection dialog options like kube config file <br/> Postgres dashboard enhancements |
+| New Notebook features | Improved Jupyter server start-up time by 50% on Windows <br/> Added support to edit Jupyter Books through right-click <br/> Added URI notebook parameterization support and [added notebook parameterization documentation](./notebooks/notebooks-parameterization.md) |
+
+## December 2020 (hotfix)
+
+February 10, 2021 &nbsp; / &nbsp; version: 1.25.3
+
+| Change | Details |
+| ------ | ------- |
+| Fix bug [#13899](https://github.com/microsoft/azuredatastudio/issues/13899) | Scrolling to the appropriate cross-reference links in Notebooks |
+| Upgrade Electron to incorporate important bug fixes| N/A |
+
+## December 2020
+
+December 9, 2020 &nbsp; / &nbsp; version: 1.25.0
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22December+2020+Release%22). |
+| Database Projects extension update | Added workspaces and improved sidebar |
+
+## November 2020
+
+November 12, 2020 &nbsp; / &nbsp; version: 1.24.0
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2020+Release%22+is%3Aclosed). |
+| Connection dialog | Added new browse tab for connection dialog. |
+| Extension(s) update | Released update to Postgres extension. |
+| New notebook features | Added new features to SQL to notebook support. <br/> Added new features to	Notebook parameterization support. <br/>  Added new features to results streaming for SQL Notebooks. |
+| Python installation | PROSE package has been removed from default Python installation. |
+
+### Known issues (1.24.0)
+
+| New Item | Details | Workaround |
+|----------|---------|------------|
+| Azure Arc extension | [Known Issue:](https://github.com/microsoft/azuredatastudio/issues/13319) The "Script to Notebook" button for Arc MIAA & PG deployments does not do field validation before scripting the notebook. This means that if users enter the password wrong in the password confirm inputs then they may end up with a notebook that has the wrong value for the password.| The "Deploy" button works as expected though so users should use that instead. |
+| Object Explorer | Releases of ADS before 1.24.0 have a breaking change in object explorer due to the engine's changes related to [Azure Synapse Analytics serverless SQL pool](/azure/synapse-analytics/sql/on-demand-workspace-overview). | To continue utilizing object explorer in Azure Data Studio with Azure Synapse Analytics serverless SQL pool, you need to use Azure Data Studio 1.24.0 or later. |
+
+You can reference [Azure Data Studio feedback](https://github.com/microsoft/azuredatastudio) for other known issues and to provide feedback to the product team.
 
 ## October 2020
 

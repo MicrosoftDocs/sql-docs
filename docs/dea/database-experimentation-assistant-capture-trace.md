@@ -128,7 +128,7 @@ If you see an error when you run a trace capture, confirm that:
 
 - The name of the computer running SQL Server is valid. To confirm, try to connect to the computer running SQL Server by using SQL Server Management Studio (SSMS).
 - Your firewall configuration doesn't block connections to the computer running SQL Server.
-- The user has the permissions that are listed in the [Replay FAQ](./database-experimentation-assistant-replay-trace.md?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
+- The user has the permissions that are listed in the [Replay FAQ](./database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay).
 - The trace name doesn't follow the standard rollover convention (Capture\_1). Instead, try trace names like Capture\_1A or Capture1.
 
 Following are some possible errors you might see and solutions for resolving them:

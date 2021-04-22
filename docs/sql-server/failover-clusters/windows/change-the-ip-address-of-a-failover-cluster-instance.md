@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: how-to
 helpviewer_keywords: 
   - "modifying IP addresses"
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "IP addresses [SQL Server]"
   - "clusters [SQL Server], IP addresses"
 ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Change the IP Address of a Failover Cluster Instance
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

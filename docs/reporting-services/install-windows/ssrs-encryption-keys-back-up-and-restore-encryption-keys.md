@@ -44,7 +44,7 @@ ms.author: maggies
   
  **Native mode:** Either the Report Server Configuration Manager or the **rskeymgmt** utility.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **SharePoint mode:** SharePoint Central Administration pages or PowerShell.  
   

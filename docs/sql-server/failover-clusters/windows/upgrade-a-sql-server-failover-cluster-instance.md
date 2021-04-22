@@ -5,15 +5,15 @@ ms.custom: "seo-lt-2019"
 ms.date: "11/21/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: failover-cluster-instance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading failover cluster instances"
   - "clusters [SQL Server], upgrading"
   - "failover clustering [SQL Server], upgrading"
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 
 # Upgrade a failover cluster instance 
@@ -45,16 +45,16 @@ ms.author: mathoma
 ## Prerequisites  
  Before you begin, review the following important information:  
   
--   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Verify that you can upgrade to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] from your version of the Windows operating system and version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For example, you cannot upgrade directly from a SQL Server 2005 failover clustering instance to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] or upgrade a failover cluster instance running on [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
+-   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Verify that you can upgrade to your desired version of [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] from your version of the Windows operating system and version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For example, you cannot upgrade directly from a SQL Server 2005 failover clustering instance to [!INCLUDE [sssql14-md](../../../includes/sssql14-md.md)] or upgrade a failover cluster instance running on [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
   
 -   [Choose a Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): Select the appropriate upgrade method and steps based on your review of supported version and edition upgrades and also based on other components installed in your environment to upgrade components in the correct order.  
   
 -   [Plan and Test the Database Engine Upgrade Plan](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Review the release notes and known upgrade issues, the pre-upgrade checklist, and develop and test the upgrade plan.  
   
--   [Hardware and Software Requirements for Installing SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Review the software requirements for installing [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. If additional software is required, install it on each node before you begin the upgrade process to minimize any downtime.  
+-   [Hardware and Software Requirements for Installing SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Review the software requirements for installing [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. If additional software is required, install it on each node before you begin the upgrade process to minimize any downtime.  
   
 ## Perform a rolling upgrade or update  
- To upgrade a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup to upgrade each node participating in the failover cluster instance, one at a time, starting with the passive nodes. As you upgrade each node, it is left out of the possible owners of the failover cluster instance. If there is an unexpected failover, the upgraded nodes do not participate in the failover until Windows Server failover cluster role ownership is moved to an upgraded node by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup.  
+ To upgrade a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance, use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup to upgrade each node participating in the failover cluster instance, one at a time, starting with the passive nodes. As you upgrade each node, it is left out of the possible owners of the failover cluster instance. If there is an unexpected failover, the upgraded nodes do not participate in the failover until Windows Server failover cluster role ownership is moved to an upgraded node by setup.  
   
  By default, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup automatically determines when to fail over to an upgraded node. This depends on the total number of nodes in the failover cluster instance and the number of nodes that have already been upgraded. When half of the nodes or more have already been upgraded, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup causes a failover to an upgraded node when you perform upgrade on the next node. Upon failover to an upgraded node, the cluster group is moved to an upgraded node. All the upgraded nodes are put in the possible owners list and all the nodes that are not yet upgraded are removed from the possible owners list. As you upgrade each remaining node, it is added to the possible owners of the failover cluster instance.  
   
@@ -76,7 +76,7 @@ ms.author: mathoma
   
 6.  On the License Terms page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. **Click Next to continue**. To end Setup, click **Cancel**.  
   
-7.  On the Select Instance page, specify the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance to upgrade to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. **Click Next to continue**.  
+7.  On the Select Instance page, specify the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance to upgrade. **Click Next to continue**.  
   
 8.  On the Feature Selection page, the features to upgrade are preselected. A description for each component group appears in the right pane after you select the feature name. Be aware that you cannot change the features to be upgraded, and you cannot add features during the upgrade operation. To add features to an upgraded instance of [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] after the upgrade operation is complete, see [Add Features to an Instance of SQL Server 2016 &#40;Setup&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md).  
   
@@ -122,14 +122,14 @@ Follow these steps to upgrade your Always On failover cluster instance in a mult
   
 ### To upgrade a multi-subnet failover cluster instance currently using Stretch VLAN to use multi-subnet.  
   
-1.  Follow the steps above to upgrade your cluster to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+1.  Follow the steps above to upgrade your cluster.  
   
 2.  Change the network settings to move the remote node to a different subnet.  
   
 3.  Using Failover Cluster Manager or PowerShell, add a new IP address for the new subnet to set the IP address resource dependency to OR.  
   
 ## Next Steps  
- After you upgrade to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], complete the following tasks:  
+ After you upgrade, complete the following tasks:  
   
 -   [Complete the Database Engine Upgrade](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   

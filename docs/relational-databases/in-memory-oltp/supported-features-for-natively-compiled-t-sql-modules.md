@@ -9,9 +9,9 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-author: MightyPen
-ms.author: genemi
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: rothja
+ms.author: jroth
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Supported Features for Natively Compiled T-SQL Modules
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,28 +28,28 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 The following query constructs are supported:  
 
 CASE expression: CASE can be used in any statement or clause that allows a valid expression.
-   - **Applies to:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-    Beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], CASE statements are now supported for natively compiled T-SQL modules.
+   - **Applies to:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)].  
+    Beginning with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], CASE statements are now supported for natively compiled T-SQL modules.
 
 SELECT clause:  
 
 -   Columns and  name aliases (using either AS or = syntax).  
 
 -   Scalar subqueries
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], scalar subqueries are now supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], scalar subqueries are now supported in natively compiled modules.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the DISTINCT operator is supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], the DISTINCT operator is supported in natively compiled modules.
 
         - DISTINCT aggregates are not supported.  
 
 -   UNION and UNION ALL
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], UNION and UNION ALL operators are now supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], UNION and UNION ALL operators are now supported in natively compiled modules.
 
 -   Variable assignments  
 
@@ -60,12 +60,12 @@ FROM clause:
 -   FROM \<natively compiled inline TVF>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN and INNER JOIN.
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], JOINS are now supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], JOINS are now supported in natively compiled modules.
 
 -   Subqueries `[AS] table_alias`. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], Subqueries are now supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], Subqueries are now supported in natively compiled modules.
 
 WHERE clause:  
 
@@ -73,8 +73,8 @@ WHERE clause:
 
 -   AND, BETWEEN  
 -   OR, NOT, IN, EXISTS
-    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], OR/NOT/IN/EXISTS operators are now supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)], OR/NOT/IN/EXISTS operators are now supported in natively compiled modules.
 
 
 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) clause:
@@ -170,8 +170,8 @@ The following DML statements are supported.
 -   Bitwise operators ~, &, |, and ^  
 
 -   APPLY operator
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the APPLY operator is supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].  
+      Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the APPLY operator is supported in natively compiled modules.
 
 ##  <a name="bfncsp"></a> Built-in Functions in Natively Compiled Modules  
  The following functions are supported in constraints on memory-optimized tables and in natively compiled T-SQL modules.  
@@ -181,8 +181,8 @@ The following DML statements are supported.
 -   Date functions: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME, and YEAR.  
 
 -   String functions: LEN, LTRIM, RTRIM, and SUBSTRING.  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the following built-in functions are also supported: TRIM, TRANSLATE, and CONCAT_WS.  
+    - **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].  
+      Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the following built-in functions are also supported: TRIM, TRANSLATE, and CONCAT_WS.  
 
 -   Identity functions: SCOPE_IDENTITY  
 
@@ -191,8 +191,8 @@ The following DML statements are supported.
 -   Uniqueidentifier functions: NEWID and NEWSEQUENTIALID  
 
 -   JSON functions  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the JSON functions are supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].  
+      Beginning with [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], the JSON functions are supported in natively compiled modules.
 
 -   Error functions: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, and ERROR_STATE  
 

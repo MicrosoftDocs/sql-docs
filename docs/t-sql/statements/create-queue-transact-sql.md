@@ -2,12 +2,12 @@
 description: "CREATE QUEUE (Transact-SQL)"
 title: "CREATE QUEUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/25/2019"
+ms.date: "03/06/2021"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "QUEUE_TSQL"
   - "CREATE QUEUE"
@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "activation stored procedures [Service Broker]"
   - "queues [Service Broker], creating"
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # CREATE QUEUE (Transact-SQL)
 
@@ -159,7 +159,7 @@ The following table lists the columns in a queue.
 |message_type_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object identifier of the message type that describes the message.|
 |validation|**nchar(2)**|Validation used for the message.<br /><br /> E=Empty<br /><br /> N=None<br /><br /> X=XML|
 |message_body|**varbinary(max)**|Content of the message.|
-|message_id|**uniqueidentifier**|Unique identifier for the message.|
+|message_enqueue_time|**datetime**|Time when the message was enqueued.|
 
 ## Permissions
 

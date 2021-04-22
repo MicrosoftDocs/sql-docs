@@ -20,10 +20,10 @@ helpviewer_keywords:
   - "executing updategrams [SQLXML]"
   - "implicit schema mapping"
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Updategrams (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -105,7 +105,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  With default mapping (when the mapping schema is not specified in the updategram), the updategram elements map to tables and the  child elements (in the case of element-centric mapping) and the attributes (in the case of attribute-centric mapping) map to columns.  
   
 ### Element-centric Mapping  
- In an element-centric updategram, an element contains child elements that denote the properties of the element. As an example, refer to the following updategram. The **\<Person.Contact>** element contains the **\<FirstName>**and **\<LastName>** child elements. These child elements are properties of the **\<Person.Contact>** element.  
+ In an element-centric updategram, an element contains child elements that denote the properties of the element. As an example, refer to the following updategram. The **\<Person.Contact>** element contains the **\<FirstName>** and **\<LastName>** child elements. These child elements are properties of the **\<Person.Contact>** element.  
   
  Because this updategram does not specify a mapping schema, the updategram uses implicit mapping, where the **\<Person.Contact>** element maps to the Person.Contact table and its child elements map to the FirstName and LastName columns.  
   

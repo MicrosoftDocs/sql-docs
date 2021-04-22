@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "%"
   - "%_TSQL"
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "wildcard characters [SQL Server]"
   - "characters [SQL Server], wildcard"
 ms.assetid: d4cbc1a9-37e1-4101-97fb-e6ac30c1223e
-author: rothja
-ms.author: jroth
+author: cawrites
+ms.author: chadam
 ---
 # Percent character (Wildcard - Character(s) to Match) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

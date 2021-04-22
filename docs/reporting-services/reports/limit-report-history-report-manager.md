@@ -23,7 +23,7 @@ ms.author: maggies
   
  Report history is stored in the report server database. If report snapshots contain a large amount of data, you might consider limiting report history to minimize the effect of snapshot retention on database size.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ## To configure report history for a report server  
   
@@ -49,7 +49,7 @@ ms.author: maggies
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 ## To configure report history for a report server  
   

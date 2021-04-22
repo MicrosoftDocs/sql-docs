@@ -1,13 +1,10 @@
 ---
+title: DATEDIFF_BIG (Transact-SQL)
 description: "DATEDIFF_BIG (Transact-SQL)"
-title: "DATEDIFF_BIG (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: reference
 f1_keywords: 
   - "DATEDIFF_BIG"
   - "DATEDIFF_BIG_TSQL"
@@ -19,9 +16,13 @@ helpviewer_keywords:
   - "functions [SQL Server], date and time"
   - "time [SQL Server], functions"
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "01/12/2021"
 ---
+
 # DATEDIFF_BIG (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -84,13 +85,13 @@ See *startdate*.
 Signed **bigint**  
   
 ## Return Value  
-Returns the **bigint** difference between the *startdate* and *enddate*, expressed in the coundary set by *datepart*.
+Returns the **bigint** difference between the *startdate* and *enddate*, expressed in the boundary set by *datepart*.
   
-For a return value out of range for **bigint** (-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807), `DATEDIFF_BIG` returns an error. Unlike `DATEDIFF` which returns an **int** and therefore may overflow with a precision of **minute** or higher, `DATEDIFF_BIG` can only overflow if using **nanosecond** precision where the difference between *enddate* and *startdate* is more than 292 years, 3 months, 10 days, 23 hours, 47 minutes and 16.8547758 seconds.
+For a return value out of range for **bigint** (-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807), `DATEDIFF_BIG` returns an error. Unlike  , which returns an **int** and therefore may overflow a **minute** or higher, `DATEDIFF_BIG` can only overflow if using **nanosecond** precision where the difference between *enddate* and *startdate* is more than 292 years, 3 months, 10 days, 23 hours, 47 minutes, and 16.8547758 seconds.
   
-If *startdate* and *enddate* are both assigned only a time value, and the *datepart* is not a time *datepart*, `DATEDIFF_BIG` returns 0.
+If *startdate* and *enddate* are both assigned only a time value, and the *datepart* isn't a time *datepart*, `DATEDIFF_BIG` returns 0.
   
-`DATEDIFF_BIG` does not use a time zone offset component of *startdate* or *enddate* to calculate the return value.
+`DATEDIFF_BIG` does use a time zone offset component of *startdate* or *enddate* to calculate the return value.
   
 For a **smalldatetime** value used for *startdate* or *enddate*, `DATEDIFF_BIG` always sets seconds and milliseconds to 0 in the return value because [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) only has accuracy to the minute.
   
@@ -117,11 +118,11 @@ SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
 ## Remarks  
 Use `DATEDIFF_BIG` in the `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` and `ORDER BY` clauses.
   
-`DATEDIFF_BIG` implicitly casts string literals as a **datetime2** type. This means that `DATEDIFF_BIG` does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
+`DATEDIFF_BIG` implicitly casts string literals as a **datetime2** type. This means that `DATEDIFF_BIG` doesn't support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
   
 Specifying `SET DATEFIRST` has no effect on `DATEDIFF_BIG`. `DATEDIFF_BIG` always uses Sunday as the first day of the week to ensure the function operates in a deterministic way.
 
-`DATEDIFF_BIG` may overflow with a precision of **nanosecond** if the difference between *enddate* and *startdate* returns a value that is out of range for **bigint**.
+`DATEDIFF_BIG` may overflow with a **nanosecond** if the difference between *enddate* and *startdate* returns a value that is out of range for **bigint**.
   
 ## Examples 
   

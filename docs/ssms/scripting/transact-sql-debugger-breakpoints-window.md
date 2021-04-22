@@ -13,7 +13,7 @@ ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-2016"
 ---
 
 # Transact-SQL Debugger - Breakpoints Window

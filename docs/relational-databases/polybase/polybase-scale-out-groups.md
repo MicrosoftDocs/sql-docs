@@ -15,7 +15,7 @@ ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
-monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
+monikerRange: ">= sql-server-2016"
 ---
 # PolyBase scale-out groups
 
@@ -29,11 +29,11 @@ See [Get started with PolyBase](./polybase-guide.md) and [PolyBase Guide](../../
   
 ## Head node  
 
-The head node contains the SQL Server instance to which PolyBase queries are submitted. Each PolyBase group can have only one head node. A head node is a logical group of SQL Database Engine, PolyBase Engine and PolyBase Data Movement Service on the SQL Server instance.
+The head node contains the SQL Server instance to which PolyBase queries are submitted. Each PolyBase group can have only one head node. A head node is a logical group of SQL Server Database Engine, PolyBase Engine, and PolyBase Data Movement Service on the SQL Server instance. With SQL Server 2017 and SQL Server 2016, the head node must be an Enterprise Edition. Beginning with SQL Server 2019 the PolyBase head node can be either an Enterprise or Standard edition.
   
-## Compute node  
+## Compute node
 
-A compute node contains the SQL Server instance that assists with scale-out query processing on external data. A compute node is a logical group of SQL Server and the PolyBase data movement service on the SQL Server instance. A PolyBase group can have multiple compute nodes. The head node and the compute nodes must all run the same version of SQL Server.
+A compute node contains the SQL Server instance that assists with scale-out query processing on external data. A compute node is a logical group of SQL Server and the PolyBase data movement service on the SQL Server instance. A PolyBase group can have multiple compute nodes. The head node and the compute nodes must all run the same version of SQL Server. The initial release of SQL Server 2016 allowed the compute nodes to be either an Enterprise or Standard edition. Beginning with SQL Server 2016 SP1, all editions of SQL Server can be a compute node.
 
 ## Scale-out Reads
 

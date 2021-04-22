@@ -39,7 +39,7 @@ In this lesson, you learn how to start the **dta** command prompt utility and ho
 ## Requirements  
 This tutorial is intended for database administrators who are not familiar with the Database Engine Tuning Advisor GUI or the **dta** command prompt utility, but who are experienced with database concepts and structures, such as indexes and indexed views.  
   
-You must install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (or a later version) with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. To enhance security, the sample databases are not installed by default. To install the sample databases, see [Installing SQL Server Samples and Sample Databases](https://sqlserversamples.codeplex.com).  
+You must install [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. To enhance security, the sample databases are not installed by default. To install the sample databases, see [Installing SQL Server Samples and Sample Databases](https://sqlserversamples.codeplex.com).  
   
 ## After You Finish This Tutorial  
 After you finish the lessons in this tutorial, refer to the following topics for more information about Database Engine Tuning Advisor:  

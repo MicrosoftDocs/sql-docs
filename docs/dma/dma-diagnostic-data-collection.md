@@ -16,7 +16,7 @@ ms.author: "aciortea"
 
 Database Migration Assistant contains Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft.
 
-This article teaches you to enable or disable DMA diagnostic data collection using the GUI or the command line tool.
+This article teaches you to enable or disable DMA diagnostic data collection when using the GUI or the command line tool.
 
 ## Collected data
 

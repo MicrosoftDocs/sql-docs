@@ -20,7 +20,7 @@ ms.author: chadam
   This topic explains how to restore the **master** database from a full database backup.
 
 > [!WARNING]
-> In the event of disaster recovery, the instance where the master database is being restored to should be as close to an exact match to the original as possible.  At minimum, this recovery instance should be the same version, edition, and patch level, as well as have the same selection of features, and the same external configuration (hostname, cluster membership, etc) as the original instance. Doing otherwise may result in undefined SQL Server instance behavior with inconsistent feature support, and is not guaranteed to be viable. 
+> In the event of disaster recovery, the instance where the master database is being restored to should be as close to an exact match to the original as possible. At a minimum, this recovery instance should be the same version, edition, and patch level, and it should have the same selection of features and the same external configuration (hostname, cluster membership, and so on) as the original instance. Doing otherwise might result in undefined SQL Server instance behavior, with inconsistent feature support, and is not guaranteed to be viable. 
   
 ### To restore the master database  
   

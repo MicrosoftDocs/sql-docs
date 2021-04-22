@@ -193,6 +193,31 @@ The use of AS in this statement does not imply the ability to impersonate anothe
 |User|[REVOKE Database Principal Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
 |View|[REVOKE Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |XML Schema Collection|[REVOKE XML Schema Collection Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
+
+  
+## Examples  
+  
+### A. Grant and revoke
+ **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+  
+ The following example creates a demo stored procedure and a contained database user on a user database, then grants execute permissions on the user and finally remove (REVOKE) that permission from the user.
+  
+```sql  
+CREATE PROCEDURE DemoProc
+AS
+select 1 a
+GO
+
+CREATE USER joe without login
+GO
+
+GRANT EXECUTE ON DemoProc to joe 
+GO
+
+REVOKE EXECUTE ON DemoProc to joe 
+GO
+ 
+```  
   
 ## See Also  
  [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   

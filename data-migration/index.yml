@@ -134,7 +134,7 @@ conceptualContent:
           url: https://azure.microsoft.com/pricing/hybrid-benefit/
           itemType: reference
         - text: Browse Azure Architecture
-          url: https://docs.microsoft.com/azure/architecture/browse/?azure_categories=migration
+          url: /azure/architecture/browse/?azure_categories=migration
           itemType: reference
         - text: Microsoft cloud Adoption Framework for Azure
           url: https://azure.microsoft.com/cloud-adoption-framework/#cloud-adoption-journey

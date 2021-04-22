@@ -200,7 +200,8 @@ The use of AS in this statement does not imply the ability to impersonate anothe
 ### A. Grant and revoke
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- The following example creates a demo stored procedure and a contained database user on a user database, then grants execute permissions on the user and finally remove (REVOKE) that permission from the user.
+The following example creates a stored procedure `DemoProc`, and a contained database user on a user database, grants execute permissions on the user, and removes (`REVOKE`) that permission from the user.
+
   
 ```sql  
 CREATE PROCEDURE DemoProc

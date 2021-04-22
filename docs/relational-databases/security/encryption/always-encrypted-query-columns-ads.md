@@ -37,7 +37,7 @@ This section describes how to retrieve data stored in encrypted columns as ciphe
 ### Prerequisites
 - Azure Data Studio version 17.1 or later.
 - You need to have access to the column master key(s) and the metadata about the key(s) protecting the columns that you are running your query against. For details, see [Permissions for querying encrypted columns](#permissions-for-querying-encrypted-columns) below.
-- Your column master key(s) must be stored in a key vault in Azure Key Vault or Windows Certificate Store. Azure Data Studio does not support other key stores and it does not support column master keys stored in [managed HSMs](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview) in Azure Key Vault.
+- Your column master key(s) must be stored in a key vault in Azure Key Vault or Windows Certificate Store. Azure Data Studio does not support other key stores and it does not support column master keys stored in [managed HSMs](/azure/key-vault/managed-hsm/overview) in Azure Key Vault.
 
 ### Steps
 1.	Enable Always Encrypted for the database connection for the query window, from which you will run a `SELECT` query retrieving and decrypting your data. This will instruct the [Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) (used by Azure Data Studio) to decrypt the encrypted columns in the query result set. See [Enabling and disabling Always Encrypted for a database connection](#enabling-and-disabling-always-encrypted-for-a-database-connection) below.
@@ -54,7 +54,7 @@ This section describes how to run a query that sends values that target an encry
 ### Prerequisites
 - Azure Data Studio version 18.1 or later.
 - You need to have access to the column master key(s) and the metadata about the key(s) protecting the columns you are running your query against. For details, see [Permissions for querying encrypted columns](#permissions-for-querying-encrypted-columns) below.
-- Your column master key(s) must be stored in a key vault in Azure Key Vault or Windows Certificate Store. Azure Data Studio does not support other key stores and it does not support column master keys stored in [managed HSMs](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview) in Azure Key Vault.
+- Your column master key(s) must be stored in a key vault in Azure Key Vault or Windows Certificate Store. Azure Data Studio does not support other key stores and it does not support column master keys stored in [managed HSMs](/azure/key-vault/managed-hsm/overview) in Azure Key Vault.
 
 ### Steps
 1. Enable Always Encrypted for the database connection for the query window, from which you will run a `SELECT` query retrieving and decrypting your data. This will instruct the [Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) (used by Azure Data Studio) to encrypt query parameters targeting encrypted columns and decrypt the results retrieved from encrypted columns. See [Enabling and disabling Always Encrypted for a database connection](#enabling-and-disabling-always-encrypted-for-a-database-connection) below. 

@@ -51,7 +51,7 @@ Watch this short 10-minute video for an introduction to the SQL Database Project
 ## .NET Core SDK
 The .NET Core SDK is required for project build functionality and you will be prompted to install the .NET Core SDK if it cannot be detected by the extension.  The .NET Core SDK (v3.1 or higher) can be downloaded and installed from [https://dotnet.microsoft.com/download/dotnet-core/3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1).
 
-Previous installations of the .NET Core SDK may be below the minimum required version and are unsupported for use with the SQL Database Projects extension.  If you would like to [check currently installed versions](https://docs.microsoft.com/dotnet/core/install/how-to-detect-installed-versions) of the dotnet SDK, open a terminal and run the following command.
+Previous installations of the .NET Core SDK may be below the minimum required version and are unsupported for use with the SQL Database Projects extension.  If you would like to [check currently installed versions](/dotnet/core/install/how-to-detect-installed-versions) of the dotnet SDK, open a terminal and run the following command.
 
 ```dotnetcli
 dotnet --list-sdks

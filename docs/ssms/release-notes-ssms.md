@@ -102,7 +102,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 | New item | Details |
 |----------|---------|
-| Always Encrypted | Updated the New Column Master Key and New Column Encryption Key dialogs to support provisioning and managing column master keys stored in [Azure Key Vault Managed HSMs](https://docs.microsoft.com/azure/key-vault/managed-hsm/overview). |
+| Always Encrypted | Updated the New Column Master Key and New Column Encryption Key dialogs to support provisioning and managing column master keys stored in [Azure Key Vault Managed HSMs](/azure/key-vault/managed-hsm/overview). |
 | Always Encrypted | Enabled specifying a key length when generating column master keys in Azure Key Vault. |
 | Always Encrypted | Improved diagnostics for provisioning and managing column master keys stored in Azure Key Vault. |
 | Azure Data Studio installation integration | Installation of SSMS installs Azure Data Studio 1.27.0. |

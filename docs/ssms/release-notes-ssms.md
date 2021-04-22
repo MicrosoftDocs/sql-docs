@@ -128,7 +128,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | Azure SQL DB | Fixed an issue that was causing the "Create firewall rule" to fail when the server name had invalid characters (such as capital letters) in the name. |
 | Import/Export Data-Tier Application | Fixed in issue where importing a bacpac into SQL Express may fail. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/42347446). |
 | General SSMS | Fixed a crash (in the Visual Studio Shell) that was causing SSMS to crash when re-docking tabs. See [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/42651556-ssms-18-8-crashes-when-re-docking-tabs) |
-| General SSMS | Fixed an issue in "Browse folder" dialog that was causing SSMS to hang. |
+| General SSMS | Fixed an issue in "Browse folder" dialog that was causing SSMS to stop responding. |
 | General SSMS | Fixed an issue where Object Explorer can lock up the UI thread, and ultimately cause the UI to freeze (and the user to have to hard close the SSMS. |
 | General SSMS | Addressed issue where there is no option available in SSMS to rebuild a clustered columnstore index online. SSMS offers an online ON checkbox on the UI, where we can select if the particular index has to be built online.  |
 | General SSMS | Fixed the logic to page the user to a proper page in most error dialogs originating from exception at the SQLClient (driver) level. Previously, for almost all the error/exceptions, the help button was always tasking the user to a non-existing page. |

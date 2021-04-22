@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Best Practices for Replication Administration
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  After you have configured replication, it is important to understand how to administer a replication topology. This topic provides basic best practice guidance in a number of areas with links to more information for each area. In addition to following the best practice guidance presented in this topic, consider reading through the frequently asked questions topic to acquaint yourself with common questions and issues: [Frequently Asked Questions for Replication Administrators](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
+  After you have configured replication, it is important to understand how to administer a replication topology. This topic provides basic best practice guidance in a number of areas with links to more information for each area. In addition to following the best practice guidance presented in this topic, consider reading through the frequently asked questions topic to acquaint yourself with common questions and issues: [Frequently Asked Questions for Replication Administrators](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.yml).  
   
  It is useful to divide the best practice guidance into two areas:  
   
@@ -145,6 +145,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
  For more information, see [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## See Also  
- [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
+ [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.yml)  
   
   

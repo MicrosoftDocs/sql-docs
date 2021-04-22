@@ -1,8 +1,8 @@
 ---
-title: "Using XA with Microsoft ODBC Driver"
-description: "The Microsoft ODBC Driver for SQL Server provides support for XA transactions with the Distributed Transaction Coordinator (DTC) on Windows, Linux, and macOS."
+title: Using XA with Microsoft ODBC Driver
+description: The Microsoft ODBC Driver for SQL Server provides support for XA transactions with the Distributed Transaction Coordinator (DTC) on Windows, Linux, and macOS.
 ms.custom: ""
-ms.date: "05/06/2020"
+ms.date: 04/20/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-daenge
@@ -15,21 +15,19 @@ ms.author: "v-jizho2"
 manager: kenvh
 ---
 # Using XA Transactions
-[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
+[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## Overview
 
-The Microsoft ODBC Driver for SQL Server starting from version 17.3 provides support for XA transactions with the Distributed Transaction Coordinator (DTC) on Windows, Linux, and macOS. The XA implementation on the driver side enables the client application to send serial operations (such as start, commit, rollback a transaction branch, etc.) to the Transaction Manager (TM). And then the TM will communicate with the Resource Manager (RM) according to these operations. For more information about the XA Specification and the Microsoft implementation for DTC (MS DTC), see [How It Works: SQL Server DTC(MSDTC and XA Transactions)](/archive/blogs/bobsql/how-it-works-sql-server-dtc-msdtc-and-xa-transactions).
-
-
+The Microsoft ODBC Driver for SQL Server, starting from version 17.3, provides support for XA transactions with the Distributed Transaction Coordinator (DTC) on Windows, Linux, and macOS. The XA implementation on the driver side enables the client application to send serial operations (such as start, commit, rollback a transaction branch, and so on) to the Transaction Manager (TM). And then the TM will communicate with the Resource Manager (RM) according to these operations. For more information about the XA Specification and the Microsoft implementation for DTC (MS DTC), see [How It Works: SQL Server DTC(MSDTC and XA Transactions)](/archive/blogs/bobsql/how-it-works-sql-server-dtc-msdtc-and-xa-transactions).
 
 ## The XACALLPARAM Structure
 
-The `XACALLPARAM` structure defines the information required for an XA transaction manager request. It is defined as follows:
+The `XACALLPARAM` structure defines the information required for an XA transaction manager request. It's defined as follows:
 
-```
-typedef struct XACallParam {    
+```cpp
+typedef struct XACallParam {
     unsigned int sizeParam;
     int          operation;
     XID          xid;
@@ -40,40 +38,38 @@ typedef struct XACallParam {
 } XACALLPARAM, *PXACALLPARAM; 
 ```
 
-*sizeParam*  
-Size of the `XACALLPARAM` structure. This excludes the size of the data following `XACALLPARAM`.
+*`sizeParam`*  
+Size of the `XACALLPARAM` structure. This size excludes the size of the data following `XACALLPARAM`.
 
-*operation*  
+*`operation`*  
 The XA operation to be passed to the TM. Possible operations are defined in [xadefs.h](use-xa-with-dtc.md#xadefsh).
 
-*xid*  
+*`xid`*  
 Transaction branch identifier.
 
-*flags*  
+*`flags`*  
 Flags associated with the TM request. Possible values are defined in [xadefs.h](use-xa-with-dtc.md#xadefsh).
 
-*status*  
+*`status`*  
 Return status from the TM. See [xadefs.h](use-xa-with-dtc.md#xadefsh) header for possible return statuses.
 
-*sizeData*  
-Size of the data buffer following `XACALLPARAM`. 
+*`sizeData`*  
+Size of the data buffer following `XACALLPARAM`.
 
-*sizeReturned*  
+*`sizeReturned`*  
 Size of data returned.
 
-In order to make a TM request, the [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) function needs to be called with attribute _SQL_COPT_SS_ENLIST_IN_XA_ and a pointer to the `XACALLPARAM` object.  
+To make a TM request, the [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) function needs to be called with attribute _SQL_COPT_SS_ENLIST_IN_XA_ and a pointer to the `XACALLPARAM` object.
 
-```
+```cpp
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
 ```
 
+## Code Sample
 
-## Code Sample 
+The following example shows how to communicate with the TM for XA transactions and execute different operations from a client application. If the test is run against Microsoft SQL Server, the MS DTC needs to be properly configured to enable XA transactions. The XA definitions can be found in the [xadefs.h](#xadefsh) header file.
 
-The following example demonstrates how to communicate with the TM for XA transactions and execute different operations from a client application. If the test is run against Microsoft SQL Server, the MS DTC needs to be properly configured to enable XA transactions. The XA definitions can be found in the [xadefs.h](#xadefsh) header file. 
-
-```
-
+```cpp
 // XA-DTC.cpp : Defines the entry point for the console application.
 //
 
@@ -89,7 +85,6 @@ The following example demonstrates how to communicate with the TM for XA transac
 #include <memory>
 #include <thread>
 #include <chrono>
-
 
 enum class TestType { Commit, Commit1Phase, Rollback, Recover};
 
@@ -136,7 +131,7 @@ bool TestXaRunner(HDBC hdbc, const char* connString, TestType testType, int time
     bool result = false;
 
     if (SQL_SUCCEEDED(rc))
-    {        
+    {
         std::string tableName;
         auto testRunner = std::make_shared<XaTestRunner>(hdbc);
         testRunner->GetUniqueName(tableName);
@@ -148,7 +143,7 @@ bool TestXaRunner(HDBC hdbc, const char* connString, TestType testType, int time
         XaTestRunner::GetUniqueXid(xid);
 
         do
-        {            
+        {
             if (!(isTableCreated = testRunner->CreateTable(tableName)))
             {
                 std::cout << "TestXaRunner::Failed to create table " << tableName.c_str() << std::endl;
@@ -274,8 +269,8 @@ bool TestRollback(HDBC hdbc, const char* connectionString)
 bool TestSetTimeout(HDBC hdbc, const char* connectionString)
 {
     bool result = false;
-    result = TestXaRunner(hdbc, connectionString, TestType::Commit, 2); 
-    result = TestXaRunner(hdbc, connectionString, TestType::Rollback, 5); 
+    result = TestXaRunner(hdbc, connectionString, TestType::Commit, 2);
+    result = TestXaRunner(hdbc, connectionString, TestType::Rollback, 5);
 
     return result;
 }
@@ -301,7 +296,7 @@ bool TestRecover(HDBC hdbc, const char* connectionString)
 
     for (auto tr = 0; tr < transactionCount; tr++)
     {
-        std::string tbName;        
+        std::string tbName;
         testRunner->GetUniqueName(tbName);
         bool isTableCreated = false;
         RETCODE xaStatus = SQL_ERROR;
@@ -326,12 +321,12 @@ bool TestRecover(HDBC hdbc, const char* connectionString)
                 break;
             }
             
-            rc = testRunner->ExecuteInsertSequence(tableNames[tr], ROWS_TO_TEST);                
+            rc = testRunner->ExecuteInsertSequence(tableNames[tr], ROWS_TO_TEST);
 
             rc = testRunner->End(xid, TMSUCCESS, xaStatus);
             if (xaStatus < 0)
             {
-                std::cout << "TestXaRunner::XA End failed status=" << xaStatus << std::endl;                   
+                std::cout << "TestXaRunner::XA End failed status=" << xaStatus << std::endl;
                 break;
             }
 
@@ -353,7 +348,7 @@ bool TestRecover(HDBC hdbc, const char* connectionString)
     std::cout << "TestRecover:: After Recover buffSize=" << buffSize << " xaStatus=" << xaStatus << std::endl;
     if (SQL_SUCCEEDED(xaStatus))
     {
-        auto numRecoveredTransactions = buffSize / sizeof(XID);        
+        auto numRecoveredTransactions = buffSize / sizeof(XID);
         std::cout << "TestRecover:: After Recover numRecoveredTransactions=" << numRecoveredTransactions << std::endl;
         result = numCompletedTransactions == numRecoveredTransactions;
         XID* pXid = (XID*)&buff[0];
@@ -397,7 +392,6 @@ int main(int argc, char** argv)
         std::cout << "Connection string: " << pConnStr << std::endl;
     }
 
-
     SQLHENV henv = NULL;
     SQLHDBC hdbc = NULL;
 
@@ -424,13 +418,13 @@ int main(int argc, char** argv)
 
     return 0;
 }
-
 ```
 
 The `XATestRunner` class implements the possible XA calls when communicating with the server.
 
 ## XaTestRunner.h
-```
+
+```cpp
 #pragma once
 #include "xadefs.h"
 #include "sqlwindef.h"
@@ -440,16 +434,15 @@ The `XATestRunner` class implements the possible XA calls when communicating wit
 #include <sqlext.h>
 #include <random>
 
-
 struct RandomProvider
 {
-    std::random_device rd;    
+    std::random_device rd;
 };
 
-class XidMgr 
+class XidMgr
 {
 public:
-    static void GetUniqueXid(XID& xid);    
+    static void GetUniqueXid(XID& xid);
     static void GetUniqueXid(XID& xid, int formatId, unsigned char* globalId = nullptr, unsigned int sizeGlobalId = 0);
     static int  GetRandomNumber(int low = 0, int high = 0xffffffff);
     static void GetRandomBuffer(unsigned char* buffer, unsigned int sizeBuffer);
@@ -504,12 +497,11 @@ private:
     RETCODE IssueXaCall(const XID* xid, int operation, const int flags, unsigned char* buffer, unsigned int& sizeBuffer, RETCODE& xaStatus);
 
 };
-
-
 ```
 
 ## XaTestRunner.cpp
-```
+
+```cpp
 #include "XaTestRunner.h"
 #include <chrono>
 #include <thread>
@@ -535,7 +527,7 @@ void XidMgr::GetRandomBuffer(unsigned char* buffer, unsigned int sizeBuffer)
     for (unsigned int i = 0; i < sizeBuffer; i++)
     {
         buffer[i] = dis(gen);
-    }    
+    }
 }
 
 XaTestRunner::XaTestRunner(HDBC dbc)
@@ -622,7 +614,7 @@ RETCODE XaTestRunner::IssueXaCall(const XID* pXid, int operation, const int flag
     auto sizeLimit = sizeBuffer;
     unsigned int sizeParam = sizeof(XACALLPARAM) + sizeBuffer;
     std::vector<unsigned char> buff(sizeParam);
-    PXACALLPARAM param = (PXACALLPARAM)(void*)&buff[0];    
+    PXACALLPARAM param = (PXACALLPARAM)(void*)&buff[0];
     memset(param, 0, sizeof(XACALLPARAM));
     param->flags = flags;
     param->operation = operation;
@@ -688,7 +680,7 @@ RETCODE XaTestRunner::Forget(const XID& xid, RETCODE& xaStatus)
 
 RETCODE XaTestRunner::Recover(const int flags, unsigned char* buffer, unsigned int& sizeBuffer, RETCODE& xaStatus)
 {
-    return IssueXaCall(nullptr, OP_RECOVER, flags, buffer, sizeBuffer, xaStatus);    
+    return IssueXaCall(nullptr, OP_RECOVER, flags, buffer, sizeBuffer, xaStatus);
 }
 
 void XaTestRunner::SetTimeout(const int tmo)
@@ -810,12 +802,11 @@ bool XaTestRunner::ExecuteInsertSequence(const std::string& nameTable, int rows,
 }
 ```
 
-
 ## Appendix
 
 ### xadefs.h
 
-```
+```cpp
 // xadefs.h : XA specific definitions.
 //
 
@@ -904,10 +895,8 @@ struct xid_s
 #define TMJOIN          0x00200000L         /* caller is joining existing transaction branch */
 #define TMMIGRATE       0x00100000L         /* caller intends to perform migration */
 
-
 typedef struct xid_t XID;
 typedef struct xid_s XID_SHORT;
-
 
 enum class XaOperation { start, end, prepare, commit, rollback, forget, recover, getTimeout, setTimeout, prepareEx, rollbackEx, forgetEx };
 const int OP_START      =  0;
@@ -925,7 +914,6 @@ const int OP_PREPAREEX  =  9;
 const int OP_ROLLBACKEX =  10;
 const int OP_FORGETEX   =  11;
 
-
 typedef struct XACallParam {
     unsigned int sizeParam;
     int          operation;
@@ -937,5 +925,4 @@ typedef struct XACallParam {
 } XACALLPARAM, *PXACALLPARAM; 
 
 #define FLAG_TIGHTLYCOUPLED  0x8000
-
 ```

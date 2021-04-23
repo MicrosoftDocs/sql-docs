@@ -29,7 +29,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 |-----------------|---------------|-----------------|  
 |name|**sysname**|Name of the database scoped credential. Is unique in the database.|  
 |credential_id|**int**|ID of the database scoped credential. Is unique in the database.|  
+::: moniker range=">=sql-server-2017"
 |principal_id|**int**|ID of the database principal who owns the key.|  
+::: moniker-end
 |credential_identity|**nvarchar(4000)**|Name of the identity to use. This will generally be a Windows user. It does not have to be unique.|  
 |create_date|**datetime**|Time at which the database scoped credential was created.|  
 |modify_date|**datetime**|Time at which the database scoped credential was last modified.|  

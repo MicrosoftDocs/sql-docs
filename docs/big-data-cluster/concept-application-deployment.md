@@ -235,7 +235,7 @@ All of your app files are in the same directory as your `spec.yaml`. The `spec.y
 
 For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
 
-#### Limitations of the dtexec utility
+#### Limitations of the dtexec utility runtime
 
 All limitations and known issues for SQL Server Integration Services (SSIS) on Linux are applicable in [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]. You can find out more from [Limitations and known issues for SSIS on Linux](../linux/sql-server-linux-ssis-known-issues.md).
 
@@ -268,7 +268,7 @@ azdata app init --template mleap --name hello-mleap --version v1
 
 For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
 
-#### Limitations of MLeap
+#### Limitations of MLeap runtime
 
 The limitations align with the vision from the MLeap open-source project [Combust on GitHub](https://github.com/combust/mleap).
 

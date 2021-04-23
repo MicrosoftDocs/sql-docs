@@ -25,6 +25,18 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 
   Returns one row for each database scoped credential in the database.  
   
+::: moniker range="=sql-server-2016"
+|Column name|Data type|Description|  
+|-----------------|---------------|-----------------|  
+|name|**sysname**|Name of the database scoped credential. Is unique in the database.|  
+|credential_id|**int**|ID of the database scoped credential. Is unique in the database.|  
+|credential_identity|**nvarchar(4000)**|Name of the identity to use. This will generally be a Windows user. It does not have to be unique.|  
+|create_date|**datetime**|Time at which the database scoped credential was created.|  
+|modify_date|**datetime**|Time at which the database scoped credential was last modified.|  
+|target_type|**nvarchar(100)**|Type of database scoped credential. Returns `NULL` for database scoped credentials.|  
+|target_id|**int**|ID of the object that the database scoped credential is mapped to. Returns 0 for database scoped credentials|  
+::: moniker-end
+  
 ::: moniker range=">=sql-server-2017"
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -38,18 +50,6 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 |target_id|**int**|ID of the object that the database scoped credential is mapped to. Returns 0 for database scoped credentials|  
 ::: moniker-end
 
-::: moniker range="=sql-server-2016"
-|Column name|Data type|Description|  
-|-----------------|---------------|-----------------|  
-|name|**sysname**|Name of the database scoped credential. Is unique in the database.|  
-|credential_id|**int**|ID of the database scoped credential. Is unique in the database.|  
-|credential_identity|**nvarchar(4000)**|Name of the identity to use. This will generally be a Windows user. It does not have to be unique.|  
-|create_date|**datetime**|Time at which the database scoped credential was created.|  
-|modify_date|**datetime**|Time at which the database scoped credential was last modified.|  
-|target_type|**nvarchar(100)**|Type of database scoped credential. Returns `NULL` for database scoped credentials.|  
-|target_id|**int**|ID of the object that the database scoped credential is mapped to. Returns 0 for database scoped credentials|  
-::: moniker-end
-  
 ## Permissions  
  Requires `CONTROL` permission on the database.  
   

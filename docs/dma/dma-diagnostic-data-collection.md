@@ -24,7 +24,7 @@ DMA may collect standard computer information and information about use and perf
 
 ## Data Migration Assistant GUI
 
-In order to disable telemetry collection when using DMA GUI you need to comment out the `AppInsightsInstrumentionKey` line in the DmaCmd.exe.config.
+In order to disable telemetry collection when using DMA GUI you need to comment out the `AppInsightsInstrumentionKey` line in the Dma.exe.config.
 
  In order to do so follow these steps:
 

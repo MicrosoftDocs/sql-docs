@@ -200,19 +200,21 @@ The use of AS in this statement does not imply the ability to impersonate anothe
 ### A. Grant and revoke
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
-The following example creates a contained database user and a new role on a user database, add the user to the role, then grants SELECT permission on the role, and later removes (`REVOKE`) that permission from the role.
+The following example creates a schema, a contained database user and a new role on a user database, it then adds the user to the role, then grants SELECT permission on the schema to the role, and later removes (`REVOKE`) that permission to the role.
 
   
 ```sql  
+CREATE SCHEMA Sales;  
+GO
 CREATE USER Joe without login;
 GO
 CREATE ROLE Vendors;
 GO
-EXEC sp_addrolemember 'Vendors', 'Joe';
+ALTER ROLE Vendors ADD MEMBER Joe; 
 GO
-GRANT SELECT ON schema::dbo TO Vendors;
+GRANT SELECT ON SCHEMA :: Sales TO Vendors;
 GO
-REVOKE SELECT TO Vendors;
+REVOKE SELECT ON SCHEMA :: Sales TO Vendors;
 GO
  
 ```  

@@ -6087,6 +6087,8 @@ items:
   - name: Database Migration Assistant (DMA)
     href: dma/dma-overview.md
     items:
+    - name: Usage and Diagnostic Data
+      href: dma/dma-diagnostic-data-collection.md
     - name: What's new
       href: dma/dma-whatsnew.md
     - name: Assess SQL Server Integration Services (SSIS)

@@ -1,23 +1,23 @@
 ---
-title: Troubleshoot issues with Launchpad service
-description: This article provides troubleshooting guidance for many issues that prevent the SQL Server Trusted Launchpad service from starting, including configuration problems or changes, or missing network protocols.
+title: Troubleshoot Launchpad for Python and R scripts
+description: This article provides troubleshooting guidance for many issues that prevent the SQL Server Launchpad service from starting, including configuration problems or changes, or missing network protocols. The Launchpad service supports external script execution for R and Python.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/30/2019
+ms.date: 04/08/2021
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperf-fy21q3
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
-# Troubleshoot issues with Launchpad service and external script execution in SQL Server
+# Troubleshoot issues with Launchpad service executing Python and R scripts in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This article provides troubleshooting guidance for issues involving the SQL Server Trusted Launchpad service. The Launchpad service supports external script execution for R and Python. Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols.  
+This article provides troubleshooting guidance for issues involving the [SQL Server Launchpad service](../security/sql-server-launchpad-service-account.md) used with [Machine Learning Services](../sql-server-machine-learning-services.md). The Launchpad service supports external script execution for R and Python. Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols.  
 
 ## Determine whether Launchpad is running
 
-1. Open the **Services** panel (Services.msc). Or, from the command line, type **SQLServerManager13.msc** or **SQLServerManager14.msc** to open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md). From the command line, type **SQLServerManager13.msc**, **SQLServerManager14.msc**, or **SQLServerManager15.msc**.
 
 2. Make a note of the service account that Launchpad is running under. Each instance where R or Python is enabled should have its own instance of the Launchpad service. For example, the service for a named instance might be something like _MSSQLLaunchpad$InstanceName_.
 
@@ -29,7 +29,7 @@ This article provides troubleshooting guidance for issues involving the SQL Serv
 
 ## Check the Launchpad service account
 
-The default service account might be "NT Service\$SQL2016" or "NT Service\$SQL2017". The final part might vary, depending on your SQL instance name.
+The default service account might be "NT Service\$SQL2016", "NT Service\$SQL2017", or "NT Service\$SQL2019". The final part might vary, depending on your SQL instance name.
 
 The Launchpad service (Launchpad.exe) runs by using a low-privilege service account. However, to start R and Python and communicate with the database instance, the Launchpad service account requires the following user rights:
 
@@ -152,7 +152,7 @@ This error can mean one of several things:
 
 - Launchpad might have insufficient external users to run the external query. For example, if you are running more than 20 external queries concurrently, and there are only 20 default users, one or more queries might fail.
 
-- Insufficient memory is available to process the R task. This error happens most often in a default environment, where SQL Server might be using up to 70 percent of the computer's resources. For information about how to modify the server configuration to support greater use of resources by R, see [Operationalizing your R code](../r/operationalizing-your-r-code.md).
+- Insufficient memory is available to process the R task. This error happens most often in a default environment, where SQL Server might be using up to 70 percent of the computer's resources. For information about how to modify the server configuration to support greater use of resources by R, see [Operationalizing your R code](/sql/machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model).
 
 ## "Can't find package"
 
@@ -228,8 +228,6 @@ As a workaround, you can enable the 8dot3 notation on the volume where SQL Serve
 ::: moniker-end
 
 ## Next steps
-
-[Machine Learning Services troubleshooting and known issues](machine-learning-troubleshooting-overview.md)
 
 [Data collection for troubleshooting machine learning](data-collection-ml-troubleshooting-process.md)
 

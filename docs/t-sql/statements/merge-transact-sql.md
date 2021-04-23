@@ -4,7 +4,7 @@ title: "MERGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/27/2021"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
+ms.prod_service: "database-engine, sql-database, synapse-analytics"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -239,7 +239,7 @@ Specifies the graph match pattern. For more information about the arguments for 
 >|-----------------|---------------|-----------------|-----------|  
 >|**WHEN MATCHED**| All distribution types |All distribution types||  
 >|**NOT MATCHED BY TARGET**|HASH |All distribution types|Use UPDATE/DELETE FROM…JOIN to synchronize two tables. |
->|**NOT MATCHED BY SOURCE**|All distribution types|All distribution types|||  
+>|**NOT MATCHED BY SOURCE**|All distribution types|All distribution types||  
 
 >[!IMPORTANT]
 > Preview features are meant for testing only and should not be used on production instances or production data. Please also keep a copy of your test data if the data is important.

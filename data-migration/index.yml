@@ -4,199 +4,206 @@ summary: "Step-by-step guidance for modernizing your data assets. "
 brand: sql
 metadata:
    title: Azure Database Migration Guides | Microsoft Docs
-   description: "Step-by-step guidance for modernizing your data assets."
+   description: "Step-by-step guidance for modernizing your data assets by migrating to SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Database, Azure Cosmos DB, SQL Server on Azure VMs and Azure Synapse Analytics. "
    ms.topic: hub-page
+   ms.technology: migration-guide
 
-# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+# itemType: how-to-guide | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 
 conceptualContent:
   items:
     - title: "SQL Server to"
       links:
-        - text: SQL Server (newer version)
-          url: azure-data-studio/quickstart-sql-server.md
-          itemType: architecture
+        - text: "SQL Server (upgrade)"
+          url: /sql/database-engine/install-windows/upgrade-sql-server
+          itemType: how-to-guide
         - text: Azure SQL Database
-          url: ssms/tutorials/connect-query-sql-server.md
-          itemType: concept
-        - text: Azure SQL Managed Instance
-          url: t-sql/tutorial-writing-transact-sql-statements.md
-          itemType: deploy
-        - text: SQL Server on Azure VMs
-          url: linux/quickstart-install-connect-docker.md
-          itemType: download
-    - title: "Oracle to"
-      links:
-        - text: SQL Server 
-          url: azure-data-studio/quickstart-sql-server.md
-          itemType: get-started
-        - text: Azure SQL Database
-          url: ssms/tutorials/connect-query-sql-server.md
+          url: /azure/azure-sql/migration-guides/database/sql-server-to-sql-database-overview
           itemType: how-to-guide
         - text: Azure SQL Managed Instance
-          url: t-sql/tutorial-writing-transact-sql-statements.md
-          itemType: video
+          url: /azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-overview
+          itemType: how-to-guide
         - text: SQL Server on Azure VMs
-          url: linux/quickstart-install-connect-docker.md
-          itemType: whats-new
-    - title: "DB2 to"
-      links:
-        - text: SQL Server
-          url: azure-data-studio/quickstart-sql-server.md
-          itemType: quickstart
-        - text: Azure SQL Database
-          url: ssms/tutorials/connect-query-sql-server.md
-          itemType: quickstart
-        - text: Azure SQL Managed Instance
-          url: t-sql/tutorial-writing-transact-sql-statements.md
-          itemType: quickstart
-        - text: SQL Server on Azure VMs
-          url: linux/quickstart-install-connect-docker.md
-          itemType: quickstart
-    - title: "MySQL to"
-      links:
-        - text: SQL Server
-          url: azure-data-studio/quickstart-sql-server.md
-          itemType: quickstart
-        - text: Azure SQL Database
-          url: ssms/tutorials/connect-query-sql-server.md
-          itemType: quickstart
-        - text: Azure SQL Managed Instance
-          url: t-sql/tutorial-writing-transact-sql-statements.md
-          itemType: quickstart
-        - text: SQL Server on Azure VMs
-          url: linux/quickstart-install-connect-docker.md
-          itemType: quickstart
-    - title: "PostgreSQL to"
+          url: /azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide
+          itemType: how-to-guide
+        - text: Azure Synapse Analytics
+          url: /azure/synapse-analytics/migration-guides/migrate-to-synapse-analytics-guide
+          itemType: how-to-guide
+    - title: "Oracle to"
       links:
         - text: Azure Database for PostgreSQL
-          url: azure-data-studio/quickstart-sql-server.md
-          itemType: quickstart
-    - title: "MongoDB to"
+          url: /azure/postgresql/howto-migrate-from-oracle
+          itemType: how-to-guide
+        - text: SQL Server
+          url: /sql/sql-server/migrate/guides/oracle-to-sql-server
+          itemType: how-to-guide
+        - text: Azure SQL Database
+          url: /azure/azure-sql/migration-guides/database/oracle-to-sql-database-guide
+          itemType: how-to-guide
+        - text: Azure SQL Managed Instance
+          url: /azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide 
+          itemType: how-to-guide
+        - text: SQL Server on Azure VMs
+          url: /azure/azure-sql/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide
+          itemType: how-to-guide
+        - text: Azure Synapse Analytics
+          url: /azure/synapse-analytics/migration-guides/migrate-to-synapse-analytics-guide
+          itemType: how-to-guide
+    - title: "Db2 to"
       links:
-        - text: Azure CosmosDB
-          url: azure-data-studio/quickstart-sql-server.md
-          itemType: quickstart
-    - title: "Cassandra to"
-      links:
-        - text: Azure CosmosDB
-          url: azure-data-studio/quickstart-sql-server.md
-          itemType: quickstart
-    - title: "MariaDB to"
-      links:
-        - text: Azure Database for MariaDB
-          url: azure-data-studio/quickstart-sql-server.md
-          itemType: quickstart
+        - text: SQL Server
+          url: /sql/sql-server/migrate/guides/db2-to-sql-server
+          itemType: how-to-guide
+        - text: Azure SQL Database
+          url: /azure/azure-sql/migration-guides/database/db2-to-sql-database-guide
+          itemType: how-to-guide
+        - text: Azure SQL Managed Instance
+          url: /azure/azure-sql/migration-guides/managed-instance/db2-to-managed-instance-guide
+          itemType: how-to-guide
+        - text: SQL Server on Azure VMs
+          url: /azure/azure-sql/migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide
+          itemType: how-to-guide
     - title: "Access to"
       links:
-        - text: SQL Server 
-          url: azure-data-studio/quickstart-sql-server.md
-          itemType: quickstart
+        - text: SQL Server
+          url: /sql/sql-server/migrate/guides/access-to-sql-server
+          itemType: how-to-guide
         - text: Azure SQL Database
-          url: ssms/tutorials/connect-query-sql-server.md
-          itemType: quickstart
-        - text: Azure SQL Managed Instance
-          url: t-sql/tutorial-writing-transact-sql-statements.md
-          itemType: quickstart
-        - text: SQL Server on Azure VMs
-          url: linux/quickstart-install-connect-docker.md
-          itemType: quickstart
+          url: /azure/azure-sql/migration-guides/database/access-to-sql-database-guide
+          itemType: how-to-guide
+    - title: "MySQL to"
+      links:
+        - text: Azure Database for MySQL
+          url: /azure/mysql/concepts-migrate-import-export
+          itemType: how-to-guide
+        - text: SQL Server
+          url: /sql/sql-server/migrate/guides/mysql-to-sql-server
+          itemType: how-to-guide
+        - text: Azure SQL Database
+          url: /azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide
+          itemType: how-to-guide
     - title: "SAP ASE to"
       links:
-        - text: SQL Server (newer version)
-          url: azure-data-studio/quickstart-sql-server.md
-          itemType: quickstart
+        - text: SQL Server
+          url: /sql/sql-server/migrate/guides/sap-ase-to-sql-server
+          itemType: how-to-guide
         - text: Azure SQL Database
-          url: ssms/tutorials/connect-query-sql-server.md
-          itemType: quickstart
-        - text: Azure SQL Managed Instance
-          url: t-sql/tutorial-writing-transact-sql-statements.md
-          itemType: quickstart
-        - text: SQL Server on Azure VMs
-          url: linux/quickstart-install-connect-docker.md
-          itemType: quickstart
-    - title: "Microsoft Azure Table Storage to"
+          url:  /azure/azure-sql/migration-guides/database/sap-ase-to-sql-database
+          itemType: how-to-guide
+    - title: "Open-source"
       links:
-        - text: Azure CosmosDB
-          url: azure-data-studio/quickstart-sql-server.md
-          itemType: quickstart
-
+        - text: PostgreSQL to Azure Database for PostgreSQL
+          url: /azure/postgresql/howto-migrate-using-dump-and-restore
+          itemType: how-to-guide
+        - text: MySQL to Azure Database for MySQL
+          url: /azure/mysql/concepts-migrate-import-export
+          itemType: how-to-guide
+        - text: MariaDB to Azure Database for MariaDB
+          url: /azure/mariadb/howto-migrate-dump-restore
+          itemType: how-to-guide
+    - title: "NoSQL"
+      links:
+        - text: MongoDB to Azure Cosmos DB
+          url: /azure/dms/tutorial-mongodb-cosmos-db-online?toc=/azure/cosmos-db/toc.json&bc=/azure/cosmos-db/breadcrumb/toc.json
+          itemType: how-to-guide
+        - text: Microsoft Azure Table Storage to Azure Cosmos DB
+          url: /azure/cosmos-db/table-import
+          itemType: how-to-guide
+        - text: Cassandra to Azure Cosmos DB
+          url: /azure/cosmos-db/cassandra-import-data
+          itemType: how-to-guide
+    - title: "Resources"
+      links:
+        - text: Getting started video overview
+          url: https://channel9.msdn.com/Shows/Data-Exposed/Get-Started-with-the-New-Database-Migration-Guides-to-Migrate-Your-Databases-to-Azure?WT.mc_id=dataexposed-c9-niner-mighub
+          itemType: video
+        - text: Azure Migration Center
+          url: https://azure.microsoft.com/migration/
+          itemType: reference
+        - text: Migration partner resources
+          url: https://www.microsoft.com/azure/partners/advspec?filters=windows-server-and-sql-server-migration-to-azure
+          itemType: reference
+        - text: Cloud Economics
+          url: https://azure.microsoft.com/overview/cloud-economics
+          itemType: reference
+        - text: Total Cost of Ownership Calculator
+          url: https://azure.microsoft.com/pricing/tco/calculator/
+          itemType: reference
+        - text: Azure Hybrid Benefit
+          url: https://azure.microsoft.com/pricing/hybrid-benefit/
+          itemType: reference
+        - text: Browse Azure Architecture
+          url: /azure/architecture/browse/?azure_categories=migration
+          itemType: reference
+        - text: Microsoft cloud Adoption Framework for Azure
+          url: https://azure.microsoft.com/cloud-adoption-framework/#cloud-adoption-journey
+          itemType: reference
+        - text: Browse customer stories
+          url: https://customers.microsoft.com/en-us/search?sq=&ff=&p=0&so=story_publish_date%20desc
+          itemType: reference
 
 tools:
-  title: Languages and tools
+  title: Migration tools
   items:
     # Card
     - title: Azure Migrate
-      imageSrc: https://docs.microsoft.com/media/logos/logo_python.svg
-      url: /azure/developer/python/
+      imageSrc: media/index/azure-migrate-symbol.svg
+      url: /azure/migrate/
     # Card
-    - title: Azure Database Migration Service
-      imageSrc: ./media/index/net-logo.svg
-      url: /dotnet/azure/
+    - title: Azure Database Migration Service (DMS)
+      imageSrc: media/index/migration-service-symbol.svg
+      url: /azure/dms/
     # Card
-    - title: Database Migration Assistant (DMA)
-      imageSrc: https://docs.microsoft.com/media/logos/logo_js.svg
-      url: /azure/developer/javascript/
+    - title: Data Migration Assistant (DMA)
+      imageSrc: media/index/database-migration-assistant-symbol.svg
+      url: /sql/dma/dma-overview
     # Card
-    - title: SQL Server Migration Assistant
-      imageSrc: https://docs.microsoft.com/media/logos/logo_java.svg
-      url: /azure/developer/java/
-
-additionalContent: 
-  sections:
-    - items:
-      - title: Case studies
-        links: 
-          - text: Capita
-            url: https://docs.microsoft.com/power-bi/report-server/get-started
-          - text: Willis Towers Watson
-            url: https://docs.microsoft.com/power-bi/service-get-started
-          - text: Innovative Systems
-            url: reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
-          - text: Geekwire
-            url: https://docs.microsoft.com/analysis-services/analysis-services-overview
-          - text: Fotoable
-            url: https://docs.microsoft.com/azure/analysis-services/
-          - text: Vipps
-            url: https://docs.microsoft.com/azure/analysis-services/
-
-      - title: idk
-        links: 
-          - text: what else
-            url: https://docs.microsoft.com/power-bi/report-server/get-started
-          - text: to put here
-            url: https://docs.microsoft.com/power-bi/service-get-started
-          - text: but idk what
-            url: reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
-          - text: and i don't think i can have just a single card
-            url: https://docs.microsoft.com/analysis-services/analysis-services-overview
-          - text: in this thing because when i get rid of this card
-            url: https://docs.microsoft.com/azure/analysis-services/
-          - text: the entire thing seems to break
-            url: https://docs.microsoft.com/azure/analysis-services/
+    - title: SQL Server Migration Assistant (SSMA)
+      imageSrc: media/index/sql-server-migration-assistant-symbol.svg
+      url: /sql/ssma/sql-server-migration-assistant
+    # Card
+    - title: Azure Synapse Pathway
+      imageSrc: media/index/azure-synapse-pathway-symbol.svg
+      url: /sql/tools/synapse-pathway/azure-synapse-pathway-overview
 
 additionalContent:
   sections:
-    - title: Case studies
+    - title: Recent customer case studies
       items:
         # Card
-        - title: Capita
-          summary: A dedicated cloud for U.S. government agencies and their partners.
-          url: azure-government/index.yml
+        - title: Ferguson (United States)
+          summary: Largest US plumbing wholesaler uses Azure Arc SQL Managed Instance to extend Azure services on-premises.
+          url: https://customers.microsoft.com/story/844232-ferguson-enterprises-retailers-azure-arc
         # Card
-        - title: Willis Towers Watson
-          summary: A dedicated cloud that adheres to German data-handling regulations.
-          url: germany/index.yml
+        - title: Clearsale (Brazil)
+          summary: ClearSale builds foundation for growth and innovation by migrating to Azure with the Azure SQL Database hyperscale service tier.
+          url: https://customers.microsoft.com/story/773410-clearsale-partner-professional-services-azure
         # Card
-        - title: Innovative Systems
-          summary: A dedicated cloud located in China and operated by 21Vianet.
-          url: /azure/china/
+        - title: Willis Towers Watson (United Kingdom)
+          summary: Willis Towers Watson achieves seamless scalability in the cloud by migrating to Azure SQL Database.
+          url: https://customers.microsoft.com/story/willis-towers-watson-partner-professional-services-azure
         # Card
-        - title: Geekwire
-          summary: A dedicated cloud located in China and operated by 21Vianet.
-          url: /azure/china/
+        - title: Paychex (United States)
+          summary: Paychex relies on Azure SQL Database Elastic Pools to handle explosive growth.
+          url: https://customers.microsoft.com/story/paychex-azure-sql-database-us
         # Card
-        - title: Vipps
-          summary: A dedicated cloud located in China and operated by 21Vianet.
-          url: /azure/china/
+        - title: Innovative Systems (United States)
+          summary: Innovative Systems unites its far-flung databases in the cloud by powering migrations using Azure Database Migration Service.
+          url: https://customers.microsoft.com/story/innovative-systems-partner-professional-services-azure-sql-database
+        # Card
+        - title: Capita Group (United Kingdom)
+          summary: Capita Reading Cloud migrates 10,000 databases and finds new scalability with Azure.
+          url: https://customers.microsoft.com/story/724217-capita-uk-professional-services-azure-sql-database
+        # Card
+        - title: Intershop (United States)
+          summary: Intershop, an e-commerce leader, migrates to SQL Server and Azure SQL Database from Oracle, boosts product performance and opens markets. 
+          url: https://customers.microsoft.com/story/intershop-partner-professional-services-azure-sql-database
+        # Card
+        - title: Minecraft Realms (United States)
+          summary: Minecraft Realms migrates from AWS to Azure with minimal disruption to the user base. 
+          url: https://developer.microsoft.com/games/blog/migrating-minecraft-realms-from-aws-to-azure/
+        # Card
+        - title: CCC Marketing (Japan)
+          summary: CCC Marketing switched its data analytics infrastructure from Oracle to Microsoft Azure. 
+          url: https://customers.microsoft.com/story/843276-ccc-marketing-professional-services-azure-en-japan

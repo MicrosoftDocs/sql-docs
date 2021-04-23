@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "computed columns, XML"
   - "XML [SQL Server], computed columns"
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Use XML in Computed Columns
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

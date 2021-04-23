@@ -4,7 +4,7 @@ title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/05/2021
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -632,7 +632,7 @@ To see this example in use, see [BULK INSERT][bulk_insert_example].
 [bulk_insert_example]: ./bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage
 [openrowset]: ../functions/openrowset-transact-sql.md
 [create_dsc]: ./create-database-scoped-credential-transact-sql.md
-[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
+[create_etb]: /sql/t-sql/statements/create-external-data-source
 [alter_eds]: ./alter-external-data-source-transact-sql.md
 [cat_eds]: ../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md
 <!-- PolyBase docs -->
@@ -898,7 +898,7 @@ WITH
 
 [create_dsc]: ./create-database-scoped-credential-transact-sql.md
 [create_eff]: ./create-external-file-format-transact-sql.md
-[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
+[create_etb]: /sql/t-sql/statements/create-external-data-source
 [create_etb_as_sel]: ./create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true
 [create_tbl_as_sel]: ./create-table-as-select-azure-sql-data-warehouse.md?view=azure-sqldw-latest&preserve-view=true
 
@@ -1144,7 +1144,7 @@ WITH
 
 [create_dsc]: ./create-database-scoped-credential-transact-sql.md
 [create_eff]: ./create-external-file-format-transact-sql.md
-[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
+[create_etb]: /sql/t-sql/statements/create-external-data-source
 [create_etb_as_sel]: ./create-external-table-as-select-transact-sql.md?view=azure-sqldw-latest&preserve-view=true
 [create_tbl_as_sel]: ./create-table-as-select-azure-sql-data-warehouse.md?view=azure-sqldw-latest&preserve-view=true
 

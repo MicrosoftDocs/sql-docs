@@ -4,7 +4,7 @@ title: "NULLIF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/08/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -72,7 +72,7 @@ INSERT budgets VALUES(300000, 250000);
 GO    
 SET NOCOUNT OFF;  
 SELECT AVG(NULLIF(COALESCE(current_year,  
-   previous_year), 0.00)) AS 'Average Budget'  
+   previous_year), 0.00)) AS [Average Budget]  
 FROM budgets;  
 GO  
 ```  
@@ -93,12 +93,12 @@ GO
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, MakeFlag, FinishedGoodsFlag,   
-   NULLIF(MakeFlag,FinishedGoodsFlag) AS 'Null if Equal'  
+   NULLIF(MakeFlag,FinishedGoodsFlag) AS [Null if Equal]  
 FROM Production.Product  
 WHERE ProductID < 10;  
 GO  
   
-SELECT ProductID, MakeFlag, FinishedGoodsFlag,'Null if Equal' =  
+SELECT ProductID, MakeFlag, FinishedGoodsFlag, [Null if Equal] =  
    CASE  
        WHEN MakeFlag = FinishedGoodsFlag THEN NULL  
        ELSE MakeFlag  

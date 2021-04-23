@@ -1,8 +1,8 @@
 ---
-title: "Spatial data types sample for JDBC Driver"
-description: "This JDBC Driver for SQL Server sample application demonstrates how to create, insert, and retrieve Geometry and Geography spatial data types from the database."
+title: Spatial data types sample for JDBC Driver
+description: This JDBC Driver for SQL Server sample application demonstrates how to create, insert, and retrieve Geometry and Geography spatial data types from the database.
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: 04/20/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -15,7 +15,7 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to create, insert and retrieve Spatial Data types (Geometry and Geography).
+This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to create, insert, and retrieve Spatial Data types (Geometry and Geography).
 
 The code file for this sample is named SpatialDataTypes.java, and it can be found in the following location:
 
@@ -34,7 +34,7 @@ To run this sample application, you must set the classpath to include the mssql-
 
 In the following example, the sample code creates a table called SpatialDataTypesTable_JDBC_Sample that contains 'Geometry' and 'Geography' columns.
 
-The sample first creates 'Geometry' and 'Geography' objects from a Well-Known-Text (WKT) representing a POINT. It uses a SQLServerPreparedStatement with a parameterized query to map the data to each column accordingly.
+The sample first creates 'Geometry' and 'Geography' objects from a Well-Known-Text (WKT) representing a POINT. It uses a SQLServerPreparedStatement with a parameterized query to map the data to each column.
 
 Finally, the sample inserts the data into the table, and retrieves it. The data is displayed in the form of WKT.
 

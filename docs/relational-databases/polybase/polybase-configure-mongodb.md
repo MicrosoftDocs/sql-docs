@@ -59,9 +59,11 @@ The following Transact-SQL commands are used in this section:
 
     ```sql
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH (LOCATION = '<mongodb://<server>[:<port>]>',
-    -- PUSHDOWN = ON | OFF,
-    CREDENTIAL = <credential_name>);
+    WITH (LOCATION = '<mongodb://<server>[:<port>]>'
+    [ [ , ] CREDENTIAL = <credential_name> ]
+    [ [ , ] CONNECTION_OPTIONS = '<key_value_pairs>'[,...]]
+    [ [ , ] PUSHDOWN = { ON | OFF } ])
+    [ ; ]
     ```
 
 1. **Optional:** Create statistics on an external table.
@@ -149,7 +151,7 @@ The following example creates an external data source with the following paramet
 ```sql
 CREATE EXTERNAL DATA SOURCE external_data_source_name
     WITH (LOCATION = 'mongodb://mongodb0.example.com:27017',
-    CONNECTION_OPTION = 'replicaSet=myRepl','tls=true',
+    CONNECTION_OPTIONS = 'replicaSet=myRepl; tls=true',
     PUSHDOWN = ON ,
     CREDENTIAL = credential_name);
 ```

@@ -4,7 +4,7 @@ title: "CREATE FUNCTION (Azure Synapse Analytics) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/17/2020"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod_service: "synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -59,6 +59,7 @@ RETURNS return_data_type
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
 }  
 ```
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ```syntaxsql
 -- Transact-SQL Inline Table-Valued Function Syntax (Preview in Azure Synapse Analytics only)
@@ -75,7 +76,6 @@ RETURNS TABLE
 [ ; ]
 ```
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
  *schema_name*  

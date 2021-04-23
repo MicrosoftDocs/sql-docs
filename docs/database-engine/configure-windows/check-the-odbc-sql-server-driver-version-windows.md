@@ -4,7 +4,7 @@ description: Discover how to use the Windows ODBC Data Source Administrator to c
 ms.custom: ""
 ms.date: "11/07/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual

@@ -48,7 +48,7 @@ Currently, there is no option of opening up additional ports for accessing the c
 
 ## Authorization
 
-Throughout the cluster, integrated security between different components allows the original user’s identity to be passed through when issuing queries from Spark and SQL Server, all the way to HDFS. As mentioned above, the various external cluster endpoints support AD authentication.
+Throughout the cluster, integrated security between different components allows the original user's identity to be passed through when issuing queries from Spark and SQL Server, all the way to HDFS. As mentioned above, the various external cluster endpoints support AD authentication.
 
 There are two levels of authorization checks in the cluster for managing data access. Authorization in the context of big data is done in SQL Server, using the traditional SQL Server permissions on objects and in HDFS with control lists (ACLs), which associate user identities with specific permissions.
 
@@ -101,6 +101,8 @@ Cluster admin password:
 
 [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
 
-[Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+[Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/microsoft/sqlworkshops-bdc)
 
-[Kubernetes RBAC](kubernetes-rbac.md)
+[Kubernetes RBAC](kubernetes-rbac.md)  
+
+[Big Data Clusters FAQ](big-data-cluster-faq.yml)  

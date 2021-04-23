@@ -8,12 +8,36 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 2/18/2021
+ms.date: 4/16/2021
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](./download-azure-data-studio.md)**
+
+## April 2021
+
+April 16, 2021 &nbsp; / &nbsp; version: 1.28.0
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| Extension(s) update | [SQLDatabaseProjects](extensions/sql-database-project-extension.md) </br> [SchemaCompare](extensions/schema-compare-extension.md) <br/> [Kusto (KQL)](extensions/kusto-extension.md) </br> [MachineLearning](extensions/machine-learning-extension.md)|
+| New Notebook features | Added Add Notebook and Remove Notebook commands |
+| Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2021+Release%22). |
+
+## March 2021
+
+March 17, 2021 &nbsp; / &nbsp; version: 1.27.0
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22March+2021+Release%22). |
+| Extension(s) update | [Dacpac](extensions/sql-server-dacpac-extension.md) </br> [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
+| New Notebook features | Added create book dialog |
 
 ## February 2021
 
@@ -26,7 +50,7 @@ February 18, 2021 &nbsp; / &nbsp; version: 1.26.0
 | Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22February+2021+Release%22+is%3Aclosed). |
 | Extension(s) update | [Dacpac](extensions/sql-server-dacpac-extension.md) <br/> [Kusto (KQL)](extensions/kusto-extension.md) </br> [MachineLearning](extensions/machine-learning-extension.md) </br> [Profiler](extensions/sql-server-profiler-extension.md) </br> [SchemaCompare](extensions/schema-compare-extension.md) </br> [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
 | New Azure Arc features | Multiple data controllers now supported <br/> New connection dialog options like kube config file <br/> Postgres dashboard enhancements |
-| New Notebook features | Improved Jupyter server start-up time by 50% on Windows <br/> Added support to edit Jupyter Books through right-click <br/> Added URI notebook parameterization support and [added notebook parameterization documentation](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-parameterization) |
+| New Notebook features | Improved Jupyter server start-up time by 50% on Windows <br/> Added support to edit Jupyter Books through right-click <br/> Added URI notebook parameterization support and [added notebook parameterization documentation](./notebooks/notebooks-parameterization.md) |
 
 ## December 2020 (hotfix)
 

@@ -3,7 +3,7 @@ title: "Editions and supported features"
 titleSuffix: SQL Server 2017
 description: This article describes features supported by the various editions of SQL Server 2017, which accommodate different performance, runtime, and price requirements.
 ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
+ms.date: "03/26/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -159,7 +159,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
 |Hybrid backup to Azure (backup to URL)|Yes|Yes|No|No|No|
-|Read-scale availability group<sup>3,4</sup>|Yes|No|No|No|No|No|
+|Read-scale availability group<sup>3,4</sup>|Yes|No|No|No|No|
 
 <sup>1</sup> For more information on installing SQL Server on Server Core,  see [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
@@ -184,7 +184,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Table and index partitioning|Yes|Yes|Yes|Yes|Yes|  
 |Data compression|Yes|Yes|Yes|Yes|Yes|
 |Resource Governor|Yes|No|No|No|No|  
-|Partitioned Table Parallelism|Yes|No|No|No|No|
+|Partitioned Table Parallelism|Yes|Yes|Yes|Yes|Yes|  
 |Multiple Filestream containers|Yes|Yes|Yes|Yes|Yes|
 |NUMA Aware Large Page Memory and Buffer Array Allocation|Yes|No|No|No|No|
 |Buffer Pool Extension|Yes|Yes|No|No|No|

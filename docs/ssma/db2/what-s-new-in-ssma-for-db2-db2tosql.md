@@ -16,6 +16,12 @@ ms.author: alexiva
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
 
+## SSMA v8.18
+
+The v8.18 release of SSMA for DB2 contains the following changes:
+
+* Add support for identity columns
+
 ## SSMA v8.17
 
 The v8.17 release of SSMA for DB2 contains the following changes:

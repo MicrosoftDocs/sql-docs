@@ -28,37 +28,37 @@ The name of the update package can vary and may include a language, edition, and
     ```
     or 
     ```
-    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>. 
+    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>
     ```
 
 - Setup can integrate the latest product updates with the main product installation so that the main product and its applicable updates are installed at the same time. You can prepare an installation of database engine instance to include product update: 
 
     ```
-    setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateSource=\<path where the update is downloaded> /INSTANCEID=\<Instance ID> /FEATURES=SQLEngine. 
+    setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateSource=\<path where the update is downloaded> /INSTANCEID=\<Instance ID> /FEATURES=SQLEngine
     ```
 
 - Update [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared components only, like [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and Management Tools: 
 
     ```
-    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch 
+    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch
     ```
 
 - Update all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the computer and all shared components, like [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and Management Tools: 
 
     ```
-    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances. 
+    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances
     ```
 
 - Remove an update from a single instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and all shared components, like [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and Management Tools: 
 
     ```
-    <package_name>.exe /qs /Action=RemovePatch /InstanceName=MyInstance. 
+    <package_name>.exe /qs /Action=RemovePatch /InstanceName=MyInstance
     ```
 
 - Remove an update from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shared components only, like [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and Management Tools: 
 
     ```
-    <package_name>.exe /qs /Action=RemovePatch 
+    <package_name>.exe /qs /Action=RemovePatch
     ```
 
   > [!NOTE] 

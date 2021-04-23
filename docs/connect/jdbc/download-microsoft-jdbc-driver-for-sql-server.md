@@ -30,7 +30,7 @@ Version 9.2 is the latest general availability (GA) version. It supports Java 8,
 When you download the driver, there are multiple JAR files. The name of the JAR file indicates the version of Java that it supports.
 
 > [!Note]
-> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server). You can download different languages from the US-English version site by selecting [available languages](#available-languages).
+> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](https://aka.ms/downloadmssqljdbcenglish). You can download different languages from the US-English version site by selecting [available languages](#available-languages).
 
 ## Available languages
 

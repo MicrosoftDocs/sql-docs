@@ -335,9 +335,9 @@ items:
         - name: Deploy
           items:
           - name: Operationalize using stored procedures
-            href: machine-learning/r/operationalizing-your-r-code.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            href: /sql/machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model?preserve-view=true&toc=%2fsql%2ftoc.json&view=sql-server-ver15
           - name: Convert R code for SQL Server
-            href: machine-learning/r/converting-r-code-for-use-in-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            href: /sql/machine-learning/deploy/modify-r-python-code-to-run-in-sql-server?preserve-view=true&toc=%2fsql%2ftoc.json&view=sql-server-ver15
         - name: Predictions
           items:
           - name: Native scoring with PREDICT T-SQL
@@ -6087,6 +6087,8 @@ items:
   - name: Database Migration Assistant (DMA)
     href: dma/dma-overview.md
     items:
+    - name: Usage and Diagnostic Data
+      href: dma/dma-diagnostic-data-collection.md
     - name: What's new
       href: dma/dma-whatsnew.md
     - name: Assess SQL Server Integration Services (SSIS)

@@ -133,6 +133,21 @@ CREATE ROLE Sales;
 ALTER ROLE Sales ADD MEMBER Barry;  
 ALTER ROLE Sales DROP MEMBER Barry;  
 ```  
+
+### C. Add a role member to special roles for Azure SQL Database and Azure Synapse Analytics
+ **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Azure SQL Database and Azure Synapse), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+  
+This example creates a SQL login in the master database, creates a database user that's related to that server login, and adds the database user as a member of the special role `dbmanager`. The example allows the user permissions to create and drop databases on an Azure SQL Database logical server. Run the example on the master database of the Azure SQL Database logical server.
+
+  
+```sql  
+ CREATE LOGIN sqllogin_nlastname WITH password='aah3%#om1os';
+    
+ CREATE USER sqllogin_nlastname FOR LOGIN sqllogin_nlastname 
+ WITH DEFAULT_SCHEMA = master;
+    
+ ALTER ROLE [dbmanager] add member sqllogin_nlastname;
+```  
   
 ## See Also  
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   

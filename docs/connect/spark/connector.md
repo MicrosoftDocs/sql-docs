@@ -2,7 +2,7 @@
 title: "Apache Spark connector for SQL Server"
 description: "Learn how to use the Apache Spark connector for SQL Server." 
 ms.custom: ""
-ms.date: 08/31/2020
+ms.date: 04/23/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity

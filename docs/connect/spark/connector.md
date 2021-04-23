@@ -24,7 +24,7 @@ There are two versions of the connector available through Maven, a 2.4.x compati
 
 | Connector | Maven Coordinate |
 | --------- | ------------------ |
-| Spark 2.4.x compatible connnector | `com.microsoft.azure:spark-mssql-connector:1.0.2` |
+| Spark 2.4.x compatible connnector | `com.microsoft.azure:spark-mssql-connector_2.11_2.4:1.0.2` |
 | Spark 3.0.x compatible connnector | `com.microsoft.azure:spark-mssql-connector_2.12_3.0:1.0.0-alpha` |
 
 You can also build the connector from source or download the jar from the Release section in GitHub. For the latest information about the connector, see [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).

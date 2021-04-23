@@ -200,22 +200,19 @@ The use of AS in this statement does not imply the ability to impersonate anothe
 ### A. Grant and revoke
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
-The following example creates a stored procedure `DemoProc`, and a contained database user on a user database, grants execute permissions on the user, and removes (`REVOKE`) that permission from the user.
+The following example creates a contained database user and a new role on a user database, add the user to the role, then grants SELECT permission on the role, and later removes (`REVOKE`) that permission from the role.
 
   
 ```sql  
-CREATE PROCEDURE DemoProc
-AS
-select 1 a
+CREATE USER Joe without login;
 GO
-
-CREATE USER joe without login
+CREATE ROLE Vendors;
 GO
-
-GRANT EXECUTE ON DemoProc to joe 
+EXEC sp_addrolemember 'Vendors', 'Joe';
 GO
-
-REVOKE EXECUTE ON DemoProc to joe 
+GRANT SELECT ON schema::dbo TO Vendors;
+GO
+REVOKE SELECT TO Vendors;
 GO
  
 ```  

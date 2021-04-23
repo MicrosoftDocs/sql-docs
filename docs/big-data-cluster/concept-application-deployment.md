@@ -84,7 +84,7 @@ The two main interfaces for application deployment are:
 - [Command line interface [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](app-create.md)
 - [Visual Studio Code and Azure Data Studio extension](app-deployment-extension.md)
 
-It is also possible for an application to be executed using a RESTful web service. For more information, see [Consume applications on big data clusters](app-consume.md).
+It is also possible for an application to be executed using a RESTful web service. For more information, see [Consume applications on Big Data Clusters](app-consume.md).
 
 ## App deploy scenarios
 
@@ -136,7 +136,7 @@ You can create the basic folder and file structure needed to deploy a Python app
 azdata app init --template python --name hello-py --version v1
 ```
 
-For next steps, see [How to deploy an app on SQL Server big data clusters](app-create.md).
+For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
 
 #### Limitations of app deploy Python runtime
 
@@ -181,7 +181,7 @@ You can create the basic folder and file structure needed to deploy a new R appl
 azdata app init --template r --name hello-r --version v1
 ```
 
-For next steps, see [How to deploy an app on SQL Server big data clusters](app-create.md).
+For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
 
 #### Limitations of R runtime
 
@@ -233,7 +233,7 @@ The example also creates a sample `hello.dtsx` package.
 
 All of your app files are in the same directory as your `spec.yaml`. The `spec.yaml` must be at the root level of your app source code directory including the dtsx file.
 
-For next steps, see [How to deploy an app on SQL Server big data clusters](app-create.md).
+For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
 
 #### Limitations of the dtexec utility
 
@@ -266,7 +266,7 @@ You can create the basic folder and file structure needed to deploy a new MLeap 
 azdata app init --template mleap --name hello-mleap --version v1
 ```
 
-For next steps, see [How to deploy an app on SQL Server big data clusters](app-create.md).
+For next steps, see [How to deploy an app on SQL Server Big Data Clusters](app-create.md).
 
 #### Limitations of MLeap
 
@@ -278,7 +278,7 @@ To learn more about how to create and run applications on [!INCLUDE[big-data-clu
 
 - [Deploy applications using azdata](app-create.md)
 - [Deploy applications using the app deploy extension](app-deployment-extension.md)
-- [Consume applications on big data clusters](app-consume.md)
+- [Consume applications on Big Data Clusters](app-consume.md)
 
 To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following overview:
 

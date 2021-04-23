@@ -37,7 +37,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 |target_id|**int**|ID of the object that the database scoped credential is mapped to. Returns 0 for database scoped credentials|  
 ::: moniker-end
   
-::: moniker range=">=sql-server-2017"
+::: moniker range=">=sql-server-2017||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|Name of the database scoped credential. Is unique in the database.|  

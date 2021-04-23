@@ -46,7 +46,7 @@ In order to disable telemetry collection when using the DMA command line tool yo
 
  In order to do so follow these steps:
 
-1. Navigate to the DMA installation folder in your file system. The default location is _%ProgramFiles%\Microsoft Data Migration Assistant\_.
+1. Navigate to the DMA installation folder in your file system. The default location is `%ProgramFiles%\Microsoft Data Migration Assistant\`.
 
 2. Locate the DmaCmd.exe.config file and open it in a text editor.
 

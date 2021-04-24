@@ -24,11 +24,11 @@ DMA may collect standard computer information and information about use and perf
 
 ## Data Migration Assistant GUI
 
-In order to disable telemetry collection when using DMA GUI you need to comment out the `AppInsightsInstrumentionKey` line in the DmaCmd.exe.config.
+In order to disable telemetry collection when using DMA GUI you need to comment out the `AppInsightsInstrumentionKey` line in the Dma.exe.config.
 
  In order to do so follow these steps:
 
-1. Navigate to the DMA installation folder ih your file system. The default location is `%ProgramFiles%\Microsoft Data Migration Assistant\`.
+1. Navigate to the DMA installation folder in your file system. The default location is `%ProgramFiles%\Microsoft Data Migration Assistant\`.
 
 2. Locate the Dma.exe.config file and open it in a text editor.
 
@@ -46,7 +46,7 @@ In order to disable telemetry collection when using the DMA command line tool yo
 
  In order to do so follow these steps:
 
-1. Navigate to the DMA installation folder ih your file system. The default location is _%ProgramFiles%\Microsoft Data Migration Assistant\_.
+1. Navigate to the DMA installation folder in your file system. The default location is `%ProgramFiles%\Microsoft Data Migration Assistant\`.
 
 2. Locate the DmaCmd.exe.config file and open it in a text editor.
 

@@ -200,7 +200,7 @@ The use of AS in this statement does not imply the ability to impersonate anothe
 ### A. Grant and revoke
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
-The following example creates a schema, a contained database user and a new role on a user database, it then adds the user to the role, then grants SELECT permission on the schema to the role, and later removes (`REVOKE`) that permission to the role.
+The following example creates a schema, a contained database user, and a new role on a user database. It adds the user to the role, grants SELECT permission on the schema to the role, and then removes (`REVOKE`) that permission to the role.
 
   
 ```sql  

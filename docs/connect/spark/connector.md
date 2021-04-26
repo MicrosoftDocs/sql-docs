@@ -2,7 +2,7 @@
 title: "Apache Spark connector for SQL Server"
 description: "Learn how to use the Apache Spark connector for SQL Server." 
 ms.custom: ""
-ms.date: 08/31/2020
+ms.date: 04/23/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,12 +20,12 @@ This library contains the source code for the Apache Spark Connector for SQL Ser
 
 [Apache Spark](https://spark.apache.org/) is a unified analytics engine for large-scale data processing.
 
-There are two versions of the connector available through Maven, a 2.4.5 compatible version and a 3.0.0 compatible version. Both versions can be found [here](https://search.maven.org/search?q=spark-mssql-connector) and can be imported using the coordinates below:
+There are two versions of the connector available through Maven, a 2.4.x compatible version and a 3.0.x compatible version. Both versions can be found [here](https://search.maven.org/search?q=spark-mssql-connector) and can be imported using the coordinates below:
 
 | Connector | Maven Coordinate |
 | --------- | ------------------ |
-| Spark 2.4.5 compatible connnector | `com.microsoft.azure:spark-mssql-connector:1.0.1` |
-| Spark 3.0.0 compatible connnector | `com.microsoft.azure:spark-mssql-connector_2.12_3.0:1.0.0-alpha` |
+| Spark 2.4.x compatible connnector | `com.microsoft.azure:spark-mssql-connector_2.11_2.4:1.0.2` |
+| Spark 3.0.x compatible connnector | `com.microsoft.azure:spark-mssql-connector_2.12_3.0:1.0.0-alpha` |
 
 You can also build the connector from source or download the jar from the Release section in GitHub. For the latest information about the connector, see [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).
 
@@ -39,9 +39,9 @@ You can also build the connector from source or download the jar from the Releas
 
 | Component                            | Versions Supported              |
 |--------------------------------------|---------------------------------|
-| Apache Spark                         | 2.4.5, 3.0.0 |
+| Apache Spark                         | 2.4.x, 3.0.x |
 | Scala                                | 2.11, 2.12                            |
-| Microsoft JDBC Driver for SQL Server | 8.2                             |
+| Microsoft JDBC Driver for SQL Server | 8.4                             |
 | Microsoft SQL Server                 | SQL Server 2008 or later        |
 | Azure SQL Databases                  | Supported                       |
 

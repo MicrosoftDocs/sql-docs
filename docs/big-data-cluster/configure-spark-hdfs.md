@@ -2,8 +2,8 @@
 title: Apache Spark and Apache Hadoop
 titleSuffix: Configure Apache Spark and Apache Hadoop in Big Data Clusters
 description: SQL Server Big Data Clusters allow Spark and HDFS solutions. Learn how to configure them.
-author: rajmera3
-ms.author: raajmera
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mikeray
 ms.date: 08/04/2020
 ms.topic: conceptual
@@ -141,8 +141,8 @@ Configurations can only be specified at category level. To specify multiple conf
       "op": "add", 
       "path": "spec.services.hdfs.settings.core-site.hadoop", 
       "value": { 
-        “proxyuser.xyz.users”: “*”, 
-        “proxyuser.abc.users”: “*” 
+        "proxyuser.xyz.users": "*", 
+        "proxyuser.abc.users": "*" 
      } 
 } 
 ```

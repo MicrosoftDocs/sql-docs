@@ -270,11 +270,11 @@ GO
 ### Enable and start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
  By default, the Browser service is disabled.  If it is disabled on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on Server Core, run the following command from the command prompt to enable it:  
   
- `sc config SQLBROWSER start= auto`  
+ `Set-service sqlbrowser -StartupType Auto`  
   
  After it is enabled, run the following command from the command prompt to start the service:  
   
- `net start SQLBROWSER`  
+ `Start-service sqlbrowser`  
   
 ### Create exceptions in Windows Firewall  
  To create exceptions for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] access in Windows Firewall, follow the steps specified in [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  

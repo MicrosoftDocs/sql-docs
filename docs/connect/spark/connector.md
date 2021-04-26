@@ -7,8 +7,8 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rajmera3
-ms.author: raajmera
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: mikeray
 ---
 

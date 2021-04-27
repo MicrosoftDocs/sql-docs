@@ -16,11 +16,9 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 
 Learn how to use the **RevoScaleR** package to store serialized R objects in a table and then load the object from the table as needed with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). This can be used when training and saving a model, and then use it later for scoring or analysis.
 
-To improve performance, the **RevoScaleR** package now includes new serialization and deserialization functions that improve performance and store the object more compactly. 
-
 ## RevoScaleR package
 
-The **RevoScaleR** package now includes new functions that make it easier to save R objects to SQL Server and then read the objects from the SQL Server table. In general, each function call uses a simple key value store, in which the key is the name of the object, and the value associated with the key is the varbinary R object to be moved in or out of a table.
+The **RevoScaleR** package includes serialization and deserializatio functions that can R objects compactly to SQL Server and then read the objects from the table. In general, each function call uses a simple key value store, in which the key is the name of the object, and the value associated with the key is the varbinary R object to be moved in or out of a table.
 
 To save R objects to SQL Server directly from an R environment, you must:
 

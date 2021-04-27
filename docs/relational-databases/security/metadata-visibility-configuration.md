@@ -179,6 +179,9 @@ GO
   
 ### Scope of Permissions  
  Permissions at one scope imply the ability to see metadata at that scope and at all enclosed scopes. For example, SELECT permission on a schema implies that the grantee has SELECT permission on all securables that are contained by that schema. The granting of SELECT permission on a schema therefore enables a user to see the metadata of the schema and also all tables, views, functions, procedures, queues, synonyms, types, and XML schema collections within it. For more information about scopes, see [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md).  
+ 
+ > [!NOTE]  
+>  The UNMASK permission does not influence metadata visibility: granting UNMASK alone will not disclose any Metadata. UNMASK will always need to be accompanied by a SELECT permission to have any effect. Example: granting UNMASK on database scope and granting SELECT on an individual Table will have the result that the user can only see the metadata of the individual table from which he can select, not any others.
   
 ### Precedence of DENY  
  DENY typically takes precedence over other permissions. For example, if a database user is granted EXECUTE permission on a schema but has been denied EXECUTE permission on a stored procedure in that schema, the user cannot view the metadata for that stored procedure.  

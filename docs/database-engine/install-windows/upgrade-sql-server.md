@@ -30,7 +30,7 @@ If you're upgrading from an end-of-support version of SQL Server such as SQL Ser
   
 ## Upgrade documentation 
 
-The following articles will help you upgrade componenets of SQL Server:  
+The following articles will help you upgrade components of SQL Server:  
   
 -   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
 -   [Prepare for upgrade by running Data Migration Assistant](../../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md)  

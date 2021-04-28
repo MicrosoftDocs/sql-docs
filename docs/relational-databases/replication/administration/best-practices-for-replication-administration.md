@@ -57,7 +57,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
   
 -   **msdb** database and **master** database at the Publisher, Distributor, and all Subscribers  
   
- Replicated databases require special attention with regards to backing up and restoring data. For more information, see [Back Up and Restore Replicated Databases](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
+ Replicated databases require special attention with regard to backing up and restoring data. For more information, see [Back Up and Restore Replicated Databases](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
 ## Script the replication topology  
  All replication components in a topology should be scripted as part of a disaster recovery plan, and scripts can also be used to automate repetitive tasks. A script contains the [!INCLUDE[tsql](../../../includes/tsql-md.md)] system stored procedures necessary to implement the replication component(s) scripted, such as a publication or subscription. Scripts can be created in a wizard (such as the New Publication Wizard) or in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] after you create a component. You can view, modify, and run the script using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or **sqlcmd**. Scripts can be stored with backup files to be used in case a replication topology must be reconfigured. For more information, see [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  

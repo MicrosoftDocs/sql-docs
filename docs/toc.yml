@@ -5050,7 +5050,7 @@ items:
       - name: Best practices
         href: relational-databases/replication/administration/best-practices-for-replication-administration.md
       - name: Frequently asked questions
-        href: relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md
+        href: relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.yml
     - name: How-to guides
       items:
       - name: Configure replication

@@ -46,7 +46,10 @@ Dynamic data masking is available in [!INCLUDE[sssql16-md](../../includes/sssql1
   
  Users with **SELECT** permission on a table can view the table data. Columns that are defined as masked, will display the masked data. Grant the **UNMASK** permission to a user to enable them to retrieve unmasked data from the columns for which masking is defined.  
   
- The **CONTROL** permission on the database includes both the **ALTER ANY MASK** and **UNMASK** permission.  
+ The **CONTROL** permission on the database includes both the **ALTER ANY MASK** and **UNMASK** permission. 
+ 
+  > [!NOTE]  
+>  The UNMASK permission does not influence metadata visibility: granting UNMASK alone will not disclose any Metadata. UNMASK will always need to be accompanied by a SELECT permission to have any effect. Example: granting UNMASK on database scope and granting SELECT on an individual Table will have the result that the user can only see the metadata of the individual table from which he can select, not any others. Also see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
 ## Best Practices and Common Use Cases  
   

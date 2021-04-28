@@ -144,7 +144,14 @@ Collation                     Edition        ServiceObjective  MaxSizeInBytes
 ----------------------------  -------------  ----------------  --------------  
 SQL_Latin1_General_CP1_CI_AS  DataWarehouse  DW1000            5368709120  
 ```  
+
+### C. Use DATABASEPROPERTYEX to know when a query is running on an Azure SQL Database replica  
+When using Azure SQL Database read scale out feature, you can verify whether you are connected to a read-only replica or not by running the following query in the context of your database. It will return READ_ONLY when you are connected to a read-only replica. This way you can also identify when a query is running on a read-only replica.
   
+```sql
+SELECT DATABASEPROPERTYEX(DB_NAME(), 'Updateability'); 
+```  
+
 ## See also
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [Database States](../../relational-databases/databases/database-states.md)  

@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page 
   author: dphansen
   ms.author: davidph
-  ms.date: 05/27/2020
+  ms.date: 04/28/2021
 
 landingContent:
   - title: Machine learning on SQL Server
@@ -131,13 +131,17 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: What is Azure Synapse Analytics?
-            url: /azure/synapse-analytics/overview-what-is
+          - text: Machine Learning capabilities in Azure Synapse Analytics
+            url: /azure/synapse-analytics/machine-learning/what-is-machine-learning
+          - text: Train machine learning models
+            url: /azure/synapse-analytics/spark/apache-spark-machine-learning-training
+      - linkListType: quickstart
+        links:
+          - text: Create a new Azure Machine Learning linked service in Synapse
+            url: /azure/synapse-analytics/machine-learning/quickstart-integrate-azure-machine-learning
       - linkListType: tutorial
         links:
+          - text: Train a model in Python with automated machine learning
+            url: /azure/synapse-analytics/spark/apache-spark-azure-machine-learning-tutorial
           - text: Build a machine learning app with Apache Spark MLlib and Azure Synapse Analytics
             url: /azure/synapse-analytics/spark/apache-spark-machine-learning-mllib-notebook
-      - linkListType: how-to-guide
-        links:
-          - text: Create, develop, and maintain Azure Synapse Studio notebooks
-            url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks

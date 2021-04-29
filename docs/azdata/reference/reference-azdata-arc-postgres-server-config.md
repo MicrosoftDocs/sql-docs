@@ -5,7 +5,7 @@ description: Reference article for azdata arc postgres server config commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 04/06/2021
+ms.date: 04/29/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -55,7 +55,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more 
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata arc postgres server config add
-Adds the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escape quotations appropriately.  Alternatively, you may use the patch file functionality.
+Adds the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escapequotations appropriately.  Alternatively, you may use the patch file functionality.
 ```bash
 azdata arc postgres server config add --path -p 
                                       --json-values -j
@@ -82,7 +82,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more 
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata arc postgres server config remove
-Removes the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escape quotations appropriately.  Alternatively, you may use the patch file functionality.
+Removes the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escapequotations appropriately.  Alternatively, you may use the patch file functionality.
 ```bash
 azdata arc postgres server config remove --path -p 
                                          --json-path -j
@@ -109,7 +109,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more 
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata arc postgres server config replace
-Replaces the value at the json path in the config file.  All examples below are given in Bash.  If using another command line, please be aware that you may need to escape quotations appropriately.  Alternatively, you may use the patch file functionality.
+Replaces the value at the json path in the config file.  All examplesbelow are given in Bash.  If using another command line, please be aware that you may need to escapequotations appropriately.  Alternatively, you may use the patch file functionality.
 ```bash
 azdata arc postgres server config replace --path -p 
                                           --json-values -j
@@ -182,4 +182,3 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
-

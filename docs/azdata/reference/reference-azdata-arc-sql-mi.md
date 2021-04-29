@@ -5,7 +5,7 @@ description: Reference article for azdata arc sql mi commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 04/06/2021
+ms.date: 04/29/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -79,7 +79,7 @@ The name of the SQL managed instance.
 #### `--path`
 The path to the src file for the SQL managed instance json file.
 #### `--replicas`
-The number of replicas to be deployed for high availability purpose. Allowed values are '3' or '1' with default of '1'.
+This option specifies the number of SQL Managed Instance replicas that will be deployed in your Kubernetes cluster for high availability purpose. Allowed values are '3' or '1' with default of '1'.
 #### `--cores-limit -cl`
 The cores limit of the managed instance as an integer.
 #### `--cores-request -cr`
@@ -87,7 +87,7 @@ The request for cores of the managed instance as an integer.
 #### `--memory-limit -ml`
 The limit of the capacity of the managed instance as an integer.
 #### `--memory-request -mr`
-The request for the capacity of the managed instance as an integer amount of memory in GBs.
+The request for the capcity of the managed instance as an integer amount of memory in GBs.
 #### `--storage-class-data -scd`
 The storage class to be used for data (.mdf). If no value is specified, then no storage class will be specified, which will result in Kubernetes using the default storage class.
 #### `--storage-class-logs -scl`
@@ -153,7 +153,7 @@ The request for cores of the managed instance as an integer.
 #### `--memory-limit -ml`
 The limit of the capacity of the managed instance as an integer.
 #### `--memory-request -mr`
-The request for the capacity of the managed instance as an integer amount of memory in GBs.
+The request for the capcity of the managed instance as an integer amount of memory in GBs.
 #### `--no-wait`
 If given, the command will not wait for the instance to be in a ready state before returning.
 ### Global Arguments
@@ -247,4 +247,3 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
-

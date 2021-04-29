@@ -24,7 +24,7 @@ The v8.19 release of SSMA for Oracle contains the following changes:
 * Improve resolution logic in `SELECT` list when user-defined column names match system functions
 * Ignore system-defined columns (`SYS_STS*`) and indexes (`SYS_IL*`)
 * Fix issue with packages disappearing from the objects tree after reconnect to Oracle database
-* Fix CLR assemblies deployment issue on [!INCLUDE [ssazure](../../includes/ssazure-md.md)] in 32-bit SSMA package
+* Fix CLR assemblies deployment issue on [!INCLUDE [ssazure](../../includes/ssazure_md.md)] in 32-bit SSMA package
 
 ## SSMA v8.18
 

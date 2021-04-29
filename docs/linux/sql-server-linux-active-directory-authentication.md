@@ -259,6 +259,11 @@ CONTOSO.COM = {
 > [!NOTE]
 > While it is not recommended, it is possible to use utilities, such as **realmd**, that set up SSSD while joining the Linux host to the domain, while configuring **disablesssd** to true so that SQL Server uses openldap calls instead of SSSD for Active Directory related calls.
 
+> [!NOTE]
+> SQL Server login using FQDN (for example, CONTOSO.COM\Username) is not supported. Use CONTOSO\Username format.
+> 
+> Due to a KRB5 limitation, you will not be able to add SQL Server logins from Domain Local Groups.
+ 
 ## Next steps
 
 In this tutorial, we walked through how to set up Active Directory authentication with SQL Server on Linux. You learned how to:

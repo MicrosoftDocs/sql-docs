@@ -2,7 +2,7 @@
 title: Using Always Encrypted with the JDBC driver
 description: Learn how to use Always Encrypted in your Java application with the JDBC driver for SQL Server to encrypt sensitive data on the server.
 ms.custom: ""
-ms.date: 04/21/2021
+ms.date: 04/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -59,9 +59,25 @@ All of these keystore providers are described in more detail in the sections tha
 
 ### Using Azure Key Vault provider
 
-Azure Key Vault is a convenient option to store and manage column master keys for Always Encrypted (especially if your application is hosted in Azure). The Microsoft JDBC Driver for SQL Server includes a built-in provider, `SQLServerColumnEncryptionAzureKeyVaultProvider`, for applications that have keys stored in Azure Key Vault. The name of this provider is AZURE_KEY_VAULT. To use the Azure Key Vault store provider, an application developer needs to create the vault and the keys in Azure Key Vault and create an App registration in Azure Active Directory. The registered application must be granted Get, Decrypt, Encrypt, Unwrap Key, Wrap Key, and Verify permissions in the Access policies defined for the key vault created for use with Always Encrypted. For more information on how to set up the key vault and create a column master key, see [Azure Key Vault - Step by Step](/archive/blogs/kv/azure-key-vault-step-by-step) and [Creating Column Master Keys in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
+Azure Key Vault is a convenient option to store and manage column master keys for Always Encrypted (especially if your application is hosted in Azure). The Microsoft JDBC Driver for SQL Server includes a built-in provider, `SQLServerColumnEncryptionAzureKeyVaultProvider`, for applications that have keys stored in Azure Key Vault. The name of this provider is AZURE_KEY_VAULT.
+
+> [!NOTE]
+> The Azure Key Vault provider built in to the JDBC driver supports both [Vaults and Managed HSMs in Azure Key Vault](/azure/key-vault/keys/about-keys).
+
+To use the Azure Key Vault store provider, an application developer needs to create the vault and the keys in Azure Key Vault and create an App registration in Azure Active Directory. The registered application must be granted Get, Decrypt, Encrypt, Unwrap Key, Wrap Key, and Verify permissions in the Access policies defined for the key vault created for use with Always Encrypted. For more information on how to set up the key vault and create a column master key, see [Azure Key Vault - Step by Step](/archive/blogs/kv/azure-key-vault-step-by-step) and [Creating Column Master Keys in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
 
 When using Azure Key Vault provider, the JDBC driver validates the column master key path against the list of trusted endpoints. Starting with driver version 8.2.2, this list is configurable: create a `mssql-jdbc.properties` file in the working directory of the application, set the `AKVTrustedEndpoints` property to a semicolon-delimited list. If the value begins with a semicolon, it extends the default list; otherwise, it replaces the default list.
+
+The default, trusted endpoints are:
+
+- *vault.azure.net
+- *vault.azure.cn
+- *vault.usgovcloudapi.net
+- *vault.microsoftazure.de
+- *managedhsm.azure.net (v9.2+)
+- *managedhsm.azure.cn (v9.2+)
+- *managedhsm.usgovcloudapi.net (v9.2+)
+- *managedhsm.microsoftazure.de (v9.2+)
 
 For the examples on this page, if you've created an Azure Key Vault based column master key and column encryption key by using SQL Server Management Studio, the T-SQL script to re-create them might look similar to this example with its own specific **KEY_PATH** and **ENCRYPTED_VALUE**:
 

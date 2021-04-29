@@ -104,14 +104,23 @@ conceptualContent:
           itemType: how-to-guide
     - title: "NoSQL"
       links:
+        - text: Relational to Azure Cosmos DB
+          url: /azure/cosmos-db/migrate-relational-to-cosmos-db-sql-api
+          itemType: how-to-guide
         - text: MongoDB to Azure Cosmos DB
           url: /azure/dms/tutorial-mongodb-cosmos-db-online?toc=/azure/cosmos-db/toc.json&bc=/azure/cosmos-db/breadcrumb/toc.json
           itemType: how-to-guide
-        - text: Microsoft Azure Table Storage to Azure Cosmos DB
-          url: /azure/cosmos-db/table-import
-          itemType: how-to-guide
         - text: Cassandra to Azure Cosmos DB
           url: /azure/cosmos-db/cassandra-import-data
+          itemType: how-to-guide
+        - text: DynamoDB to Azure Cosmos DB
+          url: /azure/cosmos-db/dynamo-to-cosmos
+          itemType: how-to-guide
+         - text: CouchBase to Azure Cosmos DB
+          url: /azure/cosmos-db/couchbase-cosmos-migration
+          itemType: how-to-guide      
+        - text: Azure Table Storage to Azure Cosmos DB
+          url: /azure/cosmos-db/table-import
           itemType: how-to-guide
     - title: "Resources"
       links:

@@ -39,10 +39,12 @@ azdata extension add --source -s
 ### Examples
 Add extension from URL.
 ```bash
-azdata extension add --source https://contoso.com/some_ext-0.0.1-py2.py3-none-any.whl```
+azdata extension add --source https://contoso.com/some_ext-0.0.1-py2.py3-none-any.whl
+```
 Add extension from local disk.
 ```bash
-azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl```
+azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl
+```
 Add extension from local disk and use pip proxy for dependencies.
 ```bash
 azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl --pip-proxy https://user:pass@proxy.server:8080
@@ -79,7 +81,8 @@ azdata extension remove --name -n
 ### Examples
 Remove an extension.
 ```bash
-azdata extension remove --name some-ext```
+azdata extension remove --name some-ext
+```
 ### Required Parameters
 #### `--name -n`
 Name of the extension

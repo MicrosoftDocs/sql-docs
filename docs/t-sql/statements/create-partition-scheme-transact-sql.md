@@ -68,7 +68,7 @@ AS PARTITION partition_function_name
   
  If *partition_function_name* generates less partitions than filegroups, the first unassigned filegroup is marked NEXT USED, and an information message displays naming the NEXT USED filegroup. If ALL is specified, the sole *file_group_name* maintains its NEXT USED property for this *partition_function_name*. The NEXT USED filegroup will receive an additional partition if one is created in an ALTER PARTITION FUNCTION statement. To create additional unassigned filegroups to hold new partitions, use ALTER PARTITION SCHEME.  
   
- When you specify the primary filegroup in *file_group_name* [ 1**,**_...n_], PRIMARY must be delimited, as in **[**PRIMARY**]**, because it is a keyword.  
+ When you specify the primary filegroup in *file_group_name* [ 1 **,**_...n_], PRIMARY must be delimited, as in **[**PRIMARY**]**, because it is a keyword.  
   
  Only PRIMARY is supported for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. See example E below. 
   

@@ -119,6 +119,9 @@ ms.author: chadam
   
  **Resolution:**  
   
+> [!NOTE]  
+> All the following steps must be run on both the Primary replica and the problematic Secondary replica(s).
+
 1. Ensure the endpoint is created and started. Run the following query to discover the endpoint
 
     ```sql
@@ -134,7 +137,10 @@ ms.author: chadam
     WHERE tep.type = 4
     ```
 
-    Use this command to restart the endpoint you discovered
+    > [!WARNING]
+    > Use caution when executing the next command as it can cause a momentary downtime for the replica. 
+
+    You can use these commands to restart the endpoint you discovered
 
     ```sql
     ALTER ENDPOINT hadr_endpoint STATE = STOPPED
@@ -165,11 +171,32 @@ ms.author: chadam
     netstat -a
     ```  
 
-3. Ensure the endpoint is configured for the correct IP/port that AG is defined for
-    - Run the following query from on the Primary and then each Secondary replica that is not connecting to find the endpoint URL and port
+3. Check for errors in the system. You can query the **sys.dm_hadr_availability_replica_states** for the last_connect_error_number which may help you diagnose the join issue. Depending on which replica was having difficulty communicating, you can query both the primary and secondary:
 
     ```sql
-    select endpoint_url from sys.availability_replicas
+    select
+      r.replica_server_name,
+      r.endpoint_url,
+      rs.connected_state_desc,
+      rs.last_connect_error_description,
+      rs.last_connect_error_number,
+      rs.last_connect_error_timestamp
+    from
+      sys.dm_hadr_availability_replica_states rs
+      join sys.availability_replicas r on rs.replica_id = r.replica_id
+    where
+      rs.is_local = 1
+    ```
+
+    For example, if the secondary was unable to communicate with the DNS server or if a replica's endpoint_url was configured incorrectly when creating the availability group, you may get the following results in the last_connect_error_description:
+
+    `DNS Lookup failed with error '11001(No such host is known)' `
+
+4. Ensure the endpoint  is config ured for the cor rect IP/port t ha t AG is defined for 
+    - Run the followin g query fr om on the Primary and then eac h  Secondary replica t hat is not connecting to find the endpoint URL and port
+
+    ```sql 
+    select endpoint_ur l from sys.availability_replicas
     ```
 
     - Run the following query to find the endpoints and ports
@@ -193,7 +220,7 @@ ms.author: chadam
 > [!NOTE]  
 > If you are using specific IP addresses for the endpoint to listen on, versus the default of “listen all”, then you may have to define URLs that use the specific IP address rather than the FQDN.
 
-4. Check whether the network service account has CONNECT permission to the endpoint. Run the following query to list the accounts that have connect permission to the endpoint on the server(s) in question.
+5. Check whether the network service account has CONNECT permission to the endpoint. Run the following query to list the accounts that have connect permission to the endpoint on the server(s) in question.
 
     ```sql
     SELECT 
@@ -212,7 +239,7 @@ ms.author: chadam
       AND tep.type = 4
     ```
 
-5. Check for possible name resolution issues
+6. Check for possible name resolution issues
     - Validate DNS resolution by using NSLookup on the IP address and the name:
 
     ```dos

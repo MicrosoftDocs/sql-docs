@@ -158,7 +158,7 @@ ms.author: chadam
     - If the Endpoint is listening and connection is successful, then you will see a blank screen.  If not, you will receive a connection error from Telnet
     - If Telnet connection to the IP address works but to the ServerName it does not, there is likely a DNS or name resolution issue
     - If connection works by ServerName and not by IP address, then there could be more than one endpoint defined on that server (another SQL instance perhaps) that is listening on that port. Though the status of the endpoint on the instance in question shows "STARTED" another instance may actually have the port binding and prevent the correct instance from listening and establishing TCP connections.
-    - If Telent fails to connect, look for Firewall and/or Anti-virus software that may be blocking the endpoint port in question. Check the firewall setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
+    - If Telnet fails to connect, look for Firewall and/or Anti-virus software that may be blocking the endpoint port in question. Check the firewall setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default).
     Run the following PowerShell script to examine for disabled inbound traffic rules
 
     ```powershell
@@ -171,7 +171,7 @@ ms.author: chadam
     netstat -a
     ```  
 
-3. Check for errors in the system. You can query the **sys.dm_hadr_availability_replica_states** for the last_connect_error_number which may help you diagnose the join issue. Depending on which replica was having difficulty communicating, you can query both the primary and secondary:
+3. Check for errors in the system. You can query the **sys.dm_hadr_availability_replica_states** for the last_connect_error_number that may help you diagnose the join issue. Depending on which replica was having difficulty communicating, you can query both the primary and secondary:
 
     ```sql
     select
@@ -192,8 +192,8 @@ ms.author: chadam
 
     `DNS Lookup failed with error '11001(No such host is known)' `
 
-4. Ensure the endpoint  is config ured for the cor rect IP/port t ha t AG is defined for 
-    - Run the followin g query fr om on the Primary and then eac h  Secondary replica t hat is not connecting to find the endpoint URL and port
+4. Ensure the endpoint is configured for the correct IP/port that AG is defined for. 
+    - Run the following query from on the Primary and then each  Secondary replica t hat is not connecting to find the endpoint URL and port
 
     ```sql 
     select endpoint_ur l from sys.availability_replicas

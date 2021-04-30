@@ -53,7 +53,7 @@ To complete this article, you need SQL Server Management Studio and access to a 
 
 3. After you've completed all the fields, select **Connect**.
 
-    You can also modify additional connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options.
+    You can also modify other connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options.
 
     If you haven't set up your firewall settings, a prompt appears to configure the firewall. Once you sign in, fill in your Azure account login information and continue to set the firewall rule. Then select **OK**. This prompt is a one time action. Once you configure the firewall, the firewall prompt shouldn't appear.
 
@@ -94,7 +94,7 @@ In this section, you create a table in your dedicated SQL pool (formerly SQL DW)
 
 3. Execute the query by selecting **Execute** or selecting F5 on your keyboard.
 
-After the query is complete, the new Customers table is displayed in the list of tables in Object Explorer. If the table isn't displayed, right-click the your dedicated SQL pool (formerly SQL DW) **Tables** node in Object Explorer, and then select **Refresh**.
+After the query is complete, the new Customers table is displayed in the list of tables in Object Explorer. If the table isn't displayed, right-click the dedicated SQL pool (formerly SQL DW) **Tables** node in Object Explorer, and then select **Refresh**.
 
    :::image type="content" source="media/ssms-connect-query-azure-synapse-analytics/new-table.png" alt-text="New table":::
 

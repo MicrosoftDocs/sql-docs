@@ -121,108 +121,110 @@ ms.author: chadam
   
 1. Ensure the endpoint is created and started. Run the following query to discover the endpoint
 
+    ```sql
+    SELECT
+      tep.name as EndPointName,
+      sp.name As CreatedBy,
+      tep.type_desc,
+      tep.state_desc,
+      tep.port
+    FROM
+      sys.tcp_endpoints tep
+    INNER JOIN sys.server_principals sp ON tep.principal_id = sp.principal_id
+    WHERE tep.type = 4
     ```
-	SELECT
-	  tep.name as EndPointName,
-	  sp.name As CreatedBy,
-	  tep.type_desc,
-	  tep.state_desc,
-	  tep.port
-	FROM
-	  sys.tcp_endpoints tep
-	  INNER JOIN sys.server_principals sp ON tep.principal_id = sp.principal_id
-	WHERE
-	  tep.type = 4
-    ```
-    
+
     Use this command to restart the endpoint you discovered
 
-    ```
+    ```sql
     ALTER ENDPOINT hadr_endpoint STATE = STOPPED
     ALTER ENDPOINT hadr_endpoint STATE = STARTED
     ```
 
-2.  Check if you can connect to the endpoint
+2. Check if you can connect to the endpoint
     - Use Telnet to validate connectivity. Here are examples of commands you can use:
-    
-    ```
+
+    ```sql
     Telnet ServerName Port
     Telnet IP_Address Port
     ```
+
     - If the Endpoint is listening and connection is successful, then you will see a blank screen.  If not, you will receive a connection error from Telnet
     - If Telnet connection to the IP address works but to the ServerName it does not, there is likely a DNS or name resolution issue
     - If connection works by ServerName and not by IP address, then there could be more than one endpoint defined on that server (another SQL instance perhaps) that is listening on that port. Though the status of the endpoint on the instance in question shows "STARTED" another instance may actually have the port binding and prevent the correct instance from listening and establishing TCP connections.
-	- If Telent fails to connect, look for Firewall and/or Anti-virus software that may be blocking the endpoint port in question. Check the firewall setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default). 
-    Run the following PowerShell script to check for disabled inbound traffic rules
-	
-	```
-	Get-NetFirewallRule | where {($_.enabled -eq $False) -and ($_.Direction -eq "Inbound")} | Format-Table
-	```
-	
-	- Capture a NETSTAT -a output and verify the status is a LISTENING or ESTABLISHED on the IP:Port for the endpoint specified.
+    - If Telent fails to connect, look for Firewall and/or Anti-virus software that may be blocking the endpoint port in question. Check the firewall setting to see if it allows the endpoint port communication between the server instances that host primary replica and the secondary replica (port 5022 by default)
+    Run the following PowerShell script to examine for disabled inbound traffic rules
 
-	
+    ```powershell
+    Get-NetFirewallRule -Action Block -Enabled True -Direction Inbound |Format-Table
+    ```
+
+    - Capture a NETSTAT -a output and verify the status is a LISTENING or ESTABLISHED on the IP:Port for the endpoint specified
+
+    ```dos
+    netstat -a
+    ```  
+
 3. Ensure the endpoint is configured for the correct IP/port that AG is defined for
     - Run the following query from on the Primary and then each Secondary replica that is not connecting to find the endpoint URL and port
-	```
-	select endpoint_url from sys.availability_replicas
-	```
-	- Run the following query to find the endpoints and ports
-	
-    ```
-	SELECT
-	  tep.name as EndPointName,
-	  sp.name As CreatedBy,
-	  tep.type_desc,
-	  tep.state_desc,
-	  tep.port
-	FROM
-	  sys.tcp_endpoints tep
-	  INNER JOIN sys.server_principals sp ON tep.principal_id = sp.principal_id
-	WHERE
-	  tep.type = 4
+
+    ```sql
+    select endpoint_url from sys.availability_replicas
     ```
 
-	
-	 - Compare endpoint_url and port from each query and ensure the port from the endpoint_url matches the port defined for the endpoint on each respective replica
+    - Run the following query to find the endpoints and ports
 
-> [!NOTE]  
->  If you are using specific IP addresses for the endpoint to listen on, versus the default of “listen all”, then you may need to define URLs that use the specific IP address rather than the FQDN. 
+    ```sql
+    SELECT
+      tep.name as EndPointName,
+      sp.name As CreatedBy,
+      tep.type_desc,
+      tep.state_desc,
+      tep.port
+    FROM
+      sys.tcp_endpoints tep
+      INNER JOIN sys.server_principals sp ON tep.principal_id = sp.principal_id
+    WHERE
+      tep.type = 4
+    ```
 
+    - Compare endpoint_url and port from each query and ensure the port from the endpoint_url matches the port defined for the endpoint on each respective replica
 
+> [!NOTE] If you are using specific IP addresses for the endpoint to listen on, versus the default of “listen all”, then you may have to define URLs that use the specific IP address rather than the FQDN.
 
-4.   Check whether the network service account has CONNECT permission to the endpoint. Run the following query to list the accounts that have connect permission to the endpoint on the server(s) in question.
+4. Check whether the network service account has CONNECT permission to the endpoint. Run the following query to list the accounts that have connect permission to the endpoint on the server(s) in question.
 
-	```
-	SELECT
-	  perm.class_desc,
-	  prin.name,
-	  perm.permission_name,
-	  perm.state_desc,
-	  prin.type_desc as PrincipalType,
-	  prin.is_disabled
-	FROM
-	  sys.server_permissions perm
-	  LEFT JOIN sys.server_principals prin ON perm.grantee_principal_id = prin.principal_id
-	  LEFT JOIN sys.tcp_endpoints tep ON perm.major_id = tep.endpoint_id
-	WHERE
-	  perm.class_desc = 'ENDPOINT'
-	  AND perm.permission_name = 'CONNECT'
-	  AND tep.type = 4
-	```
+    ```sql
+    SELECT 
+      perm.class_desc,
+      prin.name,
+      perm.permission_name,
+      perm.state_desc,
+      prin.type_desc as PrincipalType,
+      prin.is_disabled
+    FROM sys.server_permissions perm
+      LEFT JOIN sys.server_principals prin ON perm.grantee_principal_id = prin.principal_id
+      LEFT JOIN sys.tcp_endpoints tep ON perm.major_id = tep.endpoint_id
+    WHERE 
+      perm.class_desc = 'ENDPOINT'
+      AND perm.permission_name = 'CONNECT'
+      AND tep.type = 4
+    ```
+
 5. Check for possible name resolution issues
     - Validate DNS resolution by using NSLookup on the IP address and the name:
-	
-	```
-	nslookup IP_Address
-	nslookup ServerName
-	```
-	
-	- Does the name resolve to the correct IP address? Does the IP address resolve to the correct name?
-	- Check for local HOSTS file entries
-	- Check if there are [Server Aliases for Use by a Client](../../configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md) defined on the replicas 
+
+    ```dos
+    nslookup IP_Address
+    nslookup ServerName
+    ```
+
+    - Does the name resolve to the correct IP address? Does the IP address resolve to the correct name?
+    - Check for local HOSTS file entries
+    - Check if there are [Server Aliases for Use by a Client](../../configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md) defined on the replicas 
   
-  For more information, refer to [Create Availability Group Fails With Error 35250 'Failed to join the database'](https://docs.microsoft.com/en-us/archive/blogs/alwaysonpro/create-availability-group-fails-with-error-35250-failed-to-join-the-database)
+     For more information, refer to [Create Availability Group Fails With Error 35250 'Failed to join the database'](https://docs.microsoft.com/en-us/archive/blogs/alwaysonpro/create-availability-group-fails-with-error-35250-failed-to-join-the-database)
+
   
 ##  <a name="ROR"></a> Read-Only Routing is Not Working Correctly  
  Verify the following configuration values settings and correct them if necessary.  

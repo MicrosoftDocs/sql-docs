@@ -8,10 +8,10 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
+ms.date: 04/30/2021
 ---
 
-# Connect Azure Data Studio to SQL Server using Windows authentication - Kerberos
+# Connect Azure Data Studio to SQL Server using Kerberos
 
 Azure Data Studio supports connecting to SQL Server by using Kerberos.
 
@@ -122,9 +122,12 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 ### macOS
 
-Join your macOS to the Active Directory domain controller by following these steps.
+You can join your macOS to the Active Directory domain controller by [configuring your domain access in the Directory Utility](https://support.apple.com/guide/directory-utility/configure-domain-access-diru11f4f748/mac).
 
-## Configure KDC in krb5.conf
+
+#### Configure KDC in krb5.conf 	
+
+This section discusses the [Kerberos configuration file](http://web.mit.edu/macdev/KfM/Common/Documentation/preferences-osx.html).
 
 Edit the `/etc/krb5.conf` file in an editor of your choice. Configure the following keys:
 

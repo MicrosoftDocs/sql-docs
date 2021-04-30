@@ -44,7 +44,7 @@ Projects that require any of the preceding features need to explicitly declare t
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-identity</artifactId>
-    <version>1.2.5</version>
+    <version>1.1.3</version>
 </dependency>
 ```
 
@@ -60,13 +60,13 @@ Projects that require any of the preceding features need to explicitly declare t
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-identity</artifactId>
-    <version>1.2.5</version>
+    <version>1.1.3</version>
 </dependency>
 
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-security-keyvault-keys</artifactId>
-    <version>4.2.7</version>
+    <version>4.2.1</version>
 </dependency>
 ```
 

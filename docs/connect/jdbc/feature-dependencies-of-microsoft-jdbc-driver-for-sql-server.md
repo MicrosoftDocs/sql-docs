@@ -2,7 +2,7 @@
 title: "Feature dependencies of the Microsoft JDBC Driver"
 description: "Learn about the dependencies that the Microsoft JDBC Driver for SQL Server has and how to meet them."
 ms.custom: ""
-ms.date: "02/26/2021"
+ms.date: "04/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -20,69 +20,63 @@ This article lists libraries that the Microsoft JDBC Driver for SQL Server depen
 
 ## Compile time
 
- - `com.microsoft.azure:azure-keyvault` : Azure Key Vault Provider for Always Encrypted Azure Key Vault feature. (optional)
- - `com.microsoft.azure:azure-identity` : Azure Active Directory Library for Java for Azure Active Directory Authentication feature and Azure Key Vault feature. (optional)
+ - `com.microsoft.azure:azure-security-keyvault-keys` : Microsoft Azure Client Library For KeyVault Keys for Always Encrypted Azure Key Vault feature. (optional)
+ - `com.microsoft.azure:azure-identity` : Microsoft Azure Client Library For Identity for Azure Active Directory Authentication features and Azure Key Vault feature. (optional)
  - `org.antlr:antlr4-runtime`: ANTLR 4 Runtime for useFmtOnly feature. (optional)
  - `org.osgi:org.osgi.core`: OSGi Core library for OSGi Framework support.
  - `org.osgi:org.osgi.compendium`: OSGi Compendium library for OSGi Framework support.
  - `com.google.code.gson`: JSON parser for Always Encrypted with secure enclaves feature. (optional)
  - `org.bouncycastle.bcprov-jdk15on`: Bouncy Castle Provider for Always Encrypted with secure enclaves feature when using JAVA 8 only. (optional)
 
-## Test time
+## Run time
 
-Specific projects that require either of the preceding features need to explicitly declare the respective dependencies in their POM file.
+Projects that require any of the preceding features need to explicitly declare the respective dependencies in their POM file.
 
-**For example:** When you're using the Azure Active Directory Authentication feature, you need to redeclare the `adal4j` dependency in your project's POM file. See the following snippet:
-
-```xml
-<dependency>
-    <groupId>com.microsoft.sqlserver</groupId>
-    <artifactId>mssql-jdbc</artifactId>
-    <version>9.2.1.jre11</version>
-    <scope>compile</scope>
-</dependency>
-
-<dependency>
-    <groupId>com.microsoft.azure</groupId>
-    <artifactId>adal4j</artifactId>
-    <version>1.6.5</version>
-</dependency>
-
-<dependency>
-    <groupId>com.microsoft.rest</groupId>
-    <artifactId>client-runtime</artifactId>
-    <version>1.7.4</version>
-</dependency>
-```
-
-**For example:** When you're using the Azure Key Vault feature, you need to redeclare the `azure-keyvault` dependency and the `adal4j` dependency in your project's POM file. See the following snippet:
+**For example:** If you're using the Azure Active Directory Authentication feature with JDBC driver version 9.2.1 and above, you need to declare the `azure-identity` dependency in your project's POM file. See the following snippet:
 
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
     <version>9.2.1.jre11</version>
-    <scope>compile</scope>
 </dependency>
 
 <dependency>
-    <groupId>com.microsoft.azure</groupId>
-    <artifactId>adal4j</artifactId>
-    <version>1.6.5</version>
-</dependency>
-
-<dependency>
-    <groupId>com.microsoft.rest</groupId>
-    <artifactId>client-runtime</artifactId>
-    <version>1.7.4</version>
-</dependency>
-
-<dependency>
-    <groupId>com.microsoft.azure</groupId>
-    <artifactId>azure-keyvault</artifactId>
-    <version>1.2.4</version>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-identity</artifactId>
+    <version>1.2.5</version>
 </dependency>
 ```
+
+**For example:** If you're using the Azure Key Vault feature with JDBC driver version 9.2.1 and above, you need to declare the `azure-security-keyvault-keys` and the `azure-identity` dependencies in your project's POM file. See the following snippet:
+
+```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>9.2.1.jre11</version>
+</dependency>
+
+<dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-identity</artifactId>
+    <version>1.2.5</version>
+</dependency>
+
+<dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-security-keyvault-keys</artifactId>
+    <version>4.2.7</version>
+</dependency>
+```
+
+[!NOTE]
+Please make sure to use the version of the POM file that is shipped with the version of the JDBC driver version you are using as the dependencies and versions may have changed. 
+
+If you are using Maven to build or test your project, Maven will download all dependent libraries declared in the POM file and their transitiive libraries automatically. You can also use the
+[Maven Dependency Plugin](https://maven.apache.org/plugins/maven-dependency-plugin/copy-dependencies-mojo.html) to download all project dependencies to a desired location. If you are not using Maven, you will have to download all dependencies and transitive dependencies manually and make sure you have all the correct version of each library. Once you have downloaded all the required depedendent libraries, add them to your project's classpath before running your application.
+
+
 
 ## Dependency requirements for the JDBC driver
 

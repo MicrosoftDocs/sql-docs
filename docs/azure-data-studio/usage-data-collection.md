@@ -25,9 +25,9 @@ To see feature usage data that is collected by Azure Data Studio, follow the ste
 
 1.	Launch Azure Data Studio.
 2.	Select **View**, then Select **Output** in the main menu to show the **Output** window. 
-3.	When the **Output** window is visible, choose **Telemetry** in the **Show output from:** menu.
+3.	When the **Output** window is visible, choose **Log (Window)** in the **Show output from:** menu.
 
-While you use SSMS to interact with your databases, the **Output** window shows the data that is collected.
+While you use Azure Data Studio to interact with your databases, the **Output** window shows the data that is collected.
 
 ## How to disable system-generated logs
 
@@ -53,3 +53,8 @@ To disable crash reporting, from **File** > **Preferences** > **Settings**, add 
 
 ## More resources
 - [Workspace and User settings](settings.md)
+
+## See also
+
+- [Configure usage and diagnostic data collection for SQL Server](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
+- [Local audit for SQL Server usage and diagnostic data collection](../sql-server/usage-and-diagnostic-data-in-local-audit.md)

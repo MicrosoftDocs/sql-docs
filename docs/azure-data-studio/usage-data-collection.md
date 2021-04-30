@@ -15,7 +15,7 @@ ms.date: 04/30/2021
 
 Azure Data Studio contains Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft.
 
-Azure Data Studio may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of Azure Data Studio. We don't collect your name, address, or other contact information. 
+Azure Data Studio may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of Azure Data Studio. We don't collect your name, address, or any other data that relates to an identified or identifiable individual.
 
 For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](../sql-server/sql-server-privacy.md).
 

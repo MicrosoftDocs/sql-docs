@@ -18,7 +18,7 @@ ms.date: 04/30/2021
 
 SQL Server Management Studio (SSMS) contains Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. 
 
-SSMS may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of SSMS. We don't collect your name, address, or other contact information. 
+SSMS may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of SSMS. We don't collect your name, address, or any other data that relates to an identified or identifiable individual.
 
 For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](../sql-server/sql-server-privacy.md).
 
@@ -26,9 +26,9 @@ For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com
 
 To see feature usage data that is collected by SSMS, follow the steps below:
 
-1.	Launch SSMS.
-2.	Select **View**, then Select **Output** in the main menu to show the **Output** window. 
-3.	When the **Output** window is visible, choose **Telemetry** in the **Show output from:** menu.
+1. Launch SSMS.
+2. Select **View**, then Select **Output** in the main menu to show the **Output** window. 
+3. When the **Output** window is visible, choose **Telemetry** in the **Show output from:** menu.
 
 While you use SSMS to interact with your databases, the **Output** window shows the data that is collected.
 

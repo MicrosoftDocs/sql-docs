@@ -825,7 +825,7 @@ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any 
   
  **Miscellaneous Commands**  
   **:r \<** _filename_ **>**  
- Parses additional Transact-SQL statements and **sqlcmd** commands from the file specified by **\<**_filename_**>** into the statement cache.  
+ Parses additional Transact-SQL statements and **sqlcmd** commands from the file specified by **\<** _filename_ **>** into the statement cache.  
   
  If the file contains Transact-SQL statements that are not followed by **GO**, you must enter **GO** on the line that follows **:r**.  
   

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "OLE DB, SQLXML"
   - "executing updategrams [SQLXML]"
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -55,7 +55,7 @@ In the rest of this document, it is assumed that the reader is familiar with the
 
 ## About SQL Writer
 
-The SQL writer is a VSS writer provided by the SQL Server. It handles the VSS interaction with SQL Server. The SQL writer ships with SQL Server as a standalone service and is installed as part of the SQL Server installation. By default, the SQL writer is not enabled. It needs to be explicitly enabled to run on the server machine.
+The SQL writer is a VSS writer provided by the SQL Server. It handles the VSS interaction with SQL Server. The SQL writer ships with SQL Server as a standalone service and is installed as part of the SQL Server installation.
 
 The role of the SQL writer in a VSS snapshot backup operation: 
 
@@ -74,15 +74,14 @@ During installation, the SQL writer account will be installed to use the Local S
   > [!NOTE]
   > To have the SQL writer service work correctly, it is important to make sure that the Local System account is not removed from the SQL Server instance's 'sa' role.
 
-### Enabling and Starting SQL Writer
+### Re-Enabling and Starting SQL Writer
 
-In order to start and use the SQL writer, the following must be done:
+By default SQL Writer is enabled and will start automatically. If this configuration has been modified, the following must be done to revert to default settings :
 
 SQL writer service can be enabled by marking this service as "Automatic". To open the services through control panel, click Start, click Control Panel, double-click Administrative Tools, and then double-click Services. In the Services pane, double-click the SQL writer service and modify the "Startup Type" property to "Automatic".
 
-Service should also be started by selecting the "Start" button under the "Service Status" property in the service property screen mentioned above.
+Service should then be started by selecting the "Start" button under the "Service Status" property in the service property screen mentioned above.
 
-For convenience, the SQL Writer service will make these changes automatically the first time that it is started.
 
   > [!NOTE]
   > In certain cases where an instance of SQL Server Express is installed and an application is using the User Instances feature, the SQL writer may be automatically started by SQL Server. This is done to facilitate the enumeration of these User Instances during a VSS backup operation. 

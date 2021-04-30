@@ -5,7 +5,7 @@ description: Reference article for azdata arc postgres server commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 04/06/2021
+ms.date: 04/29/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -67,7 +67,11 @@ azdata arc postgres server create --name -n
                                   
 [--no-wait]  
                                   
-[--engine-settings -e]
+[--engine-settings -es]  
+                                  
+[--coordinator-engine-settings -ces]  
+                                  
+[--worker-engine-settings -wes]
 ```
 ### Examples
 Create an Azure Arc enabled PostgreSQL Hyperscale server group.
@@ -83,6 +87,10 @@ Create a PostgreSQL server group with volume claim mounts.
 ```bash
 azdata arc postgres server create -n pg1 --volume-claim-mounts backup-pvc:backup
 ```
+Create a PostgreSQL server group with specific memory-limit for different node roles.
+```bash
+azdata arc postgres server create -n pg1 --memory-limit "coordinator=2Gi,w=1Gi" --workers 1
+```
 ### Required Parameters
 #### `--name -n`
 Name of the Azure Arc enabled PostgreSQL Hyperscale server group.
@@ -90,13 +98,13 @@ Name of the Azure Arc enabled PostgreSQL Hyperscale server group.
 #### `--path`
 The path to the source json file for the Azure Arc enabled PostgreSQL Hyperscale server group. This is optional.
 #### `--cores-limit -cl`
-The maximum number of CPU cores for Azure Arc enabled PostgreSQL Hyperscale server group that can be used per node. Fractional cores are supported.
+The maximum number of CPU cores for Azure Arc enabled PostgreSQL Hyperscale server group that can be used per node. Fractional cores are supported. Optionally a comma-separated list of roles with values can be specified in format <role>=<value>. Valid roles are: "coordinator" or "c", "worker" or "w". If no roles are specified, settings will apply to all nodes of the PostgreSQL Hyperscale server group.
 #### `--cores-request -cr`
-The minimum number of CPU cores that must be available per node to schedule the service. Fractional cores are supported.
+The minimum number of CPU cores that must be available per node to schedule the service. Fractional cores are supported. Optionally a comma-separated list of roles with values can be specified in format <role>=<value>. Valid roles are: "coordinator" or "c", "worker" or "w". If no roles are specified, settings will apply to all nodes of the PostgreSQL Hyperscale server group.
 #### `--memory-limit -ml`
-The memory limit of the Azure Arc enabled PostgreSQL Hyperscale server group as a number followed by Ki (kilobytes), Mi (megabytes), or Gi (gigabytes).
+The memory limit of the Azure Arc enabled PostgreSQL Hyperscale server group as a number followed by Ki (kilobytes), Mi (megabytes), or Gi (gigabytes). Optionally a comma-separated list of roles with values can be specified in format <role>=<value>. Valid roles are: "coordinator" or "c", "worker" or "w". If no roles are specified, settings will apply to all nodes of the PostgreSQL Hyperscale server group.
 #### `--memory-request -mr`
-The memory request of the Azure Arc enabled PostgreSQL Hyperscale server group as a number followed by Ki (kilobytes), Mi (megabytes), or Gi (gigabytes).
+The memory request of the Azure Arc enabled PostgreSQL Hyperscale server group as a number followed by Ki (kilobytes), Mi (megabytes), or Gi (gigabytes). Optionally a comma-separated list of roles with values can be specified in format <role>=<value>. Valid roles are: "coordinator" or "c", "worker" or "w". If no roles are specified, settings will apply to all nodes of the PostgreSQL Hyperscale server group.
 #### `--storage-class-data -scd`
 The storage class to be used for data persistent volumes.
 #### `--storage-class-logs -scl`
@@ -124,8 +132,12 @@ If specified, no external service will be created. Otherwise, an external servic
 Optional.
 #### `--no-wait`
 If given, the command will not wait for the instance to be in a ready state before returning.
-#### `--engine-settings -e`
+#### `--engine-settings -es`
 A comma separated list of Postgres engine settings in the format 'key1=val1, key2=val2'.
+#### `--coordinator-engine-settings -ces`
+A comma separated list of Postgres engine settings in the format 'key1=val1, key2=val2' to be applied to 'coordinator' node role. When node role specific settings are specified, default settings will be ignored and overridden with the settings provided here.
+#### `--worker-engine-settings -wes`
+A comma separated list of Postgres engine settings in the format 'key1=val1, key2=val2' to be applied to 'worker' node role. When node role specific settings are specified, default settings will be ignored and overridden with the settings provided here.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -161,9 +173,13 @@ azdata arc postgres server edit --name -n
                                 
 [--no-wait]  
                                 
-[--engine-settings -e]  
+[--engine-settings -es]  
                                 
-[--replace-engine-settings -re]  
+[--replace-engine-settings -res]  
+                                
+[--coordinator-engine-settings -ces]  
+                                
+[--worker-engine-settings -wes]  
                                 
 [--admin-password]
 ```
@@ -172,9 +188,9 @@ Edit the configuration of an Azure Arc enabled PostgreSQL Hyperscale server grou
 ```bash
 azdata arc postgres server edit --src ./spec.json -n pg1
 ```
-Edit an Azure Arc enabled PostgreSQL Hyperscale server group with engine settings.
+Edit an Azure Arc enabled PostgreSQL Hyperscale server group with engine settings for the coordinator node.
 ```bash
-azdata arc postgres server edit -n pg1 --engine-settings "key2=val2"
+azdata arc postgres server edit -n pg1 --coordinator-engine-settings "key2=val2"
 ```
 Edits an Azure Arc enabled PostgreSQL Hyperscale server group and replaces existing engine settings with new setting key1=val1.
 ```bash
@@ -191,23 +207,27 @@ The number of worker nodes to provision in a server group. In Preview, reducing 
 #### ``
 Engine version cannot be changed. --engine-version can be used in conjunction with --name to identify a PostgreSQL Hyperscale server group when two server groups of different engine version have the same name. --engine-version is optional and when used to identify a server group, it must be 11 or 12.
 #### `--cores-limit -cl`
-The maximum number of CPU cores for Azure Arc enabled PostgreSQL Hyperscale server group that can be used per node, fractional cores are supported. To remove the cores_limit, specify its value as empty string.
+The maximum number of CPU cores for Azure Arc enabled PostgreSQL Hyperscale server group that can be used per node, fractional cores are supported. To remove the cores_limit, specify its value as empty string. Optionally a comma-separated list of roles with values can be specified in format <role>=<value>. Valid roles are: "coordinator" or "c", "worker" or "w". If no roles are specified, settings will apply to all nodes of the PostgreSQL Hyperscale server group.
 #### `--cores-request -cr`
-The minimum number of CPU cores that must be available per node to schedule the service, fractional cores are supported. To remove the cores_request, specify its value as empty string.
+The minimum number of CPU cores that must be available per node to schedule the service, fractional cores are supported. To remove the cores_request, specify its value as empty string. Optionally a comma-separated list of roles with values can be specified in format <role>=<value>. Valid roles are: "coordinator" or "c", "worker" or "w". If no roles are specified, settings will apply to all nodes of the PostgreSQL Hyperscale server group.
 #### `--memory-limit -ml`
-The memory limit for Azure Arc enabled PostgreSQL Hyperscale server group as a number followed by Ki (kilobytes), Mi (megabytes), or Gi (gigabytes). To remove the memory_limit, specify its value as empty string.
+The memory limit for Azure Arc enabled PostgreSQL Hyperscale server group as a number followed by Ki (kilobytes), Mi (megabytes), or Gi (gigabytes). To remove the memory_limit, specify its value as empty string. Optionally a comma-separated list of roles with values can be specified in format <role>=<value>. Valid roles are: "coordinator" or "c", "worker" or "w". If no roles are specified, settings will apply to all nodes of the PostgreSQL Hyperscale server group.
 #### `--memory-request -mr`
-The memory request for Azure Arc enabled PostgreSQL Hyperscale server group as a number followed by Ki (kilobytes), Mi (megabytes), or Gi (gigabytes). To remove the memory_request, specify its value as empty string.
+The memory request for Azure Arc enabled PostgreSQL Hyperscale server group as a number followed by Ki (kilobytes), Mi (megabytes), or Gi (gigabytes). To remove the memory_request, specify its value as empty string. Optionally a comma-separated list of roles with values can be specified in format <role>=<value>. Valid roles are: "coordinator" or "c", "worker" or "w". If no roles are specified, settings will apply to all nodes of the PostgreSQL Hyperscale server group.
 #### `--extensions`
 A comma-separated list of the Postgres extensions that should be loaded on startup. Please refer to the postgres documentation for supported values.
 #### `--port`
 Optional.
 #### `--no-wait`
 If given, the command will not wait for the instance to be in a ready state before returning.
-#### `--engine-settings -e`
+#### `--engine-settings -es`
 A comma separated list of Postgres engine settings in the format 'key1=val1, key2=val2'. The provided settings will be merged with the existing settings. To remove a setting, provide an empty value like 'removedKey='. If you change an engine setting that requires a restart, the service will be restarted to apply the settings immediately.
-#### `--replace-engine-settings -re`
+#### `--replace-engine-settings -res`
 When specified with --engine-settings, will replace all existing custom engine settings with new set of settings and values.
+#### `--coordinator-engine-settings -ces`
+A comma separated list of Postgres engine settings in the format 'key1=val1, key2=val2' to be applied to 'coordinator' node role. When node role specific settings are specified, default settings will be ignored and overridden with the settings provided here.
+#### `--worker-engine-settings -wes`
+A comma separated list of Postgres engine settings in the format 'key1=val1, key2=val2' to be applied to 'worker' node role. When node role specific settings are specified, default settings will be ignored and overridden with the settings provided here.
 #### `--admin-password`
 If given, the Azure Arc enabled PostgreSQL Hyperscale server group's admin password will be set to the value of the AZDATA_PASSWORD environment variable if present and a prompted value otherwise.
 ### Global Arguments
@@ -312,4 +332,3 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
-

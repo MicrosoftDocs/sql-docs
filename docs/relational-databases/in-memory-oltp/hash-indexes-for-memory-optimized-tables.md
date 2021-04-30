@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Troubleshooting Hash Indexes for Memory-Optimized Tables

@@ -173,5 +173,4 @@ GO
  [Rowset Functions &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [precompute rank Server Configuration Option](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md)  
-  
+ [precompute rank Server Configuration Option](/docs/database-engine/discontinued-database-engine-functionality-in-sql-server)  

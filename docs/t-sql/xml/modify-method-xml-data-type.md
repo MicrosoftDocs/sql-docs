@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "modify() method"
   - "modify method"
 ms.assetid: 52430735-51f4-46d1-a308-9aecf8648fda
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # modify() Method (xml Data Type)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

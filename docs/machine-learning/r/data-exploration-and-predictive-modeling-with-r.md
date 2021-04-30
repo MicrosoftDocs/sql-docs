@@ -90,7 +90,7 @@ For examples of how to create and work with data sources and execution contexts,
 
 An important part of data science is providing your analyses to others, or using predictive models to improve business results or processes. In [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], it is easy to move to production when your R script or model is ready.
 
-For more information about how you can move your code to run in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Operationalizing Your R Code](../../machine-learning/r/operationalizing-your-r-code.md).
+For more information about how you can move your code to run in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Operationalizing Your R Code](/sql/machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model).
 
 Typically the deployment process begins with cleaning up your script to eliminate code that is not needed in production. As you move computations closer to the data, you might find ways to  more efficiently move, summarize, or present data than doing everything in R.  We recommend that the data scientist consult with a database developer about ways to improve performance, especially if the solution does data cleansing or feature engineering that might be more effective in SQL. Changes to ETL processes might be needed to ensure that workflows for building or scoring a model don't fail, and that input data is available in the right format.
 

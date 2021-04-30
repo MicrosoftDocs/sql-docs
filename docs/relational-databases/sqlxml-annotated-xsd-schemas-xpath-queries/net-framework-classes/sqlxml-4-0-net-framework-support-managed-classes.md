@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "data providers [SQLXML], SQLXML Managed Classes"
   - "SQLXML, Managed Classes"
 ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML 4.0 .NET Framework Support - Managed Classes

@@ -190,7 +190,8 @@ ms.author: chadam
 
     - Compare endpoint_url and port from each query and ensure the port from the endpoint_url matches the port defined for the endpoint on each respective replica
 
-> [!NOTE] If you are using specific IP addresses for the endpoint to listen on, versus the default of “listen all”, then you may have to define URLs that use the specific IP address rather than the FQDN.
+> [!NOTE]  
+> If you are using specific IP addresses for the endpoint to listen on, versus the default of “listen all”, then you may have to define URLs that use the specific IP address rather than the FQDN.
 
 4. Check whether the network service account has CONNECT permission to the endpoint. Run the following query to list the accounts that have connect permission to the endpoint on the server(s) in question.
 
@@ -223,7 +224,7 @@ ms.author: chadam
     - Check for local HOSTS file entries
     - Check if there are [Server Aliases for Use by a Client](../../configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md) defined on the replicas 
   
-     For more information, refer to [Create Availability Group Fails With Error 35250 'Failed to join the database'](https://docs.microsoft.com/en-us/archive/blogs/alwaysonpro/create-availability-group-fails-with-error-35250-failed-to-join-the-database)
+     For more information, refer to [Create Availability Group Fails With Error 35250 'Failed to join the database'](https://docs.microsoft.com/archive/blogs/alwaysonpro/create-availability-group-fails-with-error-35250-failed-to-join-the-database)
 
   
 ##  <a name="ROR"></a> Read-Only Routing is Not Working Correctly  

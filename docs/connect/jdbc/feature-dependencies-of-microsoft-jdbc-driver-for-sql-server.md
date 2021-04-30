@@ -73,10 +73,7 @@ Projects that require any of the preceding features need to explicitly declare t
 > [!NOTE]
 > Make sure to use the version of the POM file that's shipped with the version of the JDBC driver you're using. The dependencies and versions may have changed.
 
-If you are using Maven to build or test your project, Maven will download all dependent libraries declared in the POM file and their transitiive libraries automatically. You can also use the
-[Maven Dependency Plugin](https://maven.apache.org/plugins/maven-dependency-plugin/copy-dependencies-mojo.html) to download all project dependencies to a desired location. If you are not using Maven, you will have to download all dependencies and transitive dependencies manually and make sure you have all the correct version of each library. Once you have downloaded all the required depedendent libraries, add them to your project's classpath before running your application.
-
-
+If you're using Maven to build or test your project, Maven will automatically download dependent libraries declared in the POM file along with their transitive libraries. You can also use the [Maven Dependency Plugin](https://maven.apache.org/plugins/maven-dependency-plugin/copy-dependencies-mojo.html) to download all project dependencies to a desired location. If you're not using Maven, you'll have to download dependencies and transitive dependencies manually and make sure you have all the correct versions of each library. Once you've downloaded the required dependent libraries, add them to your project's classpath before running your application.
 
 ## Dependency requirements for the JDBC driver
 

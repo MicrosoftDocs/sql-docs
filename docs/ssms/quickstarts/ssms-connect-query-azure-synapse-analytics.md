@@ -1,6 +1,6 @@
 ---
-title: Connect and query a dedicated SQL pool in Azure Synapse Analytics with SQL Server Management Studio (SSMS)
-description: Connect to a dedicated SQL pool in Azure Synapse Analytics using SSMS. Create and query a dedicated SQL pool in Azure Synapse Analytics by running basic T-SQL queries in SSMS.
+title: Connect and query a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics with SQL Server Management Studio (SSMS)
+description: Connect to a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics using SSMS. Create and query a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics by running basic T-SQL queries in SSMS.
 ms.prod: sql
 ms.technology: ssms
 ms.topic: quickstart
@@ -11,14 +11,14 @@ ms.custom: contperf-fy21q2
 ms.date: 12/15/2020
 ---
 
-# Quickstart: Connect and query a dedicated SQL pool in Azure Synapse Analytics with SQL Server Management Studio (SSMS)
+# Quickstart: Connect and query a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics with SQL Server Management Studio (SSMS)
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Get started using SQL Server Management Studio (SSMS) to connect to your dedicated SQL pool in Azure Synapse Analytics and run some Transact-SQL (T-SQL) commands.
+Get started using SQL Server Management Studio (SSMS) to connect to your dedicated SQL pool (formely SQL DW) in Azure Synapse Analytics and run some Transact-SQL (T-SQL) commands.
 
 > [!div class="checklist"]
-> - Connect to a dedicated SQL pool in Azure Synapse Analytics
+> - Connect to a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics
 > - Create a table in your new database
 > - Insert rows into your new table
 > - Query the new table and view the results
@@ -44,8 +44,8 @@ To complete this article, you need SQL Server Management Studio and access to a 
     |   Setting   |   Suggested Value(s)   |   Description   |
     |-------------|------------------------|-----------------|
     | **Server type** | Database engine | For **Server type**, select **Database Engine** (usually the default option). |
-    | **Server name** | The fully qualified server name | For **Server name**, enter the name of your Azure Synapse Analytics server name. |
-    | **Authentication** | SQL Server Authentication | Use **SQL Server Authentication** for Azure Synapse Analytics to connect. </br> </br> The **Windows Authentication** method isn't supported for Azure SQL. For more information, see [Azure SQL authentication](/azure/sql-database/sql-database-security-overview#access-management). |
+    | **Server name** | The fully qualified server name | For **Server name**, enter the name of your dedicated SQL pool (formerly SQL DW) server name. |
+    | **Authentication** | SQL Server Authentication | Use **SQL Server Authentication** for to connect to dedicated SQL pool (formerly SQL DW). </br> </br> The **Windows Authentication** method isn't supported for Azure SQL. For more information, see [Azure SQL authentication](/azure/sql-database/sql-database-security-overview#access-management). |
     | **Login** | Server account user ID | The user ID from the server account used to create the server. |
     | **Password** | Server account password | The password from the server account used to create the server. |
 
@@ -104,7 +104,7 @@ Now let's insert some rows into the Customers table that you created. Paste the 
 
    ```sql
    -- Insert rows into table 'Customers'
-	INSERT INTO dbo.Customers VALUES ( 1, N'Orlando', N'Australia', N'');
+   INSERT INTO dbo.Customers VALUES ( 1, N'Orlando', N'Australia', N'');
    INSERT INTO dbo.Customers VALUES ( 2, N'Keith', N'India', N'keith0@adventure-works.com');
    INSERT INTO dbo.Customers VALUES (3, N'Donna', N'Germany', N'donna0@adventure-works.com');   
    INSERT INTO dbo.Customers VALUES (4, N'Janet', N'United States', N'janet1@adventure-works.com');

@@ -37,7 +37,7 @@ The `TransparentNetworkIPResolution` connection string and DSN keyword controls 
 
 Keyword|Values|Default
 -|-|-
-`TransparentNetworkIPResolution`|`Enabled`, `Disabled`|`Enabled`
+`TransparentNetworkIPResolution`|`Enabled`, `Disabled`, `Yes`, `No`|`Enabled` or `Yes`
 
 The `SQL_COPT_SS_TNIR` pre-connection attribute allows an application to control this setting programmatically:
 

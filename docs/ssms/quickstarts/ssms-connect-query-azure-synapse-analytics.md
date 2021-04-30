@@ -15,7 +15,7 @@ ms.date: 12/15/2020
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Get started using SQL Server Management Studio (SSMS) to connect to your dedicated SQL pool (formely SQL DW) in Azure Synapse Analytics and run some Transact-SQL (T-SQL) commands.
+Get started using SQL Server Management Studio (SSMS) to connect to your dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics and run some Transact-SQL (T-SQL) commands.
 
 > [!div class="checklist"]
 > - Connect to a dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics

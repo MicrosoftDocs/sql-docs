@@ -8353,7 +8353,6 @@ items:
     - name: Issue Element
       href: tools/ssbdiagnose/issue-element-ssbdiagnose.md
   - name: SQL Server Data Tools (SSDT)
-    href: ssdt/sql-server-data-tools.md
     items:
     - name: SQL Server Data Tools Overview
       href: ssdt/sql-server-data-tools.md

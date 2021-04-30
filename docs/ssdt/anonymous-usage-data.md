@@ -22,4 +22,4 @@ For more information about the VSCEIP, including how to opt in or opt out, pleas
 For more information about the diagnostic system-generated logs collected, please see the documentation on [system-generated logs](https://docs.microsoft.com/visualstudio/ide/diagnostic-data-collection).
 
 
-We do not collect your name, address, or other contact information. For more information about the information collected, processed, or transmitted by the VSCEIP, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).
+We do not collect your name, address, or any other data that relates to an identified or identifiable individual. For more information about the information collected, processed, or transmitted by the VSCEIP, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).

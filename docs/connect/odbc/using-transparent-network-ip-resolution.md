@@ -37,7 +37,7 @@ The `TransparentNetworkIPResolution` connection string and DSN keyword controls 
 
 Keyword|Values|Default
 -|-|-
-`TransparentNetworkIPResolution`|`Enabled`, `Disabled`, `Yes`, `No`|`Enabled` or `Yes`
+`TransparentNetworkIPResolution`|`true`, `false`, `yes`, `no`| `false` or `no` when: Connecting to Azure SQL Database where the data source ends with: `.database.chinacloudapi.cn` `.database.usgovcloudapi.net` `.database.cloudapi.de` `.database.windows.net` and Authentication is 'Active Directory Password' or 'Active Directory Integrated'. `true` or `yes` in all other cases.
 
 The `SQL_COPT_SS_TNIR` pre-connection attribute allows an application to control this setting programmatically:
 

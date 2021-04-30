@@ -251,9 +251,10 @@ ms.author: chadam
     - Check for local HOSTS file entries
     - Check if there are [Server Aliases for Use by a Client](../../configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md) defined on the replicas 
   
-     For more information, refer to [Create Availability Group Fails With Error 35250 'Failed to join the database'](https://docs.microsoft.com/archive/blogs/alwaysonpro/create-availability-group-fails-with-error-35250-failed-to-join-the-database)
+7. Ensure your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running a recent build (preferrably the [latest build](/troubleshoot/sql/general/determine-version-edition-update-level)) to protect from issues like [KB3213703](https://support.microsoft.com/topic/kb3213703-fix-an-always-on-secondary-replica-goes-into-a-disconnecting-state-10131118-b63a-f49f-b140-907f77774dc2). 
 
-  
+    For more information, refer to [Create Availability Group Fails With Error 35250 'Failed to join the database'](https://docs.microsoft.com/archive/blogs/alwaysonpro/create-availability-group-fails-with-error-35250-failed-to-join-the-database)  
+
 ##  <a name="ROR"></a> Read-Only Routing is Not Working Correctly  
  Verify the following configuration values settings and correct them if necessary.  
   

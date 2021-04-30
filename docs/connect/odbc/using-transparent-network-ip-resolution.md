@@ -33,7 +33,7 @@ TransparentNetworkIPResolution is a revision of the existing MultiSubnetFailover
 |Disabled|Enabled|1|
 |Disabled|Disabled|2|
 
-The `TransparentNetworkIPResolution` connection string and DSN keyword controls this setting at the connection-string level. The default is enabled.
+The `TransparentNetworkIPResolution` connection string and DSN keyword controls this setting at the connection-string level.
 
 Keyword|Values|Default
 -|-|-

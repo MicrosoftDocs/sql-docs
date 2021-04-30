@@ -120,12 +120,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
    
 ```
 
-### macOS
-
-You can join your macOS to the Active Directory domain controller by [configuring your domain access in the Directory Utility](https://support.apple.com/guide/directory-utility/configure-domain-access-diru11f4f748/mac).
-
-
-#### Configure KDC in krb5.conf 	
+### Configure KDC in krb5.conf with macOS
 
 This section discusses the [Kerberos configuration file](http://web.mit.edu/macdev/KfM/Common/Documentation/preferences-osx.html).
 
@@ -149,7 +144,7 @@ Then save the krb5.conf file and exit.
 > The domain must be in ALL CAPS.
 
 
-## Test the Ticket Granting Ticket retrieval
+## Test the ticket granting ticket retrieval
 
 Get a Ticket Granting Ticket (TGT) from KDC.
 

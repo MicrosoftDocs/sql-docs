@@ -11,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "names [SQL Server], columns with"
 ms.assetid: 0b738e44-6108-4417-a9a4-abeb7680d899
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Column Names with the Path Specified as data()
 

@@ -193,6 +193,31 @@ The use of AS in this statement does not imply the ability to impersonate anothe
 |User|[REVOKE Database Principal Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
 |View|[REVOKE Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |XML Schema Collection|[REVOKE XML Schema Collection Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
+
+  
+## Examples  
+  
+### A. Grant and revoke
+ **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+  
+The following example creates a schema, a contained database user, and a new role on a user database. It adds the user to the role, grants SELECT permission on the schema to the role, and then removes (`REVOKE`) that permission to the role.
+
+  
+```sql  
+CREATE SCHEMA Sales;  
+GO
+CREATE USER Joe without login;
+GO
+CREATE ROLE Vendors;
+GO
+ALTER ROLE Vendors ADD MEMBER Joe; 
+GO
+GRANT SELECT ON SCHEMA :: Sales TO Vendors;
+GO
+REVOKE SELECT ON SCHEMA :: Sales TO Vendors;
+GO
+ 
+```  
   
 ## See Also  
  [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   

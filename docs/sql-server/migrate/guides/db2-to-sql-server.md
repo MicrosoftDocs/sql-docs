@@ -15,7 +15,7 @@ ms.author: mathoma
 
 In this guide, you learn how to migrate your user databases from IBM Db2 to SQL Server by using SQL Server Migration Assistant (SSMA) for Db2. 
 
-For other migration guides, see [Azure Database Migration Guides](https://docs.microsoft.com/data-migration). 
+For other migration guides, see [Azure Database Migration Guides](/data-migration). 
 
 
 ## Prerequisites

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "query method"
   - "query() method"
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # query() Method (xml Data Type)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

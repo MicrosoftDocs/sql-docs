@@ -40,6 +40,30 @@ GeneMi , 2019/03/22.
 P.S.  there's no need to keep this large HTML comment indefinitely.
 -->
 
+## 15.9.8,&nbsp; SSDT for VS 2017
+
+_Released:_ &nbsp; Apr 27, 2021  
+_Build Number:_ &nbsp; 14.0.16236.0  
+_SSDT for Visual Studio 2017._
+
+### What's New?
+
+| New Item | Details |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Add ExecuteOnProxy property on Execute SQL Task and Execute Process Task so as to support [enabling self-hosted Integration Runtime as proxy](https://docs.microsoft.com/azure/data-factory/self-hosted-integration-runtime-proxy-ssis). |
+| Integration Services (SSIS) | Allow connectivity retry for OLE DB connection manager via exposing ConnectRetryCount and ConnectRetryInterval properties. |
+| Integration Services (SSIS) | List available locations based on selected subscription in Integration Runtime Creation Wizard. |
+| Integration Services (SSIS) | Fixed an issue that test connection on Analysis Services connection manager may fail due to fail to load managed ADAL component. |
+| Integration Services (SSIS) | Fixed some issues related to accessibility and high DPI. |
+
+### Known issues
+
+| Known issue | Details |
+| :---------- | :------ |
+| SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue applies only to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog isn't affected. |
+| &nbsp; | &nbsp; |
+
+
 ## 15.9.7,&nbsp; SSDT for VS 2017
 
 _Released:_ &nbsp; Jan 5, 2021  

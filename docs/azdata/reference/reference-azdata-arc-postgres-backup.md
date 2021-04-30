@@ -5,7 +5,7 @@ description: Reference article for azdata arc postgres backup commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 04/06/2021
+ms.date: 04/29/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -31,6 +31,8 @@ Create a backup of an Azure Arc enabled PostgreSQL Hyperscale server group.
 azdata arc postgres backup create --server-name -sn 
                                   [--name -n]  
                                   
+[--incremental -i]  
+                                  
 [--no-wait]
 ```
 ### Examples
@@ -48,6 +50,8 @@ Name of the Azure Arc enabled PostgreSQL Hyperscale server group.
 ### Optional Parameters
 #### `--name -n`
 Name of the backup. This parameter is optional.
+#### `--incremental -i`
+If given, the command will take an incremental backup. The default is to take a full backup.
 #### `--no-wait`
 If given, the command will not wait for the backup to complete before returning.
 ### Global Arguments
@@ -168,4 +172,3 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
-

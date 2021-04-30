@@ -183,41 +183,45 @@ It is possible to cause information leakage through the use of carefully crafted
 
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
-CREATE USER Sales1 WITHOUT LOGIN;  
-CREATE USER Sales2 WITHOUT LOGIN;  
+CREATE USER SalesRep1 WITHOUT LOGIN;  
+CREATE USER SalesRep2 WITHOUT LOGIN;
+GO
 ```
 
 Create a table to hold data.  
 
 ```sql
-CREATE TABLE Sales  
+CREATE SCHEMA Sales
+GO
+CREATE TABLE Sales.Orders 
     (  
     OrderID int,  
-    SalesRep sysname,  
-    Product varchar(10),  
-    Qty int  
+    SalesRep nvarchar(50),  
+    Product nvarchar(50),  
+    Quantity smallint  
     );  
 ```
 
  Populate the table with six rows of data, showing three orders for each sales representative.  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales.Orders  VALUES (1, 'SalesRep1', 'Valve', 5);
+INSERT INTO Sales.Orders  VALUES (2, 'SalesRep1', 'Wheel', 2);
+INSERT INTO Sales.Orders  VALUES (3, 'SalesRep1', 'Valve', 4);
+INSERT INTO Sales.Orders  VALUES (4, 'SalesRep2', 'Bracket', 2);
+INSERT INTO Sales.Orders  VALUES (5, 'SalesRep2', 'Wheel', 5);
+INSERT INTO Sales.Orders  VALUES (6, 'SalesRep2', 'Seat', 5);
 -- View the 6 rows in the table  
-SELECT * FROM Sales;
+SELECT * FROM Sales.Orders;
 ```
 
 Grant read access on the table to each of the users.  
 
 ```sql
-GRANT SELECT ON Sales TO Manager;  
-GRANT SELECT ON Sales TO Sales1;  
-GRANT SELECT ON Sales TO Sales2;  
+GRANT SELECT ON Sales.Orders TO Manager;  
+GRANT SELECT ON Sales.Orders TO SalesRep1;  
+GRANT SELECT ON Sales.Orders TO SalesRep2; 
+GO
 ```
 
 Create a new schema, and an inline table-valued function. The function returns 1 when a row in the SalesRep column is the same as the user executing the query (`@SalesRep = USER_NAME()`) or if the user executing the query is the Manager user (`USER_NAME() = 'Manager'`).
@@ -226,44 +230,47 @@ Create a new schema, and an inline table-valued function. The function returns 1
 CREATE SCHEMA Security;  
 GO  
   
-CREATE FUNCTION Security.fn_securitypredicate(@SalesRep AS sysname)  
+CREATE FUNCTION Security.tvf_securitypredicate(@SalesRep AS nvarchar(50))  
     RETURNS TABLE  
 WITH SCHEMABINDING  
 AS  
-    RETURN SELECT 1 AS fn_securitypredicate_result
+    RETURN SELECT 1 AS tvf_securitypredicate_result
 WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
+GO
 ```
 
 Create a security policy adding the function as a filter predicate. The state must be set to ON to enable the policy.
 
 ```sql
 CREATE SECURITY POLICY SalesFilter  
-ADD FILTER PREDICATE Security.fn_securitypredicate(SalesRep)
-ON dbo.Sales  
+ADD FILTER PREDICATE Security.tvf_securitypredicate(SalesRep)
+ON Sales.Orders
 WITH (STATE = ON);  
+GO
 ```
 
 Allow SELECT permissions to the fn_securitypredicate function 
 ```sql
-GRANT SELECT ON security.fn_securitypredicate TO Manager;  
-GRANT SELECT ON security.fn_securitypredicate TO Sales1;  
-GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
+GRANT SELECT ON Security.tvf_securitypredicate TO Manager;  
+GRANT SELECT ON Security.tvf_securitypredicate TO SalesRep1;  
+GRANT SELECT ON Security.tvf_securitypredicate TO SalesRep1;  
+
 ```
 
 Now test the filtering predicate, by selected from the Sales table as each user.
 
 ```sql
-EXECUTE AS USER = 'Sales1';  
-SELECT * FROM Sales;
+EXECUTE AS USER = 'SalesRep1';  
+SELECT * FROM Sales.Orders;
 REVERT;  
   
-EXECUTE AS USER = 'Sales2';  
-SELECT * FROM Sales;
+EXECUTE AS USER = 'SalesRep2';  
+SELECT * FROM Sales.Orders;
 REVERT;  
   
 EXECUTE AS USER = 'Manager';  
-SELECT * FROM Sales;
-REVERT;  
+SELECT * FROM Sales.Orders;
+REVERT; 
 ```
 
 The Manager should see all six rows. The Sales1 and Sales2 users should only see their own sales.
@@ -280,14 +287,15 @@ Now Sales1 and Sales2 users can see all six rows.
 Connect to the SQL database to clean up resources
 
 ```sql
-DROP USER Sales1;
-DROP USER Sales2;
+DROP USER SalesRep1;
+DROP USER SalesRep2;
 DROP USER Manager;
 
 DROP SECURITY POLICY SalesFilter;
-DROP TABLE Sales;
-DROP FUNCTION Security.fn_securitypredicate;
+DROP TABLE Sales.Orders;
+DROP FUNCTION Security.tvf_securitypredicate;
 DROP SCHEMA Security;
+DROP SCHEMA Sales;
 ```
 
 ### <a name="external"></a> B. Scenarios for using Row Level Security on an Azure Synapse external table

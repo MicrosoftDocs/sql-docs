@@ -7,7 +7,7 @@ ms.topic: how-to
 author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu, maghan"
-ms.custom: seodec18; seo-lt-2019
+ms.custom: seo-lt-2019
 ms.date: 04/30/2021
 ---
 

@@ -20,8 +20,8 @@ This article lists libraries that the Microsoft JDBC Driver for SQL Server depen
 
 ## Compile time
 
- - `com.microsoft.azure:azure-security-keyvault-keys` : Microsoft Azure Client Library For KeyVault Keys for Always Encrypted Azure Key Vault feature. (optional)
- - `com.microsoft.azure:azure-identity` : Microsoft Azure Client Library For Identity for Azure Active Directory Authentication features and Azure Key Vault feature. (optional)
+ - `com.azure:azure-security-keyvault-keys`: Microsoft Azure Client Library For KeyVault Keys for JDBC driver version 9.2 and above or `com.microsoft.azure:azure-keyvault`: Microsoft Azure SDK For Key Vault for JDBC driver version 8.4 and below for Always Encrypted Azure Key Vault feature. (optional)
+ - `com.azure:azure-identity`: Microsoft Azure Client Library For Identity for JDBC driver version 9.2 and above or `com.microsoft.azure:adal4j`: Microsoft Azure Active Directory Authentication Library for JDBC driver version 8.4 and below for Azure Active Directory Authentication features and Azure Key Vault feature. (optional) 
  - `org.antlr:antlr4-runtime`: ANTLR 4 Runtime for useFmtOnly feature. (optional)
  - `org.osgi:org.osgi.core`: OSGi Core library for OSGi Framework support.
  - `org.osgi:org.osgi.compendium`: OSGi Compendium library for OSGi Framework support.
@@ -30,7 +30,7 @@ This article lists libraries that the Microsoft JDBC Driver for SQL Server depen
 
 ## Run time
 
-Projects that require any of the preceding features need to explicitly declare the respective dependencies in their POM file.
+Projects that require any of the preceding features need to explicitly declare the respective dependencies in their POM file that match the dependencies of the version of the driver used.
 
 **For example:** If you're using the Azure Active Directory Authentication feature with JDBC driver version 9.2.1 and above, you need to declare the `azure-identity` dependency in your project's POM file. See the following snippet:
 
@@ -48,7 +48,29 @@ Projects that require any of the preceding features need to explicitly declare t
 </dependency>
 ```
 
-**For example:** If you're using the Azure Key Vault feature with JDBC driver version 9.2.1 and above, you need to declare the `azure-security-keyvault-keys` and the `azure-identity` dependencies in your project's POM file. See the following snippet:
+**For example:** If you're using the Azure Active Directory Authentication feature with JDBC driver version 8.4 and below you need to declare the `adal4j` and `client-runtimes` dependencies in your project's POM file. See the following snippet:
+
+```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>9.2.1.jre11</version>
+</dependency>
+
+<dependency>
+    <groupId>com.microsoft.azure</groupId>
+    <artifactId>adal4j</artifactId>
+    <version>1.6.5</version>
+</dependency>
+
+<dependency>
+    <groupId>com.microsoft.rest</groupId>
+    <artifactId>client-runtime</artifactId>
+    <version>1.7.4</version>
+</dependency>
+```
+
+**For example:** If you're using the Azure Key Vault feature with JDBC driver version 9.2.1 and above, you need to declare the `azure-security-keyvault-keys` and `azure-identity` dependencies in your project's POM file. See the following snippet:
 
 ```xml
 <dependency>
@@ -67,6 +89,34 @@ Projects that require any of the preceding features need to explicitly declare t
     <groupId>com.azure</groupId>
     <artifactId>azure-security-keyvault-keys</artifactId>
     <version>4.2.1</version>
+</dependency>
+```
+
+**For example:** If you're using the Azure Key Vault feature with JDBC driver version 8.4 and below, you need to declare the `azure-keyvault`, `adal4j`, and `client-runtime` dependencies in your project's POM file. See the following snippet:
+
+```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>9.2.1.jre11</version>
+</dependency>
+
+<dependency>
+    <groupId>com.microsoft.azure</groupId>
+    <artifactId>adal4j</artifactId>
+    <version>1.6.5</version>
+</dependency>
+
+<dependency>
+    <groupId>com.microsoft.rest</groupId>
+    <artifactId>client-runtime</artifactId>
+    <version>1.7.4</version>
+</dependency>
+
+<dependency>
+    <groupId>com.microsoft.azure</groupId>
+    <artifactId>azure-keyvault</artifactId>
+    <version>1.2.4</version>
 </dependency>
 ```
 

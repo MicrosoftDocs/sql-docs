@@ -48,7 +48,7 @@ Projects that require any of the preceding features need to explicitly declare t
 </dependency>
 ```
 
-**For example:** If you're using the Azure Active Directory Authentication feature with JDBC driver version 8.4 and below you need to declare the `adal4j` and `client-runtimes` dependencies in your project's POM file. See the following snippet:
+**For example:** If you're using the Azure Active Directory Authentication feature with JDBC driver version 8.4 and below, you need to declare the `adal4j` and `client-runtimes` dependencies in your project's POM file. See the following snippet:
 
 ```xml
 <dependency>
@@ -160,7 +160,7 @@ From driver version 6.4.0 onward, applications don't necessarily require using A
 
 For *Windows operating systems*, the driver looks for sqljdbc_auth.dll by default and doesn't require Kerberos ticket setup or Azure library dependencies. If sqljdbc_auth.dll isn't available, the driver looks for the Kerberos ticket for authenticating to Active Directory as on other operating systems.
 
-From driver version 8.2.2 onward, 'sqljdbc_auth.dll' is renamed to 'mssql-jdbc_auth-\<version>-\<arch>.dll'. E.g. 'mssql-jdbc_auth-8.2.2.x64.dll'.
+From driver version 8.2.2 onward, 'sqljdbc_auth.dll' is renamed to 'mssql-jdbc_auth-\<version>-\<arch>.dll'. For example, 'mssql-jdbc_auth-8.2.2.x64.dll'.
 
 In addition to the **mssql-jdbc_auth-\<version>-\<arch>.dll** (available in the JDBC driver package), the Azure Active Directory Authentication Library (**ADAL.DLL**) also needs to be installed for Active Directory Integrated authentication. ADAL can be installed from [Microsoft ODBC Driver for SQL Server](../odbc/download-odbc-driver-for-sql-server.md) or [Microsoft OLE DB Driver for SQL Server](../oledb/download-oledb-driver-for-sql-server.md). The JDBC driver only supports version **1.0.2028.318 and higher** for ADAL.DLL.
 

@@ -148,4 +148,4 @@ Later quickstart articles build upon the resources created here. If you plan to 
 
 ## Next steps
 
-Now that you've successfully connected to an Azure SQL database and run a query, try the [Code editor tutorial](tutorial-sql-editor.md).
+Now that you've successfully connected to an Azure SQL Database and run a query, try the [Code editor tutorial](tutorial-sql-editor.md).

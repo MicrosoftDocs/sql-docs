@@ -9,7 +9,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 04/30/2021
+ms.date: 05/03/2021
 ---
 
 # Local audit for SSMS usage and diagnostic data collection
@@ -18,7 +18,7 @@ ms.date: 04/30/2021
 
 SQL Server Management Studio (SSMS) contains Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. 
 
-SSMS may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of SSMS. We don't collect your name, address, or any other data that relates to an identified or identifiable individual.
+SSMS may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of SSMS. 
 
 For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](../sql-server/sql-server-privacy.md).
 
@@ -44,7 +44,7 @@ To opt in or out of usage data collection for SSMS:
 
   Entry type `DWORD`: `0` is opt out; `1` is opt in
 
-  Additionally, SSMS 17.x is based on the Visual Studio 2015 shell, and the Visual Studio installation enables customer feedback by default.  
+  Additionally, SSMS is based on the Visual Studio shell, and the Visual Studio installation enables customer feedback by default.  
 
   To configure Visual Studio to disable customer feedback on individual computers, change the value of the following registry subkey to string `0`: `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn`
 

@@ -8,14 +8,14 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu, maghan"
 ms.custom: seo-lt-2019
-ms.date: 04/30/2021
+ms.date: 05/03/2021
 ---
 
 # Enable or disable usage data collection for Azure Data Studio
 
 Azure Data Studio contains Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft.
 
-Azure Data Studio may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of Azure Data Studio. We don't collect your name, address, or any other data that relates to an identified or identifiable individual.
+Azure Data Studio may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of Azure Data Studio.
 
 For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](../sql-server/sql-server-privacy.md).
 
@@ -31,11 +31,11 @@ To see feature usage data that is collected by Azure Data Studio, follow the ste
 6. Select **View**, then Select **Output** in the main menu to show the **Output** window. 
 7. When the **Output** window is visible, choose **Log (Window)** in the **Show output from:** menu.
 
-## How to disable system-generated logs
+## How to disable telemetry
 
 If you don't wish to send usage data to Microsoft, you can set the *telemetry.enableTelemetry* setting to *false*.
 
-You can silence all system-generated logs from Azure Data Studio, from **File** > **Preferences** > **Settings**, add the following option:
+You can silence all telemetry from Azure Data Studio, from **File** > **Preferences** > **Settings**, add the following option:
 
 ```json
     "telemetry.enableTelemetry": false
@@ -68,13 +68,7 @@ When tracing telemetry events, the events are also logged to a local file teleme
 
 :::image type="content" source="media/usage-data-collection/open-telemetry-log.png" alt-text="open telemetry":::
 
-## Viewing all telemetry events
-
-If you'd like to view all the possible telemetry events that Azure Data Studio could send, you can use the `--telemetry` flag in the CLI. This will generate a JSON report that you can then view within Azure Data Studio. These reports are generated per build and don't contain extension telemetry unless the extension author adds a `telemetry.json` file to their root build directory.
-
-For example, running `code --telemetry > telemetry.json && code telemetry.json` creates a `telemetry.json` file in your current working directory and then open it in Azure Data Studio. You can't pipe the output like this, `code --telemetry | code -`, because of the length of the telemetry report.
-
-## GDPR and VS Code
+## GDPR and Azure Data Studio
 
 In addition to supporting the General Data Protection Regulation (GDPR), the Azure Data Studio team takes privacy seriously. That's both for Microsoft as a company and specifically within the Azure Data Studio team.
 

@@ -166,7 +166,7 @@
         "connect/php/**/*.md": "PHP drivers for SQL Server",
         "connect/python/**/*.md": "Python driver for SQL Server",
         "connect/spark/**/*.md": "Spark connector for SQL Server",
-        "odbc/**/*.md": "",
+        "odbc/**/*.md": "ODBC",
         "odbc/reference/**/*.md": "ODBC API Reference",
         "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
         "dea/**/*.md": "Database Experimentation Assistant",

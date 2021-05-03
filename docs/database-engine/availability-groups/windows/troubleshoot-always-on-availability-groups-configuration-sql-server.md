@@ -253,7 +253,7 @@ ms.author: chadam
   
 7. Ensure your SQL Server is running a recent build (preferably the [latest build](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server) to protect from running into issues like [KB3213703](https://support.microsoft.com/topic/kb3213703-fix-an-always-on-secondary-replica-goes-into-a-disconnecting-state-10131118-b63a-f49f-b140-907f77774dc2).
 
-    For more information, refer to [Create Availability Group Fails With Error 35250 'Failed to join the database'](https://docs.microsoft.com/archive/blogs/alwaysonpro/create-availability-group-fails-with-error-35250-failed-to-join-the-database)  
+    For more information, refer to [Create Availability Group Fails With Error 35250 'Failed to join the database'](https://techcommunity.microsoft.com/t5/sql-server-support/create-availability-group-fails-with-error-35250-failed-to-join/ba-p/317987)  
 
 ##  <a name="ROR"></a> Read-Only Routing is Not Working Correctly  
  Verify the following configuration values settings and correct them if necessary.  

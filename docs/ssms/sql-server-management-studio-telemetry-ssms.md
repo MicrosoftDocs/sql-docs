@@ -18,7 +18,9 @@ ms.date: 05/03/2021
 
 SQL Server Management Studio (SSMS) contains Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. 
 
-SSMS may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of SSMS. 
+SQL Server Management Studio (SSMS) may collect standard computer, use, and performance information that may be transmitted to Microsoft and analyzed to improve the quality, security, and reliability of SSMS. 
+
+SQL Server Management Studio (SSMS) doesn't collect your name, address, or other data related to an identified or identifiable individual.
 
 For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](../sql-server/sql-server-privacy.md).
 

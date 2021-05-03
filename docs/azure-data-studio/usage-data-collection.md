@@ -23,8 +23,6 @@ For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com
 
 ## Audit feature usage and diagnostic data
 
-When tracing telemetry events, the events are also logged to a local file telemetry.log, which you can view using the **Developer: Open Log File...** command and choosing **Telemetry** from the dropdown.
-
 To see feature usage data that is collected by Azure Data Studio, follow the steps below:
 
 1. Launch Azure Data Studio.
@@ -34,6 +32,8 @@ To see feature usage data that is collected by Azure Data Studio, follow the ste
 5. Select **Log (Telemetry)** from the dropdown
 6. Select **View**, then Select **Output** in the main menu to show the **Output** window. 
 7. When the **Output** window is visible, choose **Log (Window)** in the **Show output from:** menu.
+
+When tracing telemetry events, the events are also logged to a local file telemetry.log, which you can view using the **Developer: Open Log File...** command and choosing **Telemetry** from the dropdown.
 
 ## Disable telemetry reporting
 
@@ -53,7 +53,7 @@ If you use the JSON editor for your settings, add the following line:
 
 Azure Data Studio collects data about any crashes that occur and sends it to Microsoft to help improve our products and services.
 
-If you don't want to send,  crash data to Microsoft, you can change the `enable-crash-reporter` runtime argument to `false`
+If you don't want to send, crash data to Microsoft, you can change the `enable-crash-reporter` runtime argument to `false`
 
 * Open the Command Palette (`kb(workbench.action.showCommands)`).
 * Run the **Preferences: Configure Runtime Arguments** command.
@@ -65,17 +65,9 @@ If you don't want to send,  crash data to Microsoft, you can change the `enable-
 
 Azure Data Studio lets you add features to the product by installing Microsoft and third-party extensions. These extensions may be collecting their own usage data and are not controlled by the `telemetry.enableTelemetry` setting. Consult the specific extension's documentation to learn about its telemetry reporting and whether it can be disabled.
 
-For example, the [GitHub Pull Requests extension](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) has a setting to disable its telemetry collection:
-
-![GitHub Pule Request extension disable telemetry](images/telemetry/GHPR-disable-telemetry.png)
-
-## Extensions and telemetry
-
-Azure Data Studio lets you add features to the product by installing Microsoft and third-party extensions. These extensions may be collecting their own usage data and are not controlled by the `telemetry.enableTelemetry` setting. Consult the specific extension's documentation to learn about its telemetry reporting and whether it can be disabled.
-
 ## GDPR and Azure Data Studio
 
-Also to supporting the General Data Protection Regulation (GDPR), the Azure Data Studio team takes privacy seriously. That's both for Microsoft as a company and specifically within the Azure Data Studio team.
+In addition to supporting the General Data Protection Regulation (GDPR), the Azure Data Studio team takes privacy seriously. That's both for Microsoft as a company and specifically within the Azure Data Studio team.
 
 To ensure GDPR compliance, we made several updates to Azure Data Studio, these include:
 

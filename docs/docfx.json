@@ -157,7 +157,19 @@
         "integration-services/**/*.md": "SQL Server Integration Services (SSIS)",
         "language-extensions/**/*.md": "SQL Server Language Extensions",
         "relational-database/replication/**/*.md": "SQL Server Replication",
-        "relational-databases/native-client/**/*.md": "SQL Server Native Client",        
+        "relational-databases/native-client/**/*.md": "SQL Server Native Client",
+        "connect/ado-net/**/*.md": "ADO.NET Provider for SQL Server",
+        "connect/jdbc/**/*.md": "JDBC Driver for SQL Server",
+        "connect/node-js/**/*.md": "Node.js driver for SQL Server",
+        "connect/odbc/**/*.md": "ODBC Driver for SQL Server",
+        "connect/oledb/**/*.md": "OLE DB Driver for SQL Server",
+        "connect/php/**/*.md": "PHP drivers for SQL Server",
+        "connect/python/**/*.md": "Python driver for SQL Server",
+        "connect/ruby/**/*.md": "Ruby driver for SQL Server",
+        "connect/spark/**/*.md": "Spark connector for SQL Server",
+        "ado/**/*.md": "ActiveX Data Objects (ADO)",
+        "odbc/**/*.md": "Open Database Connectivity (ODBC)",
+        "odbc/reference/**/*.md": "ODBC API Reference",
         "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
         "dea/**/*.md": "Database Experimentation Assistant",
         "sql-server/failover-clusters/**/*.md": "SQL Server Always On",
@@ -261,47 +273,54 @@
     ],
 
     "rules": {
-        "sensitive-language-ma": {
-          "exclude": [
-            "linux/sql-server-linux-availability-group-cluster-sles.md",
-            "linux/sql-server-linux-create-availability-group.md",
-            "linux/sql-server-linux-ha-basics.md",
-            "relational-databases/errors-events/database-engine-events-and-errors.md",
-            "relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md",
-            "relational-databases/maintenance-plans/create-a-maintenance-plan.md",
-            "relational-databases/maintenance-plans/maintenance-plan-servers.md",
-            "relational-databases/maintenance-plans/maintenance-plans.md",
-            "relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md",
-            "relational-databases/system-stored-procedures/sp-help-job-transact-sql.md",
-            "relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md",
-            "relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md",
-            "relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md",
-            "relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md",
-            "relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md",
-            "relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md",
-            "relational-databases/system-tables/dbo-sysschedules-transact-sql.md",
-            "relational-databases/system-tables/dbo-systargetservers-transact-sql.md",
-            "sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md",
-            "ssms/agent/**/*.md"
-          ]
-        },
-          "sensitive-language-sl": {
-            "exclude": [
-              "linux/sql-server-linux-availability-group-cluster-sles.md",
-              "linux/sql-server-linux-create-availability-group.md",
-              "linux/sql-server-linux-ha-basics.md"
-            ]
-          },
-            "sensitive-language-wl": {
-              "exclude": [
-                "big-data-cluster/reference-config-spark-hadoop.md"
-              ]
-            },
-              "sensitive-language-bl": {
-                "exclude": [
-                ]
-              }
+      "docs-link-absolute": {
+        "exclude": [
+          "connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md",
+          "connect/oledb/download-oledb-driver-for-sql-server.md",
+          "connect/odbc/download-odbc-driver-for-sql-server.md",
+          "ssms/download-sql-server-management-studio-ssms.md"
+        ]
+      },
+      "sensitive-language-ma": {
+        "exclude": [
+          "linux/sql-server-linux-availability-group-cluster-sles.md",
+          "linux/sql-server-linux-create-availability-group.md",
+          "linux/sql-server-linux-ha-basics.md",
+          "relational-databases/errors-events/database-engine-events-and-errors.md",
+          "relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md",
+          "relational-databases/maintenance-plans/create-a-maintenance-plan.md",
+          "relational-databases/maintenance-plans/maintenance-plan-servers.md",
+          "relational-databases/maintenance-plans/maintenance-plans.md",
+          "relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md",
+          "relational-databases/system-stored-procedures/sp-help-job-transact-sql.md",
+          "relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md",
+          "relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md",
+          "relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md",
+          "relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md",
+          "relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md",
+          "relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md",
+          "relational-databases/system-tables/dbo-sysschedules-transact-sql.md",
+          "relational-databases/system-tables/dbo-systargetservers-transact-sql.md",
+          "sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md",
+          "ssms/agent/**/*.md"
+        ]
+      },
+      "sensitive-language-sl": {
+        "exclude": [
+          "linux/sql-server-linux-availability-group-cluster-sles.md",
+          "linux/sql-server-linux-create-availability-group.md",
+          "linux/sql-server-linux-ha-basics.md"
+        ]
+      },
+      "sensitive-language-wl": {
+        "exclude": [
+          "big-data-cluster/reference-config-spark-hadoop.md"
+        ]
+      },
+      "sensitive-language-bl": {
+        "exclude": [
+        ]
+      }
     }
-
   }
 }

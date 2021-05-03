@@ -27,7 +27,6 @@ helpviewer_keywords:
   - "index defragmenting [SQL Server]"
   - "LOB data [SQL Server], defragmenting"
   - "clustered indexes, defragmenting"
-ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: dimitri-furman
 ms.author: dfurman
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"

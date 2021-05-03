@@ -89,7 +89,27 @@ GreatestVal
 (1 rows affected)  
 ```  
 
-### B. Simple example with character types
+### B. Simple example with NULL values
+
+Any NULL values are ignored. 
+
+ 
+```sql 
+SELECT GREATEST ( 7.0000, NULL, 3, NULL, 9 ) AS GreatestVal; 
+GO 
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+```  
+GreatestVal 
+-------- 
+  9.0000 
+
+(1 rows affected)  
+```  
+
+### C. Simple example with character types
 
  The following example returns the maximum value from the list of character constants that is provided.  
   
@@ -108,12 +128,12 @@ Mount Rainier
 (1 rows affected)  
 ```  
 
-### C. Simple example with table
+### D. Simple example with table
   
  This example returns the maximum value from a list of column arguments and ignores `NULL` values during comparison. 
   
 ```sql  
-USE AdventureWorks2019; 
+USE AdventureWorksLT; 
 GO 
 
 SELECT sp.SalesQuota, sp.SalesYTD, sp.SalesLastYear 
@@ -146,7 +166,7 @@ SalesQuota            SalesYTD              SalesLastYear         Sales
 (12 rows affected)
   
 ```  
-### D. Using `GREATEST` with local variables
+### E. Using `GREATEST` with local variables
 
  This example uses `GREATEST` to determine the maximum value of a list of local variables within the predicate of a `WHERE` clause. 
   
@@ -178,20 +198,21 @@ Var2              .825
 (1 rows affected)  
 ```  
 
-### E. Using `GREATEST` with columns, constants, and variables
+### F. Using `GREATEST` with columns, constants, and variables
 
  This example uses `GREATEST` to determine the maximum value of a list that includes columns, constants, and variables. 
   
 ```sql  
-CREATE TABLE dbo.products (    
-    prod_id int IDENTITY(1,1),    
-    listprice smallmoney NULL 
+CREATE TABLE dbo.products 
+(    
+    product_id int IDENTITY(1,1),    
+    list_price money NULL 
 ); 
 
-INSERT INTO dbo.products VALUES (14.99), (49.99), (24.99); 
+INSERT INTO dbo.products (product_id, list_price) VALUES (14.99), (49.99), (24.99); 
 GO 
 
-DECLARE @PriceX smallmoney = 19.99;  
+DECLARE @PriceX money = 19.99;  
 
 SELECT GREATEST(listprice, 0, @PriceX) as GreatestPrice  
 FROM dbo.products;

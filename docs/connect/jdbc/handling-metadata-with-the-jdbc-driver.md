@@ -1,6 +1,6 @@
 ---
+title: Handling metadata
 description: Learn what metadata is available in the different JDBC objects when using the JDBC Driver for SQL Server.
-title: Handling metadata with the JDBC driver
 ms.custom: ""
 ms.date: 04/20/2021
 ms.prod: sql

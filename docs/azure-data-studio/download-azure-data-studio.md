@@ -73,7 +73,7 @@ We recommend the *user installer* because it doesn't require administrator privi
 
 ### Linux
 
-#### Debian Installation
+#### .deb Installation
 
 1. Download Azure Data Studio for Linux by using the [.deb](https://go.microsoft.com/fwlink/?linkid=2160876) file.
 
@@ -94,7 +94,7 @@ You may have missing dependencies. Use the following commands to install these d
    sudo apt-get install libunwind8
    ```
 
-#### RedHat Installation
+#### .rpm Installation
 
 1. Download Azure Data Studio for Linux by using the [.rpm](https://go.microsoft.com/fwlink/?linkid=2160875) file.
 
@@ -192,13 +192,15 @@ Azure Data Studio runs on Windows, macOS, and Linux and is supported on the foll
 - Red Hat Enterprise Linux (RHEL) 7.4
 - Red Hat Enterprise Linux (RHEL) 7.3
 - SUSE Linux Enterprise Server v12 SP2
+- Ubuntu 20.04
+- Ubuntu 18.04
 - Ubuntu 16.04
 
 > [!Note]
 >
-> The versions of RHEL (7.3 and 7.4) are no longer supported by Red Hat. RHEL 7.3 support ended November 30, 2018 and RHEL 7.4 ended August 31, 2019. 
+> The versions of RHEL (7.3 and 7.4) are no longer supported by Red Hat. RHEL 7.3 support ended November 30, 2018 and RHEL 7.4 ended August 31, 2019.
 >
->For details of the RHEL 7 Application Compatibility Guide see: https://access.redhat.com/articles/rhel-abi-compatibility for details.
+> For details of the RHEL 7 Application Compatibility Guide see: https://access.redhat.com/articles/rhel-abi-compatibility for details.
 >
 > For details of the RHEL 8 Application Compatibility Guide see: https://access.redhat.com/articles/rhel8-abi-compatibility.
 

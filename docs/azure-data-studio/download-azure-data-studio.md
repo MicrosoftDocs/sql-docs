@@ -28,8 +28,6 @@ Azure Data Studio 1.28.0 is the latest general availability (GA) version. If you
 - Release number: 1.28.0
 - Release date: April 15, 2021
 
-If you have comments or suggestions or want to report issues, the best way to contact the Azure Data Studio team is to file an issue at [Azure Data Studio feedback](https://github.com/microsoft/azuredatastudio/issues/).
-
 | Platform | Download |
 |----------|----------|
 | Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2160781)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2160780)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2160923) |
@@ -38,6 +36,8 @@ If you have comments or suggestions or want to report issues, the best way to co
 
 > [!Note]
 > Azure Data Studio currently does not support the ARM architecture.
+
+If you have comments or suggestions or want to report issues, the best way to contact the Azure Data Studio team is to file an issue on the [Azure Data Studio feedback page](https://github.com/microsoft/azuredatastudio/issues/).
 
 ## Install Azure Data Studio
 
@@ -75,7 +75,7 @@ We recommend the *user installer* because it doesn't require administrator privi
 
 #### .deb Installation
 
-1. Download Azure Data Studio for Linux by using the [.deb](https://go.microsoft.com/fwlink/?linkid=2160876) file.
+1. Download Azure Data Studio for Linux by using the [deb](https://go.microsoft.com/fwlink/?linkid=2160876) file.
 
 2. To extract the file and launch Azure Data Studio, open a new Terminal window and follow the below commands.
 
@@ -96,7 +96,7 @@ You may have missing dependencies. Use the following commands to install these d
 
 #### .rpm Installation
 
-1. Download Azure Data Studio for Linux by using the [.rpm](https://go.microsoft.com/fwlink/?linkid=2160875) file.
+1. Download Azure Data Studio for Linux by using the [rpm](https://go.microsoft.com/fwlink/?linkid=2160875) file.
 
 2. To extract the file and launch Azure Data Studio, open a new Terminal window and follow the below commands.
 
@@ -142,9 +142,10 @@ You may have missing dependencies. Use the following commands to install these d
    sudo apt-get install libunwind8
    ```
 
-## Get Azure Data Studio for Windows Subsystem for Linux (WSL)
+#### Windows Subsystem for Linux (WSL)
 
-1. Install **Azure Data Studio** for Windows. then use the `azuredatastudio` command in a WSL terminal just as you would in a normal command prompt. By default the application is stored in your AppData foler. 
+1. Install **Azure Data Studio** for Windows. Then use the `azuredatastudio` command in a WSL terminal just as you would in a standard command prompt. By default, the application is stored in your AppData folder.
+
 2. Start **Azure Data Studio** from the WSL command prompt. When using the default Windows installation, the application can be started using:
 
 ```bash
@@ -157,7 +158,7 @@ For details about the latest release of Azure Data Studio, see **[Release notes 
 
 ## Download Insiders build of Azure Data Studio
 
-In general, it's recommended to [download the GA release of Azure Data Studio](#download-azure-data-studio). However, if you want to try out the beta features and send feedback, you can download the [Insiders build of Azure Data Studio](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main).
+It's recommended to [download the GA release of Azure Data Studio](#download-azure-data-studio). However, if you want to try out the beta features and send feedback, you can download the [Insiders build of Azure Data Studio](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main).
 
 ## Supported operating systems
 
@@ -198,11 +199,11 @@ Azure Data Studio runs on Windows, macOS, and Linux and is supported on the foll
 
 > [!Note]
 >
-> The versions of RHEL (7.3 and 7.4) are no longer supported by Red Hat. RHEL 7.3 support ended November 30, 2018 and RHEL 7.4 ended August 31, 2019.
+> The versions of RHEL (7.3 and 7.4) are no longer supported by Red Hat. RHEL 7.3 support ended November 30, 2018, and RHEL 7.4 ended August 31, 2019.
 >
-> For details of the RHEL 7 Application Compatibility Guide see: https://access.redhat.com/articles/rhel-abi-compatibility for details.
+> For details of the RHEL 7 Application Compatibility Guide, see: https://access.redhat.com/articles/rhel-abi-compatibility for more information.
 >
-> For details of the RHEL 8 Application Compatibility Guide see: https://access.redhat.com/articles/rhel8-abi-compatibility.
+> For details of the RHEL 8 Application Compatibility Guide, see: https://access.redhat.com/articles/rhel8-abi-compatibility.
 
 ## Recommended System Requirements
 
@@ -215,7 +216,7 @@ Azure Data Studio runs on Windows, macOS, and Linux and is supported on the foll
 
 To check for the latest updates, select the gear icon on the bottom left of the window and select **Check for Updates**.
 
-Offline environment updates can be applied by [installing the latest version](#download-and-install-azure-data-studio) directly over a previously installed version. Uninstalling prior versions of Azure Data Studio isn't necessary. The installer updates a currently installed application if present.
+Offline environment updates can be applied by [installing the latest version](#download-and-install-azure-data-studio) directly over a previously installed version. Uninstalling prior versions of Azure Data Studio isn't necessary. Instead, the installer updates a currently installed application if present.
 
 ## Move user settings
 
@@ -227,11 +228,11 @@ If you're updating SQL Operations Studio to Azure Data Studio and want to keep y
 
    ![edit settings in Azure Data Studio](./media/download/open-settings.png)
 
-2. Right-click the **User Settings** tab on top and select **Reveal in Explorer**
+2. Right-click the **User Settings** tab on top, and select **Reveal in Explorer**
 
    ![launch explorer, which will take you to your local file system](./media/download/reveal-in-explorer.png)
 
-3. Copy all files in this folder and save in an easy to find the location on your local drive, like your Documents folder.
+3. Copy all files in this folder and save them in an easy-to-find location on your local drive, like your Documents folder.
 
    ![use the files and copy over to your location](./media/download/copy-settings.png)
 
@@ -251,13 +252,13 @@ You can [uninstall apps](https://support.apple.com/guide/mac-help/install-and-un
 
 1. Select the **Finder icon** in the Dock, then select Applications in the Finder sidebar.
 
-2. Do one of the following:
+2. Then choose from one of te steps below:
 
-    - If an app is in a folder, open the app’s folder to check for an Uninstaller. If you see Uninstall [App] or [App] Uninstaller, double-select it, then follow the onscreen instructions.
+    - If an app is in a folder, open the app's folder to check for an Uninstaller. If you see Uninstall [App] or [App] Uninstaller, double-select it, then follow the onscreen instructions.
 
-    - If an app isn’t in a folder or doesn’t have an Uninstaller, drag the app from the Applications folder to the Trash (at the end of the Dock).
+    - If an app isn't in a folder or doesn't have an Uninstaller, drag the app from the Applications folder to the Trash (at the end of the Dock).
 
-To uninstall apps you downloaded from the App Store, use Launchpad.
+To uninstall apps, you downloaded from the App Store, use Launchpad.
 
 ## Uninstall Azure Data Studio from Linux
 

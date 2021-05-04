@@ -434,7 +434,7 @@ In Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], adding files and f
     GO  
     ```  
 
-#### To deteremine the rows in each partition, and comparison descriptions
+#### To determine the rows in each partition, and comparison descriptions
 
 1. The following query returns the rows by partition for table `PartitionTable`, and a description of the comparison operators for the partition scheme in use. *Query original provided by Kalen Delaney.*
     

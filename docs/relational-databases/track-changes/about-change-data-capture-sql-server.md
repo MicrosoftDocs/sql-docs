@@ -1,5 +1,5 @@
 ---
-description: "About Change Data Capture (SQL Server)"
+description: "About Change Data Capture"
 title: "About Change Data Capture"
 ms.custom: seo-dt-2019
 ms.date: "01/14/2019"
@@ -9,8 +9,8 @@ ms.reviewer: "vanto"
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "change data capture [SQL Server], about"
-  - "change data capture [SQL Server]"
+  - "change data capture, about"
+  - "change data capture"
   - "22832 (Database Engine error)"
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja

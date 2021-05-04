@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "change data capture [SQL Server], monitoring"
-  - "change data capture [SQL Server], administering"
-  - "change data capture [SQL Server], jobs"
+  - "change data capture, monitoring"
+  - "change data capture, administering"
+  - "change data capture, jobs"
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth

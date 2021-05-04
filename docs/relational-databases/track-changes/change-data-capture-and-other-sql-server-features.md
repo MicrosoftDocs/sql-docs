@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "change data capture [SQL Server], other features and"
+  - "change data capture, other features and"
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
@@ -84,10 +84,10 @@ ms.author: jroth
 ## <a name="AlwaysOn"></a> Always On  
  When you use Always On, change enumeration should be done on the Secondary replication to reduce the disk load on the primary.  
 
-##  <a name="Point-in-time-restore"></a> Point-in-time-restore (PITR) in Azure SQL Databases (Preview)
+##  <a name="Point-in-time-restore"></a> Point-in-time-restore (PITR) in Azure SQL Database (Preview)
 Running point-in-time-restore (PITR) on a Azure SQL Database that has Change Data Capture enabled will not preserve the Change Data Capture artifacts (e.g. system tables). After PITR, those artifacts will not be available.
 
-##  <a name="AzureActiveDirectory"></a> Azure Active Directory in Azure SQL Databases (Preview)
+##  <a name="AzureActiveDirectory"></a> Azure Active Directory in Azure SQL Database (Preview)
 If you create an Azure SQL Database as an AAD user and enable Change Data Capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to Change Data Capture artifacts. However, another AAD user will be able to enable/disable Change Data Capture on the same database. 
 
 ## See Also  

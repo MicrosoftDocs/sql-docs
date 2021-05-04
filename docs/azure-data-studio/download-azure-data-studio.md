@@ -52,23 +52,29 @@ We recommend the *user installer* because it doesn't require administrator privi
 **User Installer** (recommended)
 
 1. Download and run the [Azure Data Studio *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2160781).
+
 2. Start the Azure Data Studio app.
 
 **System Installer**
 
 1. Download and run the [Azure Data Studio *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2160780).
+
 2. Start the Azure Data Studio app.
 
 **.zip file**
 
 1. Download [Azure Data Studio .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2160923).
+
 2. Browse to the downloaded file and extract it.
+
 3. Run `\azuredatastudio-windows\azuredatastudio.exe`
 
 ### macOS
 
 1. Download [Azure Data Studio for macOS](https://go.microsoft.com/fwlink/?linkid=2160874).
+
 2. To expand the contents of the zip, double-select it.
+
 3. To make Azure Data Studio available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
 
 ### Linux
@@ -77,12 +83,14 @@ We recommend the *user installer* because it doesn't require administrator privi
 
 1. Download Azure Data Studio for Linux by using the [deb](https://go.microsoft.com/fwlink/?linkid=2160876) file.
 
-2. To extract the file and launch Azure Data Studio, open a new Terminal window and follow the below commands.
+2. To extract the file, open a new Terminal window and follow the below commands.
 
    ```bash
    cd ~
    sudo dpkg -i ./Downloads/azuredatastudio-linux-<version string>.deb
    ```
+
+3. To launch Azure Data Studio
 
    ```bash
    azuredatastudio
@@ -98,12 +106,14 @@ You may have missing dependencies. Use the following commands to install these d
 
 1. Download Azure Data Studio for Linux by using the [rpm](https://go.microsoft.com/fwlink/?linkid=2160875) file.
 
-2. To extract the file and launch Azure Data Studio, open a new Terminal window and follow the below commands.
+2. To extract the file, open a new Terminal window and follow the below commands.
 
    ```bash
    cd ~
    yum install ./Downloads/azuredatastudio-linux-<version string>.rpm
    ```
+
+3. To launch Azure Data Studio
 
    ```bash
    azuredatastudio
@@ -117,12 +127,19 @@ You may have missing dependencies. Use the following commands to install these d
 
 #### tar.gz Installation
 
+1. Download Azure Data Studio for Linux by using the [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2160782) file.
+
+2. To extract the file, open a new Terminal window and follow the below commands.
+
    ```bash
    cd ~
    cp ~/Downloads/azuredatastudio-linux-<version string>.tar.gz ~ 
    tar -xvf ~/azuredatastudio-linux-<version string>.tar.gz 
    echo 'export PATH="$PATH:~/azuredatastudio-linux-x64"' >> ~/.bashrc
    source ~/.bashrc
+  ```
+
+3. To launch Azure Data Studio
 
   ```bash
    azuredatastudio

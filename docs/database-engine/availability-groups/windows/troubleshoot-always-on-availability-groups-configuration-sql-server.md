@@ -150,9 +150,9 @@ ms.author: chadam
 2. Check if you can connect to the endpoint
     - Use Telnet to validate connectivity. Here are examples of commands you can use:
 
-    ```sql
-    Telnet ServerName Port
-    Telnet IP_Address Port
+    ```DOS
+    telnet ServerName Port
+    telnet IP_Address Port
     ```
 
     - If the Endpoint is listening and connection is successful, then you will see a blank screen.  If not, you will receive a connection error from Telnet
@@ -193,8 +193,8 @@ ms.author: chadam
 
     `DNS Lookup failed with error '11001(No such host is known)' `
 
-4. Ensure the endpoint is configured for the correct IP/port that AG is defined for. 
-    - Run the following query from on the Primary and then each  Secondary replica t hat is not connecting to find the endpoint URL and port
+4. Ensure the endpoint is configured for the correct IP/port that AG is defined for.
+    - Run the following query on the Primary and then each Secondary replica that is failing to connect. This will help you find the endpoint URL and port
 
     ```sql 
     select endpoint_ur l from sys.availability_replicas
@@ -243,7 +243,7 @@ ms.author: chadam
 6. Check for possible name resolution issues
     - Validate DNS resolution by using NSLookup on the IP address and the name:
 
-    ```dos
+    ```DOS
     nslookup IP_Address
     nslookup ServerName
     ```

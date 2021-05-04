@@ -28,11 +28,11 @@ ms.author: jroth
 
 -   [Contained Databases](#Contained)
 
--   [Always On] (#AlwaysOn)
+-   [Always On](#AlwaysOn)
 
--   [Point-in-time-restore (PITR)] (#Point-in-time-restore)
+-   [Point-in-time-restore (PITR)](#Point-in-time-restore)
 
--   [Azure Active Directory] (#AzureActiveDirectory)
+-   [Azure Active Directory](#AzureActiveDirectory)
 
   
 ##  <a name="ChangeTracking"></a> Change Tracking  

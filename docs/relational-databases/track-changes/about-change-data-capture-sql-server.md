@@ -71,12 +71,12 @@ ms.author: jroth
 >  The maximum number of capture instances that can be concurrently associated with a single source table is two.  
   
 ## Relationship Between the Capture Job and the Transactional Replication Logreader  
- The logic for change data capture process is embedded in the stored procedure [sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md), an internal server function built as part of sqlservr.exe and also used by transactional replication to harvest changes from the transaction log. When change data capture alone is enabled for a database, you create the change data capture SQL Server Agent capture job as the vehicle for invoking sp_replcmds. When replication is also present, the transactional logreader alone is used to satisfy the change data needs for both of these consumers. This strategy significantly reduces log contention when both replication and change data capture are enabled for the same database.  
+ The logic for change data capture process is embedded in the stored procedure [sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md), an internal server function built as part of sqlservr.exe and also used by transactional replication to harvest changes from the transaction log. In SQL Server and Azure SQL Managed Instance, when change data capture alone is enabled for a database, you create the change data capture SQL Server Agent capture job as the vehicle for invoking sp_replcmds. When replication is also present, the transactional logreader alone is used to satisfy the change data needs for both of these consumers. This strategy significantly reduces log contention when both replication and change data capture are enabled for the same database.  
   
  The switch between these two operational modes for capturing change data occurs automatically whenever there is a change in the replication status of a change data capture enabled database.  
   
-> [!IMPORTANT]  
->  Both instances of the capture logic require [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to be running for the process to execute.  
+> [!NOTE]  
+>  In SQL Server and Azure SQL Managed Instance, both instances of the capture logic require [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to be running for the process to execute.  
   
  The principal task of the capture process is to scan the log and write column data and transaction-related information to the change data capture change tables. To ensure a transactionally consistent boundary across all the change data capture change tables that it populates, the capture process opens and commits its own transaction on each scan cycle. It detects when tables are newly enabled for change data capture, and automatically includes them in the set of tables that are actively monitored for change entries in the log. Similarly, disabling change data capture will also be detected, causing the source table to be removed from the set of tables actively monitored for change data. When processing for a section of the log is finished, the capture process signals the server log truncation logic, which uses this information to identify log entries eligible for truncation.  
   
@@ -105,6 +105,10 @@ ms.author: jroth
   
  Change data capture cannot function properly when the Database Engine service or the SQL Server Agent service is running under the NETWORK SERVICE account. This can result in error 22832.  
  
+## Change Data Capture Capture and Cleanup in Azure SQL Database (Preview)
+
+In Azure SQL, a Change Data Capture orchestrator takes the place of the SQL Server Agent that invokes stored procedures to start periodic capture and cleanup of the Change Data Capture tables. The orchestrator runs capture and cleanup automatically within Azure SQL, without any external dependency for reliability or performance. Users still have the option to run capture and cleanup manually on demand. 
+ 
 ## Working with database and table collation differences
 
 It is important to be aware of a situation where you have different collations between the database and the columns of a table configured for change data capture. CDC uses interim storage to populate side tables. If a table has CHAR or VARCHAR columns with collations that are different from the database collation and if those columns store non-ASCII characters (such as double byte DBCS characters), CDC might not be able to persist the changed data consistent with the data in the base tables. This is due to the fact that the interim storage variables cannot have collations associated with them.
@@ -131,6 +135,12 @@ CREATE TABLE T1(
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
 
+## Performance impact of CDC on Azure SQL Databases (Preview)
+Overall, the overhead for Azure SQL Change Data Capture should be similar to the performance impact of Change Data Capture for SQL Server and Azure SQL Managed Instance. The impact of turning CDC on depends on the number of tables tracked and the activity in them. Change Data Capture artifacts (e.g. CT tables, cdc_jobs etc.) are stored in the same database, so make sure you are not too close to your database limit, in which case you should upgrade to a higher tier. It is important to monitor your space usage closely and make sure to test your workload before turning on Change Data Capture into production.
+
+## Permissions required
+In order to enable Change Data Capture on SQL Server or Azure SQL Managed Instance, a user needs the sysadmin role. On Azure SQL Databases, the db_owner role is requried. 
+
 ## Limitations
 
 Change data capture has the following limitations: 
@@ -144,12 +154,11 @@ Change data capture cannot be enabled on tables with a clustered columnstore ind
 **Partition switching with variables**   
 Using variables with partition switching on databases or tables with Change Data Capture (CDC) is not supported for the `ALTER TABLE ... SWITCH TO ... PARTITION ...` statement. See [partition switching limitations](../replication/publish/replicate-partitioned-tables-and-indexes.md#replication-support-for-partition-switching) to learn more. 
 
-
+**Capture and Cleanup Customization on Azure SQL Databases (Preview)**
+As of now, the customization of the capture and the cleanup processes in Azure SQL Databases is not possible. Capture and cleanup are run automatically by the orchestrator.
 
 ## See Also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Enable and Disable Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   
  [Work with Change Data &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
  [Administer and Monitor Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
-  
-  

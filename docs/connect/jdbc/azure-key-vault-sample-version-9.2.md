@@ -15,7 +15,7 @@ ms.author: v-susanh
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## Sample application using Azure Key Vault feature
+## Sample application using Azure Key Vault
 
 This application is runnable using JDBC Driver 9.2 and above, Azure-Security-Keyvault (version 4.2.1), Azure-Identity (version 1.1.3), and their dependencies. The underlying dependencies can be resolved by adding these libraries to the Project Object Model (POM) file of the project. For more information on feature dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 

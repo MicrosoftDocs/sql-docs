@@ -1,11 +1,11 @@
 ---
-description: "Client Certificate Authentication for loopback scenarios"
-title: "Client Certificate Authentication for loopback scenarios | Microsoft Docs"
+title: Client Certificate Authentication for loopback scenarios
+description: Learn how to use client certificates for authentication in loopback scenarios on SQL Server.
 ms.custom: ""
-ms.date: "07/31/2020"
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 
@@ -24,23 +24,27 @@ The JDBC driver adds three connection properties for this feature:
 
 * clientCertificate – specifies the certificate to be used for authentication. The JDBC driver will support PFX, PEM, DER, and CER file extensions.
 
-Format
-```
-clientCertificate=<file_location>
-``` 
+  Format
+
+  ```java
+  clientCertificate=<file_location>
+  ```
+
 The driver uses a certificate file. For certificates in PEM, DER, and CER formats clientKey attribute is required. File location can be either relative or absolute.
- 
+
 * clientKey – specifies a file location of the private key for PEM, DER, and CER certificates specified by the clientCertificate attribute.
 
-Format
-```
-clientKey=<file_location>
-```
+  Format
+
+  ```java
+  clientKey=<file_location>
+  ```
+
 Specifies location of the private key file. In case if private key file is password protected then password keyword is required. File location can be either relative or absolute.
 
-* clientKeyPassword – optional password string provided to access the clientKey file’s private key.
+* clientKeyPassword – optional password string provided to access the clientKey file's private key.
 
-This feature is only officially supported for loopback authentication scenarios against Linux SQL Server 2019 and up.
+  This feature is only officially supported for loopback authentication scenarios against Linux SQL Server 2019 and up.
 
 ## See also
 

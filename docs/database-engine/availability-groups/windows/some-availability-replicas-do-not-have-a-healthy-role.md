@@ -20,12 +20,10 @@ ms.author: chadam
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|Availability Replicas Role State|  
-|**Issue**|Some availability replicas do not have a healthy role.|  
-|**Category**|**Warning**|  
-|**Facet**|Availability group|  
+- **Policy Name**: Availability Replicas Role State
+- **Issue**: Some availability replicas do not have a healthy role.
+- **Category**: **Warning**
+- **Facet**: Availability group  
   
 ## Description  
  This policy rolls up the connection state of all availability replicas and checks if there are any availability replicas that are not in a healthy role. The policy is in an unhealthy state when any availability replica is neither primary nor secondary. The policy is otherwise in a healthy state.  

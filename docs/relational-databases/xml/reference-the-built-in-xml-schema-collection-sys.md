@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "XML schema collections [SQL Server], predefined"
   - "built-in XML schema collections [SQL Server]"
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Reference the Built-in XML Schema Collection (sys)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

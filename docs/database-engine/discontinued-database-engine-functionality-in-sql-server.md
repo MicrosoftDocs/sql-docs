@@ -67,6 +67,8 @@ For current configuration options, see [ALTER DATABASE SCOPED CONFIGURATION (Tra
 
 - Secure Sockets Layer (SSL) encryption is discontinued. Use Transport Layer Security (TLS) instead. For more information, see [Enable Encrypted Connections to the Database Engine](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
 
+- `precompute rank` Server configuration option was discontinued beginning with SQL Server 2008. The article has been removed from documentation.
+
 ## Previous Versions
 
 - [Discontinued Database Engine Functionality in SQL Server 2014](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014&preserve-view=true)

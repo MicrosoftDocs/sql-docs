@@ -23,7 +23,7 @@ This article covers the In-Memory OLTP technology in both [!INCLUDE[ssNoVersion]
 
 ## In-Memory OLTP Overview
 
-In-Memory OLTP can provide great performance gains, for the right workloads. One customer, BWIN, managed to [achieve 1.2 Million requests per second](/archive/blogs/sqlcat/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale) with a single machine running [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], leveraging In-Memory OLTP. Another customer, Quorum, managed to double their workload while [reducing their resource utilization by 70%](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database), by leveraging In-Memory OLTP in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. While customers have seen up to 30X performance gain in some cases, how much gain you see depends on the workload.
+In-Memory OLTP can provide great performance gains, for the right workloads. While customers have seen up to 30X performance gain in some cases, how much gain you see depends on the workload.
 
 Now, where does this performance gain come from? In essence, In-Memory OLTP improves performance of transaction processing by making data access and transaction execution more efficient, and by removing lock and latch contention between concurrently executing transactions: it is not fast because it is in-memory; it is fast because it is optimized around the data being in-memory. Data storage, access, and processing algorithms were redesigned from the ground up to take advantage of the latest enhancements in in-memory and high concurrency computing.
 

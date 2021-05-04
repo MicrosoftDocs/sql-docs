@@ -5,7 +5,7 @@ description: This article describes features supported by the various editions o
 ms.custom: 
    - seo-lt-2019
    - sqlfreshmay19
-ms.date: 07/22/2020
+ms.date: 03/26/2021
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -34,7 +34,6 @@ helpviewer_keywords:
   - "editions [SQL Server], about edition options"
   - "Setup [SQL Server]"
   - "CPSA"
-ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 ---
@@ -178,7 +177,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Table and index partitioning|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|  
 |Data compression|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|
 |Resource Governor|Yes|No|No|No|No|  
-|Partitioned Table Parallelism|Yes|No|No|No|No|
+|Partitioned Table Parallelism|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|  
 |Multiple Filestream containers|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|
 |NUMA Aware Large Page Memory and Buffer Array Allocation|Yes|No <sup>4</sup>|No|No|No|
 |Buffer Pool Extension|Yes|Yes|No|No|No|

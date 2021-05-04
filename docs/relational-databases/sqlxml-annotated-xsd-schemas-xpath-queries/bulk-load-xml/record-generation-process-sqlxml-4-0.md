@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "leaving node scope [SQLXML]"
   - "schema mapping [SQLXML]"
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

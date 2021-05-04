@@ -238,7 +238,7 @@ You can now deploy the BDC cluster integrated with Active Directory using the [!
 
 ## Verify reverse DNS entry for domain controller
 
-Make sure that there is a reverse DNS entry (PTR record) for the domain controller itself, registered in the DNS server. You can verify this by running `nslookup` of the domain name on the domain controller, to see that it can be resolved to the domain controller IP address.
+Make sure that there is a reverse DNS entry (PTR record) for the domain controller itself, registered in the DNS server. You can verify this by running `nslookup` of the IP address of the domain controller, to see that it can be resolved to the domain controller’s FQDN.
 
 ## Known issues and limitations
 

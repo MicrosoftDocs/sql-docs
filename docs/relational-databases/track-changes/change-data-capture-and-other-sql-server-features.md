@@ -72,7 +72,7 @@ ms.author: jroth
   
 -   If a database is detached and attached to the same server or another server, change data capture remains enabled.  
   
--   If a database is attached or restored with the **KEEP_CDC** option to any edition other than Standard or Enterprise, the operation is blocked because change data capture requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard or Enterprise editions. Error message 934 is displayed:  
+-   If a database is attached or restored with the **KEEP_CDC** option to any edition other than Standard, Enterprise, or Managed Instance, the operation is blocked because change data capture requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard, Enterprise, or Managed Instance editions. Error message 934 is displayed:  
   
      `SQL Server cannot load database '%.*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture.`  
   

@@ -4,7 +4,7 @@ description: Review some basic security concepts in SQL Server and learn about a
 ms.custom: ""
 ms.date: "01/03/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: quickstart
@@ -94,7 +94,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   `AUTHORIZATION` must be `GRANT`, `REVOKE` or `DENY`.  
   
--   The `PERMISSION` establishes what action is allowed or prohibited. [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] can specify 230 permissions. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] has fewer permissions because some actions are not relevant in Azure. The permissions are listed in the topic [Permissions &#40;Database Engine&#41;](../../../relational-databases/security/permissions-database-engine.md) and in the chart referenced below.  
+-   The `PERMISSION` establishes what action is allowed or prohibited. The exact number of permissions differs between SQL Server and SQL Database. The permissions are listed in the topic [Permissions &#40;Database Engine&#41;](../../../relational-databases/security/permissions-database-engine.md) and in the chart referenced below.  
   
 -   `ON SECURABLE::NAME` is the type of securable (server, server object, database, or database object) and its name. Some permissions do not require `ON SECURABLE::NAME` because it is unambiguous or inappropriate in the context. For example the `CREATE TABLE` permission doesn't require the `ON SECURABLE::NAME` clause. (For example `GRANT CREATE TABLE TO Mary;` allows Mary to create tables.)  
   
@@ -104,6 +104,12 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 ```  
 GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;  
+```  
+
+ The following example grant statement, grants the `UPDATE` permission on the `Production` schema, and by that on any table or view contained within this schema to the role named `ProductionTeam`, which is a more effective and salable approach to assigning permissions than on individual object-level:
+  
+```  
+GRANT UPDATE ON SCHEMA::Production TO ProductionTeam;  
 ```  
   
  Permissions are granted to security principals (logins, users, and roles) by using the `GRANT` statement. Permissions are explicitly denied by using the  `DENY` command. A previously granted or denied permission is removed by using the `REVOKE` statement. Permissions are cumulative, with the user receiving all the permissions granted to the user, login, and any group memberships; however any permission denial overrides all grants.  
@@ -148,10 +154,12 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
 ```  
   
 ## Grant the Least Permission  
- The first permission listed above (`GRANT SELECT ON OBJECT::Region TO Ted;`) is the most granular, that is, that statement is the least permission possible that grants the `SELECT`. No permissions to subordinate objects come with it. It's a good principal to always grant the least permission possible, but (contradicting that) grant at higher levels in order to simplify the granting system. So if Ted needs permissions to the entire schema, grant `SELECT` once at the schema level, instead of granting `SELECT` at the table or view level many times. The design of the database has a great deal of impact on how successful this strategy can be. This strategy will work best when your database is designed so that objects needing identical permissions are included in a single schema.  
+ The first permission listed above (`GRANT SELECT ON OBJECT::Region TO Ted;`) is the most granular, that is, that statement is the least permission possible that grants the `SELECT`. No permissions to subordinate objects come with it. It's a good principal to always grant the least permission possible (you can read more about the [Principle of Least Privilege](https://techcommunity.microsoft.com/t5/azure-sql/security-the-principle-of-least-privilege-polp/ba-p/2067390)), but at the same time (contradicting that) try to grant at higher levels in order to simplify the granting system. So if Ted needs permissions to the entire schema, grant `SELECT` once at the schema level, instead of granting `SELECT` at the table or view level many times. The design of the database has a great deal of impact on how successful this strategy can be. This strategy will work best when your database is designed so that objects needing identical permissions are included in a single schema.  
+ 
+ > [!TIP]  
+>  When designing a database and its objects, from the beginning, plan who or which applications will access which objects and based on that place objects, namely tables but also views, functions and stored procedures in schemas according to buckets of access type as much as possible. You can read more about this approach in this blog post by Andreas Wolter [Schema-design for SQL Server: recommendations for Schema design with security in mind](http://andreas-wolter.com/en/schema-design-for-sql-server-recommendations-for-schema-design-with-security-in-mind/). 
   
-## List of Permissions  
- [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] has 230 permissions. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] has 219 permissions. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] has 214 permissions. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] has 195 permissions. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], and [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] have fewer permissions because they expose only a portion of the database engine, though each have some permissions that do not apply to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
+## Diagramm of Permissions  
  
  [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  

@@ -4,7 +4,7 @@ title: "Rename Tables (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/23/2018"
 ms.prod: sql
-ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual

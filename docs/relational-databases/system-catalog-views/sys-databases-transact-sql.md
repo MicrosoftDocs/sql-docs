@@ -4,7 +4,7 @@ title: "sys.databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/08/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "reference"

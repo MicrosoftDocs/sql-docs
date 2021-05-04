@@ -347,8 +347,8 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 ```
 
 ## Related content
-[SORT_IN_TEMPDB option for indexes](../../relational-databases/indexes/sort-in-TempDB-option-for-indexes.md)    
-[System databases](../../relational-databases/databases/system-databases.md)    
-[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
-[sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
-[Move database files](../../relational-databases/databases/move-database-files.md)    
+- [SORT_IN_TEMPDB option for indexes](../../relational-databases/indexes/sort-in-TempDB-option-for-indexes.md)    
+- [System databases](../../relational-databases/databases/system-databases.md)    
+- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
+- [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
+- [Move database files](../../relational-databases/databases/move-database-files.md)    

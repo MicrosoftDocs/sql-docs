@@ -2,7 +2,7 @@
 description: "Always On Availability Groups Dynamic Management Views - Functions"
 title: "Always On Availability Groups Dynamic Management Views - Functions | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "03/01/2021"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -29,6 +29,8 @@ ms.author: wiassaf
 
         [sys.dm_hadr_auto_page_repair](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)
 
+        [sys.dm_hadr_automatic_seeding](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-automatic-seeding.md)
+
         [sys.dm_hadr_availability_group_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)
 
         [sys.dm_hadr_availability_replica_cluster_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-nodes-transact-sql.md)
@@ -54,6 +56,8 @@ ms.author: wiassaf
         [sys.dm_hadr_instance_node_map](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-instance-node-map-transact-sql.md)
 
         [sys.dm_hadr_name_id_map](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md)
+
+        [sys.dm_hadr_physical_seeding_stats](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-physical-seeding-stats.md)
 
         [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)
 

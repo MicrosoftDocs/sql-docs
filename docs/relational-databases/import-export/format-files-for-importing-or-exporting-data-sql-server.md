@@ -3,7 +3,7 @@ title: "Format files to import & export data"
 description: When you bulk import to a SQL Server table or bulk export from a table, a format file can store field format information for a data file relative to a table.
 ms.date: "09/25/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual

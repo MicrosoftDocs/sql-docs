@@ -26,7 +26,7 @@ ms.author: "sstein"
  Specify the owner of the database by selecting from the list.  
   
  **Use full-text indexing**  
- This check box is checked and disabled because full-text indexing is always enabled in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Full-Text Search](../../relational-databases/search/full-text-search.md).  
+ This check box is checked and disabled because full-text indexing is always enabled in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For more information, see [Full-Text Search](../../relational-databases/search/full-text-search.md).  
   
  **Database Files**  
  Add, view, modify, or remove database files for the associated database. Database files have the following properties:  

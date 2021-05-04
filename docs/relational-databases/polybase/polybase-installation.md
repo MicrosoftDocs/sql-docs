@@ -30,8 +30,7 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
   
 - Recommended: Minimum of 16-GB RAM.
    
-- TCP/IP must be enabled for PolyBase to function correctly. TCP/IP is enabled by default on all editions of SQL Server except for the Developer and Express SQL Server editions. For PolyBase to function correctly on the Developer and Express editions, you must enable TCP/IP connectivity. See [Enable or disable a server network protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
-
+- PolyBase services require SQL Server service to have TCP/IP network protocol enabled to function correctly. TCP/IP is enabled by default on all editions of SQL Server except for the Developer and Express SQL Server editions. For PolyBase to function correctly on the Developer and Express editions, you must enable TCP/IP connectivity. See [Enable or disable a server network protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md). Additionally, if TCP/IP Protocol configuration setting **Listen All** is set to **No**, you must still have an entry for the correct listener port in either **TCP Dynamic Ports** or **TCP Ports** under **IPAll** in TCP/IP Properties. This is required due to the way PolyBase services resolve the listener port of the SQL Server Engine.
 
 >[!NOTE] 
 > PolyBase can be installed on only one SQL Server instance per machine.
@@ -160,7 +159,7 @@ RECONFIGURE;
 PolyBase installs three user databases, DWConfiguration, DWDiagnostics, and DWQueue. These databases are for PolyBase use. Don't alter or delete them.  
 
 > [!CAUTION]
-> Adding PolyBase to an existing installation of SQL Server will install the feature at the version level of the installation media, which may be behind the version level other features of SQL Server. This may result in unexpected behavior or errors. Always follow up installing the PolyBase feature by bringing the new feature up to the same version level. Install service packs (SPs), cumulative updates (CUs), and/or general distribution releases (GDRs) as needed. To determine the version of PolyBase, see [Determine the version, edition, and update level of SQL Server and its components](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#polybase).
+> Adding PolyBase to an existing installation of SQL Server will install the feature at the version level of the installation media, which may be behind the version level other features of SQL Server. This may result in unexpected behavior or errors. Always follow up installing the PolyBase feature by bringing the new feature up to the same version level. Install service packs (SPs), cumulative updates (CUs), and/or general distribution releases (GDRs) as needed. To determine the version of PolyBase, see [Determine the version, edition, and update level of SQL Server and its components](/troubleshoot/sql/general/determine-version-edition-update-level#polybase).
    
 ### <a id="confirminstall"></a> How to confirm installation  
 

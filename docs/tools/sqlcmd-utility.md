@@ -26,7 +26,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 09/11/2020
+ms.date: 02/24/2021
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 
@@ -66,7 +66,7 @@ The new BCP supports Azure AD authentication, including Multi-Factor Authenticat
 **System Requirements**
 Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008 - 2019.
 
-This component requires both [Windows Installer 4.5](https://windows-installer.soft32.com/) and [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
+This component requires both the built-in [Windows Installer 5](/windows/win32/msi/what-s-new-in-windows-installer-5-0) and the [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
  
 To check the SQLCMD version execute `sqlcmd -?` command and confirm that 15.0.2000.5 version or higher is in use.
 
@@ -175,8 +175,9 @@ Sets the Column Encryption Setting to `Enabled`. For more information, see [Alwa
 This switch is used by the client when connecting to SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure Active Directory authentication. This option sets the **sqlcmd** scripting variable SQLCMDUSEAAD = true. The -G switch requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview). The -A option is not supported with the -G option.
 
 > [!IMPORTANT]
-> The `-G` option only applies to Azure SQL Database and Azure Data Warehouse.
-> AAD Interactive Authentication is not currently supported on Linux or macOS. AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly configured Kerberos environment.
+> The `-G` option only applies to Azure SQL Database and Azure Synapse Analytics.
+> AAD Interactive Authentication is not currently supported on Linux or macOS. AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [Configured Kerberos environment](../connect/odbc/linux-mac/using-integrated-authentication.md).
+
 
 - **Azure Active Directory Username and Password:** 
 
@@ -195,7 +196,7 @@ This switch is used by the client when connecting to SQL Database or Azure Synap
 - **Azure Active Directory Integrated**
 
    For Azure Active Directory Integrated authentication, provide the **-G** option without a user name or password.
-   *AAD Integrated Authentication is not currently supported on Linux or macOS*.
+   *AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](../connect/odbc/linux-mac/using-integrated-authentication.md).*.
 
     ```cmd
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
@@ -464,11 +465,10 @@ We recommend that you use a strong password.
   
 - **image**  
   
-> [!NOTE]  
->  UDTs can be of fixed length depending on the implementation. If this length of a fixed length UDT is shorter that *display_width*, the value of the UDT returned is not affected. However, if the length is longer than *display_width*, the output is truncated.  
-   
+> [!NOTE]
+> UDTs can be of fixed length depending on the implementation. If this length of a fixed length UDT is shorter that *display_width*, the value of the UDT returned is not affected. However, if the length is longer than *display_width*, the output is truncated.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Use the **-y 0** option with extreme caution because it may cause serious performance issues on both the server and the network, depending on the size of data returned.  
   
  **-Y** _fixed_length_type_display_width_  
@@ -511,7 +511,7 @@ We recommend that you use a strong password.
  Lists the locally configured server computers, and the names of the server computers that are broadcasting on the network. This parameter cannot be used in combination with other parameters. The maximum number of server computers that can be listed is 3000. If the server list is truncated because of the size of the buffer a warning message is displayed.  
   
 > [!NOTE]  
->  Because of the nature of broadcasting on networks, **sqlcmd** may not receive a timely response from all servers. Therefore, the list of servers returned may vary for each invocation of this option.  
+> Because of the nature of broadcasting on networks, **sqlcmd** may not receive a timely response from all servers. Therefore, the list of servers returned may vary for each invocation of this option.  
   
  If the optional parameter **c** is specified, the output appears without the **Servers:** header line, and each server line is listed without leading spaces. This presentation is referred to as clean output. Clean output improves the processing performance of scripting languages.  
   
@@ -611,17 +611,78 @@ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any 
 ## sqlcmd Commands  
  In addition to Transact-SQL statements within **sqlcmd**, the following commands are also available:  
   
-|||  
-|-|-|  
-|**GO** [*count*]|**:List**|  
-|[**:**] **RESET**|**:Error**|  
-|[**:**] **ED**|**:Out**|  
-|[**:**] **!!**|**:Perftrace**|  
-|[**:**] **QUIT**|**:Connect**|  
-|[**:**] **EXIT**|**:On Error**|  
-|**:r**|**:Help**|  
-|**:ServerList**|**:XML** [**ON** &#124; **OFF**]|  
-|**:Setvar**|**:Listvar**|  
+:::row:::
+   :::column span="":::
+      **GO** [*count*]
+   :::column-end:::
+   :::column span="":::
+      **:List**
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **RESET**
+   :::column-end:::
+   :::column span="":::
+      **:Error**  
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **ED**
+   :::column-end:::
+   :::column span="":::
+      **:Out**  
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **!!**
+   :::column-end:::
+   :::column span="":::
+      **:Perftrace**
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **QUIT**
+   :::column-end:::
+   :::column span="":::
+      **:Connect**  
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [**:**] **EXIT**
+   :::column-end:::
+   :::column span="":::
+      **:On Error**
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **:r**
+   :::column-end:::
+   :::column span="":::
+      **:Help**
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **:ServerList**
+   :::column-end:::
+   :::column span="":::
+      **:XML** [**ON** &#124; **OFF**]
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      **:Setvar**
+   :::column-end:::
+   :::column span="":::
+      **:Listvar** 
+   :::column-end:::
+:::row-end:::
   
  Be aware of the following when you use **sqlcmd** commands:  
   
@@ -764,7 +825,7 @@ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any 
   
  **Miscellaneous Commands**  
   **:r \<** _filename_ **>**  
- Parses additional Transact-SQL statements and **sqlcmd** commands from the file specified by **\<**_filename_**>**into the statement cache.  
+ Parses additional Transact-SQL statements and **sqlcmd** commands from the file specified by **\<** _filename_ **>** into the statement cache.  
   
  If the file contains Transact-SQL statements that are not followed by **GO**, you must enter **GO** on the line that follows **:r**.  
   

@@ -4,7 +4,7 @@ title: "SWITCHOFFSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/02/2015"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -38,20 +38,20 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```syntaxsql
-SWITCHOFFSET ( DATETIMEOFFSET, time_zone )   
+SWITCHOFFSET ( datetimeoffset_expression, timezoneoffset_expression )   
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *DATETIMEOFFSET*  
+ *datetimeoffset_expression*  
  Is an expression that can be resolved to a **datetimeoffset(n)** value.  
   
- *time_zone*  
- Is a character string in the format [+|-]TZH:TZM or a signed integer (of minutes) that represents the time zone offset, and is assumed to be daylight-saving aware and adjusted.  
+ *timezoneoffset_expression*  
+ Is an expression in the format [+|-]TZH:TZM or a signed integer (of minutes) that represents the time zone offset, and is assumed to be daylight-saving aware and adjusted.  
   
 ## Return Type  
- **datetimeoffset** with the fractional precision of the *DATETIMEOFFSET* argument.  
+ **datetimeoffset** with the fractional precision of the *datetimeoffset_expression* argument.  
   
 ## Remarks  
  Use SWITCHOFFSET to select a **datetimeoffset** value into a time zone offset that is different from the time zone offset that was originally stored. SWITCHOFFSET does not update the stored *time_zone* value.  

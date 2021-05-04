@@ -4,7 +4,7 @@ title: "STIntersects (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
+ms.prod_service: "synapse-analytics, database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference

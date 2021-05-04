@@ -6,8 +6,8 @@ ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ---
 # Release notes for the Microsoft OLE DB Driver for SQL Server
 

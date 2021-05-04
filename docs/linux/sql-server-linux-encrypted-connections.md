@@ -53,11 +53,12 @@ sudo mv mssql.key /etc/ssl/private/
 
 ```bash
 systemctl stop mssql-server 
-cat /var/opt/mssql/mssql.conf 
+sudo cat /var/opt/mssql/mssql.conf 
 sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
 sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
 sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
 sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
+systemctl start mssql-server 
 ```
 
 - **Register the certificate on your client machine (Windows, Linux, or macOS)**
@@ -110,11 +111,12 @@ sudo mv mssql.key /etc/ssl/private/
 
 ```bash
 systemctl stop mssql-server 
-cat /var/opt/mssql/mssql.conf 
+sudo cat /var/opt/mssql/mssql.conf 
 sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
 sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
 sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
-sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
+sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1
+systemctl start mssql-server 
 ```
 
 -	**Example connection strings** 

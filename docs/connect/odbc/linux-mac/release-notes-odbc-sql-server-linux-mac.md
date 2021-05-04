@@ -5,11 +5,11 @@ ms.custom: ""
 ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: "v-jizho2"
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-chojas
-ms.author: v-jizho2
+ms.author: v-chojas
 manager: kenvh
 ---
 # Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS
@@ -30,6 +30,13 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## 17.7.2, March 2021
+
+| New item | Details |
+| :------- | :------ |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## 17.7, January 2021
 
@@ -95,7 +102,7 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 
 | Feature added | Details |
 | :------------ | :------ |
-| Always Encrypted with Secure Enclaves. | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
+| Always Encrypted with secure enclaves. | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Dynamic loading of OpenSSL | See [Programming Guidelines](programming-guidelines.md#bkmk-openssl). |
 | Configurable TCP Keep Alive settings. | See [Connecting to SQL Server](connection-string-keywords-and-data-source-names-dsns.md). |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
@@ -136,7 +143,7 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 ## 17
 
 **New distributions supported**:
-macOS High Sierra and Ubuntu 17.10 
+macOS High Sierra and Ubuntu 17.10
 
 **Performance Improvements**:
 Greater than 10x performance improvement when driver converts to/from UTF-8/16.
@@ -147,19 +154,21 @@ Always Encrypted support for BCP API
 
 New connection string attribute UseFMTOnly causes driver to use legacy metadata in special cases requiring temp tables.
 
-Support for Azure SQL Managed Instance. 
+Support for Azure SQL Managed Instance.
+
 > [!NOTE]
 > There are a number of differences when using Managed Instance:
-> -   FILESTREAM is not supported 
-> -   Local filesystem access is not supported, but required for things like tracefiles 
-> -   Create UDT from local path is not supported 
-> -   Windows Integrated Authentication is not supported 
-> -   DTC is not supported 
-> -   'sa' account is not present (default account is called 'cloudSA')
-> -   TDS token ERROR (0xAA) returns incorrect server name
-> -   Special characters in database name are not supported 
-> -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] is not supported
-> -   The error messages are always shown in English, regardless of language settings (same as Azure) 
+>
+> - FILESTREAM is not supported
+> - Local filesystem access is not supported, but required for things like tracefiles
+> - Create UDT from local path is not supported
+> - Windows Integrated Authentication is not supported
+> - DTC is not supported
+> - 'sa' account is not present (default account is called 'cloudSA')
+> - TDS token ERROR (0xAA) returns incorrect server name
+> - Special characters in database name are not supported
+> - ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] is not supported
+> - The error messages are always shown in English, regardless of language settings (same as Azure)
 
 ## 13.1, for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS, May 2017
 
@@ -169,7 +178,7 @@ ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)
 OS X 10.11 and macOS 10.12 are supported in the first release of the ODBC Driver on macOS. Ubuntu 16.10 is now also supported, along with Red Hat 6, 7, and SUSE 12. Each platform has a platform-relevant package (RPM or DEB) to ease installation and configuration. For more information, see the ODBC driver installation instructions for [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 and [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
-**unixODBC Driver Manager 2.3.1 Support Changes**: The ODBC driver no longer depends on custom packaging for the unixODBC driver manager (except on RedHat 6), and instead relies on the distribution package manager to resolve the UnixODBC dependency from the distribution's repositories.
+**unixODBC Driver Manager 2.3.1 Support Changes**: The ODBC driver no longer depends on custom packaging for the unixODBC driver manager (except on Red Hat 6), and instead relies on the distribution package manager to resolve the UnixODBC dependency from the distribution's repositories.
 
 **BCP API Support**: The Linux and macOS ODBC driver now supports the use of the [BCP API functions (**bcp_init**, etc.)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
 

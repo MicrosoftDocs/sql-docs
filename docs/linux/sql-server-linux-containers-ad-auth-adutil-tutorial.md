@@ -153,7 +153,7 @@ Enabling AD authentication on SQL Server on Linux containers requires steps 1-3 
 2. Using the adutil tool, create the new user that will be used as the privileged AD Account by SQL Server.
 
    ```bash
-   adutil user create --name sqluser -distname CN=sqluser,CN=Users,DC=CONTOSO,DC=COM --password 'P@ssw0rd'
+   adutil user create --name sqluser --distname CN=sqluser,CN=Users,DC=CONTOSO,DC=COM --password 'P@ssw0rd'
    ```
 
     > [!NOTE]

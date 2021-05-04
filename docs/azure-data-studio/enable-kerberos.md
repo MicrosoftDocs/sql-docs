@@ -6,12 +6,12 @@ ms.technology: azure-data-studio
 ms.topic: how-to
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
-ms.date: 09/24/2018
+ms.date: 05/03/2021
 ---
 
-# Connect Azure Data Studio to SQL Server using Windows authentication - Kerberos
+# Connect Azure Data Studio to SQL Server using Kerberos
 
 Azure Data Studio supports connecting to SQL Server by using Kerberos.
 
@@ -30,7 +30,6 @@ To get started, you need:
 Sign in to the host machine of SQL Server. From the Windows command prompt, use `setspn -L %COMPUTERNAME%` to list all the SPNs for the host. You should see entries that begin with MSSQLSvc/HostName.Domain.com, which means that SQL Server has registered an SPN and is ready to accept Kerberos authentication.
 
 If you don't have access to the host of the SQL Server instance, then from any other Windows OS joined to the same Active Directory, you could use the command `setspn -L <SQLSERVER_NETBIOS>`, where *<SQLSERVER_NETBIOS>* is the computer name of the host of the SQL Server instance.
-
 
 ## Get the Kerberos Key Distribution Center
 
@@ -89,6 +88,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 ```
    
 ### RedHat Enterprise Linux
+
 ```bash
 sudo yum install realmd krb5-workstation
 ```
@@ -120,11 +120,9 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
    
 ```
 
-### macOS
+### Configure KDC in krb5.conf with macOS
 
-Join your macOS to the Active Directory domain controller by following these steps.
-
-## Configure KDC in krb5.conf
+This section discusses the [Kerberos configuration file](http://web.mit.edu/macdev/KfM/Common/Documentation/preferences-osx.html).
 
 Edit the `/etc/krb5.conf` file in an editor of your choice. Configure the following keys:
 
@@ -146,7 +144,7 @@ Then save the krb5.conf file and exit.
 > The domain must be in ALL CAPS.
 
 
-## Test the Ticket Granting Ticket retrieval
+## Test the ticket granting ticket retrieval
 
 Get a Ticket Granting Ticket (TGT) from KDC.
 

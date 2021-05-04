@@ -143,6 +143,62 @@ Remote file system access to FILESTREAM data is enabled over the Server Message 
 
 Creating memory mapped views (memory mapped I/O) by using a FILESTREAM handle is not supported. If memory mapping is used for FILESTREAM data, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] cannot guarantee consistency and durability of the data or the integrity of the database.  
 
+## Recommendations and guidelines for improving FILESTREAM performance
+
+The SQL Server FILESTREAM feature allow you to store varbinary(max) binary large object data as files in the file system. When you have a large number of rows in FILESTREAM containers, which are the underlying storage for both FILESTREAM columns and FileTables, you can end up with a file system volume that contains large number of files. To achieve best performance when processing the integrated data from the database as well as the file system, it is important to ensure the file system is tuned optimally. The following are some of the tuning options that are available from a file system perspective:
+
+- Altitude check for the SQL Server FILESTREAM filter driver [e.g. rsfx0100.sys]. Evaluate all the filter drivers loaded for the storage stack associated with a volume where the FILESTREAM feature stores files and make sure that rsfx driver is located at the bottom of the stack. You can use the FLTMC.EXE control program to enumerate the filter drivers for a specific volume. Here is a sample output from the FLTMC utility: `C:\Windows\System32>fltMC.exe` filters
+
+    |Filter Name|Num Instances|Altitude|Frame|
+    |---|---|---|---|
+    |Sftredir|1|406000|0|
+    |MpFilter|9|328000|0|
+    |luafv|1|135000|0|
+    |FileInfo|9|45000|0|
+    |RsFx0103|1|41001.03|0|
+    ||||
+
+- Check that the server has the "last access time" property disabled for the files. This file system attribute is maintained in the registry:  
+Key Name: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`  
+Name: NtfsDisableLastAccessUpdate  
+Type: REG_DWORD  
+Value: 1
+
+- Check that the server has 8.3 naming disabled. This file system attribute is maintained in the registry:  
+Key Name: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`  
+Name: NtfsDisable8dot3NameCreation  
+Type: REG_DWORD  
+Value: 1
+
+- Check that the FILESTREAM directory containers do not have file system encryption or file system compression enabled, as these can introduce a level of overhead when accessing these files.
+
+- From an elevated command prompt, run fltmc instances and make sure that no filter drivers are attached to the volume where you try to restore.
+
+- Check that FILESTREAM directory containers do not have more than 300,000 files. You can use the information from `sys.database_files` catalog view to find out which directories in the file system store `FILESTREAM-related` files. This can be prevented by having multiple containers. (See the next bullet item for more information.)
+
+- With only one FILESTREAM filegroup, all data files are created under the same folder. File creation of very large numbers of files may be impacted by large NTFS indices, which can also become fragmented.
+
+  - Having multiple filegroups generally should help with this (the application uses partitioning or has multiple tables, each going to its own filegroup).
+
+  - With SQL Server 2012 and later versions, you can have multiple containers or files under a FILESTREAM filegroup, and a round-robin allocation scheme will apply. Therefore the number of NTFS files per directory will get smaller.
+
+- Backup and restore can become faster with multiple FILESTREAM containers, if multiple volumes storing containers are used.
+
+    SQL Server 2012 supports multiple containers per filegroup and can make things much easier. No complicated partitioning schemes may be needed to manage larger number of files.
+
+- The NTFS MFT may become fragmented, and that can cause performance issues. The MFT reserved size does depend on volume size, so you may or may not encounter this.
+
+  - You can check the MFT fragmentation with `defrag /A /V C:` (change C: to the actual volume name).
+
+  - You can reserve more MFT space by using fsutil behavior set mftzone 2.
+
+  - FILESTREAM data files should be excluded from antivirus software scanning.
+
+    > [!NOTE]
+    > Windows Server 2016 automatically enables Windows Defender. Make sure that Windows Defender is configured to exclude Filestream files. Failure to do this can result in decreased performance for backup and restore operations.
+  
+    For more information, see [Configure and validate exclusions for Windows Defender Antivirus scans](/windows/security/threat-protection/microsoft-defender-antivirus/configure-exclusions-microsoft-defender-antivirus).
+
 ## Related Tasks
 
 [Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  

@@ -20,12 +20,10 @@ ms.author: chadam
     
 ## Introduction  
   
-|||  
-|-|-|  
-|**Policy Name**|Availability Replica Connection State|  
-|**Issue**|Availability replica is disconnected.|  
-|**Category**|**Critical**|  
-|**Facet**|Availability replica|  
+- **Policy Name**: Availability Replica Connection State
+- **Issue**: Availability replica is disconnected.
+- **Category**: **Critical**
+- **Facet**: Availability replica  
   
 ## Description  
  This policy checks the connection state between availability replicas. The policy is in an unhealthy state when the connection state of the availability replica is DISCONNECTED. The policy is otherwise in a healthy state.  

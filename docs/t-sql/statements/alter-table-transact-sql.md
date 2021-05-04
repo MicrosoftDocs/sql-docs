@@ -4,7 +4,7 @@ title: "ALTER TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/28/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: reference
@@ -405,6 +405,8 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 }
 ```
 
+[!INCLUDE[synapse-analytics-od-supported-tables](../../includes/synapse-analytics-od-supported-tables.md)]
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
@@ -708,7 +710,7 @@ For more information, see [How Online Index Operations Work](../../relational-da
 > [!NOTE]
 > Online index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md), and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
-MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1**,** ... *n*] **)** | *filegroup* | **"**default**"** }  
+MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ ,...*n* ] **)** | *filegroup* | **"**default**"** }  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies a location to move the data rows currently in the leaf level of the clustered index. The table is moved to the new location. This option applies only to constraints that create a clustered index.
@@ -809,7 +811,7 @@ SET (DATA_DELETION =
 Enables retention policy based cleanup of old or aged data from tables within a database. For more information see [Enable and Disable Data Retention](/azure/azure-sql-edge/data-retention-enable-disable). The following parameters must be specified for data retention to be enabled. 
 
 - FILTER_COLUMN = { column_name }  
-Specifies the column, that should be used to determine if the rows in the table are obselete or not. The following data types are allowed for the filter column.
+Specifies the column, that should be used to determine if the rows in the table are obsolete or not. The following data types are allowed for the filter column.
   - Date
   - DateTime
   - DateTime2

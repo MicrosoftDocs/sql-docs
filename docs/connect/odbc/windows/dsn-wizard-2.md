@@ -1,16 +1,16 @@
 ---
-description: "Data Source Wizard Screen 2 (ODBC Driver for SQL Server)"
-title: "Data Source Wizard Screen 2 (ODBC Driver for SQL Server) | Microsoft Docs"
+description: Learn how to select your authentication method in the Data Source Wizard to create a new ODBC connection to SQL Server.
+title: Data Source Wizard Screen 2 (ODBC Driver for SQL Server)
 ms.custom: ""
 ms.date: "01/29/2021"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
-ms.author: "v-jizho2"
+ms.author: v-daenge
 ---
 # Data Source Wizard Screen 2
 
@@ -48,7 +48,6 @@ Specifies that the driver authenticate to SQL Server using a Managed Identity.
 
 Specifies that the driver authenticate to SQL Server using an Azure Active Directory Service Principal.
 
-
 ### Login ID
 
 Specifies the login ID the driver uses when connecting to SQL Server if **With SQL Server Authentication using a login ID and password entered by the user** or **With Active Directory Password authentication using a login ID and password entered by the user** or **With Active Directory Interactive authentication using a login ID entered by the user** is selected. If **With Managed Identity authentication** is selected, specify the object ID of the managed identity or leave blank to use the default identity. This field only applies to the connection made to determine the server default settings; it does not apply to subsequent connections made using the data source after it has been created except if using Managed Identity authentication.
@@ -69,7 +68,5 @@ Returns to the previous screen of the wizard.
 
 ## Next steps
 
-[Data Source Wizard Screen 1](../../../connect/odbc/windows/dsn-wizard-1.md)
-
-[Data Source Wizard Screen 3](../../../connect/odbc/windows/dsn-wizard-3.md)
-
+[Data Source Wizard Screen 1](dsn-wizard-1.md)  
+[Data Source Wizard Screen 3](dsn-wizard-3.md)  

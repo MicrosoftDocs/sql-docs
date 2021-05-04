@@ -20,6 +20,8 @@ ms.custom: "seo-lt-2019"
 
 The following step-by-step instructions help you use the Data Migration Assistant to perform a successful scaled assessment for upgrading on-premises SQL Server or  SQL Server running on Azure VMs, or for migrating to Azure SQL Database.
 
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
+
 ## Prerequisites
 
 - Designate a tools computer on your network from which DMA will be initiated. Ensure that this computer has connectivity to your SQL Server targets.

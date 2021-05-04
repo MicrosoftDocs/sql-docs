@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "XML formatting [SQLXML]"
   - "SQLXML, formats"
 ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

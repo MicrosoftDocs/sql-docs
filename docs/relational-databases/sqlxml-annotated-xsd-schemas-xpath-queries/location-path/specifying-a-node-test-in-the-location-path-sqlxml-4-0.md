@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "node tests [SQLXML]"
   - "location path for XPath query"
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

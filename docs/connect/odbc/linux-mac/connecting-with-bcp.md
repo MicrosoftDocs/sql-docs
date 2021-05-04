@@ -2,7 +2,7 @@
 title: "Connecting with bcp"
 description: "Learn how to use the bcp utility with the Microsoft ODBC Driver for SQL Server on Linux and macOS."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/24/2021"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -69,7 +69,14 @@ Specifies the full path of a format file.
   
 - -F *first_row*  
 Specifies the number of the first row to export from a table or import from a data file.  
-  
+
+- -G  
+This switch is used by the client when connecting to Azure SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure Active Directory authentication. The -G switch requires at least bcp version 17.6. To determine your version, execute bcp -v.
+
+> [!IMPORTANT]
+> The `-G` option only applies to Azure SQL Database and Azure Synapse Analytics.
+> AAD Interactive Authentication is not currently supported on Linux or macOS. AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](../download-odbc-driver-for-sql-server.md) version 17.6.1 or higher and a properly [configured Kerberos environment](using-integrated-authentication.md#configure-kerberos).
+
 - -k  
 Specifies that empty columns should retain a null value during the operation, rather than have any default values for the columns inserted.  
   

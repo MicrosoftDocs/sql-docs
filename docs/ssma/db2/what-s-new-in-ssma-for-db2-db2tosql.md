@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "12/17/2020"
+ms.date: "04/29/2021"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,27 @@ ms.author: alexiva
 # What's New in SSMA for DB2 (DB2ToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
+
+## SSMA v8.19
+
+The v8.19 release of SSMA for DB2 contains the following changes:
+
+* Improve `TIMESTAMP_FORMAT` emulation function
+* Improve foreign keys discovery for z/OS platform
+
+## SSMA v8.18
+
+The v8.18 release of SSMA for DB2 contains the following changes:
+
+* Add support for identity columns
+
+## SSMA v8.17
+
+The v8.17 release of SSMA for DB2 contains the following changes:
+
+* Improve conversion of TRANSLATE function
+* Fix data migration for tables with computed columns
+* Update HTML assessment reports to use modern editor to display SQL text
 
 ## SSMA v8.16
 

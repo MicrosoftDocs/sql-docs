@@ -1,12 +1,11 @@
 ---
-description: "This JDBC code example demonstrates how to use Azure Key Vault as your key store provider when using Always Encrypted."
-title: "Azure Key Vault sample"
+title: Azure Key Vault sample
+description: This JDBC code example demonstrates how to use Azure Key Vault as your key store provider when using Always Encrypted.
 ms.custom: ""
-ms.date: "01/29/2021"
-
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ""
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 author: lilgreenbird
@@ -16,9 +15,9 @@ ms.author: v-susanh
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## Sample application using Azure Key Vault feature
+## Sample application using Azure Key Vault
 
-This application is runnable using JDBC Driver 9.2 and above, Azure-Security-Keyvault (version 4.2.1), Azure-Identity (version 1.1.3), and their dependencies. The underlying dependencies can be resolved by adding these libraries to the Project Object Model (POM) file of the project. For more information on feature dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+This application is runnable using JDBC Driver 9.2 and above, Azure-Security-Keyvault (version 4.2.1), Azure-Identity (version 1.1.3), and their dependencies. The underlying dependencies can be resolved by adding these libraries to the Project Object Model (POM) file of the project. For more information on feature dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ```java
 import java.net.URISyntaxException;
@@ -50,9 +49,9 @@ public class AKV {
     static String applicationClientID = "Your Client ID";
     static String applicationKey = "Your Application Key";
     static String keyID = "Your Key ID";
-	static String cmkName = "AKV_CMK_JDBC";
-	static String cekName = "AKV_CEK_JDBC";
-	static String akvTable = "akvTable";
+    static String cmkName = "AKV_CMK_JDBC";
+    static String cekName = "AKV_CEK_JDBC";
+    static String akvTable = "akvTable";
 
     static String createTableSQL = "create table " + akvTable + " ("
             + "PlainNvarcharMax nvarchar(max) null,"
@@ -74,7 +73,7 @@ public class AKV {
              * This constructor is recommended to replace the above deprecated constructor */
             SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider2 = new SQLServerColumnEncryptionAzureKeyVaultProvider(
                     tryAuthenticationCallback());
-	    setupKeyStoreProviders(akvProvider2.getName(), akvProvider2);
+            setupKeyStoreProviders(akvProvider2.getName(), akvProvider2);
             testAKV(akvProvider2.getName(), akvProvider2, connection, statement);
 
             statement.execute("DBCC FREEPROCCACHE");
@@ -82,21 +81,21 @@ public class AKV {
             /* Constructor added in 6.2.2 driver version [Continued Support] */
             SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider3 = new SQLServerColumnEncryptionAzureKeyVaultProvider(
                     applicationClientID, applicationKey);
-	    setupKeyStoreProviders(akvProvider3.getName(), akvProvider3);
+            setupKeyStoreProviders(akvProvider3.getName(), akvProvider3);
             testAKV(akvProvider3.getName(), akvProvider3, connection, statement);
-	
-	    statement.execute("DBCC FREEPROCCACHE");
+
+            statement.execute("DBCC FREEPROCCACHE");
             System.out.println("Create SQLServerColumnEncryptionAzureKeyVaultProvider with 'token credential'");
-	    /* see Azure Identity client library for Java 
-	     * https://docs.microsoft.com/java/api/overview/azure/identity-readme?view=azure-java-stable */
-	    ClientSecretCredential tokenCredential = new ClientSecretCredentialBuilder().tenantId(tenantID)
+            /* see Azure Identity client library for Java 
+             * https://docs.microsoft.com/java/api/overview/azure/identity-readme?view=azure-java-stable */
+            ClientSecretCredential tokenCredential = new ClientSecretCredentialBuilder().tenantId(tenantID)
                 .clientId(applicationClientID).clientSecret(applicationKey).build();
-	    /* Constructor added in 9.2.0 driver version */
+            /* Constructor added in 9.2.0 driver version */
             SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider4 = new SQLServerColumnEncryptionAzureKeyVaultProvider(
                     tokenCredential);
-	    setupKeyStoreProviders(akvProvider4.getName(), akvProvider4);
+            setupKeyStoreProviders(akvProvider4.getName(), akvProvider4);
             testAKV(akvProvider4.getName(), akvProvider4, connection, statement);
-	    
+
             System.exit(0);
         }
     }
@@ -151,8 +150,8 @@ public class AKV {
     private static void setupKeyStoreProviders(String CUSTOM_AKV_PROVIDER_NAME,
             SQLServerColumnEncryptionKeyStoreProvider akvProvider)
             throws SQLServerException {
-	/* unregister all previously registered providers if any */
-	SQLServerConnection.unregisterColumnEncryptionKeyStoreProviders();
+        /* unregister all previously registered providers if any */
+        SQLServerConnection.unregisterColumnEncryptionKeyStoreProviders();
         Map<String, SQLServerColumnEncryptionKeyStoreProvider> map1 = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
         map1.put(CUSTOM_AKV_PROVIDER_NAME, akvProvider);
         SQLServerConnection.registerColumnEncryptionKeyStoreProviders(map1);
@@ -243,6 +242,6 @@ public class AKV {
 
 ## See also
 
-[Azure Key vault sample version 7.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
-[Azure Key vault sample version 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
-[Azure Key vault sample version 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md) 
+[Azure Key vault sample version 7.0](azure-key-vault-sample-version-7.0.md)  
+[Azure Key vault sample version 6.2.2](azure-key-vault-sample-version-6.2.2.md)  
+[Azure Key vault sample version 6.0.0](azure-key-vault-sample-version-6.0.0.md) 

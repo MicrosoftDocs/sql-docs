@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "queries [SQLXML], XPath"
   - "XML views [SQLXML]"
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using XPath Queries in SQLXML 4.0

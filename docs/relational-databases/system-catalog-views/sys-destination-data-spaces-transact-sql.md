@@ -37,4 +37,4 @@ ms.author: wiassaf
 ## See Also  
 - [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
 - [Create Partitioned Tables and Indexes](../partitions/create-partitioned-tables-and-indexes.md#create-partitioned-tables-and-indexes)
-- [sys.partition_schemes](../../system-catalog-views/sys-partition-schemes-transact-sql.md)  
+- [sys.partition_schemes](sys-partition-schemes-transact-sql.md)  

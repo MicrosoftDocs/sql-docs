@@ -57,15 +57,6 @@ We recommend the *user installer* because it doesn't require administrator privi
 2. To expand the contents of the zip, double-click it.
 3. To make Azure Data Studio available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
 
-## Get Azure Data Studio for WSL
-
-1. Install **Azure Data Studio** for Windows. then use the `azuredatastudio` command in a WSL terminal just as you would in a normal command prompt. By default the application is stored in your AppData foler. 
-2. Start **Azure Data Studio** from the WSL command prompt. When using the default Windows installation, the application can be started using:
-
-```bash
-'/mnt/c/Users/<your user name>/AppData/Local/Programs/Azure Data Studio/azuredatastudio.exe'
-```
-
 ## Get Azure Data Studio for Linux
 
 1. Download Azure Data Studio for Linux by using one of the installers or the tar.gz archive:
@@ -127,6 +118,15 @@ We recommend the *user installer* because it doesn't require administrator privi
 
    sudo apt-get install libunwind8
    ```
+
+## Get Azure Data Studio for Windows Subsystem for Linux (WSL)
+
+1. Install **Azure Data Studio** for Windows. then use the `azuredatastudio` command in a WSL terminal just as you would in a normal command prompt. By default the application is stored in your AppData foler. 
+2. Start **Azure Data Studio** from the WSL command prompt. When using the default Windows installation, the application can be started using:
+
+```bash
+'/mnt/c/Users/<your user name>/AppData/Local/Programs/Azure Data Studio/azuredatastudio.exe'
+```
 
 ## Download Insiders build of Azure Data Studio
 
